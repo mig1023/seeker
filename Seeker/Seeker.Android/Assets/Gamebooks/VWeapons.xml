@@ -1483,7 +1483,7 @@
 					<Text>Завести разговор на отвлечённую тему:</Text>
 				</Option>
 				<Option Destination="180" Text="Держаться тени, чтобы не дать рассмотреть своего лица">
-					<Modification Name="Trigger" Value="V"/>
+					<Trigger Value="V"/>
 				</Option>
 				<Option Destination="180" Text="Не делать этого"/>
 			</Options>
