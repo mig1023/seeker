@@ -39,7 +39,7 @@
 			</Modifications>
 			<Options>
 				<Option Destination="29" Text="Взять ежедневник себе">
-					<Modification Name="Trigger" Value="E"/>
+					<Trigger Value="E"/>
 				</Option>
 				<Option Destination="29" Text="Вернуть его в карман пиджака"/>
 			</Options>
