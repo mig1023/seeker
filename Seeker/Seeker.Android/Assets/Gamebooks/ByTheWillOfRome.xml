@@ -1018,7 +1018,7 @@
 				<Option Destination="119" Text="Позади колоны"/>
 				<Option Destination="119" Text="По бокам колоны"/>
 				<Option Destination="119" Text="Впереди и позади колоны">
-					<Modification Name="Trigger" Value="Расположение кавалерии"/>
+					<Trigger Value="Расположение кавалерии"/>
 				</Option>
 			</Options>
 		</Paragraph>
