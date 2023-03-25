@@ -443,7 +443,7 @@
 			<Options>
 				<Option Destination="25" Text="Ну вот и граната пригодилась" Availability="Граната"/>
 				<Option Destination="60" Text="Жаль грануту не захватила" Availability="!Граната">
-					<Modification Name="Trigger" Value="Холод"/>
+					<Trigger Value="Холод"/>
 				</Option>
 			</Options>
 		</Paragraph>
