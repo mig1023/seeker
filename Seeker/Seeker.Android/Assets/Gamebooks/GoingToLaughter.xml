@@ -12964,7 +12964,7 @@
 					<Text>Если же нет, Вам, к сожалению, Вам было не суждено пережить абордажный бой...</Text>
 				</Option>
 				<Gameover Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории">
-					<Modification Name="Static" Value="Дежа вю"/>
+					<Static Value="Дежа вю"/>
 				</Gameover>
 			</Options>
 		</Paragraph>
