@@ -5152,7 +5152,7 @@
 			<Options>
 				<Option Destination="611" Text="Предложить ещё один самородок" Availability="Золотой самородок"/>
 				<Option Destination="648" Text="Есть достаточное количество денег, и вы готовы отдать их вместе с самородком" Availability="МОНЕТ >= 50">
-					<Modification Name="Coins" Value="-50"/>
+					<Coins Value="-50"/>
 				</Option>
 				<Option Destination="806" Text="Откажитесь от сделки, заберёте свое золото и уйдёте"/>
 			</Options>
