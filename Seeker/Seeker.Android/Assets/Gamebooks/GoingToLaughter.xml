@@ -13299,7 +13299,7 @@
 					<Text>Отпарировав точный, но всё-таки недостаточно быстрый удар француза, Вы наносите ему порез, и на белой сорочке выступает алое пятно. Этого мало, для того чтоб убить противника, но начало положено.</Text>
 				</Option>
 				<Option Destination="1332" Text="Возвращайтесь и испытайте судьбу снова!">
-					<Modification Name="Static" Value="Inspiration=5,Heroism=5"/>
+					<Static Value="Inspiration=5,Heroism=5"/>
 				</Option>
 			</Options>
 		</Paragraph>
