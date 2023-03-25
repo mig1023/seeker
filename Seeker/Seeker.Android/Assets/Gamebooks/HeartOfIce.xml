@@ -4280,10 +4280,10 @@
 			<Text>Голод завязывает внутренности в ледяной узел; из-за усталости ваши ноги наливаются свинцовой тяжестью. Каждое утро вам все тяжелее приходить в себя от сонной апатии. Любое усилие требует большой концентрации.\n\nКакой запас пищи у вас остался?</Text>
 			<Options>
 				<Option Destination="125" Text="Есть 2 единицы Еды, вычеркните их из Листа персонажа" Availability="ЕДА >= 2">
-					<Modification Name="Food" Value="-2"/>
+					<Food Value="-2"/>
 				</Option>
 				<Option Destination="37" Text="Есть только одна Еда" Availability="ЕДА >= 1">
-					<Modification Name="Food" Value="-1"/>
+					<Food Value="-1"/>
 				</Option>
 				<Option Destination="147" Text="Не осталось еды"/>
 			</Options>
