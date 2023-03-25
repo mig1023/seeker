@@ -123,7 +123,7 @@
 			<Options>
 				<Option Destination="47" Text="Вытащить маузер и упредить атаку Кляйста-младшего"/>
 				<Option Destination="7" Text="Выпрыгнуть в окно и бежать за ближайший угол здания (подозрение +1)">
-					<Modification Name="Suspicions" Value="1"/>
+					<Suspicions Value="1"/>
 				</Option>
 			</Options>
 		</Paragraph>
