@@ -13288,7 +13288,7 @@
 					<Text>В какой-то момент Вы обнаруживаете брешь в обороне француза, и наносите ему резкий удар, оставив ему шрам на память. Не смертельно, зато больно и постыдно.</Text>
 				</Option>
 				<Option Destination="1332" Text="Возвращайтесь и испытайте судьбу снова!">
-					<Modification Name="Static" Value="Inspiration=5,Heroism=5"/>
+					<Static Value="Inspiration=5,Heroism=5"/>
 				</Option>
 			</Options>
 		</Paragraph>
