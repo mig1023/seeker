@@ -2543,7 +2543,7 @@
 			<Options>
 				<Option Destination="223" Text="Навестить Аникея" Availability="Аникей"/>
 				<Option Destination="177" Text="Сжалитесь над ним и заберете гуся за ту сумму, которую он просит" Availability="МОНЕТ >= 4">
-					<Modification Name="Coins" Value="-4"/>
+					<Coins Value="-4"/>
 				</Option>
 				<Option Destination="737" Text="Попробуете сбавить цену"/>
 				<Option Destination="25" Text="Откажетесь от приобретения столь ценного товара и продолжите поиски трактира"/>
