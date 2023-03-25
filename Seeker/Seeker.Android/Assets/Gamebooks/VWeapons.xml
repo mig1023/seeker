@@ -1586,7 +1586,7 @@
 			<Text>Сфотографировавшись на новый пропуск, Сергей спокойным шагом покинул здание.</Text>
 			<Options>
 				<Option Destination="135" Text="Отправиться на встречу с Гретой (время -1)" Availability="G">
-					<Modification Name="Time" Value="-1"/>
+					<Time Value="-1"/>
 				</Option>
 				<Option Destination="198" Text="Не ходить на встречу и явиться на базу к названному сроку для получения пропуска"/>
 			</Options>
