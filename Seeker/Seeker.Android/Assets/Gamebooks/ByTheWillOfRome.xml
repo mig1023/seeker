@@ -1045,7 +1045,7 @@
 			<Options>
 				<Option Destination="113" Text="Броситься догонять грабителей"/>
 				<Option Destination="140" Text="Поблагодарить бога, что вы остались живы, и возвращаться в лагерь">
-					<Modification Name="Untrigger" Value="Бирюза"/>
+					<Untrigger Value="Бирюза"/>
 				</Option>
 			</Options>
 		</Paragraph>
