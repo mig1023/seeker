@@ -301,10 +301,10 @@
 			<Text>Надо хорошо вооружится. Кастет или трость?</Text>
 			<Options>
 				<Option Destination="41" Text="Кастет">
-					<Modification Name="Trigger" Value="Кастет"/>
+					<Trigger Value="Кастет"/>
 				</Option>
 				<Option Destination="41" Text="Трость">
-					<Modification Name="Trigger" Value="Трость"/>
+					<Trigger Value="Трость"/>
 				</Option>
 			</Options>
 		</Paragraph>
