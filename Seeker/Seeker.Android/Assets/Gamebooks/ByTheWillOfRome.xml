@@ -1090,7 +1090,7 @@
 				<Option Destination="129" Text="О дисциплине"/>
 				<Option Destination="129" Text="О чистоте оружия"/>
 				<Option Destination="129" Text="Об исправной обуви">
-					<Modification Name="Trigger" Value="Исправная обувь"/>
+					<Trigger Value="Исправная обувь"/>
 				</Option>
 				<Option Destination="129" Text="О стройности шеренг"/>
 			</Options>
