@@ -4190,16 +4190,16 @@
 					<Text>У него есть следующие ретровирусы:</Text>
 				</Option>
 				<Option Destination="308" Text="Большой усилитель — 10 скадов" Availability="ДЕНЬГИ >= 10">
-					<Modification Name="Money" Value="-10"/>
+					<Money Value="-10"/>
 				</Option>
 				<Option Destination="330" Text="Изумрудная тайна — 7 скадов" Availability="ДЕНЬГИ >= 7">
-					<Modification Name="Money" Value="-7"/>
+					<Money Value="-7"/>
 				</Option>
 				<Option Destination="449" Text="Маска затмения — 9 скадов" Availability="ДЕНЬГИ >= 9">
-					<Modification Name="Money" Value="-9"/>
+					<Money Value="-9"/>
 				</Option>
 				<Option Destination="287" Text="Несравненный проницат — 6 скадов" Availability="ДЕНЬГИ >= 6">
-					<Modification Name="Money" Value="-6"/>
+					<Money Value="-6"/>
 					<Text>Когда вы закончите дела с Маленгином:</Text>
 				</Option>
 				<Option Destination="414" Text="Владеете Знанием улиц" Availability="Знание улиц"/>
