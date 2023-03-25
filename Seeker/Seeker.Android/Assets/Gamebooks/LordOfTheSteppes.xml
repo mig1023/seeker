@@ -6762,7 +6762,7 @@
 			<Options>
 				<Option Destination="611" Text="Предложить самородок из желтого металла" Availability="Самородок из желтого металла"/>
 				<Option Destination="648" Text="Согласны на предложенные условия" Availability="МОНЕТ >= 60">
-					<Modification Name="Coins" Value="-60"/>
+					<Coins Value="-60"/>
 				</Option>
 				<Option Destination="806" Text="Заберите самородок обратно и уходите"/>
 			</Options>
