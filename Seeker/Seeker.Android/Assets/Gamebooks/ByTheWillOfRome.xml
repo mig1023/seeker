@@ -1714,10 +1714,10 @@
 			<Text>Ваше приближение заметили, но мародеры были рассыпаны по огромному пространству и многие продолжали грабить дома, не зная о возникшей опасности.</Text>
 			<Options>
 				<Option Destination="203" Text="Приказать захватывать мародеров в плен">
-					<Modification Name="Trigger" Value="Мародеров в плен"/>
+					<Trigger Value="Мародеров в плен"/>
 				</Option>
 				<Option Destination="203" Text="Приказать никого не щадить">
-					<Modification Name="Trigger" Value="Никого не щадить"/>
+					<Trigger Value="Никого не щадить"/>
 				</Option>
 			</Options>
 		</Paragraph>
