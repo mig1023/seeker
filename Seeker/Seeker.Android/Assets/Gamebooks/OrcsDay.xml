@@ -1269,7 +1269,7 @@
 					<Text>В ином случае...</Text>
 				</Option>
 				<Option Destination="101" Text="Переходи к подсчёту результата">
-					<Modification Name="Trigger" Value="Гибель"/>
+					<Trigger Value="Гибель"/>
 				</Option>
 			</Options>
 		</Paragraph>
