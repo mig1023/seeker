@@ -122,7 +122,7 @@
 			<Text>Шериф лежал в своей кровати, уставившись безразличными глазами в потолок. В его теле не осталось ни капли крови.\n\nРядом лежал заряженный револьвер, которым он не успел воспользоватся так же как и бедняга Билли своим дробовиком.</Text>
 			<Options>
 				<Option Destination="74" Text="Вжууууух!" Availability="ВЖУХ >= 1">
-					<Modification Name="Whoosh" Value="-1"/>
+					<Whoosh Value="-1"/>
 				</Option>
 				<Option Destination="0" Availability="ВЖУХ &lt; 1"/>
 			</Options>
