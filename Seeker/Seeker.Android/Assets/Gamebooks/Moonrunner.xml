@@ -2276,22 +2276,22 @@
 			</Actions>
 			<Options>
 				<Option Destination="273" Text="Первое" Availability="!первое">
-					<Modification Name="Trigger" Value="первое"/>
+					<Trigger Value="первое"/>
 				</Option>
 				<Option Destination="242" Text="Второе" Availability="!второе">
-					<Modification Name="Trigger" Value="второе"/>
+					<Trigger Value="второе"/>
 				</Option>
 				<Option Destination="325" Text="Третье" Availability="!третье">
-					<Modification Name="Trigger" Value="третье"/>
+					<Trigger Value="третье"/>
 				</Option>
 				<Option Destination="354" Text="Четвёртое" Availability="!четвёртое">
-					<Modification Name="Trigger" Value="четвёртое"/>
+					<Trigger Value="четвёртое"/>
 				</Option>
 				<Option Destination="67" Text="Пятое" Availability="!пятое">
-					<Modification Name="Trigger" Value="пятое"/>
+					<Trigger Value="пятое"/>
 				</Option>
 				<Option Destination="335" Text="Шестое"  Availability="!шестое">
-					<Modification Name="Trigger" Value="шестое"/>
+					<Trigger Value="шестое"/>
 					<Text>Отразив первое заклинание, посмотрите на свой Листок Путешественника:</Text>
 				</Option>
 				<Option Destination="188" Text="Отразив первое заклинание, посмотрите на свой Листок Путешественника. Если там записано слово “ecproc”" Availability="ecproc">
