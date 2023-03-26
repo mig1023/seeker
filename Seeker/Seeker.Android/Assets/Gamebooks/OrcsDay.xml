@@ -948,7 +948,7 @@
 			</Actions>
 			<Options>
 				<Option Destination="101" Text="Переходи к Подсчёту результата">
-					<Modification Name="Trigger" Value="Гибель"/>
+					<Trigger Value="Гибель"/>
 					<Text>Если ты победил их, то ты можешь:</Text>
 				</Option>
 				<Option Destination="3" Text="Посмотреть, что есть в комнате охраны"/>
