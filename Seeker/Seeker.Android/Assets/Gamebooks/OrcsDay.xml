@@ -1005,7 +1005,7 @@
 					<Text>В противном случае — ты безымянный труп. Стоит начать с самого начала... желаем удачи в следующий раз...</Text>
 				</Option>
 				<Option Destination="101" Text="Переходи к Подсчёту результата">
-					<Modification Name="Trigger" Value="Гибель"/>
+					<Trigger Value="Гибель"/>
 				</Option>
 			</Options>
 		</Paragraph>
