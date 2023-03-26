@@ -3407,7 +3407,7 @@
 			<Options>
 				<Option Destination="384" Text="Прикажет всем бойцам занять свои места в боевых линиях"/>
 				<Option Destination="384" Text="Вряд ли варвары быстро приготовятся в атаке">
-					<Modification Name="Trigger" Value="отдых"/>
+					<Trigger Value="отдых"/>
 				</Option>
 			</Options>
 		</Paragraph>
