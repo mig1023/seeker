@@ -176,16 +176,16 @@
 		<Paragraph No="21">
 			<Options>
 				<Option Destination="42" Text="Посмотреть влево" Availability="!Лево">
-					<Modification Name="Trigger" Value="Лево"/>
+					<Trigger Value="Лево"/>
 				</Option>
 				<Option Destination="66" Text="Посмотреть вправо" Availability="!Право">
-					<Modification Name="Trigger" Value="Право"/>
+					<Trigger Value="Право"/>
 				</Option>
 				<Option Destination="33" Text="Посмотреть вверх" Availability="!Портсигар">
-					<Modification Name="Trigger" Value="Портсигар"/>
+					<Trigger Value="Портсигар"/>
 				</Option>
 				<Option Destination="72" Text="Посмотреть вниз" Availability="!Низ">
-					<Modification Name="Trigger" Value="Низ"/>
+					<Trigger Value="Низ"/>
 				</Option>
 				<Option Destination="18" Text="Закончить осмотр" Availability="Портсигар"/>
 			</Options>
