@@ -1007,7 +1007,7 @@
 					<Text>В противном случае придется потерять 3 Выносливости и попробовать залезть на гильотину.</Text>
 				</Option>
 				<Option Destination="198">
-					<Modification Name="Endurance" Value="-2"/>
+					<Endurance Value="-2"/>
 				</Option>
 			</Options>
 		</Paragraph>
