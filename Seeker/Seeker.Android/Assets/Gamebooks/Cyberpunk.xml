@@ -5138,13 +5138,13 @@
 			</Texts>
 			<Options>
 				<Option Destination="1" Text="Планирование" Availability="ПЛАНИРОВАНИЕ &lt;= 0">
-					<Modification Name="Planning" Value="20"/>
+					<Planning Value="20"/>
 				</Option>
 				<Option Destination="1" Text="Подготовка" Availability="ПОДГОТОВКА &lt;= 0">
-					<Modification Name="Preparation" Value="20"/>
+					<Preparation Value="20"/>
 				</Option>
 				<Option Destination="1" Text="Везение" Availability="ВЕЗЕНИЕ &lt;= 0">
-					<Modification Name="Luck" Value="20"/>
+					<Luck Value="20"/>
 				</Option>
 			</Options>
 		</Paragraph>
