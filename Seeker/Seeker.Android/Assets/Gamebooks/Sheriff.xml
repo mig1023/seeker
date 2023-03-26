@@ -26,13 +26,13 @@
 			<Text>Выберите уровень сложности:</Text>
 			<Options>
 				<Option Destination="76" Text="Easy">
-					<Modification Name="Level" Value="Easy"/>
+					<Level Value="Easy"/>
 				</Option>
 				<Option Destination="76" Text="Medium">
-					<Modification Name="Level" Value="Medium"/>
+					<Level Value="Medium"/>
 				</Option>
 				<Option Destination="76" Text="Hard">
-					<Modification Name="Level" Value="Hard"/>
+					<Level Value="Hard"/>
 				</Option>
 			</Options>
 		</Paragraph>
