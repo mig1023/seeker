@@ -1350,7 +1350,7 @@
 			<Triggers>Кандидат в Властелины</Triggers>
 			<Options>
 				<Option Destination="55" Text="Нужно побороть свою Оркишность" Availability="!Борьба">
-					<Modification Name="Trigger" Value="Борьба"/>
+					<Trigger Value="Борьба"/>
 					<Text>Если ты преуспеешь там, тогда ты станешь свободным и сможешь выбирать. Но что бы ты ни выбрал, а эта история подошла к концу.</Text>
 				</Option>
 				<Option Destination="101" Text="Переходи к Подсчету результата"/>
