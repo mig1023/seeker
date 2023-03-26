@@ -1022,7 +1022,7 @@
 					<Text>Если тролль побеждает, ты погиб — и Великая Оркская Революция вместе с тобой...</Text>
 				</Option>
 				<Option Destination="101" Text="Перейди к Подсчету результатов">
-					<Modification Name="Trigger" Value="Гибель"/>
+					<Trigger Value="Гибель"/>
 				</Option>		
 			</Options>
 		</Paragraph>
