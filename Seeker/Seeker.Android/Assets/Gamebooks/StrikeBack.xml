@@ -1127,7 +1127,7 @@
 			</Actions>
 			<Options>
 				<Option Destination="124" Text="Убив летучую мышь, ты можешь её съесть">
-					<Modification Name="Endurance" Value="2"/>
+					<Endurance Value="2"/>
 					<Text>Это восстановит 2 очка Выносливости. Если наоборот, летучая мышь убила тебя:</Text>
 				</Option>
 				<Option Destination="117"/>
