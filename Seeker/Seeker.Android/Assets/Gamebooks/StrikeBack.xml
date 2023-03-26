@@ -1817,7 +1817,7 @@
 			</Actions>
 			<Options>
 				<Option Destination="157" Text="Подкрепившись">
-					<Modification Name="Endurance" Value="2"/>
+					<Endurance Value="2"/>
 				</Option>
 			</Options>
 		</Paragraph>
