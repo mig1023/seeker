@@ -251,7 +251,7 @@
 			<Text>Тело хозяйки борделя нелепо взмахнуло руками и покатилось по лестнице.\n\nДикий визг огласил особняк и толпы девиц бросились со всех сторон, буквально разорвав вас на кусочки.</Text>
 			<Options>
 				<Option Destination="86" Text="Вжууууух!" Availability="ВЖУХ >= 1">
-					<Modification Name="Whoosh" Value="-1"/>
+					<Whoosh Value="-1"/>
 				</Option>
 				<Option Destination="0" Availability="ВЖУХ &lt; 1"/>
 			</Options>
