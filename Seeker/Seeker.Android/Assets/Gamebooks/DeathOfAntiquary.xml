@@ -392,28 +392,28 @@
 			</Texts>
 			<Options>
 				<Option Destination="16" Text="Анжела" Availability="!анжела">
-					<Modification Name="Trigger" Value="анжела"/>
+					<Trigger Value="анжела"/>
 				</Option>
 				<Option Destination="16" Text="Яков Левинзон" Availability="!левинзон">
-					<Modification Name="Trigger" Value="левинзон"/>
+					<Trigger Value="левинзон"/>
 				</Option>
 				<Option Destination="16" Text="Завещание" Availability="!завещание">
-					<Modification Name="Trigger" Value="завещание"/>
+					<Trigger Value="завещание"/>
 				</Option>
 				<Option Destination="16" Text="Израиль" Availability="!израиль">
-					<Modification Name="Trigger" Value="израиль"/>
+					<Trigger Value="израиль"/>
 				</Option>
 				<Option Destination="16" Text="Картина" Availability="!картина">
-					<Modification Name="Trigger" Value="картина"/>
+					<Trigger Value="картина"/>
 				</Option>
 				<Option Destination="16" Text="Письма" Availability="!письма">
-					<Modification Name="Trigger" Value="письма"/>
+					<Trigger Value="письма"/>
 				</Option>
 				<Option Destination="16" Text="Улика" Availability="!улика">
-					<Modification Name="Trigger" Value="улика"/>
+					<Trigger Value="улика"/>
 				</Option>
 				<Option Destination="16" Text="Обыск" Availability="!обыск">
-					<Modification Name="Trigger" Value="обыск"/>
+					<Trigger Value="обыск"/>
 				</Option>
 			</Options>
 		</Paragraph>
