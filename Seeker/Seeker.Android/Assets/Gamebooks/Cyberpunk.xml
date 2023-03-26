@@ -5122,13 +5122,13 @@
 			</Texts>
 			<Options>
 				<Option Destination="589" Text="Планирование" Availability="ПЛАНИРОВАНИЕ &lt;= 0">
-					<Modification Name="Planning" Value="40"/>
+					<Planning Value="40"/>
 				</Option>
 				<Option Destination="589" Text="Подготовка" Availability="ПОДГОТОВКА &lt;= 0">
-					<Modification Name="Preparation" Value="40"/>
+					<Preparation Value="40"/>
 				</Option>
 				<Option Destination="589" Text="Везение" Availability="ВЕЗЕНИЕ &lt;= 0">
-					<Modification Name="Luck" Value="40"/>
+					<Luck Value="40"/>
 				</Option>
 			</Options>
 		</Paragraph>
