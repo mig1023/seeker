@@ -68,13 +68,13 @@
 		<Paragraph No="6">
 			<Options>
 				<Option Destination="82" Text="«Как тебя зовут?»" Availability="!имя">
-					<Modification Name="Trigger" Value="имя"/>
+					<Trigger Value="имя"/>
 				</Option>
 				<Option Destination="32" Text="«Это твои вещи?» (показать портсигар и перчатку)" Availability="!вещи">
-					<Modification Name="Trigger" Value="вещи"/>
+					<Trigger Value="вещи"/>
 				</Option>
 				<Option Destination="46" Text="«Зачем ты убила Билли и Томми?»" Availability="!Билли Томми">
-					<Modification Name="Trigger" Value="Билли Томми"/>
+					<Trigger Value="Билли Томми"/>
 				</Option>
 				<Option Destination="59" Text="Уйти" Availability="имя, вещи, Билли Томми"/>
 			</Options>
