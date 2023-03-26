@@ -282,7 +282,7 @@
 					<Text>Если же провалил, что ж...\n\nЧетверо приключенцев? От тебя не осталось ничего, кроме мокрого пятна на полу, формой напоминающего орка.</Text>
 				</Option>
 				<Option Destination="101" Text="Перейти к подсчёту результатов">
-					<Modification Name="Trigger" Value="Гибель"/>
+					<Trigger Value="Гибель"/>
 				</Option>
 			</Options>
 		</Paragraph>
