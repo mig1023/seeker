@@ -847,7 +847,7 @@
 					<Text>В противном случае ты — мертвец...</Text>
 				</Option>
 				<Option Destination="101" Text="Перейди к Подсчету результата">
-					<Modification Name="Trigger" Value="Гибель"/>
+					<Trigger Value="Гибель"/>
 				</Option>
 			</Options>
 		</Paragraph>
