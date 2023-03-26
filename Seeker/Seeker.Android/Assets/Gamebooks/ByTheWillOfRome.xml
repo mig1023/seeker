@@ -3371,7 +3371,7 @@
 			<Text>В это время к вам прибежал гонец от Клавдия. В лесу шел яростный бой с отрядом даков. Клавдий просил подкрепления.</Text>
 			<Options>
 				<Option Destination="413" Text="Пошлете Клавдию подмогу в сто бойцов">
-					<Modification Name="Trigger" Value="подмога"/>
+					<Trigger Value="подмога"/>
 				</Option>
 				<Option Destination="400" Text="Прикажете Клавдию держаться"/>
 				<Option Destination="407" Text="Прикажет Клавдию отступить из леса"/>
