@@ -336,19 +336,19 @@
 			<Text>Тарасов сидел в кабинете, изучая отчеты своих подчиненных до 22.00.\n\nнаконец он закрыл папки и откинувшись на спинку скрипучего стула потянулся.\n\n— Так, теперь можно немного и развлечься, — произнес Тарасов и пододвинул к себе клавиатуру настольного компьютера.\n\nВскоре вы услышали из динамиков женские сладострастные стоны, пыхтение и приглушенные возгласы — "О, ес! Фак ми... Оу-у!... Ес, ес!...".\n\nВы не могли разговаривать находясь в теле глупой птицы. Но попугай мог запоминать слова.\n\nВыберите из списка — какое слово или фразу запомнил ваш попугай, пока находился в кабинете следователя?</Text>
 			<Options>
 				<Option Destination="27" Text="Улика">
-					<Modification Name="Trigger" Value="улика"/>
+					<Trigger Value="улика"/>
 				</Option>
 				<Option Destination="27" Text="«Фак ми!» и женские стоны из порнофильма">
-					<Modification Name="Trigger" Value="фак-ми"/>
+					<Trigger Value="фак-ми"/>
 				</Option>
 				<Option Destination="27" Text="Обыск">
-					<Modification Name="Trigger" Value="обыск"/>
+					<Trigger Value="обыск"/>
 				</Option>
 				<Option Destination="27" Text="Записка">
-					<Modification Name="Trigger" Value="записка"/>
+					<Trigger Value="записка"/>
 				</Option>
 				<Option Destination="27" Text="«Владимирский центра-а-а-л...»">
-					<Modification Name="Trigger" Value="владимирский централ"/>
+					<Trigger Value="владимирский централ"/>
 				</Option>
 			</Options>
 		</Paragraph>
