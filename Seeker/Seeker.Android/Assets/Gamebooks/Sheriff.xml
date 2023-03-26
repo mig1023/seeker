@@ -676,13 +676,13 @@
 			<Text>Дэниэл извлек потрепанный блокнот, готовясь делать заметки.</Text>
 			<Options>
 				<Option Destination="19" Text="«Где его убили?»" Availability="!Билли убит в амбаре">
-					<Modification Name="Trigger" Value="Билли убит в амбаре"/>
+					<Trigger Value="Билли убит в амбаре"/>
 				</Option>
 				<Option Destination="79" Text="«Кого вы подозреваете в убийстве?»" Availability="!Все любили Билли">
-					<Modification Name="Trigger" Value="Все любили Билли"/>
+					<Trigger Value="Все любили Билли"/>
 				</Option>
 				<Option Destination="27" Text="«Когда случилось убийство?»" Availability="!Убит ночью">
-					<Modification Name="Trigger" Value="Убит ночью"/>
+					<Trigger Value="Убит ночью"/>
 				</Option>
 				<Option Destination="24" Text="«Мне всё ясно, убийца — садовник!»" Availability="Билли убит в амбаре, Все любили Билли"/>
 				<Option Destination="21" Text="«Ведите меня в амбар!»" Availability="Билли убит в амбаре, Все любили Билли"/>
