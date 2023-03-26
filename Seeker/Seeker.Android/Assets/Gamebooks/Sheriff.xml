@@ -477,7 +477,7 @@
 			<Text>Выстрел. Но в кресле уже никого нет.\n\n— Не люблю, когда меня не слушаются, — прошептали из-за спины, и два огромных клыка вонзились в шею.</Text>
 			<Options>
 				<Option Destination="20" Text="Вжууууух!" Availability="ВЖУХ >= 1">
-					<Modification Name="Whoosh" Value="-1"/>
+					<Whoosh Value="-1"/>
 				</Option>
 				<Option Destination="0" Availability="ВЖУХ &lt; 1"/>
 			</Options>
