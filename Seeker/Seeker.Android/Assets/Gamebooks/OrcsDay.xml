@@ -445,7 +445,7 @@
 					<Text>Иначе приключенцы понимают, что ты орк, и убивают тебя...</Text>
 				</Option>
 				<Option Destination="101" Text="Переходи к Подсчёту результатов">
-					<Modification Name="Trigger" Value="Гибель"/>
+					<Trigger Value="Гибель"/>
 				</Option>
 			</Options>
 		</Paragraph>
