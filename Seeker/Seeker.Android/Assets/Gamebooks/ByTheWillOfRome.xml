@@ -3324,7 +3324,7 @@
 			<Options>
 				<Option Destination="391" Text="Выдвинете вперед лучников, и прикажете им стрелять в противника"/>
 				<Option Destination="412" Text="Прикажете одной турме кавалерии атаковать вражеских лучников" Availability="!кавалерия победила">
-					<Modification Name="Trigger" Value="кавалерия победила"/>
+					<Trigger Value="кавалерия победила"/>
 				</Option>
 				<Option Destination="378" Text="Ничего не будете пока предпринимать"/>
 			</Options>
