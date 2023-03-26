@@ -694,7 +694,7 @@
 			</Modifications>
 			<Options>
 				<Option Destination="374" Text="Заплатите Хоггу" Availability="ЗОЛОТО >= 4">
-					<Modification Name="Gold" Value="-4"/>
+					<Gold Value="-4"/>
 				</Option>
 				<Option Destination="28" Text="У вас нет денег или вы не хотите платить вперед"/>
 			</Options>
