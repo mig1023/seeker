@@ -7123,7 +7123,7 @@
 						<Enemy Name="ВТОРОЙ ОРК" Mastery="7" Endurance="7"/>
 						<Enemy Name="ТРЕТИЙ ОРК" Mastery="6" Endurance="7"/>
 					</Enemies>
-					<After>Если вы их убили:</After>
+					<Text>Если вы их убили:</Text>
 				</Fight>
 			</Actions>
 			<Options>
