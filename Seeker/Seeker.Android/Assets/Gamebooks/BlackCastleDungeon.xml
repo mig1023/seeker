@@ -11031,7 +11031,7 @@
 				<Fight>
 					<Enemy Name="ДРАКОН" Mastery="12" Endurance="8"/>
 					<WoundsToWin>2</WoundsToWin>
-					<After>Вы можете воспользоваться заклятием Копии. Если удалось дважды ранить Дракона:</After>
+					<Text>Вы можете воспользоваться заклятием Копии. Если удалось дважды ранить Дракона:</Text>
 				</Fight>
 			</Actions>
 			<Modifications>
