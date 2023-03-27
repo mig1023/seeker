@@ -9678,7 +9678,7 @@
 				</Option>
 				<Fight>
 					<Enemy Name="ШЕСТИЛАПЫЙ ЗВЕРЬ" Mastery="9" Endurance="7"/>
-					<After>Если победили:</After>
+					<Text>Если победили:</Text>
 				</Fight>
 			</Actions>
 			<Options>
