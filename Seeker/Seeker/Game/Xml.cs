@@ -118,21 +118,17 @@ namespace Seeker.Game
             }
         }
 
-        private static bool OnlyTextChild(XmlNode xmlNode) =>
-            !xmlNode.ChildNodes.OfType<XmlNode>().Any(x => x.NodeType != XmlNodeType.Text);
-
         public static List<Text> TextsParse(XmlNode xmlNode, bool action = false)
         {
-            if (action && (xmlNode["After"] != null) && OnlyTextChild(xmlNode["After"]))
+            if (action && (xmlNode["Text"] != null))
             {
-                return new List<Text> { TextLineParse(xmlNode["After"]) };
+                return new List<Text> { TextLineParse(xmlNode["Text"]) };
             }
             else
             {
                 List<Text> texts = new List<Text>();
-                string path = action ? "After" : "Texts";
                 
-                foreach (XmlNode text in xmlNode.SelectNodes(String.Format("{0}/Text", path)))
+                foreach (XmlNode text in xmlNode.SelectNodes("Texts/Text"))
                     texts.Add(TextLineParse(text));
 
                 return texts;
