@@ -7435,7 +7435,7 @@
 						<Enemy Name="ЧЕТВЕРТЫЙ РАЗБОЙНИК" Mastery="8" Endurance="6"/>
 						<Enemy Name="ПЯТЫЙ РАЗБОЙНИК" Mastery="7" Endurance="7"/>
 					</Enemies>
-					<After>Если вы победили их, то можете:</After>
+					<Text>Если вы победили их, то можете:</Text>
 				</Fight>
 			</Actions>
 			<Options>
