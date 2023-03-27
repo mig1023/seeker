@@ -7195,7 +7195,7 @@
 						<Enemy Name="ПЕРВЫЙ ЧЕЛОВЕК" Mastery="9" Endurance="7"/>
 						<Enemy Name="ПЕРВЫЙ ЧЕЛОВЕК" Mastery="7" Endurance="7"/>
 					</Enemies>
-					<After>Если вам удалось победить их:</After>
+					<Text>Если вам удалось победить их:</Text>
 				</Fight>
 			</Actions>
 			<Options>
