@@ -1886,11 +1886,11 @@
 			<Actions>
 				<Get>
 					<Button>Купить порцию</Button>
-					<Text>РЫБА</Text>
+					<Head>РЫБА</Head>
 					<Price>1</Price>
 					<Multiple/>
 					<Benefit Name="Healing" Value="Поесть рыбы,2"/>
-					<After>Вы благодарите радушного хозяина и уходите.</After>
+					<Text>Вы благодарите радушного хозяина и уходите.</Text>
 				</Get>
 			</Actions>
 			<Options>
