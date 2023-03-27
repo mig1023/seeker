@@ -2299,7 +2299,7 @@
 				</Option>
 				<Fight>
 					<Enemy Name="ЛЕВ" Mastery="9" Endurance="15"/>
-					<After>Убив льва, вы можете перешагнуть через него и войти.</After>
+					<Text>Убив льва, вы можете перешагнуть через него и войти.</Text>
 				</Fight>
 			</Actions>
 			<Options>
