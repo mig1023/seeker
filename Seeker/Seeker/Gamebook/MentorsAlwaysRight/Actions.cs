@@ -85,12 +85,12 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             if (Price > 0)
             {
                 string gold = Game.Services.CoinsNoun(Price, "золотой", "золотых", "золотых");
-                return new List<string> { String.Format("{0}, {1} {2}", Text, Price, gold) };
+                return new List<string> { String.Format("{0}, {1} {2}", Head, Price, gold) };
             }
             else if (ThisIsSpell)
             {
-                int count = protagonist.Spells.Where(x => x == Text).Count();
-                return new List<string> { String.Format("{0}{1}", Text, (count > 0 ? String.Format(" ({0} шт)", count) : String.Empty)) };
+                int count = protagonist.Spells.Where(x => x == Head).Count();
+                return new List<string> { String.Format("{0}{1}", Head, (count > 0 ? String.Format(" ({0} шт)", count) : String.Empty)) };
             }
 
             if (Enemies == null)
@@ -138,7 +138,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
         public override bool IsButtonEnabled(bool secondButton = false)
         {
             bool bySpellAdd = ThisIsSpell && (protagonist.Magicpoints <= 0) && !secondButton;
-            bool bySpellRemove = ThisIsSpell && !protagonist.Spells.Contains(Text) && secondButton;
+            bool bySpellRemove = ThisIsSpell && !protagonist.Spells.Contains(Head) && secondButton;
             bool byCureSpell = (Type == "CureFracture") && (Services.CureSpellCount() < Wound);
             bool bySell = (Type == "Sell") && !Game.Option.IsTriggered(Trigger);
             bool bySpecButton = (Specialization != null) && (protagonist.Specialization != Character.SpecializationType.Nope);
@@ -155,8 +155,8 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
         {
             if (ThisIsSpell && (protagonist.Magicpoints >= 1))
             {
-                protagonist.Spells.Add(Text);
-                protagonist.SpellsReplica.Add(Text);
+                protagonist.Spells.Add(Head);
+                protagonist.SpellsReplica.Add(Head);
                 protagonist.Magicpoints -= 1;
             }
 
@@ -194,7 +194,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
 
         public List<string> Decrease()
         {
-            protagonist.Spells.Remove(Text);
+            protagonist.Spells.Remove(Head);
             protagonist.Magicpoints += 1;
 
             return new List<string> { "RELOAD" };

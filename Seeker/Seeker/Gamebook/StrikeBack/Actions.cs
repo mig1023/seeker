@@ -32,13 +32,13 @@ namespace Seeker.Gamebook.StrikeBack
         {
             List<string> enemies = new List<string>();
 
-            if ((Type != "Fight") && String.IsNullOrEmpty(Text))
+            if ((Type != "Fight") && String.IsNullOrEmpty(Head))
             {
                 return enemies;
             }
             else if (Type != "Fight")
             {
-                return new List<string> { Text };
+                return new List<string> { Head };
             }
 
             if ((Allies != null) && GroupFight)

@@ -98,10 +98,10 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             List<string> enemies = new List<string>();
 
             if (Price > 0)
-                return new List<string> { String.Format("{0}, {1} экю", Text, Services.ToEcu(Price)) };
+                return new List<string> { String.Format("{0}, {1} экю", Head, Services.ToEcu(Price)) };
 
             if (Type == "Get")
-                return new List<string> { Text };
+                return new List<string> { Head };
 
             if (Enemies == null)
                 return enemies;

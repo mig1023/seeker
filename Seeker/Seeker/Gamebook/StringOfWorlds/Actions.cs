@@ -91,8 +91,8 @@ namespace Seeker.Gamebook.StringOfWorlds
         {
             List<string> enemies = new List<string>();
 
-            if (!String.IsNullOrEmpty(Text))
-                return new List<string> { Text };
+            if (!String.IsNullOrEmpty(Head))
+                return new List<string> { Head };
 
             if (Enemies == null)
                 return enemies;

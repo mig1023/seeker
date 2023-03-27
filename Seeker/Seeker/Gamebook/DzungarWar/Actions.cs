@@ -43,15 +43,15 @@ namespace Seeker.Gamebook.DzungarWar
                 else if (currentStat > 1)
                     diffLine = String.Format(" (+{0})", (currentStat - 1));
 
-                return new List<string> { String.Format("{0}{1}", Text, diffLine) };
+                return new List<string> { String.Format("{0}{1}", Head, diffLine) };
             }
             else if (Price > 0)
             {
-                return new List<string> { String.Format("{0}, {1} таньга", Text, Price) };
+                return new List<string> { String.Format("{0}, {1} таньга", Head, Price) };
             }
-            else if (!String.IsNullOrEmpty(Text))
+            else if (!String.IsNullOrEmpty(Head))
             {
-                return new List<string> { Text };
+                return new List<string> { Head };
             }
             else
             {

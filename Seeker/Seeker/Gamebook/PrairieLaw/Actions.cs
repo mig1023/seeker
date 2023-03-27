@@ -40,10 +40,10 @@ namespace Seeker.Gamebook.PrairieLaw
             List<string> enemies = new List<string>();
 
             if (Price > 0)
-                return new List<string> { String.Format("{0}, {1:f2}$", Text, Services.ToDollars(Price)) };
+                return new List<string> { String.Format("{0}, {1:f2}$", Head, Services.ToDollars(Price)) };
 
-            else if (!String.IsNullOrEmpty(Text))
-                return new List<string> { Text };
+            else if (!String.IsNullOrEmpty(Head))
+                return new List<string> { Head };
 
             if (Enemies == null)
                 return enemies;

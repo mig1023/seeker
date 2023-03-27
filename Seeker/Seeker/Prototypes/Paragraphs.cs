@@ -70,9 +70,9 @@ namespace Seeker.Prototypes
         {
             actions.Type = xmlAction.Name;
             actions.Button = Xml.StringParse(xmlAction["Button"]);
-            actions.Aftertexts = Xml.TextsParse(xmlAction, action: true);
+            actions.Texts = Xml.TextsParse(xmlAction);
             actions.Trigger = Xml.StringParse(xmlAction["Trigger"]);
-            actions.Text = Xml.StringParse(xmlAction["Text"]);
+            actions.Head = Xml.StringParse(xmlAction["Head"]);
             actions.Price = Xml.IntParse(xmlAction["Price"]);
             actions.Multiple = Xml.BoolParse(xmlAction["Multiple"]);
 

@@ -118,9 +118,9 @@ namespace Seeker.Game
             }
         }
 
-        public static List<Text> TextsParse(XmlNode xmlNode, bool action = false)
+        public static List<Text> TextsParse(XmlNode xmlNode)
         {
-            if (action && (xmlNode["Text"] != null))
+            if (xmlNode["Text"] != null)
             {
                 return new List<Text> { TextLineParse(xmlNode["Text"]) };
             }

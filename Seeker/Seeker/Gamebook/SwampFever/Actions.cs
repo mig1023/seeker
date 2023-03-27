@@ -21,7 +21,7 @@ namespace Seeker.Gamebook.SwampFever
             if (Price > 0)
             {
                 string creds = Game.Services.CoinsNoun(Price, "кредит", "кредита", "кредитов");
-                return new List<string> { String.Format("{0}, {1} {2}", Text, Price, creds) };
+                return new List<string> { String.Format("{0}, {1} {2}", Head, Price, creds) };
             }
             else if (Level > 0)
             {
@@ -56,7 +56,7 @@ namespace Seeker.Gamebook.SwampFever
 
             bool disabledByUsed = false;
 
-            if ((Type == "Get") && (Text == "Серенитатин"))
+            if ((Type == "Get") && (Head == "Серенитатин"))
             {
                 return (GetProperty(protagonist, Benefit.Name) > -2) && (protagonist.Creds > 0);
             }

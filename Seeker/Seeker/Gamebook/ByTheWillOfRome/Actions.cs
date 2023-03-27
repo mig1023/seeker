@@ -45,7 +45,7 @@ namespace Seeker.Gamebook.ByTheWillOfRome
             if (Price > 0)
             {
                 string gold = Game.Services.CoinsNoun(Price, "сестерций", "сестерция", "сестерциев");
-                return new List<string> { String.Format("{0}, {1} {2}", Text, Price, gold) };
+                return new List<string> { String.Format("{0}, {1} {2}", Head, Price, gold) };
             }
             else
                 return new List<string> { };

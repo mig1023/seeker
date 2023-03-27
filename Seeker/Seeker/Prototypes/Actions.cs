@@ -8,10 +8,10 @@ namespace Seeker.Prototypes
     {
         public string Type { get; set; }
         public string Button { get; set; }
-        public string Aftertext { get; set; }
-        public List<Output.Text> Aftertexts { get; set; }
-        public string Trigger { get; set; }
         public string Text { get; set; }
+        public List<Output.Text> Texts { get; set; }
+        public string Trigger { get; set; }
+        public string Head { get; set; }
         public bool Used { get; set; }
         public Option Option { get; set; }
         public int Price { get; set; }

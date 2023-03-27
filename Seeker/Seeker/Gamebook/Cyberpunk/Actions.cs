@@ -54,7 +54,7 @@ namespace Seeker.Gamebook.Cyberpunk
             {
                 return new List<string> { };
             }
-            else if (String.IsNullOrEmpty(Text))
+            else if (String.IsNullOrEmpty(Head))
             {
                 string line = "Проверка: ";
 
@@ -65,7 +65,7 @@ namespace Seeker.Gamebook.Cyberpunk
             }
             else
             {
-                return new List<string> { Text };
+                return new List<string> { Head };
             }
         }
 

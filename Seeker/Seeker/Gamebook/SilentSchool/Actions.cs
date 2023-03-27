@@ -114,7 +114,7 @@ namespace Seeker.Gamebook.SilentSchool
         }
 
         public override List<string> Representer() =>
-            String.IsNullOrEmpty(Text) ? new List<string> { } : new List<string> { Text.ToUpper() };
+            String.IsNullOrEmpty(Head) ? new List<string> { } : new List<string> { Head.ToUpper() };
 
         public List<string> Get()
         {
@@ -124,7 +124,7 @@ namespace Seeker.Gamebook.SilentSchool
                 protagonist.HarmSelfAlready = HarmedMyself;
             }
             else
-                protagonist.Weapon = Text;
+                protagonist.Weapon = Head;
 
             return new List<string> { "RELOAD" };
         }

@@ -18,7 +18,7 @@ namespace Seeker.Gamebook.Catharsis
                 int diff = (GetProperty(protagonist, Bonus) - Constants.GetStartValues[Bonus]);
                 string diffLine = (diff > 0 ? String.Format(" (+{0})", diff) : String.Empty);
 
-                return new List<string> { String.Format("{0}{1}", Text, diffLine) };
+                return new List<string> { String.Format("{0}{1}", Head, diffLine) };
             }
 
             return new List<string>();

@@ -107,7 +107,7 @@ namespace Seeker.Gamebook.Moonrunner
             }
 
             bool disabledSkillSlots = ThisIsSkill && (protagonist.SkillSlots < 1);
-            bool disabledSkillAlready = ThisIsSkill && Game.Option.IsTriggered(Text);
+            bool disabledSkillAlready = ThisIsSkill && Game.Option.IsTriggered(Head);
 
             return !(disabledSkillSlots || disabledSkillAlready || Used);
         }
@@ -119,7 +119,7 @@ namespace Seeker.Gamebook.Moonrunner
             if (Price > 0)
             {
                 string gold = Game.Services.CoinsNoun(Price, "золотой", "золотых", "золотых");
-                return new List<string> { String.Format("{0}, {1} {2}", Text, Price, gold) };
+                return new List<string> { String.Format("{0}, {1} {2}", Head, Price, gold) };
             }
             else if (!String.IsNullOrEmpty(Stat))
             {
@@ -129,10 +129,10 @@ namespace Seeker.Gamebook.Moonrunner
                 if (currentStat > 0)
                     diffLine = String.Format(" (текущее: {0})", currentStat);
 
-                return new List<string> { String.Format("{0}{1}", Text, diffLine) };
+                return new List<string> { String.Format("{0}{1}", Head, diffLine) };
             }
             else if (ThisIsSkill)
-                return new List<string> { Text };
+                return new List<string> { Head };
 
             if (Enemies == null)
                 return enemies;
@@ -156,7 +156,7 @@ namespace Seeker.Gamebook.Moonrunner
             }
             else if (ThisIsSkill && (protagonist.SkillSlots >= 1))
             {
-                Game.Option.Trigger(Text);
+                Game.Option.Trigger(Head);
                 protagonist.SkillSlots -= 1;
             }
             else if ((Price > 0) && (protagonist.Gold >= Price))

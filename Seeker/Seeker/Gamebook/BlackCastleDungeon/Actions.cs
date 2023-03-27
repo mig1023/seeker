@@ -96,7 +96,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
         public override bool IsButtonEnabled(bool secondButton = false)
         {
             bool disabledSpellAdd = ThisIsSpell && (protagonist.SpellSlots <= 0) && !secondButton;
-            bool disabledSpellRemove = ThisIsSpell && !protagonist.Spells.Contains(Text) && secondButton;
+            bool disabledSpellRemove = ThisIsSpell && !protagonist.Spells.Contains(Head) && secondButton;
             bool disabledGetOptions = (Price > 0) && Used;
             bool disabledByPrice = (Price > 0) && (protagonist.Gold < Price);
 
@@ -125,12 +125,12 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             if (Price > 0)
             {
                 string gold = Game.Services.CoinsNoun(Price, "золотой", "золотых", "золотых");
-                return new List<string> { String.Format("{0}, {1} {2}", Text, Price, gold) };
+                return new List<string> { String.Format("{0}, {1} {2}", Head, Price, gold) };
             }
             else if (ThisIsSpell)
             {
-                int count = (ThisIsSpell ? protagonist.Spells.Where(x => x == Text).Count() : 0);
-                return new List<string> { String.Format("{0}{1}", Text, (count > 0 ? String.Format(" ({0} шт)", count) : String.Empty)) };
+                int count = (ThisIsSpell ? protagonist.Spells.Where(x => x == Head).Count() : 0);
+                return new List<string> { String.Format("{0}{1}", Head, (count > 0 ? String.Format(" ({0} шт)", count) : String.Empty)) };
             }
 
             if (Enemies == null)
@@ -168,7 +168,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
         {
             if (ThisIsSpell && (protagonist.SpellSlots >= 1))
             {
-                protagonist.Spells.Add(Text);
+                protagonist.Spells.Add(Head);
                 protagonist.SpellSlots -= 1;
             }
             else if ((Price > 0) && (protagonist.Gold >= Price))
@@ -187,7 +187,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
 
         public List<string> Decrease()
         {
-            protagonist.Spells.Remove(Text);
+            protagonist.Spells.Remove(Head);
             protagonist.SpellSlots += 1;
 
             return new List<string> { "RELOAD" };

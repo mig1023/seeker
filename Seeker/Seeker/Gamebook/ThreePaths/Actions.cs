@@ -22,14 +22,14 @@ namespace Seeker.Gamebook.ThreePaths
         public override bool IsButtonEnabled(bool secondButton = false)
         {
             bool bySpellAdd = ThisIsSpell && (protagonist.SpellSlots <= 0) && !secondButton;
-            bool bySpellRemove = ThisIsSpell && !protagonist.Spells.Contains(Text) && secondButton;
+            bool bySpellRemove = ThisIsSpell && !protagonist.Spells.Contains(Head) && secondButton;
 
             return !(bySpellAdd || bySpellRemove);
         }
 
         public List<string> Get()
         {
-            protagonist.Spells.Add(Text);
+            protagonist.Spells.Add(Head);
             protagonist.SpellSlots -= 1;
 
             return new List<string> { "RELOAD" };
@@ -37,7 +37,7 @@ namespace Seeker.Gamebook.ThreePaths
 
         public List<string> Decrease()
         {
-            protagonist.Spells.Remove(Text);
+            protagonist.Spells.Remove(Head);
             protagonist.SpellSlots += 1;
 
             return new List<string> { "RELOAD" };
@@ -80,9 +80,9 @@ namespace Seeker.Gamebook.ThreePaths
 
         public override List<string> Representer()
         {
-            int count = protagonist.Spells.Where(x => x == Text).Count();
+            int count = protagonist.Spells.Where(x => x == Head).Count();
 
-            return new List<string> { String.Format("{0}{1}", Text, (count > 0 ? String.Format(" ({0} шт)", count) : String.Empty)) };
+            return new List<string> { String.Format("{0}{1}", Head, (count > 0 ? String.Format(" ({0} шт)", count) : String.Empty)) };
         }
     }
 }

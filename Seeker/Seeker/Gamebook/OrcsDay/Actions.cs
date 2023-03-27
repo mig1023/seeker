@@ -58,11 +58,11 @@ namespace Seeker.Gamebook.OrcsDay
             else if (!String.IsNullOrEmpty(Stat))
             {
                 return new List<string> { String.Format("{0}\n(текущее значение: {1})",
-                    Text, Game.Services.NegativeMeaning(GetProperty(protagonist, Stat))) };
+                    Head, Game.Services.NegativeMeaning(GetProperty(protagonist, Stat))) };
             }
             else if (Price > 0)
             {
-                return new List<string> { Text };
+                return new List<string> { Head };
             }
             else if (Enemies == null)
             {
