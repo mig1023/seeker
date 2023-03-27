@@ -855,10 +855,10 @@
 			<Actions>
 				<Get>
 					<Button>Заплатить</Button>
-					<Text>ТАРЕЛКА ЩЕЙ</Text>
+					<Head>ТАРЕЛКА ЩЕЙ</Head>
 					<Price>2</Price>
 					<Benefit Name="Endurance" Value="2"/>
-					<After>Восстановите 4 ВЫНОСЛИВОСТИ и уходите.</After>
+					<Text>Восстановите 4 ВЫНОСЛИВОСТИ и уходите.</Text>
 				</Get>
 			</Actions>
 			<Options>
