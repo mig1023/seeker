@@ -8615,7 +8615,7 @@
 				</Option>
 				<Fight>
 					<Enemy Name="СВИРЕПЫЙ ЧЕЛОВЕКООБРАЗНЫЙ ЗВЕРЬ" Mastery="11" Endurance="10"/>
-					<After>Если победили, то идите дальше по тропинке.</After>
+					<Text>Если победили, то идите дальше по тропинке.</Text>
 				</Fight>
 			</Actions>
 			<Options>
