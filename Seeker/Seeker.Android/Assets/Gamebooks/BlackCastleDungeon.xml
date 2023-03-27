@@ -10225,7 +10225,7 @@
 				</Option>
 				<Fight>
 					<Enemy Name="ГИГАНТСКИЙ ПАУК" Mastery="8" Endurance="9"/>
-					<After>Если вы победили:</After>
+					<Text>Если вы победили:</Text>
 				</Fight>
 			</Actions>
 			<Options>
