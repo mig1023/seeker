@@ -4367,7 +4367,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="ОРК" Mastery="7" Endurance="7"/>
-					<After>Если вы победили стража, можете войти в ворота.</After>
+					<Text>Если вы победили стража, можете войти в ворота.</Text>
 				</Fight>
 			</Actions>
 			<Options>
