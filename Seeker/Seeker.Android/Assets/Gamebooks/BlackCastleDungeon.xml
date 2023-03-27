@@ -10164,7 +10164,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="ГОБЛИН" Mastery="8" Endurance="9"/>
-					<After>Если вы убили Гоблина:</After>
+					<Text>Если вы убили Гоблина:</Text>
 				</Fight>
 			</Actions>
 			<Options>
