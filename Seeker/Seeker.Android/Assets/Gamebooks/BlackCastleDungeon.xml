@@ -6887,7 +6887,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="ОБЕЗЬЯНА" Mastery="9" Endurance="14"/>
-					<After>Если вы победили ее:</After>
+					<Text>Если вы победили ее:</Text>
 				</Fight>
 			</Actions>
 			<Options>
