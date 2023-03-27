@@ -3906,54 +3906,54 @@
 			<Actions>
 				<Get>
 					<Button>Купить</Button>
-					<Text>АНАНАС</Text>
+					<Head>АНАНАС</Head>
 					<Price>2</Price>
 					<Multiple/>
 					<Benefit Name="Healing" Value="Съесть ананас,3"/>
-					<After>Добавит 3 ВЫНОСЛИВОСТЬ.</After>
+					<Text>Добавит 3 ВЫНОСЛИВОСТЬ.</Text>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
 					<Trigger>Banana</Trigger>
-					<Text>БАНАН</Text>
+					<Head>БАНАН</Head>
 					<Price>2</Price>
 					<Multiple/>
 					<Benefit Name="Healing" Value="Съесть банан,2"/>
-					<After>Добавит 2 ВЫНОСЛИВОСТИ.\n\nНо он притащил еще и кучу вещей, которые, как он считает, могут пригодиться в дороге.</After>
+					<Text>Добавит 2 ВЫНОСЛИВОСТИ.\n\nНо он притащил еще и кучу вещей, которые, как он считает, могут пригодиться в дороге.</Text>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
-					<Text>КРАСИВЫЙ КУСОЧЕК ДЕРЕВА</Text>
+					<Head>КРАСИВЫЙ КУСОЧЕК ДЕРЕВА</Head>
 					<Price>1</Price>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
 					<Trigger>CurlyKey</Trigger>
-					<Text>ФИГУРНЫЙ КЛЮЧ</Text>
+					<Head>ФИГУРНЫЙ КЛЮЧ</Head>
 					<Price>2</Price>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
-					<Text>ПОПОНА ДЛЯ ЛОШАДИ</Text>
+					<Head>ПОПОНА ДЛЯ ЛОШАДИ</Head>
 					<Price>5</Price>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
 					<Trigger>PieceOfMetal</Trigger>
-					<Text>БЛЕСТЯЩИЙ КУСОК МЕТАЛЛА</Text>
+					<Head>БЛЕСТЯЩИЙ КУСОК МЕТАЛЛА</Head>
 					<Price>3</Price>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
-					<Text>СДЕЛАННУЮ ИЗ ЗОЛОТА УСТРИЦУ</Text>
+					<Head>СДЕЛАННУЮ ИЗ ЗОЛОТА УСТРИЦУ</Head>
 					<Price>8</Price>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
 					<Trigger>SilverBracelet</Trigger>
-					<Text>СЕРЕБРЯНЫЙ БРАСЛЕТ</Text>
+					<Head>СЕРЕБРЯНЫЙ БРАСЛЕТ</Head>
 					<Price>4</Price>
-					<After>Сделайте необходимые покупки и покиньте деревню по одной из дорог: на юг или на запад.</After>
+					<Text>Сделайте необходимые покупки и покиньте деревню по одной из дорог: на юг или на запад.</Text>
 				</Get>
 			</Actions>
 			<Triggers>SilverBracelet</Triggers>
