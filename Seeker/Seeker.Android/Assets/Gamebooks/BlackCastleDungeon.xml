@@ -2912,7 +2912,7 @@
 						<Enemy Name="ВТОРОЙ ОРК" Mastery="7" Endurance="7"/>
 					</Enemies>
 					<RoundsToWin>8</RoundsToWin>
-					<After>Убиты ли оба врага за 8 раундов?</After>
+					<Text>Убиты ли оба врага за 8 раундов?</Text>
 				</Fight>
 			</Actions>
 			<Options>
