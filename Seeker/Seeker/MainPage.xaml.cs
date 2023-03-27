@@ -214,7 +214,7 @@ namespace Seeker
                         }
 
                         Action.Children.Add(actionPlace);
-                        AddAftertext(ref Action, action.Text, action.Texts);
+                        AddAftertext(ref Action, String.Empty, action.Texts);
                     }
                 }
             }

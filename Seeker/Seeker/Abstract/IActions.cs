@@ -6,7 +6,6 @@ namespace Seeker.Abstract
     {
         string Type { get; set; }
         string Button { get; set; }
-        string Text { get; set; }
         List<Output.Text> Texts { get; set; }
         string Trigger { get; set; }
         string Head { get; set; }

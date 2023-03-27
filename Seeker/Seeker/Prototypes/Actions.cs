@@ -8,7 +8,6 @@ namespace Seeker.Prototypes
     {
         public string Type { get; set; }
         public string Button { get; set; }
-        public string Text { get; set; }
         public List<Output.Text> Texts { get; set; }
         public string Trigger { get; set; }
         public string Head { get; set; }
