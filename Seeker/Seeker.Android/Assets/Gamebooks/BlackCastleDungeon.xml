@@ -12243,7 +12243,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="ГОБЛИН" Mastery="8" Endurance="11"/>
-					<After>Если вы убили его, то можете:</After>
+					<Text>Если вы убили его, то можете:</Text>
 				</Fight>
 			</Actions>
 			<Options>
