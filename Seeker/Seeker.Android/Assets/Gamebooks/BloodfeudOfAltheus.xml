@@ -427,7 +427,7 @@
 					<Enemy Name="Талос" Strength="14" Defence="18"/>
 					<FightToDeath/>
 					<Ichor/>
-					<After>Вместо сражения вы можете попробовать выдернуть пробку.</After>
+					<Text>Вместо сражения вы можете попробовать выдернуть пробку.</Text>
 				</Fight>
 			</Actions>	
 			<Options>
