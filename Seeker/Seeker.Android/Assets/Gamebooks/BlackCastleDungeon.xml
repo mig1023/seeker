@@ -13106,7 +13106,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="ГОБЛИН" Mastery="10" Endurance="7"/>
-					<After>Если вы его уничтожили, то можете:</After>
+					<Text>Если вы его уничтожили, то можете:</Text>
 				</Fight>
 			</Actions>
 			<Options>
