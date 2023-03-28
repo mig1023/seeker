@@ -252,8 +252,8 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="Талос" Strength="14" Defence="18"/>
-					<After>Вы не можете отступить.</After>
 					<FightToDeath/>
+					<Text>Вы не можете отступить.</Text>
 				</Fight>
 			</Actions>	
 			<IntuitiveSolution/>
