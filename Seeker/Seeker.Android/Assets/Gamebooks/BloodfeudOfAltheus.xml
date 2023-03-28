@@ -3925,7 +3925,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="Человек" Strength="7" Defence="13"/>
-					<After>Только на время этого боя отнимите 2 от своей Силы из-за морской болезни.</After>
+					<Text>Только на время этого боя отнимите 2 от своей Силы из-за морской болезни.</Text>
 				</Fight>
 			</Actions>	
 			<IntuitiveSolution/>
