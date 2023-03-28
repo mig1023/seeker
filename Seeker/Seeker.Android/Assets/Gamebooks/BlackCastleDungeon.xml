@@ -14358,7 +14358,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="ОРК" Mastery="8" Endurance="5"/>
-					<After>Если убили его, можете обшарить его карманы...</After>
+					<Text>Если убили его, можете обшарить его карманы...</Text>
 				</Fight>
 			</Actions>
 			<Options>
