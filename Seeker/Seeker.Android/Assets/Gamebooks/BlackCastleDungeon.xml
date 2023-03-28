@@ -14439,7 +14439,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="ГОБЛИН" Mastery="10" Endurance="7"/>
-					<After>Если вы одержали над ним победу, то остальные предоставляют вам полную свободу.\n\nВы теперь можете обследовать люки:</After>
+					<Text>Если вы одержали над ним победу, то остальные предоставляют вам полную свободу.\n\nВы теперь можете обследовать люки:</Text>
 				</Fight>
 			</Actions>
 			<Options>
@@ -14808,7 +14808,7 @@
 				<Fight>
 					<Enemy Name="ЗЛОЙ ДУХ" Mastery="10" Endurance="6"/>
 					<WoundsToWin>2</WoundsToWin>
-					<After>Заклятия вам не помогут.</After>
+					<Text>Заклятия вам не помогут.</Text>
 				</Fight>
 			</Actions>
 			<Options>
