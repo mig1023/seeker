@@ -394,7 +394,7 @@
 						<Enemy Name="ВТОРОЙ ХОББИТ" Mastery="5" Endurance="6"/>
 						<Enemy Name="ТРЕТИЙ ХОББИТ" Mastery="6" Endurance="7"/>
 					</Enemies>
-					<After>Хоббиты атакуют тебя одновременно.</After>
+					<Text>Хоббиты атакуют тебя одновременно.</Text>
 				</Fight>
 			</Actions>
 			<Options>
