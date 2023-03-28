@@ -11737,7 +11737,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="ПРИЗРАК" Mastery="9" Endurance="11"/>
-					<After>Если вы победили Призрака, то он исчезает, а вы можете:</After>
+					<Text>Если вы победили Призрака, то он исчезает, а вы можете:</Text>
 				</Fight>
 			</Actions>
 			<Options>
