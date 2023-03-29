@@ -1779,21 +1779,21 @@
 			<Actions>
 				<Get>
 					<Button>Купить</Button>
-					<Text>КИНЖАЛ</Text>
+					<Head>КИНЖАЛ</Head>
 					<Price>200</Price>
 					<Multiple/>
 					<Benefit Name="Daggers" Value="1"/>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
-					<Text>ПОРОХ И ПУЛИ на 5 выстрелов</Text>
+					<Head>ПОРОХ И ПУЛИ на 5 выстрелов</Head>
 					<Price>200</Price>
 					<Multiple/>
 					<Benefit Name="BulletsAndGubpowder" Value="5"/>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
-					<Text>ПИСТОЛЕТ</Text>
+					<Head>ПИСТОЛЕТ</Head>
 					<Price>300</Price>
 					<Multiple/>
 					<Benefit Name="Pistols" Value="1"/>
