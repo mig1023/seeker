@@ -3582,11 +3582,11 @@
 			<Actions>
 				<Get>
 					<Button>Купить кувшин</Button>
-					<Text>КИСЛОЕ ВИНО</Text>
+					<Head>КИСЛОЕ ВИНО</Head>
 					<Trigger>Кувшин вина</Trigger>
 					<Price>10</Price>
 					<Multiple/>
-					<After>За каждый купленный кувшин уровень проверки снижается на 1 пункт:</After>
+					<Text>За каждый купленный кувшин уровень проверки снижается на 1 пункт:</Text>
 				</Get>
 				<Test>
 					<Stat>Oratory</Stat>
