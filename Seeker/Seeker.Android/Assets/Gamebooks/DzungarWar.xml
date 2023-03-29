@@ -4621,34 +4621,34 @@
 			<Actions>
 				<Get>
 					<Button>Добавить</Button>
-					<Text>СИЛА</Text>
+					<Head>СИЛА</Head>
 					<Stat>Strength</Stat>
 					<StatToMax/>
 				</Get>
 				<Get>
 					<Button>Добавить</Button>
-					<Text>ЛОВКОСТЬ</Text>
+					<Head>ЛОВКОСТЬ</Head>
 					<Stat>Skill</Stat>
 					<StatToMax/>
 				</Get>
 				<Get>
 					<Button>Добавить мудрости</Button>
-					<Text>МУДРОСТЬ</Text>
+					<Head>МУДРОСТЬ</Head>
 					<Stat>Wisdom</Stat>
 					<StatToMax/>
 				</Get>
 				<Get>
 					<Button>Добавить хитрости</Button>
-					<Text>ХИТРОСТЬ</Text>
+					<Head>ХИТРОСТЬ</Head>
 					<Stat>Cunning</Stat>
 					<StatToMax/>
 				</Get>
 				<Get>
 					<Button>Добавить красноречия</Button>
-					<Text>КРАСНОРЕЧИЕ</Text>
+					<Head>КРАСНОРЕЧИЕ</Head>
 					<Stat>Oratory</Stat>
 					<StatToMax/>
-					<After>Облегчённо вздохнув, наш герой взмывает над озером.</After>
+					<Text>Облегчённо вздохнув, наш герой взмывает над озером.</Text>
 				</Get>
 			</Actions>
 			<Modifications>
