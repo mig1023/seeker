@@ -542,7 +542,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="ХОЗЯИН ДОМА" Skill="7" Strength="9"/>
-					<After>Если убили его, то вам нужно решить, что дальше делать.</After>
+					<Text>Если убили его, то вам нужно решить, что дальше делать.</Text>
 				</Fight>
 			</Actions>
 			<Options>
