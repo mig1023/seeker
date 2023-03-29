@@ -2824,7 +2824,6 @@
 				</Fight>
 			</Actions>
 			<Options>
-				
 				<Option Destination="78"/>
 			</Options>
 		</Paragraph>
@@ -3349,34 +3348,34 @@
 			<Actions>
 				<Get>
 					<Button>Купить</Button>
-					<Text>ПИСТОЛЕТ</Text>
+					<Head>ПИСТОЛЕТ</Head>
 					<Price>300</Price>
 					<Multiple/>
 					<Benefit Name="Pistols" Value="1"/>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
-					<Text>ШПАГА</Text>
+					<Head>ШПАГА</Head>
 					<Price>200</Price>
 					<Multiple/>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
-					<Text>КИНЖАЛ</Text>
+					<Head>КИНЖАЛ</Head>
 					<Price>200</Price>
 					<Multiple/>
 					<Benefit Name="Daggers" Value="1"/>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
-					<Text>ПОРОХ И ПУЛИ на 4 выстрела</Text>
+					<Head>ПОРОХ И ПУЛИ на 4 выстрела</Head>
 					<Price>100</Price>
 					<Multiple/>
 					<Benefit Name="BulletsAndGubpowder" Value="4"/>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
-					<Text>АРКЕБУЗА</Text>
+					<Head>АРКЕБУЗА</Head>
 					<Price>150</Price>
 					<Multiple/>
 				</Get>
