@@ -4996,13 +4996,13 @@
 			<Actions>
 				<Get>
 					<Button>Поужинать</Button>
-					<Text>Ужин</Text>
+					<Head>Ужин</Head>
 					<Price>150</Price>
 					<Benefits>
 						<Strength Value="2"/>
 						<HadFoodToday Value="1"/>
 					</Benefits>
-					<After>И уже готовитесь лечь спать, когда вас привлекает один подозрительный разговор.</After>
+					<Text>И уже готовитесь лечь спать, когда вас привлекает один подозрительный разговор.</Text>
 				</Get>
 			</Actions>
 			<Options>
