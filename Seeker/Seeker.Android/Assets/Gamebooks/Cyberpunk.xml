@@ -861,14 +861,14 @@
 			<Actions>
 				<Get-Decrease>
 					<Button>Добавить, Отбавить</Button>
-					<Text>ЧЁРНЫЙ РЫНОК</Text>
+					<Head>ЧЁРНЫЙ РЫНОК</Head>
 					<Stat>BlackMarket</Stat>
 				</Get-Decrease>
 				<Get-Decrease>
 					<Button>Добавить, Отбавить</Button>
-					<Text>КЛАН</Text>
+					<Head>КЛАН</Head>
 					<Stat>Clan</Stat>
-					<After>Ты сам определяешь их значение. Сумма этих показателей должна составить 100%</After>
+					<Text>Ты сам определяешь их значение. Сумма этих показателей должна составить 100%</Text>
 				</Get-Decrease>
 			</Actions>
 			<Options>
