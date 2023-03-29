@@ -663,7 +663,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="ЛОДОЧНИК" Skill="5" Strength="8"/>
-					<After>Лодка теперь ваша.</After>
+					<Text>Лодка теперь ваша.</Text>
 				</Fight>
 			</Actions>
 			<Options>
