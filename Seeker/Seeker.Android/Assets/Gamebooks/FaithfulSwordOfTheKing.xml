@@ -2469,13 +2469,13 @@
 			<Actions>
 				<Get>
 					<Button>Переночевать и поужинать</Button>
-					<Text>Комната на постоялом дворе</Text>
+					<Head>Комната на постоялом дворе</Head>
 					<Price>150</Price>
 					<Benefits>
 						<Strength Value="4"/>
 						<HadFoodToday Value="1"/>
 					</Benefits>
-					<After>Можете восстановить 4 СИЛЫ и с утра отправиться в путь.</After>
+					<Text>Можете восстановить 4 СИЛЫ и с утра отправиться в путь.</Text>
 				</Get>
 			</Actions>
 			<Options>
