@@ -325,13 +325,13 @@ namespace Seeker
 
         private bool OptionVisibility(bool aftertext)
         {
-            if (!aftertext)
+            if (aftertext)
                 return true;
 
             int bySetting = Game.Settings.GetValue("DisabledOption");
 
             if (bySetting > 0)
-                return (bySetting == 1);
+                return bySetting == 1;
 
             return Game.Data.Constants.ShowDisabledOption();
         }
