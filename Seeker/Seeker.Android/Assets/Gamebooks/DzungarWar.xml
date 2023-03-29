@@ -1184,34 +1184,34 @@
 			<Actions>
 				<Get>
 					<Button>Добавить</Button>
-					<Text>СИЛА</Text>
+					<Head>СИЛА</Head>
 					<Stat>Strength</Stat>
 					<StatStep>3</StatStep>
 				</Get>
 				<Get>
 					<Button>Добавить</Button>
-					<Text>ЛОВКОСТЬ</Text>
+					<Head>ЛОВКОСТЬ</Head>
 					<Stat>Skill</Stat>
 					<StatStep>3</StatStep>
 				</Get>
 				<Get>
 					<Button>Добавить</Button>
-					<Text>МУДРОСТЬ</Text>
+					<Head>МУДРОСТЬ</Head>
 					<Stat>Wisdom</Stat>
 					<StatStep>3</StatStep>
 				</Get>
 				<Get>
 					<Button>Добавить</Button>
-					<Text>ХИТРОСТЬ</Text>
+					<Head>ХИТРОСТЬ</Head>
 					<Stat>Cunning</Stat>
 					<StatStep>3</StatStep>
 				</Get>
 				<Get>
 					<Button>Добавить</Button>
-					<Text>КРАСНОРЕЧИЕ</Text>
+					<Head>КРАСНОРЕЧИЕ</Head>
 					<Stat>Oratory</Stat>
 					<StatStep>3</StatStep>
-					<After>Новое значение сохраняется до конца игры.\n\nПоднявшись наверх, Алдар прощается с отцом Ионой.</After>
+					<Text>Новое значение сохраняется до конца игры.\n\nПоднявшись наверх, Алдар прощается с отцом Ионой.</Text>
 				</Get>
 			</Actions>
 			<Modifications>
