@@ -5993,17 +5993,17 @@
 				<Brother>
 					<Button>Выбрать</Button>
 					<Trigger>Серик</Trigger>
-					<Text>Серик</Text>
+					<Head>Серик</Head>
 				</Brother>
 				<Brother>
 					<Button>Выбрать</Button>
 					<Trigger>Берик</Trigger>
-					<Text>Берик</Text>
+					<Head>Берик</Head>
 				</Brother>
 				<Brother>
 					<Button>Выбрать</Button>
 					<Trigger>Ерик</Trigger>
-					<Text>Ерик</Text>
+					<Head>Ерик</Head>
 				</Brother>
 			</Actions>
 			<Options>
