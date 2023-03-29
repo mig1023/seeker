@@ -5902,20 +5902,20 @@
 			<Actions>
 				<Get>
 					<Button>Переночевать</Button>
-					<Text>Гостиница</Text>
+					<Head>Гостиница</Head>
 					<Price>100</Price>
 					<Benefit Name="Strength" Value="2"/>
-					<After>Если же добавите еще экю, тогда можете поужинать (ужин восстановит 3 СИЛЫ, но если от него отказаться, ничего в этот день не ев, то столько же придется потерять).</After>
+					<Text>Если же добавите еще экю, тогда можете поужинать (ужин восстановит 3 СИЛЫ, но если от него отказаться, ничего в этот день не ев, то столько же придется потерять).</Text>
 				</Get>
 				<Get>
 					<Button>Заказать ужин</Button>
-					<Text>Ужин</Text>
+					<Head>Ужин</Head>
 					<Price>100</Price>
 					<Benefits>
 						<Strength Value="3"/>
 						<HadFoodToday Value="1"/>
 					</Benefits>
-					<After>Утром вы едете дальше.</After>
+					<Text>Утром вы едете дальше.</Text>
 				</Get>
 			</Actions>
 			<Modifications>
