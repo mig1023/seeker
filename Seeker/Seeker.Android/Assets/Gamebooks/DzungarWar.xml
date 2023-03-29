@@ -1584,22 +1584,22 @@
 			<Actions>
 				<Get>
 					<Button>Отдать</Button>
-					<Text>ПОДНОШЕНИЕ 150 таньга</Text>
+					<Head>ПОДНОШЕНИЕ 150 таньга</Head>
 					<Price>150</Price>
 					<Benefit Name="Favour" Value="1"/>
 				</Get>
 				<Get>
 					<Button>Отдать</Button>
-					<Text>ПОДНОШЕНИЕ 300 таньга</Text>
+					<Head>ПОДНОШЕНИЕ 300 таньга</Head>
 					<Price>300</Price>
 					<Benefit Name="Favour" Value="2"/>
 				</Get>
 				<Get>
 					<Button>Отдать</Button>
-					<Text>ПОДНОШЕНИЕ 500 таньга</Text>
+					<Head>ПОДНОШЕНИЕ 500 таньга</Head>
 					<Price>500</Price>
 					<Benefit Name="Favour" Value="3"/>
-					<After>– Алдар Косе – честный и порядочный человек, – кивает Ли Ю Чжао и прячет деньги в складках одежды, предварительно ощупав кошель.</After>
+					<Text>– Алдар Косе – честный и порядочный человек, – кивает Ли Ю Чжао и прячет деньги в складках одежды, предварительно ощупав кошель.</Text>
 				</Get>
 			</Actions>
 			<Options>
