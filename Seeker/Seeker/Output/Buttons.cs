@@ -47,7 +47,7 @@ namespace Seeker.Output
             bool optionColor = !String.IsNullOrEmpty(option.Availability) &&
                 !option.Availability.Contains(">") && !option.Availability.Contains("<");
 
-            if (Game.Data.Constants.ShowDisabledOption() || !String.IsNullOrEmpty(option.Aftertext))
+            if (Game.Data.Constants.ShowDisabledOption() || (option.Aftertexts.Count > 0))
                 optionColor = !String.IsNullOrEmpty(option.Availability) && !Game.Data.Availability(option.Availability);
 
             string color = Game.Data.Constants.GetColor(optionColor ?

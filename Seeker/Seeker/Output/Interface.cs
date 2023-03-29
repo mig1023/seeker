@@ -330,7 +330,6 @@ namespace Seeker.Output
                 for (int i = 0; i < healings.Count; i++)
                     info.Children.Add(Line(fontColor, "{0}. {1}", i + 1, healings[i]));
             }
-                
 
             return info;
         }

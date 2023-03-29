@@ -193,7 +193,7 @@ namespace Seeker
                         Button button = AddOptionButton(action.Option, ref gameOver);
                         Action.Children.Add(button);
                         Game.Option.ListAdd(action.Option, button);
-                        AddAftertext(ref Action, action.Option.Aftertext, action.Option.Aftertexts);
+                        AddAftertext(ref Action, action.Option.Aftertexts);
                     }
                     else
                     {
@@ -214,7 +214,7 @@ namespace Seeker
                         }
 
                         Action.Children.Add(actionPlace);
-                        AddAftertext(ref Action, String.Empty, action.Texts);
+                        AddAftertext(ref Action, action.Texts);
                     }
                 }
             }
@@ -224,7 +224,7 @@ namespace Seeker
 
             foreach (Game.Option option in paragraph.Options)
             {
-                bool mustBeVisible = OptionVisibility(option.Aftertext);
+                bool mustBeVisible = OptionVisibility(option.Aftertexts.Count > 0);
                 bool onlyIf = Game.Data.Availability(option.Availability);
                 bool singleIf = !String.IsNullOrEmpty(option.Singleton) && Game.Data.Availability(option.Singleton);
 
@@ -245,7 +245,7 @@ namespace Seeker
                 if (!String.IsNullOrEmpty(option.Input))
                     Options.Children.Add(AddInputField(option, button));
 
-                AddAftertext(ref Options, option.Aftertext, option.Aftertexts);
+                AddAftertext(ref Options, option.Aftertexts);
 
                 if (singleIf)
                     singleton = button;
@@ -323,9 +323,9 @@ namespace Seeker
             return buttonPlace;
         }
 
-        private bool OptionVisibility(string Aftertext)
+        private bool OptionVisibility(bool aftertext)
         {
-            if (!String.IsNullOrEmpty(Aftertext))
+            if (!aftertext)
                 return true;
 
             int bySetting = Game.Settings.GetValue("DisabledOption");
@@ -336,12 +336,9 @@ namespace Seeker
             return Game.Data.Constants.ShowDisabledOption();
         }
 
-        private void AddAftertext(ref StackLayout layout, string text, List<Output.Text> texts)
+        private void AddAftertext(ref StackLayout layout, List<Output.Text> texts)
         {
-            if (!String.IsNullOrEmpty(text))
-                layout.Children.Add(Output.Interface.Text(text));
-
-            if (texts == null)
+            if ((texts == null) || (texts.Count <= 0))
                 return;
 
             foreach (Output.Text aftertext in texts)

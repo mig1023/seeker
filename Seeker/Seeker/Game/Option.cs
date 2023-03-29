@@ -12,7 +12,6 @@ namespace Seeker.Game
         public string Availability { get; set; }
         public bool Dynamic { get; set; }
         public string Singleton { get; set; }
-        public string Aftertext { get; set; }
         public List<Output.Text> Aftertexts { get; set; }
         public string Input { get; set; }
         public string Style { get; set; }
