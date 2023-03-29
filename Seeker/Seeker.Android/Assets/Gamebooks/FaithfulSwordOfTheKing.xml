@@ -5864,32 +5864,32 @@
 			<Actions>
 				<Get>
 					<Button>Купить</Button>
-					<Text>ПИСТОЛЕТ</Text>
+					<Head>ПИСТОЛЕТ</Head>
 					<Price>250</Price>
 					<Multiple/>
 					<Benefit Name="Pistols" Value="1"/>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
-					<Text>ПОРОХ И ПУЛИ на 5 выстрелов</Text>
+					<Head>ПОРОХ И ПУЛИ на 5 выстрелов</Head>
 					<Price>150</Price>
 					<Multiple/>
 					<Benefit Name="BulletsAndGubpowder" Value="5"/>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
-					<Text>КИНЖАЛ</Text>
+					<Head>КИНЖАЛ</Head>
 					<Price>300</Price>
 					<Multiple/>
 					<Benefit Name="Daggers" Value="1"/>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
-					<Text>ЕДА В ДОРОГУ</Text>
+					<Head>ЕДА В ДОРОГУ</Head>
 					<Price>200</Price>
 					<Multiple/>
 					<Benefit Name="Healing" Value="Поесть,2"/>
-					<After>Теперь надо либо выбираться из города, либо ждать вечера и пытаться встретиться с курьером.</After>
+					<Text>Теперь надо либо выбираться из города, либо ждать вечера и пытаться встретиться с курьером.</Text>
 				</Get>
 			</Actions>
 			<Options>
