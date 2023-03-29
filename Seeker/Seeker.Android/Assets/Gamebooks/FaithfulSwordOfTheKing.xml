@@ -3975,13 +3975,13 @@
 			<Actions>
 				<Get>
 					<Button>Позавтракать</Button>
-					<Text>Еда</Text>
+					<Head>Еда</Head>
 					<Price>50</Price>
 					<Benefits>
 						<Strength Value="1"/>
 						<HadFoodToday Value="1"/>
 					</Benefits>
-					<After>Завтрак прибавит вам 1 СИЛУ, после чего вы направляетесь в конюшню седлать Арбалета.</After>
+					<Text>Завтрак прибавит вам 1 СИЛУ, после чего вы направляетесь в конюшню седлать Арбалета.</Text>
 				</Get>
 			</Actions>
 			<Options>
