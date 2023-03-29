@@ -642,13 +642,13 @@
 			<Actions>
 				<Get>
 					<Button>Оплатить обед</Button>
-					<Text>Пообедать</Text>
+					<Head>Пообедать</Head>
 					<Price>100</Price>
 					<Benefits>
 						<Strength Value="2"/>
 						<HadFoodToday Value="1"/>
 					</Benefits>
-					<After>И продолжать путь — до Перигё, где вы наметили заночевать, еще добрых тридцать лье.</After>
+					<Text>И продолжать путь — до Перигё, где вы наметили заночевать, еще добрых тридцать лье.</Text>
 				</Get>
 			</Actions>
 			<Modifications>
