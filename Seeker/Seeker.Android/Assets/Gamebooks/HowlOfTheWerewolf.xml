@@ -3474,7 +3474,7 @@
 			</Texts>
 			<Actions>
 				<Dice>
-					<After>Какое число на нем выпало:</After>
+					<Text>Какое число на нем выпало:</Text>
 				</Dice>
 			</Actions>
 			<Modifications>
