@@ -3174,10 +3174,10 @@
 						<Enemy Name="Огнеглотатель" Mastery="7" Endurance="6"/>
 					</Enemies>
 					<Trigger>Rellik</Trigger>
-					<After>
+					<Texts>
 						<Text Style="Small">Запишите слово “Rellik” на Листке Приключения.</Text>
 						<Text>Если вам удалось убить всех троих:</Text>
-					</After>
+					</Texts>
 				</Fight>
 			</Actions>
 			<Options>
