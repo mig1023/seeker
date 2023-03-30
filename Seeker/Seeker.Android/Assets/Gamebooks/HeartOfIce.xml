@@ -3837,29 +3837,29 @@
 			<Actions>
 				<Get>
 					<Button>Купить</Button>
-					<Text>Порция еды</Text>
+					<Head>Порция еды</Head>
 					<Price>2</Price>
 					<Multiple/>
 					<Benefit Name="Food" Value="1"/>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
-					<Text>Нейлоновая веревка</Text>
+					<Head>Нейлоновая веревка</Head>
 					<Price>2</Price>
 					<Trigger>Веревка</Trigger>
 				</Get>		
 				<Get>
 					<Button>Купить</Button>
-					<Text>Лампа</Text>
+					<Head>Лампа</Head>
 					<Trigger>Лампа</Trigger>
 					<Price>3</Price>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
-					<Text>Аптечка</Text>
+					<Head>Аптечка</Head>
 					<Price>12</Price>
 					<Trigger>Аптечка</Trigger>
-					<After>Покупайте, что хотите, и внесите соответствующие изменения в Лист персонажа.</After>
+					<Text>Покупайте, что хотите, и внесите соответствующие изменения в Лист персонажа.</Text>
 				</Get>
 			</Actions>	
 			<Options>
