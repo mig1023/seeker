@@ -4912,7 +4912,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="Волк-демон" Mastery="10" Endurance="14"/>
-					<After>Если вам удастся победить демона, посмотрите, записано ли у вас слово Deliugeb.</After>
+					<Text>Если вам удастся победить демона, посмотрите, записано ли у вас слово Deliugeb.</Text>
 				</Fight>
 			</Actions>
 			<Options>
