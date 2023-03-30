@@ -255,7 +255,7 @@
 			</Texts>
 			<Actions>
 				<Dice>
-					<After>Выпавшее число:</After>
+					<Text>Выпавшее число:</Text>
 				</Dice>
 			</Actions>
 			<Modifications>
