@@ -1705,28 +1705,28 @@
 			<Actions>
 				<Get>
 					<Button>Выбрать</Button>
-					<Text>ИД-карта</Text>
+					<Head>ИД-карта</Head>
 					<Trigger>ИД-карта</Trigger>
 					<Split/>
 				</Get>
 				<Get>
 					<Button>Выбрать</Button>
-					<Text>Бризальный пистолет</Text>
+					<Head>Бризальный пистолет</Head>
 					<Benefit Name="Shots" Value="6"/>
 					<Split/>
 				</Get>
 				<Get>
 					<Button>Выбрать</Button>
-					<Text>Фонарик</Text>
+					<Head>Фонарик</Head>
 					<Trigger>Фонарик</Trigger>
 					<Split/>
 				</Get>
 				<Get>
 					<Button>Выбрать</Button>
-					<Text>Поляризационные очки</Text>
+					<Head>Поляризационные очки</Head>
 					<Trigger>Поляризационные очки</Trigger>
 					<Split/>
-					<After>С комфортом переночевав в пещере, вы отправляетесь в путь с рассветом.</After>
+					<Text>С комфортом переночевав в пещере, вы отправляетесь в путь с рассветом.</Text>
 				</Get>
 			</Actions>
 			<Options>
