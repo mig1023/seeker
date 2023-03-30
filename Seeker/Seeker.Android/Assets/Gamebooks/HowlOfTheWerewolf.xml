@@ -791,7 +791,7 @@
 					<Enemy Name="Черный Волк" Mastery="8" Endurance="9"/>
 					<RoundsToFight>2</RoundsToFight>
 					<WoundsLimit>7</WoundsLimit>
-					<After>После двух Раундов Атаки или если вы снизили Выносливость вожака волков до 7 или меньше.</After>
+					<Text>После двух Раундов Атаки или если вы снизили Выносливость вожака волков до 7 или меньше.</Text>
 				</Fight>
 			</Actions>
 			<Options>
