@@ -5164,7 +5164,7 @@
 					<Enemy Name="Человек-волк" Mastery="8" Endurance="8"/>
 					<WoundsLimit>4</WoundsLimit>
 					<WoundsForTransformation>3</WoundsForTransformation>
-					<After>Если Человек-волк укусит вас больше двух раз, Трансформация продолжится.</After>
+					<Text>Если Человек-волк укусит вас больше двух раз, Трансформация продолжится.</Text>
 				</Fight>
 			</Actions>
 			<Options>
