@@ -1434,7 +1434,7 @@
 				</Reaction>
 				<Reaction>
 					<Button>Реагируйте в третий раз</Button>
-					<After>Если всё в порядке:</After>
+					<Text>Если всё в порядке:</Text>
 				</Reaction>
 			</Actions>
 			<Options>
