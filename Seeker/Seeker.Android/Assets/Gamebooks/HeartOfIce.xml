@@ -3388,28 +3388,28 @@
 			<Actions>
 				<Get>
 					<Button>Продать</Button>
-					<Text>Бризальный пистолет</Text>
+					<Head>Бризальный пистолет</Head>
 					<SellType>Пистолет</SellType>
 					<Price>5</Price>
 					<SellIfAvailable/>
 				</Get>
 				<Get>
 					<Button>Продать</Button>
-					<Text>Фонарик</Text>
+					<Head>Фонарик</Head>
 					<Untrigger>Фонарик</Untrigger>
 					<Price>5</Price>
 					<SellIfAvailable/>
 				</Get>
 				<Get>
 					<Button>Продать</Button>
-					<Text>Аптечка</Text>
+					<Head>Аптечка</Head>
 					<Untrigger>Аптечка</Untrigger>
 					<Price>5</Price>
 					<SellIfAvailable/>
 				</Get>
 				<Get>
 					<Button>Продать порцию</Button>
-					<Text>Еда</Text>
+					<Head>Еда</Head>
 					<SellType>Еда</SellType>
 					<Multiple/>
 					<Price>1</Price>
@@ -3417,11 +3417,11 @@
 				</Get>
 				<Get>
 					<Button>Продать</Button>
-					<Text>ИД-карта</Text>
+					<Head>ИД-карта</Head>
 					<Untrigger>ИД-карта</Untrigger>
 					<Price>10</Price>
 					<SellIfAvailable/>
-					<After>Продайте то, что хотите и внесите соответствующие изменения в Лист персонажа.</After>
+					<Text>Продайте то, что хотите и внесите соответствующие изменения в Лист персонажа.</Text>
 				</Get>
 			</Actions>
 			<Options>
