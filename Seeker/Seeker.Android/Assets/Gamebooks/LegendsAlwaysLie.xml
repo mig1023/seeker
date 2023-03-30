@@ -1755,7 +1755,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="ВЕЛИКАН" Strength="12" Hitpoints="12"/>
-					<After>Победа откроет вам путь.</After>
+					<Text>Победа откроет вам путь.</Text>
 				</Fight>
 			</Actions>
 			<Options>
