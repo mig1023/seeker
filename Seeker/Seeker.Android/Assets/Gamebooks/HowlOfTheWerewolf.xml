@@ -3289,7 +3289,7 @@
 						<Enemy Name="Третья Женщина-Волчица" Mastery="7" Endurance="8"/>
 					</Enemies>	
 					<WoundsForTransformation>4</WoundsForTransformation>
-					<After>Если вас ранили более трех раз, Трансформация продолжится. Если вам удалось выйти победителем из схватки.</After>
+					<Text>Если вас ранили более трех раз, Трансформация продолжится. Если вам удалось выйти победителем из схватки.</Text>
 				</Fight>
 			</Actions>
 			<Options>
