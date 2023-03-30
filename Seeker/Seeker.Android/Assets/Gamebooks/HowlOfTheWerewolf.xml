@@ -4244,7 +4244,7 @@
 				</Fight>
 				<Fight>
 					<Enemy Name="Второй книжный червь" Mastery="8" Endurance="6"/>
-					<After>Расправившись с ними, вы уходите из этой комнаты.</After>
+					<Text>Расправившись с ними, вы уходите из этой комнаты.</Text>
 				</Fight>
 			</Actions>
 			<Triggers>Имя Круциуса</Triggers>
