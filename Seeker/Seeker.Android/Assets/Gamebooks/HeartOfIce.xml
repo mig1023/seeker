@@ -2682,78 +2682,78 @@
 			<Actions>
 				<Get>
 					<Button>Купить</Button>
-					<Text>Бризальный пистолет с 6 выстрелами</Text>
+					<Head>Бризальный пистолет с 6 выстрелами</Head>
 					<Price>16</Price>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
-					<Text>Пси-фокусировщик</Text>
+					<Head>Пси-фокусировщик</Head>
 					<Price>18</Price>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
-					<Text>Поляризационные очки</Text>
+					<Head>Поляризационные очки</Head>
 					<Trigger>Поляризационные очки</Trigger>
 					<Price>8</Price>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
-					<Text>Фонарик</Text>
+					<Head>Фонарик</Head>
 					<Trigger>Фонарик</Trigger>
 					<Price>10</Price>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
-					<Text>Противогаз</Text>
+					<Head>Противогаз</Head>
 					<Price>10</Price>
 					<Trigger>Противогаз</Trigger>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
-					<Text>Шумовая граната</Text>
+					<Head>Шумовая граната</Head>
 					<Price>8</Price>
 					<Trigger>Шумовая граната</Trigger>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
-					<Text>Нож</Text>
+					<Head>Нож</Head>
 					<Price>4</Price>
-					<After>«Я также покупаю эти вещи, — говорит вам торговец, — за половину озвученной цены».\n\nЭто означает, что вы можете, например, продать ему бризальный пистолет, если он у вас есть, за 8 скадов.\n\n«С чего ты взял, что я захочу что-то продать?» — спрашиваете вы.\n\nЕго губы изгибаются в загадочной полуулыбке. «Я полагаю, ты пришел в Венезию, чтобы отправиться на пароме. Тебе понадобятся деньги на билет».</After>
+					<Text>«Я также покупаю эти вещи, — говорит вам торговец, — за половину озвученной цены».\n\nЭто означает, что вы можете, например, продать ему бризальный пистолет, если он у вас есть, за 8 скадов.\n\n«С чего ты взял, что я захочу что-то продать?» — спрашиваете вы.\n\nЕго губы изгибаются в загадочной полуулыбке. «Я полагаю, ты пришел в Венезию, чтобы отправиться на пароме. Тебе понадобятся деньги на билет».</Text>
 				</Get>
 				<Get>
 					<Button>Продать</Button>
-					<Text>Бризальный пистолет</Text>
+					<Head>Бризальный пистолет</Head>
 					<SellType>Пистолет</SellType>
 					<Price>8</Price>
 					<SellIfAvailable/>
 				</Get>
 				<Get>
 					<Button>Продать</Button>
-					<Text>Поляризационные очки</Text>
+					<Head>Поляризационные очки</Head>
 					<Untrigger>Поляризационные очки</Untrigger>
 					<Price>4</Price>
 					<SellIfAvailable/>
 				</Get>			
 				<Get>
 					<Button>Продать</Button>
-					<Text>Фонарик</Text>
+					<Head>Фонарик</Head>
 					<Untrigger>Фонарик</Untrigger>
 					<Price>5</Price>
 					<SellIfAvailable/>
 				</Get>
 				<Get>
 					<Button>Продать</Button>
-					<Text>Противогаз</Text>
+					<Head>Противогаз</Head>
 					<Price>5</Price>
 					<Untrigger>Противогаз</Untrigger>
 					<SellIfAvailable/>
 				</Get>
 				<Get>
 					<Button>Продать</Button>
-					<Text>Шумовая граната</Text>
+					<Head>Шумовая граната</Head>
 					<Price>4</Price>
 					<Untrigger>Шумовая граната</Untrigger>
-					<After>Покупайте и продавайте, что душе угодно.</After>
+					<Text>Покупайте и продавайте, что душе угодно.</Text>
 					<SellIfAvailable/>
 				</Get>
 			</Actions>
