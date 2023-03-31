@@ -4557,15 +4557,15 @@
 				<DiceWounds>
 					<Button>Кинуть 1 кубик</Button>
 					<Dices>1</Dices>
-					<After>или</After>
+					<Text>или</Text>
 				</DiceWounds>
 				<DiceWounds>
 					<Button>Кинуть 3 кубика</Button>
 					<Dices>3</Dices>
-					<After>
+					<Texts>
 						<Text Style="Small">Коннери также не сумел избежать града сталактитов – отнимите у него 4 ЖИЗНИ.</Text>
 						<Text>Если вы еще живы, скорее и как можно бесшумнее покиньте зал-ловушку.</Text>
-					</After>
+					</Texts>
 				</DiceWounds>
 			</Actions>
 			<Modifications>
