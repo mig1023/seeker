@@ -3808,7 +3808,7 @@
 					<Enemy Name="ВОЛЧИЦА" Strength="11" Hitpoints="17"/>
 					<RoundsToWin>5</RoundsToWin>
 					<ConneryAttacks>2</ConneryAttacks>
-					<After>Если вы уложились за пять раундов, то успеваете убежать с поля боя до подхода подкрепления.</After>
+					<Text>Если вы уложились за пять раундов, то успеваете убежать с поля боя до подхода подкрепления.</Text>
 				</Fight>
 			</Actions>
 			<Options>
