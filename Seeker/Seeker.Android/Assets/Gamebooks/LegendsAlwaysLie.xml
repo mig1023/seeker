@@ -5902,7 +5902,7 @@
 				<Reaction>
 					<Button>Реагируйте в четвёртый раз</Button>
 					<Damage Name="Hitpoints" Value="-3"/>
-					<After>Каждый неудача обойдется вам в 3 ЖИЗНИ.</After>
+					<Text>Каждый неудача обойдется вам в 3 ЖИЗНИ.</Text>
 				</Reaction>
 			</Actions>
 			<Options>
