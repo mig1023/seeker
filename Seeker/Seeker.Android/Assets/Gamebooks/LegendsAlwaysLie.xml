@@ -5227,7 +5227,7 @@
 				<Reaction>
 					<Button>Реагируйте в второй раз</Button>
 					<Damage Name="Hitpoints" Value="-3"/>
-					<After>За каждую неудачу теряете 3 ЖИЗНИ.</After>
+					<Text>За каждую неудачу теряете 3 ЖИЗНИ.</Text>
 				</Reaction>
 			</Actions>
 			<Modifications>
