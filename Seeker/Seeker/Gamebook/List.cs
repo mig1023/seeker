@@ -35,15 +35,17 @@ namespace Seeker.Gamebook
             ["Catharsis"] = Catharsis.Constants.GetLinks(),           
             ["PrairieLaw"] = PrairieLaw.Constants.GetLinks(),
             ["HeartOfIce"] = HeartOfIce.Constants.GetLinks(),
+            ["MasterOfTaiga"] = MasterOfTaiga.Constants.GetLinks(),
             ["VWeapons"] = VWeapons.Constants.GetLinks(),
             ["LandOfUnwaryBears"] = LandOfUnwaryBears.Constants.GetLinks(),
             ["YounglingTournament"] = YounglingTournament.Constants.GetLinks(),
             ["GoingToLaughter"] = GoingToLaughter.Constants.GetLinks(),
             ["WildDeath"] = WildDeath.Constants.GetLinks(),
+            ["ChooseCthulhu"] = ChooseCthulhu.Constants.GetLinks(),
             ["Damanskiy"] = Damanskiy.Constants.GetLinks(),
             ["ByTheWillOfRome"] = ByTheWillOfRome.Constants.GetLinks(),
             ["OrcsDay"] = OrcsDay.Constants.GetLinks(),
-            ["ChooseCthulhu"] = ChooseCthulhu.Constants.GetLinks(),
+            ["MasterOfTaiga"] = MasterOfTaiga.Constants.GetLinks(),
             ["Sheriff"] = Sheriff.Constants.GetLinks(),
             ["Moonrunner"] = Moonrunner.Constants.GetLinks(),
             ["DeathOfAntiquary"] = DeathOfAntiquary.Constants.GetLinks(),
@@ -51,7 +53,6 @@ namespace Seeker.Gamebook
             ["SilverAgeSilhouette"] = SilverAgeSilhouette.Constants.GetLinks(),
             ["StrikeBack"] = StrikeBack.Constants.GetLinks(),
             ["CommunityOfWorms"] = CommunityOfWorms.Constants.GetLinks(),
-            ["MasterOfTaiga"] = MasterOfTaiga.Constants.GetLinks(),
         };
 
         public static List<string> GetBooks() =>
