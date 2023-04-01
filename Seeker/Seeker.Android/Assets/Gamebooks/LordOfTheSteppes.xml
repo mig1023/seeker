@@ -237,7 +237,7 @@
 					<Text>Если у вас есть пустые фляги, то хозяин наполнит их вином (1 глоток стоит 2 монеты, восстановит 3 Жизни):</Text>
 				</Get>
 				<Get>
-					<Head>ВИНОHeadText>
+					<Head>ВИНО</Head>
 					<Price>2</Price>
 					<Multiple/>
 					<Benefit Name="Healing" Value="Выпить вина,3"/>
