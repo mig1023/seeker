@@ -92,37 +92,38 @@ namespace Seeker.Game
             return output;
         }
 
-        public static string TextParse(int id, string optionName)
-        {
-            string textByParagraph = String.Empty;
-
-            if (Data.XmlParagraphs[id]["Text"] != null)
-                textByParagraph = Data.XmlParagraphs[id]["Text"].InnerText;
-
-            string textByOption = Data.Actions.TextByOptions(optionName);
-
-            return (String.IsNullOrEmpty(textByOption) ? textByParagraph : textByOption);
-        }
-
         public static void AllTextParse(ref StackLayout textPlace, int id, string optionName, out string text)
         {
-            text = Xml.TextParse(id, optionName);
-           
-            if (!String.IsNullOrEmpty(text))
-                textPlace.Children.Add(Interface.Text(text));
+            text = String.Empty;
 
-            foreach (Text texts in Xml.TextsParse(Data.XmlParagraphs[id]))
+            foreach (Text texts in Xml.TextsParse(Data.XmlParagraphs[id], optionName))
             {
                 textPlace.Children.Add(Interface.TextBySelect(texts));
                 text += String.Format("{0}\\n\\n", texts.Content);
             }
         }
 
-        public static List<Text> TextsParse(XmlNode xmlNode)
+        public static List<Text> TextsParse(XmlNode xmlNode, string optionName = "")
         {
-            if (xmlNode["Text"] != null)
+            string textByOption = Data.Actions.TextByOptions(optionName);
+
+            if (!String.IsNullOrEmpty(optionName) && !String.IsNullOrEmpty(textByOption))
             {
-                return new List<Text> { TextLineParse(xmlNode["Text"]) };
+                return new List<Text>
+                {
+                    new Text
+                    {
+                        Content = textByOption,
+                        Size = Interface.TextFontSize.Big,
+                    }
+                };
+            }
+            else if (xmlNode["Text"] != null)
+            {
+                return new List<Text>
+                {
+                    TextLineParse(xmlNode["Text"])
+                };
             }
             else
             {
