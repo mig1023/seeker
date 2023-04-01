@@ -4925,7 +4925,7 @@
 			<Actions>	
 				<Fight>
 					<Enemy Name="Незнакомец" Attack="10" Defence="15" Endurance="4" Initiative="9"/>
-					<After>Сейчас справиться с ним будет несложно.</After>
+					<Text>Сейчас справиться с ним будет несложно.</Text>
 				</Fight>
 			</Actions>
 			<Options>
