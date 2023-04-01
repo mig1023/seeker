@@ -1,0 +1,27 @@
+<Gamebook>
+	<Introduction>
+		<Title>Хозяин тайги</Title>
+		<Copyright>Павел Горохов, 2013</Copyright>
+		<Styles>
+			<Color Name="Main" Value="3e5434"/>
+			<Color Name="Option" Value="a5b0a0"/>
+		</Styles>
+		<Settings>
+			<ShowDisabledOption/>
+		</Settings>
+	</Introduction>
+	<Paragraphs>
+		<Paragraph No="0">
+			<Text>START</Text>
+			<Options>
+				<Option Destination="1" Text="В путь!"/>
+			</Options>
+		</Paragraph>
+		<Paragraph No="1">
+			<Text>END</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
+	</Paragraphs>
+</Gamebook>

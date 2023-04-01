@@ -51,6 +51,7 @@ namespace Seeker.Gamebook
             ["SilverAgeSilhouette"] = SilverAgeSilhouette.Constants.GetLinks(),
             ["StrikeBack"] = StrikeBack.Constants.GetLinks(),
             ["CommunityOfWorms"] = CommunityOfWorms.Constants.GetLinks(),
+            ["MasterOfTaiga"] = MasterOfTaiga.Constants.GetLinks(),
         };
 
         public static List<string> GetBooks() =>
