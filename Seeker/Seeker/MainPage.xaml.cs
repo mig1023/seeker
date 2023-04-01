@@ -224,7 +224,8 @@ namespace Seeker
 
             foreach (Game.Option option in paragraph.Options)
             {
-                bool mustBeVisible = OptionVisibility(option.Aftertexts.Count > 0);
+                int aftertextsCount = option.Aftertexts?.Count ?? 0;
+                bool mustBeVisible = OptionVisibility(aftertextsCount > 0);
                 bool onlyIf = Game.Data.Availability(option.Availability);
                 bool singleIf = !String.IsNullOrEmpty(option.Singleton) && Game.Data.Availability(option.Singleton);
 
