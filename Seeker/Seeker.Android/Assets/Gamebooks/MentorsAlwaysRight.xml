@@ -3905,7 +3905,7 @@
 						<Enemy Name="ПЕРВЫЙ ХАЗРАТ" Strength="11" Hitpoints="10"/>
 						<Enemy Name="ВТОРОЙ ХАЗРАТ" Strength="10" Hitpoints="10"/>
 					</Enemies>
-					<After>Если вы вышли победителем:</After>
+					<Text>Если вы вышли победителем:</Text>
 				</Fight>
 			</Actions>
 			<Options>
