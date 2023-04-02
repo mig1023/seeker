@@ -99,7 +99,7 @@
 			<Actions>
 				<Reaction>
 					<Button>Реагируйте ещё раз</Button>
-					<After>Если вы не успеет увернуться, то теряете 3 ЖИЗНИ.</After>
+					<Text>Если вы не успеет увернуться, то теряете 3 ЖИЗНИ.</Text>
 				</Reaction>
 			</Actions>
 			<Modifications>
