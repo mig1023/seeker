@@ -1452,12 +1452,12 @@
 			<Actions>
 				<GetMagicBlade>
 					<Button>Заколдовать</Button>
-					<Text>Заколдовать свой клинок (ваш удар отнимает три ЖИЗНИ)</Text>
+					<Head>Заколдовать свой клинок (ваш удар отнимает три ЖИЗНИ)</Head>
 					<Price>5</Price>
 				</GetMagicBlade>
 				<RestoreSpells>
 					<Button>Восполнить</Button>
-					<Text>Восполнить недостающие заклинания</Text>
+					<Head>Восполнить недостающие заклинания</Head>
 					<Price>5</Price>
 				</RestoreSpells>
 			</Actions>
