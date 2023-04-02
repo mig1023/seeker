@@ -156,7 +156,7 @@
 			<Actions>
 				<Get-Decrease>
 					<Button>Больше, Меньше</Button>
-					<Text>Количество монет</Text>
+					<Head>Количество монет</Head>
 					<Stat>Offer</Stat>
 				</Get-Decrease>
 			</Actions>
