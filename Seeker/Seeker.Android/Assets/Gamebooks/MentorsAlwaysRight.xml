@@ -607,7 +607,7 @@
 					<Text>Иначе — бросьте кубик:</Text>
 				</Option>
 				<Dice>
-					<After>Выпал:</After>
+					<Text>Выпал:</Text>
 				</Dice>
 			</Actions>
 			<Options>
