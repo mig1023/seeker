@@ -1659,7 +1659,7 @@
 				</Option>
 				<Fight>
 					<Enemy Name="ХАЗРАТ" Strength="10" Hitpoints="9"/>
-					<After>Если вы победили, то:</After>
+					<Head>Если вы победили, то:</Head>
 				</Fight>
 			</Actions>
 			<Options>
