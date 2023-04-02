@@ -169,7 +169,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="Ро-пёс" Skill="9" Hitpoint="10"/>
-					<After>На этот раз предстоит смертельная битва.</After>
+					<Text>На этот раз предстоит смертельная битва.</Text>
 				</Fight>
 			</Actions>	
 			<Options>
