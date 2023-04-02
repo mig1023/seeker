@@ -3462,7 +3462,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="ЛЕШИЙ" Strength="10" Hitpoints="12"/>
-					<After>Если победа за вами, то:</After>
+					<Text>Если победа за вами, то:</Text>
 				</Fight>
 			</Actions>
 			<Options>
