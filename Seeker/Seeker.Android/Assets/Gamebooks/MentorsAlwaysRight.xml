@@ -291,7 +291,7 @@
 				</Option>
 				<Fight>
 					<Enemy Name="ХАЗРАТ" Strength="10" Hitpoints="12"/>
-					<After>Убив его, можете:</After>
+					<Text>Убив его, можете:</Text>
 				</Fight>
 			</Actions>
 			<Options>
