@@ -4676,7 +4676,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="РЫЦАРЬ-ХРАМОВНИК" Strength="11" Hitpoints="10"/>
-					<After>Если когти медведя оказались сильнее стали:</After>
+					<Text>Если когти медведя оказались сильнее стали:</Text>
 				</Fight>
 			</Actions>
 			<Options>
