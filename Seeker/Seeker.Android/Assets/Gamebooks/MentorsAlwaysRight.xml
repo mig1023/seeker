@@ -77,7 +77,7 @@
 				<Fight>
 					<Enemy Name="ТВАРЬ ИЗ КУРГАНА" Strength="14" Hitpoints="8"/>
 					<EvenWound/>
-					<After>Если вам удалось подрубить ей все 4 ноги:</After>
+					<Text>Если вам удалось подрубить ей все 4 ноги:</Text>
 				</Fight>
 			</Actions>
 			<Options>
