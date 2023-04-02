@@ -1631,7 +1631,7 @@
 						<Enemy Name="ВТОРОЙ ВОЛК" Strength="9" Hitpoints="8"/>
 						<Enemy Name="ТРЕТИЙ ВОЛК" Strength="9" Hitpoints="7"/>
 					</Enemies>
-					<After>После победы:</After>
+					<Head>После победы:</Head>
 				</Fight>
 			</Actions>
 			<Options>
