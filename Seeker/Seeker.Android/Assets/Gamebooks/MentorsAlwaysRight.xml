@@ -775,7 +775,7 @@
 			<Actions>
 				<Camouflage>
 					<Button>Разрисовать себя</Button>
-					<After>Если хотите, то можете это сделать и продолжить путь:</After>
+					<Text>Если хотите, то можете это сделать и продолжить путь:</Text>
 				</Camouflage>
 			</Actions>
 			<Options>
