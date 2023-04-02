@@ -164,7 +164,7 @@
 			<Actions>
 				<DiceWounds>
 					<Dices>2</Dices>
-					<After>Неизвестно, что это было, но надо двигаться дальше...</After>
+					<Text>Неизвестно, что это было, но надо двигаться дальше...</Text>
 				</DiceWounds>
 			</Actions>
 			<Options>
