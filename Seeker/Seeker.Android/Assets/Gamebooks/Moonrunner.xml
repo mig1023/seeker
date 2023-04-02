@@ -1851,7 +1851,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="Конрад Заар" Mastery="8" Endurance="8"/>
-					<After Style="Small">Запишите слово “darnoc” на Листок Путешественника.</After>
+					<Text Style="Small">Запишите слово “darnoc” на Листок Путешественника.</Text>
 				</Fight>
 			</Actions>
 			<Triggers>darnoc</Triggers>
