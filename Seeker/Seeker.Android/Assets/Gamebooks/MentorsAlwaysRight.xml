@@ -4989,7 +4989,7 @@
 			<Actions>
 				<Reaction>
 					<Damage Name="Hitpoints" Value="-3"/>
-					<After>Если вы не успеет увернуться, то теряете 3 ЖИЗНИ.</After>
+					<Text>Если вы не успеет увернуться, то теряете 3 ЖИЗНИ.</Text>
 				</Reaction>
 			</Actions>
 			<Options>
