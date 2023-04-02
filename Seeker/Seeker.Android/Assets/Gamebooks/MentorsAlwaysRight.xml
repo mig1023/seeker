@@ -3756,7 +3756,7 @@
 						<Enemy Name="ТРЕТЬЯ ГАРПИЯ" Strength="11" Hitpoints="10"/>
 					</Enemies>
 					<DeathLimit>1</DeathLimit>
-					<After>Стоит вам убить всего одну, как...</After>
+					<Text>Стоит вам убить всего одну, как...</Text>
 				</Fight>
 			</Actions>
 			<Options>
