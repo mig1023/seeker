@@ -1289,7 +1289,7 @@
 					<Enemy Name="Обсианский хищник" Mastery="11"/>
 					<DevastatingAttack>3</DevastatingAttack>
 					<Invulnerable/>
-					<After>В конце каждого выигранного Раунда Атаки попробуйте Проверить свою Удачу.</After>
+					<Text>В конце каждого выигранного Раунда Атаки попробуйте Проверить свою Удачу.</Text>
 				</Fight>
 			</Actions>
 			<Options>
