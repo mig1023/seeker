@@ -891,7 +891,7 @@
 			<Actions>
 				<Dinner>
 					<Dinner>5</Dinner>
-					<After>После обеда вы продолжаете свой переход в менее опасное место.</After>
+					<Text>После обеда вы продолжаете свой переход в менее опасное место.</Text>
 				</Dinner>
 			</Actions>
 			<Modifications>
