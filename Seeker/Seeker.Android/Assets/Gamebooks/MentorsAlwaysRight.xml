@@ -1104,7 +1104,7 @@
 					<Enemy Name="РАМАРЕС" Strength="15"/>
 					<Invincible/>
 					<RoundsWinToWin>3</RoundsWinToWin>
-					<After>Если вам удастся ранить его три раза:</After>
+					<Text>Если вам удастся ранить его три раза:</Text>
 				</Fight>
 			</Actions>
 			<Options>
