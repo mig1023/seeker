@@ -232,7 +232,7 @@
 			<Actions>
 				<Dinner>
 					<Dinner>5</Dinner>
-					<After>Пообедав, вы направитесь в менее опасный район.</After>
+					<Text>Пообедав, вы направитесь в менее опасный район.</Text>
 				</Dinner>
 			</Actions>
 			<Modifications>
