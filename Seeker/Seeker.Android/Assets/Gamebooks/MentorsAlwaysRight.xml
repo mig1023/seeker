@@ -4107,7 +4107,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="ГАРПИЯ" Strength="11" Hitpoints="10"/>
-					<After>Победив, вы раздумываете, куда двигаться дальше:</After>
+					<Text>Победив, вы раздумываете, куда двигаться дальше:</Text>
 				</Fight>
 			</Actions>
 			<Options>
