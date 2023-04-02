@@ -3003,7 +3003,7 @@
 				</Option>
 				<Fight>
 					<Enemy Name="ХРАМОВНИК" Strength="12" Hitpoints="13"/>
-					<After>Если вы победили:</After>
+					<Text>Если вы победили:</Text>
 				</Fight>
 			</Actions>
 			<Options>
