@@ -854,39 +854,39 @@
 			<Actions>
 				<Get>
 					<Button>Купить</Button>
-					<Text>Фигурная серебряная чаша</Text>
+					<Head>Фигурная серебряная чаша</Head>
 					<Triggers>Vessel</Triggers>
 					<Price>3</Price>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
-					<Text>Расшитый золотыми нитями пояс</Text>
+					<Head>Расшитый золотыми нитями пояс</Head>
 					<Trigger>GoldEmbroideredBelt</Trigger>
 					<Price>5</Price>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
-					<Text>Рубиновые серьги</Text>
+					<Head>Рубиновые серьги</Head>
 					<Price>3</Price>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
-					<Text>Моток веревки</Text>
+					<Head>Моток веревки</Head>
 					<Trigger>Rope</Trigger>
 					<Price>2</Price>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
-					<Text>Бурдюк с водой (добавит 3 ЖИЗНИ)</Text>
+					<Head>Бурдюк с водой (добавит 3 ЖИЗНИ)</Head>
 					<Price>4</Price>
-					<After>Если у вас есть серебряный подсвечник, торговец может купить его у вас за три золотых:</After>
+					<Text>Если у вас есть серебряный подсвечник, торговец может купить его у вас за три золотых:</Text>
 				</Get>
 				<Sell>
 					<Button>Продать</Button>
-					<Text>Серебряный подсвечник</Text>
+					<Head>Серебряный подсвечник</Head>
 					<Trigger>SilverCandlestick</Trigger>
 					<Price>3</Price>
-					<After>После уходите.</After>
+					<Text>После уходите.</Text>
 				</Sell>
 			</Actions>
 			<Options>
