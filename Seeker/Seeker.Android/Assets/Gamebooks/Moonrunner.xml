@@ -3182,7 +3182,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="Летучая мышь" Mastery="6" Endurance="6"/>
-					<After>Если вам удастся убить ее, можете:</After>
+					<Text>Если вам удастся убить ее, можете:</Text>
 				</Fight>
 			</Actions>
 			<Options>
