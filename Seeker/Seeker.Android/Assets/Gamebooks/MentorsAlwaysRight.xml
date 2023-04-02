@@ -1087,7 +1087,7 @@
 					<Button>Использовать две Лечилки</Button>
 					<Wound>2</Wound>
 					<OnlyOne>FractureCured</OnlyOne>
-					<After>Если вы вылечились, то возвращайтесь и выбирайте путь:</After>
+					<Text>Если вы вылечились, то возвращайтесь и выбирайте путь:</Text>
 				</CureFracture>
 			</Actions>
 			<Options>
