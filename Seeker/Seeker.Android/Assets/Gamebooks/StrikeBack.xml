@@ -1471,7 +1471,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="Юный священник" Attack="1" Defence="7" Endurance="6"/>
-					<After>Если одолеешь священника:</After>
+					<Text>Если одолеешь священника:</Text>
 				</Fight>
 			</Actions>
 			<Options>
