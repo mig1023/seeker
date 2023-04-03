@@ -418,12 +418,12 @@
 				<DiceCheck>
 					<Button>Кинуть один кубик</Button>
 					<Dices>1</Dices>
-					<After>или</After>
+					<Text>или</Text>
 				</DiceCheck>
 				<DiceCheck>
 					<Button>Кинуть два кубика</Button>
 					<Dices>2</Dices>
-					<After>\u00A0</After>
+					<Text>\u00A0</Text>
 				</DiceCheck>
 			</Actions>
 			<Options>
