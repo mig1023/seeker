@@ -140,7 +140,7 @@
 				<Fight>
 					<Enemy Name="ГРАБИТЕЛЬ" Skill="9" Strength="10"/>
 					<EnemyWoundsLimit/>
-					<After>Если вы снизили его СИЛУ до 2:</After>
+					<Text>Если вы снизили его СИЛУ до 2:</Text>
 				</Fight>
 			</Actions>
 			<Options>
