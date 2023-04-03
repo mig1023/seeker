@@ -1096,7 +1096,7 @@
 				<Test>
 					<Stat>Wits</Stat>
 					<Level>10</Level>
-					<After>Или:</After>
+					<Text>Или:</Text>
 				</Test>
 				<Test>
 					<Stat>Luck</Stat>
