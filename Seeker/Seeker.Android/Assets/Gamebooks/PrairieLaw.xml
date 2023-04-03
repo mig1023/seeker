@@ -329,11 +329,11 @@
 			<Actions>
 				<Get>
 					<Button>Заплатить</Button>
-					<Text>Два патрона</Text>
+					<Head>Два патрона</Head>
 					<Price>50</Price>
 					<Multiple/>
 					<Benefit Name="Cartridges" Value="2"/>
-					<After>Если вам подходит цена, выкладывайте деньги. А затем отправляйтесь в дорогу.</After>
+					<Text>Если вам подходит цена, выкладывайте деньги. А затем отправляйтесь в дорогу.</Text>
 				</Get>
 			</Actions>
 			<Modifications>
