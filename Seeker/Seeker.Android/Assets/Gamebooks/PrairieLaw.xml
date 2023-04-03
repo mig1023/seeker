@@ -4186,60 +4186,60 @@
 			<Actions>
 				<Get>
 					<Button>Купить</Button>
-					<Text>Один патрон</Text>
+					<Head>Один патрон</Head>
 					<Price>100</Price>
 					<Multiple/>
 					<Benefit Name="Cartridges" Value="1"/>
-					<After>Нож он может продать за 3 доллара, лассо за 2...</After>
+					<Text>Нож он может продать за 3 доллара, лассо за 2...</Text>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
-					<Text>Нож</Text>
+					<Head>Нож</Head>
 					<Price>300</Price>
 					<Trigger>Нож</Trigger>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
-					<Text>Лассо</Text>
+					<Head>Лассо</Head>
 					<Price>200</Price>
 					<Trigger>Лассо</Trigger>
-					<After>Можно выбрать что-нибудь для подарка индейцам: зеркальце, пачку жевательного табака, бусы, нарядный пояс – любая вещь за доллар.</After>
+					<Text>Можно выбрать что-нибудь для подарка индейцам: зеркальце, пачку жевательного табака, бусы, нарядный пояс – любая вещь за доллар.</Text>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
-					<Text>Бусы</Text>
+					<Head>Бусы</Head>
 					<Trigger>Бусы</Trigger>
 					<Price>100</Price>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
-					<Text>Жевательный табак</Text>
+					<Head>Жевательный табак</Head>
 					<Trigger>Табак</Trigger>
 					<Price>100</Price>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
-					<Text>Зеркальце</Text>
+					<Head>Зеркальце</Head>
 					<Price>100</Price>
 					<Trigger>Зеркальце</Trigger>
-					<After>Есть у разносчика даже динамитная шашка – за 8 монет.</After>
+					<Text>Есть у разносчика даже динамитная шашка – за 8 монет.</Text>
 				</Get>	
 				<Get>
 					<Button>Купить</Button>
-					<Text>Динамитная шашка</Text>
+					<Head>Динамитная шашка</Head>
 					<Price>800</Price>
 					<Trigger>Динамитная шашка</Trigger>
-					<After>Если у вас туго с наличными, Уоррен может купить любую из добытых вами шкур – за 2 доллара.</After>
+					<Text>Если у вас туго с наличными, Уоррен может купить любую из добытых вами шкур – за 2 доллара.</Text>
 				</Get>
 				<SellSkins>
 					<Button>Продать</Button>
 					<SellPrices>Любая шкура=200</SellPrices>
-					<After>За самородок он отсчитает полдоллара.</After>
+					<Text>За самородок он отсчитает полдоллара.</Text>
 				</SellSkins>
 				<SellNuggets>
 					<Button>Продать</Button>
 					<SellPrices>50</SellPrices>
-					<After>Торговаться бесполезно. Хотите совершить сделку – воля ваша. А затем попрощайтесь с разносчиком, возьмите Чикиту под уздцы и идите дальше на юго-запад.</After>
+					<Text>Торговаться бесполезно. Хотите совершить сделку – воля ваша. А затем попрощайтесь с разносчиком, возьмите Чикиту под уздцы и идите дальше на юго-запад.</Text>
 				</SellNuggets>
 			</Actions>
 			<Options>
