@@ -3442,14 +3442,14 @@
 			<Actions>
 				<Get>
 					<Button>Заплатить</Button>
-					<Text>Поесть</Text>
+					<Head>Поесть</Head>
 					<Price>100</Price>
 					<Benefit Name="Strength" Value="3"/>
-					<After>Если вы сейчас не голодны, попросите завернуть вам еду с собой:</After>
+					<Text>Если вы сейчас не голодны, попросите завернуть вам еду с собой:</Text>
 				</Get>
 				<Get>
 					<Button>Еда с собой</Button>
-					<Text>Купить</Text>
+					<Head>Купить</Head>
 					<Price>100</Price>
 					<Benefit Name="Healing" Value="Съесть еду из закусочной,3"/>
 				</Get>
