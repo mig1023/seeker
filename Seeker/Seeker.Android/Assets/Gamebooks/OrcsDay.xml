@@ -1014,7 +1014,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="Зомби-тролль" Attack="10" Defense="9" Hitpoints="6"/>
-					<After>Помощь остальных орков влияет на результаты зомби-тролля.</After>
+					<Text>Помощь остальных орков влияет на результаты зомби-тролля.</Text>
 				</Fight>
 			</Actions>
 			<Options>
