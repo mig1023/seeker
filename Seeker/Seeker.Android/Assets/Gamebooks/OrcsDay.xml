@@ -488,24 +488,24 @@
 			<Actions>
 				<Get>
 					<Button>Увеличить</Button>
-					<Text>Мышцы</Text>
+					<Head>Мышцы</Head>
 					<Stat>Muscle</Stat>
 				</Get>
 				<Get>
 					<Button>Увеличить</Button>
-					<Text>Мозги</Text>
+					<Head>Мозги</Head>
 					<Stat>Wits</Stat>
 				</Get>
 				<Get>
 					<Button>Увеличить</Button>
-					<Text>Смелость</Text>
+					<Head>Смелость</Head>
 					<Stat>Courage</Stat>
 				</Get>
 				<Get>
 					<Button>Увеличить</Button>
-					<Text>Удача</Text>
+					<Head>Удача</Head>
 					<Stat>Luck</Stat>
-					<After>Кроме того, твое Здоровье восстанавливается до 5. Ты всем повторяешь своё новое имя, а затем возвращаешься к параграфу, с которого перешёл сюда.</After>
+					<Text>Кроме того, твое Здоровье восстанавливается до 5. Ты всем повторяешь своё новое имя, а затем возвращаешься к параграфу, с которого перешёл сюда.</Text>
 				</Get>
 			</Actions>
 			<Triggers>Обрёл имя</Triggers>
