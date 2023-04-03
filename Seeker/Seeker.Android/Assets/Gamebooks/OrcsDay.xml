@@ -1379,24 +1379,24 @@
 			<Actions>
 				<Get-Decrease>
 					<Button>Увеличить, Уменьшить</Button>
-					<Text>Мышцы</Text>
+					<Head>Мышцы</Head>
 					<Stat>Muscle</Stat>
 				</Get-Decrease>
 				<Get-Decrease>
 					<Button>Увеличить, Уменьшить</Button>
-					<Text>Мозги</Text>
+					<Head>Мозги</Head>
 					<Stat>Wits</Stat>
 				</Get-Decrease>
 				<Get-Decrease>
 					<Button>Увеличить, Уменьшить</Button>
-					<Text>Смелость</Text>
+					<Head>Смелость</Head>
 					<Stat>Courage</Stat>
 				</Get-Decrease>
 				<Get-Decrease>
 					<Button>Увеличить, Уменьшить</Button>
-					<Text>Удача</Text>
+					<Head>Удача</Head>
 					<Stat>Luck</Stat>
-					<After>Распредели их, как тебе угодно. Главное, чтобы общее количество не превышало десяти:</After>
+					<Text>Распредели их, как тебе угодно. Главное, чтобы общее количество не превышало десяти:</Text>
 				</Get-Decrease>
 			</Actions>
 			<Options>
