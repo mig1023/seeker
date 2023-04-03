@@ -418,11 +418,11 @@
 				<Get>
 					<Button>Взять</Button>
 					<Text>Флейта</Text>
-					<After>
+					<Texts>
 						<Text>Из будки тем временем доносится серия щелчков — неведомый зверь добрался до диджейского пульта и каскадом обрушил все тумблеры. Внезапно оживает школьная радиостанция. Знакомая мелодия, но я не сразу узнаю исполнителя.</Text>
 						<Text Style="Italic">'Cause this is thriller, thriller night\nAnd no one's gonna save you from the beast about strike\nYou know it's thriller, thriller night\nYou're fighting for your life inside a killer, thriller tonight</Text>
 						<Text>Блин, это ж Майкл мир его праху Джексон. «Триллер», клип еще такой был. Зомби на сцене начинают шевелиться. Встают, подергиваясь в такт музыке. Было бы смешно, если бы не было так страшно. Я бросаюсь к двери, ведущей на лестницу.</Text>
-					</After>
+					</Texts>
 				</Get>
 			</Actions>
 			<Options>
