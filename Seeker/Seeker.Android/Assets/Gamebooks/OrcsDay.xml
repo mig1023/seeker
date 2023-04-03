@@ -350,16 +350,16 @@
 			<Actions>
 				<Get-Decrease>
 					<Button>Увеличить, Уменьшить</Button>
-					<Text>Ставка</Text>
+					<Head>Ставка</Head>
 					<Stat>Bet</Stat>
 				</Get-Decrease>
 				<CardGames>
 					<Button>Сыграть</Button>
 					<SecondGame/>
-					<After>
+					<Texts>
 						<Text Style="Small">Если твоя Удача 15 или выше, ты возвращаешь свою ставку плюс ещё столько же.\nЕсли при проверке Удачи выпало от 10 до 15, ты возвращаешь свою ставку.\nЕсли же Удача была меньше 10, ты теряешь свою ставку.</Text>
 						<Text>Независимо от того, как повернулась к тебе Удача:</Text>
-					</After>
+					</Texts>
 				</CardGames>
 				<Test>
 					<Stat>Wits</Stat>
