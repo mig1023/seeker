@@ -620,7 +620,7 @@
 						<Enemy Name="Воин B" Attack="2" Defence="8" Endurance="6"/>
 					</Enemies>
 					<SpecialTechnique>ToFirstDeathOnly</SpecialTechnique>
-					<After>Разумеется, ты тоже должен принять участие в драке.</After>
+					<Text>Разумеется, ты тоже должен принять участие в драке.</Text>
 				</Fight>
 			</Actions>
 			<Options>
