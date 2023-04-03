@@ -1215,7 +1215,7 @@
 					<Stat>Luck</Stat>
 					<Level>5</Level>
 					<OrcishnessTest/>
-					<After>Или:</After>
+					<Text>Или:</Text>
 				</Test>
 				<Test>
 					<Stat>Wits</Stat>
