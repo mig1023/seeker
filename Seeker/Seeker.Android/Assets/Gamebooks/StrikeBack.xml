@@ -303,7 +303,7 @@
 				<Fight>
 					<Enemy Name="Бывший вор РАМБЛ" Attack="3" Defence="8" Endurance="12" SpecialTechnique="RumbleKnife"/>
 					<SpecialTechnique>Werewolf</SpecialTechnique>
-					<After>Правда, кинжал у Рамбла не простой — это волшебное оружие, способное наносить ранения, даже если ты ОБОРОТЕНЬ.</After>
+					<Text>Правда, кинжал у Рамбла не простой — это волшебное оружие, способное наносить ранения, даже если ты ОБОРОТЕНЬ.</Text>
 				</Fight>
 			</Actions>
 			<Options>
