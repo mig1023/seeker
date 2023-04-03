@@ -1304,7 +1304,7 @@
 			<Actions>	
 				<Dices>
 					<Count>2</Count>
-					<After>Если ты ПОСЛАНЕЦ СМЕРТИ:</After>
+					<Text>Если ты ПОСЛАНЕЦ СМЕРТИ:</Text>
 				</Dices>
 			</Actions>
 			<Options>
