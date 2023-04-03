@@ -1013,7 +1013,7 @@
 						<Enemy Name="Хобгоблин D" Attack="3" Defence="8" Endurance="7"/>
 					</Enemies>
 					<SpecialTechnique>WithoutProtagonist</SpecialTechnique>
-					<After>Поскольку ты сидишь в укрытии, тебя никто не атакует. Всё, что от тебя требуется — следить за боем хобгоблинов с лютоволком.</After>
+					<Text>Поскольку ты сидишь в укрытии, тебя никто не атакует. Всё, что от тебя требуется — следить за боем хобгоблинов с лютоволком.</Text>
 				</Fight>
 			</Actions>
 			<Options>
