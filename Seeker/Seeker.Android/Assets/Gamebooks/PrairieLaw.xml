@@ -4144,7 +4144,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="ПУМА" Skill="10" Strength="10"/>
-					<After>Если у вас есть нож, можете прибавлять 1 к МОЩНОСТИ своего УДАРА.</After>
+					<Text>Если у вас есть нож, можете прибавлять 1 к МОЩНОСТИ своего УДАРА.</Text>
 				</Fight>
 			</Actions>
 			<Modifications>
