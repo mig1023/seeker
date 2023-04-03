@@ -755,16 +755,16 @@
 			<Actions>
 				<Get>
 					<Button>Взять</Button>
-					<Text>ЗЕЛЬЕ ПОВЕЛЕВАНИЯ ЗОМБИ</Text>
+					<Head>ЗЕЛЬЕ ПОВЕЛЕВАНИЯ ЗОМБИ</Head>
 					<Price>1</Price>
 					<Trigger>Зелье управление зомби</Trigger>
 				</Get>
 				<Get>
 					<Button>Взять</Button>
-					<Text>МАГИЧЕСКИЙ КЛИНОК</Text>
+					<Head>МАГИЧЕСКИЙ КЛИНОК</Head>
 					<Price>1</Price>
 					<Benefit Name="Weapon" Value="1"/>
-					<After>В сопровождении девушки ты и остальные орки отправляетесь дальше.</After>
+					<Text>В сопровождении девушки ты и остальные орки отправляетесь дальше.</Text>
 				</Get>
 			</Actions>
 			<Modifications>
