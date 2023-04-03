@@ -1571,7 +1571,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="Ро-паук" Skill="9" Hitpoint="10"/>
-					<After>И это будет битва не на жизнь, а на смерть.</After>
+					<Text>И это будет битва не на жизнь, а на смерть.</Text>
 				</Fight>
 			</Actions>	
 			<Options>
