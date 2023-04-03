@@ -1942,7 +1942,7 @@
 					</Enemies>
 					<HeroWoundsLimit/>
 					<EnemyWoundsLimit/>
-					<After>Убивать их, конечно, не надо.</After>
+					<Text>Убивать их, конечно, не надо.</Text>
 				</Fight>
 			</Actions>
 			<Options>
