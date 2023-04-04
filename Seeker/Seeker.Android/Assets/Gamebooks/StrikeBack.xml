@@ -3596,7 +3596,7 @@
 				<InlineWoundsByDices/>
 				<InlineWoundsByDices/>
 				<InlineWoundsByDices>
-					<After>Осталось ещё 10 раз:</After>
+					<Text>Осталось ещё 10 раз:</Text>
 				</InlineWoundsByDices>
 				<InlineWoundsByDices/>
 				<InlineWoundsByDices/>
@@ -3608,7 +3608,7 @@
 				<InlineWoundsByDices/>
 				<InlineWoundsByDices/>
 				<InlineWoundsByDices>
-					<After>Если после 20 уколов ты ещё жив, то чары удержания к тому времени спадут:</After>
+					<Text>Если после 20 уколов ты ещё жив, то чары удержания к тому времени спадут:</Text>
 				</InlineWoundsByDices>
 			</Actions>
 			<Options>
