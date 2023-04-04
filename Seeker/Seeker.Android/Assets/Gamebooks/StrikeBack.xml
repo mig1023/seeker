@@ -3560,7 +3560,7 @@
 					<Count>2</Count>
 					<WoundsByDices/>
 					<WoundsMultiple>2</WoundsMultiple>
-					<After>Если ты ещё жив, то выползай из лавы:</After>
+					<Text>Если ты ещё жив, то выползай из лавы:</Text>
 				</Dices>
 			</Actions>
 			<Options>
