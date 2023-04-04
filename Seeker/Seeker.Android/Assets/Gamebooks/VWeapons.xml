@@ -2146,7 +2146,7 @@
 				<Damage>
 					<Button>ОСМОТРЕТЬ РАНУ</Button>
 					<Value>1</Value>
-					<After>Если хотите, то можете взять себе респиратор.</After>
+					<Text>Если хотите, то можете взять себе респиратор.</Text>
 				</Damage>
 			</Actions>
 			<Triggers>R</Triggers>
