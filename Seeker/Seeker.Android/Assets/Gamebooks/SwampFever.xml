@@ -249,7 +249,7 @@
 			<Actions>
 				<TrackPull>
 					<Button>Гусеничный режим</Button>
-					<After>или</After>
+					<Text>или</Text>
 				</TrackPull>
 				<PropellersPull>
 					<Button>Режим амфибии</Button>
