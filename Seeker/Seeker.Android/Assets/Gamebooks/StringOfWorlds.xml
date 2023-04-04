@@ -5327,7 +5327,7 @@
 						<Enemy Name="ВТОРОЙ РАЗБОЙНИК" Skill="9" Strength="9"/>
 						<Enemy Name="ТРЕТИЙ РАЗБОЙНИК" Skill="8" Strength="10"/>
 					</Enemies>
-					<After>Удалось ли вам победить врагов?</After>
+					<Text>Удалось ли вам победить врагов?</Text>
 				</Fight>
 			</Actions>
 			<Options>
