@@ -266,7 +266,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="ШАР-ХИЩНИК" Skill="10" Strength="6"/>
-					<After>Удалось ли вам победить?</After>
+					<Text>Удалось ли вам победить?</Text>
 				</Fight>
 			</Actions>	
 			<Options>
