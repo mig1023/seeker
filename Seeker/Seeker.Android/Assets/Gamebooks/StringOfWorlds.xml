@@ -2339,7 +2339,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="КУСТ-ВАМПИР" Skill="11" Strength="8"/>
-					<After>Если вы победили — можете продолжать путь.</After>
+					<Text>Если вы победили — можете продолжать путь.</Text>
 				</Fight>
 			</Actions>	
 			<Options>
