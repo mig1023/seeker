@@ -606,7 +606,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="РЫЦАРЬ" Skill="10" Strength="12"/>
-					<After>В любой момент боя вы можете попытаться сбежать.</After>
+					<Text>В любой момент боя вы можете попытаться сбежать.</Text>
 				</Fight>
 			</Actions>	
 			<Options>
