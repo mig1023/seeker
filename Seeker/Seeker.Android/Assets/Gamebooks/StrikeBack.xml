@@ -3742,7 +3742,7 @@
 			<Actions>	
 				<Dices>
 					<WoundsByDices/>
-					<After>Остаётся лишь сдаться да уйти отсюда.</After>
+					<Text>Остаётся лишь сдаться да уйти отсюда.</Text>
 				</Dices>
 			</Actions>
 			<Options>
