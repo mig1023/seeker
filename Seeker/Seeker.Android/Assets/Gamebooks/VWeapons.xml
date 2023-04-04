@@ -590,12 +590,12 @@
 					<Button>ПОДЛЕЧИТЬСЯ</Button>
 					<Value>2</Value>
 					<Time>-1</Time>
-					<After>Забрать бомбу из тайника:</After>
+					<Text>Забрать бомбу из тайника:</Text>
 				</Healing>
 				<Bomb>
 					<Button>ЗАБРАТЬ БОМБУ</Button>
 					<Time>-1</Time>
-					<After>Отправится в оружейный магазин и купить патроны:</After>
+					<Text>Отправится в оружейный магазин и купить патроны:</Text>
 				</Bomb>
 				<Cartridges>
 					<Button>КУПИТЬ ПАТРОНЫ</Button>
