@@ -1526,18 +1526,18 @@
 					<Button>ПОДЛЕЧИТЬСЯ</Button>
 					<Value>2</Value>
 					<Time>-1</Time>
-					<After>Если по пути вы хотите заехать за бомбой:</After>
+					<Text>Если по пути вы хотите заехать за бомбой:</Text>
 				</Healing>
 				<Bomb>
 					<Button>ЗАБРАТЬ БОМБУ</Button>
 					<Time>-1</Time>
-					<After>Если по пути вы хотите заехать купить патронов:</After>
+					<Text>Если по пути вы хотите заехать купить патронов:</Text>
 				</Bomb>
 				<Cartridges>
 					<Button>КУПИТЬ ПАТРОНЫ</Button>
 					<Value>8</Value>
 					<Time>-1</Time>
-					<After>Ехать к военно-морской базе:</After>
+					<Text>Ехать к военно-морской базе:</Text>
 				</Cartridges>
 			</Actions>
 			<Options>
