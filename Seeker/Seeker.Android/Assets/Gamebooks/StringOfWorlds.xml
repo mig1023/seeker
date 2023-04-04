@@ -5268,7 +5268,7 @@
 						<Enemy Name="ПЕРВЫЙ ШЕРШЕНЬ" Skill="8" Strength="8"/>
 						<Enemy Name="ВТОРОЙ ШЕРШЕНЬ" Skill="8" Strength="6"/>
 					</Enemies>
-					<After>Удалось ли вам победить? Тогда продолжайте путь.</After>
+					<Text>Удалось ли вам победить? Тогда продолжайте путь.</Text>
 				</Fight>
 			</Actions>
 			<Options>
