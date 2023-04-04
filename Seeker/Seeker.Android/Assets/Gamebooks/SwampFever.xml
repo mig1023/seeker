@@ -847,7 +847,7 @@
 				<Fight>
 					<EnemyName>ТОПИГЛОТ</EnemyName>
 					<EnemyCombination>4-4-4-2-2-2</EnemyCombination>
-					<After>В случае поражения вы станете обедом для озёрного монстра.</After>
+					<Text>В случае поражения вы станете обедом для озёрного монстра.</Text>
 				</Fight>
 			</Actions>
 			<Options>
