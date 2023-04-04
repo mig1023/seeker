@@ -1026,7 +1026,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="«КУЗНЕЧИК»" Skill="10" Strength="10"/>
-					<After>Вы победили?</After>
+					<Text>Вы победили?</Text>
 				</Fight>
 			</Actions>	
 			<Options>
