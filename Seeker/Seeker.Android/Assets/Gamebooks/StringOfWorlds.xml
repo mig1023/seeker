@@ -49,7 +49,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="КУСТ-ХИЩНИК" Skill="9" Strength="10"/>
-					<After>Удалось ли вам победить?</After>
+					<Text>Удалось ли вам победить?</Text>
 				</Fight>
 			</Actions>	
 			<Options>
