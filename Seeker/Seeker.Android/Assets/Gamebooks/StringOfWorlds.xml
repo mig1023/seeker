@@ -1876,7 +1876,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="ПАУК" Skill="9" Strength="8"/>
-					<After>В любой момент боя вы можете бежать.</After>
+					<Text>В любой момент боя вы можете бежать.</Text>
 				</Fight>
 			</Actions>	
 			<Options>
