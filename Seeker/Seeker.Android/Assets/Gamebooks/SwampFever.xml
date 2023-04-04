@@ -624,7 +624,7 @@
 			<Actions>
 				<Get>
 					<Button>Купить</Button>
-					<Text>Серенитатин</Text>
+					<Head>Серенитатин</Head>
 					<Price>1</Price>
 					<Benefit Name="Fury" Value="-1"/>
 				</Get>
