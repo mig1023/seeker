@@ -5120,7 +5120,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="СОРОКОНОЖКА" Skill="12" Strength="6"/>
-					<After>Удалось ли вам победить опасного противника?</After>
+					<Text>Удалось ли вам победить опасного противника?</Text>
 				</Fight>
 			</Actions>
 			<Options>
