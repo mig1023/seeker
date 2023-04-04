@@ -3247,7 +3247,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="ОБЕЗЬЯНОПАУК" Skill="10" Strength="10"/>
-					<After>Если вы победили, то ура!</After>
+					<Text>Если вы победили, то ура!</Text>
 				</Fight>
 			</Actions>	
 			<Options>
