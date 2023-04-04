@@ -388,7 +388,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="«РОСЯНКА»" Skill="7" Strength="8"/>
-					<After>Если вы победили, продолжайте путь.</After>
+					<Text>Если вы победили, продолжайте путь.</Text>
 				</Fight>
 			</Actions>	
 			<Options>
