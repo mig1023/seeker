@@ -773,7 +773,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="РАКОСКОРПИОН" Skill="9" Strength="9"/>
-					<After>Удалось ли вам победить?</After>
+					<Text>Удалось ли вам победить?</Text>
 				</Fight>
 			</Actions>	
 			<Options>
