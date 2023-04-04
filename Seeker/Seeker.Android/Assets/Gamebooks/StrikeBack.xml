@@ -2791,10 +2791,10 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="Воительница ШЕЙНА" Attack="4" Defence="11" Endurance="18"/>
-					<After>
+					<Texts>
 						<Text Style="Small">Так как у Шейны волшебный меч, то она может наносить тебе ранения, даже если ты ГОРГУЛЬЯ.</Text>
 						<Text>Если Выносливость Шейны упадёт ниже 10 очков:</Text>
-					</After>
+					</Texts>
 				</Fight>
 			</Actions>
 			<Options>
