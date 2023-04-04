@@ -1885,7 +1885,7 @@
 					<Count>2</Count>
 					<WoundsByDices/>
 					<WoundsMultiple>2</WoundsMultiple>
-					<After>Если ты всё ещё жив:</After>
+					<Text>Если ты всё ещё жив:</Text>
 				</Dices>
 			</Actions>
 			<Options>
