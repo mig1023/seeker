@@ -2621,7 +2621,7 @@
 				<Dices>
 					<WoundsByDices/>
 					<WoundsMultiple>3</WoundsMultiple>
-					<After>Однако, если ты ГОРГУЛЬЯ, то копье просто отскакивает, не причиняя тебе вреда.</After>
+					<Text>Однако, если ты ГОРГУЛЬЯ, то копье просто отскакивает, не причиняя тебе вреда.</Text>
 				</Dices>
 			</Actions>
 			<Options>
