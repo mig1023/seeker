@@ -106,7 +106,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="ЗМЕЯ" Skill="12" Strength="12"/>
-					<After>Удалось ли вам победить?</After>
+					<Text>Удалось ли вам победить?</Text>
 				</Fight>
 			</Actions>	
 			<Options>
