@@ -443,46 +443,46 @@
 			<Actions>
 				<Get>
 					<Button>Купить</Button>
-					<Text>Второй двигатель</Text>
+					<Head>Второй двигатель</Head>
 					<Price>40</Price>
 					<Benefit Name="SecondEngine" Value="1"/>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
-					<Text>Стелс-покрытие</Text>
+					<Head>Стелс-покрытие</Head>
 					<Price>20</Price>
 					<Benefit Name="Stealth" Value="1"/>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
-					<Text>Радар</Text>
+					<Head>Радар</Head>
 					<Price>20</Price>
 					<Benefit Name="Radar" Value="1"/>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
-					<Text>Циркулярная пила</Text>
+					<Head>Циркулярная пила</Head>
 					<Price>25</Price>
 					<Benefit Name="CircularSaw" Value="1"/>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
-					<Text>Реактивный огнемёт</Text>
+					<Head>Реактивный огнемёт</Head>
 					<Price>30</Price>
 					<Benefit Name="Flamethrower" Value="1"/>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
-					<Text>Спаренная плазмопушка</Text>
+					<Head>Спаренная плазмопушка</Head>
 					<Price>30</Price>
 					<Benefit Name="PlasmaCannon" Value="1"/>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
-					<Text>Гармонизатор</Text>
+					<Head>Гармонизатор</Head>
 					<Price>50</Price>
 					<Benefit Name="Harmonizer" Value="1"/>
-					<After>Гармонизатор похож на метроном. При колебании маятника он излучает пси-волны. Данное устройство упрощает ментальные проверки на 1 (+1 к цифре МП)</After>
+					<Text>Гармонизатор похож на метроном. При колебании маятника он излучает пси-волны. Данное устройство упрощает ментальные проверки на 1 (+1 к цифре МП)</Text>
 				</Get>
 			</Actions>
 			<Options>
