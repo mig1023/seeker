@@ -2560,7 +2560,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="Рыцарь" Attack="3" Defence="10" Endurance="13"/>
-					<After>Победишь ты рыцаря или превратишь его в камень?</After>
+					<Text>Победишь ты рыцаря или превратишь его в камень?</Text>
 				</Fight>
 			</Actions>
 			<Options>
