@@ -3512,7 +3512,7 @@
 			</Modifications>
 			<Actions>
 				<DiceWounds>
-					<After>А Кирку засчитайте еще один укол.</After>
+					<Text>А Кирку засчитайте еще один укол.</Text>
 				</DiceWounds>
 			</Actions>
 			<Options>
