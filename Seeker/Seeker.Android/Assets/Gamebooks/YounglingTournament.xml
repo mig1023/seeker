@@ -5828,14 +5828,14 @@
 				<EnemyDiceWounds>
 					<BonusTechnique>Push</BonusTechnique>
 					<Enemy>Марика Затт,25</Enemy>
-					<After>Вы бросаетесь на противницу. Продолжается дуэль на световых мечах.</After>
+					<Text>Вы бросаетесь на противницу. Продолжается дуэль на световых мечах.</Text>
 				</EnemyDiceWounds>
 				<SwordFight>
 					<Enemy Name="Марика Затт" Skill="12" Rang="4" Speed="3" Hitpoints="25"/>
 					<HeroHitpointsLimith>5</HeroHitpointsLimith>
 					<EnemyHitpointsLimith>5</EnemyHitpointsLimith>
 					<NoStrikeBack/>
-					<After>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</After>
+					<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
 				</SwordFight>
 			</Actions>
 			<Options>
