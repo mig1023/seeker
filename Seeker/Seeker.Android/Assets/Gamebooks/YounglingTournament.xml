@@ -5751,7 +5751,7 @@
 					<EnemyHitpointsLimith>20</EnemyHitpointsLimith>
 					<HeroRoundWin>3</HeroRoundWin>
 					<NoStrikeBack/>
-					<After>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</After>
+					<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
 				</SwordFight>
 			</Actions>
 			<Options>
