@@ -4669,13 +4669,13 @@
 			</Texts>
 			<Actions>
 				<DiceWounds>
-					<After>— Как тебе такой удар? — спрашивает он, явно довольный собой, и принимает защитную стойку. — Твоя очередь атаковать! Покажи, на что способен!</After>
+					<Text>— Как тебе такой удар? — спрашивает он, явно довольный собой, и принимает защитную стойку. — Твоя очередь атаковать! Покажи, на что способен!</Text>
 				</DiceWounds>
 				<SwordFight>
 					<Enemy Name="Артхт Тархтхтх" Skill="12" Rang="4" Speed="3" Hitpoints="24"/>
 					<HeroHitpointsLimith>5</HeroHitpointsLimith>
 					<EnemyHitpointsLimith>20</EnemyHitpointsLimith>
-					<After>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</After>
+					<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
 				</SwordFight>
 			</Actions>
 			<Modifications>
