@@ -4070,7 +4070,7 @@
 					<HeroHitpointsLimith>5</HeroHitpointsLimith>
 					<EnemyHitpointsLimith>5</EnemyHitpointsLimith>
 					<NoStrikeBack/>
-					<After>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</After>
+					<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
 				</SwordFight>
 			</Actions>
 			<Options>
