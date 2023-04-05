@@ -4964,7 +4964,7 @@
 			</Modifications>
 			<Actions>
 				<DiceWounds>
-					<After>А Артхта Тархтхтху засчитайте еще один укол.</After>
+					<Text>А Артхта Тархтхтху засчитайте еще один укол.</Text>
 				</DiceWounds>
 			</Actions>
 			<Options>
