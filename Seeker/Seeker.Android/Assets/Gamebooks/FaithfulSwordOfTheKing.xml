@@ -10,7 +10,7 @@
 			<Color Name="System" Val="f0dddd"/>
 		</Styles>
 		<Constants>
-			<List Name="WithoutStatuses" Value="0, 660"/>
+			<List Name="WithoutStatuses" Val="0, 660"/>
 			<Dictionary Name="Skills" FromLineByOrder="12, 8, 10, 7, 9, 11"/>
 			<Dictionary Name="Strengths" FromLineByOrder="22, 18, 14, 24, 16, 20"/>	
 		</Constants>
