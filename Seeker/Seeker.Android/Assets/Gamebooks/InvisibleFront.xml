@@ -3,13 +3,13 @@
 		<Title>На невидимых фронтах</Title>
 		<Copyright>mmvvss, 2018</Copyright>
 		<Styles>
-			<Color Name="Main, Option" Value="d52b1e"/>
-			<Color Name="Continue" Value="e57f78"/>
-			<Color Name="ButtonFont, StatusFont" Value="eede49"/>
-			<Color Name="System" Value="eca5a0"/>
-			<Color Name="Background" Value="ffdadb"/>
-			<Color Name="StatusBar" Value="aa2218"/>
-			<Color Name="SystemFont" Value="f7f1b6"/>
+			<Color Name="Main, Option" Val="d52b1e"/>
+			<Color Name="Continue" Val="e57f78"/>
+			<Color Name="ButtonFont, StatusFont" Val="eede49"/>
+			<Color Name="System" Val="eca5a0"/>
+			<Color Name="Background" Val="ffdadb"/>
+			<Color Name="StatusBar" Val="aa2218"/>
+			<Color Name="SystemFont" Val="f7f1b6"/>
 		</Styles>
 		<Constants>
 			<List Name="GetApartments" Value="один, два, три, один, два, три"/>
