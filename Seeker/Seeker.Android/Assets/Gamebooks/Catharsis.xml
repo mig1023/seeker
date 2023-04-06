@@ -13,7 +13,7 @@
 			<Color Name="Continue" Val="a9a9a6"/>
 		</Styles>
 		<Constants>
-			<List Name="WithoutStatuses" Value="0, 401, 402"/>
+			<List Name="WithoutStatuses" Val="0, 401, 402"/>
 			<Dictionary Name="GetStartValues">
 				<Item Name="Fight" Value="10"/>
 				<Item Name="Accuracy" Value="10"/>
