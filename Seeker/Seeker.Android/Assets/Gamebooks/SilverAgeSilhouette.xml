@@ -3,11 +3,11 @@
 		<Title>Серебряного века Силуэт</Title>
 		<Copyright>Константин Шепелин, 2014</Copyright>
 		<Styles>
-			<Color Name="Main, Action, Continue" Value="f8ecc2"/>
-			<Color Name="Option" Value="fdfaf0"/>
-			<Color Name="ButtonFont" Value="000000"/>
-			<Color Name="StatusBar" Value="dfd4ae"/>
-			<Color Name="ActionBox" Value="fcf9ec"/>
+			<Color Name="Main, Action, Continue" Val="f8ecc2"/>
+			<Color Name="Option" Val="fdfaf0"/>
+			<Color Name="ButtonFont" Val="000000"/>
+			<Color Name="StatusBar" Val="dfd4ae"/>
+			<Color Name="ActionBox" Val="fcf9ec"/>
 		</Styles>
 		<Settings>
 			<ShowDisabledOption/>
