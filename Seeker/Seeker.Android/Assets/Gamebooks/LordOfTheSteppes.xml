@@ -3,13 +3,13 @@
 		<Title>Владыка степей</Title>
 		<Copyright>Сергей Ступин, 2009</Copyright>
 		<Styles>
-			<Color Name="StatusBar" Value="b42806"/>
-			<Color Name="StatusFont" Value="ffffff"/>
-			<Color Name="Main" Value="b80f0a"/>
-			<Color Name="Action" Value="a92605"/>
-			<Color Name="Option" Value="878787"/>
-			<Color Name="Continue" Value="db8784"/>
-			<Color Name="System" Value="f2f2f2"/>
+			<Color Name="StatusBar" Val="b42806"/>
+			<Color Name="StatusFont" Val="ffffff"/>
+			<Color Name="Main" Val="b80f0a"/>
+			<Color Name="Action" Val="a92605"/>
+			<Color Name="Option" Val="878787"/>
+			<Color Name="Continue" Val="db8784"/>
+			<Color Name="System" Val="f2f2f2"/>
 		</Styles>
 		<Constants>
 			<List Name="WithoutStatuses" Value="0, 904, 905, 906"/>
