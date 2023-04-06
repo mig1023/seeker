@@ -3,15 +3,15 @@
 		<Title>Генезис</Title>
 		<Copyright>Андрей Журавлёв, 2013</Copyright>
 		<Styles>
-			<Color Name="Background" Value="293342"/>
-			<Color Name="Font" Value="b6cbd8"/>
-			<Color Name="StatusBar, System" Value="3c5363"/>
-			<Color Name="ActionBox" Value="69707a"/>
-			<Color Name="StatusFont" Value="b1b5ba"/>
-			<Color Name="Main" Value="4c687c"/>
-			<Color Name="Option" Value="6f8696"/>
-			<Color Name="Action" Value="445d6f"/>
-			<Color Name="Continue" Value="849fb3"/>
+			<Color Name="Background" Val="293342"/>
+			<Color Name="Font" Val="b6cbd8"/>
+			<Color Name="StatusBar, System" Val="3c5363"/>
+			<Color Name="ActionBox" Val="69707a"/>
+			<Color Name="StatusFont" Val="b1b5ba"/>
+			<Color Name="Main" Val="4c687c"/>
+			<Color Name="Option" Val="6f8696"/>
+			<Color Name="Action" Val="445d6f"/>
+			<Color Name="Continue" Val="849fb3"/>
 		</Styles>
 		<Constants>
 			<List Name="WithoutStatuses" Value="0, 201, 202, 203, 204, 205, 206, 207"/>
