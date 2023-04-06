@@ -3,11 +3,11 @@
 		<Title>Идущий на смех</Title>
 		<Copyright>Геннадий Логинов, 2018</Copyright>
 		<Styles>
-			<Color Name="StatusBar" Value="2f0b0c"/>
-			<Color Name="Main, Option" Value="441012"/>
-			<Color Name="Continue" Value="814548"/>
-			<Color Name="Action" Value="693f41"/>
-			<Color Name="System" Value="f3f0f0"/>
+			<Color Name="StatusBar" Val="2f0b0c"/>
+			<Color Name="Main, Option" Val="441012"/>
+			<Color Name="Continue" Val="814548"/>
+			<Color Name="Action" Val="693f41"/>
+			<Color Name="System" Val="f3f0f0"/>
 		</Styles>
 		<Constants>
 			<List Name="WithoutStatuses" Value="0, 1393, 1394"/>
