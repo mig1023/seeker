@@ -14,7 +14,7 @@
 			<Color Name="Continue" Val="849fb3"/>
 		</Styles>
 		<Constants>
-			<List Name="WithoutStatuses" Value="0, 201, 202, 203, 204, 205, 206, 207"/>
+			<List Name="WithoutStatuses" Val="0, 201, 202, 203, 204, 205, 206, 207"/>
 			<Dictionary Name="GetStartValues">
 				<Item Name="Skill" Value="30"/>
 				<Item Name="Weapon" Value="15"/>
