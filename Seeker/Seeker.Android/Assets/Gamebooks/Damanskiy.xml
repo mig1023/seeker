@@ -3,11 +3,11 @@
 		<Title>Даманский</Title>
 		<Copyright>Павел Горохов, 2016</Copyright>
 		<Styles>
-			<Color Name="Main" Value="d8d8d8"/>
-			<Color Name="Continue" Value="e7e7e7"/>
-			<Color Name="System" Value="efefef"/>
-			<Color Name="SystemFont" Value="8f8f8f"/>
-			<Color Name="ButtonFont" Value="000000"/>
+			<Color Name="Main" Val="d8d8d8"/>
+			<Color Name="Continue" Val="e7e7e7"/>
+			<Color Name="System" Val="efefef"/>
+			<Color Name="SystemFont" Val="8f8f8f"/>
+			<Color Name="ButtonFont" Val="000000"/>
 		</Styles>
 		<Settings>
 			<HideDisabledOption/>
