@@ -3,10 +3,10 @@
 		<Title>Оружие возмездия</Title>
 		<Copyright>Андрей Тишин, 2013</Copyright>
 		<Styles>
-			<Color Name="Main, Action, Option, StatusBar, Continue" Value="ffffff"/>
-			<Color Name="ButtonFont, StatusFont, StatusBorder, Border" Value="000000"/>
-			<Color Name="ActionBox" Value="efefef"/>
-			<Color Name="System" Value="f4f4f4"/>
+			<Color Name="Main, Action, Option, StatusBar, Continue" Val="ffffff"/>
+			<Color Name="ButtonFont, StatusFont, StatusBorder, Border" Val="000000"/>
+			<Color Name="ActionBox" Val="efefef"/>
+			<Color Name="System" Val="f4f4f4"/>
 		</Styles>
 		<Constants>
 			<List Name="WithoutStatuses" Value="0, 266"/>
