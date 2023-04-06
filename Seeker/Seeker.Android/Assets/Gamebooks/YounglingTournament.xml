@@ -3,12 +3,12 @@
 		<Title>Турнир юнлингов</Title>
 		<Copyright>Александр Андросенко, 2018</Copyright>
 		<Styles>
-			<Color Name="StatusBar" Value="e8d17e"/>
-			<Color Name="StatusFont" Value="000000"/>
-			<Color Name="ActionBox, Continue" Value="e6d9ae"/>
-			<Color Name="Main" Value="c0ac6c"/>
-			<Color Name="Action" Value="c0a23b"/>
-			<Color Name="System" Value="f9f9f9"/>
+			<Color Name="StatusBar" Val="e8d17e"/>
+			<Color Name="StatusFont" Val="000000"/>
+			<Color Name="ActionBox, Continue" Val="e6d9ae"/>
+			<Color Name="Main" Val="c0ac6c"/>
+			<Color Name="Action" Val="c0a23b"/>
+			<Color Name="System" Val="f9f9f9"/>
 		</Styles>
 		<Settings>
 			<ShowDisabledOption/>
