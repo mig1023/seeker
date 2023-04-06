@@ -192,7 +192,7 @@ namespace Seeker.Game
 
             foreach (XmlNode xmlNode in xmlFile.SelectNodes(Intro("Constants/List")))
             {
-                List<string> values = xmlNode.Attributes["Value"].InnerText.Split(',').ToList();
+                List<string> values = xmlNode.Attributes["Val"].InnerText.Split(',').ToList();
                 Data.Constants.LoadList(xmlNode.Attributes["Name"].InnerText, values);
             }
 
