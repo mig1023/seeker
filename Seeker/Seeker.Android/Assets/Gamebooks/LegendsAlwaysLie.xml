@@ -3,14 +3,14 @@
 		<Title>Легенды всегда врут</Title>
 		<Copyright>Роман Островерхов, 2012</Copyright>
 		<Styles>
-			<Color Name="Background" Value="f5e7e5"/>
-			<Color Name="StatusBar" Value="870808"/>
-			<Color Name="AdditionalStatus" Value="b70b0b"/>
-			<Color Name="AdditionalFont" Value="ffffff"/>
-			<Color Name="Main" Value="911"/>
-			<Color Name="Action" Value="ba2020"/>
-			<Color Name="Option, Continue" Value="cc8888"/>
-			<Color Name="System" Value="e6c5c5"/>
+			<Color Name="Background" Val="f5e7e5"/>
+			<Color Name="StatusBar" Val="870808"/>
+			<Color Name="AdditionalStatus" Val="b70b0b"/>
+			<Color Name="AdditionalFont" Val="ffffff"/>
+			<Color Name="Main" Val="911"/>
+			<Color Name="Action" Val="ba2020"/>
+			<Color Name="Option, Continue" Val="cc8888"/>
+			<Color Name="System" Val="e6c5c5"/>
 		</Styles>
 		<Constants>
 			<List Name="WithoutStatuses" Value="0, 714, 715, 716"/>
