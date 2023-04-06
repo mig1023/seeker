@@ -3,12 +3,12 @@
 		<Title>День Орка</Title>
 		<Copyright>Кейси Трэйвис, 2008</Copyright>
 		<Styles>
-			<Color Name="Main" Value="a4be84"/>
-			<Color Name="Continue" Value="cad9b7"/>
-			<Color Name="Action, StatusBar" Value="72855c"/>
-			<Color Name="System" Value="e9efe2"/>
-			<Color Name="Font, ButtonFont, SystemFont" Value="000000"/>
-			<Color Name="ActionBox, AdditionalStatus" Value="c8d8b5"/>
+			<Color Name="Main" Val="a4be84"/>
+			<Color Name="Continue" Val="cad9b7"/>
+			<Color Name="Action, StatusBar" Val="72855c"/>
+			<Color Name="System" Val="e9efe2"/>
+			<Color Name="Font, ButtonFont, SystemFont" Val="000000"/>
+			<Color Name="ActionBox, AdditionalStatus" Val="c8d8b5"/>
 		</Styles>
 		<Constants>
 			<List Name="WithoutStatuses" Value="0, 102, 103"/>
