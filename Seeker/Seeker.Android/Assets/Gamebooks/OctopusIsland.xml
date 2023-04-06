@@ -3,9 +3,9 @@
 		<Title>Остров Осьминогов</Title>
 		<Copyright>Филипп Эбли, 1992</Copyright>
 		<Styles>
-			<Color Name="StatusBar" Value="ce4f36"/>
-			<Color Name="Main, Action, Option" Value="c93c20"/>
-			<Color Name="System" Value="eeeeee"/>
+			<Color Name="StatusBar" Val="ce4f36"/>
+			<Color Name="Main, Action, Option" Val="c93c20"/>
+			<Color Name="System" Val="eeeeee"/>
 		</Styles>
 		<Settings>
 			<HideDisabledOption/>
