@@ -3,9 +3,9 @@
 		<Title>Смерть антиквара</Title>
 		<Copyright>Константин Таро, 2001</Copyright>
 		<Styles>
-			<Color Name="Main, Option" Value="2e2e2e"/>
-			<Color Name="Continue" Value="9a9a9a"/>
-			<Color Name="System" Value="d6d6d6"/>
+			<Color Name="Main, Option" Val="2e2e2e"/>
+			<Color Name="Continue" Val="9a9a9a"/>
+			<Color Name="System" Val="d6d6d6"/>
 		</Styles>
 		<Settings>
 			<HideDisabledOption/>
