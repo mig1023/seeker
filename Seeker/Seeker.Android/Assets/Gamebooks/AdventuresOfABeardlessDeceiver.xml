@@ -3,14 +3,14 @@
 		<Title>Приключения безбородого обманщика</Title>
 		<Copyright>Владимир Сизиков, 2015</Copyright>
 		<Styles>
-			<Color Name="Background" Value="dbeadc"/>
-			<Color Name="ActionBox" Value="7cb281"/>
-			<Color Name="StatusBar" Value="005100"/>
-			<Color Name="AdditionalStatus" Value="99b999"/>
-			<Color Name="Main" Value="5da130"/>
-			<Color Name="Action" Value="339933"/>
-			<Color Name="Option, Continue" Value="8dbd6e"/>
-			<Color Name="System" Value="c7dfb9"/>
+			<Color Name="Background" Val="dbeadc"/>
+			<Color Name="ActionBox" Val="7cb281"/>
+			<Color Name="StatusBar" Val="005100"/>
+			<Color Name="AdditionalStatus" Val="99b999"/>
+			<Color Name="Main" Val="5da130"/>
+			<Color Name="Action" Val="339933"/>
+			<Color Name="Option, Continue" Val="8dbd6e"/>
+			<Color Name="System" Val="c7dfb9"/>
 		</Styles>
 		<Constants>
 			<List Name="WithoutStatuses" Value="0, 205"/>
