@@ -3,15 +3,15 @@
 		<Title>Наставники всегда правы</Title>
 		<Copyright>Роман Островерхов, 2011</Copyright>
 		<Styles>
-			<Color Name="Background" Value="e0e7f2"/>
-			<Color Name="ActionBox" Value="7988a4"/>
-			<Color Name="StatusBar" Value="364d77"/>
-			<Color Name="AdditionalStatus" Value="5e7092"/>
-			<Color Name="AdditionalFont" Value="ced4de"/>
-			<Color Name="Main" Value="3662ae"/>
-			<Color Name="Action" Value="203a68"/>
-			<Color Name="Option, Continue" Value="9ab0d6"/>
-			<Color Name="System" Value="ccd7ea"/>
+			<Color Name="Background" Val="e0e7f2"/>
+			<Color Name="ActionBox" Val="7988a4"/>
+			<Color Name="StatusBar" Val="364d77"/>
+			<Color Name="AdditionalStatus" Val="5e7092"/>
+			<Color Name="AdditionalFont" Val="ced4de"/>
+			<Color Name="Main" Val="3662ae"/>
+			<Color Name="Action" Val="203a68"/>
+			<Color Name="Option, Continue" Val="9ab0d6"/>
+			<Color Name="System" Val="ccd7ea"/>
 		</Styles>
 		<Constants>
 			<List Name="WithoutStatuses" Value="0, 556, 557, 558, 559"/>
