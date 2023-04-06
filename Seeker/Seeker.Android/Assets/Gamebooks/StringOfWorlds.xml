@@ -3,7 +3,7 @@
 		<Title>Вереница миров или выводы из закона Мэрфи</Title>
 		<Copyright>Ольга Голотвина, 1995</Copyright>
 		<Constants>
-			<List Name="WithoutStaticsButtons" Value="0, 1, 665"/>
+			<List Name="WithoutStaticsButtons" Val="0, 1, 665"/>
 			<Dictionary Name="Skills" FromLineByOrder=", 8, 10, 12, 9, 11, 9, 10, 8, 9, 10, 11"/>
 			<Dictionary Name="Strengths" FromLineByOrder=", 22, 20, 16, 18, 20, 20, 16, 24, 22, 18, 20"/>
 			<Dictionary Name="Charms" FromLineByOrder=", 8, 6, 5, 8, 6, 7, 7, 7, 6, 7, 5"/>
