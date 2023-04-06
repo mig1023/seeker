@@ -3,13 +3,13 @@
 		<Title>Сердце льда</Title>
 		<Copyright>Дэйв Моррис, 1994</Copyright>
 		<Styles>
-			<Color Name="Background" Value="0787c4"/>
-			<Color Name="Font, SystemFont" Value="d3f0fd"/>
-			<Color Name="Main, ActionBox" Value="389fcf"/>
-			<Color Name="StatusBar" Value="5c7ca5"/>
-			<Color Name="Option, Continue" Value="6ab7db"/>
-			<Color Name="Action" Value="0679b0"/>
-			<Color Name="System" Value="1f93c9"/>
+			<Color Name="Background" Val="0787c4"/>
+			<Color Name="Font, SystemFont" Val="d3f0fd"/>
+			<Color Name="Main, ActionBox" Val="389fcf"/>
+			<Color Name="StatusBar" Val="5c7ca5"/>
+			<Color Name="Option, Continue" Val="6ab7db"/>
+			<Color Name="Action" Val="0679b0"/>
+			<Color Name="System" Val="1f93c9"/>
 		</Styles>
 		<Constants>
 			<List Name="WithoutStatuses" Value="0, 454, 455, 456, 457"/>
