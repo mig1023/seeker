@@ -14,7 +14,7 @@
 			<ShowDisabledOption/>
 		</Settings>
 		<Constants>
-			<List Name="ParagraphsStatusesLimit" Value="375, 417"/>
+			<List Name="ParagraphsStatusesLimit" Val="375, 417"/>
 		</Constants>
 		<Buttons>
 			<Get>Купить</Get>
