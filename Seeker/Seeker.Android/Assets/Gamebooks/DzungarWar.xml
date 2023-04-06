@@ -3,16 +3,16 @@
 		<Title>Джунгарское нашествие</Title>
 		<Copyright>Владимир Сизиков, 2016</Copyright>
 		<Styles>
-			<Color Name="Background" Value="f1e6d1"/>
-			<Color Name="ActionBox" Value="af8f69"/>
-			<Color Name="StatusBar" Value="dcc18c"/>
-			<Color Name="StatusFont" Value="000000"/>
-			<Color Name="AdditionalStatus" Value="ebdcbe"/>
-			<Color Name="Main" Value="93684f"/>
-			<Color Name="Action" Value="8c7254"/>
-			<Color Name="Option" Value="a88672"/>
-			<Color Name="Continue" Value="b99e8e"/>
-			<Color Name="System" Value="cebbaf"/>
+			<Color Name="Background" Val="f1e6d1"/>
+			<Color Name="ActionBox" Val="af8f69"/>
+			<Color Name="StatusBar" Val="dcc18c"/>
+			<Color Name="StatusFont" Val="000000"/>
+			<Color Name="AdditionalStatus" Val="ebdcbe"/>
+			<Color Name="Main" Val="93684f"/>
+			<Color Name="Action" Val="8c7254"/>
+			<Color Name="Option" Val="a88672"/>
+			<Color Name="Continue" Val="b99e8e"/>
+			<Color Name="System" Val="cebbaf"/>
 		</Styles>
 		<Constants>
 			<List Name="WithoutStatuses" Value="0, 658, 659, 660"/>
