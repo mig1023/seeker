@@ -3,12 +3,12 @@
 		<Title>Монстр наносит ответный удар</Title>
 		<Copyright>Хироси Ямамото, 1987</Copyright>
 		<Styles>
-			<Color Name="Main" Value="4d5339"/>
-			<Color Name="Option" Value="405339"/>
-			<Color Name="Action" Value="454a33"/>
-			<Color Name="StatusBar" Value="33422d"/>
-			<Color Name="System" Value="9fa99c"/>
-			<Color Name="ActionBox" Value="bcc2b9"/>
+			<Color Name="Main" Val="4d5339"/>
+			<Color Name="Option" Val="405339"/>
+			<Color Name="Action" Val="454a33"/>
+			<Color Name="StatusBar" Val="33422d"/>
+			<Color Name="System" Val="9fa99c"/>
+			<Color Name="ActionBox" Val="bcc2b9"/>
 		</Styles>
 		<Settings>
 			<ShowDisabledOption/>
