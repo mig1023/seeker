@@ -10,10 +10,10 @@
 			<Color Name="System" Val="f9f9f9"/>
 		</Styles>
 		<Constants>
-			<List Name="WithoutStatuses" Value="0, 619, 753"/>
-			<List Name="WithoutStaticsButtons" Value="0, 619, 753"/>
-			<List Name="ParagraphsStatusesLimit" Value="620, 752"/>
-			<List Name="StaticSpells" Value="ЗАКЛЯТИЕ КОПИИ, ЗАКЛЯТИЕ СИЛЫ, ЗАКЛЯТИЕ СЛАБОСТИ"/>
+			<List Name="WithoutStatuses" Val="0, 619, 753"/>
+			<List Name="WithoutStaticsButtons" Val="0, 619, 753"/>
+			<List Name="ParagraphsStatusesLimit" Val="620, 752"/>
+			<List Name="StaticSpells" Val="ЗАКЛЯТИЕ КОПИИ, ЗАКЛЯТИЕ СИЛЫ, ЗАКЛЯТИЕ СЛАБОСТИ"/>
 		</Constants>
 		<Settings>
 			<HideDisabledOption/>
