@@ -3,12 +3,12 @@
 		<Title>Киберпанк: Тени Найт-Сити</Title>
 		<Copyright>Мария Ерошкина, 2021</Copyright>
 		<Styles>
-			<Color Name="AdditionalStatus" Value="094542"/>
-			<Color Name="AdditionalFont" Value="ffffff"/>
-			<Color Name="Main" Value="118984"/>
-			<Color Name="Action" Value="0c5c58"/>
-			<Color Name="Option, Continue" Value="84c2bf"/>
-			<Color Name="System" Value="cde6e5"/>
+			<Color Name="AdditionalStatus" Val="094542"/>
+			<Color Name="AdditionalFont" Val="ffffff"/>
+			<Color Name="Main" Val="118984"/>
+			<Color Name="Action" Val="0c5c58"/>
+			<Color Name="Option, Continue" Val="84c2bf"/>
+			<Color Name="System" Val="cde6e5"/>
 		</Styles>
 		<Constants>
 			<List Name="WithoutStatuses" Value="0, 587, 588, 589"/>
