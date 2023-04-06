@@ -12,7 +12,7 @@
 			<Color Name="SystemFont" Val="f7f1b6"/>
 		</Styles>
 		<Constants>
-			<List Name="GetApartments" Value="один, два, три, один, два, три"/>
+			<List Name="GetApartments" Val="один, два, три, один, два, три"/>
 		</Constants>
 		<Settings>
 			<HideDisabledOption/>
