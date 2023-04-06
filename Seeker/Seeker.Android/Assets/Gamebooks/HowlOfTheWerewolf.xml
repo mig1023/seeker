@@ -3,13 +3,13 @@
 		<Title>Вой оборотня</Title>
 		<Copyright>Джонатан Грин, 2007</Copyright>
 		<Styles>
-			<Color Name="Background" Value="c2cccd"/>
-			<Color Name="StatusBar" Value="253130"/>
-			<Color Name="AdditionalStatus, ActionBox" Value="a8b7b8"/>
-			<Color Name="Main" Value="383e3b"/>
-			<Color Name="Action" Value="516f72"/>
-			<Color Name="Option, Continue" Value="738b8e"/>
-			<Color Name="System" Value="9dadaf"/>
+			<Color Name="Background" Val="c2cccd"/>
+			<Color Name="StatusBar" Val="253130"/>
+			<Color Name="AdditionalStatus, ActionBox" Val="a8b7b8"/>
+			<Color Name="Main" Val="383e3b"/>
+			<Color Name="Action" Val="516f72"/>
+			<Color Name="Option, Continue" Val="738b8e"/>
+			<Color Name="System" Val="9dadaf"/>
 		</Styles>
 		<Constants>
 			<Dictionary Name="GetCountName">
