@@ -3,8 +3,8 @@
 		<Title>Всегда выбирай Ктулху</Title>
 		<Copyright>Эдвард Райкер, 2018</Copyright>
 		<Styles>
-			<Color Name="StatusBar" Value="003153"/>
-			<Color Name="SystemFont" Value="dce3e5"/>
+			<Color Name="StatusBar" Val="003153"/>
+			<Color Name="SystemFont" Val="dce3e5"/>
 		</Styles>
 		<Settings>
 			<HideDisabledOption/>
