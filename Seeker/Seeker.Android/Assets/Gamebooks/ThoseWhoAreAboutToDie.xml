@@ -3,10 +3,10 @@
 		<Title>Идущие на смерть</Title>
 		<Copyright>Александр Слюта, 2009</Copyright>
 		<Styles>
-			<Color Name="Main, Action, Option" Value="fcdd76"/>
-			<Color Name="ButtonFont, StatusFont" Value="000000"/>
-			<Color Name="StatusBar" Value="fce391"/>
-			<Color Name="Continue" Value="fdeeba"/>
+			<Color Name="Main, Action, Option" Val="fcdd76"/>
+			<Color Name="ButtonFont, StatusFont" Val="000000"/>
+			<Color Name="StatusBar" Val="fce391"/>
+			<Color Name="Continue" Val="fdeeba"/>
 		</Styles>
 		<Settings>
 			<ShowDisabledOption/>
