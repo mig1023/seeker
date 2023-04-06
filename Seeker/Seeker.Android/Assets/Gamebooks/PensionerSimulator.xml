@@ -3,8 +3,8 @@
 		<Title>Симулятор пенсионерки</Title>
 		<Copyright>Zaratystra, the_arsonist, 2018</Copyright>
 		<Styles>
-			<Color Name="Main" Value="030436"/>
-			<Color Name="Option" Value="35365e"/>
+			<Color Name="Main" Val="030436"/>
+			<Color Name="Option" Val="35365e"/>
 		</Styles>
 		<Settings>
 			<HideDisabledOption/>
