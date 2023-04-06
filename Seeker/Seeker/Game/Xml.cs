@@ -181,7 +181,7 @@ namespace Seeker.Game
 
             foreach (XmlNode xmlNode in xmlFile.SelectNodes(Intro("Styles/Color")))
                 foreach (string type in Multiples(xmlNode, "Name"))
-                    Data.Constants.LoadColor(type, xmlNode.Attributes["Value"].InnerText);
+                    Data.Constants.LoadColor(type, xmlNode.Attributes["Val"].InnerText);
 
             Data.Constants.LoadEnabledDisabledOption(SettingBool(xmlFile, "ShowDisabledOption"));
             Data.Constants.LoadStartParagraphOption(SettingString(xmlFile, "StartParagraph"));
