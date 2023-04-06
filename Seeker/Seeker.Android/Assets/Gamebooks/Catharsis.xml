@@ -3,14 +3,14 @@
 		<Title>Катарсис</Title>
 		<Copyright>Андрей Журавлёв, 2013</Copyright>
 		<Styles>
-			<Color Name="Background" Value="cdcdcd"/>
-			<Color Name="StatusBar, ActionBox, System" Value="b8b8b8"/>
-			<Color Name="StatusFont" Value="000000"/>
-			<Color Name="AdditionalStatus" Value="bfbfbf"/>
-			<Color Name="Main" Value="51514b"/>
-			<Color Name="Option" Value="858581"/>
-			<Color Name="Action" Value="939393"/>
-			<Color Name="Continue" Value="a9a9a6"/>
+			<Color Name="Background" Val="cdcdcd"/>
+			<Color Name="StatusBar, ActionBox, System" Val="b8b8b8"/>
+			<Color Name="StatusFont" Val="000000"/>
+			<Color Name="AdditionalStatus" Val="bfbfbf"/>
+			<Color Name="Main" Val="51514b"/>
+			<Color Name="Option" Val="858581"/>
+			<Color Name="Action" Val="939393"/>
+			<Color Name="Continue" Val="a9a9a6"/>
 		</Styles>
 		<Constants>
 			<List Name="WithoutStatuses" Value="0, 401, 402"/>
