@@ -3,10 +3,10 @@
 		<Title>Хозяин тайги</Title>
 		<Copyright>Павел Горохов, 2013</Copyright>
 		<Styles>
-			<Color Name="Main" Value="3e5434"/>
-			<Color Name="Background" Value="314329"/>
-			<Color Name="Font, SystemFont" Value="a5b0a0"/>
-			<Color Name="Option, Continue, System" Value="64765c"/>
+			<Color Name="Main" Val="3e5434"/>
+			<Color Name="Background" Val="314329"/>
+			<Color Name="Font, SystemFont" Val="a5b0a0"/>
+			<Color Name="Option, Continue, System" Val="64765c"/>
 		</Styles>
 		<Settings>
 			<ShowDisabledOption/>
