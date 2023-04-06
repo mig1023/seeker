@@ -3,11 +3,11 @@
 		<Title>Верная шпага короля</Title>
 		<Copyright>Дмитрий Браславский, 1995</Copyright>
 		<Styles>
-			<Color Name="StatusBar" Value="870808"/>
-			<Color Name="Main" Value="911"/>
-			<Color Name="Action" Value="ba2020"/>
-			<Color Name="Option, Continue" Value="dbabab"/>
-			<Color Name="System" Value="f0dddd"/>
+			<Color Name="StatusBar" Val="870808"/>
+			<Color Name="Main" Val="911"/>
+			<Color Name="Action" Val="ba2020"/>
+			<Color Name="Option, Continue" Val="dbabab"/>
+			<Color Name="System" Val="f0dddd"/>
 		</Styles>
 		<Constants>
 			<List Name="WithoutStatuses" Value="0, 660"/>
