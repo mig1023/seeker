@@ -3,14 +3,14 @@
 		<Title>Разрушитель</Title>
 		<Copyright>Стив Джексон, 1986</Copyright>
 		<Styles>
-			<Color Name="Background" Value="c9d7d0"/>
-			<Color Name="StatusBar" Value="0e3b24"/>
-			<Color Name="Main" Value="145334"/>
-			<Color Name="Action" Value="104229"/>
-			<Color Name="Option" Value="42755c"/>
-			<Color Name="Continue" Value="7d9188"/>
-			<Color Name="System" Value="9db6aa"/>
-			<Color Name="ActionBox" Value="87a094"/>
+			<Color Name="Background" Val="c9d7d0"/>
+			<Color Name="StatusBar" Val="0e3b24"/>
+			<Color Name="Main" Val="145334"/>
+			<Color Name="Action" Val="104229"/>
+			<Color Name="Option" Val="42755c"/>
+			<Color Name="Continue" Val="7d9188"/>
+			<Color Name="System" Val="9db6aa"/>
+			<Color Name="ActionBox" Val="87a094"/>
 		</Styles>
 		<Settings>
 			<HideDisabledOption/>
