@@ -12,7 +12,7 @@
 			<Color Name="AdditionalStatus" Val="d0c3b0"/>
 		</Styles>
 		<Constants>
-			<List Name="WithoutStaticsButtons" Value="0, 1"/>
+			<List Name="WithoutStaticsButtons" Val="0, 1"/>
 			<Dictionary Name="HealthLine">
 				<Item Name="0" Value="мертв"/>
 				<Item Name="1" Value="тяжело ранен"/>
