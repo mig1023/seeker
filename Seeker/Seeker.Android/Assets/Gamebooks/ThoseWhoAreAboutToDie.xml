@@ -798,9 +798,9 @@
 				<Text Style="Small">Отними по 2 пункта от каждого своего навыка.</Text>
 			</Texts>
 			<Modifications>
-				<Reaction Value="-2"/>
-				<Strength Value="-2"/>
-				<Endurance Value="-2"/>
+				<Reaction Val="-2"/>
+				<Strength Val="-2"/>
+				<Endurance Val="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="124"/>
