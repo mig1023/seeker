@@ -723,7 +723,7 @@
 				</MentalTest>
 			</Actions>
 			<Modifications>
-				<Fury Value="1"/>
+				<Fury Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="71"/>
