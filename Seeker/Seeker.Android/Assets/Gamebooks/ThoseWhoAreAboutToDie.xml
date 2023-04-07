@@ -108,7 +108,7 @@
 				<Text>Готовься отражать атаку.</Text>
 			</Texts>
 			<Modifications>
-				<Reaction Value="-2"/>
+				<Reaction Val="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="56"/>
