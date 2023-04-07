@@ -17,38 +17,38 @@
 		</Styles>
 		<Constants>
 			<Dictionary Name="GetRangeTypes">
-				<Item Name="6" Value="ДАЛЬНЯЯ ДИСТАНЦИЯ"/>
-				<Item Name="5" Value="СРЕДНЯЯ ДИСТАНЦИЯ"/>
-				<Item Name="4" Value="БЛИЖНЯЯ ДИСТАНЦИЯ"/>
+				<Item Name="6" Val="ДАЛЬНЯЯ ДИСТАНЦИЯ"/>
+				<Item Name="5" Val="СРЕДНЯЯ ДИСТАНЦИЯ"/>
+				<Item Name="4" Val="БЛИЖНЯЯ ДИСТАНЦИЯ"/>
 			</Dictionary>
 			<Dictionary Name="GetUpgrates">
-				<Item Name="1" Value="SecondEngine|Второй двигатель"/>
-				<Item Name="2" Value="Stealth|Стелс-покрытие"/>
-				<Item Name="3" Value="Radar|Радар"/>
-				<Item Name="4" Value="CircularSaw|Циркулярная пила"/>
-				<Item Name="5" Value="Flamethrower|Реактивный огнемёт"/>
-				<Item Name="6" Value="PlasmaCannon|Спаренная плазмопушка"/>
+				<Item Name="1" Val="SecondEngine|Второй двигатель"/>
+				<Item Name="2" Val="Stealth|Стелс-покрытие"/>
+				<Item Name="3" Val="Radar|Радар"/>
+				<Item Name="4" Val="CircularSaw|Циркулярная пила"/>
+				<Item Name="5" Val="Flamethrower|Реактивный огнемёт"/>
+				<Item Name="6" Val="PlasmaCannon|Спаренная плазмопушка"/>
 			</Dictionary>
 			<Dictionary Name="GetPurchases">
-				<Item Name="Месячное проживание на Земле" Value="5"/>
-				<Item Name="Круиз по галактике" Value="10"/>
-				<Item Name="Робот-помощник" Value="50"/>
-				<Item Name="Жена/муж-андроид" Value="100"/>
-				<Item Name="Звёздный ялик" Value="150"/>
-				<Item Name="Кибермодификация тела" Value="200"/>
-				<Item Name="Биомодификация тела" Value="300"/>
-				<Item Name="Чудо-омоложение" Value="400"/>
-				<Item Name="Особняк на Эдеме" Value="500"/>
-				<Item Name="Остров на Гидронее" Value="750"/>
-				<Item Name="Космический фрегат" Value="1000"/>
-				<Item Name="Колонизация нового планетоида" Value="1500"/>
+				<Item Name="Месячное проживание на Земле" Val="5"/>
+				<Item Name="Круиз по галактике" Val="10"/>
+				<Item Name="Робот-помощник" Val="50"/>
+				<Item Name="Жена/муж-андроид" Val="100"/>
+				<Item Name="Звёздный ялик" Val="150"/>
+				<Item Name="Кибермодификация тела" Val="200"/>
+				<Item Name="Биомодификация тела" Val="300"/>
+				<Item Name="Чудо-омоложение" Val="400"/>
+				<Item Name="Особняк на Эдеме" Val="500"/>
+				<Item Name="Остров на Гидронее" Val="750"/>
+				<Item Name="Космический фрегат" Val="1000"/>
+				<Item Name="Колонизация нового планетоида" Val="1500"/>
 			</Dictionary>
 			<Dictionary Name="GetFuryLevel">
-				<Item Name="-2" Value="Монах"/>
-				<Item Name="-1" Value="Пацифист"/>
-				<Item Name="0" Value="Путник"/>
-				<Item Name="1" Value="Милитарист"/>
-				<Item Name="2" Value="Берсерк"/>
+				<Item Name="-2" Val="Монах"/>
+				<Item Name="-1" Val="Пацифист"/>
+				<Item Name="0" Val="Путник"/>
+				<Item Name="1" Val="Милитарист"/>
+				<Item Name="2" Val="Берсерк"/>
 			</Dictionary>
 		</Constants>
 		<Settings>
