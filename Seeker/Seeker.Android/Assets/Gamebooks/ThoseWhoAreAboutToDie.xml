@@ -753,9 +753,9 @@
 				<Text Style="Small">Добавь 1 силу, 1 выносливость и 1 реакцию.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="1"/>
-				<Endurance Value="1"/>
-				<Reaction Value="1"/>
+				<Strength Val="1"/>
+				<Endurance Val="1"/>
+				<Reaction Val="1"/>
 			</Modifications>
 			<Triggers>Массаж</Triggers>
 			<Options>
