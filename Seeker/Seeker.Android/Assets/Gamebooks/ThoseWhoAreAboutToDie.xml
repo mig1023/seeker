@@ -448,7 +448,7 @@
 				<Text>Ты отскакиваешь и готовишься к отражению атаки.</Text>
 			</Texts>
 			<Modifications>
-				<Reaction Value="-2"/>
+				<Reaction Val="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="56"/>
