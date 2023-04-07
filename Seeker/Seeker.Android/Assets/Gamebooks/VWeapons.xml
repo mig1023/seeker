@@ -246,7 +246,7 @@
 				<Option Destination="29" Text="Последовать за барменом немедленно"/>
 				<Option Destination="1" Text="Попросить бармена подождать, пока вы допьёте кофе"/>
 				<Option Destination="7" Text="Объяснить, что у морского офицера и других забот хватает (подозрение +1)">
-					<Suspicions Value="1"/>
+					<Suspicions Val="1"/>
 				</Option>
 			</Options>
 		</Paragraph>
