@@ -253,7 +253,7 @@
 				<Text Style="Small">Если твоя реакция больше 5, то ты успеваешь изменить направление атаки и убрать руки от щита. Если не успеваешь, то, ударившись о щит кистями рук, ты теряешь 2 пункта Реакции.</Text>
 			</Texts>
 			<Modifications>
-				<ReactionByReaction Value="5"/>
+				<ReactionByReaction Val="5"/>
 			</Modifications>
 			<Options>
 				<Option Destination="56"/>
