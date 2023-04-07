@@ -142,7 +142,7 @@
 				<Option Destination="145" Text="Зайдёте в зал" Availability="12"/>
 				<Option Destination="109" Text="Зайдёте в зал" Availability="!12"/>
 				<Option Destination="29" Text="Вернётесь в коридор">
-					<Trigger Value="12"/>
+					<Trigger Val="12"/>
 				</Option>
 			</Options>
 		</Paragraph>
