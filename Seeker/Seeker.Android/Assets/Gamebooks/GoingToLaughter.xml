@@ -33,7 +33,7 @@
 		</Constants>
 		<Settings>
 			<ShowDisabledOption/>
-			<StartParagraph Value="1392"/>
+			<StartParagraph Val="1392"/>
 		</Settings>	
 	</Introduction>
 	<Paragraphs>
