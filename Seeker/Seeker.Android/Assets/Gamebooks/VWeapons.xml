@@ -461,7 +461,7 @@
 				<Text Style="Small">Время -1</Text>
 			</Texts>
 			<Modifications>
-				<Time Value="-1"/>
+				<Time Val="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="49" Availability="ПОДОЗРЕНИЕ >= 4"/>
