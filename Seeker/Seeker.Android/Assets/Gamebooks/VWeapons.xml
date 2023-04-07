@@ -528,7 +528,7 @@
 				<Text Style="Small">Подозрение +3</Text>
 			</Texts>
 			<Modifications>
-				<Suspicions Value="3"/>
+				<Suspicions Val="3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="51" Text="Покинуть это место и отправиться на КПП порта"/>
