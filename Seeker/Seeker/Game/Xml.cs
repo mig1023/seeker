@@ -51,10 +51,10 @@ namespace Seeker.Game
             modification.Empty = BoolParse(xmlNode.Attributes["Empty"]);
             modification.Restore = BoolParse(xmlNode.Attributes["Restore"]);
 
-            if (xmlNode.Attributes["Value"] == null)
+            if (xmlNode.Attributes["Val"] == null)
                 return modification;
 
-            string value = xmlNode.Attributes["Value"].InnerText;
+            string value = xmlNode.Attributes["Val"].InnerText;
 
             if (int.TryParse(value, out _))
                 modification.Value = IntParse(value);
