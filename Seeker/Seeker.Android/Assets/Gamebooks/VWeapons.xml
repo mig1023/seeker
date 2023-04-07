@@ -1562,7 +1562,7 @@
 				<Text Style="Small">Подозрения +1</Text>
 			</Texts>
 			<Modifications>
-				<Suspicions Value="1"/>
+				<Suspicions Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="175" Text="Нажать кнопку «1»"/>
