@@ -204,7 +204,7 @@
 				<Text Style="Small">Потеряй 2 пункта Реакции.</Text>
 			</Texts>
 			<Modifications>
-				<Reaction Value="-2"/>
+				<Reaction Val="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="12" Text="Выносливость более 10 пунктов" Availability="ВЫНОСЛИВОСТЬ > 10"/>
