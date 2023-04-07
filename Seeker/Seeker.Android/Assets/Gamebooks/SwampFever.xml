@@ -165,7 +165,7 @@
 				<Text>Щурясь, вы покидаете капсулу, словно заново родившимся.</Text>
 			</Texts>
 			<Modifications>
-				<Fury Value="-1"/>
+				<Fury Val="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="54"/>
