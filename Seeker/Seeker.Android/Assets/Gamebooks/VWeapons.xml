@@ -541,7 +541,7 @@
 			<Options>
 				<Option Destination="106" Text="Войти на территорию дока"/>
 				<Option Destination="64" Text="Развернуться и уйти, сославшись, что что-либо забыли (подозрение +1)">
-					<Suspicions Value="1"/>
+					<Suspicions Val="1"/>
 				</Option>
 			</Options>
 		</Paragraph>
