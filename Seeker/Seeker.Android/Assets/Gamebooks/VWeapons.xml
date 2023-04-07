@@ -516,7 +516,7 @@
 				<Text Style="Small">Подозрение +2</Text>
 			</Texts>
 			<Modifications>
-				<Suspicions Value="2"/>
+				<Suspicions Val="2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="64"/>
