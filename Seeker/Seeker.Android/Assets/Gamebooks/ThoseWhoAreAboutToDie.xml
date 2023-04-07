@@ -217,7 +217,7 @@
 				<Text Style="Small">Добавь 1 пункт Выносливости.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Value="1"/>
+				<Endurance Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="28" Text="Уйти в комнату и дождаться следующего боя"/>
