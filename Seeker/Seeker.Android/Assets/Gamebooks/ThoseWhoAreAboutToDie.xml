@@ -713,7 +713,7 @@
 				<Text Style="Small">Добавь себе 3 Выносливости.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Value="3"/>
+				<Endurance Val="3"/>
 			</Modifications>
 			<Triggers>Бани</Triggers>
 			<Options>
