@@ -123,7 +123,7 @@
 			<Options>
 				<Option Destination="47" Text="Вытащить маузер и упредить атаку Кляйста-младшего"/>
 				<Option Destination="7" Text="Выпрыгнуть в окно и бежать за ближайший угол здания (подозрение +1)">
-					<Suspicions Value="1"/>
+					<Suspicions Val="1"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -195,7 +195,7 @@
 				</Damage>
 			</Actions>
 			<Modifications>
-				<Time Value="-1"/>
+				<Time Val="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="7"/>
@@ -207,8 +207,8 @@
 				<Text Style="Small">Подозрения +1, меткость +2</Text>
 			</Texts>
 			<Modifications>
-				<Suspicions Value="1"/>
-				<Accuracy Value="2"/>
+				<Suspicions Val="1"/>
+				<Accuracy Val="2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="30" Text="Попытаться выяснить что-нибудь о ракетах"/>
@@ -221,7 +221,7 @@
 				<Text Style="Small">Меткость +2</Text>
 			</Texts>
 			<Modifications>
-				<Accuracy Value="2"/>
+				<Accuracy Val="2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="25"/>
