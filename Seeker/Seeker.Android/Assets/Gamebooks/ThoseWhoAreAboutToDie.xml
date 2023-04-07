@@ -726,7 +726,7 @@
 				<Text Style="Small">Добавь 2 силы.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="2"/>
+				<Strength Val="2"/>
 			</Modifications>
 			<Triggers>Обед</Triggers>
 			<Options>
