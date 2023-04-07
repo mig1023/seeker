@@ -2159,7 +2159,7 @@
 			<Options>
 				<Option Destination="257" Text="Завершить путешествие и направиться вместе с Шандором к казахскому ополчению"/>
 				<Option Destination="428" Text="Попрощаться с ним и продолжить свои поиски в Семиречье (в этом случае +3 ОПАСНОСТИ)">
-					<Danger Value="3"/>
+					<Danger Val="3"/>
 				</Option>
 			</Options>
 		</Paragraph>
