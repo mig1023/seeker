@@ -416,7 +416,7 @@
 			<Options>
 				<Option Destination="48" Text="Броситься в дверь"/>
 				<Option Destination="7" Text="Прыгнуть в окно и убежать по улице (подозрения +1)">
-					<Suspicions Value="1"/>
+					<Suspicions Val="1"/>
 				</Option>
 			</Options>
 		</Paragraph>
