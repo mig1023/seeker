@@ -12,22 +12,22 @@
 		<Constants>
 			<List Name="WithoutStatuses" Val="0, 1393, 1394"/>
 			<Dictionary Name="IncompatiblesDisadvantages">
-				<Item Name="Пьянство" Value="Набожность"/>
-				<Item Name="Алчность" Value="Набожность"/>
-				<Item Name="Суеверие" Value="Набожность"/>
-				<Item Name="Похоть" Value="Набожность"/>
-				<Item Name="Жестокосердие" Value="Набожность"/>
-				<Item Name="Азартность" Value="Набожность"/>
-				<Item Name="Невезение" Value="Везение"/>
-				<Item Name="Рассеянность" Value="Наблюдательность"/>
-				<Item Name="Обжорство" Value="Эквилибристика, Акробатика"/>
-				<Item Name="Малодушие" Value="Вспыльчивость"/>
+				<Item Name="Пьянство" Val="Набожность"/>
+				<Item Name="Алчность" Val="Набожность"/>
+				<Item Name="Суеверие" Val="Набожность"/>
+				<Item Name="Похоть" Val="Набожность"/>
+				<Item Name="Жестокосердие" Val="Набожность"/>
+				<Item Name="Азартность" Val="Набожность"/>
+				<Item Name="Невезение" Val="Везение"/>
+				<Item Name="Рассеянность" Val="Наблюдательность"/>
+				<Item Name="Обжорство" Val="Эквилибристика, Акробатика"/>
+				<Item Name="Малодушие" Val="Вспыльчивость"/>
 			</Dictionary>
 			<Dictionary Name="ParamNames">
-				<Item Name="Heroism" Value="Героизму"/>
-				<Item Name="Villainy" Value="Злодейству"/>
-				<Item Name="Buffoonery" Value="Шутовству"/>
-				<Item Name="Inspiration" Value="Вдохновению"/>
+				<Item Name="Heroism" Val="Героизму"/>
+				<Item Name="Villainy" Val="Злодейству"/>
+				<Item Name="Buffoonery" Val="Шутовству"/>
+				<Item Name="Inspiration" Val="Вдохновению"/>
 			</Dictionary>
 			<List Name="SleepCleaningSurvive" Val="Дежа вю, Се ля ви, Шерше ля фам, Триумфатор, Лютня, Записная книжка, Бревиарий"/>
 		</Constants>
