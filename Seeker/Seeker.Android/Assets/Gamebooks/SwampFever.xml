@@ -1488,7 +1488,7 @@
 			</Texts>
 			<Triggers>5</Triggers>
 			<Modifications>
-				<Stigon Value="1"/>
+				<Stigon Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="118"/>
