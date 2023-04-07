@@ -897,7 +897,7 @@
 				<Text Style="Small">Подозрения +5</Text>
 			</Texts>
 			<Modifications>
-				<Suspicions Value="5"/>
+				<Suspicions Val="5"/>
 			</Modifications>
 			<Options>
 				<Option Destination="100"/>
