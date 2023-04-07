@@ -4861,7 +4861,7 @@
 			</Modifications>
 			<Options>
 				<Option Destination="389" Text="Заплатить 50 ТАНЬГА бухарцу" Availability="ТАНЬГА >= 50">
-					<Tanga Value="-50"/>
+					<Tanga Val="-50"/>
 				</Option>
 				<Option Destination="401" Text="Попытать счастья в качестве новобранца"/>
 				<Option Destination="575" Text="Покинуть эти места"/>
