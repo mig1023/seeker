@@ -1310,7 +1310,7 @@
 			</Texts>
 			<Untriggers>13</Untriggers>
 			<Modifications>
-				<LiveMucus Value="1"/>
+				<LiveMucus Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="52"/>
