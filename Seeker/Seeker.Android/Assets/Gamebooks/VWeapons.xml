@@ -299,7 +299,7 @@
 				<Text Style="Small">Подозрения: аннулируйте три очка подозрений</Text>
 			</Texts>
 			<Modifications>
-				<Suspicions Value="-3"/>
+				<Suspicions Val="-3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="7"/>
