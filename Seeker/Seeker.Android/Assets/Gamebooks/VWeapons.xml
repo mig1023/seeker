@@ -11,11 +11,11 @@
 		<Constants>
 			<List Name="WithoutStatuses" Val="0, 266"/>
 			<Dictionary Name="HealingParts">
-				<Item Name="головы" Value="Head"/>
-				<Item Name="плеч" Value="ShoulderGirdle"/>
-				<Item Name="корпуса" Value="Body"/>
-				<Item Name="рук" Value="Hands"/>
-				<Item Name="ног" Value="Legs"/>
+				<Item Name="головы" Val="Head"/>
+				<Item Name="плеч" Val="ShoulderGirdle"/>
+				<Item Name="корпуса" Val="Body"/>
+				<Item Name="рук" Val="Hands"/>
+				<Item Name="ног" Val="Legs"/>
 			</Dictionary>
 		</Constants>
 		<Settings>
