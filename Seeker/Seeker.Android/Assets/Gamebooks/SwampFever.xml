@@ -305,7 +305,7 @@
 				<Text>В иных случаях ваше психическое состояние не изменилось.</Text>
 			</Texts>
 			<Modifications>
-				<Fury Value="1"/>
+				<Fury Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="54"/>
