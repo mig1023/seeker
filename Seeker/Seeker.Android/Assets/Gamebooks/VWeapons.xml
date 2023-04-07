@@ -664,7 +664,7 @@
 				<Text Style="Small">Аннулируйте два полученных Вами очка подозрений</Text>
 			</Texts>
 			<Modifications>
-				<Suspicions Value="-2"/>
+				<Suspicions Val="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="104" Availability="D"/>
