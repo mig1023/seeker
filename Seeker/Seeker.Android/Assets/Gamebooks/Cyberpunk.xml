@@ -14,18 +14,18 @@
 			<List Name="WithoutStatuses" Val="0, 587, 588, 589"/>
 			<List Name="NormalizationParams" Val="Planning, Preparation, Luck"/>
 			<Dictionary Name="CharactersParams">
-				<Item Name="Planning" Value="Планирование"/>
-				<Item Name="Preparation" Value="Подготовка"/>
-				<Item Name="Luck" Value="Везение"/>
-				<Item Name="Cybernetics" Value="Кибернетика"/>
-				<Item Name="Morality" Value="Мораль"/>
-				<Item Name="Careerism" Value="Карьеризм"/>
-				<Item Name="BlackMarket" Value="Чёрный рынок"/>
-				<Item Name="Clan" Value="Клан"/>
-				<Item Name="Selfcontrol25" Value="Самообладание 25"/>
-				<Item Name="Selfcontrol50" Value="Самообладание 50"/>
-				<Item Name="Selfcontrol75" Value="Самообладание 75"/>
-				<Item Name="Selfcontrol100" Value="Самообладание 100"/>
+				<Item Name="Planning" Val="Планирование"/>
+				<Item Name="Preparation" Val="Подготовка"/>
+				<Item Name="Luck" Val="Везение"/>
+				<Item Name="Cybernetics" Val="Кибернетика"/>
+				<Item Name="Morality" Val="Мораль"/>
+				<Item Name="Careerism" Val="Карьеризм"/>
+				<Item Name="BlackMarket" Val="Чёрный рынок"/>
+				<Item Name="Clan" Val="Клан"/>
+				<Item Name="Selfcontrol25" Val="Самообладание 25"/>
+				<Item Name="Selfcontrol50" Val="Самообладание 50"/>
+				<Item Name="Selfcontrol75" Val="Самообладание 75"/>
+				<Item Name="Selfcontrol100" Val="Самообладание 100"/>
 			</Dictionary>
 		</Constants>
 		<Settings>
