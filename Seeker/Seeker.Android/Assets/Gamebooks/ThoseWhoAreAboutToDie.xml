@@ -457,7 +457,7 @@
 		<Paragraph No="56">
 			<Text>Секутор замахивается мечом. Если твоя Реакция больше 7, то ты замечаешь, что выпад ложный.</Text>
 			<Modifications>
-				<ReactionByReaction Value="7"/>
+				<ReactionByReaction Val="7"/>
 			</Modifications>
 			<Options>
 				<Option Destination="6" Text="Твоя Реакция больше 7" Availability="РЕАКЦИЯ > 7">
