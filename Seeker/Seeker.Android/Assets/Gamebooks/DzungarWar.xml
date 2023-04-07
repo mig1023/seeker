@@ -898,7 +898,7 @@
 			<Options>
 				<Option Destination="257" Text="Завершить путешествие и направиться вместе с офицерами к казахскому ополчению"/>
 				<Option Destination="428" Text="Попрощаться с ними и продолжить свои поиски в Семиречье (в этом случае +2 ОПАСНОСТИ)">
-					<Danger Value="2"/>
+					<Danger Val="2"/>
 				</Option>
 			</Options>
 		</Paragraph>
