@@ -159,7 +159,7 @@
 				<Option Destination="49" Text="Займётесь исследованием помещения"/>
 				<Option Destination="121" Text="Подойдёте к жрецам поближе"/>
 				<Option Destination="29" Text="Покинете эту комнату">
-					<Trigger Value="12"/>
+					<Trigger Val="12"/>
 				</Option>
 				<Option Destination="9" Text="Подождёте ещё некоторое время"/>
 			</Options>
@@ -380,7 +380,7 @@
 			<Options>
 				<Option Destination="155" Text="Попробуете открыть"/>
 				<Option Destination="29" Text="Лучше не надо! (Выходите из библиотеки в коридор)">
-					<Trigger Value="12"/>
+					<Trigger Val="12"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -819,7 +819,7 @@
 				<Option Destination="121" Text="Осторожно подойдёте поближе к жрецам"/>
 				<Option Destination="49" Text="Принципиально не обращая внимания на их присутствие, тщательно обследуете помещение"/>
 				<Option Destination="29" Text="Выйдете отсюда поскорей">
-					<Trigger Value="12"/>
+					<Trigger Val="12"/>
 				</Option>
 			</Options>
 		</Paragraph>
