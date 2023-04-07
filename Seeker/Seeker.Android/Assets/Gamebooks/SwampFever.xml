@@ -1270,7 +1270,7 @@
 					<EnemyName>МУТАВОРМ</EnemyName>
 					<EnemyCombination>5-5-5-5-3-3</EnemyCombination>
 					<Trigger>14</Trigger>
-					<Benefit Name="Creds" Value="100"/>
+					<Benefit Name="Creds" Val="100"/>
 					<Text>Если вы одержите верх, то получите в награду 100 кредов. При ничьей возникнет выбор: продолжить схватку или отступить. При поражении вас уничтожат Резак-Лучи, кроме того, тварь мутирует.</Text>
 				</Fight>
 			</Actions>
