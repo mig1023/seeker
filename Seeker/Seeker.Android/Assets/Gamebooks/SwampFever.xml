@@ -556,7 +556,7 @@
 			</Texts>
 			<Triggers>17</Triggers>
 			<Modifications>
-				<AcousticMembrane Value="1"/>
+				<AcousticMembrane Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="73"/>
