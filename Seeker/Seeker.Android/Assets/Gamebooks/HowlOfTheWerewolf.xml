@@ -13,17 +13,17 @@
 		</Styles>
 		<Constants>
 			<Dictionary Name="GetCountName">
-				<Item Name="1" Value="Первый"/>
-				<Item Name="2" Value="Второй"/>
-				<Item Name="3" Value="Третий"/>
-				<Item Name="4" Value="Четвёртый"/>
-				<Item Name="5" Value="Пятый"/>
-				<Item Name="6" Value="Шестой"/>
+				<Item Name="1" Val="Первый"/>
+				<Item Name="2" Val="Второй"/>
+				<Item Name="3" Val="Третий"/>
+				<Item Name="4" Val="Четвёртый"/>
+				<Item Name="5" Val="Пятый"/>
+				<Item Name="6" Val="Шестой"/>
 			</Dictionary>
 			<Dictionary Name="GetPassageName">
-				<Item Name="1" Value="дверь"/>
-				<Item Name="2" Value="первое окно"/>
-				<Item Name="3" Value="второе окно"/>
+				<Item Name="1" Val="дверь"/>
+				<Item Name="2" Val="первое окно"/>
+				<Item Name="3" Val="второе окно"/>
 			</Dictionary>
 		</Constants>
 		<Settings>
