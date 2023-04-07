@@ -813,9 +813,9 @@
 				<Text Style="Small">Меткость -1, время -1, подозрение +2</Text>
 			</Texts>
 			<Modifications>
-				<Time Value="-1"/>
-				<Accuracy Value="-1"/>
-				<Suspicions Value="2"/>
+				<Time Val="-1"/>
+				<Accuracy Val="-1"/>
+				<Suspicions Val="2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="64"/>
