@@ -9,7 +9,7 @@
 		</Styles>
 		<Settings>
 			<HideDisabledOption/>
-			<DefaultFontSize Value="Big"/>
+			<DefaultFontSize Val="Big"/>
 		</Settings>
 	</Introduction>
 	<Paragraphs>
