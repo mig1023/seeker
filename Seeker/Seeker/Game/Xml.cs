@@ -230,7 +230,7 @@ namespace Seeker.Game
         }
 
         private static string SettingString(XmlDocument xmlFile, string option) =>
-            StringParse(xmlFile.SelectSingleNode(Intro(String.Format("Settings/{0}", option)))?.Attributes["Value"]) ?? String.Empty;
+            StringParse(xmlFile.SelectSingleNode(Intro(String.Format("Settings/{0}", option)))?.Attributes["Val"]) ?? String.Empty;
 
         private static bool SettingBool(XmlDocument xmlFile, string optionTrue) =>
             xmlFile.SelectSingleNode(Intro(String.Format("Settings/{0}", optionTrue))) != null;
