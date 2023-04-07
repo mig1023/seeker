@@ -11,8 +11,8 @@
 		</Constants>
 		<Settings>
 			<HideDisabledOption/>
-			<StartParagraph Value="1"/>
-			<DefaultFontSize Value="Big"/>
+			<StartParagraph Val="1"/>
+			<DefaultFontSize Val="Big"/>
 		</Settings>
 	</Introduction>
 	<Paragraphs>
