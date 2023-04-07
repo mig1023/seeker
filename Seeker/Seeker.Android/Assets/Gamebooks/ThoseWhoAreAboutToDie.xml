@@ -496,7 +496,7 @@
 		<Paragraph No="61">
 			<Text>Сильный прыжок встретил неумелую, но эффективную защиту. Инстинктивно прикрывшись щитом, фракиец помешал удару, а ты вывихнул себе обе кисти, ударившись ими о щит (Отними 2 Силы).</Text>
 			<Modifications>
-				<Strength Value="-2"/>
+				<Strength Val="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="78"/>
