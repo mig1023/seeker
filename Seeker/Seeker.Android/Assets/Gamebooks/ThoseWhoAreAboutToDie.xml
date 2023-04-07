@@ -740,7 +740,7 @@
 				<Text>Уже вечер, поэтому бани и массажный кабинет закрыты.</Text>
 			</Texts>
 			<Modifications>
-				<Reaction Value="2"/>
+				<Reaction Val="2"/>
 			</Modifications>
 			<Triggers>Сон, Бани, Массаж</Triggers>
 			<Options>
