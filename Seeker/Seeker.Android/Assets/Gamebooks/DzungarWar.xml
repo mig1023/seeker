@@ -17,12 +17,12 @@
 		<Constants>
 			<List Name="WithoutStatuses" Val="0, 658, 659, 660"/>
 			<Dictionary Name="StatNames">
-				<Item Name="Strength" Value="силы"/>
-				<Item Name="Skill" Value="ловкости"/>
-				<Item Name="Wisdom" Value="мудрости"/>
-				<Item Name="Cunning" Value="хитрости"/>
-				<Item Name="Oratory" Value="красноречия"/>
-				<Item Name="Danger" Value="опасности"/>
+				<Item Name="Strength" Val="силы"/>
+				<Item Name="Skill" Val="ловкости"/>
+				<Item Name="Wisdom" Val="мудрости"/>
+				<Item Name="Cunning" Val="хитрости"/>
+				<Item Name="Oratory" Val="красноречия"/>
+				<Item Name="Danger" Val="опасности"/>
 			</Dictionary>
 		</Constants>
 		<Settings>
