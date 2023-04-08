@@ -1929,7 +1929,7 @@
 				<Text>Вы еще живы?</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="-5"/>
+				<Strength Val="-5"/>
 			</Modifications>
 			<Options>
 				<Option Destination="338"/>
