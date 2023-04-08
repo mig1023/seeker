@@ -2500,7 +2500,7 @@
 				</LuckRecovery>
 			</Actions>
 			<Modifications>
-				<GateCode Value="215"/>
+				<GateCode Val="215"/>
 			</Modifications>
 			<Options>
 				<Option Destination="Gate" Text="Мир был не первый"/>
