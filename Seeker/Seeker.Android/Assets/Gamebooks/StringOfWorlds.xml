@@ -1737,7 +1737,7 @@
 				<Text>Теперь придется сражаться.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="-2"/>
+				<Strength Val="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="91"/>
