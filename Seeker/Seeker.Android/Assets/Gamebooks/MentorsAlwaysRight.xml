@@ -103,7 +103,7 @@
 				</Reaction>
 			</Actions>
 			<Modifications>
-				<Hitpoints Value="-4"/>
+				<Hitpoints Val="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="511" Text="Успели"/>
@@ -117,7 +117,7 @@
 				<Text>...но внезапно грифон... попросту тает в воздухе!</Text>
 			</Texts>
 			<Modifications>
-				<Hitpoints Value="-1"/>
+				<Hitpoints Val="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="441"/>
@@ -258,7 +258,7 @@
 				<Text>Выход удается отыскать только на ощупь...</Text>
 			</Texts>
 			<Modifications>
-				<Hitpoints Value="-1"/>
+				<Hitpoints Val="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="64"/>
@@ -277,7 +277,7 @@
 				</Fight>
 			</Actions>
 			<Modifications>
-				<Hitpoints Value="-1"/>
+				<Hitpoints Val="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="115"/>
@@ -321,7 +321,7 @@
 				<Text>Подняв глаза, вы видите перед собой куст, усеянный ничем не примечательными листиками странно знакомой формы. Вот это удача! Вы осторожно выкапываете его корешки. Так и есть — это калиостр, вытяжка из корней которого составляет основу вашего Эликсира. Однако, чтобы от него был хоть какой-то толк, корешки надо выварить. Есть ли у вас что-нибудь, в чем это можно сделать: чаша, котелок или хотя бы кружка?</Text>
 			</Texts>
 			<Modifications>
-				<Hitpoints Value="2"/>
+				<Hitpoints Val="2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="72" Text="Что-то из этого есть" Availability="Vessel">
@@ -350,7 +350,7 @@
 				<Text Style="Small">-1 ЖИЗНЬ.</Text>
 			</Texts>
 			<Modifications>
-				<Hitpoints Value="-1"/>
+				<Hitpoints Val="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="458"/>
@@ -375,12 +375,12 @@
 			<Actions>
 				<Get>
 					<Button>Выбрать деньги</Button>
-					<Benefit Name="Gold" Value="20"/>
+					<Benefit Name="Gold" Val="20"/>
 					<OnlyOne>WizardPay</OnlyOne>
 				</Get>
 				<Get>
 					<Button>Выбрать благодать</Button>
-					<Benefit Name="MaxHitpoints" Value="10"/>
+					<Benefit Name="MaxHitpoints" Val="10"/>
 					<OnlyOne>WizardPay</OnlyOne>
 					<Text>Совершив приглянувшийся обмен, вы прощаетесь.</Text>
 				</Get>
@@ -412,7 +412,7 @@
 				<Text>Болевая судорога скручивает все тело и откуда-то издалека доносится насмешливый голос:\n\n— Слабоват...</Text>
 			</Texts>
 			<Modifications>
-				<Hitpoints Value="-8"/>
+				<Hitpoints Val="-8"/>
 			</Modifications>
 			<Options>
 				<Option Destination="469"/>
@@ -474,10 +474,10 @@
 			<Text>Удар точен, но в предсмертной судороге обезьян спускает курок. Если вы не поставите ЗАСЛОН, стрела прошьет ваше бедро, и придется отнять у себя 5 ЖИЗНЕЙ:</Text>
 			<Options>
 				<Option Destination="503" Text="ЗАСЛОН" Availability="ЗАСЛОН">
-					<Spell Value="ЗАСЛОН"/>
+					<Spell Val="ЗАСЛОН"/>
 				</Option>
 				<Option Destination="503">
-					<Hitpoints Value="-5"/>
+					<Hitpoints Val="-5"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -538,7 +538,7 @@
 				<Text>...вы понимаете, что пора продолжать путь.</Text>
 			</Texts>
 			<Modifications>
-				<Hitpoints Value="-1"/>
+				<Hitpoints Val="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="479"/>
@@ -559,7 +559,7 @@
 				<Text>Вы успеваете захлопнуть дверь, но в ушах еще некоторое время стоит звон. Вдобавок, вы обнаруживаете, что весь ваш магический арсенал вычерпан досуха (не осталось ни заклинаний, ни оборотней). Однако ваша выходка не привлекла к себе ненужного внимания и вы возвращаетесь, чтобы выбрать другой вариант.</Text>
 			</Texts>
 			<Modifications>
-				<Hitpoints Value="-2"/>
+				<Hitpoints Val="-2"/>
 				<NoMoreMagic/>
 			</Modifications>
 			<Options>
@@ -573,7 +573,7 @@
 				<Text>Вскоре на вашем пути попадается малоприятная картина: низкорослая пятнистая гиена, жадно урча, отрывает куски от полуразложившейся бычьей туши. Подняв окровавленную морду, она тут же ощеривается в вашу сторону. Похоже, она решила насмерть отстаивать свою находку, несмотря на то, что эта падаль вас совсем не интересует. Решайте:</Text>
 			</Texts>
 			<Modifications>
-				<Hitpoints Value="-1"/>
+				<Hitpoints Val="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="181" Text="Двинетесь на гиену"/>
@@ -685,7 +685,7 @@
 				<Text>...вы извлекаете на свет божий позеленевшее от времени латунное колечко. Забирайте его, если хотите и двигайтесь дальше.</Text>
 			</Texts>
 			<Modifications>
-				<Hitpoints Value="-1"/>
+				<Hitpoints Val="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="421"/>
@@ -694,7 +694,7 @@
 		<Paragraph No="72">
 			<Text>Быстро разведя костер, измельчаете калиостр. Через десять минут отвар готов. До вашего эликсира он не дотягивает, но 8 ЖИЗНЕЙ вам добавит. Если у вас есть бурдюк, вы можете взять отвар с собой. В противном случае придется выпить его на месте. После — уходите.</Text>
 			<Modifications>
-				<Hitpoints Value="8"/>
+				<Hitpoints Val="8"/>
 				<HealingByVessel/>
 			</Modifications>
 			<Options>
@@ -843,7 +843,7 @@
 				<Text>...и кубарем катитесь по траве. Вскочив, вы видите, что колдуна-психопата и след простыл...</Text>
 			</Texts>
 			<Modifications>
-				<Hitpoints Value="-3"/>
+				<Hitpoints Val="-3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="246"/>
@@ -900,7 +900,7 @@
 				<Text>Плотоядная ухмылка демонстрирует вам полный набор вампирьих клыков.</Text>
 			</Texts>
 			<Modifications>
-				<Hitpoints Value="-2"/>
+				<Hitpoints Val="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="509" Text="Вы стоите"/>
@@ -948,7 +948,7 @@
 				<Text>...но тут этим тварям становится не до вас. Получив свободу действий, "аллигатор" начинает гоняться за уродцами по всей поляне, хватая их челюстями или расплющивая ударом хвоста. Визжащая орава крысюков улепетывает во все стороны, крокодил-мутант тоже скрывается в кустах. Внезапно наступает полная тишина...</Text>
 			</Texts>
 			<Modifications>
-				<Hitpoints Value="-3"/>
+				<Hitpoints Val="-3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="32"/>
@@ -976,7 +976,7 @@
 				<Text Style="Small">-3 ЖИЗНИ.</Text>
 			</Texts>
 			<Modifications>
-				<Hitpoints Value="-3"/>
+				<Hitpoints Val="-3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="212"/>
@@ -1065,11 +1065,11 @@
 				<Text>Если у вас есть в запасе ЛЕЧИЛКА, используйте ее, чтобы закрыть рану (без прибавления ЖИЗНЕЙ):</Text>
 			</Texts>
 			<Modifications>
-				<Hitpoints Value="-5"/>
+				<Hitpoints Val="-5"/>
 			</Modifications>
 			<Options>
 				<Option Destination="437" Text="Использовать ЛЕЧИЛКУ" Availability="ЛЕЧЕНИЕ">
-					<Spell Value="ЛЕЧЕНИЕ"/>
+					<Spell Val="ЛЕЧЕНИЕ"/>
 					<Text>Иначе вы тут же отдадите концы от потери крови и болевого шока...</Text>
 				</Option>
 				<Gameover/>
@@ -1114,8 +1114,8 @@
 		<Paragraph No="115">
 			<Text>Осиротевшие кони уносятся прочь, а вы быстро осматриваете убитых. Добыча невелика: пара кожаных перчаток, полупустой бурдюк с водой да один золотой.</Text>
 			<Modifications>
-				<Gold Value="1"/>
-				<Healing Value="Выпить воды из бурдюка,3"/>
+				<Gold Val="1"/>
+				<Healing Val="Выпить воды из бурдюка,3"/>
 			</Modifications>
 			<Triggers>Vessel</Triggers>
 			<Options>
@@ -1133,7 +1133,7 @@
 			<Text>Вы успеваете сбросить с себя противную тварь, но она ужалила вас. Ведьмачьи чувства говорят, что подавляющая волю отрава уже растекается по телу. Вас спасет только ЛЕЧИЛКА (не добавляя ЖИЗНЕЙ):</Text>
 			<Options>
 				<Option Destination="249" Text="Использовать ЛЕЧИЛКУ" Availability="ЛЕЧЕНИЕ">
-					<Spell Value="ЛЕЧЕНИЕ"/>
+					<Spell Val="ЛЕЧЕНИЕ"/>
 					<Text>Иначе ноги ваши подкашиваются и паразит забирается на вас, получая нового наездника...</Text>
 				</Option>
 				<Gameover/>
@@ -1168,7 +1168,7 @@
 				<Text>Треклятого гоблина и след простыл, а с ним и плакали ваши денежки. Мрачно осмотрев срезанные ремешки, на которых ранее болтался ваш кошель, вы предаетесь угрюмым раздумьям...</Text>
 			</Texts>
 			<Modifications>
-				<Hitpoints Value="-3"/>
+				<Hitpoints Val="-3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="101"/>
@@ -1230,7 +1230,7 @@
 				<Text>Прихрамывая, входите в противоположную дверь...</Text>
 			</Texts>
 			<Modifications>
-				<Hitpoints Value="-1"/>
+				<Hitpoints Val="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="386"/>
@@ -1243,7 +1243,7 @@
 				<Text>Прихлопнув здоровенного шмеля, вы выбираете маршрут:</Text>
 			</Texts>
 			<Modifications>
-				<Hitpoints Value="-2"/>
+				<Hitpoints Val="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="365" Text="Север"/>
@@ -1273,7 +1273,7 @@
 				<Option Destination="349" Text="Подпрыгнуть"/>
 				<Option Destination="161" Text="Встретить гада рубящим ударом снизу"/>
 				<Option Destination="500" Text="ЗАСЛОН" Availability="ЗАСЛОН">
-					<Spell Value="ЗАСЛОН"/>
+					<Spell Val="ЗАСЛОН"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -1292,7 +1292,7 @@
 				<Text>...и уходите, несолоно хлебавши...</Text>
 			</Texts>
 			<Modifications>
-				<Hitpoints Value="-1"/>
+				<Hitpoints Val="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="344"/>
@@ -1305,7 +1305,7 @@
 				<Text>Если вам удалось продержаться, то собаки охладеют к столь яростно сопротивляющейся добыче, и набросятся на тех своих сородичей, кого вы ранили или убили. Это ваш шанс.</Text>
 			</Texts>
 			<Modifications>
-				<Hitpoints Value="-2"/>
+				<Hitpoints Val="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="23"/>
@@ -1337,7 +1337,7 @@
 				<Text>...и разворачиваетесь к рассвирепевшему демону. Учтите, что каждый удар вашего страшного молота отнимет у него не две, а три ЖИЗНИ.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="1"/>
+				<Strength Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="324"/>
@@ -1350,7 +1350,7 @@
 				<Text>...и раздумываете куда идти:</Text>
 			</Texts>
 			<Modifications>
-				<Hitpoints Value="1"/>
+				<Hitpoints Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="164" Text="На северо-запад"/>
@@ -1366,7 +1366,7 @@
 				<Text>В вашу щиколотку впился зубами вырезанный из дерева барельеф — голова льва.</Text>
 			</Texts>
 			<Modifications>
-				<Hitpoints Value="-4"/>
+				<Hitpoints Val="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="449" Text="Рубануть его мечом"/>
@@ -1414,7 +1414,7 @@
 				<Text>Правильно, думать придется как-нибудь попозже, а пока надо двигаться:</Text>
 			</Texts>
 			<Modifications>
-				<Hitpoints Value="-1"/>
+				<Hitpoints Val="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="366" Text="Вдоль берега на восток"/>
@@ -1433,7 +1433,7 @@
 				<Text Style="Small">-1 ЖИЗНЬ за удар о пол.</Text>
 			</Texts>
 			<Modifications>
-				<Hitpoints Value="-1"/>
+				<Hitpoints Val="-1"/>
 			</Modifications>
 			<Triggers>BronzeKey</Triggers>
 			<Options>
@@ -1481,7 +1481,7 @@
 				<Text>Вдобавок, дорога ни в какую не хочет согласовываться с картой и забирает все восточнее. Вы уже видите ее конец — дорога обрывается перед двухэтажной деревянной постройкой.</Text>
 			</Texts>
 			<Modifications>
-				<Hitpoints Value="-1"/>
+				<Hitpoints Val="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="22" Text="Двинуться к ней"/>
@@ -1492,7 +1492,7 @@
 			<Text>— Ты проиграл, приятель, — гоблин выжидающе смотрит на вас. — Плати, таков уговор.</Text>
 			<Options>
 				<Option Destination="206" Text="Отдадите ему четыре золотых" Availability="ЗОЛОТО >= 4">
-					<Gold Value="-4"/>
+					<Gold Val="-4"/>
 				</Option>
 				<Option Destination="231" Text="Дадите ему понять, что никакого уговора не было"/>
 			</Options>
@@ -1509,7 +1509,7 @@
 				<Text Style="Small">-2 ЖИЗНИ.</Text>
 			</Texts>
 			<Modifications>
-				<Hitpoints Value="-2"/>
+				<Hitpoints Val="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="352" Text="Попробуете разомкнуть их самостоятельно"/>
@@ -1561,7 +1561,7 @@
 				<Option Destination="382" Text="Сжать покрепче меч и принять бой"/>
 				<Option Destination="143" Text="Что-нибудь сказать демону, чтобы втянуть его в разговор"/>
 				<Option Destination="92" Text="Ударить его СГУСТКОМ" Availability="СГУСТОК">
-					<Spell Value="СГУСТОК"/>
+					<Spell Val="СГУСТОК"/>
 				</Option>
 				<Option Destination="331" Text="Попытаться прорваться к столику за спиной демона"/>
 				<Option Destination="213" Text="ВОЛК" Availability="ВОЛК">
@@ -1603,7 +1603,7 @@
 				<Text>...но тут стрела с яркой вспышкой ломается, демон с ревом отшатывается, но, увы, магии, заключенной в стреле, хватило лишь на то, чтобы вывести из строя его правую лапу. Перед вами все еще опасный противник, который вот-вот атакует.\n\nВозвращайтесь и выберите другой вариант...</Text>
 			</Texts>
 			<Modifications>
-				<Hitpoints Value="-2"/>
+				<Hitpoints Val="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="162"/>
@@ -1722,7 +1722,7 @@
 			<Options>
 				<Option Destination="255" Text="Бросить ему свой кошель"/>
 				<Option Destination="531" Text="Демонстративно кинуть под копыта коней один золотой" Availability="ЗОЛОТО >= 1">
-					<Gold Value="-1"/>
+					<Gold Val="-1"/>
 					<Text>Ответить:</Text>
 				</Option>
 				<Option Destination="325" Text="«Подойди и возьми, если сумеешь»"/>
@@ -1805,7 +1805,7 @@
 		<Paragraph No="188">
 			<Text>Увы, две дозы Ускорителя за такой короткий промежуток времени вас просто убьют, поэтому вы к нему даже не притрагиваетесь. Во второй бутылочке обычное вино с кое-какими особыми специями. Оно добавит вам три ЖИЗНИ, даже если это и превысит ваш изначальный ЖИЗНЕННЫЙ УРОВЕНЬ. Разобраться в остальных бутылочках было бы заманчиво, но нет времени. Вы выходите обратно на площадку...</Text>
 			<Modifications>
-				<MaxHitpoints Value="3"/>
+				<MaxHitpoints Val="3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="220"/>
@@ -1937,7 +1937,7 @@
 				</Option>
 				<Option Destination="354" Text="Принять бой"/>
 				<Option Destination="414" Text="Поставить ЗАСЛОН" Availability="ЗАСЛОН">
-					<Spell Value="ЗАСЛОН"/>
+					<Spell Val="ЗАСЛОН"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -1980,7 +1980,7 @@
 				<Text>Однако, задача оказывается далеко не из простых.</Text>
 			</Texts>
 			<Modifications>
-				<Hitpoints Value="-1"/>
+				<Hitpoints Val="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="144" Text="Отодвинуть камень (только если ваша СИЛА не меньше 13-ти)" Availability="СИЛА >= 13"/>
@@ -2004,7 +2004,7 @@
 				<Text>Выбравшись из-под трупа, вы устремляетесь вслед за мелькнувшей фигурой в накинутой на плечи волчьей шкуре и оказываетесь вновь в кругу камней рядом с идолом.</Text>
 			</Texts>
 			<Modifications>
-				<Hitpoints Value="-3"/>
+				<Hitpoints Val="-3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="532"/>
@@ -2013,7 +2013,7 @@
 		<Paragraph No="210">
 			<Text>Быстрый обыск приносит вам две золотые монеты, красивый черный кристалл, а также плавающий в котле подозрительный кусок мяса. Поразмыслив, мясо вы решаете не трогать и покидаете хижину.</Text>
 			<Modifications>
-				<Gold Value="2"/>
+				<Gold Val="2"/>
 			</Modifications>
 			<Triggers>BlackCrystal</Triggers>
 			<Options>
@@ -2027,7 +2027,7 @@
 				<Text>В пути вы не так уж и долго, а сколько всего уже приключилось! Но вот впереди видна быстро приближающаяся фигурка всадника. Вскоре в клубах пыли можно разглядеть, что это... рыцарь-храмовник! Так-так. Подъехав, всадник останавливается и весьма недоброжелательно вас рассматривает, держась за рукоять грозного боевого топора, притороченного к седлу. Вы можете в ответ:</Text>
 			</Texts>
 			<Modifications>
-				<Hitpoints Value="-1"/>
+				<Hitpoints Val="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="319" Text="Взяться за свой клинок"/>
@@ -2057,7 +2057,7 @@
 			<Options>
 				<Option Destination="258" Text="Упасть навзничь"/>
 				<Option Destination="542" Text="Поставить ЗАСЛОН" Availability="ЗАСЛОН">
-					<Spell Value="ЗАСЛОН"/>
+					<Spell Val="ЗАСЛОН"/>
 				</Option>
 				<Option Destination="305" Text="Прижаться к стене"/>
 			</Options>
@@ -2066,7 +2066,7 @@
 			<Text>В таком случае вас спасет лишь ЗАСЛОН, если вы догадались им запастись:</Text>
 			<Options>
 				<Option Destination="375" Text="Воспользоваться ЗАСЛОНОМ" Availability="ЗАСЛОН">
-					<Spell Value="ЗАСЛОН"/>
+					<Spell Val="ЗАСЛОН"/>
 					<Text>Иначе новый удар повергнет вас наземь, а там уже вся крона обрушится на вас шквалом ударов...</Text>
 				</Option>
 				<Gameover/>
@@ -2165,7 +2165,7 @@
 				<Text>...продолжаете путь. Никакой магии, простая дыхательная методика расслабления плюс легкий транс.\n\nВскоре вы понимаете, что холмы начинают уводить вас слишком на восток. Поэтому вы покидаете их и движетесь:</Text>
 			</Texts>
 			<Modifications>
-				<Hitpoints Value="2"/>
+				<Hitpoints Val="2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="160" Text="Сквозь высокую траву на северо-запад"/>
@@ -2192,7 +2192,7 @@
 				<Text>...а гоблину, похоже, неприятностей не причиняет. Он рывком проносится мимо вас и удаляется в южном направлении. Прокашлявшись, вы обнаруживаете, что ваш кошель с деньгами срезан.</Text>
 			</Texts>
 			<Modifications>
-				<Hitpoints Value="-2"/>
+				<Hitpoints Val="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="101"/>
@@ -2212,7 +2212,7 @@
 				<Text>...и змея располосована на куски.</Text>
 			</Texts>
 			<Modifications>
-				<Hitpoints Value="-2"/>
+				<Hitpoints Val="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="523"/>
@@ -2380,7 +2380,7 @@
 				<Text>С трудом выбравшись, вы понимаете, что птеродактиль мертв. Можно двигаться к лесу.</Text>
 			</Texts>
 			<Modifications>
-				<Hitpoints Value="-3"/>
+				<Hitpoints Val="-3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="547"/>
@@ -2434,7 +2434,7 @@
 				<Text>Но, подняв голову, вы видите, что от пламени ни малейшего следа. И откуда оно ударило? Размышляя над этим, вы осторожно поднимаетесь.</Text>
 			</Texts>
 			<Modifications>
-				<Hitpoints Value="-2"/>
+				<Hitpoints Val="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="54"/>
@@ -2455,7 +2455,7 @@
 		<Paragraph No="260">
 			<Text>Внутри землянки ни одной живой души. Нельзя сказать, чтобы она была бедно обставлена, поскольку никакой обстановки здесь нет вообще. Несколько шкур на полу, камень вместо стола — вот и все. Кстати, на камне лежит солидный кусок вяленого мяса, который вы, недолго думая, разрубаете пополам. Можете оставить несколько монет за позаимствованное мясо (когда надумаете его съесть, прибавите себе 4 ЖИЗНИ), и уходите.</Text>
 			<Modifications>
-				<Healing Value="Поесть вяленого мяса,4"/>
+				<Healing Val="Поесть вяленого мяса,4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="39"/>
@@ -2464,7 +2464,7 @@
 		<Paragraph No="261">
 			<Text>Итак, теперь у вас есть ВОЛЧИЙ ОБЕРЕГ. Он дает вам возможность двух дополнительных ОБРАЩЕНИЙ. Теперь возвращайтесь.</Text>
 			<Modifications>
-				<AddTransformation Value="2"/>
+				<AddTransformation Val="2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="279"/>
@@ -2473,7 +2473,7 @@
 		<Paragraph No="262">
 			<Text>— На, глотни, — эльф протягивает вам фляжку. Глоток превосходного эльфийского вина добавит вам 3 ЖИЗНИ. Лучник тем временем начинает рассказ:\n\n— Понимаешь, ведьмак, четыре столетия тому назад один из моих предков побывал в этих местах. Он был очень неплохим чародеем, даже состоял в некоем магическом ордене, Белом Братстве. Так вот, это самое Белое Братство было практически истреблено в ходе рейда по этой самой местности. С какой целью был предпринят этот рейд и кто их убил — мне неизвестно. Но мой прадед выжил. Вскоре он погиб во время междоусобных войн, но недавно, разбирая фамильные бумаги, я нашел карту этих мест. Где-то там, за рекой, — эльф делает неопределенный жест рукой в северо-западном направлении, — он что-то обозначил жирным крестом. Но что там — это вопрос. Я знаю лишь, что он надеялся найти здесь эту самую "пирамидку", утерянный фамильный артефакт нашего рода. В поисках этой вещи я и отправился сюда, однако... Что-то странное здесь происходит, ты не находишь? Быть может, у тебя получится в этом разобраться и понять, что же мой предок нашел (или оставил) за рекой. А моя миссия выполнена.\n\nНа этом вы прощаетесь.</Text>
 			<Modifications>
-				<Hitpoints Value="3"/>
+				<Hitpoints Val="3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="236"/>
@@ -2506,7 +2506,7 @@
 				<Text>Почесывая обожженную кожу, вы продолжаете движение на запад.</Text>
 			</Texts>
 			<Modifications>
-				<Hitpoints Value="-1"/>
+				<Hitpoints Val="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="518"/>
@@ -2515,7 +2515,7 @@
 		<Paragraph No="267">
 			<Text>Однако, ограбленный прислонился к скале и не торопится поблагодарить вас. Перед тем, как двинуться к вам, бандиты на всякий случай перерезали ему горло. Возможно, именно ваше вмешательство убило его. Наскоро обыскав мертвецов, находите 5 золотых, оловянную кружку, медный браслет и продолговатый серебряный подсвечник (он займет два места в вашем мешке). Возьмите, что хотите и двигайтесь вперед.</Text>
 			<Modifications>
-				<Gold Value="5"/>
+				<Gold Val="5"/>
 			</Modifications>
 			<Triggers>Vessel, SilverCandlestick</Triggers>
 			<Options>
@@ -2542,12 +2542,12 @@
 				<Text>Похоже, эта тварь выделяет кислоту, или нечто подобное. Зашипев от боли, вы все же успеваете:</Text>
 			</Texts>
 			<Modifications>
-				<Hitpoints Value="-2"/>
+				<Hitpoints Val="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="419" Text="Ударить «лжековрик» мечом"/>
 				<Option Destination="129" Text="СГУСТОК" Availability="СГУСТОК">
-					<Spell Value="СГУСТОК"/>
+					<Spell Val="СГУСТОК"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -2625,7 +2625,7 @@
 		<Paragraph No="279">
 			<Text>Итак, все хазраты мертвы. Утерев пот со лба, вы быстро обыскиваете трупы и находите кучу бесполезных вещей. Лук вам ни к чему — стрелок вы хреновый. Нагайки, уздечки и т.п. — тоже не лежит душа к верховой езде. Так что могут пригодиться лишь три золотых, кожаный ремень, да изящный кривой нож.</Text>
 			<Modifications>
-				<Gold Value="3"/>
+				<Gold Val="3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="239" Text="Вы убили шамана">
@@ -2724,7 +2724,7 @@
 				<Option Destination="393" Text="Вступите в бой"/>
 				<Option Destination="481" Text="С размаху рубанете по пирамидке"/>
 				<Option Destination="27" Text="СГУСТОК" Availability="СГУСТОК">
-					<Spell Value="СГУСТОК"/>
+					<Spell Val="СГУСТОК"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -2740,8 +2740,8 @@
 		<Paragraph No="293">
 			<Text>Удивительно, но заклинание помогает — так, во всяком случае, утверждает "пациент". Высокий хазрат спрыгивает с коня, долго вас обнимает, хлопает по плечу и еще всякими способами выражает благодарность (в частности высыпает вам в карман 4 золотых).\n\n— Сотник Субэдай ценит друзей, — приговаривает он, вручая вам деревянный оберег в форме змеи. — Где-то поблизости рыщет наш шаман, говорит, что-то здесь происходит странное, древние силы просыпаются, очень злые, да. Встретишь его, покажешь оберег, скажешь — друг Субэдая.\n\nНа этой лирической ноте вы и прощаетесь.</Text>
 			<Modifications>
-				<Gold Value="4"/>
-				<Spell Value="ЛЕЧЕНИЕ"/>
+				<Gold Val="4"/>
+				<Spell Val="ЛЕЧЕНИЕ"/>
 			</Modifications>
 			<Triggers>Amulet</Triggers>
 			<Options>
@@ -2783,7 +2783,7 @@
 				<Text>...вы успеваете откатиться за валуны и выхватить меч.</Text>
 			</Texts>
 			<Modifications>
-				<Hitpoints Value="-2"/>
+				<Hitpoints Val="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="29"/>
@@ -2811,7 +2811,7 @@
 				<Reaction/>
 			</Actions>
 			<Modifications>
-				<Hitpoints Value="-1"/>
+				<Hitpoints Val="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="178" Text="Успели"/>
@@ -2825,7 +2825,7 @@
 				<Text>— Далековато тебя занесло от Академии, юноша, — он бросает быстрый взгляд на ваше лицо. — Недавний выпуск, да?\n\nОх, непрост монах!</Text>
 			</Texts>
 			<Modifications>
-				<Hitpoints Value="5"/>
+				<Hitpoints Val="5"/>
 			</Modifications>
 			<Options>
 				<Option Destination="95" Text="Дадите ему высказаться"/>
@@ -2861,7 +2861,7 @@
 				<Text>Это Ускоритель реакции, опасный эликсир, действие которого пройдет к утру. Его применение будет стоить вам в будущем примерно месяца жизни, но что-то подсказывает, что это того стоит. Возвращайтесь и дочитывайте параграф...</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="1"/>
+				<Strength Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="76"/>
@@ -2915,7 +2915,7 @@
 			<Actions>
 				<Reaction>
 					<Button>Реагируйте</Button>
-					<Damage Name="Hitpoints" Value="-4"/>
+					<Damage Name="Hitpoints" Val="-4"/>
 					<Text>Затем вы вступаете в бой. Гигант чертовски силен, его удары отнимут у вас не 2, а 4 ЖИЗНИ. Зато его скорость оставляет желать лучшего. РЕАГИРУЙТЕ во время каждого раунда. Если вы пропустите удар, но в этом раунде ваша реакция на высоте, то вы успеваете увернуться и ничего не теряете.</Text>
 				</Reaction>
 				<Fight>
@@ -2981,7 +2981,7 @@
 		<Paragraph No="317">
 			<Text>— Любая информация в вашем запутанном положении будет как нельзя кстати, — думаете вы, отсчитывая пять золотых. Наемник принимает деньги и говорит:\n\n— Ты парень что надо, но если сунешься дальше, то, скорее всего, погибнешь, и деньги тебе уже не понадобятся. Ты не думай, я про ведьмаков наслышан, да только тут по окрестностям такие твари шастают — тебе не потянуть. Без обид. Да и если в руки храмовников попадешь — тоже мало приятного. Их здесь целый отряд, главным у них баронет де Массар. Вояка хороший, но командир никакой. Я от них слинял подобру-поздорову, пока местная нечисть до меня не добралась. Они в небольшой рощице лагерь разбили. Да, и еще...</Text>
 			<Modifications>
-				<Gold Value="-5"/>
+				<Gold Val="-5"/>
 			</Modifications>
 			<Options>
 				<Option Destination="418"/>
@@ -3064,7 +3064,7 @@
 			<Text>Разрубив в воздухе брошенный в вас аркан, вы понимаете, что теряете драгоценные секунды. Слишком слаженно атакуют трое хазратов. Через пару секунд вас просто собьют с ног и затопчут копытами...</Text>
 			<Options>
 				<Option Destination="448" Text="Успели поставить ЗАСЛОН" Availability="ЗАСЛОН">
-					<Spell Value="ЗАСЛОН"/>
+					<Spell Val="ЗАСЛОН"/>
 					<Text>Иначе, максимум, что вы успеете — прихватить с собой одного кочевника...</Text>
 				</Option>
 				<Gameover/>
@@ -3083,7 +3083,7 @@
 				<Text>Вскочив, вы принимаете боевую стойку, но грифон как сквозь землю провалился...</Text>
 			</Texts>
 			<Modifications>
-				<Hitpoints Value="-2"/>
+				<Hitpoints Val="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="441"/>
@@ -3293,7 +3293,7 @@
 				<Text>Ваши волосы встали дыбом, сердце бешено колотится — закоротило вас неслабо. Вернитесь, в эту дверь не войти...</Text>
 			</Texts>
 			<Modifications>
-				<Hitpoints Value="-4"/>
+				<Hitpoints Val="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="220"/>
@@ -3346,7 +3346,7 @@
 				<Text>...и вы понимаете неудачность своего выбора. Уж лучше сразиться в человеческом облике.</Text>
 			</Texts>
 			<Modifications>
-				<Hitpoints Value="-3"/>
+				<Hitpoints Val="-3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="445"/>
@@ -3415,7 +3415,7 @@
 				<Text>Вернитесь и сделайте другой выбор.</Text>
 			</Texts>
 			<Modifications>
-				<Hitpoints Value="-2"/>
+				<Hitpoints Val="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="173"/>
@@ -3428,7 +3428,7 @@
 				<Text>Внутри небольшого углубления лежит массивная шкатулка из черного дерева. Она заперта. Судя по весу, в ней или ничего нет, или же что-то очень легкое.</Text>
 			</Texts>
 			<Modifications>
-				<Hitpoints Value="-1"/>
+				<Hitpoints Val="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="351" Text="Попробовать ее взломать"/>
@@ -3523,7 +3523,7 @@
 					<Text>Иначе, потеряв с хлещущей кровью еще 2 ЖИЗНИ, остается лишь рубануть по барельефу мечом:</Text>
 				</Option>
 				<Option Destination="449">
-					<Hitpoints Value="-2"/>
+					<Hitpoints Val="-2"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -3542,7 +3542,7 @@
 				<Text>Запястье хрустит, вытащить меч вы уже не успеваете.\n\nКорчась от боли, вы можете лишь:</Text>
 			</Texts>
 			<Modifications>
-				<Hitpoints Value="-2"/>
+				<Hitpoints Val="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="310" Text="Врезать ему свободной рукой в челюсть"/>
@@ -3561,24 +3561,24 @@
 			<Actions>
 				<Reaction>
 					<Button>Реагируйте на первой ступеньке</Button>
-					<Damage Name="Hitpoints" Value="-4"/>
+					<Damage Name="Hitpoints" Val="-4"/>
 					<Text>Если вы не успеете увернуться, то получите серьезную рану (-4 ЖИЗНИ). Ту же операцию придется проделывать на каждой из оставшихся четырех белых ступенек:</Text>
 				</Reaction>
 				<Reaction>
 					<Button>Реагируйте на второй ступеньке</Button>
-					<Damage Name="Hitpoints" Value="-4"/>
+					<Damage Name="Hitpoints" Val="-4"/>
 				</Reaction>
 				<Reaction>
 					<Button>Реагируйте на третьей ступеньке</Button>
-					<Damage Name="Hitpoints" Value="-4"/>
+					<Damage Name="Hitpoints" Val="-4"/>
 				</Reaction>
 				<Reaction>
 					<Button>Реагируйте на четвёртой ступеньке</Button>
-					<Damage Name="Hitpoints" Value="-4"/>
+					<Damage Name="Hitpoints" Val="-4"/>
 				</Reaction>
 				<Reaction>
 					<Button>Реагируйте на пятой ступеньке</Button>
-					<Damage Name="Hitpoints" Value="-4"/>
+					<Damage Name="Hitpoints" Val="-4"/>
 				</Reaction>
 			</Actions>
 			<Options>
@@ -3608,7 +3608,7 @@
 					<Transformation/>
 				</Option>
 				<Option Destination="496" Text="СГУСТОК" Availability="СГУСТОК">
-					<Spell Value="СГУСТОК"/>
+					<Spell Val="СГУСТОК"/>
 				</Option>
 				<Option Destination="445" Text="Старый добрый меч"/>
 			</Options>
@@ -3620,7 +3620,7 @@
 				<Text>— Впечатляет? — интересуется колдун, опуская вас на землю. Растирая пострадавшую шею:</Text>
 			</Texts>
 			<Modifications>
-				<Hitpoints Value="-2"/>
+				<Hitpoints Val="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="314" Text="Кивнуть"/>
@@ -3730,7 +3730,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="НАЕМНИК" Strength="11" Hitpoints="4"/>
-					<Benefit Name="Gold" Value="1"/>
+					<Benefit Name="Gold" Val="1"/>
 					<Trigger>Grapnel</Trigger>
 					<Text>Убив, обыскиваете его и находите один золотой, стальной крюк — "кошку" и обтянутую кожей рукоять кинжала. Берите все, что хотите.</Text>
 				</Fight>
@@ -3811,7 +3811,7 @@
 				<Option Destination="302" Text="Кувырнуться вперед"/>
 				<Option Destination="443" Text="Кувырнуться назад (с этой стороны ее конец вроде бы поближе)"/>
 				<Option Destination="499" Text="ЗАСЛОН" Availability="ЗАСЛОН">
-					<Spell Value="ЗАСЛОН"/>
+					<Spell Val="ЗАСЛОН"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -3840,7 +3840,7 @@
 		<Paragraph No="413">
 			<Text>Бег по такой жаре обойдется в одну ЖИЗНЬ.\n\nУдаляясь от дороги, вы переходите на шаг и движетесь:</Text>
 			<Modifications>
-				<Hitpoints Value="-1"/>
+				<Hitpoints Val="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="130" Text="На запад"/>
@@ -3858,7 +3858,7 @@
 			<Text>— Чего еще от вас, людей, ожидать, — презрительно хмыкает гном. В его руке внезапно оказывается миниатюрный арбалет. Надо же, мерзавец был начеку...</Text>
 			<Actions>
 				<Reaction>
-					<Damage Name="Hitpoints" Value="-3"/>
+					<Damage Name="Hitpoints" Val="-3"/>
 					<Text>Если ваша реакция запаздывает, то вы теряете три ЖИЗНИ, не успев увернуться от его выстрела.\n\nТем временем гном поднимает руку с еще одним арбалетом, но вы уже благоразумно скрываетесь за камнями. Не гном, а ходячий арсенал какой-то попался.</Text>
 				</Reaction>
 			</Actions>
@@ -3879,7 +3879,7 @@
 				<Text Style="Small">-3 ЖИЗНИ.</Text>
 			</Texts>
 			<Modifications>
-				<Hitpoints Value="-3"/>
+				<Hitpoints Val="-3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="29"/>
@@ -3938,7 +3938,7 @@
 		<Paragraph No="424">
 			<Text>Краткий разговор с шаманом дает вам кое-какую полезную информацию. Оказывается, вы находитесь на территории давно заброшенного святилища хазратов.\n\n— В древности, — говорит шаман, — этими местами правило великое зло и наши предки ушли отсюда. И сейчас, спустя много веков, зло возвращается. Кто-то вновь гневает богов, творя черное колдовство и изменяя живую плоть.\n\nЖивотные и растения здесь ведут себя ненормально, я даже не могу с ними общаться, а чем дальше на север, тем страшнее перемены. Источник всего этого где-то за рекой, но мои попытки магического сканирования бесполезны. Такое ощущение, что лес завешен черной пеленой. Не знаю, что принесло сюда тебя, ведьмак, — шаман искоса смотрит на вас, — но, на мой взгляд, ты слишком молод и неопытен, чтобы выжить здесь. Глядя на тебя, я вижу линии твоего будущего, — он прикрывает глаза. — Схватки, боль, обман...\n\nШаман открывает глаза и взгляд его печален:\n\n— Одно могу сказать тебе, воин: если ты пройдешь этот путь до конца, то тебе суждено измениться. Мир в твоих глазах больше никогда не будет ясным и дружелюбным.\n\nНапоследок кочевники оставляют вам кусок вяленого мяса (когда надумаете съесть +2 ЖИЗНИ) и уезжают. Шаман успевает напоследок крикнуть:\n\n— Берегись ястреба и черных ступенек, парень, — и скрывается за валунами, оставляя вас в глубоком раздумье по поводу того, во что же вы все-таки вляпались.</Text>
 			<Modifications>
-				<Healing Value="Съесть кусак вяленого мяса,2"/>
+				<Healing Val="Съесть кусак вяленого мяса,2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="57"/>
@@ -3953,7 +3953,7 @@
 		<Paragraph No="426">
 			<Text>Вскоре на вашем пути попадается какая-то яма. Проходя мимо, вы замечаете в ней чье-то тело. Спустившись, осматриваете его. Судя по окровавленному белому плащу, это храмовник. Бедняге досталось — большая часть трупа напоминает кровавую кашу. Рядом с ним валяется подсумок. Этому парню он уже ни к чему, и вы извлекаете оттуда два золотых и перстень с топазом.\n\nЗатем вы внимательно осматриваете окрестности, но не замечаете ничего подозрительного. Правее по-прежнему видна дорога, на северо-западе однообразная равнина начинает бугриться, и нигде не видать ни души. Итак:</Text>
 			<Modifications>
-				<Gold Value="2"/>
+				<Gold Val="2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="316" Text="Двинетесь на север"/>
@@ -3995,7 +3995,7 @@
 				<Text>и вы понимаете, что в арке дремлет какая-то магия. Весь ваш изначальный набор ЗАКЛИНАНИЙ восстановлен!</Text>
 			</Texts>
 			<Modifications>
-				<Hitpoints Value="-1"/>
+				<Hitpoints Val="-1"/>
 				<RestoreSpells/>
 			</Modifications>
 			<Options>
@@ -4018,7 +4018,7 @@
 				<Text>...отбрасывая назад. Хрупкая фигурка протягивает руку к колчану. Тут уж не до разговоров. Прыжок.</Text>
 			</Texts>
 			<Modifications>
-				<Hitpoints Value="-5"/>
+				<Hitpoints Val="-5"/>
 			</Modifications>
 			<Options>
 				<Option Destination="329"/>
@@ -4098,7 +4098,7 @@
 			<Options>
 				<Option Destination="2" Text="Рубанете ее мечом"/>
 				<Option Destination="499" Text="ЗАСЛОН" Availability="ЗАСЛОН">
-					<Spell Value="ЗАСЛОН"/>
+					<Spell Val="ЗАСЛОН"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -4157,7 +4157,7 @@
 		<Paragraph No="449">
 			<Text>Голову льва удается разрубить лишь с четвертого удара. За это время вы теряете еще 4 ЖИЗНИ.</Text>
 			<Modifications>
-				<Hitpoints Value="-4"/>
+				<Hitpoints Val="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="528"/>
@@ -4228,7 +4228,7 @@
 				<Text>...и в шипении разумного сгустка слышна издевка:\n\n— Глупый с-с-смертный...</Text>
 			</Texts>
 			<Modifications>
-				<Hitpoints Value="-3"/>
+				<Hitpoints Val="-3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="469"/>
@@ -4244,7 +4244,7 @@
 		<Paragraph No="459">
 			<Text>Калорийные орехи добавят вам 2 ЖИЗНИ. Теперь можно двигаться дальше.</Text>
 			<Modifications>
-				<Hitpoints Value="2"/>
+				<Hitpoints Val="2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="518"/>
@@ -4345,7 +4345,7 @@
 				<Text>Вы решаете не повторять экспериментов и покидаете водоем.</Text>
 			</Texts>
 			<Modifications>
-				<Hitpoints Value="-3"/>
+				<Hitpoints Val="-3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="344"/>
@@ -4388,7 +4388,7 @@
 				<Text>Отбросив лук и идеально сливавшийся с травой маскировочный плащ, лучник поднимается с земли.</Text>
 			</Texts>
 			<Modifications>
-				<Hitpoints Value="-5"/>
+				<Hitpoints Val="-5"/>
 			</Modifications>
 			<Options>
 				<Option Destination="189"/>
@@ -4435,7 +4435,7 @@
 				<Text>...вы отлетаете к стене.</Text>
 			</Texts>
 			<Modifications>
-				<Hitpoints Value="-2"/>
+				<Hitpoints Val="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="393"/>
@@ -4464,7 +4464,7 @@
 			<Text>Выпрыгнув из-за своего укрытия, бросаете песок в хазратов и сбиваете прицел лучнику. Стрела уходит мимо, но вы понимаете, что запорошив глаза кочевникам вы не остановили их скакунов...</Text>
 			<Options>
 				<Option Destination="448" Text="Использовать ЗАСЛОН" Availability="ЗАСЛОН">
-					<Spell Value="ЗАСЛОН"/>
+					<Spell Val="ЗАСЛОН"/>
 					<Text>Иначе вас попросту стопчут через пару секунд...</Text>
 				</Option>
 				<Gameover/>
@@ -4478,7 +4478,7 @@
 			<Options>
 				<Option Destination="546" Text="Успели"/>
 				<Option Destination="245" Text="Иначе теряете 3 ЖИЗНИ и принимаете бой">
-					<Hitpoints Value="-3"/>
+					<Hitpoints Val="-3"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -4510,7 +4510,7 @@
 			<Text>Одновременно с прыжком вам надо успеть поставить ЗАСЛОН:</Text>
 			<Actions>
 				<Option Destination="548" Text="Заслон" Availability="ЗАСЛОН">
-					<Spell Value="ЗАСЛОН"/>
+					<Spell Val="ЗАСЛОН"/>
 					<Text>...либо СРЕАГИРОВАТЬ:</Text>
 				</Option>
 				<Reaction/>
@@ -4586,7 +4586,7 @@
 				<Text>...вы вваливаетесь в ближайший дом. Рычащая свора врывается следом, но вы успеваете вскарабкаться по лестнице на чердак. Очутившись на крыше, вы понимаете, что вас осадили — взбешенные псы рыщут вокруг дома. Вечно тут не просидишь. Вас посещает одна мысль, но для претворения ее в жизнь требуется какая-нибудь увесистая вещь (чтобы она занимала не менее двух мест в вашем мешке).</Text>
 			</Texts>
 			<Modifications>
-				<Hitpoints Value="-1"/>
+				<Hitpoints Val="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="202" Text="Она у вас есть"/>
@@ -4665,7 +4665,7 @@
 				<Text>Затем желтые зрачки сужаются — леший насытился.\n\n— Перекуси орехами, полегчает, — бросает он странную фразу и растворяется в лесу.\n\nПуть свободен.</Text>
 			</Texts>
 			<Modifications>
-				<Hitpoints Value="-4"/>
+				<Hitpoints Val="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="128"/>
@@ -4703,7 +4703,7 @@
 				<Text>Вы со стоном зажимаете уши, но, обернувшись, видите, что демону приходится несравненно хуже. Плывущий по комнате звон сотрясает его массивное тело, он заходится в беззвучном вопле и падает на колени, обхватив голову. Зеленая кровь струится у него между пальцев и демон-чернокнижник медленно оседает на пол. Звон постепенно стихает.</Text>
 			</Texts>
 			<Modifications>
-				<Hitpoints Value="-1"/>
+				<Hitpoints Val="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="224"/>
@@ -4783,7 +4783,7 @@
 				<Text>Что вы предпримете:</Text>
 			</Texts>
 			<Modifications>
-				<Hitpoints Value="-3"/>
+				<Hitpoints Val="-3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="43" Text="Кувырнетесь и рванетесь бежать"/>
@@ -4838,7 +4838,7 @@
 				<Text>Прием этого зелья обойдется вам примерно в месяц жизни, но, с другой стороны, вы можете и не дожить до рассвета, так что раздумывать не приходится.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="1"/>
+				<Strength Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="188"/>
@@ -4877,7 +4877,7 @@
 				<Text>Зашипев от боли, вы оборачиваетесь. Причина — тонкая сеточка из ажурных серебристых нитей, зацепившая вашу конечность. Аккуратно смахнув ее мечом, вы видите...</Text>
 			</Texts>
 			<Modifications>
-				<Hitpoints Value="-3"/>
+				<Hitpoints Val="-3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="394"/>
@@ -4921,7 +4921,7 @@
 				<Text Style="Small">-4 ЖИЗНИ.</Text>
 			</Texts>
 			<Modifications>
-				<Hitpoints Value="-4"/>
+				<Hitpoints Val="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="369" Text="Есть золотой браслет" Availability="GoldBracelet"/>
@@ -4955,7 +4955,7 @@
 		<Paragraph No="537">
 			<Text>Аппетитная птичка добавит вам 3 ЖИЗНИ. Больше абсолютно ничего не происходит. Пожав плечами, вы уходите.</Text>
 			<Modifications>
-				<Hitpoints Value="3"/>
+				<Hitpoints Val="3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="69"/>
@@ -4988,7 +4988,7 @@
 			<Text>Не успев сделать и несколько шагов, вы слышите звук рассекающего воздух камня.</Text>
 			<Actions>
 				<Reaction>
-					<Damage Name="Hitpoints" Value="-3"/>
+					<Damage Name="Hitpoints" Val="-3"/>
 					<Text>Если вы не успеет увернуться, то теряете 3 ЖИЗНИ.</Text>
 				</Reaction>
 			</Actions>
@@ -5015,7 +5015,7 @@
 				<Text>...вы понимаете, что ошиблись.</Text>
 			</Texts>
 			<Modifications>
-				<Hitpoints Value="-4"/>
+				<Hitpoints Val="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="408"/>
@@ -5063,7 +5063,7 @@
 			<Text>Но прыжок левого богомола имеет очень невысокую, хотя и невероятно длинную траекторию. Вот, оказывается, что это такое — оказаться меж двух огней.\n\nМысль эта — последнее, что вы успеваете подумать, пытаясь заслониться мечом в своем неудобном положении и прекрасно понимая, что вы не успеваете...</Text>
 			<Options>
 				<Option Destination="500" Text="Поставить ЗАСЛОН" Availability="ЗАСЛОН">
-					<Spell Value="ЗАСЛОН"/>
+					<Spell Val="ЗАСЛОН"/>
 					<Text>Если сделать этого вы не можете:</Text>
 				</Option>
 				<Option Destination="286"/>
