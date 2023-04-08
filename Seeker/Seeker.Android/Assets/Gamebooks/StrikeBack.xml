@@ -791,7 +791,7 @@
 				<Text Style="Selected, Bold">СТРАШИЛА\nАтака 5\nЗащита 9\nВыносливость 15</Text>
 				<Text>Что ж, если ты доволен новым телом, пора покинуть это место.</Text>
 			</Texts>
-			<Transformation Value="СТРАШИЛА,5,9,15"/>
+			<Transformation Val="СТРАШИЛА,5,9,15"/>
 			<Options>
 				<Option Destination="100"/>
 			</Options>
@@ -840,7 +840,7 @@
 			<Actions>	
 				<Dices/>
 			</Actions>
-			<Transformation Value="ЯЩЕРОЛЮД,4,9,10"/>
+			<Transformation Val="ЯЩЕРОЛЮД,4,9,10"/>
 			<Options>
 				<Option Destination="7" Text="Выпало 1 или 2"/>
 				<Option Destination="23" Text="Выпало от 3 до 6"/>
@@ -886,7 +886,7 @@
 				<Text Style="Selected, Bold">Обычный ЧЕЛОВЕК\nАтака 1\nЗащита 7\nВыносливость 3</Text>
 				<Text>Но сожалеть поздно. Нефрит уже рассыпался. Один камень можно использовать один раз. Чтобы превратиться в кого-то ещё, необходимо найти новый нефрит.\n\nПостаравшись не падать духом, покидаешь постоялый двор.</Text>
 			</Texts>
-			<Transformation Value="ЧЕЛОВЕК,1,7,3"/>
+			<Transformation Val="ЧЕЛОВЕК,1,7,3"/>
 			<Options>
 				<Option Destination="100"/>
 			</Options>
@@ -897,7 +897,7 @@
 				<Text Style="Small">Если ты терял Выносливость, то сейчас можешь восстановить 2 очка.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Value="2"/>
+				<Endurance Val="2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="59"/>
