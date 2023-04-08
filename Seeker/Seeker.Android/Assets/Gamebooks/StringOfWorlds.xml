@@ -1770,7 +1770,7 @@
 				<Text>Придется драться.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="-2"/>
+				<Strength Val="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="94"/>
