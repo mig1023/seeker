@@ -70,7 +70,7 @@
 				<Text>Вы радуетесь рассвету, как спасению, и, вскинув рюкзак за плечи, продолжаете путь.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="-1"/>
+				<Strength Val="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="401"/>
