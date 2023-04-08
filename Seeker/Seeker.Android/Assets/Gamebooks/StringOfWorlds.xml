@@ -4661,7 +4661,7 @@
 		<Paragraph No="575">
 			<Text>Вот у вас и фляга, к тому же она не занимает места в рюкзаке. За водой стрекоза быстро слетала к соседнему роднику. Правда, фляга вмещает воды лишь на 2 глотка, зато каждый глоток в любое время пути увеличит вашу СИЛУ на 2.</Text>
 			<Modifications>
-				<Healing Value="Выпить воды из фляги,2,2"/>
+				<Healing Val="Выпить воды из фляги,2,2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="43"/>
@@ -4710,7 +4710,7 @@
 				</Charm>
 			</Actions>
 			<Modifications>
-				<Strength Value="-1"/>
+				<Strength Val="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="32" Text="Удалось"/>
@@ -4765,7 +4765,7 @@
 		<Paragraph No="587">
 			<Text>Сытная еда увеличит СИЛУ на 5.</Text>
 			<Modifications>
-				<Strength Value="5"/>
+				<Strength Val="5"/>
 			</Modifications>
 			<Options>
 				<Option Destination="623"/>
@@ -4837,7 +4837,7 @@
 				<Text>Вы пытаетесь расспросить хозяина о Бронсоне и Воротах, но тот либо ничего не знает, либо не любит болтать лишнего.\n\nВы потягиваете кислое вино... и внезапно замечаете, что незнакомец в сером плаще, подняв голову, с интересом вас разглядывает. Посетитель таверны молод, широкоплеч, по сброшенному капюшону рассыпаются длинные русые волосы. Карие глаза смотрят прямо, дерзко.\n\nВы пришли в таверну в рыцарском шлеме или без него?</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="5"/>
+				<Strength Val="5"/>
 			</Modifications>
 			<Options>
 				<Option Destination="171" Text="Вы пришли в таверну в рыцарском шлеме"/>
@@ -4864,7 +4864,7 @@
 				<Text Style="Small">Вычтите 3 из СИЛЫ.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="-3"/>
+				<Strength Val="-3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="208"/>
@@ -4922,7 +4922,7 @@
 		<Paragraph No="608">
 			<Text>Умница Клуша моментально высчитывает уязвимое место установки — узкую смотровую щель. Точный выстрел — и жуткий гибрид сейфа с мясорубкой останавливается, всё медленнее вращая смертоносную крестовину. Путь вперед открыт!</Text>
 			<Modifications>
-				<Blaster Value="-1"/>
+				<Blaster Val="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="520"/>
@@ -4961,7 +4961,7 @@
 				<Text>А утром, затоптав догорающий костер, вновь пускаетесь в дорогу.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="1"/>
+				<Strength Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="401"/>
@@ -4979,7 +4979,7 @@
 				<Text Style="Small">Вычтите 1 из СИЛЫ.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="-1"/>
+				<Strength Val="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="571"/>
@@ -4998,7 +4998,7 @@
 				<Text Style="Small">Прибавьте 3 к своей СИЛЕ.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="3"/>
+				<Strength Val="3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="249"/>
@@ -5169,7 +5169,7 @@
 				<Text>С трудом вырвавшись, отступаете на безопасное расстояние. Будь здесь светло, вы бы показали этим тварям! Но драться во мраке с неизвестным противником... Нет уж, разумнее вернуться к повороту и пойти другой дорогой.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="-5"/>
+				<Strength Val="-5"/>
 			</Modifications>
 			<Options>
 				<Option Destination="602"/>
@@ -5200,7 +5200,7 @@
 				<Text>Прихрамывая, возвращаетесь к развилке и сворачиваете в другой коридор.</Text>
 			</Texts>
 			<Modifications>
-				<Skill Value="-1"/>
+				<Skill Val="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="66"/>
@@ -5293,7 +5293,7 @@
 				<Text Style="Small">СИЛА уменьшается лишь на 2.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="-2"/>
+				<Strength Val="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="371"/>
@@ -5341,7 +5341,7 @@
 				<Text>Здесь не пройти. Будете ломиться сквозь кусты или обойдете их с другой стороны?</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="-1"/>
+				<Strength Val="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="251" Text="Будете ломиться сквозь кусты"/>
