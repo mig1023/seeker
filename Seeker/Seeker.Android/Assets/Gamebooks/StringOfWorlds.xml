@@ -1916,7 +1916,7 @@
 				<Text>А наутро забрасываете рюкзак за плечи и идете по дороге прочь от замка на север.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="-4"/>
+				<Strength Val="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="381"/>
