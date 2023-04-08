@@ -580,7 +580,7 @@
 				<Text>Ладно, а что же дальше?</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="-1"/>
+				<Strength Val="-1"/>
 			</Modifications>
 			<Untriggers>AntiGravityRing</Untriggers>
 			<Options>
