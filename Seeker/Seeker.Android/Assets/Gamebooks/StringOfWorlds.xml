@@ -1982,7 +1982,7 @@
 		<Paragraph No="240">
 			<Text>Сон на деревянной лежанке, под мягкой, лохматой черной шкурой прибавит 2 к вашей СИЛЕ. А утром вы оставляете таверну и идете по дороге дальше — на север.</Text>
 			<Modifications>
-				<Strength Value="2"/>
+				<Strength Val="2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="517"/>
