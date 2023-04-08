@@ -117,7 +117,7 @@
 				<Text>Вы принимаете бой.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="-4"/>
+				<Strength Val="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="217"/>
@@ -130,8 +130,8 @@
 				<Text>Спустившись на рассвете вниз, видите, что в очаге уже разведен огонь, а на вертеле что-то жарится. Хозяин предлагает поесть перед дальней дорогой. Согласитесь или постараетесь побыстрее уехать из Капденака?</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="2"/>
-				<Day Value="1"/>
+				<Strength Val="2"/>
+				<Day Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="416" Text="Согласитесь"/>
@@ -151,7 +151,7 @@
 				<Text>Дверца кареты кажется настоящим спасением. Отпустив лошадь, вы раскрываете ее, готовясь сыграть роль спасителя.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="-1"/>
+				<Strength Val="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="223"/>
@@ -169,7 +169,7 @@
 				<Text>Когда впереди показываются башенки Шательро, вы мечтаете только об одном: согреться. Однако невидимое за тучами солнце должно было только-только перевалить на вторую половину небосвода, а заночевать вы планировали в Туре. Остановитесь на постоялом дворе, чтобы переждать ливень или поскачете дальше до Тура?</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="-2"/>
+				<Strength Val="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="168" Text="Остановитесь на постоялом дворе"/>
@@ -183,11 +183,11 @@
 				<Text>Если хотите потратить еще полэкю, то зайдите поужинать в соседний трактир, иначе же отправляйтесь искать место для ночлега.</Text>
 			</Texts>
 			<Modifications>
-				<Honor Value="-1"/>
+				<Honor Val="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="417" Text="Поужинать в соседний трактир" Availability="ЭКЮ >= 50">
-					<Ecu Value="-50"/>
+					<Ecu Val="-50"/>
 				</Option>
 				<Option Destination="93" Text="Искать место для ночлега"/>
 			</Options>
@@ -199,8 +199,8 @@
 				<Text>С восходом вы отправляетесь дальше.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="-1"/>
-				<Day Value="1"/>
+				<Strength Val="-1"/>
+				<Day Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="179"/>
@@ -210,7 +210,7 @@
 			<Text>Если у вас есть лишние полэкю, то переночуйте в гостинице, если же нет, то лучше выехать за город и, завернувшись в плащ, постараться уснуть неподалеку от дороги.</Text>
 			<Options>
 				<Option Destination="545" Text="Переночуете в гостинице" Availability="ЭКЮ >= 50">
-					<Ecu Value="-50"/>
+					<Ecu Val="-50"/>
 				</Option>
 				<Option Destination="480" Text="Постараться уснуть неподалеку от дороги"/>
 			</Options>
@@ -229,9 +229,9 @@
 				<Text>...после чего покидаете Капденак, так и оставшись в неведении по поводу ночного происшествия.</Text>
 			</Texts>
 			<Modifications>
-				<HadFoodToday Value="1"/>
-				<Strength Value="2"/>
-				<Ecu Value="-50"/>
+				<HadFoodToday Val="1"/>
+				<Strength Val="2"/>
+				<Ecu Val="-50"/>
 			</Modifications>
 			<Options>
 				<Option Destination="331"/>
@@ -244,8 +244,8 @@
 				<Text>Утром вы отправляетесь дальше.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="1"/>
-				<Day Value="1"/>
+				<Strength Val="1"/>
+				<Day Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="592"/>
@@ -364,7 +364,7 @@
 				<Text>После этого он внимательно смотрит на вас и задумчиво говорит: «На вашем месте я бы воздержался сейчас от прогулки по реке. Но вот в Орлеане должен быть герцог Майенский — если вы за Лигу, то лучше направиться туда». Вы понимаете намек, прощаетесь с графом, пожимаете ему руку и торопитесь к городу.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="3"/>
+				<Strength Val="3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="105"/>
@@ -403,8 +403,8 @@
 				<Text>После этого вы прощаетесь с купцом и готовитесь ехать дальше, но он уговаривает остановиться у него на ночь. Согласитесь или откажетесь?</Text>
 			</Texts>
 			<Modifications>
-				<Ecu Value="800"/>
-				<Honor Value="1"/>
+				<Ecu Val="800"/>
+				<Honor Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="116" Text="Согласитесь"/>
@@ -436,9 +436,9 @@
 				<Text>Как следует выспавшись, ближе к полудню, после того как дождь перестает, можете во весь опор поскакать в Туру.</Text>
 			</Texts>
 			<Modifications>
-				<HadFoodToday Value="1"/>
-				<Strength Value="4"/>
-				<Day Value="1"/>
+				<HadFoodToday Val="1"/>
+				<Strength Val="4"/>
+				<Day Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="85"/>
@@ -448,7 +448,7 @@
 			<Text>Наступает утро. Деньги уже разошлись по карманам разбойников, им пора отправляться «на работу». «Ладно, благородный, — говорит один из них, — пожил, погулял и хватит. Готовься к смерти». Хотите попросить о помощи Бога или попробуете обойтись своими силами?</Text>
 			<Options>
 				<Option Destination="427" Text="Попросить о помощи Бога" Availability="!DivineIntervention">
-					<Trigger Value="DivineIntervention"/>
+					<Trigger Val="DivineIntervention"/>
 				</Option>
 				<Option Destination="244" Text="Попробуете обойтись своими силами"/>
 			</Options>
@@ -479,9 +479,9 @@
 				<Text>...вновь появляется «настоятель» с несколько неожиданными словами: «Мой друг, прости нас, произошла ошибка. Теперь ты свободен». Морщась от подобного обращения как от зубной боли (надо сказать, у вас были несколько иные представления о дружбе), принимаете все извинения, делая вид, что поверили им. А что еще остается делать? Вам возвращают вместе со свободой коня, оружие и все, что с вами было, включая деньги. По дороге к Парижу недоумеваете по поводу странного пленения и не менее странного освобождения. Может быть, им просто надо было вас задержать? (Не забудьте записать на Листок путешественника 3 дня, проведенные в монастыре).</Text>
 			</Texts>
 			<Modifications>
-				<HadFoodToday Value="1"/>
-				<Strength Value="6"/>
-				<Day Value="3"/>
+				<HadFoodToday Val="1"/>
+				<Strength Val="6"/>
+				<Day Val="3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="428"/>
@@ -494,9 +494,9 @@
 				<Text>Поутру вы торопитесь покинуть Лимож, все еще удивляясь странностям местных гостиниц.</Text>
 			</Texts>
 			<Modifications>
-				<HadFoodToday Value="1"/>
-				<Strength Value="2"/>
-				<Day Value="1"/>
+				<HadFoodToday Val="1"/>
+				<Strength Val="2"/>
+				<Day Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="245"/>
@@ -511,7 +511,7 @@
 		<Paragraph No="51">
 			<Text>У одного из убитых в кармане вы находите отмычку, у другого — 1 экю: все же лучше, чем ничего. Придвинув к двери комод, ложитесь досыпать, но все время кажется, что к двери кто-то крадется, и толком уснуть так и не удается. Утром вы решаете не тратить времени на лишние разговоры с хозяином и, сев на коня, уезжаете из города.</Text>
 			<Modifications>
-				<Ecu Value="100"/>
+				<Ecu Val="100"/>
 			</Modifications>
 			<Options>
 				<Option Destination="331"/>
@@ -565,9 +565,9 @@
 				<Text>Спать на голой земле не такое уж большое удовольствие, поэтому с восходом солнца вы едете дальше.</Text>
 			</Texts>
 			<Modifications>
-				<HadFoodToday Value="1"/>
-				<Strength Value="1"/>
-				<Day Value="1"/>
+				<HadFoodToday Val="1"/>
+				<Strength Val="1"/>
+				<Day Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="3"/>
@@ -619,9 +619,9 @@
 				<Text>...а потом — решайте. Если хотите что-нибудь еще купить, можете сходить на рынок, если нет — либо выбирайтесь из города, либо ждите до следующего вечера, чтобы встретиться с курьером.</Text>
 			</Texts>
 			<Modifications>
-				<HadFoodToday Value="1"/>
-				<Ecu Value="450"/>
-				<Strength Value="4"/>
+				<HadFoodToday Val="1"/>
+				<Ecu Val="450"/>
+				<Strength Val="4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="620" Text="На рынок"/>
@@ -645,14 +645,14 @@
 					<Head>Пообедать</Head>
 					<Price>100</Price>
 					<Benefits>
-						<Strength Value="2"/>
-						<HadFoodToday Value="1"/>
+						<Strength Val="2"/>
+						<HadFoodToday Val="1"/>
 					</Benefits>
 					<Text>И продолжать путь — до Перигё, где вы наметили заночевать, еще добрых тридцать лье.</Text>
 				</Get>
 			</Actions>
 			<Modifications>
-				<Ecu Value="700"/>
+				<Ecu Val="700"/>
 			</Modifications>
 			<Options>
 				<Option Destination="619"/>
@@ -690,7 +690,7 @@
 				<Text>Вы пришпориваете коня и въезжаете в Шалю.</Text>
 			</Texts>
 			<Modifications>
-				<Honor Value="-1"/>
+				<Honor Val="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="257"/>
@@ -711,7 +711,7 @@
 		<Paragraph No="72">
 			<Text>На закате вы вместе с Арбалетом высаживаетесь на причал, и лодка уплывает дальше. Через полчаса впереди уже виднеется Суйак, где неплохо было бы и переночевать. Остановитесь в гостинице или, экономя деньги, переночуете в поле за городом?</Text>
 			<Modifications>
-				<Ecu Value="-200"/>
+				<Ecu Val="-200"/>
 			</Modifications>
 			<Options>
 				<Option Destination="621" Text="Остановитесь в гостинице"/>
@@ -753,7 +753,7 @@
 		<Paragraph No="77">
 			<Text>Зайдя в пристройку для слуг позади Ратуши, переодеваетесь в одежду лакея. Слуга проводит вас внутрь, где до поры до времени на вас никто не обращает внимания. Вы не подумали только об одном. Поговорить с дворянином, сделав вид, что передаете ему какую-нибудь записку или бокал вина, лакей еще может. Но если будете спрашивать, кто здесь граф де Дольней, это сразу же вызовет подозрение. Что же делать? Мимоходом спрашиваете несколько слуг, не знают ли они господина графа. Конечно же нет, ведь он не из этого города. Скорее всего курьер появился здесь несколько дней назад, чтобы сообщить вам адрес и быстро исчезнуть вновь: он и так достаточно рискует, изображая из себя вельможу у всех на виду. Как вы поступите? Достанете где-нибудь чистый лист бумаги, сложите и будете всем говорить, что должны передать письмо графу, или походите еще, надеясь встретить кого-нибудь из знакомых?</Text>
 			<Modifications>
-				<Ecu Value="-300"/>
+				<Ecu Val="-300"/>
 			</Modifications>
 			<Options>
 				<Option Destination="599" Text="Должен передать письмо графу"/>
@@ -780,9 +780,9 @@
 				<Text>После этого он расспрашивает о гасконских новостях, дворе Генриха, победах протестантских армий. Рассказывая, вы удивляетесь про себя, что влиятельный союзник Короля так мало знает. Прочитав ваши мысли, шевалье с улыбкой говорит, что он не тот, за кого вы его принимаете. Его задача — всего лишь сказать вам адрес, по которому вы и сможете найти друга Генриха. Сегодня туда идти уже поздно, а днем его не будет. Поэтому придется сутки провести в его доме (сон добавит еще 2 СИЛЫ), а вечером следующего дня вы отправляетесь по следующему адресу: улица Августинцев, дом два.</Text>
 			</Texts>
 			<Modifications>
-				<HadFoodToday Value="1"/>
-				<Strength Value="4"/>
-				<Day Value="1"/>
+				<HadFoodToday Val="1"/>
+				<Strength Val="4"/>
+				<Day Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="181"/>
@@ -801,9 +801,9 @@
 				<Text>...вы в приемной герцога. Когда вас вводят в его покои, влиятельный вельможа, которого вы чаще видели на коне, нежели в светских салонах, выходит к вам навстречу. Несколько минут он не говорит ни слова, всматриваясь в ваше лицо проницательным взглядом умных серых глаз.</Text>
 			</Texts>
 			<Modifications>
-				<HadFoodToday Value="1"/>
-				<Strength Value="2"/>
-				<Day Value="1"/>
+				<HadFoodToday Val="1"/>
+				<Strength Val="2"/>
+				<Day Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="194" Text="Если ваша ЧЕСТЬ больше или равна 6"/>
@@ -837,7 +837,7 @@
 				<Text Style="Small">Потеряйте 1 ЧЕСТЬ и отправляйтесь дальше.</Text>
 			</Texts>
 			<Modifications>
-				<Honor Value="-1"/>
+				<Honor Val="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="24"/>
@@ -857,9 +857,9 @@
 				<Text>Рано утром вы продолжаете свой путь.</Text>
 			</Texts>
 			<Modifications>
-				<HadFoodToday Value="1"/>
-				<Strength Value="1"/>
-				<Day Value="1"/>
+				<HadFoodToday Val="1"/>
+				<Strength Val="1"/>
+				<Day Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="163"/>
@@ -888,7 +888,7 @@
 				<Text>...но ехать-то все же надо. Куда вы поедете? В ту сторону, куда сидели лицом или в обратную?</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="1"/>
+				<Strength Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="164" Text="В ту сторону, куда сидели лицом"/>
@@ -922,7 +922,7 @@
 				<Text>Вы без приключений выбираетесь из города и скачете дальше по турской дороге.</Text>
 			</Texts>
 			<Modifications>
-				<Honor Value="-1"/>
+				<Honor Val="-1"/>
 			</Modifications>
 			<Triggers>DivineIntervention</Triggers>
 			<Options>
@@ -942,9 +942,9 @@
 				<Text>Утром вы выезжаете на какую-то дорогу. Куда по ней поедете: направо или налево?</Text>
 			</Texts>
 			<Modifications>
-				<HadFoodToday Value="1"/>
-				<Strength Value="3"/>
-				<Day Value="1"/>
+				<HadFoodToday Val="1"/>
+				<Strength Val="3"/>
+				<Day Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="547" Text="Направо"/>
@@ -1038,7 +1038,7 @@
 				<Text>Женщина в карете только и ждала, пока вы откроете дверцу, и совершенно не собиралась умирать — напротив, желала этого вам. Выбить кинжал не составляет труда, но пуля, просвистевшая около уха, «намекает», что кто-то еще не против помочь вам отправиться на тот свет. Спасение только одно: укрыться внутри кареты, иначе вы слишком хорошая мишень.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="-2"/>
+				<Strength Val="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="7"/>
@@ -1097,9 +1097,9 @@
 				<Text>Хозяин не расспрашивает вас о том, куда вы едете, но вы сами задаете ему вопрос: насколько спокойно на дороге, не пошаливают ли лихие люди и безопасно ли заехать в Шартр. Он отвечает, что в Шартр на вашем месте он бы не заезжал, а вот дорога должна быть спокойной: герцог Майенский прочно контролирует эти места, и разбойники переместились куда-то поюжнее. Трудно сказать только, утешает ли вас эта новость. Утром, пустившись в дорогу, к полудню доезжаете до Шартра. Объедете город стороной или все же въедете в него?</Text>
 			</Texts>
 			<Modifications>
-				<HadFoodToday Value="1"/>
-				<Strength Value="4"/>
-				<Day Value="1"/>
+				<HadFoodToday Val="1"/>
+				<Strength Val="4"/>
+				<Day Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="558" Text="Объедете город стороной"/>
@@ -1134,7 +1134,7 @@
 				<Text>Если вы еще живы, то можете либо подъехать поближе и посмотреть, кто в вас стрелял, или пришпорите коня и въедете в городок в другом месте?</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="-6"/>
+				<Strength Val="-6"/>
 			</Modifications>
 			<Options>
 				<Option Destination="570" Text="Подъехать поближе"/>
@@ -1195,7 +1195,7 @@
 				<Text>Девушка в карете, хоть и перепугана до смерти, находит все же в себе силы вас поблагодарить. А вскоре на дороге, ковыляя, появляются ее кучер и лакей, которым вы и передаете поводья. Тем временем мадмуазель рассказывает, что она дочь графа де Ледигьера, живущего в Шатору, и ехала к тетушке в Лимож, когда и приключилась эта неприятность. Достав дорожный письменный прибор, она быстро пишет несколько слов и просит, когда будете в Шатору, зайти и передать эту записку отцу. С поклоном вы принимаете это новое поручение и устремляетесь дальше.</Text>
 			</Texts>
 			<Modifications>
-				<Honor Value="1"/>
+				<Honor Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="237"/>
@@ -1231,14 +1231,14 @@
 					<Head>ЛОШАДЬ</Head>
 					<Price>500</Price>
 					<Multiple/>
-					<Benefit Name="Horses" Value="1"/>
+					<Benefit Name="Horses" Val="1"/>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
 					<Head>ПИСТОЛЕТ</Head>
 					<Price>300</Price>
 					<Multiple/>
-					<Benefit Name="Pistols" Value="1"/>
+					<Benefit Name="Pistols" Val="1"/>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
@@ -1251,14 +1251,14 @@
 					<Head>КИНЖАЛ</Head>
 					<Price>300</Price>
 					<Multiple/>
-					<Benefit Name="Daggers" Value="1"/>
+					<Benefit Name="Daggers" Val="1"/>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
 					<Head>ПОРОХ И ПУЛИ на 3 выстрела</Head>
 					<Price>200</Price>
 					<Multiple/>
-					<Benefit Name="BulletsAndGubpowder" Value="3"/>
+					<Benefit Name="BulletsAndGubpowder" Val="3"/>
 				</Get>
 			</Actions>
 			<Options>
@@ -1288,7 +1288,7 @@
 			<Text>У одного из нищих, сидящих у городских ворот, интересуетесь, не проезжал ли здесь незадолго до вас человек в зеленом камзоле на прекрасном сером в яблоках коне. Нищий хитро смотрит и говорит: «Дашь золотой, — скажу». Дадите ему экю или поедете дальше?</Text>
 			<Options>
 				<Option Destination="564" Text="Дадите ему экю">
-					<Ecu Value="-100"/>
+					<Ecu Val="-100"/>
 				</Option>
 				<Option Destination="105" Text="Поедете дальше"/>
 			</Options>
@@ -1306,9 +1306,9 @@
 				<Text Style="Small">Но так или иначе, прибавьте себе 2 СИЛЫ после отдыха и легкого завтрака.</Text>
 			</Texts>
 			<Modifications>
-				<HadFoodToday Value="1"/>
-				<Strength Value="2"/>
-				<Ecu Value="-400"/>
+				<HadFoodToday Val="1"/>
+				<Strength Val="2"/>
+				<Ecu Val="-400"/>
 			</Modifications>
 			<Options>
 				<Option Destination="620" Text="Сходить на базарную площадь"/>
@@ -1335,7 +1335,7 @@
 				<Text>Путь до Шатору проходит без приключений.</Text>
 			</Texts>
 			<Modifications>
-				<Honor Value="-1"/>
+				<Honor Val="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="638"/>
@@ -1352,7 +1352,7 @@
 			<Text>Видя, что вы пытаетесь скрыться за деревьями, черные фигуры достают пистолеты и стреляют вам вслед. Одна из пуль попадает Арбалету в голову, вторая — вам в живот. Конец наступит всего через несколько часов. Выход один — попросить Бога о помощи:</Text>
 			<Options>
 				<Option Destination="521" Availability="!DivineIntervention">
-					<Trigger Value="DivineIntervention"/>
+					<Trigger Val="DivineIntervention"/>
 					<Text>Если не сделаете это, то остается только достойно встретить смерть...</Text>
 				</Option>
 				<Gameover/>
@@ -1428,7 +1428,7 @@
 				<Text>Внимательно осмотрев комнатку, не находите ничего подозрительного и решаете спокойно лечь спать.</Text>
 			</Texts>
 			<Modifications>
-				<Ecu Value="-500"/>
+				<Ecu Val="-500"/>
 			</Modifications>
 			<Options>
 				<Option Destination="540"/>
@@ -1457,7 +1457,7 @@
 				<Text>Перед сном хозяин предлагает поужинать. Согласитесь или решите, что здоровый сон вполне заменит жирный кусок мяса?</Text>
 			</Texts>
 			<Modifications>
-				<Ecu Value="-100"/>
+				<Ecu Val="-100"/>
 			</Modifications>
 			<Options>
 				<Option Destination="413" Text="Согласитесь"/>
@@ -1472,7 +1472,7 @@
 					<Head>ПИСТОЛЕТ</Head>
 					<Price>300</Price>
 					<Multiple/>
-					<Benefit Name="Pistols" Value="1"/>
+					<Benefit Name="Pistols" Val="1"/>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
@@ -1485,7 +1485,7 @@
 					<Head>КИНЖАЛ</Head>
 					<Price>200</Price>
 					<Multiple/>
-					<Benefit Name="Daggers" Value="1"/>
+					<Benefit Name="Daggers" Val="1"/>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
@@ -1498,7 +1498,7 @@
 					<Head>ПОРОХ И ПУЛИ на 5 выстрелов</Head>
 					<Price>100</Price>
 					<Multiple/>
-					<Benefit Name="BulletsAndGubpowder" Value="5"/>
+					<Benefit Name="BulletsAndGubpowder" Val="5"/>
 				</Get>
 			</Actions>
 			<Options>
@@ -1513,7 +1513,7 @@
 				<Text>Решив, что на постоялом дворе все же было бы хуже, продолжаете ехать вперед. Впереди небольшой лесок, который в неверном ночном свете выглядит как-то особенно угрожающе. Хотите заночевать в поле, спрятавшись в одном из стогов или поедете дальше?</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="-1"/>
+				<Strength Val="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="88" Text="Заночевать в поле"/>
@@ -1529,9 +1529,9 @@
 				<Text>Теперь на Шательро.</Text>
 			</Texts>
 			<Modifications>
-				<HadFoodToday Value="1"/>
-				<Strength Value="2"/>
-				<Day Value="1"/>
+				<HadFoodToday Val="1"/>
+				<Strength Val="2"/>
+				<Day Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="334"/>
@@ -1603,7 +1603,7 @@
 			<Text>Если у вас есть экю на ужин и ночлег, можете воспользоваться услугами постоялого двора. Если нет, то чем ночевать на улице, лучше уж побыстрее доехать до Тура.</Text>
 			<Options>
 				<Option Destination="43" Text="Воспользоваться услугами постоялого двора" Availability="ЭКЮ >= 100">
-					<Ecu Value="-100"/>
+					<Ecu Val="-100"/>
 				</Option>
 				<Option Destination="497" Text="Побыстрее доехать до Тура"/>
 			</Options>
@@ -1636,7 +1636,7 @@
 				<Text>Остался ли у вас перстень короля?</Text>
 			</Texts>
 			<Modifications>
-				<Day Value="1"/>
+				<Day Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="358" Text="У вас остался перстень короля"/>
@@ -1650,7 +1650,7 @@
 				<Text>К утру вы выезжаете на какую-то дорогу. Поедете по ней направо или налево?</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="-3"/>
+				<Strength Val="-3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="547" Text="Направо"/>
@@ -1697,9 +1697,9 @@
 				<Text>После крепкого сна можете добавить себе 1 СИЛУ и утром ехать дальше.</Text>
 			</Texts>
 			<Modifications>
-				<HadFoodToday Value="1"/>
-				<Strength Value="1"/>
-				<Day Value="1"/>
+				<HadFoodToday Val="1"/>
+				<Strength Val="1"/>
+				<Day Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="4"/>
@@ -1735,7 +1735,7 @@
 				<Text>Теперь скачите дальше: не стоит тратить время на этот балаган, впереди ждут гораздо более серьезные сражения.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="-4"/>
+				<Strength Val="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="64"/>
@@ -1756,9 +1756,9 @@
 				<Text>Рано утром, решив не испытывать больше судьбу, отправляетесь дальше.</Text>
 			</Texts>
 			<Modifications>
-				<HadFoodToday Value="1"/>
-				<Strength Value="1"/>
-				<Day Value="1"/>
+				<HadFoodToday Val="1"/>
+				<Strength Val="1"/>
+				<Day Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="4"/>
@@ -1782,29 +1782,29 @@
 					<Head>КИНЖАЛ</Head>
 					<Price>200</Price>
 					<Multiple/>
-					<Benefit Name="Daggers" Value="1"/>
+					<Benefit Name="Daggers" Val="1"/>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
 					<Head>ПОРОХ И ПУЛИ на 5 выстрелов</Head>
 					<Price>200</Price>
 					<Multiple/>
-					<Benefit Name="BulletsAndGubpowder" Value="5"/>
+					<Benefit Name="BulletsAndGubpowder" Val="5"/>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
 					<Head>ПИСТОЛЕТ</Head>
 					<Price>300</Price>
 					<Multiple/>
-					<Benefit Name="Pistols" Value="1"/>
+					<Benefit Name="Pistols" Val="1"/>
 				</Get>
 			</Actions>
 			<Triggers>LetterToTheDuke</Triggers>
 			<Modifications>
-				<HadFoodToday Value="1"/>
-				<Strength Value="2"/>
-				<Day Value="1"/>
-				<Ecu Value="550"/>
+				<HadFoodToday Val="1"/>
+				<Strength Val="2"/>
+				<Day Val="1"/>
+				<Ecu Val="550"/>
 			</Modifications>
 			<Options>
 				<Option Destination="362"/>
@@ -1848,8 +1848,8 @@
 		<Paragraph No="191">
 			<Text>Тогда придется потерять 3 СИЛЫ, а если с собой нет ничего съедобного, то еще столько же. Если же есть, то можете поужинать.</Text>
 			<Modifications>
-				<Strength Value="-3"/>
-				<Day Value="1"/>
+				<Strength Val="-3"/>
+				<Day Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="558"/>
@@ -1862,9 +1862,9 @@
 				<Text>...можете решить, что теперь самое время попробовать найти графа де Дольнея.</Text>
 			</Texts>
 			<Modifications>
-				<HadFoodToday Value="1"/>
-				<Strength Value="2"/>
-				<Day Value="1"/>
+				<HadFoodToday Val="1"/>
+				<Strength Val="2"/>
+				<Day Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="653"/>
@@ -1946,7 +1946,7 @@
 				<Option Destination="362" Text="Лезть прямо в пекло"/>
 				<Option Destination="85" Text="Съездить в Тур"/>
 				<Option Destination="105" Text="Подняться по реке почти до самого Невера" Availability="ЭКЮ >= 200">
-					<Ecu Value="-200"/>
+					<Ecu Val="-200"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -1965,8 +1965,8 @@
 				<Text>...вы решаете посоветоваться с Жаком, как лучше выполнить возложенную на вас миссию.</Text>
 			</Texts>
 			<Modifications>
-				<HadFoodToday Value="1"/>
-				<Strength Value="-1"/>
+				<HadFoodToday Val="1"/>
+				<Strength Val="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="82"/>
@@ -1992,7 +1992,7 @@
 				<Text>Но в это время вместо дамы в окне появляется лакей, целящийся в вас из аркебузы.</Text>
 			</Texts>
 			<Modifications>
-				<Honor Value="-1"/>
+				<Honor Val="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="538"/>
@@ -2013,7 +2013,7 @@
 				<Text>Внезапно между деревьями мелькает какой-то огонек. Спешившись и ведя коня за узду вы подходите ближе. Это небольшая хижина, одно из окон которой ярко освещено. Приблизитесь к двери и постучите, сначала подкрадетесь к окну и заглянете в него или вновь сядете на коня и поедете дальше?</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="-1"/>
+				<Strength Val="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="8" Text="Приблизитесь к двери и постучите"/>
@@ -2086,9 +2086,9 @@
 				<Text>Бродяги ведут себя довольно-таки мирно, явно не желая связываться с благородным, да к тому же еще и вооруженным путником. Наевшись до отвала, выходите из трактира и отправляетесь искать подходящую гостиницу.</Text>
 			</Texts>
 			<Modifications>
-				<HadFoodToday Value="1"/>
-				<Strength Value="2"/>
-				<Honor Value="1"/>
+				<HadFoodToday Val="1"/>
+				<Strength Val="2"/>
+				<Honor Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="93"/>
@@ -2116,8 +2116,8 @@
 				<Text>После этого поедете дальше, решив обойтись без сна, или переночуете в лесу?</Text>
 			</Texts>
 			<Modifications>
-				<Honor Value="-1"/>
-				<Strength Value="-4"/>
+				<Honor Val="-1"/>
+				<Strength Val="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="327" Text="Обойтись без сна"/>
@@ -2233,7 +2233,7 @@
 				<Text>Рейтары не успевают еще развернуть лошадей, как вы уже скрываетесь за деревьями. Наемников слишком мало, чтобы обшарить весь лес, да и вряд ли это входит в их планы.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="-3"/>
+				<Strength Val="-3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="91"/>
@@ -2260,8 +2260,8 @@
 			</Texts>
 			<Triggers>LetterOfRecommendationToTheDuke</Triggers>
 			<Modifications>
-				<HadFoodToday Value="1"/>
-				<Strength Value="2"/>
+				<HadFoodToday Val="1"/>
+				<Strength Val="2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="85" Text="В Тур"/>
@@ -2288,9 +2288,9 @@
 				<Text>Утром, решив не тратить время на лишние разговоры с хозяином, садитесь на коня и торопитесь покинуть город.</Text>
 			</Texts>
 			<Modifications>
-				<HadFoodToday Value="1"/>
-				<Strength Value="1"/>
-				<Day Value="1"/>
+				<HadFoodToday Val="1"/>
+				<Strength Val="1"/>
+				<Day Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="331"/>
@@ -2320,7 +2320,7 @@
 			<Options>
 				<Option Destination="412" Text="Вы уменьшили его СИЛУ до 2"/>
 				<Option Destination="521" Text="Он уменьшил вашу СИЛУ до 2 и вы хотите воззвать к Богу" Availability="!DivineIntervention">
-					<Trigger Value="DivineIntervention"/>
+					<Trigger Val="DivineIntervention"/>
 				</Option>
 				<Option Destination="0" Text="Вы погибли: придётся начинать сначала..." Availability="DivineIntervention"/>
 			</Options>
@@ -2445,7 +2445,7 @@
 				<Text>Но, может быть, это все же лучше, чем быть съеденным. Выехав на дорогу, вы продолжаете свой путь, пока над лесом не поднимается тусклое осеннее солнце.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="-2"/>
+				<Strength Val="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="4"/>
@@ -2472,8 +2472,8 @@
 					<Head>Комната на постоялом дворе</Head>
 					<Price>150</Price>
 					<Benefits>
-						<Strength Value="4"/>
-						<HadFoodToday Value="1"/>
+						<Strength Val="4"/>
+						<HadFoodToday Val="1"/>
 					</Benefits>
 					<Text>Можете восстановить 4 СИЛЫ и с утра отправиться в путь.</Text>
 				</Get>
@@ -2560,8 +2560,8 @@
 				<Text>Уже надеетесь, что о вас забыли, когда слышите за спиной голос герцога: «Так это вы, сударь, из Парижа?». Майен присаживается на стул рядом, несколько минут изучает ваше лицо своими цепкими маленькими глазками, а потом спрашивает: «Скажите, виконт, а герцог де Ламуаньон еще в городе или уже отправился к Западной армии?» Сомнений нет — это проверка, и Карл знает ответ гораздо лучше вас. Остается одно: попробовать угадать. Что вы скажете? Что герцог еще в столице или что он уже уехал?</Text>
 			</Texts>
 			<Modifications>
-				<HadFoodToday Value="1"/>
-				<Strength Value="2"/>
+				<HadFoodToday Val="1"/>
+				<Strength Val="2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="629" Text="Герцог еще в столице"/>
@@ -2572,7 +2572,7 @@
 			<Text>Вам нельзя попадаться на глаза патрулю. Если деньги при вас, то можете потратить 7 экю на то, чтобы полностью переодеться и вечером отправиться к Парижским воротам неузнанным. </Text>
 			<Options>
 				<Option Destination="489" Text="Если вы переоделись" Availability="ЭКЮ >= 700">
-					<Ecu Value="-700"/>
+					<Ecu Val="-700"/>
 					<Text>Если же нет, то избежать солдат губернатора вам не удастся. Вы уже побывали в тюрьме?</Text>
 				</Option>
 				<Option Destination="615" Text="Уже побывали в тюрьме"/>
@@ -2608,7 +2608,7 @@
 				<Option Destination="179" Text="На Париж"/>
 				<Option Destination="85" Text="Добраться через Блуа до Тура"/>
 				<Option Destination="105" Text="Нанять лодку и подняться по Луаре до Невера" Availability="ЭКЮ >= 200">
-					<Ecu Value="-200"/>
+					<Ecu Val="-200"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -2627,8 +2627,8 @@
 				<Text>Утром решайте, куда ехать дальше: на Блуа и Орлеан или на Вандом.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="2"/>
-				<Day Value="1"/>
+				<Strength Val="2"/>
+				<Day Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="596" Text="На Блуа и Орлеан"/>
@@ -2642,10 +2642,10 @@
 				<Text>К полудню вы уже на твердой земле, а впереди — Бор-лез-Орг.</Text>
 			</Texts>
 			<Modifications>
-				<HadFoodToday Value="1"/>
-				<Strength Value="3"/>
-				<Day Value="1"/>
-				<Ecu Value="-350"/>
+				<HadFoodToday Val="1"/>
+				<Strength Val="3"/>
+				<Day Val="1"/>
+				<Ecu Val="-350"/>
 			</Modifications>
 			<Options>
 				<Option Destination="496"/>
@@ -2660,7 +2660,7 @@
 		<Paragraph No="280">
 			<Text>Вы решаете остаться в этой гостинице, надеясь, что проведете ночь с комфортом. К вашему удивлению, хозяин два раза подряд дает ключи от уже занятых комнат. И каждый раз вам приходится не только бегать вверх и вниз на второй этаж, но и извиняться перед постояльцами за неожиданное вторжение. А в третий раз он дает ключи от номера, которого вообще нет на этаже! И когда вы в очередной раз совершенно обескураженный спускаетесь с лестницы, просит прощения, улыбаясь своей гаденькой слащавой улыбкой. Да это просто безобразие какое-то! Возмутитесь или покорно возьмете ключи в четвертый раз?</Text>
 			<Modifications>
-				<Ecu Value="-100"/>
+				<Ecu Val="-100"/>
 			</Modifications>
 			<Options>
 				<Option Destination="507" Text="Возмутитесь"/>
@@ -2680,8 +2680,8 @@
 				<Text>Рано утром, не теряя времени даром, отправляетесь в путь. Куда вы поедете: напрямую, через Шатору или в объезд, через Ангулем?</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="2"/>
-				<Day Value="1"/>
+				<Strength Val="2"/>
+				<Day Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="508" Text="Напрямую, через Шатору"/>
@@ -2708,9 +2708,9 @@
 				<Text>Когда на рассвете спускаетесь вниз, хозяин предлагает позавтракать. Согласитесь или постараетесь побыстрее уехать из Капденака?</Text>
 			</Texts>
 			<Modifications>
-				<HadFoodToday Value="1"/>
-				<Strength Value="2"/>
-				<Day Value="1"/>
+				<HadFoodToday Val="1"/>
+				<Strength Val="2"/>
+				<Day Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="416" Text="Согласитесь"/>
@@ -2739,7 +2739,7 @@
 				<Text>...но от ворот подбегает еще один отряд. Сильный удар чем-то тяжелым по голове кладет конец вашей попытке прорваться. В глазах темнеет, вы теряете сознание.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="-4"/>
+				<Strength Val="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="352"/>
@@ -2754,7 +2754,7 @@
 		<Paragraph No="290">
 			<Text>Последний мастерский удар, и ваша шпага попадает де Мишуару между ребрами. Быстро обыскав карманы убитого, вы находите 2 экю, которые и можете взять с собой.</Text>
 			<Modifications>
-				<Ecu Value="200"/>
+				<Ecu Val="200"/>
 			</Modifications>
 			<Options>
 				<Option Destination="440"/>
@@ -2763,7 +2763,7 @@
 		<Paragraph No="291">
 			<Text>Недолго побродив по рынку, находите подходящего коня. Расплатившись и держа его в поводу, вы возвращаетесь ближе к десяти часам к тюрьме.</Text>
 			<Modifications>
-				<Ecu Value="-400"/>
+				<Ecu Val="-400"/>
 			</Modifications>
 			<Options>
 				<Option Destination="100"/>
@@ -2776,7 +2776,7 @@
 				<Text>Что вы сделаете? Покажете королевский перстень и прикажете, чтобы вас пропустили, или поедете в объезд города: направо или налево?</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="-2"/>
+				<Strength Val="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="509" Text="Покажете королевский перстень"/>
@@ -2793,7 +2793,7 @@
 				<Text>Подумаете, что в этом виноват хозяин (в том, что в кубке было снотворное теперь сомнений почти не остается) и отправитесь к нему, или поскорее сядете на коня и покинете город?</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="2"/>
+				<Strength Val="2"/>
 				<Ecu Empty="true"/>
 			</Modifications>
 			<Options>
@@ -2830,7 +2830,7 @@
 		<Paragraph No="296">
 			<Text>Теперь кольчуга ваша. Когда во время боя на кубике у вашего противника выпадет 6, она отразит удар. А теперь лучше побыстрее уехать.</Text>
 			<Modifications>
-				<Chainmail Value="1"/>
+				<Chainmail Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="262"/>
@@ -2850,7 +2850,7 @@
 				<Text>Вы уже были в тюрьме?</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="-3"/>
+				<Strength Val="-3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="615" Text="Вы уже были в тюрьме"/>
@@ -2889,8 +2889,8 @@
 				<Text>Можете попробовать найти графа де Дольнея.</Text>
 			</Texts>
 			<Modifications>
-				<HadFoodToday Value="1"/>
-				<Strength Value="2"/>
+				<HadFoodToday Val="1"/>
+				<Strength Val="2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="653"/>
@@ -2958,8 +2958,8 @@
 				<Text>Теперь можно заняться поисками графа де Дольнея.</Text>
 			</Texts>
 			<Modifications>
-				<HadFoodToday Value="1"/>
-				<Strength Value="2"/>
+				<HadFoodToday Val="1"/>
+				<Strength Val="2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="653"/>
@@ -2991,7 +2991,7 @@
 				<Text>Вы, в свою очередь, рассказываете, зачем Король направил вас в столицу и спрашиваете, не знает ли де Грансе, как найти его преемника (сомнений нет, вы едете именно к нему). Но маркиз, несмотря на столь чудесное освобождение, слишком много пережил, попав в руки к Лиге, чтобы довериться первому встречному, даже если этот первый встречный спас ему жизнь (ведь все это вполне могло быть подстроено той же Лигой). Он лишь говорит, что не стал бы ездить на улицу Ваннери. Вам не хочется настаивать. Попрощавшись с маркизом, продолжаете свой путь. Но по какой дороге: на Лимож или на Пуатье?</Text>
 			</Texts>
 			<Modifications>
-				<Honor Value="1"/>
+				<Honor Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="409" Text="На Лимож"/>
@@ -3091,7 +3091,7 @@
 		<Paragraph No="326">
 			<Text>Вы быстро обыскиваете одежду врагов. В их карманах оказываются 3 экю и 10 су, которые можете взять с собой. Плюс к этому у каждого находите бумагу с подробным вашим описанием. Значит, при дворе Генриха действуют искусные шпионы, которые не смогли только одного: выехать из города до открытия ворот. Теперь надо быть настороже. Неизвестно только одно: если шпион остался в Ажене и послал этих двух всадников вдогонку, то вы спасены. А если он отправил кого-то с вашим описанием вперед? Так или иначе, надо ехать дальше.</Text>
 			<Modifications>
-				<Ecu Value="330"/>
+				<Ecu Val="330"/>
 			</Modifications>
 			<Options>
 				<Option Destination="450" Text="Не пытались скрыться от преследователей"/>
@@ -3105,7 +3105,7 @@
 				<Text>...но вот коню это явно не под силу. Придется все же заночевать в лесу.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="1"/>
+				<Strength Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="542"/>
@@ -3125,7 +3125,7 @@
 				<Text>После этого выберете место поуютнее, чтобы поспать, или поедете дальше?</Text>
 			</Texts>
 			<Modifications>
-				<Day Value="1"/>
+				<Day Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="97" Text="Выберете место поуютнее"/>
@@ -3191,7 +3191,7 @@
 		<Paragraph No="337">
 			<Text>Подождав, пока один из стражников выйдет из тюрьмы, некоторое время идете за ним, а потом окликаете и догоняете. Риск велик, но лучше всего сразу же приступить к делу. Он быстро соглашается на ваше предложение: за 2 экю поможет бежать пленнику. План таков: сегодня после ужина протестанта должны вывести на прогулку в тюремный двор. Около десяти часов вечера каждый день из тюрьмы выезжает повозка, развозящая по домам поваров и дневную стражу. В тот момент, когда повозка будет проезжать мимо ворот, стражник отвернется, и гугенот сможет проскользнуть вслед за ней. Остальное уже дело ваше, но лучше бы с лошадью быть где-нибудь поблизости. После этого стражник быстро удаляется, чтобы поужинать дома и вновь вернуться к своим обязанностям. А перед вами выбор: если есть в запасе лишние 4 экю, то можете пойти на рынок и купить вторую лошадь, если нет, то вы просто подъезжаете к воротам тюрьмы ближе к десяти часам, рассчитывая отдать пленнику хотя бы временно своего Арбалета.</Text>
 			<Modifications>
-				<Ecu Value="-200"/>
+				<Ecu Val="-200"/>
 			</Modifications>
 			<Options>
 				<Option Destination="291" Text="Пойти на рынок и купить вторую лошадь"/>
@@ -3226,7 +3226,7 @@
 				<Text>Правый бок болит так, как будто в него забили несколько гвоздей, но, по счастью, вроде бы ничего не сломано. Подбежав, де Мишуар помогает вам подняться и отвязать проклятую веревку. Сразу сесть на лошадь вы все равно не в силах, поэтому он вновь предлагает вместе позавтракать. Но вам не дает покоя одна мысль: ведь кому-то все же понадобилось натянуть эту проклятую веревку! Но кому и зачем? Очевидно, что в ответе на этот вопрос что-то кроется и, возможно, это «что-то» направлено против вас. Что вы сделаете? Спокойно согласитесь позавтракать, решив, что автора этой «шутки» все равно не найти, склонитесь к тому, что шевалье наверняка что-то знает и постараетесь выбить из него эти сведения, благо до трактира не так уж и близко, или, наоборот, предпочтете направиться туда и попробуете любой ценой узнать у хозяина, кто это сделал?</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="-2"/>
+				<Strength Val="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="544" Text="Согласитесь позавтракать"/>
@@ -3241,7 +3241,7 @@
 				<Text>Подплываете к карете и одним рывком распахиваете дверцу.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="-1"/>
+				<Strength Val="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="223"/>
@@ -3286,7 +3286,7 @@
 				<Text>Мортон просит прислать из Невера помощь, что вы, безусловно, вскоре и сделаете. После этого он внимательно смотрит на вас и, как бы самому себе, говорит: «Странно, и зачем это проверяют все лодки, плывущие из Невера в Орлеан? Может быть, потому, что в Орлеане сейчас сам герцог Майенский?». Вы понимаете намек, прощаетесь с графом и торопитесь к городу.</Text>
 			</Texts>
 			<Modifications>
-				<Honor Value="1"/>
+				<Honor Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="105"/>
@@ -3299,10 +3299,10 @@
 				<Text>Если болезнь не унесла вас в могилу, после полудня седлайте коня и отправляйтесь дальше.</Text>
 			</Texts>
 			<Modifications>
-				<HadFoodToday Value="1"/>
-				<Strength Value="-4"/>
-				<Ecu Value="-100"/>
-				<Day Value="2"/>
+				<HadFoodToday Val="1"/>
+				<Strength Val="-4"/>
+				<Ecu Val="-100"/>
+				<Day Val="2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="85"/>
@@ -3351,7 +3351,7 @@
 					<Head>ПИСТОЛЕТ</Head>
 					<Price>300</Price>
 					<Multiple/>
-					<Benefit Name="Pistols" Value="1"/>
+					<Benefit Name="Pistols" Val="1"/>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
@@ -3364,14 +3364,14 @@
 					<Head>КИНЖАЛ</Head>
 					<Price>200</Price>
 					<Multiple/>
-					<Benefit Name="Daggers" Value="1"/>
+					<Benefit Name="Daggers" Val="1"/>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
 					<Head>ПОРОХ И ПУЛИ на 4 выстрела</Head>
 					<Price>100</Price>
 					<Multiple/>
-					<Benefit Name="BulletsAndGubpowder" Value="4"/>
+					<Benefit Name="BulletsAndGubpowder" Val="4"/>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
@@ -3391,14 +3391,14 @@
 					<Button>Выбрать</Button>
 					<Head>Гостиница побогаче</Head>
 					<Price>100</Price>
-					<Benefit Name="Strength" Value="2"/>
+					<Benefit Name="Strength" Val="2"/>
 					<Text>Если выделите только полэкю — придется довольствоваться тем, что похуже и восстановить только 1:</Text>
 				</Get>
 				<Get>
 					<Button>Выбрать</Button>
 					<Head>Гостиница похуже</Head>
 					<Price>50</Price>
-					<Benefit Name="Strength" Value="1"/>
+					<Benefit Name="Strength" Val="1"/>
 					<Text>Кроме того, вспомните, успели ли вы сегодня хотя бы один раз поесть. Если нет, потеряйте 3 СИЛЫ, однако только в том случае, если не удастся найти ничего съедобного. Для этого есть два пути: если осталось еще что-то с собой или если есть полэкю на еду. В последнем случае ужин принесут прямо в номер, и сможете восстановить 2 СИЛЫ:</Text>
 				</Get>
 				<Get>
@@ -3406,13 +3406,13 @@
 					<Head>Еда в номер</Head>
 					<Price>50</Price>
 					<Benefits>
-						<Strength Value="2"/>
-						<HadFoodToday Value="1"/>
+						<Strength Val="2"/>
+						<HadFoodToday Val="1"/>
 					</Benefits>
 				</Get>
 			</Actions>
 			<Modifications>
-				<Day Value="1"/>
+				<Day Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="445"/>
@@ -3425,9 +3425,9 @@
 				<Text>Поев до отвала, выходите из трактира и отправляетесь на поиски гостиницы для ночлега.</Text>
 			</Texts>
 			<Modifications>
-				<HadFoodToday Value="1"/>
-				<Strength Value="2"/>
-				<Honor Value="-1"/>
+				<HadFoodToday Val="1"/>
+				<Strength Val="2"/>
+				<Honor Val="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="93"/>
@@ -3445,7 +3445,7 @@
 				<Text>Подтащив обмякшее тело к окну, начинаете думать, что делать дальше. Звучит несколько выстрелов, женщина вздрагивает, на ее платье появляется кровь, и она сползает на пол кареты.</Text> <Text Style="Small">Потеряйте 1 ЧЕСТЬ: для дворянина женщина всегда должна оставаться женщиной.</Text>
 			</Texts>
 			<Modifications>
-				<Honor Value="-1"/>
+				<Honor Val="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="432"/>
@@ -3454,7 +3454,7 @@
 		<Paragraph No="358">
 			<Text>Утром разбойники покидают хижину, вам же суждено было провести бессонную ночь. Остается только один лысоватый низенький мужичок, больше похожий на лавочника, чем на убийцу и грабителя. Он сидит за столом, задумчиво разглядывая перстень. Потом подходит ближе, берет нож и, ни слова не говоря, перерезает веревки, после чего снова возвращается на свое место. Вам повезло: среди головорезов оказался протестант, узнавший перстень Короля. Не заставляя его дважды повторять молчаливое приглашение, вы быстро собираете свои вещи, деньги (от которых осталась только половина), выходите из домика, садитесь на коня и как можно быстрее скачете прочь, предоставляя единоверцу рассказывать товарищам байку по поводу того, как вам удалось бежать. Вскоре вы выезжаете на дорогу и скачете по ней в том направлении, которое вам кажется правильным.</Text>
 			<Modifications>
-				<Day Value="1"/>
+				<Day Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="351"/>
@@ -3475,7 +3475,7 @@
 		<Paragraph No="360">
 			<Text>Де Мишуар, обливаясь кровью, в изнеможении прислоняется к дереву. Ваша шпага упирается ему в грудь: его жизнь в ваших руках. «Зачем и кто вас подослал?» — вот главный вопрос, на который вы хотите получить ответ. Шевалье рассказывает, что ему заплатили 2 экю за то, чтобы он вас задержал во что бы то ни стало, но вот с какой целью, он не знает. Слова даются ему с огромным трудом, после последнего он испускает дух. Вы лезете ему в карман и забираете пресловутые 2 экю, которые покойнику уже не понадобятся.</Text>
 			<Modifications>
-				<Ecu Value="200"/>
+				<Ecu Val="200"/>
 			</Modifications>
 			<Options>
 				<Option Destination="440"/>
@@ -3562,7 +3562,7 @@
 				<Text Style="Small">Прибавьте себе 1 ЧЕСТЬ за то, что все же пришли на помощь даме, и продолжайте путь на верном Арбалете.</Text>
 			</Texts>
 			<Modifications>
-				<Honor Value="1"/>
+				<Honor Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="24"/>
@@ -3590,7 +3590,7 @@
 				<Text>Наутро гостеприимный хозяин спрашивает, не может ли он вам чем-нибудь помочь. Откажетесь от помощи, попросите дать вам провожатого до Невера или рекомендательное письмо к кому-нибудь в Орлеан?</Text>
 			</Texts>
 			<Modifications>
-				<MaxSkill Value="1"/>
+				<MaxSkill Val="1"/>
 				<Strength Restore="true"/>
 			</Modifications>
 			<Options>
@@ -3631,8 +3631,8 @@
 				<Text>Наступает рассвет, до Ангулема не так уж и далеко.</Text>
 			</Texts>
 			<Modifications>
-				<HadFoodToday Value="-10"/>
-				<Day Value="1"/>
+				<HadFoodToday Val="-10"/>
+				<Day Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="163"/>
@@ -3674,7 +3674,7 @@
 		<Paragraph No="384">
 			<Text>Граф мертв. Вы находите в его карманах 4 экю и медальон на тонкой золотой цепочке. Можете взять с собой и то, и другое, переехать мост и отправляться дальше.</Text>
 			<Modifications>
-				<Ecu Value="400"/>
+				<Ecu Val="400"/>
 			</Modifications>
 			<Options>
 				<Option Destination="105"/>
@@ -3723,7 +3723,7 @@
 			<Text>Когда вы подплываете к Блуа, то видите, что на пристани уже стоит большой отряд солдат, держащих под уздцы взмыленных лошадей. Если вы хотите — можете отдать еще 2 экю, чтобы лодочник доставил вас в Орлеан. Если же у вас нет ни денег, ни желания высаживаться на землю, то остается только убить хозяина лодки и управлять суденышком самому.</Text>
 			<Options>
 				<Option Destination="606" Text="В Орлеан" Availability="ЭКЮ >= 200">
-					<Ecu Value="-200"/>
+					<Ecu Val="-200"/>
 				</Option>
 				<Option Destination="144" Text="Пристать к берегу"/>
 				<Option Destination="66" Text="Убить хозяина лодки"/>
@@ -3737,8 +3737,8 @@
 					<Head>Еда</Head>
 					<Price>50</Price>
 					<Benefits>
-						<Strength Value="2"/>
-						<HadFoodToday Value="1"/>
+						<Strength Val="2"/>
+						<HadFoodToday Val="1"/>
 					</Benefits>
 					<Text>Вывеска совсем свежая, быть может, ее даже успели нарисовать после смерти Генриха IV. Это не такой уж плохой знак — если Каор признал Генриха своим сюзереном всерьез и надолго, то его примеру, дай Бог, последуют и другие города Франции. Можете восстановить 2 СИЛЫ, а затем волей-неволей приходится уезжать из уютного городка — впереди дальняя дорога, до цели еще не один день пути.</Text>
 				</Get>
@@ -3849,7 +3849,7 @@
 		<Paragraph No="404">
 			<Text>Свернув с «дороги» и выбрав подходящее место, привязываете коня к дереву и ложитесь рядом с ним. Если вы сегодня еще не ели, то либо потеряйте 2 СИЛЫ, либо поешьте, если что-то есть с собой. После этого вы засыпаете.</Text>
 			<Modifications>
-				<Day Value="1"/>
+				<Day Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="102"/>
@@ -3862,7 +3862,7 @@
 				<Text>Внимательно осмотрев ее и не найдя ничего подозрительного, решаете спокойно лечь спать.</Text>
 			</Texts>
 			<Modifications>
-				<Ecu Value="-50"/>
+				<Ecu Val="-50"/>
 			</Modifications>
 			<Options>
 				<Option Destination="540"/>
@@ -3876,7 +3876,7 @@
 				<Text Style="Small">Если вы не владеете искусством боя левой рукой, то пока правая не заживет (еще 2 дня), вычитайте у себя 2 единицы ЛОВКОСТИ.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="-3"/>
+				<Strength Val="-3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="217"/>
@@ -3895,8 +3895,8 @@
 				<Text Style="Small">Думается, что вы и сами понимаете, что совершили поступок, недостойный дворянина — потеряйте 1 ЧЕСТЬ.</Text>
 			</Texts>
 			<Modifications>
-				<Honor Value="-1"/>
-				<Ecu Value="500"/>
+				<Honor Val="-1"/>
+				<Ecu Val="500"/>
 			</Modifications>
 			<Options>
 				<Option Destination="137"/>
@@ -3940,9 +3940,9 @@
 				<Text>Хозяин не дает кубку с вином пустовать, но вскоре вы начинаете чувствовать странную сонливость. Решите, что вам подсыпали снотворного или спокойно доужинаете и пойдете к себе в комнату спать?</Text>
 			</Texts>
 			<Modifications>
-				<HadFoodToday Value="1"/>
-				<Strength Value="2"/>
-				<Ecu Value="-50"/>
+				<HadFoodToday Val="1"/>
+				<Strength Val="2"/>
+				<Ecu Val="-50"/>
 			</Modifications>
 			<Options>
 				<Option Destination="112" Text="Решите, что вам подсыпали снотворного"/>
@@ -3952,7 +3952,7 @@
 		<Paragraph No="414">
 			<Text>Чтобы не вызвать подозрения, вы отправляетесь на базарную площадь, изображая из себя скучающего провинциала. Присмотрев быстрого и смышленого мальчишку, даете ему 3 су и расспрашиваете о предстоящей казни. Он отвечает, что шевалье де Соле сейчас находится в городской тюрьме, а завтра утром сам губернатор Ангулема будет присутствовать при приведении приговора в исполнение. Итак, все долговременные способы освобождения из тюрьмы: подкоп, штурм, взрыв стен и т.д. отпадают. Вы один, и у вас слишком мало времени. Остается два варианта: либо попробовать подкупить тюремщиков, либо дождаться завтрашнего утра, чтобы попытаться отбить шевалье де Соле у охраны. Остановитесь на первом или на втором?</Text>
 			<Modifications>
-				<Ecu Value="-10"/>
+				<Ecu Val="-10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="175" Text="Попытаться подкупить"/>
@@ -3962,7 +3962,7 @@
 		<Paragraph No="415">
 			<Text>Зайдя в ближайший трактир, подходите к столу в углу комнаты и заказываете себе ужин. Заведение, в которое вы попали, скорее всего, не пользуется уважением почтенных жителей города: компании за соседними столами больше всего напоминают бродяг или воров. С одной стороны, это хорошо: вряд ли сюда осмелятся сунуться шпионы Майена. Но с другой — ваша одежда может вызвать у сотрапезников чисто профессиональный интерес, а в драке перевес будет не на вашей стороне. За ужин уже заплачено полэкю. Выйдете из трактира и пойдете искать другой, постараетесь поесть, как ни в чем не бывало, или вынете из седельной кобуры пистолет и положите его перед собой, чтобы показать, что с вами шутки плохи?</Text>
 			<Modifications>
-				<Ecu Value="-50"/>
+				<Ecu Val="-50"/>
 			</Modifications>
 			<Options>
 				<Option Destination="16" Text="Пойдете искать другой"/>
@@ -3978,8 +3978,8 @@
 					<Head>Еда</Head>
 					<Price>50</Price>
 					<Benefits>
-						<Strength Value="1"/>
-						<HadFoodToday Value="1"/>
+						<Strength Val="1"/>
+						<HadFoodToday Val="1"/>
 					</Benefits>
 					<Text>Завтрак прибавит вам 1 СИЛУ, после чего вы направляетесь в конюшню седлать Арбалета.</Text>
 				</Get>
@@ -3996,8 +3996,8 @@
 				<Text>Поев, идите искать гостиницу, где можно было бы столь же спокойно переночевать.</Text>
 			</Texts>
 			<Modifications>
-				<HadFoodToday Value="1"/>
-				<Strength Value="2"/>
+				<HadFoodToday Val="1"/>
+				<Strength Val="2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="93"/>
@@ -4010,7 +4010,7 @@
 				<Text>Враги приближаются, вы стреляете в ответ.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="-4"/>
+				<Strength Val="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="537"/>
@@ -4023,7 +4023,7 @@
 				<Text>После этого вы садитесь на изрядно подуставшего коня и выезжаете на дорогу в полулье от моста.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="-1"/>
+				<Strength Val="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="105"/>
@@ -4062,8 +4062,8 @@
 		<Paragraph No="424">
 			<Text>Фехтуя, вы снова оказались на вашей стороне реки. Дворянин мертв. В его дорожной сумке, притороченной к седлу, находите 3 экю, пистолет и... небольшую записку с вашим описанием. Это уже любопытно! Ну что же, надо быть повнимательней: Лига использует все способы свести вас в могилу, подстраивая даже такие «случайности». Если хотите, можете его лошадь и шпагу взять с собой и продать в Перигё. Пистолет возьмите себе или избавьтесь от него таким же образом. Обойдя телегу, вы вновь вскакиваете в седло. Путь на Перигё свободен.</Text>
 			<Modifications>
-				<Ecu Value="300"/>
-				<Pistols Value="1"/>
+				<Ecu Val="300"/>
+				<Pistols Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="528"/>
@@ -4072,7 +4072,7 @@
 		<Paragraph No="425">
 			<Text>Хозяин гостиницы разводит руками и говорит, что он ничего об этом не знает, после чего приказывает позвать к нему конюха. Но сколько слуги не ищут, найти его не удается. В качестве возмещения за причиненный ущерб вам отдают 3 экю, после чего волей-неволей приходится ехать дальше.</Text>
 			<Modifications>
-				<Ecu Value="300"/>
+				<Ecu Val="300"/>
 			</Modifications>
 			<Options>
 				<Option Destination="331"/>
@@ -4133,7 +4133,7 @@
 			<Text>Сражение заканчивается, даже не успев перейти в побоище. Ведь у вас не сто рук, к тому же монахи вооружены пистолетами. Последнее, что вы видите — дуло одного из них, нацеленное прямо в грудь. Если хотите и есть возможность попросить Бога о помощи, сделайте это:</Text>
 			<Options>
 				<Option Destination="601" Availability="!DivineIntervention">
-					<Trigger Value="DivineIntervention"/>
+					<Trigger Val="DivineIntervention"/>
 					<Text>Иначе же ваша миссия останется невыполненной...</Text>
 				</Option>
 				<Gameover/>
@@ -4145,7 +4145,7 @@
 				<Text Style="Small">Если желудок пуст, то либо поешьте, либо потеряйте 3 СИЛЫ, после чего ложитесь спать.</Text>
 			</Texts>
 			<Modifications>
-				<Day Value="1"/>
+				<Day Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="57"/>
@@ -4155,10 +4155,10 @@
 			<Text>Решив, что все ворота охраняются, вы идете на пристань и спрашиваете у владельцев небольших лодочек, во что обойдется доехать до Блуа или до самого Орлеана. Цены следующие: до Блуа — 2 экю, до Орлеана — 5.</Text>
 			<Options>
 				<Option Destination="390" Text="До Блуа" Availability="ЭКЮ >= 200">
-					<Ecu Value="-200"/>
+					<Ecu Val="-200"/>
 				</Option>
 				<Option Destination="530" Text="До Орлеана" Availability="ЭКЮ >= 500">
-					<Ecu Value="-500"/>
+					<Ecu Val="-500"/>
 				</Option>
 				<Option Destination="250" Text="Вернуться"/>
 			</Options>
@@ -4194,7 +4194,7 @@
 			<Text>Вскоре перед вами пристань, откуда можно без труда доплыть до Капденака всего за полтора экю. Так и поступите или нет?</Text>
 			<Options>
 				<Option Destination="133" Text="Так и поступите" Availability="ЭКЮ >= 150">
-					<Ecu Value="-150"/>
+					<Ecu Val="-150"/>
 				</Option>
 				<Option Destination="602" Text="Нет"/>
 			</Options>
@@ -4246,7 +4246,7 @@
 				<Text>Маркиз предлагает вам переночевать в его замке. Согласитесь или ответите, что, к сожалению, дела торопят, и, вернувшись на дорогу, отправитесь дальше?</Text>
 			</Texts>
 			<Modifications>
-				<Honor Value="1"/>
+				<Honor Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="375" Text="Согласитесь"/>
@@ -4262,7 +4262,7 @@
 		<Paragraph No="448">
 			<Text>Вы платите деньги и расстаетесь со стражником. Завтра, когда начнется бой, узнаете, сдержал ли тюремщик свое слово.</Text>
 			<Modifications>
-				<Ecu Value="-600"/>
+				<Ecu Val="-600"/>
 			</Modifications>
 			<Triggers>CorruptGuard</Triggers>
 			<Options>
@@ -4276,7 +4276,7 @@
 				<Text>Теперь вы можете либо уехать из Тура в надежде встретиться с курьером в Орлеане, либо попытайтесь разбогатеть по-другому.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="-4"/>
+				<Strength Val="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="250" Text="Уехать из Тура"/>
@@ -4309,8 +4309,8 @@
 				<Text Style="Small">Сон восстановит вам 1 СИЛУ, однако, если вы сегодня ничего не ели и нечем восполнить этот пробел, придется их потерять.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="1"/>
-				<Day Value="1"/>
+				<Strength Val="1"/>
+				<Day Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="652"/>
@@ -4324,28 +4324,28 @@
 					<Head>ПИСТОЛЕТ</Head>
 					<Price>300</Price>
 					<Multiple/>
-					<Benefit Name="Pistols" Value="1"/>
+					<Benefit Name="Pistols" Val="1"/>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
 					<Head>ЛОШАДЬ</Head>
 					<Price>500</Price>
 					<Multiple/>
-					<Benefit Name="Horses" Value="1"/>
+					<Benefit Name="Horses" Val="1"/>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
 					<Head>КИНЖАЛ</Head>
 					<Price>200</Price>
 					<Multiple/>
-					<Benefit Name="Daggers" Value="1"/>
+					<Benefit Name="Daggers" Val="1"/>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
 					<Head>ПОРОХ И ПУЛИ на 4 выстрела</Head>
 					<Price>200</Price>
 					<Multiple/>
-					<Benefit Name="BulletsAndGubpowder" Value="4"/>
+					<Benefit Name="BulletsAndGubpowder" Val="4"/>
 				</Get>
 			</Actions>
 			<Options>
@@ -4368,10 +4368,10 @@
 				<Text>Часов в десять вновь стучите в дверь тринадцатого номера, но опять никто не открывает. Спускаетесь к хозяину, но на этот раз его приветливость как рукой сняло. «Граф де Дольней арестован ночью в Ратуше как изменник вере и Франции», — холодно отвечает он. Пожалуй, лучше всего будет поскорее уехать из города, пока Лига не добралась и до вас.</Text>
 			</Texts>
 			<Modifications>
-				<HadFoodToday Value="1"/>
-				<Strength Value="3"/>
-				<Day Value="1"/>
-				<Ecu Value="-100"/>
+				<HadFoodToday Val="1"/>
+				<Strength Val="3"/>
+				<Day Val="1"/>
+				<Ecu Val="-100"/>
 			</Modifications>
 			<Options>
 				<Option Destination="179"/>
@@ -4410,7 +4410,7 @@
 				<Option Destination="477" Text="На Шатоден"/>
 				<Option Destination="596" Text="На Орлеан"/>
 				<Option Destination="606" Text="Подняться до Орлеана вверх по Луаре" Availability="ЭКЮ >= 200">
-					<Ecu Value="-200"/>
+					<Ecu Val="-200"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -4458,7 +4458,7 @@
 				<Text Style="Small">Добавьте себе 1 ЧЕСТЬ.</Text>
 			</Texts>
 			<Modifications>
-				<Honor Value="1"/>
+				<Honor Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="597"/>
@@ -4501,8 +4501,8 @@
 				<Text>Утром вновь пускаетесь в путь, и к полудню перед вами Вьерзон.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="1"/>
-				<Day Value="1"/>
+				<Strength Val="1"/>
+				<Day Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="204"/>
@@ -4519,7 +4519,7 @@
 			<Options>
 				<Option Destination="105" Text="Поедете в город"/>
 				<Option Destination="204" Text="Спуститесь по реке до Вьерзона" Availability="ЭКЮ >= 200">
-					<Ecu Value="-200"/>
+					<Ecu Val="-200"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -4565,7 +4565,7 @@
 			<Text>Арбалет носится по полю, как молния, и один за другим враги падают мертвыми. Но один из них все-таки успевает перезарядить аркебузу. Киньте кубик и вычтите у себя столько СИЛ, сколько на нем выпало. Если остались живы, добавьте себе 1 ЧЕСТЬ и отправляйтесь дальше. Вскоре Шартр уже перед вами. Направитесь в город переночевать или объедете его и поторопитесь в Париж?</Text>
 			<Modifications>
 				<Strength/>
-				<Honor Value="1"/>
+				<Honor Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="260" Text="Направитесь в город переночевать"/>
@@ -4579,8 +4579,8 @@
 				<Text>С рассветом вы возвращаетесь в город и направляетесь к тюрьме.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="2"/>
-				<Day Value="1"/>
+				<Strength Val="2"/>
+				<Day Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="343"/>
@@ -4589,7 +4589,7 @@
 		<Paragraph No="481">
 			<Text>Вы заходите на постоялый двор и за полэкю получаете ключи от комнаты. Но в ней все вверх дном. Белье раскидано по полу, кровать прислонена к стене, шкаф валяется на полу, а окно разбито. Возмутитесь и потребуете деньги обратно или немного приведете комнату в порядок и расположитесь в ней на ночлег?</Text>
 			<Modifications>
-				<Ecu Value="-50"/>
+				<Ecu Val="-50"/>
 			</Modifications>
 			<Options>
 				<Option Destination="32" Text="Возмутитесь и потребуете деньги обратно"/>
@@ -4602,7 +4602,7 @@
 				<Text Style="Small">Потеряйте 1 СИЛУ.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="-1"/>
+				<Strength Val="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="212"/>
@@ -4621,7 +4621,7 @@
 				<Text>Выстрелите в негодяя или постараетесь достать его шпагой?</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="-3"/>
+				<Strength Val="-3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="229" Text="Выстрелите в негодяя"/>
@@ -4669,8 +4669,8 @@
 			</Texts>
 			<Triggers>GreenCamisole</Triggers>
 			<Modifications>
-				<HadFoodToday Value="1"/>
-				<Strength Value="2"/>
+				<HadFoodToday Val="1"/>
+				<Strength Val="2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="41" Text="Согласитесь"/>
@@ -4716,7 +4716,7 @@
 		<Paragraph No="495">
 			<Text>Вы доводите странную пару до одного из домов в получасе ходьбы от того места, где чуть было не состоялся ваш дебют в качестве грабителя. Напоследок дворянин благодарит вас и отдает мешочек с деньгами, после чего вместе со своей спутницей скрывается в доме. Развязав мешочек, высыпаете на ладонь его содержимое. 10 экю! Да с такими деньгами можно добраться не только до Парижа, а до самой Индии!</Text>
 			<Modifications>
-				<Ecu Value="1000"/>
+				<Ecu Val="1000"/>
 			</Modifications>
 			<Options>
 				<Option Destination="137"/>
@@ -4874,8 +4874,8 @@
 		<Paragraph No="515">
 			<Text>Поев, можете восстановить 2 СИЛЫ.</Text>
 			<Modifications>
-				<HadFoodToday Value="1"/>
-				<Strength Value="2"/>
+				<HadFoodToday Val="1"/>
+				<Strength Val="2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="361"/>
@@ -4914,7 +4914,7 @@
 				</Fight>
 			</Actions>
 			<Modifications>
-				<Honor Value="-1"/>
+				<Honor Val="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="384"/>
@@ -4926,8 +4926,8 @@
 				<Text>С рассветом, не останавливаясь, проезжаете Пуатье и несетесь дальше.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="-3"/>
-				<Day Value="1"/>
+				<Strength Val="-3"/>
+				<Day Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="3"/>
@@ -4985,7 +4985,7 @@
 				<Text Style="Small">Можете восстановить 1 СИЛУ.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="1"/>
+				<Strength Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="416"/>
@@ -4999,8 +4999,8 @@
 					<Head>Ужин</Head>
 					<Price>150</Price>
 					<Benefits>
-						<Strength Value="2"/>
-						<HadFoodToday Value="1"/>
+						<Strength Val="2"/>
+						<HadFoodToday Val="1"/>
 					</Benefits>
 					<Text>И уже готовитесь лечь спать, когда вас привлекает один подозрительный разговор.</Text>
 				</Get>
@@ -5031,8 +5031,8 @@
 					<Head>Завтра</Head>
 					<Price>50</Price>
 					<Benefits>
-						<Strength Value="2"/>
-						<HadFoodToday Value="1"/>
+						<Strength Val="2"/>
+						<HadFoodToday Val="1"/>
 					</Benefits>
 					<Text>Хозяин словоохотлив, все время болтает без умолку, но так и не удается понять, видел ли он ваш поединок с шевалье де Мишуаром. По крайней мере, вопросов он никаких не задает, все больше сам рассказывает — и то ладно. Несколько раз стараетесь сосредоточиться и прислушаться к тому, что он говорит, но боль в боку ужасно мешает. Ну, ничего, в следующий раз будете внимательней, и ни Лиге, ни самому Дьяволу поймать вас на такой простейший трюк с веревкой больше не удастся. Поев, вы отправляетесь в путь, потрепав по холке лошадь де Мишуара, все еще сиротливо привязанную у крыльца.</Text>
 				</Get>
@@ -5080,7 +5080,7 @@
 				<Text>Правый бок болит так, как будто на него наступил слон, а в глазах даже потемнело от боли. К счастью, вы ничего не сломали и можете подняться на ноги с помощью того самого дворянина. Он говорит, что его зовут шевалье де Мишуар, и он видел вас вчера вечером за королевским столом. Как же он оказался здесь раньше меня? — думаете вы, но шевалье, будто прочитав мысли, рассказывает, что он выехал из Ажена еще вчера вечером, заночевал в этом трактире, и уже готов был тронуться в путь, как вспомнил, что не позавтракал, а, увидев вас, подумал, почему бы это не сделать вдвоем. Про себя вы длинно и со вкусом проклинаете эту навязчивую любезность, которая чуть не стоила вам сломанного ребра, но делать нечего. Прямо сейчас сесть на лошадь вы все равно не в силах, почему бы и не позавтракать. Де Мишуар помогает отвязать веревку, бормоча тысячи извинений. Что вы сделаете? Спокойно согласитесь позавтракать, понимая, что автора этого замечательного изобретения все равно не найти, решите, что шевалье наверняка что-то знает, и постараетесь выбить из него эти сведения, благо трактир кажется безлюдным, или, наоборот, направитесь туда, намереваясь перевернуть все вверх дном, но уж добиться от хозяина, кто и зачем устроил эту ловушку?</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="-2"/>
+				<Strength Val="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="544" Text="Согласитесь позавтракать"/>
@@ -5164,14 +5164,14 @@
 					<Head>Ужин</Head>
 					<Price>50</Price>
 					<Benefits>
-						<Strength Value="2"/>
-						<HadFoodToday Value="1"/>
+						<Strength Val="2"/>
+						<HadFoodToday Val="1"/>
 					</Benefits>
 					<Text>Если же денег нет, а желудок пуст, потеряйте 2 СИЛЫ. Однако, несмотря на завтрашние трудности, спите вы спокойно, и сон приносит вам лишние 2 СИЛЫ. С рассветом вы отправляетесь к тюрьме.</Text>
 				</Get>
 			</Actions>	
 			<Modifications>
-				<Day Value="1"/>
+				<Day Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="343"/>
@@ -5224,7 +5224,7 @@
 					<Head>ПИСТОЛЕТ</Head>
 					<Price>400</Price>
 					<Multiple/>
-					<Benefit Name="Pistols" Value="1"/>
+					<Benefit Name="Pistols" Val="1"/>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
@@ -5237,21 +5237,21 @@
 					<Head>ПОРОХ И ПУЛИ на 5 выстрелов</Head>
 					<Price>300</Price>
 					<Multiple/>
-					<Benefit Name="BulletsAndGubpowder" Value="5"/>
+					<Benefit Name="BulletsAndGubpowder" Val="5"/>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
 					<Head>КИНЖАЛ</Head>
 					<Price>200</Price>
 					<Multiple/>
-					<Benefit Name="Daggers" Value="1"/>
+					<Benefit Name="Daggers" Val="1"/>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
 					<Head>ЛОШАДЬ</Head>
 					<Price>600</Price>
 					<Multiple/>
-					<Benefit Name="Horses" Value="1"/>
+					<Benefit Name="Horses" Val="1"/>
 				</Get>
 			</Actions>
 			<Options>
@@ -5313,7 +5313,7 @@
 		<Paragraph No="560">
 			<Text>Вокруг тихо, шума никто не слышал. Вы забираете у парня кинжал и связку ключей. После чего вы осторожно выходите в коридор и прикрываете дверь «камеры» за собой. Куда вы пойдете по коридору: направо или налево?</Text>
 			<Modifications>
-				<Daggers Value="1"/>
+				<Daggers Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="609" Text="Направо"/>
@@ -5329,9 +5329,9 @@
 				<Text>Какое-то предчувствие не дает покоя. Почему-то кажется, что королевское поручение как-то неуловимо связано с этими давно ушедшими в прошлое делами. Впрочем, почему ушедшими в прошлое? Ведь молодой герцог де Лавалетт жив, а это значит, что его можно найти. Утром вы спрашиваете Берлье, как он выглядит. Тот отвечает, что несколько лет уже не видел убийцу, но знает одну отличительную черту, по которой его всегда можно было узнать. Он с детства любил зеленый цвет и серых в яблоках лошадей. Если вам это о чем-то говорит:</Text>
 			</Texts>
 			<Modifications>
-				<HadFoodToday Value="1"/>
-				<Strength Value="4"/>
-				<MaxSkill Value="1"/>
+				<HadFoodToday Val="1"/>
+				<Strength Val="4"/>
+				<MaxSkill Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="591" Text="Всадник в зелёном камзоле" Availability="GreenCamisole">
@@ -5402,9 +5402,9 @@
 				<Text>К одиннадцати утра вы уже в Блуа. Здесь неизвестная дама благодарит и говорит, что готова расстаться с вами, если вы не хотите сослужить ей еще одну службу. Согласитесь иметь с ней дело дальше или распрощаетесь?</Text>
 			</Texts>
 			<Modifications>
-				<HadFoodToday Value="1"/>
-				<Strength Value="4"/>
-				<Ecu Value="700"/>
+				<HadFoodToday Val="1"/>
+				<Strength Val="4"/>
+				<Ecu Val="700"/>
 			</Modifications>
 			<Options>
 				<Option Destination="147" Text="Согласитесь иметь с ней дело дальше"/>
@@ -5439,9 +5439,9 @@
 				<Text>Никто вас не зарезал и не убил, а, быть может, храбрость спасла вас и от гораздо более опасных приключений. Утром вы седлаете коня и спокойно выезжаете из города. По какой дороге вы поедете: на Лимож или на Ангулем?</Text>
 			</Texts>
 			<Modifications>
-				<HadFoodToday Value="1"/>
-				<Strength Value="2"/>
-				<Day Value="1"/>
+				<HadFoodToday Val="1"/>
+				<Strength Val="2"/>
+				<Day Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="351" Text="На Лимож"/>
@@ -5464,7 +5464,7 @@
 				</Fight>
 			</Actions>
 			<Modifications>
-				<Strength Value="-2"/>
+				<Strength Val="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="296"/>
@@ -5489,11 +5489,11 @@
 				<Text>...и вы понимаете, что долго не выдержите. Кроме как умереть под пытками, остается два выхода: обратиться к помощи Бога или рассказать все, как есть.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="-4"/>
+				<Strength Val="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="313" Text="Обратиться к помощи Бога" Availability="!DivineIntervention">
-					<Trigger Value="DivineIntervention"/>
+					<Trigger Val="DivineIntervention"/>
 				</Option>
 				<Option Destination="256" Text="Рассказать все, как есть"/>
 			</Options>
@@ -5522,8 +5522,8 @@
 				<Text>С рассветом, стараясь согреться, пускаете коня галопом.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="1"/>
-				<Day Value="1"/>
+				<Strength Val="1"/>
+				<Day Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="84"/>
@@ -5582,7 +5582,7 @@
 		<Paragraph No="590">
 			<Text>Магистр Хэрнок оказывается маленьким сухоньким старичком. По его лицу невозможно определить возраст — ему может быть и семьдесят, и за сто. А вдруг он, как многие маги, живет вечно? Старичок рад вашему появлению, прячет деньги в карман и начинает говорить раньше, чем вы успеваете задать свой вопрос. «Я ждал твоего появления, храбрый шевалье. Издавна я помогаю героям, вступающим в схватку со злом, а теперь хочу помочь и тебе». Серебряное кольцо на его пальце начинает светиться ровным мягким светом. «Скажи, знаешь ли ты, как погиб твой отец?»</Text>
 			<Modifications>
-				<Ecu Value="-300"/>
+				<Ecu Val="-300"/>
 			</Modifications>
 			<Options>
 				<Option Destination="315" Text="Вы знаете это"/>
@@ -5644,9 +5644,9 @@
 		<Paragraph No="598">
 			<Text>Близость Парижа придает вам силы. На полном скаку проехав Монтаржи, вы устремляетесь вперед. Дорога становится уже, наверно, ездят по ней достаточно мало. И тут вас ждет неожиданное затруднение: старый мост через один из оврагов рухнул, и крестьяне временно положили вместо него несколько бревен. Попробуете перепрыгнуть овраг не слезая с коня или же спешитесь и постараетесь аккуратно пройти по бревнам?</Text>
 			<Modifications>
-				<HadFoodToday Value="1"/>
-				<Strength Value="4"/>
-				<Day Value="1"/>
+				<HadFoodToday Val="1"/>
+				<Strength Val="4"/>
+				<Day Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="469" Text="Попробуете перепрыгнуть овраг"/>
@@ -5657,9 +5657,9 @@
 			<Text>Сообразительность выручает вас и в этот раз. Один из дворян указывает на человека, беседующего с дамой в нише окна и говорит, что это и есть граф де Дольней. Дождавшись конца разговора, вы подходите к нему и передаете сложенный лист бумаги, на котором вы успели написать: «Генрих». Граф сразу же все понимает, однако вам не нравится, что в его глазах промелькнуло что-то очень похожее на страх. Или, по крайней мере, вам так показалось. Кликнув другого лакея, де Дольней требует бумагу, перо и чернила и обращается к вам: «Подожди, милейший, я напишу ответ». Ну что ж, это замечательный способ не привлечь к себе лишнего внимания. Когда ответ готов, граф не глядя отдает его вам и скрывается в толпе. Вы же торопитесь покинуть Ратушу и вновь обрести приличествующее титулу обличье. На улице вы раскрываете листок и читаете: «Улица Ваннери, дом 5, мельник Жозеф». Вместе с письмом граф дал «за услуги» полтора экю, отказаться от которых на людях было просто невозможно. На эти деньги вы проводите ночь в гостинице (сон и ужин восстановят вам 4 СИЛЫ), а наутро покидаете Орлеан.</Text>
 			<Triggers>VenneraStreet</Triggers>
 			<Modifications>
-				<HadFoodToday Value="1"/>
-				<Strength Value="4"/>
-				<Day Value="1"/>
+				<HadFoodToday Val="1"/>
+				<Strength Val="4"/>
+				<Day Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="275"/>
@@ -5758,8 +5758,8 @@
 				<Text>Вряд ли вы совершили поступок, достойный своих благородных предков — прирезать ночью прохожего! Что сказал бы об этом ваш отец!</Text>
 			</Texts>
 			<Modifications>
-				<Honor Value="-1"/>
-				<Ecu Value="600"/>
+				<Honor Val="-1"/>
+				<Ecu Val="600"/>
 			</Modifications>
 			<Options>
 				<Option Destination="137"/>
@@ -5773,14 +5773,14 @@
 					<Head>ЛОШАДЬ</Head>
 					<Price>600</Price>
 					<Multiple/>
-					<Benefit Name="Horses" Value="1"/>
+					<Benefit Name="Horses" Val="1"/>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
 					<Head>ПИСТОЛЕТ</Head>
 					<Price>400</Price>
 					<Multiple/>
-					<Benefit Name="Pistols" Value="1"/>
+					<Benefit Name="Pistols" Val="1"/>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
@@ -5793,14 +5793,14 @@
 					<Head>КИНЖАЛ</Head>
 					<Price>300</Price>
 					<Multiple/>
-					<Benefit Name="Daggers" Value="1"/>
+					<Benefit Name="Daggers" Val="1"/>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
 					<Head>ПОРОХ И ПУЛИ на 5 выстрелов</Head>
 					<Price>300</Price>
 					<Multiple/>
-					<Benefit Name="BulletsAndGubpowder" Value="5"/>
+					<Benefit Name="BulletsAndGubpowder" Val="5"/>
 				</Get>
 			</Actions>
 			<Options>
@@ -5867,28 +5867,28 @@
 					<Head>ПИСТОЛЕТ</Head>
 					<Price>250</Price>
 					<Multiple/>
-					<Benefit Name="Pistols" Value="1"/>
+					<Benefit Name="Pistols" Val="1"/>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
 					<Head>ПОРОХ И ПУЛИ на 5 выстрелов</Head>
 					<Price>150</Price>
 					<Multiple/>
-					<Benefit Name="BulletsAndGubpowder" Value="5"/>
+					<Benefit Name="BulletsAndGubpowder" Val="5"/>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
 					<Head>КИНЖАЛ</Head>
 					<Price>300</Price>
 					<Multiple/>
-					<Benefit Name="Daggers" Value="1"/>
+					<Benefit Name="Daggers" Val="1"/>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
 					<Head>ЕДА В ДОРОГУ</Head>
 					<Price>200</Price>
 					<Multiple/>
-					<Benefit Name="Healing" Value="Поесть,2"/>
+					<Benefit Name="Healing" Val="Поесть,2"/>
 					<Text>Теперь надо либо выбираться из города, либо ждать вечера и пытаться встретиться с курьером.</Text>
 				</Get>
 			</Actions>
@@ -5904,7 +5904,7 @@
 					<Button>Переночевать</Button>
 					<Head>Гостиница</Head>
 					<Price>100</Price>
-					<Benefit Name="Strength" Value="2"/>
+					<Benefit Name="Strength" Val="2"/>
 					<Text>Если же добавите еще экю, тогда можете поужинать (ужин восстановит 3 СИЛЫ, но если от него отказаться, ничего в этот день не ев, то столько же придется потерять).</Text>
 				</Get>
 				<Get>
@@ -5912,14 +5912,14 @@
 					<Head>Ужин</Head>
 					<Price>100</Price>
 					<Benefits>
-						<Strength Value="3"/>
-						<HadFoodToday Value="1"/>
+						<Strength Val="3"/>
+						<HadFoodToday Val="1"/>
 					</Benefits>
 					<Text>Утром вы едете дальше.</Text>
 				</Get>
 			</Actions>
 			<Modifications>
-				<Day Value="1"/>
+				<Day Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="84"/>
@@ -5929,7 +5929,7 @@
 			<Text>Через полчаса женщина вручает вам запечатанный конверт, а вместе с ним 5 экю на дорожные расходы. Вы быстро уезжаете из Блуа, но письмо как будто жжет карман: а вдруг баронесса тоже служит Лиге (даже наверняка именно так и есть) и в послании важные сведения, которые пригодятся Королю. Или вас разоблачили и решили, чтобы вы сами себя доставили прямо в руки герцога Майенского, подсластив пилюлю несколькими экю? Несколько раз вынув конверт и положив обратно, решаете как следует подумать и определиться: вскрывать письмо или нет.</Text>
 			<Triggers>LetterOfRecommendationToTheDuke</Triggers>
 			<Modifications>
-				<Ecu Value="500"/>
+				<Ecu Val="500"/>
 			</Modifications>
 			<Options>
 				<Option Destination="316" Text="Вскрывать письмо"/>
@@ -5943,8 +5943,8 @@
 				<Text>Утром вас снова ожидает дорога.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="1"/>
-				<Day Value="1"/>
+				<Strength Val="1"/>
+				<Day Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="386"/>
@@ -5969,7 +5969,7 @@
 				<Text>Если еще остались живы, то поторопитесь дальше: кто знает, какие еще сюрпризы могут ожидать в этом балагане.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="-6"/>
+				<Strength Val="-6"/>
 			</Modifications>
 			<Options>
 				<Option Destination="64"/>
@@ -5983,7 +5983,7 @@
 					<Head>ПИСТОЛЕТ</Head>
 					<Price>300</Price>
 					<Multiple/>
-					<Benefit Name="Pistols" Value="1"/>
+					<Benefit Name="Pistols" Val="1"/>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
@@ -5996,21 +5996,21 @@
 					<Head>КИНЖАЛ</Head>
 					<Price>400</Price>
 					<Multiple/>
-					<Benefit Name="Daggers" Value="1"/>
+					<Benefit Name="Daggers" Val="1"/>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
 					<Head>ПОРОХ И ПУЛИ на 5 выстрелов</Head>
 					<Price>150</Price>
 					<Multiple/>
-					<Benefit Name="BulletsAndGubpowder" Value="5"/>
+					<Benefit Name="BulletsAndGubpowder" Val="5"/>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
 					<Head>ЕДА</Head>
 					<Price>200</Price>
 					<Multiple/>
-					<Benefit Name="Healing" Value="Поесть,2"/>
+					<Benefit Name="Healing" Val="Поесть,2"/>
 				</Get>
 			</Actions>
 			<Options>
@@ -6064,7 +6064,7 @@
 			<Text>Арбалет почти скатывается к реке по крутому склону. Дальше пути нет, но у маленькой пристани привязаны несколько лодок. Если у вас есть 3 экю, киньте их лодочнику и он отвезет вас вниз по Луаре в Орлеан, иначе же выбирайтесь обратно на дорогу.</Text>
 			<Options>
 				<Option Destination="606" Text="Вниз по Луаре в Орлеан" Availability="ЭКЮ >= 300">
-					<Ecu Value="-300"/>
+					<Ecu Val="-300"/>
 				</Option>
 				<Option Destination="56" Text="Обратно на дорогу"/>
 			</Options>
@@ -6102,14 +6102,14 @@
 				<Text>Если вы еще не были в Туре, можете через Блуа направиться туда, если были, то, быть может, стоит ехать прямо в Париж, а если хотите, за 2 экю можно по Луаре доплыть до Невера.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="-3"/>
-				<Day Value="1"/>
+				<Strength Val="-3"/>
+				<Day Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="85" Text="В Тура"/>
 				<Option Destination="179" Text="В Париж"/>
 				<Option Destination="105" Text="До Невера" Availability="ЭКЮ >= 200">
-					<Ecu Value="-200"/>
+					<Ecu Val="-200"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -6152,7 +6152,7 @@
 					<Head>ПИСТОЛЕТ</Head>
 					<Price>400</Price>
 					<Multiple/>
-					<Benefit Name="Pistols" Value="1"/>
+					<Benefit Name="Pistols" Val="1"/>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
@@ -6165,21 +6165,21 @@
 					<Head>ПОРОХ И ПУЛИ на 5 выстрелов</Head>
 					<Price>300</Price>
 					<Multiple/>
-					<Benefit Name="BulletsAndGubpowder" Value="5"/>
+					<Benefit Name="BulletsAndGubpowder" Val="5"/>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
 					<Head>КИНЖАЛ</Head>
 					<Price>200</Price>
 					<Multiple/>
-					<Benefit Name="Daggers" Value="1"/>
+					<Benefit Name="Daggers" Val="1"/>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
 					<Head>ЛОШАДЬ</Head>
 					<Price>600</Price>
 					<Multiple/>
-					<Benefit Name="Horses" Value="1"/>
+					<Benefit Name="Horses" Val="1"/>
 				</Get>
 			</Actions>
 			<Options>
@@ -6211,8 +6211,8 @@
 				<Text>...и настает время посоветоваться, как лучше выполнить ваше поручение.</Text>
 			</Texts>
 			<Modifications>
-				<HadFoodToday Value="1"/>
-				<Strength Value="2"/>
+				<HadFoodToday Val="1"/>
+				<Strength Val="2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="82"/>
