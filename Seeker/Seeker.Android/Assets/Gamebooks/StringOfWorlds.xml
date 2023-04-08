@@ -1681,7 +1681,7 @@
 		<Paragraph No="204">
 			<Text>Бластер в умелых руках — не только убийства, но и надежный инструмент. Отрегулировав луч на минимальную мощность, плавным движением вырезаете замок...</Text>
 			<Modifications>
-				<Blaster Value="-1"/>
+				<Blaster Val="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="92"/>
