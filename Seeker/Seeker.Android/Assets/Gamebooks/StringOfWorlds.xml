@@ -2014,7 +2014,7 @@
 				<Text>Вы спотыкаетесь на бегу, но не останавливаетесь, пока, свернув за поворот, не видите, что погони нет: троица не стала вас преследовать.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="-2"/>
+				<Strength Val="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="456"/>
