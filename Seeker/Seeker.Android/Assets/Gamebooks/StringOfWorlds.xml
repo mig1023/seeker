@@ -1844,7 +1844,7 @@
 		<Paragraph No="224">
 			<Text>Жаль, что пришлось убить беднягу. Тем более что, оглядевшись, вы понимаете: он защищал свое логово.</Text>
 			<Modifications>
-				<Blaster Value="-1"/>
+				<Blaster Val="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="320"/>
