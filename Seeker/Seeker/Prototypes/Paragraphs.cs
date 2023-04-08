@@ -187,12 +187,11 @@ namespace Seeker.Prototypes
 
         public void SetPropertyByAttr(object action, string param, XmlNode value, bool maxPrefix = false)
         {
-            string xmlField = (maxPrefix && param.StartsWith("Max")) ? param.Substring(3) : param;
+            string propertyName = (maxPrefix && param.StartsWith("Max")) ? param.Substring(3) : param;
+            object propertyValue = PropertyByType(action, value.Attributes[Services.ValueStringFuse(propertyName)], propertyName);
 
-            object propetyValue = PropertyByType(action, value.Attributes[Services.ValueStringFuse(xmlField)], param);
-
-            if (propetyValue != null)
-                action.GetType().GetProperty(param).SetValue(action, propetyValue);
+            if (propertyValue != null)
+                action.GetType().GetProperty(param).SetValue(action, propertyValue);
         }
     }
 }
