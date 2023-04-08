@@ -2280,7 +2280,7 @@
 		<Paragraph No="273">
 			<Text>Плащ и в самом деле очень легкий и совсем не сковывает движений. Можете накинуть его на плечи, чтобы не занимал места в рюкзаке.\n\nВы спрашиваете старуху, хорошо ли она знает здешние края. Да, конечно, и она охотно о них расскажет за серебряную монету. Или, в крайнем случае, за две какие-нибудь вещи из вашей красивой сумы...\n\nУ вас есть еще монета или две вещицы, которые вы считаете лишними? Или нету?</Text>
 			<Modifications>
-				<Coins Value="-1"/>
+				<Coins Val="-1"/>
 			</Modifications>
 			<Triggers>Плащ</Triggers>
 			<Options>
@@ -2328,7 +2328,7 @@
 				<Text>После этого вы еще живы?</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="-6"/>
+				<Strength Val="-6"/>
 			</Modifications>
 			<Options>
 				<Option Destination="486"/>
@@ -2409,7 +2409,7 @@
 				<Text>С трудом пробираетесь вы к двери, ведущей из подъезда на улицу.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="-3"/>
+				<Strength Val="-3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="400"/>
