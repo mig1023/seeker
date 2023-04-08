@@ -1436,7 +1436,7 @@
 				<Text>Если после этого вы живы — идите дальше.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="-6"/>
+				<Strength Val="-6"/>
 			</Modifications>
 			<Options>
 				<Option Destination="210"/>
