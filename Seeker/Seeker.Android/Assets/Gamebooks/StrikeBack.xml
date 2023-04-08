@@ -61,7 +61,7 @@
 				<Text Style="Selected, Bold">ЗОМБИ\nАтака 3\nЗащита 8\nВыносливость 9</Text>
 				<Text>Но, даже прогнив, твой мозг что-то соображает. В голове у тебя накрепко засела жгучая ненависть к роду людскому. Что ж, пора убить всех этих людей!</Text>
 			</Texts>
-			<Transformation Value="ЗОМБИ,3,8,9"/>
+			<Transformation Val="ЗОМБИ,3,8,9"/>
 			<Options>
 				<Option Destination="39"/>
 			</Options>
