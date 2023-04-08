@@ -222,7 +222,7 @@
 				<Text>Жаль, что попытка полета истрачена... Что ж, пора уходить отсюда.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="-2"/>
+				<Strength Val="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="592"/>
