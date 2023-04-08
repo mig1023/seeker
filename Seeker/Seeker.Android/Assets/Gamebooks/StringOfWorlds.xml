@@ -2606,7 +2606,7 @@
 				<Text>Наконец удается миновать опасный участок коридора. Почему-то пауки не преследуют вас. Может быть, они всего лишь охраняют свою территорию?</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="-6"/>
+				<Strength Val="-6"/>
 			</Modifications>
 			<Options>
 				<Option Destination="386"/>
