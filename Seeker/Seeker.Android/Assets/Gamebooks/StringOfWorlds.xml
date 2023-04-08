@@ -1532,7 +1532,7 @@
 				</Fight>
 			</Actions>
 			<Modifications>
-				<Blaster Value="-1"/>
+				<Blaster Val="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="37" Text="Вы убили его за 4 раунда"/>
