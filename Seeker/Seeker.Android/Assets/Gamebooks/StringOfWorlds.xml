@@ -1161,7 +1161,7 @@
 				<Text>А утром выходите на дорогу (чуть дальше таверны) и идете на север.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="1"/>
+				<Strength Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="517"/>
