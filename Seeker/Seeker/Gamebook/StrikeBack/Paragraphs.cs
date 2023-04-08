@@ -32,7 +32,7 @@ namespace Seeker.Gamebook.StrikeBack
 
             if (xmlAction["Ally"] != null)
             {
-                action.Enemies = new List<Character> { CharacterParse(xmlAction["Ally"], null) };
+                action.Allies = new List<Character> { CharacterParse(xmlAction["Ally"], null) };
             }
             else if (xmlAction["Allies"] != null)
             {
