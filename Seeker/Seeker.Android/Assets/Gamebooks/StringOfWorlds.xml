@@ -732,7 +732,7 @@
 				<Text>Но наконец путь расчищен. Теперь вы можете идти дальше по коридору.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="-3"/>
+				<Strength Val="-3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="630"/>
