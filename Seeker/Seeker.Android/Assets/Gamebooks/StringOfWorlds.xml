@@ -2185,7 +2185,7 @@
 				<Text>Пожалуй, надо возвращаться к развилке и идти другой дорогой... если, конечно, не знаете иного способа подняться наверх.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="-2"/>
+				<Strength Val="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="66"/>
