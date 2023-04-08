@@ -913,7 +913,7 @@
 				<Text Style="Small">Падение вычтет только 1 из вашей СИЛЫ.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="-1"/>
+				<Strength Val="-1"/>
 			</Modifications>
 			<Untriggers>AntiGravityBelt</Untriggers>
 			<Options>
