@@ -1696,7 +1696,7 @@
 		<Paragraph No="206">
 			<Text>Беззвучная вспышка распарывает грудь вашего противника. Выронив свой бластер, он падает.</Text>
 			<Modifications>
-				<Blaster Value="-1"/>
+				<Blaster Val="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="326"/>
