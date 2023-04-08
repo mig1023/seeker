@@ -2685,7 +2685,7 @@
 		<Paragraph No="323">
 			<Text>Ягода увеличит вашу СИЛУ на 5. Если не голодны — можете взять ее с собой (если, конечно, в рюкзаке найдется место)...</Text>
 			<Modifications>
-				<Healing Value="Съесть ягоды,5"/>
+				<Healing Val="Съесть ягоды,5"/>
 			</Modifications>
 			<Options>
 				<Option Destination="43"/>
