@@ -102,7 +102,7 @@
 				<Text>Остаться в остроге, чтобы поговорить с кем-то из русских (если Алдар этого ещё не делал):</Text>
 			</Texts>
 			<Modifications>
-				<Danger Value="1"/>
+				<Danger Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="465" Text="С полковником Риддером"/>
@@ -120,7 +120,7 @@
 				<Text Style="Small">+1 ОПАСНОСТЬ</Text>
 			</Texts>
 			<Modifications>
-				<Danger Value="1"/>
+				<Danger Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="101" Text="Подождать главу кочевья Алтынбая в юрте"/>
@@ -151,7 +151,7 @@
 			</Texts>
 			<Triggers>Взрыв</Triggers>
 			<Modifications>
-				<Danger Value="3"/>
+				<Danger Val="3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="453"/>
@@ -440,7 +440,7 @@
 				<Text>Ещё есть время оседлать коня и уехать.</Text>
 			</Texts>
 			<Modifications>
-				<Danger Value="1"/>
+				<Danger Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="575"/>
@@ -452,7 +452,7 @@
 				<Text Style="Small">+1 ОПАСНОСТЬ</Text>
 			</Texts>
 			<Modifications>
-				<Danger Value="1"/>
+				<Danger Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="87"/>
@@ -572,7 +572,7 @@
 				<Text>Через некоторое время снаружи раздаётся топот копыт, и в юрту входят два человека. Один из них постарше, седой, с длинной бородой, в меховом халате и тюбетейке. А другой — совсем молодой воин в расшитом кожаном доспехе и высокой шапке. Старший представляется Алтынбаем. Именно он и есть глава кочевья. А молодой спутник — это его единственный сын Азимхан. Стоит ли и дальше сохранять личину джунгара? А может быть, лучше раскрыться? Но тогда Алдару придётся идти до конца и рассказывать о задании хана. Иначе и не объяснишь, что делает путник-казах, облачённый в джунгарские доспехи, среди земель, захваченных вражеским войском.</Text>
 			</Texts>
 			<Modifications>
-				<Danger Value="1"/>
+				<Danger Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="325" Text="Притворяться джунгарским воином и дальше"/>
@@ -670,7 +670,7 @@
 				<Text>Тот возвращается в свою келью, чтобы следующим утром покинуть монастырь.</Text>
 			</Texts>
 			<Modifications>
-				<Danger Value="1"/>
+				<Danger Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="654"/>
@@ -716,7 +716,7 @@
 				<Text>По возвращении в свой лагерь джунгарский воин обязательно расскажет о неизвестном лучнике-одиночке. Хотя прямой угрозы для Алдара Косе не будет, джунгары усилят бдительность в этих землях.\n\nПервоочередная задача — навестить ханского лазутчика в Аягузе — теперь под вопросом. Стоит ли подвергаться опасности, направляясь в поселение, если джунгары уже на этом берегу реки и ведут себя как дома? Проще всего переправиться на южную сторону и вести поиски своими силами. С другой стороны, разведчик, если, конечно, он ещё жив, может сообщить ценные сведения.</Text>
 			</Texts>
 			<Modifications>
-				<Danger Value="1"/>
+				<Danger Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="201" Text="Проследовать к поселению Аягуз, принимая меры предосторожности"/>
@@ -775,7 +775,7 @@
 			</Texts>
 			<Triggers>Тумен</Triggers>
 			<Modifications>
-				<Tanga Value="50"/>
+				<Tanga Val="50"/>
 			</Modifications>
 			<Options>
 				<Option Destination="373" Text="На юг в Кульджу"/>
@@ -809,7 +809,7 @@
 			</Texts>
 			<Triggers>Рассвет</Triggers>
 			<Modifications>
-				<Tanga Value="-10"/>
+				<Tanga Val="-10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="17" Text="Посетить Арамбека, следуя указаниям Абулхаир-хана"/>
@@ -930,8 +930,8 @@
 				<Text>Во время разговора Алдар запоминает высоту, на которой находится голова сидящего хунтайши и украдкой оглядывает внутреннее убранство, чтобы потом определить положение Галдана Церена снаружи. Также нужно разобраться с плотной тканью шатра, устранив единственное препятствие для стрелы.</Text>
 			</Texts>
 			<Modifications>
-				<Tanga Value="200"/>
-				<Danger Value="1"/>
+				<Tanga Val="200"/>
+				<Danger Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="80"/>
@@ -966,7 +966,7 @@
 				<Text>В глазах предводителя разгорается алчный блеск.\n\n— Я вижу, ты богат словно ташкентский торговец. Поэтому с тебя причитается ещё...\n\n— Сто таньга и ни монетой больше! — отрезает Алдар, помахивая пистолетом. — Или попросим кого-нибудь в ставке хунтайши рассудить нас? До тех мест недалеко, можно послать гонца.\n\nДжунгар хмурится, но возражений не высказывает. Ведь их отряд появился здесь не по приказу Галдана Церена или его военачальников. А если до хунтайши дойдёт жалоба от рыбаков, четвёрке воинов не поздоровится. Порядки в джунгарской армии строгие.\n\n— Мы ещё встретимся! — произносит главарь и машет воинам, давая знак к отбытию.\n\nВскоре отряд скрывается в степи в южном направлении. А рыбаки благодарят Алдара за избавление (надолго ли?) от жестоких захватчиков. Теперь можно отдохнуть в посёлке и поговорить с его жителями.</Text>
 			</Texts>
 			<Modifications>
-				<Tanga Value="-100"/>
+				<Tanga Val="-100"/>
 			</Modifications>
 			<Options>
 				<Option Destination="236"/>
@@ -981,7 +981,7 @@
 				<Text>Довольный полученными сведениями наш герой возвращается в шатёр и спокойно засыпает. Утром его выпускают из крепости.\n\nПродолжить путь (в зависимости от того, в какую сторону Алдар Косе направляется):</Text>
 			</Texts>
 			<Modifications>
-				<Tanga Value="50"/>
+				<Tanga Val="50"/>
 			</Modifications>
 			<Triggers>Тропа, Тумен</Triggers>
 			<Options>
@@ -1060,31 +1060,31 @@
 					<Button>Купить</Button>
 					<Head>НАСТОЙКА СИЛЫ</Head>
 					<Price>50</Price>
-					<Benefit Name="Strength" Value="1"/>
+					<Benefit Name="Strength" Val="1"/>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
 					<Head>НАСТОЙКА ЛОВКОСТИ</Head>
 					<Price>50</Price>
-					<Benefit Name="Skill" Value="1"/>
+					<Benefit Name="Skill" Val="1"/>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
 					<Head>НАСТОЙКА МУДРОСТИ</Head>
 					<Price>50</Price>
-					<Benefit Name="Wisdom" Value="1"/>
+					<Benefit Name="Wisdom" Val="1"/>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
 					<Head>НАСТОЙКА ХИТРОСТИ</Head>
 					<Price>50</Price>
-					<Benefit Name="Cunning" Value="1"/>
+					<Benefit Name="Cunning" Val="1"/>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
 					<Head>НАСТОЙКА КРАСНОРЕЧИЯ</Head>
 					<Price>50</Price>
-					<Benefit Name="Oratory" Value="1"/>
+					<Benefit Name="Oratory" Val="1"/>
 					<Text>У торговцев лошадьми Алдар засматривается на серого скакуна, который не стоит на месте, а гарцует и показывает свой отнюдь не кроткий нрав. Несомненно, такой конь пригодится в путешествии, особенно если придётся удирать от врагов верхом. Скакуна можно купить, отдав своего коня и доплатив 200 ТАНЬГА:</Text>
 				</Get>
 				<Get>
@@ -1153,7 +1153,7 @@
 			</Texts>
 			<Triggers>Стрелок</Triggers>
 			<Modifications>
-				<Danger Value="10"/>
+				<Danger Val="10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="453"/>
@@ -1215,7 +1215,7 @@
 				</Get>
 			</Actions>
 			<Modifications>
-				<StatBonuses Value="1"/>
+				<StatBonuses Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="498"/>
@@ -1273,7 +1273,7 @@
 				<Text>Разговор продолжается.</Text>
 			</Texts>
 			<Modifications>
-				<Tanga Value="200"/>
+				<Tanga Val="200"/>
 			</Modifications>
 			<Options>
 				<Option Destination="403" Text="Отмечено ключевое слово «Переговорщик»" Availability="Переговорщик"/>
@@ -1288,7 +1288,7 @@
 			</Texts>
 			<Triggers>Переписка</Triggers>
 			<Modifications>
-				<Danger Value="1"/>
+				<Danger Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="130"/>
@@ -1340,7 +1340,7 @@
 				<Text>Китаец поднимается и взбирается в седло, напоследок махнув рукой. Алдар Косе, посидев немного на обрыве, тоже оправляется в путь.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="4"/>
+				<Strength Val="4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="475"/>
@@ -1400,7 +1400,7 @@
 				</Get>
 			</Actions>
 			<Modifications>
-				<StatBonuses Value="1"/>
+				<StatBonuses Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="498"/>
@@ -1426,9 +1426,9 @@
 				<Text>Алдар Косе скачет вдоль берега озера Эби-Нур до караванной дороги в Кульджу.</Text>
 			</Texts>
 			<Modifications>
-				<Wisdom Value="2"/>
-				<Cunning Value="2"/>
-				<Danger Value="1"/>
+				<Wisdom Val="2"/>
+				<Cunning Val="2"/>
+				<Danger Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="654"/>
@@ -1529,7 +1529,7 @@
 			</Texts>
 			<Triggers>Переписка</Triggers>
 			<Modifications>
-				<Danger Value="1"/>
+				<Danger Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="130"/>
@@ -1555,7 +1555,7 @@
 				<Text Style="Small">+1 ОПАСНОСТЬ</Text>
 			</Texts>
 			<Modifications>
-				<Danger Value="1"/>
+				<Danger Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="453"/>
@@ -1573,7 +1573,7 @@
 				<Text Style="Small">+500 ТАНЬГА</Text>
 			</Texts>
 			<Modifications>
-				<Tanga Value="500"/>
+				<Tanga Val="500"/>
 			</Modifications>
 			<Options>
 				<Option Destination="159"/>
@@ -1586,19 +1586,19 @@
 					<Button>Отдать</Button>
 					<Head>ПОДНОШЕНИЕ 150 таньга</Head>
 					<Price>150</Price>
-					<Benefit Name="Favour" Value="1"/>
+					<Benefit Name="Favour" Val="1"/>
 				</Get>
 				<Get>
 					<Button>Отдать</Button>
 					<Head>ПОДНОШЕНИЕ 300 таньга</Head>
 					<Price>300</Price>
-					<Benefit Name="Favour" Value="2"/>
+					<Benefit Name="Favour" Val="2"/>
 				</Get>
 				<Get>
 					<Button>Отдать</Button>
 					<Head>ПОДНОШЕНИЕ 500 таньга</Head>
 					<Price>500</Price>
-					<Benefit Name="Favour" Value="3"/>
+					<Benefit Name="Favour" Val="3"/>
 					<Text>– Алдар Косе – честный и порядочный человек, – кивает Ли Ю Чжао и прячет деньги в складках одежды, предварительно ощупав кошель.</Text>
 				</Get>
 			</Actions>
@@ -1641,7 +1641,7 @@
 			</Texts>
 			<Triggers>Переписка</Triggers>
 			<Modifications>
-				<Danger Value="1"/>
+				<Danger Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="130"/>
@@ -1676,7 +1676,7 @@
 			</Texts>
 			<Triggers>Стрелок</Triggers>
 			<Modifications>
-				<Danger Value="10"/>
+				<Danger Val="10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="453"/>
@@ -1719,9 +1719,9 @@
 				<Text>Алдар Косе скачет вдоль берега озера Эби-Нур до караванной дороги в Кульджу.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="2"/>
-				<Skill Value="2"/>
-				<Danger Value="1"/>
+				<Strength Val="2"/>
+				<Skill Val="2"/>
+				<Danger Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="654"/>
@@ -1774,7 +1774,7 @@
 				<Text>Переночевав на руднике, Алдар Косе отправляется в путь.</Text>
 			</Texts>
 			<Modifications>
-				<Danger Value="2"/>
+				<Danger Val="2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="87"/>
@@ -1816,7 +1816,7 @@
 				</Get>
 			</Actions>
 			<Modifications>
-				<MaxBonus Value="1"/>
+				<MaxBonus Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="453"/>
@@ -1840,7 +1840,7 @@
 			</Texts>
 			<Triggers>Тулпар</Triggers>
 			<Modifications>
-				<Tanga Value="100"/>
+				<Tanga Val="100"/>
 			</Modifications>
 			<Options>
 				<Option Destination="128"/>
@@ -1925,7 +1925,7 @@
 			<Text>В споре проходит немало времени, и наступает глубокая ночь. Алдар и пастух стараются говорить потише, чтобы не разбудить никого. Да и привлекать внимание джунгарских воинов у костра незачем.\n\nПоначалу пастух не уступает ни одного таньга, стремясь продать коня подороже. Но Алдар Косе находит всё новые и новые доводы. Не зря, ох не зря старый хан именно его в своё время направлял на важные переговоры с ойратами, бухарцами и русскими. Наконец джигиту удаётся сбить цену до восьмидесяти таньга. Пастух и не рад, что связался с нашим героем. Он берёт серебро и, даже не пересчитав деньги, отправляется спать.\n\nАлдар тем временем седлает коня и тихонько отходит за ближайший холм. Конечно, он может сразу же покинуть Аягуз. Но ведь джигиту теперь известно местонахождение Арамбека. Почему бы и не наведаться к нему?</Text>
 			<Triggers>Рассвет</Triggers>
 			<Modifications>
-				<Tanga Value="-80"/>
+				<Tanga Val="-80"/>
 			</Modifications>
 			<Options>
 				<Option Destination="279" Text="Переправиться на другой берег и продолжить путешествие"/>
@@ -1967,7 +1967,7 @@
 				<Text>Алдар ещё некоторое время смотрит на озеро и отправляется дальше.</Text>
 			</Texts>
 			<Modifications>
-				<Tanga Value="50"/>
+				<Tanga Val="50"/>
 			</Modifications>
 			<Options>
 				<Option Destination="475"/>
@@ -1992,7 +1992,7 @@
 				<Text>Вечером у костра в своём лагере джунгар посетует на неудачную погоню и расскажет о сообщнике парня-казаха, который пытался обдурить его. Воины посмеются и забудут об этом. Но обязательно найдётся тот, кто сопоставит все странности и заподозрит неладное.\n\nПервоочередная задача — навестить ханского лазутчика в Аягузе — теперь под вопросом. Стоит ли подвергаться опасности, направляясь в поселение, если джунгары уже на этом берегу реки и ведут себя как дома? Проще всего переправиться на южную сторону и вести поиски своими силами. С другой стороны, разведчик, если, конечно, он ещё жив, может сообщить ценные сведения.</Text>
 			</Texts>
 			<Modifications>
-				<Danger Value="1"/>
+				<Danger Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="201" Text="Проследовать к поселению Аягуз, принимая меры предосторожности"/>
@@ -2015,8 +2015,8 @@
 			</Texts>
 			<Triggers>Переписка</Triggers>
 			<Modifications>
-				<Tanga Value="100"/>
-				<Danger Value="2"/>
+				<Tanga Val="100"/>
+				<Danger Val="2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="87"/>
@@ -2059,7 +2059,7 @@
 			</Texts>
 			<Triggers>Стрелок</Triggers>
 			<Modifications>
-				<Danger Value="10"/>
+				<Danger Val="10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="453"/>
@@ -2125,7 +2125,7 @@
 				<Text>А разговор тем временем подходит к концу.</Text>
 			</Texts>
 			<Modifications>
-				<Favour Value="-2"/>
+				<Favour Val="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="161"/>
@@ -2170,7 +2170,7 @@
 				<Text>На этом разговор закончен. Ругнувшись про себя, Алдар покидает юрту.</Text>
 			</Texts>
 			<Modifications>
-				<Danger Value="1"/>
+				<Danger Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="297"/>
@@ -2263,7 +2263,7 @@
 				<Text Style="Small">+1 ОПАСНОСТЬ</Text>
 			</Texts>
 			<Modifications>
-				<Danger Value="1"/>
+				<Danger Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="453"/>
@@ -2322,10 +2322,10 @@
 				<Text>Под чествования толпы наш герой покидает место айтыса и направляется в юрту Алтынбая.</Text>
 			</Texts>
 			<Modifications>
-				<Tanga Value="200"/>
-				<Danger Value="1"/>
-				<Wisdom Value="2"/>
-				<Oratory Value="2"/>
+				<Tanga Val="200"/>
+				<Danger Val="1"/>
+				<Wisdom Val="2"/>
+				<Oratory Val="2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="728"/>
@@ -2341,7 +2341,7 @@
 			</Texts>
 			<Triggers>Алдан</Triggers>
 			<Modifications>
-				<Tanga Value="100"/>
+				<Tanga Val="100"/>
 			</Modifications>
 			<Options>
 				<Option Destination="428"/>
@@ -2369,7 +2369,7 @@
 			</Texts>
 			<Triggers>Лучник</Triggers>
 			<Modifications>
-				<Danger Value="1"/>
+				<Danger Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="575" Text="Покинуть эти места"/>
@@ -2458,7 +2458,7 @@
 		<Paragraph No="226">
 			<Text>Мелодии и песни Алдара Косе хороши, но сказывается недостаток опыта и отсутствие практики. И хотя другие акыны не такие уж великие мастера, джигит не может вырвать победу.\n\nВ первом поединке с мудрым аксакалом, он со скрипом побеждает за счёт своего красивого голоса и остроумной песни. Однако в схватке с девушкой наш герой проигрывает. Её голос, чистый как горный родник завоёвывает сердца зрителей.\n\nТем не менее мастерство нашего героя на высоте, и ему по праву достаётся доля похвал. А один из судей благодарит Алдара Косе, за то, что тот не побоялся выступить и помог провести красивый айтыс. Он вручает джигиту небольшую фляжку:\n\n— Прими этот подарок. Ты его заслужил. Внутри отвар из женьшеня, корня жизни, который обладает поразительными свойствами. Один глоток — и ты горы свернёшь.\n\nОтметить 1 глоток отвара женьшеня. Он добавит 8 пунктов к уровню любой способности при её проверке. Как и настойка Алдара, женьшень подействует только на одну проверку.\n\nАлдар сердечно прощается с соперниками и возвращается в юрту Алтынбая, который должен скоро приехать.</Text>
 			<Modifications>
-				<Ginseng Value="1"/>
+				<Ginseng Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="128"/>
@@ -2487,9 +2487,9 @@
 				<Text Style="Small">Увеличить значения способностей МУДРОСТЬ и ХИТРОСТЬ на один пункт каждое. Новые значения сохраняются до конца игры. Также +1 ОПАСНОСТЬ.</Text>
 			</Texts>
 			<Modifications>
-				<Wisdom Value="2"/>
-				<Cunning Value="2"/>
-				<Danger Value="1"/>
+				<Wisdom Val="2"/>
+				<Cunning Val="2"/>
+				<Danger Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="127" Text="Остаться и продолжить изучение тибетских трактатов"/>
@@ -2504,7 +2504,7 @@
 			</Texts>
 			<Triggers>Аягуз, Дружба</Triggers>
 			<Modifications>
-				<Danger Value="1"/>
+				<Danger Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="258" Text="Помочь Адильжану"/>
@@ -2566,7 +2566,7 @@
 			</Texts>
 			<Triggers>Рассвет</Triggers>
 			<Modifications>
-				<Tanga Value="-150"/>
+				<Tanga Val="-150"/>
 			</Modifications>
 			<Options>
 				<Option Destination="279" Text="Переправиться на другой берег и продолжить путешествие"/>
@@ -2599,7 +2599,7 @@
 				<Text Style="Small">+1 ОПАСНОСТЬ.</Text>
 			</Texts>
 			<Modifications>
-				<Danger Value="1"/>
+				<Danger Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="87"/>
@@ -2666,7 +2666,7 @@
 				<Text Style="Small">+1 ОПАСНОСТЬ.</Text>
 			</Texts>
 			<Modifications>
-				<Danger Value="1"/>
+				<Danger Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="77"/>
@@ -2684,9 +2684,9 @@
 				<Text Style="Small">величить значения способностей СИЛА и ЛОВКОСТЬ на один пункт каждое. Новые значения сохраняются до конца игры. Также +1 ОПАСНОСТЬ.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="1"/>
-				<Skill Value="1"/>
-				<Danger Value="1"/>
+				<Strength Val="1"/>
+				<Skill Val="1"/>
+				<Danger Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="152" Text="Остаться и продолжить совершенствование своего тела"/>
@@ -2808,7 +2808,7 @@
 			</Texts>
 			<Triggers>Отряд</Triggers>
 			<Modifications>
-				<Danger Value="1"/>
+				<Danger Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="297"/>
@@ -2904,7 +2904,7 @@
 					<Button>Купить</Button>
 					<Head>ОТВАР КОРНЯ ЖЕНЬШЕНЯ</Head>
 					<Price>100</Price>
-					<Benefit Name="Ginseng" Value="1"/>
+					<Benefit Name="Ginseng" Val="1"/>
 					<Text>Купить всё, что нужно, и внести изменения на листе персонажа (в том числе отметить ключевое слово «Фарфор», если Алдар приобретает фигурку дракона).\n\nТем временем наступает ночь. А хозяин с гостем продолжают беседу, попивая зелёный чай из маленьких фарфоровых чашек.</Text>
 				</Get>
 			</Actions>
@@ -2974,7 +2974,7 @@
 				<Text>А разговор тем временем подходит к концу.</Text>
 			</Texts>
 			<Modifications>
-				<Favour Value="3"/>
+				<Favour Val="3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="161"/>
@@ -3002,7 +3002,7 @@
 			</Texts>
 			<Triggers>Гелугпа</Triggers>
 			<Modifications>
-				<Danger Value="1"/>
+				<Danger Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="654"/>
@@ -3106,7 +3106,7 @@
 				</Get>
 			</Actions>
 			<Modifications>
-				<StatBonuses Value="1"/>
+				<StatBonuses Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="279"/>
@@ -3139,7 +3139,7 @@
 				<Text>И ничего уже не исправишь. Новые вопросы только возбудят подозрения у тысячника.\n\nПоговорив о том о сём, Алдар Косе прощается и покидает шатёр.\n\nПродолжить путешествие (в зависимости от того, в какую сторону Алдар Косе направляется):</Text>
 			</Texts>
 			<Modifications>
-				<Danger Value="1"/>
+				<Danger Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="373" Text="На юг в Кульджу"/>
@@ -3274,7 +3274,7 @@
 				<Text Style="Small">+1 ОПАСНОСТЬ.</Text>
 			</Texts>
 			<Modifications>
-				<Danger Value="1"/>
+				<Danger Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="279"/>
@@ -3316,9 +3316,9 @@
 			</Texts>
 			<Triggers>Арбалет</Triggers>
 			<Modifications>
-				<Danger Value="1"/>
-				<Tanga Value="600"/>
-				<Tincture Value="1"/>
+				<Danger Val="1"/>
+				<Tanga Val="600"/>
+				<Tincture Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="207"/>
@@ -3387,7 +3387,7 @@
 			</Texts>
 			<Triggers>Рассвет</Triggers>
 			<Modifications>
-				<Danger Value="2"/>
+				<Danger Val="2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="279"/>
@@ -3429,8 +3429,8 @@
 			</Texts>
 			<Triggers>Оружейник</Triggers>
 			<Modifications>
-				<Danger Value="1"/>
-				<Tanga Value="50"/>
+				<Danger Val="1"/>
+				<Tanga Val="50"/>
 			</Modifications>
 			<Options>
 				<Option Destination="128"/>
@@ -3567,11 +3567,11 @@
 				<Text>Китайцу уже оказывают необходимую помощь. Поэтому Алдар Косе, больше о нём не беспокоясь, сбрасывает с себя мокрую одежду, растирается бараньим жиром, небольшой запас которого он прихватил с собой, и переодевается в сухое.\n\nВскоре спасённый китаец приходит в себя. Он и его спутники рассыпаются в благодарностях и приглашают Алдара на свою стоянку неподалёку.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="1"/>
-				<Skill Value="1"/>
-				<Wisdom Value="1"/>
-				<Cunning Value="1"/>
-				<Oratory Value="1"/>
+				<Strength Val="1"/>
+				<Skill Val="1"/>
+				<Wisdom Val="1"/>
+				<Cunning Val="1"/>
+				<Oratory Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="256"/>
@@ -3654,7 +3654,7 @@
 				<Text>Наш герой корит себя за то, что ввязался в столь опасное дело. Тем не менее он радуется, что ещё легко отделался. Попытайся он обмануть муллу в мечети где-нибудь в Бухаре, не сносить бы ему головы.\n\nАлдар Косе скачет вдоль берега озера Эби-Нур до караванной дороги в Кульджу.</Text>
 			</Texts>
 			<Modifications>
-				<Danger Value="2"/>
+				<Danger Val="2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="654"/>
@@ -3869,7 +3869,7 @@
 				<Text>Не привлекать здесь лишнего внимания и заняться чем-нибудь другим:</Text>
 			</Texts>
 			<Modifications>
-				<Danger Value="1"/>
+				<Danger Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="514" Text="Посетить уйгурское поселение и кульджинский базар"/>
@@ -3896,7 +3896,7 @@
 				<Text>У него ещё есть немного времени, чтобы порыться в бумагах, прежде чем покинуть шатёр.</Text>
 			</Texts>
 			<Modifications>
-				<Danger Value="1"/>
+				<Danger Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="406"/>
@@ -3921,11 +3921,11 @@
 				<Text>Когда джигит выходит на берег, он видит, что в его вещах кто-то копался. Бросившись туда, Алдар убеждается, что пропал кошель с деньгами. Оглянувшись вокруг, он видит серого ворона, который летит, сжимая кошель в когтях. Ноша настолько тяжёлая, что птица летит медленно и невысоко над землёй, хотя и сильно машет крыльями. Вскоре ворон скроется за скалами, унося с собой все деньги Алдара. Надо ему помешать! Из пистолета его не подстрелишь: слишком далеко. Значит, джигиту остаётся либо выстрелить из лука, либо положиться на свою смекалку.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="1"/>
-				<Skill Value="1"/>
-				<Wisdom Value="1"/>
-				<Cunning Value="1"/>
-				<Oratory Value="1"/>
+				<Strength Val="1"/>
+				<Skill Val="1"/>
+				<Wisdom Val="1"/>
+				<Cunning Val="1"/>
+				<Oratory Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="375" Text="Алдар Косе уже потратил все свои деньги и он спокойно продолжает путь, недоумевая, зачем птице понадобился кошель">
@@ -4245,7 +4245,7 @@
 				<Text>— Отдадите долг, когда будет такая возможность.\n\nПолковник словно бы радуется, что ему не пришлось оказывать какую-то более серьёзную услугу. Но выбор сделан, и Алдар откланивается, поблагодарив офицера.</Text>
 			</Texts>
 			<Modifications>
-				<Tanga Value="200"/>
+				<Tanga Val="200"/>
 			</Modifications>
 			<Options>
 				<Option Destination="356"/>
@@ -4305,7 +4305,7 @@
 				<Text>Алдар Косе забирает своего коня и, попрощавшись с Азатом, направляется прочь от озера Алаколь и его тайн.</Text>
 			</Texts>
 			<Modifications>
-				<Danger Value="1"/>
+				<Danger Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="58"/>
@@ -4377,7 +4377,7 @@
 				<Text Style="Small">+300 ТАНЬГА. Если Алдар решит попасть на приём к китайскому наместнику, то во время разговора с ним уровни всех проверок понижаются на 3 пункта.</Text>
 			</Texts>
 			<Modifications>
-				<Tanga Value="300"/>
+				<Tanga Val="300"/>
 			</Modifications>
 			<Options>
 				<Option Destination="356"/>
@@ -4418,7 +4418,7 @@
 				<GetSomething>
 					<Button>Взять</Button>
 					<Trigger>Переписка</Trigger>
-					<Benefit Name="Danger" Value="2"/>
+					<Benefit Name="Danger" Val="2"/>
 					<Texts>
 						<Text>Подробная карта хребта Джунгарский Алатау с обозначением рек, ручьёв, ущелий и перевалов, ведущих сквозь горы. В случае наступления казахских войск бои будут проходить именно в этих местах. Абулхаир-хану очень пригодится эта карта. Всех подробностей Алдар ни за что не запомнит, поэтому надо решить, брать ли её с собой.</Text>
 						<Text Style="Small">Ключевое слово «Перевал», +1 ОПАСНОСТЬ.</Text>
@@ -4427,7 +4427,7 @@
 				<GetSomething>
 					<Button>Взять</Button>
 					<Trigger>Перевал</Trigger>
-					<Benefit Name="Danger" Value="1"/>
+					<Benefit Name="Danger" Val="1"/>
 					<Text>Взять всё, что нужно, отметив соответствующие ключевые слова и соответственно повысив уровень опасности.\n\nПокинуть шатёр Аюк-багатура и выбраться из цитадели оказывается проще, чем попасть внутрь. Алдар отвязывает своего коня, вскакивает в седло и отправляется прочь отсюда.</Text>
 				</GetSomething>
 			</Actions>
@@ -4522,7 +4522,7 @@
 				<Text Style="Small">+1 ОПАСНОСТЬ.</Text>
 			</Texts>
 			<Modifications>
-				<Danger Value="1"/>
+				<Danger Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="42"/>
@@ -4652,7 +4652,7 @@
 				</Get>
 			</Actions>
 			<Modifications>
-				<MaxBonus Value="1"/>
+				<MaxBonus Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="396"/>
@@ -4665,7 +4665,7 @@
 				<Text>Главарь взбирается на лошадь и со своим отрядом покидает озеро. Вскоре воины скрываются в степи в южном направлении. Теперь наш герой может спокойно пообщаться с рыбаками, которые всё это время безучастно наблюдали за разговором.</Text>
 			</Texts>
 			<Modifications>
-				<Tanga Value="50"/>
+				<Tanga Val="50"/>
 			</Modifications>
 			<Options>
 				<Option Destination="449"/>
@@ -4678,7 +4678,7 @@
 				<Text>Алдар Косе скачет вдоль берега озера Эби-Нур до караванной дороги в Кульджу.</Text>
 			</Texts>
 			<Modifications>
-				<Danger Value="1"/>
+				<Danger Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="654"/>
@@ -4741,7 +4741,7 @@
 				<Text>Наш герой заканчивает свои дела как раз вовремя. Поднявшись наверх, он видит Хуяга, рассматривающего тело смуглого человека. Взглянув на Алдара, ойрат произносит:\n\n— Поздравляю, тебе посчастливилось убить главаря.</Text>		
 			</Texts>
 			<Modifications>
-				<Tanga Value="1000"/>
+				<Tanga Val="1000"/>
 			</Modifications>
 			<Options>
 				<Option Destination="212"/>
@@ -4782,7 +4782,7 @@
 				<Text>Ему приходится развернуть коня и под насмешки джунгаров ехать дальше.</Text>
 			</Texts>
 			<Modifications>
-				<Danger Value="1"/>
+				<Danger Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="42"/>
@@ -4826,7 +4826,7 @@
 				<Text>Успех совсем близко, но расслабляться не стоит.</Text>
 			</Texts>
 			<Modifications>
-				<Favour Value="2"/>
+				<Favour Val="2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="371"/>
@@ -4857,7 +4857,7 @@
 				<Text>После приветствий и краткого обмена новостями бухарец внимательно смотрит на Алдара:\n\n— Чем же может быть полезен Арон бен-Моше такому знатному воину?\n\n— Моя семья занимается разведением овец на шерсть и кожу. Сейчас почти весь наш товар забирают отряды Галдана Церена. Но рано или поздно война завершится, и нам потребуются новые покупатели. А купец Арон бен-Моше известен повсюду, — Алдар лукавит, так как в первый раз слышит это имя. — Не может быть такого, чтобы мы с вами не нашли взаимную выгоду.\n\n— Вы совершенно правы, молодой человек. В Бухаре я занимаю далеко не последнее место. Все знают, что купец бен-Моше ведёт свои дела честно и даёт хорошую цену. Но, простите меня, ни о вас, ни о вашей семье я ничего не слышал. Я не люблю вести дела, не подкреплённые ничем, кроме слов.\n\nАрон бен-Моше хитро улыбается. Алдар Косе понимает, что в таких случаях принято давать немного денег в залог будущих торговых отношений. Чтобы разговорить бухарского торговца, полсотни таньга вполне достаточно.</Text>
 			</Texts>
 			<Modifications>
-				<Danger Value="1"/>
+				<Danger Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="389" Text="Заплатить 50 ТАНЬГА бухарцу" Availability="ТАНЬГА >= 50">
@@ -4983,7 +4983,7 @@
 			</Texts>
 			<Triggers>Гелугпа</Triggers>
 			<Modifications>
-				<Danger Value="3"/>
+				<Danger Val="3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="654"/>
@@ -5082,7 +5082,7 @@
 		<Paragraph No="466">
 			<Text>Хуяг благодарит Алдара и его спутника. Он приказывает готовиться к вылазке, которая произойдёт через день.\n\n— Почему не сегодня же ночью? — интересуется Алдар Косе.\n\n— Нас пока ещё слишком мало. Я отправил гонца по кочевьям, чтобы собрать ополчение. А пастухов нужно ещё хоть немного научить махать саблями, — усмехается Алдан Хуяг. — Пока что можете отдыхать. Я велю выдать вам несколько кувшинов айрага. Вы это заслужили.\n\nНо Алдару Косе не до отдыха. Ночью у костра он мало пьёт, всё больше подливая своим собеседникам. А ближе к утру, когда все спят, он отправляется в пустыню на встречу с разбойниками. Неизвестно, как они его примут. Однако наш герой привык полагаться на свои способности.\n\nВо время вечерней попойки Алдар незаметно отливает себе в бурдюк немного айрага, на один глоток. Этот напиток добавит 2 пункта к уровню способности при проверке.</Text>
 			<Modifications>
-				<Airag Value="1"/>
+				<Airag Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="40"/>
@@ -5104,7 +5104,7 @@
 			</Texts>
 			<Triggers>Подлог</Triggers>
 			<Modifications>
-				<Danger Value="2"/>
+				<Danger Val="2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="575" Text="Покинуть расположение джунгарских войск, опасаясь мстительного ойрата">
@@ -5180,7 +5180,7 @@
 				<Text>— Думаю, что незачем беспокоить хунтайши по пустякам. Не так ли?\n\nАлдар, добившись своего, кивает и едет дальше.</Text>
 			</Texts>
 			<Modifications>
-				<Tanga Value="150"/>
+				<Tanga Val="150"/>
 			</Modifications>
 			<Options>
 				<Option Destination="436"/>
@@ -5201,7 +5201,7 @@
 				<Text>Алдар Косе мчится к своему коню, оставленному под присмотром возле уйгурской чайханы. Оседлав скакуна, он покидает Кульджу: оставаться здесь опасно.</Text>
 			</Texts>
 			<Modifications>
-				<Danger Value="1"/>
+				<Danger Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="545"/>
@@ -5287,7 +5287,7 @@
 				<Text Style="Small">+1 ОПАСНОСТЬ.</Text>
 			</Texts>
 			<Modifications>
-				<Danger Value="1"/>
+				<Danger Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="428"/>
@@ -5356,7 +5356,7 @@
 				<Text>Разговор продолжается.</Text>
 			</Texts>
 			<Modifications>
-				<Favour Value="-1"/>
+				<Favour Val="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="371"/>
@@ -5375,7 +5375,7 @@
 				<Text>Алдара не покидает ощущение, что он пропустил что-то важное. Что же такое скрывал тот проход?\n\nАлдар Косе скачет вдоль берега озера Эби-Нур до караванной дороги в Кульджу.</Text>
 			</Texts>
 			<Modifications>
-				<Danger Value="3"/>
+				<Danger Val="3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="654"/>
@@ -5412,7 +5412,7 @@
 				<Text>Побеседовать с кем-то другим в поселении (если Алдар этого ещё не делал):</Text>
 			</Texts>
 			<Modifications>
-				<Danger Value="1"/>
+				<Danger Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="465" Text="С полковником Риддером"/>
@@ -5444,7 +5444,7 @@
 			</Texts>
 			<Triggers>Гелугпа</Triggers>
 			<Modifications>
-				<Danger Value="3"/>
+				<Danger Val="3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="654"/>
@@ -5539,7 +5539,7 @@
 				<Text Style="Small">+1 ОПАСНОСТЬ</Text>
 			</Texts>
 			<Modifications>
-				<Danger Value="1"/>
+				<Danger Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="436"/>
@@ -5552,7 +5552,7 @@
 				<Text>Надо присоединиться к кому-нибудь, пока вся харчевня не уставилась на нашего героя.</Text>
 			</Texts>
 			<Modifications>
-				<Danger Value="1"/>
+				<Danger Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="328" Text="Присесть к батракам и ремесленникам"/>
@@ -5569,7 +5569,7 @@
 			</Texts>
 			<Triggers>Дракон</Triggers>
 			<Modifications>
-				<Danger Value="1"/>
+				<Danger Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="545"/>
@@ -5659,8 +5659,8 @@
 			</Texts>
 			<Triggers>Оборона, Хубилган</Triggers>
 			<Modifications>
-				<Strength Value="2"/>
-				<Skill Value="2"/>
+				<Strength Val="2"/>
+				<Skill Val="2"/>
 				<Danger Empty="true"/>
 			</Modifications>
 			<Options>
@@ -5723,7 +5723,7 @@
 				<Text Style="Small">+1 ОПАСНОСТЬ.</Text>
 			</Texts>
 			<Modifications>
-				<Danger Value="1"/>
+				<Danger Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="654"/>
@@ -5917,7 +5917,7 @@
 				<Text>Кроме того, священник дарит Алдару Косе небольшую бутыль с отваром корня женьшеня (1 порция, добавит 8 пунктов при проверке способности, в остальном используется по тем же правилам, что и ханская настойка). Джигит ещё некоторое время беседует с отцом Ионой. Однако узнать что-то полезное про джунгаров, не выдав себя, не удаётся. А Алдар не хочет сознаваться в обмане.</Text>
 			</Texts>
 			<Modifications>
-				<Ginseng Value="1"/>
+				<Ginseng Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="518"/>
@@ -5971,7 +5971,7 @@
 				<Text Style="Small">+1 БЛАГОСКЛОННОСТЬ.</Text>
 			</Texts>
 			<Modifications>
-				<Favour Value="1"/>
+				<Favour Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="459"/>
@@ -6026,7 +6026,7 @@
 			</Texts>
 			<Triggers>Долина</Triggers>
 			<Modifications>
-				<Ginseng Value="1"/>
+				<Ginseng Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="518"/>
@@ -6091,7 +6091,7 @@
 				<Text>В случае смерти Джин Тао наместнику очень сложно было бы найти нового жениха для своей дочери.</Text>
 			</Texts>
 			<Modifications>
-				<Favour Value="3"/>
+				<Favour Val="3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="572"/>
@@ -6135,7 +6135,7 @@
 				<Text>Будь на то воля русского купца, он бы вообще ничего не заплатил. Однако Яков Штейн понимает, что новости в Великой степи распространяются очень быстро. Обманешь собеседника — с тобой никто потом общаться не будет.\n\nРазговор продолжается.</Text>
 			</Texts>
 			<Modifications>
-				<Tanga Value="50"/>
+				<Tanga Val="50"/>
 			</Modifications>
 			<Options>
 				<Option Destination="447"/>
@@ -6148,7 +6148,7 @@
 				<Text>Если наш герой считает, что узнал достаточно, то можно покинуть эти места. Иначе придётся продолжить сбор сведений.</Text>
 			</Texts>
 			<Modifications>
-				<Tanga Value="-150"/>
+				<Tanga Val="-150"/>
 			</Modifications>
 			<Triggers>Лучник</Triggers>
 			<Options>
@@ -6182,7 +6182,7 @@
 				<Text>Но с другой стороны, воины на любой стоянке обязаны предоставить кров проезжающему гонцу. Да и обычное гостеприимство никто не отменял.</Text>
 			</Texts>
 			<Modifications>
-				<Danger Value="1"/>
+				<Danger Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="537" Text="Остаться в крепости ночлег">
@@ -6223,7 +6223,7 @@
 				<Text Style="Small">+150 ТАНЬГА</Text>
 			</Texts>
 			<Modifications>
-				<Tanga Value="150"/>
+				<Tanga Val="150"/>
 			</Modifications>
 			<Options>
 				<Option Destination="447"/>
@@ -6245,7 +6245,7 @@
 				<Text>Несмотря на это, послание будет доставлено императору.\n\nСамое время покинуть шатёр.</Text>
 			</Texts>
 			<Modifications>
-				<Danger Value="2"/>
+				<Danger Val="2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="539"/>
@@ -6300,7 +6300,7 @@
 				<Text Style="Small">+100 ТАНЬГА.</Text>
 			</Texts>
 			<Modifications>
-				<Tanga Value="100"/>
+				<Tanga Val="100"/>
 			</Modifications>
 			<Options>
 				<Option Destination="447"/>
@@ -6450,7 +6450,7 @@
 				<Text>Вернитесь и сделайте другой выбор.</Text>
 			</Texts>
 			<Modifications>
-				<Favour Value="2"/>
+				<Favour Val="2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="572"/>
@@ -6516,7 +6516,7 @@
 				<Text>К счастью, крики раздаются отовсюду. Всё внимание бодрствующей стражи обращено в сторону реки. Поэтому Алдар со своим товарищем быстро раскладывают охранников у костра (пусть все думают, что они спят) и проникают в шатёр.</Text>
 			</Texts>
 			<Modifications>
-				<Danger Value="2"/>
+				<Danger Val="2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="586"/>
@@ -6572,7 +6572,7 @@
 				<Text>Вернитесь и сделайте другой выбор.</Text>
 			</Texts>
 			<Modifications>
-				<Favour Value="2"/>
+				<Favour Val="2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="572"/>
@@ -6627,7 +6627,7 @@
 				<Text>Вернитесь и сделайте другой выбор.</Text>
 			</Texts>
 			<Modifications>
-				<Favour Value="1"/>
+				<Favour Val="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="572"/>
