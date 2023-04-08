@@ -1793,7 +1793,7 @@
 		<Paragraph No="217">
 			<Text>Меткая рука и верный глаз не подводят вас. Ослепительный тонкий луч аккуратно перерезает чудовищу шею. Обезглавленное тело с грохотом падает на поляну.</Text>
 			<Modifications>
-				<Blaster Value="-1"/>
+				<Blaster Val="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="257"/>
