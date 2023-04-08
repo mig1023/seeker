@@ -61,7 +61,8 @@ namespace Seeker.Game
                 return String.Format("{0} тыс. слов", (fullSize / 1000));
         }
 
-        public static string ValueStringFuse(string value) => (value == "ValueString" ? "Val" : value);
+        public static string ValueStringFuse(string value) =>
+            (value == "Value" || value == "ValueString" ? "Val" : value);
 
         public static bool ParagraphsWithoutStatuses(List<string> statuses)
         {
