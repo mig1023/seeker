@@ -196,7 +196,7 @@
 				<Text Style="Small">Вычтите 1 из СИЛЫ.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Value="-1"/>
+				<Strength Val="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="625"/>
