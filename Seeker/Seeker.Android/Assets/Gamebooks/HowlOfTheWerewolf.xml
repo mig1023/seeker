@@ -4399,8 +4399,8 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="Безумец" Mastery="7" Endurance="9"/>
-					<RoundsToFight>3</RoundsToFight>
-					<WoundsLimit>6</WoundsLimit>
+					<RoundsToFight Value="3"/>
+					<WoundsLimit Value="6"/>
 					<Text>Вы деретесь с полоумным дикарем на пороге дома. Ни Ульрих ни ведунья не могут вам помочь. После трех Раундов Атаки, или же если вы смогли уменьшить Выносливость врага до 6 или ниже:</Text>
 				</Fight>
 			</Actions>
