@@ -4836,9 +4836,9 @@
 					<Button>Драться</Button>
 					<Enemy Name="Грендель" Mastery="8"/>
 					<Specificity>Invulnerable</Specificity>
-					<HitStrengthBonus>-1</HitStrengthBonus>
-					<RoundsWinToWin>2</RoundsWinToWin>
-					<RoundsFailToFail>2</RoundsFailToFail>
+					<HitStrengthBonus Value="-1"/>
+					<RoundsWinToWin Value="2"/>
+					<RoundsFailToFail Value="2"/>
 					<Text>Выигрывает тот, кто первый свалит своего соперника (для этого надо выиграть два Раунда Атаки). Вы не очень привыкли драться без оружия, поэтому придется уменьшать свою Силу Удара на 1.</Text>
 				</Fight>
 			</Actions>
