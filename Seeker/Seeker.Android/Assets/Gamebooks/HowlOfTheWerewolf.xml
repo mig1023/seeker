@@ -2644,8 +2644,8 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="Оборотень" Mastery="8" Endurance="11"/>
-					<RoundsToFight>5</RoundsToFight>
-					<WoundsForTransformation>3</WoundsForTransformation>
+					<RoundsToFight Value="5"/>
+					<WoundsForTransformation Value="3"/>
 					<Text>Если вы получите больше двух ран, Трансформация продолжится.</Text>
 				</Fight>
 			</Actions>
