@@ -3,52 +3,52 @@
 		<Title>Болотная лихорадка</Title>
 		<Copyright>Пётр Прокошев, 2017</Copyright>
 		<Styles>
-			<Color Name="Background" Val="485432"/>
-			<Color Name="Font" Val="eaece8"/>
-			<Color Name="ActionBox" Val="707a60"/>
-			<Color Name="AdditionalStatus" Val="34411c"/>
-			<Color Name="AdditionalFont" Val="ffffff"/>
-			<Color Name="Main, Option" Val="5c6649"/>
-			<Color Name="Action" Val="5a6546"/>
-			<Color Name="Continue" Val="8c937f"/>
-			<Color Name="System" Val="717963"/>
-			<Color Name="GoodColor" Val="145314"/>
-			<Color Name="BadColor" Val="7f0000"/>
+			<Color Name="Background" Value="485432"/>
+			<Color Name="Font" Value="eaece8"/>
+			<Color Name="ActionBox" Value="707a60"/>
+			<Color Name="AdditionalStatus" Value="34411c"/>
+			<Color Name="AdditionalFont" Value="ffffff"/>
+			<Color Name="Main, Option" Value="5c6649"/>
+			<Color Name="Action" Value="5a6546"/>
+			<Color Name="Continue" Value="8c937f"/>
+			<Color Name="System" Value="717963"/>
+			<Color Name="GoodColor" Value="145314"/>
+			<Color Name="BadColor" Value="7f0000"/>
 		</Styles>
 		<Constants>
 			<Dictionary Name="GetRangeTypes">
-				<Item Name="6" Val="ДАЛЬНЯЯ ДИСТАНЦИЯ"/>
-				<Item Name="5" Val="СРЕДНЯЯ ДИСТАНЦИЯ"/>
-				<Item Name="4" Val="БЛИЖНЯЯ ДИСТАНЦИЯ"/>
+				<Item Name="6" Value="ДАЛЬНЯЯ ДИСТАНЦИЯ"/>
+				<Item Name="5" Value="СРЕДНЯЯ ДИСТАНЦИЯ"/>
+				<Item Name="4" Value="БЛИЖНЯЯ ДИСТАНЦИЯ"/>
 			</Dictionary>
 			<Dictionary Name="GetUpgrates">
-				<Item Name="1" Val="SecondEngine|Второй двигатель"/>
-				<Item Name="2" Val="Stealth|Стелс-покрытие"/>
-				<Item Name="3" Val="Radar|Радар"/>
-				<Item Name="4" Val="CircularSaw|Циркулярная пила"/>
-				<Item Name="5" Val="Flamethrower|Реактивный огнемёт"/>
-				<Item Name="6" Val="PlasmaCannon|Спаренная плазмопушка"/>
+				<Item Name="1" Value="SecondEngine|Второй двигатель"/>
+				<Item Name="2" Value="Stealth|Стелс-покрытие"/>
+				<Item Name="3" Value="Radar|Радар"/>
+				<Item Name="4" Value="CircularSaw|Циркулярная пила"/>
+				<Item Name="5" Value="Flamethrower|Реактивный огнемёт"/>
+				<Item Name="6" Value="PlasmaCannon|Спаренная плазмопушка"/>
 			</Dictionary>
 			<Dictionary Name="GetPurchases">
-				<Item Name="Месячное проживание на Земле" Val="5"/>
-				<Item Name="Круиз по галактике" Val="10"/>
-				<Item Name="Робот-помощник" Val="50"/>
-				<Item Name="Жена/муж-андроид" Val="100"/>
-				<Item Name="Звёздный ялик" Val="150"/>
-				<Item Name="Кибермодификация тела" Val="200"/>
-				<Item Name="Биомодификация тела" Val="300"/>
-				<Item Name="Чудо-омоложение" Val="400"/>
-				<Item Name="Особняк на Эдеме" Val="500"/>
-				<Item Name="Остров на Гидронее" Val="750"/>
-				<Item Name="Космический фрегат" Val="1000"/>
-				<Item Name="Колонизация нового планетоида" Val="1500"/>
+				<Item Name="Месячное проживание на Земле" Value="5"/>
+				<Item Name="Круиз по галактике" Value="10"/>
+				<Item Name="Робот-помощник" Value="50"/>
+				<Item Name="Жена/муж-андроид" Value="100"/>
+				<Item Name="Звёздный ялик" Value="150"/>
+				<Item Name="Кибермодификация тела" Value="200"/>
+				<Item Name="Биомодификация тела" Value="300"/>
+				<Item Name="Чудо-омоложение" Value="400"/>
+				<Item Name="Особняк на Эдеме" Value="500"/>
+				<Item Name="Остров на Гидронее" Value="750"/>
+				<Item Name="Космический фрегат" Value="1000"/>
+				<Item Name="Колонизация нового планетоида" Value="1500"/>
 			</Dictionary>
 			<Dictionary Name="GetFuryLevel">
-				<Item Name="-2" Val="Монах"/>
-				<Item Name="-1" Val="Пацифист"/>
-				<Item Name="0" Val="Путник"/>
-				<Item Name="1" Val="Милитарист"/>
-				<Item Name="2" Val="Берсерк"/>
+				<Item Name="-2" Value="Монах"/>
+				<Item Name="-1" Value="Пацифист"/>
+				<Item Name="0" Value="Путник"/>
+				<Item Name="1" Value="Милитарист"/>
+				<Item Name="2" Value="Берсерк"/>
 			</Dictionary>
 		</Constants>
 		<Settings>
@@ -72,7 +72,7 @@
 				<Fight>
 					<EnemyName>ТЕРМИТ</EnemyName>
 					<EnemyCombination>5-4</EnemyCombination>
-					<Benefit Name="Creds" Val="5"/>
+					<Benefit Name="Creds" Value="5"/>
 					<Text>Если в схватке с термитом вы одержите верх, то в качестве бонуса компания подарит вам 5 кредов. Иначе придётся начинать странствие без денег.</Text>
 				</Fight>
 			</Actions>
@@ -165,7 +165,7 @@
 				<Text>Щурясь, вы покидаете капсулу, словно заново родившимся.</Text>
 			</Texts>
 			<Modifications>
-				<Fury Val="-1"/>
+				<Fury Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="54"/>
@@ -196,7 +196,7 @@
 		<Paragraph No="16">
 			<Text>Вы въезжаете в техцентр, следуя указаниям властей. Пауки-технари спешно меняют огнемётную смесь на специальный состав пожаротушения. И вот вы мчитесь к горящим силосам. Несколько часов вы боритесь с пламенем и побеждаете. За спасение хранилищ стигона вас награждают премией. На личный счёт приходит круглая сумма в виде 100 кредов. В техцентре обратно заливают горючую смесь. Все здания возобновляют работу.</Text>
 			<Modifications>
-				<Creds Val="100"/>
+				<Creds Value="100"/>
 			</Modifications>
 			<Options>
 				<Option Destination="30"/>
@@ -305,7 +305,7 @@
 				<Text>В иных случаях ваше психическое состояние не изменилось.</Text>
 			</Texts>
 			<Modifications>
-				<Fury Val="1"/>
+				<Fury Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="54"/>
@@ -361,7 +361,7 @@
 				</MentalTest>
 			</Actions>
 			<Modifications>
-				<Fury Val="-1"/>
+				<Fury Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="151" Text="Проверка успешно пройдена"/>
@@ -404,8 +404,8 @@
 				<Text>Так был обнаружен схрон чёрных старателей, работников без лицензии. Они вбрасывают на рынок большие поставки сырья за бесценок, снижая его котировку. Вы успешно сорвали незаконную операцию, благодаря чему стоимость стигона растёт на 15 пунктов. Довольный собой вы возвращаетесь на тропу.</Text>
 			</Texts>
 			<Modifications>
-				<Stigon Val="2"/>
-				<Rate Val="15"/>
+				<Stigon Value="2"/>
+				<Rate Value="15"/>
 			</Modifications>
 			<Options>
 				<Option Destination="112"/>
@@ -445,43 +445,43 @@
 					<Button>Купить</Button>
 					<Head>Второй двигатель</Head>
 					<Price>40</Price>
-					<Benefit Name="SecondEngine" Val="1"/>
+					<Benefit Name="SecondEngine" Value="1"/>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
 					<Head>Стелс-покрытие</Head>
 					<Price>20</Price>
-					<Benefit Name="Stealth" Val="1"/>
+					<Benefit Name="Stealth" Value="1"/>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
 					<Head>Радар</Head>
 					<Price>20</Price>
-					<Benefit Name="Radar" Val="1"/>
+					<Benefit Name="Radar" Value="1"/>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
 					<Head>Циркулярная пила</Head>
 					<Price>25</Price>
-					<Benefit Name="CircularSaw" Val="1"/>
+					<Benefit Name="CircularSaw" Value="1"/>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
 					<Head>Реактивный огнемёт</Head>
 					<Price>30</Price>
-					<Benefit Name="Flamethrower" Val="1"/>
+					<Benefit Name="Flamethrower" Value="1"/>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
 					<Head>Спаренная плазмопушка</Head>
 					<Price>30</Price>
-					<Benefit Name="PlasmaCannon" Val="1"/>
+					<Benefit Name="PlasmaCannon" Value="1"/>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
 					<Head>Гармонизатор</Head>
 					<Price>50</Price>
-					<Benefit Name="Harmonizer" Val="1"/>
+					<Benefit Name="Harmonizer" Value="1"/>
 					<Text>Гармонизатор похож на метроном. При колебании маятника он излучает пси-волны. Данное устройство упрощает ментальные проверки на 1 (+1 к цифре МП)</Text>
 				</Get>
 			</Actions>
@@ -556,7 +556,7 @@
 			</Texts>
 			<Triggers>17</Triggers>
 			<Modifications>
-				<AcousticMembrane Val="1"/>
+				<AcousticMembrane Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="73"/>
@@ -626,7 +626,7 @@
 					<Button>Купить</Button>
 					<Head>Серенитатин</Head>
 					<Price>1</Price>
-					<Benefit Name="Fury" Val="-1"/>
+					<Benefit Name="Fury" Value="-1"/>
 				</Get>
 			</Actions>
 			<Options>
@@ -653,7 +653,7 @@
 			<Text>Упрямый робот разваливается. Утилизатор был важным элементом для здешнего поселения. Вы невольно саботировали функционирование Порта Грёз. Власти Стигии обнаружили следы харвестера на месте инцидента. Начато расследование. Компанию «Манекенгроу» вынудили покрыть расходы на закупку техники для переработки мусора. Фирма компенсирует убытки за счёт старателей, подозреваемых в происшествии. Отныне стигон принимают по сниженной ставке: его стоимость падает на 10 пунктов.</Text>
 			<Triggers>3</Triggers>
 			<Modifications>
-				<Rate Val="-10"/>
+				<Rate Value="-10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="93"/>
@@ -723,7 +723,7 @@
 				</MentalTest>
 			</Actions>
 			<Modifications>
-				<Fury Val="1"/>
+				<Fury Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="71"/>
@@ -732,7 +732,7 @@
 		<Paragraph No="67">
 			<Text>Вы решили переждать, пока волнения не стихнут. Позже станет известно, что бунтовщики добились части требований. Компания "Манекенгроу" повысила закупочную цену на редкое растение. Отныне 1 кубометр стигона принимают на 50 кредов дороже.</Text>
 			<Modifications>
-				<Rate Val="50"/>
+				<Rate Value="50"/>
 			</Modifications>
 			<Options>
 				<Option Destination="45"/>
@@ -887,7 +887,7 @@
 		<Paragraph No="84">
 			<Text>Если был выбран выход с лунным волком, то повысьте на 1 свою ЯРОСТЬ. Если вы пошли к солнечной корове, то напротив — ЯРОСТЬ на 1 уменьшите. В любом случае стоило вам покинуть иллюзорную пещеру, как транс завершился. Вы очнулись на прогалине рядом с тлеющим костром. Драконианца нет, как и копны стигона. Больше здесь делать нечего, и вы возвращаетесь в харвестер.</Text>
 			<Modifications>
-				<Fury Val="1"/>
+				<Fury Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="23"/>
@@ -896,7 +896,7 @@
 		<Paragraph No="85">
 			<Text>На ваш счёт поступает оговоренная сумма (+100 кредов), и вы бросаете свой харвестер. Вас сопровождают в тайное убежище, где вы терпеливо ждёте попутного транспорта до Порта Грёз. Наконец на грузовом вездеходе вы прибываете в космопорт. В кармане у вас извещение для компании "Манекенгроу", составленное юристами Семьи. Согласно документу с вами произошёл страховой случай, и контракт с фирмой считается расторгнутым. Вы заявляете, что ваша машина якобы утонула в трясине. Представители "Манекенгроу" подозрительно косятся, но доказать аферу не могут. Страховка компенсирует утерю харвестера и стоимость билета со Стигии домой.</Text>
 			<Modifications>
-				<Creds Val="100"/>
+				<Creds Value="100"/>
 			</Modifications>
 			<Options>
 				<Option Destination="3"/>
@@ -986,7 +986,7 @@
 			<Text>Харвестер проламывается сквозь живую стену. Вы стали свидетелем уникального явления. Тростник набухает и громко лопается. Из поломанных трубок разлетаются горошины. Чудные семена собираются воедино, образуя травянистые шары. Зелёные комья стремительно уносятся вдаль. Одна из трубок осталась целой. Вы осторожно выкапываете тростник вместе с корнем и грузите его в харвестер. Так вы добыли 1 кубометр стигона.</Text>
 			<Triggers>18</Triggers>
 			<Modifications>
-				<Stigon Val="1"/>
+				<Stigon Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="114"/>
@@ -1010,7 +1010,7 @@
 		<Paragraph No="98">
 			<Text>В Порту Грёз нечего делать. Кроме того, здесь стало тяжело дышать. Вы решаете эвакуироваться из города. Впоследствии пожар ликвидируют, но силосы сгорят дотла. Из-за крупной потери стигона его закупочная цена вырастет в три раза! Умножьте нынешнюю стоимость втрое, и впишите новое число в графу "Котировка".</Text>
 			<Modifications>
-				<Rate Val="3" Multiplication="true"/>
+				<Rate Value="3" Multiplication="true"/>
 			</Modifications>
 			<Options>
 				<Option Destination="45"/>
@@ -1019,7 +1019,7 @@
 		<Paragraph No="99">
 			<Text>Вы схематично изобразили солнце. Яти хлопает в ладоши. Затем он рисует нечто похожее на стигон и харвестер. Гигант откуда-то знает, что вам нужно. Ваше сердце ускорило ритм, по телу пробежала волнительная дрожь. Вы решаете заключить с дикарём сделку, объясняя её условия жестами и рисунками. Взамен на запасную фару верзила должен показать местоположение стигона. В фару встроена аккумуляторная батарея, и её заряда хватит на десятилетие автономной работы. Яти будет радовать сияющая безделушка, а вас залежи ценного сырья. Всё происходит по плану. Сев обратно в харвестер, вы медленно едете за радостным великаном. Наконец яти приводит вас к заброшенному бункеру. Внутри находится 1 кубометр спрессованного стигона. Обчистив подземный тайник, вы возвращаетесь на шоссе.</Text>
 			<Modifications>
-				<Stigon Val="1"/>
+				<Stigon Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="96"/>
@@ -1072,7 +1072,7 @@
 				<Fight>
 					<EnemyName>ОГНЕПОКЛОННИК</EnemyName>
 					<EnemyCombination>5-5-2</EnemyCombination>
-					<Benefit Name="Stigon" Val="1"/>
+					<Benefit Name="Stigon" Value="1"/>
 					<Text>Если вы не будете зажарены заживо и победите, то сможете забрать 1 кубометр стигона. Если стычка завершится ничьёй, у вас будет выбор: сбежать или продолжить схватку.</Text>
 				</Fight>
 			</Actions>
@@ -1119,7 +1119,7 @@
 				<Fight>
 					<EnemyName>МЕРЗЛОБА</EnemyName>
 					<EnemyCombination>5-5-4-3</EnemyCombination>
-					<Benefit Name="Stigon" Val="2"/>
+					<Benefit Name="Stigon" Value="2"/>
 					<Text>Если победа за вами, то можете забрать 2 кубометра стигона. Если бой завершился ничьёй, то у вас есть выбор: продолжить стычку или ретироваться.</Text>
 				</Fight>
 			</Actions>
@@ -1138,7 +1138,7 @@
 		<Paragraph No="111">
 			<Text>Вам удалось вытащить звёздный ялик. Из кабины пилота выходит повреждённый робот. Из-за падения он лишился руки. Робот устанавливает поисковый маяк. Вскоре на ваш борткомпьютер приходит послание: "Компания Манекенгроу благодарит за помощь. Вам на счёт перечислено вознаграждение". Добавьте себе 50 кредов и двигайтесь дальше.</Text>
 			<Modifications>
-				<Creds Val="50"/>
+				<Creds Value="50"/>
 			</Modifications>
 			<Options>
 				<Option Destination="65"/>
@@ -1230,8 +1230,8 @@
 		<Paragraph No="122">
 			<Text>Вы активно поддерживаете забастовку. Вы едете в колонии гудящих харвестеров. Иногда вы озвучиваете по громкой связи требования старателей. Повысьте ЯРОСТЬ на 1. Наконец к разъярённой толпе выходит представитель "Манекенгроу". Он устало заявляет: "Компания согласна принимать стигон на 50 кредов дороже!" "На 60!" — дерзко кричите вы, и толпа подхватывает смелое заявление. "Только на 60 и не кредом меньше", "60 или мы подожжём ваши силосы!" Представитель соглашается, и вместе с этим гул голосов стихает. Бунтовщики расходятся, здания возобновляют работу. Котировка стигона растёт на 60 кредов.</Text>
 			<Modifications>
-				<Fury Val="1"/>
-				<Rate Val="60"/>
+				<Fury Value="1"/>
+				<Rate Value="60"/>
 			</Modifications>
 			<Options>
 				<Option Destination="30"/>
@@ -1270,7 +1270,7 @@
 					<EnemyName>МУТАВОРМ</EnemyName>
 					<EnemyCombination>5-5-5-5-3-3</EnemyCombination>
 					<Trigger>14</Trigger>
-					<Benefit Name="Creds" Val="100"/>
+					<Benefit Name="Creds" Value="100"/>
 					<Text>Если вы одержите верх, то получите в награду 100 кредов. При ничьей возникнет выбор: продолжить схватку или отступить. При поражении вас уничтожат Резак-Лучи, кроме того, тварь мутирует.</Text>
 				</Fight>
 			</Actions>
@@ -1310,7 +1310,7 @@
 			</Texts>
 			<Untriggers>13</Untriggers>
 			<Modifications>
-				<LiveMucus Val="1"/>
+				<LiveMucus Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="52"/>
@@ -1382,7 +1382,7 @@
 				<Text>Потом ловко орудуя "гребешком", вы раскопали яму для трупа. Кодекс старателей требует трепетного отношения к павшим коллегам. После коротких похорон вы покидаете галечный остров.</Text>
 			</Texts>
 			<Modifications>
-				<Stigon Val="1"/>
+				<Stigon Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="59"/>
@@ -1488,7 +1488,7 @@
 			</Texts>
 			<Triggers>5</Triggers>
 			<Modifications>
-				<Stigon Val="1"/>
+				<Stigon Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="118"/>
@@ -1506,7 +1506,7 @@
 				<Fight>
 					<EnemyName>МУТАВОРМ</EnemyName>
 					<EnemyCombination>6-6-6-6-3-3</EnemyCombination>
-					<Benefit Name="Creds" Val="150"/>
+					<Benefit Name="Creds" Value="150"/>
 					<Text>Если вы одолеете врага, то получите в награду 150 кредов. При ничьей возникнет выбор: продолжить схватку или ретироваться. При поражении вас взорвут.</Text>
 				</Fight>
 			</Actions>
@@ -1519,7 +1519,7 @@
 			<Text>Вы распиливаете дерево, забрав сердцевину вместе с сотами. Гнездо оказывается полезным. Грузовой анализатор выявил высокое содержание эпиморфина в сотах. Объём ценного сырья равен одному кубометру стигона. Сердитые пчёлы яростно жалят харвестер, но это не доставляет вам проблем. Неудобство возникает лишь тогда, когда маленькие солдаты залепляют своими телами смотровые щели и триплексы. Чтобы вернуть обзор вы включаете огнемёт. Можете продать находку в Порту Грёз по текущей котировке, т.е. сдать на элеватор как кубометр стигона.</Text>
 			<Triggers>30</Triggers>
 			<Modifications>
-				<Stigon Val="1"/>
+				<Stigon Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="182"/>
@@ -1721,7 +1721,7 @@
 				<Fight>
 					<EnemyName>ТЕХНОКРОТ</EnemyName>
 					<EnemyCombination>5-5-5-2-2-2-2</EnemyCombination>
-					<Benefit Name="Stigon" Val="1"/>
+					<Benefit Name="Stigon" Value="1"/>
 					<Text>Если одержите верх, то в качестве награды получите кубометр стигона. При ничьей можете отступить или продолжить схватку. При поражении ваше безжизненное тело станет объектом инопланетного изучения.</Text>
 				</Fight>
 			</Actions>
@@ -1803,7 +1803,7 @@
 		<Paragraph No="187">
 			<Text>Ваши руки трясутся, спина раскалывается от напряжения. Яти склоняет чашу весов в свою сторону. Под громкий вздох зрителей ваша троица падает, как подрубленные деревья. Финч довольно потирает руки: "Уговор есть уговор". Эрик обречённо кивает. Котировка стигона уменьшается в два раза! Чтобы сохранить лицо профсоюзный лидер призывает устроить очередную стачку. С задумчивым видом толпа расходится. Всё возвращается к обычной жизни.</Text>
 			<Modifications>
-				<Rate Val="2" Division="true"/>
+				<Rate Value="2" Division="true"/>
 			</Modifications>
 			<Options>
 				<Option Destination="30"/>
@@ -1816,7 +1816,7 @@
 				<Text>Технокрот закапывается, уходя под землю, а вы продолжаете мчаться по серой долине.</Text>
 			</Texts>
 			<Modifications>
-				<Stigon Val="1"/>
+				<Stigon Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="194"/>
@@ -1840,7 +1840,7 @@
 			</Actions>
 			<Triggers>28</Triggers>
 			<Modifications>
-				<Fury Val="1"/>
+				<Fury Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="170"/>
@@ -1849,7 +1849,7 @@
 		<Paragraph No="190">
 			<Text>"Изумительно, — радостно объявляет малыш. — Конечно, НОль ПЛЮс ЧЕтыре больше, чем ЧЕтыре МИнус ОДин. Как и обещал, я уступаю вам куст. А также кое-что подарю в качестве бонуса". Технокрот закапывается, чтобы выудить из подземного тайника жестяную банку. "Это дымовая шашка, — поясняет неонаталец, — в моей машине для неё нет места. Однако водителю харвестера она может принести пользу". Поблагодарив пришельца за помощь, вы мчитесь дальше по долине. Отметьте, если пожелаете, кубометр стигона и дымовую шашку (которая также займёт грузовой отсек). Дымовуха разово применяется в битве. Она добавит на этапе формирования комбинации две двойки (+2 к Маскировке). Двойки дымовой завесы в форсаж уйти не могут. Сразу после использования дымовуху придётся вычеркнуть.</Text>
 			<Modifications>
-				<Stigon Val="1"/>
+				<Stigon Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="194"/>
@@ -1874,8 +1874,8 @@
 		<Paragraph No="193">
 			<Text>Это кажется фантастикой, но гигант рушится вперёд. Под аплодисменты зрителей ваша троица победно вскидывает уставшие руки. Множество старателей подбрасывают вас вверх. Воздух наполнился радостными возгласами. Финч мрачнее тучи, но вынужден исполнить обещания. Стоимость стигона растёт на 100 пунктов. Вам достаётся премия в размере 30 кредов.</Text>
 			<Modifications>
-				<Creds Val="30"/>
-				<Rate Val="100"/>
+				<Creds Value="30"/>
+				<Rate Value="100"/>
 			</Modifications>
 			<Options>
 				<Option Destination="30"/>
