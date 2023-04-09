@@ -4938,7 +4938,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="Мертвая собака" Mastery="7" Endurance="6"/>
-					<WoundsForTransformation>4</WoundsForTransformation>
+					<WoundsForTransformation Value="4"/>
 					<Text>Если пес укусит вас более трех раз, Трансформация продолжится. После такого заснуть не удается до самого рассвета. С первыми лучами солнца, вы выходите на дорогу и продолжаете свой путь.</Text>
 				</Fight>
 			</Actions>
