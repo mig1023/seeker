@@ -3,12 +3,12 @@
 		<Title>Шериф</Title>
 		<Copyright>Zaratystra, 2022</Copyright>
 		<Styles>
-			<Color Name="Main" Val="7d2c1c"/>
-			<Color Name="Option, Continue" Val="b45b27"/>
-			<Color Name="System" Val="f0d1b9"/>
+			<Color Name="Main" Value="7d2c1c"/>
+			<Color Name="Option, Continue" Value="b45b27"/>
+			<Color Name="System" Value="f0d1b9"/>
 		</Styles>
 		<Constants>
-			<List Name="CleaningNotebookList" Val="Билли убит в амбаре, Все любили Билли, Убит ночью, Не успел защититься, У убийцы есть рука, Убийца женщина, Надо проверить салон мадам Жу-жу, Женская перчатка, Дробовик, Патроны, Портсигар"/>
+			<List Name="CleaningNotebookList" Value="Билли убит в амбаре, Все любили Билли, Убит ночью, Не успел защититься, У убийцы есть рука, Убийца женщина, Надо проверить салон мадам Жу-жу, Женская перчатка, Дробовик, Патроны, Портсигар"/>
 			<Dictionary Name="Levels" FromLine="Easy:100, Medium:1, Hard:0"/>
 		</Constants>
 		<Settings>
@@ -26,13 +26,13 @@
 			<Text>Выберите уровень сложности:</Text>
 			<Options>
 				<Option Destination="76" Text="Easy">
-					<Level Val="Easy"/>
+					<Level Value="Easy"/>
 				</Option>
 				<Option Destination="76" Text="Medium">
-					<Level Val="Medium"/>
+					<Level Value="Medium"/>
 				</Option>
 				<Option Destination="76" Text="Hard">
-					<Level Val="Hard"/>
+					<Level Value="Hard"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -68,13 +68,13 @@
 		<Paragraph No="6">
 			<Options>
 				<Option Destination="82" Text="«Как тебя зовут?»" Availability="!имя">
-					<Trigger Val="имя"/>
+					<Trigger Value="имя"/>
 				</Option>
 				<Option Destination="32" Text="«Это твои вещи?» (показать портсигар и перчатку)" Availability="!вещи">
-					<Trigger Val="вещи"/>
+					<Trigger Value="вещи"/>
 				</Option>
 				<Option Destination="46" Text="«Зачем ты убила Билли и Томми?»" Availability="!Билли Томми">
-					<Trigger Val="Билли Томми"/>
+					<Trigger Value="Билли Томми"/>
 				</Option>
 				<Option Destination="59" Text="Уйти" Availability="имя, вещи, Билли Томми"/>
 			</Options>
@@ -122,7 +122,7 @@
 			<Text>Шериф лежал в своей кровати, уставившись безразличными глазами в потолок. В его теле не осталось ни капли крови.\n\nРядом лежал заряженный револьвер, которым он не успел воспользоватся так же как и бедняга Билли своим дробовиком.</Text>
 			<Options>
 				<Option Destination="74" Text="Вжууууух!" Availability="ВЖУХ >= 1">
-					<Whoosh Val="-1"/>
+					<Whoosh Value="-1"/>
 				</Option>
 				<Option Destination="0" Availability="ВЖУХ &lt; 1"/>
 			</Options>
@@ -176,16 +176,16 @@
 		<Paragraph No="21">
 			<Options>
 				<Option Destination="42" Text="Посмотреть влево" Availability="!Лево">
-					<Trigger Val="Лево"/>
+					<Trigger Value="Лево"/>
 				</Option>
 				<Option Destination="66" Text="Посмотреть вправо" Availability="!Право">
-					<Trigger Val="Право"/>
+					<Trigger Value="Право"/>
 				</Option>
 				<Option Destination="33" Text="Посмотреть вверх" Availability="!Портсигар">
-					<Trigger Val="Портсигар"/>
+					<Trigger Value="Портсигар"/>
 				</Option>
 				<Option Destination="72" Text="Посмотреть вниз" Availability="!Низ">
-					<Trigger Val="Низ"/>
+					<Trigger Value="Низ"/>
 				</Option>
 				<Option Destination="18" Text="Закончить осмотр" Availability="Портсигар"/>
 			</Options>
@@ -212,10 +212,10 @@
 			<Text>— Ага, улика!\n\nПод телом обнаружилась кружевная чёрная перчатка.\n\n— Чья это перчатка, Джо?\n\n— Не знаю, сэр, у нас в семье никто такие не носит.\n\n— Это улика, Джо. А любая улика может очень многое рассказать о преступнике!\n\n— И что она вам рассказала?</Text>
 			<Options>
 				<Option Destination="2" Text="У убийцы есть руки. По крайней мере одна рука">
-					<Trigger Val="У убийцы есть рука"/>
+					<Trigger Value="У убийцы есть рука"/>
 				</Option>
 				<Option Destination="75" Text="Убийца — женщина">
-					<Trigger Val="Убийца женщина"/>
+					<Trigger Value="Убийца женщина"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -251,7 +251,7 @@
 			<Text>Тело хозяйки борделя нелепо взмахнуло руками и покатилось по лестнице.\n\nДикий визг огласил особняк и толпы девиц бросились со всех сторон, буквально разорвав вас на кусочки.</Text>
 			<Options>
 				<Option Destination="86" Text="Вжууууух!" Availability="ВЖУХ >= 1">
-					<Whoosh Val="-1"/>
+					<Whoosh Value="-1"/>
 				</Option>
 				<Option Destination="0" Availability="ВЖУХ &lt; 1"/>
 			</Options>
@@ -260,13 +260,13 @@
 			<Text>Дэн откинул шкуру в сторону.\n\n— Тело кто-нибудь трогал после смерти?\n\n— Нет, сэр, только прикрыли шкурой.\n\n— Так, что тут у нас? Ага, труп мужчины. Горло перерезано чем-то острым, но крови почти нет. Хм, странно.\n\n— Вы правы, сэр, когда мы с отцом режем свиней, обычно всё вокруг залито кровищей, если вовремя не подставить корыто.\n\n— Значит, кто-то слил с него всю кровь как со свиньи. Убийца очень силён.\n\n— Это ужасно, сэр, — прокомментировал Джо.\n\n— Рядом с убитым лежит дробовик. Джо, это его оружие?\n\n— Да, сэр.</Text>
 			<Options>
 				<Option Destination="61" Text="Осмотреть дробовик" Availability="!Дробовик">
-					<Trigger Val="Дробовик"/>
+					<Trigger Value="Дробовик"/>
 				</Option>
 				<Option Destination="58" Text="Обыскать одежду Билли" Availability="!Патроны">
-					<Trigger Val="Патроны"/>
+					<Trigger Value="Патроны"/>
 				</Option>
 				<Option Destination="25" Text="Отодвинуть тело в сторону" Availability="!Женская перчатка">
-					<Trigger Val="Женская перчатка"/>
+					<Trigger Value="Женская перчатка"/>
 				</Option>
 				<Option Destination="18" Text="Продолжить осмотр места преступления" Availability="Женская перчатка, Дробовик, Патроны"/>
 			</Options>
@@ -404,7 +404,7 @@
 			<Text>Выбив дверь, они оказались в обширном подвале. Неярко светили масляные лампы, в их свете было хорошо видно скопление людей в ковбойских шляпах. Так вот где собрались все неудачливые клиенты этого заведения!\n\nДэниэл и Виктория отстреливались, а когда кончились патроны, в ход пошли ножи. Но в конечном итоге их смяли числом и разорвали на части.</Text>
 			<Options>
 				<Option Destination="77" Text="Вжууууух!" Availability="ВЖУХ >= 1">
-					<Whoosh Val="-1"/>
+					<Whoosh Value="-1"/>
 				</Option>
 				<Option Destination="0" Availability="ВЖУХ &lt; 1"/>
 			</Options>
@@ -477,7 +477,7 @@
 			<Text>Выстрел. Но в кресле уже никого нет.\n\n— Не люблю, когда меня не слушаются, — прошептали из-за спины, и два огромных клыка вонзились в шею.</Text>
 			<Options>
 				<Option Destination="20" Text="Вжууууух!" Availability="ВЖУХ >= 1">
-					<Whoosh Val="-1"/>
+					<Whoosh Value="-1"/>
 				</Option>
 				<Option Destination="0" Availability="ВЖУХ &lt; 1"/>
 			</Options>
@@ -676,13 +676,13 @@
 			<Text>Дэниэл извлек потрепанный блокнот, готовясь делать заметки.</Text>
 			<Options>
 				<Option Destination="19" Text="«Где его убили?»" Availability="!Билли убит в амбаре">
-					<Trigger Val="Билли убит в амбаре"/>
+					<Trigger Value="Билли убит в амбаре"/>
 				</Option>
 				<Option Destination="79" Text="«Кого вы подозреваете в убийстве?»" Availability="!Все любили Билли">
-					<Trigger Val="Все любили Билли"/>
+					<Trigger Value="Все любили Билли"/>
 				</Option>
 				<Option Destination="27" Text="«Когда случилось убийство?»" Availability="!Убит ночью">
-					<Trigger Val="Убит ночью"/>
+					<Trigger Value="Убит ночью"/>
 				</Option>
 				<Option Destination="24" Text="«Мне всё ясно, убийца — садовник!»" Availability="Билли убит в амбаре, Все любили Билли"/>
 				<Option Destination="21" Text="«Ведите меня в амбар!»" Availability="Билли убит в амбаре, Все любили Билли"/>
