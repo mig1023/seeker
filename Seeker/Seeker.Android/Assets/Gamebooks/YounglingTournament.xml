@@ -141,7 +141,7 @@
 						<Enemy Name="Первый HH-108" Accuracy="7" Hitpoints="10" Shield="15" Firepower="10"/>
 						<Enemy Name="Второй HH-108" Accuracy="7" Hitpoints="10" Shield="15" Firepower="10"/>
 					</Enemies>
-					<AccuracyBonus>2</AccuracyBonus>
+					<AccuracyBonus Value="2"/>
 				</FireFight>
 			</Actions>
 			<Options>
