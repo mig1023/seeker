@@ -3,7 +3,7 @@
 		<Title>Вереница миров или выводы из закона Мэрфи</Title>
 		<Copyright>Ольга Голотвина, 1995</Copyright>
 		<Constants>
-			<List Name="WithoutStaticsButtons" Val="0, 1, 665"/>
+			<List Name="WithoutStaticsButtons" Value="0, 1, 665"/>
 			<Dictionary Name="Skills" FromLineByOrder=", 8, 10, 12, 9, 11, 9, 10, 8, 9, 10, 11"/>
 			<Dictionary Name="Strengths" FromLineByOrder=", 22, 20, 16, 18, 20, 20, 16, 24, 22, 18, 20"/>
 			<Dictionary Name="Charms" FromLineByOrder=", 8, 6, 5, 8, 6, 7, 7, 7, 6, 7, 5"/>
@@ -70,7 +70,7 @@
 				<Text>Вы радуетесь рассвету, как спасению, и, вскинув рюкзак за плечи, продолжаете путь.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-1"/>
+				<Strength Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="401"/>
@@ -196,7 +196,7 @@
 				<Text Style="Small">Вычтите 1 из СИЛЫ.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-1"/>
+				<Strength Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="625"/>
@@ -222,7 +222,7 @@
 				<Text>Жаль, что попытка полета истрачена... Что ж, пора уходить отсюда.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-2"/>
+				<Strength Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="592"/>
@@ -406,7 +406,7 @@
 			<Text>Вы неплохо помните внутреннюю планировку кораблей типа «Ковчег» и, выйдя из лифта, быстро находите командную рубку. Из всего, что там можно обнаружить, для вас имеет самое большое значение сейфы с оружием, к которым имели доступ лишь капитан и первый помощник.\n\n«Не обольщайтесь, шеф, — предупреждает Клуша. — Легенды гласят, что все оружие было торжественно уничтожено как подлое и не соответствующее духу истинного рыцарства».\n\nОна оказывается права. Серые металлические дверцы не заперты, но за ними — пустота. Без особой надежды отворяете в их одну за другой — и восхищенно присвистываете. В последнем сейфе что-то есть! Во-первых, небольшая пластиковая обойма с двумя зарядами для бластера. Во-вторых, протонная граната. Конечно, такую серьезную штуковину где попало в дело не пустишь, ее рекомендуется швырять из укрытия.\n\nВам повезло... но что будет дальше?</Text>
 			<Triggers>ProtonGrenade</Triggers>
 			<Modifications>
-				<Blaster Val="2"/>
+				<Blaster Value="2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="457"/>
@@ -416,7 +416,7 @@
 			<Text>Меткость не изменила вам. Взмахнув руками, без единого вскрика незнакомец падает к вашим ногам. Вы переворачиваете труп — и присвистываете. На рукаве незнакомца — эмблема «Ядовитого Когтя», флагманского корабля эскадры Паука. Вот как, здесь пираты?..\n\nЖаль, что бластер противника, видимо, упал в какую-то трещину, да и фонарь разбился. Зато вам досталась другая добыча — металлический пояс-антигравитатор. Чтобы трофей не занимал места в рюкзаке, можете надеть его. Только не включайте зря: судя по миганию зеленого индикатора на пряжке, пояс давно нуждается в подзарядке. А сейчас продолжайте путь.</Text>
 			<Triggers>AntiGravityBelt</Triggers>
 			<Modifications>
-				<Blaster Val="-1"/>
+				<Blaster Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="502"/>
@@ -486,7 +486,7 @@
 				<Text Style="Small">Прибавьте 1 к своей СИЛЕ.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="1"/>
+				<Strength Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="571"/>
@@ -580,7 +580,7 @@
 				<Text>Ладно, а что же дальше?</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-1"/>
+				<Strength Value="-1"/>
 			</Modifications>
 			<Untriggers>AntiGravityRing</Untriggers>
 			<Options>
@@ -594,7 +594,7 @@
 				<Text>Утром покидаете свое убежище и уже собираетесь продолжать путь, как вдруг замечаете у себя над головой черное пятно пещеры. Хотите взглянуть на нее поближе или не станете карабкаться по скалам?</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="1"/>
+				<Strength Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="108" Text="Взглянуть на нее поближе"/>
@@ -732,7 +732,7 @@
 				<Text>Но наконец путь расчищен. Теперь вы можете идти дальше по коридору.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-3"/>
+				<Strength Value="-3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="630"/>
@@ -783,7 +783,7 @@
 		<Paragraph No="95">
 			<Text>Тонкий луч ударяет в середину куста — и тот вспыхивает, как кучка пороха. Острые коготки отпускают вас. Вскоре от куста остается лишь горстка сизого пепла. Можно идти дальше — на северо-запад.</Text>
 			<Modifications>
-				<Blaster Val="-1"/>
+				<Blaster Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="475"/>
@@ -798,7 +798,7 @@
 				<Luck/>
 			</Actions>
 			<Modifications>
-				<Strength Val="-1"/>
+				<Strength Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="661" Text="Повезло"/>
@@ -901,7 +901,7 @@
 		<Paragraph No="110">
 			<Text>Бластер яростной вспышкой разрывает полумрак — и тут же перед вами точно встает огненная стена. Встает и гаснет...\n\nНе веря своим глазам, подходите к оплавленной стене и касаетесь остывающего камня. Тупик! Стена, отполированная подземными водами и превращенная в зеркало... гигантское зеркало! Вы потратили драгоценный заряд, стреляя в собственное искаженное отражение!..\n\nПлюнув, возвращаетесь в напрасно оставленный коридор. Клуша, которая во время поединка вела себя тихо, как мышь, теперь приободрилась и нахально бубнит что-то о людях, которых при рождении плохо запрограммировали, а они туда же — берутся за опасные спецзадания...</Text>
 			<Modifications>
-				<Blaster Val="-1"/>
+				<Blaster Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="542"/>
@@ -913,7 +913,7 @@
 				<Text Style="Small">Падение вычтет только 1 из вашей СИЛЫ.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-1"/>
+				<Strength Value="-1"/>
 			</Modifications>
 			<Untriggers>AntiGravityBelt</Untriggers>
 			<Options>
@@ -955,7 +955,7 @@
 				<Text>Кто это?</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-2"/>
+				<Strength Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="468"/>
@@ -992,7 +992,7 @@
 				<Text>Что ж, придется прекратить погоню и идти дальше.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-1"/>
+				<Strength Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="447"/>
@@ -1040,7 +1040,7 @@
 				<Text>Гнездо, что ли, вы нечаянно разорили? Выход из этого дурацкого положения только один — бегство. Вы прибавляете шагу, и вскоре таинственные зверьки отвязываются от вас.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-4"/>
+				<Strength Value="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="576"/>
@@ -1147,7 +1147,7 @@
 				<Text>С трудом вырываетесь вы из этих объятий и отступаете на безопасное расстояние. Да здесь этой дряни столько, что и бластером не выкосишь! Хотите расчистить путь протонной гранатой (если, конечно, у вас она есть)? Иначе придется возвратиться к развилке и выбрать другую дорогу.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-5"/>
+				<Strength Value="-5"/>
 			</Modifications>
 			<Options>
 				<Option Destination="198" Text="Бросить протонную гранату" Availability="ProtonGrenade"/>
@@ -1161,7 +1161,7 @@
 				<Text>А утром выходите на дорогу (чуть дальше таверны) и идете на север.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="1"/>
+				<Strength Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="517"/>
@@ -1236,7 +1236,7 @@
 				</LuckRecovery>
 			</Actions>
 			<Modifications>
-				<GateCode Val="27"/>
+				<GateCode Value="27"/>
 			</Modifications>
 			<Options>
 				<Option Destination="Gate" Text="Мир был не первый"/>
@@ -1356,7 +1356,7 @@
 		<Paragraph No="164">
 			<Text>Тяжелая работа уменьшит вашу СИЛУ на 3, пока до вас наконец не дойдет, что это не баррикада, а завал, уходящий глубоко в тоннель... Разогнув спину, решаете осмотреть второй вход в тоннель или просто махнуть рукой на все эти подземные тайны?</Text>
 			<Modifications>
-				<Strength Val="-3"/>
+				<Strength Value="-3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="420" Text="Осмотреть второй вход"/>
@@ -1397,7 +1397,7 @@
 		<Paragraph No="170">
 			<Text>Зверь издыхает у ваших ног. Вы небрежно осматриваете его логово — и присвистываете на полу валяются обрывки ткани, в которой лишь наметанный глаз может признать клочья формы астронавта. Такую одежду носят в торговом космофлоте... ну, и пираты зачастую тоже. Кого же сожрала эта зверюга? Надо быть осторожнее...\n\nВы нагибаетесь и внимательнее изучаете впадину. Вот обрывок портупеи, вот пряжка пояса без опознавательной бляхи... а это что?\n\nВ руке у вас — тонкая пластиковая трубочка с зеленым шариком внутри. Клуша моментально определяет, что это такое:\n\n«Меорвин. Сильнейший тонизатор... и реакцию улучшает. Одного такого шарика хватит на две недели...»\n\nЕсли проглотите шарик, можете прибавить 1 к ЛОВКОСТИ... А затем выбирайтесь из логова ракоскорпиона и идите дальше.</Text>
 			<Modifications>
-				<Skill Val="1"/>
+				<Skill Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="34"/>
@@ -1423,7 +1423,7 @@
 				<Text Style="Small">Прибавьте 1 к своей СИЛЕ.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="1"/>
+				<Strength Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="53"/>
@@ -1436,7 +1436,7 @@
 				<Text>Если после этого вы живы — идите дальше.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-6"/>
+				<Strength Value="-6"/>
 			</Modifications>
 			<Options>
 				<Option Destination="210"/>
@@ -1532,7 +1532,7 @@
 				</Fight>
 			</Actions>
 			<Modifications>
-				<Blaster Val="-1"/>
+				<Blaster Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="37" Text="Вы убили его за 4 раунда"/>
@@ -1665,7 +1665,7 @@
 				</LuckRecovery>
 			</Actions>
 			<Modifications>
-				<GateCode Val="103"/>
+				<GateCode Value="103"/>
 			</Modifications>
 			<Options>
 				<Option Destination="Gate" Text="Мир был не первый"/>
@@ -1681,7 +1681,7 @@
 		<Paragraph No="204">
 			<Text>Бластер в умелых руках — не только убийства, но и надежный инструмент. Отрегулировав луч на минимальную мощность, плавным движением вырезаете замок...</Text>
 			<Modifications>
-				<Blaster Val="-1"/>
+				<Blaster Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="92"/>
@@ -1696,7 +1696,7 @@
 		<Paragraph No="206">
 			<Text>Беззвучная вспышка распарывает грудь вашего противника. Выронив свой бластер, он падает.</Text>
 			<Modifications>
-				<Blaster Val="-1"/>
+				<Blaster Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="326"/>
@@ -1737,7 +1737,7 @@
 				<Text>Теперь придется сражаться.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-2"/>
+				<Strength Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="91"/>
@@ -1757,7 +1757,7 @@
 				<Text>Без сознания вы пробыли совсем недолго, но за это время толпа успела уйти далеко по дороге в деревню, уводя за собой связанного пленника.\n\nПридя в себя, продолжайте путь... конечно, в противоположную от деревни сторону — к лесу...</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-6"/>
+				<Strength Value="-6"/>
 			</Modifications>
 			<Options>
 				<Option Destination="69"/>
@@ -1770,7 +1770,7 @@
 				<Text>Придется драться.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-2"/>
+				<Strength Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="94"/>
@@ -1793,7 +1793,7 @@
 		<Paragraph No="217">
 			<Text>Меткая рука и верный глаз не подводят вас. Ослепительный тонкий луч аккуратно перерезает чудовищу шею. Обезглавленное тело с грохотом падает на поляну.</Text>
 			<Modifications>
-				<Blaster Val="-1"/>
+				<Blaster Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="257"/>
@@ -1844,7 +1844,7 @@
 		<Paragraph No="224">
 			<Text>Жаль, что пришлось убить беднягу. Тем более что, оглядевшись, вы понимаете: он защищал свое логово.</Text>
 			<Modifications>
-				<Blaster Val="-1"/>
+				<Blaster Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="320"/>
@@ -1916,7 +1916,7 @@
 				<Text>А наутро забрасываете рюкзак за плечи и идете по дороге прочь от замка на север.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-4"/>
+				<Strength Value="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="381"/>
@@ -1929,7 +1929,7 @@
 				<Text>Вы еще живы?</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-5"/>
+				<Strength Value="-5"/>
 			</Modifications>
 			<Options>
 				<Option Destination="338"/>
@@ -1961,7 +1961,7 @@
 				<Text Style="Small">Прибавьте 5 к своей СИЛЕ.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="5"/>
+				<Strength Value="5"/>
 			</Modifications>
 			<Options>
 				<Option Destination="61"/>
@@ -1982,7 +1982,7 @@
 		<Paragraph No="240">
 			<Text>Сон на деревянной лежанке, под мягкой, лохматой черной шкурой прибавит 2 к вашей СИЛЕ. А утром вы оставляете таверну и идете по дороге дальше — на север.</Text>
 			<Modifications>
-				<Strength Val="2"/>
+				<Strength Value="2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="517"/>
@@ -2014,7 +2014,7 @@
 				<Text>Вы спотыкаетесь на бегу, но не останавливаетесь, пока, свернув за поворот, не видите, что погони нет: троица не стала вас преследовать.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-2"/>
+				<Strength Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="456"/>
@@ -2030,7 +2030,7 @@
 		<Paragraph No="246">
 			<Text>Ослепительная вспышка разрезает полумрак. Пауки в панике забиваются в трещины, а те, что не успели убежать от луча, превращаются в безобразные комки. Путь свободен!</Text>
 			<Modifications>
-				<Blaster Val="-1"/>
+				<Blaster Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="386"/>
@@ -2068,7 +2068,7 @@
 				<Text>Хотите вернуться и пойти прежним путем? Или все же попытаетесь исследовать расщелину до конца?</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-1"/>
+				<Strength Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="558" Text="Вернуться и пойти прежним путем"/>
@@ -2082,7 +2082,7 @@
 				<Text>Вы продолжаете упрямо ломиться вперед... и вдруг замечаете на одной из ветвей обрывок ткани! Присев на корточки, рассматриваете свою находку. Это клок форменной куртки исследователей Вереницы Миров. Можно, конечно, идти дальше, усмехаясь при мысли, что не только у вас хватило ума забраться в такие непроходимые заросли. Но вы, точно повинуясь чьей-то подсказке, начинаете внимательно осматривать землю вокруг. И ваши усилия не пропадают зря: среди узловатых тонких корней лежала маленькая легкая зажигалка — точь-в-точь такая же, как та, которую вам предложили перед отбытием на задание. Вероятно, оставшийся на ветке клок был вырван из кармана...\n\nЧто ж, можно идти дальше.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-2"/>
+				<Strength Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="131"/>
@@ -2095,7 +2095,7 @@
 				<Text>«Трус! — кричит Палеандр. — Ты недостоин называться рыцарем! Ты покрываешь позором свой шлем и свое имя! Сражайся — или, клянусь Небесным Клинком, я убью тебя, как жалкого болотного хлипуна!»\n\nВыяснять, кто такой хлипун, сейчас явно не время. Этот псих и впрямь Неукротимый... Придется драться.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-2"/>
+				<Strength Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="493"/>
@@ -2150,7 +2150,7 @@
 				<Text>Оказывается, водоросли (и многое другое) стрекозы выменивают у жителей моря. Гостеприимная хозяйка вспархивает к древесной кроне и, сорвав плод, похожий на черное яблоко, бросает вам на колени.\n\n«Вот на это и вымениваем. Если окажетесь на берегу моря, сделайте так...»\n\nЧуть изогнув крылья, она поворачивает их ребром к ветру — раздается протяжный свистящий звук.\n\n«Вот так! Морские жители услышат... За Плод Жизни они сделают все, что угодно...»\n\nИ тут же стрекоза огорченно спохватывается:\n\n«Но вы же не сможете их позвать! У вас нет крыльев!»\n\nУсмехнувшись, вы начинаете насвистывать. Стрекоза в восхищении.\n\nА беседа продолжается...</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="3"/>
+				<Strength Value="3"/>
 			</Modifications>
 			<Triggers>FruitOfLife</Triggers>
 			<Options>
@@ -2185,7 +2185,7 @@
 				<Text>Пожалуй, надо возвращаться к развилке и идти другой дорогой... если, конечно, не знаете иного способа подняться наверх.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-2"/>
+				<Strength Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="66"/>
@@ -2204,7 +2204,7 @@
 				<Text>Но Ворота — рядом!</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-2"/>
+				<Strength Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="532"/>
@@ -2213,7 +2213,7 @@
 		<Paragraph No="265">
 			<Text>Жаль вояку, но он сам виноват... Можете взять его шлем. Увы, темно-красные метелки плюмажа слетели во время боя, ветер унес их в придорожные кусты. Но и без плюмажа шлем выглядит красиво и приходится вам впору. Если до сих пор шлема у вас не было, а вы не прочь были бы выдать себя за рыцаря, то теперь можете это сделать. Если шлем у вас уже есть (или вы не считаете нужным в нем щеголять) — уберите добычу в рюкзак, вдруг да пригодится...\n\nТело рыцаря вытянулось поперек дороги, будто преграждая вам путь. Стремясь отделаться от неприятного чувства, поспешно идете прочь — на север, как вы определяете по солнцу.</Text>
 			<Modifications>
-				<Blaster Val="-1"/>
+				<Blaster Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="364"/>
@@ -2270,7 +2270,7 @@
 				<Text>Эта тварь наносит телепатические удары! Ах, как вам сейчас пригодилась бы сейчас металлическая каска или шлем! Если найдется что-нибудь в этом роде, немедленно наденьте! Иначе придется выдержать тяжелое испытание.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-2"/>
+				<Strength Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="40" Text="Найдется что-нибудь"/>
@@ -2280,7 +2280,7 @@
 		<Paragraph No="273">
 			<Text>Плащ и в самом деле очень легкий и совсем не сковывает движений. Можете накинуть его на плечи, чтобы не занимал места в рюкзаке.\n\nВы спрашиваете старуху, хорошо ли она знает здешние края. Да, конечно, и она охотно о них расскажет за серебряную монету. Или, в крайнем случае, за две какие-нибудь вещи из вашей красивой сумы...\n\nУ вас есть еще монета или две вещицы, которые вы считаете лишними? Или нету?</Text>
 			<Modifications>
-				<Coins Val="-1"/>
+				<Coins Value="-1"/>
 			</Modifications>
 			<Triggers>Плащ</Triggers>
 			<Options>
@@ -2328,7 +2328,7 @@
 				<Text>После этого вы еще живы?</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-6"/>
+				<Strength Value="-6"/>
 			</Modifications>
 			<Options>
 				<Option Destination="486"/>
@@ -2409,7 +2409,7 @@
 				<Text>С трудом пробираетесь вы к двери, ведущей из подъезда на улицу.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-3"/>
+				<Strength Value="-3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="400"/>
@@ -2486,7 +2486,7 @@
 		<Paragraph No="299">
 			<Text>«Это надо съесть сейчас же! — предупреждает стрекоза. — Ягоды быстро портятся!»\n\nВы поступаете так, как она советует и не жалеете об этом — ягоды прибавляют 1 к вашей ЛОВКОСТИ.</Text>
 			<Modifications>
-				<Skill Val="1"/>
+				<Skill Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="43"/>
@@ -2500,7 +2500,7 @@
 				</LuckRecovery>
 			</Actions>
 			<Modifications>
-				<GateCode Val="215"/>
+				<GateCode Value="215"/>
 			</Modifications>
 			<Options>
 				<Option Destination="Gate" Text="Мир был не первый"/>
@@ -2535,7 +2535,7 @@
 		<Paragraph No="305">
 			<Text>Старуха оживляется, она готова отвечать на любые вопросы. Вы описываете Бронсона, но, увы, такой человек ей не встречался... Без особой надежды спрашиваете вы о Воротах.\n\n«Столб света меж двумя чашами? — ахает старуха. — Так ты — паломник к Затерянной Часовне? Люди давно уже туда не ходят, а теперь, когда там появилось это наваждение, и вовсе позабыли дорогу в те края!»\n\nОказывается, в лесу стоит полуразрушенная часовня. Недавно о ней стали расползаться странные слухи: мол, те, кто входит в часовню, исчезают безвозвратно...\n\n«Иди на север, — объясняет старуха. — Рано или поздно наткнешься в лесу на длинную прогалину, заросшую синими цветами. На восточном ее конце растет Великое Древо — говорят, ему поклоняются дикие обезьянопауки. От корней начинается тропка. Ищи хорошенько, она совсем заросла...»\n\nНа прощание старуха напутствует вас:\n\n«Будь осторожен, щедрый господин мой! Говорят, некий рыцарь дал обет своим мечом защищать подступы к Затерянной часовне!»</Text>
 			<Modifications>
-				<Coins Val="-1"/>
+				<Coins Value="-1"/>
 			</Modifications>
 			<Triggers>Footpath</Triggers>
 			<Options>
@@ -2606,7 +2606,7 @@
 				<Text>Наконец удается миновать опасный участок коридора. Почему-то пауки не преследуют вас. Может быть, они всего лишь охраняют свою территорию?</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-6"/>
+				<Strength Value="-6"/>
 			</Modifications>
 			<Options>
 				<Option Destination="386"/>
@@ -2620,7 +2620,7 @@
 				</LuckRecovery>
 			</Actions>
 			<Modifications>
-				<GateCode Val="48"/>
+				<GateCode Value="48"/>
 			</Modifications>
 			<Options>
 				<Option Destination="Gate" Text="Мир был не первый"/>
@@ -2685,7 +2685,7 @@
 		<Paragraph No="323">
 			<Text>Ягода увеличит вашу СИЛУ на 5. Если не голодны — можете взять ее с собой (если, конечно, в рюкзаке найдется место)...</Text>
 			<Modifications>
-				<Healing Val="Съесть ягоды,5"/>
+				<Healing Value="Съесть ягоды,5"/>
 			</Modifications>
 			<Options>
 				<Option Destination="43"/>
@@ -2700,7 +2700,7 @@
 		<Paragraph No="325">
 			<Text>Вы произносите пароль — и ситуация резко изменяется. Разбойники не только убирают оружие в ножны, но и приглашают вас к своему костру — перекусить. Над огнем на прутиках жарятся какие-то птички. Одну из них, горячую, истекающую жиром, подносят вам. Еда прибавит 3 к вашей СИЛЕ. Если не хотите есть сейчас, заверните птичку в листья и возьмите с собой.\n\nНа прощание новые знакомые дают вам совет: «Если выйдешь на дорогу — держись от нее подальше, лучше иди лесом. Здесь шляются люди похуже нашего брата разбойника. От них атамановым словом не отговоришься...»</Text>
 			<Modifications>
-				<Healing Val="Съесть еду,3"/>
+				<Healing Value="Съесть еду,3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="247"/>
@@ -2715,7 +2715,7 @@
 		<Paragraph No="327">
 			<Text>Да, эти насекомые — родня земным осам! И вы в этом сию же минуту убеждаетесь!\n\nК тому времени, когда крылатая, свирепо гудящая армия соблаговолит оставить вас в покое, ваша СИЛА уменьшится на 5.</Text>
 			<Modifications>
-				<Strength Val="-5"/>
+				<Strength Value="-5"/>
 			</Modifications>
 			<Options>
 				<Option Destination="7"/>
@@ -2787,7 +2787,7 @@
 				<Text>Сухо хрустнув, дверь подается...</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-1"/>
+				<Strength Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="556"/>
@@ -2915,7 +2915,7 @@
 				<Text>Если вы в состоянии встать, выбирайтесь на улицу и идите дальше.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-6"/>
+				<Strength Value="-6"/>
 			</Modifications>
 			<Options>
 				<Option Destination="584"/>
@@ -2941,7 +2941,7 @@
 				<Text Style="Small">Прибавьте 1 к своей СИЛЕ.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="1"/>
+				<Strength Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="571"/>
@@ -2960,8 +2960,8 @@
 				<Text Style="Small">Вычтите 2 из СИЛЫ и 1 из ЛОВКОСТИ.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-2"/>
-				<Skill Val="-1"/>
+				<Strength Value="-2"/>
+				<Skill Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="37"/>
@@ -3040,7 +3040,7 @@
 				<Text>Наконец вы перебираетесь через коварную поляну и, отряхнув с одежды грязь и тину, идете дальше.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-2"/>
+				<Strength Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="155"/>
@@ -3096,7 +3096,7 @@
 				<Text>А теперь идите дальше.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="1"/>
+				<Strength Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="26"/>
@@ -3364,7 +3364,7 @@
 		<Paragraph No="411">
 			<Text>Останки хищного куста агонизируют на земле, а вы, убрав оружие, пытаетесь привести в чувство стрекозу... а, собственно говоря, как их приводят в чувство? Как оказывают первую помощь существу примерно в метр длиной, с гибким членистым туловищем, овальной грудью, громадными прозрачными крыльями, и круглой изящной головкой, украшенной выпуклыми фасеточными глазами?\n\nК счастью, ваша подопечная сама приходит в сознание, расправляет тонкие крылья и перепархивает к вам на плечо. Вы чувствуете себя не слишком уютно, когда цепкие лапки впиваются вам в кожу, а у самого лица начинают покачиваться жуткого вида жвала, похожие на кривые ножи.\n\nНо неприятное ощущение проходит, когда стрекоза начинает шуршать крыльями и поскрипывать жвалами. Звуки эти складываются в странную мелодию. И тут же начинает работать автопереводчик — оказывается, вас благодарят за спасение!\n\nСтрекоза отнюдь не удивлена вашим видом. Ей уже приходилось встречаться с людьми, и она сохранила о них теплые воспоминания. (Вы догадываетесь, что речь идет об исследователях из Лаборатории Мерфи.)\n\nСпасенная предлагает вам свернуть с дороги и погостить немного у нее. Согласитесь или откажетесь (памятуя о том, что на Земле стрекозы — ненасытные хищницы)?</Text>
 			<Modifications>
-				<Blaster Val="-1"/>
+				<Blaster Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="535" Text="Согласитесь"/>
@@ -3374,7 +3374,7 @@
 		<Paragraph No="412">
 			<Text>В вагоне, прямо на металлическом полу, горит высокая свеча. В углу лежит тряпье, служившее кому-то постелью. Тут же валяется груда пустых консервных банок... впрочем, нет, одна из них полная. Можете ее взять, в любую минуту мясные консервы прибавят 5 к вашей СИЛЕ. Если хотите, можете погасить свечу и захватить ее с собой.\n\nА теперь куда? В погоню за неизвестным стрелком? Или удовлетворитесь тем, что обратили его в бегство, вернетесь к развилке и свернете в другой тоннель?</Text>
 			<Modifications>
-				<Healing Val="Съесть мясные консервы,5"/>
+				<Healing Value="Съесть мясные консервы,5"/>
 			</Modifications>
 			<Options>
 				<Option Destination="612" Text="В погоню"/>
@@ -3426,7 +3426,7 @@
 				<Text>Если у вас с собой фляга, можете наполнить ее. А затем продолжайте путь.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="3"/>
+				<Strength Value="3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="386"/>
@@ -3449,7 +3449,7 @@
 		<Paragraph No="421">
 			<Text>Ягоды оказываются такими нежными и сочными, что лопаются в пальцах, и их приходится снимать губами прямо с ветки. Зато их терпкий пряный сок прибавит 10 к вашей СИЛЕ. Жаль, что нельзя захватить хоть немного ягод с собой...\n\nА теперь продолжайте путь.</Text>
 			<Modifications>
-				<Strength Val="10"/>
+				<Strength Value="10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="241"/>
@@ -3535,7 +3535,7 @@
 				<Text>Вы приземляетесь. «Черепаха» продолжает ползти своим путем, а вы, прихрамывая, идете дальше по улице. Кольцо, конечно, вам больше не пригодится.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-2"/>
+				<Strength Value="-2"/>
 			</Modifications>
 			<Untriggers>AntiGravityRing</Untriggers>
 			<Options>
@@ -3548,7 +3548,7 @@
 				<Text Style="Small">Прибавьте 2 к своей СИЛЕ.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="2"/>
+				<Strength Value="2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="245"/>
@@ -3631,7 +3631,7 @@
 				<Text>Остается одно — драться, защищая свою жизнь.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-2"/>
+				<Strength Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="123"/>
@@ -3650,7 +3650,7 @@
 				<Text>А утром идете прочь от замка — на север.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="1"/>
+				<Strength Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="381"/>
@@ -3793,7 +3793,7 @@
 				<Text>С трудом приходите в себя. Клуша вскользь замечает, что бесконтрольный дурак — явление крайне опасное... но наотрез отказывается уточнить, в чей адрес это сказано.\n\nЛадно, надо продолжать путь. Но куда?</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-4"/>
+				<Strength Value="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="287" Text="На север"/>
@@ -3933,7 +3933,7 @@
 				<Text>Пока Вы занимаетесь своими глазами, мерзкое существо успевает скрыться.</Text>
 			</Texts>
 			<Modifications>
-				<Skill Val="-1"/>
+				<Skill Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="599"/>
@@ -3965,8 +3965,8 @@
 				<Text>Отступая, вы не глядите по сторонам, думая лишь о том, не метнется ли из-под ног еще один корень-убийца. Вы стараетесь держаться дна каменистой расселины — там меньше нор. Но вот расселина раздваивается. Куда свернете?</Text>
 			</Texts>
 			<Modifications>
-				<Blaster Val="-1"/>
-				<Strength Val="-6"/>
+				<Blaster Value="-1"/>
+				<Strength Value="-6"/>
 			</Modifications>
 			<Options>
 				<Option Destination="347" Text="Налево"/>
@@ -3980,7 +3980,7 @@
 				<Text>Если раны не смертельны — продолжайте свой путь.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-6"/>
+				<Strength Value="-6"/>
 			</Modifications>
 			<Options>
 				<Option Destination="592"/>
@@ -3996,7 +3996,7 @@
 		<Paragraph No="490">
 			<Text>Чудовище сотрясается, из пасти его вырывается звук, похожий на гул землетрясения. Точно порыв ветра подхватывает вас и вышвыривает из пещеры-пасти. Похоже, от боли монстр закашлялся, и это спасло вас.</Text>
 			<Modifications>
-				<Blaster Val="-1"/>
+				<Blaster Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="354"/>
@@ -4096,7 +4096,7 @@
 				<Text Style="Small">Прибавьте 1 к СИЛЕ.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="1"/>
+				<Strength Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="462"/>
@@ -4131,7 +4131,7 @@
 				<Text>А теперь пора идти спать.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="5"/>
+				<Strength Value="5"/>
 			</Modifications>
 			<Options>
 				<Option Destination="240"/>
@@ -4147,8 +4147,8 @@
 		<Paragraph No="507">
 			<Text>Вы пытаетесь вскарабкаться по стенке воронки, песок осыпается под руками, и проклятая тварь ухитряется цапнуть вас за щиколотку (причем цапнуть так крепко, что СИЛА уменьшается на 2, а ЛОВКОСТЬ — на 1). Но наконец удается выбраться, и вы идете дальше, обходя колючие заросли.</Text>
 			<Modifications>
-				<Strength Val="-2"/>
-				<Skill Val="-1"/>
+				<Strength Value="-2"/>
+				<Skill Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="131"/>
@@ -4160,7 +4160,7 @@
 				<Text Style="Small">Вычтите 3 из своей СИЛЫ.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-3"/>
+				<Strength Value="-3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="356"/>
@@ -4172,7 +4172,7 @@
 				<Text Style="Small">Вычтите 2 из своей СИЛЫ.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-2"/>
+				<Strength Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="73" Text="Дадите ему сдачи"/>
@@ -4215,7 +4215,7 @@
 		<Paragraph No="515">
 			<Text>Жаль зарядов, но жизнь дороже... Обойдя чудовищные черные туши, вы идете дальше по тропинке — на северо-запад.</Text>
 			<Modifications>
-				<Blaster Val="-2"/>
+				<Blaster Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="427"/>
@@ -4224,7 +4224,7 @@
 		<Paragraph No="516">
 			<Text>Тут кипел бой! Возле окна грудой навалены мешки с песком — для защиты от пуль. На этом импровизированном бруствере лежит тот, кто еще совсем недавно — пожалуй, несколько часов назад — вел стрельбу по улице. Не робот — человек! Он убит в спину: кто-то поднялся по лестнице и застал его врасплох.\n\nВозле тела лежит бластер почти той же конструкции, что и ваш. Ствол поврежден случайной пулей, но зарядник цел. Передернув затвор, обнаруживаете последний неиспользованный заряд. Можете взять его с собой.\n\nА теперь пора покинуть комнату и спуститься по лестнице.</Text>
 			<Modifications>
-				<Blaster Val="1"/>
+				<Blaster Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="288"/>
@@ -4243,7 +4243,7 @@
 				<Text Style="Small">Вычтите 3 из СИЛЫ.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-3"/>
+				<Strength Value="-3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="82"/>
@@ -4252,7 +4252,7 @@
 		<Paragraph No="519">
 			<Text>Ох, и гадость же вы выпили! Все тело пронзает боль, в глазах темнеет, ноги подкашиваются... Мерзкое ощущение вскоре проходит, но ваша ЛОВКОСТЬ уменьшается на 1... Зато дышать под водой вы тебе сможете. Скорее ныряйте в воду, пока не прошло действие чудесной жидкости.</Text>
 			<Modifications>
-				<Skill Val="-1"/>
+				<Skill Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="315"/>
@@ -4316,7 +4316,7 @@
 				<Text>Остается лишь покинуть подвал через окно и продолжить путь по переулку.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-1"/>
+				<Strength Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="360"/>
@@ -4467,7 +4467,7 @@
 				<Text Style="Small">Вычтите 1 из СИЛЫ.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-1"/>
+				<Strength Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="473"/>
@@ -4588,7 +4588,7 @@
 				<Text Style="Small">Прибавьте 2 к своей СИЛЕ.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="2"/>
+				<Strength Value="2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="245"/>
@@ -4646,7 +4646,7 @@
 				<Text Style="Small">Ожоги уменьшат вашу СИЛУ на 4.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-4"/>
+				<Strength Value="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="13"/>
@@ -4661,7 +4661,7 @@
 		<Paragraph No="575">
 			<Text>Вот у вас и фляга, к тому же она не занимает места в рюкзаке. За водой стрекоза быстро слетала к соседнему роднику. Правда, фляга вмещает воды лишь на 2 глотка, зато каждый глоток в любое время пути увеличит вашу СИЛУ на 2.</Text>
 			<Modifications>
-				<Healing Val="Выпить воды из фляги,2,2"/>
+				<Healing Value="Выпить воды из фляги,2,2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="43"/>
@@ -4710,7 +4710,7 @@
 				</Charm>
 			</Actions>
 			<Modifications>
-				<Strength Val="-1"/>
+				<Strength Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="32" Text="Удалось"/>
@@ -4765,7 +4765,7 @@
 		<Paragraph No="587">
 			<Text>Сытная еда увеличит СИЛУ на 5.</Text>
 			<Modifications>
-				<Strength Val="5"/>
+				<Strength Value="5"/>
 			</Modifications>
 			<Options>
 				<Option Destination="623"/>
@@ -4837,7 +4837,7 @@
 				<Text>Вы пытаетесь расспросить хозяина о Бронсоне и Воротах, но тот либо ничего не знает, либо не любит болтать лишнего.\n\nВы потягиваете кислое вино... и внезапно замечаете, что незнакомец в сером плаще, подняв голову, с интересом вас разглядывает. Посетитель таверны молод, широкоплеч, по сброшенному капюшону рассыпаются длинные русые волосы. Карие глаза смотрят прямо, дерзко.\n\nВы пришли в таверну в рыцарском шлеме или без него?</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="5"/>
+				<Strength Value="5"/>
 			</Modifications>
 			<Options>
 				<Option Destination="171" Text="Вы пришли в таверну в рыцарском шлеме"/>
@@ -4864,7 +4864,7 @@
 				<Text Style="Small">Вычтите 3 из СИЛЫ.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-3"/>
+				<Strength Value="-3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="208"/>
@@ -4922,7 +4922,7 @@
 		<Paragraph No="608">
 			<Text>Умница Клуша моментально высчитывает уязвимое место установки — узкую смотровую щель. Точный выстрел — и жуткий гибрид сейфа с мясорубкой останавливается, всё медленнее вращая смертоносную крестовину. Путь вперед открыт!</Text>
 			<Modifications>
-				<Blaster Val="-1"/>
+				<Blaster Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="520"/>
@@ -4961,7 +4961,7 @@
 				<Text>А утром, затоптав догорающий костер, вновь пускаетесь в дорогу.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="1"/>
+				<Strength Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="401"/>
@@ -4979,7 +4979,7 @@
 				<Text Style="Small">Вычтите 1 из СИЛЫ.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-1"/>
+				<Strength Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="571"/>
@@ -4998,7 +4998,7 @@
 				<Text Style="Small">Прибавьте 3 к своей СИЛЕ.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="3"/>
+				<Strength Value="3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="249"/>
@@ -5169,7 +5169,7 @@
 				<Text>С трудом вырвавшись, отступаете на безопасное расстояние. Будь здесь светло, вы бы показали этим тварям! Но драться во мраке с неизвестным противником... Нет уж, разумнее вернуться к повороту и пойти другой дорогой.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-5"/>
+				<Strength Value="-5"/>
 			</Modifications>
 			<Options>
 				<Option Destination="602"/>
@@ -5200,7 +5200,7 @@
 				<Text>Прихрамывая, возвращаетесь к развилке и сворачиваете в другой коридор.</Text>
 			</Texts>
 			<Modifications>
-				<Skill Val="-1"/>
+				<Skill Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="66"/>
@@ -5293,7 +5293,7 @@
 				<Text Style="Small">СИЛА уменьшается лишь на 2.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-2"/>
+				<Strength Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="371"/>
@@ -5341,7 +5341,7 @@
 				<Text>Здесь не пройти. Будете ломиться сквозь кусты или обойдете их с другой стороны?</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-1"/>
+				<Strength Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="251" Text="Будете ломиться сквозь кусты"/>
