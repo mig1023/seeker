@@ -2145,7 +2145,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="Варг" Mastery="7" Endurance="8"/>
-					<WoundsForTransformation>3</WoundsForTransformation>
+					<WoundsForTransformation Value="3"/>
 					<Text>Если вы ранены больше двух раз, Трансформация продолжается.</Text>
 				</Fight>
 			</Actions>
