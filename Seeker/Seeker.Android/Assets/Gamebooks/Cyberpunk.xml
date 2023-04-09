@@ -3,29 +3,29 @@
 		<Title>Киберпанк: Тени Найт-Сити</Title>
 		<Copyright>Мария Ерошкина, 2021</Copyright>
 		<Styles>
-			<Color Name="AdditionalStatus" Val="094542"/>
-			<Color Name="AdditionalFont" Val="ffffff"/>
-			<Color Name="Main" Val="118984"/>
-			<Color Name="Action" Val="0c5c58"/>
-			<Color Name="Option, Continue" Val="84c2bf"/>
-			<Color Name="System" Val="cde6e5"/>
+			<Color Name="AdditionalStatus" Value="094542"/>
+			<Color Name="AdditionalFont" Value="ffffff"/>
+			<Color Name="Main" Value="118984"/>
+			<Color Name="Action" Value="0c5c58"/>
+			<Color Name="Option, Continue" Value="84c2bf"/>
+			<Color Name="System" Value="cde6e5"/>
 		</Styles>
 		<Constants>
-			<List Name="WithoutStatuses" Val="0, 587, 588, 589"/>
-			<List Name="NormalizationParams" Val="Planning, Preparation, Luck"/>
+			<List Name="WithoutStatuses" Value="0, 587, 588, 589"/>
+			<List Name="NormalizationParams" Value="Planning, Preparation, Luck"/>
 			<Dictionary Name="CharactersParams">
-				<Item Name="Planning" Val="Планирование"/>
-				<Item Name="Preparation" Val="Подготовка"/>
-				<Item Name="Luck" Val="Везение"/>
-				<Item Name="Cybernetics" Val="Кибернетика"/>
-				<Item Name="Morality" Val="Мораль"/>
-				<Item Name="Careerism" Val="Карьеризм"/>
-				<Item Name="BlackMarket" Val="Чёрный рынок"/>
-				<Item Name="Clan" Val="Клан"/>
-				<Item Name="Selfcontrol25" Val="Самообладание 25"/>
-				<Item Name="Selfcontrol50" Val="Самообладание 50"/>
-				<Item Name="Selfcontrol75" Val="Самообладание 75"/>
-				<Item Name="Selfcontrol100" Val="Самообладание 100"/>
+				<Item Name="Planning" Value="Планирование"/>
+				<Item Name="Preparation" Value="Подготовка"/>
+				<Item Name="Luck" Value="Везение"/>
+				<Item Name="Cybernetics" Value="Кибернетика"/>
+				<Item Name="Morality" Value="Мораль"/>
+				<Item Name="Careerism" Value="Карьеризм"/>
+				<Item Name="BlackMarket" Value="Чёрный рынок"/>
+				<Item Name="Clan" Value="Клан"/>
+				<Item Name="Selfcontrol25" Value="Самообладание 25"/>
+				<Item Name="Selfcontrol50" Value="Самообладание 50"/>
+				<Item Name="Selfcontrol75" Value="Самообладание 75"/>
+				<Item Name="Selfcontrol100" Value="Самообладание 100"/>
 			</Dictionary>
 		</Constants>
 		<Settings>
@@ -238,19 +238,19 @@
 			<Text>Медтехи «БиоХим Инжиниринг» рекомендуют один из трёх стандартных комплектов кибернетики, подобранных под вероятные задачи и оптимизированных с точки зрения послеоперационного восстановления:</Text>
 			<Options>
 				<Option Destination="188" Text="Кибер 20 (для минимального усиления)">
-					<Trigger Val="Кибер 20"/>
+					<Trigger Value="Кибер 20"/>
 					<Text>Небольшие, но очень полезные модификации. Включает продвинутый оптический интерфейс, интегрированный со смартганом — «умным оружием». Гарантирует точность стрельбы и даёт дополнительные эффекты вроде ночного зрения.</Text>
 				</Option>
 				<Option Destination="188" Text="Кибер 30 (для среднего усиления)">
-					<Trigger Val="Кибер 30"/>
+					<Trigger Value="Кибер 30"/>
 					<Text>Замена руки на киберконечность и базовая броня в виде прошивки кожи.</Text>
 				</Option>
 				<Option Destination="188" Text="Кибер 40 (для максимального усиления)">
-					<Trigger Val="Кибер 40"/>
+					<Trigger Value="Кибер 40"/>
 					<Text>Киберконечность, полное покрытие торса пластинчатой бронёй, нейропроцессор со встроенными усилителями силы.\n\nЕсли пока не решился на установку киберимплантов, запиши ключевое слово «Кибер 0».</Text>
 				</Option>
 				<Option Destination="188" Text="Кибер 0">
-					<Trigger Val="Кибер 0"/>
+					<Trigger Value="Кибер 0"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -576,7 +576,7 @@
 				<Text Style="Small">Запиши на Лист персонажа два новых показателя — Мораль и Карьеризм. Они взаимосвязаны и в сумме всегда составляют 100. Сейчас твоя Мораль равна 40, а Карьеризм, соответственно, 60.</Text>
 			</Texts>
 			<Modifications>
-				<Morality Val="40"/>
+				<Morality Value="40"/>
 			</Modifications>
 			<Options>
 				<Option Destination="203"/>
@@ -1459,7 +1459,7 @@
 				<Text Style="Small">Запиши на Лист персонажа два новых показателя — Мораль и Карьеризм. Они взаимосвязаны и в сумме всегда составляют 100. Сейчас твоя Мораль равна 60, а Карьеризм, соответственно, 40.</Text>
 			</Texts>
 			<Modifications>
-				<Morality Val="60"/>
+				<Morality Value="60"/>
 			</Modifications>
 			<Options>
 				<Option Destination="203"/>
@@ -3808,7 +3808,7 @@
 				<Text Style="Small">Прибавь 10 к Карьеризму.</Text>
 			</Texts>
 			<Modifications>
-				<Careerism Val="10"/>
+				<Careerism Value="10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="493"/>
@@ -3854,13 +3854,13 @@
 			<Text>После боя с террористами ваше подразделение получает небольшой отдых. Капрал сообщает, что желающие могут даже отправиться на базу в Найт-Сити для кибернетического апгрейда.\n\nЕсли ты хочешь поставить или улучшить киберимпланты, воспользуйся этой возможностью. Как ты помнишь, возможно: Минимальное («Кибер 20»), Среднее («Кибер 30») или Максимальное («Кибер 40») улучшение.</Text>
 			<Options>
 				<Option Destination="444" Text="Кибер 20 (для минимального усиления)">
-					<Trigger Val="Кибер 20"/>
+					<Trigger Value="Кибер 20"/>
 				</Option>
 				<Option Destination="444" Text="Кибер 30 (для среднего усиления)">
-					<Trigger Val="Кибер 30"/>
+					<Trigger Value="Кибер 30"/>
 				</Option>
 				<Option Destination="444" Text="Кибер 40 (для максимального усиления)">
-					<Trigger Val="Кибер 40"/>
+					<Trigger Value="Кибер 40"/>
 				</Option>
 				<Option Destination="444"/>
 			</Options>
@@ -3978,7 +3978,7 @@
 				<Text Style="Small">Прибавь 10 к Карьеризму.</Text>
 			</Texts>
 			<Modifications>
-				<Careerism Val="10"/>
+				<Careerism Value="10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="552"/>
@@ -4702,7 +4702,7 @@
 		<Paragraph No="537">
 			<Text>Тебе хватает своих забот. Почему ты должен возиться с чужими недоработками? Если отсутствие предупреждений в меморандуме вообще является таковой. Вполне возможно, это сделано специально или по приказу начальства. Как ни крути, это не твоё дело.\n\nТы оставляешь всё как есть.\n\nПрибавь 10 к Карьеризму.</Text>
 			<Modifications>
-				<Careerism Val="10"/>
+				<Careerism Value="10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="12"/>
@@ -5122,13 +5122,13 @@
 			</Texts>
 			<Options>
 				<Option Destination="589" Text="Планирование" Availability="ПЛАНИРОВАНИЕ &lt;= 0">
-					<Planning Val="40"/>
+					<Planning Value="40"/>
 				</Option>
 				<Option Destination="589" Text="Подготовка" Availability="ПОДГОТОВКА &lt;= 0">
-					<Preparation Val="40"/>
+					<Preparation Value="40"/>
 				</Option>
 				<Option Destination="589" Text="Везение" Availability="ВЕЗЕНИЕ &lt;= 0">
-					<Luck Val="40"/>
+					<Luck Value="40"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -5138,13 +5138,13 @@
 			</Texts>
 			<Options>
 				<Option Destination="1" Text="Планирование" Availability="ПЛАНИРОВАНИЕ &lt;= 0">
-					<Planning Val="20"/>
+					<Planning Value="20"/>
 				</Option>
 				<Option Destination="1" Text="Подготовка" Availability="ПОДГОТОВКА &lt;= 0">
-					<Preparation Val="20"/>
+					<Preparation Value="20"/>
 				</Option>
 				<Option Destination="1" Text="Везение" Availability="ВЕЗЕНИЕ &lt;= 0">
-					<Luck Val="20"/>
+					<Luck Value="20"/>
 				</Option>
 			</Options>
 		</Paragraph>
