@@ -2095,7 +2095,7 @@
 						<Enemy Name="Первый Волк" Mastery="7" Endurance="6"/>
 						<Enemy Name="Второй Волк" Mastery="6" Endurance="5"/>
 					</Enemies>
-					<RoundsToFight>2</RoundsToFight>
+					<RoundsToFight Value="2"/>
 					<Text>Теперь вы сражаетесь с тремя волками одновременно. После двух Раундов атаки:</Text>
 				</Fight>
 			</Actions>
