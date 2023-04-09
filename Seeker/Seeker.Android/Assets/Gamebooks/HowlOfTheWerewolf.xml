@@ -2252,7 +2252,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="Оборотень" Mastery="8" Endurance="11"/>
-					<RoundsToFight>6</RoundsToFight>
+					<RoundsToFight Value="6"/>
 					<Specificity>NeedForSpeedAndDead</Specificity>
 					<Text>Если у вас нет способности Скорость, придется вычитать 1 из своей Силы Удара. Если Зверю удастся вас ранить, киньте кубик, и, если выпадет 6, то участь ваша будет незавидна. После того, как пройдет 6 Раундов Атаки или вам удастся снизить до 4 его Выносливость:</Text>
 				</Fight>
