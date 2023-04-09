@@ -4165,7 +4165,7 @@
 			<Actions>
 				<SwordFight>
 					<Enemy Name="Жюль Трито" Skill="10" Rang="3" Speed="3" Hitpoints="26"/>
-					<HeroHitpointsLimith>5</HeroHitpointsLimith>
+					<HeroHitpointsLimith Value="5"/>
 					<NoStrikeBack/>
 					<Text>Вы можете выбрать любую из изученных техник боя.\n\nЖюль Трито знает защиту от Встречного удара, поэтому вам не удастся его провести. Бой идет до трех уколов.</Text>
 				</SwordFight>
