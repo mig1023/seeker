@@ -3,12 +3,12 @@
 		<Title>В краю непуганных медведей</Title>
 		<Copyright>Геннадий Логинов, 2020</Copyright>
 		<Styles>
-			<Color Name="Main" Val="9e003a"/>
-			<Color Name="System" Val="f9f9f9"/>
+			<Color Name="Main" Value="9e003a"/>
+			<Color Name="System" Value="f9f9f9"/>
 		</Styles>
 		<Settings>
 			<HideDisabledOption/>
-			<DefaultFontSize Val="Small"/>
+			<DefaultFontSize Value="Small"/>
 		</Settings>
 	</Introduction>
 	<Paragraphs>
