@@ -3453,7 +3453,7 @@
 			<Actions>
 				<SwordFight>
 					<Enemy Name="Кирк Драгус" Skill="10" Rang="3" Hitpoints="30"/>
-					<EnemyHitpointsLimith>5</EnemyHitpointsLimith>
+					<EnemyHitpointsLimith Value="5"/>
 					<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
 				</SwordFight>
 			</Actions>
