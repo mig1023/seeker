@@ -229,8 +229,8 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="Шак" Mastery="7" Endurance="7"/>
-					<RoundsToFight>7</RoundsToFight>
-					<WoundsToFail>3</WoundsToFail>
+					<RoundsToFight Value="7"/>
+					<WoundsToFail Value="3"/>
 				</Fight>
 			</Actions>
 			<Options>
