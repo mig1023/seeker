@@ -177,9 +177,16 @@ namespace Seeker.Prototypes
         public List<string> GetProperties(object action) =>
             action.GetType().GetProperties().Select(x => x.Name).ToList();
 
-        public void SetProperty(object action, string param, XmlNode value)
+        public void SetProperty(object action, string param, XmlNode xmlNode)
         {
-            object propetyValue = PropertyByType(action, value[param], param);
+            XmlNode value = null;
+
+            if (xmlNode[param]?.Attributes["Value"] != null)
+                value = xmlNode[param].Attributes["Value"];
+            else
+                value = xmlNode[param];
+
+            object propetyValue = PropertyByType(action, value, param);
 
             if (propetyValue != null)
                 action.GetType().GetProperty(param).SetValue(action, propetyValue);
