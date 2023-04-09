@@ -2902,8 +2902,8 @@
 						<Enemy Name="Госпожа Бауэр" Mastery="5"/>
 					</Enemies>
 					<Specificity>Invulnerable</Specificity>
-					<HitStrengthBonus>-1</HitStrengthBonus>
-					<RoundsWinToWin>4</RoundsWinToWin>
+					<HitStrengthBonus Value="-1"/>
+					<RoundsWinToWin Value="4"/>
 					<Text>Конечно же, вы не собираетесь убивать гостеприимных стариков. Вам нужно только обезоружить их (для этого надо выиграть 2 Раунда Атаки у каждого). Вы изо всех сил стараетесь их не ранить, а так сражаться довольно неудобно (придется уменьшать Силу Удара на 1). А тем временем сила беса все время растет.</Text>
 				</Fight>
 			</Actions>
