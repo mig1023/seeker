@@ -3,12 +3,12 @@
 		<Title>Симулятор пенсионерки</Title>
 		<Copyright>Zaratystra, the_arsonist, 2018</Copyright>
 		<Styles>
-			<Color Name="Main" Val="030436"/>
-			<Color Name="Option" Val="35365e"/>
+			<Color Name="Main" Value="030436"/>
+			<Color Name="Option" Value="35365e"/>
 		</Styles>
 		<Settings>
 			<HideDisabledOption/>
-			<DefaultFontSize Val="Big"/>
+			<DefaultFontSize Value="Big"/>
 		</Settings>
 	</Introduction>
 	<Paragraphs>
@@ -301,10 +301,10 @@
 			<Text>Надо хорошо вооружится. Кастет или трость?</Text>
 			<Options>
 				<Option Destination="41" Text="Кастет">
-					<Trigger Val="Кастет"/>
+					<Trigger Value="Кастет"/>
 				</Option>
 				<Option Destination="41" Text="Трость">
-					<Trigger Val="Трость"/>
+					<Trigger Value="Трость"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -443,7 +443,7 @@
 			<Options>
 				<Option Destination="25" Text="Ну вот и граната пригодилась" Availability="Граната"/>
 				<Option Destination="60" Text="Жаль грануту не захватила" Availability="!Граната">
-					<Trigger Val="Холод"/>
+					<Trigger Value="Холод"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -491,10 +491,10 @@
 			<Text>Остальные старушки тоже протягивают у кого что есть. Армейский нож или граната?</Text>
 			<Options>
 				<Option Destination="39" Text="Нож">
-					<Trigger Val="Армейский нож"/>
+					<Trigger Value="Армейский нож"/>
 				</Option>
 				<Option Destination="39" Text="Граната">
-					<Trigger Val="Граната"/>
+					<Trigger Value="Граната"/>
 				</Option>
 			</Options>
 		</Paragraph>
