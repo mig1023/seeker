@@ -1658,9 +1658,9 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="Граф Варколак" Mastery="12" Endurance="16"/>
-					<RoundsToFight>7</RoundsToFight>
-					<WoundsLimit>6</WoundsLimit>
-					<WoundsForTransformation>1</WoundsForTransformation>
+					<RoundsToFight Value="7"/>
+					<WoundsLimit Value="6"/>
+					<WoundsForTransformation Value="1"/>
 					<Text>Если он укусит вас хотя бы раз, Трансформация продолжится. Если вам удается снизить Выносливость врага до 6 или продержаться в течение семи Раундов Атаки:</Text>
 				</Fight>
 			</Actions>
