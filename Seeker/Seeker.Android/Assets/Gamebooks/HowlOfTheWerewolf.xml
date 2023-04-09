@@ -866,7 +866,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="Оборотень" Mastery="7" Endurance="7"/>
-					<WoundsForTransformation>3</WoundsForTransformation>
+					<WoundsForTransformation Value="3"/>
 					<Text>Если получите больше двух ран, Трансформация продолжится. Если вам удасться убить его, то, вы понимаете, что на шум скоро прибежит целая стая и, не дожидаясь их, возвращаетесь к лестнице. Поднявшись по ней, идите ко входу в замок и решайте:</Text>
 				</Fight>
 			</Actions>
