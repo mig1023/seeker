@@ -1929,7 +1929,7 @@
 						<Enemy Name="Первый Варг" Mastery="7" Endurance="8"/>
 						<Enemy Name="Второй Варг" Mastery="8" Endurance="7"/>
 					</Enemies>
-					<WoundsForTransformation>3</WoundsForTransformation>
+					<WoundsForTransformation Value="3"/>
 					<Text>Если получите больше двух укусов, Трансформация продолжится.</Text>
 				</Fight>
 			</Actions>
