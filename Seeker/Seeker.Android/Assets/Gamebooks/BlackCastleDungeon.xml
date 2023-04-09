@@ -3,17 +3,17 @@
 		<Title>Подземелья чёрного замка</Title>
 		<Copyright>Дмитрий Браславский, 1991</Copyright>
 		<Styles>
-			<Color Name="StatusBar" Val="2a2a2a"/>
-			<Color Name="Main" Val="151515"/>
-			<Color Name="Action" Val="3f3f3f"/>
-			<Color Name="Option" Val="696969"/>
-			<Color Name="System" Val="f9f9f9"/>
+			<Color Name="StatusBar" Value="2a2a2a"/>
+			<Color Name="Main" Value="151515"/>
+			<Color Name="Action" Value="3f3f3f"/>
+			<Color Name="Option" Value="696969"/>
+			<Color Name="System" Value="f9f9f9"/>
 		</Styles>
 		<Constants>
-			<List Name="WithoutStatuses" Val="0, 619, 753"/>
-			<List Name="WithoutStaticsButtons" Val="0, 619, 753"/>
-			<List Name="ParagraphsStatusesLimit" Val="620, 752"/>
-			<List Name="StaticSpells" Val="ЗАКЛЯТИЕ КОПИИ, ЗАКЛЯТИЕ СИЛЫ, ЗАКЛЯТИЕ СЛАБОСТИ"/>
+			<List Name="WithoutStatuses" Value="0, 619, 753"/>
+			<List Name="WithoutStaticsButtons" Value="0, 619, 753"/>
+			<List Name="ParagraphsStatusesLimit" Value="620, 752"/>
+			<List Name="StaticSpells" Value="ЗАКЛЯТИЕ КОПИИ, ЗАКЛЯТИЕ СИЛЫ, ЗАКЛЯТИЕ СЛАБОСТИ"/>
 		</Constants>
 		<Settings>
 			<HideDisabledOption/>
@@ -58,13 +58,13 @@
 			<Options>
 				<Option Destination="416" Text="Вернуться обратно и направиться к зданию в центре двора"/>
 				<Option Destination="372" Text="Заклятие Плавания" Availability="ЗАКЛЯТИЕ ПЛАВАНИЯ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
 				</Option>
 				<Option Destination="103" Text="Заклятие Левитации" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 				</Option>
 				<Option Destination="311" Text="Заклятием Плавания и поплыть по течению реки" Availability="ЗАКЛЯТИЕ ПЛАВАНИЯ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -87,8 +87,8 @@
 				</Fight>
 			</Actions>
 			<Modifications>
-				<Luck Val="-1"/>
-				<Gold Val="1"/>
+				<Luck Value="-1"/>
+				<Gold Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="420" Text="Отправиться дальше"/>
@@ -101,17 +101,17 @@
 				<Text>Теперь вы можете попробовать заклятия Силы, Слабости, Огня или же надеяться только на свой меч и драться.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="36" Text="Заклятия Силы" Availability="ЗАКЛЯТИЕ СИЛЫ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ СИЛЫ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ СИЛЫ"/>
 				</Option>
 				<Option Destination="314" Text="Заклятия Слабости" Availability="ЗАКЛЯТИЕ СЛАБОСТИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ СЛАБОСТИ"/>
 				</Option>
 				<Option Destination="112" Text="Заклятия Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ОГНЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ОГНЯ"/>
 				</Option>
 				<Option Destination="183" Text="Драться"/>
 			</Options>
@@ -148,10 +148,10 @@
 			<Options>
 				<Option Destination="312" Text="Построите плот"/>
 				<Option Destination="201" Text="Воспользуетесь заклятием Плавания" Availability="ЗАКЛЯТИЕ ПЛАВАНИЯ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
 				</Option>
 				<Option Destination="425" Text="Воспользуетесь заклятием Левитации" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -176,13 +176,13 @@
 			<Text>Вы подзываете хозяина поближе и, выхватив меч, нападаете на него. Первый удар ваш, Водяной ранен, и ему ничего не остается, как принять бой. Он сражается с вами водорослями, каждый удар которых оставляет острые глубокие порезы. Вы можете воспользоваться заклятиями Силы, Слабости, Огня или драться с ним без помощи магии.</Text>
 			<Options>
 				<Option Destination="417" Text="Заклятие Силы" Availability="ЗАКЛЯТИЕ СИЛЫ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ СИЛЫ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ СИЛЫ"/>
 				</Option>
 				<Option Destination="228" Text="Заклятие Слабости" Availability="ЗАКЛЯТИЕ СЛАБОСТИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ СЛАБОСТИ"/>
 				</Option>
 				<Option Destination="521" Text="Заклятие Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ОГНЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ОГНЯ"/>
 				</Option>
 				<Option Destination="326" Text="Драться без помощи магии"/>
 			</Options>
@@ -203,11 +203,11 @@
 				</Fight>
 			</Actions>
 			<Modifications>
-				<Endurance Val="-1"/>
+				<Endurance Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="557" Text="Воспользоваться заклятием Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ОГНЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ОГНЯ"/>
 					<Text>Если вы победите их, то можете откинуть ставни и осмотреть домик или же уйти и направиться к центральному строению:</Text>
 				</Option>
 				<Option Destination="120" Text="Осмотреть домик"/>
@@ -252,7 +252,7 @@
 			<Text>Он просит всего 2 золотых и говорит, что без него вы просто не найдете дороги, а то и вовсе утонете в болотах, которых немало поблизости. Воспользуетесь его предложением и скажете, что ищете Черный замок, попросите проводить вас до ближайшего жилья или откажетесь и уйдете?</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="2"/>
+				<Endurance Value="2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="186" Text="Воспользуетесь предложением и скажете, что ищете Черный замок"/>
@@ -294,7 +294,7 @@
 				<Text>После этого надо уходить:</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="6"/>
+				<Endurance Value="6"/>
 			</Modifications>
 			<Options>
 				<Option Destination="427" Text="Через дверь в той же стене, где вход">
@@ -308,7 +308,7 @@
 		<Paragraph No="26">
 			<Text>Они со смехом отвечают, что не принимают воинов со стороны, а такие слабые и хилые, как вы, им вообще не нужны. Теперь вам придется драться со стражей.</Text>
 			<Modifications>
-				<Endurance Val="6"/>
+				<Endurance Value="6"/>
 			</Modifications>
 			<Options>
 				<Option Destination="341"/>
@@ -354,7 +354,7 @@
 				<Text Style="Small">Потеряйте 1 МАСТЕРСТВО.</Text>
 			</Texts>
 			<Modifications>
-				<Mastery Val="-1"/>
+				<Mastery Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="207"/>
@@ -407,11 +407,11 @@
 				</Fight>
 			</Actions>
 			<Modifications>
-				<Endurance Val="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="451" Text="Заклятие Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ОГНЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ОГНЯ"/>
 				</Option>
 				<Option Destination="454" Text="Дракон убит"/>
 			</Options>
@@ -467,7 +467,7 @@
 				<Text>Теперь вам придется драться.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="316"/>
@@ -572,10 +572,10 @@
 			</Actions>
 			<Options>
 				<Option Destination="410" Text="Заклятие Силы" Availability="ЗАКЛЯТИЕ СИЛЫ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ СИЛЫ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ СИЛЫ"/>
 				</Option>
 				<Option Destination="219" Text="Заклятие Слабости" Availability="ЗАКЛЯТИЕ СЛАБОСТИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ СЛАБОСТИ"/>
 				</Option>
 				<Option Destination="189"/>
 			</Options>
@@ -694,7 +694,7 @@
 			<Options>
 				<Option Destination="39" Text="Отойти от окна"/>
 				<Option Destination="273" Text="Воспользоваться заклятием Левитации" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -746,7 +746,7 @@
 				<Text>К тому же вам лучше поторопиться уйти, ведь если появится хозяин коня, то он вряд ли скажет вам спасибо.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="-1"/>
+				<Endurance Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="378" Text="Уйти"/>
@@ -761,7 +761,7 @@
 		<Paragraph No="79">
 			<Text>Вы кидаете женщинам 1 золотой, из-за которого начинается драка. Жадность вас подвела, и теперь остается только один выход: быстро выбежать в следующую дверь, что вы и делаете, попадая в какой-то коридор.</Text>
 			<Modifications>
-				<Gold Val="-1"/>
+				<Gold Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="325" Text="Выбежать в следующую дверь"/>
@@ -796,7 +796,7 @@
 				<Text>Вам придется вернуться и сразиться с ним.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="247" Text="Вернуться"/>
@@ -857,7 +857,7 @@
 					<Button>Заплатить</Button>
 					<Head>ТАРЕЛКА ЩЕЙ</Head>
 					<Price>2</Price>
-					<Benefit Name="Endurance" Val="2"/>
+					<Benefit Name="Endurance" Value="2"/>
 					<Text>Восстановите 4 ВЫНОСЛИВОСТИ и уходите.</Text>
 				</Get>
 			</Actions>
@@ -1022,7 +1022,7 @@
 				<Text>Другого выхода нет — возвращайтесь и деритесь с ним.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="309" Text="Вернуться"/>
@@ -1062,7 +1062,7 @@
 				<Text Style="Small">Но вы плыли против течения, поэтому потеряйте 2 ВЫНОСЛИВОСТИ.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="424"/>
@@ -1158,7 +1158,7 @@
 			<Text>Враг убит. Если хотите, то можете взять с собой его латы. К сожалению, вы не успели поймать его лошадь, поэтому ни на лесных дорогах, ни при входе в замок латы не помогут: пеший рыцарь сразу же вызовет подозрения. Но если будет суждено проникнуть в замок, вы сможете ими воспользоваться. Пока латы на вас, ваша собственная одежда будет в заплечном мешке. Но будьте осторожны: ведь неизвестно, как должен вести себя Зеленый рыцарь, какие двери перед ним в замке открыты, а какие нет. Не злоупотребляйте переодеванием — можете попасть в беду. Карманы у противника пусты, но ведь главное богатство рыцаря — меч. Можете взять его с собой, он прибавит 1 МАСТЕРСТВО (в том числе и сверх изначального), но тогда ваш собственный меч придется либо оставить на поле боя, либо положить в заплечный мешок.</Text>
 			<Triggers>GreenSword, GreenArmour</Triggers>
 			<Modifications>
-				<MaxMastery Val="1"/>
+				<MaxMastery Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="434"/>
@@ -1177,7 +1177,7 @@
 				<Text>Поблагодарите Тролля и покиньте погреб через дверь в противоположном конце прохода между полками.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="4"/>
+				<Endurance Value="4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="207"/>
@@ -1200,7 +1200,7 @@
 		<Paragraph No="131">
 			<Text>Вы вознаграждены за свою смелость. Это Микстура выносливости. Можете прибавить 6 ВЫНОСЛИВОСТЕЙ и отправляться дальше.</Text>
 			<Modifications>
-				<Endurance Val="6"/>
+				<Endurance Value="6"/>
 			</Modifications>
 			<Options>
 				<Option Destination="305"/>
@@ -1213,7 +1213,7 @@
 				<Text>В центре островка на высоком дереве растет апельсин, который привлекает ваше внимание. Сначала вы не можете понять, почему он блестит на солнце, но когда подходите ближе, то видите, что он из чистого золота. Рискнете сорвать его или будете выбираться с острова?</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="6"/>
+				<Endurance Value="6"/>
 			</Modifications>
 			<Options>
 				<Option Destination="336" Text="Сорвать его"/>
@@ -1282,7 +1282,7 @@
 				<Text Style="Small">Потеряйте 2 ВЫНОСЛИВОСТИ.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="409"/>
@@ -1368,10 +1368,10 @@
 			<Text>Попробуете наложить заклятие Огня или Иллюзии?</Text>
 			<Options>
 				<Option Destination="538" Text="Заклятие Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ОГНЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ОГНЯ"/>
 				</Option>
 				<Option Destination="370" Text="Заклятие Иллюзии" Availability="ЗАКЛЯТИЕ ИЛЛЮЗИИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ИЛЛЮЗИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ИЛЛЮЗИИ"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -1394,7 +1394,7 @@
 			<Text>Вы берете пояс и надеваете на себя. Теперь на вас Волшебный пояс (добавьте 1 УДАЧУ). С его помощью вы можете в любой момент (но только один раз за все путешествие) позвать на помощь крота. Он выроет ход, по которому сможете проникнуть во двор Черного замка когда вы увидите замок, если, конечно, будет такое желание, и воспользуйтесь помощью крота. Теперь же пора выбираться из берлоги. С поляны в глубь леса ведет какая-то дорога, и вы решаете пойти по ней.</Text>
 			<Triggers>MoleBelt</Triggers>
 			<Modifications>
-				<Luck Val="1"/>
+				<Luck Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="44"/>
@@ -1419,8 +1419,8 @@
 				<Text>Сундук заколдован! Что вы сделаете теперь — обратите внимание на средний сундук, на маленький или же вернетесь обратно?</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="-2"/>
-				<Mastery Val="-1"/>
+				<Endurance Value="-2"/>
+				<Mastery Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="540" Text="Средний сундук"/>
@@ -1443,7 +1443,7 @@
 				<Text>Сражайтесь, теперь уже другого выхода нет.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="316"/>
@@ -1527,7 +1527,7 @@
 		<Paragraph No="173">
 			<Text>Вы открываете сундук, но он пуст. Видимо его только временно принесли на кухню за неимением лучшего места. Можете быстро поесть суп из котла и восстановить 2 ВЫНОСЛИВОСТИ, после чего придется уходить.</Text>
 			<Modifications>
-				<Endurance Val="2"/>
+				<Endurance Value="2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="379"/>
@@ -1552,21 +1552,21 @@
 					<Button>Купить</Button>
 					<Head>ЯБЛОКО</Head>
 					<Price>1</Price>
-					<Benefit Name="Healing" Val="Съесть яблоко,1"/>
+					<Benefit Name="Healing" Value="Съесть яблоко,1"/>
 					<Text>Добавит 1 ВЫНОСЛИВОСТЬ</Text>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
 					<Head>МАНДАРИН</Head>
 					<Price>2</Price>
-					<Benefit Name="Healing" Val="Съесть мандарин,2"/>
+					<Benefit Name="Healing" Value="Съесть мандарин,2"/>
 					<Text>Добавит 2 ВЫНОСЛИВОСТИ</Text>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
 					<Head>АПЕЛЬСИН</Head>
 					<Price>1</Price>
-					<Benefit Name="Healing" Val="Съесть апельсин,1"/>
+					<Benefit Name="Healing" Value="Съесть апельсин,1"/>
 					<Text>Добавит 1 ВЫНОСЛИВОСТЬ</Text>
 				</Get>
 				<Get>
@@ -1574,28 +1574,28 @@
 					<Trigger>Banana</Trigger>
 					<Head>БАНАН</Head>
 					<Price>2</Price>
-					<Benefit Name="Healing" Val="Съесть банан,2"/>
+					<Benefit Name="Healing" Value="Съесть банан,2"/>
 					<Text>Добавит 2 ВЫНОСЛИВОСТИ</Text>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
 					<Head>МОЛОКО</Head>
 					<Price>2</Price>
-					<Benefit Name="Endurance" Val="3"/>
+					<Benefit Name="Endurance" Value="3"/>
 					<Text>Прибавит 3 ВЫНОСЛИВОСТИ.\n\nЗа 4 золотых он предлагает наполнить вашу флягу целиком:</Text>
 				</Get>
 				<Get>
 					<Button>Наполнить флягу целиком</Button>
 					<Head>ВОДА</Head>
 					<Price>4</Price>
-					<Benefit Name="Healing" Val="Попить,2"/>
+					<Benefit Name="Healing" Value="Попить,2"/>
 					<Text>или за 2 — наполовину:</Text>
 				</Get>
 				<Get>
 					<Button>Наполнить флягу наполовину</Button>
 					<Head>ВОДА</Head>
 					<Price>2</Price>
-					<Benefit Name="Healing" Val="Попить,2"/>
+					<Benefit Name="Healing" Value="Попить,2"/>
 					<Text>Если вы хотите что-то купить — покупайте. Все, кроме молока и воды (если вам не в чем ее нести), можете съесть сразу же или взять с собой. Если хотите, можете купить еще и заплечный мешок — он стоит 8 золотых, но в него помещается больше, чем в ваш: не 7, а 9 предметов. Однако два заплечных мешка нести неудобно, и если свой у вас еще с собой, вы должны будете оставить его в доме у торговца. Теперь можете либо уходить, либо попробовать поговорить с ним еще.</Text>
 				</Get>
 			</Actions>
@@ -1613,7 +1613,7 @@
 		<Paragraph No="178">
 			<Text>Вы гонитесь за зайцем, не разбирая дороги. Ветки хлещут по лицу, но голод гонит все вперед и вперед. Вдруг заяц жалобно пищит и начинает биться на земле. Подбежав ближе, вы видите, что он попал в одну из охотничьих ловушек, наверняка поставленных кем-нибудь из слуг волшебника. Итак, на этот раз они помогли вам, можете пообедать зайчатиной и восстановить 6 ВЫНОСЛИВОСТЕЙ. Однако с собой взять ее не в чем — все придется съесть на месте. Найти дорогу обратно уже невозможно, и вам приходится идти по тропинке, которая углубляется в лес от того места, где стояла ловушка.</Text>
 			<Modifications>
-				<Endurance Val="6"/>
+				<Endurance Value="6"/>
 			</Modifications>
 			<Options>
 				<Option Destination="406"/>
@@ -1693,8 +1693,8 @@
 		<Paragraph No="187">
 			<Text>Сворачиваете с тропинки и поднимаетесь на холм к двум березам. Вы не слишком-то поверили в этот клад, но почему бы не попробовать его поискать. Прикинув, где может быть середина между двумя деревьями, вы несколько раз втыкаете меч в мягкую землю. Наконец он во что-то упирается. Проходит немного времени, и закопанный ларец у вас в руках. Торопливо сбиваете замок. Внутри ларца лежат 10 золотых, серебряное кольцо и светильник. Можете взять с собой все, что хотите, и добавьте себе 1 УДАЧУ, даже если вы еще не тратили ее. Теперь возвращайтесь.</Text>
 			<Modifications>
-				<Gold Val="10"/>
-				<Luck Val="1"/>
+				<Gold Value="10"/>
+				<Luck Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="47"/>
@@ -1707,7 +1707,7 @@
 				<Text>...но мысль о том, что вы явно избежали какой-то опасности, придает силы. Вскоре вы выходите на большую дорогу: слева виднеется деревня (вы очень удивлены, увидев многолюдную деревню в Зачарованном лесу, но дымки над хатами говорят, что жителей в ней немало), справа дорога скрывается за поворотом. Куда вы пойдете: налево или направо?</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="-1"/>
+				<Endurance Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="184" Text="Налево"/>
@@ -1718,7 +1718,7 @@
 			<Text>Паук мертв, и вы можете посмотреть, что он хранил в своей паутине. Вы находите 1 золотой, прекрасный бриллиант и золотой свисток. Берите с собой все, что пожелаете, спускайтесь с дерева и продолжайте путь.</Text>
 			<Triggers>GoldenWhistle, Diamond</Triggers>
 			<Modifications>
-				<Gold Val="1"/>
+				<Gold Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="19"/>
@@ -1796,7 +1796,7 @@
 				<Text Style="Small">Потеряйте 2 ВЫНОСЛИВОСТИ.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="346"/>
@@ -1843,7 +1843,7 @@
 				<Text>Отправляйтесь в путь с первыми лучами солнца. Времени терять нельзя: до цели еще не близко.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="3"/>
+				<Endurance Value="3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="353"/>
@@ -1856,8 +1856,8 @@
 				<Text>Теперь, когда вы достаточно наказаны за беспечное любопытство, вернитесь и сделайте более безопасный выбор.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="-3"/>
-				<Mastery Val="-1"/>
+				<Endurance Value="-3"/>
+				<Mastery Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="39"/>
@@ -1889,7 +1889,7 @@
 					<Head>РЫБА</Head>
 					<Price>1</Price>
 					<Multiple/>
-					<Benefit Name="Healing" Val="Поесть рыбы,2"/>
+					<Benefit Name="Healing" Value="Поесть рыбы,2"/>
 					<Text>Вы благодарите радушного хозяина и уходите.</Text>
 				</Get>
 			</Actions>
@@ -1907,10 +1907,10 @@
 			<Text>Вы оказываетесь на берегу широкой полноводной реки. Течение сильное и быстрое, вброд ее не перейти. По берегу, где вы сейчас стоите, вправо идет узкая тропинка. Можете или пойти по ней, или попробовать перебраться через реку. Вы воспользуетесь заклятием Левитации? Заклятием Плавания? Или пойдете по тропинке?</Text>
 			<Options>
 				<Option Destination="9" Text="Заклятием Левитации" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 				</Option>
 				<Option Destination="313" Text="Заклятием Плавания" Availability="ЗАКЛЯТИЕ ПЛАВАНИЯ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
 				</Option>
 				<Option Destination="423" Text="Пойти по тропинке"/>
 			</Options>
@@ -1919,10 +1919,10 @@
 			<Text>Вы подходите к огромному озеру. Другого берега почти не видно, но неподалеку виднеется небольшой островок. Лодки на берегу нет и придется либо воспользоваться заклятием Плавания, либо заклятием Левитации. Или же можете вернуться и попробовать пройти через кустарник.</Text>
 			<Options>
 				<Option Destination="5" Text="Заклятием Плавания" Availability="ЗАКЛЯТИЕ ПЛАВАНИЯ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
 				</Option>
 				<Option Destination="105" Text="Заклятием Левитации" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 				</Option>
 				<Option Destination="177" Text="Вернуться и попробовать пройти через кустарник"/>
 			</Options>
@@ -2083,7 +2083,7 @@
 				<Text>По пути вы видели несколько силков — это наводит на размышления.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="-1"/>
+				<Endurance Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="406"/>
@@ -2115,7 +2115,7 @@
 				<Text>Но вот в конце концов лес позади, но за поворотом дороги...</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="102"/>
@@ -2126,7 +2126,7 @@
 			<Options>
 				<Option Destination="331" Text="Пойти дальше"/>
 				<Option Destination="87" Text="Использовать заклятие Левитации" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -2148,9 +2148,9 @@
 			<Text>Оба противника мертвы, и вы можете осмотреть дом, в котором оказались. В нем нет ничего интересного, кроме картины, висящей на стене напротив входа. На ней рыцарь в зеленых латах и зеленом шлеме во весь опор скачет по лесной дороге. Картина любопытна, но ни о чем не напоминает: при дворе таких рыцарей не встречалось. Может быть, это воинство волшебника? Пока же ясно только одно: если этот рыцарь враг, то такая встреча не сулит ничего хорошего. Бутылка, которую нес Гоблин, разбилась, но в погребе удается найти еще одну и немного еды. Можете использовать и то, и другое или же взять с собой: вино восстановит вам 3 ВЫНОСЛИВОСТИ, еда — 2. В кармане у Орка лежит серебряный свисток, который вы можете взять себе. Теперь уходите. От Заставы в глубь леса ведет удобная широкая дорога, и вы быстро идете по ней, стараясь наверстать упущенное время. Направо от дороги отходит узенькая тропка. Хотите свернуть на нее или пойдете дальше?</Text>
 			<Triggers>SilverWhistle</Triggers>
 			<Modifications>
-				<Endurance Val="5"/>
-				<Healing Val="Выпить вина,3"/>
-				<Healing Val="Съесть гоблинской еды,2"/>
+				<Endurance Value="5"/>
+				<Healing Value="Выпить вина,3"/>
+				<Healing Value="Съесть гоблинской еды,2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="531" Text="Свернуть на нее"/>
@@ -2214,7 +2214,7 @@
 			<Text>Вы платите деньги, и Начальник стражи выписывает пропуск на небольшом кусочке пергамента. Он предупреждает, что пропуск действителен только на первые два этажа. Начальник стражи может проводить вас до лестницы, если скажете ему, что вам надо на 2-й этаж, или же уходите через противоположную дверь.</Text>
 			<Triggers>Pass</Triggers>
 			<Modifications>
-				<Gold Val="-10"/>
+				<Gold Value="-10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="550" Text="Скажете ему, что вам надо на 2-й этаж"/>
@@ -2250,10 +2250,10 @@
 			<Text>Как только закрылась дверь, из угла комнаты на вас бросаются крысы. Вы с ужасом замечаете, что они не обыкновенные, а каменные. Если хотите, можете показать им пропуск, надеясь, что это поможет, или же можете воспользоваться заклятиями Слабости или Огня. Или просто выньте меч и сразитесь с ними.</Text>
 			<Options>
 				<Option Destination="564" Text="Заклятие Слабости" Availability="ЗАКЛЯТИЕ СЛАБОСТИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ СЛАБОСТИ"/>
 				</Option>
 				<Option Destination="541" Text="Заклятие Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ОГНЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ОГНЯ"/>
 				</Option>
 				<Option Destination="494" Text="Сразитесь с ними"/>
 				<Option Destination="364" Text="Если есть меч Зеленого рыцаря"/>
@@ -2339,7 +2339,7 @@
 		<Paragraph No="262">
 			<Text>Через четверть часа снова в лесу. Вы путешествуете уже достаточно долго, но так и не смогли углубиться в лес, а ведь знаете, что Черный замок — сердце леса. Потеряйте 1 УДАЧУ. Перед вами снова лесная развилка. Вы пойдете направо? Или налево?</Text>
 			<Modifications>
-				<Luck Val="-1"/>
+				<Luck Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="117" Text="Направо"/>
@@ -2389,7 +2389,7 @@
 		<Paragraph No="268">
 			<Text>Срываете огурец и пробуете. Вкус у него самый обычный, и вы без опаски съедаете огурец целиком. Восстановите 4 ВЫНОСЛИВОСТИ и покиньте комнату.</Text>
 			<Modifications>
-				<Endurance Val="4"/>
+				<Endurance Value="4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="80"/>
@@ -2431,7 +2431,7 @@
 		<Paragraph No="274">
 			<Text>Старуха подбирает монеты, кланяется, после чего делает знак следовать за ней. Она открывает правую дверь и тает в воздухе. Но когда вы делаете шаг в сторону от двери, она снова возникает и снова настойчиво указывает на дверь справа. Повинуетесь ее настояниям и войдете или попробуете отогнать старуху мечом?</Text>
 			<Modifications>
-				<Gold Val="-8"/>
+				<Gold Value="-8"/>
 			</Modifications>
 			<Options>
 				<Option Destination="542" Text="Повинуетесь и войдете"/>
@@ -2471,7 +2471,7 @@
 				<Text Style="Small">Потеряйте 4 ВЫНОСЛИВОСТИ.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="-4"/>
+				<Endurance Value="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="409"/>
@@ -2628,7 +2628,7 @@
 				<Text>Теперь вернитесь и попробуйте победить привратника в честном бою.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="257"/>
@@ -2733,11 +2733,11 @@
 				</Fight>
 			</Actions>
 			<Modifications>
-				<Endurance Val="-3"/>
+				<Endurance Value="-3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="111" Text="Наложить заклятие Копии" Availability="ЗАКЛЯТИЕ КОПИИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ КОПИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ КОПИИ"/>
 				</Option>
 				<Option Destination="126" Text="Если победили"/>
 			</Options>
@@ -2751,7 +2751,7 @@
 		<Paragraph No="311">
 			<Text>Наложив заклятие Плавания, вступаете в реку. Течение такое быстрое, что уже через несколько секунд вы подплываете к тому месту, где река скрывается под замком. Сначала все идет так, как и ожидалось: после небольшого водопада, который удается миновать, отделавшись только легким ушибом (потеряйте 1 ВЫЕНОСЛИВОСТЬ), река выравнивается и течет в высокой трубе где-то по подземельям замка. Но когда по вашим расчетам вот-вот можно будет попасть в комнату, откуда слуги берут воду, вы внезапно ударяетесь о невидимую решетку и чувствуете, что начинаете тонуть. Барлад Дэрт надежно защитил свой замок от любопытных глаз. Решетка развеяла заклятие, а плавать вы не умеете. Вода начинает прибывать, теперь уже нельзя воспользоваться даже заклятием Левитации: вам не пролететь, не захлебнувшись, по узкому пространству между верхом трубы и водой. Есть только один выход: наложить еще одно заклятие Плавания и попытаться выплыть против течения. Но догадались ли вы запастись еще одним таким заклятием? Если же нет, то решетка пропустит только ваш труп, который послужит хорошей пищей Гоблинам и Оркам...</Text>
 			<Modifications>
-				<Endurance Val="-1"/>
+				<Endurance Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="115" Text="Да, догадались"/>
@@ -2764,7 +2764,7 @@
 				<Text>После этого благополучно пересекаете озеро, но на противоположном берегу вас ждет еще один сюрприз.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="-4"/>
+				<Endurance Value="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="192"/>
@@ -2788,7 +2788,7 @@
 				<Text Style="Small">Потеряйте 2 ВЫНОСЛИВОСТИ.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="409"/>
@@ -2808,7 +2808,7 @@
 				</Fight>
 			</Actions>
 			<Modifications>
-				<Endurance Val="-4"/>
+				<Endurance Value="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="513" Text="Удалось"/>
@@ -2897,7 +2897,7 @@
 		<Paragraph No="327">
 			<Text>Ваши деньги исчезают в бездонном кармане торговца.</Text>
 			<Modifications>
-				<Gold Val="-7"/>
+				<Gold Value="-7"/>
 			</Modifications>
 			<Options>
 				<Option Destination="443"/>
@@ -2964,7 +2964,7 @@
 			<Text>Обшарив одежду разбойников, находите 7 золотых, перо аиста и пустой бронзовый кувшин. Можете взять с собой все, что считаете нужным, и идти дальше.</Text>
 			<Triggers>StorkFeather</Triggers>
 			<Modifications>
-				<Gold Val="7"/>
+				<Gold Value="7"/>
 			</Modifications>
 			<Options>
 				<Option Destination="46"/>
@@ -2974,7 +2974,7 @@
 			<Text>Решаете сорвать золотой апельсин. Вокруг все тихо — ничего особенного не происходит. Можете взять его с собой и покинуть остров. Прибавьте себе 1 УДАЧУ, даже если вы еще ни разу не проверяли ее.</Text>
 			<Triggers>GoldenOrange</Triggers>
 			<Modifications>
-				<Luck Val="1"/>
+				<Luck Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="24"/>
@@ -3009,7 +3009,7 @@
 				<Text>Отправляйтесь в путь с рассветом.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="3"/>
+				<Endurance Value="3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="509"/>
@@ -3019,13 +3019,13 @@
 			<Text>Вы можете воспользоваться заклятиями Силы, Слабости, Огня или драться мечом.</Text>
 			<Options>
 				<Option Destination="164" Text="Заклятие Силы" Availability="ЗАКЛЯТИЕ СИЛЫ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ СИЛЫ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ СИЛЫ"/>
 				</Option>
 				<Option Destination="289" Text="Заклятие Слабости" Availability="ЗАКЛЯТИЕ СЛАБОСТИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ СЛАБОСТИ"/>
 				</Option>
 				<Option Destination="506" Text="Заклятие Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ОГНЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ОГНЯ"/>
 				</Option>
 				<Option Destination="487" Text="Драться"/>
 			</Options>
@@ -3037,7 +3037,7 @@
 				<Text>Встает солнце, и вы видите, что конец дороги близок.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="-3"/>
+				<Endurance Value="-3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="181"/>
@@ -3149,7 +3149,7 @@
 			</Actions>
 			<Triggers>GoldRing</Triggers>
 			<Modifications>
-				<Luck Val="1"/>
+				<Luck Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="207"/>
@@ -3168,7 +3168,7 @@
 				<Text>Но когда вы просыпаетесь, то видите, что лес спрятал дорогу, по которой вы шли. Вместо этого перед вами широкий перекресток. И три дороги: направо, налево и прямо. Куда вы пойдете: направо, налево или прямо?</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="2"/>
+				<Endurance Value="2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="510" Text="Направо"/>
@@ -3242,7 +3242,7 @@
 		<Paragraph No="369">
 			<Text>Старуха подбирает монеты, кланяется и услужливо открывает правую дверь, после чего исчезает. Пойдете в эту дверь или в ту, что прямо?</Text>
 			<Modifications>
-				<Gold Val="-6"/>
+				<Gold Value="-6"/>
 			</Modifications>
 			<Options>
 				<Option Destination="542" Text="В эту дверь"/>
@@ -3253,7 +3253,7 @@
 			<Text>Заклятие Иллюзии не действует на стариков. Хотите наложить заклятие Огня или наберетесь терпения?</Text>
 			<Options>
 				<Option Destination="538" Text="Заклятие Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ОГНЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ОГНЯ"/>
 				</Option>
 				<Option Destination="68" Text="Ждать"/>
 			</Options>
@@ -3295,10 +3295,10 @@
 			<Text>Вы подходите к реке, но вброд ее не перейти. Вам придется использовать заклятия: либо Плавания, либо Левитации. Если хотите, можете, используя заклятие Плавания, попробовать проплыть по течению под замок, надеясь попасть в подземелье незамеченным. Если же у вас нет ни одного из этих заклятий или вы не хотите их использовать, идите к палаткам.</Text>
 			<Options>
 				<Option Destination="254" Text="Заклятье Плавания" Availability="ЗАКЛЯТИЕ ПЛАВАНИЯ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
 				</Option>
 				<Option Destination="508" Text="Заклятье Левитации" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 				</Option>
 				<Option Destination="311" Text="Попробовать проплыть по течению под замок"/>
 				<Option Destination="424" Text="К палаткам"/>
@@ -3307,7 +3307,7 @@
 		<Paragraph No="376">
 			<Text>Вы платите 2 золотых, и он подплывает к вам с пиалой, наполненной водой. Она чистая и прохладная, и вы с удовольствием пьете, но вдруг чувствуете, что настолько хотите спать, что не в силах этому сопротивляться. Засыпая, вы опускаетесь на пол таверны.</Text>
 			<Modifications>
-				<Gold Val="-2"/>
+				<Gold Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="155"/>
@@ -3375,7 +3375,7 @@
 		<Paragraph No="385">
 			<Text>Вы подходите к столикам. На их крышках выгравировано двенадцать рисунков, каждый из которых соответствует одному из месяцев. Но рассмотреть рисунки как следует вам не дают.</Text>
 			<Modifications>
-				<Gold Val="-4"/>
+				<Gold Value="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="502"/>
@@ -3405,7 +3405,7 @@
 		<Paragraph No="389">
 			<Text>Вы выпиваете жидкость. Это Микстура ужаса. Каждый раз, когда вы будете встречаться с врагом, вам потребуются все силы, чтобы подавить в себе ужас перед ним. Поэтому потеряйте 1 МАСТЕРСТВО. Теперь же закройте дверь и снова заприте ее.</Text>
 			<Modifications>
-				<Endurance Val="-3"/>
+				<Endurance Value="-3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="300"/>
@@ -3503,7 +3503,7 @@
 				<Text>Уходите в правую или левую дверь.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="-1"/>
+				<Endurance Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="547" Text="В правую"/>
@@ -3524,21 +3524,21 @@
 				<Text>Отбросив копье, он разворачивает лошадь и достает меч. Щит приворожил вас, привлек все внимание — дело явно не обошлось без колдовства. Теперь надо мгновенно решать, что делать: выхватить меч и драться, попробовать наложить заклятие Силы, Слабости, Копии, Огня.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="-3"/>
+				<Endurance Value="-3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="183" Text="Выхватить меч"/>
 				<Option Destination="36" Text="Заклятие Силы" Availability="ЗАКЛЯТИЕ СИЛЫ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ СИЛЫ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ СИЛЫ"/>
 				</Option>
 				<Option Destination="334" Text="Заклятие Слабости" Availability="ЗАКЛЯТИЕ СЛАБОСТИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ СЛАБОСТИ"/>
 				</Option>
 				<Option Destination="7" Text="Заклятие Копии" Availability="ЗАКЛЯТИЕ КОПИИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ КОПИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ КОПИИ"/>
 				</Option>
 				<Option Destination="112" Text="Заклятие Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ОГНЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ОГНЯ"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -3575,10 +3575,10 @@
 			<Text>Вы приходите в себя и видите, что лежите на полу в просторной клетке. Клетка стоит у стены в большой комнате с толстыми каменными стенами. По сырости на них вы сразу понимаете, что это должен быть один из подземных этажей замка, но какой? Впрочем, сейчас надо думать о том, как выбраться отсюда. Вы оглядываетесь. Из мебели в комнате только стол, два покосившихся стула да небольшой ларь, стоящий у стены. За столом — два Гоблина. Они увлечены игрой в кости и не обращают на вас никакого внимания. Неудивительно: даже если бы они и знали, что вы пришли в себя, шансов выбраться из клетки у вас все равно нет. Комнату освещает единственная свеча, горящая на столе, и в ее мерцающем свете вы видите, что рядом со столом на полу валяются ваши вещи: игра идет на них. Вам же остается надеяться только на свою магию. Вы попробуете использовать заклятие Иллюзии, Огня или у вас нет ни того, ни другого?</Text>
 			<Options>
 				<Option Destination="200" Text="Заклятие Иллюзии" Availability="ЗАКЛЯТИЕ ИЛЛЮЗИИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ИЛЛЮЗИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ИЛЛЮЗИИ"/>
 				</Option>
 				<Option Destination="114" Text="Заклятие Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ОГНЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ОГНЯ"/>
 				</Option>
 				<Option Destination="56" Text="Нет ни того, ни другого"/>
 			</Options>
@@ -3592,7 +3592,7 @@
 		<Paragraph No="411">
 			<Text>Мясо вполне сносно и добавляет вам 6 ВЫНОСЛИВОСТЕЙ. Хотите попробовать еще и овощи или покинете комнату через дверь в правой стене?</Text>
 			<Modifications>
-				<Endurance Val="6"/>
+				<Endurance Value="6"/>
 			</Modifications>
 			<Options>
 				<Option Destination="578" Text="Попробовать овощи"/>
@@ -3604,13 +3604,13 @@
 			<Options>
 				<Option Destination="316" Text="Биться"/>
 				<Option Destination="37" Text="Заклятье Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ОГНЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ОГНЯ"/>
 				</Option>
 				<Option Destination="357" Text="Заклятье Силы" Availability="ЗАКЛЯТИЕ СИЛЫ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ СИЛЫ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ СИЛЫ"/>
 				</Option>
 				<Option Destination="256" Text="Заклятье Слабости" Availability="ЗАКЛЯТИЕ СЛАБОСТИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ СЛАБОСТИ"/>
 				</Option>
 				<Option Destination="516" Text="Предложить подарок"/>
 			</Options>
@@ -3625,7 +3625,7 @@
 			<Text>Ваши противники повержены. Вы можете взять латы одного из них и понести с собой (они займут три места в вашем заплечном мешке). Однако проникнуть в замок они не помогут: ехать на лошади слишком опасно, а пеший рыцарь неизбежно вы зовет подозрение. Но если вам суждено будет попасть в замок, то прежде чем совершить выбор, куда пойти, решите, наденете ли вы латы. Пока латы на вас, ваша одежда будет занимать только одно место в заплечном мешке. Но будьте осторожны: ведь вы не знаете, как должен вести себя Зеленый рыцарь в замке, куда ему можно, а куда нельзя ходить. Не злоупотребляйте переодеванием — можете попасть в беду. В карманах у рыцарей вы находите 7 золотых и перо павлина — можете взять их с собой. Решив не рисковать, вы возвращаетесь к развилке и идете направо.</Text>
 			<Triggers>PeacockFeather</Triggers>
 			<Modifications>
-				<Gold Val="10"/>
+				<Gold Value="10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="338"/>
@@ -3690,13 +3690,13 @@
 			<Text>Тропинка петляет вдоль реки, то отдаляясь, то приближаясь к воде. По краям растет высокий густой кустарник, и поначалу вы продвигаетесь вперед осторожно. Один поворот, второй, третий, опасности нет, и вы начинаете идти быстрее. Вскоре тропинка вновь спускается на берег реки, но что это? Вы вышли к мосту, а около него — охрана. Два Гоблина поставлены здесь для того, чтобы никто посторонний не мог перебраться через реку. Ваша одежда ясно показывает им, что вы не служите волшебнику. Скорее решайте, что делать, ведь они атакуют вас. Наложите заклятие Силы, Слабости, Огня или будете драться с ними?</Text>
 			<Options>
 				<Option Destination="58" Text="Заклятье Силы" Availability="ЗАКЛЯТИЕ СИЛЫ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ СИЛЫ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ СИЛЫ"/>
 				</Option>
 				<Option Destination="580" Text="Заклятье Слабости" Availability="ЗАКЛЯТИЕ СЛАБОСТИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ СЛАБОСТИ"/>
 				</Option>
 				<Option Destination="290" Text="Заклятье Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ОГНЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ОГНЯ"/>
 				</Option>
 				<Option Destination="40" Text="Драться с ними"/>
 			</Options>
@@ -3735,13 +3735,13 @@
 			<Text>Вы можете воспользоваться заклятиями Огня, Силы, Слабости или же просто сражаться мечом.</Text>
 			<Options>
 				<Option Destination="499" Text="Заклятье Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ОГНЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ОГНЯ"/>
 				</Option>
 				<Option Destination="85" Text="Заклятье Силы" Availability="ЗАКЛЯТИЕ СИЛЫ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ СИЛЫ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ СИЛЫ"/>
 				</Option>
 				<Option Destination="390" Text="Заклятье Слабости" Availability="ЗАКЛЯТИЕ СЛАБОСТИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ СЛАБОСТИ"/>
 				</Option>
 				<Option Destination="569" Text="Сражаться мечом"/>
 			</Options>
@@ -3812,7 +3812,7 @@
 				<Text>Наконец, дорога раздваивается. Вы изберете путь направо или налево?</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="531" Text="Направо"/>
@@ -3846,7 +3846,7 @@
 				<Text>К утру выходите на какую-то дорогу, но понятия не имеете, куда идти.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="-3"/>
+				<Endurance Value="-3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="378"/>
@@ -3859,7 +3859,7 @@
 				<Text>К утру выходите на поляну, которую во всех направлениях пересекает множество следов крупных животных.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="119"/>
@@ -3868,7 +3868,7 @@
 		<Paragraph No="443">
 			<Text>Торговец предлагает вам присесть у камина и рассказывает, куда ведут дороги от его дома. Справа в лесу Застава — слуги волшебника сторожат дорогу, и никто не может пройти мимо них незамеченным. Если же пойти по дороге, ведущей налево, то вы придете к небольшой хижине, в которой, насколько он знает, живет какой-то старичок. Скорее всего, старичок может помочь вам, но сам торговец по этой дороге ни разу не ходил и с обитателями хижины не встречался. Напоследок он рассказывает, что Черный замок действительно существует, но до него еще очень далеко. Проникнуть туда гораздо труднее, чем пройти через лес, и здесь он ничем не может помочь. Единственное, что можно посоветовать: идти в открытую лучше, чем прятаться. Когда однажды он пытался войти в замок со своими товарами (его туда так и не пустили), то видел, как стража извлекала из воза с сеном какого-то человека, пытавшегося проникнуть в цитадель незамеченным. Расправа была коротка и жестока. Больше он ничего не знает, и вам остается только распрощаться и покинуть лавку.</Text>
 			<Modifications>
-				<Gold Val="-2"/>
+				<Gold Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="106"/>
@@ -3896,7 +3896,7 @@
 			<Text>Вы пытаетесь успокоить медведицу, говорите, что не желаете ей зла, но она продолжает двигаться на вас. И тут вы решаете спросить, не надо ли ей чем-нибудь помочь. Зверь с удивлением останавливается, смотрит умными черными глазами и показывает лапой на медвежонка. Вы подходите ближе и понимаете, что он болен. Но ведь вы не лекарь. Есть только один способ помочь медведице: истратить заклятие Исцеления. Если оно у вас есть и вы хотите истратить его на медвежонка, то действуйте. Если же нет или не хотите, то вы обманули надежды медведицы, и вам придется драться с ней.</Text>
 			<Options>
 				<Option Destination="62" Text="Исцелить медвежонка" Availability="ЗАКЛЯТИЕ ИСЦЕЛЕНИЯ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ИСЦЕЛЕНИЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ИСЦЕЛЕНИЯ"/>
 				</Option>
 				<Option Destination="529" Text="Драться с медведицей"/>
 			</Options>
@@ -3909,7 +3909,7 @@
 					<Head>АНАНАС</Head>
 					<Price>2</Price>
 					<Multiple/>
-					<Benefit Name="Healing" Val="Съесть ананас,3"/>
+					<Benefit Name="Healing" Value="Съесть ананас,3"/>
 					<Text>Добавит 3 ВЫНОСЛИВОСТЬ.</Text>
 				</Get>
 				<Get>
@@ -3918,7 +3918,7 @@
 					<Head>БАНАН</Head>
 					<Price>2</Price>
 					<Multiple/>
-					<Benefit Name="Healing" Val="Съесть банан,2"/>
+					<Benefit Name="Healing" Value="Съесть банан,2"/>
 					<Text>Добавит 2 ВЫНОСЛИВОСТИ.\n\nНо он притащил еще и кучу вещей, которые, как он считает, могут пригодиться в дороге.</Text>
 				</Get>
 				<Get>
@@ -4012,7 +4012,7 @@
 		<Paragraph No="456">
 			<Text>Вы отдаете деньги и проводник с радостью прячет их в небольшой сундучок, стоящий в углу. После этого выходите из дома, проходите через сад и углубляетесь в лес. По дороге ваш проводник весело болтает: у него явно хорошее настроение. У начала узкой тропинки он пропускает вас вперед. Но что это? Через несколько шагов вы поскальзываетесь и по пояс проваливаетесь в вонючую засасывающую жижу. Вы оборачиваетесь, чтобы позвать на помощь, но проводника и след простыл. Ведь он на работе — маг неплохо за нее платит. Вам же надеяться больше не на что...</Text>
 			<Modifications>
-				<Gold Val="-2"/>
+				<Gold Value="-2"/>
 			</Modifications>
 			<Options>
 				<Gameover/>
@@ -4027,7 +4027,7 @@
 		<Paragraph No="458">
 			<Text>Старуха подбирает монеты, кланяется и растворяется в воздухе. Но перед вами две двери. В какую из них вы пойдете: в противоположную от входа или в ту, что справа?</Text>
 			<Modifications>
-				<Gold Val="-3"/>
+				<Gold Value="-3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="252" Text="В противоположную от входа"/>
@@ -4110,7 +4110,7 @@
 				<Text>После этого придется пробиваться силой — вернитесь и сражайтесь со Львом.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="257"/>
@@ -4152,8 +4152,8 @@
 				<Text>Хотите еще раз попробовать поднять крышку или займетесь одним из двух других сундуков — средним или маленьким. А может быть, лучше уйти?</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="-2"/>
-				<Mastery Val="-1"/>
+				<Endurance Value="-2"/>
+				<Mastery Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="159" Text="Еще раз попробовать"/>
@@ -4177,8 +4177,8 @@
 		<Paragraph No="477">
 			<Text>Торговец мертв, и вы быстро осматриваете его лавку. После недолгих поисков находите 10 золотых. Кроме того, можете взять с собой любой товар, который торговец предлагал, но вы не купили. Загляните еще раз и выберите то, что понравится. Но вы убили честного человека — потеряйте 1 УДАЧУ. Теперь уходите.</Text>
 			<Modifications>
-				<Luck Val="-1"/>
-				<Gold Val="10"/>
+				<Luck Value="-1"/>
+				<Gold Value="10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="106"/>
@@ -4214,7 +4214,7 @@
 				<Text Style="Small">Потеряйте 2 ВЫНОСЛИВОСТИ.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="60"/>
@@ -4238,7 +4238,7 @@
 			<Text>В сторожке вы не находите ничего интересного. Пить брагу, которой угощались Гоблины, нет ни малейшего желания: стоит только ее понюхать, как уже ясно, что на пользу она не пойдет. На столе лежат стаканчик с костями и вещи, на которые шла игра: бронзовый свисток, 3 золотых и медный браслет. Возьмите все, что понравилось, и идите к зданию в центре двора.</Text>
 			<Triggers>BronzeWhistle</Triggers>
 			<Modifications>
-				<Gold Val="3"/>
+				<Gold Value="3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="308"/>
@@ -4327,8 +4327,8 @@
 		<Paragraph No="495">
 			<Text>Вы даете женщинам 6 золотых. Они поражены вашей щедростью и дают один маленький совет: побольше обращайте внимание на зеркала — ими пользуются не только женщины. Добавьте себе 1 УДАЧУ. Теперь же, выслушав жен мага, вы выходите из гарема и идете по новому коридору.</Text>
 			<Modifications>
-				<Luck Val="1"/>
-				<Gold Val="-6"/>
+				<Luck Value="1"/>
+				<Gold Value="-6"/>
 			</Modifications>
 			<Options>
 				<Option Destination="325"/>
@@ -4356,7 +4356,7 @@
 				<Text>Теперь закройте дверь кладовки и снова заприте ее.</Text>
 			</Texts>
 			<Modifications>
-				<MaxMastery Val="1"/>
+				<MaxMastery Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="300"/>
@@ -4381,7 +4381,7 @@
 				<Text>Теперь уходите из домика.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="6"/>
+				<Endurance Value="6"/>
 			</Modifications>
 			<Options>
 				<Option Destination="416"/>
@@ -4464,7 +4464,7 @@
 				<Text Style="Small">Потеряйте 2 ВЫНОСЛИВОСТИ.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="409"/>
@@ -4474,13 +4474,13 @@
 			<Text>После двух ударов одна из голов Дракона отлетает. Он отскакивает назад, а у вас появляется время, чтобы, если хотите, успеть наложить заклятие. Воспользуетесь передышкой и наложите заклятие?</Text>
 			<Options>
 				<Option Destination="41" Text="Заклятье Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ОГНЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ОГНЯ"/>
 				</Option>
 				<Option Destination="476" Text="Заклятье Силы" Availability="ЗАКЛЯТИЕ СИЛЫ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ СИЛЫ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ СИЛЫ"/>
 				</Option>
 				<Option Destination="172" Text="Заклятье Слабости" Availability="ЗАКЛЯТИЕ СЛАБОСТИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ СЛАБОСТИ"/>
 				</Option>
 				<Option Destination="347" Text="Продолжать драться">
 					<Text>Можете, если есть желание, попробовать убежать:</Text>
@@ -4502,7 +4502,7 @@
 				<Text>Если еще живы, возвращайтесь на дорогу.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="-8"/>
+				<Endurance Value="-8"/>
 			</Modifications>
 			<Options>
 				<Option Destination="98"/>
@@ -4523,7 +4523,7 @@
 			<Options>
 				<Option Destination="359" Text="Подождать"/>
 				<Option Destination="105" Text="Заклятье Левитации" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -4562,7 +4562,7 @@
 				<Text>Теперь вам ничего не остается, как сражаться с ним мечом.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="326"/>
@@ -4582,7 +4582,7 @@
 				<Text>Теперь вернитесь и сделайте более удачный выбор.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="-6"/>
+				<Endurance Value="-6"/>
 			</Modifications>
 			<Options>
 				<Option Destination="39"/>
@@ -4715,7 +4715,7 @@
 			<Text>В воздухе появляется огненный шар и направляется к одному из стариков. К вашему огромному разочарованию, старик щелкает пальцами, и шар исчезает. Теперь можете или попробовать заклятие Иллюзии, или же спокойно ждите, что будет дальше.</Text>
 			<Options>
 				<Option Destination="370" Text="Заклятье Иллюзии" Availability="ЗАКЛЯТИЕ ИЛЛЮЗИИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ИЛЛЮЗИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ИЛЛЮЗИИ"/>
 				</Option>
 				<Option Destination="68" Text="Спокойно ждать"/>
 			</Options>
@@ -4947,7 +4947,7 @@
 				<Option Destination="556" Text="В правую"/>
 				<Option Destination="277" Text="В ту, что напротив"/>
 				<Option Destination="483" Text="Заклятье Левитации" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 				</Option>
 				<Option Destination="39" Text="Вернуться в залу"/>
 			</Options>
@@ -4962,13 +4962,13 @@
 			</Actions>
 			<Options>
 				<Option Destination="395" Text="Заклятье Силы" Availability="ЗАКЛЯТИЕ СИЛЫ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ СИЛЫ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ СИЛЫ"/>
 				</Option>
 				<Option Destination="299" Text="Заклятье Слабости" Availability="ЗАКЛЯТИЕ СЛАБОСТИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ СЛАБОСТИ"/>
 				</Option>
 				<Option Destination="96" Text="Заклятье Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ОГНЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ОГНЯ"/>
 				</Option>
 				<Option Destination="241"/>
 			</Options>
@@ -5030,7 +5030,7 @@
 		<Paragraph No="574">
 			<Text>Вы платите деньги и прячетесь под сеном. Вскоре несколько возов отправляются в путь, но вам не видно, по какой дороге вы выезжаете из деревни. Через некоторое время становится жарко, и вы понимаете, что лес остался позади. Ветерок доносит запах водорослей и тины, потом слышатся пьяные голоса Гоблинов, и вам приходится затаить дыхание, когда телега останавливается прямо возле них. Но вот пост позади, под колесами слышится скрип бревен, вы чувствуете, что воз въезжает на мост. Потом еще около получаса дороги — и вновь голоса. На этот раз Орки. «Что под сеном?» спрашивает один из них крестьянина, и ужас охватывает вас. Тянутся долгие минуты, показавшиеся часами: стража осматривает несколько телег перед вами. Потом острая мгновенная боль — и все. Недоверчивый Орк ткнул мечом в ваш стог сена и лезвие прошло всего в нескольких сантиметрах от сердца. По крови, которая закапала на дорогу, стража понимает все — и вам никогда уже больше не увидеть солнца...</Text>
 			<Modifications>
-				<Gold Val="-2"/>
+				<Gold Value="-2"/>
 			</Modifications>
 			<Options>
 				<Gameover/>
@@ -5057,7 +5057,7 @@
 				<Text>«Ты слишком подл, чтобы оценить мое великодушие и терпение, говорит маг, — и будешь наказан за это».</Text>
 			</Texts>
 			<Modifications>
-				<Mastery Val="-1"/>
+				<Mastery Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="293"/>
@@ -5070,7 +5070,7 @@
 				<Text>Хотите теперь попробовать мясо, если вы этого еще не делали, или поторопитесь уйти из комнаты через дверь в ее правой стене?</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="411" Text="Попробовать мясо"/>
@@ -5151,7 +5151,7 @@
 		<Paragraph No="588">
 			<Text>Слава Богу, вы смогли сдержать крик. Потеряйте 6 ВЫНОСЛИВОСТЕЙ за укол волшебным шипом и обойдите кровать с другой стороны.</Text>
 			<Modifications>
-				<Endurance Val="-6"/>
+				<Endurance Value="-6"/>
 			</Modifications>
 			<Options>
 				<Option Destination="275"/>
@@ -5187,7 +5187,7 @@
 				<Text Style="Small">Потеряйте 3 ВЫНОСЛИВОСТИ.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="-3"/>
+				<Endurance Value="-3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="409"/>
@@ -5250,7 +5250,7 @@
 				<Text>Если остались живы, то скрывайтесь в лесу, где Дракон не может вас преследовать.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="-6"/>
+				<Endurance Value="-6"/>
 			</Modifications>
 			<Options>
 				<Option Destination="232"/>
@@ -5453,16 +5453,16 @@
 			<Text>Вы решаете, что недурно бы проверить периметр замка. А вдруг там потайные двери есть какие? Или кладка где выкрошилась. С кладкой и, правда, нелады: в нескольких местах вы замечаете отвалившиеся камни. Вы быстро готовите раствор и заделываете дырки в стене. Под конец вы натыкаетесь на странное место. Вроде бы та же стена, но трава полностью вытоптана, словно тут часто ходят. Вы очень внимательно обшариваете всё и находите контуры потайной двери.\n\nКак вы себя поведёте:</Text>
 			<Options>
 				<Option Destination="700" Text="Зло">
-					<Trigger Val="Мякоть кизила"/>
+					<Trigger Value="Мякоть кизила"/>
 				</Option>
 				<Option Destination="679" Text="Добро">
-					<Trigger Val="Кожура кизила"/>
+					<Trigger Value="Кожура кизила"/>
 				</Option>
 				<Option Destination="672" Text="Грозно">
-					<Trigger Val="Рыцарь-неумёха"/>
+					<Trigger Value="Рыцарь-неумёха"/>
 				</Option>
 				<Option Destination="714" Text="Льстиво">
-					<Trigger Val="Семечко кизила"/>
+					<Trigger Value="Семечко кизила"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -5477,16 +5477,16 @@
 			<Text>Вы открываете тяжёлую парадную дверь и заходите в большую, шикарно обставленную комнату. Здесь собралось несколько Зелёных Рыцарей, а на кресле с баронской короной сидит не кто иной, как Капитан. Чуть позвякивают шпоры Рыцарей, воздух наполнен неторопливым говором беседы. От множества восковых свечей стоит тяжеловатый дух. Довольно тепло, несмотря на позднюю осень и туман, заплывающий в окно. Как себя поведёте:</Text>
 			<Options>
 				<Option Destination="710" Text="Зло">
-					<Trigger Val="Семечко лимона"/>
+					<Trigger Value="Семечко лимона"/>
 				</Option>
 				<Option Destination="667" Text="Добро">
-					<Trigger Val="Рыцарь-неумёха"/>
+					<Trigger Value="Рыцарь-неумёха"/>
 				</Option>
 				<Option Destination="724" Text="Грозно">
-					<Trigger Val="Кожура лимона"/>
+					<Trigger Value="Кожура лимона"/>
 				</Option>
 				<Option Destination="698" Text="Льстиво">
-					<Trigger Val="Мякоть лимона"/>
+					<Trigger Value="Мякоть лимона"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -5501,16 +5501,16 @@
 			<Text>Вы подходите к дверям караульного помещения. Тут стражники — а это, преимущественно, гоблины и люди — коротают долгие зимние часы, маясь от безделья. Вообще-то они должны обходить по периметру Чёрный Замок и собирать мусор и опавшие листья. Ну, а также, разумеется, следить за злобными героями, покушающимися на их повелителя. Но это в идеале. Сейчас внутри весь комплект — восемь стражников. От дыма самокруток не продохнуть. А они ещё и напердели тут. Объедки на полу спрессовались в тонкую липкую корку.\n\n— Ставлю пять медяков против восьми! — орёт толстый гоблин.\n\nВ руках другого, который ещё толще, стаканчик с игральными костями.\n\nКак вы себя поведёте:</Text>
 			<Options>
 				<Option Destination="684" Text="Зло">
-					<Trigger Val="Семечко кокоса"/>
+					<Trigger Value="Семечко кокоса"/>
 				</Option>
 				<Option Destination="715" Text="Добро">
-					<Trigger Val="Рыцарь-неумёха"/>
+					<Trigger Value="Рыцарь-неумёха"/>
 				</Option>
 				<Option Destination="736" Text="Грозно">
-					<Trigger Val="Кожура кокоса"/>
+					<Trigger Value="Кожура кокоса"/>
 				</Option>
 				<Option Destination="637" Text="Льстиво">
-					<Trigger Val="Мякоть кокоса"/>
+					<Trigger Value="Мякоть кокоса"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -5555,16 +5555,16 @@
 			<Text>Вы довольно долго бредёте по коридорам, огибая замок. Да, в покои принцессы вполне можно добраться без всякого плутания по канализациям и тюрьмам Замка. Конечно, это будет не по-геройски. Переоткрыв кучу дверей, вы, наконец, заходите в уютную комнатку. Это почти будуар. Ну почти. Тут очень мило. Для Чёрного Замка. Принцесса прихорашивается перед зеркалом. На ваш вкус она худовата. В том смысле, что тощая. Ключицы выпирают как рёбра вешалки. В ямочки, пожалуй, стакан воды налить можно. Волосы тонкие. На лице конопушки. Вот в Катэне, в порту девчонки — это да!\n\nКстати, а что вы тут забыли? Пароль принцессе знать не нужно, с героем она драться не будет. Шпионить против папочки явно тоже.\n\nКак вы себя поведёте:</Text>
 			<Options>
 				<Option Destination="718" Text="Зло">
-					<Trigger Val="Кожура персика"/>
+					<Trigger Value="Кожура персика"/>
 				</Option>
 				<Option Destination="687" Text="Добро">
-					<Trigger Val="Рыцарь-неумёха"/>
+					<Trigger Value="Рыцарь-неумёха"/>
 				</Option>
 				<Option Destination="730" Text="Грозно">
-					<Trigger Val="Мякоть персика"/>
+					<Trigger Value="Мякоть персика"/>
 				</Option>
 				<Option Destination="632" Text="Льстиво">
-					<Trigger Val="Семечко персика"/>
+					<Trigger Value="Семечко персика"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -5597,16 +5597,16 @@
 			<Text>Такого дуба ещё поискать. Раскидистый, листва густо-зелёная как драконья чешуя, жёлуди как золотые монетки висят. Крона необъятная, словно море. Морщинистая грубая кора нагрета солнцем. Вы подходите ближе и начинаете оглядываться, задрав голову к небу.\n\nВ ветвях замечаете гнездо.\n\nВ гнезде сидит орёл.\n\nИнтересно, что он тут забыл — орлы же на скалах селятся. Как вы себя поведёте:</Text>
 			<Options>
 				<Option Destination="670" Text="Зло">
-					<Trigger Val="Семечко банана"/>
+					<Trigger Value="Семечко банана"/>
 				</Option>
 				<Option Destination="734" Text="Добро">
-					<Trigger Val="Мякоть банана"/>
+					<Trigger Value="Мякоть банана"/>
 				</Option>
 				<Option Destination="746" Text="Грозно">
-					<Trigger Val="Рыцарь-неумёха"/>
+					<Trigger Value="Рыцарь-неумёха"/>
 				</Option>
 				<Option Destination="749" Text="Льстиво">
-					<Trigger Val="Кожура банана"/>
+					<Trigger Value="Кожура банана"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -5626,16 +5626,16 @@
 			<Text>Вы заходите в комнату, где ещё темнее, чем у тролля в не скажу где! Комната абсолютно пуста, посреди на стуле стоит шкатулка с затейливым орнаментом. Пахнет катэнскими притираниями. Хотя, зачем бы они духу. Как себя поведёте:</Text>
 			<Options>
 				<Option Destination="652" Text="Зло">
-					<Trigger Val="Кожура апельсина"/>
+					<Trigger Value="Кожура апельсина"/>
 				</Option>
 				<Option Destination="706" Text="Добро">
-					<Trigger Val="Мякоть апельсина"/>
+					<Trigger Value="Мякоть апельсина"/>
 				</Option>
 				<Option Destination="708" Text="Грозно">
-					<Trigger Val="Семечко апельсина"/>
+					<Trigger Value="Семечко апельсина"/>
 				</Option>
 				<Option Destination="644" Text="Льстиво">
-					<Trigger Val="Рыцарь-неумёха"/>
+					<Trigger Value="Рыцарь-неумёха"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -5667,16 +5667,16 @@
 			<Text>Вы долго петляете по катакомбам Чёрного Замка. Здесь ходят редко — Барлад Дэрт сажает в темницу не для того, чтобы ежедневно устраивать рандеву с заключёнными. Пол в лужах, которые зарастают коркой плесени. Воздушные потоки лениво снуют туда-сюда. Пахнет то пригорелой яичницей, то потными лошадьми, то крепким орочьим духом. Эхо ведёт себя неподобающе: вместо равномерного затихающего отражения ваших шагов, вы то слышите их, то не слышите вовсе. А иногда эхо надвигается на вас из глубины, закруживает в танце и убегает за спину. На стенах то и дело попадаются странные знаки: какие-то птицы, перья, стрелы.\n\nОднажды пламя факела выхватывает надпись «БД — не то, что вы думаете. Подпись АШ&amp;Br-s». Пытаясь разгадать эту головоломку, вы доходите до тюрьмы. В камерах никого нет, кроме одной. В ней сидит тощий старик с безумными глазами. Перед самой камерой лежит шкура оленя. Старик безуспешно пытается дотянуться до неё то рукой, то ногой, то самодельным крюком на верёвке, свитой из простыни. Ничего не выходит.\n\nКак вы себя поведёте:</Text>
 			<Options>
 				<Option Destination="676" Text="Зло">
-					<Trigger Val="Кожура ореха"/>
+					<Trigger Value="Кожура ореха"/>
 				</Option>
 				<Option Destination="678" Text="Добро">
-					<Trigger Val="Рыцарь-неумёха"/>
+					<Trigger Value="Рыцарь-неумёха"/>
 				</Option>
 				<Option Destination="716" Text="Грозно">
-					<Trigger Val="Семечко ореха"/>
+					<Trigger Value="Семечко ореха"/>
 				</Option>
 				<Option Destination="701" Text="Льстиво">
-					<Trigger Val="Мякоть ореха"/>
+					<Trigger Value="Мякоть ореха"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -5690,16 +5690,16 @@
 			<Text>Вы выходите к хижине, притаившейся среди вековых деревьев. Точнее было бы сказать, сросшейся с ними. Мхи покрывают брёвна так густо, что их вообще не видно. Лопухи высятся, словно частокол. Полевые цветы подступают к самому порогу. Пчёлы с весёлым жужжанием носятся туда-сюда. В воздухе стоит медвяный аромат. Опавшие листья, которые никто не убирал, возможно, веками, так и хрустят при каждом шаге. В маленьких круглых окошках мелькает свет.\n\nВы отворяете дверь и заходите внутрь. Домик, в общем-то, просторный, но от множества вещей здесь как-то даже тесновато. Связки луковиц и пучки сушёных трав густо покрывают стены и балки потолка. Несколько столов завалены необычными предметами. Ёжкин кот, тут даже перегонный куб есть! И стеллажи с книгами. И чучело аллигатора! Куда это вы попали???\n\nИз глубины комнаты к вам выходит опрятный старичок. На нём посеревшая от многократных стирок хламида, когда-то бывшая снежно-белой. На пальцах несколько колец с крупными драгоценными камнями. На шее цепочка — видимо, с каким-то кулоном, но вы замечаете лишь верхнюю часть. Приятным голосом старичок произносит:\n\n— Приветствую тебя, юноша! Я — белый Марк Хэнкок! Как вы себя поведёте:</Text>
 			<Options>
 				<Option Destination="685" Text="Зло">
-					<Trigger Val="Рыцарь-неумёха"/>
+					<Trigger Value="Рыцарь-неумёха"/>
 				</Option>
 				<Option Destination="671" Text="Добро">
-					<Trigger Val="Семечко киви"/>
+					<Trigger Value="Семечко киви"/>
 				</Option>
 				<Option Destination="673" Text="Грозно">
-					<Trigger Val="Кожура киви"/>
+					<Trigger Value="Кожура киви"/>
 				</Option>
 				<Option Destination="723" Text="Льстиво">
-					<Trigger Val="Мякоть киви"/>
+					<Trigger Value="Мякоть киви"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -5735,16 +5735,16 @@
 			<Text>Вы приближаетесь к небольшой полянке, облюбованной драконом. Вокруг сплошной уголь в той или иной форме: обожжённые коряги, горелое мясо — геройское, видимо; обугленные кости, расплавленный металл, совсем непонятные ошмётки. Пахнет, разумеется, дымом. Что удивительно, самим драконом не пахнет никак. Обычные, и даже волшебные животные имеют свои отличительные запахи. Тот же Пегас пахнет как лошадь. Тигр пахнет тигром. Даже рыба имеет свой запах. А вот дракон почему-то нет. Его можно опознать лишь по запаху разрушений, которые несёт его дыхание. Драконы — твари хитрые. Ну, плюс ко всему остальному. Так что надо хорошо подумать, прежде чем соваться в его логово.\n\nКак вы себя поведёте:</Text>
 			<Options>
 				<Option Destination="717" Text="Зло">
-					<Trigger Val="Мякоть инжира"/>
+					<Trigger Value="Мякоть инжира"/>
 				</Option>
 				<Option Destination="739" Text="Добро">
-					<Trigger Val="Семечко инжира"/>
+					<Trigger Value="Семечко инжира"/>
 				</Option>
 				<Option Destination="748" Text="Грозно">
-					<Trigger Val="Рыцарь-неумёха"/>
+					<Trigger Value="Рыцарь-неумёха"/>
 				</Option>
 				<Option Destination="742" Text="Льстиво">
-					<Trigger Val="Кожура инжира"/>
+					<Trigger Value="Кожура инжира"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -5752,16 +5752,16 @@
 			<Text>Подземная галерея приводит вас к широкой массивной двери. Дверь приоткрыта, из-за неё доносится звон медной посуды и долетают аппетитные запахи. Вы заходите внутрь. Вы на средневековой кухне. Точнее, на средневековой кухне тролля. Тут всё по-средневековому, только чуть... хм грязнее. Связки лука под потолком. В полу крышка люка. Под ней ледник, где хранятся колбасы. Вдоль стенки вытянулось сразу несколько плит, под которыми полыхает огонь. В медных котлах и кастрюлях кипит солдатская похлёбка. Она вкусна, но состав лучше не узнавать. С боков сделаны шкафчики. В них куча всего. Вы замечаете короба с названиями «Крепкий порошок», «Сладкий порошок», «Порох», «Пудра», «Катэнский укроп» и «Дежурное блюдо». Тут же батарея бутылей. Повар-тролль что-то бурчит под нос, помешивая в котле обглоданной костью.\n\nКак вы себя поведёте:</Text>
 			<Options>
 				<Option Destination="660" Text="Зло">
-					<Trigger Val="Кожура яблока"/>
+					<Trigger Value="Кожура яблока"/>
 				</Option>
 				<Option Destination="722" Text="Добро">
-					<Trigger Val="Семечко яблока"/>
+					<Trigger Value="Семечко яблока"/>
 				</Option>
 				<Option Destination="702" Text="Грозно">
-					<Trigger Val="Рыцарь-неумёха"/>
+					<Trigger Value="Рыцарь-неумёха"/>
 				</Option>
 				<Option Destination="703" Text="Льстиво">
-					<Trigger Val="Мякоть яблока"/>
+					<Trigger Value="Мякоть яблока"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -5852,16 +5852,16 @@
 			<Text>Пригибаясь и с опаской косясь на застывших у входа гаргулов, вы заползаете внутрь. Тишина тут, и правда, могильная. Если бы вы могли видеть ваши ноги, то заметили, как от каждого шага в морозный воздух взлетают фонтанчики пыли. Но вы не видите. Только слышите, как хрустят тараканы под ногами. Вы плотнее кутаетесь в плащ. Надо скорее заканчивать и валить отседова. Вдруг, вы наступаете на какой-то скрытый механизм, который какой-то древний гад устроил в этом склепе для таких хороших парней, как вы.\n\nПеред вами материализуется огромный шлем, из которого несётся гулкий глас:\n\n— КТО ТЫ???\n\nВы — не будь дураком — придумываете первое попавшееся имечко, чтобы не выдать духу настоящего.\n\n— ЗАЧЕМ ТЫ ПОТРЕВОЖИЛ ПОКОЙ ГРАФА ЭЛКА? Как вы себя поведёте:</Text>
 			<Options>
 				<Option Destination="737" Text="Зло">
-					<Trigger Val="Кожура грейпфрута"/>
+					<Trigger Value="Кожура грейпфрута"/>
 				</Option>
 				<Option Destination="625" Text="Добро">
-					<Trigger Val="Семечко грейпфрута"/>
+					<Trigger Value="Семечко грейпфрута"/>
 				</Option>
 				<Option Destination="693" Text="Грозно">
-					<Trigger Val="Рыцарь-неумёха"/>
+					<Trigger Value="Рыцарь-неумёха"/>
 				</Option>
 				<Option Destination="732" Text="Льстиво">
-					<Trigger Val="Мякоть грейпфрута"/>
+					<Trigger Value="Мякоть грейпфрута"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -5918,16 +5918,16 @@
 			<Text>Вы отходите от Чёрного Замка и спускаетесь вниз по течению реки. Тут устроен ближний пост. Это просто хибара, в которой дежурят два гоблина. Из трубы вьётся дымок. Пахнет жареной свининой. Вот, ухари!\n\nКак вы себя поведёте:</Text>
 			<Options>
 				<Option Destination="697" Text="Зло">
-					<Trigger Val="Кожура айвы"/>
+					<Trigger Value="Кожура айвы"/>
 				</Option>
 				<Option Destination="656" Text="Добро">
-					<Trigger Val="Семечко айвы"/>
+					<Trigger Value="Семечко айвы"/>
 				</Option>
 				<Option Destination="658" Text="Грозно">
-					<Trigger Val="Мякоть айвы"/>
+					<Trigger Value="Мякоть айвы"/>
 				</Option>
 				<Option Destination="664" Text="Льстиво">
-					<Trigger Val="Рыцарь-неумёха"/>
+					<Trigger Value="Рыцарь-неумёха"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -5947,16 +5947,16 @@
 			<Text>Уже несколько минут вы идёте по тропе разбойников. В прямом смысле. В переносном вы это давным-давно делаете. Тропа широкая, хорошо утоптанная, с указателями и беседками для отдыха. Нет, а вы чего ожидали? Кто по плохой тропе ходить-то будет? Кого они грабить-то будут? Разумеется, разбойники обустроили тропу, чтобы торговцам было удобнее тут передвигаться. Следят за порядком. Ну, вы понимаете. Вы идёте около часа. Внезапно из-за большого дуба вам навстречу выходят три амбала. Один ещё издалека с ленцой кричит:\n\n— Кошелёк или жизнь?!\n\nКак вы себя поведёте:</Text>
 			<Options>
 				<Option Destination="745" Text="Зло">
-					<Trigger Val="Семечко дыни"/>
+					<Trigger Value="Семечко дыни"/>
 				</Option>
 				<Option Destination="645" Text="Добро">
-					<Trigger Val="Кожура дыни"/>
+					<Trigger Value="Кожура дыни"/>
 				</Option>
 				<Option Destination="636" Text="Грозно">
-					<Trigger Val="Рыцарь-неумёха"/>
+					<Trigger Value="Рыцарь-неумёха"/>
 				</Option>
 				<Option Destination="731" Text="Льстиво">
-					<Trigger Val="Мякоть дыни"/>
+					<Trigger Value="Мякоть дыни"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -5964,16 +5964,16 @@
 			<Text>Чтобы добраться до дерева патруля, вам приходится идти довольно долго. Впрочем, это даже приятно. Птички щебечут, сухие листья шуршат под ногами. Ветерок проносится в еловых ветвях. Рыжики норовят выставить тёмно-оранжевые шляпки из песка. Белки цокают на ветках. В небе проплывают пушистые облака, точь-в-точь как взбитые сливки. Ну, красотень! Однако, у вас есть задание — его надо выполнять. Наконец, вы подходите к высокому кедру, у которого пасутся две лошади в полном конном доспехе. Рядом о чём-то беседуют два Зелёных Рыцаря.\n\nКак вы себя поведёте:</Text>
 			<Options>
 				<Option Destination="707" Text="Зло">
-					<Trigger Val="Кожура помело"/>
+					<Trigger Value="Кожура помело"/>
 				</Option>
 				<Option Destination="750" Text="Добро">
-					<Trigger Val="Рыцарь-неумёха"/>
+					<Trigger Value="Рыцарь-неумёха"/>
 				</Option>
 				<Option Destination="669" Text="Грозно">
-					<Trigger Val="Семечко помело"/>
+					<Trigger Value="Семечко помело"/>
 				</Option>
 				<Option Destination="692" Text="Льстиво">
-					<Trigger Val="Мякоть помело"/>
+					<Trigger Value="Мякоть помело"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -5981,16 +5981,16 @@
 			<Text>Вы у главных ворот Чёрного Замка. Тут на цепи прикован Чёрный Крылатый Лев. Он выглядит довольно внушительно. Мало того, что он, подобно гаргульям, из камня, так ещё и два метра в холке — не менее. В довесок к этому он ещё и разумный. Вы в который раз поражаетесь — как это Барлад смог посадить Льва на цепь? Очень странно. Тем не менее, вам дано конкретное задание: сменить пароль, и выпендриваться тут особо нечего. Зверюга, наверняка, злопамятная, так что грубить не надо. На добро и лесть ей тоже плевать. Поэтому просто сообщите новый пароль:</Text>
 			<Options>
 				<Option Destination="695" Text="«Щит Тьмы»">
-					<Trigger Val="Семечко сливы"/>
+					<Trigger Value="Семечко сливы"/>
 				</Option>
 				<Option Destination="640" Text="«Песнь Льда и Пламени»">
-					<Trigger Val="Кожура сливы"/>
+					<Trigger Value="Кожура сливы"/>
 				</Option>
 				<Option Destination="649" Text="«Розенкранц и Гильденстерн мертвы»">
-					<Trigger Val="Рыцарь-неумёха"/>
+					<Trigger Value="Рыцарь-неумёха"/>
 				</Option>
 				<Option Destination="709" Text="«Пёс войны и боль мира»">
-					<Trigger Val="Мякоть сливы"/>
+					<Trigger Value="Мякоть сливы"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -6030,16 +6030,16 @@
 			<Text>Пегас с шумом рассекает воздух и радостно ржёт. Видать, давно его не выпускали полетать. Однако, вы понимаете, что это непорядок! Ведь какой-нибудь ушлый герой может воспользоваться летающим конём и натворить дел. Срочно надо что-то предпринять!\n\nКак вы себя поведёте:</Text>
 			<Options>
 				<Option Destination="735" Text="Зло">
-					<Trigger Val="Семечко ананаса"/>
+					<Trigger Value="Семечко ананаса"/>
 				</Option>
 				<Option Destination="655" Text="Добро">
-					<Trigger Val="Кожура ананаса"/>
+					<Trigger Value="Кожура ананаса"/>
 				</Option>
 				<Option Destination="630" Text="Грозно">
-					<Trigger Val="Рыцарь-неумёха"/>
+					<Trigger Value="Рыцарь-неумёха"/>
 				</Option>
 				<Option Destination="665" Text="Льстиво">
-					<Trigger Val="Мякоть ананаса"/>
+					<Trigger Value="Мякоть ананаса"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -6048,7 +6048,7 @@
 			<Options>
 				<Option Destination="744" Text="Выложить перед Барладом Дэртом весь компотный набор"/>
 				<Option Destination="743" Text="Выложить перед Барладом Дэртом правильный компотный набор" Availability="Кожура апельсина, Семечко лимона, Мякоть грейпфрута, Кожура ореха, Мякоть яблока, Семечко сливы, Семечко персика, Семечко кокоса, Мякоть груши, Кожура ананаса, Семечко финика, Мякоть инжира, Семечко кизила, Мякоть айвы, Кожура арбуза, Кожура дыни, Мякоть помело, Семечко киви, Кожура авокадо, Мякоть смоквы, Кожура агавы, Кожура банана, Мякоть манго">
-					<Trigger Val="Зелёный рыцарь"/>
+					<Trigger Value="Зелёный рыцарь"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -6062,16 +6062,16 @@
 			<Text>Вы следуете по дороге, указанной табличкой. Дорога ровная, хорошо утоптанная. Видать, народ часто захаживает к водяному. Правда, не очень понятно, зачем. От деревни до деревни можно добраться за день — лес не так уж и велик, а люди предпочитают селиться поближе друг к другу. Если же кто отправляется в пограничные с лесом городки, то и обедает, и ночует в трактирах за пределами леса. Экономический нонсенс. Тем не менее, таверна водяного явно не бедствует — крыша починена, труба оштукатурена, стены побелены, кольцо на двери так и блестит медным бочком в лучах осеннего солнышка. Даже стёкла в окнах целы. Вкусный запах доносится с заднего двора — наверно, для свиней похлёбку варят.\n\nКак вы себя поведёте:</Text>
 			<Options>
 				<Option Destination="726" Text="Зло">
-					<Trigger Val="Кожура манго"/>
+					<Trigger Value="Кожура манго"/>
 				</Option>
 				<Option Destination="666" Text="Добро">
-					<Trigger Val="Мякоть манго"/>
+					<Trigger Value="Мякоть манго"/>
 				</Option>
 				<Option Destination="631" Text="Грозно">
-					<Trigger Val="Рыцарь-неумёха"/>
+					<Trigger Value="Рыцарь-неумёха"/>
 				</Option>
 				<Option Destination="711" Text="Льстиво">
-					<Trigger Val="Семечко манго"/>
+					<Trigger Value="Семечко манго"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -6104,16 +6104,16 @@
 			<Text>Вы подходите к логову обезьяны. Его несложно узнать по куче объедков. Ну да, похожих на те значки, что подкидывает вам Барлад Дэрт: кожура, семечки, гнилая мякоть. Кости... Да и запашок тут тот ещё. Вообще, может она больная, обезьяна-то — так что вы поосторожнее.\n\nКак вы себя поведёте:</Text>
 			<Options>
 				<Option Destination="635" Text="Зло">
-					<Trigger Val="Кожура арбуза"/>
+					<Trigger Value="Кожура арбуза"/>
 				</Option>
 				<Option Destination="629" Text="Добро">
-					<Trigger Val="Рыцарь-неумёха"/>
+					<Trigger Value="Рыцарь-неумёха"/>
 				</Option>
 				<Option Destination="675" Text="Грозно">
-					<Trigger Val="Семечко арбуза"/>
+					<Trigger Value="Семечко арбуза"/>
 				</Option>
 				<Option Destination="694" Text="Льстиво">
-					<Trigger Val="Мякоть арбуза"/>
+					<Trigger Value="Мякоть арбуза"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -6268,16 +6268,16 @@
 			<Text>Решив, что всё подождёт, а дрова нет, идёте к костру, пока он не прогорел. Над костром висит котёл с кашей. Рядом кашеварит гнолл в забавном шлеме, украшенном головой утки. Иногда он подносит ложку с кашей к самому клюву утки.\n\n— Ну, как? — спрашивает он. Вы так и не можете понять, то ли он кормит утку, то ли просит продегустировать. Сами вы не рискуете отведать из котла. Кстати, как вы себя поведёте:</Text>
 			<Options>
 				<Option Destination="647" Text="Зло">
-					<Trigger Val="Кожура груши"/>
+					<Trigger Value="Кожура груши"/>
 				</Option>
 				<Option Destination="627" Text="Добро">
-					<Trigger Val="Рыцарь-неумёха"/>
+					<Trigger Value="Рыцарь-неумёха"/>
 				</Option>
 				<Option Destination="704" Text="Грозно">
-					<Trigger Val="Мякоть груши"/>
+					<Trigger Value="Мякоть груши"/>
 				</Option>
 				<Option Destination="628" Text="Льстиво">
-					<Trigger Val="Семечко груши"/>
+					<Trigger Value="Семечко груши"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -6285,16 +6285,16 @@
 			<Text>Вы идёте себе и идёте по лесу. И, наконец, выходите к красивому домику с соломенной крышей и маленькими опрятными окошками. Тут даже клумбы есть — с бегониями. Птички порхают с цветка на цветок. Нет, не колибри, конечно. Вы не знаете, как они называются. Ежики бегают в корнях древних деревьев, окружающих домик. Солнышко пригревает. Замануха, короче. Тут живёт доверенный человек чёрного мага. Специально сюда переселённый с тем, чтобы собирать полезную информацию, приглядывать за лесом, ну, и, при случае, подкладывать свиней героям. Вы слышали про него — мастер своего дела.\n\nКак вы себя поведёте:</Text>
 			<Options>
 				<Option Destination="713" Text="Зло">
-					<Trigger Val="Мякоть смоквы"/>
+					<Trigger Value="Мякоть смоквы"/>
 				</Option>
 				<Option Destination="690" Text="Добро">
-					<Trigger Val="Рыцарь-неумёха"/>
+					<Trigger Value="Рыцарь-неумёха"/>
 				</Option>
 				<Option Destination="642" Text="Грозно">
-					<Trigger Val="Кожура смоквы"/>
+					<Trigger Value="Кожура смоквы"/>
 				</Option>
 				<Option Destination="719" Text="Льстиво">
-					<Trigger Val="Семечко смоквы"/>
+					<Trigger Value="Семечко смоквы"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -6373,16 +6373,16 @@
 			<Text>Насвистывая весёлую песенку, вы прогулочным шагом фланируете меж светлых берёзовых стволов, освещённых летним тёплым солнцем. Крики всё ближе. Вы замечаете за деревьями какое-то движение. Несколько оборванцев — штук пять-шесть — избивают ногами полуголого человека. Человек явно при смерти: он харкает кровью и жалобно стонет, не пытаясь даже поднять рук для защиты. Из множества рваных неглубоких ран капает кровь. Что будете делать, милейший? С одной стороны — какое вам до всего этого дело? С другой — может, какое-то и есть.\n\nКак вы себя поведёте:</Text>
 			<Options>
 				<Option Destination="663" Text="Зло">
-					<Trigger Val="Семечко агавы"/>
+					<Trigger Value="Семечко агавы"/>
 				</Option>
 				<Option Destination="651" Text="Добро">
-					<Trigger Val="Кожура агавы"/>
+					<Trigger Value="Кожура агавы"/>
 				</Option>
 				<Option Destination="705" Text="Грозно">
-					<Trigger Val="Мякоть агавы"/>
+					<Trigger Value="Мякоть агавы"/>
 				</Option>
 				<Option Destination="621" Text="Льстиво">
-					<Trigger Val="Рыцарь-неумёха"/>
+					<Trigger Value="Рыцарь-неумёха"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -6431,16 +6431,16 @@
 			<Text>Вы у въездных ворот. Здесь дежурят несколько крупных гоблинов. Мост через ров уже опущен. Хотя туман до сих пор не рассеялся, но утренняя смена уже на посту, и ей полагается поджидать любых гостей чёрного мага. Обычно это торговцы разнообразной едой. Иногда забредают ремесленники и актёры. Терпкий смолистый запах леса долетает до ворот с редкими порывами ветра. Во рву бурлит вода, отведённая из ближайшей речки. Солдаты тихо переговариваются между собой.\n\nКак вы себя поведёте:</Text>
 			<Options>
 				<Option Destination="661" Text="Зло">
-					<Trigger Val="Кожура финика"/>
+					<Trigger Value="Кожура финика"/>
 				</Option>
 				<Option Destination="728" Text="Добро">
-					<Trigger Val="Мякоть финика"/>
+					<Trigger Value="Мякоть финика"/>
 				</Option>
 				<Option Destination="639" Text="Грозно">
-					<Trigger Val="Семечко финика"/>
+					<Trigger Value="Семечко финика"/>
 				</Option>
 				<Option Destination="634" Text="Льстиво">
-					<Trigger Val="Рыцарь-неумёха"/>
+					<Trigger Value="Рыцарь-неумёха"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -6521,16 +6521,16 @@
 			<Text>Вы на околице довольно крупной деревни. Вы же бывалый путешественник, что вам рассказывать, как выглядит деревня? Вы их тысячи перевидали. Разномастные домики, деревянные — каменных нет. К лесу — поплоше, пониже. В центру — побогаче, иногда в два этажа. Колодец на деревенской площади. Отпорная городьба по периметру. Крестьяне, занятые работой на огородах. Крестьянки, болтающие у колодца. Запах навоза с полей. Запах жарящейся яичницы из домов. Ну до вечера можно описывать! Короче, вы в деревне. Тут сходятся несколько торговых путей, поэтому деревня на подъёме. На деревенской площади стоит важный староста — дородный мужик, пузо навыкате. Вот вам к нему.\n\nКак вы себя поведёте:</Text>
 			<Options>
 				<Option Destination="623" Text="Зло">
-					<Trigger Val="Кожура авокадо"/>
+					<Trigger Value="Кожура авокадо"/>
 				</Option>
 				<Option Destination="662" Text="Добро">
-					<Trigger Val="Рыцарь-неумёха"/>
+					<Trigger Value="Рыцарь-неумёха"/>
 				</Option>
 				<Option Destination="741" Text="Грозно">
-					<Trigger Val="Семечко авокадо"/>
+					<Trigger Value="Семечко авокадо"/>
 				</Option>
 				<Option Destination="727" Text="Льстиво">
-					<Trigger Val="Мякоть авокадо"/>
+					<Trigger Value="Мякоть авокадо"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -6647,7 +6647,7 @@
 					<Text>Воспользуетесь заклятием:</Text>
 				</Option>
 				<Option Destination="825" Text="Плавания" Availability="ЗАКЛЯТИЕ ПЛАВАНИЯ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
 				</Option>
 				<Option Destination="1012" Text="Левитации">
 					<Text>Или пойдете вдоль берега на запад:</Text>
@@ -6791,7 +6791,7 @@
 		<Paragraph No="778">
 			<Text>Через недлинный промежуток времени тропинка выходит на дорогу. Дорога ровная и безлюдная, и вы расслабляетесь. Вдруг обо что-то спотыкаетесь и падаете. Это всего-навсего булыжник, но вы ушиблись (потеряйте 2 ВЫНОСЛИВОСТИ). Наверное, вы просто устали.</Text>
 			<Modifications>
-				<Endurance Val="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1003"/>
@@ -6856,7 +6856,7 @@
 		<Paragraph No="788">
 			<Text>Враг убит. Если хотите, то можете взять его шлем. Карманы у противника пусты, но ведь главное богатство рыцаря – меч. Можете взять его с собой, он прибавит 1 МАСТЕРСТВО (в том числе и сверх изначального), но тогда ваш собственный меч придется либо оставить на поле боя, либо положить в заплечный мешок.</Text>
 			<Modifications>
-				<Mastery Val="-1"/>
+				<Mastery Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1299"/>
@@ -6911,10 +6911,10 @@
 			<Text>Вы приходите в себя и видите, что лежите на полу в просторной клетке. Клетка стоит у стены в большой комнате с толстыми каменными стенами. По сырости на них вы сразу понимаете, что это должен быть один из подземных этажей замка, но какой? Впрочем, сейчас надо думать о том, как выбраться отсюда. Вы оглядываетесь. Из мебели в комнате только стол, два покосившихся стула да небольшой ларь, стоящий у стены. За столом – два Гоблина. Они увлечены игрой в кости и не обращают на вас никакого внимания. Неудивительно: даже если бы они и знали, что вы пришли в себя, шансов выбрать из клетки у вас все равно нет. Комнату освещает единственная свеча, горящая на столе, и в ее мерцающем свете вы видите, что рядом со столом на полу валяются ваши вещи: игра идет на них. Вам же остается надеяться только на свою магию.\n\nВы попробуете использовать заклятие:</Text>
 			<Options>
 				<Option Destination="1847" Text="Иллюзии" Availability="ЗАКЛЯТИЕ ИЛЛЮЗИИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ИЛЛЮЗИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ИЛЛЮЗИИ"/>
 				</Option>
 				<Option Destination="887" Text="Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ОГНЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ОГНЯ"/>
 					<Text>Если у вас нет ни того ни другого:</Text>
 				</Option>
 				<Option Destination="1506"/>
@@ -7083,7 +7083,7 @@
 			<Text>Вам придется потратить заклятие Плавания.</Text>
 			<Options>
 				<Option Destination="872" Text="Сделаете это" Availability="ЗАКЛЯТИЕ ПЛАВАНИЯ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
 				</Option>
 				<Option Destination="1338" Text="Не станете"/>
 			</Options>
@@ -7097,8 +7097,8 @@
 		<Paragraph No="816">
 			<Text>Торговец мертв, и вы быстро осматриваете его лавку. После недолгих поисков находите 10 золотых. Но вы убили честного человека – потеряйте 1 УДАЧУ. Теперь уходите.</Text>
 			<Modifications>
-				<Luck Val="-1"/>
-				<Gold Val="10"/>
+				<Luck Value="-1"/>
+				<Gold Value="10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1107"/>
@@ -7115,7 +7115,7 @@
 			<Text>Навстречу плывет патрульная лодка с тремя Орками. Они осматривают окрестности берега и реки, проверяют сети и меняют стражу у мостов, которые перекинуты через реку. Столкновение с ними неизбежно. Молча, насупившись, Орки налегают на весла. Вам не уйти от погони, — не пытайтесь сделать это один, с одним веслом. Через минуту один из Орков подцепляет край вашей лодки копьем и подтягивает к себе.\n\nВы можете воспользоваться заклятием Силы (ваша Сила Удара увеличится на 2), Слабости (Сила Удара одного из Орков уменьшится на 2 очка), Копии же просто негде будет поместиться; или драться без помощи магии. Но учтите, что вы деретесь не на земле, а в качающейся на воде лодке, поэтому во время боя вычитайте 1 из Силы вашего Удара.</Text>
 			<Actions>
 				<Option Destination="1398" Text="Можете воспользоваться заклятием Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ОГНЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ОГНЯ"/>
 				</Option>
 				<Fight>
 					<Enemies>
@@ -7139,7 +7139,7 @@
 		<Paragraph No="820">
 			<Text>«Правильно, — одобрительно говорит Домик, — это дракон. Ну что ж, вот тебе печень дракона, она очень питательна (можете съесть ее сразу, можете положить в мешок; печень добавит 9 ВЫНОСЛИВОСТЕЙ). И вправду, не успели вы подумать, как это Домик будет вам что-то давать, падает сверток с печенью дракона, как будто брошенный откуда-то сверху. Вы решаете ничему не удивляться, и слушаете вторую загадку. «Легче легкого, проще простого, но чтобы попасть в замок, нет ничего ценнее». Если вы знаете, что это, то проделайте такое же сложение, если нет, придется уходить.</Text>
 			<Modifications>
-				<Healing Val="Съесть печень дракона,9"/>
+				<Healing Value="Съесть печень дракона,9"/>
 			</Modifications>
 			<Options>
 				<Option Destination="806"/>
@@ -7205,7 +7205,7 @@
 		<Paragraph No="827">
 			<Text>Решаете сорвать золотой апельсин. Вокруг все тихо – ничего особенного не происходит. Можете взять его с собой (когда он вам понадобится, прибавьте 750 к номеру параграфа, на котором будете находиться) и покинуть остров. Прибавьте себе 1 УДАЧУ, даже если вы еще ни разу не проверяли ее.</Text>
 			<Modifications>
-				<MaxLuck Val="1"/>
+				<MaxLuck Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1367"/>
@@ -7214,8 +7214,8 @@
 		<Paragraph No="828">
 			<Text>На этот раз вы лезете с большей осторожностью, но с вывихом руки оказывается не так-то просто это сделать. Тем не менее, вы достигаете цели. Вы можете сорвать 6 бананов, потом или съесть сразу, или оставить на следующий раз. Один банан прибавит 2 ВЫНОСЛИВОСТИ и займет одно место в вашем мешке. Если вы сейчас съели все 6 бананов, то возьмите еще 6, но теперь только в заплечный мешок. Вы благополучно спускаетесь и, наевшись, отправляетесь в путь.</Text>
 			<Modifications>
-				<Endurance Val="12"/>
-				<Healing Val="Съесть банан,2,6"/>
+				<Endurance Value="12"/>
+				<Healing Value="Съесть банан,2,6"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1726"/>
@@ -7275,7 +7275,7 @@
 		<Paragraph No="835">
 			<Text>Вы ищете место для ночлега, но ничего подходящего не находите. Придется спать прямо на земле под деревом в стороне от дороги. К счастью, ночь проходит спокойно (добавьте себе 4 ВЫНОСЛИВОСТИ). С рассветом отправляйтесь дальше.</Text>
 			<Modifications>
-				<Endurance Val="4"/>
+				<Endurance Value="4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="861"/>
@@ -7321,7 +7321,7 @@
 		<Paragraph No="841">
 			<Text>Хозяин говорит, что до замка вы дойдете обязательно, если никуда не будете сворачивать, а будете все время прямо. Он ведь возит в Черный замок арбузы и знает этот путь очень хорошо. После чего вы взбираетесь на печку и сладко засыпаете на часок. После отдыха (добавьте 4 ВЫНОСЛИВОСТИ) вы собираетесь уходить, но хозяин вдруг зовет вас за собой. Он заводит вас в темную комнату, похоже, в кладовку, и протягивает вам кольцо: «Возьми его! Это Медное кольцо, — голос Хозяина переходит в шепот, — но оно не простое! Когда ты наденешь его на палец, то станешь невидимым. Невидимыми будут и твои вещи. Я иногда пользовался им, но теперь отдаю тебе. Я надеюсь, что ты убьешь жестокого мага. Его слуги постоянно грабят мое поле, да еще требуют денег. Возьми кольцо!».\n\nВы благодарите хозяина и кладете кольцо в мешок. Теперь, когда вы захотите им воспользоваться, то, надев его на палец, вы просто проходите мимо через препятствие, и ваши незадачливые враги вас не заметят.\n\nОднако, вы невидимы только для живых существ, а не для духов и призраков. И попав в какую-нибудь ловушку, переплывая через водную преграду или сражаясь с Барладом Дэртом, неважно, видимы вы или нет, – такие препятствия вам придется преодолевать своими силами.\n\nНу, а теперь пора уходить. Что вы предпримите:</Text>
 			<Modifications>
-				<Endurance Val="4"/>
+				<Endurance Value="4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="765" Text="В благодарность за гостеприимство поищите в заплечном мешке подарок для Хозяина"/>
@@ -7353,7 +7353,7 @@
 		<Paragraph No="845">
 			<Text>Приятные на вид овощи оказываются совершенно гнилыми внутри. Может быть, Орки и любят такую еду, но вас от нее сильно мутит. Потеряйте 1 ВЫНОСЛИВОСТЬ. Теперь поторопитесь выйти через дверь обратно.</Text>
 			<Modifications>
-				<Endurance Val="-1"/>
+				<Endurance Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1826"/>
@@ -7363,7 +7363,7 @@
 			<Text>Вы быстро идете вперед. Земля становится скользкой, начинает понемногу засасывать. Вы пытаетесь освободиться, но ничего не выходит – болото не хочет выпускать свою жертву. Неожиданно вы вспоминаете про заклятие Левитации.\n\nА что, если оно сможет вытянуть вас из болота?</Text>
 			<Options>
 				<Option Destination="883" Text="Если оно у вас есть, используйте его" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 					<Text>Если же нет, то ваше путешествие закончено...</Text>
 				</Option>
 				<Gameover/>
@@ -7387,13 +7387,13 @@
 			<Text>или просто атаковать Зеленого рыцаря, надеясь только на себя. Можете воспользоваться заклятиями:</Text>
 			<Actions>
 				<Option Destination="1618" Text="Силы" Availability="ЗАКЛЯТИЕ СИЛЫ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ СИЛЫ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ СИЛЫ"/>
 				</Option>
 				<Option Destination="1841" Text="Слабости" Availability="ЗАКЛЯТИЕ СЛАБОСТИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ СЛАБОСТИ"/>
 				</Option>
 				<Option Destination="1654" Text="Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ОГНЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ОГНЯ"/>
 				</Option>
 				<Fight>
 					<Enemy Name="ЗЕЛЕНЫЙ РЫЦАРЬ" Mastery="10" Endurance="10"/>
@@ -7452,7 +7452,7 @@
 		<Paragraph No="855">
 			<Text>В темноте вы сбиваетесь с дороги. Всю ночь приходится наугад продираться через чащу (потеряйте 5 ВЫНОСЛИВОСТЕЙ). К утру выходите на какую-то дорогу, но понятия не имеете, куда идти.</Text>
 			<Modifications>
-				<Endurance Val="-5"/>
+				<Endurance Value="-5"/>
 			</Modifications>
 			<Options>
 				<Option Destination="840"/>
@@ -7490,7 +7490,7 @@
 		<Paragraph No="860">
 			<Text>Дракон решает, что вы предлагаете ему одеться (в самом деле, что ему делать с костюмом?) и возмущенно выпускает небольшую струю пламени в вашу сторону. Потеряйте 2 ВЫНОСЛИВОСТИ и сражайтесь, теперь уже другого выхода нет.</Text>
 			<Modifications>
-				<Endurance Val="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1285"/>
@@ -7506,7 +7506,7 @@
 		<Paragraph No="862">
 			<Text>Вы не сдержались и свернули с дороги. Всего несколько шагов и вы выходите на узкую заросшую дорогу. Через лес продираться было трудно и неудобно – потеряйте 1 ВЫНОСЛИВОСТЬ. Дорога самая обычная, хотя и заброшенная.\n\nРешайте, куда направитесь по ней:</Text>
 			<Modifications>
-				<Endurance Val="-1"/>
+				<Endurance Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1092" Text="На юг"/>
@@ -7611,7 +7611,7 @@
 		<Paragraph No="876">
 			<Text>Вы падаете с большой высоты и получаете сильный ушиб (вычтите у себя 5 ВЫНОСЛИВОСТЕЙ). Но и за это скажите спасибо – вам еще «повезло». А теперь отправляйтесь дальше.</Text>
 			<Modifications>
-				<Endurance Val="-5"/>
+				<Endurance Value="-5"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1003"/>
@@ -7632,7 +7632,7 @@
 		<Paragraph No="879">
 			<Text>Пьяные Гоблины начинают смеяться над вами и более-менее сильно колоть кончиками мечей и копий (от уколов теряете 3 ВЫНОСЛИВОСТИ).\n\nВам ничего не остается, как поскорей выбежать из комнаты, подальше от этого кошмара. Вы открываете первую попавшую дверь и быстро закрываете ее за собой.</Text>
 			<Modifications>
-				<Endurance Val="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1756"/>
@@ -7685,14 +7685,14 @@
 					<Text>Если у вас есть заклятие Левитации, то можете:</Text>
 				</Option>
 				<Option Destination="1589" Text="Подняться по воздуху вверх" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 					<Text>Или в какое-нибудь окно на вашем этаже:</Text>
 				</Option>
 				<Option Destination="1660" Text="В окно справа" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 				</Option>
 				<Option Destination="1828" Text="В окно слева" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -7703,21 +7703,21 @@
 					<Button>Купить</Button>
 					<Head>ЯБЛОКО</Head>
 					<Price>1</Price>
-					<Benefit Name="Healing" Val="Съесть яблоко,2"/>
+					<Benefit Name="Healing" Value="Съесть яблоко,2"/>
 					<Text>Добавит 2 ВЫНОСЛИВОСТЬ</Text>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
 					<Head>МАНДАРИН</Head>
 					<Price>2</Price>
-					<Benefit Name="Healing" Val="Съесть мандарин,3"/>
+					<Benefit Name="Healing" Value="Съесть мандарин,3"/>
 					<Text>Добавит 3 ВЫНОСЛИВОСТИ</Text>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
 					<Head>АПЕЛЬСИН</Head>
 					<Price>1</Price>
-					<Benefit Name="Healing" Val="Съесть апельсин,2"/>
+					<Benefit Name="Healing" Value="Съесть апельсин,2"/>
 					<Text>Добавит 2 ВЫНОСЛИВОСТЬ</Text>
 				</Get>
 				<Get>
@@ -7725,63 +7725,63 @@
 					<Trigger>Banana</Trigger>
 					<Head>БАНАН</Head>
 					<Price>2</Price>
-					<Benefit Name="Healing" Val="Съесть банан,3"/>
+					<Benefit Name="Healing" Value="Съесть банан,3"/>
 					<Text>Добавит 3 ВЫНОСЛИВОСТИ</Text>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
 					<Head>ГРУША</Head>
 					<Price>1</Price>
-					<Benefit Name="Healing" Val="Съесть грушу,2"/>
+					<Benefit Name="Healing" Value="Съесть грушу,2"/>
 					<Text>Добавит 2 ВЫНОСЛИВОСТИ</Text>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
 					<Head>МОЛОКО</Head>
 					<Price>2</Price>
-					<Benefit Name="Endurance" Val="4"/>
+					<Benefit Name="Endurance" Value="4"/>
 					<Text>Прибавит 4 ВЫНОСЛИВОСТИ.\n\nЗа 4 золотых он предлагает наполнить вашу флягу целиком:</Text>
 				</Get>
 				<Get>
 					<Button>Наполнить флягу целиком</Button>
 					<Head>ВОДА</Head>
 					<Price>4</Price>
-					<Benefit Name="Healing" Val="Попить,2"/>
+					<Benefit Name="Healing" Value="Попить,2"/>
 					<Text>...Или за 2 — наполовину:</Text>
 				</Get>
 				<Get>
 					<Button>Наполнить флягу наполовину</Button>
 					<Head>ВОДА</Head>
 					<Price>2</Price>
-					<Benefit Name="Healing" Val="Попить,2"/>
+					<Benefit Name="Healing" Value="Попить,2"/>
 					<Text>Кроме фруктов, у него еще есть:</Text>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
 					<Head>СЫР</Head>
 					<Price>3</Price>
-					<Benefit Name="Healing" Val="Съесть сыр,4"/>
+					<Benefit Name="Healing" Value="Съесть сыр,4"/>
 					<Text>Добавит 4 ВЫНОСЛИВОСТИ</Text>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
 					<Head>КОЛБАСА</Head>
 					<Price>3</Price>
-					<Benefit Name="Healing" Val="Съесть колбасу,5"/>
+					<Benefit Name="Healing" Value="Съесть колбасу,5"/>
 					<Text>Добавит 5 ВЫНОСЛИВОСТИ</Text>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
 					<Head>ХЛЕБ</Head>
 					<Price>3</Price>
-					<Benefit Name="Healing" Val="Съесть хлеб,4"/>
+					<Benefit Name="Healing" Value="Съесть хлеб,4"/>
 					<Text>Добавит 4 ВЫНОСЛИВОСТИ</Text>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
 					<Head>МЯСО</Head>
 					<Price>4</Price>
-					<Benefit Name="Healing" Val="Съесть мясо,6"/>
+					<Benefit Name="Healing" Value="Съесть мясо,6"/>
 					<Text>Добавит 6 ВЫНОСЛИВОСТИ.\n\nЕсли вы что-то хотите купить – покупайте. Все, кроме молока и воды (если вам не в чем ее нести), можете съесть сразу или же взять с собой. Если хотите, можете купить еще и заплечный мешок.</Text>
 				</Get>
 			</Actions>
@@ -7795,7 +7795,7 @@
 			<Options>
 				<Option Destination="1452" Text="Хотите узнать, питаются ли они людьми"/>
 				<Option Destination="1332" Text="Воспользуетесь заклятием Левитации" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -7929,9 +7929,9 @@
 		<Paragraph No="905">
 			<Text>Вы не только не проиграли своей ставки (заберите ее обратно), но и выиграли яблоко (добавит 2 ВЫНОСЛИВОСТИ), два мускатных печенья, каждое из которых добавит также по 2 ВЫНОСЛИВОСТИ, и 5 золотых.</Text>
 			<Modifications>
-				<Healing Val="Съесть яблоко,2"/>
-				<Healing Val="Съесть мускатное печенье,2,2"/>
-				<Gold Val="5"/>
+				<Healing Value="Съесть яблоко,2"/>
+				<Healing Value="Съесть мускатное печенье,2,2"/>
+				<Gold Value="5"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1579" Text="Сыграете еще"/>
@@ -7983,7 +7983,7 @@
 		<Paragraph No="912">
 			<Text>В сторожке вы не находите ничего интересного. Пить брагу, которой угощались Гоблины, нет ни малейшего желания: стоит только ее понюхать, как уже ясно, что на пользу она не пойдет. На столе лежат стаканчик с костями и вещи, на которые шла игра: бронзовый свисток, 3 золотых и медный браслет. Возьмите все, что понравилось, и идите к зданию в центре двора.</Text>
 			<Modifications>
-				<Gold Val="3"/>
+				<Gold Value="3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1598"/>
@@ -8062,7 +8062,7 @@
 		<Paragraph No="923">
 			<Text>Хозяин кивает головой, но, судя по всему, не верит тому, что вы сказали.\n\nПосле обеда вы взбираетесь на печь прикорнуть часок-другой. Отдых даст еще 4 ВЫНОСЛИВОСТИ. Вы благодарите своего собеседника за обед и продолжаете путь по дорожке, ведущей от дома в лес.</Text>
 			<Modifications>
-				<Endurance Val="4"/>
+				<Endurance Value="4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1256"/>
@@ -8174,10 +8174,10 @@
 			</Actions>
 			<Options>
 				<Option Destination="1594" Text="Заклятие Плавания" Availability="ЗАКЛЯТИЕ ПЛАВАНИЯ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
 				</Option>
 				<Option Destination="1657" Text="Заклятие Левитации" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 				</Option>
 				<Option Destination="1757" Text="Если у вас есть Водолазный костюм">
 					<Text>Если у вас нет ни того, ни другого, идите вдоль берега, на запад, откуда прибежал Гоблин...</Text>
@@ -8194,7 +8194,7 @@
 		<Paragraph No="937">
 			<Text>Вы гонитесь за зайцем, не разбирая дороги. Ветки хлещут по лицу, но голод гонит все вперед и вперед. Вдруг заяц жалобно пищит и начинает биться на земле. Подбежав ближе, вы видите, что он попал в одну из охотничьих ловушек, наверняка поставленных кем-нибудь из слуг волшебника. Итак, на этот раз они помогли вам. Можете пообедать зайчатиной и восстановить 8 ВЫНОСЛИВОСТЕЙ. Однако с собой взять ее не в чем – все придется съесть на месте. Найти дорогу обратно уже невозможно и вам приходится идти по тропинке, которая углубляется в лес от того места, где стояла ловушка.</Text>
 			<Modifications>
-				<Endurance Val="8"/>
+				<Endurance Value="8"/>
 			</Modifications>
 			<Options>
 				<Option Destination="988"/>
@@ -8274,10 +8274,10 @@
 					<Text>Вы воспользуетесь заклятием:</Text>
 				</Option>
 				<Option Destination="759" Text="Заклятием Левитации" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 				</Option>
 				<Option Destination="1382" Text="Заклятием Плавания" Availability="ЗАКЛЯТИЕ ПЛАВАНИЯ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -8315,7 +8315,7 @@
 		<Paragraph No="952">
 			<Text>Вы подходите к ульям. Это действительно небольшая пасека, но никого не видно. Только через несколько минут понимаете, что никого и не надо: пчелы на этой волшебной пасеке сами являются зоркими часовыми. Целый рой насекомых накидывается на незваного гостя. Вам не удается защититься от укусов – не драться же с пчелами мечом. Потеряйте 9 ВЫНОСЛИВОСТЕЙ и, если еще живы, возвращайтесь на дорогу.</Text>
 			<Modifications>
-				<Endurance Val="-9"/>
+				<Endurance Value="-9"/>
 			</Modifications>
 			<Options>
 				<Option Destination="997"/>
@@ -8373,7 +8373,7 @@
 		<Paragraph No="959">
 			<Text>Вы вылетаете из пещеры. Солнце уже почти зашло, а вы все еще не пробрались в замок. Потеряйте 1 УДАЧУ.</Text>
 			<Modifications>
-				<Luck Val="-1"/>
+				<Luck Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="946"/>
@@ -8389,13 +8389,13 @@
 			<Text>Вы можете воспользоваться:</Text>
 			<Options>
 				<Option Destination="1015" Text="Заклятием Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ОГНЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ОГНЯ"/>
 				</Option>
 				<Option Destination="1061" Text="Заклятием Силы" Availability="ЗАКЛЯТИЕ СИЛЫ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ СИЛЫ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ СИЛЫ"/>
 				</Option>
 				<Option Destination="869" Text="Заклятием Слабости" Availability="ЗАКЛЯТИЕ СЛАБОСТИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ СЛАБОСТИ"/>
 					<Text>Или просто сражаться мечом:</Text>
 				</Option>
 				<Option Destination="1928"/>
@@ -8460,7 +8460,7 @@
 		<Paragraph No="970">
 			<Text>Через четверть часа снова в лесу. Вы путешествуете уже достаточно долго, но так и не смогли углубиться в лес, а ведь знаете, что Черный замок – сердце леса. Потеряйте 1 УДАЧУ. Вскоре вы выходите на дорогу, идущую в нужном вам направлении.</Text>
 			<Modifications>
-				<Luck Val="-1"/>
+				<Luck Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="960"/>
@@ -8475,7 +8475,7 @@
 		<Paragraph No="972">
 			<Text>Вы идете дальше, несмотря на усталость. Потеряйте еще 2 ВЫНОСЛИВОСТИ.</Text>
 			<Modifications>
-				<Endurance Val="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="942"/>
@@ -8484,7 +8484,7 @@
 		<Paragraph No="973">
 			<Text>Хозяин весьма доволен. Он вас предупреждает, что когда вы переберетесь через реку (а вам нужно будет это сделать), то на берегу вас будет ожидать охрана: парочка Гоблинов. Хозяин желает вам удачи (добавьте себе 1 УДАЧУ). А вы продолжаете свой путь.</Text>
 			<Modifications>
-				<Luck Val="1"/>
+				<Luck Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1256"/>
@@ -8500,7 +8500,7 @@
 		<Paragraph No="975">
 			<Text>Теперь Злой Дух не сделает вам вреда. Но ночью, в темноте вы сбиваетесь с пути, на вас наваливается усталость (потеряйте 4 ВЫНОСЛИВОСТИ). К утру выходите на какую-то дорогу.</Text>
 			<Modifications>
-				<Endurance Val="-4"/>
+				<Endurance Value="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="767"/>
@@ -8559,7 +8559,7 @@
 		<Paragraph No="983">
 			<Text>Пытаетесь бежать, но огненное дыхание настигает вас. Потеряйте еще 8 ВЫНОСЛИВОСТЕЙ. Если остались живы, то скрывайтесь в лесу, где Дракон не может вас преследовать.</Text>
 			<Modifications>
-				<Endurance Val="-8"/>
+				<Endurance Value="-8"/>
 			</Modifications>
 			<Options>
 				<Option Destination="823"/>
@@ -8601,16 +8601,16 @@
 			<Text>Вдруг на дорогу откуда-то сверху спрыгивает двухметровый человекообразный зверь. Он появился перед вами настолько неожиданно, что вы сначала испугались, а потом обратили внимание на зверя. Он похож на огромную гориллу и к тому же явно не собирается пропускать вас дальше. Зверь отпрыгивает на два метра в сторону, два раза бьет себе по груди и, оскалив клыки, смотрит на вас.\n\nВо время боя можете воспользоваться заклятиями:</Text>
 			<Actions>
 				<Option Destination="1091" Text="Копии" Availability="ЗАКЛЯТИЕ КОПИИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ КОПИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ КОПИИ"/>
 				</Option>
 				<Option Destination="1091" Text="Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ОГНЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ОГНЯ"/>
 				</Option>
 				<Option Destination="1157" Text="Силы" Availability="ЗАКЛЯТИЕ СИЛЫ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ СИЛЫ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ СИЛЫ"/>
 				</Option>
 				<Option Destination="1170" Text="Слабости" Availability="ЗАКЛЯТИЕ СЛАБОСТИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ СЛАБОСТИ"/>
 					<Text>Или драться без них. Битва будет жаркая.</Text>
 				</Option>
 				<Fight>
@@ -8771,7 +8771,7 @@
 		<Paragraph No="1007">
 			<Text>Вы вознаграждены за свою смелость. Это Микстура выносливости. Можете прибавить 8 ВЫНОСЛИВОСТЕЙ и отправляться дальше.</Text>
 			<Modifications>
-				<Endurance Val="8"/>
+				<Endurance Value="8"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1261"/>
@@ -8851,8 +8851,8 @@
 		<Paragraph No="1016">
 			<Text>Вам повезло: вы успеваете выкарабкаться за пределы желоба, цепляясь за кусты и исцарапав до крови руки (потеряйте 1 МАСТЕРСТВО и 2 ВЫНОСЛИВОСТИ), и шар проносится мимо. Потом опять с опаской спускаетесь в желоб и, решив больше не рисковать, подниметесь по нему вверх. Но наверху вас ждет сюрприз...</Text>
 			<Modifications>
-				<Mastery Val="-1"/>
-				<Endurance Val="-2"/>
+				<Mastery Value="-1"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1156"/>
@@ -8919,17 +8919,17 @@
 		<Paragraph No="1026">
 			<Text>Вы пытаетесь сосредоточиться на заклятии Копии. Но, к вашему ужасу, копия не появляется! Рыцари развеяли заклятие, после чего второй бросает копье, и оно ранит вас на излете. Потеряйте еще 4 ВЫНОСЛИВОСТИ. Теперь вы можете попробовать или заклятие:</Text>
 			<Modifications>
-				<Endurance Val="-4"/>
+				<Endurance Value="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="913" Text="Заклятие Силы" Availability="ЗАКЛЯТИЕ СИЛЫ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ СИЛЫ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ СИЛЫ"/>
 				</Option>
 				<Option Destination="792" Text="Заклятие Слабости" Availability="ЗАКЛЯТИЕ СЛАБОСТИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ СЛАБОСТИ"/>
 				</Option>
 				<Option Destination="1121" Text="Заклятие Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ОГНЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ОГНЯ"/>
 					<Text>Надеяться только на свой меч и драться...</Text>
 				</Option>
 				<Option Destination="799"/>
@@ -8963,7 +8963,7 @@
 		<Paragraph No="1031">
 			<Text>Когда вы задаете свой вопрос, один из Орков невозмутимо дергает рычаг под столом, и вы летите куда-то вниз. Вероятно, спросили что-то не то...\n\nКогда вы падаете, то от удара теряете сознание (и 2 ВЫНОСЛИВОСТИ)...</Text>
 			<Modifications>
-				<Endurance Val="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="794"/>
@@ -9000,7 +9000,7 @@
 			<Text>Заклятие Иллюзии не действует на стариков.</Text>
 			<Options>
 				<Option Destination="1532" Text="Хотите наложить заклятие Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ОГНЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ОГНЯ"/>
 				</Option>
 				<Option Destination="1391" Text="Наберетесь терпения"/>
 			</Options>
@@ -9029,7 +9029,7 @@
 		<Paragraph No="1040">
 			<Text>Вы выиграли 10 золотых. Однако вашу ставку вычеркните из своего имущества.</Text>
 			<Modifications>
-				<Gold Val="10"/>
+				<Gold Value="10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1579" Text="Будете играть еще"/>
@@ -9085,7 +9085,7 @@
 		<Paragraph No="1047">
 			<Text>Вам удается построить плот, но на это уходят все ваши силы (потеряйте 6 ВЫНОСЛИВОСТЕЙ). Куда вы поплывете на плоту:</Text>
 			<Modifications>
-				<Endurance Val="-6"/>
+				<Endurance Value="-6"/>
 			</Modifications>
 			<Options>
 				<Option Destination="813" Text="К противоположному берегу"/>
@@ -9165,7 +9165,7 @@
 		<Paragraph No="1057">
 			<Text>Драгоценности мало интересуют Дракона, и он недвусмысленно дает вам это понять, дохнув на вас пламенем (потеряйте 3 ВЫНОСЛИВОСТИ).\n\nТеперь вам придется драться...</Text>
 			<Modifications>
-				<Endurance Val="-3"/>
+				<Endurance Value="-3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1285"/>
@@ -9295,7 +9295,7 @@
 					<Text>Воспользоваться заклятием Левитации, вылететь наружу и посмотреть, нет ли еще где-нибудь открытых окон:</Text>
 				</Option>
 				<Option Destination="1641" Text="Заклятием Левитации" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -9338,7 +9338,7 @@
 			<Text>Вы идете вперед, земля становится скользкой, начинает понемногу засасывать. Вы пытаетесь освободиться, но ничего не выходит – болото не хочет выпускать свою жертву. Когда вы уже теряете надежду выбраться, вам приходит мысль использовать заклятие Левитации. Вдруг оно вытянет вас из трясины?</Text>
 			<Options>
 				<Option Destination="1185" Text="Если у вас есть заклятие" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 					<Text>Если нет, то, увы, как вы ни стараетесь, болото не выпустит вас. Ваше путешествие кончено...</Text>
 				</Option>
 				<Gameover/>
@@ -9378,7 +9378,7 @@
 		<Paragraph No="1088">
 			<Text>Обшарив одежду разбойников, находите вытесанную из камня фигурку Кентавра – полуконя-получеловека, курительную трубку, гребень из слоновой кости, 7 золотых, пустой бронзовый кувшин и огнетушитель.\n\nМожете взять с собой все, что считаете нужным. Если когда-нибудь понадобится каменный Кентавр, то обращайтесь к параграфу 434, а если понадобится огнетушитель – к параграфу 225.\n\nТеперь вы идете по дороге, ведущей прямо к замку.</Text>
 			<Modifications>
-				<Gold Val="7"/>
+				<Gold Value="7"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1205"/>
@@ -9472,7 +9472,7 @@
 		<Paragraph No="1100">
 			<Text>Вы идете всю ночь – за осторожность приходится платить усталостью (потеряйте 3 ВЫНОСЛИВОСТИ). К утру выходите на дорогу.</Text>
 			<Modifications>
-				<Endurance Val="-3"/>
+				<Endurance Value="-3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="805"/>
@@ -9498,20 +9498,20 @@
 			<Text>Какой фокус вы им покажете:</Text>
 			<Options>
 				<Option Destination="991" Text="Метание огня с помощью заклятия Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ОГНЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ОГНЯ"/>
 				</Option>
 				<Option Destination="1094" Text="Превращение с помощью заклятия Иллюзии" Availability="ЗАКЛЯТИЕ ИЛЛЮЗИИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ИЛЛЮЗИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ИЛЛЮЗИИ"/>
 				</Option>
 				<Option Destination="890" Text="Воздушный трюк с помощью заклятия Левитации" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph No="1104">
 			<Text>Паук мертв, и вы можете посмотреть, что он хранил в своей паутине. Вы находите 1 золотой. Можете взять его собой, спускайтесь с дерева и продолжайте путь.</Text>
 			<Modifications>
-				<Gold Val="1"/>
+				<Gold Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1923"/>
@@ -9674,7 +9674,7 @@
 			<Text>Оскалив зубы, лохматое чудовище приближается к вам. Сначала вы не понимаете, сколько у него лап. Оказывается, не четыре, как обычно, а шесть. Однако зверь почему-то не на шутку разъярен. Вам придется принять на себя причину его плохого настроения, т.е. принять бой.</Text>
 			<Actions>
 				<Option Destination="856" Text="Можете воспользоваться заклятием Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ОГНЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ОГНЯ"/>
 				</Option>
 				<Fight>
 					<Enemy Name="ШЕСТИЛАПЫЙ ЗВЕРЬ" Mastery="9" Endurance="7"/>
@@ -9749,12 +9749,12 @@
 					<Trigger>Banana</Trigger>
 					<Head>БАНАН</Head>
 					<Price>21</Price>
-					<Benefit Name="Healing" Val="Съесть банан,3"/>
+					<Benefit Name="Healing" Value="Съесть банан,3"/>
 					<Text>Потом он спрашивает, куда вы держите путь. Он просит всего 2 золотых и говорит, что без него вы просто не найдете дороги, а то и вовсе утонете в болотах, которых немало поблизости.</Text>
 				</Get>
 			</Actions>
 			<Modifications>
-				<Endurance Val="3"/>
+				<Endurance Value="3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1315" Text="Воспользуетесь его предложением и скажете, что ищите Черный замок"/>
@@ -9807,10 +9807,10 @@
 					<Text>Если хотите, попробуйте наложить заклятия:</Text>
 				</Option>
 				<Option Destination="1203" Text="Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ОГНЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ОГНЯ"/>
 				</Option>
 				<Option Destination="1664" Text="Копии" Availability="ЗАКЛЯТИЕ КОПИИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ КОПИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ КОПИИ"/>
 					<Text>Итак:</Text>
 				</Option>
 				<Fight>
@@ -9848,10 +9848,10 @@
 			<Text>Обшарив карманы Гоблина, находите бронзовый свисток. Через реку не проложено дороги, и нет моста, так что придется потратить заклятие:</Text>
 			<Options>
 				<Option Destination="1594" Text="Плавания" Availability="ЗАКЛЯТИЕ ПЛАВАНИЯ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
 				</Option>
 				<Option Destination="1657" Text="Левитации" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 					<Text>Если у вас есть водолазный костюм, можете воспользоваться им:</Text>
 				</Option>
 				<Option Destination="1757" Text="Воспользоваться водолазным костюмом"/>
@@ -9860,7 +9860,7 @@
 		<Paragraph No="1145">
 			<Text>«Ты не знаешь пароля!» – в ярости рычит Лев. И его лапа наносит удар прежде, чем вы успеваете защититься (потеряйте 2 ВЫНОСЛИВОСТИ).\n\nТеперь вернитесь и пробуйте победить привратника в честном бою.</Text>
 			<Modifications>
-				<Endurance Val="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1668"/>
@@ -9942,10 +9942,10 @@
 			<Text>Вам удается только долететь до середины озера, когда заклятие перестает действовать. Майлин же предупреждал вас: не переоцените свои силы. Теперь скорее накладывайте еще одно заклятие:</Text>
 			<Options>
 				<Option Destination="1394" Text="Заклятие Левитации" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 				</Option>
 				<Option Destination="1394" Text="Заклятие Плавания" Availability="ЗАКЛЯТИЕ ПЛАВАНИЯ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
 					<Text>Иначе упадете в воду...</Text>
 				</Option>
 				<Option Destination="785"/>
@@ -9979,7 +9979,7 @@
 		<Paragraph No="1160">
 			<Text>Вы идете по дороге всю ночь. В темноте приходится миновать несколько перекрестков, но вы не рискуете сворачивать с избранного пути. Начинает сказываться усталость, слипаются (потеряйте 4 ВЫНОСЛИВОСТИ). Встает солнце, и вы видите, что конец дороги близок.</Text>
 			<Modifications>
-				<Endurance Val="-4"/>
+				<Endurance Value="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="934"/>
@@ -10002,7 +10002,7 @@
 		<Paragraph No="1163">
 			<Text>Вы садитесь отдохнуть и вдруг слышите стук капель... Вода! На ощупь находите это место и припадаете к нему губами (восстановите 7 ВЫНОСЛИВОСТЕЙ). Можете наполнить флягу, если она пуста (пользуйтесь этой водой так же, как и той, что была у вас в начале путешествия). После отдыха встаете и идете дальше.</Text>
 			<Modifications>
-				<Endurance Val="7"/>
+				<Endurance Value="7"/>
 			</Modifications>
 			<Options>
 				<Option Destination="942"/>
@@ -10027,7 +10027,7 @@
 			<Options>
 				<Option Destination="1128" Text="Если есть веревка"/>
 				<Option Destination="1158" Text="Если есть заклятие Левитации, то можете с его помощью перелететь скалу" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 					<Text>Иначе придется выбирать:</Text>
 				</Option>
 				<Option Destination="967" Text="Обойти скалу, если еще не делали этого"/>
@@ -10095,7 +10095,7 @@
 		<Paragraph No="1173">
 			<Text>В темноте устраиваетесь в дупле большого дерева. Ночь спите крепко. Добавьте себе 4 ВЫНОСЛИВОСТИ и отправляйтесь в путь с рассветом.</Text>
 			<Modifications>
-				<Endurance Val="4"/>
+				<Endurance Value="4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="805"/>
@@ -10218,10 +10218,10 @@
 					<Text>Если же нет, то паук затягивает вас на дерево, и вам приходится драться с ним. Во время боя уменьшайте вашу СИЛУ УДАРА на 1. Ведь вы не слишком-то привыкли драться на деревьях.\n\nПользоваться заклятием Огня на дереве неразумно. Копии же просто негде будет поместиться. Однако вы можете воспользоваться заклятиями:</Text>
 				</Option>
 				<Option Destination="1279" Text="Силы" Availability="ЗАКЛЯТИЕ СИЛЫ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ СИЛЫ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ СИЛЫ"/>
 				</Option>
 				<Option Destination="1201" Text="Слабости" Availability="ЗАКЛЯТИЕ СЛАБОСТИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ СЛАБОСТИ"/>
 				</Option>
 				<Fight>
 					<Enemy Name="ГИГАНТСКИЙ ПАУК" Mastery="8" Endurance="9"/>
@@ -10236,13 +10236,13 @@
 			<Text>После двух ударов одна из голов Дракона отлетает. Он отскакивает назад, а вас появляется время, чтобы, если хотите успеть наложить заклятие. Воспользуетесь передышкой и наложите заклятие:</Text>
 			<Options>
 				<Option Destination="1925" Text="Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ОГНЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ОГНЯ"/>
 				</Option>
 				<Option Destination="1023" Text="Силы" Availability="ЗАКЛЯТИЕ СИЛЫ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ СИЛЫ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ СИЛЫ"/>
 				</Option>
 				<Option Destination="780" Text="Слабости" Availability="ЗАКЛЯТИЕ СЛАБОСТИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ СЛАБОСТИ"/>
 				</Option>
 				<Option Destination="1889" Text="Будете продолжать драться"/>
 				<Option Destination="983" Text="Попробовать убежать"/>
@@ -10265,7 +10265,7 @@
 			<Text>Вы используете заклятие Огня, и огненный шар сжигает одну из голов Дракона.\n\n</Text>
 			<Actions>
 				<Option Destination="893" Text="У вас еще одно заклятие Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ОГНЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ОГНЯ"/>
 					<Text>Или будете драться с оставшейся головой? Она в свою очередь, дышит на вас огнем (потеряйте 2 ВЫНОСЛИВОСТИ).</Text>
 				</Option>
 				<Fight>
@@ -10307,7 +10307,7 @@
 		<Paragraph No="1197">
 			<Text>Молоко в кувшине совсем свежее. Но выпить его придется на месте (добавьте 7 ВЫНОСЛИВОСТЕЙ).</Text>
 			<Modifications>
-				<Endurance Val="7"/>
+				<Endurance Value="7"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1759" Text="Подойти к другому полотну"/>
@@ -10323,7 +10323,7 @@
 		<Paragraph No="1199">
 			<Text>Вы путешествуете уже достаточно долго, но так и не смогли углубиться в лес, а ведь знаете, что Черный замок – сердце леса. Потеряйте 1 УДАЧУ.\n\nПеред вами снова лесная развилка.</Text>
 			<Modifications>
-				<Luck Val="-1"/>
+				<Luck Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1276" Text="Пойдете направо"/>
@@ -10356,13 +10356,13 @@
 					<Text>Либо использовать заклятие:</Text>
 				</Option>
 				<Option Destination="1193" Text="Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ОГНЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ОГНЯ"/>
 				</Option>
 				<Option Destination="945" Text="Силы" Availability="ЗАКЛЯТИЕ СИЛЫ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ СИЛЫ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ СИЛЫ"/>
 				</Option>
 				<Option Destination="1936" Text="Слабости" Availability="ЗАКЛЯТИЕ СЛАБОСТИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ СЛАБОСТИ"/>
 				</Option>
 				<Option Destination="769" Text="Лучше предложить миролюбивому дракону подарок"/>
 			</Options>
@@ -10389,7 +10389,7 @@
 		<Paragraph No="1206">
 			<Text>Вы располагаетесь на ночь под одним из деревьев, и ничто не прерывает ваш сон. Прибавьте себе 3 ВЫНОСЛИВОСТИ и отправляйтесь в путь с первыми лучами солнца. Времени терять нельзя, до цели еще не близко.</Text>
 			<Modifications>
-				<Endurance Val="3"/>
+				<Endurance Value="3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1129"/>
@@ -10462,7 +10462,7 @@
 		<Paragraph No="1215">
 			<Text>За поясом у Орка находите флягу с водой. Можете взять ее с собой, тогда у вас будут две фляги. Воду эту можете использовать так же, как и вашу. В кармане у Орка лежит 3 золотых и игральная кость. Можете это взять себе, а теперь уходите.</Text>
 			<Modifications>
-				<Gold Val="3"/>
+				<Gold Value="3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1003"/>
@@ -10482,12 +10482,12 @@
 		<Paragraph No="1217">
 			<Text>Вы удачно приземляетесь, не считая небольшой царапины (потеряйте 2 ВЫНОСЛИВОСТИ). Однако нужно выбираться.</Text>
 			<Modifications>
-				<Endurance Val="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1283" Text="Если есть веревка"/>
 				<Option Destination="1022" Text="Можете воспользоваться заклятием Левитации" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 					<Text>Если нет ни веревки, ни заклятия...</Text>
 				</Option>
 				<Option Destination="1225"/>
@@ -10518,23 +10518,23 @@
 		<Paragraph No="1221">
 			<Text>На дороге появляются два скачущих во весь опор рыцаря. Оба закованы в тяжелые зеленые латы, на щитах силуэт Черного замка. Вы понимаете свою ошибку – это враги, а спрятаться уже некуда (если есть черная жемчужина – действуйте! — 482). Изображение замка на щите начинает расти, и вскоре вы видите только его, и ничего больше. Мрачный, угрюмый замок, по бокам невысокие сторожевые башенки, под одной из них исчезает голубая змейка. Неужели река! Но тогда замок должен быть огромен. Резкая боль заставляет прийти в себя. Один из рыцарей уже миновал вас, на полном скаку ударив копьем (потеряйте 4 ВЫНОСЛИВОСТИ). Отбросив копье, он разворачивает лошадь и достает меч. Щит приворожил вас, привлек все внимание – дело явно не обошлось без колдовства.\n\nТеперь надо мгновенно решать, что делать:</Text>
 			<Modifications>
-				<Endurance Val="-4"/>
+				<Endurance Value="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="799" Text="Выхватить меч и драться">
 					<Text>Попробовать наложить заклятие:</Text>
 				</Option>
 				<Option Destination="913" Text="Силы" Availability="ЗАКЛЯТИЕ СИЛЫ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ СИЛЫ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ СИЛЫ"/>
 				</Option>
 				<Option Destination="792" Text="Слабости" Availability="ЗАКЛЯТИЕ СЛАБОСТИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ СЛАБОСТИ"/>
 				</Option>
 				<Option Destination="1026" Text="Копии" Availability="ЗАКЛЯТИЕ КОПИИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ КОПИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ КОПИИ"/>
 				</Option>
 				<Option Destination="1121" Text="Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ОГНЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ОГНЯ"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -10597,7 +10597,7 @@
 		<Paragraph No="1230">
 			<Text>Вы изо всех сил ударяете ногой о стену, но она не ломается, а вы чувствуете резкую боль в ноге. Это растяжение – потеряйте 6 ВЫНОСЛИВОСТЕЙ. Нога еще поболит, но потом боль пройдет. Так что теперь попробуйте разобрать стену руками.</Text>
 			<Modifications>
-				<Endurance Val="-6"/>
+				<Endurance Value="-6"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1488"/>
@@ -10606,7 +10606,7 @@
 		<Paragraph No="1231">
 			<Text>Вы выпиваете жидкость. Это микстура ужаса. Каждый раз, когда вы будете встречаться с врагом, вам потребуются все силы, чтобы подавить в себе ужас перед ним. Поэтому потеряйте 1 МАСТЕРСТВО. Теперь же закройте дверь и снова заприте ее.</Text>
 			<Modifications>
-				<Mastery Val="-1"/>
+				<Mastery Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1508"/>
@@ -10643,7 +10643,7 @@
 		<Paragraph No="1235">
 			<Text>Ваши противники повержены. В карманах у рыцарей вы находите 7 золотых, перо павлина и прекрасную розу, которая, похоже, никогда не завянет.</Text>
 			<Modifications>
-				<Gold Val="7"/>
+				<Gold Value="7"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1289" Text="Отправляться дальше"/>
@@ -10660,7 +10660,7 @@
 		<Paragraph No="1237">
 			<Text>Вы осторожно кладете конверт на место и, отдохнув (восстановите 2 ВЫНОСЛИВОСТИ), отправляетесь в путь.</Text>
 			<Modifications>
-				<Endurance Val="2"/>
+				<Endurance Value="2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1205"/>
@@ -10687,8 +10687,8 @@
 				</Fight>
 			</Actions>
 			<Modifications>
-				<Luck Val="-1"/>
-				<Gold Val="1"/>
+				<Luck Value="-1"/>
+				<Gold Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1131"/>
@@ -10864,7 +10864,7 @@
 		<Paragraph No="1263">
 			<Text>Вы откидываете тяжелую крышку сундука, и вам в глаза ударяет сверканье множества золотых монет. Обезьяна удивленно смотрит на вас и зовет, указывая на какую-то дверь. Вы можете взять себе максимум 85 монет. Сундук слишком большой и тяжелый, чтобы тащить его весь с собой.\n\nТеперь решайте:</Text>
 			<Modifications>
-				<Gold Val="85"/>
+				<Gold Value="85"/>
 			</Modifications>
 			<Options>
 				<Option Destination="921" Text="Последуете за обезьяной"/>
@@ -10887,7 +10887,7 @@
 		<Paragraph No="1266">
 			<Text>Ночь проходит спокойно (восстановите 3 ВЫНОСЛИВОСТИ).\n\nПроснувшись с рассветом, вы отправляетесь в путь.</Text>
 			<Modifications>
-				<Endurance Val="3"/>
+				<Endurance Value="3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1256"/>
@@ -10896,7 +10896,7 @@
 		<Paragraph No="1267">
 			<Text>Зеленый рыцарь как раз готовится нанести вам удар, и вы надеясь, что заклятие Копии защитит вас. Но Копия не появляется, и его удар достигает цели (потеряйте 2 ВЫНОСЛИВОСТИ). Другого выхода нет – возвращайтесь и деритесь с ним.</Text>
 			<Modifications>
-				<Endurance Val="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1409"/>
@@ -10907,7 +10907,7 @@
 			<Options>
 				<Option Destination="953" Text="Пойдете дальше"/>
 				<Option Destination="1907" Text="Попробуете перелететь через стену, используя заклятие Левитации" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -10948,7 +10948,7 @@
 			<Text>Вы идете вперед, земля становится скользкой, начинает понемногу засасывать. Вы пытаетесь освободиться, но ничего не выходит – болото не хочет выпускать свою жертву. И вдруг вы вспоминаете про заклятие Левитации.</Text>
 			<Options>
 				<Option Destination="1079" Text="Если оно у вас есть" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 					<Text>Если же нет, то ваше путешествие окончено...</Text>
 				</Option>
 				<Gameover/>
@@ -10957,7 +10957,7 @@
 		<Paragraph No="1275">
 			<Text>Довольный собой, вы останавливаетесь. Однако, у вас сложилось впечатление, что дети больше удивлялись не тому, что вы использовали магию и как вы ей пользовались, а скорее зрелищности происходящего. Похоже, вы не первый, кто показывал им “фокусы”. Тут вы чувствуете, что они трогают вас за рукав рубахи и заговорщицки зовут вас что-то послушать. Наклоняясь, вы слушаете то, что они хотели вам сказать, и ваши догадки подтверждаются: оказывается, дети каким-то образом разузнали, как можно обращать заклятия противника на него самого, и теперь охотно делятся с вами этим секретом. Добавьте себе 1 УДАЧУ.\n\nКогда захотите этим воспользоваться, то просто обратите обратно на врага заклятие, которое он наложил на вас. Но с одним условием: вы можете обращать только те заклятия, которые сами знаете. Вы благодарите ребятишек за помощь и расстаетесь с ними друзьями.</Text>
 			<Modifications>
-				<Luck Val="1"/>
+				<Luck Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1196"/>
@@ -10978,7 +10978,7 @@
 		<Paragraph No="1278">
 			<Text>С помощью меча вы прорубаете себе путь в непроходимых зарослях. Вскоре усталость дает о себе знать, а конца зарослям не видно. Вычтите у себя 1 выносливость и вернитесь к воротам.</Text>
 			<Modifications>
-				<Endurance Val="-1"/>
+				<Endurance Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="958"/>
@@ -11035,7 +11035,7 @@
 				</Fight>
 			</Actions>
 			<Modifications>
-				<Endurance Val="-4"/>
+				<Endurance Value="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1190"/>
@@ -11080,13 +11080,13 @@
 			</Actions>
 			<Options>
 				<Option Destination="1039" Text="Копии" Availability="ЗАКЛЯТИЕ КОПИИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ КОПИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ КОПИИ"/>
 				</Option>
 				<Option Destination="1039" Text="Силы" Availability="ЗАКЛЯТИЕ СИЛЫ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ СИЛЫ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ СИЛЫ"/>
 				</Option>
 				<Option Destination="1223" Text="Слабости" Availability="ЗАКЛЯТИЕ СЛАБОСТИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ СЛАБОСТИ"/>
 					<Text>Если победили их:</Text>
 				</Option>
 				<Option Destination="1010"/>
@@ -11134,8 +11134,8 @@
 		<Paragraph No="1296">
 			<Text>Вы залезаете на пальму и у самого верха вдруг нечаянно обрываетесь и падаете. При падении вывихиваете руку (потеряйте 1 МАСТЕРСТВО и 2 ВЫНОСЛИВОСТИ).</Text>
 			<Modifications>
-				<Mastery Val="-1"/>
-				<Endurance Val="-2"/>
+				<Mastery Value="-1"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="828" Text="Попробуете залезть еще раз"/>
@@ -11190,8 +11190,8 @@
 		<Paragraph No="1303">
 			<Text>В паутине вы находите 3 золотых, коготь дракона, бронзовый свисток и запечатанную бутылку вина. Как она попала сюда, вы только можете догадываться. Вероятно, Гоблин или Орк ненароком зашел сюда и не смог осилить злополучного паука. Берите себе все, что захотите (вино добавит 4 ВЫНОСЛИВОСТИ) и уходите по другой дороге.</Text>
 			<Modifications>
-				<Gold Val="3"/>
-				<Benefit Name="Healing" Val="Выпить гоблинского вина,4"/>
+				<Gold Value="3"/>
+				<Benefit Name="Healing" Value="Выпить гоблинского вина,4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="998"/>
@@ -11232,13 +11232,13 @@
 			<Text>Вскоре мостовая вновь спускается на берег реки. Широкий каменный мост высоко проходит над полноводной рекой. На другом берегу, по обеим сторонам моста, стоят сторожевые будки, выкрашенные в зеленый цвет. Между ними проходит дорога и скрывается в лесу. Пока переходите мост, вас замечает охрана, которая уже ждет на дороге. Охрана – два Гоблина поставлена здесь для того, чтобы никто посторонний не мог перебраться через реку. Ваша одежда ясно показывает им, что вы не служите волшебнику. Скорее решайте, что делать, ведь они атакуют вас. Наложите заклятие:</Text>
 			<Options>
 				<Option Destination="1140" Text="Силы" Availability="ЗАКЛЯТИЕ СИЛЫ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ СИЛЫ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ СИЛЫ"/>
 				</Option>
 				<Option Destination="822" Text="Слабости" Availability="ЗАКЛЯТИЕ СЛАБОСТИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ СЛАБОСТИ"/>
 				</Option>
 				<Option Destination="986" Text="Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ОГНЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ОГНЯ"/>
 				</Option>
 				<Option Destination="1320" Text="Будете драться с ними"/>
 			</Options>
@@ -11260,7 +11260,7 @@
 		<Paragraph No="1311">
 			<Text>Несколько часов идете по коридору, а конца все нет. Вы ужасно устали (потеряйте 4 ВЫНОСЛИВОСТИ).</Text>
 			<Modifications>
-				<Endurance Val="-4"/>
+				<Endurance Value="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1163" Text="Прислониться к сырой стене и отдохнуть"/>
@@ -11270,7 +11270,7 @@
 		<Paragraph No="1312">
 			<Text>Вы уже идете достаточно долго, пробираясь на ощупь в темноте, а коридор не изменяется. Все так же тесно, да к тому же и душно. Он вовсе не выложен из камня или кирпича, коридор просто выкопан в земле. Вскоре боль в согнутой спине дает о себе знать, потеряйте 3 ВЫНОСЛИВОСТИ.\n\nКогда начинаете жалеть, что связались с этим деревом, впереди забрезжил свет. Через минуту выходите из коридора через нору в земле и, щурясь от дневного света, проходите какое-то заброшенное поле и направляетесь к Замку.</Text>
 			<Modifications>
-				<Endurance Val="-3"/>
+				<Endurance Value="-3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1205"/>
@@ -11286,7 +11286,7 @@
 		<Paragraph No="1314">
 			<Text>Через густой и темный лес продираться трудно. Пока искали дорогу, лишились 1 ВЫНОСЛИВОСТИ. В конце концов, вылезаете на какую-то тропинку и решаете направиться по ней.</Text>
 			<Modifications>
-				<Endurance Val="-1"/>
+				<Endurance Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1302"/>
@@ -11400,7 +11400,7 @@
 		<Paragraph No="1328">
 			<Text>Вы берете пояс и надеваете на себя. Теперь на вас Волшебный пояс (добавьте 1 УДАЧУ). С его помощью можете в любой момент (но только один раз за все путешествие) позвать на помощь крота. Он выроет ход, по которому сможете проникнуть во двор Черного замка. Когда вы увидите замок, обратитесь к параграфу 1148, если, конечно, будет такое желание, и воспользуйтесь помощью крота. Теперь же пора выбираться из берлоги.</Text>
 			<Modifications>
-				<Luck Val="1"/>
+				<Luck Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1034"/>
@@ -11451,7 +11451,7 @@
 		<Paragraph No="1335">
 			<Text>Остров кажется вам немного странным: он весь засажен прекрасными фруктовыми деревьями, но нигде не видно ни одной живой души. Среди деревьев больше всего апельсиновых, кроме того, растут бананы, мандарины, а также яблоки и груши. Можете сорвать по три плода каждого вида, и каждый из восстановит вам по 2 ВЫНОСЛИВОСТИ. В центре островка на высоком дереве растет апельсин, который привлекает ваше внимание. Сначала вы не можете понять, почему он блестит на солнце, но когда подходите ближе, то видите, что он из чистого золота.</Text>
 			<Modifications>
-				<Healing Val="Съесть плодов с острова,2,15"/>
+				<Healing Value="Съесть плодов с острова,2,15"/>
 			</Modifications>
 			<Options>
 				<Option Destination="827" Text="Рискнете сорвать его"/>
@@ -11557,10 +11557,10 @@
 			<Text>Вы решаете идти по берегу. Другого берега по-прежнему не видно. Через несколько минут остров скрывается из виду, а еще через несколько – в воде появляется новый островок.\n\nЛодки на берегу нет, и, если все же хотите перебраться через озеро, придется:</Text>
 			<Options>
 				<Option Destination="810" Text="Воспользоваться заклятием Плавания" Availability="ЗАКЛЯТИЕ ПЛАВАНИЯ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
 				</Option>
 				<Option Destination="1332" Text="Заклятием Левитации" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 					<Text>Или можете идти дальше по дорожке, ведущей вас по берегу:</Text>
 				</Option>
 				<Option Destination="924"/>
@@ -11631,7 +11631,7 @@
 		<Paragraph No="1359">
 			<Text>Настроение Хозяина меняется: он становится веселее и еще раз приглашает зайти и отдохнуть после дальней дороги. По вашей пыльной одежде он сразу понял, что пришли вы издалека. На этот раз вы принимаете его приглашение. Как только входите, сразу становится ясно, что Хозяин живет не один. Из кухни веет пряными запахами, запахом мясного супа и пирожков. Хозяин говорит, что это его женушка готовит обед, и приглашает вас за стол. Вы садитесь у окна и принимаетесь за еду. Горячий обед восстановит вам 6 ВЫНОСЛИВОСТЕЙ. За столом вы рассказываете, что вы не здешний и пришли издалека. Хозяина, однако, интересует, зачем и куда вы держите путь. Что вы ответите:</Text>
 			<Modifications>
-				<Endurance Val="6"/>
+				<Endurance Value="6"/>
 			</Modifications>
 			<Options>
 				<Option Destination="841" Text="Что ищете Черный замок, чтобы убить волшебника и освободить принцессу"/>
@@ -11664,7 +11664,7 @@
 			<Text>Книга разъясняет вам смысл загадочных символов, хотя не совсем: «Да поднявший этот камень сможет стать рыбой...».\n\nВы удивляетесь: как это вы станете рыбой? Но осмотрев каменную глыбу со всех сторон, вы понимаете, что одному вам ее не поднять.</Text>
 			<Options>
 				<Option Destination="1967" Text="Использовать заклятие Силы, чтобы поднять камень" Availability="ЗАКЛЯТИЕ СИЛЫ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ СИЛЫ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ СИЛЫ"/>
 				</Option>
 				<Option Destination="910" Text="Идти обратно потому что у камня дорога кончается"/>
 			</Options>
@@ -11692,10 +11692,10 @@
 			<Text>Если у вас есть еще заклятия Плавания или Левитации, используйте их и достигните другого берега озера:</Text>
 			<Options>
 				<Option Destination="1334" Text="Заклятие Плавания" Availability="ЗАКЛЯТИЕ ПЛАВАНИЯ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
 				</Option>
 				<Option Destination="1334" Text="Заклятие Левитации" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 					<Text>Если же нет, то фруктов вам хватит надолго, и вы еще сможете узнать, кто охраняет золотой апельсин и для чего он нужен. Но это будет еще не скоро...</Text>
 				</Option>
 				<Gameover/>
@@ -11805,8 +11805,8 @@
 		<Paragraph No="1379">
 			<Text>Вы приподнимаете крышку большого сундука, но она вырывается из рук и со всей силы бьет по пальцам. Потеряйте 1 МАСТЕРСТВО и 2 ВЫНОСЛИВОСТИ.</Text>
 			<Modifications>
-				<Mastery Val="-1"/>
-				<Endurance Val="-2"/>
+				<Mastery Value="-1"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1789" Text="Попробовать поднять крышку">
@@ -11887,7 +11887,7 @@
 		<Paragraph No="1388">
 			<Text>Срываете огурец и пробуете. Вкус у него самый обычный, и вы без опаски съедаете огурец целиком. Восстановите 4 ВЫНОСЛИВОСТИ и покиньте комнату или через:</Text>
 			<Modifications>
-				<Endurance Val="4"/>
+				<Endurance Value="4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1812" Text="Левую дверь"/>
@@ -12010,7 +12010,7 @@
 		<Paragraph No="1406">
 			<Text>Вы бросаете фигурку в мешок, и оттуда вырывается столб пламени, обдавший вас жаром (потеряйте 2 ВЫНОСЛИВОСТИ). Вы отскакиваете от него, а затем принимаете тушить водой из бадьи, стоящей рядом. Потушив, осматриваете мешок и не обнаруживаете ковра-самолета. Он сгорел – неужели от этого гномика? Остальные вещи целы. Вычеркните ковер из списка. Слава Богу, мешок цел остался! Теперь выходите обратно.</Text>
 			<Modifications>
-				<Endurance Val="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1708"/>
@@ -12036,11 +12036,11 @@
 				</Fight>
 			</Actions>
 			<Modifications>
-				<Endurance Val="-4"/>
+				<Endurance Value="-4"/>
 			</Modifications>			
 			<Options>
 				<Option Destination="1267" Text="Вы можете попытаться наложить заклятие Копии" Availability="ЗАКЛЯТИЕ КОПИИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ КОПИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ КОПИИ"/>
 					<Text>Если же решили драться с ним на мечах, то учтите, что каждый раз вам придется вычитать из вашей СИЛЫ УДАРА 1, ведь он сражается на коне, а вы нет. Если вы победили:</Text>
 				</Option>
 				<Option Destination="788"/>
@@ -12173,7 +12173,7 @@
 		<Paragraph No="1428">
 			<Text>Вы просите накормить вас. Повар соглашается, но просит за это плату – 2 золотых. Если согласны, то отдайте ему деньги, и он нальет вам тарелку горячих щей. Восстановите 5 ВЫНОСЛИВОСТЕЙ и уходите.</Text>
 			<Modifications>
-				<Endurance Val="5"/>
+				<Endurance Value="5"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1450"/>
@@ -12209,7 +12209,7 @@
 		<Paragraph No="1433">
 			<Text>Вы храбро выпиваете жидкость. Это микстура жизни. Прибавьте себе 8 ВЫНОСЛИВОСТЕЙ и уходите из домика.</Text>
 			<Modifications>
-				<Endurance Val="8"/>
+				<Endurance Value="8"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1343"/>
@@ -12232,7 +12232,7 @@
 		<Paragraph No="1436">
 			<Text>Вы пробуете красное вино. Оно действительно великолепно. Прибавьте 5 ВЫНОСЛИВОСТЕЙ, поблагодарите Тролля и покиньте погреб через дверь в противоположном конце прохода между полками.</Text>
 			<Modifications>
-				<Endurance Val="5"/>
+				<Endurance Value="5"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1136"/>
@@ -12252,13 +12252,13 @@
 					<Text>Либо, если, конечно, у вас есть еще одно заклинание Левитации, можете подняться по воздуху:</Text>
 				</Option>
 				<Option Destination="1589" Text="Вверх" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 				</Option>
 				<Option Destination="1660" Text="В окно справа" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 				</Option>
 				<Option Destination="1828" Text="В окно слева" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -12311,14 +12311,14 @@
 					<Text>Но если у вас есть заклятие Левитации, то можете попробовать влететь в окно повыше:</Text>
 				</Option>
 				<Option Destination="1945" Text="Использовать заклятье" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph No="1444">
 			<Text>Вода самая обычная. Восстановите себе 4 ВЫНОСЛИВОСТИ. Теперь выходите из комнаты и идите дальше по коридору.</Text>
 			<Modifications>
-				<Endurance Val="4"/>
+				<Endurance Value="4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1429"/>
@@ -12369,11 +12369,11 @@
 		<Paragraph No="1451">
 			<Text>Наложив заклятие Плавания, вступаете в реку. Течение такое быстрое, что уже через несколько секунд вы подплываете к тому месту, где река скрывается под замком. Сначала все идет так, как и ожидалось: после небольшого водопада, который удается миновать, отделавшись только легким ушибом (потеряйте 1 ВЫНОСЛИВОСТЬ), река выравнивается и течет в высокой трубе где-то по подземельям замка. Но когда по вашим расчетам вот-вот можно будет попасть в комнату, откуда слуги берут воду, вы внезапно ударяетесь о невидимую решетку и чувствуете, что начинаете тонуть. Барлад Дэрт надежно защитил свой замой от любопытных глаз.\n\nРешетка развеяла заклятие, а плавать вы не умеете. Вода начинает прибывать, теперь уже нельзя воспользоваться даже заклятием Левитации: вам не пролететь, не захлебнувшись, по узкому пространству между верхом трубы и водой. Есть только один выход: наложить еще одно заклятие Плавания и попытаться выплыть против течения. Но догадались ли вы запастись еще одним таким заклятием?</Text>
 			<Modifications>
-				<Endurance Val="-1"/>
+				<Endurance Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1566" Text="Если да" Availability="ЗАКЛЯТИЕ ПЛАВАНИЯ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
 					<Text>Если нет, то решетка пропустит только ваш труп, который послужит хорошей пищей Гоблинам и Оркам...</Text>
 				</Option>
 				<Gameover/>
@@ -12389,13 +12389,13 @@
 			<Text>Вы можете воспользоваться заклятиями:</Text>
 			<Options>
 				<Option Destination="1420" Text="Силы" Availability="ЗАКЛЯТИЕ СИЛЫ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ СИЛЫ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ СИЛЫ"/>
 				</Option>
 				<Option Destination="1408" Text="Слабости" Availability="ЗАКЛЯТИЕ СЛАБОСТИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ СЛАБОСТИ"/>
 				</Option>
 				<Option Destination="1941" Text="Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ОГНЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ОГНЯ"/>
 					<Text>Или драться мечом:</Text>
 				</Option>
 				<Option Destination="1381"/>
@@ -12404,7 +12404,7 @@
 		<Paragraph No="1454">
 			<Text>Библиотекарь обманул вас: он насторожился и решил поднять тревогу. Вы не в силах сопротивляться вбежавшей страже – Гоблинам, вооруженным боевыми топорами. Нескольких вам удается убить, но врагов слишком много. Сильный удар по голове (потеряйте 2 ВЫНОСЛИВОСТИ) – и вы теряете сознание...</Text>
 			<Modifications>
-				<Endurance Val="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="794"/>
@@ -12432,7 +12432,7 @@
 			<Text>Вы пробираетесь через клумбу и подходите к окну. Его не трудно открыть, и вы выглядываете наружу: все еще стоит ночь. До рассвета еще долго.\n\nЧто вы сделаете:</Text>
 			<Options>
 				<Option Destination="1658" Text="Вылетите в окно, наложив заклятие Левитации, и посмотрите, нет ли где еще окон" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 					<Text>Пройдете к одной из дверей:</Text>
 				</Option>
 				<Option Destination="1645" Text="В ту, что теперь слева от вас"/>
@@ -12552,7 +12552,7 @@
 		<Paragraph No="1474">
 			<Text>Через несколько шагов тоннель заканчивается у невысокой двери. За ней крошечная комнатенка. Войдя, вы больно ударяетесь о низкий потолок головой (потеряйте 1 ВЫНОСЛИВОСТЬ). Потом выходите через такую же дверь, только в другой стене и попадаете не то в коридорчик, не то в разлом в стене. Вы стараетесь протиснуться в эту щель и с последним рывком вываливаетесь наружу.</Text>
 			<Modifications>
-				<Endurance Val="-1"/>
+				<Endurance Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1785"/>
@@ -12652,7 +12652,7 @@
 		<Paragraph No="1486">
 			<Text>Вы пытаетесь отступить назад и захлопнуть дверь, но скелет не дает вам это сделать. Несмотря на то, что он только ранил вас, когда вы повернулись к нему спиной (потеряйте 2 ВЫНОСЛИВОСТИ), бегство не удалось. Вам придется вернуться и сразиться с ним.</Text>
 			<Modifications>
-				<Endurance Val="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1208"/>
@@ -12667,7 +12667,7 @@
 		<Paragraph No="1488">
 			<Text>Кирпичи легко вынимаются, но за ними выложен еще один такой ряд. Его тоже удается разобрать, но кирпичи оказываются слишком тяжелыми, и к концу работы вы чувствуете усталость (потеряйте 1 ВЫНОСЛИВОСТЬ). За образовавшимся отверстием находите веревочную лесенку, ведущую вниз. Спустившись, открываете люк в полу и спрыгиваете вниз. Вы оказались на лестничной площадке. Перед вами дверь, которую вы открываете.</Text>
 			<Modifications>
-				<Endurance Val="-1"/>
+				<Endurance Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1818"/>
@@ -12843,7 +12843,7 @@
 		<Paragraph No="1510">
 			<Text>Это меч Зеленого рыцаря. Он поможет вам лучше сражаться и быстрей побеждать. Добавьте 1 МАСТЕРСТВО и проходите через дверь справа.</Text>
 			<Modifications>
-				<Mastery Val="1"/>
+				<Mastery Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1740"/>
@@ -12866,7 +12866,7 @@
 			<Text>Дверь со скрипом открывается, и вы входите внутрь. Вдруг чьи-то крылья бьют по лицу, и вы чувствуете сильный укус в плечо (потеряйте 1 ВЫНОСЛИВОСТЬ). Вам придется сражаться с летучими мышами – давними обитателями заброшенного домика.</Text>
 			<Actions>
 				<Option Destination="1396" Text="Вы можете воспользоваться заклятием Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ОГНЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ОГНЯ"/>
 					<Text>Или же драться:</Text>
 				</Option>
 				<Fight>
@@ -12879,7 +12879,7 @@
 				</Fight>
 			</Actions>
 			<Modifications>
-				<Endurance Val="-1"/>
+				<Endurance Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1738" Text="Откинуть ставни и осмотреть домик"/>
@@ -12896,7 +12896,7 @@
 		<Paragraph No="1515">
 			<Text>Вы проходите через комнату и понимаете, что совершили ошибку. За стеной зенит колокольчик, и при выходе вас встречает охрана. Короткий неравный бой, кто-то бьет сзади по голове (потеряйте 2 ВЫНОСЛИВОСТИ), и вы теряете сознание...</Text>
 			<Modifications>
-				<Endurance Val="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1642"/>
@@ -13013,7 +13013,7 @@
 		<Paragraph No="1529">
 			<Text>Вы выхватываете меч и бросаетесь вперед. Недобрый огонек вспыхивает в глазах у волшебника, и в следующую секунду ваш меч, вырванный из руки нечеловеческой силой (потеряйте 1 МАСТЕРСТВО), отлетает в другой конец комнаты. «Ты слишком подл, чтобы оценить мое великодушие и терпение, — говорит маг, — и будешь наказан за это».</Text>
 			<Modifications>
-				<Mastery Val="-1"/>
+				<Mastery Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1576"/>
@@ -13039,7 +13039,7 @@
 			<Text>В воздухе появляется огненный шар и направляется к одному из стариков. К вашему огромному разочарованию, старик щелкает пальцами, и шар исчезает.</Text>
 			<Options>
 				<Option Destination="1036" Text="Попробовать заклятие Иллюзии" Availability="ЗАКЛЯТИЕ ИЛЛЮЗИИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ИЛЛЮЗИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ИЛЛЮЗИИ"/>
 				</Option>
 				<Option Destination="1391" Text="Спокойно ждёте, что будет дальше"/>
 			</Options>
@@ -13113,7 +13113,7 @@
 				<Option Destination="1443" Text="Посмотреть с помоста вниз"/>
 				<Option Destination="1570" Text="Сразу уйти"/>
 				<Option Destination="1945" Text="Наложить заклятие Левитации, взмыть в воздух и посмотреть окно выше" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -13155,13 +13155,13 @@
 					<Text>С помощью заклятия Левитации взмыть в воздух и направиться:</Text>
 				</Option>
 				<Option Destination="1589" Text="К этажу выше" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 				</Option>
 				<Option Destination="1660" Text="К окну справа" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 				</Option>
 				<Option Destination="1828" Text="К окну слева" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -13240,8 +13240,8 @@
 		<Paragraph No="1553">
 			<Text>Вы продули свою ставку, но зато вы выиграли бронзовый свисток, одно мускатное печенье, которое добавит 2 ВЫНОСЛИВОСТИ, и 1 золотой.</Text>
 			<Modifications>
-				<Healing Val="Съесть мускатное печенье,2"/>
-				<Gold Val="1"/>
+				<Healing Value="Съесть мускатное печенье,2"/>
+				<Gold Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1579" Text="Рискнете и сыграете следующий кон"/>
@@ -13251,8 +13251,8 @@
 		<Paragraph No="1554">
 			<Text>Вы берете булочки с тарелки. Они еще теплые – только недавно из печи. Вы можете съесть их сразу или положить в заплечный мешок. Каждая булочка восстановит вам 2 ВЫНОСЛИВОСТИ.</Text>
 			<Modifications>
-				<Healing Val="Съесть булочки,2,2"/>
-				<Gold Val="1"/>
+				<Healing Value="Съесть булочки,2,2"/>
+				<Gold Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1759" Text="Подойти к следующей картине"/>
@@ -13297,7 +13297,7 @@
 			</Actions>
 			<Options>
 				<Option Destination="1773" Text="Вы можете воспользоваться заклятием Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ОГНЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ОГНЯ"/>
 					<Text>Если вы остались целы после боя, то идите дальше:</Text>
 				</Option>
 				<Option Destination="1708"/>
@@ -13364,7 +13364,7 @@
 		<Paragraph No="1566">
 			<Text>Второе заклятие спасает вас: вы накладываете его, оттолкнувшись ногами от невидимой решетки, и оно благополучно выносит вас на берег. Но вы плыли против течения, поэтому потеряйте 2 ВЫНОСЛИВОСТИ.</Text>
 			<Modifications>
-				<Endurance Val="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1468"/>
@@ -13417,7 +13417,7 @@
 			<Options>
 				<Option Destination="1426" Text="Вы можете посмотреть, что за ней находится"/>
 				<Option Destination="1533" Text="С помощью заклятия Левитации вылететь в Окно и посмотреть, нет ли этажом выше открытых окон" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -13545,7 +13545,7 @@
 			<Text>Вы попадаете в абсолютно пустую комнату. Из нее только одна дверь, но она наглухо закрыта и не поддается, как бы вы ни старались ее открыть.\n\nЕсли же нет, остается только позвать Пегаса.</Text>
 			<Options>
 				<Option Destination="1641" Text="Если у вас есть еще одно заклятие Левитации, используйте его для того, чтобы вылететь из окна" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 					<Text>Если вы и этого не можете сделать, то через несколько часов стены комнаты раскалятся и сдвинутся, а вам придется спокойно смотреть на это и торопить смерть...</Text>
 				</Option>
 				<Gameover/>
@@ -13558,7 +13558,7 @@
 					<Text>Или, если не боитесь летать на такой высоте, и не боитесь, что заклятие Левитации может подвести вас, то можете влететь в окно последнего пятого этажа:</Text>
 				</Option>
 				<Option Destination="1945" Text="Заклятие Левитации" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -13586,7 +13586,7 @@
 		<Paragraph No="1593">
 			<Text>Подъемник не рассчитан на такую тяжесть. Один из канатов обрывается, и вы летите вниз. По пути задеваете что-то головой (потеряйте 5 ВЫНОСЛИВОСТЕЙ) – и теряете сознание...</Text>
 			<Modifications>
-				<Endurance Val="-5"/>
+				<Endurance Value="-5"/>
 			</Modifications>
 			<Options>
 				<Option Destination="794"/>
@@ -13610,7 +13610,7 @@
 		<Paragraph No="1596">
 			<Text>Вы пробуете белое вино, но вкус у него просто кошмарен. Оно явно предназначено не для людей. Постарайтесь не показать своего неудовольствия Троллю, потеряйте 1 МАСТЕРСТВО и уходите.</Text>
 			<Modifications>
-				<Mastery Val="-1"/>
+				<Mastery Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1136"/>
@@ -13683,7 +13683,7 @@
 		<Paragraph No="1605">
 			<Text>Камни очень тяжелы, но вы старательно снимаете их с сундука (потеряйте 3 ВЫНОСЛИВОСТИ) и поднимаете крышку.</Text>
 			<Modifications>
-				<Endurance Val="-3"/>
+				<Endurance Value="-3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1676"/>
@@ -13767,7 +13767,7 @@
 		<Paragraph No="1617">
 			<Text>Вы говорите человеку о том, что вы один из тех, кто взялся спасти Принцессу и не побоялся найти и победить черного мага. Вы добавляете ко всему, что пока не выполнили своей миссии. Человек желает вам удачи (добавьте себе 1 УДАЧУ) и может кое-чем помочь. Он говорит, что наиболее опасными местами в замке являются тупики и комнаты-ловушки.\n\nПо некоторым признакам можно их определить: никогда не входите в тот коридор, в конце которого видна дверь – это наверняка ловушка. При большом выборе направлений, ловушки обычно находятся по краям.\n\nОсобенно много ловушек на том этаже, где покоится Принцесса. Потом Человек говорит, что скоро придет охрана, так что вам надо уходить.\n\nПоблагодарив за помощь, вы прощаетесь с ним и выходите в коридор за вашей спиной.</Text>
 			<Modifications>
-				<Luck Val="1"/>
+				<Luck Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1404"/>
@@ -13828,7 +13828,7 @@
 		<Paragraph No="1625">
 			<Text>Это вино. Добавьте себе 5 ВЫНОСЛИВОСТЕЙ. Интересно, какой здесь запас вина? Но теперь это неважно, и вам придется выходить и идти дальше.</Text>
 			<Modifications>
-				<Endurance Val="5"/>
+				<Endurance Value="5"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1429"/>
@@ -14003,8 +14003,8 @@
 		<Paragraph No="1649">
 			<Text>Подойдя поближе, вы видите, что картина изображает не битву, а расправу. В центре ее сидит на коне рыцарь в латах и шляпе темно-зеленого цвета. Рукой в железной перчатке он указывает воинам на горящую деревню. В другой руке у него меч. Гоблины на заднем плане картины выволакивают из хат крестьян, несколько орков с факелами поджигают дома. Может быть так завоевывались древни вокруг леса? Или это эпизод из жизни армии мага до его прихода в эти места? Но ваши размышления прерваны: с картиной что-то происходит. На ваших глазах Зеленый рыцарь разворачивает лошадь – теперь его перчатка направлена на вас. Вы окаменели и не в силах пошевелиться, настолько заворожило только что увиденное действие. Несколько Гоблинов, вооруженных луками, поднимают их и направляют на вас. Вы испытываете странное желание убежать от этой страшной картины, но она притягивает, приковывает к себе. Гоблины отпускают тетиву луков, стрелы летят прямо в вас, но что это? Вы чувствуете острую боль в левой руке и под правым коленом. Стрелы попали в вас! Не теряя времени, вы отскакиваете от картины. Все немедленно принимает прежний вид. Но стрелы все еще торчат! Вы осторожно вынимаете их, радуясь, что они хотя бы не отравлены. Потеряйте 1 МАСТЕРСТВО и 4 ВЫНОСЛИВОСТИ. Теперь, когда вы достаточно наказаны за беспечное любопытство, вернитесь и сделайте более безопасный выбор.</Text>
 			<Modifications>
-				<Mastery Val="-1"/>
-				<Endurance Val="-4"/>
+				<Mastery Value="-1"/>
+				<Endurance Value="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1545"/>
@@ -14091,7 +14091,7 @@
 		<Paragraph No="1661">
 			<Text>Примерно на четвертые сутки все ваши силы иссякают (потеряйте 16 ВЫНОСЛИВОСТЕЙ). Голод дает о себе знать. Не померли ли вы, потеряв столько сил?</Text>
 			<Modifications>
-				<Endurance Val="-16"/>
+				<Endurance Value="-16"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1760" Text="Если вы живы"/>
@@ -14207,7 +14207,7 @@
 		<Paragraph No="1676">
 			<Text>Открыть сундук не составляет труда. На его дне обнаруживаете пергаментный свиток, свернутый в трубочку. Вы разворачиваете его и пытаетесь понять, что на нем изображено. Там изображение плана помещения, в котором находится Принцесса. В зал ведут несколько ходов, в центре помещения стоит возвышение для Принцессы. Вы уже хотели было отложить свиток, как вдруг одна деталь привлекает ваше внимание.\n\nЭто то место, где указано зеркало. Сначала вы думаете, что это дверь, так как за зеркалом отчетливо нарисована лестница, ведущая вверх. Это может означать только одно: в зал Принцессы ведет потайной ход. Теперь, когда увидите зеркало и захотите воспользоваться им, вычтете 13 из номера параграфа, на котором будете находиться и прочтите, что будет дальше.\n\nТеперь уходите из комнаты и не забудьте добавить себе 1 УДАЧУ.</Text>
 			<Modifications>
-				<Luck Val="1"/>
+				<Luck Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1212"/>
@@ -14223,7 +14223,7 @@
 		<Paragraph No="1678">
 			<Text>Через несколько метров пол проваливается под вами, и вы летите вниз.\n\nПри полете ударяетесь обо что-то головой (потеряйте 3 ВЫНОСЛИВОСТИ) и теряете сознание...</Text>
 			<Modifications>
-				<Endurance Val="-3"/>
+				<Endurance Value="-3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1688"/>
@@ -14239,7 +14239,7 @@
 		<Paragraph No="1680">
 			<Text>Вы наклоняетесь над краном и пробуете жидкость. Это микстура Жизни (восстановите 8 ВЫНОСЛИВОСТЕЙ). Теперь уходите из комнаты</Text>
 			<Modifications>
-				<Endurance Val="8"/>
+				<Endurance Value="8"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1429"/>
@@ -14254,8 +14254,8 @@
 		<Paragraph No="1682">
 			<Text>Сворачиваете с дороги и подходите к дереву. Оно вроде сухое, и дупло тоже есть. Вы не слишком то поверили в этот клад, но почему бы и не попробовать его поискать. Прикинув, где может быть место под дуплом, вы несколько раз втыкаете меч в мягкую землю. Наконец он во что-то упирается. Проходит немного времени, и закопанный ларец у вас в руках. Торопливо сбиваете замок. Внутри ларца лежат 10 золотых, серебряное кольцо и светильник. Можете взять с собой все, что хотите, и добавьте себе 1 УДАЧУ, даже если вы еще не тратили ее. Если вам понадобится зажечь светильник, прибавьте 10 к номеру параграфа, на котором вы будете находиться. Теперь возвращайтесь.</Text>
 			<Modifications>
-				<Luck Val="1"/>
-				<Gold Val="10"/>
+				<Luck Value="1"/>
+				<Gold Value="10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="920"/>
@@ -14271,7 +14271,7 @@
 		<Paragraph No="1684">
 			<Text>Вы забираете свою ставку и еще забираете 3 золотых. Вам повезло.</Text>
 			<Modifications>
-				<Gold Val="3"/>
+				<Gold Value="3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1579" Text="Решите, что стоит еще сыграть"/>
@@ -14304,7 +14304,7 @@
 			<Text>Очнулись в глубокой каменной яме. Стены гладкие, как стекло, поэтому нечего и думать, что можно как-то выкарабкаться отсюда. Вы упали прямо на чей-то скелет, а вокруг их еще несколько – видимо вы не первый, кто попадал в эту ловушку. Правда, у вас есть один шанс: вы можете использовать заклятие Левитации, чтоб выбраться отсюда:</Text>
 			<Options>
 				<Option Destination="1222" Text="Заклятие Левитации" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 					<Text>Если же его у вас нет, то через некоторое время никто уже не отличит вас от валяющихся вокруг костей...</Text>
 				</Option>
 				<Gameover/>
@@ -14319,7 +14319,7 @@
 		<Paragraph No="1690">
 			<Text>Вы даете женщинам 6 золотых. Они поражены вашей щедростью и дают один маленький совет: побольше обращаете внимания на зеркала – ими пользуются не только женщины. Добавьте себе 1 УДАЧУ. Когда вы увидите зеркало, которым захотите воспользоваться, вычтете 13 из того параграфа, на котором вы его увидели. Теперь же, выслушав жен мага, вы выходите из гарема и идете к новой двери.</Text>
 			<Modifications>
-				<Luck Val="1"/>
+				<Luck Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1147"/>
@@ -14334,7 +14334,7 @@
 		<Paragraph No="1692">
 			<Text>Женщине наплевать на ваши шутки. Потеряйте 1 УДАЧУ. После этого она выключает связь.</Text>
 			<Modifications>
-				<Luck Val="-1"/>
+				<Luck Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1702"/>
@@ -14376,13 +14376,13 @@
 			<Text>Вы подходите к реке, но вброд ее не перейти.\n\nВам придется использовать заклятия:</Text>
 			<Options>
 				<Option Destination="1970" Text="Заклятие Плавания" Availability="ЗАКЛЯТИЕ ПЛАВАНИЯ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
 				</Option>
 				<Option Destination="1709" Text="Заклятие Левитации" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 				</Option>
 				<Option Destination="1451" Text="Использовать заклятие Плавания, чтобы попробовать проплыть по течению реки под Замок, надеясь попасть в подземелье незамеченным" Availability="ЗАКЛЯТИЕ ПЛАВАНИЯ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
 				</Option>
 				<Option Destination="1834" Text="Если у вас есть скафандр, можете надеть его">
 					<Text>Если же у вас нет ни одного из этих заклятий или вы не хотите их использовать, идите к палаткам...</Text>
@@ -14460,13 +14460,13 @@
 					<Text>Либо попытаться перебраться через реку (тогда вам надо решить, каким заклятием вы воспользуетесь):</Text>
 				</Option>
 				<Option Destination="1774" Text="Заклятием Плавания" Availability="ЗАКЛЯТИЕ ПЛАВАНИЯ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
 				</Option>
 				<Option Destination="1324" Text="Заклятием Левитации" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 				</Option>
 				<Option Destination="1451" Text="Заклятием Левитации, но поплыть по течению реки, надеясь проникнуть в подземелье замка" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 				</Option>
 				<Option Destination="1418" Text="Если у вас есть водолазный костюм, вы можете надеть его"/>
 			</Options>
@@ -14521,8 +14521,8 @@
 		<Paragraph No="1711">
 			<Text>Вы выиграли четыре яблока, каждое из которых, добавит по 2 ВЫНОСЛИВОСТИ и 12 золотых. А также можете вернуть себе свою ставку. Теперь вам лучше уйти: нескольким Гоблинам не понравилось ваше везение, и они смотрят на вас завистливо и как-то подозрительно.</Text>
 			<Modifications>
-				<Healing Val="Съесть яблоко,2,4"/>
-				<Gold Val="12"/>
+				<Healing Value="Съесть яблоко,2,4"/>
+				<Gold Value="12"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1672"/>
@@ -14531,7 +14531,7 @@
 		<Paragraph No="1712">
 			<Text>Вы открываете сундук, но... он пуст. Видимо, его временно принесли в кухню за неимением лучшего места. Можете быстро поесть суп из котла и восстановить 3 ВЫНОСЛИВОСТИ, после чего придется уходить.</Text>
 			<Modifications>
-				<Endurance Val="3"/>
+				<Endurance Value="3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1450"/>
@@ -14573,7 +14573,7 @@
 		<Paragraph No="1718">
 			<Text>«Ты обманул меня, — рычит Лев. – Ты не знаешь пароля!». Его сильная лапа наносит удар прежде, чем вы успеваете защититься (потеряйте 2 ВЫНОСЛИВОСТИ). После этого вам придется пробиваться силой, – вернитесь и сражайтесь со Львом.</Text>
 			<Modifications>
-				<Endurance Val="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1668"/>
@@ -14614,7 +14614,7 @@
 		<Paragraph No="1723">
 			<Text>Вы поворачиваетесь к Начальнику стражи и говорите: «Мне поручили передать вам...», но не заканчиваете фразу, видя, как глаза его лезут на лоб, а рука тянется к звонку. Он дергает за шнур звонка, и комната наполняется вооруженными Орками. Вы пытаетесь сопротивляться, но один из Орков, подкравшись сзади, бьет своим мечом плашмя по голове (потеряйте 2 ВЫНОСЛИВОСТИ), и вы теряете сознание...</Text>
 			<Modifications>
-				<Endurance Val="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1642"/>
@@ -14697,23 +14697,23 @@
 					<Text>Или если у вас есть заклятие Левитации, вылетите из окна? Тогда на уровень какого этажа:</Text>
 				</Option>		
 				<Option Destination="1533" Text="Первого" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 				</Option>
 				<Option Destination="1820" Text="Второго" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 				</Option>
 				<Option Destination="1641" Text="Третьего" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 				</Option>
 				<Option Destination="1589" Text="Четвертого" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph No="1734">
 			<Text>Мясо вполне сносно и добавляет вам 7 ВЫНОСЛИВОСТЕЙ.</Text>
 			<Modifications>
-				<Endurance Val="7"/>
+				<Endurance Value="7"/>
 			</Modifications>
 			<Options>
 				<Option Destination="845" Text="Хотите попробовать еще и овощи"/>
@@ -14840,7 +14840,7 @@
 		<Paragraph No="1751">
 			<Text>Вероятно, вы спросили что-то не то, потому что один из Орков, глядя прямо в глаза, невозмутимо дергает какой-то рычаг под столом, и вы проваливаетесь вниз. Последнее, что почувствовали – тупую боль в голове от сильного удара (потеряйте 4 ВЫНОСЛИВОСТИ) – и сознание покинуло вас...</Text>
 			<Modifications>
-				<Endurance Val="-4"/>
+				<Endurance Value="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="794"/>
@@ -14877,10 +14877,10 @@
 			<Text>Как только закрылась дверь, из угла комнаты на вас бросаются крысы. Вы с ужасом замечаете, что они не обыкновенные, а каменные. Если хотите, можете воспользоваться заклятием:</Text>
 			<Options>
 				<Option Destination="1863" Text="Слабости" Availability="ЗАКЛЯТИЕ СЛАБОСТИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ СЛАБОСТИ"/>
 				</Option>
 				<Option Destination="888" Text="Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ОГНЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ОГНЯ"/>
 				</Option>
 				<Option Destination="919" Text="Если у вас есть меч зеленого рыцаря">
 					<Text>Или просто выньте меч и сразитесь с ними...</Text>
@@ -15021,7 +15021,7 @@
 		<Paragraph No="1777">
 			<Text>Слава богу, вы смогли сдержать крик. Потеряйте 7 ВЫНОСЛИВОСТЕЙ за укол волшебным шипом и обойдите кровать с другой стороны.</Text>
 			<Modifications>
-				<Endurance Val="-7"/>
+				<Endurance Value="-7"/>
 			</Modifications>
 			<Options>
 				<Option Destination="979"/>
@@ -15103,8 +15103,8 @@
 		<Paragraph No="1789">
 			<Text>Вы снова пробуете поднять крышку, и снова она падает на руку.\n\nПотеряйте еще 1 МАСТЕРСТВО и 2 ВЫНОСЛИВОСТИ.\n\nСундук заколдован! Что вы сделаете теперь:</Text>
 			<Modifications>
-				<Mastery Val="-1"/>
-				<Endurance Val="-2"/>
+				<Mastery Value="-1"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1961" Text="Обратите внимание на средний сундук"/>
@@ -15209,7 +15209,7 @@
 				</Fight>
 			</Actions>
 			<Modifications>
-				<Luck Val="1"/>
+				<Luck Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1136"/>
@@ -15283,7 +15283,7 @@
 		<Paragraph No="1814">
 			<Text>Буфет переполняют разнообразные сладости. Вы можете подкрепиться ими и восстановить 7 ВЫНОСЛИВОСТЕЙ.\n\nПосле этого надо уходить:</Text>
 			<Modifications>
-				<Endurance Val="7"/>
+				<Endurance Value="7"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1375" Text="Через дверь в правой стене"/>
@@ -15329,10 +15329,10 @@
 			<Text>Попробуете наложить заклятие:</Text>
 			<Options>
 				<Option Destination="1532" Text="Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ОГНЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ОГНЯ"/>
 				</Option>
 				<Option Destination="1036" Text="Иллюзии" Availability="ЗАКЛЯТИЕ ИЛЛЮЗИИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ИЛЛЮЗИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ИЛЛЮЗИИ"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -15346,7 +15346,7 @@
 		<Paragraph No="1821">
 			<Text>После того, как двери лифта закрылись, происходит резкий толчок. Вы падаете и, пытаясь за что-нибудь ухватиться, ударяетесь о каменную стенку лифта (потеряйте 1 ВЫНОСЛИВОСТЬ). Под вами слышится какое-то бурление и бульканье, но о причине этого вы не успеваете задуматься, — двери лифта открываются, и вы выходите.</Text>
 			<Modifications>
-				<Endurance Val="-1"/>
+				<Endurance Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1519"/>
@@ -15535,7 +15535,7 @@
 		<Paragraph No="1846">
 			<Text>Человек в двери удивленно смотрит на вас, но не входит – вы успеваете предупредить его об опасности. Но видя, что вы не в силах встать, что сейчас наложит на вас заклятие Исцеления. И действительно: вы чувствуете прилив свежих сил (прибавьте 10 ВЫНОСЛИВОСТЕЙ). Теперь вы можете выйти из злополучного коридора.</Text>
 			<Modifications>
-				<Endurance Val="10"/>
+				<Endurance Value="10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1635"/>
@@ -15718,7 +15718,7 @@
 		<Paragraph No="1870">
 			<Text>Вы доходит до конца коридора. На полу лежит красивый пушистый ковер. Вам так и хочется лечь на него и отдохнуть, не смотря на то, что он смотрится здесь довольно странно, как бы не к месту. Но что это... как только вы встаете на него, пол уходит из-под ваших ног, и вы чувствуете, что летите вниз. Потом сильно обо что-то ударяетесь и теряете 5 ВЫНОСЛИВОСТЕЙ. У вас ненадолго потемнело в глазах, и вы оглядываетесь, где очутились...</Text>
 			<Modifications>
-				<Endurance Val="-5"/>
+				<Endurance Value="-5"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1136"/>
@@ -15727,7 +15727,7 @@
 		<Paragraph No="1871">
 			<Text>В этот момент секретный ящичек сам собой захлопывается и прищемляет вам палец (потеряйте 2 ВЫНОСЛИВОСТИ). Теперь вы можете выйти:</Text>
 			<Modifications>
-				<Endurance Val="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1829" Text="Через дверь в углу напротив вас"/>
@@ -15757,7 +15757,7 @@
 		<Paragraph No="1875">
 			<Text>В этот момент вы чувствуете, что ваш заплечный мешок ведет себя как-то странно. Вдруг из мешка вылетают песочные часы и разбиваются о пол. Поднимается такая песочная пыль, что вам приходится зажмурить глаза.\n\nКогда пыль исчезает, ножей и след простыл, а раны зажили. Тем не менее, вам все равно придется вычесть 5 ВЫНОСЛИВОСТЕЙ за те раны, которые были нанесены вам ножами. Но, согласитесь, вам повезло – все могло кончиться хуже. Вылезайте из люка назад и поднимайтесь по лестнице.</Text>
 			<Modifications>
-				<Endurance Val="-5"/>
+				<Endurance Value="-5"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1356"/>
@@ -15786,13 +15786,13 @@
 			<Text>Вы подзываете хозяина поближе и, выхватив меч, нападаете на него. Первый удар ваш, Водяной ранен, и ему ничего не остается, как принять бой. Он сражается с вами водорослями, каждый удар которых оставляет острые глубокие порезы. Вы можете воспользоваться заклятиями:</Text>
 			<Options>
 				<Option Destination="1504" Text="Силы" Availability="ЗАКЛЯТИЕ СИЛЫ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ СИЛЫ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ СИЛЫ"/>
 				</Option>
 				<Option Destination="1086" Text="Слабости" Availability="ЗАКЛЯТИЕ СЛАБОСТИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ СЛАБОСТИ"/>
 				</Option>
 				<Option Destination="1947" Text="Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ОГНЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ОГНЯ"/>
 				</Option>
 				<Option Destination="1013" Text="Драться с ним без помощи магии"/>
 			</Options>
@@ -15806,7 +15806,7 @@
 		<Paragraph No="1881">
 			<Text>Вы делаете себе небольшой шалашик, но до ночи ждать приходится несколько часов. Наконец начинает смеркаться, и вы жалеете, что потратили зря столько времени. Наступает ночь. Вы чутко спите, но никто не нарушает вашего покоя. Добавьте себе 2 ВЫНОСЛИВОСТИ и отправляйтесь в путь с рассветом.</Text>
 			<Modifications>
-				<Endurance Val="2"/>
+				<Endurance Value="2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1512"/>
@@ -15823,7 +15823,7 @@
 		<Paragraph No="1883">
 			<Text>Вы выпиваете жидкость и вдруг начинаете чувствовать, как наливаются силой ваши мускулы. Вы выпиваете зелье, называемое «Силой Дракона». Добавьте себе 5 МАСТЕРСТВА. Но учтите, если вы три раза кого-нибудь убьете в бою, то зелье теряет силу, и ваше МАСТЕРСТВО станет прежним. Теперь осмотрите сундук.</Text>
 			<Modifications>
-				<Endurance Val="5"/>
+				<Endurance Value="5"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1731"/>
@@ -15845,7 +15845,7 @@
 			<Text>Вы начинаете спускаться по лестнице, но неожиданно ступенька подламывается под вами. Как же так, ведь еще секунду назад лестница казалась такой прочной! Но ловушки Черного замка неистощимы.</Text>
 			<Options>
 				<Option Destination="1374" Text="Если у вас есть в запасе заклятие Левитации, то вы еще сумеете вернуться обратно и выбрать другую дверь" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 					<Text>Если же нет, то ваше путешествие так и окончится в гибельном подземелье замка...</Text>
 				</Option>
 				<Gameover/>
@@ -15949,7 +15949,7 @@
 		<Paragraph No="1900">
 			<Text>Вода прозрачная и приятная на вкус (прибавьте 4 ВЫНОСЛИВОСТИ).\n\nТеперь уходите...</Text>
 			<Modifications>
-				<Endurance Val="4"/>
+				<Endurance Value="4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1869"/>
@@ -15981,7 +15981,7 @@
 					<Text>Либо, если у вас есть заклятие Левитации, взмыть в воздух и посмотреть, что за окно виднеется этажом выше:</Text>
 				</Option>
 				<Option Destination="1733" Text="Взмыть в воздух" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<RemoveSpell Val="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -15994,7 +15994,7 @@
 		<Paragraph No="1905">
 			<Text>Откупорив бутыль, вы подносите ее ко рту. После нескольких глотков у вас начинается кружиться голова и темнеет в глазах (потеряйте 3 ВЫНОСЛИВОСТИ).</Text>
 			<Modifications>
-				<Endurance Val="-3"/>
+				<Endurance Value="-3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1883" Text="Выпьете до конца"/>
@@ -16158,7 +16158,7 @@
 		<Paragraph No="1927">
 			<Text>Благодарите судьбу за ваше спасение! Вы успеваете ухватиться руками за ступеньки. Они ведут вверх в зияющее отверстие. Лестница оказывается длиннее, чем вы думали. Вот уже несколько этажей осталось позади, вы устали карабкаться вверх по отвесной стене (потеряйте 2 ВЫНОСЛИВОСТИ), а выхода все нет.... Наконец, вы видите конец пути, но тут вдруг огонь выскальзывает из ваших рук и падает вниз. Вы наблюдаете, как ваш огонек удаляется от вас, летя в пропасть. Но, главное – вы живы, и вам надо постараться самим не соскользнуть со ступенек. Уже в темноте вы достигаете верха и нащупываете ручку. Вы толкаете ее вперед и, выйдя в светлую просторную комнату, видите, что проход закрывается не дверью, а обычным зеркалом. Вам в голову приходит мысль, что, возможно, это не единственный потайной ход в замке, и если вам что-нибудь по этому поводу покажется подозрительным, вычтите 13 из номера параграфа, на котором будете находиться. Теперь осмотритесь в комнате, в которой оказались.</Text>
 			<Modifications>
-				<Endurance Val="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1733"/>
@@ -16241,7 +16241,7 @@
 		<Paragraph No="1934">
 			<Text>Неподалеку в лесу виднеется шалаш. Он давно заброшен и может служить прекрасным местом для ночлега. Положив меч рядом, вы чутко спите, но ночь проходит спокойно. Добавьте себе 4 ВЫНОСЛИВОСТИ и отправляйтесь в путь с рассветом.</Text>
 			<Modifications>
-				<Endurance Val="4"/>
+				<Endurance Value="4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="987"/>
@@ -16269,7 +16269,7 @@
 		<Paragraph No="1938">
 			<Text>Вы отгоняете их, грозя мечом, и понимаете, что сделали ошибку: ребята испугались и разбежались, а это может привести к нежелательным последствиям. Потеряйте 1 УДАЧУ – вы лишили радости детей. Теперь придется быстрее убираться из деревни.</Text>
 			<Modifications>
-				<Luck Val="-1"/>
+				<Luck Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="960"/>
@@ -16340,7 +16340,7 @@
 		<Paragraph No="1947">
 			<Text>Вы накладываете заклятие и направляете огненный шар на Водяного, но он скрывается под водой. Шар следует за ним – и... гаснет. Водяной же выныривает обратно и наносит ответный удар водорослями (потеряйте 2 ВЫНОСЛИВОСТИ). Теперь вам ничего не остается, как сражаться с ним мечом.</Text>
 			<Modifications>
-				<Endurance Val="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1013"/>
@@ -16380,7 +16380,7 @@
 		<Paragraph No="1952">
 			<Text>Ужас охватывает вас при виде призрака. Вы пытаетесь бежать, но в панике спотыкаетесь о корягу и падаете. Потеряйте 4 ВЫНОСЛИВОСТИ.\n\nЗлой Дух вновь возникает перед вами, и вам не удастся избавиться от него без боя...</Text>
 			<Modifications>
-				<Endurance Val="-4"/>
+				<Endurance Value="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1747"/>
@@ -16433,7 +16433,7 @@
 		<Paragraph No="1959">
 			<Text>Ничего не выйдет. Вы теряете 2 ВЫНОСЛИВОСТИ, пытаясь выбить дверь плечом, но она сработана на редкость крепко.\n\nВам все же придется выбрать одну из оставшихся дверей:</Text>
 			<Modifications>
-				<Endurance Val="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1740" Text="Прямо"/>
@@ -16443,7 +16443,7 @@
 		<Paragraph No="1960">
 			<Text>Вы сворачиваете с дороги и углубляетесь в лес. Через лесную чащобу идти трудно и неудобно – потеряйте 2 ВЫНОСЛИВОТИ. Вскоре выходите на какую-то дорогу. Она и в самом деле идет в правильном направлении</Text>
 			<Modifications>
-				<Endurance Val="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="933"/>
@@ -16498,7 +16498,7 @@
 		<Paragraph No="1966">
 			<Text>Вы выбираете щит. Он поможет вам отражать вражеские удары (прибавьте себе 1 МАСТЕРСТВО, даже если ваше изначальное МАСТЕРСТВО не изменялось). Теперь закройте дверь кладовки и снова заприте ее</Text>
 			<Modifications>
-				<MaxMastery Val="1"/>
+				<MaxMastery Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1508"/>
@@ -16507,7 +16507,7 @@
 		<Paragraph No="1967">
 			<Text>Вы чувствуете, как наливаются ваши мускулы. Когда вы сдвигаете камень в сторону, то находите какую-то одежду, похожую на водолазный костюм. Надев его, вы можете беспрепятственно плыть через любую водную преграду. Однако костюм займет два места в вашем заплечном мешке, но если вы его берете, то добавьте себе 1 УДАЧУ. Теперь идите назад...</Text>
 			<Modifications>
-				<Luck Val="1"/>
+				<Luck Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="910"/>
