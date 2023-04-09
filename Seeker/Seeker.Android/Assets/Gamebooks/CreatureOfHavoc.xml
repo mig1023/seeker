@@ -3,14 +3,14 @@
 		<Title>Разрушитель</Title>
 		<Copyright>Стив Джексон, 1986</Copyright>
 		<Styles>
-			<Color Name="Background" Val="c9d7d0"/>
-			<Color Name="StatusBar" Val="0e3b24"/>
-			<Color Name="Main" Val="145334"/>
-			<Color Name="Action" Val="104229"/>
-			<Color Name="Option" Val="42755c"/>
-			<Color Name="Continue" Val="7d9188"/>
-			<Color Name="System" Val="9db6aa"/>
-			<Color Name="ActionBox" Val="87a094"/>
+			<Color Name="Background" Value="c9d7d0"/>
+			<Color Name="StatusBar" Value="0e3b24"/>
+			<Color Name="Main" Value="145334"/>
+			<Color Name="Action" Value="104229"/>
+			<Color Name="Option" Value="42755c"/>
+			<Color Name="Continue" Value="7d9188"/>
+			<Color Name="System" Value="9db6aa"/>
+			<Color Name="ActionBox" Value="87a094"/>
 		</Styles>
 		<Settings>
 			<HideDisabledOption/>
@@ -44,7 +44,7 @@
 			</Texts>
 			<Modifications>
 				<Endurance Restore="true"/>
-				<Luck Val="1"/>
+				<Luck Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="153" Text="Хочешь продолжить свой путь на восток по коридору, что темнеет в противоположной стене"/>
@@ -110,7 +110,7 @@
 				<Text>Если ты все еще жив, то боль постепенно стихает...</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="-6"/>
+				<Endurance Value="-6"/>
 			</Modifications>
 			<Options>
 				<Option Destination="79"/>
@@ -129,7 +129,7 @@
 				<Text>Ты выходишь из хижины, останавливаешься на минуту, чтобы обдумать услышанное, а затем отправляешься назад к перекрестку.</Text>
 			</Texts>
 			<Modifications>
-				<Luck Val="2"/>
+				<Luck Value="2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="386"/>
@@ -161,7 +161,7 @@
 				<Text>От боли у тебя ручьем льются слезы, которые застилают глаза, но ты не отступаешь и снова рвешься вперед. Эльф снова натягивает тетиву. Но на этот раз цель выбрана более точно — стрела летит выше, прямо тебе в лицо. Среагировать ты уже не успеваешь. Стрела пробивает глаз и застревает глубоко в мозгу. К счастью для тебя, смерть наступает практически мгновенно...\n\nНа этом твое приключение окончено!</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="-3"/>
+				<Endurance Value="-3"/>
 			</Modifications>
 			<Options>
 				<Gameover/>
@@ -201,7 +201,7 @@
 				<Text Style="Small">За отмороженные ноги отними 1 от уровня своей ВЫНОСЛИВОСТИ.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="-1"/>
+				<Endurance Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="84"/>
@@ -227,7 +227,7 @@
 				<Text>Не давая тебе опомниться, Охранник вновь надвигается на тебя. Хочешь не хочешь, а тебе придется сразиться с ним.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="-4"/>
+				<Endurance Value="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="98"/>
@@ -262,8 +262,8 @@
 				<Text>Однако если ты искупаешься в чистой воде, защита исчезнет.</Text>
 			</Texts>
 			<Modifications>
-				<Mastery Val="1"/>
-				<Endurance Val="2"/>
+				<Mastery Value="1"/>
+				<Endurance Value="2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="52"/>
@@ -327,7 +327,7 @@
 				<Text>Если ты все еще жив, то скорее решай, что делать дальше.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="-5"/>
+				<Endurance Value="-5"/>
 			</Modifications>
 			<Options>
 				<Option Destination="242" Text="Попробуешь спастись бегством"/>
@@ -497,7 +497,7 @@
 				<Text>«Так я и думал! – ревет Охранник. – Что Даррамусс, идиот, чтобы выпускать из подземелий такого урода, как ты?» Твоя уловка не сработала — Охранник заносит дубину для нового удара, и ты должен защищаться!</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="-4"/>
+				<Endurance Value="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="98"/>
@@ -565,7 +565,7 @@
 				<Text>Твоя ярость не знает границ!</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="-4"/>
+				<Endurance Value="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="14,14,260"/>
@@ -583,7 +583,7 @@
 				</Fight>
 			</Actions>
 			<Modifications>
-				<Endurance Val="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="207" Text="Ты победил Кровавого Орка"/>
@@ -721,7 +721,7 @@
 			</Actions>
 			<Modifications>
 				<Endurance Restore="true"/>
-				<MaxMastery Val="2"/>
+				<MaxMastery Value="2"/>
 				<Mastery Restore="true"/>
 			</Modifications>
 			<Options>
@@ -777,7 +777,7 @@
 				</Fight>
 			</Actions>
 			<Modifications>
-				<Endurance Val="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="41"/>
@@ -805,7 +805,7 @@
 				<Text>Теперь уходи из Ковена.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="4"/>
+				<Endurance Value="4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="107"/>
@@ -829,7 +829,7 @@
 				<Text>Не проходит и секунды, как тельце Гнома безжизненно повисает в твоих руках.\n\nТвоя огромная сила принесла несчастному скорое избавление от страданий, но все-таки происшедшее оставило у тебя в душе странный осадок. Ты хотел помочь Гному, но в результате убил его.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="-3"/>
+				<Endurance Value="-3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="248" Text="Выбросить все эти мысли из головы и идти дальше"/>
@@ -912,7 +912,7 @@
 			</Actions>
 			<Options>
 				<Option Destination="243" Text="Не хочешь драться с Эльфом, получай пинок (отними 2 от уровня своей ВЫНОСЛИВОСТИ)">
-					<Endurance Val="-2"/>
+					<Endurance Value="-2"/>
 				</Option>
 				<Option Destination="27" Text="Победил эльфа"/>
 			</Options>
@@ -1004,7 +1004,7 @@
 				<Text>Теперь можно продолжить путешествие. Вокруг совершенно тихо, если не считать едва слышного звука твоих осторожных шагов. Вскоре твой острый слух улавливает звук бегущей воды, и ты чувствуешь, как воздух вокруг становится более влажным и прохладным. Прохлада приятно освежает твое разгоряченное яростной схваткой тело, однако тебя раздражает какой-то отвратительный запах. Чем громче шум воды, тем сильнее ощущается зловоние. Вскоре ты выходишь на край скалистого склона. Оглядевшись, ты понимаешь, что стоишь на каменном карнизе, нависающем над необъятной пещерой, посреди которой несет свои грязно-бурые воды широкая река – именно она и является источником зловония; ее мутные воды разносят по пещере смрад гниения и нечистот. Вниз спускается лестница из выдолбленных в камне грубых ступеней. Лестница — единственная для тебя возможность миновать зловонную реку, однако ты никак не можешь решиться начать спуск. Дело в том, что узкие ступени рассчитаны на размер человеческой ноги, а твои огромные ступни едва умещаются на них. Тем временем запах все усиливается и из просто неприятного становится нестерпимо омерзительным. Как бы то ни было, другого пути вперед нет, и, хочешь не хочешь, тебе придется рискнуть и спуститься по лестнице.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="4"/>
+				<Endurance Value="4"/>
 			</Modifications>
 			<Actions>
 				<Luck/>
@@ -1102,7 +1102,7 @@
 				<Text Style="Small">Отними 1 от уровня своей ВЫНОСЛИВОСТИ.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="-1"/>
+				<Endurance Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="150" Text="Будешь и дальше пытаться выломать дверь"/>
@@ -1124,7 +1124,7 @@
 				<Text>Ты продолжаешь свой путь на север и вскоре достигаешь развилки. На обочине вкопан путевой столб. В южном направлении указывает стрелка с надписью «Дри». Дорога на северо-запад отмечена надписью «Ковен», а на северо-восток – «Болото Бу Фон».</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="4"/>
+				<Endurance Value="4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="190" Text="На северо-запад"/>
@@ -1137,7 +1137,7 @@
 				<Text Style="Small">Прибавь 4 к уровню своей ВЫНОСЛИВОСТИ.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="4"/>
+				<Endurance Value="4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="374"/>
@@ -1263,8 +1263,8 @@
 				<Text Style="Small">Прибавь 4 к уровню своей ВЫНОСЛИВОСТИ и занеси орехи в список на Игровой Карте. В дальнейшем ты сможешь съесть Орехи Изобилия в любой момент, но только не во время битвы. Каждый мешочек орехов увеличит уровень твоей ВЫНОСЛИВОСТИ на 4.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="4"/>
-				<Healing Val="Съесть Орехи Изобилия,4,3"/>
+				<Endurance Value="4"/>
+				<Healing Value="Съесть Орехи Изобилия,4,3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="374"/>
@@ -1294,7 +1294,7 @@
 				<Text Style="Small">Ушиб отнимает у тебя 3 пункта ВЫНОСЛИВОСТИ.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="-3"/>
+				<Endurance Value="-3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="257"/>
@@ -1306,7 +1306,7 @@
 				<Text Style="Small">Отними 1 от уровня своей ВЫНОСЛИВОСТИ.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="-1"/>
+				<Endurance Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="398" Text="Будешь и дальше пытаться выломать дверь"/>
@@ -1357,7 +1357,7 @@
 				</Translation>
 			</Actions>
 			<Modifications>
-				<Endurance Val="-1"/>
+				<Endurance Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="428" Text="Посмотреть, что голова будет делать дальше"/>
@@ -1423,7 +1423,7 @@
 				<Text>...ты выбираешься из ямы и продолжаешь свой путь через лес.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="244"/>
@@ -1470,7 +1470,7 @@
 				<Text>Не в силах терпеть адскую боль, ты валишься на пол, и это помогает тебе освободить ногу. Однако, когда спустя несколько секунд ты вновь поднимаешься на ноги, то понимаешь, что в комнате что-то произошло. Прямо перед тобой из воздуха материализуются три чудовищных силуэта.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="447"/>
@@ -1695,7 +1695,7 @@
 				<Text>А теперь выходи из комнаты.</Text>
 			</Texts>
 			<Modifications>
-				<Mastery Val="1"/>
+				<Mastery Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="257"/>
@@ -1742,7 +1742,7 @@
 				<Text>От перекрестка ты можешь повернуть:</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="-1"/>
+				<Endurance Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="130" Text="На север"/>
@@ -1790,7 +1790,7 @@
 				<Text>Теперь ты готов уйти из комнаты. Ты подходишь к двери и пытаешься открыть ее. Но у двери нет ручки. Попытка подцепить дверь когтями ничего не дает. Она плотно закрыта, и, видимо, заперта на какой-то тайный замок. Ты налегаешь на дверь, пытаясь сломать ее, но у тебя ничего не выходит. Таких крепких дверей тебе еще не попадалось! Внезапно чувство раздражения сменяется новым приступом голода.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="4"/>
+				<Endurance Value="4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="109" Text="Вернуться к костям Кровавого Орка, чтобы еще раз обглодать их"/>
@@ -1861,7 +1861,7 @@
 				<Text>Тем временем Тагруфф рассказывает тебе о легионах. Половина войска сейчас находится на летающем Корабле-Крепости, который курсирует над Паучьим Лесом в поисках Радужных Прудов. Отыскав Радужные Пруды, можно будет найти и деревню Эльфов Ститл Воуд, которая расположена где-то рядом с ними. Если тебе повезет, обещает Тагруфф, ты тоже сможешь попасть на Корабль-Крепость.\n\nПока ты раздумываешь, что делать дальше, Тагруфф выводит тебя на улицу и предлагает дать урок владения оружием.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="5"/>
+				<Endurance Value="5"/>
 			</Modifications>
 			<Options>
 				<Option Destination="271" Text="Принимаешь его предложение"/>
@@ -1875,10 +1875,10 @@
 				<Text>Теперь продолжай свой путь.</Text>
 			</Texts>
 			<Modifications>
-				<Mastery Val="-2"/>
-				<MaxMastery Val="-2"/>
-				<Endurance Val="-5"/>
-				<MaxEndurance Val="-5"/>
+				<Mastery Value="-2"/>
+				<MaxMastery Value="-2"/>
+				<Endurance Value="-5"/>
+				<MaxEndurance Value="-5"/>
 			</Modifications>
 			<Options>
 				<Option Destination="436"/>
@@ -1919,7 +1919,7 @@
 				<Text>Как только восходящее солнце немного согревает прохладный утренний воздух, ты вновь отправляешься в путь. Теперь твой путь лежит на северо-восток, туда, куда показывает стрелка с надписью «Болото Бу Фон».</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="4"/>
+				<Endurance Value="4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="134"/>
@@ -1932,7 +1932,7 @@
 				<Text>Во время еды ты обшариваешь трупы поверженных противников, однако не находишь ничего заслуживающего внимания. Вдруг под потолком впереди тебя ярко вспыхивают голубые сталактиты. Подняв голову, ты видишь, как из-за поворота высовывается крошечное личико, и на тебя падает чей-то изучающий взгляд. Через мгновение лицо исчезает, но этого мгновения тебе вполне достаточно.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="4"/>
+				<Endurance Value="4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="403"/>
@@ -1988,7 +1988,7 @@
 				<Text Style="Small">Обильная трапеза восстанавливает 2 пункта твоей ВЫНОСЛИВОСТИ.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="2"/>
+				<Endurance Value="2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="165"/>
@@ -2000,7 +2000,7 @@
 				<Text Style="Small">Прибавь 4 к уровню своей ВЫНОСЛИВОСТИ.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="4"/>
+				<Endurance Value="4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="293"/>
@@ -2110,7 +2110,7 @@
 				<Text>Несмотря на чудовищную боль, тебе все-таки удается добраться до арки, и в тот же момент ваши тени разделяются. Чем дальше ты уходишь от освещенной комнаты, тем бледнее становится Тень-Убийца. В свете голубых сталактитов она практически полностью исчезает, проскальзывает обратно в комнату и устраивается на полу. Ты не веришь своим глазам — теперь Тень-Убийца вновь выглядит как куча черного тряпья! Ты поворачиваешься и уходишь, так и не поняв толком, что же здесь произошло. Вскоре ты возвращаешься к развилке и поворачиваешь на запад.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="-3"/>
+				<Endurance Value="-3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="309"/>
@@ -2122,7 +2122,7 @@
 				<Text Style="Small">Но твоя «трусость» даром не проходит — на то время, пока ты пребываешь в Учебном Лагере, уменьши уровень своего МАСТЕРСТВА на 1.</Text>
 			</Texts>
 			<Modifications>
-				<Mastery Val="-1"/>
+				<Mastery Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="348"/>
@@ -2155,7 +2155,7 @@
 				<Text Style="Small">Отними 2 от уровня своей ВЫНОСЛИВОСТИ.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="79" Text="Выбежать из комнаты через секретный проход"/>
@@ -2175,7 +2175,7 @@
 				<Text>Покончив с трапезой, ты осматриваешь комнату, и твое внимание привлекает кожаный кошелек, лежащий на груде полуистлевших костей. Открыв кошелек, ты находишь 2 золотые монеты; если хочешь, можешь взять их с собой (в этом случае не забудь сделать соответствующую пометку на Игровой Карте). Кроме того, ты замечаешь две стеклянные бутылки, лежащие неподалеку от растерзанного тела. Они покрыты тонкой паутиной трещин, однако целы. В одной бутылке налита жидкость зеленого цвета, во второй – голубого.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="4"/>
+				<Endurance Value="4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="318" Text="Выпить зеленую жидкость"/>
@@ -2268,7 +2268,7 @@
 				<Text Style="Small">Сделай соответствующую пометку на Игровой Карте, увеличь на 1 уровень своей УДАЧИ.</Text>
 			</Texts>
 			<Modifications>
-				<Luck Val="1"/>
+				<Luck Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="115"/>
@@ -2303,7 +2303,7 @@
 				</Fight>
 			</Actions>
 			<Modifications>
-				<Endurance Val="-1"/>
+				<Endurance Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="209"/>
@@ -2375,7 +2375,7 @@
 				<Text>Какие у тебя планы?</Text>
 			</Texts>
 			<Modifications>
-				<Mastery Val="1"/>
+				<Mastery Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="43" Text="Хочешь и дальше постигать военную науку и в конце концов дослужиться до высокой должности на Корабле-Крепости"/>
@@ -2428,7 +2428,7 @@
 				<Text>Летучие твари упорно продолжают атаки, и ты решаешь вернуться к двери. Обнаружив, что она все еще заперта и по-прежнему преграждает тебе путь, ты наливаешься яростью. Что это за дела?! Куда бы ты ни пошел, везде тебя ждут преграды и опасности! Как следует разбежавшись, ты всей своей массой наваливаешься на дверь.</Text>
 			</Texts>
 			<Modifications>
-				<Mastery Val="-1"/>
+				<Mastery Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="101"/>
@@ -2520,7 +2520,7 @@
 				<Text>Теперь выходи из комнаты и продолжай свой путь.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="4"/>
+				<Endurance Value="4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="138"/>
@@ -2558,7 +2558,7 @@
 				</Fight>
 			</Actions>
 			<Modifications>
-				<Endurance Val="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="446"/>
@@ -2584,7 +2584,7 @@
 				<Text>Теперь продолжай свой путь.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="3"/>
+				<Endurance Value="3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="414"/>
@@ -2617,7 +2617,7 @@
 				<Text>Теперь думай, куда пойдешь дальше:</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="2"/>
+				<Endurance Value="2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="96" Text="На запад"/>
@@ -2677,7 +2677,7 @@
 				<Text Style="Small">Можешь увеличить на 1 уровень твоей УДАЧИ.</Text>
 			</Texts>
 			<Modifications>
-				<Luck Val="1"/>
+				<Luck Value="1"/>
 			</Modifications>
 			<Triggers>StrongHandPendant</Triggers>
 			<Options>
@@ -2788,7 +2788,7 @@
 				<Text>Откуда-то снизу доносится шум бегущей воды — оттуда же веет неописуемым смрадом Реки Нечистот. Ты лихорадочно втягиваешь голову обратно.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="-1"/>
+				<Endurance Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="217" Text="Осмотреть стоящие около стены ящики"/>
@@ -2836,8 +2836,8 @@
 				<Text>Пора отправляться в путь. Итак, куда ты пойдешь?</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="8"/>
-				<Luck Val="2"/>
+				<Endurance Value="8"/>
+				<Luck Value="2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="301" Text="На север"/>
@@ -2889,7 +2889,7 @@
 				</Stoning>
 			</Actions>
 			<Modifications>
-				<Endurance Val="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="177" Text="На запад"/>
@@ -2929,7 +2929,7 @@
 				<Text Style="Small">Снова отними 2 от уровня своей ВЫНОСЛИВОСТИ. Что ты предпримешь?</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="-4"/>
+				<Endurance Value="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="34" Text="Сразиться с ТЕНЬЮ-УБИЙЦЕЙ"/>
@@ -3054,7 +3054,7 @@
 				<Text>Путь вперед закрывает железная дверь. Ты дергаешь за ручку, но дверь заперта. Припав глазом к смотровой щели, ты видишь за дверью лестницу, ведущую вверх. С той стороны дует свежий ветерок, который приятно холодит твою разгоряченную кожу.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="3"/>
+				<Endurance Value="3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="112" Text="Найти ключ от замка"/>
@@ -3088,7 +3088,7 @@
 				<Text>Ты поспешно перебегаешь мост и снова оказываешься в коридоре. Вскоре в его правой стене открывается ведущее на север ответвление.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="172" Text="Свернуть в новый коридор"/>
@@ -3113,7 +3113,7 @@
 			</Actions>
 			<Options>
 				<Option Destination="386">
-					<Endurance Val="5"/>
+					<Endurance Value="5"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -3179,7 +3179,7 @@
 				<Text>Теперь продолжай свой путь.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="4"/>
+				<Endurance Value="4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="244"/>
@@ -3192,7 +3192,7 @@
 				<Text>Теперь продолжай свой путь.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="-4"/>
+				<Endurance Value="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="75"/>
@@ -3205,7 +3205,7 @@
 				<Text>Почувствовав, как острая сталь входит в твое тело, ты оглашаешь пустоту туннеля громким ревом и еще сильнее стискиваешь пальцы. Как тонкие веточки, с хрустом ломаются ребра, и тельце Гнома обмякает. Ты разжимаешь пальцы – Гном падает, будто мешок с костями. Собственно, мешок с костями – это все, что от него осталось.\n\nЧто ты предпримешь?</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="218" Text="Попытаешься спрятать тело"/>
@@ -3315,7 +3315,7 @@
 				</Fight>
 			</Actions>
 			<Modifications>
-				<Endurance Val="4"/>
+				<Endurance Value="4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="227"/>
@@ -3354,7 +3354,7 @@
 				<Text>Если не хочешь бесславно сгинуть в таинственной комнате, поскорее решай, что делать дальше.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="-1"/>
+				<Endurance Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="34" Text="Сразиться с Тенью-Убийцей"/>
@@ -3385,7 +3385,7 @@
 				</Translation>
 			</Actions>
 			<Modifications>
-				<Luck Val="2"/>
+				<Luck Value="2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="51" Text="Уйти через дверь, ведущую на запад"/>
@@ -3428,7 +3428,7 @@
 				<Text>Не давая тебе опомниться, Охранник вновь надвигается на тебя. Хочешь не хочешь, а тебе придется сразиться с ним.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="-4"/>
+				<Endurance Value="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="98"/>
@@ -3461,7 +3461,7 @@
 				<Text>Когда придешь в себя, поднимайся на ноги и продолжай свой путь.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="52"/>
@@ -3489,7 +3489,7 @@
 				<Text Style="Small">Отними 2 от уровня своей ВЫНОСЛИВОСТИ.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="405" Text="Попробовать выйти в другие двери"/>
@@ -3509,8 +3509,8 @@
 				<Text Style="Small">Выпивка добавила тебе 3 пункта ВЫНОСЛИВОСТИ, но пока пиво еще шумит в голове, уменьши уровень своего МАСТЕРСТВА на 1.</Text>
 			</Texts>
 			<Modifications>
-				<Mastery Val="-1"/>
-				<Endurance Val="3"/>
+				<Mastery Value="-1"/>
+				<Endurance Value="3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="107"/>
@@ -3523,7 +3523,7 @@
 				<Text>Переступив порог, ты озираешься по сторонам. В комнате никого нет; её единственную меблировку составляет заваленный аккуратно перевязанными свитками пергамента стол, с трех сторон окруженный деревянными полками, сплошь уставленными старинными фолиантами и манускриптами. За пыльными полками ты не сразу замечаешь ещё одну дверь, ведущую из комнаты на восток.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="-1"/>
+				<Endurance Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="365" Text="Не задерживаясь в комнате, войти в эту дверь"/>
@@ -3547,7 +3547,7 @@
 				<Text Style="Small">отними 1 от уровня своей ВЫНОСЛИВОСТИ.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="-1"/>
+				<Endurance Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="128" Text="Будешь и дальше пытаться сломать дверь"/>
@@ -3581,7 +3581,7 @@
 				<Text>Пока ты бьешься в агонии, Даррамусс заканчивает чтение заклинания.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="-4"/>
+				<Endurance Value="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="286"/>
@@ -3672,7 +3672,7 @@
 				<Text Style="Small">Увеличь на 1 уровень своей УДАЧИ.</Text>
 			</Texts>
 			<Modifications>
-				<Luck Val="1"/>
+				<Luck Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="115"/>
@@ -3699,7 +3699,7 @@
 			</Texts>
 			<Triggers>Chestplate</Triggers>
 			<Modifications>
-				<Mastery Val="-1"/>
+				<Mastery Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="394"/>
@@ -3712,7 +3712,7 @@
 				<Text>Подождав, пока обильная пища переварится, ты вновь отправляешься в путь вниз по течению реки.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="4"/>
+				<Endurance Value="4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="388"/>
@@ -3743,7 +3743,7 @@
 				<Text Style="Small">Прибавь 4 к уровню своей ВЫНОСЛИВОСТИ.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="4"/>
+				<Endurance Value="4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="138"/>
@@ -3758,7 +3758,7 @@
 				<Text>Вновь и вновь ты пытаешься приблизиться к своим врагам, но, наконец, понимаешь, что это бесполезно. Крестьяне намного быстрее тебя передвигаются по колосящемуся полю, и тебе за ними просто не угнаться! Недовольно ворча, ты поворачиваешь назад и возвращаешься на тропу. Селяне провожают тебя улюлюканьем и свистом до тех пор, пока ты окончательно не покидаешь пределы их поля.\n\nВпереди до горизонта тянется зеленый лес, и тропа ведет тебя именно туда. Добравшись до опушки, ты читаешь надпись на указателе: «Лес Узловатых Дубов».</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="244"/>
@@ -3803,7 +3803,7 @@
 				</Fight>
 			</Actions>
 			<Modifications>
-				<Endurance Val="-1"/>
+				<Endurance Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="275"/>
@@ -3837,7 +3837,7 @@
 				<Text>Поскорее возвращайся на развилку, с которой пришел.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="-4"/>
+				<Endurance Value="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="81"/>
@@ -4031,7 +4031,7 @@
 				<Text>Затем ты слышишь пронзительное ржание и, обернувшись, видишь силуэт поднявшейся на дыбы лошади. Перепуганный конь готов вновь ударить тебя копытами...</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="355" Text="Считаешь, что лошадь сгодится тебе в пищу, можешь попытаться сразиться с разъяренным животным"/>
@@ -4050,7 +4050,7 @@
 				</Fight>
 			</Actions>
 			<Modifications>
-				<Endurance Val="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="207"/>
@@ -4062,7 +4062,7 @@
 				<Text Style="Small">Прибавь 2 к уровню своей ВЫНОСЛИВОСТИ.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="2"/>
+				<Endurance Value="2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="52"/>
@@ -4091,7 +4091,7 @@
 				<Text Style="Small">Если отведаешь мяса лекаря, можешь увеличить уровень своей ВЫНОСЛИВОСТИ на 4.</Text>
 			</Texts>
 			<Modifications>
-				<Endurance Val="4"/>
+				<Endurance Value="4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="374"/>
