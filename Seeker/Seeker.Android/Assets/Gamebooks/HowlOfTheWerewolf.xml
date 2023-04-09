@@ -1622,8 +1622,8 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="Черный Волк" Mastery="7" Endurance="8"/>
-					<RoundsToFight>2</RoundsToFight>
-					<WoundsLimit>7</WoundsLimit>
+					<RoundsToFight Value="2"/>
+					<WoundsLimit Value="7"/>
 					<Text>По завершению двух следующих Раундов Атаки или если вы снизили Выносливость вожака волков до 7 или меньше:</Text>
 				</Fight>
 			</Actions>
