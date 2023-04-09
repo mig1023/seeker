@@ -1845,7 +1845,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="Горбун" Mastery="6" Endurance="7"/>
-					<RoundsToWin>5</RoundsToWin>
+					<RoundsToWin Value="5"/>
 				</Fight>
 			</Actions>
 			<Options>
