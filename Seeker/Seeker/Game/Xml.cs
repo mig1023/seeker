@@ -51,10 +51,10 @@ namespace Seeker.Game
             modification.Empty = BoolParse(xmlNode.Attributes["Empty"]);
             modification.Restore = BoolParse(xmlNode.Attributes["Restore"]);
 
-            if (xmlNode.Attributes["Val"] == null)
+            if (xmlNode.Attributes["Value"] == null)
                 return modification;
 
-            string value = xmlNode.Attributes["Val"].InnerText;
+            string value = xmlNode.Attributes["Value"].InnerText;
 
             if (int.TryParse(value, out _))
                 modification.Value = IntParse(value);
@@ -181,7 +181,7 @@ namespace Seeker.Game
 
             foreach (XmlNode xmlNode in xmlFile.SelectNodes(Intro("Styles/Color")))
                 foreach (string type in Multiples(xmlNode, "Name"))
-                    Data.Constants.LoadColor(type, xmlNode.Attributes["Val"].InnerText);
+                    Data.Constants.LoadColor(type, xmlNode.Attributes["Value"].InnerText);
 
             Data.Constants.LoadEnabledDisabledOption(SettingBool(xmlFile, "ShowDisabledOption"));
             Data.Constants.LoadStartParagraphOption(SettingString(xmlFile, "StartParagraph"));
@@ -192,7 +192,7 @@ namespace Seeker.Game
 
             foreach (XmlNode xmlNode in xmlFile.SelectNodes(Intro("Constants/List")))
             {
-                List<string> values = xmlNode.Attributes["Val"].InnerText.Split(',').ToList();
+                List<string> values = xmlNode.Attributes["Value"].InnerText.Split(',').ToList();
                 Data.Constants.LoadList(xmlNode.Attributes["Name"].InnerText, values);
             }
 
@@ -216,7 +216,7 @@ namespace Seeker.Game
                 else
                 {
                     List<XmlNode> xmlNodes = xmlNode.SelectNodes("Item").Cast<XmlNode>().ToList();
-                    items = xmlNodes.ToDictionary(x => x.Attributes["Name"].InnerText, x => x.Attributes["Val"].InnerText);
+                    items = xmlNodes.ToDictionary(x => x.Attributes["Name"].InnerText, x => x.Attributes["Value"].InnerText);
                 }
 
                 Data.Constants.LoadDictionary(xmlNode.Attributes["Name"].InnerText, items);
@@ -230,7 +230,7 @@ namespace Seeker.Game
         }
 
         private static string SettingString(XmlDocument xmlFile, string option) =>
-            StringParse(xmlFile.SelectSingleNode(Intro(String.Format("Settings/{0}", option)))?.Attributes["Val"]) ?? String.Empty;
+            StringParse(xmlFile.SelectSingleNode(Intro(String.Format("Settings/{0}", option)))?.Attributes["Value"]) ?? String.Empty;
 
         private static bool SettingBool(XmlDocument xmlFile, string optionTrue) =>
             xmlFile.SelectSingleNode(Intro(String.Format("Settings/{0}", optionTrue))) != null;

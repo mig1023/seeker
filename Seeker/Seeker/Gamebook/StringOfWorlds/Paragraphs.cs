@@ -32,7 +32,7 @@ namespace Seeker.Gamebook.StringOfWorlds
                     {
                         foreach (XmlNode xmlModification in xmlParagraph.SelectNodes("Modifications/*"))
                             if (xmlModification.Name == "GateCode")
-                                Character.Protagonist.GateCode += Xml.IntParse(xmlModification.Attributes["Val"]);
+                                Character.Protagonist.GateCode += Xml.IntParse(xmlModification.Attributes["Value"]);
                         
                         option.Destination = Character.Protagonist.GateCode;
                     }

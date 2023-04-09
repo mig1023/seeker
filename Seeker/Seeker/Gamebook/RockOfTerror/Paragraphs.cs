@@ -16,7 +16,7 @@ namespace Seeker.Gamebook.RockOfTerror
         public override Abstract.IModification ModificationParse(XmlNode xmlModification) => new Modification
         {
             Name = xmlModification.Name,
-            Value = Xml.IntParse(xmlModification.Attributes["Val"]),
+            Value = Xml.IntParse(xmlModification.Attributes["Value"]),
             Init = Xml.BoolParse(xmlModification.Attributes["Init"]),
         };
     }

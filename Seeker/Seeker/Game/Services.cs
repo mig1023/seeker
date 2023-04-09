@@ -62,7 +62,7 @@ namespace Seeker.Game
         }
 
         public static string ValueStringFuse(string value) =>
-            (value == "Value" || value == "ValueString" ? "Val" : value);
+            (value == "ValueString" ? "Value" : value);
 
         public static bool ParagraphsWithoutStatuses(List<string> statuses)
         {
