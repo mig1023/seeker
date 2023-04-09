@@ -3,8 +3,8 @@
 		<Title>Общество червей</Title>
 		<Copyright>Пётр Прокошев, 2017</Copyright>
 		<Styles>
-			<Color Name="Main" Val="191039"/>
-			<Color Name="Option" Val="191039"/>
+			<Color Name="Main" Value="191039"/>
+			<Color Name="Option" Value="191039"/>
 		</Styles>
 		<Settings>
 			<ShowDisabledOption/>
