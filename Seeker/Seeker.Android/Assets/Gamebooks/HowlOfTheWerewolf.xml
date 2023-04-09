@@ -5148,8 +5148,8 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="Безумец" Mastery="7" Endurance="9"/>
-					<RoundsToFight>3</RoundsToFight>
-					<WoundsLimit>6</WoundsLimit>
+					<RoundsToFight Value="3"/>
+					<WoundsLimit Value="6"/>
 					<Text>После трех Раундов Атаки или если вам удастся снизить его Выносливость до 6 или меньше:</Text>
 				</Fight>
 			</Actions>
