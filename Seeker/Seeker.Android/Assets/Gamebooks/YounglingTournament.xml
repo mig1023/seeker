@@ -1146,8 +1146,8 @@
 			<Actions>
 				<SwordFight>
 					<Enemy Name="Проводник" Skill="8" Rang="1" Speed="3" Hitpoints="20" SwordTechnique="Elasticity"/>
-					<HeroHitpointsLimith>3</HeroHitpointsLimith>
-					<EnemyHitpointsLimith>2</EnemyHitpointsLimith>
+					<HeroHitpointsLimith Value="3"/>
+					<EnemyHitpointsLimith Value="2"/>
 					<WithoutTechnique/>
 					<Text>Вы можете выбрать любую из изученных техник боя.\n\nСпособности Силы применять во ЭТОГО время боя нельзя — это тренировка, и нацелена она именно на совершенствование навыков владения световым мечом.</Text>
 				</SwordFight>
