@@ -4030,9 +4030,9 @@
 			<Actions>
 				<SwordFight>
 					<Enemy Name="Жюль Трито" Skill="10" Rang="3" Speed="3" Hitpoints="26"/>
-					<HeroHitpointsLimith>5</HeroHitpointsLimith>
-					<EnemyHitpointsLimith>5</EnemyHitpointsLimith>
-					<EnemyHitpointsPenalty>3</EnemyHitpointsPenalty>
+					<HeroHitpointsLimith Value="5"/>
+					<EnemyHitpointsLimith Value="5"/>
+					<EnemyHitpointsPenalty Value="3"/>
 					<NoStrikeBack/>
 					<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
 				</SwordFight>
