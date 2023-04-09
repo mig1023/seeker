@@ -590,7 +590,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="Упырь" Mastery="8" Endurance="8"/>
-					<WoundsForTransformation>3</WoundsForTransformation>
+					<WoundsForTransformation Value="3"/>
 					<Text>Если вы получите больше двух ран, Трансформация продолжится.</Text>
 				</Fight>
 			</Actions>
@@ -713,7 +713,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="Человек-Крыса" Mastery="8" Endurance="6"/>
-					<WoundsForTransformation>2</WoundsForTransformation>
+					<WoundsForTransformation Value="2"/>
 					<Text>Если он укусит вас больше одного раза, Трансформация продолжится.\n\nЕсли вы вышли из боя победителем, то спешите к ближайшему зарешеченному отверстию, откуда на недавнее поля боя льется серый вечерний свет. Поднявшись по ржавым скобам, вы откидываете решетку и выбираетесь наружу.</Text>
 				</Fight>
 			</Actions>
