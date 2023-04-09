@@ -3066,7 +3066,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="Зараженные крысы" Mastery="6" Endurance="10"/>
-					<WoundsForTransformation>3</WoundsForTransformation>
+					<WoundsForTransformation Value="3"/>
 					<Specificity>Plague</Specificity>
 					<Text>Если крысы нанесут вам больше двух ран, Трансформация продолжится, к тому же, вы заразитесь чумой, которую они переносят, и в дальнейшем, каждый раз, когда уменьшается ваша Выносливость, вы будете терять 1 Мастерство.</Text>
 				</Fight>
