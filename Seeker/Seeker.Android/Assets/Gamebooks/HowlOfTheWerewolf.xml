@@ -1230,7 +1230,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="Медведь" Mastery="8" Endurance="10"/>
-					<WoundsForTransformation>3</WoundsForTransformation>
+					<WoundsForTransformation Value="3"/>
 					<Text>Ульрих-оборотень – опасный противник! Уступающий вам в скорости, он, тем не менее, может переломить вас пополам одним ударом мощной лапы. Если он ранит вас больше двух раз, Трансформация продолжится!</Text>
 				</Fight>
 			</Actions>
