@@ -3,9 +3,9 @@
 		<Title>Смерть антиквара</Title>
 		<Copyright>Константин Таро, 2001</Copyright>
 		<Styles>
-			<Color Name="Main, Option" Val="2e2e2e"/>
-			<Color Name="Continue" Val="9a9a9a"/>
-			<Color Name="System" Val="d6d6d6"/>
+			<Color Name="Main, Option" Value="2e2e2e"/>
+			<Color Name="Continue" Value="9a9a9a"/>
+			<Color Name="System" Value="d6d6d6"/>
 		</Styles>
 		<Settings>
 			<HideDisabledOption/>
@@ -35,28 +35,28 @@
 			<Text>Вы сидели в клетке и все слышали. Какое новое слово вы хотите запомнить?</Text>
 			<Options>
 				<Option Destination="54" Text="Анжела" Availability="!анжела">
-					<Trigger Val="анжела"/>
+					<Trigger Value="анжела"/>
 				</Option>
 				<Option Destination="54" Text="Яков Левинзон" Availability="!левинзон">
-					<Trigger Val="левинзон"/>
+					<Trigger Value="левинзон"/>
 				</Option>
 				<Option Destination="54" Text="Завещание" Availability="!завещание">
-					<Trigger Val="завещание"/>
+					<Trigger Value="завещание"/>
 				</Option>
 				<Option Destination="54" Text="Картина" Availability="!картина">
-					<Trigger Val="картина"/>
+					<Trigger Value="картина"/>
 				</Option>
 				<Option Destination="54" Text="Улика" Availability="!улика">
-					<Trigger Val="улика"/>
+					<Trigger Value="улика"/>
 				</Option>
 				<Option Destination="54" Text="Обыск" Availability="!обыск">
-					<Trigger Val="обыск"/>
+					<Trigger Value="обыск"/>
 				</Option>
 				<Option Destination="54" Text="Записка" Availability="!записка">
-					<Trigger Val="записка"/>
+					<Trigger Value="записка"/>
 				</Option>
 				<Option Destination="54" Text="Письма" Availability="!письма">
-					<Trigger Val="письма"/>
+					<Trigger Value="письма"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -137,31 +137,31 @@
 			<Text>К вечеру в кабинет к Тарасову пришла для дачи показаний домработница Лариса Павловна.\n\nЭто была полноватая, но крепкая женщина с грубым пухлым лицом. На вид лет 50. Она чувствовала себя неуверенно в кабинете следователя и от волнения мяла в руке носовой платок.\n\n— У вас есть ключ от квартиры Розенблата?\n\n— Да, есть. Они сами мне его дали.\n\n— А зачем вам ключ, если когда вы убираете в квартире всегда был или покойный или его жена?\n\n— Михаил Самсонович дал ключ, чтобы я не отвлекала его от работы в его кабинете. Его раздражало, когда я звонила в дверь и он должен был через все комнаты идти открывать мне.\n\n— Понятно. А что вы скажете про его жену Анжелу? Она на двадцать лет моложе мужа. Это не приводило к каким-то... э-ээ... недоразумениям?\n\n— Ну, всякое бывало, — смутилась домработница. — Бывало что и ругались.\n\n— А из-за чего ругались?\n\n— Анжела хотела уехать жить в Израиль и уговаривала мужа. А он не хотел.\n\n— Понятно. А вы не слышали ничего в их разговорах насчет картины Брейгеля?\n\n— Картины?... Ах, да! Был один разговор, но не с Анжелой. Покойный, земля ему пухом, говорил о какой-то картине с Яковом Левинзоном. Это его близкий товарищ.\n\n— А вы знаете Лариса Павловна, что эта картина была очень дорогой.\n\n— Да, откуда же я знаю! Помилуй бог. Это вы у Якова Левинзона спросите.\n\n— А покойный не получал никаких писем. Он не вел с кем-то переписку?\n\n— Письма?... Ему иногда приходили письма из университетов. Анжела говорила, что мужа приглашали кажется в Вену на конференцию по этой... как ее... забыла это мудреное слово. Ну, там собирались те, кто изучал древние монеты.\n\nНо покойный не любил никуда ездить. Он был домоседом.\n\n— Понятно. Ну ладно, не буду больше вас мучить. На этом следователь решил закончить допрос.\n\nКакие новые слова вы хотите запомнить?</Text>
 			<Options>
 				<Option Destination="64" Text="Анжела" Availability="!анжела">
-					<Trigger Val="анжела"/>
+					<Trigger Value="анжела"/>
 				</Option>
 				<Option Destination="64" Text="Яков Левинзон" Availability="!левинзон">
-					<Trigger Val="левинзон"/>
+					<Trigger Value="левинзон"/>
 				</Option>
 				<Option Destination="64" Text="Израиль" Availability="!израиль">
-					<Trigger Val="израиль"/>
+					<Trigger Value="израиль"/>
 				</Option>
 				<Option Destination="64" Text="Завещание" Availability="!завещание">
-					<Trigger Val="завещание"/>
+					<Trigger Value="завещание"/>
 				</Option>
 				<Option Destination="64" Text="Картина" Availability="!картина">
-					<Trigger Val="картина"/>
+					<Trigger Value="картина"/>
 				</Option>
 				<Option Destination="64" Text="Письма" Availability="!письма">
-					<Trigger Val="письма"/>
+					<Trigger Value="письма"/>
 				</Option>
 				<Option Destination="64" Text="Улика" Availability="!улика">
-					<Trigger Val="улика"/>
+					<Trigger Value="улика"/>
 				</Option>
 				<Option Destination="64" Text="Обыск" Availability="!обыск">
-					<Trigger Val="обыск"/>
+					<Trigger Value="обыск"/>
 				</Option>
 				<Option Destination="64" Text="Записка" Availability="!записка">
-					<Trigger Val="записка"/>
+					<Trigger Value="записка"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -254,28 +254,28 @@
 			<Text>Запомните еще одно слово!</Text>
 			<Options>
 				<Option Destination="77" Text="Анжела" Availability="!анжела">
-					<Trigger Val="анжела"/>
+					<Trigger Value="анжела"/>
 				</Option>
 				<Option Destination="77" Text="Яков Левинзон" Availability="!левинзон">
-					<Trigger Val="левинзон"/>
+					<Trigger Value="левинзон"/>
 				</Option>
 				<Option Destination="77" Text="Завещание" Availability="!завещание">
-					<Trigger Val="завещание"/>
+					<Trigger Value="завещание"/>
 				</Option>
 				<Option Destination="77" Text="Картина" Availability="!картина">
-					<Trigger Val="картина"/>
+					<Trigger Value="картина"/>
 				</Option>
 				<Option Destination="77" Text="Улика" Availability="!улика">
-					<Trigger Val="улика"/>
+					<Trigger Value="улика"/>
 				</Option>
 				<Option Destination="77" Text="Обыск" Availability="!обыск">
-					<Trigger Val="обыск"/>
+					<Trigger Value="обыск"/>
 				</Option>
 				<Option Destination="77" Text="Записка" Availability="!записка">
-					<Trigger Val="записка"/>
+					<Trigger Value="записка"/>
 				</Option>
 				<Option Destination="77" Text="Письма" Availability="!письма">
-					<Trigger Val="письма"/>
+					<Trigger Value="письма"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -336,19 +336,19 @@
 			<Text>Тарасов сидел в кабинете, изучая отчеты своих подчиненных до 22.00.\n\nнаконец он закрыл папки и откинувшись на спинку скрипучего стула потянулся.\n\n— Так, теперь можно немного и развлечься, — произнес Тарасов и пододвинул к себе клавиатуру настольного компьютера.\n\nВскоре вы услышали из динамиков женские сладострастные стоны, пыхтение и приглушенные возгласы — "О, ес! Фак ми... Оу-у!... Ес, ес!...".\n\nВы не могли разговаривать находясь в теле глупой птицы. Но попугай мог запоминать слова.\n\nВыберите из списка — какое слово или фразу запомнил ваш попугай, пока находился в кабинете следователя?</Text>
 			<Options>
 				<Option Destination="27" Text="Улика">
-					<Trigger Val="улика"/>
+					<Trigger Value="улика"/>
 				</Option>
 				<Option Destination="27" Text="«Фак ми!» и женские стоны из порнофильма">
-					<Trigger Val="фак-ми"/>
+					<Trigger Value="фак-ми"/>
 				</Option>
 				<Option Destination="27" Text="Обыск">
-					<Trigger Val="обыск"/>
+					<Trigger Value="обыск"/>
 				</Option>
 				<Option Destination="27" Text="Записка">
-					<Trigger Val="записка"/>
+					<Trigger Value="записка"/>
 				</Option>
 				<Option Destination="27" Text="«Владимирский центра-а-а-л...»">
-					<Trigger Val="владимирский централ"/>
+					<Trigger Value="владимирский централ"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -392,28 +392,28 @@
 			</Texts>
 			<Options>
 				<Option Destination="16" Text="Анжела" Availability="!анжела">
-					<Trigger Val="анжела"/>
+					<Trigger Value="анжела"/>
 				</Option>
 				<Option Destination="16" Text="Яков Левинзон" Availability="!левинзон">
-					<Trigger Val="левинзон"/>
+					<Trigger Value="левинзон"/>
 				</Option>
 				<Option Destination="16" Text="Завещание" Availability="!завещание">
-					<Trigger Val="завещание"/>
+					<Trigger Value="завещание"/>
 				</Option>
 				<Option Destination="16" Text="Израиль" Availability="!израиль">
-					<Trigger Val="израиль"/>
+					<Trigger Value="израиль"/>
 				</Option>
 				<Option Destination="16" Text="Картина" Availability="!картина">
-					<Trigger Val="картина"/>
+					<Trigger Value="картина"/>
 				</Option>
 				<Option Destination="16" Text="Письма" Availability="!письма">
-					<Trigger Val="письма"/>
+					<Trigger Value="письма"/>
 				</Option>
 				<Option Destination="16" Text="Улика" Availability="!улика">
-					<Trigger Val="улика"/>
+					<Trigger Value="улика"/>
 				</Option>
 				<Option Destination="16" Text="Обыск" Availability="!обыск">
-					<Trigger Val="обыск"/>
+					<Trigger Value="обыск"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -501,28 +501,28 @@
 			<Text>Вы можете запомнить еще одно слово!</Text>
 			<Options>
 				<Option Destination="29" Text="Анжела" Availability="!анжела">
-					<Trigger Val="анжела"/>
+					<Trigger Value="анжела"/>
 				</Option>
 				<Option Destination="29" Text="Яков Левинзон" Availability="!левинзон">
-					<Trigger Val="левинзон"/>
+					<Trigger Value="левинзон"/>
 				</Option>
 				<Option Destination="29" Text="Завещание" Availability="!завещание">
-					<Trigger Val="завещание"/>
+					<Trigger Value="завещание"/>
 				</Option>
 				<Option Destination="29" Text="Картина" Availability="!картина">
-					<Trigger Val="картина"/>
+					<Trigger Value="картина"/>
 				</Option>
 				<Option Destination="29" Text="Письма" Availability="!письма">
-					<Trigger Val="письма"/>
+					<Trigger Value="письма"/>
 				</Option>
 				<Option Destination="29" Text="Улика" Availability="!улика">
-					<Trigger Val="улика"/>
+					<Trigger Value="улика"/>
 				</Option>
 				<Option Destination="29" Text="Обыск" Availability="!обыск">
-					<Trigger Val="обыск"/>
+					<Trigger Value="обыск"/>
 				</Option>
 				<Option Destination="29" Text="Записка" Availability="!записка">
-					<Trigger Val="записка"/>
+					<Trigger Value="записка"/>
 				</Option>
 			</Options>
 		</Paragraph>
