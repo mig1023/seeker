@@ -3,11 +3,11 @@
 		<Title>По закону прерии</Title>
 		<Copyright>Ольга Голотвина, 1995</Copyright>
 		<Styles>
-			<Color Name="StatusBar" Val="b85d43"/>
-			<Color Name="AdditionalStatus" Val="d69b8b"/>
-			<Color Name="Main" Val="b66247"/>
-			<Color Name="Action" Val="8f4445"/>
-			<Color Name="Option" Val="a04c4d"/>
+			<Color Name="StatusBar" Value="b85d43"/>
+			<Color Name="AdditionalStatus" Value="d69b8b"/>
+			<Color Name="Main" Value="b66247"/>
+			<Color Name="Action" Value="8f4445"/>
+			<Color Name="Option" Value="a04c4d"/>
 		</Styles>
 		<Constants>
 			<Dictionary Name="Skills" FromLineByOrder=", 8, 10, 12, 9, 11, 9, 10, 8, 9, 10, 11"/>
@@ -121,7 +121,7 @@
 				<Text>Чикита мирно поджидает вас.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-1"/>
+				<Strength Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="565" Text="Поскачете дальше"/>
@@ -200,7 +200,7 @@
 		<Paragraph No="19">
 			<Text>В руках у вас замшевый мешочек на шнурке, а внутри у него тяжелый самородок. Что ж, это ваш законный трофей, раз вор улизнул... А теперь возвращайтесь к коновязи – пора в путь.</Text>
 			<Modifications>
-				<Nuggets Val="1"/>
+				<Nuggets Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="91"/>
@@ -213,7 +213,7 @@
 				<Text>А на рассвете лошадь будит вас веселым ржанием.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="1"/>
+				<Strength Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="300"/>
@@ -249,7 +249,7 @@
 		<Paragraph No="24">
 			<Text>Бросить на произвол судьбы беспомощного человека... Вы, конечно, вольны поступать как знаете, но за этот поступок ваше ОБАЯНИЕ уменьшится на 1.</Text>
 			<Modifications>
-				<Charm Val="-1"/>
+				<Charm Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="601"/>
@@ -262,8 +262,8 @@
 				<Text>Утром вас угощают лепешками. Можете завернуть их с собой, в любую минуту путешествия они увеличат вашу СИЛУ на 3.\n\nТеперь можете ехать дальше:</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="2"/>
-				<Healing Val="Поесть лепешек,3"/>
+				<Strength Value="2"/>
+				<Healing Value="Поесть лепешек,3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="395" Text="На север"/>
@@ -332,12 +332,12 @@
 					<Head>Два патрона</Head>
 					<Price>50</Price>
 					<Multiple/>
-					<Benefit Name="Cartridges" Val="2"/>
+					<Benefit Name="Cartridges" Value="2"/>
 					<Text>Если вам подходит цена, выкладывайте деньги. А затем отправляйтесь в дорогу.</Text>
 				</Get>
 			</Actions>
 			<Modifications>
-				<Strength Val="6"/>
+				<Strength Value="6"/>
 			</Modifications>
 			<Options>
 				<Option Destination="300"/>
@@ -395,7 +395,7 @@
 				<Text>А наутро отправляетесь дальше на восток.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-1"/>
+				<Strength Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="456"/>
@@ -411,7 +411,7 @@
 		<Paragraph No="40">
 			<Text>Шериф встречает вас с распростертыми объятиями. Оказывается, ваш пленник – известный мошенник: Уайт, он же Бевидж, он же Фрост, он же Ларсен Рыжий Хвост. И награда за него немалая – 25 долларов!\n\nС туго набитым кошельком можно смело отправляться в любое путешествие!</Text>
 			<Modifications>
-				<Cents Val="2500"/>
+				<Cents Value="2500"/>
 			</Modifications>
 			<Options>
 				<Option Destination="91"/>
@@ -506,7 +506,7 @@
 					<Head>Шесть патронов</Head>
 					<Price>100</Price>
 					<Multiple/>
-					<Benefit Name="Cartridges" Val="6"/>
+					<Benefit Name="Cartridges" Value="6"/>
 					<Text>На случай, если судьба забросит вас на индейскую территорию, лавочник советует запастись подарками для индейцев (любая вещь за полдоллара):</Text>
 				</Get>
 				<Get>
@@ -619,7 +619,7 @@
 				<Text>Вы мгновенно спрыгиваете с седла и укрываетесь в орешнике.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-1"/>
+				<Strength Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="27" Text="Воспользоваться подзорной трубой" Availability="Подзорная труба"/>
@@ -681,7 +681,7 @@
 				<Text Style="Small">Прибавьте 2 к СИЛЕ.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="2"/>
+				<Strength Value="2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="588"/>
@@ -742,7 +742,7 @@
 				<Text Style="Small">Сон прибавит 2 к вашей СИЛЕ.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="2"/>
+				<Strength Value="2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="585"/>
@@ -777,7 +777,7 @@
 					<Button>Заплатить</Button>
 					<Head>Обед</Head>
 					<Price>200</Price>
-					<Benefit Name="Strength" Val="3"/>
+					<Benefit Name="Strength" Value="3"/>
 					<Text>Но когда вы спрашиваете официанта о рулетке, он огорченно отвечает, что городские власти велели это дело прикрыть. Здесь, мол, ежедневно драки, проигравшиеся бедолаги не раз пытались убить и ограбить счастливчиков... да еще ходили слухи о мошенничестве.\n\nПополнить кошелек тут не удастся. Но ведь не корысть привела вас сюда! Где-то бродят убийцы, оставшиеся безнаказанными, а вы здесь преспокойно слушаете оркестр!\n\nС этой мыслью вы покидаете ресторан.</Text>
 				</Get>
 			</Actions>	
@@ -827,7 +827,7 @@
 				<Text>За окнами темнеет, а Джинкинса все нет... В душе вашей нарастает недоброе предчувствие.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="3"/>
+				<Strength Value="3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="294" Text="Пора покинуть этот дом и продолжить свой путь"/>
@@ -929,7 +929,7 @@
 				<Text Style="Small">Вычтите 3 из своей СИЛЫ.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-3"/>
+				<Strength Value="-3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="159"/>
@@ -942,8 +942,8 @@
 				<Text>Затем выводите испуганную Чикиту из пещеры и решайте:</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="6"/>
-				<Skin Val="Шкура медведя"/>
+				<Strength Value="6"/>
+				<Skin Value="Шкура медведя"/>
 			</Modifications>
 			<Options>
 				<Option Destination="586" Text="Свернуть на восток, держа лошадь в поводу"/>
@@ -956,7 +956,7 @@
 				<Text Style="Small">Вычтите 1 из своей СИЛЫ.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-1"/>
+				<Strength Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="70"/>
@@ -1152,7 +1152,7 @@
 		<Paragraph No="119">
 			<Text>Вы способны бросить женщину в беде? Ну-ну, дело ваше. Но имейте в виду: после этого неджентльменского поступка ваше ОБАЯНИЕ уменьшится на 1.</Text>
 			<Modifications>
-				<Charm Val="-1"/>
+				<Charm Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="518"/>
@@ -1187,7 +1187,7 @@
 				<Text Style="Small">Еда прибавит 3 к вашей СИЛЕ.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="3"/>
+				<Strength Value="3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="472"/>
@@ -1225,7 +1225,7 @@
 				<Text>Что ж, бой так бой!</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-3"/>
+				<Strength Value="-3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="17"/>
@@ -1279,7 +1279,7 @@
 				<Text>Кляня себя за неосторожность и доверчивость, приоткрываете глаза и незаметно осматриваетесь.\n\nВы лежите на площадке среди скал, руки и ноги связаны. Неподалеку горит костер, у огня сидят несколько плечистых парней весьма неприятного вида. Один из них, высокий, светловолосый, устроился поодаль от остальных. На коленях у него ваша сумка, он как раз начал ее развязывать.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-5"/>
+				<Strength Value="-5"/>
 			</Modifications>
 			<Options>
 				<Option Destination="344" Text="Есть серебряный медальон" Availability="Медальон"/>
@@ -1315,7 +1315,7 @@
 		<Paragraph No="138">
 			<Text>Обратная дорога в город обходится без приключений, да и пленник не доставляет вам хлопот. Сдав его властям, получаете награду – 20 долларов. Заодно узнаете у шерифа, нет ли известий о банде Фостера. Увы, ничего нового он вам сообщить не может. Однако вы сами понимаете, что ваши розыски вряд ли остались тайной для бандитов. Надо действовать быстро и энергично, чтобы враг не успел нанести ответный удар. Задерживаться в городе не стоит...\n\nНо, может быть, вы все-таки хотите заглянуть:</Text>
 			<Modifications>
-				<Cents Val="2000"/>
+				<Cents Value="2000"/>
 			</Modifications>
 			<Options>
 				<Option Destination="307" Text="В ресторан"/>
@@ -1344,7 +1344,7 @@
 				<Get>
 					<Button>Выбрать</Button>
 					<Trigger>Самородок</Trigger>
-					<Benefit Name="Nuggets" Val="1"/>
+					<Benefit Name="Nuggets" Value="1"/>
 				</Get>
 				<Get>
 					<Button>Выбрать</Button>
@@ -1352,7 +1352,7 @@
 				</Get>
 				<Get>
 					<Button>Выбрать</Button>
-					<Benefit Name="Cents" Val="1000"/>
+					<Benefit Name="Cents" Value="1000"/>
 					<Text>Решайте, что вам больше по душе, и прощайтесь с фермером.</Text>
 				</Get>	
 			</Actions>
@@ -1363,7 +1363,7 @@
 		<Paragraph No="141">
 			<Text>Вашего нового знакомого зовут Лунный Луч – это имя он получил за умение двигаться по лесу бесшумно, как свет луны. Его пытались захватить в плен «бледнолицые койоты» – судя по всему, из шайки Мясника. Парнишке удалось уйти после серьезной перестрелки, но добраться до своих он не смог, укрылся в пещере и уже приготовился уйти на Луга Счастливой Охоты.\n\nНо что нужно было негодяям от юноши?\n\nМолодой индеец колеблется. Затем, решившись, протягивает открытую ладонь.\n\n«Они хотели знать, где искать это...»\n\nНа ладони – увесистый самородок.\n\n«Возьми его, мой бледнолицый брат. Но не спрашивай, где он найден. Черный Бизон, мудрый вождь, говорит, что, когда много таких камней собирается вместе, они приносят несчастье!»\n\nУ вас на этот счет другое мнение, но вы оставляете его при себе. В молчании вы двигаетесь дальше, пока не оказываетесь на поляне, где разбили лагерь охотники из Рода Ворона.</Text>
 			<Modifications>
-				<Nuggets Val="1"/>
+				<Nuggets Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="550"/>
@@ -1629,7 +1629,7 @@
 				<Text>Лишь расстреляв последний патрон из тех, что дал незнакомец, замечаете, что остались одни. Ветер колышет под луной траву, мрачно чернеют заброшенные рудничные здания... В каком из них скрылся этот странный тип? Не искать же его впотьмах! Да, место опасное, лучше поскорее исчезнуть.</Text>
 			</Texts>
 			<Modifications>
-				<MaxSkill Val="1"/>
+				<MaxSkill Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="38"/>
@@ -1668,7 +1668,7 @@
 				<Text Style="Small">Прибавьте 3 к своей СИЛЕ.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="3"/>
+				<Strength Value="3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="407"/>
@@ -1688,7 +1688,7 @@
 					<Button>Заплатить</Button>
 					<Head>Обед</Head>
 					<Price>200</Price>
-					<Benefit Name="Strength" Val="3"/>
+					<Benefit Name="Strength" Value="3"/>
 					<Text>Если сейчас вы не голодны, попросите официанта собрать еду вам в дорогу.\n\nВы уже собираетесь покинуть ресторан, но официант негромко говорит, что на втором этаже – рулетка. Не угодно ли джентльмену слегка развлечься?</Text>
 				</Get>
 			</Actions>	
@@ -1771,7 +1771,7 @@
 				<Text Style="Small">Прибавьте 2 к своей СИЛЕ.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="2"/>
+				<Strength Value="2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="588"/>
@@ -1793,7 +1793,7 @@
 				<Text>К счастью, у него нет коня, и вскоре вы оказываетесь так далеко, что можете спокойно перевязать рану и наполнить флягу свежей водой. А Чикита может отдохнуть и напиться.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-3"/>
+				<Strength Value="-3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="536"/>
@@ -1850,7 +1850,7 @@
 					<Button>Заплатить</Button>
 					<Head>Обед</Head>
 					<Price>50</Price>
-					<Benefit Name="Strength" Val="4"/>
+					<Benefit Name="Strength" Value="4"/>
 					<Text>Если не голодны или поистратились в дороге, можете отказаться от еды. А ночлег здесь бесплатный...\n\nЧто вы сделаете потом?</Text>
 				</Get>
 			</Actions>	
@@ -1874,7 +1874,7 @@
 				<Text>...но, к счастью, одежда не вспыхнула, а тлеющие веревки быстро лопнули.\n\nВам удается незаметно уползти за груду камней. Более того, вы даже имеете дерзость прихватить свой мешок. Конечно, про золото придется забыть, но остальные вещи целы – бандиты не заинтересовались ими.\n\nИ еще одна сказочная удача: неподалеку привязаны лошади бандитов. И Чикита, ваша Чикита – тоже здесь. Ну, теперь вы не пропадете!</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-3"/>
+				<Strength Value="-3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="486"/>
@@ -1926,7 +1926,7 @@
 				<Text Style="Small">Вычтите 3 из своей СИЛЫ.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-3"/>
+				<Strength Value="-3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="442"/>
@@ -1953,7 +1953,7 @@
 		<Paragraph No="208">
 			<Text>Не веря себе, смотрите на вытянувшееся у ваших ног длинное красновато-рыжее тело. Вы смогли это сделать! Если есть нож и свободное место в сумке, можете снять с пумы шкуру и взять с собой. Вы не забыли про свою находку?</Text>
 			<Modifications>
-				<Skin Val="Шкура пумы"/>
+				<Skin Value="Шкура пумы"/>
 			</Modifications>
 			<Options>
 				<Option Destination="308" Text="Попытаетесь вытащить эту вещь из воды">
@@ -2048,7 +2048,7 @@
 		<Paragraph No="221">
 			<Text>Вы окликаете незнакомца и интересуетесь: какого дьявола он палит в каждого встречного? В ответ доносится поток извинений. Оказывается, этот чудак – художник из Бостона, приехал сюда писать пейзажи – и принял вас за бандита...\n\nВыбравшись из кустов, подходите к художнику с намерением дать ему по физиономии. Но у него такой виноватый вид, что вы сдерживаетесь и в тщательно подобранных выражениях объясняете этому недотепе разницу между Бостоном и западными штатами.\n\nХудожник замечает царапину от пули на вашей щеке и начинает суетливо рыться в своей седельной сумке. Достав пузырек, он объясняет, что это лекарство под названием Золотая Панацея, которую он умоляет принять от него в подарок.\n\nЕсли в сумке найдется место, можете взять лекарство. В любое время суток оно восстановит вашу СИЛУ до первоначального уровня. Но пузырек маленький, его хватит лишь на один глоток...\n\nА теперь распрощайтесь с новым знакомым и продолжайте путь, пока не доберетесь до Северного перевала.</Text>
 			<Modifications>
-				<Healing Val="Выпить Золотую Панацею,-1"/>
+				<Healing Value="Выпить Золотую Панацею,-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="542"/>
@@ -2069,7 +2069,7 @@
 		<Paragraph No="223">
 			<Text>Индейцы в растерянности. Вампум явно знаком им, и теперь они уже не говорят ни о столбе пыток, ни о вашем скальпе на шесте. Но оставить вас в лагере они не решаются... Наконец высокий воин приказывает увести бледнолицего подальше и даже ему еды на дорогу. Вам отрезают кусок жареной оленины (который прибавит 3 к вашей СИЛЕ) и показывают путь к речному берегу.</Text>
 			<Modifications>
-				<Strength Val="3"/>
+				<Strength Value="3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="173"/>
@@ -2089,7 +2089,7 @@
 				<Text>С трудом удается стряхнуть с себя противника и обернуться. Перед вами Эль-Хабали. Вытаскивать оружие уже некогда...</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-3"/>
+				<Strength Value="-3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="309"/>
@@ -2175,7 +2175,7 @@
 		<Paragraph No="236">
 			<Text>Вы вглядываетесь в лица лежащих в пыльной траве врагов и невольно присвистываете. Вы никогда не встречали этих людей, но их физиономии давно украшают собою объявления о розыске. Один был объявлен вне закона за несколько убийств, другой – за поджог дома соседа-фермера.\n\nВ карманах первого из противников обнаруживаете 5 долларов и записку с тремя словами: «Сбор на острове». У второго находите лишь дешевенькое круглое зеркальце. Интересно, кому в подарок оно предназначалось?..\n\nЧужой конь стоит, тяжело поводя запавшими боками и опустив морду в землю. Ох, и заморен же он! Оставьте беднягу здесь: он отдохнет, а потом прибьется к какому-нибудь ранчо... А теперь пора ехать дальше – на восток!</Text>
 			<Modifications>
-				<Cents Val="500"/>
+				<Cents Value="500"/>
 			</Modifications>
 			<Triggers>Зеркальце</Triggers>
 			<Options>
@@ -2209,7 +2209,7 @@
 				<Text>А когда вы удобно устраиваетесь на одеяле, дверь сарая приоткрывается. Входит владелец ранчо – мистер Саймон Ридж. В руках у него бутылка виски. Хозяин зашел еще раз поблагодарить вас и немножко побеседовать.\n\nПотягивая виски, вы вновь, уже подробнее, рассказываете о схватке со злодеями, похитившими мисс Ридж. А затем хозяин интересуется: что послужило причиной вашего столь своевременного появления в здешних краях?</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="6"/>
+				<Strength Value="6"/>
 			</Modifications>
 			<Options>
 				<Option Destination="404" Text="Расскажете всю правду"/>
@@ -2367,7 +2367,7 @@
 				</Fight>
 			</Actions>
 			<Modifications>
-				<Strength Val="-3"/>
+				<Strength Value="-3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="573"/>
@@ -2418,7 +2418,7 @@
 				<Text>Но после еды вам советуют покинуть лагерь и провожают до реки, чтобы убедиться в том, что вы этому совету последовали.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="4"/>
+				<Strength Value="4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="173"/>
@@ -2463,7 +2463,7 @@
 				<Text>А если спичек нет, то вы зря потратили патрон: не будете же вы есть сырую птицу!</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="3"/>
+				<Strength Value="3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="97"/>
@@ -2539,7 +2539,7 @@
 				<Text>Если после этого вы еще живы...</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-8"/>
+				<Strength Value="-8"/>
 			</Modifications>
 			<Options>
 				<Option Destination="480"/>
@@ -2552,7 +2552,7 @@
 				<Text>Утром собираетесь в путь. О`Доннелл, сонно щурясь, выходит вместе с вами из хижины.\n\n«Ну, парень, – говорит он, – ты мне пришелся по душе. Вот, возьми, пригодится... – И старик протягивает ожерелье из речных раковин и бисера. – Это индейский вампум. Встретишь Черного Бизона – покажи ему. Он поймет, что ты мой приятель. Прощай, сынок!»</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="2"/>
+				<Strength Value="2"/>
 			</Modifications>
 			<Triggers>Вампум</Triggers>
 			<Options>
@@ -2562,7 +2562,7 @@
 		<Paragraph No="280">
 			<Text>Забрав у официанта свое оружие, вы конвоируете незадачливого грабителя к шерифу.\n\nВы угадали: за этого типа и в самом деле обещана награда – 25 долларов.\n\nПожалуй, теперь вам пора уезжать из Ту-Попларс, вы и так здесь очень задержались.</Text>
 			<Modifications>
-				<Cents Val="2500"/>
+				<Cents Value="2500"/>
 			</Modifications>
 			<Options>
 				<Option Destination="91"/>
@@ -2574,7 +2574,7 @@
 				<Text Style="Small">Каждая из которых повысит вашу СИЛУ на 1.</Text>
 			</Texts>
 			<Modifications>
-				<Healing Val="Съесть лепешку,1,1"/>
+				<Healing Value="Съесть лепешку,1,1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="173"/>
@@ -2620,7 +2620,7 @@
 		<Paragraph No="288">
 			<Text>Показалось вам или нет, что в глазах хозяина блеснула радость? Он отворачивается к окну и через минуту хрипло говорит:\n\n«Я возьму эти часы за тридцать долларов...»\n\nВы изумлены. За что вам предлагают такие большие деньги? К тому же Перкинс вовсе не производит впечатления щедрого человека... Но не сбивать же самому цену!\n\nХозяин заявляет, что больше ничего сегодня покупать не будет, берет свечу и провожает вас в приготовленную для ночлега комнату. В коридоре вы припоминаете, что не мешало бы проведать Чикиту и взглянуть, хорошо ли она устроена. Но Перкинс утверждает, что проследит за этим сам.</Text>
 			<Modifications>
-				<Cents Val="3000"/>
+				<Cents Value="3000"/>
 			</Modifications>
 			<Untriggers>Часы</Untriggers>
 			<Options>
@@ -2699,7 +2699,7 @@
 				<Text>Тут уж придется отстреливаться: убийцы охотятся именно за вами.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-3"/>
+				<Strength Value="-3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="166"/>
@@ -2752,7 +2752,7 @@
 				<Text>Пора уходить, но не забудьте сначала забрать у официанта свое оружие.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-2"/>
+				<Strength Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="610"/>
@@ -2852,7 +2852,7 @@
 				<Text>...вы бросаете эти дурацкие поиски. Хватит, вы и так слишком задержались в Ту-Попларс.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-1"/>
+				<Strength Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="91"/>
@@ -2896,7 +2896,7 @@
 				<Get>
 					<Button>Купить</Button>
 					<Head>Бальзам для исцеления ран</Head>
-					<Benefit Name="Healing" Val="Применить бальзам для исцеления ран,5,2"/>
+					<Benefit Name="Healing" Value="Применить бальзам для исцеления ран,5,2"/>
 					<Price>50</Price>
 					<Multiple/>
 					<Text>А вот это – внимание! – знаменитая Золотая Панацея, патентованное средство. Цена ей, правда, 3 доллара за пузырек, зато она пригодится на все... м-м... неудачные случаи жизни.</Text>
@@ -2905,7 +2905,7 @@
 					<Button>Купить</Button>
 					<Head>Золотая Панацея</Head>
 					<Trigger>Противоядие</Trigger>
-					<Benefit Name="Healing" Val="Принять Золотую Панацею,-1"/>
+					<Benefit Name="Healing" Value="Принять Золотую Панацею,-1"/>
 					<Price>300</Price>
 					<Multiple/>
 				</Get>	
@@ -2954,8 +2954,8 @@
 				<Text Style="Small">Она прибавит 3 к СИЛЕ.</Text>
 			</Texts>
 			<Modifications>
-				<Skin Val="Шкура кролика"/>
-				<Strength Val="3"/>
+				<Skin Value="Шкура кролика"/>
+				<Strength Value="3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="417"/>
@@ -3076,7 +3076,7 @@
 			<Text>В кармане 2 доллара и золотые часы. На крышке вмятина (явно от пули) и красиво выгравированная надпись: «Джозеф Рэй». Во внутреннюю сторону крышки вделан миниатюрный портрет синеглазой, черноволосой девчушки лет семи...</Text>
 			<Triggers>Часы</Triggers>
 			<Modifications>
-				<Cents Val="200"/>
+				<Cents Value="200"/>
 			</Modifications>
 			<Options>
 				<Option Destination="636"/>
@@ -3088,7 +3088,7 @@
 				<Text Style="Small">Сон увеличит СИЛУ на 2.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="2"/>
+				<Strength Value="2"/>
 			</Modifications>
 			<Triggers>Дом Джинкинса</Triggers>
 			<Options>
@@ -3191,7 +3191,7 @@
 		<Paragraph No="353">
 			<Text>Интересно, почему эта негодяйка бросилась на вас? Неужели в лесу нет более подходящей добычи? Может быть, какой-нибудь охотник ранил ее, и рысь возненавидела людей? Впрочем, это не важно. Если есть нож, можете ненадолго задержаться и снять со зверюги шкуру. А потом продолжайте путь на юг.</Text>
 			<Modifications>
-				<Skin Val="Шкура рыси"/>
+				<Skin Value="Шкура рыси"/>
 			</Modifications>
 			<Options>
 				<Option Destination="139"/>
@@ -3203,7 +3203,7 @@
 				<Text>Утром вы умываетесь у насоса и наполняете флягу свежей водой. В это время на крыльцо выходит хозяин.\n\n«Что, – спрашивает он хмуро, – видели уже моего зверя?»\n\nВ загоне щиплет траву крупный вороной мустанг. Он выглядит смирным, но короткий нервный всхрап, чуть прижатое ухо, скошенный в вашу сторону синеватый белок злого глаза говорят о многом. Да, это зверюга...\n\nОказывается, фермер купил коня по глупости. В земле-то он разбирается, а вот в лошадях... Ну, и всучили ему дикаря. Конь уже изувечил двоих объездчиков. По всей округе пошла дурная слава о четвероногом злодее. Продать его невозможно, ездить – немыслимо, пристрелить – жалко.\n\n«Может, – спрашивает хозяин, – вы его обломаете? Я цену знаю – десять долларов».</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="2"/>
+				<Strength Value="2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="569" Text="Попытаетесь заработать эти деньги"/>
@@ -3216,7 +3216,7 @@
 				<Text Style="Small">СИЛА понизится на 1.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-1"/>
+				<Strength Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="80"/>
@@ -3275,7 +3275,7 @@
 		<Paragraph No="364">
 			<Text>Лохматый чертенок сгребает доллар, сует вам в ладонь скомканную бумажку и исчезает в кустах. Развернув записку, вы читаете: «Остров на Барсучьей реке. Жду. Эль-Хабали». Барсучья река? Кажется, это на индейской территории.</Text>
 			<Modifications>
-				<Cents Val="-100"/>
+				<Cents Value="-100"/>
 			</Modifications>
 			<Options>
 				<Option Destination="565"/>
@@ -3294,7 +3294,7 @@
 				<Text>Вы перекидываете мешок через плечо и печально идете берегом озера, пока не выходите к ковбойскому лагерю.\n\nРассвело совсем недавно, но парни уже ускакали к стаду, и в лагере вас встречают лишь повар и объездчик, только что прискакавший сюда. Оба заняты и неприветливы, продать вам лошадь отказываются.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-1"/>
+				<Strength Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="448" Text="Среди ваших вещей есть индейский томагавк" Availability="Томагавк">
@@ -3317,7 +3317,7 @@
 				<Text>Вы ожидаете, что визгливо скрипящая цепь вот-вот оборвется, но, как ни странно, вам обоим удается благополучно выбраться из шахты.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-2"/>
+				<Strength Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="70"/>
@@ -3352,7 +3352,7 @@
 				<Text>Придя в себя, слышите гортанную незнакомую речь. Стало быть, вы напоролись на засаду, и вас, бесчувственного, притащили, как мешок с мукой, в лагерь индейцев.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-4"/>
+				<Strength Value="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="73"/>
@@ -3444,14 +3444,14 @@
 					<Button>Заплатить</Button>
 					<Head>Поесть</Head>
 					<Price>100</Price>
-					<Benefit Name="Strength" Val="3"/>
+					<Benefit Name="Strength" Value="3"/>
 					<Text>Если вы сейчас не голодны, попросите завернуть вам еду с собой:</Text>
 				</Get>
 				<Get>
 					<Button>Еда с собой</Button>
 					<Head>Купить</Head>
 					<Price>100</Price>
-					<Benefit Name="Healing" Val="Съесть еду из закусочной,3"/>
+					<Benefit Name="Healing" Value="Съесть еду из закусочной,3"/>
 				</Get>
 			</Actions>
 			<Options>
@@ -3637,7 +3637,7 @@
 				<Text>Можете наполнить флягу...\n\nВы собираетесь подняться, но от земляной стены колодца доносится тихий глухой стук. Вы припадаете ухом к стене: да, сюда кто-то скачет!</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="3"/>
+				<Strength Value="3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="470" Text="Попробуете затаиться и выждать"/>
@@ -3797,7 +3797,7 @@
 				<Text>...вы седлаете Чикиту и, простившись с хлопочущим у костра поваром, отправляетесь в путь. Но куда?</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="2"/>
+				<Strength Value="2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="557" Text="Берегом озера на восток"/>
@@ -3841,7 +3841,7 @@
 				<Text>...возвращаетесь на дорогу, садитесь в седло и продолжаете путь.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-1"/>
+				<Strength Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="565"/>
@@ -3991,8 +3991,8 @@
 				<Text Style="Small">ЛОВКОСТЬ уменьшается на 1, а СИЛА – на 2. Но если у вас с собой Золотая Панацея, можете ею воспользоваться, и тогда ЛОВКОСТЬ останется такой же, какой была до этого неприятного происшествия, а СИЛА даже возрастет до первоначального уровня.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-2"/>
-				<Skill Val="-1"/>
+				<Strength Value="-2"/>
+				<Skill Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="112"/>
@@ -4027,7 +4027,7 @@
 				<Text>Фермер увлеченно рассказывает о своем огороде, о кукурузе нового сорта, о сорока акрах, отведенных под люцерну... Вы пытаетесь завести разговор о банде Фостера, но фермер делает вид, что не понимает ваших намеков. Что ж, вы человек проезжий, а ему здесь жить да жить... Сообразив это, вы встаете из-за стола и отправляетесь спать.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="5"/>
+				<Strength Value="5"/>
 			</Modifications>
 			<Options>
 				<Option Destination="354"/>
@@ -4043,7 +4043,7 @@
 		<Paragraph No="455">
 			<Text>Услышав выстрел, стадо настораживается – и тут же, успокоившись, продолжает тупо пережевывать траву. А бурый бык косматой грудой оседает на землю: опытная рука и зоркий глаз не подвели вас. Обойдя котловину, вы криками вспугиваете и прогоняете стадо. Теперь можно подойти к добыче. Но сумеете ли вы ею воспользоваться? Если есть нож, можно снять с бизона шкуру. Если, кроме ножа, есть еще и спички, можете зажарить большой кусок мяса, который в любое время прибавит 6 к вашей силе.</Text>
 			<Modifications>
-				<Skin Val="Шкура бизона"/>
+				<Skin Value="Шкура бизона"/>
 			</Modifications>
 			<Options>
 				<Option Destination="324"/>
@@ -4071,8 +4071,8 @@
 				<Text Style="Small">Когда проголодаетесь, эта еда прибавит 4 к вашей СИЛЕ.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="5"/>
-				<Healing Val="Съесть окорок,4"/>
+				<Strength Value="5"/>
+				<Healing Value="Съесть окорок,4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="357"/>
@@ -4148,7 +4148,7 @@
 				</Fight>
 			</Actions>
 			<Modifications>
-				<Strength Val="-2"/>
+				<Strength Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="208"/>
@@ -4174,7 +4174,7 @@
 				<Text>Куда вы поскачете?</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-2"/>
+				<Strength Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="593" Text="На восток"/>
@@ -4189,7 +4189,7 @@
 					<Head>Один патрон</Head>
 					<Price>100</Price>
 					<Multiple/>
-					<Benefit Name="Cartridges" Val="1"/>
+					<Benefit Name="Cartridges" Value="1"/>
 					<Text>Нож он может продать за 3 доллара, лассо за 2...</Text>
 				</Get>
 				<Get>
@@ -4272,7 +4272,7 @@
 				<Text>После ужина:</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="6"/>
+				<Strength Value="6"/>
 			</Modifications>
 			<Options>
 				<Option Destination="247" Text="Сошлётесь на усталость, заберётесь в любую палатку и ляжете спать"/>
@@ -4424,7 +4424,7 @@
 				<Text>И индейцы молча скрываются в чаще.</Text>
 			</Texts>
 			<Modifications>
-				<Healing Val="Поесть индейских лепешек,1,2"/>
+				<Healing Value="Поесть индейских лепешек,1,2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="173"/>
@@ -4436,7 +4436,7 @@
 				<Text Style="Small">Но все же бессонная ночь уменьшит вашу СИЛУ на 2.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-2"/>
+				<Strength Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="312"/>
@@ -4611,7 +4611,7 @@
 				<Text>Наконец это дурацкое занятие вам надоедает. Мошенник давно успел скрыться, и делать здесь вам нечего. Пора покинуть этот набитый неприятностями городишко.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-1"/>
+				<Strength Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="91"/>
@@ -4707,7 +4707,7 @@
 				<Text>На рассвете, простившись с О’Доннеллом, седлаете Чикиту и едете дальше.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="2"/>
+				<Strength Value="2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="300"/>
@@ -4738,7 +4738,7 @@
 				<Text Style="Small">Прибавьте 2 к своей СИЛЕ.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="2"/>
+				<Strength Value="2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="402"/>
@@ -4854,7 +4854,7 @@
 				<Text Style="Small">Но бессонная ночь уменьшит вашу СИЛУ на 2.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-2"/>
+				<Strength Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="43"/>
@@ -4907,7 +4907,7 @@
 				<Text>Утром вы седлаете Чикиту, оставляете постоялый двор и скачете дальше по дороге.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="1"/>
+				<Strength Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="312"/>
@@ -4933,7 +4933,7 @@
 				<Text>Сознание возвращается не сразу. Сначала вы и не понимаете, что вас куда-то несут. Руки у вас не связаны, но голова так страшно кружится, что сопротивляться вы не можете. Сзади слышится протестующее ржание – Чикиту ведут следом...\n\nВаши похитители перебрасываются скупыми фразами. Не так уж хорошо вы знаете их язык, но понимаете главное: они тащат вас в свой лагерь.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-4"/>
+				<Strength Value="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="73"/>
@@ -5020,7 +5020,7 @@
 					<Head>Шесть патронов</Head>
 					<Price>100</Price>
 					<Multiple/>
-					<Benefit Name="Cartridges" Val="6"/>
+					<Benefit Name="Cartridges" Value="6"/>
 					<Text>Подарки для индейцев (бусы, зеркала, яркие пояса) – любая вещь за полдоллара:</Text>
 				</Get>
 				<Get>
@@ -5206,7 +5206,7 @@
 			</Texts>
 			<Modifications>
 				<Strength Restore="true"/>
-				<MaxSkill Val="1"/>
+				<MaxSkill Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="110"/>
@@ -5237,7 +5237,7 @@
 				<Text>Если есть место в сумке – возьмите сверток, еда всегда пригодится.\n\nНа прощание хозяин говорит, что на север и на запад отсюда на три дня пути нет человеческого жилья. А вот на востоке отсюда есть и фермы, и ранчо, и дорога для дилижансов, при которой стоит постоялый двор.</Text>
 			</Texts>
 			<Modifications>
-				<Healing Val="Поесть маленьких лепешек,2"/>
+				<Healing Value="Поесть маленьких лепешек,2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="130" Text="Поедете на восток"/>
@@ -5257,7 +5257,7 @@
 				<Text>Чикита тоже прекрасно отдохнула и нетерпеливо пританцовывает под седлом.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="1"/>
+				<Strength Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="473"/>
@@ -5291,7 +5291,7 @@
 				<Text>Искать в другом доме нет смысла, негодяй наверняка не дожидается вас там...</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-2"/>
+				<Strength Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="91" Text="Пора уезжать из города, что-то вам здесь не везет"/>
@@ -5397,7 +5397,7 @@
 				<Text>Теперь пора подумать о ночлеге.</Text>
 			</Texts>
 			<Modifications>
-				<Charm Val="-1"/>
+				<Charm Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="61" Text="Заночуете здесь, у приветливо журчащего родника"/>
@@ -5418,7 +5418,7 @@
 				<Text>Но вот ночь позади, можно оседлать Чикиту.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-1"/>
+				<Strength Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="300"/>
@@ -5461,7 +5461,7 @@
 				<Text>Когда удается освободиться, вы возвращаетесь к коновязи, где дожидается Чикита.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-1"/>
+				<Strength Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="91" Text="Хотите в гневе покинуть город"/>
@@ -5622,7 +5622,7 @@
 				<Text Style="Small">Сон прибавляет 2 к вашей СИЛЕ.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="2"/>
+				<Strength Value="2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="588"/>
@@ -5656,7 +5656,7 @@
 				<Get>
 					<Button>Продать</Button>
 					<Head>Золотые часы</Head>
-					<Benefit Name="Cents" Val="700"/>
+					<Benefit Name="Cents" Value="700"/>
 					<Untrigger>Часы</Untrigger>
 					<Text>Если вы еще не предлагали Перкинсу серебряный медальон или самородки – можете сделать это сейчас.</Text>
 				</Get>
@@ -5698,7 +5698,7 @@
 				<Text>Не мешает и флягу наполнить...\n\nВнезапно в земляной стене колодца вы слышите ритмичный тупой стук. не сразу соображаете вы, что это отзвук копыт.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="3"/>
+				<Strength Value="3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="553" Text="Поспешите, пока не поздно, выбраться наверх"/>
@@ -5731,7 +5731,7 @@
 		<Paragraph No="644">
 			<Text>Отличная, прекрасно выделанная шкура! Со временем вы сможете ее продать.</Text>
 			<Modifications>
-				<Skin Val="Шкура волка"/>
+				<Skin Value="Шкура волка"/>
 			</Modifications>
 			<Options>
 				<Option Destination="110"/>
@@ -5744,7 +5744,7 @@
 				<Text>Оставив озеро позади, вы оба двигаетесь на север, и к рассвету перед вами поднимается длинная цепь валунов и скал, которая протянулась вдоль русла пересохшей реки. Тут ваш проводник теряет остатки мужества и в слезах умоляет отпустить его.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-1"/>
+				<Strength Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="218" Text="Расстанетесь с парнишкой и продолжите поиски в одиночку"/>
@@ -5776,8 +5776,8 @@
 				<Text>Хозяин с потерянным видом спрашивает, не хотите ли вы попытаться еще разок... Вы отвечаете, что для этого надо быть особо крупным идиотом, седлаете свою славную, послушную Чикиту и оставляете ферму. В конце концов, вы шериф, а не объездчик мустангов. Если этот вулкан на копытах сломает вам шею, некому будет отомстить за Дана Сэвиджа.</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-5"/>
-				<Skill Val="-1"/>
+				<Strength Value="-5"/>
+				<Skill Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="473"/>
@@ -5813,7 +5813,7 @@
 				<Text Style="Small">Этот поступок уменьшит ваше ОБАЯНИЕ на 1.</Text>
 			</Texts>
 			<Modifications>
-				<Charm Val="-1"/>
+				<Charm Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="38"/>
@@ -5863,7 +5863,7 @@
 				<Text>Кряхтя, встаете на ноги и сердито отряхиваете одежду. Гнедая ржет, вскинув голову и оскалив зубы, точно смеется над вами...</Text>
 			</Texts>
 			<Modifications>
-				<Strength Val="-2"/>
+				<Strength Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="259" Text="Попытаете счастья на другом уступе"/>
