@@ -2729,7 +2729,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="ЗЕЛЕНЫЙ РЫЦАРЬ" Mastery="10" Endurance="10"/>
-					<StrengthPenlty>1</StrengthPenlty>
+					<StrengthPenlty Value="1"/>
 				</Fight>
 			</Actions>
 			<Modifications>
