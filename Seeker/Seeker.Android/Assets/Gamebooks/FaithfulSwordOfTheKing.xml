@@ -1831,7 +1831,7 @@
 				</Option>
 				<Fight>
 					<Enemy Name="ОХРАННИК" Skill="7" Strength="9"/>
-					<RoundsToWin>5</RoundsToWin>
+					<RoundsToWin Value="5"/>
 				</Fight>
 			</Actions>
 			<Options>
