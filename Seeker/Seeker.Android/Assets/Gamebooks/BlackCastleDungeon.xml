@@ -2911,7 +2911,7 @@
 						<Enemy Name="ПЕРВЫЙ ОРК" Mastery="8" Endurance="5"/>
 						<Enemy Name="ВТОРОЙ ОРК" Mastery="7" Endurance="7"/>
 					</Enemies>
-					<RoundsToWin>8</RoundsToWin>
+					<RoundsToWin Value="8"/>
 					<Text>Убиты ли оба врага за 8 раундов?</Text>
 				</Fight>
 			</Actions>
