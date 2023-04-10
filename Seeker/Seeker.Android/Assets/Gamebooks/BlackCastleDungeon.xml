@@ -12684,7 +12684,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="ГОБЛИН" Mastery="7" Endurance="10"/>
-					<RoundsToWin>5</RoundsToWin>
+					<RoundsToWin Value="5"/>
 				</Fight>
 			</Actions>			
 			<Options>
