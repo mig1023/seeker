@@ -3250,7 +3250,7 @@
 				</Option>
 				<Fight>
 					<Enemy Name="Ксен-Вайп" Mastery="8" Endurance="7"/>
-					<WoundsLimit>3</WoundsLimit>
+					<WoundsLimit Value="3"/>
 				</Fight>
 			</Actions>
 			<Options>
