@@ -4388,7 +4388,7 @@
 			<Actions>
 				<Test>
 					<Stat>Skill</Stat>
-					<TriggerTestPenalty>Скакун, -5; Тулпар, -5</TriggerTestPenalty>
+					<TriggerTestPenalty Value="Скакун, -5; Тулпар, -5"/>
 					<Level>12</Level>
 				</Test>
 			</Actions>
