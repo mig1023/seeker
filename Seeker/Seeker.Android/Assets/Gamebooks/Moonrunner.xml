@@ -3608,7 +3608,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="Дама с моноклем" Mastery="7" Endurance="10"/>
-					<WoundsLimit>9</WoundsLimit>
+					<WoundsLimit Value="9"/>
 				</Fight>
 			</Actions>
 			<Options>
