@@ -2517,7 +2517,7 @@
 				</Option>
 				<Fight>
 					<Enemy Name="ЛЕГИСТ" Skill="12" Strength="14"/>
-					<WoundsToWin>3</WoundsToWin>
+					<WoundsToWin Value="3"/>
 					<LeftHandPenalty/>
 				</Fight>
 			</Actions>
