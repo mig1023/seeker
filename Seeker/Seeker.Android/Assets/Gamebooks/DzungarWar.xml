@@ -3591,7 +3591,7 @@
 				<Test>
 					<Stat>Oratory</Stat>
 					<Level>14</Level>
-					<TriggerTestPenalty>Вино</TriggerTestPenalty>
+					<TriggerTestPenalty Value="Вино"/>
 				</Test>
 			</Actions>
 			<Options>
