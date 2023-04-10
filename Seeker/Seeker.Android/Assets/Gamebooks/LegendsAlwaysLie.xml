@@ -2705,8 +2705,8 @@
 				</Reaction>
 				<Fight>
 					<Enemy Name="ВЕЛИКАН" Strength="11" Hitpoints="12"/>
-					<ConneryAttacks>2, 5</ConneryAttacks>
-					<AttackWounds>3</AttackWounds>
+					<ConneryAttacks Value="2, 5"/>
+					<AttackWounds Value="3"/>
 					<Text>Через 5 раундов распутавшийся Коннери приходит вам на помощь. После этого каждый раунд отнимайте у противника 2 ЖИЗНИ.</Text>
 				</Fight>
 			</Actions>
