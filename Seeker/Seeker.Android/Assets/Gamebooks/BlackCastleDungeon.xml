@@ -15588,7 +15588,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="НАЧАЛЬНИК СТРАЖИ" Mastery="9" Endurance="6"/>
-					<RoundsToWin>3</RoundsToWin>
+					<RoundsToWin Value="3"/>
 					<Text>Вы можете воспользоваться заклятием Копии.</Text>
 				</Fight>
 			</Actions>
