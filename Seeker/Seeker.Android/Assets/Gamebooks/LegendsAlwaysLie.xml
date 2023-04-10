@@ -5287,7 +5287,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="ТРОЛЛЬ" Strength="10" Hitpoints="10"/>
-					<RoundsToWin>6</RoundsToWin>
+					<RoundsToWin Value="6"/>
 					<Text>Вы справились за 6 раундов или меньше (а если у вас записано слово «задержка», то это означает, что времени у вас еще меньше – вам надо справиться за 5 раундов)?</Text>
 				</Fight>
 			</Actions>
