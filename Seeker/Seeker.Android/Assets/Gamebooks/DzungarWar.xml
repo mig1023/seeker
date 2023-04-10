@@ -3669,7 +3669,7 @@
 				</Option>	
 				<Test>
 					<Stat>Oratory</Stat>
-					<TriggerTestPenalty>Переговорщик, -7</TriggerTestPenalty>
+					<TriggerTestPenalty Value="Переговорщик, -7"/>
 					<Level>14</Level>
 				</Test>
 			</Actions>
