@@ -2314,7 +2314,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="НАЕМНИК" Strength="11" Hitpoints="12"/>
-					<WoundsLimit>4</WoundsLimit>
+					<WoundsLimit Value="4"/>
 					<Text>Когда у него остается четыре или менее ЖИЗНЕЙ, наемник предлагает поделиться с вами кое-какой информацией в обмен на то, что вы отпустите его:</Text>
 				</Fight>
 			</Actions>
