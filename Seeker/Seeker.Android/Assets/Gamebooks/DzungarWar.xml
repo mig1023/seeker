@@ -1652,7 +1652,7 @@
 			<Actions>
 				<Test>
 					<Stat>Oratory</Stat>
-					<TriggerTestPenalty>Боль, 4; Скакун, -5; Тулпар, -10</TriggerTestPenalty>
+					<TriggerTestPenalty Value="Боль, 4; Скакун, -5; Тулпар, -10"/>
 					<Level>14</Level>
 				</Test>
 			</Actions>
