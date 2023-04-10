@@ -6935,7 +6935,7 @@
 						<Enemy Name="ПЕРВЫЙ ОРК" Mastery="8" Endurance="7"/>
 						<Enemy Name="ВТОРОЙ ОРК" Mastery="7" Endurance="9"/>
 					</Enemies>
-					<RoundsToWin>10</RoundsToWin>
+					<RoundsToWin Value="10"/>
 					<Text>Сражаться с ними придется одновременно. Если хотите, можете воспользоваться заклятием Копии.</Text>
 				</Fight>
 			</Actions>
