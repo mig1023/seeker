@@ -3447,12 +3447,12 @@
 			<Actions>
 				<Test>
 					<Stat>Skill</Stat>
-					<TriggerTestPenalty>Арбалет, -3</TriggerTestPenalty>
+					<TriggerTestPenalty Value="Арбалет, -3"/>
 					<Level>12</Level>
 				</Test>
 				<Test>
 					<Stat>Strength</Stat>
-					<TriggerTestPenalty>Арбалет, -3</TriggerTestPenalty>
+					<TriggerTestPenalty Value="Арбалет, -3"/>
 					<Level>12</Level>
 				</Test>
 			</Actions>
