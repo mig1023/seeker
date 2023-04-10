@@ -6092,7 +6092,7 @@
 			<Actions>
 				<SwordFight>
 					<Enemy Name="Марика Затт" Skill="12" Rang="4" Speed="3" Hitpoints="25"/>
-					<HeroHitpointsLimith>5</HeroHitpointsLimith>
+					<HeroHitpointsLimith Value="5"/>
 					<NoStrikeBack/>
 					<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
 				</SwordFight>
