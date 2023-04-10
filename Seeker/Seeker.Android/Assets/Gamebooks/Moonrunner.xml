@@ -1287,7 +1287,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="Обсианский хищник" Mastery="11"/>
-					<DevastatingAttack>3</DevastatingAttack>
+					<DevastatingAttack Value="3"/>
 					<Invulnerable/>
 					<Text>В конце каждого выигранного Раунда Атаки попробуйте Проверить свою Удачу.</Text>
 				</Fight>
