@@ -14807,7 +14807,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="ЗЛОЙ ДУХ" Mastery="10" Endurance="6"/>
-					<WoundsToWin>2</WoundsToWin>
+					<WoundsToWin Value="2"/>
 					<Text>Заклятия вам не помогут.</Text>
 				</Fight>
 			</Actions>
