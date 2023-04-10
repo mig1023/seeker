@@ -1338,8 +1338,8 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="ВЕЛИКАН" Strength="13" Hitpoints="16"/>
-					<ConneryAttacks>2</ConneryAttacks>
-					<AttackWounds>3</AttackWounds>
+					<ConneryAttacks Value="2"/>
+					<AttackWounds Value="3"/>
 					<Text>Несмотря на то, что вас двое, это непростой бой. Уж очень здоровый бугай вам попался. После победы вы осматриваете его, находите 2 золотых, и моток медной проволоки.\n\nБерите все, что захотите, и двигайтесь дальше, пока не появились его сородичи.</Text>
 				</Fight>
 			</Actions>
