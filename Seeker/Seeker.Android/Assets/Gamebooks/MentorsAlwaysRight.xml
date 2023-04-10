@@ -2920,7 +2920,7 @@
 				</Reaction>
 				<Fight>
 					<Enemy Name="ГИГАНТ" Strength="12" Hitpoints="15"/>
-					<ReactionWounds>0-4</ReactionWounds>
+					<ReactionWounds Value="0-4"/>
 					<Text>Победив, можете осмотреть хижину.</Text>
 				</Fight>
 			</Actions>
