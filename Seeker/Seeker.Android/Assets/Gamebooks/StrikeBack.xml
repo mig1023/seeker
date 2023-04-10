@@ -2620,7 +2620,7 @@
 			<Actions>	
 				<Dices>
 					<WoundsByDices/>
-					<WoundsMultiple>3</WoundsMultiple>
+					<WoundsMultiple Value="3"/>
 					<Text>Однако, если ты ГОРГУЛЬЯ, то копье просто отскакивает, не причиняя тебе вреда.</Text>
 				</Dices>
 			</Actions>
