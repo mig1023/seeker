@@ -3755,7 +3755,7 @@
 						<Enemy Name="ВТОРАЯ ГАРПИЯ" Strength="11" Hitpoints="10"/>
 						<Enemy Name="ТРЕТЬЯ ГАРПИЯ" Strength="11" Hitpoints="10"/>
 					</Enemies>
-					<DeathLimit>1</DeathLimit>
+					<DeathLimit Value="1"/>
 					<Text>Стоит вам убить всего одну, как...</Text>
 				</Fight>
 			</Actions>
