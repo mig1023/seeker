@@ -6320,8 +6320,8 @@
 				</DiceWounds>
 				<SwordFight>
 					<Enemy Name="Марика Затт" Skill="12" Rang="4" Speed="3" Hitpoints="25"/>
-					<HeroHitpointsLimith>5</HeroHitpointsLimith>
-					<EnemyHitpointsLimith>15</EnemyHitpointsLimith>
+					<HeroHitpointsLimith Value="5"/>
+					<EnemyHitpointsLimith Value="15"/>
 					<Text>Вы можете выбрать любую из изученных техник боя.\n\nБой с двумя соперниками крайне энергозатратен, они подстраховывают друг друга, и применение приемов невозможно.</Text>
 				</SwordFight>
 			</Actions>
