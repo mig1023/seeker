@@ -2798,7 +2798,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="Монстр Кадеруэлша" Mastery="11" Endurance="14"/>
-					<WoundsLimit>4</WoundsLimit>
+					<WoundsLimit Value="4"/>
 					<Text>Если во время битвы вы выкинете дубль за монстра, значит ему удалось сломать ваш меч, и пока вы не найдете новое оружие, придется уменьшать свое Мастерство на 1.</Text>
 				</Fight>
 			</Actions>
