@@ -1817,7 +1817,7 @@
 				<Fight>
 					<Enemy Name="ЭЛЬФ" Strength="11"/>
 					<Invincible/>
-					<RoundsWinToWin>4</RoundsWinToWin>
+					<RoundsWinToWin Value="4"/>
 					<Text>Он неплохой фехтовальщик, но не настроен умирать — если вам удастся нанести ему четыре раны, эльф внезапно что-то выкрикивает и исчезает...</Text>
 				</Fight>
 			</Actions>
