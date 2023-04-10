@@ -4879,7 +4879,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="ГИГАНТСКИЙ ПАУК" Mastery="8" Endurance="8"/>
-					<StrengthPenlty>1</StrengthPenlty>
+					<StrengthPenlty Value="1"/>
 				</Fight>
 			</Actions>
 			<Options>
