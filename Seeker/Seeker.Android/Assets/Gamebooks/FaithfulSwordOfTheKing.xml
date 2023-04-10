@@ -2064,7 +2064,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="ПЕРВЫЙ ВСАДНИК" Skill="8" Strength="8"/>
-					<RoundsToWin>4</RoundsToWin>
+					<RoundsToWin Value="4"/>
 					<WithoutShooting/>
 				</Fight>
 			</Actions>
