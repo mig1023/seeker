@@ -4445,7 +4445,7 @@
 				</Test>
 				<Test>
 					<Stat>Skill</Stat>
-					<TriggerTestPenalty>Арбалет, -4</TriggerTestPenalty>
+					<TriggerTestPenalty Value="Арбалет, -4"/>
 					<Level>12</Level>
 				</Test>
 			</Actions>
