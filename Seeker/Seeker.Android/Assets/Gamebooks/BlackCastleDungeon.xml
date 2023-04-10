@@ -8828,7 +8828,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="ГОБЛИН" Mastery="9" Endurance="4"/>
-					<RoundsToWin>3</RoundsToWin>
+					<RoundsToWin Value="3"/>
 				</Fight>
 			</Actions>
 			<Options>
