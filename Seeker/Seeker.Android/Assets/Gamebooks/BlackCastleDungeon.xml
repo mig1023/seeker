@@ -4532,7 +4532,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="ТОРГОВЕЦ" Mastery="6" Endurance="12"/>
-					<ExtendedDamage>3</ExtendedDamage>
+					<ExtendedDamage Value="3"/>
 					<Text>Торговец неповоротлив, но удар его очень силен. Поэтому всякий раз, когда он ранит вас, вычитайте у себя не 2, а 3 ВЫНОСЛИВОСТИ.</Text>
 				</Fight>
 			</Actions>
