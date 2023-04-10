@@ -1227,7 +1227,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="ВЕЛИКАН-КОПЬЕНОСЕЦ" Strength="11" Hitpoints="10"/>
-					<RoundsToWin>5</RoundsToWin>
+					<RoundsToWin Value="5"/>
 				</Fight>
 			</Actions>
 			<Options>
