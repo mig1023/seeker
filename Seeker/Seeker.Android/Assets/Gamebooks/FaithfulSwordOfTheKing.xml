@@ -2099,7 +2099,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="ШЕВАЛЬЕ ДО МИШУАР" Skill="9" Strength="8"/>
-					<SkillPenalty>1</SkillPenalty>
+					<SkillPenalty Value="1"/>
 					<Text>Если вы выйдете из схватки победителем, то можете либо убить шевалье, сорвав на нём свою злость, либо попытаться распросить его.</Text>
 				</Fight>
 			</Actions>
