@@ -353,19 +353,19 @@
 			<Actions>
 				<Get>
 					<Button>Ранить себя на 1 жизнь</Button>
-					<HarmedMyself>1</HarmedMyself>
+					<HarmedMyself Value="1"/>
 				</Get>
 				<Get>
 					<Button>Ранить себя на 3 жизни</Button>
-					<HarmedMyself>3</HarmedMyself>
+					<HarmedMyself Value="3"/>
 				</Get>
 				<Get>
 					<Button>Ранить себя на 5 жизней</Button>
-					<HarmedMyself>5</HarmedMyself>
+					<HarmedMyself Value="5"/>
 				</Get>
 				<Get>
 					<Button>Ранить себя на 10 жизней</Button>
-					<HarmedMyself>10</HarmedMyself>
+					<HarmedMyself Value="10"/>
 					<Text>Чем больше — тем аутентичнее я буду смотреться.\n\nПокончив с этим, я решаю пройти сквозь зомби.</Text>
 				</Get>
 			</Actions>
