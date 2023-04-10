@@ -3218,7 +3218,7 @@
 						<Enemy Name="ВТОРАЯ ГАРПИЯ" Strength="11" Hitpoints="10"/>
 						<Enemy Name="ТРЕТЬЯ ГАРПИЯ" Strength="11" Hitpoints="10"/>
 					</Enemies>
-					<DeathLimit>2</DeathLimit>
+					<DeathLimit Value="2"/>
 					<Text>Когда вы убьете двух из них:</Text>
 				</Fight>
 			</Actions>
