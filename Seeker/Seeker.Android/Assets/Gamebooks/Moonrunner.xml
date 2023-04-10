@@ -627,7 +627,7 @@
 				</Option>
 				<Fight>
 					<Enemy Name="Арголис" Mastery="8" Endurance="13"/>
-					<DevastatingAttack>4</DevastatingAttack>
+					<DevastatingAttack Value="4"/>
 					<Text>Из-за огромной силы демона каждый его удар, попавший в цель, отнимет 4 Выносливости.</Text>
 				</Fight>
 			</Actions>
