@@ -7140,7 +7140,7 @@
 			<Actions>
 				<SwordFight>
 					<Enemy Name="Арладо Ураки" Skill="18" Rang="2" Speed="3" Hitpoints="30" SwordTechnique="Confidence"/>
-					<EnemyHitpointsLimith>15</EnemyHitpointsLimith>
+					<EnemyHitpointsLimith Value="15"/>
 					<SpeedActivate/>
 					<Text>Вы можете выбрать любую из изученных техник боя. Вся ваша концентрация уходит на применение Скорости Силы, другие техники применить не получится.</Text>
 				</SwordFight>
