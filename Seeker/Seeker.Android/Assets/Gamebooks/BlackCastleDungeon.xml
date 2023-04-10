@@ -6867,7 +6867,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="ТОРГОВЕЦ" Mastery="7" Endurance="17"/>
-					<ExtendedDamage>4</ExtendedDamage>
+					<ExtendedDamage Value="4"/>
 					<Text>Если вы убили его:</Text>
 				</Fight>
 			</Actions>
