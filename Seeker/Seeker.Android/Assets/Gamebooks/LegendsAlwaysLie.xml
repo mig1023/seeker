@@ -2162,7 +2162,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="ВЕЛИКАН" Strength="11" Hitpoints="10"/>
-					<ReactionWounds>1-3</ReactionWounds>
+					<ReactionWounds Value="1-3"/>
 					<Text>Удары у великана страшные, но совсем уж медленные. Каждый раз, когда вы проигрываете раунд, реагируйте. Если успеваете, то вы теряете 1 ЖИЗНЬ. Не успеваете – теряете 3 ЖИЗНИ.</Text>
 				</Fight>
 			</Actions>
