@@ -4905,7 +4905,7 @@
 			<Actions>
 				<SwordFight>
 					<Enemy Name="Артхт Тархтхтх" Skill="12" Rang="4" Speed="3" Hitpoints="24"/>
-					<EnemyHitpointsLimith>5</EnemyHitpointsLimith>
+					<EnemyHitpointsLimith Value="5"/>
 					<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
 				</SwordFight>
 			</Actions>
