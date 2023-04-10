@@ -1146,7 +1146,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="ТЮРЕМЩИК" Skill="9" Strength="6"/>
-					<RoundsToWin>4</RoundsToWin>
+					<RoundsToWin Value="4"/>
 				</Fight>
 			</Actions>
 			<Options>
