@@ -1072,7 +1072,7 @@
 						<Enemy Name="Мистер Килмамей" Mastery="8" Endurance="10"/>
 						<Enemy Name="Мистер Хогг" Mastery="7" Endurance="10"/>
 					</Enemies>
-					<RoundsToFight>3</RoundsToFight>
+					<RoundsToFight Value="3"/>
 				</Fight>
 			</Actions>
 			<Options>
