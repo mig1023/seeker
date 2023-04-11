@@ -922,7 +922,7 @@
 			<Actions>
 				<Fight>
 					<EnemyName>СВАРИТЕЛЬ</EnemyName>
-					<EnemyCombination>5-5-5-4-3-2</EnemyCombination>
+					<EnemyCombination Value="5-5-5-4-3-2"/>
 					<Text>При поражении вы превратитесь в бульон, а ваша машина в дырявую кастрюлю.</Text>
 				</Fight>
 			</Actions>
