@@ -6320,7 +6320,7 @@
 						<Enemy Name="Первый путник" Attack="8" Defence="14" Endurance="9" Initiative="9" SpecialTechnique="Reaction"/>
 						<Enemy Name="Второй путник" Attack="6" Defence="13" Endurance="8" Initiative="8"/>
 					</Enemies>
-					<Coherence>1</Coherence>
+					<Coherence Value="1"/>
 					<Text>Тот, что разговаривал с вами в начале встречи, — явный лидер в этой странной компании. Если убить его первым, есть вероятность того, что его товарищ сдастся, увидев ваше превосходство.</Text>
 				</Fight>
 			</Actions>
