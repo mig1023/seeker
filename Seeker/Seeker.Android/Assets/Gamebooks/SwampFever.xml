@@ -743,7 +743,7 @@
 			<Actions>
 				<Fight>
 					<EnemyName>МИМИКРОИД</EnemyName>
-					<EnemyCombination>6-5-4-3-2</EnemyCombination>
+					<EnemyCombination Value="6-5-4-3-2"/>
 				</Fight>
 			</Actions>
 			<Options>
