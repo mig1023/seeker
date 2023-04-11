@@ -1527,7 +1527,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="СТРАЖНИК" Skill="8" Strength="8"/>
-					<RoundsToWin>4</RoundsToWin>
+					<RoundsToWin Value="4"/>
 					<Text>Если вы убили его за 4 раунда, то путь через ворота свободен. Если схватка затянулась, то уйти будет сложнее.</Text>
 				</Fight>
 			</Actions>
