@@ -826,7 +826,7 @@
 			<Actions>
 				<Fight>
 					<EnemyName>ИЗОТРОНОХОД</EnemyName>
-					<EnemyCombination>6-6-5-5-2</EnemyCombination>
+					<EnemyCombination Value="6-6-5-5-2"/>
 					<Text>Ничья с последующим отступлением невозможны, т.к. гидронейская техника превосходит вашу по скорости.</Text>
 				</Fight>
 			</Actions>
