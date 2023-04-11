@@ -7464,7 +7464,7 @@
 						<Enemy Name="Второй мерзавец" Attack="8" Defence="14" Endurance="16" Initiative="9"/>
 						<Enemy Name="Третий мерзавец" Attack="8" Defence="14" Endurance="16" Initiative="9"/>
 					</Enemies>
-					<WoundsToWin>5</WoundsToWin>
+					<WoundsToWin Value="5"/>
 					<NotToDeath/>
 					<Text>Вам нужно нанести пять точных ударов, причем неважно, кому они будут адресованы — одному противнику или всем по очереди. Противники одержат победу, если сумеют понизить показатель вашей жизни до значения 2 или меньше.</Text>
 				</Fight>
