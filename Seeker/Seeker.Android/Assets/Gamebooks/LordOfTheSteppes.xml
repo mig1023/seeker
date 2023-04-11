@@ -7268,7 +7268,7 @@
 						<Enemy Name="Первый разбойник" Attack="8" Defence="15" Endurance="10" Initiative="9"/>
 						<Enemy Name="Второй разбойник" Attack="8" Defence="14" Endurance="19" Initiative="9"/>
 					</Enemies>
-					<Coherence>1</Coherence>
+					<Coherence Value="1"/>
 					<Text>При победе над предводителем слаженность станет равной 0.\n\nРазбойники одержали немало побед над беспечными путниками и научились неплохо владеть мечами.</Text>
 				</Fight>
 			</Actions>
