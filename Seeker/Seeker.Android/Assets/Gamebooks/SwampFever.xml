@@ -1505,7 +1505,7 @@
 			<Actions>
 				<Fight>
 					<EnemyName>МУТАВОРМ</EnemyName>
-					<EnemyCombination>6-6-6-6-3-3</EnemyCombination>
+					<EnemyCombination Value="6-6-6-6-3-3"/>
 					<Benefit Name="Creds" Value="150"/>
 					<Text>Если вы одолеете врага, то получите в награду 150 кредов. При ничьей возникнет выбор: продолжить схватку или ретироваться. При поражении вас взорвут.</Text>
 				</Fight>
