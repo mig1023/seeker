@@ -1118,7 +1118,7 @@
 			<Actions>
 				<Fight>
 					<EnemyName>МЕРЗЛОБА</EnemyName>
-					<EnemyCombination>5-5-4-3</EnemyCombination>
+					<EnemyCombination Value="5-5-4-3"/>
 					<Benefit Name="Stigon" Value="2"/>
 					<Text>Если победа за вами, то можете забрать 2 кубометра стигона. Если бой завершился ничьёй, то у вас есть выбор: продолжить стычку или ретироваться.</Text>
 				</Fight>
