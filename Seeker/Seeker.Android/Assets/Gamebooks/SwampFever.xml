@@ -1665,7 +1665,7 @@
 			<Actions>
 				<Fight>
 					<EnemyName>ГРОЗДЕГЛАВ</EnemyName>
-					<EnemyCombination>4-4-4-4-1-1</EnemyCombination>
+					<EnemyCombination Value="4-4-4-4-1-1"/>
 					<Trigger>26</Trigger>
 					<Text>При ничьей произойдёт продолжение боя. Поражение означает гибель в чавкающей пасти.</Text>
 				</Fight>
