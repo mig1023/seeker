@@ -1720,7 +1720,7 @@
 			<Actions>
 				<Fight>
 					<EnemyName>ТЕХНОКРОТ</EnemyName>
-					<EnemyCombination>5-5-5-2-2-2-2</EnemyCombination>
+					<EnemyCombination Value="5-5-5-2-2-2-2"/>
 					<Benefit Name="Stigon" Value="1"/>
 					<Text>Если одержите верх, то в качестве награды получите кубометр стигона. При ничьей можете отступить или продолжить схватку. При поражении ваше безжизненное тело станет объектом инопланетного изучения.</Text>
 				</Fight>
