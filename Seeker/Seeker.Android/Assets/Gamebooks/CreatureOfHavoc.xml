@@ -1975,7 +1975,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="ОДИННАДЦАТЫЙ" Mastery="7" Endurance="9"/>
-					<WoundsToWin>4</WoundsToWin>
+					<WoundsToWin Value="4"/>
 				</Fight>
 			</Actions>
 			<Options>
