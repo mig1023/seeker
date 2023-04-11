@@ -416,7 +416,7 @@
 			<Actions>
 				<Fight>
 					<EnemyName>ЗАГРЕБАЛО</EnemyName>
-					<EnemyCombination>5-4-4-4-4-4-2</EnemyCombination>
+					<EnemyCombination Value="5-4-4-4-4-4-2"/>
 				</Fight>
 			</Actions>
 			<Options>
