@@ -71,7 +71,7 @@
 			<Actions>
 				<Fight>
 					<EnemyName>ТЕРМИТ</EnemyName>
-					<EnemyCombination>5-4</EnemyCombination>
+					<EnemyCombination Value="5-4"/>
 					<Benefit Name="Creds" Value="5"/>
 					<Text>Если в схватке с термитом вы одержите верх, то в качестве бонуса компания подарит вам 5 кредов. Иначе придётся начинать странствие без денег.</Text>
 				</Fight>
