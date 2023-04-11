@@ -1096,7 +1096,7 @@
 			<Actions>
 				<Fight>
 					<EnemyName>УТИЛИЗАТОР</EnemyName>
-					<EnemyCombination>6-5-5-5-4-3</EnemyCombination>
+					<EnemyCombination Value="6-5-5-5-4-3"/>
 					<Text>Если бой завершится ничьёй, то вы можете прекратить огонь и подождать дальнейших действий робота.</Text>
 				</Fight>
 			</Actions>
