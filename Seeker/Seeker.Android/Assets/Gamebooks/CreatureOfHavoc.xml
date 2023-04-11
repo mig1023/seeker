@@ -3798,7 +3798,7 @@
 				</Translation>
 				<Fight>
 					<Enemy Name="ЧЁРНЫЙ ЭЛЬФ" Mastery="7" Endurance="6"/>
-					<RoundsToFight>2</RoundsToFight>
+					<RoundsToFight Value="2"/>
 					<Text>Вы успеете сразиться только в течение двух раундов.</Text>
 				</Fight>
 			</Actions>
