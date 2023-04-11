@@ -1071,7 +1071,7 @@
 			<Actions>
 				<Fight>
 					<EnemyName>ОГНЕПОКЛОННИК</EnemyName>
-					<EnemyCombination>5-5-2</EnemyCombination>
+					<EnemyCombination Value="5-5-2"/>
 					<Benefit Name="Stigon" Value="1"/>
 					<Text>Если вы не будете зажарены заживо и победите, то сможете забрать 1 кубометр стигона. Если стычка завершится ничьёй, у вас будет выбор: сбежать или продолжить схватку.</Text>
 				</Fight>
