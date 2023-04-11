@@ -1761,7 +1761,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="ХОББИТ" Mastery="5" Endurance="6"/>
-					<RoundsToWin>3</RoundsToWin>
+					<RoundsToWin Value="3"/>
 				</Fight>
 			</Actions>
 			<Options>
