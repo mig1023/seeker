@@ -533,18 +533,28 @@ namespace Seeker.Output
 
         private static View BoxedText(Text text)
         {
+            string backgroundColor = Game.Data.Constants.GetColor(ColorTypes.Background);
+
+            if (String.IsNullOrEmpty(backgroundColor))
+                backgroundColor = Constants.DEFAULT_COLORS[ColorTypes.BookColor];
+
             StackLayout content = new StackLayout
             {
-                BackgroundColor = Color.FromHex(Game.Data.Constants.GetColor(Game.Data.ColorTypes.Background)),
+                BackgroundColor = Color.FromHex(backgroundColor),
                 HorizontalOptions = LayoutOptions.FillAndExpand,
                 VerticalOptions = LayoutOptions.FillAndExpand,
                 Padding = new Thickness(Constants.BOX_PADDING),
                 Children = { Text(text) },
             };
 
+            string borderColor = Game.Data.Constants.GetColor(ColorTypes.Font);
+
+            if (String.IsNullOrEmpty(borderColor))
+                borderColor = Constants.DEFAULT_COLORS[ColorTypes.Font];
+
             StackLayout border = new StackLayout
             {
-                BackgroundColor = Color.FromHex(Game.Data.Constants.GetColor(Game.Data.ColorTypes.Font)),
+                BackgroundColor = Color.FromHex(borderColor),
                 HorizontalOptions = LayoutOptions.FillAndExpand,
                 VerticalOptions = LayoutOptions.FillAndExpand,
                 Padding = new Thickness(Constants.BOX_BORDER),
