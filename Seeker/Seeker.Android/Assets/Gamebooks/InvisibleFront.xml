@@ -806,8 +806,8 @@
 		<Paragraph No="106">
 			<Text>— Действительно, а я и внимания не обратил, — резидент удивлённо вскинул брови. — Быстро же вы работаете, товарищ. Давайте оценим ваши результаты.</Text>
 			<Options>
-				<Option Destination="54" Text="Если в наличии 3 «успех вербовки»: Выслушать оценку ваших успехов" Availability="ВЕРБОВКА > 2"/>
-				<Option Destination="83" Text="Если отсутствует 3 «успех вербовки»: Выслушать оценку ваших успехов" Availability="ВЕРБОВКА &lt;= 2"/>
+				<Option Destination="54" Text="Выслушать оценку ваших успехов" Availability="ВЕРБОВКА > 2"/>
+				<Option Destination="83" Text="Выслушать оценку ваших успехов" Availability="ВЕРБОВКА &lt;= 2"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="107">
@@ -1014,7 +1014,7 @@
 				</Option>
 				<Option Destination="132" Text="Продолжить писать любовные письма"/>
 				<Option Destination="11" Text="Встретить Фрау А на улице и устроить пылкое объяснение в своих чувствах"/>
-				<Option Destination="19" Text="Если не удаётся соблазнить — нужно подстроить автомобильную аварию"/>
+				<Option Destination="19" Text="Нужно подстроить автомобильную аварию"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="135">
