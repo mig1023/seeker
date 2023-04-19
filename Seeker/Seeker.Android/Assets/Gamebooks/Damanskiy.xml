@@ -2054,7 +2054,7 @@
 				<Option Destination="323" Text="Но я, пожалуй, снова откажусь"/>
 				<Option Destination="146" Text="На этот раз я, пожалуй, соглашусь"/>
 				<Option Destination="86" Text="Так что вечером снова идем туда"/>
-				<Option Destination="332" Text="С прошлого раза еще все тело ломит"/>
+				<Option Destination="332" Text="Но, нет, спасибо. С прошлого раза еще все тело ломит"/>
 				<Option Destination="255" Text="В это раз я, пожалуй, откажусь"/>
 			</Options>
 		</Paragraph>
