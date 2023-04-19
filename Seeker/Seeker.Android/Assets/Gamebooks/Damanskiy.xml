@@ -1466,8 +1466,8 @@
 		<Paragraph No="211">
 			<Text>Я решил сэкономить на печенье и купил только пачку папирос.\n\nТолько я успел отойти в сторону, как рядом со мной из ниоткуда возник Миша Закалюжный.\n\n— Лех, дай папиросу. А то у меня вообще голяк.</Text>
 			<Options>
-				<Option Destination="121" Text="Не жалко"/>
-				<Option Destination="57" Text="Курить вредно"/>
+				<Option Destination="121" Text="«На, травись. Не жалко»"/>
+				<Option Destination="57" Text="«Отвали, Зэк. Курить вредно»"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="212">
