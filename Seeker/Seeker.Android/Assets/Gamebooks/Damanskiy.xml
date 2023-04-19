@@ -3265,9 +3265,9 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="474">
-			<Text>— Что-то не охота.</Text>
+			<Text>— Что-то не охота.\n\nЯ пошел в казарму...</Text>
 			<Options>
-				<Option Destination="444" Text="Я пошел в казарму и завалился спать"/>
+				<Option Destination="444" Text="Завалился спать"/>
 				<Option Destination="397" Text="Взял гитару"/>
 			</Options>
 		</Paragraph>
