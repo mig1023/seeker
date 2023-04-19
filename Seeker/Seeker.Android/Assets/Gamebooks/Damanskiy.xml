@@ -3893,7 +3893,7 @@
 			</Texts>
 			<Options>
 				<Option Destination="486" Text="«Ну, ты молоток! Соображаешь! Пошли»"/>
-				<Option Destination="654" Text="Мне хватило картошки"/>
+				<Option Destination="654" Text="«Не, Андрюх. Давай обойдемся без самодеятельности. Мне хватило картошки»"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="566">
