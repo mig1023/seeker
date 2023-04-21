@@ -151,12 +151,14 @@ namespace Seeker.Output
             return gamebookButton;
         }
 
-        public static Button ClosePage(EventHandler onClick)
+        public static Button ClosePage(EventHandler onClick, bool bookmark = false)
         {
+            string color = Game.Data.Constants.GetColor(Buttons.ButtonTypes.Main);
+
             Button button = new Button
             {
                 Text = Constants.BACK_LINK,
-                BackgroundColor = Color.Gainsboro,
+                BackgroundColor = bookmark ? Color.FromHex(color) : Color.Gainsboro,
                 FontFamily = Interface.TextFontFamily(),
                 FontSize = Interface.Font(NamedSize.Default),
                 Margin = new Thickness(0, 30),
@@ -167,16 +169,25 @@ namespace Seeker.Output
             return button;
         }
 
-        public static Button Bookmark(EventHandler onClick, string text)
+        public static Button Bookmark(EventHandler onClick, string text,
+            bool bookmark = false, bool bottomMargin = false)
         {
+            string color = Game.Data.Constants.GetColor(bookmark ?
+                Buttons.ButtonTypes.Option : Buttons.ButtonTypes.Main);
+
             Button button = new Button
             {
                 Text = text,
-                BackgroundColor = Color.Gainsboro,
+                BackgroundColor = Color.FromHex(color),
                 FontFamily = Interface.TextFontFamily(),
                 FontSize = Interface.Font(NamedSize.Default),
-                Margin = new Thickness(0, 30),
             };
+
+            if (!bookmark && !bottomMargin)
+                button.Margin = new Thickness(0, 30);
+
+            if (bottomMargin)
+                button.Margin = new Thickness(0, 0, 0, 30);
 
             button.Clicked += onClick;
 
