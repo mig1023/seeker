@@ -42,11 +42,11 @@ namespace Seeker.Game
                 String.Format("{0}@{1}@{2}@{3}@{4}", paragraph, triggers, healing, character, path);
         }
 
-        public static int LoadCurrentGame() =>
-            Load(CurrentGameName);
-
         public static int Load(string gameName)
         {
+            if (String.IsNullOrEmpty(gameName))
+                gameName = CurrentGameName;
+
             string saveLine = (string)App.Current.Properties[gameName];
 
             string[] save = saveLine.Split('@');
