@@ -84,7 +84,17 @@ namespace Seeker
         {
             PageClean();
 
-            Output.Bookmarks.Add(ref Action);
+            Action.Children.Add(Output.Interface.Text("Сделать новую закладку:", defaultParams: true));
+
+            Entry field = new Entry
+            {
+                Placeholder = "Название закладки",
+                FontFamily = Output.Interface.TextFontFamily(),
+            };
+
+            Action.Children.Add(field);
+            Action.Children.Add(Output.Buttons.Bookmark(
+                (s, args) => BookmarkSave_Click(field.Text), Output.Constants.BOOKMARK_SAVE));
 
             Dictionary<string, string> allBookmarks = Game.Bookmarks.List();
 
@@ -105,6 +115,12 @@ namespace Seeker
                 (s, args) => Paragraph(Game.Data.CurrentParagraphID, reload: true)));
 
             ScrollToTop();
+        }
+
+        private void BookmarkSave_Click(string bookmark)
+        {
+            Game.Bookmarks.Save(bookmark);
+            Paragraph(Game.Data.CurrentParagraphID, reload: true);
         }
 
         public void Error(string errorType, string message)

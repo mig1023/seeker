@@ -7,9 +7,6 @@ namespace Seeker.Game
 {
     class Bookmarks
     {
-        // GameName-BOOKMARKS    SAVE1:GameName,SAVE2:GameName,SAVE3:GameName
-        // GameName-SAVE1        SAVEDATA
-
         public static Dictionary<string, string> List()
         {
             string currentGame = Continue.GetCurrentGame();
@@ -51,8 +48,5 @@ namespace Seeker.Game
 
             Continue.Save(String.Format("{0}-{1}", currentGame, saveName));
         }
-
-        public static int Load(string bookmark) =>
-            Continue.Load(String.Format("{0}-{1}", Continue.GetCurrentGame(), bookmark));
     }
 }
