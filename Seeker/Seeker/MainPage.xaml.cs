@@ -296,7 +296,7 @@ namespace Seeker
             }
             else if (!startOfGame)
             {
-                Game.Continue.Save();
+                Game.Continue.SaveCurrentGame();
             }
         }
 
@@ -536,7 +536,7 @@ namespace Seeker
 
             try
             {
-                id = Game.Continue.Load();
+                id = Game.Continue.LoadCurrentGame();
             }
             catch (Exception ex)
             {

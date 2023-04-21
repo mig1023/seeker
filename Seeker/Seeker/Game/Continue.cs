@@ -24,7 +24,10 @@ namespace Seeker.Game
         public static bool IsGameSaved() =>
             App.Current.Properties.TryGetValue(CurrentGameName, out _);
 
-        public static void Save()
+        public static void SaveCurrentGame() =>
+            Save(CurrentGameName);
+
+        public static void Save(string gameName)
         {
             string triggers = String.Join(",", Data.Triggers);
             string healing = Healing.Save();
@@ -32,13 +35,16 @@ namespace Seeker.Game
             string character = Data.Save();
             string path = String.Join(",", Data.Path);
 
-            App.Current.Properties[CurrentGameName] =
+            App.Current.Properties[gameName] =
                 String.Format("{0}@{1}@{2}@{3}@{4}", paragraph, triggers, healing, character, path);
         }
 
-        public static int Load()
+        public static int LoadCurrentGame() =>
+            Load(CurrentGameName);
+
+        public static int Load(string gameName)
         {
-            string saveLine = (string)App.Current.Properties[CurrentGameName];
+            string saveLine = (string)App.Current.Properties[gameName];
 
             string[] save = saveLine.Split('@');
 
