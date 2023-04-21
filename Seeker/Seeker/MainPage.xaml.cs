@@ -75,7 +75,18 @@ namespace Seeker
             PageClean();
 
             Output.Settings.Add(ref Action);
-            Options.Children.Add(Output.Buttons.CloseSettings((s, args) => Gamebooks(toMain: true)));
+            Options.Children.Add(Output.Buttons.ClosePage((s, args) => Gamebooks(toMain: true)));
+
+            ScrollToTop();
+        }
+
+        private void Bookmarks_Click()
+        {
+            PageClean();
+
+            Output.Bookmarks.Add(ref Action);
+            Options.Children.Add(Output.Buttons.ClosePage(
+                (s, args) => Paragraph(Game.Data.CurrentParagraphID, reload: true)));
 
             ScrollToTop();
         }
@@ -101,7 +112,7 @@ namespace Seeker
 
             Text.Children.Add(Output.Interface.Text(errMessage));
 
-            Options.Children.Add(Output.Buttons.CloseSettings((s, arg) => Gamebooks(toMain: true)));
+            Options.Children.Add(Output.Buttons.ClosePage((s, arg) => Gamebooks(toMain: true)));
         }
 
         private async void Speach(string text)
@@ -358,6 +369,9 @@ namespace Seeker
 
             systemLayout.Children.Add(Output.Buttons.System("Выйти",
                 (object sender, EventArgs e) => System.Diagnostics.Process.GetCurrentProcess().Kill()));
+
+            systemLayout.Children.Add(Output.Buttons.System("Закладки",
+                (object sender, EventArgs e) => this.Bookmarks_Click()));
 
             systemLayout.Children.Add(Output.Buttons.System("На главную",
                 (object sender, EventArgs e) => this.Gamebooks(toMain: true)));

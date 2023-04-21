@@ -151,7 +151,7 @@ namespace Seeker.Output
             return gamebookButton;
         }
 
-        public static Button CloseSettings(EventHandler onClick)
+        public static Button ClosePage(EventHandler onClick)
         {
             Button button = new Button
             {
