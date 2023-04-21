@@ -13,6 +13,9 @@ namespace Seeker.Game
             CurrentGameName = name;
         }
 
+        public static string GetCurrentGame() =>
+            CurrentGameName;
+
         public static int? IntNullableParse(string line)
         {
             if (int.TryParse(line, out int value))

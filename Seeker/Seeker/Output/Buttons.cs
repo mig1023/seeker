@@ -167,6 +167,22 @@ namespace Seeker.Output
             return button;
         }
 
+        public static Button Bookmark(EventHandler onClick, string text)
+        {
+            Button button = new Button
+            {
+                Text = text,
+                BackgroundColor = Color.Gainsboro,
+                FontFamily = Interface.TextFontFamily(),
+                FontSize = Interface.Font(NamedSize.Default),
+                Margin = new Thickness(0, 30),
+            };
+
+            button.Clicked += onClick;
+
+            return button;
+        }
+
         public static Button GameOver(string text, EventHandler onClick)
         {
             string colorLine = Game.Data.Constants.GetColor(Buttons.ButtonTypes.Continue);
