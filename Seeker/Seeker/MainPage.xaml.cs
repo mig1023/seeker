@@ -85,13 +85,14 @@ namespace Seeker
         {
             PageClean();
 
-            Action.Children.Add(Output.Interface.Text("Сделать новую закладку:"));
+            Action.Children.Add(Output.Interface.Text("Сделать новую закладку:", bold: true));
 
             Entry field = new Entry
             {
                 Placeholder = "Название закладки",
                 FontFamily = Output.Interface.TextFontFamily(),
                 FontSize = Output.Interface.FontSize(Output.Interface.TextFontSize.Big),
+                BackgroundColor = Color.Gainsboro,
             };
 
             if (!String.IsNullOrEmpty(Game.Data.Constants.GetColor(Game.Data.ColorTypes.Font)))
@@ -102,6 +103,8 @@ namespace Seeker
             Action.Children.Add(Output.Buttons.Bookmark(
                 (s, args) => BookmarkSave_Click(field.Text),
                 Output.Constants.BOOKMARK_SAVE, bottomMargin: true));
+
+            Action.Children.Add(Output.Interface.Text("Вернуться к закладке:", bold: true));
 
             Dictionary<string, string> allBookmarks = Game.Bookmarks.List();
 

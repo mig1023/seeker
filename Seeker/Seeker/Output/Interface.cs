@@ -603,7 +603,7 @@ namespace Seeker.Output
             return grid;
         }
 
-        public static ExtendedLabel Text(string text, bool defaultParams = false, bool italic = false,
+        public static ExtendedLabel Text(string text, bool defaultParams = false, bool italic = false, bool bold = false,
             TextFontSize size = TextFontSize.nope, bool selected = false)
         {
             bool justyfy = (defaultParams ? false : (Game.Settings.IsEnabled("Justyfy")));
@@ -612,10 +612,13 @@ namespace Seeker.Output
             {
                 FontSize = FontSize(defaultParams ? TextFontSize.Normal : TextFontSize.Little),
                 Text = Regex.Unescape(RedStyle(text)),
-                FontFamily = TextFontFamily(),
+                FontFamily = TextFontFamily(bold: bold),
                 JustifyText = justyfy,
                 LineHeight = Constants.LINE_HEIGHT,
             };
+
+            if (bold)
+                label.FontAttributes = FontAttributes.Bold;
 
             if (!selected)
                 label.Margin = Constants.TEXT_LABEL_MARGIN;
