@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace Seeker.Game
 {
@@ -27,6 +28,15 @@ namespace Seeker.Game
         public static void Save(string bookmark)
         {
             Dictionary<string, string> bookmarks = List(out string currentGame, out string bookmarksName);
+
+            int bookmarkIndex = 0;
+
+            while (bookmarks.Keys.Contains(bookmark))
+            {
+                bookmarkIndex += 1;
+                bookmark = Regex.Replace(bookmark, @"\s+\(\d\)$", String.Empty);
+                bookmark += String.Format(" ({0})", bookmarkIndex);
+            };
 
             int nextSaveGameIndex = 0;
             string saveName = String.Empty;
