@@ -11,6 +11,7 @@ namespace Seeker.Output
         public static string BACK_LINK = "НАЗАД";
         public static string BOOKMARK_SAVE = "СДЕЛАТЬ ЗАКЛАДКУ";
         public static string DISCLAIMER_LINK = "➝ подробнее";
+        public static string DISCLAIMER_LINK_OPENED = "⤵";
 
         public static Color BACKGROUND = Color.FromHex("#f7f7f7");
         public static Color LINK_COLOR_DEFAULT = Color.Black;

@@ -153,10 +153,10 @@ namespace Seeker.Output
         }
             
         private static void AddDisclaimerElement(string head, string body,
-            ref StackLayout disclaimer, Frame border, bool little = false)
+            ref StackLayout disclaimer, Frame border, Label change, bool little = false)
         {
-            disclaimer.Children.Add(DisclaimerElement(head, CloseTapped(border), bold: true));
-            disclaimer.Children.Add(DisclaimerElement(body, CloseTapped(border), little: little));
+            disclaimer.Children.Add(DisclaimerElement(head, CloseTapped(border, change), bold: true));
+            disclaimer.Children.Add(DisclaimerElement(body, CloseTapped(border, change), little: little));
         }
 
         private static Label DisclaimerElement(string text, TapGestureRecognizer click, bool bold = false, bool little = false)
@@ -182,22 +182,30 @@ namespace Seeker.Output
             return element;
         }
 
-        private static TapGestureRecognizer OpenTapped(Frame disclaimer)
+        private static TapGestureRecognizer OpenTapped(Frame disclaimer, Label changedPart)
         {
             TapGestureRecognizer open = new TapGestureRecognizer();
             open.Tapped += (s, e) =>
             {
                 disclaimer.IsVisible = !disclaimer.IsVisible;
+
+                changedPart.Text = disclaimer.IsVisible ?
+                    Constants.DISCLAIMER_LINK_OPENED : Constants.DISCLAIMER_LINK;
+
                 disclaimer.ForceLayout();
             };
 
             return open;
         }
 
-        private static TapGestureRecognizer CloseTapped(Frame disclaimer)
+        private static TapGestureRecognizer CloseTapped(Frame disclaimer, Label changedPart)
         {
             TapGestureRecognizer close = new TapGestureRecognizer();
-            close.Tapped += (s, e) => disclaimer.IsVisible = false;
+            close.Tapped += (s, e) =>
+            {
+                disclaimer.IsVisible = false;
+                changedPart.Text = Constants.DISCLAIMER_LINK;
+            };
 
             return close;
         }
@@ -241,35 +249,37 @@ namespace Seeker.Output
                 Margin = new Thickness(0, 0, 0, 5),
             };
 
-            textLayout.Children.Add(LinkedDisclaimerElement(GamebookDisclaimer(gamebook), OpenTapped(border)));
-            textLayout.Children.Add(LinkedDisclaimerElement(LinkDisclaimer(gamebook.BookColor), OpenTapped(border)));
+            Label change = LinkDisclaimer(gamebook.BookColor);
+
+            textLayout.Children.Add(LinkedDisclaimerElement(GamebookDisclaimer(gamebook), OpenTapped(border, change)));
+            textLayout.Children.Add(LinkedDisclaimerElement(change, OpenTapped(border, change)));
 
             options.Children.Add(textLayout);
 
             StackLayout disclaimer = new StackLayout();
 
             if (!String.IsNullOrEmpty(gamebook.Original))
-                AddDisclaimerElement(head: "Оригинальное название:", body: gamebook.Original, ref disclaimer, border);
+                AddDisclaimerElement("Оригинальное название:", gamebook.Original, ref disclaimer, border, change);
 
             if (!String.IsNullOrEmpty(gamebook.Authors))
-                AddDisclaimerElement(head: "Авторы:", body: Regex.Unescape(gamebook.Authors), ref disclaimer, border);
+                AddDisclaimerElement("Авторы:", Regex.Unescape(gamebook.Authors), ref disclaimer, border, change);
             else
-                AddDisclaimerElement(head: "Автор:", body: gamebook.Author, ref disclaimer, border);
+                AddDisclaimerElement("Автор:", gamebook.Author, ref disclaimer, border, change);
 
             if (!String.IsNullOrEmpty(gamebook.Translators))
-                AddDisclaimerElement(head: "Переводчики:", body: Regex.Unescape(gamebook.Translators), ref disclaimer, border);
+                AddDisclaimerElement("Переводчики:", Regex.Unescape(gamebook.Translators), ref disclaimer, border, change);
             else if (!String.IsNullOrEmpty(gamebook.Translator))
-                AddDisclaimerElement(head: "Переводчик:", body: gamebook.Translator, ref disclaimer, border);
+                AddDisclaimerElement("Переводчик:", gamebook.Translator, ref disclaimer, border, change);
 
             if (!String.IsNullOrEmpty(gamebook.Text))
-                AddDisclaimerElement(head: "Описание:", body: Regex.Unescape(gamebook.Text), ref disclaimer, border, little: true);
+                AddDisclaimerElement("Описание:", Regex.Unescape(gamebook.Text), ref disclaimer, border, change, little: true);
 
             string paragraphs = gamebook.ParagraphSizeLine();
             string size = Game.Services.SizeParse(gamebook.Size);
             string separator = (paragraphs.Contains('(') ? "\n" : " / ");
-            AddDisclaimerElement(head: "Обьём:", body: String.Join(String.Empty, paragraphs, separator, size), ref disclaimer, border);
+            AddDisclaimerElement("Обьём:", String.Join(String.Empty, paragraphs, separator, size), ref disclaimer, border, change);
 
-            border.GestureRecognizers.Add(CloseTapped(border));
+            border.GestureRecognizers.Add(CloseTapped(border, change));
 
             border.Content = disclaimer;
             options.Children.Add(border);
