@@ -10,6 +10,9 @@ namespace Seeker.Output
     {
         public static string BACK_LINK = "НАЗАД";
         public static string BOOKMARK_SAVE = "СДЕЛАТЬ ЗАКЛАДКУ";
+        public static string BOOKMARK_SAVE_HEAD = "Сделать новую закладку:";
+        public static string BOOKMARK_SAVE_HOLDER = "Название закладки";
+        public static string BOOKMARK_LOAD_HEAD = "Вернуться к закладке:";
         public static string DISCLAIMER_LINK = "➝ подробнее";
         public static string DISCLAIMER_LINK_OPENED = "⤵";
 

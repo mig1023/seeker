@@ -85,11 +85,11 @@ namespace Seeker
         {
             PageClean();
 
-            Action.Children.Add(Output.Interface.Text("Сделать новую закладку:", bold: true));
+            Action.Children.Add(Output.Interface.Text(Output.Constants.BOOKMARK_SAVE_HEAD, bold: true));
 
             Entry field = new Entry
             {
-                Placeholder = "Название закладки",
+                Placeholder = Output.Constants.BOOKMARK_SAVE_HOLDER,
                 FontFamily = Output.Interface.TextFontFamily(),
                 FontSize = Output.Interface.FontSize(Output.Interface.TextFontSize.Big),
                 BackgroundColor = Color.Gainsboro,
@@ -104,7 +104,7 @@ namespace Seeker
                 (s, args) => BookmarkSave_Click(field.Text),
                 Output.Constants.BOOKMARK_SAVE, bottomMargin: true));
 
-            Action.Children.Add(Output.Interface.Text("Вернуться к закладке:", bold: true));
+            Action.Children.Add(Output.Interface.Text(Output.Constants.BOOKMARK_LOAD_HEAD, bold: true));
 
             Dictionary<string, string> allBookmarks = Game.Bookmarks.List();
 
@@ -113,6 +113,7 @@ namespace Seeker
                 foreach (string bookmark in allBookmarks.Keys)
                 {
                     string bookmarkSave = String.Format("{0}-{1}", Game.Continue.GetCurrentGame(), allBookmarks[bookmark]);
+
                     Action.Children.Add(Output.Buttons.Bookmark(
                         (s, args) => Continue_Click(bookmarkSave), bookmark, bookmark: true));
                 }
