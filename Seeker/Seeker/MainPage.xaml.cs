@@ -81,23 +81,24 @@ namespace Seeker
             ScrollToTop();
         }
 
+        private void AddAllBookmarks(Dictionary<string, string> allBookmarks)
+        {
+            foreach (string bookmark in allBookmarks.Keys)
+            {
+                string bookmarkSave = String.Format("{0}-{1}", Game.Continue.GetCurrentGame(), allBookmarks[bookmark]);
+
+                Action.Children.Add(Output.Buttons.Bookmark(
+                    (s, args) => Continue_Click(bookmarkSave), bookmark, bookmark: true));
+            }
+        }
+
         private void Bookmarks_Click()
         {
             PageClean();
 
+            Entry field = Output.Interface.BookmarkField();
+
             Action.Children.Add(Output.Interface.Text(Output.Constants.BOOKMARK_SAVE_HEAD, bold: true));
-
-            Entry field = new Entry
-            {
-                Placeholder = Output.Constants.BOOKMARK_SAVE_HOLDER,
-                FontFamily = Output.Interface.TextFontFamily(),
-                FontSize = Output.Interface.FontSize(Output.Interface.TextFontSize.Big),
-                BackgroundColor = Color.Gainsboro,
-            };
-
-            if (!String.IsNullOrEmpty(Game.Data.Constants.GetColor(Game.Data.ColorTypes.Font)))
-                field.TextColor = Color.FromHex(Game.Data.Constants.GetColor(Game.Data.ColorTypes.Font));
-
             Action.Children.Add(field);
 
             Action.Children.Add(Output.Buttons.Bookmark(
@@ -109,19 +110,9 @@ namespace Seeker
             Dictionary<string, string> allBookmarks = Game.Bookmarks.List();
 
             if (allBookmarks.Count > 0)
-            {
-                foreach (string bookmark in allBookmarks.Keys)
-                {
-                    string bookmarkSave = String.Format("{0}-{1}", Game.Continue.GetCurrentGame(), allBookmarks[bookmark]);
-
-                    Action.Children.Add(Output.Buttons.Bookmark(
-                        (s, args) => Continue_Click(bookmarkSave), bookmark, bookmark: true));
-                }
-            }
+                AddAllBookmarks(allBookmarks);
             else
-            {
                 Action.Children.Add(Output.Interface.Text("Пока ещё нет ни одной закладки"));
-            }
 
             Options.Children.Add(Output.Buttons.Bookmark(
                 (s, args) => Paragraph(Game.Data.CurrentParagraphID, reload: true),

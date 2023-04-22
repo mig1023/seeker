@@ -730,5 +730,21 @@ namespace Seeker.Output
 
             return actionLabels;
         }
+
+        public static Entry BookmarkField()
+        {
+            Entry field = new Entry
+            {
+                Placeholder = Constants.BOOKMARK_SAVE_HOLDER,
+                FontFamily = TextFontFamily(),
+                FontSize = FontSize(TextFontSize.Big),
+                BackgroundColor = Color.Gainsboro,
+            };
+
+            if (!String.IsNullOrEmpty(Game.Data.Constants.GetColor(Game.Data.ColorTypes.Font)))
+                field.TextColor = Color.FromHex(Game.Data.Constants.GetColor(Game.Data.ColorTypes.Font));
+
+            return field;
+        }
     }
 }
