@@ -98,8 +98,10 @@ namespace Seeker
                 field.TextColor = Color.FromHex(Game.Data.Constants.GetColor(Game.Data.ColorTypes.Font));
 
             Action.Children.Add(field);
+
             Action.Children.Add(Output.Buttons.Bookmark(
-                (s, args) => BookmarkSave_Click(field.Text), Output.Constants.BOOKMARK_SAVE, bottomMargin: true));
+                (s, args) => BookmarkSave_Click(field.Text),
+                Output.Constants.BOOKMARK_SAVE, bottomMargin: true));
 
             Dictionary<string, string> allBookmarks = Game.Bookmarks.List();
 
@@ -117,8 +119,9 @@ namespace Seeker
                 Action.Children.Add(Output.Interface.Text("Пока ещё нет ни одной закладки"));
             }
 
-            Options.Children.Add(Output.Buttons.ClosePage(
-                (s, args) => Paragraph(Game.Data.CurrentParagraphID, reload: true), bookmark: true));
+            Options.Children.Add(Output.Buttons.Bookmark(
+                (s, args) => Paragraph(Game.Data.CurrentParagraphID, reload: true),
+                Output.Constants.BACK_LINK, topMargin: true));
 
             ScrollToTop();
         }

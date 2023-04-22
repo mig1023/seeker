@@ -176,7 +176,7 @@ namespace Seeker.Output
         }
 
         public static Button Bookmark(EventHandler onClick, string text,
-            bool bookmark = false, bool bottomMargin = false)
+            bool bookmark = false, bool topMargin = false, bool bottomMargin = false)
         {
             string color = Game.Data.Constants.GetColor(bookmark ?
                 Buttons.ButtonTypes.Option : Buttons.ButtonTypes.Main);
@@ -189,15 +189,10 @@ namespace Seeker.Output
                 FontSize = Interface.Font(NamedSize.Default),
             };
 
-            if (!bookmark && !bottomMargin)
-                button.Margin = new Thickness(0, 30);
-
-            if (bottomMargin)
-                button.Margin = new Thickness(0, 0, 0, 30);
-
+            button.Margin = new Thickness(0, topMargin ? 30 : 0, 0, bottomMargin ? 30 : 0);
             button.Clicked += onClick;
 
-            return button;
+            return SetBorderAndTextColor(button);
         }
 
         public static Button GameOver(string text, EventHandler onClick)
