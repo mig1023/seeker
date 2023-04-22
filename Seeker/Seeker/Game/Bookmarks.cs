@@ -7,10 +7,10 @@ namespace Seeker.Game
 {
     class Bookmarks
     {
-        public static Dictionary<string, string> List()
+        public static Dictionary<string, string> List(out string currentGame, out string bookmarksName)
         {
-            string currentGame = Continue.GetCurrentGame();
-            string bookmarksName = String.Format("{0}-BOOKMARKS", currentGame);
+            currentGame = Continue.GetCurrentGame();
+            bookmarksName = String.Format("{0}-BOOKMARKS", currentGame);
             Dictionary<string, string> bookmarks = new Dictionary<string, string>();
 
             if (App.Current.Properties.TryGetValue(bookmarksName, out object bookmarksList))
@@ -26,10 +26,7 @@ namespace Seeker.Game
 
         public static void Save(string bookmark)
         {
-            Dictionary<string, string> bookmarks = List();
-
-            string currentGame = Continue.GetCurrentGame();
-            string bookmarksName = String.Format("{0}-BOOKMARKS", currentGame);
+            Dictionary<string, string> bookmarks = List(out string currentGame, out string bookmarksName);
 
             int nextSaveGameIndex = 0;
             string saveName = String.Empty;
@@ -47,6 +44,33 @@ namespace Seeker.Game
                 App.Current.Properties[bookmarksName] += String.Format(",{0}:{1}", saveName, bookmark);
 
             Continue.Save(String.Format("{0}-{1}", currentGame, saveName));
+        }
+
+        public static void Remove(string bookmark)
+        {
+            Dictionary<string, string> bookmarks = List(out string currentGame, out string bookmarksName);
+            string bookmarkIndex = bookmark.Split('-')[1];
+            string newBookmarkList = String.Empty; 
+
+            foreach (string index in bookmarks.Keys)
+            {
+                if (bookmarks[index] == bookmarkIndex)
+                {
+                    App.Current.Properties.Remove(bookmark);
+                }
+                else
+                {
+                    if (!String.IsNullOrEmpty(newBookmarkList))
+                        newBookmarkList += ",";
+
+                    newBookmarkList += String.Format("{0}:{1}", bookmarks[index], index);
+                }
+            }
+
+            if (String.IsNullOrEmpty(newBookmarkList))
+                App.Current.Properties.Remove(bookmarksName);
+            else
+                App.Current.Properties[bookmarksName] = newBookmarkList;
         }
     }
 }

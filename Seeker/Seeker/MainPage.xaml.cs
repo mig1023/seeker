@@ -87,8 +87,24 @@ namespace Seeker
             {
                 string bookmarkSave = String.Format("{0}-{1}", Game.Continue.GetCurrentGame(), allBookmarks[bookmark]);
 
-                Action.Children.Add(Output.Buttons.Bookmark(
-                    (s, args) => Continue_Click(bookmarkSave), bookmark, bookmark: true));
+                StackLayout bookmarkLine = new StackLayout { Orientation = StackOrientation.Horizontal };
+
+                Button load = Output.Buttons.Bookmark(
+                    (s, args) => Continue_Click(bookmarkSave), bookmark, bookmark: true);
+
+                load.HorizontalOptions = LayoutOptions.FillAndExpand;
+
+                bookmarkLine.Children.Add(load);
+
+                Button remove = Output.Buttons.Bookmark(
+                    (s, args) => BookmarkRemove_Click(bookmarkSave),
+                    Output.Constants.BOOKMARK_REMOVE, bookmark: true);
+
+                remove.WidthRequest = 35;
+
+                bookmarkLine.Children.Add(remove);
+
+                Action.Children.Add(bookmarkLine);
             }
         }
 
@@ -107,7 +123,7 @@ namespace Seeker
 
             Action.Children.Add(Output.Interface.Text(Output.Constants.BOOKMARK_LOAD_HEAD, bold: true));
 
-            Dictionary<string, string> allBookmarks = Game.Bookmarks.List();
+            Dictionary<string, string> allBookmarks = Game.Bookmarks.List(out string _, out string _);
 
             if (allBookmarks.Count > 0)
                 AddAllBookmarks(allBookmarks);
@@ -578,6 +594,12 @@ namespace Seeker
             int returnId = int.Parse(Game.Data.Path[lastStep - 1]);
 
             Paragraph(returnId, reload: true);
+        }
+
+        private void BookmarkRemove_Click(string bookmark)
+        {
+            Game.Bookmarks.Remove(bookmark);
+            Bookmarks_Click();
         }
 
         private void Continue_Click(string bookmark = "")
