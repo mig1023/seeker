@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace Seeker.Game
 {
@@ -79,6 +81,28 @@ namespace Seeker.Game
                 statusesLimit = (Data.CurrentParagraphID >= limitStart) && (Data.CurrentParagraphID <= limitEnd);
 
             return (withoutStatuses || statusesLimit);
+        }
+
+        public static void BookmarkName(Dictionary<string, string> bookmarks, string bookmarkIn, out string bookmarkOut, out string saveName)
+        {
+            int bookmarkIndex = 0;
+            bookmarkOut = bookmarkIn;
+
+            while (bookmarks.Keys.Contains(bookmarkOut))
+            {
+                bookmarkIndex += 1;
+                bookmarkOut = Regex.Replace(bookmarkOut, @"\s+\(\d\)$", String.Empty);
+                bookmarkOut += String.Format(" ({0})", bookmarkIndex);
+            };
+
+            int nextSaveGameIndex = 0;
+
+            do
+            {
+                nextSaveGameIndex += 1;
+                saveName = String.Format("SAVE{0}", nextSaveGameIndex);
+            }
+            while (bookmarks.Values.Contains(saveName));
         }
     }
 }

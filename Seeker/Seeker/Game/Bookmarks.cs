@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
 
 namespace Seeker.Game
 {
@@ -28,37 +26,19 @@ namespace Seeker.Game
         public static void Save(string bookmark)
         {
             Dictionary<string, string> bookmarks = List(out string currentGame, out string bookmarksName);
-
-            int bookmarkIndex = 0;
-
-            while (bookmarks.Keys.Contains(bookmark))
-            {
-                bookmarkIndex += 1;
-                bookmark = Regex.Replace(bookmark, @"\s+\(\d\)$", String.Empty);
-                bookmark += String.Format(" ({0})", bookmarkIndex);
-            };
-
-            int nextSaveGameIndex = 0;
-            string saveName = String.Empty;
-
-            do
-            {
-                nextSaveGameIndex += 1;
-                saveName = String.Format("SAVE{0}", nextSaveGameIndex);
-            }
-            while (bookmarks.Values.Contains(saveName));
+            Services.BookmarkName(bookmarks, bookmark, out string bookmarkOut, out string saveName);
 
             if (bookmarks.Count == 0)
-                App.Current.Properties[bookmarksName] = String.Format("{0}:{1}", saveName, bookmark);
+                App.Current.Properties[bookmarksName] = String.Format("{0}:{1}", saveName, bookmarkOut);
             else
-                App.Current.Properties[bookmarksName] += String.Format(",{0}:{1}", saveName, bookmark);
+                App.Current.Properties[bookmarksName] += String.Format(",{0}:{1}", saveName, bookmarkOut);
 
             Continue.Save(String.Format("{0}-{1}", currentGame, saveName));
         }
 
         public static void Remove(string bookmark)
         {
-            Dictionary<string, string> bookmarks = List(out string currentGame, out string bookmarksName);
+            Dictionary<string, string> bookmarks = List(out string _, out string bookmarksName);
             string bookmarkIndex = bookmark.Split('-')[1];
             string newBookmarkList = String.Empty; 
 
