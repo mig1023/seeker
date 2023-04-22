@@ -153,12 +153,18 @@ namespace Seeker.Output
 
         public static Button ClosePage(EventHandler onClick, bool bookmark = false)
         {
-            string color = Game.Data.Constants.GetColor(Buttons.ButtonTypes.Main);
+            Color buttonColor = Color.Gainsboro;
+
+            if (bookmark)
+            {
+                string color = Game.Data.Constants.GetColor(Buttons.ButtonTypes.Main);
+                buttonColor = Color.FromHex(color);
+            }
 
             Button button = new Button
             {
                 Text = Constants.BACK_LINK,
-                BackgroundColor = bookmark ? Color.FromHex(color) : Color.Gainsboro,
+                BackgroundColor = buttonColor,
                 FontFamily = Interface.TextFontFamily(),
                 FontSize = Interface.Font(NamedSize.Default),
                 Margin = new Thickness(0, 30),
