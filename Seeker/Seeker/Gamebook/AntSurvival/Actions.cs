@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Seeker.Gamebook.AntSurvival
@@ -7,6 +8,12 @@ namespace Seeker.Gamebook.AntSurvival
     {
         public static Actions StaticInstance = new Actions();
         private static Character protagonist = Character.Protagonist;
+
+        public override List<string> Status() => new List<string>
+        {
+            String.Format("Количество: {0}", protagonist.Quantity),
+            String.Format("Прирост: {0}", protagonist.Increase),
+        };
 
         public override bool Availability(string option)
         {
