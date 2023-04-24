@@ -9,5 +9,11 @@ namespace Seeker.Gamebook.AntSurvival
 
         public override Paragraph Get(int id, XmlNode xmlParagraph) =>
             base.Get(xmlParagraph);
+
+        public override Abstract.IModification ModificationParse(XmlNode xmlModification) =>
+            Xml.ModificationParse(xmlModification, new Modification());
+
+        public override Option OptionParse(XmlNode xmlOption) =>
+            OptionParseWithDo(xmlOption, new Modification());
     }
 }
