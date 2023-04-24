@@ -144,6 +144,27 @@ namespace Seeker.Prototypes
             return option;
         }
 
+        public Option OptionParseWithDo(XmlNode xmlOption, List<Abstract.IModification> modifications)
+        {
+            Option option = OptionsTemplate(xmlOption);
+
+            int modIndex = 0;
+
+            foreach (XmlNode optionMod in xmlOption.SelectNodes("*"))
+            {
+                if (optionMod.Name.StartsWith("Text"))
+                    continue;
+
+                if (modIndex >= modifications.Count)
+                    break;
+
+                option.Do.Add(Xml.ModificationParse(optionMod, modifications[modIndex]));
+                modIndex += 1;
+            }
+
+            return option;
+        }
+
         public Option OptionParseWithDo(XmlNode xmlOption, Abstract.IModification modification)
         {
             Option option = OptionsTemplate(xmlOption);
