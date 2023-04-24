@@ -1,4 +1,5 @@
-﻿using System.Xml;
+﻿using System.Collections.Generic;
+using System.Xml;
 using Seeker.Game;
 
 namespace Seeker.Gamebook.AntSurvival
@@ -13,7 +14,15 @@ namespace Seeker.Gamebook.AntSurvival
         public override Abstract.IModification ModificationParse(XmlNode xmlModification) =>
             Xml.ModificationParse(xmlModification, new Modification());
 
-        public override Option OptionParse(XmlNode xmlOption) =>
-            OptionParseWithDo(xmlOption, new Modification());
+        public override Option OptionParse(XmlNode xmlOption)
+        {
+            List<Abstract.IModification> modifications = new List<Abstract.IModification>();
+
+            foreach (XmlNode optionMod in xmlOption.SelectNodes("*"))
+                if (!optionMod.Name.StartsWith("Text"))
+                    modifications.Add(new Modification());
+
+            return OptionParseWithDo(xmlOption, modifications);
+        }
     }
 }
