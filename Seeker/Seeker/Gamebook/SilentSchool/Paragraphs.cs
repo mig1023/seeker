@@ -56,7 +56,7 @@ namespace Seeker.Gamebook.SilentSchool
                     modification.ValueString = Xml.StringParse(optionMod.Attributes["Value"]);
                 }
 
-                option.Do = modification;
+                option.Do.Add(modification);
             }
 
             return option;
