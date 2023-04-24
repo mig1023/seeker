@@ -182,10 +182,11 @@ namespace Seeker
         }
 
         public void Paragraph(int id, bool reload = false, bool loadGame = false,
-            string optionName = "", Abstract.IModification optionModification = null)
+            string optionName = "", List<Abstract.IModification> optionModifications = null)
         {
-            if (optionModification != null)
-                optionModification.Do();
+            if (optionModifications != null)
+                foreach(Abstract.IModification modification in optionModifications)
+                    modification.Do();
 
             bool physicalStartOfGame = (id == Game.Data.PhysicalStartParagraph);
             bool logicalStartOfGame = (id == Game.Data.Constants.GetStartParagraph());
@@ -450,7 +451,7 @@ namespace Seeker
             gameOver = (option.Destination == 0);
 
             EventHandler optionClick = (object sender, EventArgs e) =>
-                Paragraph(option.Destination, optionName: option.Text, optionModification: option.Do);
+                Paragraph(option.Destination, optionName: option.Text, optionModifications: option.Do);
 
             return Output.Buttons.Option(option, optionClick);
         }

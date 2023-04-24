@@ -132,6 +132,7 @@ namespace Seeker.Prototypes
             Input = Xml.StringParse(xmlOption.Attributes["Input"]),
             Aftertexts = Xml.TextsParse(xmlOption),
             Style = Xml.StringParse(xmlOption.Attributes["Style"]),
+            Do = new List<Abstract.IModification>(),
         };
             
         public Option OptionsTemplate(XmlNode xmlOption)
@@ -149,7 +150,7 @@ namespace Seeker.Prototypes
 
             foreach (XmlNode optionMod in xmlOption.SelectNodes("*"))
                 if (!optionMod.Name.StartsWith("Text"))
-                    option.Do = Xml.ModificationParse(optionMod, modification);
+                    option.Do.Add(Xml.ModificationParse(optionMod, modification));
 
             return option;
         }

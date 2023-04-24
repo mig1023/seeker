@@ -16,7 +16,7 @@ namespace Seeker.Game
         public string Input { get; set; }
         public string Style { get; set; }
 
-        public Abstract.IModification Do { get; set; }
+        public List<Abstract.IModification> Do { get; set; }
 
         private static Dictionary<Option, Button> Options { get; set; }
 
