@@ -29,11 +29,17 @@ namespace Seeker.Gamebook.AntSurvival
             {
                 foreach (string oneOption in option.Split(','))
                 {
-                    if (oneOption.Contains(">") || oneOption.Contains("="))
+                    if (oneOption.Contains(">") || oneOption.Contains("<") || oneOption.Contains("="))
                     {
                         int level = Game.Services.LevelParse(option);
 
                         if (oneOption.Contains("ДАЙС =") && !protagonist.Dice[level])
+                            return false;
+
+                        if (oneOption.Contains("КОЛИЧЕСТВО >=") && (level > protagonist.Quantity))
+                            return false;
+
+                        if (oneOption.Contains("КОЛИЧЕСТВО <") && (level <= protagonist.Quantity))
                             return false;
                     }
                     else if (oneOption.Contains("!"))
