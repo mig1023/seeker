@@ -9,18 +9,52 @@
 			<Color Name="System" Value="f4f4f4"/>
 		</Styles>
 		<Settings>
-			<ShowDisabledOption/>
+			<HideDisabledOption/>
 		</Settings>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph No="0">
-			<Text>START</Text>
+			<Text>В густом лесу, рядом с мощными корнями бука находится удивительный муравейник. Здесь обитает очень редкий вид — Формицин Ратус. Эти насекомые, в отличие от своих собратьев, меньше зависят от инстинктов. Они умеют планировать и даже демонстрируют зачатки государственности.</Text>
 			<Options>
 				<Option Destination="1" Text="В путь!"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="1">
-			<Text>END</Text>
+			<Text>Нынче к власти над муравейником приходит...</Text>
+			<Modifications>
+				<Dice/>
+				<Dice/>
+				<Dice/>
+			</Modifications>
+			<Options>
+				<Option Destination="33" Text="Королева Антуанетта Плодовитая" Availability="ДАЙС = 1">
+					<Undice/>
+					<Trigger Value="Королева Антуанетта Плодовитая"/>
+				</Option>
+				<Option Destination="33" Text="Принц Мурадин Крылатый" Availability="ДАЙС = 2">
+					<Undice/>
+					<Trigger Value="Принц Мурадин Крылатый"/>
+				</Option>
+				<Option Destination="33" Text="Солдат Руф Твердожвалый" Availability="ДАЙС = 3">
+					<Undice/>
+					<Trigger Value="Солдат Руф Твердожвалый"/>
+				</Option>
+				<Option Destination="33" Text="Рабочая Партия Муравьёв" Availability="ДАЙС = 4">
+					<Undice/>
+					<Trigger Value="Рабочая Партия Муравьёв"/>
+				</Option>
+				<Option Destination="33" Text="Отважный Мураш" Availability="ДАЙС = 5">
+					<Undice/>
+					<Trigger Value="Отважный Мураш"/>
+				</Option>
+				<Option Destination="33" Text="Амазонка Ахилла Кусачая" Availability="ДАЙС = 6">
+					<Undice/>
+					<Trigger Value="Амазонка Ахилла Кусачая"/>
+				</Option>
+			</Options>
+		</Paragraph>
+		<Paragraph No="33">
+			<Text>TEST</Text>
 			<Options>
 				<Option Destination="0"/>
 			</Options>
