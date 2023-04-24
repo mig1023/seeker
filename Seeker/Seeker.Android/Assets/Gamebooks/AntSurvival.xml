@@ -1,0 +1,29 @@
+<Gamebook>
+	<Introduction>
+		<Title>Муравьиная борьба</Title>
+		<Copyright>Пётр Прокошев, 2023</Copyright>
+		<Styles>
+			<Color Name="Main, Action, Option, StatusBar, Continue" Value="ffffff"/>
+			<Color Name="ButtonFont, StatusFont, StatusBorder, Border" Value="000000"/>
+			<Color Name="ActionBox" Value="efefef"/>
+			<Color Name="System" Value="f4f4f4"/>
+		</Styles>
+		<Settings>
+			<ShowDisabledOption/>
+		</Settings>
+	</Introduction>
+	<Paragraphs>
+		<Paragraph No="0">
+			<Text>START</Text>
+			<Options>
+				<Option Destination="1" Text="В путь!"/>
+			</Options>
+		</Paragraph>
+		<Paragraph No="1">
+			<Text>END</Text>
+			<Options>
+				<Option Destination="0"/>
+			</Options>
+		</Paragraph>
+	</Paragraphs>
+</Gamebook>
