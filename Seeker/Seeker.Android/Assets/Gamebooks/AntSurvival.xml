@@ -8,6 +8,9 @@
 			<Color Name="ActionBox" Value="efefef"/>
 			<Color Name="System" Value="f4f4f4"/>
 		</Styles>
+		<Constants>
+			<List Name="WithoutStatuses" Value="0, 1"/>
+		</Constants>
 		<Settings>
 			<HideDisabledOption/>
 		</Settings>
@@ -30,26 +33,37 @@
 				<Option Destination="33" Text="Королева Антуанетта Плодовитая" Availability="ДАЙС = 1">
 					<Undice/>
 					<Trigger Value="Королева Антуанетта Плодовитая"/>
+					<Quantity Value="3"/>
+					<Increase Value="6"/>
 				</Option>
 				<Option Destination="33" Text="Принц Мурадин Крылатый" Availability="ДАЙС = 2">
 					<Undice/>
 					<Trigger Value="Принц Мурадин Крылатый"/>
+					<Quantity Value="5"/>
+					<Increase Value="5"/>
 				</Option>
 				<Option Destination="33" Text="Солдат Руф Твердожвалый" Availability="ДАЙС = 3">
 					<Undice/>
 					<Trigger Value="Солдат Руф Твердожвалый"/>
+					<Quantity Value="20"/>
 				</Option>
 				<Option Destination="33" Text="Рабочая Партия Муравьёв" Availability="ДАЙС = 4">
 					<Undice/>
 					<Trigger Value="Рабочая Партия Муравьёв"/>
+					<Quantity Value="10"/>
+					<Increase Value="4"/>
 				</Option>
 				<Option Destination="33" Text="Отважный Мураш" Availability="ДАЙС = 5">
 					<Undice/>
 					<Trigger Value="Отважный Мураш"/>
+					<Quantity Value="12"/>
+					<Increase Value="3"/>
 				</Option>
 				<Option Destination="33" Text="Амазонка Ахилла Кусачая" Availability="ДАЙС = 6">
 					<Undice/>
 					<Trigger Value="Амазонка Ахилла Кусачая"/>
+					<Quantity Value="15"/>
+					<Increase Value="2"/>
 				</Option>
 			</Options>
 		</Paragraph>
