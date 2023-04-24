@@ -33,7 +33,7 @@ namespace Seeker.Gamebook.GoingToLaughter
                 XmlNode optionMod = xmlOption.SelectSingleNode("Modification");
 
                 if (optionMod != null)
-                    option.Do = Xml.ModificationParse(optionMod, new Modification());
+                    option.Do.Add(Xml.ModificationParse(optionMod, new Modification()));
 
                 paragraph.Options.Add(option);
             }
