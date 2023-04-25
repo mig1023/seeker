@@ -1338,5 +1338,86 @@
 				</Option>
 			</Options>
 		</Paragraph>
+		<Paragraph No="29">
+			<Text>Зреют перемены к лучшему.</Text>
+			<Options>
+				<Option Destination="29" Text="К власти приходит..." Availability="!Окончание, !Середина">
+					<Dice/>
+					<Dice/>
+					<Trigger Value="Середина"/>
+				</Option>
+				<Option Destination="29" Text="Королева Антуанетта Плодовитая" Availability="Середина, ДАЙС = 1">
+					<Undice/>
+					<Dice/>
+					<Trigger Value="Окончание, Королева Антуанетта Плодовитая"/>
+					<Increase Value="6"/>
+				</Option>
+				<Option Destination="29" Text="Принц Мурадин Крылатый" Availability="ДАЙС = 2">
+					<Undice/>
+					<Dice/>
+					<Trigger Value="Окончание, Принц Мурадин Крылатый"/>
+					<Increase Value="4"/>
+					<Defence Value="1"/>
+				</Option>
+				<Option Destination="29" Text="Солдат Руф Твердожвалый" Availability="ДАЙС = 3">
+					<Undice/>
+					<Dice/>
+					<Trigger Value="Окончание, Солдат Руф Твердожвалый"/>
+					<Increase Value="-2"/>
+					<Defence Value="5"/>
+				</Option>
+				<Option Destination="29" Text="Рабочая Партия Муравьёв" Availability="ДАЙС = 4">
+					<Undice/>
+					<Dice/>
+					<Trigger Value="Окончание, Рабочая Партия Муравьёв"/>
+					<Increase Value="2"/>
+					<Defence Value="2"/>
+				</Option>
+				<Option Destination="29" Text="Отважный Мураш" Availability="ДАЙС = 5">
+					<Undice/>
+					<Dice/>
+					<Trigger Value="Окончание, Отважный Мураш"/>
+					<Defence Value="3"/>
+				</Option>
+				<Option Destination="29" Text="Амазонка Ахилла Кусачая" Availability="ДАЙС = 6">
+					<Undice/>
+					<Dice/>
+					<Trigger Value="Окончание, Амазонка Ахилла Кусачая"/>
+					<Increase Value="-1"/>
+					<Defence Value="4"/>
+				</Option>
+				<Option Destination="13" Text="Горбатки" Availability="Окончание, ДАЙС = 1">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="27" Text="Трубкозуб" Availability="Окончание, ДАЙС = 2">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="26" Text="Соседние муравьи" Availability="Окончание, ДАЙС = 3">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="2" Text="Медвяная падь" Availability="Окончание, ДАЙС = 4">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="18" Text="Богомол" Availability="Окончание, ДАЙС = 5">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+					<Enemy Value="12"/>
+				</Option>
+				<Option Destination="3" Text="Ломехуза" Availability="Окончание, ДАЙС = 6">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
