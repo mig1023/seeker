@@ -535,11 +535,12 @@
 				<Option Destination="13" Text="Успех! Собрать сок горбатки" Availability="Середина, Решка, !Окончание">
 					<Increase Value="1"/>
 					<Trigger Value="Окончание"/>
-					<Untrigger Value="Решка"/>
+					<Untrigger Value="Решка, Середина"/>
 					<Dice/>
 				</Option>
 				<Option Destination="13" Text="Неудача! Разведчик заражён личинкой паразита" Availability="Середина, !Решка, !Окончание">
 					<Quantity Value="-1"/>
+					<Untrigger Value="Решка, Середина"/>
 					<Trigger Value="Окончание"/>
 					<Dice/>
 				</Option>
