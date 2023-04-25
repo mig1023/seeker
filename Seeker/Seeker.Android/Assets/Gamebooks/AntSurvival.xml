@@ -1290,5 +1290,53 @@
 				</Option>
 			</Options>
 		</Paragraph>
+		<Paragraph No="28">
+			<Text>Около бука ползёт многоножка. Она грозно озирается на муравьёв, думая, что своими размерами напугает их.\n\nС многоножкой можно сражаться. Для победы следует довести вражеское здоровье до нуля. Каждая атака будет стоить одному муравью жизни, снижая здоровье недруга от 1 до 6 ед. (бросок шестигранника). После победы колония расширит зону обитания. Останки противника отнесут в муравейник, чтобы закатить пир. И тогда прирост увеличится на два.</Text>
+			<Options>
+				<Option Destination="28" Text="Сражаться" Availability="ВРАГ >= 1, КОЛИЧЕСТВО >= 2, !Окончание">
+					<EnemyDiceWound/>
+					<Quantity Value="-1"/>
+				</Option>
+				<Option Destination="18" Text="Забрать останки многоножки" Availability="ВРАГ &lt; 1, !Окончание">
+					<Dice/>
+					<Untrigger Value="Окончание"/>
+					<Increase Value="2"/>
+				</Option>
+				<Option Destination="18" Text="Спрятаться от многоножки" Availability="ВРАГ >= 1, !Окончание">
+					<Dice/>
+					<Untrigger Value="Окончание"/>
+				</Option>
+				<Option Destination="6" Text="Голубянка" Availability="Окончание, ДАЙС = 1">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="14" Text="Термиты" Availability="Окончание, ДАЙС = 2">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="11" Text="Пауссин" Availability="Окончание, ДАЙС = 3">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="30" Text="Оса" Availability="Окончание, ДАЙС = 4">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="31" Text="Медовая бочка" Availability="Окончание, ДАЙС = 5">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="32" Text="Муравьиный лев" Availability="Окончание, ДАЙС = 6">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
