@@ -424,5 +424,50 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="11">
+			<Text>Муравьи обнаружили жука-пауссина, выпускающего горячую жидкость во врагов. Они могут поселить его в муравейнике в качестве живой пушки, но тогда придётся стабильно кормить жука, т.к. голодный пауссин закусит личинками.</Text>
+			<Options>
+				<Option Destination="11" Text="Взять пауссина" Availability="!Окончание">
+					<Defence Value="1"/>
+					<Increase Value="-1"/>
+					<Trigger Value="Окончание"/>
+					<Dice/>
+				</Option>
+				<Option Destination="11" Text="Не беспокоить жука" Availability="!Окончание">
+					<Trigger Value="Окончание"/>
+					<Dice/>
+				</Option>
+				<Option Destination="20" Text="Тля" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 1">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="7" Text="Муравьед" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 2">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="25" Text="Непентес" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 3">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="24" Text="Червец" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 4">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="23" Text="Муравейник" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 5">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="12" Text="Паук-Муравьед" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 6">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
