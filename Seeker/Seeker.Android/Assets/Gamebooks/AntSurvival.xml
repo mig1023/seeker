@@ -139,8 +139,7 @@
 					<Undice/>
 					<Untrigger Value="Окончание"/>
 					<Time Value="1"/>
-					<Enemy Value="13"/>
-					<EnemyName Value="Скорпион"/>
+					<Enemy Value="Скорпион, 13"/>
 				</Option>
 				<Option Destination="21" Text="Клоп-Хищнец" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 2">
 					<Undice/>
