@@ -81,7 +81,9 @@
 					<Untrigger Value="Мало соседей"/>
 					<Dice/>
 				</Option>
-				<Option Destination="9" Text="Победа" Availability="КОЛИЧЕСТВО >= 50" Singleton="КОЛИЧЕСТВО >= 50"/>
+				<Option Destination="9" Text="Победа"
+					Availability="КОЛИЧЕСТВО >= 50"
+					Singleton="КОЛИЧЕСТВО >= 50"/>
 				<Option Destination="34" Text="Скорпион" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 1">
 					<Undice/>
 					<Untrigger Value="Окончание"/>
@@ -130,7 +132,9 @@
 					<Trigger Value="Окончание"/>
 					<Dice/>
 				</Option>
-				<Option Destination="9" Text="Победа" Availability="КОЛИЧЕСТВО >= 50" Singleton="КОЛИЧЕСТВО >= 50"/>
+				<Option Destination="9" Text="Победа"
+					Availability="КОЛИЧЕСТВО >= 50"
+					Singleton="КОЛИЧЕСТВО >= 50"/>
 				<Option Destination="34" Text="Скорпион" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 1">
 					<Undice/>
 					<Untrigger Value="Окончание"/>
@@ -206,6 +210,58 @@
 					<Enemy Value="12"/>
 				</Option>
 				<Option Destination="3" Text="Ломехуза" Availability="Окончание, ДАЙС = 6">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+			</Options>
+		</Paragraph>
+		<Paragraph No="5">
+			<Text>Одного муравья поймал телифон. Держа жертву ногощупальцами, он готовится разорвать её на части.\n\nС телифоном можно сражаться, несмотря на его умение выстреливать уксусную кислоту из хвоста. Для победы следует довести вражеское здоровье до нуля. Каждая атака будет стоить одному муравью жизни, снижая здоровье недруга от 1 до 6 ед. (бросок шестигранника). После победы муравьям станет безопаснее жить. Труп супостата отнесут в гнездо, чтобы закатить пир. И тогда прирост увеличится на три.</Text>
+			<Options>
+				<Option Destination="10" Text="Телифон убил последнего муравья кислотой"
+					Availability="ВРАГ >= 1, КОЛИЧЕСТВО &lt; 2, !Окончание"
+					Singleton="ВРАГ >= 1, КОЛИЧЕСТВО &lt; 2, !Окончание"/>
+				<Option Destination="5" Text="Сражаться" Availability="ВРАГ >= 1, КОЛИЧЕСТВО >= 2, !Окончание">
+					<EnemyDiceWound/>
+					<Quantity Value="-1"/>
+				</Option>
+				<Option Destination="5" Text="Забрать останки телифон" Availability="ВРАГ &lt; 1, !Окончание">
+					<Dice/>
+					<Untrigger Value="Окончание"/>
+					<Increase Value="3"/>
+				</Option>
+				<Option Destination="5" Text="Отдать муравья на съедение" Availability="ВРАГ >= 1, КОЛИЧЕСТВО >= 2, !Окончание">
+					<Dice/>
+					<Untrigger Value="Окончание"/>
+					<Quantity Value="-1"/>
+				</Option>			
+				<Option Destination="6" Text="Голубянка" Availability="Окончание, ДАЙС = 1">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="14" Text="Термиты" Availability="Окончание, ДАЙС = 2">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="11" Text="Пауссин" Availability="Окончание, ДАЙС = 3">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="30" Text="Оса" Availability="Окончание, ДАЙС = 4">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="31" Text="Медовая бочка" Availability="Окончание, ДАЙС = 5">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="32" Text="Муравьиный лев" Availability="Окончание, ДАЙС = 6">
 					<Undice/>
 					<Untrigger Value="Окончание"/>
 					<Time Value="1"/>
