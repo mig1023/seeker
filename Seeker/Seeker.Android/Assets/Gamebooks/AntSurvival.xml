@@ -672,8 +672,7 @@
 					<Undice/>
 					<Untrigger Value="Окончание"/>
 					<Time Value="1"/>
-					<Enemy Value="12"/>
-					<EnemyName Value="Богомол"/>
+					<Enemy Value="Богомол, 12"/>
 				</Option>
 				<Option Destination="3" Text="Ломехуза" Availability="Окончание, ДАЙС = 6">
 					<Undice/>
