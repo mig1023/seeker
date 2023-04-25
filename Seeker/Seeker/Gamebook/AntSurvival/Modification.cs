@@ -30,6 +30,10 @@ namespace Seeker.Gamebook.AntSurvival
                 if (Game.Dice.Roll(size: 2) == 1)
                     Game.Option.Trigger("Решка");
             }
+            else if (Name == "QuantityIncrease")
+            {
+                protagonist.Quantity += protagonist.Increase;
+            }
             else
             {
                 base.Do(protagonist);
