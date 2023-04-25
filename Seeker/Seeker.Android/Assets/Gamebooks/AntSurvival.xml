@@ -268,5 +268,53 @@
 				</Option>
 			</Options>
 		</Paragraph>
+		<Paragraph No="6">
+			<Text>Обнаружена гусеница голубянки. Её сладкие выделения нравятся муравьям.\n\nГолубянку прогонят либо притащат в муравейник. Гусеница сделает колонию сплочённее, однако забота о потомстве пострадает.</Text>
+			<Options>
+				<Option Destination="6" Text="Взять Голубянку" Availability="!Окончание">
+					<Quantity Value="6"/>
+					<Increase Value="-3"/>
+					<Trigger Value="Окончание"/>
+					<Dice/>
+				</Option>
+				<Option Destination="6" Text="Прогнать" Availability="!Окончание">
+					<Trigger Value="Окончание"/>
+					<Dice/>
+				</Option>
+				<Option Destination="9" Text="Победа"
+					Availability="КОЛИЧЕСТВО >= 50"
+					Singleton="КОЛИЧЕСТВО >= 50"/>
+				<Option Destination="20" Text="Тля" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 1">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="7" Text="Муравьед" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 2">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="25" Text="Непентес" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 3">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="24" Text="Червец" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 4">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="23" Text="Муравейник" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 5">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="12" Text="Паук-Муравьед" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 6">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
