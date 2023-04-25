@@ -235,6 +235,7 @@
 					<Dice/>
 					<Trigger Value="Окончание"/>
 					<Quantity Value="-1"/>
+					<NoMoreEnemy/>
 				</Option>			
 				<Option Destination="6" Text="Голубянка" Availability="Окончание, ДАЙС = 1">
 					<Undice/>
@@ -799,6 +800,7 @@
 					<Dice/>
 					<Trigger Value="Окончание"/>
 					<Quantity Value="-1"/>
+					<NoMoreEnemy/>
 				</Option>
 				<Option Destination="34" Text="Скорпион" Availability="Окончание, ДАЙС = 1">
 					<Undice/>
@@ -1303,6 +1305,7 @@
 				<Option Destination="18" Text="Спрятаться от многоножки" Availability="ВРАГ >= 1, !Окончание">
 					<Dice/>
 					<Untrigger Value="Окончание"/>
+					<NoMoreEnemy/>
 				</Option>
 				<Option Destination="6" Text="Голубянка" Availability="Окончание, ДАЙС = 1">
 					<Undice/>
@@ -1724,6 +1727,7 @@
 					<Dice/>
 					<Trigger Value="Окончание"/>
 					<Quantity Value="-1"/>
+					<NoMoreEnemy/>
 				</Option>
 				<Option Destination="6" Text="Голубянка" Availability="Окончание, ДАЙС = 1">
 					<Undice/>
