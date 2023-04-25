@@ -781,5 +781,60 @@
 				</Option>
 			</Options>
 		</Paragraph>
+		<Paragraph No="18">
+			<Text>Один муравей подвергся атаке богомола. Хищник выпрыгнул из травы и пронзил жертву передними лапами.\n\nС богомолом можно сражаться. Для победы следует довести вражеское здоровье до нуля. Каждая атака будет стоить одному муравью жизни, снижая здоровье недруга от 1 до 6 ед. (бросок шестигранника). После победы муравьям станет безопаснее жить. Павшего супостата отнесут в муравейник, чтобы закатить пир. И тогда прирост увеличится на два.</Text>
+			<Options>
+				<Option Destination="10" Text="Богомол обезглавил последнего муравья"
+					Availability="ВРАГ >= 1, КОЛИЧЕСТВО &lt; 2, !Окончание"
+					Singleton="ВРАГ >= 1, КОЛИЧЕСТВО &lt; 2, !Окончание"/>
+				<Option Destination="18" Text="Сражаться" Availability="ВРАГ >= 1, КОЛИЧЕСТВО >= 2, !Окончание">
+					<EnemyDiceWound/>
+					<Quantity Value="-1"/>
+				</Option>
+				<Option Destination="18" Text="Забрать останки богомола" Availability="ВРАГ &lt; 1, !Окончание">
+					<Dice/>
+					<Untrigger Value="Окончание"/>
+					<Increase Value="2"/>
+				</Option>
+				<Option Destination="18" Text="Отдать муравья на съедение" Availability="ВРАГ >= 1, КОЛИЧЕСТВО >= 2, !Окончание">
+					<Dice/>
+					<Untrigger Value="Окончание"/>
+					<Quantity Value="-1"/>
+				</Option>
+				<Option Destination="34" Text="Скорпион" Availability="Окончание, ДАЙС = 1">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+					<Enemy Value="13"/>
+				</Option>
+				<Option Destination="21" Text="Клоп-Хищнец" Availability="Окончание, ДАЙС = 2">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="5" Text="Телифон" Availability="Окончание, ДАЙС = 3">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+					<Enemy Value="14"/>
+				</Option>
+				<Option Destination="17" Text="Мёд" Availability="Окончание, ДАЙС = 4">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="28" Text="Многоножка" Availability="Окончание, ДАЙС = 5">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+					<Enemy Value="5"/>
+				</Option>
+				<Option Destination="8" Text="Наводнение" Availability="Окончание, ДАЙС = 6">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
