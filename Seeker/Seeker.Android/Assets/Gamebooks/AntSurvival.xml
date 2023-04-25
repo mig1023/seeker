@@ -1511,5 +1511,55 @@
 				</Option>
 			</Options>
 		</Paragraph>
+		<Paragraph No="32">
+			<Text>Муравьи-разведчики заметили яму, в которой прячется муравьиный лев. Стоит насекомому пройти по краю воронки, как песок под жертвой зашевелится, и добыча упадёт в ловушку. На дне своего логова хищник убивает беспечных жертв челюстями в виде серпов.\n\nМожно пожертвовать группой муравьёв для ликвидации угрозы или не трогать ловушку, куда будет изредка попадать молодняк.</Text>
+			<Options>
+				<Option Destination="32" Text="Ликвидация угрозы" Availability="КОЛИЧЕСТВО >= 5, !Окончание">
+					<Quantity Value="-4"/>
+					<Trigger Value="Окончание"/>
+					<Dice/>
+				</Option>
+				<Option Destination="32" Text="Игнорировать опасность" Availability="!Окончание">
+					<Increase Value="-2"/>
+					<Trigger Value="Окончание"/>
+					<Dice/>
+				</Option>
+				<Option Destination="32" Text="Использовать защиту" Availability="ЗАЩИТА >= 1, !Окончание">
+					<UseDefence/>
+					<Untrigger Value="Окончание"/>
+					<Dice/>
+				</Option>
+				<Option Destination="20" Text="Тля" Availability="Окончание, ДАЙС = 1">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="7" Text="Муравьед" Availability="Окончание, ДАЙС = 2">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="25" Text="Непентес" Availability="Окончание, ДАЙС = 3">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="24" Text="Червец" Availability="Окончание, ДАЙС = 4">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="23" Text="Муравейник" Availability="Окончание, ДАЙС = 5">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="12" Text="Паук-Муравьед" Availability="Окончание, ДАЙС = 6">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
