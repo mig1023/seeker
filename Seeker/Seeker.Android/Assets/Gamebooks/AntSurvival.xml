@@ -233,7 +233,7 @@
 				</Option>
 				<Option Destination="5" Text="Отдать муравья на съедение" Availability="ВРАГ >= 1, КОЛИЧЕСТВО >= 2, !Окончание">
 					<Dice/>
-					<Untrigger Value="Окончание"/>
+					<Trigger Value="Окончание"/>
 					<Quantity Value="-1"/>
 				</Option>			
 				<Option Destination="6" Text="Голубянка" Availability="Окончание, ДАЙС = 1">
@@ -798,7 +798,7 @@
 				</Option>
 				<Option Destination="18" Text="Отдать муравья на съедение" Availability="ВРАГ >= 1, КОЛИЧЕСТВО >= 2, !Окончание">
 					<Dice/>
-					<Untrigger Value="Окончание"/>
+					<Trigger Value="Окончание"/>
 					<Quantity Value="-1"/>
 				</Option>
 				<Option Destination="34" Text="Скорпион" Availability="Окончание, ДАЙС = 1">
@@ -1724,7 +1724,7 @@
 				</Option>
 				<Option Destination="34" Text="Отдать муравья на съедение" Availability="ВРАГ >= 1, КОЛИЧЕСТВО >= 2, !Окончание">
 					<Dice/>
-					<Untrigger Value="Окончание"/>
+					<Trigger Value="Окончание"/>
 					<Quantity Value="-1"/>
 				</Option>
 				<Option Destination="6" Text="Голубянка" Availability="Окончание, ДАЙС = 1">
