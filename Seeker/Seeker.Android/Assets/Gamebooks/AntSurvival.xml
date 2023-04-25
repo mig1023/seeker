@@ -1465,5 +1465,51 @@
 				</Option>
 			</Options>
 		</Paragraph>
+		<Paragraph No="31">
+			<Text>В среде фуражиров появилась пара раздутых особей. Эти причудливые толстяки, подобно медовым бочкам, хранят в себе запасы пищи. В их зобиках брюшка блестит золотистая жидкость. При необходимости бочконосы отрыгнут корм, кормя соплеменников. Однако они могут привлечь медведя.</Text>
+			<Options>
+				<Option Destination="31" Text="Оставить бочконосов" Availability="!Окончание">
+					<Increase Value="4"/>
+					<Trigger Value="Мёд, Окончание"/>
+					<Dice/>
+				</Option>
+				<Option Destination="31" Text="Изгнание" Availability="!Окончание">
+					<Quantity Value="-2"/>
+					<Trigger Value="Окончание"/>
+					<Untrigger Value="Мёд"/>
+					<Dice/>
+				</Option>
+				<Option Destination="20" Text="Тля" Availability="Окончание, ДАЙС = 1">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="7" Text="Муравьед" Availability="Окончание, ДАЙС = 2">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="25" Text="Непентес" Availability="Окончание, ДАЙС = 3">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="24" Text="Червец" Availability="Окончание, ДАЙС = 4">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="23" Text="Муравейник" Availability="Окончание, ДАЙС = 5">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="12" Text="Паук-Муравьед" Availability="Окончание, ДАЙС = 6">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
