@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Seeker.Gamebook.AntSurvival
+namespace Seeker.Gamebook.Ants
 {
     class Constants : Prototypes.Constants, Abstract.IConstants
     {

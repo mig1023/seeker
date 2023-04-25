@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Seeker.Gamebook.AntSurvival
+namespace Seeker.Gamebook.Ants
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {

@@ -461,10 +461,10 @@
     <AndroidAsset Include="Assets\Gamebooks\MasterOfTaiga.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\AntSurvival.jpg" />
+    <AndroidResource Include="Resources\drawable\Ants.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Gamebooks\AntSurvival.xml" />
+    <AndroidAsset Include="Assets\Gamebooks\Ants.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>

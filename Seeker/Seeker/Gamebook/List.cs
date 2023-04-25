@@ -53,7 +53,7 @@ namespace Seeker.Gamebook
             ["SilverAgeSilhouette"] = SilverAgeSilhouette.Constants.GetLinks(),
             ["StrikeBack"] = StrikeBack.Constants.GetLinks(),
             ["CommunityOfWorms"] = CommunityOfWorms.Constants.GetLinks(),
-            ["AntSurvival"] = AntSurvival.Constants.GetLinks(),
+            ["Ants"] = Ants.Constants.GetLinks(),
         };
 
         public static List<string> GetBooks() =>

@@ -512,7 +512,7 @@
 		<Setting>Приключения</Setting>
 		<Color>191039</Color>
 	</CommunityOfWorms>
-	<AntSurvival>
+	<Ants>
 		<Title>Муравьиная борьба</Title>
 		<Author>Пётр Прокошев</Author>
 		<Year>2023</Year>
@@ -526,5 +526,5 @@
 			<Font>000000</Font>
 			<Border>000000</Border>
 		</Colors>
-	</AntSurvival>
+	</Ants>
 </Gamebooks>
