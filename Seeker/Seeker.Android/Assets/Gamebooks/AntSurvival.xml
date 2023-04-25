@@ -885,5 +885,53 @@
 				</Option>
 			</Options>
 		</Paragraph>
+		<Paragraph No="20">
+			<Text>Замечена тля, верная подруга муравьёв.\n\nСоюз тлей и муравьёв выгоден обеим сторонам: тли получают защиту, а муравьи поглощают сахарные выделения тлей. Также муравьи переносят тлей с одного растения на другое, чтобы обеспечить их едой.\n\nЕсли поблизости обитает оса, тля побоится войти с колонией в контакт.</Text>
+			<Options>
+				<Option Destination="20" Text="Оса пугает тлю" Availability="Оса, !Окончание">
+					<Trigger Value="Окончание"/>
+					<Dice/>
+				</Option>
+				<Option Destination="20" Text="Союз с тлёй" Availability="!Оса, !Окончание">
+					<Quantity Value="3"/>
+					<Increase Value="2"/>
+					<Trigger Value="Окончание"/>
+					<Dice/>
+				</Option>
+				<Option Destination="9" Text="Победа"
+					Availability="КОЛИЧЕСТВО >= 50"
+					Singleton="КОЛИЧЕСТВО >= 50"/>
+				<Option Destination="15" Text="Медведь" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 1">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="22" Text="Кордицепс" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 2">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="4" Text="Муравление" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 3">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="19" Text="Запасы листьев" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 4">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="29" Text="Смена власти" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 5">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="16" Text="Молох" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 6">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
