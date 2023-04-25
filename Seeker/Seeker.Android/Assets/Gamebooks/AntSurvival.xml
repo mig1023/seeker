@@ -126,7 +126,7 @@
 					<Trigger Value="Окончание"/>
 					<Dice/>
 				</Option>
-				<Option Destination="3" Text="Победа" Availability="!Окончание">
+				<Option Destination="3" Text="Прогнать" Availability="!Окончание">
 					<Trigger Value="Окончание"/>
 					<Dice/>
 				</Option>
@@ -160,6 +160,52 @@
 					<Enemy Value="5"/>
 				</Option>
 				<Option Destination="8" Text="Наводнение" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 6">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+			</Options>
+		</Paragraph>
+		<Paragraph No="4">
+			<Text>Рядом с колонией пролетают сойки. Если привлечь их внимание, птицы сядут в муравейник, расправят крылья и будут ждать укусов. Муравьиной кислотой птицы обрабатывают перья, отпугивают и убивают паразитов.\n\nДанная процедура, муравление, приведёт к тому, что часть муравьёв будет раздавлена. Однако позже сойки помогут колонии, пугая или отвлекая некоторых врагов.</Text>
+			<Options>
+				<Option Destination="4" Text="Привлечь соек" Availability="КОЛИЧЕСТВО >= 6, !Окончание">
+					<Quantity Value="-5"/>
+					<Defence Value="3"/>
+					<Trigger Value="Окончание"/>
+					<Dice/>
+				</Option>
+				<Option Destination="4" Text="Спрятаться от птиц" Availability="!Окончание">
+					<Trigger Value="Окончание"/>
+					<Dice/>
+				</Option>
+				<Option Destination="13" Text="Горбатки" Availability="Окончание, ДАЙС = 1">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="27" Text="Трубкозуб" Availability="Окончание, ДАЙС = 2">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="26" Text="Соседние муравьи" Availability="Окончание, ДАЙС = 3">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="2" Text="Медвяная падь" Availability="Окончание, ДАЙС = 4">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="18" Text="Богомол" Availability="Окончание, ДАЙС = 5">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+					<Enemy Value="12"/>
+				</Option>
+				<Option Destination="3" Text="Ломехуза" Availability="Окончание, ДАЙС = 6">
 					<Undice/>
 					<Untrigger Value="Окончание"/>
 					<Time Value="1"/>
