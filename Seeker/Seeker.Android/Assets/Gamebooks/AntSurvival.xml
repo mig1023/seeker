@@ -1219,8 +1219,7 @@
 					<Undice/>
 					<Untrigger Value="Окончание"/>
 					<Time Value="1"/>
-					<Enemy Value="5"/>
-					<EnemyName Value="Многоножка"/>
+					<Enemy Value="Многоножка, 5"/>
 				</Option>
 				<Option Destination="8" Text="Наводнение" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 6">
 					<Undice/>
