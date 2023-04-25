@@ -316,5 +316,57 @@
 				</Option>
 			</Options>
 		</Paragraph>
+		<Paragraph No="7">
+			<Text>По лесу шастает косматый когтистый зверь. Это муравьед. Длинным клейким языком он хватает термитов и муравьёв.\n\nЗверь обожает вскрывать термитники для добычи пищи. Если в округе обитают термиты, то он навестит их. Иначе (метка "Нет термитов") он пообедает муравьями.</Text>
+			<Options>
+				<Option Destination="7" Text="Муравьед посещает термитов" Availability="!Нет термитов, !Окончание">
+					<Trigger Value="Окончание"/>
+					<Dice/>
+				</Option>
+				<Option Destination="7" Text="Пережить визит муравьеда" Availability="Нет термитов, !Окончание">
+					<Quantity Value="-10"/>
+					<Trigger Value="Окончание"/>
+					<Dice/>
+				</Option>
+				<Option Destination="7" Text="Использовать защиту" Availability="ЗАЩИТА >= 1, Нет термитов, !Окончание">
+					<UseDefence/>
+					<Untrigger Value="Окончание"/>
+					<Dice/>
+				</Option>
+				<Option Destination="10" Text="Муравьед уничтожил колонию"
+					Availability="КОЛИЧЕСТВО &lt; 1"
+					Singleton="КОЛИЧЕСТВО &lt; 1"/>
+				<Option Destination="15" Text="Медведь" Availability="Окончание, ДАЙС = 1">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="22" Text="Кордицепс" Availability="Окончание, ДАЙС = 2">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="4" Text="Муравление" Availability="Окончание, ДАЙС = 3">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="19" Text="Запасы листьев" Availability="Окончание, ДАЙС = 4">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="29" Text="Смена власти" Availability="Окончание, ДАЙС = 5">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="16" Text="Молох" Availability="Окончание, ДАЙС = 6">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
