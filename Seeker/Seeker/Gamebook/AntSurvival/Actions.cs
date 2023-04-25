@@ -22,8 +22,8 @@ namespace Seeker.Gamebook.AntSurvival
             return statusLines;
         }
 
-        public override List<string> AdditionalStatus() => protagonist.Enemy > 0 ?
-            new List<string> { String.Format("{0}: {1}", protagonist.Name, protagonist.Enemy) } : null;
+        public override List<string> AdditionalStatus() => protagonist.EnemyHitpoints > 0 ?
+            new List<string> { String.Format("{0}: {1}", protagonist.Name, protagonist.EnemyHitpoints) } : null;
 
         public override bool Availability(string option)
         {
@@ -52,10 +52,10 @@ namespace Seeker.Gamebook.AntSurvival
                         if (oneOption.Contains("КОЛИЧЕСТВО <") && (level <= protagonist.Quantity))
                             return false;
 
-                        if (oneOption.Contains("ВРАГ >=") && (level > protagonist.Enemy))
+                        if (oneOption.Contains("ВРАГ >=") && (level > protagonist.EnemyHitpoints))
                             return false;
 
-                        if (oneOption.Contains("ВРАГ <") && (level <= protagonist.Enemy))
+                        if (oneOption.Contains("ВРАГ <") && (level <= protagonist.EnemyHitpoints))
                             return false;
 
                         if (oneOption.Contains("ЗАЩИТА >=") && (level > protagonist.Defence))

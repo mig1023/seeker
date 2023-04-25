@@ -15,13 +15,14 @@ namespace Seeker.Gamebook.AntSurvival
         public int Time { get; set; }
         public int Defence { get; set; }
         public int Start { get; set; }
-        public string Name { get; set; }
 
-        private int _enemy;
-        public int Enemy
+        public string EnemyName { get; set; }
+
+        private int _enemyHitpoints;
+        public int EnemyHitpoints
         {
-            get => _enemy;
-            set => _enemy = Game.Param.Setter(value);
+            get => _enemyHitpoints;
+            set => _enemyHitpoints = Game.Param.Setter(value);
         }
 
         public override void Init()
@@ -31,10 +32,10 @@ namespace Seeker.Gamebook.AntSurvival
             Quantity = 0;
             Increase = 0;
             Time = 0;
-            Enemy = 0;
             Defence = 0;
             Start = 0;
-            Name = String.Empty;
+            EnemyName = String.Empty;
+            EnemyHitpoints = 0;
             Dice = new List<bool> { false, false, false, false, false, false, false };
         }
 
@@ -44,15 +45,15 @@ namespace Seeker.Gamebook.AntSurvival
             Quantity = this.Quantity,
             Increase = this.Increase,
             Time = this.Time,
-            Enemy = this.Enemy,
             Defence = this.Defence,
             Start = this.Start,
-            Name = this.Name,
+            EnemyName = this.EnemyName,
+            EnemyHitpoints = this.EnemyHitpoints,
         };
 
         public override string Save() => String.Join("|",
             String.Join(",", Dice.Select(x => x ? "1" : "0")),
-            Quantity, Increase, Time, Enemy, Defence, Start, Name
+            Quantity, Increase, Time, Defence, Start, EnemyName, EnemyHitpoints
         );
 
         public override void Load(string saveLine)
@@ -63,10 +64,10 @@ namespace Seeker.Gamebook.AntSurvival
             Quantity = int.Parse(save[1]);
             Increase = int.Parse(save[2]);
             Time = int.Parse(save[3]);
-            Enemy = int.Parse(save[4]);
-            Defence = int.Parse(save[5]);
-            Start = int.Parse(save[6]);
-            Name = save[7];
+            Defence = int.Parse(save[4]);
+            Start = int.Parse(save[5]);
+            EnemyName = save[6];
+            EnemyHitpoints = int.Parse(save[7]);
 
             IsProtagonist = true;
         }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Seeker.Gamebook.AntSurvival
 {
@@ -17,9 +18,15 @@ namespace Seeker.Gamebook.AntSurvival
             {
                 protagonist.Dice = new List<bool> { false, false, false, false, false, false, false };
             }
+            else if (Name == "Enemy")
+            {
+                List<string> enemy = ValueString.Split(',').ToList();
+                protagonist.EnemyName = enemy[0].Trim();
+                protagonist.EnemyHitpoints = int.Parse(enemy[1].Trim());
+            }
             else if (Name == "EnemyDiceWound")
             {
-                protagonist.Enemy -= Game.Dice.Roll();
+                protagonist.EnemyHitpoints -= Game.Dice.Roll();
             }
             else if (Name == "UseDefence")
             {
