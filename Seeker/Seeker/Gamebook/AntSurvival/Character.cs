@@ -14,6 +14,7 @@ namespace Seeker.Gamebook.AntSurvival
         public int Increase { get; set; }
         public int Time { get; set; }
         public int Defence { get; set; }
+        public int Start { get; set; }
 
         private int _enemy;
         public int Enemy
@@ -31,6 +32,7 @@ namespace Seeker.Gamebook.AntSurvival
             Time = 0;
             Enemy = 0;
             Defence = 0;
+            Start = 0;
             Dice = new List<bool> { false, false, false, false, false, false, false };
         }
 
@@ -42,11 +44,12 @@ namespace Seeker.Gamebook.AntSurvival
             Time = this.Time,
             Enemy = this.Enemy,
             Defence = this.Defence,
+            Start = this.Start,
         };
 
         public override string Save() => String.Join("|",
             String.Join(",", Dice.Select(x => x ? "1" : "0")),
-            Quantity, Increase, Time, Enemy, Defence
+            Quantity, Increase, Time, Enemy, Defence, Start
         );
 
         public override void Load(string saveLine)
@@ -59,6 +62,7 @@ namespace Seeker.Gamebook.AntSurvival
             Time = int.Parse(save[3]);
             Enemy = int.Parse(save[4]);
             Defence = int.Parse(save[5]);
+            Start = int.Parse(save[6]);
 
             IsProtagonist = true;
         }
