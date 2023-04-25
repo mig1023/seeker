@@ -1133,5 +1133,50 @@
 				</Option>
 			</Options>
 		</Paragraph>
+		<Paragraph No="25">
+			<Text>В лесу появился непентес. Это плотоядное растение питается насекомыми, используя изящный кувшинчик для приманивания, утопления и переваривания жертв. Добычу привлекает сладкий аромат нектара. Обычно жертва падает в ёмкость из-за скользких краёв кувшинчика и сразу тонет в ловушке.\n\nМуравьи могут начать ухаживать за непентесом: очищать края кувшина, подкармливать растение продуктами жизнедеятельности, удалять из кувшинчика непереваренную пищу. В благодарность непентес станет угощать муравьёв сладким нектаром.\n\nВступление в симбиоз с непентесом — опасный процесс, требующий больших усилий.</Text>
+			<Options>
+				<Option Destination="25" Text="Уход за непентесом" Availability="КОЛИЧЕСТВО >= 5, !Окончание">
+					<Quantity Value="-4"/>
+					<Increase Value="3"/>
+					<Trigger Value="Окончание"/>
+					<Dice/>
+				</Option>
+				<Option Destination="25" Text="Избегать непентеса" Availability="!Окончание">
+					<Trigger Value="Окончание"/>
+					<Dice/>
+				</Option>
+				<Option Destination="15" Text="Медведь" Availability="Окончание, ДАЙС = 1">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="22" Text="Кордицепс" Availability="Окончание, ДАЙС = 2">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="4" Text="Муравление" Availability="Окончание, ДАЙС = 3">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="19" Text="Запасы листьев" Availability="Окончание, ДАЙС = 4">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="29" Text="Смена власти" Availability="Окончание, ДАЙС = 5">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="16" Text="Молох" Availability="Окончание, ДАЙС = 6">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
