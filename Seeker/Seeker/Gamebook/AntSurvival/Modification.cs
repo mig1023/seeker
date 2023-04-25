@@ -21,6 +21,10 @@ namespace Seeker.Gamebook.AntSurvival
             {
                 protagonist.Enemy -= Game.Dice.Roll();
             }
+            else if (Name == "UseDefence")
+            {
+                protagonist.Defence -= 1;
+            }
             else
             {
                 base.Do(protagonist);
