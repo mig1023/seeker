@@ -1561,5 +1561,203 @@
 				</Option>
 			</Options>
 		</Paragraph>
+		<Paragraph No="33">
+			<Text>Наступила весна, небо стало голубым и чистым. Звенят ручьи, стрекочут кузнечики, птицы танцуют в брачных танцах. Все животные, от медведей до букашек, устремились к размножению.\n\nВ этот шумный период муравейник у бука отчаянно борется за своё существование. Последняя колония с трудом пережила зиму, и теперь ей нужно хорошо потрудиться, чтобы восполнить потери.\n\nЕсли весной популяция Формицина Ратуса преодолеет отметку в 50 особей, они сумеют выйти из кризиса. В противном случае уникальный вид муравьёв исчезнет.</Text>
+			<Options>
+				<Option Destination="33" Text="Случайное событие" Availability="СТАРТ = 0">
+					<Start Value="1"/>
+					<Undice/>
+					<Dice/>
+				</Option>
+				<Option Destination="33" Text="Переброс события: осталось 3 попытки" Availability="СТАРТ = 1">
+					<Start Value="1"/>
+					<Undice/>
+					<Dice/>
+				</Option>
+				<Option Destination="33" Text="Переброс события: осталось 2 попытки" Availability="СТАРТ = 2">
+					<Start Value="1"/>
+					<Undice/>
+					<Dice/>
+				</Option>
+				<Option Destination="33" Text="Переброс события: осталось 1 попытки" Availability="СТАРТ = 3">
+					<Start Value="1"/>
+					<Undice/>
+					<Dice/>
+				</Option>
+				<Option Destination="6" Text="Голубянка" Availability="СТАРТ = 1, ДАЙС = 1">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="14" Text="Термиты" Availability="СТАРТ = 1, ДАЙС = 2">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="11" Text="Пауссин" Availability="СТАРТ = 1, ДАЙС = 3">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="30" Text="Оса" Availability="СТАРТ = 1, ДАЙС = 4">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="31" Text="Медовая бочка" Availability="СТАРТ = 1, ДАЙС = 5">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="32" Text="Муравьиный лев" Availability="СТАРТ = 1, ДАЙС = 6">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>			
+				<Option Destination="20" Text="Тля" Availability="СТАРТ = 2, ДАЙС = 1">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="7" Text="Муравьед" Availability="СТАРТ = 2, ДАЙС = 2">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="25" Text="Непентес" Availability="СТАРТ = 2, ДАЙС = 3">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="24" Text="Червец" Availability="СТАРТ = 2, ДАЙС = 4">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="23" Text="Муравейник" Availability="СТАРТ = 2, ДАЙС = 5">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="12" Text="Паук-Муравьед" Availability="СТАРТ = 2, ДАЙС = 6">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>		
+				<Option Destination="15" Text="Медведь" Availability="СТАРТ = 3, ДАЙС = 1">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="22" Text="Кордицепс" Availability="СТАРТ = 3, ДАЙС = 2">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="4" Text="Муравление" Availability="СТАРТ = 3, ДАЙС = 3">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="19" Text="Запасы листьев" Availability="СТАРТ = 3, ДАЙС = 4">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="29" Text="Смена власти" Availability="СТАРТ = 3, ДАЙС = 5">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="16" Text="Молох" Availability="СТАРТ = 3, ДАЙС = 6">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="13" Text="Горбатки" Availability="СТАРТ = 4, ДАЙС = 1">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="27" Text="Трубкозуб" Availability="СТАРТ = 4, ДАЙС = 2">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="26" Text="Соседние муравьи" Availability="СТАРТ = 4, ДАЙС = 3">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="2" Text="Медвяная падь" Availability="СТАРТ = 4, ДАЙС = 4">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="18" Text="Богомол" Availability="СТАРТ = 4, ДАЙС = 5">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+					<Enemy Value="12"/>
+				</Option>
+				<Option Destination="3" Text="Ломехуза" Availability="СТАРТ = 4, ДАЙС = 6">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+			</Options>
+		</Paragraph>
+		<Paragraph No="34">
+			<Text>Одного муравья поймал скорпион. Держа жертву клешнями, он готовится нанести смертельный укол хвостом.\n\nСо скорпионом можно биться. Для победы следует довести вражеское здоровье до нуля. Каждая атака будет стоить одному муравью жизни, снижая здоровье недруга от 1 до 6 ед. (бросок шестигранника). После победы колония расширит зону обитания. Останки противника отнесут в муравейник, чтобы закатить пир. И тогда прирост увеличится на два.</Text>
+			<Options>
+				<Option Destination="10" Text="Скорпион убил последнего муравья "
+					Availability="ВРАГ >= 1, КОЛИЧЕСТВО &lt; 2, !Окончание"
+					Singleton="ВРАГ >= 1, КОЛИЧЕСТВО &lt; 2, !Окончание"/>
+				<Option Destination="34" Text="Сражаться" Availability="ВРАГ >= 1, КОЛИЧЕСТВО >= 2, !Окончание">
+					<EnemyDiceWound/>
+					<Quantity Value="-1"/>
+				</Option>
+				<Option Destination="34" Text="Забрать останки скорпиона" Availability="ВРАГ &lt; 1, !Окончание">
+					<Dice/>
+					<Untrigger Value="Окончание"/>
+					<Increase Value="2"/>
+				</Option>
+				<Option Destination="34" Text="Отдать муравья на съедение" Availability="ВРАГ >= 1, КОЛИЧЕСТВО >= 2, !Окончание">
+					<Dice/>
+					<Untrigger Value="Окончание"/>
+					<Quantity Value="-1"/>
+				</Option>
+				<Option Destination="6" Text="Голубянка" Availability="Окончание, ДАЙС = 1">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="14" Text="Термиты" Availability="Окончание, ДАЙС = 2">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="11" Text="Пауссин" Availability="Окончание, ДАЙС = 3">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="30" Text="Оса" Availability="Окончание, ДАЙС = 4">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="31" Text="Медовая бочка" Availability="Окончание, ДАЙС = 5">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="32" Text="Муравьиный лев" Availability="Окончание, ДАЙС = 6">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
