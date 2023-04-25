@@ -418,5 +418,11 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="10">
+			<Text>Надежды на выживание Формицина Ратуса рухнули с падением последней колонии. Данный вид был плохо адаптирован к окружающей среде и потому исчез навсегда.</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
