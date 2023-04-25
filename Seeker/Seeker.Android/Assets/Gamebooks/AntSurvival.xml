@@ -368,5 +368,49 @@
 				</Option>
 			</Options>
 		</Paragraph>
+		<Paragraph No="8">
+			<Text>Протяжные ливни затопили местность. Если муравьёв больше восьми, они сумеют сцепиться в один большой плот и дрейфовать по воде, спасая личинок. Если их мало, то они, оставив расплод в беде, переползут на дерево и подождут, пока вода не спадёт.</Text>
+			<Options>
+				<Option Destination="8" Text="Создать живой плот" Availability="КОЛИЧЕСТВО >= 8, !Окончание">
+					<Trigger Value="Окончание"/>
+					<Dice/>
+				</Option>
+				<Option Destination="8" Text="Перебраться на дерево" Availability="КОЛИЧЕСТВО &lt; 8, !Окончание">
+					<Increase Value="-5"/>
+					<Trigger Value="Окончание"/>
+					<Dice/>
+				</Option>
+				<Option Destination="6" Text="Голубянка" Availability="Окончание, ДАЙС = 1">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="14" Text="Термиты" Availability="Окончание, ДАЙС = 2">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="11" Text="Пауссин" Availability="Окончание, ДАЙС = 3">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="30" Text="Оса" Availability="Окончание, ДАЙС = 4">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="31" Text="Медовая бочка" Availability="Окончание, ДАЙС = 5">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="32" Text="Муравьиный лев" Availability="Окончание, ДАЙС = 6">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
