@@ -88,8 +88,7 @@
 					<Undice/>
 					<Untrigger Value="Окончание"/>
 					<Time Value="1"/>
-					<Enemy Value="13"/>
-					<Name Value="Скорпион"/>
+					<Enemy Value="Скорпион, 13"/>
 				</Option>
 				<Option Destination="21" Text="Клоп-Хищнец" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 2">
 					<Undice/>
@@ -101,7 +100,7 @@
 					<Untrigger Value="Окончание"/>
 					<Time Value="1"/>
 					<Enemy Value="14"/>
-					<Name Value="Телифон"/>
+					<EnemyName Value="Телифон"/>
 				</Option>
 				<Option Destination="17" Text="Мёд" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 4">
 					<Undice/>
@@ -113,7 +112,7 @@
 					<Untrigger Value="Окончание"/>
 					<Time Value="1"/>
 					<Enemy Value="5"/>
-					<Name Value="Многоножка"/>
+					<EnemyName Value="Многоножка"/>
 				</Option>
 				<Option Destination="8" Text="Наводнение" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 6">
 					<Undice/>
@@ -143,7 +142,7 @@
 					<Untrigger Value="Окончание"/>
 					<Time Value="1"/>
 					<Enemy Value="13"/>
-					<Name Value="Скорпион"/>
+					<EnemyName Value="Скорпион"/>
 				</Option>
 				<Option Destination="21" Text="Клоп-Хищнец" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 2">
 					<Undice/>
@@ -155,7 +154,7 @@
 					<Untrigger Value="Окончание"/>
 					<Time Value="1"/>
 					<Enemy Value="14"/>
-					<Name Value="Телифон"/>
+					<EnemyName Value="Телифон"/>
 				</Option>
 				<Option Destination="17" Text="Мёд" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 4">
 					<Undice/>
@@ -167,7 +166,7 @@
 					<Untrigger Value="Окончание"/>
 					<Time Value="1"/>
 					<Enemy Value="5"/>
-					<Name Value="Многоножка"/>
+					<EnemyName Value="Многоножка"/>
 				</Option>
 				<Option Destination="8" Text="Наводнение" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 6">
 					<Undice/>
@@ -214,7 +213,7 @@
 					<Untrigger Value="Окончание"/>
 					<Time Value="1"/>
 					<Enemy Value="12"/>
-					<Name Value="Богомол"/>
+					<EnemyName Value="Богомол"/>
 				</Option>
 				<Option Destination="3" Text="Ломехуза" Availability="Окончание, ДАЙС = 6">
 					<Undice/>
@@ -559,7 +558,7 @@
 					<Untrigger Value="Окончание"/>
 					<Time Value="1"/>
 					<Enemy Value="13"/>
-					<Name Value="Скорпион"/>
+					<EnemyName Value="Скорпион"/>
 				</Option>
 				<Option Destination="21" Text="Клоп-Хищнец" Availability="Окончание, ДАЙС = 2">
 					<Undice/>
@@ -571,7 +570,7 @@
 					<Untrigger Value="Окончание"/>
 					<Time Value="1"/>
 					<Enemy Value="14"/>
-					<Name Value="Телифон"/>
+					<EnemyName Value="Телифон"/>
 				</Option>
 				<Option Destination="17" Text="Мёд" Availability="Окончание, ДАЙС = 4">
 					<Undice/>
@@ -583,7 +582,7 @@
 					<Untrigger Value="Окончание"/>
 					<Time Value="1"/>
 					<Enemy Value="5"/>
-					<Name Value="Многоножка"/>
+					<EnemyName Value="Многоножка"/>
 				</Option>
 				<Option Destination="8" Text="Наводнение" Availability="Окончание, ДАЙС = 6">
 					<Undice/>
@@ -683,7 +682,7 @@
 					<Untrigger Value="Окончание"/>
 					<Time Value="1"/>
 					<Enemy Value="12"/>
-					<Name Value="Богомол"/>
+					<EnemyName Value="Богомол"/>
 				</Option>
 				<Option Destination="3" Text="Ломехуза" Availability="Окончание, ДАЙС = 6">
 					<Undice/>
@@ -738,7 +737,7 @@
 					<Untrigger Value="Окончание"/>
 					<Time Value="1"/>
 					<Enemy Value="12"/>
-					<Name Value="Богомол"/>
+					<EnemyName Value="Богомол"/>
 				</Option>
 				<Option Destination="3" Text="Ломехуза" Availability="Окончание, ДАЙС = 6">
 					<Undice/>
@@ -817,7 +816,7 @@
 					<Untrigger Value="Окончание"/>
 					<Time Value="1"/>
 					<Enemy Value="13"/>
-					<Name Value="Скорпион"/>
+					<EnemyName Value="Скорпион"/>
 				</Option>
 				<Option Destination="21" Text="Клоп-Хищнец" Availability="Окончание, ДАЙС = 2">
 					<Undice/>
@@ -829,7 +828,7 @@
 					<Untrigger Value="Окончание"/>
 					<Time Value="1"/>
 					<Enemy Value="14"/>
-					<Name Value="Телифон"/>
+					<EnemyName Value="Телифон"/>
 				</Option>
 				<Option Destination="17" Text="Мёд" Availability="Окончание, ДАЙС = 4">
 					<Undice/>
@@ -841,7 +840,7 @@
 					<Untrigger Value="Окончание"/>
 					<Time Value="1"/>
 					<Enemy Value="5"/>
-					<Name Value="Многоножка"/>
+					<EnemyName Value="Многоножка"/>
 				</Option>
 				<Option Destination="8" Text="Наводнение" Availability="Окончание, ДАЙС = 6">
 					<Undice/>
@@ -891,7 +890,7 @@
 					<Untrigger Value="Окончание"/>
 					<Time Value="1"/>
 					<Enemy Value="12"/>
-					<Name Value="Богомол"/>
+					<EnemyName Value="Богомол"/>
 				</Option>
 				<Option Destination="3" Text="Ломехуза" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 6">
 					<Undice/>
@@ -1043,7 +1042,7 @@
 					<Untrigger Value="Окончание"/>
 					<Time Value="1"/>
 					<Enemy Value="12"/>
-					<Name Value="Богомол"/>
+					<EnemyName Value="Богомол"/>
 				</Option>
 				<Option Destination="3" Text="Ломехуза" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 6">
 					<Undice/>
@@ -1215,7 +1214,7 @@
 					<Untrigger Value="Окончание"/>
 					<Time Value="1"/>
 					<Enemy Value="13"/>
-					<Name Value="Скорпион"/>
+					<EnemyName Value="Скорпион"/>
 				</Option>
 				<Option Destination="21" Text="Клоп-Хищнец" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 2">
 					<Undice/>
@@ -1227,7 +1226,7 @@
 					<Untrigger Value="Окончание"/>
 					<Time Value="1"/>
 					<Enemy Value="14"/>
-					<Name Value="Телифон"/>
+					<EnemyName Value="Телифон"/>
 				</Option>
 				<Option Destination="17" Text="Мёд" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 4">
 					<Undice/>
@@ -1239,7 +1238,7 @@
 					<Untrigger Value="Окончание"/>
 					<Time Value="1"/>
 					<Enemy Value="5"/>
-					<Name Value="Многоножка"/>
+					<EnemyName Value="Многоножка"/>
 				</Option>
 				<Option Destination="8" Text="Наводнение" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 6">
 					<Undice/>
@@ -1278,7 +1277,7 @@
 					<Untrigger Value="Окончание"/>
 					<Time Value="1"/>
 					<Enemy Value="13"/>
-					<Name Value="Скорпион"/>
+					<EnemyName Value="Скорпион"/>
 				</Option>
 				<Option Destination="21" Text="Клоп-Хищнец" Availability="Окончание, ДАЙС = 2">
 					<Undice/>
@@ -1290,7 +1289,7 @@
 					<Untrigger Value="Окончание"/>
 					<Time Value="1"/>
 					<Enemy Value="14"/>
-					<Name Value="Телифон"/>
+					<EnemyName Value="Телифон"/>
 				</Option>
 				<Option Destination="17" Text="Мёд" Availability="Окончание, ДАЙС = 4">
 					<Undice/>
@@ -1302,7 +1301,7 @@
 					<Untrigger Value="Окончание"/>
 					<Time Value="1"/>
 					<Enemy Value="5"/>
-					<Name Value="Многоножка"/>
+					<EnemyName Value="Многоножка"/>
 				</Option>
 				<Option Destination="8" Text="Наводнение" Availability="Окончание, ДАЙС = 6">
 					<Undice/>
@@ -1432,7 +1431,7 @@
 					<Untrigger Value="Окончание"/>
 					<Time Value="1"/>
 					<Enemy Value="12"/>
-					<Name Value="Богомол"/>
+					<EnemyName Value="Богомол"/>
 				</Option>
 				<Option Destination="3" Text="Ломехуза" Availability="Окончание, ДАЙС = 6">
 					<Undice/>
@@ -1721,7 +1720,7 @@
 					<Untrigger Value="Окончание"/>
 					<Time Value="1"/>
 					<Enemy Value="12"/>
-					<Name Value="Богомол"/>
+					<EnemyName Value="Богомол"/>
 				</Option>
 				<Option Destination="3" Text="Ломехуза" Availability="СТАРТ = 4, ДАЙС = 6">
 					<Undice/>
