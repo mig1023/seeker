@@ -23,7 +23,7 @@ namespace Seeker.Gamebook.AntSurvival
         }
 
         public override List<string> AdditionalStatus() => protagonist.EnemyHitpoints > 0 ?
-            new List<string> { String.Format("{0}: {1}", protagonist.Name, protagonist.EnemyHitpoints) } : null;
+            new List<string> { String.Format("{0}: {1}", protagonist.EnemyName, protagonist.EnemyHitpoints) } : null;
 
         public override bool Availability(string option)
         {
