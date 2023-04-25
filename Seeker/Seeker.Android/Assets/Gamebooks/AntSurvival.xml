@@ -521,5 +521,66 @@
 					<Time Value="1"/>
 				</Option>
 			</Options>
+		</Paragraph>
 	</Paragraphs>
+	<Paragraph No="13">
+			<Text>В тенистом подлеске встречаются два типа горбаток. Одни, маскирующиеся под колючки и шипы растений, выделяют сладкий сок, полезный для муравьёв. Другие горбатки — это мухи-паразиты. С помощью острого яйцеклада они внедряют в тела жертв свои личинки. Перед тем как окуклиться, личинка паразита поедает содержимое головы муравья.\n\nЕсли в подлеске разведчик найдёт хорошую горбатку (50%), то он добудет целебный напиток, что повысит прирост на 1. При встрече с горбаткой-мухой разведчик погибнет (-1 муравей).</Text>
+			<Options>
+				<Option Destination="13" Text="Исследовать подлесок" Availability="!Середина">
+					<TossCoin/>
+					<Trigger Value="Середина"/>
+				</Option>
+				<Option Destination="13" Text="Не рисковать" Availability="!Середина">
+					<Trigger Value="Середина"/>
+					<Dice/>
+				</Option>
+				<Option Destination="13" Text="Успех! Собрать сок горбатки" Availability="Середина, Решка, !Окончание">
+					<Increase Value="1"/>
+					<Trigger Value="Окончание"/>
+					<Untrigger Value="Решка"/>
+					<Dice/>
+				</Option>
+				<Option Destination="13" Text="Неудача! Разведчик заражён личинкой паразита" Availability="Середина, !Решка, !Окончание">
+					<Quantity Value="-1"/>
+					<Trigger Value="Окончание"/>
+					<Dice/>
+				</Option>
+				<Option Destination="10" Text="Последний муравей погиб от мухи-горбатки"
+					Availability="КОЛИЧЕСТВО &lt; 1"
+					Singleton="КОЛИЧЕСТВО &lt; 1"/>
+				<Option Destination="34" Text="Скорпион" Availability="Окончание, ДАЙС = 1">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+					<Enemy Value="13"/>
+				</Option>
+				<Option Destination="21" Text="Клоп-Хищнец" Availability="Окончание, ДАЙС = 2">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="5" Text="Телифон" Availability="Окончание, ДАЙС = 3">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+					<Enemy Value="14"/>
+				</Option>
+				<Option Destination="17" Text="Мёд" Availability="Окончание, ДАЙС = 4">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="28" Text="Многоножка" Availability="Окончание,  ДАЙС = 5">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+					<Enemy Value="5"/>
+				</Option>
+				<Option Destination="8" Text="Наводнение" Availability="Окончание, ДАЙС = 6">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+			</Options>
+		</Paragraph>
 </Gamebook>
