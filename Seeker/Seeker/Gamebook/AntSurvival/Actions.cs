@@ -31,7 +31,7 @@ namespace Seeker.Gamebook.AntSurvival
                 {
                     if (oneOption.Contains(">") || oneOption.Contains("<") || oneOption.Contains("="))
                     {
-                        int level = Game.Services.LevelParse(option);
+                        int level = Game.Services.LevelParse(oneOption);
 
                         if (oneOption.Contains("ДАЙС =") && !protagonist.Dice[level])
                             return false;
