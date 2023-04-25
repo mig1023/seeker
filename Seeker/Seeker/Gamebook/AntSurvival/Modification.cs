@@ -25,6 +25,11 @@ namespace Seeker.Gamebook.AntSurvival
             {
                 protagonist.Defence -= 1;
             }
+            else if (Name == "TossCoin")
+            {
+                if (Game.Dice.Roll(size: 2) == 1)
+                    Game.Option.Trigger("Решка");
+            }
             else
             {
                 base.Do(protagonist);
