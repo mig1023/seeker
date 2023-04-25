@@ -41,6 +41,12 @@ namespace Seeker.Gamebook.AntSurvival
 
                         if (oneOption.Contains("КОЛИЧЕСТВО <") && (level <= protagonist.Quantity))
                             return false;
+
+                        if (oneOption.Contains("ВРАГ >=") && (level > protagonist.Enemy))
+                            return false;
+
+                        if (oneOption.Contains("ВРАГ <") && (level <= protagonist.Enemy))
+                            return false;
                     }
                     else if (oneOption.Contains("!"))
                     {

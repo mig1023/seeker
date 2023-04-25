@@ -13,8 +13,14 @@ namespace Seeker.Gamebook.AntSurvival
         public int Quantity { get; set; }
         public int Increase { get; set; }
         public int Time { get; set; }
-        public int Enemy { get; set; }
         public int Defence { get; set; }
+
+        private int _enemy;
+        public int Enemy
+        {
+            get => _enemy;
+            set => _enemy = Game.Param.Setter(value);
+        }
 
         public override void Init()
         {

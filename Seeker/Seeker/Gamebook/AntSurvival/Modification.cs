@@ -17,6 +17,10 @@ namespace Seeker.Gamebook.AntSurvival
             {
                 protagonist.Dice = new List<bool> { false, false, false, false, false, false, false };
             }
+            else if (Name == "EnemyDiceWound")
+            {
+                protagonist.Enemy -= Game.Dice.Roll();
+            }
             else
             {
                 base.Do(protagonist);
