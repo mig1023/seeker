@@ -28,6 +28,11 @@ namespace Seeker.Gamebook.AntSurvival
             {
                 protagonist.EnemyHitpoints -= Game.Dice.Roll();
             }
+            else if (Name == "NoMoreEnemy")
+            {
+                protagonist.EnemyName = String.Empty;
+                protagonist.EnemyHitpoints = 0;
+            }
             else if (Name == "UseDefence")
             {
                 protagonist.Defence -= 1;
