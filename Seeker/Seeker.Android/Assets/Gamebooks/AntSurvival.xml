@@ -836,5 +836,54 @@
 				</Option>
 			</Options>
 		</Paragraph>
+		<Paragraph No="19">
+			<Text>Муравьи срезали много листьев. Их можно использовать как субстрат для посева грибницы или для укрепления муравейника. Личинки выделят изо рта шёлк, прочно сшивая листья и строя своеобразные стены.\n\nГрибная ферма даст еду новому поколению, а зелёные стены защитят колонию от внешних врагов.</Text>
+			<Options>
+				<Option Destination="19" Text="Грибница" Availability="!Окончание">
+					<QuantityIncrease/>
+					<Trigger Value="Окончание"/>
+					<Dice/>
+				</Option>
+				<Option Destination="19" Text="Стены из листьев" Availability="Мало соседей, !Окончание">
+					<Increase Value="2"/>
+					<Trigger Value="Окончание"/>
+					<Dice/>
+				</Option>
+				<Option Destination="9" Text="Победа"
+					Availability="КОЛИЧЕСТВО >= 50"
+					Singleton="КОЛИЧЕСТВО >= 50"/>
+				<Option Destination="13" Text="Горбатки" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 1">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="27" Text="Трубкозуб" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 2">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="26" Text="Соседние муравьи" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 3">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="2" Text="Медвяная падь" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 4">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="18" Text="Богомол" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 5">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+					<Enemy Value="12"/>
+				</Option>
+				<Option Destination="3" Text="Ломехуза" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 6">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
