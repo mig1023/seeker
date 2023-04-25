@@ -522,8 +522,7 @@
 				</Option>
 			</Options>
 		</Paragraph>
-	</Paragraphs>
-	<Paragraph No="13">
+		<Paragraph No="13">
 			<Text>В тенистом подлеске встречаются два типа горбаток. Одни, маскирующиеся под колючки и шипы растений, выделяют сладкий сок, полезный для муравьёв. Другие горбатки — это мухи-паразиты. С помощью острого яйцеклада они внедряют в тела жертв свои личинки. Перед тем как окуклиться, личинка паразита поедает содержимое головы муравья.\n\nЕсли в подлеске разведчик найдёт хорошую горбатку (50%), то он добудет целебный напиток, что повысит прирост на 1. При встрече с горбаткой-мухой разведчик погибнет (-1 муравей).</Text>
 			<Options>
 				<Option Destination="13" Text="Исследовать подлесок" Availability="!Середина">
@@ -583,4 +582,51 @@
 				</Option>
 			</Options>
 		</Paragraph>
+		<Paragraph No="14">
+			<Text>Муравьи и термиты часто сражаются. Битвы происходят каждый день. Агрессорами чаще выступают муравьи.\n\nНынче колония окрепла и может совершить набег на термитник. Успешный рейд обеспечит муравейник едой для расплода, но став доминирующим видом в округе, Формицин Ратус будет приоритетной целью для хищников.</Text>
+			<Options>
+				<Option Destination="14" Text="Ограбить термитник" Availability="!Окончание">
+					<Increase Value="4"/>
+					<Trigger Value="Окончание, Нет термитов"/>
+					<Dice/>
+				</Option>
+				<Option Destination="14" Text="Оставить термитов в покое" Availability="!Окончание">
+					<Increase Value="-1"/>
+					<Trigger Value="Окончание"/>
+					<Untrigger Value="Нет термитов"/>
+					<Dice/>
+				</Option>
+				<Option Destination="20" Text="Тля" Availability="Окончание, ДАЙС = 1">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="7" Text="Муравьед" Availability="Окончание, ДАЙС = 2">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="25" Text="Непентес" Availability="Окончание, ДАЙС = 3">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="24" Text="Червец" Availability="Окончание, ДАЙС = 4">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="23" Text="Муравейник" Availability="Окончание, ДАЙС = 5">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="12" Text="Паук-Муравьед" Availability="Окончание, ДАЙС = 6">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+			</Options>
+		</Paragraph>
+	</Paragraphs>
 </Gamebook>
