@@ -1230,5 +1230,65 @@
 				</Option>
 			</Options>
 		</Paragraph>
+		<Paragraph No="27">
+			<Text>Трубкозуб — животное, прозванное "земляным поросёнком" за свиноподобное тело и умение рыть норы. Зверёк стал охотиться на насекомых после захода солнца. Он разрушает муравейники и термитники когтями, ловя свою добычу языком.\n\nЕсли в лесу обитает много муравьёв или термитов, то трубкозуб найдёт сторонних жертв. В противном случае (есть метки "Мало соседей" и "Нет термитов") он потревожит колонию Формицина Ратуса.</Text>
+			<Options>
+				<Option Destination="27" Text="Трубкозуб разоряет термитник" Availability="!Нет термитов, !Окончание">
+					<Trigger Value="Окончание"/>
+					<Dice/>
+				</Option>
+				<Option Destination="27" Text="Трубкозуб атакует других муравьёв" Availability="!Мало соседей, !Окончание">
+					<Trigger Value="Окончание"/>
+					<Dice/>
+				</Option>
+				<Option Destination="27" Text="Пережить охоту трубкозуба" Availability="!Окончание">
+					<Quantity Value="-4"/>
+					<Increase Value="-4"/>
+					<Trigger Value="Окончание"/>
+					<Dice/>
+				</Option>
+				<Option Destination="21" Text="Использовать защиту" Availability="ЗАЩИТА >= 1, !Окончание">
+					<UseDefence/>
+					<Untrigger Value="Окончание"/>
+					<Dice/>
+				</Option>
+				<Option Destination="10" Text="Визит трубкозуба стал роковым"
+					Availability="КОЛИЧЕСТВО &lt; 1"
+					Singleton="КОЛИЧЕСТВО &lt; 1"/>
+				<Option Destination="34" Text="Скорпион" Availability="Окончание, ДАЙС = 1">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+					<Enemy Value="13"/>
+				</Option>
+				<Option Destination="21" Text="Клоп-Хищнец" Availability="Окончание, ДАЙС = 2">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="5" Text="Телифон" Availability="Окончание, ДАЙС = 3">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+					<Enemy Value="14"/>
+				</Option>
+				<Option Destination="17" Text="Мёд" Availability="Окончание, ДАЙС = 4">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="28" Text="Многоножка" Availability="Окончание, ДАЙС = 5">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+					<Enemy Value="5"/>
+				</Option>
+				<Option Destination="8" Text="Наводнение" Availability="Окончание, ДАЙС = 6">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
