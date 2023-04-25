@@ -228,7 +228,7 @@
 				</Option>
 				<Option Destination="5" Text="Забрать останки телифон" Availability="ВРАГ &lt; 1, !Окончание">
 					<Dice/>
-					<Untrigger Value="Окончание"/>
+					<Trigger Value="Окончание"/>
 					<Increase Value="3"/>
 				</Option>
 				<Option Destination="5" Text="Отдать муравья на съедение" Availability="ВРАГ >= 1, КОЛИЧЕСТВО >= 2, !Окончание">
@@ -793,7 +793,7 @@
 				</Option>
 				<Option Destination="18" Text="Забрать останки богомола" Availability="ВРАГ &lt; 1, !Окончание">
 					<Dice/>
-					<Untrigger Value="Окончание"/>
+					<Trigger Value="Окончание"/>
 					<Increase Value="2"/>
 				</Option>
 				<Option Destination="18" Text="Отдать муравья на съедение" Availability="ВРАГ >= 1, КОЛИЧЕСТВО >= 2, !Окончание">
@@ -1299,7 +1299,7 @@
 				</Option>
 				<Option Destination="18" Text="Забрать останки многоножки" Availability="ВРАГ &lt; 1, !Окончание">
 					<Dice/>
-					<Untrigger Value="Окончание"/>
+					<Trigger Value="Окончание"/>
 					<Increase Value="2"/>
 				</Option>
 				<Option Destination="18" Text="Спрятаться от многоножки" Availability="ВРАГ >= 1, !Окончание">
@@ -1719,7 +1719,7 @@
 				</Option>
 				<Option Destination="34" Text="Забрать останки скорпиона" Availability="ВРАГ &lt; 1, !Окончание">
 					<Dice/>
-					<Untrigger Value="Окончание"/>
+					<Trigger Value="Окончание"/>
 					<Increase Value="2"/>
 				</Option>
 				<Option Destination="34" Text="Отдать муравья на съедение" Availability="ВРАГ >= 1, КОЛИЧЕСТВО >= 2, !Окончание">
