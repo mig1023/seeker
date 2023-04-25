@@ -1208,8 +1208,7 @@
 					<Undice/>
 					<Untrigger Value="Окончание"/>
 					<Time Value="1"/>
-					<Enemy Value="14"/>
-					<EnemyName Value="Телифон"/>
+					<Enemy Value="Телифон, 14"/>
 				</Option>
 				<Option Destination="17" Text="Мёд" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 4">
 					<Undice/>
