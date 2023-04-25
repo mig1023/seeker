@@ -9,11 +9,18 @@ namespace Seeker.Gamebook.AntSurvival
         public static Actions StaticInstance = new Actions();
         private static Character protagonist = Character.Protagonist;
 
-        public override List<string> Status() => new List<string>
+        public override List<string> Status()
         {
-            String.Format("Количество: {0}", protagonist.Quantity),
-            String.Format("Прирост: {0}", protagonist.Increase),
-        };
+            List<string> statusLines = new List<string>();
+
+            statusLines.Add(String.Format("Количество: {0}", protagonist.Quantity));
+            statusLines.Add(String.Format("Прирост: {0}", protagonist.Increase));
+
+            if (protagonist.Defence > 0)
+                statusLines.Add(String.Format("Защита: {0}", protagonist.Defence));
+
+            return statusLines;
+        }
 
         public override bool Availability(string option)
         {
