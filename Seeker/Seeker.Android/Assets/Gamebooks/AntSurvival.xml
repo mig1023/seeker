@@ -117,5 +117,54 @@
 				</Option>
 			</Options>
 		</Paragraph>
+		<Paragraph No="3">
+			<Text>Обнаружен жук, способный радовать и одурманивать. Его зовут Ломехуза. От выделений его брюшных желёз муравьи впадают в эйфорию.\n\nЕсли взять жука в муравейник, колония станет сплочённее, но пострадает потомство. Муравьи будут чаще кормить и выхаживать гостя вместо своих личинок.</Text>
+			<Options>
+				<Option Destination="3" Text="Взять Ломехузу" Availability="!Окончание">
+					<Quantity Value="8"/>
+					<Increase Value="-4"/>
+					<Trigger Value="Окончание"/>
+					<Dice/>
+				</Option>
+				<Option Destination="3" Text="Победа" Availability="!Окончание">
+					<Trigger Value="Окончание"/>
+					<Dice/>
+				</Option>
+				<Option Destination="9" Text="Победа" Availability="КОЛИЧЕСТВО >= 50" Singleton="КОЛИЧЕСТВО >= 50"/>
+				<Option Destination="34" Text="Скорпион" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 1">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+					<Enemy Value="13"/>
+				</Option>
+				<Option Destination="21" Text="Клоп-Хищнец" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 2">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="5" Text="Телифон" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 3">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+					<Enemy Value="14"/>
+				</Option>
+				<Option Destination="17" Text="Мёд" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 4">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="28" Text="Многоножка" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 5">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+					<Enemy Value="5"/>
+				</Option>
+				<Option Destination="8" Text="Наводнение" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 6">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
