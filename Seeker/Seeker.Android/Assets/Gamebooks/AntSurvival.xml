@@ -735,5 +735,51 @@
 				</Option>
 			</Options>
 		</Paragraph>
+		<Paragraph No="17">
+			<Text>Рядом с буком находится слабая колония пчёл, у которых можно отобрать мёд. Пчелиный мёд обеспечит матку и расплод питанием. Однако наличие мёда в муравейнике может привлечь медведя.</Text>
+			<Options>
+				<Option Destination="17" Text="Забрать мёд" Availability="!Окончание">
+					<Increase Value="2"/>
+					<Trigger Value="Мёд, Окончание"/>
+					<Dice/>
+				</Option>
+				<Option Destination="17" Text="Не трогать пчёл" Availability="!Окончание">
+					<Untrigger Value="Мёд"/>
+					<Trigger Value="Окончание"/>
+					<Dice/>
+				</Option>
+				<Option Destination="6" Text="Голубянка" Availability="Окончание, ДАЙС = 1">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="14" Text="Термиты" Availability="Окончание, ДАЙС = 2">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="11" Text="Пауссин" Availability="Окончание, ДАЙС = 3">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="30" Text="Оса" Availability="Окончание, ДАЙС = 4">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="31" Text="Медовая бочка" Availability="Окончание, ДАЙС = 5">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+					<Enemy Value="12"/>
+				</Option>
+				<Option Destination="32" Text="Муравьиный лев" Availability="Окончание, ДАЙС = 6">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
