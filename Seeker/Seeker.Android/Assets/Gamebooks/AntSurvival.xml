@@ -1419,5 +1419,51 @@
 				</Option>
 			</Options>
 		</Paragraph>
+		<Paragraph No="30">
+			<Text>Рядом с буком летает оса. Она пугает союзников муравьёв — тлей и червецов.\n\nС меткой "Оса" события "Червец" и "Тля" бесполезны. Чтобы убрать вредную метку, следует одолеть осу в битве, жертвуя тремя муравьями.</Text>
+			<Options>
+				<Option Destination="30" Text="Атаковать неприятеля" Availability="КОЛИЧЕСТВО >= 4, !Окончание">
+					<Quantity Value="-3"/>
+					<Untrigger Value="Оса"/>
+					<Trigger Value="Окончание"/>
+					<Dice/>
+				</Option>
+				<Option Destination="30" Text="Прятаться от угрозы" Availability="!Окончание">
+					<Increase Value="-1"/>
+					<Trigger Value="Оса, Окончание"/>
+					<Dice/>
+				</Option>
+				<Option Destination="20" Text="Тля" Availability="Окончание, ДАЙС = 1">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="7" Text="Муравьед" Availability="Окончание, ДАЙС = 2">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="25" Text="Непентес" Availability="Окончание, ДАЙС = 3">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="24" Text="Червец" Availability="Окончание, ДАЙС = 4">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="23" Text="Муравейник" Availability="Окончание, ДАЙС = 5">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="12" Text="Паук-Муравьед" Availability="Окончание, ДАЙС = 6">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
