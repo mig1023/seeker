@@ -1178,5 +1178,57 @@
 				</Option>
 			</Options>
 		</Paragraph>
+		<Paragraph No="26">
+			<Text>Формицин Ратус борется с иными видами муравьёв за обладание ресурсами. Драки происходят каждый день.\n\nНынче колония окрепла и может совершить набег на соседей. Успешный рейд обеспечит муравейник рабами и едой для расплода, но став доминирующим видом, Формицин Ратус будет приоритетной целью для хищников.</Text>
+			<Options>
+				<Option Destination="26" Text="Совершить набег" Availability="!Окончание">
+					<QuantityIncrease/>
+					<Trigger Value="Мало соседей, Окончание"/>
+					<Dice/>
+				</Option>
+				<Option Destination="26" Text="Уступить в борьбе" Availability="!Окончание">
+					<Increase Value="-2"/>
+					<Untrigger Value="Мало соседей"/>
+					<Trigger Value="Окончание"/>
+					<Dice/>
+				</Option>
+				<Option Destination="9" Text="Победа"
+					Availability="КОЛИЧЕСТВО >= 50"
+					Singleton="КОЛИЧЕСТВО >= 50"/>
+				<Option Destination="34" Text="Скорпион" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 1">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+					<Enemy Value="13"/>
+				</Option>
+				<Option Destination="21" Text="Клоп-Хищнец" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 2">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="5" Text="Телифон" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 3">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+					<Enemy Value="14"/>
+				</Option>
+				<Option Destination="17" Text="Мёд" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 4">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="28" Text="Многоножка" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 5">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+					<Enemy Value="5"/>
+				</Option>
+				<Option Destination="8" Text="Наводнение" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 6">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
