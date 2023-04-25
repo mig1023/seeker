@@ -1038,7 +1038,7 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="23">
-			<Text>Муравейник сооружён из веточек, листьев, иголок хвойных растений. Сейчас колония может заняться укреплением своего гнезда либо заботой о расплоде</Text>
+			<Text>Муравейник сооружён из веточек, листьев, иголок хвойных растений. Сейчас колония может заняться укреплением своего гнезда либо заботой о расплоде.</Text>
 			<Options>
 				<Option Destination="23" Text="Забота о расплоде" Availability="!Окончание">
 					<QuantityIncrease/>
@@ -1047,6 +1047,54 @@
 				</Option>
 				<Option Destination="23" Text="Укрепление муравейника" Availability="!Окончание">
 					<Increase Value="3"/>
+					<Trigger Value="Окончание"/>
+					<Dice/>
+				</Option>
+				<Option Destination="9" Text="Победа"
+					Availability="КОЛИЧЕСТВО >= 50"
+					Singleton="КОЛИЧЕСТВО >= 50"/>
+				<Option Destination="15" Text="Медведь" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 1">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="22" Text="Кордицепс" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 2">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="4" Text="Муравление" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 3">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="19" Text="Запасы листьев" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 4">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="29" Text="Смена власти" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 5">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="16" Text="Молох" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 6">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+			</Options>
+		</Paragraph>
+		<Paragraph No="24">
+			<Text>Замечен червец, старый друг муравьёв.\n\nЧервецы кормят муравьев сладкими выделениями в обмен на защиту. Также муравьи переносят червецов с одного растения на другое, чтобы обеспечить их едой.\n\nЕсли поблизости обитает оса, червец побоится войти с колонией в контакт.</Text>
+			<Options>
+				<Option Destination="24" Text="Оса пугает червеца" Availability="Оса, !Окончание">
+					<Trigger Value="Окончание"/>
+					<Dice/>
+				</Option>
+				<Option Destination="24" Text="Дружба с червецом" Availability="!Оса, !Окончание">
+					<Quantity Value="1"/>
+					<Increase Value="2"/>
 					<Trigger Value="Окончание"/>
 					<Dice/>
 				</Option>
