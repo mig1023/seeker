@@ -412,5 +412,11 @@
 				</Option>
 			</Options>
 		</Paragraph>
+		<Paragraph No="9">
+			<Text>Колония смогла окрепнуть и значительно повысить свою популяцию.</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
