@@ -85,26 +85,35 @@
 				<Option Destination="34" Text="Скорпион" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 1">
 					<Undice/>
 					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+					<Enemy Value="13"/>
 				</Option>
 				<Option Destination="21" Text="Клоп-Хищнец" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 2">
 					<Undice/>
 					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
 				</Option>
 				<Option Destination="5" Text="Телифон" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 3">
 					<Undice/>
 					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+					<Enemy Value="14"/>
 				</Option>
 				<Option Destination="17" Text="Мёд" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 4">
 					<Undice/>
 					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
 				</Option>
 				<Option Destination="28" Text="Многоножка" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 5">
 					<Undice/>
 					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+					<Enemy Value="5"/>
 				</Option>
 				<Option Destination="8" Text="Наводнение" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 6">
 					<Undice/>
 					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
 				</Option>
 			</Options>
 		</Paragraph>
