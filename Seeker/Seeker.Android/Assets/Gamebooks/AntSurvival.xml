@@ -699,7 +699,7 @@
 					<Untrigger Value="Окончание"/>
 					<Dice/>
 				</Option>
-				<Option Destination="16" Text="Нападение молоха стало роковым"
+				<Option Destination="10" Text="Нападение молоха стало роковым"
 					Availability="КОЛИЧЕСТВО &lt; 1"
 					Singleton="КОЛИЧЕСТВО &lt; 1"/>
 				<Option Destination="13" Text="Горбатки" Availability="Окончание, ДАЙС = 1">
@@ -951,7 +951,7 @@
 					<Untrigger Value="Окончание"/>
 					<Dice/>
 				</Option>
-				<Option Destination="16" Text="Атака клопа-хищнеца стала роковой"
+				<Option Destination="10" Text="Атака клопа-хищнеца стала роковой"
 					Availability="КОЛИЧЕСТВО &lt; 1"
 					Singleton="КОЛИЧЕСТВО &lt; 1"/>
 				<Option Destination="6" Text="Голубянка" Availability="Окончание, ДАЙС = 1">
@@ -981,6 +981,56 @@
 					<Enemy Value="12"/>
 				</Option>
 				<Option Destination="32" Text="Муравьиный лев" Availability="Окончание, ДАЙС = 6">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+			</Options>
+		</Paragraph>
+		<Paragraph No="22">
+			<Text>Гриб кордицепс превратил одного из муравьёв в послушного зомби. Заражённый муравей ушёл из колонии, взобрался на соседнее растение и повис на нём, удерживаясь челюстями. Позже из бедолаги проросло плодовое тело гриба. Так через свою жертву кордицепс выбрал оптимальное место для распространения спор.\n\nДля ликвидации гриба можно отправить несколько муравьёв, после чего им будет запрещено возвращаться в колонию из-за заражения. Если кордицепс не трогать, то он принесёт вред следующему поколению.</Text>
+			<Options>
+				<Option Destination="22" Text="Ликвидация гриба" Availability="!Окончание">
+					<Quantity Value="-3"/>
+					<Trigger Value="Окончание"/>
+					<Dice/>
+				</Option>
+				<Option Destination="22" Text="Игнорировать угрозу" Availability="!Окончание">
+					<Quantity Value="-1"/>
+					<Increase Value="-1"/>
+					<Trigger Value="Окончание"/>
+					<Dice/>
+				</Option>
+				<Option Destination="10" Text="Кордицепс уничтожил колонию"
+					Availability="КОЛИЧЕСТВО &lt; 1"
+					Singleton="КОЛИЧЕСТВО &lt; 1"/>
+				<Option Destination="13" Text="Горбатки" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 1">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="27" Text="Трубкозуб" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 2">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="26" Text="Соседние муравьи" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 3">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="2" Text="Медвяная падь" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 4">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="18" Text="Богомол" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 5">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+					<Enemy Value="12"/>
+				</Option>
+				<Option Destination="3" Text="Ломехуза" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 6">
 					<Undice/>
 					<Untrigger Value="Окончание"/>
 					<Time Value="1"/>
