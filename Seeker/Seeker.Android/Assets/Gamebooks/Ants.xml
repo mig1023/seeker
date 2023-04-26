@@ -10,6 +10,7 @@
 		</Styles>
 		<Constants>
 			<List Name="WithoutStatuses" Value="0, 1"/>
+			<List Name="Heads" Value="Королева Антуанетта Плодовитая, Принц Мурадин Крылатый, Солдат Руф Твердожвалый, Рабочая Партия Муравьёв, Отважный Мураш, Амазонка Ахилла Кусачая"/>
 		</Constants>
 		<Settings>
 			<HideDisabledOption/>
