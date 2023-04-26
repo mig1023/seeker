@@ -416,6 +416,12 @@
 		</Paragraph>
 		<Paragraph No="9">
 			<Text>Колония смогла окрепнуть и значительно повысить свою популяцию.</Text>
+			<Actions>
+				<Result>
+					<Head>Рейтинг прохождения</Head>
+					<Text>Узнать</Text>
+				</Result>
+			</Actions>
 			<Options>
 				<Gameover/>
 			</Options>
