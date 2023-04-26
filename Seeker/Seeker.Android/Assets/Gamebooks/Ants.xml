@@ -154,9 +154,7 @@
 					<Trigger Value="Окончание"/>
 					<Dice/>
 				</Option>
-				<Option Destination="9" Text="Победа"
-					Availability="КОЛИЧЕСТВО >= 50"
-					Singleton="КОЛИЧЕСТВО >= 50"/>
+				<Option Destination="9" Text="Победа" Availability="КОЛИЧЕСТВО >= 50" Singleton="Availability"/>
 				<Option Destination="34" Text="Скорпион" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 1">
 					<Undice/>
 					<Untrigger Value="Окончание"/>
