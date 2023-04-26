@@ -1570,21 +1570,6 @@
 					<Undice/>
 					<Dice/>
 				</Option>
-				<Option Destination="33" Text="Переброс события: осталось 3 попытки" Availability="СТАРТ = 1">
-					<Start Value="1"/>
-					<Undice/>
-					<Dice/>
-				</Option>
-				<Option Destination="33" Text="Переброс события: осталось 2 попытки" Availability="СТАРТ = 2">
-					<Start Value="1"/>
-					<Undice/>
-					<Dice/>
-				</Option>
-				<Option Destination="33" Text="Переброс события: осталось 1 попытки" Availability="СТАРТ = 3">
-					<Start Value="1"/>
-					<Undice/>
-					<Dice/>
-				</Option>
 				<Option Destination="6" Text="Голубянка" Availability="СТАРТ = 1, ДАЙС = 1">
 					<Undice/>
 					<Untrigger Value="Окончание"/>
@@ -1705,6 +1690,21 @@
 					<Undice/>
 					<Untrigger Value="Окончание"/>
 					<Time Value="1"/>
+				</Option>
+				<Option Destination="33" Text="Переброс события: осталось 3 попытки" Availability="СТАРТ = 1">
+					<Start Value="1"/>
+					<Undice/>
+					<Dice/>
+				</Option>
+				<Option Destination="33" Text="Переброс события: осталось 2 попытки" Availability="СТАРТ = 2">
+					<Start Value="1"/>
+					<Undice/>
+					<Dice/>
+				</Option>
+				<Option Destination="33" Text="Переброс события: осталось 1 попытки" Availability="СТАРТ = 3">
+					<Start Value="1"/>
+					<Undice/>
+					<Dice/>
 				</Option>
 			</Options>
 		</Paragraph>
