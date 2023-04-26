@@ -11,6 +11,14 @@
 		<Constants>
 			<List Name="WithoutStatuses" Value="0, 1"/>
 			<List Name="Heads" Value="Королева Антуанетта Плодовитая, Принц Мурадин Крылатый, Солдат Руф Твердожвалый, Рабочая Партия Муравьёв, Отважный Мураш, Амазонка Ахилла Кусачая"/>
+			<Dictionary Name="Changes">
+				<Item Name="Королева Антуанетта Плодовитая" Value="Королева Антуанетта Плодовитая уделяет много времени потомству. Ей стало сложно управлять колонией."/>
+				<Item Name="Принц Мурадин Крылатый" Value="Принц Мурадин Крылатый готовится к брачному полёту. Ему стало сложно управлять колонией."/>
+				<Item Name="Солдат Руф Твердожвалый" Value="Солдат Руф Твердожвалый зализывает раны после драки с термитами. Ему стало сложно управлять колонией."/>
+				<Item Name="Рабочая Партия Муравьёв" Value="Рабочая Партия Муравьёв теряет влияние из-за постоянных споров."/>
+				<Item Name="Отважный Мураш" Value="Отважный Мураш теряет авторитет из-за бегства при встрече с тарантулом."/>
+				<Item Name="Амазонка Ахилла Кусачая" Value="Вспыльчивый нрав Амазонки Ахиллы Кусачей злит большую часть подданных. Зреет мятеж."/>
+			</Dictionary>
 			<Dictionary Name="Rating">
 				<Item Name="Затянутое прохождение игры!BIG|BOLD|Ваше звание: Мастер кликанья." Value="100"/>
 				<Item Name="Долгое прохождение игры!BIG|BOLD|Ваше звание: Дезинфектор." Value="150"/>
@@ -434,8 +442,7 @@
 			<Text>Колония смогла окрепнуть и значительно повысить свою популяцию.</Text>
 			<Actions>
 				<Result>
-					<Head>Рейтинг прохождения</Head>
-					<Button>Узнать</Button>
+					<Button>Узнать подробнее</Button>
 				</Result>
 			</Actions>
 			<Options>
@@ -1365,89 +1372,16 @@
 		</Paragraph>
 		<Paragraph No="29">
 			<Text>Зреют перемены к лучшему.</Text>
+			<Actions>
+				<Changes>
+					<Button>Узнать подробнее</Button>
+				</Changes>
+			</Actions>
 			<Options>
-				<Option Destination="29" Text="К власти приходит..." Availability="!Окончание, !Середина">
+				<Option Destination="35" Text="К власти приходит...">
 					<Dice/>
 					<Dice/>
-					<Trigger Value="Середина"/>
 					<HeadChange/>
-				</Option>
-				<Option Destination="29" Text="Королева Антуанетта Плодовитая" Availability="Середина, ДАЙС = 1">
-					<Undice/>
-					<Dice/>
-					<Trigger Value="Окончание, Королева Антуанетта Плодовитая"/>
-					<Untrigger Value="Середина"/>
-					<Increase Value="6"/>
-				</Option>
-				<Option Destination="29" Text="Принц Мурадин Крылатый" Availability="Середина, ДАЙС = 2">
-					<Undice/>
-					<Dice/>
-					<Trigger Value="Окончание, Принц Мурадин Крылатый"/>
-					<Untrigger Value="Середина"/>
-					<Increase Value="4"/>
-					<Defence Value="1"/>
-				</Option>
-				<Option Destination="29" Text="Солдат Руф Твердожвалый" Availability="Середина, ДАЙС = 3">
-					<Undice/>
-					<Dice/>
-					<Trigger Value="Окончание, Солдат Руф Твердожвалый"/>
-					<Untrigger Value="Середина"/>
-					<Increase Value="-2"/>
-					<Defence Value="5"/>
-				</Option>
-				<Option Destination="29" Text="Рабочая Партия Муравьёв" Availability="Середина, ДАЙС = 4">
-					<Undice/>
-					<Dice/>
-					<Trigger Value="Окончание, Рабочая Партия Муравьёв"/>
-					<Untrigger Value="Середина"/>
-					<Increase Value="2"/>
-					<Defence Value="2"/>
-				</Option>
-				<Option Destination="29" Text="Отважный Мураш" Availability="Середина, ДАЙС = 5">
-					<Undice/>
-					<Dice/>
-					<Trigger Value="Окончание, Отважный Мураш"/>
-					<Untrigger Value="Середина"/>
-					<Defence Value="3"/>
-				</Option>
-				<Option Destination="29" Text="Амазонка Ахилла Кусачая" Availability="Середина, ДАЙС = 6">
-					<Undice/>
-					<Dice/>
-					<Trigger Value="Окончание, Амазонка Ахилла Кусачая"/>
-					<Untrigger Value="Середина"/>
-					<Increase Value="-1"/>
-					<Defence Value="4"/>
-				</Option>
-				<Option Destination="13" Text="Горбатки" Availability="Окончание, ДАЙС = 1">
-					<Undice/>
-					<Untrigger Value="Окончание"/>
-					<Time Value="1"/>
-				</Option>
-				<Option Destination="27" Text="Трубкозуб" Availability="Окончание, ДАЙС = 2">
-					<Undice/>
-					<Untrigger Value="Окончание"/>
-					<Time Value="1"/>
-				</Option>
-				<Option Destination="26" Text="Соседние муравьи" Availability="Окончание, ДАЙС = 3">
-					<Undice/>
-					<Untrigger Value="Окончание"/>
-					<Time Value="1"/>
-				</Option>
-				<Option Destination="2" Text="Медвяная падь" Availability="Окончание, ДАЙС = 4">
-					<Undice/>
-					<Untrigger Value="Окончание"/>
-					<Time Value="1"/>
-				</Option>
-				<Option Destination="18" Text="Богомол" Availability="Окончание, ДАЙС = 5">
-					<Undice/>
-					<Untrigger Value="Окончание"/>
-					<Time Value="1"/>
-					<Enemy Value="Богомол, 12"/>
-				</Option>
-				<Option Destination="3" Text="Ломехуза" Availability="Окончание, ДАЙС = 6">
-					<Undice/>
-					<Untrigger Value="Окончание"/>
-					<Time Value="1"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -1786,6 +1720,87 @@
 					<Time Value="1"/>
 				</Option>
 				<Option Destination="32" Text="Муравьиный лев" Availability="Окончание, ДАЙС = 6">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+			</Options>
+		</Paragraph>
+		<Paragraph No="35">
+			<Text>К власти приходит...</Text>
+			<Options>
+				<Option Destination="36" Text="Королева Антуанетта Плодовитая" Availability="ДАЙС = 1">
+					<Undice/>
+					<Dice/>
+					<Trigger Value="Королева Антуанетта Плодовитая"/>
+					<Increase Value="6"/>
+				</Option>
+				<Option Destination="36" Text="Принц Мурадин Крылатый" Availability="ДАЙС = 2">
+					<Undice/>
+					<Dice/>
+					<Trigger Value="Принц Мурадин Крылатый"/>
+					<Increase Value="4"/>
+					<Defence Value="1"/>
+				</Option>
+				<Option Destination="36" Text="Солдат Руф Твердожвалый" Availability="ДАЙС = 3">
+					<Undice/>
+					<Dice/>
+					<Trigger Value="Солдат Руф Твердожвалый"/>
+					<Increase Value="-2"/>
+					<Defence Value="5"/>
+				</Option>
+				<Option Destination="36" Text="Рабочая Партия Муравьёв" Availability="ДАЙС = 4">
+					<Undice/>
+					<Dice/>
+					<Trigger Value="Рабочая Партия Муравьёв"/>
+					<Increase Value="2"/>
+					<Defence Value="2"/>
+				</Option>
+				<Option Destination="36" Text="Отважный Мураш" Availability="ДАЙС = 5">
+					<Undice/>
+					<Dice/>
+					<Trigger Value="Отважный Мураш"/>
+					<Defence Value="3"/>
+				</Option>
+				<Option Destination="36" Text="Амазонка Ахилла Кусачая" Availability="ДАЙС = 6">
+					<Undice/>
+					<Dice/>
+					<Trigger Value="Амазонка Ахилла Кусачая"/>
+					<Increase Value="-1"/>
+					<Defence Value="4"/>
+				</Option>
+			</Options>
+		</Paragraph>				
+		<Paragraph No="36">
+			<Text>Наступило новое правление.</Text>
+			<Options>		
+				<Option Destination="13" Text="Горбатки" Availability="ДАЙС = 1">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="27" Text="Трубкозуб" Availability="ДАЙС = 2">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="26" Text="Соседние муравьи" Availability="ДАЙС = 3">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="2" Text="Медвяная падь" Availability="ДАЙС = 4">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+				</Option>
+				<Option Destination="18" Text="Богомол" Availability="ДАЙС = 5">
+					<Undice/>
+					<Untrigger Value="Окончание"/>
+					<Time Value="1"/>
+					<Enemy Value="Богомол, 12"/>
+				</Option>
+				<Option Destination="3" Text="Ломехуза" Availability="ДАЙС = 6">
 					<Undice/>
 					<Untrigger Value="Окончание"/>
 					<Time Value="1"/>
