@@ -1352,12 +1352,14 @@
 					<Undice/>
 					<Dice/>
 					<Trigger Value="Окончание, Королева Антуанетта Плодовитая"/>
+					<Untrigger Value="Середина"/>
 					<Increase Value="6"/>
 				</Option>
 				<Option Destination="29" Text="Принц Мурадин Крылатый" Availability="ДАЙС = 2">
 					<Undice/>
 					<Dice/>
 					<Trigger Value="Окончание, Принц Мурадин Крылатый"/>
+					<Untrigger Value="Середина"/>
 					<Increase Value="4"/>
 					<Defence Value="1"/>
 				</Option>
@@ -1365,6 +1367,7 @@
 					<Undice/>
 					<Dice/>
 					<Trigger Value="Окончание, Солдат Руф Твердожвалый"/>
+					<Untrigger Value="Середина"/>
 					<Increase Value="-2"/>
 					<Defence Value="5"/>
 				</Option>
@@ -1372,6 +1375,7 @@
 					<Undice/>
 					<Dice/>
 					<Trigger Value="Окончание, Рабочая Партия Муравьёв"/>
+					<Untrigger Value="Середина"/>
 					<Increase Value="2"/>
 					<Defence Value="2"/>
 				</Option>
@@ -1379,12 +1383,14 @@
 					<Undice/>
 					<Dice/>
 					<Trigger Value="Окончание, Отважный Мураш"/>
+					<Untrigger Value="Середина"/>
 					<Defence Value="3"/>
 				</Option>
 				<Option Destination="29" Text="Амазонка Ахилла Кусачая" Availability="ДАЙС = 6">
 					<Undice/>
 					<Dice/>
 					<Trigger Value="Окончание, Амазонка Ахилла Кусачая"/>
+					<Untrigger Value="Середина"/>
 					<Increase Value="-1"/>
 					<Defence Value="4"/>
 				</Option>
