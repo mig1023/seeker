@@ -24,5 +24,8 @@ namespace Seeker.Gamebook.Ants
 
             return OptionParseWithDo(xmlOption, modifications);
         }
+
+        public override Abstract.IActions ActionParse(XmlNode xmlAction) =>
+            ActionTemplate(xmlAction, new Actions());
     }
 }
