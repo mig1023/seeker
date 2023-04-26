@@ -291,7 +291,17 @@ namespace Seeker
                 int aftertextsCount = option.Aftertexts?.Count ?? 0;
                 bool mustBeVisible = OptionVisibility(aftertextsCount > 0);
                 bool onlyIf = Game.Data.Availability(option.Availability);
-                bool singleIf = !String.IsNullOrEmpty(option.Singleton) && Game.Data.Availability(option.Singleton);
+
+                bool singleIf = false;
+
+                if (option.Singleton == "Availability")
+                {
+                    singleIf = Game.Data.Availability(option.Availability);
+                }
+                else if (!String.IsNullOrEmpty(option.Singleton))
+                {
+                    singleIf = Game.Data.Availability(option.Singleton);
+                }
 
                 Button button = AddOptionButton(option, ref gameOver);
 
