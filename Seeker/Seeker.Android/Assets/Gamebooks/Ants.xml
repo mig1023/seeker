@@ -563,9 +563,7 @@
 					<Trigger Value="Окончание"/>
 					<Dice/>
 				</Option>
-				<Option Destination="10" Text="Последний муравей погиб от мухи-горбатки"
-					Availability="КОЛИЧЕСТВО &lt; 1"
-					Singleton="КОЛИЧЕСТВО &lt; 1"/>
+				<Option Destination="10" Text="Последний муравей погиб от мухи-горбатки" Availability="КОЛИЧЕСТВО &lt; 1" Singleton="Availability"/>
 				<Option Destination="34" Text="Скорпион" Availability="Окончание, ДАЙС = 1">
 					<Undice/>
 					<Untrigger Value="Окончание"/>
