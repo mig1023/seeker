@@ -8,6 +8,8 @@ namespace Seeker.Gamebook.Ants
 
         public static List<string> Heads { get; set; }
 
+        public static Dictionary<string, int> Rating { get; set; }
+
         public static Links GetLinks() => new Links
         {
             Protagonist = Character.Protagonist.Init,

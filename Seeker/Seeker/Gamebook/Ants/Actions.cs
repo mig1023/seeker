@@ -25,6 +25,9 @@ namespace Seeker.Gamebook.Ants
             return statusLines;
         }
 
+        public override List<string> Representer() =>
+            new List<string> { Head };
+
         public override bool Availability(string option)
         {
             if (String.IsNullOrEmpty(option))
@@ -105,76 +108,20 @@ namespace Seeker.Gamebook.Ants
 
             int speed = 300 - protagonist.Time;
 
-            if (speed < 100)
+            string line = String.Empty;
+
+            foreach (KeyValuePair<string, int> timelist in Constants.Rating.OrderBy(x => x.Value))
             {
-                results.Add("Затянутое прохождение игры!");
-                results.Add("BIG|BOLD|Ваше звание: Мастер кликанья.");
+                if (speed < timelist.Value)
+                    break;
+                else
+                    line = timelist.Key;
             }
-            else if (speed < 150)
-            {
-                results.Add("Долгое прохождение игры!");
-                results.Add("BIG|BOLD|Ваше звание: Дезинфектор.");
-            }
-            else if (speed < 180)
-            {
-                results.Add("Обычное прохождение игры!");
-                results.Add("BIG|BOLD|Ваше звание: Любитель муравьёв.");
-            }
-            else if (speed < 200)
-            {
-                results.Add("Стандартное прохождение игры!");
-                results.Add("BIG|BOLD|Ваше звание: Друг муравьёв.");
-            }
-            else if (speed < 210)
-            {
-                results.Add("Нормальное прохождение игры!");
-                results.Add("BIG|BOLD|Ваше звание: Муравьиный знаток.");
-            }
-            else if (speed < 220)
-            {
-                results.Add("Неплохое прохождение игры!");
-                results.Add("BIG|BOLD|Ваше звание: Муравьиный эксперт.");
-            }
-            else if (speed < 230)
-            {
-                results.Add("Хорошое прохождение игры!");
-                results.Add("BIG|BOLD|Ваше звание: Мирмикипер.");
-            }
-            else if (speed < 250)
-            {
-                results.Add("Отличное прохождение игры!");
-                results.Add("BIG|BOLD|Ваше звание: Энтомолог.");
-            }
-            else if (speed < 260)
-            {
-                results.Add("Прекрасное прохождение игры!");
-                results.Add("BIG|BOLD|Ваше звание: Мирмеколог.");
-            }
-            else if (speed < 270)
-            {
-                results.Add("Изумительное прохождение игры!");
-                results.Add("BIG|BOLD|Ваше звание: Муравьиный барон.");
-            }
-            else if (speed < 280)
-            {
-                results.Add("Удивительное прохождение игры!");
-                results.Add("BIG|BOLD|Ваше звание: Муравьиный барон.");
-            }
-            else if (speed < 285)
-            {
-                results.Add("Чудесное прохождение игры!");
-                results.Add("BIG|BOLD|Ваше звание: Муравьиный оракул.");
-            }
-            else if (speed < 290)
-            {
-                results.Add("Невероятное прохождение игры!");
-                results.Add("BIG|BOLD|Ваше звание: Муравьиный небожитель.");
-            }
-            else
-            {
-                results.Add("Легендарное прохождение игры!");
-                results.Add("BIG|BOLD|Ваше звание: Муравьиный бог.");
-            }
+
+            List<string> resultLines = line.Split('!').ToList();
+
+            results.Add(String.Format("{0}!", resultLines[0]));
+            results.Add(resultLines[1]);
 
             return results;
         }
