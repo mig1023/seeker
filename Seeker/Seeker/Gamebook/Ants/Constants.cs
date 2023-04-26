@@ -6,6 +6,8 @@ namespace Seeker.Gamebook.Ants
     {
         public static Constants StaticInstance = new Constants();
 
+        public static List<string> Heads { get; set; }
+
         public static Links GetLinks() => new Links
         {
             Protagonist = Character.Protagonist.Init,

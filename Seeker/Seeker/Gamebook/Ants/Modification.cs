@@ -46,6 +46,11 @@ namespace Seeker.Gamebook.Ants
             {
                 protagonist.Quantity += protagonist.Increase;
             }
+            else if (Name == "HeadChange")
+            {
+                foreach (string head in Constants.Heads)
+                    Game.Option.Trigger(head, remove: true);
+            }
             else
             {
                 base.Do(protagonist);
