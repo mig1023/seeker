@@ -83,13 +83,11 @@ namespace Seeker.Gamebook.Ants
         {
             List<string> results = new List<string>();
 
-            int currentHead = 0;
+            bool queen = Game.Option.IsTriggered("Королева Антуанетта Плодовитая");
+            bool prince = Game.Option.IsTriggered("Принц Мурадин Крылатый");
+            bool soldier = Game.Option.IsTriggered("Солдат Руф Твердожвалый");
 
-            for (int i = 0; i < Constants.Heads.Count; i++)
-                if (Game.Option.IsTriggered(Constants.Heads[i]))
-                    currentHead = i;
-
-            if (currentHead < 3)
+            if (queen || prince || soldier)
             {
                 results.Add("Муравейник вырос до гигантских размеров. Высотою в шесть метров и диаметром двадцать, он попал в книгу рекордов Гиннесса.");
                 results.Add("Позже группа религиозных фанатиков сожгла муравейник, мотивируя это тем, что продвинутый вид насекомых угрожает человечеству.");
@@ -127,9 +125,9 @@ namespace Seeker.Gamebook.Ants
         {
             List<string> changes = new List<string>();
 
-            foreach (string head in Constants.Changes.Keys)
+            foreach (string head in Constants.Government.Keys)
                 if (Game.Option.IsTriggered(head))
-                    changes.Add(Constants.Changes[head]);
+                    changes.Add(Constants.Government[head]);
 
             return changes;
         }

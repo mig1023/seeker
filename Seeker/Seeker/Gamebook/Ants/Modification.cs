@@ -48,7 +48,7 @@ namespace Seeker.Gamebook.Ants
             }
             else if (Name == "HeadChange")
             {
-                foreach (string head in Constants.Heads)
+                foreach (string head in Constants.Government.Keys)
                     Game.Option.Trigger(head, remove: true);
             }
             else
