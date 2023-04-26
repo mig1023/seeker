@@ -1005,9 +1005,7 @@
 					<Trigger Value="Окончание"/>
 					<Dice/>
 				</Option>
-				<Option Destination="10" Text="Кордицепс уничтожил колонию"
-					Availability="КОЛИЧЕСТВО &lt; 1"
-					Singleton="КОЛИЧЕСТВО &lt; 1"/>
+				<Option Destination="10" Text="Кордицепс уничтожил колонию" Availability="КОЛИЧЕСТВО &lt; 1" Singleton="Availability"/>
 				<Option Destination="13" Text="Горбатки" Availability="Окончание, КОЛИЧЕСТВО &lt; 50, ДАЙС = 1">
 					<Undice/>
 					<Untrigger Value="Окончание"/>
