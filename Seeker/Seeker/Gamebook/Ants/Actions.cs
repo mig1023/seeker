@@ -25,9 +25,6 @@ namespace Seeker.Gamebook.Ants
             return statusLines;
         }
 
-        public override List<string> Representer() =>
-            new List<string> { Head };
-
         public override bool Availability(string option)
         {
             if (String.IsNullOrEmpty(option))
@@ -124,6 +121,17 @@ namespace Seeker.Gamebook.Ants
             results.Add(resultLines[1]);
 
             return results;
+        }
+
+        public List<string> Changes()
+        {
+            List<string> changes = new List<string>();
+
+            foreach (string head in Constants.Changes.Keys)
+                if (Game.Option.IsTriggered(head))
+                    changes.Add(Constants.Changes[head]);
+
+            return changes;
         }
     }
 }
