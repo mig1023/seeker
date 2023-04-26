@@ -881,7 +881,7 @@
 		</Paragraph>
 		<Paragraph No="100">
 			<Options>
-				<Option Destination="46" Text="У вас записано слово «вражда»" Availability="Вражда" Singleton="Вражда"/>
+				<Option Destination="46" Text="У вас записано слово «вражда»" Availability="Вражда" Singleton="Availability"/>
 				<Option Destination="88" Text="Тренировать легионеров рукопашному бою"/>
 				<Option Destination="104" Text="Совершить марш-бросок"/>
 				<Option Destination="106" Text="Заняться строевой подготовкой"/>
