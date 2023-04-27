@@ -10,50 +10,57 @@ namespace Seeker.Gamebook.Ants
 
         public override void Do()
         {
-            if (Name == "Dice")
-            {
-                protagonist.Dice[Game.Dice.Roll()] = true;
-            }
-            else if (Name == "Undice")
-            {
-                protagonist.Dice = new List<bool> { false, false, false, false, false, false, false };
-            }
-            else if (Name == "Enemy")
-            {
-                List<string> enemy = ValueString.Split(',').ToList();
-                protagonist.EnemyName = enemy[0].Trim();
-                protagonist.EnemyHitpoints = int.Parse(enemy[1].Trim());
-            }
-            else if (Name == "EnemyDiceWound")
-            {
-                protagonist.EnemyHitpoints -= Game.Dice.Roll();
-            }
-            else if (Name == "NoMoreEnemy")
-            {
-                protagonist.EnemyName = String.Empty;
-                protagonist.EnemyHitpoints = 0;
-            }
-            else if (Name == "UseDefence")
-            {
-                protagonist.Defence -= 1;
-            }
-            else if (Name == "TossCoin")
-            {
-                if (Game.Dice.Roll(size: 2) == 1)
-                    Game.Option.Trigger("Решка");
-            }
-            else if (Name == "QuantityIncrease")
-            {
-                protagonist.Quantity += protagonist.Increase;
-            }
-            else if (Name == "HeadChange")
-            {
-                foreach (string head in Constants.Government.Keys)
-                    Game.Option.Trigger(head, remove: true);
-            }
-            else
-            {
+            if (!AntsModification())
                 base.Do(protagonist);
+        }
+
+        private bool AntsModification()
+        {
+            switch (Name)
+            {
+                case "Dice":
+                    protagonist.Dice[Game.Dice.Roll()] = true;
+                    return true;
+
+                case "Undice":
+                    protagonist.Dice = new List<bool> { false, false, false, false, false, false, false };
+                    return true;
+
+                case "Enemy":
+                    List<string> enemy = ValueString.Split(',').ToList();
+                    protagonist.EnemyName = enemy[0].Trim();
+                    protagonist.EnemyHitpoints = int.Parse(enemy[1].Trim());
+                    return true;
+
+                case "EnemyDiceWound":
+                    protagonist.EnemyHitpoints -= Game.Dice.Roll();
+                    return true;
+
+                case "NoMoreEnemy":
+                    protagonist.EnemyName = String.Empty;
+                    protagonist.EnemyHitpoints = 0;
+                    return true;
+
+                case "UseDefence":
+                    protagonist.Defence -= 1;
+                    return true;
+
+                case "TossCoin":
+                    if (Game.Dice.Roll(size: 2) == 1)
+                        Game.Option.Trigger("Решка");
+                    return true;
+
+                case "QuantityIncrease":
+                    protagonist.Quantity += protagonist.Increase;
+                    return true;
+
+                case "HeadChange":
+                    foreach (string head in Constants.Government.Keys)
+                        Game.Option.Trigger(head, remove: true);
+                    return true;
+
+                default:
+                    return false;
             }
         }
     }
