@@ -347,7 +347,7 @@
 				</Option>
 				<Option Destination="7" Text="Использовать защиту" Availability="ЗАЩИТА >= 1, Нет термитов, !Окончание">
 					<UseDefence/>
-					<Untrigger Value="Окончание"/>
+					<Trigger Value="Окончание"/>
 					<Dice/>
 				</Option>
 				<Option Destination="10" Text="Муравьед уничтожил колонию" Availability="КОЛИЧЕСТВО &lt; 1" Singleton="Availability"/>
