@@ -659,7 +659,7 @@
 				</Option>
 				<Option Destination="15" Text="Использовать защиту" Availability="Мёд, ЗАЩИТА >= 1, !Окончание">
 					<UseDefence/>
-					<Untrigger Value="Окончание"/>
+					<Trigger Value="Окончание"/>
 					<Dice/>
 				</Option>
 				<Option Destination="10" Text="Визит медведя стал роковым" Availability="КОЛИЧЕСТВО &lt; 1" Singleton="Availability"/>
