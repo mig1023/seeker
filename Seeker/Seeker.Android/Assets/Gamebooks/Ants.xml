@@ -711,7 +711,7 @@
 				</Option>
 				<Option Destination="16" Text="Использовать защиту" Availability="Мало соседей, ЗАЩИТА >= 1, !Окончание">
 					<UseDefence/>
-					<Untrigger Value="Окончание"/>
+					<Trigger Value="Окончание"/>
 					<Dice/>
 				</Option>
 				<Option Destination="10" Text="Нападение молоха стало роковым" Availability="КОЛИЧЕСТВО &lt; 1" Singleton="Availability"/>
