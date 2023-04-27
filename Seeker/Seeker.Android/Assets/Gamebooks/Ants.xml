@@ -1291,12 +1291,12 @@
 					<EnemyDiceWound/>
 					<Quantity Value="-1"/>
 				</Option>
-				<Option Destination="18" Text="Забрать останки многоножки" Availability="ВРАГ &lt; 1, !Окончание">
+				<Option Destination="28" Text="Забрать останки многоножки" Availability="ВРАГ &lt; 1, !Окончание">
 					<Dice/>
 					<Trigger Value="Окончание"/>
 					<Increase Value="2"/>
 				</Option>
-				<Option Destination="18" Text="Спрятаться от многоножки" Availability="ВРАГ >= 1, !Окончание">
+				<Option Destination="28" Text="Спрятаться от многоножки" Availability="ВРАГ >= 1, !Окончание">
 					<Dice/>
 					<Untrigger Value="Окончание"/>
 					<NoMoreEnemy/>
