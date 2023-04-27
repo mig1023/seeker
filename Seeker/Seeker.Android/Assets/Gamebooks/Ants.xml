@@ -955,7 +955,7 @@
 				</Option>
 				<Option Destination="21" Text="Использовать защиту" Availability="Мало соседей, ЗАЩИТА >= 1, !Окончание">
 					<UseDefence/>
-					<Untrigger Value="Окончание"/>
+					<Trigger Value="Окончание"/>
 					<Dice/>
 				</Option>
 				<Option Destination="10" Text="Атака клопа-хищнеца стала роковой" Availability="КОЛИЧЕСТВО &lt; 1" Singleton="Availability"/>
