@@ -10,7 +10,7 @@
 			<Color Name="ButtonFont" Value="000000"/>
 		</Styles>
 		<Settings>
-			<HideDisabledOption/>
+			<DisabledOption Value="Hide"/>
 		</Settings>
 	</Introduction>
 	<Paragraphs>
