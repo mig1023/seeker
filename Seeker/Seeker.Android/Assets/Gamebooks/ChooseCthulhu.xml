@@ -7,7 +7,7 @@
 			<Color Name="SystemFont" Value="dce3e5"/>
 		</Styles>
 		<Settings>
-			<HideDisabledOption/>
+			<DisabledOption Value="Hide"/>
 		</Settings>
 	</Introduction>
 	<Paragraphs>
