@@ -11,7 +11,7 @@
 			<Color Name="System" Value="546270"/>
 		</Styles>
 		<Settings>
-			<HideDisabledOption/>
+			<DisabledOption Value="Hide"/>
 		</Settings>
 	</Introduction>
 	<Paragraphs>
