@@ -11,7 +11,7 @@
 			<Color Name="System" Value="f9f9f9"/>
 		</Styles>
 		<Settings>
-			<ShowDisabledOption/>
+			<DisabledOption Value="Show"/>
 		</Settings>
 		<Buttons>
 			<Button Action="SwordFight, MixedFightAttack">Сражаться</Button>
