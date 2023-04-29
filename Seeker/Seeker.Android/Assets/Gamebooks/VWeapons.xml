@@ -19,7 +19,7 @@
 			</Dictionary>
 		</Constants>
 		<Settings>
-			<HideDisabledOption/>
+			<DisabledOption Value="Hide"/>
 		</Settings>
 		<Buttons>
 			<Fight>Перестрелка</Fight>
