@@ -23,7 +23,7 @@
 			<List Name="Skills" Value="Акробатика, Скалолазание, Сражение, Интеллект, Маскировка, Взлом, Ловкость рук, Скрытность, Поиск следов"/>
 		</Constants>
 		<Settings>
-			<ShowDisabledOption/>
+			<DisabledOption Value="Show"/>
 		</Settings>
 		<Buttons>
 			<Fight>Сражаться</Fight>
