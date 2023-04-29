@@ -7,7 +7,7 @@
 			<Color Name="Option" Value="191039"/>
 		</Styles>
 		<Settings>
-			<ShowDisabledOption/>
+			<DisabledOption Value="Show"/>
 		</Settings>
 	</Introduction>
 	<Paragraphs>
