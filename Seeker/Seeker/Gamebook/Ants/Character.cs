@@ -10,8 +10,20 @@ namespace Seeker.Gamebook.Ants
 
         public List<bool> Dice { get; set; }
 
-        public int Quantity { get; set; }
-        public int Increase { get; set; }
+        private int _quantity;
+        public int Quantity
+        {
+            get => _quantity;
+            set => _quantity = Game.Param.Setter(value);
+        }
+
+        private int _increase;
+        public int Increase
+        {
+            get => _increase;
+            set => _increase = Game.Param.Setter(value);
+        }
+
         public int Time { get; set; }
         public int Defence { get; set; }
         public int Start { get; set; }
