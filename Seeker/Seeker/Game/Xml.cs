@@ -183,7 +183,7 @@ namespace Seeker.Game
                 foreach (string type in Multiples(xmlNode, "Name"))
                     Data.Constants.LoadColor(type, xmlNode.Attributes["Value"].InnerText);
 
-            Data.Constants.LoadEnabledDisabledOption(SettingBool(xmlFile, "ShowDisabledOption"));
+            Data.Constants.LoadEnabledDisabledOption(SettingString(xmlFile, "DisabledOption"));
             Data.Constants.LoadStartParagraphOption(SettingString(xmlFile, "StartParagraph"));
             Data.Constants.LoadDefaultFontSize(SettingString(xmlFile, "DefaultFontSize"));
 
@@ -231,9 +231,6 @@ namespace Seeker.Game
 
         private static string SettingString(XmlDocument xmlFile, string option) =>
             StringParse(xmlFile.SelectSingleNode(Intro(String.Format("Settings/{0}", option)))?.Attributes["Value"]) ?? String.Empty;
-
-        private static bool SettingBool(XmlDocument xmlFile, string optionTrue) =>
-            xmlFile.SelectSingleNode(Intro(String.Format("Settings/{0}", optionTrue))) != null;
 
         private static void AddButtonsTexts(XmlNode xmlNode)
         {

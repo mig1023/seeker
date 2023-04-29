@@ -285,6 +285,7 @@ namespace Seeker
 
             int optionCount = 0;
             Button singleton = null;
+            Game.Data.Constants.ShowDisabledOption(out bool hideAllSingletons);
 
             foreach (Game.Option option in paragraph.Options)
             {
@@ -334,6 +335,9 @@ namespace Seeker
                 {
                     button.IsEnabled = false;
                     button.BackgroundColor = Color.Default;
+
+                    if (hideAllSingletons)
+                        button.IsVisible = false;
                 }
             }
 
@@ -408,7 +412,7 @@ namespace Seeker
             if (bySetting > 0)
                 return bySetting == 1;
 
-            return Game.Data.Constants.ShowDisabledOption();
+            return Game.Data.Constants.ShowDisabledOption(out bool _);
         }
 
         private void AddAftertext(ref StackLayout layout, List<Output.Text> texts)

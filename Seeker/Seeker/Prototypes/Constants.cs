@@ -21,6 +21,7 @@ namespace Seeker.Prototypes
         public List<int> WithoutStaticsButtons { get; set; }
 
         private bool ShowDisabledOptionStatus = false;
+        private bool HideSingletonOption = false;
 
         private int StartParagraph = 0;
 
@@ -50,6 +51,7 @@ namespace Seeker.Prototypes
             WithoutStaticsButtons = new List<int> { 0 };
             ButtonTextList = new Dictionary<string, string>();
             ShowDisabledOptionStatus = false;
+            HideSingletonOption = false;
         }
 
         public virtual void LoadColor(string type, string color)
@@ -108,10 +110,18 @@ namespace Seeker.Prototypes
             return false;
         }
 
-        public void LoadEnabledDisabledOption(bool option) =>
-            ShowDisabledOptionStatus = option;
+        public void LoadEnabledDisabledOption(string option)
+        {
+            ShowDisabledOptionStatus = option == "Show";
+            HideSingletonOption = option == "HideAndSingletonsToo";
+        }
+            
 
-        public virtual bool ShowDisabledOption() => ShowDisabledOptionStatus;
+        public virtual bool ShowDisabledOption(out bool HideSingleton)
+        {
+            HideSingleton = HideSingletonOption;
+            return ShowDisabledOptionStatus;
+        }
 
         public void LoadStartParagraphOption(string option)
         {
