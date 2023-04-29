@@ -15,7 +15,7 @@
 			<Dictionary Name="Strengths" FromLineByOrder="22, 18, 14, 24, 16, 20"/>	
 		</Constants>
 		<Settings>
-			<HideDisabledOption/>
+			<DisabledOption Value="Hide"/>
 		</Settings>
 		<Buttons>
 			<Fight>Сражаться</Fight>
