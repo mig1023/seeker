@@ -10,7 +10,7 @@
 			<Color Name="ActionBox" Value="fcf9ec"/>
 		</Styles>
 		<Settings>
-			<ShowDisabledOption/>
+			<DisabledOption Value="Show"/>
 			<DefaultFontSize Value="Little"/>
 		</Settings>
 		<Buttons>
