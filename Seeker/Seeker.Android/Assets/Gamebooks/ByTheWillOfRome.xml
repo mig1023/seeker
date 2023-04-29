@@ -11,7 +11,7 @@
 			<Color Name="System" Value="d1b5b5"/>
 		</Styles>
 		<Settings>
-			<ShowDisabledOption/>
+			<DisabledOption Value="Show"/>
 		</Settings>
 		<Constants>
 			<List Name="ParagraphsStatusesLimit" Value="375, 417"/>
