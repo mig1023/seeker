@@ -7,7 +7,7 @@
 			<Color Name="System" Value="f9f9f9"/>
 		</Styles>
 		<Settings>
-			<HideDisabledOption/>
+			<DisabledOption Value="Hide"/>
 			<DefaultFontSize Value="Small"/>
 		</Settings>
 	</Introduction>
