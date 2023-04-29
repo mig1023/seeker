@@ -9,7 +9,7 @@
 			<Color Name="Continue" Value="fdeeba"/>
 		</Styles>
 		<Settings>
-			<ShowDisabledOption/>
+			<DisabledOption Value="Show"/>
 		</Settings>
 	</Introduction>
 	<Paragraphs>
