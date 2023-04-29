@@ -9,7 +9,7 @@
 			<Color Name="System" Value="f4f4f4"/>
 		</Styles>
 		<Settings>
-			<HideDisabledOption/>
+			<DisabledOption Value="Hide"/>
 		</Settings>
 	</Introduction>
 	<Paragraphs>
