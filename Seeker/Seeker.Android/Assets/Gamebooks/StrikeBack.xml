@@ -11,7 +11,7 @@
 			<Color Name="ActionBox" Value="bcc2b9"/>
 		</Styles>
 		<Settings>
-			<ShowDisabledOption/>
+			<DisabledOption Value="Show"/>
 		</Settings>
 		<Buttons>
 			<Fight>Сражаться</Fight>
