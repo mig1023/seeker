@@ -36,7 +36,7 @@
 			</Dictionary>
 		</Constants>
 		<Settings>
-			<HideDisabledOption/>
+			<DisabledOption Value="HideAndSingletonsToo"/>
 		</Settings>
 	</Introduction>
 	<Paragraphs>
