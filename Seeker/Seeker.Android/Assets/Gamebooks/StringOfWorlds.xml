@@ -10,7 +10,7 @@
 			<Dictionary Name="LuckList" FromLine="1:①, 2:②, 3:③, 4:④, 5:⑤, 6:⑥, 11:❶, 12:❷, 13:❸, 14:❹, 15:❺, 16:❻"/>
 		</Constants>
 		<Settings>
-			<HideDisabledOption/>
+			<DisabledOption Value="Hide"/>
 		</Settings>
 		<Buttons>
 			<Fight>Сражаться</Fight>
