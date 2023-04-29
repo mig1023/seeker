@@ -10,7 +10,7 @@
 			<List Name="GetParagraphsWithoutHokkuCreation" Value="0, 1, 9, 10, 11, 12"/>
 		</Constants>
 		<Settings>
-			<HideDisabledOption/>
+			<DisabledOption Value="Hide"/>
 			<StartParagraph Value="1"/>
 			<DefaultFontSize Value="Big"/>
 		</Settings>
