@@ -15,7 +15,7 @@
 			<List Name="GetApartments" Value="один, два, три, один, два, три"/>
 		</Constants>
 		<Settings>
-			<HideDisabledOption/>
+			<DisabledOption Value="Hide"/>
 		</Settings>
 	</Introduction>
 	<Paragraphs>
