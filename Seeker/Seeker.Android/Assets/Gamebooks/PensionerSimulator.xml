@@ -7,7 +7,7 @@
 			<Color Name="Option" Value="35365e"/>
 		</Styles>
 		<Settings>
-			<HideDisabledOption/>
+			<DisabledOption Value="Hide"/>
 			<DefaultFontSize Value="Big"/>
 		</Settings>
 	</Introduction>
