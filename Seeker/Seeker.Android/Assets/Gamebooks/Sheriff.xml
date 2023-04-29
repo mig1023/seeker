@@ -12,7 +12,7 @@
 			<Dictionary Name="Levels" FromLine="Easy:100, Medium:1, Hard:0"/>
 		</Constants>
 		<Settings>
-			<HideDisabledOption/>
+			<DisabledOption Value="Hide"/>
 		</Settings>
 	</Introduction>
 	<Paragraphs>
