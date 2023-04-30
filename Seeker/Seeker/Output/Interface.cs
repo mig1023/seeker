@@ -118,7 +118,8 @@ namespace Seeker.Output
 
         public static Label GamebookDisclaimer(Description gamebook)
         {
-            string text = (!String.IsNullOrEmpty(gamebook.Authors) ? gamebook.Authors.Split(',', '-')[0] : gamebook.Author);
+            string text = !String.IsNullOrEmpty(gamebook.Authors) ?
+                gamebook.Authors.Split(new string[] { "\\n" }, StringSplitOptions.RemoveEmptyEntries)[0] : gamebook.Author;
 
             if (List.Sort() == Constants.SORT_BY_AUTHORS)
                 text = gamebook.AuthorsIndex();
