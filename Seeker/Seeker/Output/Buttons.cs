@@ -49,7 +49,7 @@ namespace Seeker.Output
 
             int aftertextsCount = option.Aftertexts?.Count ?? 0;
 
-            if (Game.Data.Constants.ShowDisabledOption() || (aftertextsCount > 0))
+            if (Game.Data.Constants.ShowDisabledOption(out bool _) || (aftertextsCount > 0))
                 optionColor = !String.IsNullOrEmpty(option.Availability) && !Game.Data.Availability(option.Availability);
 
             string color = Game.Data.Constants.GetColor(optionColor ?
