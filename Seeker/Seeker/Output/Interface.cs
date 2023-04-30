@@ -105,16 +105,26 @@ namespace Seeker.Output
         {
             List<VerticalText> statusLabels = new List<VerticalText>();
 
-            bool whiteColor = !String.IsNullOrEmpty(Game.Data.Constants.GetColor(Game.Data.ColorTypes.AdditionalFont));
+            bool whiteColor = !String.IsNullOrEmpty(Game.Data.Constants.GetColor(ColorTypes.AdditionalFont));
+            double heightPart = (int)Application.Current.MainPage.Height / statusLines.Sum(x => x.Length);
 
             foreach (string status in statusLines)
-                statusLabels.Add(new VerticalText { Value = status, WhiteColor = whiteColor });
+            {
+                VerticalText text = new VerticalText
+                {
+                    Value = status,
+                    WhiteColor = whiteColor,
+                    HeightRequest = status.Length * heightPart,
+                };
+
+                statusLabels.Add(text);
+            }
 
             return statusLabels;
         }
 
         private static string AndOtherMark(Description gamebook) =>
-            (!String.IsNullOrEmpty(gamebook.Authors) ? " и др." : String.Empty);
+            !String.IsNullOrEmpty(gamebook.Authors) ? " и др." : String.Empty;
 
         public static Label GamebookDisclaimer(Description gamebook)
         {

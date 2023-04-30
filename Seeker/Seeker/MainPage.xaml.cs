@@ -518,7 +518,7 @@ namespace Seeker
                 string backgroundColor = Game.Data.Constants.GetColor(Game.Data.ColorTypes.AdditionalStatus);
 
                 MainGrid.ColumnDefinitions[1].Width = 20;
-                AdditionalStatus.BackgroundColor = (String.IsNullOrEmpty(backgroundColor) ? Color.LightGray : Color.FromHex(backgroundColor));
+                AdditionalStatus.BackgroundColor = String.IsNullOrEmpty(backgroundColor) ? Color.LightGray : Color.FromHex(backgroundColor);
                 AdditionalStatus.IsVisible = true;
 
                 foreach (Output.VerticalText status in Output.Interface.AdditionalStatusBar(additionalStatuses))
