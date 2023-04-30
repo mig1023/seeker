@@ -285,6 +285,20 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             return new List<string> { "RELOAD" };
         }
 
+        private int CountShots()
+        {
+            bool multiplePistols = (protagonist.Pistols > 1) && (protagonist.BulletsAndGubpowder > 1);
+
+            if (WithoutShooting)
+                return 0;
+            else if ((protagonist.MeritalArt == Character.MeritalArts.TwoPistols) && multiplePistols)
+                return 2;
+            else if ((protagonist.Pistols > 0) && (protagonist.BulletsAndGubpowder > 0))
+                return 1;
+            else
+                return 0;
+        }
+
         public List<string> Fight()
         {
             List<string> fight = new List<string>();
@@ -294,18 +308,14 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             foreach (Character enemy in Enemies)
                 FightEnemies.Add(enemy.Clone());
 
-            int round = 1, enemyWounds = 0, shoots = 0;
-            bool multiplePistols = (protagonist.Pistols > 1) && (protagonist.BulletsAndGubpowder > 1);
+            int round = 1, enemyWounds = 0;
+            int shots = CountShots();
 
-            if (WithoutShooting)
-                shoots = 0;
-            else if ((protagonist.MeritalArt == Character.MeritalArts.TwoPistols) && multiplePistols)
-                shoots = 2;
-            else if ((protagonist.Pistols > 0) && (protagonist.BulletsAndGubpowder > 0))
-                shoots = 1;
-
-            for (int pistol = 1; pistol <= shoots; pistol++)
+            for (int pistol = 1; pistol <= shots; pistol++)
             {
+                if (pistol == 1)
+                    fight.Add("Прежде всего пытаемся выстрелить из пистолета.");
+
                 if (Services.NoMoreEnemies(FightEnemies, EnemyWoundsLimit))
                     continue;
 
@@ -313,12 +323,16 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
                 protagonist.BulletsAndGubpowder -= 1;
 
+                string pistolLine = (shots > 1 ? String.Format("{0} ", pistol) : String.Empty);
+
                 fight.Add(String.Format("Выстрел из {0}пистолета: {1} - {2}",
-                    (shoots > 1 ? String.Format("{0} ", pistol) : String.Empty),
-                    Game.Dice.Symbol(shootDice), (hit ? "попал" : "промах")));
+                    pistolLine, Game.Dice.Symbol(shootDice), (hit ? "чёт" : "нечет")));
 
                 if (!hit)
+                {
+                    fight.Add("BOLD|Вы промахнулись...");
                     continue;
+                }
 
                 foreach (Character enemy in FightEnemies.Where(x => x.Strength > 0))
                 {
@@ -329,10 +343,14 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             }
 
             if (Services.NoMoreEnemies(FightEnemies, EnemyWoundsLimit))
+            {
                 return fight;
-
-            if (shoots > 0)
+            }
+            else if (shots > 0)
+            {
                 fight.Add(String.Empty);
+                fight.Add("LINE|");
+            }
 
             while (true)
             {
