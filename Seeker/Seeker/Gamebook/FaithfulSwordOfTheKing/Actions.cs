@@ -31,6 +31,8 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
         {
             List<string> statusLines = new List<string>();
 
+            statusLines.Add(String.Format("Выбранное искусство: {0}", Constants.MeritalArtsNames[protagonist.MeritalArt]));
+
             if (protagonist.BulletsAndGubpowder > 0)
                 statusLines.Add(String.Format("Патронов: {0}", protagonist.BulletsAndGubpowder));
 
