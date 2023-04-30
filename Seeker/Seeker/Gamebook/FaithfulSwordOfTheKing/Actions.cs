@@ -24,9 +24,21 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             String.Format("Ловкость: {0}", protagonist.Skill),
             String.Format("Сила: {0}/{1}", protagonist.Strength, protagonist.MaxStrength),
             String.Format("Честь: {0}", protagonist.Honor),
-            String.Format("День: {0}", protagonist.Day),
-            String.Format("Экю: {0}", Services.ToEcu(protagonist.Ecu))
+
         };
+
+        public override List<string> AdditionalStatus()
+        {
+            List<string> statusLines = new List<string>();
+
+            if (protagonist.BulletsAndGubpowder > 0)
+                statusLines.Add(String.Format("Патронов: {0}", protagonist.BulletsAndGubpowder));
+
+            statusLines.Add(String.Format("Экю: {0}", Services.ToEcu(protagonist.Ecu)));
+            statusLines.Add(String.Format("День: {0}", protagonist.Day));
+
+            return statusLines;
+        }
 
         public override bool GameOver(out int toEndParagraph, out string toEndText)
         {
