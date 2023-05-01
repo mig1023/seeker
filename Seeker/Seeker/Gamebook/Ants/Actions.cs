@@ -13,14 +13,14 @@ namespace Seeker.Gamebook.Ants
         {
             List<string> statusLines = new List<string>();
 
-            if (protagonist.EnemyHitpoints > 0)
-                statusLines.Add(String.Format("{0}: {1}", protagonist.EnemyName, protagonist.EnemyHitpoints));
+            statusLines.Add(String.Format("Количество: {0}", protagonist.Quantity));
+            statusLines.Add(String.Format("Прирост: {0}", protagonist.Increase));
 
             if (protagonist.Defence > 0)
                 statusLines.Add(String.Format("Защита: {0}", protagonist.Defence));
 
-            statusLines.Add(String.Format("Прирост: {0}", protagonist.Increase));
-            statusLines.Add(String.Format("Количество: {0}", protagonist.Quantity));
+            if (protagonist.EnemyHitpoints > 0)
+                statusLines.Add(String.Format("{0}: {1}", protagonist.EnemyName, protagonist.EnemyHitpoints));
 
             return statusLines;
         }
