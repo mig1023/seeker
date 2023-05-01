@@ -32,7 +32,7 @@
             <BoxView x:Name="StatusBorder" HeightRequest="1" IsVisible="False" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2"/>
             <FlexLayout x:Name="Status" IsVisible="False" Direction="Row" JustifyContent="SpaceAround" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" Padding="5, 0, 5, 0" Wrap="Wrap"/>
 
-            <FlexLayout x:Name="AdditionalStatus" IsVisible="False" Direction="ColumnReverse" HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand" Grid.Column="1" Grid.Row="0" Padding="0, 0, 0, 0"/>
+            <FlexLayout x:Name="AdditionalStatus" IsVisible="False" Direction="Column" HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand" Grid.Column="1" Grid.Row="0" Padding="0, 0, 0, 0"/>
         </Grid>
     </ContentPage.Content>
 </ContentPage>
