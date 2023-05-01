@@ -15,8 +15,8 @@ namespace Seeker.Gamebook.Genesis
         {
             if (!String.IsNullOrEmpty(Bonus))
             {
-                int diff = (GetProperty(protagonist, Bonus) - Constants.GetStartValues[Bonus]);
-                string diffLine = (diff > 0 ? String.Format(" (+{0})", diff) : String.Empty);
+                int diff = GetProperty(protagonist, Bonus) - Constants.GetStartValues[Bonus];
+                string diffLine = diff > 0 ? String.Format(" (+{0})", diff) : String.Empty;
 
                 return new List<string> { String.Format("{0}{1}", Head, diffLine) };
             }
