@@ -37,7 +37,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                 statusLines.Add(String.Format("Выстрелов: {0}", protagonist.BulletsAndGubpowder));
 
             statusLines.Add(String.Format("Экю: {0}", Services.ToEcu(protagonist.Ecu)));
-            statusLines.Add(String.Format("День: {0}", protagonist.Day));
+            statusLines.Add(String.Format("    День: {0}", protagonist.Day));
 
             return statusLines;
         }
