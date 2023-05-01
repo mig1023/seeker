@@ -488,7 +488,7 @@
 		<Text>Детектив (наше время)</Text>
 		<Paragraphs>80</Paragraphs>
 		<Size>7876</Size>
-		<ShortPlaythrough/>
+		<Playthrough>Short</Playthrough>
 		<Setting>Юмор</Setting>
 		<Color>2e2e2e</Color>
 	</DeathOfAntiquary>
