@@ -49,28 +49,28 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
         {
             List<string> statusLines = new List<string>();
 
-            if (protagonist.Oratory > 1)
-                statusLines.Add(String.Format("Красноречие: {0}", protagonist.Oratory));
-
-            if (protagonist.Cunning > 1)
-                statusLines.Add(String.Format("Хитрость: {0}", protagonist.Cunning));
-
-            if (protagonist.Wisdom > 1)
-                statusLines.Add(String.Format("Мудрость: {0}", protagonist.Wisdom));
-
-            if (protagonist.Skill > 1)
-                statusLines.Add(String.Format("Ловкость: {0}", protagonist.Skill));
-
-            if (protagonist.Strength > 1)
-                statusLines.Add(String.Format("Сила: {0}", protagonist.Strength));
-
-            if (protagonist.UnitOfTime != null)
-                statusLines.Add(String.Format("Ед.времени: {0}", protagonist.UnitOfTime));
+            statusLines.Add(String.Format("Популярность: {0}", protagonist.Popularity));
 
             if (protagonist.AkynGlory != null)
                 statusLines.Add(String.Format("Слава акына: {0}", protagonist.AkynGlory));
 
-            statusLines.Add(String.Format("Популярность: {0}", protagonist.Popularity));
+            if (protagonist.UnitOfTime != null)
+                statusLines.Add(String.Format("Ед.времени: {0}", protagonist.UnitOfTime));
+
+            if (protagonist.Strength > 1)
+                statusLines.Add(String.Format("Сила: {0}", protagonist.Strength));
+
+            if (protagonist.Skill > 1)
+                statusLines.Add(String.Format("Ловкость: {0}", protagonist.Skill));
+
+            if (protagonist.Wisdom > 1)
+                statusLines.Add(String.Format("Мудрость: {0}", protagonist.Wisdom));
+
+            if (protagonist.Cunning > 1)
+                statusLines.Add(String.Format("Хитрость: {0}", protagonist.Cunning));
+
+            if (protagonist.Oratory > 1)
+                statusLines.Add(String.Format("Красноречие: {0}", protagonist.Oratory));
 
             return statusLines;
         }
