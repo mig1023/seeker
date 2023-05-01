@@ -71,9 +71,9 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
         {
             List<string> statusLines = new List<string>
             {
-                String.Format("Удача: {0}/{1}", protagonist.Luck, protagonist.MaxLuck),
+                String.Format("Изменение: {0}", protagonist.Change),
                 String.Format("Золото: {0}", protagonist.Gold),
-                String.Format("Изменение: {0}", protagonist.Change)
+                String.Format("Удача: {0}/{1}", protagonist.Luck, protagonist.MaxLuck),
             };
 
             if (protagonist.Crossbow > 0)
