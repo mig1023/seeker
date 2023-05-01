@@ -136,14 +136,8 @@ namespace Seeker.Game
             }
         }
 
-        public static int PlaythrougParse(XmlNode xmlNode)
-        {
-            foreach (string type in Constants.PLAYTHROUGH_TIME_NODE.Keys)
-                if (xmlNode[type] != null)
-                    return Constants.PLAYTHROUGH_TIME_NODE[type];
-
-            return 1;
-        }
+        public static int PlaythrougParse(XmlNode xmlNode) =>
+            Constants.PLAYTHROUGH_TIME_NODE[xmlNode.InnerText];
 
         private static XmlDocument GetGamebookXmlFile(string name)
         {
@@ -270,7 +264,7 @@ namespace Seeker.Game
             description.Paragraphs = StringParse(data["Paragraphs"]);
             description.OnlyFirstParagraphsValue = BoolParse(data["OnlyFirstParagraphsValue"]);
             description.Size = StringParse(data["Size"]);
-            description.PlaythroughTime = PlaythrougParse(data);
+            description.PlaythroughTime = PlaythrougParse(data["Playthrough"]);
             description.Setting = StringParse(data["Setting"]);
 
             XmlNode colors = data.SelectSingleNode("Colors");

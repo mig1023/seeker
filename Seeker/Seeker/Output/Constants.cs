@@ -85,9 +85,9 @@ namespace Seeker.Output
 
         public static Dictionary<string, int> PLAYTHROUGH_TIME_NODE = new Dictionary<string, int>
         {
-            ["ShortPlaythrough"] = 0,
-            ["MediumPlaythrough"] = 1,
-            ["LongPlaythrough"] = 2,
+            ["Short"] = 0,
+            ["Normal"] = 1,
+            ["Long"] = 2,
         };
 
         public static Dictionary<ButtonTypes, string> DEFAULT_BUTTONS = new Dictionary<ButtonTypes, string>
