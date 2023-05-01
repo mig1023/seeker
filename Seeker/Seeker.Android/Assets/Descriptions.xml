@@ -279,7 +279,7 @@
 		<Text>Стихи скажут о себе сами.</Text>
 		<Paragraphs>12</Paragraphs>
 		<Size>306</Size>
-		<ShortPlaythrough/>
+		<Playthrough>Short</Playthrough>
 		<Setting>Стихи</Setting>
 		<Colors>
 			<Book>deb887</Book>
