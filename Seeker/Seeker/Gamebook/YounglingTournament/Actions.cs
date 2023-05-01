@@ -36,22 +36,22 @@ namespace Seeker.Gamebook.YounglingTournament
         {
             List<string> newStatuses = new List<string>();
 
+            newStatuses.Add(String.Format("Выносливость: {0}/{1}", protagonist.Hitpoints, protagonist.MaxHitpoints));
+
             if (protagonist.SecondPart == 0)
             {
-                newStatuses.Add(String.Format("Меткость: {0}", protagonist.Accuracy));
-                newStatuses.Add(String.Format("Пилот: {0}", protagonist.Pilot));
                 newStatuses.Add(String.Format("Взлом: {0}", protagonist.Hacking));
+                newStatuses.Add(String.Format("Пилот: {0}", protagonist.Pilot));
+                newStatuses.Add(String.Format("Меткость: {0}", protagonist.Accuracy));
             }
             else
             {
-                newStatuses.Add(String.Format("Форма {0}", Services.GetSwordSkillName(Services.GetSwordType())));
-                newStatuses.Add(String.Format("Понимание Силы: {0}", protagonist.ForceTechniques.Values.Sum()));
-
                 if ((protagonist.Thrust > 0) || (protagonist.EnemyThrust > 0))
                     newStatuses.Add(String.Format("Уколов: {0} vs {1}", protagonist.Thrust, protagonist.EnemyThrust));
-            }
 
-            newStatuses.Add(String.Format("Выносливость: {0}/{1}", protagonist.Hitpoints, protagonist.MaxHitpoints));
+                newStatuses.Add(String.Format("Понимание Силы: {0}", protagonist.ForceTechniques.Values.Sum()));
+                newStatuses.Add(String.Format("Форма {0}", Services.GetSwordSkillName(Services.GetSwordType())));
+            }
 
             return newStatuses;
         }
