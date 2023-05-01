@@ -464,7 +464,7 @@
 		<Text>Вам предстоит найти убийцу и разобраться в непростом деле.</Text>
 		<Paragraphs>92</Paragraphs>
 		<Size>5701</Size>
-		<ShortPlaythrough/>
+		<Playthrough>Short</Playthrough>
 		<Setting>Юмор</Setting>
 		<Color>7d2c1c</Color>
 	</Sheriff>
