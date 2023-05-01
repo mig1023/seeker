@@ -230,7 +230,7 @@
 		<Text>Все совпадения случайны. Всё написанное художественный вымысел. Автор уважает стариков.</Text>
 		<Paragraphs>64 (21+43)</Paragraphs>
 		<Size>4993</Size>
-		<ShortPlaythrough/>
+		<Playthrough>Short</Playthrough>
 		<Setting>Юмор</Setting>
 		<Color>030436</Color>
 	</PensionerSimulator>
