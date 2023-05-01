@@ -76,34 +76,31 @@ namespace Seeker.Gamebook.DzungarWar
         {
             List<string> statusLines = new List<string>();
 
-            if (protagonist.Tincture > 0)
-                statusLines.Add(String.Format("Настойка: {0}", protagonist.Tincture));
-
-            if (protagonist.Ginseng > 0)
-                statusLines.Add(String.Format("Отвар: {0}", protagonist.Ginseng));
-
-            if (protagonist.Oratory > 1)
-                statusLines.Add(String.Format("Красноречие: {0}", protagonist.Oratory));
-
-            if (protagonist.Cunning > 1)
-                statusLines.Add(String.Format("Хитрость: {0}", protagonist.Cunning));
-
-            if (protagonist.Wisdom > 1)
-                statusLines.Add(String.Format("Мудрость: {0}", protagonist.Wisdom));
-
-            if (protagonist.Skill > 1)
-                statusLines.Add(String.Format("Ловкость: {0}", protagonist.Skill));
+            if (protagonist.Favour != null)
+                statusLines.Add(String.Format("Благосклонность: {0}", protagonist.Favour));
 
             if (protagonist.Strength > 1)
                 statusLines.Add(String.Format("Сила: {0}", protagonist.Strength));
 
-            if (protagonist.Favour != null)
-                statusLines.Add(String.Format("Благосклонность: {0}", protagonist.Favour));
+            if (protagonist.Skill > 1)
+                statusLines.Add(String.Format("Ловкость: {0}", protagonist.Skill));
 
-            if (statusLines.Count <= 0)
-                return null;
+            if (protagonist.Wisdom > 1)
+                statusLines.Add(String.Format("Мудрость: {0}", protagonist.Wisdom));
 
-            return statusLines;
+            if (protagonist.Cunning > 1)
+                statusLines.Add(String.Format("Хитрость: {0}", protagonist.Cunning));
+
+            if (protagonist.Oratory > 1)
+                statusLines.Add(String.Format("Красноречие: {0}", protagonist.Oratory));
+
+            if (protagonist.Ginseng > 0)
+                statusLines.Add(String.Format("Отвар: {0}", protagonist.Ginseng));
+
+            if (protagonist.Tincture > 0)
+                statusLines.Add(String.Format("Настойка: {0}", protagonist.Tincture));
+
+            return statusLines.Count <= 0 ? null : statusLines;
         }
 
         public override List<string> StaticButtons()
