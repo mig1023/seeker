@@ -32,8 +32,8 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
             if (!String.IsNullOrEmpty(Stat))
             {
-                int diff = (GetProperty(protagonist, Stat) - Constants.GetStartValues[Stat]);
-                string diffLine = (diff > 0 ? String.Format(" (+{0})", diff) : String.Empty);
+                int diff = GetProperty(protagonist, Stat) - Constants.GetStartValues[Stat];
+                string diffLine = diff > 0 ? String.Format(" (+{0})", diff) : String.Empty;
 
                 return new List<string> { String.Format("{0}{1}", Head, diffLine) };
             }
@@ -107,9 +107,9 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
         public override List<string> AdditionalStatus() => new List<string>
         {
-            String.Format("Инициатива: {0}", protagonist.Initiative),
-            String.Format("Защита: {0}", protagonist.Defence),
             String.Format("Нападение: {0}", protagonist.Attack),
+            String.Format("Защита: {0}", protagonist.Defence),
+            String.Format("Инициатива: {0}", protagonist.Initiative),
         };
 
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
