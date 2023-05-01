@@ -61,7 +61,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
             bool success = Enum.TryParse(xmlNode.InnerText, out Character.MeritalArts value);
 
-            return (success ? value : Character.MeritalArts.Nope);
+            return success ? value : Character.MeritalArts.Nope;
         }
 
         private Character EnemyParse(XmlNode xmlEnemy)
