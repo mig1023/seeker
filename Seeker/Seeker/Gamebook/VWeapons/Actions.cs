@@ -25,11 +25,11 @@ namespace Seeker.Gamebook.VWeapons
 
         public override List<string> AdditionalStatus() => new List<string>
         {
-            String.Format("Ноги: {0}/4", protagonist.Legs),
-            String.Format("Руки: {0}/4", protagonist.Hands),
-            String.Format("Корпус: {0}/4", protagonist.Body),
-            String.Format("Плечи: {0}/4", protagonist.ShoulderGirdle),
             String.Format("Голова: {0}/3", protagonist.Head),
+            String.Format("Плечи: {0}/4", protagonist.ShoulderGirdle),
+            String.Format("Корпус: {0}/4", protagonist.Body),
+            String.Format("Руки: {0}/4", protagonist.Hands),
+            String.Format("Ноги: {0}/4", protagonist.Legs),
         };
 
         public override List<string> Representer()
