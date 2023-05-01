@@ -28,8 +28,8 @@ namespace Seeker.Gamebook.PrairieLaw
 
         public override List<string> AdditionalStatus() => new List<string>
         {
+            String.Format("Долларов: {0:f2}", Services.ToDollars(protagonist.Cents)),
             String.Format("Патронов: {0}", protagonist.Cartridges),
-            String.Format("Долларов: {0:f2}", Services.ToDollars(protagonist.Cents))
         };
 
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
