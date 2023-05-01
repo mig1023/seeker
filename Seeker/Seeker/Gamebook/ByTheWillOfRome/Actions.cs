@@ -23,8 +23,8 @@ namespace Seeker.Gamebook.ByTheWillOfRome
 
                 return new List<string>
                 {
-                    String.Format("Дисциплина: {0}", Game.Services.NegativeMeaning(protagonist.Discipline)),
                     String.Format("Легионеров: {0}", legionaries),
+                    String.Format("Дисциплина: {0}", Game.Services.NegativeMeaning(protagonist.Discipline)),
                 };
             }
             else if (protagonist.Horsemen > 0)
@@ -32,8 +32,8 @@ namespace Seeker.Gamebook.ByTheWillOfRome
                 string horsemen = new string('♘', protagonist.Horsemen);
                 return new List<string>
                 {
-                    String.Format("Навыки рукопашного боя: {0}", 2),
                     String.Format("Всадников: {0}", horsemen),
+                    String.Format("Навыки рукопашного боя: {0}", 2),
                 };
             }
             else
