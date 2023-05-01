@@ -533,6 +533,7 @@
 		<Text>Добро пожаловать в "Смертельную Игру". Чтобы выжить, нужна эрудиция и острый ум.</Text>
 		<Paragraphs>128</Paragraphs>
 		<Size>6983</Size>
+		<Playthrough>Normal</Playthrough>
 		<Setting>Приключения</Setting>
 		<Color>191039</Color>
 	</CommunityOfWorms>
