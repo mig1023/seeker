@@ -29,11 +29,11 @@ namespace Seeker.Gamebook.OrcsDay
 
         public override List<string> AdditionalStatus() => new List<string>
         {
-            String.Format("Деньги: {0}", protagonist.Money),
-            String.Format("Удача: {0}", Game.Services.NegativeMeaning(protagonist.Luck)),
-            String.Format("Смелость: {0}", Game.Services.NegativeMeaning(protagonist.Courage)),
-            String.Format("Мозги: {0}", Game.Services.NegativeMeaning(protagonist.Wits)),
             String.Format("Мышцы: {0}", Game.Services.NegativeMeaning(protagonist.Muscle)),
+            String.Format("Мозги: {0}", Game.Services.NegativeMeaning(protagonist.Wits)),
+            String.Format("Смелость: {0}", Game.Services.NegativeMeaning(protagonist.Courage)),
+            String.Format("Удача: {0}", Game.Services.NegativeMeaning(protagonist.Luck)),
+            String.Format("Деньги: {0}", protagonist.Money),
         };
 
         public override List<string> Representer()
