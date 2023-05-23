@@ -12,7 +12,7 @@
 			<Color Name="System" Value="1f93c9"/>
 		</Styles>
 		<Constants>
-			<List Name="WithoutStatuses" Value="0, 454, 455, 456, 457"/>
+			<List Name="WithoutStatuses" Items="0, 454, 455, 456, 457"/>
 		</Constants>
 		<Settings>
 			<DisabledOption Value="Show"/>
