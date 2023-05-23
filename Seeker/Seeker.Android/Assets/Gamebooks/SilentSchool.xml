@@ -269,7 +269,7 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="33">
-			<Text>Схватка будет очень суровой, и победа в ней достанется мне лишь ценой 7 ЖИЗНЕЙ</Text>
+			<Text>Схватка будет очень суровой, и победа в ней достанется мне лишь ценой 7 ЖИЗНЕЙ...</Text>
 			<Options>
 				<Option Destination="54" Availability="Стеклоочиститель"/>
 				<Option Destination="12" Availability="!Стеклоочиститель">
