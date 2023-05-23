@@ -11,7 +11,7 @@
 			<Color Name="ActionBox, AdditionalStatus" Value="c8d8b5"/>
 		</Styles>
 		<Constants>
-			<List Name="WithoutStatuses" Value="0, 102, 103"/>
+			<List Name="WithoutStatuses" Items="0, 102, 103"/>
 			<Dictionary Name="StatNames">
 				<Item Name="Muscle" Value="мышцы"/>
 				<Item Name="Wits" Value="мозги"/>
