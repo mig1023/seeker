@@ -10,10 +10,10 @@
 			<Color Name="Option" Value="a04c4d"/>
 		</Styles>
 		<Constants>
-			<Dictionary Name="Skills" FromLineByOrder=", 8, 10, 12, 9, 11, 9, 10, 8, 9, 10, 11"/>
-			<Dictionary Name="Strengths" FromLineByOrder=", 22, 20, 16, 18, 20, 20, 16, 24, 22, 18, 20"/>
-			<Dictionary Name="Charms" FromLineByOrder=", 8, 6, 5, 8, 6, 7, 7, 7, 6, 7, 5"/>
-			<Dictionary Name="LuckList" FromLine="1:①, 2:②, 3:③, 4:④, 5:⑤, 6:⑥, 11:❶, 12:❷, 13:❸, 14:❹, 15:❺, 16:❻"/>
+			<Dictionary Name="Skills" ItemsByOrder=", 8, 10, 12, 9, 11, 9, 10, 8, 9, 10, 11"/>
+			<Dictionary Name="Strengths" ItemsByOrder=", 22, 20, 16, 18, 20, 20, 16, 24, 22, 18, 20"/>
+			<Dictionary Name="Charms" ItemsByOrder=", 8, 6, 5, 8, 6, 7, 7, 7, 6, 7, 5"/>
+			<Dictionary Name="LuckList" Items="1:①, 2:②, 3:③, 4:④, 5:⑤, 6:⑥, 11:❶, 12:❷, 13:❸, 14:❹, 15:❺, 16:❻"/>
 		</Constants>
 		<Settings>
 			<DisabledOption Value="Hide"/>
