@@ -13,8 +13,8 @@
 			<Color Name="System" Value="e6c5c5"/>
 		</Styles>
 		<Constants>
-			<List Name="WithoutStatuses" Value="0, 714, 715, 716"/>
-			<List Name="WithoutStaticsButtons" Value="0, 687, 714, 715, 701, 702"/>
+			<List Name="WithoutStatuses" Items="0, 714, 715, 716"/>
+			<List Name="WithoutStaticsButtons" Items="0, 687, 714, 715, 701, 702"/>
 		</Constants>
 		<Settings>
 			<DisabledOption Value="Show"/>
