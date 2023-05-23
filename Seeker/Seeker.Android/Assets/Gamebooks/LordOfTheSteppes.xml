@@ -12,7 +12,7 @@
 			<Color Name="System" Value="f2f2f2"/>
 		</Styles>
 		<Constants>
-			<List Name="WithoutStatuses" Value="0, 904, 905, 906"/>
+			<List Name="WithoutStatuses" Items="0, 904, 905, 906"/>
 			<Dictionary Name="GetStartValues">
 				<Item Name="Attack" Value="8"/>
 				<Item Name="Defence" Value="15"/>
