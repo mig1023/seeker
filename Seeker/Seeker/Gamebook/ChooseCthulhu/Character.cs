@@ -12,7 +12,13 @@ namespace Seeker.Gamebook.ChooseCthulhu
         public int Initiation
         {
             get => _initiation;
-            set => _initiation = Game.Param.Setter(value, _initiation, this);
+            set
+            {
+                if (IsCursed() && (value < 1))
+                    value = 1;
+
+                _initiation = Game.Param.Setter(value, _initiation, this);
+            }
         }
 
         public List<int> BackColor { get; set; }
@@ -22,7 +28,7 @@ namespace Seeker.Gamebook.ChooseCthulhu
         {
             base.Init();
 
-            Initiation = 0;
+            Initiation = IsCursed() ? 1 : 0;
 
             BackColor = new List<int> { 112, 144, 167 };
             BtnColor = new List<int> { 50, 88, 100 };
@@ -42,6 +48,17 @@ namespace Seeker.Gamebook.ChooseCthulhu
 
             return String.Join("|", Initiation, backColor, btnColor);
         }
+
+        public bool IsCursed()
+        {
+            if (App.Current.Properties.ContainsKey("ChooseCthulhuCursed"))
+                return (string)App.Current.Properties["ChooseCthulhuCursed"] == "1";
+            else
+                return false;
+        }
+           
+        public void Cursed() =>
+            App.Current.Properties["ChooseCthulhuCursed"] = "1";
 
         public override void Load(string saveLine)
         {

@@ -8,8 +8,11 @@ namespace Seeker.Gamebook.ChooseCthulhu
         public static Actions StaticInstance = new Actions();
         private static Character protagonist = Character.Protagonist;
 
-        public override List<string> Status() =>
-            new List<string> { String.Format("Посвящение: {0}", protagonist.Initiation) };
+        public override List<string> Status()
+        {
+            string cursed = Character.Protagonist.IsCursed() ? " (проклят)" : String.Empty;
+            return new List<string> { String.Format("Посвящение: {0}{1}", protagonist.Initiation, cursed) };
+        }
 
         public override bool Availability(string option)
         {
