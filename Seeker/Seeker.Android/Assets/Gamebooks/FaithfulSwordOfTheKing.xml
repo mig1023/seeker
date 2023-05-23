@@ -10,9 +10,9 @@
 			<Color Name="System" Value="f0dddd"/>
 		</Styles>
 		<Constants>
-			<List Name="WithoutStatuses" Value="0, 660"/>
-			<Dictionary Name="Skills" FromLineByOrder="12, 8, 10, 7, 9, 11"/>
-			<Dictionary Name="Strengths" FromLineByOrder="22, 18, 14, 24, 16, 20"/>	
+			<List Name="WithoutStatuses" Items="0, 660"/>
+			<Dictionary Name="Skills" ItemsByOrder="12, 8, 10, 7, 9, 11"/>
+			<Dictionary Name="Strengths" ItemsByOrder="22, 18, 14, 24, 16, 20"/>	
 		</Constants>
 		<Settings>
 			<DisabledOption Value="Hide"/>
