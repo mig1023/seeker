@@ -29,7 +29,8 @@ namespace Seeker.Output
 
             SettingSplitter(ref settings);
 
-            SettingButton("Сбросить сохранённые игры", () => Game.Continue.Clean(), ref settings, spacer: true);
+            SettingButton("Сбросить закладки", () => Game.Bookmarks.Clean(), ref settings, spacer: true);
+            SettingButton("Сбросить сохранённые игры", () => Game.Continue.Clean(), ref settings);
             SettingButton("Сбросить все настройки", () => Game.Settings.Clean(), ref settings);
         }
 

@@ -62,5 +62,24 @@ namespace Seeker.Game
             else
                 App.Current.Properties[bookmarksName] = newBookmarkList;
         }
+
+        public static void Clean()
+        {
+            foreach (string gamebook in Gamebook.List.GetBooks())
+            {
+                string bookmarksName = String.Format("{0}-BOOKMARKS", gamebook);
+
+                if (App.Current.Properties.TryGetValue(bookmarksName, out object bookmarksList))
+                {
+                    List<string> allBookmarks = (bookmarksList as string).Split(',').ToList();
+
+                    foreach (string bookmark in allBookmarks)
+                        App.Current.Properties.Remove(String.Format("{0}-{1}", gamebook, bookmark.Split(':')[0]));
+                }
+
+                if (App.Current.Properties.ContainsKey(bookmarksName))
+                    App.Current.Properties.Remove(bookmarksName);
+            }
+        }
     }
 }
