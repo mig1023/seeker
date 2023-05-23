@@ -15269,7 +15269,7 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="1812">
-			<Text>Вы открываете дверь и оказываетесь в коридоре</Text>
+			<Text>Вы открываете дверь и оказываетесь в коридоре...</Text>
 			<Options>
 				<Option Destination="1424"/>
 			</Options>
