@@ -186,7 +186,7 @@ namespace Seeker.Game
 
             foreach (XmlNode xmlNode in xmlFile.SelectNodes(Intro("Constants/List")))
             {
-                List<string> values = xmlNode.Attributes["Value"].InnerText.Split(',').ToList();
+                List<string> values = xmlNode.Attributes["Items"].InnerText.Split(',').ToList();
                 Data.Constants.LoadList(xmlNode.Attributes["Name"].InnerText, values);
             }
 
@@ -194,17 +194,17 @@ namespace Seeker.Game
             {
                 Dictionary<string, string> items = new Dictionary<string, string>();
 
-                if (xmlNode.Attributes["FromLineByOrder"] != null)
+                if (xmlNode.Attributes["ItemsByOrder"] != null)
                 {
-                    List<string> lines = xmlNode.Attributes["FromLineByOrder"].InnerText.Split(',').Select(x => x.Trim()).ToList();
+                    List<string> lines = xmlNode.Attributes["ItemsByOrder"].InnerText.Split(',').Select(x => x.Trim()).ToList();
 
                     for (int i = 1; i <= lines.Count; i++)
                         if (!String.IsNullOrEmpty(lines[i - 1]))
                             items.Add(i.ToString(), lines[i - 1]);
                 }
-                else if (xmlNode.Attributes["FromLine"] != null)
+                else if (xmlNode.Attributes["Items"] != null)
                 {
-                    List<string> lines = xmlNode.Attributes["FromLine"].InnerText.Split(',').Select(x => x.Trim()).ToList();
+                    List<string> lines = xmlNode.Attributes["Items"].InnerText.Split(',').Select(x => x.Trim()).ToList();
                     items = lines.ToDictionary(x => ItemLineSplit(x), x => ItemLineSplit(x, second: true));
                 }
                 else
