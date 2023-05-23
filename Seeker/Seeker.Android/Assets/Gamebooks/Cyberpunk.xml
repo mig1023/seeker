@@ -11,8 +11,8 @@
 			<Color Name="System" Value="cde6e5"/>
 		</Styles>
 		<Constants>
-			<List Name="WithoutStatuses" Value="0, 587, 588, 589"/>
-			<List Name="NormalizationParams" Value="Planning, Preparation, Luck"/>
+			<List Name="WithoutStatuses" Items="0, 587, 588, 589"/>
+			<List Name="NormalizationParams" Items="Planning, Preparation, Luck"/>
 			<Dictionary Name="CharactersParams">
 				<Item Name="Planning" Value="Планирование"/>
 				<Item Name="Preparation" Value="Подготовка"/>
