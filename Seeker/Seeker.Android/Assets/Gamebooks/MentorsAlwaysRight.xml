@@ -14,8 +14,8 @@
 			<Color Name="System" Value="ccd7ea"/>
 		</Styles>
 		<Constants>
-			<List Name="WithoutStatuses" Value="0, 556, 557, 558, 559"/>
-			<List Name="WithoutStaticsButtons" Value="0, 556, 557, 558, 559"/>
+			<List Name="WithoutStatuses" Items="0, 556, 557, 558, 559"/>
+			<List Name="WithoutStaticsButtons" Items="0, 556, 557, 558, 559"/>
 		</Constants>
 		<Settings>
 			<DisabledOption Value="Hide"/>
