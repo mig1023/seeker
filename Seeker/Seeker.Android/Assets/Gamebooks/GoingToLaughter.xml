@@ -10,7 +10,7 @@
 			<Color Name="System" Value="f3f0f0"/>
 		</Styles>
 		<Constants>
-			<List Name="WithoutStatuses" Value="0, 1393, 1394"/>
+			<List Name="WithoutStatuses" Items="0, 1393, 1394"/>
 			<Dictionary Name="IncompatiblesDisadvantages">
 				<Item Name="Пьянство" Value="Набожность"/>
 				<Item Name="Алчность" Value="Набожность"/>
@@ -29,7 +29,7 @@
 				<Item Name="Buffoonery" Value="Шутовству"/>
 				<Item Name="Inspiration" Value="Вдохновению"/>
 			</Dictionary>
-			<List Name="SleepCleaningSurvive" Value="Дежа вю, Се ля ви, Шерше ля фам, Триумфатор, Лютня, Записная книжка, Бревиарий"/>
+			<List Name="SleepCleaningSurvive" Items="Дежа вю, Се ля ви, Шерше ля фам, Триумфатор, Лютня, Записная книжка, Бревиарий"/>
 		</Constants>
 		<Settings>
 			<DisabledOption Value="Show"/>
