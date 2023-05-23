@@ -9,7 +9,7 @@
 			<Color Name="System" Value="f4f4f4"/>
 		</Styles>
 		<Constants>
-			<List Name="WithoutStatuses" Value="0, 1"/>
+			<List Name="WithoutStatuses" Items="0, 1"/>
 			<Dictionary Name="Government">
 				<Item Name="Королева Антуанетта Плодовитая" Value="Королева Антуанетта Плодовитая уделяет много времени потомству. Ей стало сложно управлять колонией."/>
 				<Item Name="Принц Мурадин Крылатый" Value="Принц Мурадин Крылатый готовится к брачному полёту. Ему стало сложно управлять колонией."/>
