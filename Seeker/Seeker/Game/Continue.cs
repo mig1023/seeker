@@ -69,6 +69,10 @@ namespace Seeker.Game
         {
             foreach (string gamebook in Gamebook.List.GetBooks())
                 App.Current.Properties.Remove(gamebook);
+
+            foreach (string variable in Game.Data.OuterGameVariable)
+                if (App.Current.Properties.ContainsKey(variable))
+                    App.Current.Properties.Remove(variable);
         }
     }
 }

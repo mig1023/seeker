@@ -29,6 +29,11 @@ namespace Seeker.Game
         public const string DescriptionXml = "Descriptions.xml";
         public const string SettingsXml = "Settings.xml";
 
+        public static List<string> OuterGameVariable = new List<string>
+        {
+            "ChooseCthulhu_Cursed",
+        };
+
         public static Paragraph CurrentParagraph { get; set; }
         public static int CurrentParagraphID { get; set; }
 

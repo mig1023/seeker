@@ -51,14 +51,14 @@ namespace Seeker.Gamebook.ChooseCthulhu
 
         public bool IsCursed()
         {
-            if (App.Current.Properties.ContainsKey("ChooseCthulhuCursed"))
-                return (string)App.Current.Properties["ChooseCthulhuCursed"] == "1";
+            if (App.Current.Properties.ContainsKey("ChooseCthulhu_Cursed"))
+                return (string)App.Current.Properties["ChooseCthulhu_Cursed"] == "1";
             else
                 return false;
         }
            
         public void Cursed() =>
-            App.Current.Properties["ChooseCthulhuCursed"] = "1";
+            App.Current.Properties["ChooseCthulhu_Cursed"] = "1";
 
         public override void Load(string saveLine)
         {
