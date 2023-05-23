@@ -13,8 +13,8 @@
 			<Color Name="System" Value="c7dfb9"/>
 		</Styles>
 		<Constants>
-			<List Name="WithoutStatuses" Value="0, 205"/>
-			<List Name="WithoutStaticsButtons" Value="0, 30, 60, 90"/>
+			<List Name="WithoutStatuses" Items="0, 205"/>
+			<List Name="WithoutStaticsButtons" Items="0, 30, 60, 90"/>
 			<Dictionary Name="StatNames">
 				<Item Name="Strength" Value="силы"/>
 				<Item Name="Skill" Value="ловкости"/>
