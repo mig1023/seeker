@@ -12644,7 +12644,7 @@
 				<Option Destination="1710" Text="Зеленый"/>
 				<Option Destination="1771" Text="Стеклянный"/>
 				<Option Destination="1804" Text="Белый">
-					<Text>Выйдете обратно в коридор</Text>
+					<Text>Выйдете обратно в коридор:</Text>
 				</Option>
 				<Option Destination="1429"/>
 			</Options>
