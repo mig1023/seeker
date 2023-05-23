@@ -7,7 +7,7 @@
 			<Color Name="ButtonFont" Value="000000"/>
 		</Styles>
 		<Constants>
-			<List Name="GetParagraphsWithoutHokkuCreation" Value="0, 1, 9, 10, 11, 12"/>
+			<List Name="GetParagraphsWithoutHokkuCreation" Items="0, 1, 9, 10, 11, 12"/>
 		</Constants>
 		<Settings>
 			<DisabledOption Value="Hide"/>
