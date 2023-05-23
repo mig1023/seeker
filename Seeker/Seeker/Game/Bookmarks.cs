@@ -6,19 +6,22 @@ namespace Seeker.Game
 {
     class Bookmarks
     {
+        private static List<string> BookmarkList(string bookmarksName)
+        {
+            if (!App.Current.Properties.TryGetValue(bookmarksName, out object bookmarksList))
+                return new List<string>();
+            else
+                return (bookmarksList as string).Split(',').ToList();
+        }
+
         public static Dictionary<string, string> List(out string currentGame, out string bookmarksName)
         {
             currentGame = Continue.GetCurrentGame();
             bookmarksName = String.Format("{0}-BOOKMARKS", currentGame);
             Dictionary<string, string> bookmarks = new Dictionary<string, string>();
 
-            if (App.Current.Properties.TryGetValue(bookmarksName, out object bookmarksList))
-            {
-                List<string> allBookmarks = (bookmarksList as string).Split(',').ToList();
-
-                foreach (string bookmark in allBookmarks)
-                    bookmarks[bookmark.Split(':')[1]] = bookmark.Split(':')[0];
-            }
+            foreach (string bookmark in BookmarkList(bookmarksName))
+                bookmarks[bookmark.Split(':')[1]] = bookmark.Split(':')[0];
 
             return bookmarks;
         }
@@ -69,13 +72,8 @@ namespace Seeker.Game
             {
                 string bookmarksName = String.Format("{0}-BOOKMARKS", gamebook);
 
-                if (App.Current.Properties.TryGetValue(bookmarksName, out object bookmarksList))
-                {
-                    List<string> allBookmarks = (bookmarksList as string).Split(',').ToList();
-
-                    foreach (string bookmark in allBookmarks)
-                        App.Current.Properties.Remove(String.Format("{0}-{1}", gamebook, bookmark.Split(':')[0]));
-                }
+                foreach (string bookmark in BookmarkList(bookmarksName))
+                    App.Current.Properties.Remove(String.Format("{0}-{1}", gamebook, bookmark.Split(':')[0]));
 
                 if (App.Current.Properties.ContainsKey(bookmarksName))
                     App.Current.Properties.Remove(bookmarksName);
