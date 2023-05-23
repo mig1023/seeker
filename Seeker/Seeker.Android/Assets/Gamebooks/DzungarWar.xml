@@ -15,7 +15,7 @@
 			<Color Name="System" Value="cebbaf"/>
 		</Styles>
 		<Constants>
-			<List Name="WithoutStatuses" Value="0, 658, 659, 660"/>
+			<List Name="WithoutStatuses" Items="0, 658, 659, 660"/>
 			<Dictionary Name="StatNames">
 				<Item Name="Strength" Value="силы"/>
 				<Item Name="Skill" Value="ловкости"/>
