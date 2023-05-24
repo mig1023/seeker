@@ -1038,7 +1038,7 @@
 			<Text>Ты наносишь сокрушительный удар по первому легионеру. Он пытается уклониться.</Text>
 			<Options>
 				<Option Destination="115" Text="Реакция больше 9" Availability="РЕАКЦИЯ > 9"/>
-				<Option Destination="117" Text="Реакция меньше или равна 9"  Availability="РЕАКЦИЯ &lt;= 9"/>
+				<Option Destination="117" Text="Реакция меньше или равна 9" Availability="РЕАКЦИЯ &lt;= 9"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="139">
