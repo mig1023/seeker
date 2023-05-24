@@ -2290,7 +2290,7 @@
 				<Option Destination="67" Text="Пятое" Availability="!пятое">
 					<Trigger Value="пятое"/>
 				</Option>
-				<Option Destination="335" Text="Шестое"  Availability="!шестое">
+				<Option Destination="335" Text="Шестое" Availability="!шестое">
 					<Trigger Value="шестое"/>
 					<Text>Отразив первое заклинание, посмотрите на свой Листок Путешественника:</Text>
 				</Option>
