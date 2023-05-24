@@ -586,7 +586,7 @@
 					<Untrigger Value="Окончание"/>
 					<Time Value="1"/>
 				</Option>
-				<Option Destination="28" Text="Многоножка" Availability="Окончание,  ДАЙС = 5">
+				<Option Destination="28" Text="Многоножка" Availability="Окончание, ДАЙС = 5">
 					<Undice/>
 					<Untrigger Value="Окончание"/>
 					<Time Value="1"/>
