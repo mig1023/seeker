@@ -1196,7 +1196,7 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="162">
-			<Text>Ты хватаешь топор за рукоять и с силой дёргаешь на себя.\n\nПроверь свою Силу.\n\nЕсли 4 или меньше, то на 167.\n\nЕсли она больше 4, то</Text>
+			<Text>Ты хватаешь топор за рукоять и с силой дёргаешь на себя.\n\nПроверь свою Силу:</Text>
 			<Options>
 				<Option Destination="157" Text="Сила больше 4" Availability="СИЛА > 4"/>
 				<Option Destination="167" Text="Сила 4 или меньше" Availability="СИЛА &lt;= 4"/>
