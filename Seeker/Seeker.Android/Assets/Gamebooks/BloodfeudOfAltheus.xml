@@ -3814,7 +3814,7 @@
 			<Text>Крысы разносят чуму, и вы подхватили эту ужасную болезнь от зараженного укуса.</Text>
 			<Options>
 				<Option Destination="377" Text="Асклепий безразличен к вам" Availability="!НЕМИЛОСТИВ Асклепий"/>
-				<Option Destination="98" Text="Вы впали у него в Немилость"  Availability="НЕМИЛОСТИВ Асклепий"/>
+				<Option Destination="98" Text="Вы впали у него в Немилость" Availability="НЕМИЛОСТИВ Асклепий"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="452">
