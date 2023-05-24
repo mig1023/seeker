@@ -3673,7 +3673,7 @@
 			<Options>
 				<Option Destination="524" Text="Пойдёте с воинами"/>
 				<Option Destination="370" Text="Будете сражаться"/>
-				<Option Destination="478" Text="Примените «Молнию», так как «паралич» при таком количестве народа не поможет"  Availability="ЗАКЛЯТИЕ МОЛНИИ"/>
+				<Option Destination="478" Text="Примените «Молнию», так как «паралич» при таком количестве народа не поможет" Availability="ЗАКЛЯТИЕ МОЛНИИ"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="495">
