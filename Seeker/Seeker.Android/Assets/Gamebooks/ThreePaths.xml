@@ -63,8 +63,8 @@
 			<Options>
 				<Option Destination="14" Text="Пойдёте на запад"/>
 				<Option Destination="76" Text="Пойдёте на юг" Availability="!17"/>
-				<Option Destination="60" Text="Пойдёте на север"  Availability="11"/>
-				<Option Destination="70" Text="Пойдёте на север"  Availability="!11"/>
+				<Option Destination="60" Text="Пойдёте на север" Availability="11"/>
+				<Option Destination="70" Text="Пойдёте на север" Availability="!11"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="7">
