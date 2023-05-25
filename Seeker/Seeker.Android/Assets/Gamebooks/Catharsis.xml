@@ -1,7 +1,9 @@
 <Gamebook>
 	<Introduction>
-		<Title>Катарсис</Title>
-		<Copyright>Андрей Журавлёв, 2013</Copyright>
+		<Info>
+			<Title>Катарсис</Title>
+			<Copyright>Андрей Журавлёв, 2013</Copyright>
+		</Info>
 		<Styles>
 			<Color Name="Background" Value="cdcdcd"/>
 			<Color Name="StatusBar, ActionBox, System" Value="b8b8b8"/>
