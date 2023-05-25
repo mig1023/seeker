@@ -1,7 +1,9 @@
 <Gamebook>
 	<Introduction>
-		<Title>Разрушитель</Title>
-		<Copyright>Стив Джексон, 1986</Copyright>
+		<Info>
+			<Title>Разрушитель</Title>
+			<Copyright>Стив Джексон, 1986</Copyright>
+		</Info>
 		<Styles>
 			<Color Name="Background" Value="c9d7d0"/>
 			<Color Name="StatusBar" Value="0e3b24"/>
