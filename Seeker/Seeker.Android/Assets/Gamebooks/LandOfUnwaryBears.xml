@@ -1,7 +1,9 @@
 <Gamebook>
 	<Introduction>
-		<Title>В краю непуганных медведей</Title>
-		<Copyright>Геннадий Логинов, 2020</Copyright>
+		<Info>
+			<Title>В краю непуганных медведей</Title>
+			<Copyright>Геннадий Логинов, 2020</Copyright>
+		</Info>
 		<Styles>
 			<Color Name="Main" Value="9e003a"/>
 			<Color Name="System" Value="f9f9f9"/>
