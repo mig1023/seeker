@@ -1,7 +1,9 @@
 <Gamebook>
 	<Introduction>
-		<Title>Монстр наносит ответный удар</Title>
-		<Copyright>Хироси Ямамото, 1987</Copyright>
+		<Info>
+			<Title>Монстр наносит ответный удар</Title>
+			<Copyright>Хироси Ямамото, 1987</Copyright>
+		</Info>
 		<Styles>
 			<Color Name="Main" Value="4d5339"/>
 			<Color Name="Option" Value="405339"/>
