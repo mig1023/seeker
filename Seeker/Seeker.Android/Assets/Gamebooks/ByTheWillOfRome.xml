@@ -1,7 +1,9 @@
 <Gamebook>
 	<Introduction>
-		<Title>По воле Рима</Title>
-		<Copyright>Константин Таро, 2010</Copyright>
+		<Info>
+			<Title>По воле Рима</Title>
+			<Copyright>Константин Таро, 2010</Copyright>
+		</Info>
 		<Styles>
 			<Color Name="StatusBar" Value="520809"/>
 			<Color Name="Main" Value="670b0c"/>
