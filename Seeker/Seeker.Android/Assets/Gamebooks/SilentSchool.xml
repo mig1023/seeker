@@ -1,7 +1,9 @@
 <Gamebook>
 	<Introduction>
-		<Title>Silent School</Title>
-		<Copyright>Роман Островерхов, 2013</Copyright>
+		<Info>
+			<Title>Silent School</Title>
+			<Copyright>Роман Островерхов, 2013</Copyright>
+		</Info>
 		<Styles>
 			<Color Name="StatusBar" Value="2a2a2a"/>
 			<Color Name="Main" Value="434343"/>
