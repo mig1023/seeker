@@ -1,7 +1,9 @@
 <Gamebook>
 	<Introduction>
-		<Title>Лунатик</Title>
-		<Copyright>Стивен Хэнд, 1992</Copyright>
+		<Info>
+			<Title>Лунатик</Title>
+			<Copyright>Стивен Хэнд, 1992</Copyright>
+		</Info>
 		<Styles>
 			<Color Name="StatusBar" Value="44264b"/>
 			<Color Name="ActionBox" Value="e3d9d9"/>
