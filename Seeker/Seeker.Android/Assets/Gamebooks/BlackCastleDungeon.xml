@@ -1,7 +1,9 @@
 <Gamebook>
 	<Introduction>
-		<Title>Подземелья чёрного замка</Title>
-		<Copyright>Дмитрий Браславский, 1991</Copyright>
+		<Info>
+			<Title>Подземелья чёрного замка</Title>
+			<Copyright>Дмитрий Браславский, 1991</Copyright>
+		</Info>
 		<Styles>
 			<Color Name="StatusBar" Value="2a2a2a"/>
 			<Color Name="Main" Value="151515"/>
