@@ -1,7 +1,9 @@
 <Gamebook>
 	<Introduction>
-		<Title>Последнее хокку</Title>
-		<Copyright>Юркий Слон, 2021</Copyright>
+		<Info>
+			<Title>Последнее хокку</Title>
+			<Copyright>Юркий Слон, 2021</Copyright>
+		</Info>
 		<Styles>
 			<Color Name="Main" Value="deb887"/>
 			<Color Name="ButtonFont" Value="000000"/>
