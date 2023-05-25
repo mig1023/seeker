@@ -1,7 +1,9 @@
 <Gamebook>
 	<Introduction>
-		<Title>Приключения безбородого обманщика</Title>
-		<Copyright>Владимир Сизиков, 2015</Copyright>
+		<Info>
+			<Title>Приключения безбородого обманщика</Title>
+			<Copyright>Владимир Сизиков, 2015</Copyright>
+		</Info>
 		<Styles>
 			<Color Name="Background" Value="dbeadc"/>
 			<Color Name="ActionBox" Value="7cb281"/>
