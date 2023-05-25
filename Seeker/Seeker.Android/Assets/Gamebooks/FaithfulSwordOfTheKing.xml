@@ -1,7 +1,9 @@
 <Gamebook>
 	<Introduction>
-		<Title>Верная шпага короля</Title>
-		<Copyright>Дмитрий Браславский, 1995</Copyright>
+		<Info>
+			<Title>Верная шпага короля</Title>
+			<Copyright>Дмитрий Браславский, 1995</Copyright>
+		</Info>
 		<Styles>
 			<Color Name="StatusBar" Value="870808"/>
 			<Color Name="Main" Value="911"/>
