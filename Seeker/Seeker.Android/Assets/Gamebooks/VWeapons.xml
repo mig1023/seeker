@@ -1,7 +1,9 @@
 <Gamebook>
 	<Introduction>
-		<Title>Оружие возмездия</Title>
-		<Copyright>Андрей Тишин, 2013</Copyright>
+		<Info>
+			<Title>Оружие возмездия</Title>
+			<Copyright>Андрей Тишин, 2013</Copyright>
+		</Info>
 		<Styles>
 			<Color Name="Main, Action, Option, StatusBar, Continue" Value="ffffff"/>
 			<Color Name="ButtonFont, StatusFont, StatusBorder, Border" Value="000000"/>
