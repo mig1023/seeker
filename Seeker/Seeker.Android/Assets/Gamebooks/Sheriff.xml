@@ -1,7 +1,9 @@
 <Gamebook>
 	<Introduction>
-		<Title>Шериф</Title>
-		<Copyright>Zaratystra, 2022</Copyright>
+		<Info>
+			<Title>Шериф</Title>
+			<Copyright>Zaratystra, 2022</Copyright>
+		</Info>
 		<Styles>
 			<Color Name="Main" Value="7d2c1c"/>
 			<Color Name="Option, Continue" Value="b45b27"/>
