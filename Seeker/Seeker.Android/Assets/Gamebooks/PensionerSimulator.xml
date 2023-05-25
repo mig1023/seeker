@@ -1,7 +1,9 @@
 <Gamebook>
 	<Introduction>
-		<Title>Симулятор пенсионерки</Title>
-		<Copyright>Zaratystra, the_arsonist, 2018</Copyright>
+		<Info>
+			<Title>Симулятор пенсионерки</Title>
+			<Copyright>Zaratystra, the_arsonist, 2018</Copyright>
+		</Info>
 		<Styles>
 			<Color Name="Main" Value="030436"/>
 			<Color Name="Option" Value="35365e"/>
