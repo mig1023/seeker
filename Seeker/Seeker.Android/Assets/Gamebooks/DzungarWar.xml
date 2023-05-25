@@ -1,7 +1,9 @@
 <Gamebook>
 	<Introduction>
-		<Title>Джунгарское нашествие</Title>
-		<Copyright>Владимир Сизиков, 2016</Copyright>
+		<Info>
+			<Title>Джунгарское нашествие</Title>
+			<Copyright>Владимир Сизиков, 2016</Copyright>
+		</Info>
 		<Styles>
 			<Color Name="Background" Value="f1e6d1"/>
 			<Color Name="ActionBox" Value="af8f69"/>
