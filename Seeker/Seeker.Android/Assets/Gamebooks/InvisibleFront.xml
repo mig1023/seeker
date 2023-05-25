@@ -1,7 +1,9 @@
 <Gamebook>
 	<Introduction>
-		<Title>На невидимых фронтах</Title>
-		<Copyright>mmvvss, 2018</Copyright>
+		<Info>
+			<Title>На невидимых фронтах</Title>
+			<Copyright>mmvvss, 2018</Copyright>
+		</Info>
 		<Styles>
 			<Color Name="Main, Option" Value="d52b1e"/>
 			<Color Name="Continue" Value="e57f78"/>
