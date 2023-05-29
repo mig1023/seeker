@@ -1,9 +1,9 @@
 <Gamebook>
 	<Introduction>
-		<Info>
+		<Copyright>
 			<Title>Общество червей</Title>
-			<Copyright>Пётр Прокошев, 2017</Copyright>
-		</Info>
+			<Author>Пётр Прокошев, 2017</Author>
+		</Copyright>
 		<Styles>
 			<Color Name="Main" Value="191039"/>
 			<Color Name="Option" Value="191039"/>
