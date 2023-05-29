@@ -1,9 +1,9 @@
 <Gamebook>
 	<Introduction>
-		<Info>
+		<Copyright>
 			<Title>Турнир юнлингов</Title>
-			<Copyright>Александр Андросенко, 2018</Copyright>
-		</Info>
+			<Author>Александр Андросенко, 2018</Author>
+		</Copyright>
 		<Styles>
 			<Color Name="StatusBar" Value="e8d17e"/>
 			<Color Name="StatusFont" Value="000000"/>
