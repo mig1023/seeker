@@ -1,9 +1,9 @@
 <Gamebook>
 	<Introduction>
-		<Info>
+		<Copyright>
 			<Title>Владыка степей</Title>
-			<Copyright>Сергей Ступин, 2009</Copyright>
-		</Info>
+			<Author>Сергей Ступин, 2009</Author>
+		</Copyright>
 		<Styles>
 			<Color Name="StatusBar" Value="b42806"/>
 			<Color Name="StatusFont" Value="ffffff"/>
