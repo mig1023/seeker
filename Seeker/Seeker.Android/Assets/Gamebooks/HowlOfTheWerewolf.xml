@@ -1,9 +1,9 @@
 <Gamebook>
 	<Introduction>
-		<Info>
+		<Copyright>
 			<Title>Вой оборотня</Title>
-			<Copyright>Джонатан Грин, 2007</Copyright>
-		</Info>
+			<Author>Джонатан Грин, 2007</Author>
+		</Copyright>
 		<Styles>
 			<Color Name="Background" Value="c2cccd"/>
 			<Color Name="StatusBar" Value="253130"/>
