@@ -1,9 +1,9 @@
 <Gamebook>
 	<Introduction>
-		<Info>
+		<Copyright>
 			<Title>Легенды всегда врут</Title>
-			<Copyright>Роман Островерхов, 2012</Copyright>
-		</Info>
+			<Author>Роман Островерхов, 2012</Author>
+		</Copyright>
 		<Styles>
 			<Color Name="Background" Value="f5e7e5"/>
 			<Color Name="StatusBar" Value="870808"/>
