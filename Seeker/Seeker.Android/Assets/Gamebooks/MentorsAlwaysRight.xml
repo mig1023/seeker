@@ -1,9 +1,9 @@
 <Gamebook>
 	<Introduction>
-		<Info>
+		<Copyright>
 			<Title>Наставники всегда правы</Title>
-			<Copyright>Роман Островерхов, 2011</Copyright>
-		</Info>
+			<Author>Роман Островерхов, 2011</Author>
+		</Copyright>
 		<Styles>
 			<Color Name="Background" Value="e0e7f2"/>
 			<Color Name="ActionBox" Value="7988a4"/>
