@@ -1,9 +1,9 @@
 <Gamebook>
 	<Introduction>
-		<Info>
+		<Copyright>
 			<Title>Скала ужаса</Title>
-			<Copyright>Дмитрий Тышевич, 2009</Copyright>
-		</Info>
+			<Author>Дмитрий Тышевич, 2009</Author>
+		</Copyright>
 		<Styles>
 			<Color Name="Background" Value="000000"/>
 			<Color Name="Font" Value="ffffff"/>
