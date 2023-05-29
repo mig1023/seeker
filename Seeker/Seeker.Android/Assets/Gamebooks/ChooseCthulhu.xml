@@ -1,9 +1,9 @@
 <Gamebook>
 	<Introduction>
-		<Info>
+		<Copyright>
 			<Title>Всегда выбирай Ктулху</Title>
-			<Copyright>Эдвард Райкер, 2018</Copyright>
-		</Info>
+			<Author>Эдвард Райкер, 2018</Author>
+		</Copyright>
 		<Styles>
 			<Color Name="StatusBar" Value="003153"/>
 			<Color Name="SystemFont" Value="dce3e5"/>
