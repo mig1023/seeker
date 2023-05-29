@@ -1,9 +1,9 @@
 <Gamebook>
 	<Introduction>
-		<Info>
+		<Copyright>
 			<Title>День Орка</Title>
-			<Copyright>Кейси Трэйвис, 2008</Copyright>
-		</Info>
+			<Author>Кейси Трэйвис, 2008</Author>
+		</Copyright>
 		<Styles>
 			<Color Name="Main" Value="a4be84"/>
 			<Color Name="Continue" Value="cad9b7"/>
