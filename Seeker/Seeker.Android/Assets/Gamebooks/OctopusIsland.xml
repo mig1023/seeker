@@ -1,9 +1,9 @@
 <Gamebook>
 	<Introduction>
-		<Info>
+		<Copyright>
 			<Title>Остров Осьминогов</Title>
-			<Copyright>Филипп Эбли, 1992</Copyright>
-		</Info>
+			<Author>Филипп Эбли, 1992</Author>
+		</Copyright>
 		<Styles>
 			<Color Name="StatusBar" Value="ce4f36"/>
 			<Color Name="Main, Action, Option" Value="c93c20"/>
