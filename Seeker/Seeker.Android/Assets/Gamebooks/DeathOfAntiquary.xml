@@ -1,9 +1,9 @@
 <Gamebook>
 	<Introduction>
-		<Info>
+		<Copyright>
 			<Title>Смерть антиквара</Title>
-			<Copyright>Константин Таро, 2001</Copyright>
-		</Info>
+			<Author>Константин Таро, 2001</Author>
+		</Copyright>
 		<Styles>
 			<Color Name="Main, Option" Value="2e2e2e"/>
 			<Color Name="Continue" Value="9a9a9a"/>
