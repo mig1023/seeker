@@ -1,9 +1,9 @@
 <Gamebook>
 	<Introduction>
-		<Info>
+		<Copyright>
 			<Title>Хозяин тайги</Title>
-			<Copyright>Павел Горохов, 2013</Copyright>
-		</Info>
+			<Author>Павел Горохов, 2013</Author>
+		</Copyright>
 		<Styles>
 			<Color Name="Main" Value="3e5434"/>
 			<Color Name="Background" Value="314329"/>
