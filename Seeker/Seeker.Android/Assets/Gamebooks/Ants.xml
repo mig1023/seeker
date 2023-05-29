@@ -1,9 +1,9 @@
 <Gamebook>
 	<Introduction>
-		<Info>
+		<Copyright>
 			<Title>Муравьиная борьба</Title>
-			<Copyright>Пётр Прокошев, 2023</Copyright>
-		</Info>
+			<Author>Пётр Прокошев, 2023</Author>
+		</Copyright>
 		<Styles>
 			<Color Name="Main, Action, Option, StatusBar, Continue" Value="ffffff"/>
 			<Color Name="ButtonFont, StatusFont, StatusBorder, Border" Value="000000"/>
