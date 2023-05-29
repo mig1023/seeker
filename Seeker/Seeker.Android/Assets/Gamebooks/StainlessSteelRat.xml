@@ -1,9 +1,9 @@
 <Gamebook>
 	<Introduction>
-		<Info>
+		<Copyright>
 			<Title>Крыса из нержавеющей стали</Title>
-			<Copyright>Гарри Гаррисон, 1985</Copyright>
-		</Info>
+			<Author>Гарри Гаррисон, 1985</Author>
+		</Copyright>
 		<Styles>
 			<Color Name="Background" Value="4a5b6c"/>
 			<Color Name="Font" Value="c3c6c8"/>
