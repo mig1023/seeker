@@ -1,9 +1,9 @@
 <Gamebook>
 	<Introduction>
-		<Info>
+		<Copyright>
 			<Title>Даманский</Title>
-			<Copyright>Павел Горохов, 2016</Copyright>
-		</Info>
+			<Author>Павел Горохов, 2016</Author>
+		</Copyright>
 		<Styles>
 			<Color Name="Main" Value="d8d8d8"/>
 			<Color Name="Continue" Value="e7e7e7"/>
