@@ -1,9 +1,9 @@
 <Gamebook>
 	<Introduction>
-		<Info>
+		<Copyright>
 			<Title>Серебряного века Силуэт</Title>
-			<Copyright>Константин Шепелин, 2014</Copyright>
-		</Info>
+			<Author>Константин Шепелин, 2014</Author>
+		</Copyright>
 		<Styles>
 			<Color Name="Main, Action, Continue" Value="f8ecc2"/>
 			<Color Name="Option" Value="fdfaf0"/>
