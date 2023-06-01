@@ -69,11 +69,9 @@ namespace Seeker.Game
             StringComparer ignoreCase = StringComparer.CurrentCultureIgnoreCase;
             List<string> style = StringParse(text.Attributes["Style"]).Split(',').Select(x => x.Trim()).ToList();
 
-            string textLine = text.InnerText.Replace("\\n", "\\n\\n").Replace("\\r", "\\n");
-
             Text output = new Text
             {
-                Content = textLine,
+                Content = text.InnerText,
                 Bold = style.Contains("Bold", ignoreCase),
                 Italic = style.Contains("Italic", ignoreCase),
                 Selected = style.Contains("Selected", ignoreCase),
