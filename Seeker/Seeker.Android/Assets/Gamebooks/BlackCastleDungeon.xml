@@ -11,12 +11,12 @@
 			<Color Name="Option" Value="696969"/>
 			<Color Name="System" Value="f9f9f9"/>
 		</Styles>
-		<Constants>
+		<Data>
 			<List Name="WithoutStatuses" Items="0, 619, 753"/>
 			<List Name="WithoutStaticsButtons" Items="0, 619, 753"/>
 			<List Name="ParagraphsStatusesLimit" Items="620, 752"/>
 			<List Name="StaticSpells" Items="ЗАКЛЯТИЕ КОПИИ, ЗАКЛЯТИЕ СИЛЫ, ЗАКЛЯТИЕ СЛАБОСТИ"/>
-		</Constants>
+		</Data>
 		<Settings>
 			<DisabledOption Value="Hide"/>
 		</Settings>
