@@ -13,7 +13,7 @@
 			<Color Name="Option, Continue" Value="738b8e"/>
 			<Color Name="System" Value="9dadaf"/>
 		</Styles>
-		<Constants>
+		<Data>
 			<Dictionary Name="GetCountName">
 				<Item Name="1" Value="Первый"/>
 				<Item Name="2" Value="Второй"/>
@@ -27,7 +27,7 @@
 				<Item Name="2" Value="первое окно"/>
 				<Item Name="3" Value="второе окно"/>
 			</Dictionary>
-		</Constants>
+		</Data>
 		<Settings>
 			<DisabledOption Value="Hide"/>
 		</Settings>
