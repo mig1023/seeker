@@ -8,9 +8,9 @@
 			<Color Name="Main" Value="deb887"/>
 			<Color Name="ButtonFont" Value="000000"/>
 		</Styles>
-		<Constants>
+		<Data>
 			<List Name="GetParagraphsWithoutHokkuCreation" Items="0, 1, 9, 10, 11, 12"/>
-		</Constants>
+		</Data>
 		<Settings>
 			<DisabledOption Value="Hide"/>
 			<StartParagraph Value="1"/>
