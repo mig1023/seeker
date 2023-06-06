@@ -13,7 +13,7 @@
 			<Color Name="Continue" Value="db8784"/>
 			<Color Name="System" Value="f2f2f2"/>
 		</Styles>
-		<Constants>
+		<Data>
 			<List Name="WithoutStatuses" Items="0, 904, 905, 906"/>
 			<Dictionary Name="GetStartValues">
 				<Item Name="Attack" Value="8"/>
@@ -21,7 +21,7 @@
 				<Item Name="Endurance" Value="14"/>
 				<Item Name="Initiative" Value="10"/>
 			</Dictionary>
-		</Constants>
+		</Data>
 		<Settings>
 			<DisabledOption Value="Hide"/>
 			<DefaultFontSize Value="Little"/>
