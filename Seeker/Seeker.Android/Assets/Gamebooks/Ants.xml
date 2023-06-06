@@ -10,7 +10,7 @@
 			<Color Name="ActionBox" Value="efefef"/>
 			<Color Name="System" Value="f4f4f4"/>
 		</Styles>
-		<Constants>
+		<Data>
 			<List Name="WithoutStatuses" Items="0, 1"/>
 			<Dictionary Name="Government">
 				<Item Name="Королева Антуанетта Плодовитая" Value="Королева Антуанетта Плодовитая уделяет много времени потомству. Ей стало сложно управлять колонией."/>
@@ -36,7 +36,7 @@
 				<Item Name="Невероятное прохождение игры!BIG|BOLD|Ваше звание: Муравьиный небожитель." Value="290"/>
 				<Item Name="Легендарное прохождение игры!BIG|BOLD|Ваше звание: Муравьиный бог." Value="300"/>
 			</Dictionary>
-		</Constants>
+		</Data>
 		<Settings>
 			<DisabledOption Value="HideAndSingletonsToo"/>
 		</Settings>
