@@ -14,14 +14,14 @@
 			<Color Name="Action" Value="939393"/>
 			<Color Name="Continue" Value="a9a9a6"/>
 		</Styles>
-		<Constants>
+		<Data>
 			<List Name="WithoutStatuses" Items="0, 401, 402"/>
 			<Dictionary Name="GetStartValues">
 				<Item Name="Fight" Value="10"/>
 				<Item Name="Accuracy" Value="10"/>
 				<Item Name="Stealth" Value="3"/>
 			</Dictionary>
-		</Constants>
+		</Data>
 		<Settings>
 			<DisabledOption Value="Show"/>
 		</Settings>
