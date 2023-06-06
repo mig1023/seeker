@@ -9,10 +9,10 @@
 			<Color Name="Option, Continue" Value="b45b27"/>
 			<Color Name="System" Value="f0d1b9"/>
 		</Styles>
-		<Constants>
+		<Data>
 			<List Name="CleaningNotebookList" Items="Билли убит в амбаре, Все любили Билли, Убит ночью, Не успел защититься, У убийцы есть рука, Убийца женщина, Надо проверить салон мадам Жу-жу, Женская перчатка, Дробовик, Патроны, Портсигар"/>
 			<Dictionary Name="Levels" Items="Easy:100, Medium:1, Hard:0"/>
-		</Constants>
+		</Data>
 		<Settings>
 			<DisabledOption Value="Hide"/>
 		</Settings>
