@@ -10,7 +10,7 @@
 			<Color Name="ActionBox" Value="efefef"/>
 			<Color Name="System" Value="f4f4f4"/>
 		</Styles>
-		<Constants>
+		<Data>
 			<List Name="WithoutStatuses" Items="0, 266"/>
 			<Dictionary Name="HealingParts">
 				<Item Name="головы" Value="Head"/>
@@ -19,7 +19,7 @@
 				<Item Name="рук" Value="Hands"/>
 				<Item Name="ног" Value="Legs"/>
 			</Dictionary>
-		</Constants>
+		</Data>
 		<Settings>
 			<DisabledOption Value="Hide"/>
 		</Settings>
