@@ -184,13 +184,13 @@ namespace Seeker.Game
             foreach (XmlNode xmlNode in xmlFile.SelectNodes(Intro("Buttons/*")))
                 AddButtonsTexts(xmlNode);
 
-            foreach (XmlNode xmlNode in xmlFile.SelectNodes(Intro("Constants/List")))
+            foreach (XmlNode xmlNode in xmlFile.SelectNodes(Intro("Data/List")))
             {
                 List<string> values = xmlNode.Attributes["Items"].InnerText.Split(',').ToList();
                 Data.Constants.LoadList(xmlNode.Attributes["Name"].InnerText, values);
             }
 
-            foreach (XmlNode xmlNode in xmlFile.SelectNodes(Intro("Constants/Dictionary")))
+            foreach (XmlNode xmlNode in xmlFile.SelectNodes(Intro("Data/Dictionary")))
             {
                 Dictionary<string, string> items = new Dictionary<string, string>();
 
