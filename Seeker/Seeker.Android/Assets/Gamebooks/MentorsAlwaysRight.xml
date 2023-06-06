@@ -15,10 +15,10 @@
 			<Color Name="Option, Continue" Value="9ab0d6"/>
 			<Color Name="System" Value="ccd7ea"/>
 		</Styles>
-		<Constants>
+		<Data>
 			<List Name="WithoutStatuses" Items="0, 556, 557, 558, 559"/>
 			<List Name="WithoutStaticsButtons" Items="0, 556, 557, 558, 559"/>
-		</Constants>
+		</Data>
 		<Settings>
 			<DisabledOption Value="Hide"/>
 		</Settings>
