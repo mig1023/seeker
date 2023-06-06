@@ -16,7 +16,7 @@
 			<Color Name="Continue" Value="b99e8e"/>
 			<Color Name="System" Value="cebbaf"/>
 		</Styles>
-		<Constants>
+		<Data>
 			<List Name="WithoutStatuses" Items="0, 658, 659, 660"/>
 			<Dictionary Name="StatNames">
 				<Item Name="Strength" Value="силы"/>
@@ -26,7 +26,7 @@
 				<Item Name="Oratory" Value="красноречия"/>
 				<Item Name="Danger" Value="опасности"/>
 			</Dictionary>
-		</Constants>
+		</Data>
 		<Settings>
 			<DisabledOption Value="Show"/>
 		</Settings>
