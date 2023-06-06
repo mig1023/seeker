@@ -13,9 +13,9 @@
 			<Color Name="Action" Value="0679b0"/>
 			<Color Name="System" Value="1f93c9"/>
 		</Styles>
-		<Constants>
+		<Data>
 			<List Name="WithoutStatuses" Items="0, 454, 455, 456, 457"/>
-		</Constants>
+		</Data>
 		<Settings>
 			<DisabledOption Value="Show"/>
 		</Settings>
