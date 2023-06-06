@@ -13,7 +13,7 @@
 			<Color Name="StatusBar" Value="bcaa8f"/>
 			<Color Name="AdditionalStatus" Value="d0c3b0"/>
 		</Styles>
-		<Constants>
+		<Data>
 			<List Name="WithoutStaticsButtons" Items="0, 1"/>
 			<Dictionary Name="HealthLine">
 				<Item Name="0" Value="мертв"/>
@@ -21,7 +21,7 @@
 				<Item Name="2" Value="ранен"/>
 				<Item Name="3" Value="здоров"/>
 			</Dictionary>
-		</Constants>
+		</Data>
 		<Settings>
 			<DisabledOption Value="Show"/>
 		</Settings>
