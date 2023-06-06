@@ -17,7 +17,7 @@
 			<Color Name="GoodColor" Value="145314"/>
 			<Color Name="BadColor" Value="7f0000"/>
 		</Styles>
-		<Constants>
+		<Data>
 			<Dictionary Name="GetRangeTypes">
 				<Item Name="6" Value="ДАЛЬНЯЯ ДИСТАНЦИЯ"/>
 				<Item Name="5" Value="СРЕДНЯЯ ДИСТАНЦИЯ"/>
@@ -52,7 +52,7 @@
 				<Item Name="1" Value="Милитарист"/>
 				<Item Name="2" Value="Берсерк"/>
 			</Dictionary>
-		</Constants>
+		</Data>
 		<Settings>
 			<DisabledOption Value="Hide"/>
 		</Settings>
