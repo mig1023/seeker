@@ -12,7 +12,7 @@
 			<Color Name="Option, Continue" Value="84c2bf"/>
 			<Color Name="System" Value="cde6e5"/>
 		</Styles>
-		<Constants>
+		<Data>
 			<List Name="WithoutStatuses" Items="0, 587, 588, 589"/>
 			<List Name="NormalizationParams" Items="Planning, Preparation, Luck"/>
 			<Dictionary Name="CharactersParams">
@@ -29,7 +29,7 @@
 				<Item Name="Selfcontrol75" Value="Самообладание 75"/>
 				<Item Name="Selfcontrol100" Value="Самообладание 100"/>
 			</Dictionary>
-		</Constants>
+		</Data>
 		<Settings>
 			<DisabledOption Value="Show"/>
 		</Settings>
