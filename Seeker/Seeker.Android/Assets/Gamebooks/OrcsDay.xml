@@ -12,7 +12,7 @@
 			<Color Name="Font, ButtonFont, SystemFont" Value="000000"/>
 			<Color Name="ActionBox, AdditionalStatus" Value="c8d8b5"/>
 		</Styles>
-		<Constants>
+		<Data>
 			<List Name="WithoutStatuses" Items="0, 102, 103"/>
 			<Dictionary Name="StatNames">
 				<Item Name="Muscle" Value="мышцы"/>
@@ -44,7 +44,7 @@
 				<Item Name="Courage" Value="+1 Оркишность за то, что Смелости больше, чем Мозгов"/>
 				<Item Name="TooMuch" Value="-1 Оркишность за то, что Смелости слишком много"/>
 			</Dictionary>
-		</Constants>
+		</Data>
 		<Settings>
 			<DisabledOption Value="Hide"/>
 		</Settings>
