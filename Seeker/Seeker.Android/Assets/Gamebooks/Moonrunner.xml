@@ -13,7 +13,7 @@
 			<Color Name="Action" Value="7e0059"/>
 			<Color Name="System" Value="ddd1df"/>
 		</Styles>
-		<Constants>
+		<Data>
 			<Dictionary Name="SpellsList">
 				<Item Name="1" Value="первое"/>
 				<Item Name="2" Value="второе"/>
@@ -23,7 +23,7 @@
 				<Item Name="6" Value="шестое"/>
 			</Dictionary>
 			<List Name="Skills" Items="Акробатика, Скалолазание, Сражение, Интеллект, Маскировка, Взлом, Ловкость рук, Скрытность, Поиск следов"/>
-		</Constants>
+		</Data>
 		<Settings>
 			<DisabledOption Value="Show"/>
 		</Settings>
