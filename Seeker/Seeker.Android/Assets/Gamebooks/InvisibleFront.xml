@@ -13,9 +13,9 @@
 			<Color Name="StatusBar" Value="aa2218"/>
 			<Color Name="SystemFont" Value="f7f1b6"/>
 		</Styles>
-		<Constants>
+		<Data>
 			<List Name="GetApartments" Items="один, два, три, один, два, три"/>
-		</Constants>
+		</Data>
 		<Settings>
 			<DisabledOption Value="Hide"/>
 		</Settings>
