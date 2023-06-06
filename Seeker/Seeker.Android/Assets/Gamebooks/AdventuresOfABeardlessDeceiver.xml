@@ -14,7 +14,7 @@
 			<Color Name="Option, Continue" Value="8dbd6e"/>
 			<Color Name="System" Value="c7dfb9"/>
 		</Styles>
-		<Constants>
+		<Data>
 			<List Name="WithoutStatuses" Items="0, 205"/>
 			<List Name="WithoutStaticsButtons" Items="0, 30, 60, 90"/>
 			<Dictionary Name="StatNames">
@@ -25,7 +25,7 @@
 				<Item Name="Oratory" Value="красноречия"/>
 				<Item Name="Popularity" Value="популярности"/>
 			</Dictionary>
-		</Constants>
+		</Data>
 		<Settings>
 			<DisabledOption Value="Hide"/>
 		</Settings>
