@@ -30,7 +30,7 @@ namespace Seeker.Game
                 return images;
 
             foreach (XmlNode xmlImage in xmlNode.SelectNodes("Image"))
-                images.Add(StringParse(xmlImage.Attributes["Image"]), StringParse(xmlImage.SelectSingleNode("Text")));
+                images.Add(StringParse(xmlImage.Attributes["Name"]), StringParse(xmlImage.SelectSingleNode("Text")));
 
             return images;
         }
