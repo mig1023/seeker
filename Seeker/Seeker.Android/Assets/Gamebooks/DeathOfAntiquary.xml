@@ -530,7 +530,7 @@
 		</Paragraph>
 		<Paragraph No="55">
 			<Images>
-				<Image Image="DeathOfAntiquary_Parrot.jpg">
+				<Image Name="DeathOfAntiquary_Parrot.jpg">
 					<Text>Из зеркала на вас смотрел попугай!!</Text>
 				</Image>
 			</Images>
