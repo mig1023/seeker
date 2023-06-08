@@ -1573,7 +1573,7 @@
 		<Paragraph No="161">
 			<Text>Вы заехали в кусты шиполиственника. Густые заросли выглядят изнутри как надёжное убежище. Высокие стебли усеяны колючками. Заглушив двигатель, вы замерли в одной из пяти точек:</Text>
 			<Images>
-				<Image Image="SwampFever_LarchThorns.jpg">
+				<Image Name="SwampFever_LarchThorns.jpg">
 					<Text>Запомните выбранную цифру.</Text>
 				</Image>
 			</Images>
