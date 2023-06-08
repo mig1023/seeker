@@ -11,6 +11,7 @@ namespace Seeker.Game
         {
             App.Current.Properties["LastGame"] = name;
             CurrentGameName = name;
+            Data.CurrentGamebook = name;
         }
 
         public static string GetCurrentGame() =>

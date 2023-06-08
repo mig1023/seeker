@@ -22,6 +22,9 @@ namespace Seeker.Game
         public static string StringParse(XmlNode xmlNode) =>
             xmlNode?.InnerText ?? String.Empty;
 
+        public static string ImageName(XmlNode xmlNode) =>
+            String.Format("{0}_{1}.jpg", Data.CurrentGamebook, StringParse(xmlNode.Attributes["Name"]));
+
         public static Dictionary<string, string> ImagesParse(XmlNode xmlNode)
         {
             Dictionary<string, string> images = new Dictionary<string, string>();
@@ -30,7 +33,7 @@ namespace Seeker.Game
                 return images;
 
             foreach (XmlNode xmlImage in xmlNode.SelectNodes("Image"))
-                images.Add(StringParse(xmlImage.Attributes["Name"]), StringParse(xmlImage.SelectSingleNode("Text")));
+                images.Add(ImageName(xmlImage.Attributes["Name"]), StringParse(xmlImage.SelectSingleNode("Text")));
 
             return images;
         }

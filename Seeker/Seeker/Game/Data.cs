@@ -6,6 +6,8 @@ namespace Seeker.Game
 {
     class Data
     {
+        public static string CurrentGamebook { get; set; }
+
         public enum ColorTypes
         {
             Background,
