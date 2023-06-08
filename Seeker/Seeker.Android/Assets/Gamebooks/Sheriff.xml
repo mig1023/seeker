@@ -629,7 +629,7 @@
 		</Paragraph>
 		<Paragraph No="85">
 			<Images>
-				<Image Name="Sheriff_Place.jpg"/>
+				<Image Name="Place"/>
 			</Images>
 			<Options>
 				<Option Destination="67" Text="«Хм, неплохо»"/>
