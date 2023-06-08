@@ -309,7 +309,7 @@
 		</Paragraph>
 		<Paragraph No="37">
 			<Images>
-				<Image Image="Sheriff_Woman.jpg"/>
+				<Image Name="Sheriff_Woman.jpg"/>
 			</Images>
 			<Options>
 				<Option Destination="68" Text="«У тебя уже получается намного лучше»"/>
