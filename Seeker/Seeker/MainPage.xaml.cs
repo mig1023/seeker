@@ -85,7 +85,7 @@ namespace Seeker
         {
             foreach (string bookmark in allBookmarks.Keys)
             {
-                string bookmarkSave = String.Format("{0}-{1}", Game.Continue.GetCurrentGame(), allBookmarks[bookmark]);
+                string bookmarkSave = String.Format("{0}-{1}", Game.Data.CurrentGamebook, allBookmarks[bookmark]);
 
                 StackLayout bookmarkLine = new StackLayout { Orientation = StackOrientation.Horizontal };
 
@@ -123,7 +123,7 @@ namespace Seeker
 
             Action.Children.Add(Output.Interface.Text(Output.Constants.BOOKMARK_LOAD_HEAD, bold: true));
 
-            Dictionary<string, string> allBookmarks = Game.Bookmarks.List(out string _, out string _);
+            Dictionary<string, string> allBookmarks = Game.Bookmarks.List(out string _);
 
             if (allBookmarks.Count > 0)
                 AddAllBookmarks(allBookmarks);

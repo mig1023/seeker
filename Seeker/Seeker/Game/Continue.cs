@@ -5,17 +5,11 @@ namespace Seeker.Game
 {
     class Continue
     {
-        private static string CurrentGameName { get; set; } 
-
         public static void CurrentGame(string name)
         {
             App.Current.Properties["LastGame"] = name;
-            CurrentGameName = name;
             Data.CurrentGamebook = name;
         }
-
-        public static string GetCurrentGame() =>
-            CurrentGameName;
 
         public static int? IntNullableParse(string line)
         {
@@ -26,10 +20,10 @@ namespace Seeker.Game
         }
 
         public static bool IsGameSaved() =>
-            App.Current.Properties.TryGetValue(CurrentGameName, out _);
+            App.Current.Properties.TryGetValue(Data.CurrentGamebook, out _);
 
         public static void SaveCurrentGame() =>
-            Save(CurrentGameName);
+            Save(Data.CurrentGamebook);
 
         public static void Save(string gameName)
         {
@@ -46,7 +40,7 @@ namespace Seeker.Game
         public static int Load(string gameName)
         {
             if (String.IsNullOrEmpty(gameName))
-                gameName = CurrentGameName;
+                gameName = Data.CurrentGamebook;
 
             string saveLine = (string)App.Current.Properties[gameName];
 
@@ -64,7 +58,7 @@ namespace Seeker.Game
         }
 
         public static void Remove() =>
-            App.Current.Properties.Remove(CurrentGameName);
+            App.Current.Properties.Remove(Data.CurrentGamebook);
 
         public static void Clean()
         {
