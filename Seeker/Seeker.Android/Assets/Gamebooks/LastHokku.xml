@@ -21,93 +21,93 @@
 		<Paragraph No="0">
 			<Text>Стихи скажут о себе сами...</Text>
 			<Options>
-				<Option Destination="1"/>
+				<Option Goto="1"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="1">
 			<Options>
-				<Option Destination="2" Text="Сверкающее"/>
-				<Option Destination="2" Text="Тёмное"/>
-				<Option Destination="2" Text="Пепельное"/>
-				<Option Destination="2" Text="Кровавое"/>
-				<Option Destination="2" Text="Безмолвное"/>
+				<Option Goto="2" Text="Сверкающее"/>
+				<Option Goto="2" Text="Тёмное"/>
+				<Option Goto="2" Text="Пепельное"/>
+				<Option Goto="2" Text="Кровавое"/>
+				<Option Goto="2" Text="Безмолвное"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="2">
 			<Options>
-				<Option Destination="3" Text="солнце"/>
-				<Option Destination="3" Text="облако"/>
-				<Option Destination="3" Text="отражение"/>
-				<Option Destination="3" Text="озеро"/>
-				<Option Destination="3" Text="ничто"/>
+				<Option Goto="3" Text="солнце"/>
+				<Option Goto="3" Text="облако"/>
+				<Option Goto="3" Text="отражение"/>
+				<Option Goto="3" Text="озеро"/>
+				<Option Goto="3" Text="ничто"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="3">
 			<Options>
-				<Option Destination="4" Text="накрыло"/>
-				<Option Destination="4" Text="впитало"/>
-				<Option Destination="4" Text="растворило"/>
-				<Option Destination="4" Text="высосало"/>
-				<Option Destination="4" Text="изранило"/>
+				<Option Goto="4" Text="накрыло"/>
+				<Option Goto="4" Text="впитало"/>
+				<Option Goto="4" Text="растворило"/>
+				<Option Goto="4" Text="высосало"/>
+				<Option Goto="4" Text="изранило"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="4">
 			<Options>
-				<Option Destination="5" Text="небо"/>
-				<Option Destination="5" Text="землю"/>
-				<Option Destination="5" Text="звёзды"/>
-				<Option Destination="5" Text="душу"/>
-				<Option Destination="5" Text="весь мир"/>
+				<Option Goto="5" Text="небо"/>
+				<Option Goto="5" Text="землю"/>
+				<Option Goto="5" Text="звёзды"/>
+				<Option Goto="5" Text="душу"/>
+				<Option Goto="5" Text="весь мир"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="5">
 			<Options>
-				<Option Destination="6" Text="Время"/>
-				<Option Destination="6" Text="Я"/>
-				<Option Destination="6" Text="Вселенная"/>
-				<Option Destination="6" Text="Мысль"/>
-				<Option Destination="6" Text="Жизнь"/>
+				<Option Goto="6" Text="Время"/>
+				<Option Goto="6" Text="Я"/>
+				<Option Goto="6" Text="Вселенная"/>
+				<Option Goto="6" Text="Мысль"/>
+				<Option Goto="6" Text="Жизнь"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="6">
 			<Options>
-				<Option Destination="7" Text="больше чем"/>
-				<Option Destination="7" Text="всего лишь"/>
-				<Option Destination="7" Text="это"/>
+				<Option Goto="7" Text="больше чем"/>
+				<Option Goto="7" Text="всего лишь"/>
+				<Option Goto="7" Text="это"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="7">
 			<Options>
-				<Option Destination="8" Text="слово"/>
-				<Option Destination="8" Text="смерть"/>
-				<Option Destination="8" Text="счастье"/>
-				<Option Destination="8" Text="боль"/>
-				<Option Destination="8" Text="мой сон"/>
+				<Option Goto="8" Text="слово"/>
+				<Option Goto="8" Text="смерть"/>
+				<Option Goto="8" Text="счастье"/>
+				<Option Goto="8" Text="боль"/>
+				<Option Goto="8" Text="мой сон"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="8">
 			<Options>
-				<Option Destination="9" Text="Ты создал это хокку..."/>
+				<Option Goto="9" Text="Ты создал это хокку..."/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="9">
 			<Options>
-				<Option Destination="10" Text="Прочти его ещё раз..."/>
+				<Option Goto="10" Text="Прочти его ещё раз..."/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="10">
 			<Options>
-				<Option Destination="11" Text="Обдумай..."/>
+				<Option Goto="11" Text="Обдумай..."/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="11">
 			<Options>
-				<Option Destination="12" Text="Проникнись..."/>
+				<Option Goto="12" Text="Проникнись..."/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="12">
 			<Options>
-				<Option Destination="1" Text="И создай ещё лучше..."/>
+				<Option Goto="1" Text="И создай ещё лучше..."/>
 			</Options>
 		</Paragraph>
 	</Paragraphs>
