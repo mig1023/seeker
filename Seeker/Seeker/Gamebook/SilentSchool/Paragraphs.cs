@@ -22,23 +22,23 @@ namespace Seeker.Gamebook.SilentSchool
 
         public override Option OptionParse(XmlNode xmlOption)
         {
-            Option option = OptionsTemplateWithoutDestination(xmlOption);
+            Option option = OptionsTemplateWithoutGoto(xmlOption);
 
             if (ThisIsGameover(xmlOption))
             {
-                option.Destination = GetDestination(xmlOption);
+                option.Goto = GetGoto(xmlOption);
             }
-            else if (xmlOption.Attributes["Destination"].Value == "Change")
+            else if (xmlOption.Attributes["Goto"].Value == "Change")
             {
-                option.Destination = Character.Protagonist.ChangeDecision;
+                option.Goto = Character.Protagonist.ChangeDecision;
             }
             else if (ThisIsBack(xmlOption))
             {
-                option.Destination = GetDestination(xmlOption, wayBack: Character.Protagonist.WayBack);
+                option.Goto = GetGoto(xmlOption, wayBack: Character.Protagonist.WayBack);
             }
             else
             {
-                option.Destination = Xml.IntParse(xmlOption.Attributes["Destination"]);
+                option.Goto = Xml.IntParse(xmlOption.Attributes["Goto"]);
             }
 
             XmlNode optionMod = xmlOption.SelectSingleNode("Modification");
