@@ -14,12 +14,12 @@ namespace Seeker.Gamebook.YounglingTournament
 
             foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/*"))
             {
-                Option option = OptionsTemplateWithoutDestination(xmlOption);
+                Option option = OptionsTemplateWithoutGoto(xmlOption);
 
                 if (ThisIsGameover(xmlOption) || ThisIsBack(xmlOption))
-                    option.Destination = GetDestination(xmlOption, wayBack: Character.Protagonist.WayBack);
+                    option.Goto = GetGoto(xmlOption, wayBack: Character.Protagonist.WayBack);
                 else
-                    option.Destination = Xml.IntParse(xmlOption.Attributes["Destination"]);
+                    option.Goto = Xml.IntParse(xmlOption.Attributes["Goto"]);
 
                 XmlNode optionMod = xmlOption.SelectSingleNode("Modification");
 
