@@ -18,13 +18,13 @@ namespace Seeker.Gamebook.StringOfWorlds
 
             foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/*"))
             {
-                Option option = OptionsTemplateWithoutDestination(xmlOption);
+                Option option = OptionsTemplateWithoutGoto(xmlOption);
 
                 if (ThisIsGameover(xmlOption))
                 {
-                    option.Destination = GetDestination(xmlOption);
+                    option.Goto = GetGoto(xmlOption);
                 }
-                else if (xmlOption.Attributes["Destination"].Value == "Gate")
+                else if (xmlOption.Attributes["Goto"].Value == "Gate")
                 {
                     if (Character.Protagonist.GateCode <= 0)
                         continue;
@@ -34,15 +34,15 @@ namespace Seeker.Gamebook.StringOfWorlds
                             if (xmlModification.Name == "GateCode")
                                 Character.Protagonist.GateCode += Xml.IntParse(xmlModification.Attributes["Value"]);
                         
-                        option.Destination = Character.Protagonist.GateCode;
+                        option.Goto = Character.Protagonist.GateCode;
                     }
                 }
-                else if (int.TryParse(xmlOption.Attributes["Destination"].Value, out int _))
-                    option.Destination = Xml.IntParse(xmlOption.Attributes["Destination"]);
+                else if (int.TryParse(xmlOption.Attributes["Goto"].Value, out int _))
+                    option.Goto = Xml.IntParse(xmlOption.Attributes["Goto"]);
                 else
                 {
-                    List<string> link = xmlOption.Attributes["Destination"].Value.Split(',').ToList<string>();
-                    option.Destination = int.Parse(link[random.Next(link.Count())]);
+                    List<string> link = xmlOption.Attributes["Goto"].Value.Split(',').ToList<string>();
+                    option.Goto = int.Parse(link[random.Next(link.Count())]);
                 }
 
                 paragraph.Options.Add(option);
