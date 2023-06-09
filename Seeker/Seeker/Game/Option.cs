@@ -7,7 +7,7 @@ namespace Seeker.Game
 {
     class Option
     {
-        public int Destination { get; set; }
+        public int Goto { get; set; }
         public string Text { get; set; }
         public string Availability { get; set; }
         public bool Dynamic { get; set; }
@@ -43,10 +43,10 @@ namespace Seeker.Game
         public static void ListAdd(Option option, Button button) =>
             Options.Add(option, button);
 
-        public static void OpenButtonByDestination(int destination)
+        public static void OpenButtonByGoto(int destination)
         {
             Button button = Options
-                .Where(x => x.Key.Destination == destination)
+                .Where(x => x.Key.Goto == destination)
                 .FirstOrDefault()
                 .Value;
 

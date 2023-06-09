@@ -23,7 +23,7 @@ namespace Seeker.Prototypes
             {
                 Option option = new Option
                 {
-                    Destination = GetDestination(xmlOption),
+                    Goto = GetGoto(xmlOption),
                     Text = Xml.StringParse(xmlOption.Attributes["Text"]),
                 };
 
@@ -56,14 +56,14 @@ namespace Seeker.Prototypes
         protected bool ThisIsBack(XmlNode xmlOption) =>
             xmlOption.Name == "Back";
 
-        protected int GetDestination(XmlNode xmlOption, int? wayBack = null)
+        protected int GetGoto(XmlNode xmlOption, int? wayBack = null)
         {
             if (ThisIsGameover(xmlOption))
                 return Data.Constants.GetStartParagraph();
             else if (ThisIsBack(xmlOption))
                 return wayBack ?? 0;
             else
-                return Xml.IntParse(xmlOption.Attributes["Destination"]);
+                return Xml.IntParse(xmlOption.Attributes["Goto"]);
         }
 
         public Abstract.IActions ActionTemplate(XmlNode xmlAction, Abstract.IActions actions)
@@ -123,7 +123,7 @@ namespace Seeker.Prototypes
             Images = Xml.ImagesParse(xmlParagraph["Images"]),
         };
 
-        public Option OptionsTemplateWithoutDestination(XmlNode xmlOption) => new Option()
+        public Option OptionsTemplateWithoutGoto(XmlNode xmlOption) => new Option()
         {
             Text = Xml.StringParse(xmlOption.Attributes["Text"]),
             Availability = Xml.StringParse(xmlOption.Attributes["Availability"]),
@@ -137,9 +137,9 @@ namespace Seeker.Prototypes
             
         public Option OptionsTemplate(XmlNode xmlOption)
         {
-            Option option = OptionsTemplateWithoutDestination(xmlOption);
+            Option option = OptionsTemplateWithoutGoto(xmlOption);
 
-            option.Destination = GetDestination(xmlOption);
+            option.Goto = GetGoto(xmlOption);
 
             return option;
         }

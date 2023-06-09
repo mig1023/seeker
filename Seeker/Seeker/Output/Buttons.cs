@@ -39,7 +39,7 @@ namespace Seeker.Output
         public static void EmptyOptionTextFuse(Game.Option option)
         {
             if (String.IsNullOrEmpty(option.Text))
-                option.Text = (option.Destination == 0 ? "Начать сначала" : "Далее");
+                option.Text = (option.Goto == 0 ? "Начать сначала" : "Далее");
         }
 
         public static Button Option(Game.Option option, EventHandler onClick)
