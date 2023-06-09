@@ -169,7 +169,7 @@ namespace Seeker.Gamebook.StrikeBack
                 }
                 else if ((wayPoint >= 301) && (wayPoint <= 450))
                 {
-                    Game.Option.OpenButtonByDestination(cleanWayPoint);
+                    Game.Option.OpenButtonByGoto(cleanWayPoint);
 
                     way.Add(String.Empty);
                     way.Add(String.Format("BIG|GOOD|Кхм, число {0} вроде бы подходит...", wayPoint));
