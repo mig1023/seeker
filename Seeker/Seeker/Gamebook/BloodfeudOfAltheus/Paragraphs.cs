@@ -55,7 +55,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
         private static Option GetOption(int link, string text) => new Option
         {
-            Destination = link,
+            Goto = link,
             Text = text,
             Style = "d3bfa1",
         };
