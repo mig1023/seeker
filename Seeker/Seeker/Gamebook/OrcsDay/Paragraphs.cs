@@ -14,12 +14,12 @@ namespace Seeker.Gamebook.OrcsDay
 
             foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/*"))
             {
-                Option option = OptionsTemplateWithoutDestination(xmlOption);
+                Option option = OptionsTemplateWithoutGoto(xmlOption);
 
                 if (ThisIsGameover(xmlOption) || ThisIsBack(xmlOption))
-                    option.Destination = GetDestination(xmlOption, wayBack: Character.Protagonist.WayBack);
+                    option.Goto = GetGoto(xmlOption, wayBack: Character.Protagonist.WayBack);
                 else
-                    option.Destination = Xml.IntParse(xmlOption.Attributes["Destination"]);
+                    option.Goto = Xml.IntParse(xmlOption.Attributes["Goto"]);
 
                 XmlNode optionMod = xmlOption.SelectSingleNode("Modification");
 
@@ -77,7 +77,7 @@ namespace Seeker.Gamebook.OrcsDay
 
         private static Option GetOption(int destination, string text) => new Option
         {
-            Destination = destination,
+            Goto = destination,
             Text = text,
         };
     }
