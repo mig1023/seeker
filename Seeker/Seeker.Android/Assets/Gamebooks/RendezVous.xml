@@ -10,9 +10,9 @@
 			<Color Name="ActionBox" Value="efefef"/>
 			<Color Name="System" Value="f4f4f4"/>
 		</Styles>
-		<Settings>
+		<Default>
 			<DisabledOption Value="Hide"/>
-		</Settings>
+		</Default>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph No="0">
