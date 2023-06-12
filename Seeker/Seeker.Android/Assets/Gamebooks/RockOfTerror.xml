@@ -15,9 +15,9 @@
 			<Color Name="Continue" Value="2f2f2f"/>
 			<Color Name="SystemFont" Value="a8a8a8"/>
 		</Styles>
-		<Settings>
+		<Default>
 			<DisabledOption Value="Hide"/>
-		</Settings>
+		</Default>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph No="0">
