@@ -33,10 +33,10 @@
 			</Dictionary>
 			<List Name="SleepCleaningSurvive" Items="Дежа вю, Се ля ви, Шерше ля фам, Триумфатор, Лютня, Записная книжка, Бревиарий"/>
 		</Data>
-		<Settings>
+		<Default>
 			<DisabledOption Value="Show"/>
 			<StartParagraph Value="1392"/>
-		</Settings>	
+		</Default>	
 	</Introduction>
 	<Paragraphs>
 		<Paragraph No="0">
