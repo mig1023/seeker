@@ -45,9 +45,9 @@
 				<Item Name="TooMuch" Value="-1 Оркишность за то, что Смелости слишком много"/>
 			</Dictionary>
 		</Data>
-		<Settings>
+		<Default>
 			<DisabledOption Value="Hide"/>
-		</Settings>
+		</Default>
 		<Buttons>
 			<Fight>Сражаться</Fight>
 			<Test>Проверить</Test>
