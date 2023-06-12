@@ -12,9 +12,9 @@
 			<Color Name="Action" Value="6d0101"/>
 			<Color Name="System" Value="d1b5b5"/>
 		</Styles>
-		<Settings>
+		<Default>
 			<DisabledOption Value="Show"/>
-		</Settings>
+		</Default>
 		<Data>
 			<List Name="ParagraphsStatusesLimit" Items="375, 417"/>
 		</Data>
