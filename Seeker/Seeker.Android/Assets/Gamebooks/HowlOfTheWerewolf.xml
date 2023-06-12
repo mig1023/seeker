@@ -28,9 +28,9 @@
 				<Item Name="3" Value="второе окно"/>
 			</Dictionary>
 		</Data>
-		<Settings>
+		<Default>
 			<DisabledOption Value="Hide"/>
-		</Settings>
+		</Default>
 		<Buttons>
 			<Fight>Сражаться</Fight>
 			<Luck>Проверить удачу</Luck>
