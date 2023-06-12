@@ -27,9 +27,9 @@
 				<Item Name="Danger" Value="опасности"/>
 			</Dictionary>
 		</Data>
-		<Settings>
+		<Default>
 			<DisabledOption Value="Show"/>
-		</Settings>
+		</Default>
 		<Buttons>
 			<Test>Проверить</Test>
 		</Buttons>
