@@ -12,9 +12,9 @@
 			<Color Name="Action" Value="c0a23b"/>
 			<Color Name="System" Value="f9f9f9"/>
 		</Styles>
-		<Settings>
+		<Default>
 			<DisabledOption Value="Show"/>
-		</Settings>
+		</Default>
 		<Buttons>
 			<Button Action="SwordFight, MixedFightAttack">Сражаться</Button>
 			<FireFight>Перестрелка</FireFight>
