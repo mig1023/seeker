@@ -22,10 +22,10 @@
 				<Item Name="Initiative" Value="10"/>
 			</Dictionary>
 		</Data>
-		<Settings>
+		<Default>
 			<DisabledOption Value="Hide"/>
 			<FontSize Value="Little"/>
-		</Settings>
+		</Default>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph No="0">
