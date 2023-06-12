@@ -11,7 +11,7 @@
 		</Styles>
 		<Settings>
 			<DisabledOption Value="Hide"/>
-			<DefaultFontSize Value="Big"/>
+			<FontSize Value="Big"/>
 		</Settings>
 	</Introduction>
 	<Paragraphs>
