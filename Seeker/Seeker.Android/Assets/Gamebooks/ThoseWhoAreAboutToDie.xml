@@ -10,9 +10,9 @@
 			<Color Name="StatusBar" Value="fce391"/>
 			<Color Name="Continue" Value="fdeeba"/>
 		</Styles>
-		<Settings>
+		<Default>
 			<DisabledOption Value="Show"/>
-		</Settings>
+		</Default>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph No="0">
