@@ -30,9 +30,9 @@
 				<Item Name="Selfcontrol100" Value="Самообладание 100"/>
 			</Dictionary>
 		</Data>
-		<Settings>
+		<Default>
 			<DisabledOption Value="Show"/>
-		</Settings>
+		</Default>
 		<Buttons>
 			<Test>Пройти проверку</Test>
 		</Buttons>
