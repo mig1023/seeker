@@ -8,10 +8,10 @@
 			<Color Name="Main" Value="9e003a"/>
 			<Color Name="System" Value="f9f9f9"/>
 		</Styles>
-		<Settings>
+		<Default>
 			<DisabledOption Value="Hide"/>
 			<FontSize Value="Small"/>
-		</Settings>
+		</Default>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph No="0">
