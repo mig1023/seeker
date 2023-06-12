@@ -11,11 +11,11 @@
 		<Data>
 			<List Name="GetParagraphsWithoutHokkuCreation" Items="0, 1, 9, 10, 11, 12"/>
 		</Data>
-		<Settings>
+		<Default>
 			<DisabledOption Value="Hide"/>
 			<StartParagraph Value="1"/>
 			<FontSize Value="Big"/>
-		</Settings>
+		</Default>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph No="0">
