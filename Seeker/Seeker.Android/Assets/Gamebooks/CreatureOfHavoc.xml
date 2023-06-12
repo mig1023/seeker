@@ -14,9 +14,9 @@
 			<Color Name="System" Value="9db6aa"/>
 			<Color Name="ActionBox" Value="87a094"/>
 		</Styles>
-		<Settings>
+		<Default>
 			<DisabledOption Value="Hide"/>
-		</Settings>
+		</Default>
 		<Buttons>
 			<Fight>Сражаться</Fight>
 			<Luck>Испытай удачу</Luck>
