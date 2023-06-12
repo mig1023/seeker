@@ -8,9 +8,9 @@
 			<Color Name="Main" Value="191039"/>
 			<Color Name="Option" Value="191039"/>
 		</Styles>
-		<Settings>
+		<Default>
 			<DisabledOption Value="Show"/>
-		</Settings>
+		</Default>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph No="0">
