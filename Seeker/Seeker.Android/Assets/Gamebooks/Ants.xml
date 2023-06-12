@@ -37,9 +37,9 @@
 				<Item Name="Легендарное прохождение игры!BIG|BOLD|Ваше звание: Муравьиный бог." Value="300"/>
 			</Dictionary>
 		</Data>
-		<Settings>
+		<Default>
 			<DisabledOption Value="HideAndSingletonsToo"/>
-		</Settings>
+		</Default>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph No="0">
