@@ -13,7 +13,7 @@
 		</Styles>
 		<Settings>
 			<DisabledOption Value="Show"/>
-			<DefaultFontSize Value="Little"/>
+			<FontSize Value="Little"/>
 		</Settings>
 		<Buttons>
 			<Verse>Узнать свой стих</Verse>
