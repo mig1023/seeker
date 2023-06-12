@@ -9,9 +9,9 @@
 			<Color Name="Continue" Value="9a9a9a"/>
 			<Color Name="System" Value="d6d6d6"/>
 		</Styles>
-		<Settings>
+		<Default>
 			<DisabledOption Value="Hide"/>
-		</Settings>
+		</Default>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph No="0">
