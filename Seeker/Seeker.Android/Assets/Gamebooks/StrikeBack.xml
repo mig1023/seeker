@@ -12,9 +12,9 @@
 			<Color Name="System" Value="9fa99c"/>
 			<Color Name="ActionBox" Value="bcc2b9"/>
 		</Styles>
-		<Settings>
+		<Default>
 			<DisabledOption Value="Show"/>
-		</Settings>
+		</Default>
 		<Buttons>
 			<Fight>Сражаться</Fight>
 			<FindTheWay>Искать путь</FindTheWay>
