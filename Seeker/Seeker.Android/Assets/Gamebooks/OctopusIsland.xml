@@ -9,9 +9,9 @@
 			<Color Name="Main, Action, Option" Value="c93c20"/>
 			<Color Name="System" Value="eeeeee"/>
 		</Styles>
-		<Settings>
+		<Default>
 			<DisabledOption Value="Hide"/>
-		</Settings>
+		</Default>
 		<Buttons>
 			<Dinner>Пообедать</Dinner>
 			<Fight>Сражаться</Fight>
