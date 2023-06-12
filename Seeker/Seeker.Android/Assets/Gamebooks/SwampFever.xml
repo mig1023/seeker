@@ -53,9 +53,9 @@
 				<Item Name="2" Value="Берсерк"/>
 			</Dictionary>
 		</Data>
-		<Settings>
+		<Default>
 			<DisabledOption Value="Hide"/>
-		</Settings>
+		</Default>
 		<Buttons>
 			<Fight>Сражаться</Fight>
 			<MentalTest>Проверка</MentalTest>
