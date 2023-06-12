@@ -9,10 +9,10 @@
 			<Color Name="Continue" Value="b6c095"/>
 			<Color Name="System" Value="cbd2b4"/>
 		</Styles>
-		<Settings>
+		<Default>
 			<DisabledOption Value="Hide"/>
 			<FontSize Value="Big"/>
-		</Settings>
+		</Default>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph No="0">
