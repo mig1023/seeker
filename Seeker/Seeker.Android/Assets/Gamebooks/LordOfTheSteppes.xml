@@ -24,7 +24,7 @@
 		</Data>
 		<Settings>
 			<DisabledOption Value="Hide"/>
-			<DefaultFontSize Value="Little"/>
+			<FontSize Value="Little"/>
 		</Settings>
 	</Introduction>
 	<Paragraphs>
