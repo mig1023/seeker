@@ -11,10 +11,10 @@
 			<Color Name="StatusBar" Value="dfd4ae"/>
 			<Color Name="ActionBox" Value="fcf9ec"/>
 		</Styles>
-		<Settings>
+		<Default>
 			<DisabledOption Value="Show"/>
 			<FontSize Value="Little"/>
-		</Settings>
+		</Default>
 		<Buttons>
 			<Verse>Узнать свой стих</Verse>
 		</Buttons>
