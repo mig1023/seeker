@@ -16,9 +16,9 @@
 		<Data>
 			<List Name="GetApartments" Items="один, два, три, один, два, три"/>
 		</Data>
-		<Settings>
+		<Default>
 			<DisabledOption Value="Hide"/>
-		</Settings>
+		</Default>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph No="0">
