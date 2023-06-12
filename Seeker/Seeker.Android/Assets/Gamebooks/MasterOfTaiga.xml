@@ -10,9 +10,9 @@
 			<Color Name="Font, SystemFont" Value="a5b0a0"/>
 			<Color Name="Option, Continue, System" Value="64765c"/>
 		</Styles>
-		<Settings>
+		<Default>
 			<DisabledOption Value="Show"/>
-		</Settings>
+		</Default>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph No="0">
