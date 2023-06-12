@@ -20,7 +20,7 @@
 		</Data>
 		<Settings>
 			<DisabledOption Value="Show"/>
-			<DefaultFontSize Value="Little"/>
+			<FontSize Value="Little"/>
 		</Settings>
 		<Buttons>
 			<Fight>Сражаться</Fight>
