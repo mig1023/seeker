@@ -182,7 +182,7 @@ namespace Seeker.Game
 
             Data.Constants.LoadEnabledDisabledOption(SettingString(xmlFile, "DisabledOption"));
             Data.Constants.LoadStartParagraphOption(SettingString(xmlFile, "StartParagraph"));
-            Data.Constants.LoadDefaultFontSize(SettingString(xmlFile, "DefaultFontSize"));
+            Data.Constants.LoadDefaultFontSize(SettingString(xmlFile, "FontSize"));
 
             foreach (XmlNode xmlNode in xmlFile.SelectNodes(Intro("Buttons/*")))
                 AddButtonsTexts(xmlNode);
