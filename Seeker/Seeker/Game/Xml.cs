@@ -227,7 +227,7 @@ namespace Seeker.Game
         }
 
         private static string SettingString(XmlDocument xmlFile, string option) =>
-            StringParse(xmlFile.SelectSingleNode(Intro(String.Format("Settings/{0}", option)))?.Attributes["Value"]) ?? String.Empty;
+            StringParse(xmlFile.SelectSingleNode(Intro(String.Format("Default/{0}", option)))?.Attributes["Value"]) ?? String.Empty;
 
         private static void AddButtonsTexts(XmlNode xmlNode)
         {
