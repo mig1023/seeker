@@ -8,10 +8,10 @@
 			<Color Name="Main" Value="030436"/>
 			<Color Name="Option" Value="35365e"/>
 		</Styles>
-		<Settings>
+		<Default>
 			<DisabledOption Value="Hide"/>
 			<FontSize Value="Big"/>
-		</Settings>
+		</Default>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph No="0">
