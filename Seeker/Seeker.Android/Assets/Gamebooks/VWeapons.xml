@@ -20,9 +20,9 @@
 				<Item Name="ног" Value="Legs"/>
 			</Dictionary>
 		</Data>
-		<Settings>
+		<Default>
 			<DisabledOption Value="Hide"/>
-		</Settings>
+		</Default>
 		<Buttons>
 			<Fight>Перестрелка</Fight>
 		</Buttons>
