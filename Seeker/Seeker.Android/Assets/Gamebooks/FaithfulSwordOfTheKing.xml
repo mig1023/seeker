@@ -16,9 +16,9 @@
 			<Dictionary Name="Skills" ItemsByOrder="12, 8, 10, 7, 9, 11"/>
 			<Dictionary Name="Strengths" ItemsByOrder="22, 18, 14, 24, 16, 20"/>	
 		</Data>
-		<Settings>
+		<Default>
 			<DisabledOption Value="Hide"/>
-		</Settings>
+		</Default>
 		<Buttons>
 			<Fight>Сражаться</Fight>
 			<Luck>Проверить удачу</Luck>
