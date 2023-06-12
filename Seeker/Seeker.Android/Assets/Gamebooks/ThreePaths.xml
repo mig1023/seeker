@@ -10,9 +10,9 @@
 			<Color Name="Action" Value="005b5b"/>
 			<Color Name="Continue" Value="6fc5c5"/>
 		</Styles>
-		<Settings>
+		<Default>
 			<DisabledOption Value="Hide"/>
-		</Settings>
+		</Default>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph No="0">
