@@ -26,9 +26,9 @@
 				<Item Name="Popularity" Value="популярности"/>
 			</Dictionary>
 		</Data>
-		<Settings>
+		<Default>
 			<DisabledOption Value="Hide"/>
-		</Settings>
+		</Default>
 		<Buttons>
 			<Test>Проверить</Test>
 		</Buttons>
