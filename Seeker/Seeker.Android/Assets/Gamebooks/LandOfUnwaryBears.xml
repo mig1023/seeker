@@ -10,7 +10,7 @@
 		</Styles>
 		<Settings>
 			<DisabledOption Value="Hide"/>
-			<DefaultFontSize Value="Small"/>
+			<FontSize Value="Small"/>
 		</Settings>
 	</Introduction>
 	<Paragraphs>
