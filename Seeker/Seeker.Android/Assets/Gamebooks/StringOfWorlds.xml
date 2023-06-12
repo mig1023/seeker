@@ -11,9 +11,9 @@
 			<Dictionary Name="Charms" ItemsByOrder=", 8, 6, 5, 8, 6, 7, 7, 7, 6, 7, 5"/>
 			<Dictionary Name="LuckList" Items="1:①, 2:②, 3:③, 4:④, 5:⑤, 6:⑥, 11:❶, 12:❷, 13:❸, 14:❹, 15:❺, 16:❻"/>
 		</Data>
-		<Settings>
+		<Default>
 			<DisabledOption Value="Hide"/>
-		</Settings>
+		</Default>
 		<Buttons>
 			<Fight>Сражаться</Fight>
 			<Luck>Проверить удачу</Luck>
