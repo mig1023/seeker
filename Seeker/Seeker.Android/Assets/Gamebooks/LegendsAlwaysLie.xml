@@ -18,10 +18,10 @@
 			<List Name="WithoutStatuses" Items="0, 714, 715, 716"/>
 			<List Name="WithoutStaticsButtons" Items="0, 687, 714, 715, 701, 702"/>
 		</Data>
-		<Settings>
+		<Default>
 			<DisabledOption Value="Show"/>
 			<FontSize Value="Little"/>
-		</Settings>
+		</Default>
 		<Buttons>
 			<Fight>Сражаться</Fight>
 			<Reaction>Реагируйте</Reaction>
