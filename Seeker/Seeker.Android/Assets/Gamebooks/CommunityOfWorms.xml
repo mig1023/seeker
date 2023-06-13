@@ -31,7 +31,7 @@
 			<Options>
 				<Option Goto="117" Text="Войду в «А», как бы глупо ни звучало"/>
 				<Option Goto="22" Text="Метнусь к двери «В»"/>
-				<Option Goto="49" Text="Останусь верен выбору - «С»"/>
+				<Option Goto="49" Text="Останусь верен выбору — «С»"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="3">
