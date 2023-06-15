@@ -157,7 +157,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             toEndText = String.Empty;
 
             if (protagonist.Hitpoints <= 0)
-                toEndText = "Начать сначала";
+                toEndText = Output.Constants.GAMEOVER_TEXT;
 
             else if (protagonist.ConneryHitpoints <= 0)
                 toEndText = "Коннери погиб, ваше путешествие окончено";
