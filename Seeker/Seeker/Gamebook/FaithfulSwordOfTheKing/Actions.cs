@@ -48,7 +48,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             toEndText = String.Empty;
 
             if (protagonist.Strength <= 0)
-                toEndText = "Начать сначала";
+                toEndText = Output.Constants.GAMEOVER_TEXT;
 
             else if (protagonist.Honor <= 0)
             {
