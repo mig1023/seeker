@@ -45,7 +45,7 @@
 				<Text Style="Center">А ТЕПЕРЬ ПЕРЕВЕРНИТЕ СТРАНИЦУ..!</Text>
 			</Texts>
 			<Options>
-				<Option Goto="1" Text="В путь!"/>
+				<Option Goto="1" Text="Start"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="1">
