@@ -8,6 +8,7 @@ namespace Seeker.Output
 {
     class Constants
     {
+        public static string START_TEXT = "В путь!";
         public static string BACK_LINK = "НАЗАД";
         public static string BOOKMARK_SAVE = "СДЕЛАТЬ ЗАКЛАДКУ";
         public static string BOOKMARK_SAVE_HEAD = "Сделать новую закладку:";

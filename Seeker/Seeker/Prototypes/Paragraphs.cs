@@ -24,7 +24,7 @@ namespace Seeker.Prototypes
                 Option option = new Option
                 {
                     Goto = GetGoto(xmlOption),
-                    Text = Xml.StringParse(xmlOption.Attributes["Text"]),
+                    Text = Xml.TextStringParse(xmlOption.Attributes["Text"]),
                 };
 
                 paragraph.Options.Add(option);
@@ -125,7 +125,7 @@ namespace Seeker.Prototypes
 
         public Option OptionsTemplateWithoutGoto(XmlNode xmlOption) => new Option()
         {
-            Text = Xml.StringParse(xmlOption.Attributes["Text"]),
+            Text = Xml.TextStringParse(xmlOption.Attributes["Text"]),
             Availability = Xml.StringParse(xmlOption.Attributes["Availability"]),
             Dynamic = Xml.BoolParse(xmlOption.Attributes["Dynamic"]),
             Singleton = Xml.StringParse(xmlOption.Attributes["Singleton"]),
