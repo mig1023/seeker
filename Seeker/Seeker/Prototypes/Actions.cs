@@ -91,7 +91,7 @@ namespace Seeker.Prototypes
         public virtual bool GameOverBy(int param, out int toEndParagraph, out string toEndText)
         {
             toEndParagraph = 0;
-            toEndText = "Начать сначала";
+            toEndText = Output.Constants.GAMEOVER_TEXT;
 
             return param <= 0;
         }
@@ -99,7 +99,7 @@ namespace Seeker.Prototypes
         public virtual bool GameOverBy(bool param, out int toEndParagraph, out string toEndText)
         {
             toEndParagraph = 0;
-            toEndText = "Начать сначала";
+            toEndText = Output.Constants.GAMEOVER_TEXT;
 
             return param;
         }
