@@ -17,7 +17,7 @@
 		<Paragraph No="0">
 			<Text>Все совпадения случайны.\nВсё написанное художественный вымысел.\nАвтор уважает стариков.\n</Text>
 			<Options>
-				<Option Goto="1" Text="В путь!"/>
+				<Option Goto="1" Text="Start"/>
 				<Option Goto="15" Text="Сразу к Кровавой Охоте" Style="35365e"/>
 			</Options>
 		</Paragraph>
