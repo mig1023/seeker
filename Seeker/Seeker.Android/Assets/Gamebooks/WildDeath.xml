@@ -18,7 +18,7 @@
 		<Paragraph No="0">
 			<Text>Вы — Дикий Билл. Сегодня Вы решили посидеть в салуне и опрокинуть в себя пару стаканов виски. Вдруг на улице послышались выстрелы.</Text>
 			<Options>
-				<Option Goto="1" Text="В путь!"/>
+				<Option Goto="1" Text="Start"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="1">
