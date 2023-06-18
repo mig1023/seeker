@@ -791,7 +791,7 @@
 				<Option Goto="94" Text="Поест" Availability="!Обед"/>
 				<Option Goto="95" Text="Пойдёт спать" Availability="!Сон"/>
 				<Option Goto="96" Text="Сходит в массажную комнату" Availability="!Массаж"/>
-				<Option Goto="73" Text="Если ты уже побывал везде, где хотел"/>
+				<Option Goto="73" Text="Уже побывал везде, где хотел"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="101">
