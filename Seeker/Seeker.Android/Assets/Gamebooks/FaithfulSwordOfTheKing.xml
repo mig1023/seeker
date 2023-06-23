@@ -217,7 +217,7 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="19">
-			<Text>По какой дороге вы поедете, покинув город? На Перигё или на Лимож?</Text>
+			<Text>По какой дороге вы поедете, покинув город?</Text>
 			<Options>
 				<Option Goto="349" Text="На Перигё"/>
 				<Option Goto="353" Text="На Лимож"/>
