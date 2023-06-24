@@ -2387,13 +2387,15 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="250">
-			<Text>Поедете через ворота на Вандом, через ворота на Леман, через ворота на Блуа, через ворота на Вьерзон или отправитесь на пристань?</Text>
+			<Text>Поедете через ворота...</Text>
 			<Options>
-				<Option Goto="119" Text="Через ворота на Вандом"/>
-				<Option Goto="21" Text="Через ворота на Леман"/>
-				<Option Goto="61" Text="Через ворота на Блуа"/>
-				<Option Goto="367" Text="Через ворота на Вьерзон"/>
-				<Option Goto="435" Text="Отправитесь на пристань"/>
+				<Option Goto="119" Text="На Вандом"/>
+				<Option Goto="21" Text="На Леман"/>
+				<Option Goto="61" Text="На Блуа"/>
+				<Option Goto="367" Text="На Вьерзон">
+					<Text>...или отправитесь на пристань?</Text>
+				</Option>
+				<Option Goto="435" Text="На пристань"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="251">
