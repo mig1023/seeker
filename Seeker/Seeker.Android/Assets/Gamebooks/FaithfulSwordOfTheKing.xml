@@ -519,8 +519,8 @@
 		<Paragraph No="52">
 			<Text>Улица, по которой вы едете, проходит прямо через рыночную площадь.</Text>
 			<Options>
-				<Option Goto="613" Text="Надо на рынок"/>
-				<Option Goto="306" Text="Не надо"/>
+				<Option Goto="613" Text="Заехать на рынок"/>
+				<Option Goto="306" Text="Не заезжать"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="53">
