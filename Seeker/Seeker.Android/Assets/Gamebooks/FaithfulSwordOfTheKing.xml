@@ -1186,7 +1186,7 @@
 			<Text>Вы перегородили боковую улицу?</Text>
 			<Options>
 				<Option Goto="576" Text="Вы перегородили боковую улицу" Availability="StreetIsBlocked"/>
-				<Option Goto="641" Text="Не перегородили"/>
+				<Option Goto="641" Text="Не перегораживали"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="127">
