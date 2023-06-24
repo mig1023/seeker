@@ -1668,7 +1668,7 @@
 			</Actions>
 			<Options>
 				<Option Goto="430" Text="Ловкости хватило"/>
-				<Option Goto="288" Text="Не повезло"/>
+				<Option Goto="288" Text="Не хватило"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="175">
