@@ -1641,8 +1641,8 @@
 				<Day Value="1"/>
 			</Modifications>
 			<Options>
-				<Option Goto="358" Text="У вас остался перстень короля"/>
-				<Option Goto="44" Text="Не повезло"/>
+				<Option Goto="358" Text="Перстень короля всё ещё у вас"/>
+				<Option Goto="44" Text="Неn"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="173">
