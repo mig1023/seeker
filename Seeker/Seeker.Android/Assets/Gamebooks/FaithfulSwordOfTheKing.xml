@@ -1221,7 +1221,7 @@
 				<Option Goto="454" Text="Улица Пьер-о-Реаль, дом 11" Availability="PierreAuxRealStreet"/>
 				<Option Goto="555" Text="Улица Ваннери, дом 5" Availability="VenneraStreet"/>
 				<Option Goto="181" Text="К графу де Ноайлю" Availability="CountDeNoaille"/>
-				<Option Goto="562"/>
+				<Option Goto="562" Text="Отправиться в ваш дом"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="131">
