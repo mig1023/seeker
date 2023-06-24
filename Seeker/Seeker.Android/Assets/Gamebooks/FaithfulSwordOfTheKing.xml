@@ -673,7 +673,7 @@
 			<Text>Былали ли вы уже в тюрьме?</Text>
 			<Options>
 				<Option Goto="615" Text="Уже были в тюрьме"/>
-				<Option Goto="307" Text="Не повезло"/>
+				<Option Goto="307" Text="Ещё не были"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="68">
