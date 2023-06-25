@@ -3869,9 +3869,9 @@
 				</Pursuit>
 			</Actions>
 			<Options>
-				<Option Goto="292" Text="Если вас не догнали"/>
-				<Option Goto="90" Text="Если догнали"/>
-				<Option Goto="159" Text="Ели вас нагнали без труда"/>
+				<Option Goto="292" Text="Не догнали"/>
+				<Option Goto="90" Text="Догнали"/>
+				<Option Goto="159" Text="Нагнали без труда"/>
 			</Options>
 		</Paragraph>
 			<Paragraph No="404">
