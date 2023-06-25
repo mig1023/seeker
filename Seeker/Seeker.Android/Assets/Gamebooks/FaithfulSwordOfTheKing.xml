@@ -4224,12 +4224,12 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="439">
-			<Text>Вскоре перед вами пристань, откуда можно без труда доплыть до Капденака всего за полтора экю. Так и поступите или нет?</Text>
+			<Text>Вскоре перед вами пристань, откуда можно без труда доплыть до Капденака всего за полтора экю. </Text>
 			<Options>
 				<Option Goto="133" Text="Так и поступите" Availability="ЭКЮ >= 150">
 					<Ecu Value="-150"/>
 				</Option>
-				<Option Goto="602" Text="Нет"/>
+				<Option Goto="602" Text="Поступите иначе"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="440">
