@@ -3660,7 +3660,7 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="380">
-			<Text>Из Бор-лез-Орга ведут две дороги. Одна на Лимож, а другая на Невер.</Text>
+			<Text>Из Бор-лез-Орга ведут две дороги.</Text>
 			<Options>
 				<Option Goto="212" Text="На Лимож"/>
 				<Option Goto="213" Text="На Невер"/>
