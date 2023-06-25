@@ -4666,8 +4666,8 @@
 		<Paragraph No="485">
 			<Text>Тогда выход один: стрелять. У вас есть с собой заряженный пистолет?</Text>
 			<Options>
-				<Option Goto="33" Text="Если у вас есть с собой заряженный пистолет"/>
-				<Option Goto="377" Text="Если нет"/>
+				<Option Goto="33" Text="Есть"/>
+				<Option Goto="377" Text="Нет"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="486">
