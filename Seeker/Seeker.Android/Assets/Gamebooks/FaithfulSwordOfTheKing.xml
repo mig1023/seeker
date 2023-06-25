@@ -4144,7 +4144,7 @@
 		<Paragraph No="431">
 			<Text>Если вы успеете до конца дня найти нужного вам человека — считайте, что повезло. Ну а теперь — в Париж.</Text>
 			<Options>
-				<Option Goto="130" Text="В Париж"/>
+				<Option Goto="130"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="432">
