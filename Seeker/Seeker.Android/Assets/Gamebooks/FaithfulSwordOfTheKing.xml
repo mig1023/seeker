@@ -3594,7 +3594,7 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="374">
-			<Text>Вот и Вильнёв. Хотите заехать на рынок или поедете дальше?</Text>
+			<Text>Вот и Вильнёв.</Text>
 			<Options>
 				<Option Goto="645" Text="Хотите заехать на рынок"/>
 				<Option Goto="125" Text="Поедете дальше"/>
