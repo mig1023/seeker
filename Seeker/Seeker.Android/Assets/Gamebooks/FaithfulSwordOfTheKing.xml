@@ -4581,8 +4581,8 @@
 		<Paragraph No="476">
 			<Text>У ворот Арбалета окружают солдаты, посланные губернатором. Сопротивление бесполезно. Вы уже были в тюрьме?</Text>
 			<Options>
-				<Option Goto="615" Text="Если вы уже были в тюрьме"/>
-				<Option Goto="307" Text="Если нет"/>
+				<Option Goto="615" Text="Вы уже были в тюрьме"/>
+				<Option Goto="307" Text="Не бывали"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="477">
