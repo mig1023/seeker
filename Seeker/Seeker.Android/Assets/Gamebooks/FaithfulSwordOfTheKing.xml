@@ -3224,10 +3224,9 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="339">
-			<Text>Обнажите шпагу и атакуете или сначала поговорите с ними и узнаете, чего они хотят?</Text>
 			<Options>
 				<Option Goto="249" Text="Обнажите шпагу и атакуете"/>
-				<Option Goto="442" Text="Сначала поговорите"/>
+				<Option Goto="442" Text="Сначала поговорите с ними и узнаете, чего они хотят"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="340">
