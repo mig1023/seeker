@@ -3702,7 +3702,7 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="385">
-			<Text>Через какие ворота вы поедете? На Вандом или на Блуа?</Text>
+			<Text>Через какие ворота вы поедете?</Text>
 			<Options>
 				<Option Goto="452" Text="На Вандом"/>
 				<Option Goto="277" Text="На Блуа"/>
