@@ -5632,7 +5632,7 @@
 			</Modifications>
 			<Options>
 				<Option Goto="315" Text="Вы знаете это"/>
-				<Option Goto="656" Text="Не повезло"/>
+				<Option Goto="656" Text="Нет"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="591">
