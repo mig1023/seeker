@@ -5421,15 +5421,15 @@
 				<Strength/>
 			</Modifications>
 			<Options>
-				<Option Goto="459"/>
 				<Option Goto="264" Text="Если же выпали одинаковые числа"/>
+				<Option Goto="459"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="567">
 			<Text>Ведущий допрос не верит ни единому вашему слову, но вот еще не хватало — откровенничать перед таким чучелом!</Text>
 			<Options>
-				<Option Goto="610" Text="Если вы приехали в Тур с королевским перстнем"/>
-				<Option Goto="146" Text="Если без него"/>
+				<Option Goto="610" Text="Вы приехали в Тур с королевским перстнем"/>
+				<Option Goto="146" Text="Без него"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="568">
