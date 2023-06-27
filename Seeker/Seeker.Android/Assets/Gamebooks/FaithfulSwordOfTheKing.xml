@@ -6235,6 +6235,7 @@
 					<Price>600</Price>
 					<Multiple/>
 					<Benefit Name="Horses" Value="1"/>
+					<Text>После этого вы едете дальше.</Text>
 				</Get>
 			</Actions>
 			<Options>
