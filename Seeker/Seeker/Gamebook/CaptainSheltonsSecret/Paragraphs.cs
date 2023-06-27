@@ -19,6 +19,9 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             foreach (string param in GetProperties(action))
                 SetProperty(action, param, xmlAction);
 
+            if (action.Type == "Option")
+                action.Option = OptionParse(xmlAction);
+
             if (xmlAction["Ally"] != null)
             {
                 action.Enemies = new List<Character> { EnemyParse(xmlAction["Ally"]) };
