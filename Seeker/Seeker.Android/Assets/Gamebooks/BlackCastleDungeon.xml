@@ -917,7 +917,7 @@
 				<Option Goto="163" Text="Ответ правильный!" Input="Совесть">
 					<Text>Если знаете отгадку, поступите с ней так же, как и с предыдущими. Если же нет, то придется уходить.</Text>
 				</Option>
-				<Option Goto="98" Text="Уйти"/>
+				<Option Goto="98"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="96">
