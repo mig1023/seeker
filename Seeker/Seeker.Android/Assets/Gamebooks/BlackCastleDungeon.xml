@@ -408,10 +408,13 @@
 		</Paragraph>
 		<Paragraph No="37">
 			<Texts>
-				<Text>Вы используете заклятие Огня, и огненный шар сжигает одну из голов Дракона. У вас есть еще одно заклятие Огня или будете драться с оставшейся головой? Она, в свою очередь, дышит на вас огнем.</Text>
+				<Text>Вы используете заклятие Огня, и огненный шар сжигает одну из голов Дракона. У вас есть еще одно заклятие Огня или будете драться с оставшейся головой? Пока вы думаете, она, в свою очередь, дышит на вас огнем.</Text>
 				<Text Style="Small">Потеряйте 2 ВЫНОСЛИВОСТИ.</Text>
 			</Texts>
 			<Actions>
+				<Option Goto="451" Text="Заклятие Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
+					<RemoveSpell Value="ЗАКЛЯТИЕ ОГНЯ"/>
+				</Option>
 				<Fight>
 					<Enemy Name="ДРАКОН" Mastery="9" Endurance="4"/>
 				</Fight>
@@ -420,9 +423,6 @@
 				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
-				<Option Goto="451" Text="Заклятие Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-					<RemoveSpell Value="ЗАКЛЯТИЕ ОГНЯ"/>
-				</Option>
 				<Option Goto="454" Text="Дракон убит"/>
 			</Options>
 		</Paragraph>
