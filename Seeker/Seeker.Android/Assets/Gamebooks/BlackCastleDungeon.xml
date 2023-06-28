@@ -347,8 +347,8 @@
 		<Paragraph No="30">
 			<Text>Вы спускаетесь по лестнице и открываете дверь.</Text>
 			<Options>
-				<Option Goto="10"/>
 				<Option Goto="90" Text="Воспользоваться латами" Availability="GreenArmour"/>
+				<Option Goto="10"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="31">
@@ -394,10 +394,10 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="35">
-			<Text>Наступает ночь. Хотите отдохнуть и поспать после долгой дороги или решите, что лес слишком опасен для этого и пойдете дальше?</Text>
+			<Text>Наступает ночь.</Text>
 			<Options>
-				<Option Goto="204" Text="Отдохнуть"/>
-				<Option Goto="342" Text="Пойдете дальше"/>
+				<Option Goto="204" Text="Отдохнуть и поспать после долгой дороги"/>
+				<Option Goto="342" Text="Решите, что лес слишком опасен для этого и пойдете дальше"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="36">
