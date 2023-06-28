@@ -510,7 +510,7 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="46">
-			<Text>Перед вами две дороги. Вы пойдете направо или налево?</Text>
+			<Text>Перед вами две дороги. Вы пойдете:</Text>
 			<Options>
 				<Option Goto="445" Text="Направо"/>
 				<Option Goto="524" Text="Налево"/>
