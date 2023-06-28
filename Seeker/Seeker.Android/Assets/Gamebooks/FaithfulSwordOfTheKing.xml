@@ -1026,6 +1026,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="ВТОРОЙ ВСАДНИК" Skill="6" Strength="10"/>
+					<WithoutShooting/>
 				</Fight>
 			</Actions>
 			<Options>
