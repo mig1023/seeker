@@ -3763,7 +3763,7 @@
 				<Get>
 					<Button>Сытно поесть</Button>
 					<Head>Еда</Head>
-					<Price>50</Price>
+					<Price>100</Price>
 					<Benefits>
 						<Strength Value="2"/>
 						<HadFoodToday Value="1"/>
