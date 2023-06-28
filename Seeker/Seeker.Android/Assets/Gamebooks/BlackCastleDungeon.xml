@@ -172,8 +172,10 @@
 				<Luck/>
 			</Actions>
 			<Options>
-				<Option Goto="338" Text="Вы удачливы"/>
-				<Option Goto="404" Text="Иначе решение принято слишком поздно"/>
+				<Option Goto="338" Text="Вы удачливы">
+					<Text>Иначе решение принято слишком поздно...</Text>
+				</Option>
+				<Option Goto="404"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="15">
