@@ -1045,7 +1045,7 @@
 				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
-				<Option Goto="309" Text="Вернуться"/>
+				<Option Goto="309"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="112">
