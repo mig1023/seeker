@@ -380,7 +380,7 @@
 				<Time Value="60"/>
 			</Modifications>
 			<Options>
-				<Option Goto="8" Text="К сумасшедшей старухе" Availability="CrazyOldWoman">
+				<Option Goto="53" Text="К сумасшедшей старухе" Availability="CrazyOldWoman">
 					<Text>До Скалы Ужаса идти осталось совсем немного, и вы прибавляете шаг...</Text>
 				</Option>
 				<Option Goto="8"/>
