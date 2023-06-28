@@ -882,7 +882,7 @@
 				</Get>
 			</Actions>
 			<Options>
-				<Option Goto="379" Text="Уйти"/>
+				<Option Goto="379"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="92">
