@@ -1274,12 +1274,14 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="137">
-			<Text>Сколько монет вы кинете нищенке? Три, шесть или восемь? Если у вас нет столько денег, то вам придется отгонять ее мечом.</Text>
+			<Text>Сколько монет вы кинете нищенке?</Text>
 			<Options>
 				<Option Goto="458" Text="3 золотых" Availability="ЗОЛОТО >= 3"/>
 				<Option Goto="369" Text="6 золотых" Availability="ЗОЛОТО >= 6"/>
-				<Option Goto="274" Text="8 золотых" Availability="ЗОЛОТО >= 8"/>
-				<Option Goto="522" Text="Отгонять ее мечом"/>
+				<Option Goto="274" Text="8 золотых" Availability="ЗОЛОТО >= 8">
+					<Text>Если у вас нет столько денег, то вам придется отгонять ее мечом...</Text>
+				</Option>
+				<Option Goto="522"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="138">
