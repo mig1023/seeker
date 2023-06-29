@@ -1810,11 +1810,13 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="194">
-			<Text>Что вы можете ей предложить? Перо павлина, серебряный браслет, белую стрелу. Если у вас нет ничего подходящего, можете или дать денег, или сразиться с ней.</Text>
+			<Text>Что вы можете ей предложить?</Text>
 			<Options>
 				<Option Goto="27" Text="Перо павлина" Availability="PeacockFeather"/>
 				<Option Goto="270" Text="Серебряный браслет" Availability="SilverBracelet"/>
-				<Option Goto="533" Text="Белую стрелу" Availability="WhiteArrow"/>
+				<Option Goto="533" Text="Белую стрелу" Availability="WhiteArrow">
+					<Text>Если у вас нет ничего подходящего, можете:</Text>
+				</Option>
 				<Option Goto="137" Text="Дать денег"/>
 				<Option Goto="522" Text="Сразиться"/>
 			</Options>
