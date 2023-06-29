@@ -2224,7 +2224,7 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="240">
-			<Text>Вот и первый перекресток. Пойдете прямо или налево?</Text>
+			<Text>Вот и первый перекресток.</Text>
 			<Options>
 				<Option Goto="462" Text="Пойти прямо"/>
 				<Option Goto="145" Text="Пойти налево"/>
