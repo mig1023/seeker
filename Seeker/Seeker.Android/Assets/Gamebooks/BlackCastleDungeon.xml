@@ -2384,7 +2384,7 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="258">
-			<Text>Перстень с изумрудом надет на палец. Что вы осмотрите теперь: шкаф, зеркало или стол?</Text>
+			<Text>Перстень с изумрудом надет на палец. Что вы осмотрите теперь:</Text>
 			<Triggers>RingWithEmerald</Triggers>
 			<Options>
 				<Option Goto="560" Text="Шкаф"/>
