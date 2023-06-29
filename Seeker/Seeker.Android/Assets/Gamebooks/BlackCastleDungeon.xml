@@ -1467,11 +1467,11 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="160">
-			<Text>Вы идете со стариком по коридору. Он безмолвно указывает путь. Попробуете напасть на него или пойдете дальше?</Text>
+			<Text>Вы идете со стариком по коридору. Он безмолвно указывает путь.</Text>
 			<Options>
-				<Option Goto="371" Text="Напасть на него"/>
+				<Option Goto="135" Text="«Трое из Авенло»" Availability="ThreeFromAvenlo"/>
+				<Option Goto="371" Text="Попробуете напасть на него"/>
 				<Option Goto="276" Text="Пойдете дальше"/>
-				<Option Goto="135" Text="Трое из Авенло" Availability="ThreeFromAvenlo"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="161">
