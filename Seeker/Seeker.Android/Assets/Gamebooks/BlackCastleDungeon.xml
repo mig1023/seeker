@@ -2593,12 +2593,14 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="283">
-			<Text>Что вы покажете рыцарю как пропуск? Зеркальце? Бронзовый свисток? Золотое кольцо? Если у вас нет ни одного из этих предметов, то путь вперед придется прокладывать мечом.</Text>
+			<Text>Что вы покажете рыцарю как пропуск?</Text>
 			<Options>
 				<Option Goto="387" Text="Зеркальце" Availability="Mirror"/>
 				<Option Goto="69" Text="Бронзовый свисток" Availability="BronzeWhistle"/>
-				<Option Goto="233" Text="Золотое кольцо" Availability="GoldRing"/>
-				<Option Goto="567" Text="Сражаться"/>
+				<Option Goto="233" Text="Золотое кольцо" Availability="GoldRing">
+					<Text>Если у вас нет ни одного из этих предметов, то путь вперед придется прокладывать мечом...</Text>
+				</Option>
+				<Option Goto="567"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="284">
