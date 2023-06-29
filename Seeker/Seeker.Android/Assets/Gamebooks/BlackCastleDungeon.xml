@@ -1503,7 +1503,7 @@
 		<Paragraph No="164">
 			<Text>Заклятие действует немедленно, и вы чувствуете, как наливаются ваши мускулы. Добавьте 2 к вашей СИЛЕ УДАРА и деритесь.</Text>
 			<Options>
-				<Option Goto="487" Text="Драться"/>
+				<Option Goto="487"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="165">
