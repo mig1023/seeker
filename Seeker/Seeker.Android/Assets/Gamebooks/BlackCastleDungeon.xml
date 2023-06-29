@@ -2015,12 +2015,14 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="217">
-			<Text>Что вы можете ему предложить? Белую стрелу, бриллиант, серебряный свисток. Если у вас ничего нет, то, как ни жаль, придется уходить.</Text>
+			<Text>Что вы можете ему предложить?</Text>
 			<Options>
 				<Option Goto="354" Text="Белую стрелу" Availability="WhiteArrow"/>
 				<Option Goto="28" Text="Бриллиант" Availability="Diamond"/>
-				<Option Goto="142" Text="Серебряный свисток" Availability="SilverWhistle"/>
-				<Option Goto="106" Text="Уйти"/>
+				<Option Goto="142" Text="Серебряный свисток" Availability="SilverWhistle">
+					<Text>Если у вас ничего нет, то, как ни жаль, придется уходить...</Text>
+				</Option>
+				<Option Goto="106"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="218">
