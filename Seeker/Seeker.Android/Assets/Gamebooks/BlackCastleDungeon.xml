@@ -4308,17 +4308,20 @@
 			<Texts>
 				<Text>Вы приподнимаете крышку большого сундука, но она вырывается из рук и со всей силой бьет по пальцам.</Text>
 				<Text Style="Small">Потеряйте 1 МАСТЕРСТВО и 3 ВЫНОСЛИВОСТИ.</Text>
-				<Text>Хотите еще раз попробовать поднять крышку или займетесь одним из двух других сундуков — средним или маленьким. А может быть, лучше уйти?</Text>
 			</Texts>
 			<Modifications>
 				<Endurance Value="-2"/>
 				<Mastery Value="-1"/>
 			</Modifications>
 			<Options>
-				<Option Goto="159" Text="Еще раз попробовать"/>
-				<Option Goto="540" Text="Заняться средним сундуком"/>
-				<Option Goto="380" Text="Заняться маленьким сундуком"/>
-				<Option Goto="39" Text="Лучше уйти"/>
+				<Option Goto="159" Text="Хотите еще раз попробовать поднять крышку">
+					<Text>Займетесь одним из двух других сундуков:</Text>
+				</Option>
+				<Option Goto="540" Text="Средним"/>
+				<Option Goto="380" Text="Маленьким">
+					<Text>А может быть, лучше уйти?</Text>
+				</Option>
+				<Option Goto="39"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="475">
