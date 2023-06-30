@@ -4952,14 +4952,14 @@
 		<Paragraph No="543">
 			<Text>Вы можете наложить какое-нибудь заклятие или сразиться с рыцарем без помощи магии.</Text>
 			<Actions>
+				<Option Goto="365" Text="Использовать заклятия"/>
 				<Fight>
 					<Enemy Name="ЗЕЛЕНЫЙ РЫЦАРЬ" Mastery="11" Endurance="14"/>
 					<Text>Если вам удалось победить рыцаря, то идите по коридору дальше, пока не дойдете до двери.</Text>
 				</Fight>
 			</Actions>
 			<Options>
-				<Option Goto="365" Text="Использовать заклятие"/>
-				<Option Goto="241" Text="По коридору дальше"/>
+				<Option Goto="241"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="544">
