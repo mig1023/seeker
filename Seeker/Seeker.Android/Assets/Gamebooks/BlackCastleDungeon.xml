@@ -3870,13 +3870,17 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="427">
-			<Text>Дверь заперта. Есть ли у вас золотой свисток? Если нет, то можете попробовать или выломать ее, или выйти в другую дверь: правую, левую или среднюю.</Text>
+			<Text>Дверь заперта.</Text>
 			<Options>
-				<Option Goto="583" Text="Золотой свисток" Availability="GoldenWhistle"/>
-				<Option Goto="597" Text="Выломать ее"/>
-				<Option Goto="398" Text="Выйти в правую дверь"/>
-				<Option Goto="206" Text="Выйти в левую дверь"/>
-				<Option Goto="350" Text="Выйти в среднюю дверь"/>
+				<Option Goto="583" Text="У вас есть золотой свисток" Availability="GoldenWhistle">
+					<Text>Если нет, то можете попробовать выломать ее:</Text>
+				</Option>
+				<Option Goto="597" Text="Попробовать">
+					<Text>Или выйти в другую дверь:</Text>
+				</Option>
+				<Option Goto="398" Text="Правую"/>
+				<Option Goto="206" Text="Левую"/>
+				<Option Goto="350" Text="Среднюю"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="428">
