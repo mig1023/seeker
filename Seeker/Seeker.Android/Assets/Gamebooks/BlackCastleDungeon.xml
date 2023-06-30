@@ -3567,12 +3567,14 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="394">
-			<Text>Что вы хотите ей подарить? Бронзовый свисток, зеркальце или флакончик духов. Если вам нечего дарить, то придется с ней сразиться.</Text>
+			<Text>Что вы хотите ей подарить?</Text>
 			<Options>
 				<Option Goto="294" Text="Бронзовый свисток" Availability="BronzeWhistle"/>
 				<Option Goto="596" Text="Зеркальце" Availability="Mirror"/>
-				<Option Goto="171" Text="Флакончик духов" Availability="PerfumeBottle"/>
-				<Option Goto="93" Text="Сражаться"/>
+				<Option Goto="171" Text="Флакончик духов" Availability="PerfumeBottle">
+					<Text>Если вам нечего дарить, то придется с ней сразиться...</Text>
+				</Option>
+				<Option Goto="93"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="395">
