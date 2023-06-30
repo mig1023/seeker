@@ -4935,8 +4935,8 @@
 		<Paragraph No="541">
 			<Text>Вы накладываете заклятие, но огонь не в силах разрушить камень. Теперь вам придется сражаться с крысами. Есть ли у вас меч Зеленого рыцаря?</Text>
 			<Options>
-				<Option Goto="364" Text="Есть меч Зеленого рыцаря" Availability="GreenSword"/>
-				<Option Goto="494" Text="Нет меча"/>
+				<Option Goto="364" Text="Есть" Availability="GreenSword"/>
+				<Option Goto="494" Text="Нет"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="542">
