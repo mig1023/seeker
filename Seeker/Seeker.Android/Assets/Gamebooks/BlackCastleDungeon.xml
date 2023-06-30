@@ -3097,10 +3097,12 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="339">
-			<Text>Если вы действительно уже встречали кого-то из их знакомых, назовите его имя. Если же вы обманули их, то ваш обман непременно откроется, и лучше уж самому начать бой.</Text>
+			<Text>Если вы действительно уже встречали кого-то из их знакомых:</Text>
 			<Options>
-				<Option Goto="66" Text="Назовёте имя Гиены" Availability="HyenaName"/>
-				<Option Goto="123" Text="Начать бой"/>
+				<Option Goto="66" Text="Назовать его имя" Availability="HyenaName">
+					<Text>Если же вы обманули их, то ваш обман непременно откроется, и лучше уж самому начать бой...</Text>
+				</Option>
+				<Option Goto="123"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="340">
