@@ -3728,13 +3728,13 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="411">
-			<Text>Мясо вполне сносно и добавляет вам 6 ВЫНОСЛИВОСТЕЙ. Хотите попробовать еще и овощи или покинете комнату через дверь в правой стене?</Text>
+			<Text>Мясо вполне сносно и добавляет вам 6 ВЫНОСЛИВОСТЕЙ.</Text>
 			<Modifications>
 				<Endurance Value="6"/>
 			</Modifications>
 			<Options>
-				<Option Goto="578" Text="Попробовать овощи"/>
-				<Option Goto="80" Text="Покинете комнату"/>
+				<Option Goto="578" Text="Попробовать еще и овощи"/>
+				<Option Goto="80" Text="Покинете комнату через дверь в правой стене"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="412">
