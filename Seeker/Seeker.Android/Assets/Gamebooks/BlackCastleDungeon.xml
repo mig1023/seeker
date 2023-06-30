@@ -4920,12 +4920,16 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="540">
-			<Text>Вы подходите к среднему сундуку. Есть ли у вас фигурный ключ? Если да, то вам удастся его открыть, если нет, то лучше заняться большим, маленьким или вернуться в залу, откуда вы пришли.</Text>
+			<Text>Вы подходите к среднему сундуку. Есть ли у вас фигурный ключ?</Text>
 			<Options>
-				<Option Goto="284" Text="Есть фигурный ключ" Availability="CurlyKey"/>
-				<Option Goto="474" Text="Заняться большим сундуком"/>
-				<Option Goto="380" Text="Заняться маленьким сундуком"/>
-				<Option Goto="39" Text="Вернуться в залу"/>
+				<Option Goto="284" Text="Есть фигурный ключ" Availability="CurlyKey">
+					<Text>Если нет, то лучше заняться другими:</Text>
+				</Option>
+				<Option Goto="474" Text="Большим"/>
+				<Option Goto="380" Text="Маленьким">
+					<Text>Или вернуться в залу, откуда вы пришли...</Text>
+				</Option>
+				<Option Goto="39"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="541">
