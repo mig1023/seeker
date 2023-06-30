@@ -4682,13 +4682,15 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="516">
-			<Text>Что вы ему предложите: Коготь дракона? Бриллиант? Гребень? Перо аиста? Если же вам нечего ему предложить, придется драться.</Text>
+			<Text>Что вы ему предложите:</Text>
 			<Options>
 				<Option Goto="134" Text="Коготь дракона" Availability="DragonClaw"/>
 				<Option Goto="42" Text="Бриллиант" Availability="Diamond"/>
 				<Option Goto="161" Text="Гребень" Availability="Comb"/>
-				<Option Goto="488" Text="Перо аиста" Availability="StorkFeather"/>
-				<Option Goto="316" Text="Драться"/>
+				<Option Goto="488" Text="Перо аиста" Availability="StorkFeather">
+					<Text>Если же вам нечего ему предложить, придется драться...</Text>
+				</Option>
+				<Option Goto="316"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="517">
