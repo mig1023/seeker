@@ -3241,12 +3241,14 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="355">
-			<Text>Что, по-вашему, может послужить пропуском? Золотое кольцо? Бронзовый свисток? Четки? Если у вас нет ни одного из этих предметов, вам придется драться.</Text>
+			<Text>Что, по-вашему, может послужить пропуском?</Text>
 			<Options>
 				<Option Goto="233" Text="Золотое кольцо" Availability="GoldRing"/>
 				<Option Goto="69" Text="Бронзовый свисток" Availability="BronzeWhistle"/>
-				<Option Goto="168" Text="Четки" Availability="Beads"/>
-				<Option Goto="543" Text="Драться"/>
+				<Option Goto="168" Text="Четки" Availability="Beads">
+					<Text>Если у вас нет ни ничего, то вам придется драться...</Text>
+				</Option>
+				<Option Goto="543"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="356">
