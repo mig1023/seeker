@@ -5010,12 +5010,14 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="551">
-			<Text>Что вы хотите ей подарить: Зеркальце? Гребень? Оберег? Если у вас нет ни одного из этих предметов, то вернитесь и выберите что-нибудь другое.</Text>
+			<Text>Что вы хотите ей подарить:</Text>
 			<Options>
 				<Option Goto="92" Text="Зеркальце" Availability="Mirror"/>
 				<Option Goto="296" Text="Гребень" Availability="Comb"/>
-				<Option Goto="490" Text="Оберег" Availability="Amulet"/>
-				<Option Goto="255" Text="Придумать что-то другое"/>
+				<Option Goto="490" Text="Оберег" Availability="Amulet">
+					<Text>Если у вас нет ни одного из этих предметов, то вернитесь и выберите что-нибудь другое...</Text>
+				</Option>
+				<Option Goto="255"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="552">
