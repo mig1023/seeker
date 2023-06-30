@@ -3884,7 +3884,7 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="428">
-			<Text>Вы можете воспользоваться заклятиями Огня, Силы, Слабости или же просто сражаться мечом.</Text>
+			<Text>Вы можете воспользоваться заклятиями:</Text>
 			<Options>
 				<Option Goto="499" Text="Заклятье Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
 					<RemoveSpell Value="ЗАКЛЯТИЕ ОГНЯ"/>
@@ -3894,8 +3894,9 @@
 				</Option>
 				<Option Goto="390" Text="Заклятье Слабости" Availability="ЗАКЛЯТИЕ СЛАБОСТИ">
 					<RemoveSpell Value="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+					<Text>Или же просто сражаться мечом...</Text>
 				</Option>
-				<Option Goto="569" Text="Сражаться мечом"/>
+				<Option Goto="569"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="429">
