@@ -3354,13 +3354,13 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="369">
-			<Text>Старуха подбирает монеты, кланяется и услужливо открывает правую дверь, после чего исчезает. Пойдете в эту дверь или в ту, что прямо?</Text>
+			<Text>Старуха подбирает монеты, кланяется и услужливо открывает правую дверь, после чего исчезает.</Text>
 			<Modifications>
 				<Gold Value="-6"/>
 			</Modifications>
 			<Options>
-				<Option Goto="542" Text="В эту дверь"/>
-				<Option Goto="252" Text="В ту, что прямо"/>
+				<Option Goto="542" Text="Пойдете в эту дверь"/>
+				<Option Goto="252" Text="В дверь, что прямо"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="370">
