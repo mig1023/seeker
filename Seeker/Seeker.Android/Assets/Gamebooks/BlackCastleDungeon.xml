@@ -3364,12 +3364,13 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="370">
-			<Text>Заклятие Иллюзии не действует на стариков. Хотите наложить заклятие Огня или наберетесь терпения?</Text>
+			<Text>Заклятие Иллюзии не действует на стариков.</Text>
 			<Options>
-				<Option Goto="538" Text="Заклятие Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
+				<Option Goto="538" Text="Попробовать заклятие Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
 					<RemoveSpell Value="ЗАКЛЯТИЕ ОГНЯ"/>
+					<Text>Или наберетесь терпения и будете ждать?</Text>
 				</Option>
-				<Option Goto="68" Text="Ждать"/>
+				<Option Goto="68"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="371">
