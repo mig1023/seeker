@@ -5149,14 +5149,8 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="567">
-			<Text>Вы можете воспользоваться заклятием Силы, Слабости, Огня или просто атаковать Зеленого рыцаря, надеясь только на себя.</Text>
+			<Text>Вы можете воспользоваться заклятием:</Text>
 			<Actions>
-				<Fight>
-					<Enemy Name="ЗЕЛЕНЫЙ РЫЦАРЬ" Mastery="10" Endurance="10"/>
-					<Text>Если вы победили врага, то путь вперед свободен, и вы бежите дальше по коридору, пока дорогу не преграждает дверь.</Text>
-				</Fight>
-			</Actions>
-			<Options>
 				<Option Goto="395" Text="Заклятье Силы" Availability="ЗАКЛЯТИЕ СИЛЫ">
 					<RemoveSpell Value="ЗАКЛЯТИЕ СИЛЫ"/>
 				</Option>
@@ -5165,7 +5159,14 @@
 				</Option>
 				<Option Goto="96" Text="Заклятье Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
 					<RemoveSpell Value="ЗАКЛЯТИЕ ОГНЯ"/>
+					<Text>Или просто атаковать Зеленого рыцаря, надеясь только на себя:</Text>
 				</Option>
+				<Fight>
+					<Enemy Name="ЗЕЛЕНЫЙ РЫЦАРЬ" Mastery="10" Endurance="10"/>
+					<Text>Если вы победили врага, то путь вперед свободен, и вы бежите дальше по коридору, пока дорогу не преграждает дверь...</Text>
+				</Fight>
+			</Actions>
+			<Options>
 				<Option Goto="241"/>
 			</Options>
 		</Paragraph>
