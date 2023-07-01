@@ -5548,10 +5548,10 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="613">
-			<Text>Он требует 10 золотых и готов выписать за это пропуск. Согласитесь на его условия или все же будете драться?</Text>
+			<Text>Он требует 10 золотых и готов выписать за это пропуск.</Text>
 			<Options>
-				<Option Goto="246" Text="Согласиться" Availability="ЗОЛОТО >= 10"/>
-				<Option Goto="65" Text="Драться"/>
+				<Option Goto="246" Text="Согласиться на его условия" Availability="ЗОЛОТО >= 10"/>
+				<Option Goto="65" Text="Будете драться"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="614">
