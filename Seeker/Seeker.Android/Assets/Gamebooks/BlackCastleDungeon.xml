@@ -5128,9 +5128,9 @@
 		<Paragraph No="565">
 			<Text>Каков же пароль?</Text>
 			<Options>
-				<Option Goto="94" Text="Щит тьмы"/>
-				<Option Goto="469" Text="Демоны и сила"/>
-				<Option Goto="298" Text="Меч и верность"/>
+				<Option Goto="94" Text="«Щит тьмы»"/>
+				<Option Goto="469" Text="«Демоны и сила»"/>
+				<Option Goto="298" Text="«Меч и верность»"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="566">
