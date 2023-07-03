@@ -1962,7 +1962,7 @@
 					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 				</Option>
 				<Option Goto="313" Text="Заклятием Плавания" Availability="ЗАКЛЯТИЕ ПЛАВАНИЯ">
-					<RemoveSpell Value="ЗАКЛЯТИЕ ПЛАВАНИЯ">
+					<RemoveSpell Value="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
 					<Text>Или пойдете по тропинке?</Text>
 				</Option>
 				<Option Goto="423"/>
