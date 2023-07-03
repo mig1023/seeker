@@ -9374,7 +9374,11 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="1047">
-			<Text>Вам удается построить плот, но на это уходят все ваши силы (потеряйте 6 ВЫНОСЛИВОСТЕЙ). Куда вы поплывете на плоту:</Text>
+			<Texts>
+				<Text>Вам удается построить плот, но на это уходят все ваши силы.</Text>
+				<Text Style="Small">Потеряйте 6 ВЫНОСЛИВОСТЕЙ.</Text>
+				<Text>Куда вы поплывете на плоту:</Text>
+			</Texts>
 			<Modifications>
 				<Endurance Value="-6"/>
 			</Modifications>
