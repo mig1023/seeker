@@ -3837,7 +3837,7 @@
 					<RemoveSpell Value="ЗАКЛЯТИЕ СЛАБОСТИ"/>
 				</Option>
 				<Option Goto="290" Text="Заклятье Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-					<RemoveSpell Value="ЗАКЛЯТИЕ ОГНЯ">
+					<RemoveSpell Value="ЗАКЛЯТИЕ ОГНЯ"/>
 					<Text>Или будете драться с ними?</Text>
 				</Option>
 				<Option Goto="40"/>
