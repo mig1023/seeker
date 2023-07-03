@@ -8626,7 +8626,10 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="959">
-			<Text>Вы вылетаете из пещеры. Солнце уже почти зашло, а вы все еще не пробрались в замок. Потеряйте 1 УДАЧУ.</Text>
+			<Texts>
+				<Text>Вы вылетаете из пещеры. Солнце уже почти зашло, а вы все еще не пробрались в замок.</Text>
+				<Text Style="Small">Потеряйте 1 УДАЧУ.</Text>
+			</Texts>
 			<Modifications>
 				<Luck Value="-1"/>
 			</Modifications>
