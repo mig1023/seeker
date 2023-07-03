@@ -188,7 +188,7 @@
 					<RemoveSpell Value="ЗАКЛЯТИЕ СЛАБОСТИ"/>
 				</Option>
 				<Option Goto="521" Text="Заклятие Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-					<RemoveSpell Value="ЗАКЛЯТИЕ ОГНЯ">
+					<RemoveSpell Value="ЗАКЛЯТИЕ ОГНЯ"/>
 					<Text>Или драться с ним без помощи магии:</Text>
 				</Option>
 				<Option Goto="326" Text="Драться"/>
