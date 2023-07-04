@@ -11019,7 +11019,10 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="1237">
-			<Text>Вы осторожно кладете конверт на место и, отдохнув (восстановите 2 ВЫНОСЛИВОСТИ), отправляетесь в путь.</Text>
+			<Texts>
+				<Text>Вы осторожно кладете конверт на место и, отдохнув, отправляетесь в путь.</Text>
+				<Text Style="Small">Восстановите 2 ВЫНОСЛИВОСТИ.</Text>
+			</Texts>
 			<Modifications>
 				<Endurance Value="2"/>
 			</Modifications>
