@@ -10825,7 +10825,11 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="1217">
-			<Text>Вы удачно приземляетесь, не считая небольшой царапины (потеряйте 2 ВЫНОСЛИВОСТИ). Однако нужно выбираться.</Text>
+			<Texts>
+				<Text>Вы удачно приземляетесь, не считая небольшой царапины.</Text>
+				<Text Style="Small">Потеряйте 2 ВЫНОСЛИВОСТИ.</Text>
+				<Text>Однако нужно выбираться.</Text>
+			</Texts>
 			<Modifications>
 				<Endurance Value="-2"/>
 			</Modifications>
