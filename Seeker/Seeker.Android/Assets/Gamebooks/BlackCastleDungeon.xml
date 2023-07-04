@@ -11629,8 +11629,9 @@
 				</Option>
 				<Option Goto="986" Text="Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
 					<RemoveSpell Value="ЗАКЛЯТИЕ ОГНЯ"/>
+					<Text>Или будете драться с ними...</Text>
 				</Option>
-				<Option Goto="1320" Text="Будете драться с ними"/>
+				<Option Goto="1320"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="1309">
