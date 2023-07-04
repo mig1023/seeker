@@ -10639,7 +10639,10 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="1197">
-			<Text>Молоко в кувшине совсем свежее. Но выпить его придется на месте (добавьте 7 ВЫНОСЛИВОСТЕЙ).</Text>
+			<Texts>
+				<Text>Молоко в кувшине совсем свежее. Но выпить его придется на месте.</Text>
+				<Text Style="Small">Добавьте 7 ВЫНОСЛИВОСТЕЙ.</Text>
+			</Texts>
 			<Modifications>
 				<Endurance Value="7"/>
 			</Modifications>
