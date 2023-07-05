@@ -13293,9 +13293,13 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="1510">
-			<Text>Это меч Зеленого рыцаря. Он поможет вам лучше сражаться и быстрей побеждать. Добавьте 1 МАСТЕРСТВО и проходите через дверь справа.</Text>
+			<Texts>
+				<Text>Это меч Зеленого рыцаря. Он поможет вам лучше сражаться и быстрей побеждать.</Text>
+				<Text Style="Small">Добавьте 1 МАСТЕРСТВО.</Text>
+				<Text>Теперь проходите через дверь справа.</Text>
+			</Texts>
 			<Modifications>
-				<Mastery Value="1"/>
+				<MaxMastery Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Goto="1740"/>
