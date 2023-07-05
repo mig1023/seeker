@@ -14852,7 +14852,11 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="1692">
-			<Text>Женщине наплевать на ваши шутки. Потеряйте 1 УДАЧУ. После этого она выключает связь.</Text>
+			<Texts>
+				<Text>Женщине наплевать на ваши шутки.</Text>
+				<Text Style="Small">Потеряйте 1 УДАЧУ.</Text>
+				<Text>После этого она выключает связь.</Text>
+			</Texts>
 			<Modifications>
 				<Luck Value="-1"/>
 			</Modifications>
