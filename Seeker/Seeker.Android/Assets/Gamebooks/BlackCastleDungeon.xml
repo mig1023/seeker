@@ -7619,7 +7619,7 @@
 					<RemoveSpell Value="ЗАКЛЯТИЕ СЛАБОСТИ"/>
 				</Option>
 				<Option Goto="1654" Text="Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-					<RemoveSpell Value="ЗАКЛЯТИЕ ОГНЯ">
+					<RemoveSpell Value="ЗАКЛЯТИЕ ОГНЯ"/>
 					<Text>Или просто атаковать Зеленого рыцаря, надеясь только на себя:</Text>
 				</Option>
 				<Fight>
