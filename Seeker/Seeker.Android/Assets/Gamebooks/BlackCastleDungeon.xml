@@ -317,9 +317,6 @@
 		</Paragraph>
 		<Paragraph No="26">
 			<Text>Они со смехом отвечают, что не принимают воинов со стороны, а такие слабые и хилые, как вы, им вообще не нужны. Теперь вам придется драться со стражей.</Text>
-			<Modifications>
-				<Endurance Value="6"/>
-			</Modifications>
 			<Options>
 				<Option Goto="341"/>
 			</Options>
