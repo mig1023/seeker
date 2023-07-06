@@ -15956,8 +15956,10 @@
 				<Option Goto="1812" Text="Пройти через овощи к двери"/>
 				<Option Goto="1909" Text="Понюхать цветы"/>
 				<Option Goto="1323" Text="Сорвать лук"/>
-				<Option Goto="1388" Text="Сорвать огурец"/>
-				<Option Goto="1645" Text="Просто пройти через комнату и выйти через первую дверь"/>
+				<Option Goto="1388" Text="Сорвать огурец">
+					<Text>Просто пройти через комнату и выйти через первую дверь...</Text>
+				</Option>
+				<Option Goto="1645"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="1829">
