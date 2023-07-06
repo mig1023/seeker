@@ -16542,7 +16542,11 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="1900">
-			<Text>Вода прозрачная и приятная на вкус (прибавьте 4 ВЫНОСЛИВОСТИ).\n\nТеперь уходите...</Text>
+			<Texts>
+				<Text>Вода прозрачная и приятная на вкус.</Text>
+				<Text Style="Small">Прибавьте 4 ВЫНОСЛИВОСТИ.</Text>
+				<Text>Теперь уходите...</Text>
+			</Texts>
 			<Modifications>
 				<Endurance Value="4"/>
 			</Modifications>
