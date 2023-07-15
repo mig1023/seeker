@@ -828,7 +828,7 @@
 			</Modifications>
 			<Options>
 				<Option Goto="661" Text="Повезло"/>
-				<Option Goto="540" Text="Вам или нет"/>
+				<Option Goto="540" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="97">
