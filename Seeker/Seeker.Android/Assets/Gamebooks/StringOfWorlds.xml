@@ -630,8 +630,10 @@
 				</Fight>
 			</Actions>	
 			<Options>
-				<Option Goto="557" Text="Попытаться сбежать"/>
-				<Option Goto="265" Text="Вы победили"/>
+				<Option Goto="557" Text="Попытаться сбежать">
+					<Text>Если вы победили...</Text>
+				</Option>
+				<Option Goto="265"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="74">
