@@ -1187,7 +1187,7 @@
 			</Modifications>
 			<Options>
 				<Option Goto="198" Text="Бросить протонную гранату" Availability="ProtonGrenade">
-					<Text>ХИначе придется возвратиться к развилке и выбрать другую дорогу...</Text>
+					<Text>Иначе придется возвратиться к развилке и выбрать другую дорогу...</Text>
 				</Option>
 				<Option Goto="602"/>
 			</Options>
