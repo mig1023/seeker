@@ -3835,8 +3835,10 @@
 			<Options>
 				<Option Goto="299" Text="Тяжелую, сочную гроздь чего-то, похожее на виноград, но ярко-алого цвета"/>
 				<Option Goto="323" Text="Круглую зеленую ягоду размером с кулак"/>
-				<Option Goto="491" Text="Длинную тонкую лиану"/>
-				<Option Goto="43" Text="Вы раздумали меняться"/>
+				<Option Goto="491" Text="Длинную тонкую лиану">
+					<Text>Если вы раздумали меняться:</Text>
+				</Option>
+				<Option Goto="43"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="452">
