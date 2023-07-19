@@ -5237,13 +5237,13 @@
 		<Paragraph No="627">
 			<Text>Придётся драться:</Text>
 			<Actions>
+				<Option Goto="195" Text="Отступить"/>
 				<Fight>
 					<Enemy Name="«БАБОЧКА»" Skill="8" Strength="8"/>
-					<Text>В любой момент вы можете отступить. Но, может быть, вам удастся победить противника.</Text>
+					<Text>Но, может быть, вам удастся победить противника.</Text>
 				</Fight>
 			</Actions>
 			<Options>
-				<Option Goto="195" Text="Отступить"/>
 				<Option Goto="459" Text="Вам удалось победить"/>
 			</Options>
 		</Paragraph>
