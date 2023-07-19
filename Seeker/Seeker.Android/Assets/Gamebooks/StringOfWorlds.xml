@@ -5309,10 +5309,9 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="636">
-			<Text>Хотите исследовать второй тоннель? Или вам надоели подземные приключения?</Text>
 			<Options>
-				<Option Goto="148" Text="Хотите исследовать тоннель"/>
-				<Option Goto="184" Text="Надоели подземные приключения"/>
+				<Option Goto="148" Text="Хотите исследовать второй тоннель"/>
+				<Option Goto="184" Text="Вам надоели подземные приключения"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="637">
