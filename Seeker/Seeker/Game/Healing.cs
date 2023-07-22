@@ -59,7 +59,7 @@ namespace Seeker.Game
                 return allHealing;
 
             foreach (Healing currentHealing in HealingList.Where(x => x.Portion > 0))
-                allHealing.Add(String.Format("{0} (осталось {1})", currentHealing.Name, currentHealing.Portion));
+                allHealing.Add($"{currentHealing.Name} (осталось {currentHealing.Portion})");
 
             return allHealing;
         }
@@ -69,8 +69,8 @@ namespace Seeker.Game
             List<string> allHealing = new List<string>();
 
             foreach (Healing currentHealing in HealingList)
-                allHealing.Add(String.Format("{0} (восстанавливает {1}, осталось {2})",
-                    currentHealing.Name, currentHealing.Level, currentHealing.Portion));
+                allHealing.Add($"{currentHealing.Name} (восстанавливает {currentHealing.Level}, " +
+                    $"осталось {currentHealing.Portion})");
 
             return allHealing;
         }
@@ -80,7 +80,7 @@ namespace Seeker.Game
             List<string> allHealing = new List<string>();
 
             foreach(Healing healing in HealingList)
-                allHealing.Add(String.Format("{0},{1},{2}", healing.Name, healing.Level, healing.Portion));
+                allHealing.Add($"{healing.Name},{healing.Level},{healing.Portion}");
 
             return String.Join("|", allHealing);
         }
