@@ -64,7 +64,7 @@ namespace Seeker.Game
         }
 
         public static string ValueStringFuse(string value) =>
-            (value == "ValueString" ? "Value" : value);
+            value == "ValueString" ? "Value" : value;
 
         public static bool ParagraphsWithoutStatuses(List<string> statuses)
         {
@@ -92,7 +92,7 @@ namespace Seeker.Game
             {
                 bookmarkIndex += 1;
                 bookmarkOut = Regex.Replace(bookmarkOut, @"\s+\(\d\)$", String.Empty);
-                bookmarkOut += String.Format(" ({0})", bookmarkIndex);
+                bookmarkOut += $" ({bookmarkIndex})";
             };
 
             int nextSaveGameIndex = 0;
@@ -100,7 +100,7 @@ namespace Seeker.Game
             do
             {
                 nextSaveGameIndex += 1;
-                saveName = String.Format("SAVE{0}", nextSaveGameIndex);
+                saveName = $"SAVE{nextSaveGameIndex}";
             }
             while (bookmarks.Values.Contains(saveName));
         }
