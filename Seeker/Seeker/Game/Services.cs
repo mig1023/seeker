@@ -43,7 +43,7 @@ namespace Seeker.Game
         }
 
         public static string NegativeMeaning(int value) =>
-            value < 0 ? String.Format("минус {0}", Math.Abs(value)) : value.ToString(); 
+            value < 0 ? $"минус {Math.Abs(value)}" : value.ToString(); 
 
         public static int LevelParse(string option) =>
             int.Parse(option.Contains("=") ? option.Split('=')[1] : option.Split('>', '<')[1]);
@@ -57,10 +57,10 @@ namespace Seeker.Game
             if (fullSize < 1000)
             {
                 string line = CoinsNoun(fullSize, "слово", "слова", "слов");
-                return String.Format("{0} {1}", fullSize, line);
+                return $"{fullSize} {line}";
             }
             else
-                return String.Format("{0} тыс. слов", (fullSize / 1000));
+                return $"{fullSize / 1000} тыс. слов";
         }
 
         public static string ValueStringFuse(string value) =>
