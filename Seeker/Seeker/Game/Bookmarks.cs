@@ -16,7 +16,7 @@ namespace Seeker.Game
 
         public static Dictionary<string, string> List(out string bookmarksName)
         {
-            bookmarksName = String.Format("{0}-BOOKMARKS", Data.CurrentGamebook);
+            bookmarksName = $"{Data.CurrentGamebook}-BOOKMARKS";
             Dictionary<string, string> bookmarks = new Dictionary<string, string>();
 
             foreach (string bookmark in BookmarkList(bookmarksName))
@@ -31,11 +31,11 @@ namespace Seeker.Game
             Services.BookmarkName(bookmarks, bookmark, out string bookmarkOut, out string saveName);
 
             if (bookmarks.Count == 0)
-                App.Current.Properties[bookmarksName] = String.Format("{0}:{1}", saveName, bookmarkOut);
+                App.Current.Properties[bookmarksName] = $"{saveName}:{bookmarkOut}";
             else
-                App.Current.Properties[bookmarksName] += String.Format(",{0}:{1}", saveName, bookmarkOut);
+                App.Current.Properties[bookmarksName] += $",{saveName}:{bookmarkOut}";
 
-            Continue.Save(String.Format("{0}-{1}", Data.CurrentGamebook, saveName));
+            Continue.Save($"{Data.CurrentGamebook}-{saveName}");
         }
 
         public static void Remove(string bookmark)
