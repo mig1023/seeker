@@ -35,7 +35,7 @@ namespace Seeker.Prototypes
             }
             catch (Exception ex)
             {
-                actionResult = new List<string> { "BIG|BOLD|Ошибка action-кода книги:", String.Format("BIG|{0}", ex.Message) };
+                actionResult = new List<string> { "BIG|BOLD|Ошибка action-кода книги:", $"BIG|{ex.Message}" };
             }
 
             reload = (actionResult.Count >= 1) && (actionResult[0] == "RELOAD");
@@ -43,7 +43,8 @@ namespace Seeker.Prototypes
             return actionResult;
         }
 
-        public virtual List<string> Representer() => new List<string> { };
+        public virtual List<string> Representer() =>
+            new List<string> { };
 
         public virtual string ButtonText()
         {
@@ -58,15 +59,20 @@ namespace Seeker.Prototypes
                 return String.Empty;
         }
                         
-        public virtual List<string> Status() => null;
+        public virtual List<string> Status() =>
+            null;
 
-        public virtual List<string> AdditionalStatus() => null;
+        public virtual List<string> AdditionalStatus() =>
+            null;
 
-        public virtual List<string> StaticButtons() => new List<string> { };
+        public virtual List<string> StaticButtons() =>
+            new List<string> { };
 
-        public virtual bool StaticAction(string action) => false;
+        public virtual bool StaticAction(string action) =>
+            false;
 
-        public virtual bool Availability(string option) => true;
+        public virtual bool Availability(string option) =>
+            true;
 
         public static bool AvailabilityTrigger(string option)
         {
@@ -115,15 +121,20 @@ namespace Seeker.Prototypes
             return new List<string> { "RELOAD" };
         }
 
-        public virtual bool IsButtonEnabled(bool secondButton = false) => true;
+        public virtual bool IsButtonEnabled(bool secondButton = false) =>
+            true;
 
-        public virtual bool IsHealingEnabled() => false;
+        public virtual bool IsHealingEnabled() =>
+            false;
 
-        public virtual void UseHealing(int healingLevel) => Services.DoNothing();
+        public virtual void UseHealing(int healingLevel) =>
+            Services.DoNothing();
 
-        public virtual string TextByOptions(string option) => String.Empty;
+        public virtual string TextByOptions(string option) =>
+            String.Empty;
 
-        public List<string> SimpleDice() => new List<string> { String.Format("BIG|Кубик: {0}", Dice.Symbol(Dice.Roll())) };
+        public List<string> SimpleDice() =>
+            new List<string> { $"BIG|Кубик: {Dice.Symbol(Dice.Roll())}" };
 
         public int GetProperty(object protagonist, string property) =>
             (int)protagonist.GetType().GetProperty(property).GetValue(protagonist, null);
@@ -131,7 +142,10 @@ namespace Seeker.Prototypes
         public void SetProperty(object protagonist, string property, int value) =>
             protagonist.GetType().GetProperty(property).SetValue(protagonist, value);
 
-        public string Result(bool resultOk, string options) =>
-            (resultOk ? String.Format("BIG|GOOD|{0} :)", options.Split('|')[0]) : String.Format("BIG|BAD|{0} :(", options.Split('|')[1]));
+        public string Result(bool resultOk, string options)
+        {
+            string result = options.Split('|')[1];
+            return resultOk ? $"BIG|GOOD|{result} :)" : $"BIG|BAD|{result} :(";
+        }
     }
 }
