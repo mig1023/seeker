@@ -319,13 +319,13 @@ namespace Seeker.Output
             if ((Game.Data.Constants != null) && !String.IsNullOrEmpty(Game.Data.Constants.GetColor(Game.Data.ColorTypes.Font)))
                 fontColor = Color.FromHex(Game.Data.Constants.GetColor(Game.Data.ColorTypes.Font));
 
-            info.Children.Add(Line(fontColor, "Текущий параграф: {0}", id));
+            info.Children.Add(Line(fontColor, $"Текущий параграф: {id}"));
 
             if (Game.Data.Path.Count > 1)
-                info.Children.Add(Line(fontColor, "Путь: {0}", String.Join(" -> ", Game.Data.Path)));
+                info.Children.Add(Line(fontColor, $"Путь: {String.Join(" -> ", Game.Data.Path)}"));
 
             if (Game.Data.Triggers.Count > 0)
-                info.Children.Add(Line(fontColor, "Триггеры: {0}", String.Join(", ", Game.Data.Triggers)));
+                info.Children.Add(Line(fontColor, $"Триггеры: {String.Join(", ", Game.Data.Triggers)}"));
 
             info.Children.Add(Interface.SplitterLine(new Thickness(0, 15), Color.LightGray));
 
@@ -338,7 +338,7 @@ namespace Seeker.Output
                 if (debugLines.Count > 3)
                     info.Children.Add(GridDebugParams(debugLines, fontColor));
                 else
-                    info.Children.Add(Line(fontColor, "{0}", debug));
+                    info.Children.Add(Line(fontColor, debug));
             }
 
             List<string> healings = Game.Healing.Debug();
@@ -349,7 +349,7 @@ namespace Seeker.Output
                 info.Children.Add(Line(fontColor, "Снаряжение:"));
 
                 for (int i = 0; i < healings.Count; i++)
-                    info.Children.Add(Line(fontColor, "{0}. {1}", i + 1, healings[i]));
+                    info.Children.Add(Line(fontColor, "{i + 1}. {healings[i]}"));
             }
 
             return info;
@@ -377,7 +377,7 @@ namespace Seeker.Output
             for (int i = 0; i < debugLines.Count; i++)
             {
                 int column = 1 - ((i + 1) % 2);
-                grid.Children.Add(Line(fontColor, "{0}", debugLines[i]), column, currentRow);
+                grid.Children.Add(Line(fontColor, debugLines[i]), column, currentRow);
 
                 if ((i > 0) && (column == 1))
                 {
@@ -389,9 +389,9 @@ namespace Seeker.Output
             return grid;
         }
 
-        private static Label Line(Color color, string line, params object[] prms) => new Label
+        private static Label Line(Color color, string line) => new Label
         {
-            Text = String.Format(line, prms),
+            Text = line, 
             FontSize = FontSize(TextFontSize.Micro),
             TextColor = color,
         };
