@@ -464,18 +464,25 @@ namespace Seeker.Output
         {
             string font = String.Empty;
             int fontSetting = Game.Settings.GetValue("FontType");
+            string boldLine = bold ? "Bold" : String.Empty;
 
             if (fontSetting > 0)
-                font = String.Format("{0}{1}", Constants.FONT_TYPE_VALUES[fontSetting], (bold ? "Bold" : String.Empty));
-
+            {
+                font = $"{Constants.FONT_TYPE_VALUES[fontSetting]}{boldLine}";
+            }
             else if (standart || (Game.Data.Constants == null) || String.IsNullOrEmpty(Game.Data.Constants.GetFont()))
-                font = (bold ? "YanoneFontBold" : "YanoneFont");
-
+            {
+                font = bold ? "YanoneFontBold" : "YanoneFont";
+            }
             else
-                font = String.Format("{0}{1}", Game.Data.Constants.GetFont(), (bold ? "Bold" : String.Empty));
+            {
+                font = $"{Game.Data.Constants.GetFont()}{boldLine}";
+            }
                 
             if (italic)
+            {
                 font = "RobotoFontItalic";
+            }
 
             return TextFontFamily(font);
         }
