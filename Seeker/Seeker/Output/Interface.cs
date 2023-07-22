@@ -47,7 +47,7 @@ namespace Seeker.Output
 
         public static Label SortSplitter(string setting) => new Label
         {
-            Text = String.Format("― {0} ―", setting),
+            Text = $"― {setting} ―",
             HorizontalTextAlignment = TextAlignment.Center,
             FontSize = Font(NamedSize.Large),
             HorizontalOptions = LayoutOptions.Center,
