@@ -57,10 +57,10 @@ namespace Seeker.Prototypes
         public virtual void LoadColor(string type, string color)
         {
             if (Enum.TryParse(type, out ColorTypes colorTypes))
-                ColorsList.Add(colorTypes, String.Format("#{0}", color));
+                ColorsList.Add(colorTypes, $"#{color}");
 
             else if (Enum.TryParse(type, out ButtonTypes buttonTypes))
-                ButtonsColorsList.Add(buttonTypes, String.Format("#{0}", color));
+                ButtonsColorsList.Add(buttonTypes, $"#{color}");
         }
 
         public virtual List<int> GetParagraphsWithoutStatuses() => WithoutStatuses;
