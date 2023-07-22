@@ -85,7 +85,7 @@ namespace Seeker
         {
             foreach (string bookmark in allBookmarks.Keys)
             {
-                string bookmarkSave = String.Format("{0}-{1}", Game.Data.CurrentGamebook, allBookmarks[bookmark]);
+                string bookmarkSave = $"{Game.Data.CurrentGamebook}-{allBookmarks[bookmark]}";
 
                 StackLayout bookmarkLine = new StackLayout { Orientation = StackOrientation.Horizontal };
 
