@@ -122,7 +122,7 @@ namespace Seeker.Output
 
             Label settingTitle = new Label
             {
-                Text = String.Format("{0}:", settingName),
+                Text = $"{settingName}:",
                 VerticalOptions = LayoutOptions.CenterAndExpand,
                 FontSize = Interface.Font(NamedSize.Small),
             };
