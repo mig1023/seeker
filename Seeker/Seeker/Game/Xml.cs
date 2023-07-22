@@ -233,7 +233,7 @@ namespace Seeker.Game
         }
 
         private static string SettingString(XmlDocument xmlFile, string option) =>
-            StringParse(xmlFile.SelectSingleNode(Intro(String.Format("Default/{0}", option)))?.Attributes["Value"]) ?? String.Empty;
+            StringParse(xmlFile.SelectSingleNode(Intro($"Default/{option}"))?.Attributes["Value"]) ?? String.Empty;
 
         private static void AddButtonsTexts(XmlNode xmlNode)
         {
@@ -248,7 +248,7 @@ namespace Seeker.Game
             xmlNode.Attributes[attributes].InnerText.Split(',').Select(x => x.Trim()).ToList();
 
         private static string Intro(string node) =>
-            String.Format("Gamebook/Introduction/{0}", node);
+            $"Gamebook/Introduction/{node}";
 
         public static void GetXmlDescriptionData(ref Description description)
         {
@@ -326,8 +326,7 @@ namespace Seeker.Game
             }
             else
             {
-                string color = StringParse(xmlNode[name]);
-                return String.Format("#{0}", color);
+                return $"#{StringParse(xmlNode[name])}";
             }
         }
  
