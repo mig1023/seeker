@@ -34,7 +34,7 @@ namespace Seeker.Game
             string path = String.Join(",", Data.Path);
 
             App.Current.Properties[gameName] =
-                String.Format("{0}@{1}@{2}@{3}@{4}", paragraph, triggers, healing, character, path);
+                $"{paragraph}@{triggers}@{healing}@{character}@{path}";
         }
 
         public static int Load(string gameName)
