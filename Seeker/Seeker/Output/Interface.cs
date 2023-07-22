@@ -134,7 +134,7 @@ namespace Seeker.Output
             if (List.Sort() == Constants.SORT_BY_AUTHORS)
                 text = gamebook.AuthorsIndex();
 
-            string disclaimerText = String.Format("© {0}, {1}", text.Trim() + AndOtherMark(gamebook), gamebook.Year);
+            string disclaimerText = $"© {text.Trim() + AndOtherMark(gamebook)}, {gamebook.Year}";
 
             Label disclaimer = new Label
             {
