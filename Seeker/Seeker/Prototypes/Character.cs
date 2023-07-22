@@ -12,7 +12,8 @@ namespace Seeker.Prototypes
 
         public int WayBack { get; set; }
 
-        public virtual bool ThisIsProtagonist() => IsProtagonist;
+        public virtual bool ThisIsProtagonist() =>
+            IsProtagonist;
 
         public virtual void Init()
         {
@@ -20,9 +21,11 @@ namespace Seeker.Prototypes
             IsProtagonist = true;
         }
             
-        public virtual string Save() => String.Empty;
+        public virtual string Save() =>
+            String.Empty;
 
-        public virtual void Load(string saveLine) => Game.Services.DoNothing();
+        public virtual void Load(string saveLine) =>
+            Game.Services.DoNothing();
 
         public virtual string Debug()
         {
@@ -31,32 +34,32 @@ namespace Seeker.Prototypes
             foreach (string proterty in this.GetType().GetProperties().Select(x => x.Name).ToList())
             {
                 object value = this.GetType().GetProperty(proterty).GetValue(this);
+                string data = String.Empty;
 
                 if (value is Dictionary<string, string>)
                 {
-                    propertiesList += String.Format("{0}: {1}\n",
+                    data = String.Join(",",
                         (value as Dictionary<string, string>).Select(x => x.Key + " = " + x.Value).ToArray());
                 }
                 else if (value is Dictionary<string, int>)
                 {
-                    propertiesList += String.Format("{0}: {1}\n",
+                    data = String.Join(",",
                         (value as Dictionary<string, int>).Select(x => x.Key + " = " + x.Value).ToArray());
                 }
                 else if (value is List<string>)
                 {
-                    propertiesList += String.Format("{0}: {1}\n",
-                        proterty, String.Join(",", (value as List<string>).ToArray()));
+                    data = String.Join(",", (value as List<string>).ToArray());
                 }
                 else if (value is List<bool>)
                 {
-                    propertiesList += String.Format("{0}: {1}\n",
-                        proterty, String.Join(",", (value as List<bool>).ToArray()));
+                    data = String.Join(",", (value as List<bool>).ToArray());
                 }
                 else
                 {
-                    propertiesList += String.Format("{0}: {1}\n",
-                        proterty, value);
+                    data = value.ToString();
                 }
+
+                propertiesList += $"{proterty}: {value}\n";
             }
 
             return propertiesList;
