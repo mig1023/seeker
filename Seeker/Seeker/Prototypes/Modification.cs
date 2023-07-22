@@ -13,7 +13,8 @@ namespace Seeker.Prototypes
 
         public delegate void ParamMod();
 
-        public virtual void Do() => Game.Services.DoNothing();
+        public virtual void Do() =>
+            Game.Services.DoNothing();
 
         public virtual void Do(Abstract.ICharacter Character)
         {
@@ -69,7 +70,9 @@ namespace Seeker.Prototypes
                 return true;
             }
             else
+            {
                 return false;
+            }
         }
 
         public bool DoByValueString(string actualName, ParamMod doModification) =>

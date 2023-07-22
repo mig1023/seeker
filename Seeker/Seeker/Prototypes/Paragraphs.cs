@@ -11,9 +11,12 @@ namespace Seeker.Prototypes
     {
         internal Random random = new Random();
 
-        public virtual Abstract.IActions ActionParse(XmlNode xmlAction) => null;
-        public virtual Option OptionParse(XmlNode xmlOption) => OptionsTemplate(xmlOption);
-        public virtual Abstract.IModification ModificationParse(XmlNode xmlxmlModification) => null;
+        public virtual Abstract.IActions ActionParse(XmlNode xmlAction) =>
+            null;
+        public virtual Option OptionParse(XmlNode xmlOption) =>
+            OptionsTemplate(xmlOption);
+        public virtual Abstract.IModification ModificationParse(XmlNode xmlxmlModification) =>
+            null;
 
         public virtual Paragraph Get(int id, XmlNode xmlParagraph)
         {
