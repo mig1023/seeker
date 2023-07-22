@@ -55,7 +55,7 @@ namespace Seeker.Game
                     if (!String.IsNullOrEmpty(newBookmarkList))
                         newBookmarkList += ",";
 
-                    newBookmarkList += String.Format("{0}:{1}", bookmarks[index], index);
+                    newBookmarkList += $"{bookmarks[index]}:{index}";
                 }
             }
 
@@ -69,10 +69,10 @@ namespace Seeker.Game
         {
             foreach (string gamebook in Gamebook.List.GetBooks())
             {
-                string bookmarksName = String.Format("{0}-BOOKMARKS", gamebook);
+                string bookmarksName = $"{gamebook}-BOOKMARKS";
 
                 foreach (string bookmark in BookmarkList(bookmarksName))
-                    App.Current.Properties.Remove(String.Format("{0}-{1}", gamebook, bookmark.Split(':')[0]));
+                    App.Current.Properties.Remove($"{gamebook}-{bookmark.Split(':')[0]}");
 
                 if (App.Current.Properties.ContainsKey(bookmarksName))
                     App.Current.Properties.Remove(bookmarksName);
