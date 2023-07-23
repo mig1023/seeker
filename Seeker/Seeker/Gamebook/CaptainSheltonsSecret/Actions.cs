@@ -160,12 +160,12 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             {
                 int dice = Game.Dice.Roll();
                 dices += dice;
-                diceCheck.Add(String.Format("На {0} выпало: {1}", i, Game.Dice.Symbol(dice)));
+                diceCheck.Add($"На {i} выпало: {Game.Dice.Symbol(dice)}");
             }
 
             protagonist.Endurance -= dices;
 
-            diceCheck.Add(String.Format("BIG|BAD|Вы потеряли выносливости: {0}", dices));
+            diceCheck.Add($"BIG|BAD|Вы потеряли выносливости: {dices}");
 
             return diceCheck;
         }
