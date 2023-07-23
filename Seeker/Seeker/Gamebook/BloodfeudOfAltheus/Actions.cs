@@ -173,14 +173,14 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
             int sum = firstDice + secondDice;
 
-            diceCheck.Add(String.Format("Кубики: {0} + {1} = {2}", Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), sum));
+            diceCheck.Add($"Кубики: {Game.Dice.Symbol(firstDice)} + {Game.Dice.Symbol(secondDice)} = {sum}");
 
             int difference = protagonist.Glory - protagonist.Shame;
 
             string comparison = Game.Services.Сomparison(sum, difference);
 
-            diceCheck.Add(String.Format("Разница между Славой и Позором: {0} - {1} = {2}", protagonist.Glory, protagonist.Shame, difference));
-            diceCheck.Add(sum > difference ? String.Format("BIG|BAD|{0} :(", comparison.ToUpper()) : "BIG|GOOD|МЕНЬШЕ :)");
+            diceCheck.Add($"Разница между Славой и Позором: {protagonist.Glory} - {protagonist.Shame} = {difference}");
+            diceCheck.Add(sum > difference ? $"BIG|BAD|{comparison.ToUpper()} :(" : "BIG|GOOD|МЕНЬШЕ :)");
 
             return diceCheck;
         }
