@@ -183,7 +183,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                 if (weaponDefence > 0)
                 {
                     defence += weaponDefence;
-                    defenceLine += String.Format(" + {0} {1}", weaponDefence, name);
+                    defenceLine += $" + {weaponDefence} {name}";
                 }
             }
 
@@ -207,9 +207,9 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                 defence += armour.Value;
 
                 if (status)
-                    defenceLine += String.Format("{0}, ", armour.Key);
+                    defenceLine += $"{armour.Key}, ";
                 else
-                    defenceLine += String.Format(" + {0} {1}", armour.Value, armour.Key);
+                    defenceLine += $" + {armour.Value} {armour.Key}";
             }
 
             armourDefence = defence;
