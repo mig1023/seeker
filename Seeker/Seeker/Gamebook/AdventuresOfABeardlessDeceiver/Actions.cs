@@ -20,17 +20,17 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
         public override List<string> Representer()
         {
             if (Level > 0)
-                return new List<string> { String.Format("Проверка {0}, уровень {1}", Constants.StatNames[Stat], Level) };
+                return new List<string> { $"Проверка {Constants.StatNames[Stat]}, уровень {Level}" };
 
             else if (!String.IsNullOrEmpty(Stat))
             {
                 int currentStat = GetProperty(protagonist, Stat);
-                string diffLine = (currentStat > 1 ? String.Format(" (+{0})", (currentStat - 1)) : String.Empty);
+                string diffLine = currentStat > 1 ? $" (+{currentStat - 1})" : String.Empty;
 
-                return new List<string> { String.Format("{0}{1}", Head, diffLine) };
+                return new List<string> { $"{Head}{diffLine}" };
             }
             else if (Price > 0)
-                return new List<string> { String.Format("{0}, {1} таньга", Head, Price) };
+                return new List<string> { $"{Head}, {Price} таньга" };
 
             else if (!String.IsNullOrEmpty(Head))
                 return new List<string> { Head };
@@ -41,36 +41,36 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 
         public override List<string> Status() => new List<string>
         {
-            String.Format("Деньги: {0}", protagonist.Tanga),
-            String.Format("Кумыс: {0}", protagonist.Kumis),
+            $"Деньги: {protagonist.Tanga}",
+            $"Кумыс: {protagonist.Kumis}",
         };
 
         public override List<string> AdditionalStatus()
         {
             List<string> statusLines = new List<string>();
 
-            statusLines.Add(String.Format("Популярность: {0}", protagonist.Popularity));
+            statusLines.Add($"Популярность: {protagonist.Popularity}");
 
             if (protagonist.AkynGlory != null)
-                statusLines.Add(String.Format("Слава акына: {0}", protagonist.AkynGlory));
+                statusLines.Add($"Слава акына: {protagonist.AkynGlory}");
 
             if (protagonist.UnitOfTime != null)
-                statusLines.Add(String.Format("Ед.времени: {0}", protagonist.UnitOfTime));
+                statusLines.Add($"Ед.времени: {protagonist.UnitOfTime}");
 
             if (protagonist.Strength > 1)
-                statusLines.Add(String.Format("Сила: {0}", protagonist.Strength));
+                statusLines.Add($"Сила: {protagonist.Strength}");
 
             if (protagonist.Skill > 1)
-                statusLines.Add(String.Format("Ловкость: {0}", protagonist.Skill));
+                statusLines.Add($"Ловкость: {protagonist.Skill}");
 
             if (protagonist.Wisdom > 1)
-                statusLines.Add(String.Format("Мудрость: {0}", protagonist.Wisdom));
+                statusLines.Add($"Мудрость: {protagonist.Wisdom}");
 
             if (protagonist.Cunning > 1)
-                statusLines.Add(String.Format("Хитрость: {0}", protagonist.Cunning));
+                statusLines.Add($"Хитрость: {protagonist.Cunning}");
 
             if (protagonist.Oratory > 1)
-                statusLines.Add(String.Format("Красноречие: {0}", protagonist.Oratory));
+                statusLines.Add($"Красноречие: {protagonist.Oratory}");
 
             return statusLines;
         }
@@ -196,10 +196,10 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             }
             else
             {
-                testLines.Add(String.Format(
-                    "Проверка {0}: {1} + {2} + {3} {4} {5}",
-                    Constants.StatNames[Stat], Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice),
-                    currentStat, (testIsOk ? ">=" : "<"), Level));
+                string okLine = testIsOk ? ">=" : "<";
+
+                testLines.Add($"Проверка {Constants.StatNames[Stat]}: {Game.Dice.Symbol(firstDice)} + " +
+                    $"{Game.Dice.Symbol(secondDice)} + {currentStat} {okLine} {Level}");
 
                 if (GuessBonus && Game.Option.IsTriggered("guess"))
                     testLines.Insert(0, "Бонус за догадку: -4");
@@ -210,7 +210,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         testLines.Insert(0, "Бонус за ханское кольцо: -3");
 
                     if (protagonist.Popularity > 0)
-                        testLines.Insert(0, String.Format("Бонус за популярность: -{0}", protagonist.Popularity));
+                        testLines.Insert(0, $"Бонус за популярность: -{protagonist.Popularity}");
                 }
 
                 if (NextTestWithKumis)
