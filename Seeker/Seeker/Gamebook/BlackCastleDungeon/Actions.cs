@@ -26,10 +26,10 @@ namespace Seeker.Gamebook.BlackCastleDungeon
 
         public override List<string> Status() => new List<string>
         {
-            String.Format("Мастерство: {0}", protagonist.Mastery),
-            String.Format("Выносливость: {0}/{1}", protagonist.Endurance, protagonist.MaxEndurance),
-            String.Format("Удача: {0}", protagonist.Luck),
-            String.Format("Золото: {0}", protagonist.Gold)
+            $"Мастерство: {protagonist.Mastery}",
+            $"Выносливость: {protagonist.Endurance}/{protagonist.MaxEndurance}",
+            $"Удача: {protagonist.Luck}",
+            $"Золото: {protagonist.Gold}"
         };
 
         public override List<string> AdditionalStatus()
@@ -55,7 +55,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             List<string> statusLines = new List<string>();
 
             foreach (string spell in currentSpells.Keys.ToList().OrderBy(q => q))
-                statusLines.Add(String.Format("{0}: {1}", char.ToUpper(spell[0]) + spell.Substring(1), currentSpells[spell]));
+                statusLines.Add($"{char.ToUpper(spell[0]) + spell.Substring(1)}: {currentSpells[spell]}");
 
             return statusLines;
         }
@@ -125,19 +125,20 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             if (Price > 0)
             {
                 string gold = Game.Services.CoinsNoun(Price, "золотой", "золотых", "золотых");
-                return new List<string> { String.Format("{0}, {1} {2}", Head, Price, gold) };
+                return new List<string> { $"{Head}, {Price} {gold}" };
             }
             else if (ThisIsSpell)
             {
                 int count = (ThisIsSpell ? protagonist.Spells.Where(x => x == Head).Count() : 0);
-                return new List<string> { String.Format("{0}{1}", Head, (count > 0 ? String.Format(" ({0} шт)", count) : String.Empty)) };
+                string line = count > 0 ? $" ({count} шт)" : String.Empty;
+                return new List<string> { $"{Head}{line}" };
             }
 
             if (Enemies == null)
                 return enemies;
 
             foreach (Character enemy in Enemies)
-                enemies.Add(String.Format("{0}\nмастерство {1}  выносливость {2}", enemy.Name, enemy.Mastery, enemy.Endurance));
+                enemies.Add($"{enemy.Name}\nмастерство {enemy.Mastery}  выносливость {enemy.Endurance}");
 
             return enemies;
         }
@@ -147,11 +148,11 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
 
             bool goodLuck = (firstDice + secondDice) <= protagonist.Luck;
+            string luckLine = goodLuck ? "<=" : ">";
 
-            List<string> luckCheck = new List<string> { String.Format(
-                "Проверка удачи: {0} + {1} {2} {3}",
-                Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), (goodLuck ? "<=" : ">"), protagonist.Luck
-            ) };
+            List<string> luckCheck = new List<string> {
+                $"Проверка удачи: {Game.Dice.Symbol(firstDice)} + " +
+                $"{Game.Dice.Symbol(secondDice)} {luckLine} {protagonist.Luck}" };
 
             luckCheck.Add(goodLuck ? "BIG|GOOD|УСПЕХ :)" : "BIG|BAD|НЕУДАЧА :(");
 
@@ -212,10 +213,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                 int oldEnemyMastery = FightEnemies[0].Mastery;
                 FightEnemies[0].Mastery -= 2;
 
-                fight.Add(String.Format(
-                    "BOLD|Заклятье слабости ослабляет вашего противника: {0} теперь имеет ловкость {1} вместо {2}",
-                    FightEnemies[0].Name, FightEnemies[0].Mastery, oldEnemyMastery
-                ));
+                fight.Add($"BOLD|Заклятье слабости ослабляет вашего противника: " +
+                    $"{FightEnemies[0].Name} теперь имеет ловкость " +
+                    $"{FightEnemies[0].Mastery} вместо {oldEnemyMastery}");
 
                 fight.Add(String.Empty);
             }
@@ -227,8 +227,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                 Character enemyCopy = FightEnemies[0].Clone();
                 enemyCopy.Name += "-копия";
 
-                bool copyWin = Services.WinInFight(ref fight, ref round, ref enemyCopy, ref FightEnemies, ref enemyWounds,
-                    StrengthPenlty, WoundsToWin, RoundsToWin, ExtendedDamage, copyFight: true);
+                bool copyWin = Services.WinInFight(ref fight, ref round, ref enemyCopy,
+                    ref FightEnemies, ref enemyWounds, StrengthPenlty, WoundsToWin, RoundsToWin,
+                    ExtendedDamage, copyFight: true);
 
                 fight.Add(String.Empty);
 
@@ -258,16 +259,14 @@ namespace Seeker.Gamebook.BlackCastleDungeon
 
                 protagonist.Mastery += 2;
 
-                fight.Add(String.Format(
-                    "BOLD|Заклятье Силы увеличивает ваше мастерство: на время этого боя она равна {0}",
-                    protagonist.Mastery
-                ));
+                fight.Add($"BOLD|Заклятье Силы увеличивает ваше мастерство: " +
+                    $"на время этого боя она равна {protagonist.Mastery}");
 
                 fight.Add(String.Empty);
             }
 
-            bool win = Services.WinInFight(ref fight, ref round, ref protagonist, ref FightEnemies, ref enemyWounds,
-                StrengthPenlty, WoundsToWin, RoundsToWin, ExtendedDamage);
+            bool win = Services.WinInFight(ref fight, ref round, ref protagonist, ref FightEnemies,
+                ref enemyWounds, StrengthPenlty, WoundsToWin, RoundsToWin, ExtendedDamage);
 
             protagonist.Mastery = oldMastery;
 
