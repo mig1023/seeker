@@ -557,23 +557,25 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                         comradesBonusLine = $" + {comradesBonus} за товарищей";
                     }
 
-                    fight.Add(String.Format("Мощность его удара: {0}{1} + {2} Сила{3} = {4}",
-                        Game.Dice.Symbol(enemyRollFirst), ememySecondRollLine, enemy.Strength, comradesBonusLine, enemyHitStrength));
+                    fight.Add($"Мощность его удара: {Game.Dice.Symbol(enemyRollFirst)}" +
+                        $"{ememySecondRollLine} + {enemy.Strength} Сила{comradesBonusLine} = " +
+                        $"{enemyHitStrength}");
 
                     protagonist.GetArmour(out int armourDefence, out string armourLine);
 
-                    string needTotal = (String.IsNullOrEmpty(armourLine) ? String.Empty : String.Format(" = {0}", (protagonist.Defence + armourDefence)));
+                    string needTotal = String.IsNullOrEmpty(armourLine) ?
+                        String.Empty : $" = {protagonist.Defence + armourDefence}";
 
                     if (autoHit)
                         fight.Add("GRAY|На кубиках выпало больше 10, он попадает авоматически!");
                     else if (autoFail)
                         fight.Add("GRAY|На кубиках выпало слишком мало, он промахиваетесь авоматически!");
                     else
-                        fight.Add(String.Format("Ваша защита: {0}{1}{2}", protagonist.Defence, armourLine, needTotal));
+                        fight.Add($"Ваша защита: {protagonist.Defence}{armourLine}{needTotal}");
 
                     if ((autoHit || (enemyHitStrength > (protagonist.Defence + armourDefence))) && !autoFail)
                     {
-                        fight.Add(String.Format("BOLD|BAD|{0} ранил вас", enemy.Name));
+                        fight.Add($"BOLD|BAD|{enemy.Name} ранил вас");
 
                         if (Game.Option.IsTriggered("FirstWoundProtection"))
                         {
@@ -588,12 +590,12 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                         if (protagonist.Health <= 0)
                         {
                             fight.Add(String.Empty);
-                            fight.Add(String.Format("BIG|BAD|Вы ПРОИГРАЛИ :("));
+                            fight.Add("BIG|BAD|Вы ПРОИГРАЛИ :(");
                             return fight;
                         }
                     }
                     else
-                        fight.Add(String.Format("BOLD|Противник не смог ранить вас", enemy.Name));
+                        fight.Add("BOLD|Противник не смог ранить вас");
 
                     fight.Add(String.Empty);
                 }
