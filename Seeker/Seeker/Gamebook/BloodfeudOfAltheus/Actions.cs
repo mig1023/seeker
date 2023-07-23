@@ -498,20 +498,20 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                         protagonistHitStrength += useGlory;
                     }
 
-                    fight.Add(String.Format("Мощность вашего удара: {0}{1} + {2} Сила + {3} {4}{5} = {6}",
-                        Game.Dice.Symbol(protagonistRollFirst), secondRollLine, protagonist.Strength,
-                        weaponStrength, weaponName, useGloryLine, protagonistHitStrength));
+                    fight.Add($"Мощность вашего удара: {Game.Dice.Symbol(protagonistRollFirst)}" +
+                        $"{secondRollLine} + {protagonist.Strength} Сила + {weaponStrength} " +
+                        $"{weaponName}{useGloryLine} = {protagonistHitStrength}");
 
                     if (autoHit)
                         fight.Add("GRAY|На кубиках выпало больше 10, вы попадаете авоматически!");
                     else if (autoFail)
                         fight.Add("GRAY|На кубиках выпало слишком мало, вы промахиваетесь авоматически!");
                     else
-                        fight.Add(String.Format("Его защита: {0}", enemy.Defence));
+                        fight.Add($"Его защита: {enemy.Defence}");
 
                     if ((autoHit || (protagonistHitStrength > enemy.Defence)) && !autoFail)
                     {
-                        fight.Add(String.Format("BOLD|GOOD|{0} ранен", enemy.Name));
+                        fight.Add($"BOLD|GOOD|{enemy.Name} ранен");
 
                         enemy.Health -= 1;
 
@@ -520,13 +520,13 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                         if (enemyLost)
                         {
                             fight.Add(String.Empty);
-                            fight.Add(String.Format("BIG|GOOD|Вы ПОБЕДИЛИ :)"));
+                            fight.Add("BIG|GOOD|Вы ПОБЕДИЛИ :)");
                             return fight;
                         }
                     }
                     else
                     {
-                        fight.Add(String.Format("BOLD|Вы не смогли ранить противника", enemy.Name));
+                        fight.Add($"BOLD|Вы не смогли ранить противника");
                     }
 
                     int enemyRollFirst = Game.Dice.Roll();
@@ -536,7 +536,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                     if ((enemy.Health > 1) || Services.NoMoreEnemies(FightEnemies, noHealthy: true))
                     {
                         enemyRollSecond = Game.Dice.Roll();
-                        ememySecondRollLine = String.Format(" + {0}", Game.Dice.Symbol(enemyRollSecond));
+                        ememySecondRollLine = $" + {Game.Dice.Symbol(enemyRollSecond)}";
                         autoFail = (enemyRollFirst + enemyRollSecond) < 4;
                     }
                     else
@@ -554,7 +554,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                     if (comradesBonus > 0)
                     {
                         enemyHitStrength += comradesBonus;
-                        comradesBonusLine = String.Format(" + {0} за товарищей", comradesBonus);
+                        comradesBonusLine = $" + {comradesBonus} за товарищей";
                     }
 
                     fight.Add(String.Format("Мощность его удара: {0}{1} + {2} Сила{3} = {4}",
