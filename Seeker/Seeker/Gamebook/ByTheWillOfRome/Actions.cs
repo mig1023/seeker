@@ -11,8 +11,8 @@ namespace Seeker.Gamebook.ByTheWillOfRome
 
         public override List<string> Status() => new List<string>
         {
-            String.Format("Сестерциев: {0}", protagonist.Sestertius),
-            String.Format("Честь: {0}", protagonist.Honor),
+            $"Сестерциев: {protagonist.Sestertius}",
+            $"Честь: {protagonist.Honor}",
         };
 
         public override List<string> AdditionalStatus()
@@ -23,8 +23,8 @@ namespace Seeker.Gamebook.ByTheWillOfRome
 
                 return new List<string>
                 {
-                    String.Format("Легионеров: {0}", legionaries),
-                    String.Format("Дисциплина: {0}", Game.Services.NegativeMeaning(protagonist.Discipline)),
+                    $"Легионеров: {legionaries}",
+                    $"Дисциплина: {Game.Services.NegativeMeaning(protagonist.Discipline)}",
                 };
             }
             else if (protagonist.Horsemen > 0)
@@ -32,8 +32,8 @@ namespace Seeker.Gamebook.ByTheWillOfRome
                 string horsemen = new string('♘', protagonist.Horsemen);
                 return new List<string>
                 {
-                    String.Format("Всадников: {0}", horsemen),
-                    String.Format("Навыки рукопашного боя: {0}", 2),
+                    $"Всадников: {horsemen}",
+                    $"Навыки рукопашного боя: 2",
                 };
             }
             else
@@ -45,7 +45,7 @@ namespace Seeker.Gamebook.ByTheWillOfRome
             if (Price > 0)
             {
                 string gold = Game.Services.CoinsNoun(Price, "сестерций", "сестерция", "сестерциев");
-                return new List<string> { String.Format("{0}, {1} {2}", Head, Price, gold) };
+                return new List<string> { $"{Head}, {Price} {gold}" };
             }
             else
                 return new List<string> { };
