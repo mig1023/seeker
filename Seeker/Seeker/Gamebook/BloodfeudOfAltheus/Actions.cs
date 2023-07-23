@@ -241,7 +241,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
             int dice = Game.Dice.Roll();
 
-            roll.Add(String.Format("Кубик: {0}", Game.Dice.Symbol(dice)));
+            roll.Add($"Кубик: {Game.Dice.Symbol(dice)}");
 
             if (dice >= 4)
             {
