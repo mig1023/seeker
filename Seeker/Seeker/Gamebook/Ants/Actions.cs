@@ -13,14 +13,14 @@ namespace Seeker.Gamebook.Ants
         {
             List<string> statusLines = new List<string>();
 
-            statusLines.Add(String.Format("Количество: {0}", protagonist.Quantity));
-            statusLines.Add(String.Format("Прирост: {0}", protagonist.Increase));
+            statusLines.Add($"Количество: {protagonist.Quantity}");
+            statusLines.Add($"Прирост: {protagonist.Increase}");
 
             if (protagonist.Defence > 0)
-                statusLines.Add(String.Format("Защита: {0}", protagonist.Defence));
+                statusLines.Add($"Защита: {protagonist.Defence}");
 
             if (protagonist.EnemyHitpoints > 0)
-                statusLines.Add(String.Format("{0}: {1}", protagonist.EnemyName, protagonist.EnemyHitpoints));
+                statusLines.Add($"{protagonist.EnemyName}: {protagonist.EnemyHitpoints}");
 
             return statusLines;
         }
@@ -89,8 +89,10 @@ namespace Seeker.Gamebook.Ants
 
             if (queen || prince || soldier)
             {
-                results.Add("Муравейник вырос до гигантских размеров. Высотою в шесть метров и диаметром двадцать, он попал в книгу рекордов Гиннесса.");
-                results.Add("Позже группа религиозных фанатиков сожгла муравейник, мотивируя это тем, что продвинутый вид насекомых угрожает человечеству.");
+                results.Add("Муравейник вырос до гигантских размеров. Высотою в шесть метров и " +
+                    "диаметром двадцать, он попал в книгу рекордов Гиннесса.");
+                results.Add("Позже группа религиозных фанатиков сожгла муравейник, мотивируя это " +
+                    "тем, что продвинутый вид насекомых угрожает человечеству.");
             }
             else
             {
@@ -115,7 +117,7 @@ namespace Seeker.Gamebook.Ants
 
             List<string> resultLines = line.Split('!').ToList();
 
-            results.Add(String.Format("{0}!", resultLines[0]));
+            results.Add($"{resultLines[0]}!");
             results.Add(resultLines[1]);
 
             return results;
