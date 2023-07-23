@@ -180,7 +180,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             {
                 if (!protagonist.Luck[i])
                 {
-                    luckRecovery.Add(String.Format("GOOD|Цифра {0} восстановлена!", i));
+                    luckRecovery.Add($"GOOD|Цифра {i} восстановлена!");
                     protagonist.Luck[i] = true;
                     success = true;
 
@@ -207,7 +207,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             {
                 if (protagonist.Luck[i])
                 {
-                    luckLose.Add(String.Format("BAD|Цифра {0} стала несчастливой...", i));
+                    luckLose.Add($"BAD|Цифра {i} стала несчастливой...");
                     protagonist.Luck[i] = false;
                     success = false;
 
@@ -224,15 +224,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             return luckLose;
         }
 
-        public List<string> RollDice() => new List<string> { String.Format("BIG|Бросок: {0}", Game.Dice.Symbol(Game.Dice.Roll())) };
+        public List<string> RollDice() =>
+            new List<string> { $"BIG|Бросок: {Game.Dice.Symbol(Game.Dice.Roll())}" };
 
         public List<string> RollDoubleDices()
         {
             Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
 
-            return new List<string> { String.Format(
-                "BIG|Бросок: {0} + {1} = {2}",
-                Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), (firstDice + secondDice)) };
+            return new List<string> { $"BIG|Бросок: {Game.Dice.Symbol(firstDice)} + " +
+                $"{Game.Dice.Symbol(secondDice)} = {firstDice + secondDice}" };
         }
 
         public List<string> Mastery()
