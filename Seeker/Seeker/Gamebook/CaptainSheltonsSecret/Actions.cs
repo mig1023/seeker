@@ -240,10 +240,11 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             int firstDice = Game.Dice.Roll();
             int secondDice = Game.Dice.Roll();
             bool goodMastery = (firstDice + secondDice) <= protagonist.Mastery;
+            string lineMastery = goodMastery ? "<=" : ">";
 
-            List<string> masteryCheck = new List<string> { String.Format(
-                "Проверка мастерства: {0} + {1} {2} {3} мастерство",
-                Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), (goodMastery ? "<=" : ">"), protagonist.Mastery) };
+            List<string> masteryCheck = new List<string> { $"Проверка мастерства: " +
+                $"{Game.Dice.Symbol(firstDice)} + {Game.Dice.Symbol(secondDice)} " +
+                $"{lineMastery} {protagonist.Mastery} мастерство" };
 
             masteryCheck.Add(Result(goodMastery, "МАСТЕРСТВА ХВАТИЛО|МАСТЕРСТВА НЕ ХВАТИЛО"));
 
@@ -277,17 +278,21 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                 FightEnemies.Add(enemy.Clone().SetEndurance());             
 
             if (Allies == null)
+            {
                 FightAllies.Add(protagonist);
+            }
             else
+            {
                 foreach (Character ally in Allies)
                     if (ally == protagonist)
                         FightAllies.Add(ally);
                     else
-                        FightAllies.Add(ally.Clone().SetEndurance());                   
+                        FightAllies.Add(ally.Clone().SetEndurance());
+            }
 
             while (true)
             {
-                fight.Add(String.Format("HEAD|BOLD|Раунд: {0}", round));
+                fight.Add($"HEAD|BOLD|Раунд: {round}");
 
                 foreach (Character ally in FightAllies)
                 {
@@ -297,7 +302,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                     if (GroupFight)
                     {
                         string person = (Services.IsProtagonist(ally.Name) ? "Вы" : ally.Name);
-                        fight.Add(String.Format("{0} (сила {1})", person, ally.Endurance));
+                        fight.Add($"{person} (сила {ally.Endurance})");
                     }
 
                     bool attackAlready = false;
