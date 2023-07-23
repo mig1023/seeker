@@ -19,9 +19,9 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
 
         public override List<string> Status() => new List<string>
         {
-            String.Format("Мастерство: {0}", protagonist.Mastery),
-            String.Format("Выносливость: {0}/{1}", protagonist.Endurance, protagonist.MaxEndurance),
-            String.Format("Золото: {0}", protagonist.Gold)
+            $"Мастерство: {protagonist.Mastery}",
+            $"Выносливость: {protagonist.Endurance}/{protagonist.MaxEndurance}",
+            $"Золото: {protagonist.Gold}",
         };
 
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
@@ -55,13 +55,13 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             if ((Allies != null) && GroupFight)
             {
                 foreach (Character ally in Allies)
-                    enemies.Add(String.Format("{0}\nмастерство {1}  выносливость {2}", ally.Name, ally.Mastery, ally.GetEndurance()));
+                    enemies.Add($"{ally.Name}\nмастерство {ally.Mastery}  выносливость {ally.GetEndurance()}");
 
                 enemies.Add("SPLITTER|против");
             }
 
             foreach (Character enemy in Enemies)
-                enemies.Add(String.Format("{0}\nмастерство {1}  выносливость {2}", enemy.Name, enemy.Mastery, enemy.GetEndurance()));
+                enemies.Add($"{enemy.Name}\nмастерство {enemy.Mastery}  выносливость {enemy.GetEndurance()}");
 
             return enemies;
         }
