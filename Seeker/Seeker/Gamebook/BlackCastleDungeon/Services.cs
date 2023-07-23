@@ -27,13 +27,13 @@ namespace Seeker.Gamebook.BlackCastleDungeon
         {
             if (copyFight)
             {
-                fight.Add(String.Format("BOLD|Вместо вас будет сражаться: {0}", protagonist.Name));
+                fight.Add($"BOLD|Вместо вас будет сражаться: {protagonist.Name}");
                 fight.Add(String.Empty);
             }
 
             while (true)
             {
-                fight.Add(String.Format("HEAD|BOLD|Раунд: {0}", round));
+                fight.Add($"HEAD|BOLD|Раунд: {round}");
 
                 bool attackAlready = false;
                 int protagonistHitStrength = 0;
@@ -43,10 +43,10 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                     if (enemy.Endurance <= 0)
                         continue;
 
-                    fight.Add(String.Format("{0} (выносливость {1})", enemy.Name, enemy.Endurance));
+                    fight.Add($"{enemy.Name} (выносливость {enemy.Endurance})");
 
                     if (copyFight)
-                        fight.Add(String.Format("{0} (выносливость {1})", protagonist.Name, protagonist.Endurance));
+                        fight.Add($"{protagonist.Name} (выносливость {protagonist.Endurance})");
 
                     if (!attackAlready)
                     {
@@ -58,25 +58,25 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                         if (StrengthPenlty > 0)
                         {
                             protagonistHitStrength -= StrengthPenlty;
-                            penalty = String.Format(" - {0} по обстоятельствам", StrengthPenlty);
+                            penalty = $" - {StrengthPenlty} по обстоятельствам";
                         }
 
-                        fight.Add(String.Format(
-                            "Сила {0}: {1} + {2} + {3}{4} = {5}",
-                            (copyFight ? "удара копии" : "вашего удара"), Game.Dice.Symbol(firstprotagonistRoll),
-                            Game.Dice.Symbol(secondprotagonistRoll), protagonist.Mastery, penalty, protagonistHitStrength));
+                        string whofigth = copyFight ? "удара копии" : "вашего удара";
+
+                        fight.Add($"Сила {whofigth}: {Game.Dice.Symbol(firstprotagonistRoll)} + " +
+                            $"{Game.Dice.Symbol(secondprotagonistRoll)} + " +
+                            $"{protagonist.Mastery}{penalty} = {protagonistHitStrength}");
                     }
 
                     Game.Dice.DoubleRoll(out int firstEnemyRoll, out int secondEnemyRoll);
                     int enemyHitStrength = firstEnemyRoll + secondEnemyRoll + enemy.Mastery;
 
-                    fight.Add(String.Format(
-                        "Сила удара врага: {0} + {1} + {2} = {3}",
-                        Game.Dice.Symbol(firstEnemyRoll), Game.Dice.Symbol(secondEnemyRoll), enemy.Mastery, enemyHitStrength));
+                    fight.Add($"Сила удара врага: {Game.Dice.Symbol(firstEnemyRoll)} + " +
+                        $"{Game.Dice.Symbol(secondEnemyRoll)} + {enemy.Mastery} = {enemyHitStrength}");
 
                     if ((protagonistHitStrength > enemyHitStrength) && !attackAlready)
                     {
-                        fight.Add(String.Format("GOOD|{0} ранен", enemy.Name));
+                        fight.Add($"GOOD|{enemy.Name} ранен");
                         enemy.Endurance -= 2;
 
                         enemyWounds += 1;
@@ -88,11 +88,12 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                     }
                     else if (protagonistHitStrength > enemyHitStrength)
                     {
-                        fight.Add(String.Format("BOLD|{0} не смог ранить", enemy.Name));
+                        fight.Add($"BOLD|{enemy.Name} не смог ранить");
                     }
                     else if (protagonistHitStrength < enemyHitStrength)
                     {
-                        fight.Add(String.Format("BAD|{0} ранил {1}", enemy.Name, (copyFight ? "копию" : "вас")));
+                        string copyName = copyFight ? "копию" : "вас";
+                        fight.Add($"BAD|{enemy.Name} ранил {copyName}");
 
                         protagonist.Endurance -= (ExtendedDamage > 0 ? ExtendedDamage : 2);
 
