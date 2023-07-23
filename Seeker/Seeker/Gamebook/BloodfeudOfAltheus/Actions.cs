@@ -25,32 +25,32 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                 return enemies;
 
             foreach (Character enemy in Enemies)
-                enemies.Add(String.Format("{0}\nсила {1}  защита {2}", enemy.Name.ToUpper(), enemy.Strength, enemy.Defence));
+                enemies.Add($"{enemy.Name.ToUpper()}\nсила {enemy.Strength}  защита {enemy.Defence}");
 
             return enemies;
         }
 
         public override List<string> Status() => new List<string>
         {
-            String.Format("Сила: {0}", protagonist.Strength),
-            String.Format("Защита: {0}", protagonist.Defence),
-            String.Format("Слава: {0}", protagonist.Glory),
-            String.Format("Позор: {0}", protagonist.Shame),
+            $"Сила: {protagonist.Strength}",
+            $"Защита: {protagonist.Defence}",
+            $"Слава: {protagonist.Glory}",
+            $"Позор: {protagonist.Shame}",
         };
 
         public override List<string> AdditionalStatus()
         {
             List<string> statusLines = new List<string>();
 
-            statusLines.Add(String.Format("Покровитель: {0}", protagonist.Patron));
+            statusLines.Add($"Покровитель: {protagonist.Patron}");
 
             protagonist.GetWeapons(out string name, out int strength, out int defence);
-            statusLines.Add(String.Format("Оружие: {0} (сила {1}, защита {2})", name, strength, defence));
+            statusLines.Add($"Оружие: {name} (сила {strength}, защита {defence})");
 
             protagonist.GetArmour(out int armour, out string armourLine, status: true);
             
             if (armour > 0)
-                statusLines.Add(String.Format("Броня: {0} (защита {1})", armourLine, armour));
+                statusLines.Add($"Броня: {armourLine} (защита {armour})");
 
             return statusLines.Count > 0 ? statusLines : null;
         }
