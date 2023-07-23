@@ -194,8 +194,9 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             List<string> spendGlory = new List<string>();
 
             int dice = Game.Dice.Roll();
+            string add = addOne ? " + 1" : String.Empty;
 
-            spendGlory.Add(String.Format("Кубик: {0}{1}", Game.Dice.Symbol(dice), (addOne ? " + 1" : String.Empty)));
+            spendGlory.Add($"Кубик: {Game.Dice.Symbol(dice)}{add}");
 
             Dictionary<int, int> ltlDices = new Dictionary<int, int> { [1] = 1, [2] = 1, [3] = 2, [4] = 2, [5] = 3, [6] = 3 };
 
@@ -206,7 +207,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
             protagonist.Glory -= dice;
 
-            spendGlory.Add(String.Format("BIG|BAD|Вы потратили очков Славы: {0} :(", dice));
+            spendGlory.Add($"BIG|BAD|Вы потратили очков Славы: {dice} :(");
 
             return spendGlory;
         }
@@ -217,7 +218,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
             int dice = Game.Dice.Roll();
 
-            lance.Add(String.Format("Кубик: {0}", Game.Dice.Symbol(dice)));
+            lance.Add($"Кубик: {Game.Dice.Symbol(dice)}");
 
             if (dice <= 4)
             {
