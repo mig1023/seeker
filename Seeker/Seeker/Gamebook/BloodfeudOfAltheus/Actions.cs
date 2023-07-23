@@ -406,12 +406,12 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
                     if (YourRacing)
                     {
-                        string other = String.Format("BIG|{0}Вы проиграли, победила {1} команда :(", teamsColor[winner], names[winner]);
+                        string other = $"BIG|{teamsColor[winner]}Вы проиграли, победила {names[winner]} команда :(";
                         racing.Add(winner == 2 ? "BIG|RED|Вы ПОБЕДИЛИ, Красная команда пришла первой! :)" : other);
                     }
                     else
                     {
-                        racing.Add(String.Format("BIG|{0}Гонка окончена, {1} команда победила!", teamsColor[winner], names[winner]));
+                        racing.Add($"BIG|{teamsColor[winner]}Гонка окончена, {names[winner]} команда победила!");
                     }
 
                     return racing;
@@ -444,7 +444,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
             while (true)
             {
-                fight.Add(String.Format("HEAD|BOLD|Раунд: {0}", round));
+                fight.Add($"HEAD|BOLD|Раунд: {round}");
 
                 int currentEnemy = -1;
 
@@ -460,13 +460,12 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                         enemy.Strength -= 3;
                         enemy.Defence -= 3;
 
-                        fight.Add(String.Format(
-                            "Противник теряет 3 Силы и 3 Защиты из-за вытекающего ихора! Теперь его Сила равна {0}, а Защита - {1}!",
-                            enemy.Strength, enemy.Defence));
+                        fight.Add($"Противник теряет 3 Силы и 3 Защиты из-за вытекающего ихора! " +
+                            $"Теперь его Сила равна {enemy.Strength}, а Защита - {enemy.Defence}!");
                     }
 
-                    fight.Add(String.Format("Вы: {0}ы, {1}: {2}",
-                        Constants.HealthLine[protagonist.Health], enemy.Name, Constants.HealthLine[enemy.Health]));
+                    fight.Add($"Вы: {Constants.HealthLine[protagonist.Health]}ы, {enemy.Name}: " +
+                        $"{Constants.HealthLine[enemy.Health]}");
 
                     int protagonistRollFirst = Game.Dice.Roll();
                     int protagonistRollSecond = 0;
@@ -476,7 +475,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                     if ((protagonist.Health > 1) || Services.NoMoreEnemies(FightEnemies, noHealthy: true))
                     {
                         protagonistRollSecond = Game.Dice.Roll();
-                        secondRollLine = String.Format(" + {0}", Game.Dice.Symbol(protagonistRollSecond));
+                        secondRollLine = $" + {Game.Dice.Symbol(protagonistRollSecond)}";
                         autoFail = (protagonistRollFirst + protagonistRollSecond) < 4;
                     }
                     else
@@ -495,7 +494,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
                     if (usedGlore)
                     {
-                        useGloryLine =  String.Format(" + {0} Славы", useGlory);
+                        useGloryLine = $" + {useGlory} Славы";
                         protagonistHitStrength += useGlory;
                     }
 
