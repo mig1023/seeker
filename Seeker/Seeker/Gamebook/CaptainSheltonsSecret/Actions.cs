@@ -357,7 +357,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                                     fight.Add(String.Empty);
 
                                     bool heroOrAlly = GroupFight && !Services.IsProtagonist(ally.Name);
-                                    string who = heroOrAlly ? ally.Name + " ПОБЕДИЛ" : "ВЫ ПОБЕДИЛИ";
+                                    string who = heroOrAlly ? $"{ally.Name} ПОБЕДИЛ" : "ВЫ ПОБЕДИЛИ";
 
                                     fight.Add($"BIG|GOOD|{who} :)");
 
@@ -367,12 +367,12 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                         }
                         else if (allyHitStrength > enemyHitStrength)
                         {
-                            fight.Add(String.Format("BOLD|{0} не смог ранить", enemy.Name));
+                            fight.Add($"BOLD|{enemy.Name} не смог ранить");
                         }
                         else if (allyHitStrength < enemyHitStrength)
                         {
                             bool isEnemy = GroupFight && !Services.IsProtagonist(ally.Name);
-                            fight.Add(isEnemy ? String.Format("BAD|{0} ранен",  ally.Name) : "BAD|Вы ранены");
+                            fight.Add(isEnemy ? $"BAD|{ally.Name} ранен" : "BAD|Вы ранены");
                             ally.Endurance -= 2 + enemy.ExtendedDamage;
                             ally.Mastery -= enemy.MasteryDamage;
 
@@ -382,24 +382,29 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             {
                                 fight.Add(String.Empty);
 
-                                fight.Add(String.Format("BIG|BAD|{0} :(",
-                                    (Services.IsProtagonist(ally.Name) ? "ВЫ ПРОИГРАЛИ" : String.Format("{0} ПРОИГРАЛ", ally.Name))));
+                                bool heroOrAlly = Services.IsProtagonist(ally.Name);
+                                string who = heroOrAlly ? "ВЫ ПРОИГРАЛИ" : $"{ally.Name} ПРОИГРАЛ";
+
+                                fight.Add($"BIG|BAD|{who} :(");
 
                                 return fight;
                             }
                         }
                         else
-                            fight.Add(String.Format("BOLD|Ничья в раунде"));
+                        {
+                            fight.Add("BOLD|Ничья в раунде");
+                        }
 
                         attackAlready = true;
 
                         if ((RoundsToWin > 0) && (RoundsToWin <= round))
                         {
                             bool isHero = Services.IsProtagonist(ally.Name);
+                            string result = isHero ? "ВЫ ПРОИГРАЛИ" : $"{ally.Name} ПРОИГРАЛ";
 
                             fight.Add(String.Empty);
-                            fight.Add(String.Format("BAD|Отведённые на победу раунды истекли.", RoundsToWin));
-                            fight.Add(String.Format("BIG|BAD|{0} :(", (isHero ? "ВЫ ПРОИГРАЛИ" : String.Format("{0} ПРОИГРАЛ", ally.Name))));
+                            fight.Add("BAD|Отведённые на победу раунды истекли.");
+                            fight.Add($"BIG|BAD|{result} :(");
                             return fight;
                         }
 
