@@ -263,9 +263,10 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
             int sum = firstDice + secondDice;
             bool success = (sum < protagonist.Strength);
+            string over = success ? "больше!" : "меньше или равна...";
 
-            bareHands.Add(String.Format("Кубики: {0} + {1} = {2}", Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), sum));
-            bareHands.Add(String.Format("Ваша Сила: {0} - {1}", protagonist.Strength, (success ? "больше!" : "меньше или равна...")));
+            bareHands.Add($"Кубики: {Game.Dice.Symbol(firstDice)} + {Game.Dice.Symbol(secondDice)} = {sum}");
+            bareHands.Add($"Ваша Сила: {protagonist.Strength} - {over}");
 
             if (!success)
             {
