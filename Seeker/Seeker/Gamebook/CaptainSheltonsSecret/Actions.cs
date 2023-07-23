@@ -104,9 +104,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
 
                 string result = (succesBreaked ? "удачный, дверь поддалась!" : "неудачный, -1 сила" );
 
-                breakingDoor.Add(String.Format(
-                    "Удар: {0} + {1} = {2}",
-                    Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), result));
+                breakingDoor.Add($"Удар: {Game.Dice.Symbol(firstDice)} + " +
+                    $"{Game.Dice.Symbol(secondDice)} = {result}");
             }
 
             breakingDoor.Add(Result(succesBreaked, "ДВЕРЬ ВЗЛОМАНА|ВЫ УБИЛИСЬ ОБ ДВЕРЬ"));
@@ -127,9 +126,9 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             if (Game.Option.IsTriggered("EvenLuck"))
             {
                 bool even = goodLuck % 2 == 0;
+                string no = even ? String.Empty : "не";
 
-                luckCheck.Add(String.Format("Проверка чётности: {0} - {1}чётное",
-                    Game.Dice.Symbol(goodLuck), even ? String.Empty : "не"));
+                luckCheck.Add($"Проверка чётности: {Game.Dice.Symbol(goodLuck)} - {no}чётное");
 
                 if (even)
                 {
@@ -141,8 +140,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                     luckCheck.Add("Увы, Заклятье Удачи тут не поможет...");
             }
 
-            luckCheck.Add(String.Format("Проверка удачи: {0} - {1}зачёркунтый",
-                Game.Dice.Symbol(goodLuck), (protagonist.Luck[goodLuck] ? "не " : String.Empty)));
+            string luckLine = protagonist.Luck[goodLuck] ? "не " : String.Empty;
+            luckCheck.Add($"Проверка удачи: {Game.Dice.Symbol(goodLuck)} - {luckLine}зачёркунтый");
 
             luckCheck.Add(Result(protagonist.Luck[goodLuck], "УСПЕХ|НЕУДАЧА"));
             
