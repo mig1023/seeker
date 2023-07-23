@@ -315,47 +315,51 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                         if (enemy.Endurance <= 0)
                             continue;
 
-                        fight.Add(String.Format("{0} (сила {1})", enemy.Name, enemy.Endurance));
+                        fight.Add($"{enemy.Name} (сила {enemy.Endurance})");
 
                         if (!attackAlready)
                         {
                             Game.Dice.DoubleRoll(out firstAllyRoll, out secondAllyRoll);
                             allyHitStrength = firstAllyRoll + secondAllyRoll + (ally.Mastery - MasteryPenalty);
+                            string who = Services.IsProtagonist(ally.Name) ? "Ваша" : $"{ally.Name} -";
 
-                            fight.Add(String.Format(
-                                "{0} мощность удара: {1} + {2} + {3} = {4}",
-                                (Services.IsProtagonist(ally.Name) ? "Ваша" : String.Format("{0} -", ally.Name)),
-                                Game.Dice.Symbol(firstAllyRoll), Game.Dice.Symbol(secondAllyRoll), ally.Mastery, allyHitStrength));
+                            fight.Add($"{who} мощность удара: " +
+                                $"{Game.Dice.Symbol(firstAllyRoll)} + {Game.Dice.Symbol(secondAllyRoll)} + " +
+                                $"{ally.Mastery} = {allyHitStrength}");
                         }
 
                         Game.Dice.DoubleRoll(out int firstEnemyRoll, out int secondEnemyRoll);
                         int enemyHitStrength = firstEnemyRoll + secondEnemyRoll + enemy.Mastery;
+                        string enemyLine = GroupFight ? $"{enemy.Name} -" : "Его";
 
-                        fight.Add(String.Format(
-                            "{0} мощность удара: {1} + {2} + {3} = {4}",
-                            (GroupFight ? String.Format("{0} -", enemy.Name) : "Его"),
-                            Game.Dice.Symbol(firstEnemyRoll), Game.Dice.Symbol(secondEnemyRoll), enemy.Mastery, enemyHitStrength));
+                        fight.Add($"{enemyLine} мощность удара: {Game.Dice.Symbol(firstEnemyRoll)} + " +
+                            $"{Game.Dice.Symbol(secondEnemyRoll)} + {enemy.Mastery} = {enemyHitStrength}");
 
                         if ((allyHitStrength > enemyHitStrength) && !attackAlready)
                         {
                             if (enemy.SeaArmour && (firstAllyRoll == secondAllyRoll))
-                                fight.Add(String.Format("BOLD|Чешуя отразила ваш удар"));
+                                fight.Add("BOLD|Чешуя отразила ваш удар");
                             else
                             {
-                                fight.Add(String.Format("GOOD|{0} ранен", (GroupFight ? enemy.Name : "Он")));
+                                string group = GroupFight ? enemy.Name : "Он";
+                                fight.Add($"GOOD|{group} ранен");
                                 enemy.Endurance -= 2 + ally.ExtendedDamage;
                                 enemy.Mastery -= ally.MasteryDamage;
 
                                 enemyWounds += 1;
 
-                                bool enemyLost = FightEnemies.Where(x => ((x.Endurance > 0) && (x.Endurance > DamageToWin))).Count() == 0;
+                                bool enemyLost = FightEnemies
+                                    .Where(x => ((x.Endurance > 0) && (x.Endurance > DamageToWin)))
+                                    .Count() == 0;
 
                                 if (enemyLost || ((WoundsToWin > 0) && (WoundsToWin <= enemyWounds)))
                                 {
                                     fight.Add(String.Empty);
 
-                                    fight.Add(String.Format("BIG|GOOD|{0} :)",
-                                        (GroupFight && !Services.IsProtagonist(ally.Name) ? ally.Name + " ПОБЕДИЛ" : "ВЫ ПОБЕДИЛИ")));
+                                    bool heroOrAlly = GroupFight && !Services.IsProtagonist(ally.Name);
+                                    string who = heroOrAlly ? ally.Name + " ПОБЕДИЛ" : "ВЫ ПОБЕДИЛИ";
+
+                                    fight.Add($"BIG|GOOD|{who} :)");
 
                                     return fight;
                                 }
