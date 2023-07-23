@@ -297,11 +297,11 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             {
                 Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
                 bool diceDouble = (firstDice == secondDice);
-                bool nobodyCantForward = (diceDouble && (teams[firstDice] == -1)) || ((teams[firstDice] == -1) && (teams[secondDice] == -1));
+                bool nobodyCantForward = (diceDouble && (teams[firstDice] == -1)) ||
+                    ((teams[firstDice] == -1) && (teams[secondDice] == -1));
 
                 racing.Add(String.Empty);
-                racing.Add(String.Format("BOLD|Следующий бросок: {0} и {1}",
-                    Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice)));
+                racing.Add($"BOLD|Следующий бросок: {Game.Dice.Symbol(firstDice)} и {Game.Dice.Symbol(secondDice)}");
 
                 if ((firstDice == 6) && diceDouble)
                 {
@@ -309,11 +309,11 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
                     int crashDice = Game.Dice.Roll();
 
-                    racing.Add(String.Format("Кубик столкновения: {0}", Game.Dice.Symbol(crashDice)));
+                    racing.Add($"Кубик столкновения: {Game.Dice.Symbol(crashDice)}");
 
                     if (crashDice < 5)
                     {
-                        racing.Add(String.Format("BOLD|{0} команда выбывает из гонки!", names[crashDice]));
+                        racing.Add($"BOLD|{names[crashDice]} команда выбывает из гонки!");
                         teams[crashDice] = -1;
                     }
                     else if (crashDice == 6)
@@ -355,7 +355,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                 }
                 else if (firstDice == secondDice)
                 {
-                    racing.Add(String.Format("{0} команда продвинулась сразу на два сектора!", names[firstDice]));
+                    racing.Add($"{names[firstDice]} команда продвинулась сразу на два сектора!");
                     teams[firstDice] += 2;
                 }
                 else
@@ -363,7 +363,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                     foreach (int i in new List<int> { firstDice, secondDice })
                         if (teams[i] >= 0)
                         {
-                            racing.Add(String.Format("{0} команда продвинулась вперёд", names[i]));
+                            racing.Add($"{names[i]} команда продвинулась вперёд");
                             teams[i] += 1;
                         }
                 }
@@ -377,7 +377,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                 foreach (int i in new List<int> { 1, 2, 3, 4 })
                     if (teams[i] < 0)
                     {
-                        racing.Add(String.Format("{0}{1} команда выбыла из гонки", teamsColor[i], names[i]));
+                        racing.Add($"{teamsColor[i]}{names[i]} команда выбыла из гонки");
                     }
                     else
                     {
@@ -386,7 +386,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                         for (int p = 0; p < teams[i]; p++)
                             path += "|";
 
-                        racing.Add(String.Format("{0}{1}█", teamsColor[i], path));
+                        racing.Add($"{teamsColor[i]}{path}█");
 
                         if (teams[i] == maxSector)
                         {
