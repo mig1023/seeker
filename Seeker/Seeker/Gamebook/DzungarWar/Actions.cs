@@ -285,11 +285,11 @@ namespace Seeker.Gamebook.DzungarWar
             foreach (string test in tests)
                 allStats += GetProperty(protagonist, test);
 
-            testLines.Add(String.Format("Сумма всех параметров Алдара: {0}", allStats));
+            testLines.Add($"Сумма всех параметров Алдара: {allStats}");
 
             double approximateStatUnit = (double)Level / (double)allStats;
 
-            testLines.Add(String.Format("Условная средняя единица: {0} / {1} = {2:f1}", Level, allStats, approximateStatUnit));
+            testLines.Add($"Условная средняя единица: {Level} / {allStats} = {approximateStatUnit:f1}");
 
             foreach (string test in tests)
             {
@@ -312,8 +312,10 @@ namespace Seeker.Gamebook.DzungarWar
 
                 levels.Add(test, finalLevel);
 
-                testLines.Add(String.Format("Проверка {0}: {1} x {2:f1} = {3} {4} коррекция, итого {5}",
-                    Constants.StatNames[test], currentStat, approximateStatUnit, approximateLevel, approximateFix, finalLevel));
+                testLines.Add($"Проверка {Constants.StatNames[test]}: " +
+                    $"{currentStat} x {approximateStatUnit:f1} = " +
+                    $"{approximateLevel} {approximateFix} коррекция, " +
+                    $"итого {finalLevel}");
             }
 
             testLines.Add(String.Empty);
