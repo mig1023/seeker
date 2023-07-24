@@ -197,7 +197,7 @@ namespace Seeker.Gamebook.Cyberpunk
         }
 
         public List<string> DiceRoll() =>
-            new List<string> { String.Format("BIG|Кубик: {0}", Game.Dice.Roll(size: 100)) };
+            new List<string> { $"BIG|Кубик: {Game.Dice.Roll(size: 100)}" };
 
         public List<string> OddDiceRoll()
         {
@@ -205,7 +205,7 @@ namespace Seeker.Gamebook.Cyberpunk
 
             int dice = Game.Dice.Roll(size: 100);
 
-            diceCheck.Add(String.Format("На кубикe выпало: {0}", dice));
+            diceCheck.Add($"На кубикe выпало: {dice}");
             diceCheck.Add(dice % 2 == 0 ? "BIG|ЧЁТНОЕ ЧИСЛО!" : "BIG|НЕЧЁТНОЕ ЧИСЛО!");
 
             return diceCheck;
