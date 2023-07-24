@@ -48,7 +48,7 @@ namespace Seeker.Gamebook.Cyberpunk
                 int statValue = GetProperty(protagonist, Stat);
                 string statName = Constants.CharactersParams[Stat];
 
-                return new List<string> { String.Format("{0} (значение: {1})", statName.ToUpper(), statValue) };
+                return new List<string> { $"{statName.ToUpper()} (значение: {statValue})" };
             }
             else if ((Type == "DiceRoll") || (Type == "OddDiceRoll"))
             {
@@ -59,7 +59,7 @@ namespace Seeker.Gamebook.Cyberpunk
                 string line = "Проверка: ";
 
                 foreach (string stat in Stat.Split(','))
-                    line += String.Format("{0} + ", Constants.CharactersParams[stat.Trim()]);
+                    line += $"{Constants.CharactersParams[stat.Trim()]} + ";
 
                 return new List<string> { line.TrimEnd(' ', '+') };
             }
