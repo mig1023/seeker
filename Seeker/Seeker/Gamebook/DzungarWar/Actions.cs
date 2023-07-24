@@ -77,28 +77,28 @@ namespace Seeker.Gamebook.DzungarWar
             List<string> statusLines = new List<string>();
 
             if (protagonist.Favour != null)
-                statusLines.Add(String.Format("Благосклонность: {0}", protagonist.Favour));
+                statusLines.Add($"Благосклонность: {protagonist.Favour}");
 
             if (protagonist.Strength > 1)
-                statusLines.Add(String.Format("Сила: {0}", protagonist.Strength));
+                statusLines.Add($"Сила: {protagonist.Strength}");
 
             if (protagonist.Skill > 1)
-                statusLines.Add(String.Format("Ловкость: {0}", protagonist.Skill));
+                statusLines.Add($"Ловкость: {protagonist.Skill}");
 
             if (protagonist.Wisdom > 1)
-                statusLines.Add(String.Format("Мудрость: {0}", protagonist.Wisdom));
+                statusLines.Add($"Мудрость: {protagonist.Wisdom}");
 
             if (protagonist.Cunning > 1)
-                statusLines.Add(String.Format("Хитрость: {0}", protagonist.Cunning));
+                statusLines.Add($"Хитрость: {protagonist.Cunning}");
 
             if (protagonist.Oratory > 1)
-                statusLines.Add(String.Format("Красноречие: {0}", protagonist.Oratory));
+                statusLines.Add($"Красноречие: {protagonist.Oratory}");
 
             if (protagonist.Ginseng > 0)
-                statusLines.Add(String.Format("Отвар: {0}", protagonist.Ginseng));
+                statusLines.Add($"Отвар: {protagonist.Ginseng}");
 
             if (protagonist.Tincture > 0)
-                statusLines.Add(String.Format("Настойка: {0}", protagonist.Tincture));
+                statusLines.Add($"Настойка: {protagonist.Tincture}");
 
             return statusLines.Count <= 0 ? null : statusLines;
         }
