@@ -11,7 +11,7 @@ namespace Seeker.Gamebook.ChooseCthulhu
         public override List<string> Status()
         {
             string cursed = Character.Protagonist.IsCursed() ? " (проклят)" : String.Empty;
-            return new List<string> { String.Format("Посвящение: {0}{1}", protagonist.Initiation, cursed) };
+            return new List<string> { $"Посвящение: {protagonist.Initiation}{cursed}" };
         }
 
         public override bool Availability(string option)
