@@ -55,9 +55,10 @@ namespace Seeker.Gamebook.CreatureOfHavoc
             Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
             goodLuck = (firstDice + secondDice) < protagonist.Luck;
 
-            List<string> luckCheck = new List<string> { String.Format(
-                "Проверка удачи: {0} + {1} {2} {3}",
-                Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), (goodLuck ? "<=" : ">"), protagonist.Luck ) };
+            string luckLine = goodLuck ? "<=" : ">";
+            List<string> luckCheck = new List<string> {
+                $"Проверка удачи: {Game.Dice.Symbol(firstDice)} + " +
+                $"{Game.Dice.Symbol(secondDice)} {luckLine} {protagonist.Luck}" };
 
             luckCheck.Add((notInline ? String.Empty : "BIG|") + (goodLuck ? "GOOD|УСПЕХ :)" : "BAD|НЕУДАЧА :("));
 
