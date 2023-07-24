@@ -46,13 +46,14 @@ namespace Seeker.Gamebook.DzungarWar
                     if (bottles > 0)
                     {
                         level += (bottles * -1);
-                        penaltyLine.Add(String.Format("Пенальти -{0} за покупку {0} кувшинов", bottles));
+                        penaltyLine.Add($"Пенальти -{bottles} за покупку {bottles} кувшинов");
                     }
                 }
                 else if (Game.Option.IsTriggered(penalty[0].Trim()))
                 {
                     level += int.Parse(penalty[1].Trim());
-                    penaltyLine.Add(String.Format("Пенальти {0} к уровню проверки за ключевое слово {1}", penalty[1].Trim(), penalty[0].Trim()));
+                    penaltyLine.Add($"Пенальти {penalty[1].Trim()} к уровню проверки " +
+                        $"за ключевое слово {penalty[0].Trim()}");
                 }
             }
 
@@ -80,11 +81,11 @@ namespace Seeker.Gamebook.DzungarWar
             Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
 
             result = (firstDice + secondDice) + currentStat >= level;
+            string resultCompare = result ? ">=" : "<";
 
-            resultLine.Add(String.Format(
-                "Проверка {0}: {1} + {2} + {3} {4} {5}",
-                Constants.StatNames[stat], Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice),
-                currentStat, (result ? ">=" : "<"), level));
+            resultLine.Add($"Проверка {Constants.StatNames[stat]}: " +
+                $"{Game.Dice.Symbol(firstDice)} + {Game.Dice.Symbol(secondDice)} + " +
+                $"{currentStat} {resultCompare} {level}");
         }
     }
 }
