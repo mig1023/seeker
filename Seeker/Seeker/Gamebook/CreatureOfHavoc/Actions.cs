@@ -186,10 +186,11 @@ namespace Seeker.Gamebook.CreatureOfHavoc
         {
             Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
             bool goodSkill = (firstDice + secondDice) <= protagonist.Mastery;
+            string skillLine = goodSkill ? "<=" : ">";
 
-            List<string> skillCheck = new List<string> { String.Format(
-                "Проверка мастерства: {0} + {1} {2} {3} мастерство",
-                Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), (goodSkill ? "<=" : ">"), protagonist.Mastery) };
+            List<string> skillCheck = new List<string> {
+                $"Проверка мастерства: {Game.Dice.Symbol(firstDice)} + " +
+                $"{Game.Dice.Symbol(secondDice)} {skillLine} {protagonist.Mastery} мастерство" };
 
             skillCheck.Add(Result(goodSkill, "МАСТЕРСТВА ХВАТИЛО|МАСТЕРСТВА НЕ ХВАТИЛО"));
 
