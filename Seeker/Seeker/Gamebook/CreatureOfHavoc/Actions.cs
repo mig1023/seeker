@@ -282,7 +282,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                         fight.AddRange(GoodLuck(out bool goodLuck));
 
                         if (goodLuck)
-                            fight.Add(String.Format("BOLD|{0} не смог вас ранить", enemy.Name));
+                            fight.Add($"BOLD|{enemy.Name} не смог вас ранить");
 
                         else if (Services.WoundAndDeath(ref fight, ref protagonist, enemy.Name))
                             return fight;
@@ -301,7 +301,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                             else
                             {
                                 fight.Add(String.Empty);
-                                fight.Add(String.Format("BIG|GOOD|Вы ПОБЕДИЛИ :)"));
+                                fight.Add("BIG|GOOD|Вы ПОБЕДИЛИ :)");
                                 return fight;
                             }
                         }
@@ -309,7 +309,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                         {
                             protagonist.Endurance = 0;
 
-                            fight.Add(String.Format("BAD|Вы смертельно ранены шершнем"));
+                            fight.Add("BAD|Вы смертельно ранены шершнем");
                             fight.Add(String.Empty);
                             fight.Add("BIG|BAD|Вы ПРОИГРАЛИ :(");
                             return fight;
@@ -319,12 +319,12 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                     {
                         if (doubleSixes)
                         {
-                            fight.Add(String.Format("GOOD|{0} убит наповал", enemy.Name));
+                            fight.Add($"GOOD|{enemy.Name} убит наповал");
                             enemy.Endurance = 0;
                         }
                         else
                         {
-                            fight.Add(String.Format("GOOD|{0} ранен", enemy.Name));
+                            fight.Add($"GOOD|{enemy.Name} ранен");
                             enemy.Endurance -= 2;
                         }
 
@@ -337,13 +337,13 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                         if (enemyLost || ((WoundsToWin > 0) && (WoundsToWin <= enemyWounds)))
                         {
                             fight.Add(String.Empty);
-                            fight.Add(String.Format("BIG|GOOD|Вы ПОБЕДИЛИ :)"));
+                            fight.Add("BIG|GOOD|Вы ПОБЕДИЛИ :)");
                             return fight;
                         }
                     }
                     else if (protagonistHitStrength > enemyHitStrength)
                     {
-                        fight.Add(String.Format("BOLD|{0} не смог вас ранить", enemy.Name));
+                        fight.Add($"BOLD|{enemy.Name} не смог вас ранить");
                     }
                     else if (protagonistHitStrength < enemyHitStrength)
                     {
@@ -351,7 +351,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                             return fight;
                     }
                     else
-                        fight.Add(String.Format("BOLD|Ничья в раунде"));
+                        fight.Add("BOLD|Ничья в раунде");
 
                     attackAlready = true;
 
