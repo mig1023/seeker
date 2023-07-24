@@ -225,7 +225,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
 
             while (true)
             {
-                fight.Add(String.Format("HEAD|BOLD|Раунд: {0}", round));
+                fight.Add($"HEAD|BOLD|Раунд: {round}");
 
                 bool attackAlready = false;
                 int protagonistHitStrength = 0;
@@ -238,23 +238,22 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                     bool doubleDice = false, doubleSixes = false, doubleDiceEnemy = false;
 
                     Character enemyInFight = enemy;
-                    fight.Add(String.Format("{0} (выносливость {1})", enemy.Name, enemy.Endurance));
+                    fight.Add($"{enemy.Name} (выносливость {enemy.Endurance})");
 
                     if (!attackAlready)
                     {
                         Game.Dice.DoubleRoll(out int protagonistRollFirst, out int protagonistRollSecond);
                         protagonistHitStrength = protagonistRollFirst + protagonistRollSecond + protagonist.Mastery;
 
-                        fight.Add(String.Format("Мощность вашего удара: {0} + {1} + {2} = {3}",
-                            Game.Dice.Symbol(protagonistRollFirst), Game.Dice.Symbol(protagonistRollSecond),
-                            protagonist.Mastery, protagonistHitStrength));
+                        fight.Add($"Мощность вашего удара: " +
+                            $"{Game.Dice.Symbol(protagonistRollFirst)} + " +
+                            $"{Game.Dice.Symbol(protagonistRollSecond)} + " +
+                            $"{protagonist.Mastery} = {protagonistHitStrength}");
 
                         if (Game.Option.IsTriggered("Chestplate"))
                         {
                             protagonistHitStrength += 2;
-
-                            fight.Add(String.Format("+2 к мощности удара за нагрудную пластину, итого {0}",
-                                protagonistHitStrength));
+                            fight.Add($"+2 к мощности удара за нагрудную пластину, итого {protagonistHitStrength}");
                         }
 
                         doubleDice = (protagonistRollFirst == protagonistRollSecond);
@@ -263,25 +262,23 @@ namespace Seeker.Gamebook.CreatureOfHavoc
 
                     Game.Dice.DoubleRoll(out int enemyRollFirst, out int enemyRollSecond);
                     int enemyHitStrength = enemyRollFirst + enemyRollSecond + enemy.Mastery;
-
                     doubleDiceEnemy = (enemyRollFirst == enemyRollSecond);
 
-                    fight.Add(String.Format("Мощность его удара: {0} + {1} + {2} = {3}",
-                        Game.Dice.Symbol(enemyRollFirst), Game.Dice.Symbol(enemyRollSecond), enemy.Mastery, enemyHitStrength));
+                    fight.Add($"Мощность его удара: " +
+                        $"{Game.Dice.Symbol(enemyRollFirst)} + " +
+                        $"{Game.Dice.Symbol(enemyRollSecond)} + " +
+                        $"{enemy.Mastery} = {enemyHitStrength}");
 
                     if (ManicBeast && previousRoundWound)
                     {
                         enemyHitStrength += 2;
-
-                        fight.Add(String.Format("+2 бонус к его удару за ярость, итого {0}", enemyHitStrength));
-
                         previousRoundWound = false;
+                        fight.Add($"+2 бонус к его удару за ярость, итого {enemyHitStrength}");
                     }
 
                     if (Ophidiotaur && doubleDiceEnemy)
                     {
                         fight.Add("Офидиотавр наносит удар ядовитым жалом");
-
                         fight.AddRange(GoodLuck(out bool goodLuck));
 
                         if (goodLuck)
