@@ -119,7 +119,7 @@ namespace Seeker.Gamebook.Cyberpunk
         }
 
         private static string GetParamLine(int level, string stat) =>
-            String.Format("{0} ({1}) +", level, Constants.CharactersParams[stat].ToLower());
+            $"{level} ({Constants.CharactersParams[stat].ToLower()}) +";
 
         public List<string> Test()
         {
@@ -131,12 +131,12 @@ namespace Seeker.Gamebook.Cyberpunk
             if (MultipliedLuck)
             {
                 paramsLevel = protagonist.Luck * 2;
-                paramsLine += String.Format("{0} (везение) x 2", protagonist.Luck);
+                paramsLine += $"{protagonist.Luck} (везение) x 2";
             }
             else if (DividedLuck)
             {
                 paramsLevel = protagonist.Luck / 2;
-                paramsLine += String.Format("{0} (везение) / 2", protagonist.Luck);
+                paramsLine += $"{protagonist.Luck} (везение) / 2";
             }
             else if (Stat.StartsWith("Selfcontrol"))
             {
@@ -161,14 +161,14 @@ namespace Seeker.Gamebook.Cyberpunk
             }
 
             if (Stat.Contains(','))
-                test.Add(String.Format("Параметры: {0} = {1}", paramsLine.TrimEnd(' ', '+'), paramsLevel));
+                test.Add($"Параметры: {paramsLine.TrimEnd(' ', '+')} = {paramsLevel}");
             else
-                test.Add(String.Format("Параметр: {0}", paramsLine.TrimEnd(' ', '+')));
+                test.Add($"Параметр: {paramsLine.TrimEnd(' ', '+')}");
 
             int dice = Game.Dice.Roll(size: 100);
             bool success = ReverseCheck ? dice > paramsLevel : dice <= paramsLevel;
 
-            test.Add(String.Format("BOLD|BIG|Бросок кубика: {0} - {1}!", dice, Game.Services.Сomparison(dice, paramsLevel)));
+            test.Add($"BOLD|BIG|Бросок кубика: {dice} - {Game.Services.Сomparison(dice, paramsLevel)}!");
             test.Add(Result(success, "УСПЕХ|НЕУДАЧА"));
 
             return test;
