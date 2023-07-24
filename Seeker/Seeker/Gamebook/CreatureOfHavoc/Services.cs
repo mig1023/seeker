@@ -9,18 +9,20 @@ namespace Seeker.Gamebook.CreatureOfHavoc
         public static bool WoundAndDeath(ref List<string> fight, ref Character protagonist, string enemy, int wounds = 2)
         {
             if (wounds == 2)
-                fight.Add(String.Format("BAD|{0} ранил вас", enemy));
+                fight.Add($"BAD|{enemy} ранил вас");
 
             protagonist.Endurance -= wounds;
 
             if (protagonist.Endurance <= 0)
             {
                 fight.Add(String.Empty);
-                fight.Add(String.Format("BIG|BAD|Вы ПРОИГРАЛИ :("));
+                fight.Add("BIG|BAD|Вы ПРОИГРАЛИ :(");
                 return true;
             }
             else
+            {
                 return false;
+            }
         }
 
         public static bool NoMoreEnemies(List<Character> enemies) =>
