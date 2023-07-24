@@ -36,9 +36,9 @@ namespace Seeker.Gamebook.CreatureOfHavoc
 
         public override List<string> Status() => new List<string>
         {
-            String.Format("Мастерство: {0}", protagonist.Mastery),
-            String.Format("Выносливость: {0}/{1}", protagonist.Endurance, protagonist.MaxEndurance),
-            String.Format("Удачливость: {0}", protagonist.Luck),
+            $"Мастерство: {protagonist.Mastery}",
+            $"Выносливость: {protagonist.Endurance}/{protagonist.MaxEndurance}",
+            $"Удачливость: {protagonist.Luck}",
         };
 
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
