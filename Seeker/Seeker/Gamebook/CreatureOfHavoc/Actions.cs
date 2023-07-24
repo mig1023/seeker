@@ -93,7 +93,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                 else
                     inTarget = "- не попали.";
 
-                rocks.Add(String.Format("{0}Бросок камня: {1}{2}", bold, Game.Dice.Symbol(rock), inTarget));
+                rocks.Add($"{bold}Бросок камня: {Game.Dice.Symbol(rock)}{inTarget}");
             }
 
             protagonist.Endurance += 3;
@@ -147,14 +147,17 @@ namespace Seeker.Gamebook.CreatureOfHavoc
             hunt.AddRange(GoodLuck(out bool goodLuck));
 
             string[] huntPray = "птичку, кролика, зайчика, кабанчика, ящерку, мышку, фазанчика".Split(',');
+            string hunted = huntPray[Game.Dice.Roll() - 1].Trim();
 
             if (goodLuck)
             {
                 protagonist.Endurance += 2;
-                hunt.Add(String.Format("GOOD|Вы поймали {0} и получаете 2 выносливости", huntPray[Game.Dice.Roll() - 1].Trim()));
+                hunt.Add($"GOOD|Вы поймали {hunted} и получаете 2 выносливости");
             }
             else
+            {
                 hunt.Add("BAD|Вам не удалось никого поймать");
+            }
 
             return hunt;
         }
