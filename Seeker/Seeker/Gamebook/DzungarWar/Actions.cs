@@ -64,10 +64,10 @@ namespace Seeker.Gamebook.DzungarWar
             List<string> statusLines = new List<string>();
 
             if (protagonist.Tanga > 0)
-                statusLines.Add(String.Format("Деньги: {0}", protagonist.Tanga));
+                statusLines.Add($"Деньги: {protagonist.Tanga}");
 
             if (protagonist.Danger != null)
-                statusLines.Add(String.Format("Опасность: {0}", protagonist.Danger));
+                statusLines.Add($"Опасность: {protagonist.Danger}");
 
             return statusLines;
         }
