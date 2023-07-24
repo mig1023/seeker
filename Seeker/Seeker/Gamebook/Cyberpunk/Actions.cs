@@ -18,25 +18,25 @@ namespace Seeker.Gamebook.Cyberpunk
         {
             List<string> statusLines = new List<string>
             {
-                String.Format("Планирование: {0}", protagonist.Planning),
-                String.Format("Подготовка: {0}", protagonist.Preparation),
-                String.Format("Везение: {0}", protagonist.Luck),
+                $"Планирование: {protagonist.Planning}",
+                $"Подготовка: {protagonist.Preparation}",
+                $"Везение: {protagonist.Luck}",
             };
 
             if (protagonist.Cybernetics > 1)
-                statusLines.Add(String.Format("Кибернетика: {0}", protagonist.Cybernetics));
+                statusLines.Add($"Кибернетика: {protagonist.Cybernetics}");
 
             if (protagonist.Morality > 1)
-                statusLines.Add(String.Format("Мораль: {0}", protagonist.Morality));
+                statusLines.Add($"Мораль: {protagonist.Morality}");
 
             if (protagonist.Careerism > 1)
-                statusLines.Add(String.Format("Карьеризм: {0}", protagonist.Careerism));
+                statusLines.Add($"Карьеризм: {protagonist.Careerism}");
 
             if (protagonist.BlackMarket > 1)
-                statusLines.Add(String.Format("Чёрный рынок: {0}", protagonist.BlackMarket));
+                statusLines.Add($"Чёрный рынок: {protagonist.BlackMarket}");
 
             if (protagonist.Clan > 1)
-                statusLines.Add(String.Format("Клан: {0}", protagonist.Clan));
+                statusLines.Add($"Клан: {protagonist.Clan}");
 
             return statusLines;
         }
