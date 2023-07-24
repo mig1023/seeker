@@ -23,14 +23,14 @@ namespace Seeker.Gamebook.DzungarWar
         {
             if (Type == "TestAll")
             {
-                return new List<string> { String.Format("Проверить по совокупному уровню {0}", Level) };
+                return new List<string> { $"Проверить по совокупному уровню {Level}" };
             }
             else if (Level > 0)
             {
                 int testResult = Services.TestLevelWithPenalty(Level, out List<string> _,
                     ref NextTestWithTincture, ref NextTestWithGinseng, ref NextTestWithAirag, TriggerTestPenalty);
 
-                return new List<string> { String.Format("Проверка {0}, уровень {1}", Constants.StatNames[Stat], testResult) };
+                return new List<string> { $"Проверка {Constants.StatNames[Stat]}, уровень {testResult}" };
             }
             else if (!String.IsNullOrEmpty(Stat) && !StatToMax)
             {
@@ -41,13 +41,13 @@ namespace Seeker.Gamebook.DzungarWar
                     diffLine = " (максимум)";
 
                 else if (currentStat > 1)
-                    diffLine = String.Format(" (+{0})", (currentStat - 1));
+                    diffLine = $" (+{currentStat - 1})";
 
-                return new List<string> { String.Format("{0}{1}", Head, diffLine) };
+                return new List<string> { $"{Head}{diffLine}" };
             }
             else if (Price > 0)
             {
-                return new List<string> { String.Format("{0}, {1} таньга", Head, Price) };
+                return new List<string> { $"{Head}, {Price} таньга" };
             }
             else if (!String.IsNullOrEmpty(Head))
             {
