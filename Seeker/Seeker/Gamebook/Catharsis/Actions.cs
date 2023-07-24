@@ -26,15 +26,15 @@ namespace Seeker.Gamebook.Catharsis
 
         public override List<string> Status() => new List<string>
         {
-            String.Format("Здоровье: {0}/{1}", protagonist.Life, protagonist.MaxLife),
-            String.Format("Аура: {0}", protagonist.Aura),
+            $"Здоровье: {protagonist.Life}/{protagonist.MaxLife}",
+            $"Аура: {protagonist.Aura}",
         };
 
         public override List<string> AdditionalStatus() =>  new List<string>
         {
-            String.Format("Меткость: {0}", protagonist.Accuracy),
-            String.Format("Рукопашный бой: {0}", protagonist.Fight),
-            String.Format("Стелс: {0}", protagonist.Stealth),
+            $"Меткость: {protagonist.Accuracy}",
+            $"Рукопашный бой: {protagonist.Fight}",
+            $"Стелс: {protagonist.Stealth}",
         };
 
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
