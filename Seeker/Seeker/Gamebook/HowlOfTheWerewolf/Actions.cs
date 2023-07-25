@@ -384,8 +384,9 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
             Services.PassageDice(out int dice, out int protagonistPassage);
 
-            fight.Add(String.Format("Вы обороняете: {0} / 2 = {1}, это {2}",
-                Game.Dice.Symbol(dice), protagonistPassage, Constants.GetPassageName[protagonistPassage]));
+            fight.Add($"Вы обороняете:" +
+                $"{Game.Dice.Symbol(dice)} / 2 = {protagonistPassage}," +
+                $"это {Constants.GetPassageName[protagonistPassage]}");
 
             fight.Add(String.Empty);
 
@@ -395,8 +396,9 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             {
                 Services.PassageDice(out int wolfDice, out int wolfPassage);
 
-                fight.Add(String.Format("{0} волк: {1} / 2 = {2}, ломится через {3}",
-                    wolf, Game.Dice.Symbol(wolfDice), wolfPassage, Constants.GetPassageName[wolfPassage]));
+                fight.Add($"{wolf} волк: " +
+                    $"{Game.Dice.Symbol(wolfDice)} / 2 = {wolfPassage}, " +
+                    $"ломится через {Constants.GetPassageName[wolfPassage]}");
 
                 if (protagonistPassage == wolfPassage)
                     woulfCount += 1;
@@ -410,7 +412,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                 return fight;
             }
             else
-                fight.Add(String.Format("BOLD|Вам предстоит сразиться с волками в количестве: {0}", woulfCount));
+                fight.Add($"BOLD|Вам предстоит сразиться с волками в количестве: {woulfCount}");
 
             fight.Add(String.Empty);
 
