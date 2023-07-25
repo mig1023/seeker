@@ -21,7 +21,7 @@ namespace Seeker.Gamebook.HeartOfIce
             if (Price > 0)
             {
                 string money = Game.Services.CoinsNoun(Price, "скад", "скада", "скадов");
-                return new List<string> { String.Format("{0}, {1} скад{2}", Head, Price, money) };
+                return new List<string> { $"{Head}, {Price} скад{money}" };
             }
             else if (!String.IsNullOrEmpty(Head))
             {
@@ -41,15 +41,15 @@ namespace Seeker.Gamebook.HeartOfIce
         {
             List<string> statusLines = new List<string>
             {
-                String.Format("Здоровье: {0}/{1}", protagonist.Life, protagonist.MaxLife),
-                String.Format("Деньги: {0}", protagonist.Money),
+                $"Здоровье: {protagonist.Life}/{protagonist.MaxLife}",
+                $"Деньги: {protagonist.Money}",
             };
 
             if (protagonist.Food > 0)
-                statusLines.Add(String.Format("Еда: {0}", protagonist.Food));
+                statusLines.Add($"Еда: {protagonist.Food}");
 
             if (protagonist.Shots > 0)
-                statusLines.Add(String.Format("Выстрелов: {0}", protagonist.Shots));
+                statusLines.Add($"Выстрелов: {protagonist.Shots}");
 
             return statusLines;
         }
