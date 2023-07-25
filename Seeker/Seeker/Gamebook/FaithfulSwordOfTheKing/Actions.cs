@@ -167,9 +167,11 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             {
                 Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
                 bool fail = firstDice == secondDice;
+                string failLine = fail ? String.Empty : "НЕ ";
 
-                doubleCheck.Add(String.Format("Бросок: {0} и {1} - {2}дубль",
-                    Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), (fail ? String.Empty : "НЕ ")));
+                doubleCheck.Add($"Бросок: " +
+                    $"{Game.Dice.Symbol(firstDice)} и " +
+                    $"{Game.Dice.Symbol(secondDice)} - {failLine}дубль");
 
                 if (fail)
                     doubleFail = true;
