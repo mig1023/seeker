@@ -346,10 +346,11 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
                 protagonist.BulletsAndGubpowder -= 1;
 
-                string pistolLine = (shots > 1 ? String.Format("{0} ", pistol) : String.Empty);
+                string pistolLine = shots > 1 ? $"{pistol} " : String.Empty;
+                string odd = hit ? "чёт" : "нечет";
 
-                fight.Add(String.Format("Выстрел из {0}пистолета: {1} - {2}",
-                    pistolLine, Game.Dice.Symbol(shootDice), (hit ? "чёт" : "нечет")));
+                fight.Add($"Выстрел из {pistolLine}пистолета: " +
+                    $"{Game.Dice.Symbol(shootDice)} - {odd}");
 
                 if (!hit)
                 {
@@ -359,7 +360,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
                 foreach (Character enemy in FightEnemies.Where(x => x.Strength > 0))
                 {
-                    fight.Add(String.Format("GOOD|{0} убит", enemy.Name));
+                    fight.Add($"GOOD|{enemy.Name} убит");
                     enemy.Strength = 0;
                     break;
                 }
