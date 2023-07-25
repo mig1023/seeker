@@ -281,13 +281,13 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
             int dice = Game.Dice.Roll();
 
-            string bonus = (Value > 0 ? String.Format(" + ещё {0}", Value) : String.Empty);
+            string bonus = (Value > 0 ? $" + ещё {Value}" : String.Empty);
 
-            diceCheck.Add(String.Format("На кубике выпало: {0}{1}", Game.Dice.Symbol(dice), bonus));
+            diceCheck.Add($"На кубике выпало: {Game.Dice.Symbol(dice)}{bonus}");
 
             protagonist.Endurance -= dice + Value;
 
-            diceCheck.Add(String.Format("BIG|BAD|Вы потеряли жизней: {0}", dice + Value));
+            diceCheck.Add($"BIG|BAD|Вы потеряли жизней: {dice + Value}");
 
             return diceCheck;
         }
@@ -298,13 +298,13 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
             int dice = Game.Dice.Roll();
 
-            diceCheck.Add(String.Format("На кубике выпало: {0} + ещё {1}", Game.Dice.Symbol(dice), Value));
+            diceCheck.Add($"На кубике выпало: {Game.Dice.Symbol(dice)} + ещё {Value}");
 
             dice += Value;
 
             protagonist.Gold -= dice;
 
-            diceCheck.Add(String.Format("BIG|GOOD|Вы нашли золотых: {0}", dice));
+            diceCheck.Add($"BIG|GOOD|Вы нашли золотых: {dice}");
 
             return diceCheck;
         }
