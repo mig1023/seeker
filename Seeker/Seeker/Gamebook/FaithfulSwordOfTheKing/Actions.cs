@@ -188,12 +188,12 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
             int wounds = Game.Dice.Roll();
 
-            diceWound.Add(String.Format("Бросок: {0}", Game.Dice.Symbol(wounds)));
+            diceWound.Add($"Бросок: {Game.Dice.Symbol(wounds)}");
 
             if (wounds < 6)
             {
                 protagonist.Strength -= wounds;
-                diceWound.Add(String.Format("BIG|BAD|Вы потеряли сил: {0}", wounds));
+                diceWound.Add($"BIG|BAD|Вы потеряли сил: {wounds}");
             }
             else
                 diceWound.Add("BIG|BAD|Выпала шестёрка :(");
@@ -211,12 +211,12 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             {
                 int dice = Game.Dice.Roll();
                 dices += dice;
-                diceCheck.Add(String.Format("На {0} выпало: {1}", i, Game.Dice.Symbol(dice)));
+                diceCheck.Add($"На {i} выпало: {Game.Dice.Symbol(dice)}");
             }
 
             protagonist.Strength -= dices;
 
-            diceCheck.Add(String.Format("BIG|BAD|Вы потеряли жизней: {0}", dices));
+            diceCheck.Add($"BIG|BAD|Вы потеряли жизней: {dices}");
 
             return diceCheck;
         }
@@ -229,7 +229,9 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             int result = firstDice + secondDice;
             bool evenNumber = result % 2 == 0;
 
-            ambush.Add(String.Format("Кубики: {0} + {1} = {2}", Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), result));
+            ambush.Add($"Кубики: " +
+                $"{Game.Dice.Symbol(firstDice)} + " +
+                $"{Game.Dice.Symbol(secondDice)} = {result}");
 
             if (firstDice == secondDice)
                 ambush.Add("BIG|BAD|Выпали одинаковые числа :(");
@@ -253,8 +255,9 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             {
                 Game.Dice.DoubleRoll(out int protagonistSpeed, out int enemiesSpeed);
 
-                pursuit.Add(String.Format("Ваша скорость: {0}  <-->  Их скорость: {1}",
-                    Game.Dice.Symbol(protagonistSpeed), Game.Dice.Symbol(enemiesSpeed)));
+                pursuit.Add($"Ваша скорость: " +
+                    $"{Game.Dice.Symbol(protagonistSpeed)}  <-->  " +
+                    $"Их скорость: {Game.Dice.Symbol(enemiesSpeed)}");
 
                 if (protagonistSpeed > enemiesSpeed)
                 {
