@@ -16,9 +16,9 @@ namespace Seeker.Gamebook.Genesis
             if (!String.IsNullOrEmpty(Bonus))
             {
                 int diff = GetProperty(protagonist, Bonus) - Constants.GetStartValues[Bonus];
-                string diffLine = diff > 0 ? String.Format(" (+{0})", diff) : String.Empty;
+                string diffLine = diff > 0 ? $" (+{diff})" : String.Empty;
 
-                return new List<string> { String.Format("{0}{1}", Head, diffLine) };
+                return new List<string> { $"{Head}{diffLine}" };
             }
 
             return new List<string>();
@@ -26,10 +26,10 @@ namespace Seeker.Gamebook.Genesis
 
         public override List<string> Status() => new List<string>
         {
-            String.Format("Здоровье: {0}/{1}", protagonist.Life, protagonist.MaxLife),
-            String.Format("Аура: {0}", protagonist.Aura),
-            String.Format("Ловкость: {0}", protagonist.Skill),
-            String.Format("Стелс: {0}", protagonist.Stealth),
+            $"Здоровье: {protagonist.Life}/{protagonist.MaxLife}",
+            $"Аура: {protagonist.Aura}",
+            $"Ловкость: {protagonist.Skill}",
+            $"Стелс: {protagonist.Stealth}",
         };
 
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
