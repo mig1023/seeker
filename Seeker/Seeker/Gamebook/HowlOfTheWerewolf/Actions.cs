@@ -192,8 +192,9 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
             int result = firstDice + secondDice;
 
-            diceCheck.Add(String.Format("На кубиках выпало: {0} + {1} = {2}", Game.Dice.Symbol(firstDice), Game.Dice.Symbol(firstDice), result));
-            diceCheck.Add(String.Format("Текущий уровень тревоги: {0}", protagonist.Anxiety));
+            diceCheck.Add($"На кубиках выпало: {Game.Dice.Symbol(firstDice)} + " +
+                $"{Game.Dice.Symbol(firstDice)} = {result}");
+            diceCheck.Add($"Текущий уровень тревоги: {protagonist.Anxiety}");
 
             diceCheck.Add(Result(result > protagonist.Anxiety, "Больше!|Меньше"));
 
@@ -214,10 +215,10 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                 int result = firstDice + secondDice + penalty;
 
                 if (penalty > 0)
-                    penaltyLine = String.Format(" + {0} пенальти", penalty);
+                    penaltyLine = $" + {penalty} пенальти";
 
-                competition.Add(String.Format("{0} выстрел: {1} + {2}{3} = {4}",
-                    i, Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), penaltyLine, result));
+                competition.Add($"{i} выстрел: {Game.Dice.Symbol(firstDice)} + " +
+                    $"{Game.Dice.Symbol(secondDice)}{penaltyLine} = {result}");
 
                 if (result > protagonist.Mastery)
                 {
@@ -249,7 +250,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
             int dice = Game.Dice.Roll();
 
-            diceRestore.Add(String.Format("На кубике выпало: {0}", Game.Dice.Symbol(dice)));
+            diceRestore.Add($"На кубике выпало: {Game.Dice.Symbol(dice)}");
 
             string line = "BIG|GOOD|Восстановлен";
 
