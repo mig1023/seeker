@@ -132,6 +132,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
             bool goodLuck = luckDice % 2 == 0;
             string odd = goodLuck ? "чётное" : "нечётное";
+
             List<string> luckCheck = new List<string> {
                 $"Проверка удачи: {Game.Dice.Symbol(luckDice)} - {odd}" };
 
@@ -144,9 +145,12 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
         {
             Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
             bool goodSkill = (firstDice + secondDice) <= protagonist.Skill;
+            string compare = goodSkill ? "<=" : ">";
 
-            List<string> skillCheck = new List<string> { String.Format("Проверка ловкости: {0} + {1} {2} {3} ловкость",
-                Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), (goodSkill ? "<=" : ">"), protagonist.Skill) };
+            List<string> skillCheck = new List<string> { $"Проверка ловкости: " +
+                $"{Game.Dice.Symbol(firstDice)} + " +
+                $"{Game.Dice.Symbol(secondDice)} {compare} " +
+                $"{protagonist.Skill} ловкость" };
 
             skillCheck.Add(Result(goodSkill, "ЛОВКОСТИ ХВАТИЛО|ЛОВКОСТИ НЕ ХВАТИЛО"));
 
