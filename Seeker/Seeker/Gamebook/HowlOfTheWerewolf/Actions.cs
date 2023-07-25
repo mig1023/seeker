@@ -71,19 +71,19 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
         {
             List<string> statusLines = new List<string>
             {
-                String.Format("Изменение: {0}", protagonist.Change),
-                String.Format("Золото: {0}", protagonist.Gold),
-                String.Format("Удача: {0}/{1}", protagonist.Luck, protagonist.MaxLuck),
+                $"Изменение: {protagonist.Change}",
+                $"Золото: {protagonist.Gold}",
+                $"Удача: {protagonist.Luck}/{protagonist.MaxLuck}",
             };
 
             if (protagonist.Crossbow > 0)
-                statusLines.Add(String.Format("Арбалет: {0}", protagonist.Crossbow));
+                statusLines.Add($"Арбалет: {protagonist.Crossbow}");
 
             if (protagonist.Gun > 0)
-                statusLines.Add(String.Format("Пистолет: {0}", protagonist.Gun));
+                statusLines.Add($"Пистолет: {protagonist.Gun}");
 
             if (protagonist.VanRichten > 0)
-                statusLines.Add(String.Format("Выносливость Ван Рихтена: {0}", protagonist.VanRichten));
+                statusLines.Add($"Выносливость Ван Рихтена: {protagonist.VanRichten}");
 
             return statusLines;
         }
@@ -95,10 +95,11 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
         {
             Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
             bool goodLuck = (firstDice + secondDice) <= protagonist.Luck;
+            string luckLine = goodLuck ? "<=" : ">";
 
-            List<string> luckCheck = new List<string> { String.Format(
-                "Проверка удачи: {0} + {1} {2} {3}",
-                Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), (goodLuck ? "<=" : ">"), protagonist.Luck) };
+            List<string> luckCheck = new List<string> {
+                $"Проверка удачи: {Game.Dice.Symbol(firstDice)} + " +
+                $"{Game.Dice.Symbol(secondDice)} {luckLine} {protagonist.Luck}" };
 
             luckCheck.Add(Result(goodLuck, "УСПЕХ|НЕУДАЧА"));
 
@@ -116,10 +117,11 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
             int mastery = (Value > 0 ? Value : protagonist.Mastery);
             bool masteryOk = (firstDice + secondDice) <= mastery;
+            string masteryLine = masteryOk ? "<=" : ">";
 
-            List<string> masteryCheck = new List<string> { String.Format(
-                "Проверка мастерства: {0} + {1} {2} {3}",
-                Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), (masteryOk ? "<=" : ">"), mastery) };
+            List<string> masteryCheck = new List<string> {
+                $"Проверка мастерства: {Game.Dice.Symbol(firstDice)} + " +
+                $"{Game.Dice.Symbol(secondDice)} {masteryLine} {mastery}" };
 
             if (Value > 0)
                 masteryCheck.Add(Result(!masteryOk, "Мастерства НЕ хватило|Мастерства ХВАТИЛО"));
