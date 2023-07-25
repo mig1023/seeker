@@ -21,9 +21,9 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
         public override List<string> Status() => new List<string>
         {
-            String.Format("Ловкость: {0}", protagonist.Skill),
-            String.Format("Сила: {0}/{1}", protagonist.Strength, protagonist.MaxStrength),
-            String.Format("Честь: {0}", protagonist.Honor),
+            $"Ловкость: {protagonist.Skill}",
+            $"Сила: {protagonist.Strength}/{protagonist.MaxStrength}",
+            $"Честь: {protagonist.Honor}",
 
         };
 
