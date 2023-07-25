@@ -190,7 +190,7 @@ namespace Seeker.Gamebook.GoingToLaughter
             if (DiceOfDice)
             {
                 dicesCount = Game.Dice.Roll();
-                diceValues.Add(String.Format("Количество кубиков: {0}", Game.Dice.Symbol(dicesCount)));
+                diceValues.Add($"Количество кубиков: {Game.Dice.Symbol(dicesCount)}");
                 diceValues.Add(String.Empty);
             }
 
@@ -203,22 +203,21 @@ namespace Seeker.Gamebook.GoingToLaughter
                 if (DiceBonus > 0)
                 {
                     dicesResult += DiceBonus;
-                    bonus = String.Format(" + {0} по условию", DiceBonus);
+                    bonus = $" + {DiceBonus} по условию";
                 }
 
-                diceValues.Add(String.Format("На {0} выпало: {1}{2}", i, Game.Dice.Symbol(dice), bonus));
+                diceValues.Add($"На {i} выпало: {Game.Dice.Symbol(dice)}{bonus}");
             }
 
             if (ResultBonus > 0)
             {
                 dicesResult += ResultBonus;
-                diceValues.Add(String.Format(" +{0} по условию", ResultBonus));
+                diceValues.Add($" +{ResultBonus} по условию");
             }
 
             SetProperty(protagonist, Target, (GetProperty(protagonist, Target) + dicesResult));
 
-            diceValues.Add(String.Format("BIG|BOLD|Вы добавили +{0} к {1}",
-                dicesResult, Constants.ParamNames[Target]));
+            diceValues.Add($"BIG|BOLD|Вы добавили +{dicesResult} к {Constants.ParamNames[Target]}");
 
             return diceValues;
         }
