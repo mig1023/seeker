@@ -31,13 +31,13 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
         {
             List<string> statusLines = new List<string>();
 
-            statusLines.Add(String.Format("    День: {0}", protagonist.Day));
-            statusLines.Add(String.Format("Экю: {0}", Services.ToEcu(protagonist.Ecu)));
+            statusLines.Add($"    День: {protagonist.Day}");
+            statusLines.Add($"Экю: {Services.ToEcu(protagonist.Ecu)}");
 
             if (protagonist.BulletsAndGubpowder > 0)
-                statusLines.Add(String.Format("Выстрелов: {0}", protagonist.BulletsAndGubpowder));
+                statusLines.Add($"Выстрелов: {protagonist.BulletsAndGubpowder}");
 
-            statusLines.Add(String.Format("Выбранное искусство: {0}", Constants.MeritalArtsNames[protagonist.MeritalArt]));
+            statusLines.Add($"Выбранное искусство: {Constants.MeritalArtsNames[protagonist.MeritalArt]}");
 
             return statusLines;
         }
