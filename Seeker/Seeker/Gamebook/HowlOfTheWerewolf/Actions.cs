@@ -152,16 +152,18 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             bool changeOk = result > protagonist.Change;
             string cmpLine = Game.Services.Сomparison(result, protagonist.Change);
 
-            List<string> changeCheck = new List<string> { String.Format(
-                "Проверка: {0} + {1}{2} {3} {4} изменение",
-                Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), bonusLine, cmpLine, protagonist.Change) };
+            List<string> changeCheck = new List<string> {
+                $"Проверка: {Game.Dice.Symbol(firstDice)} + " +
+                $"{Game.Dice.Symbol(secondDice)}{bonusLine} {cmpLine} " +
+                $"{protagonist.Change} изменение" };
 
             changeCheck.Add(Result(changeOk, "Победил ЧЕЛОВЕК|Победил ВОЛК"));
 
             return changeCheck;
         }
 
-        public List<string> Dice() => new List<string> { String.Format("BIG|На кубике выпало: {0}", Game.Dice.Symbol(Game.Dice.Roll())) };
+        public List<string> Dice() =>
+            new List<string> { $"BIG|На кубике выпало: {Game.Dice.Symbol(Game.Dice.Roll())}" };
 
         public List<string> DicesEndurance()
         {
@@ -173,10 +175,10 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             {
                 int dice = Game.Dice.Roll();
                 result += dice;
-                diceCheck.Add(String.Format("На {0} выпало: {1}", i, Game.Dice.Symbol(dice)));
+                diceCheck.Add($"На {i} выпало: {Game.Dice.Symbol(dice)}");
             }
 
-            diceCheck.Add(String.Format("BIG|Сумма на кубиках: {0}", result));
+            diceCheck.Add($"BIG|Сумма на кубиках: {result}");
 
             diceCheck.Add(Result(result < protagonist.Endurance, "Меньше!|Больше"));
 
