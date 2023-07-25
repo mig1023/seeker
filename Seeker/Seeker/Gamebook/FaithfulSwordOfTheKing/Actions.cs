@@ -112,7 +112,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             List<string> enemies = new List<string>();
 
             if (Price > 0)
-                return new List<string> { String.Format("{0}, {1} экю", Head, Services.ToEcu(Price)) };
+                return new List<string> { $"{Head}, {Services.ToEcu(Price)} экю" };
 
             if (Type == "Get")
                 return new List<string> { Head };
@@ -121,7 +121,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                 return enemies;
 
             foreach (Character enemy in Enemies)
-                enemies.Add(String.Format("{0}\nловкость {1}  сила {2}", enemy.Name, enemy.Skill, enemy.Strength));
+                enemies.Add($"{enemy.Name}\nловкость {enemy.Skill}  сила {enemy.Strength}");
 
             return enemies;
         }
@@ -131,9 +131,9 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             int luckDice = Game.Dice.Roll();
 
             bool goodLuck = luckDice % 2 == 0;
-
-            List<string> luckCheck = new List<string> { String.Format("Проверка удачи: {0} - {1}",
-                Game.Dice.Symbol(luckDice), (goodLuck ? "чётное" : "нечётное")) };
+            string odd = goodLuck ? "чётное" : "нечётное";
+            List<string> luckCheck = new List<string> {
+                $"Проверка удачи: {Game.Dice.Symbol(luckDice)} - {odd}" };
 
             luckCheck.Add(Result(goodLuck, "УСПЕХ|НЕУДАЧА"));
 
