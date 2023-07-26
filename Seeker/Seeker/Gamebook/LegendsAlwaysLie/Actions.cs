@@ -39,7 +39,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             if (Price > 0)
             {
                 string gold = Game.Services.CoinsNoun(Price, "золотой", "золотых", "золотых");
-                return new List<string> { String.Format("{0}, {1} {2}", Head, Price, gold) };
+                return new List<string> { $"{Head}, {Price} {gold}" };
             }
             else if (!String.IsNullOrEmpty(Head))
             {
@@ -52,7 +52,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 return enemies;
 
             foreach (Character enemy in Enemies)
-                enemies.Add(String.Format("{0}\nсила {1}  жизни {2}", enemy.Name, enemy.Strength, enemy.Hitpoints));
+                enemies.Add($"{enemy.Name}\nсила {enemy.Strength}  жизни {enemy.Hitpoints}");
 
             return enemies;
         }
