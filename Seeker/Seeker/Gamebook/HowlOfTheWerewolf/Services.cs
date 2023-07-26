@@ -202,7 +202,8 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             {
                 protagonist.Endurance -= 2;
                 protagonist.Change += 1;
-                fight.Add(String.Format("BAD|Вы потеряли 2 Выносливости и Трансформация продолжилась (Изменение достигло {0})", protagonist.Change));
+                fight.Add($"BAD|Вы потеряли 2 Выносливости и " +
+                    $"Трансформация продолжилась (Изменение достигло {protagonist.Change})");
             }
         }
 
