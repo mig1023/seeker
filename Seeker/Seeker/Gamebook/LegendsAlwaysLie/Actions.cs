@@ -455,7 +455,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                     if (enemy.Hitpoints <= 0)
                         continue;
 
-                    fight.Add(String.Format("{0} (жизни: {1})", enemy.Name, enemy.Hitpoints));
+                    fight.Add($"{enemy.Name} (жизни: {enemy.Hitpoints})");
 
                     if (!String.IsNullOrEmpty(ConneryAttacks))
                     {
@@ -467,7 +467,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
                             enemy.Hitpoints -= conneryAttack;
 
-                            fight.Add(String.Format("GOOD|{0} ранен атакой Коннери", enemy.Name, conneryAttack));
+                            fight.Add($"GOOD|{enemy.Name} ранен атакой Коннери (-{conneryAttack})");
 
                             if (Services.EnemyLostFight(FightEnemies, ref fight, connery: true))
                                 return fight;
