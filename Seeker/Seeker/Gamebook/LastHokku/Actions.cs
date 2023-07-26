@@ -13,7 +13,9 @@ namespace Seeker.Gamebook.LastHokku
             if (protagonist.Hokku == null)
                 return String.Empty;
 
-            if (!Constants.GetParagraphsWithoutHokkuCreation.Contains(Game.Data.CurrentParagraphID) && !String.IsNullOrEmpty(option))
+            bool wihoutHokku = Constants.GetParagraphsWithoutHokkuCreation.Contains(Game.Data.CurrentParagraphID);
+
+            if (!wihoutHokku && !String.IsNullOrEmpty(option))
                 protagonist.Hokku.Add(option);
 
             if (protagonist.Hokku.Count >= 7)
@@ -24,9 +26,9 @@ namespace Seeker.Gamebook.LastHokku
 
                 List<string> newHokku = new List<string>
                 {
-                    String.Format("{0} {1}", oldHokku[0], oldHokku[1]),
-                    String.Format("{0} {1}.", oldHokku[2], oldHokku[3]),
-                    String.Format("{0} - {1} {2}...", oldHokku[4], oldHokku[5], oldHokku[6]),
+                    $"{oldHokku[0]} {oldHokku[1]}",
+                    $"{oldHokku[2]} {oldHokku[3]}.",
+                    $"{oldHokku[4]} - {oldHokku[5]} {oldHokku[6]}...",
                 };
 
                 protagonist.Hokku = newHokku;
