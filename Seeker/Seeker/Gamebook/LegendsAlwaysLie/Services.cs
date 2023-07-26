@@ -19,7 +19,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
             int reactionDice = Game.Dice.Roll();
             bool goodReaction = reactionDice <= reactionLevel;
-            reaction.Add(String.Format("Реакция: {0} {1} {2}", Game.Dice.Symbol(reactionDice), (goodReaction ? "<=" : ">"), reactionLevel));
+            string compare = goodReaction ? "<=" : ">";
+            reaction.Add($"Реакция: {Game.Dice.Symbol(reactionDice)} {compare} {reactionLevel}");
 
             return goodReaction;
         }
