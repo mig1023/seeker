@@ -75,7 +75,11 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
         {
             List<string> staticButtons = new List<string> { };
 
-            if (Game.Data.Constants.GetParagraphsWithoutStaticsButtons().Contains(Game.Data.CurrentParagraphID))
+            int currentId = Game.Data.CurrentParagraphID;
+            Abstract.IConstants consants = Game.Data.Constants;
+            bool withoutStatic = consants.GetParagraphsWithoutStaticsButtons().Contains(currentId);
+
+            if (withoutStatic)
                 return staticButtons;
 
             bool healingSpell = (protagonist.Magicpoints > 0) && !Game.Option.IsTriggered("HealingSpellLost");
