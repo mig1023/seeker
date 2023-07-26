@@ -559,7 +559,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
                             enemy.Hitpoints -= wound;
 
-                            fight.Add(String.Format("Вы нанесли урон: {0}", wound));
+                            fight.Add($"Вы нанесли урон: {wound}");
                         }
                         
                         if (Services.EnemyLostFight(FightEnemies, ref fight))
