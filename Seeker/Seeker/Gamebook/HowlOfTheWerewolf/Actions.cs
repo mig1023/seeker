@@ -486,10 +486,10 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                         string bonus = String.Empty;
 
                         if (HitStrengthBonus > 0)
-                            bonus = String.Format(" + {0} бонус", HitStrengthBonus);
+                            bonus = $" + {HitStrengthBonus} бонус";
 
                         else if (HitStrengthBonus < 0)
-                            bonus = String.Format(" - {0} пенальти", Math.Abs(HitStrengthBonus));
+                            bonus = $" - {Math.Abs(HitStrengthBonus)} пенальти";
 
                         else if (blackWidowLastAttack == 4)
                         {
@@ -503,9 +503,10 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                             protagonistHitStrength -= 1;
                         }
 
-                        fight.Add(String.Format("Сила вашего удара: {0} + {1} + {2}{3} = {4}",
-                            Game.Dice.Symbol(protagonistRollFirst), Game.Dice.Symbol(protagonistRollSecond),
-                            protagonist.Mastery, bonus, protagonistHitStrength));
+                        fight.Add($"Сила вашего удара: " +
+                            $"{Game.Dice.Symbol(protagonistRollFirst)} + " +
+                            $"{Game.Dice.Symbol(protagonistRollSecond)} + " +
+                            $"{protagonist.Mastery}{bonus} = {protagonistHitStrength}");
 
                         if ((Specificity == Specifics.SnakeFight) && (round >= 2))
                             HitStrengthBonus = 0;
@@ -514,14 +515,16 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                     Game.Dice.DoubleRoll(out int enemyRollFirst, out int enemyRollSecond);
                     int enemyHitStrength = enemyRollFirst + enemyRollSecond + enemy.Mastery;
 
-                    fight.Add(String.Format("Сила его удара: {0} + {1} + {2} = {3}",
-                        Game.Dice.Symbol(enemyRollFirst), Game.Dice.Symbol(enemyRollSecond), enemy.Mastery, enemyHitStrength));
+                    fight.Add($"Сила его удара: " +
+                        $"{Game.Dice.Symbol(enemyRollFirst)} + " +
+                        $"{Game.Dice.Symbol(enemyRollSecond)} + " +
+                        $"{enemy.Mastery} = {enemyHitStrength}");
 
                     bool webLastAttack = (blackWidowLastAttack == 3);
 
                     if ((protagonistHitStrength > enemyHitStrength) && !attackAlready && !invulnerable && !webLastAttack)
                     {
-                        fight.Add(String.Format("GOOD|{0} ранен", enemy.Name));
+                        fight.Add($"GOOD|{enemy.Name} ранен");
 
                         enemy.Endurance -= (Specificity == Specifics.StoneGriffin ? 1 : 2);
 
@@ -535,13 +538,13 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                     }
                     else if (protagonistHitStrength > enemyHitStrength)
                     {
-                        fight.Add(String.Format("BOLD|{0} не смог вас ранить", enemy.Name));
+                        fight.Add($"BOLD|{enemy.Name} не смог вас ранить");
 
                         roundWins += 1;
                     }
                     else if (protagonistHitStrength < enemyHitStrength)
                     {
-                        fight.Add(String.Format("BAD|{0} ранил вас", enemy.Name));
+                        fight.Add($"BAD|{enemy.Name} ранил вас");
 
                         bool evenHit = (enemyHitStrength % 2 == 0);
 
