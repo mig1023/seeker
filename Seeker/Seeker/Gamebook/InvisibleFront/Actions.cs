@@ -9,8 +9,8 @@ namespace Seeker.Gamebook.InvisibleFront
         private static Character protagonist = Character.Protagonist;
 
         public override List<string> Status() => new List<string> {
-            String.Format("Недовольство резидента: {0}", protagonist.Dissatisfaction),
-            String.Format("Вербовка: {0}", protagonist.Recruitment)
+            $"Недовольство резидента: {protagonist.Dissatisfaction}",
+            $"Вербовка: {protagonist.Recruitment}",
         };
 
         public override bool Availability(string option)
