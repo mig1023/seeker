@@ -414,7 +414,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
             while (true)
             {
-                fight.Add(String.Format("HEAD|BOLD|Раунд: {0}", round));
+                fight.Add($"HEAD|BOLD|Раунд: {round}");
 
                 if (!GolemFight && (protagonist.Specialization == Character.SpecializationType.Thrower) && (round == 1))
                 {
@@ -422,7 +422,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
                     FightEnemies[0].Hitpoints -= 3;
 
-                    fight.Add(String.Format("GOOD|{0} ранен метательными ножами и потерял 3 жизни", FightEnemies[0].Name));
+                    fight.Add($"GOOD|{FightEnemies[0].Name} ранен метательными ножами и потерял 3 жизни");
                     fight.Add(String.Empty);
 
                     if (Services.EnemyLostFight(FightEnemies, ref fight))
@@ -432,20 +432,20 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 if (!String.IsNullOrEmpty(ReactionRound))
                 {
                     string[] wounds = ReactionRound.Split(',');
-                    fight.Add(String.Format("BOLD|{0} пытаются нанести вам дополнительный урон", wounds[1].TrimStart()));
+                    fight.Add($"BOLD|{wounds[1].TrimStart()} пытаются нанести вам дополнительный урон");
 
                     if (!Services.GoodReaction(ref fight))
                     {
                         int wound = int.Parse(wounds[0]);
                         protagonist.Hitpoints -= wound;
 
-                        fight.Add(String.Format("BAD|{0} нанесли дополнительный урон: {1}", wounds[1].TrimStart(), wound));
+                        fight.Add($"BAD|{wounds[1].TrimStart()} нанесли дополнительный урон: {wound}");
 
                         if (protagonist.Hitpoints <= 0)
                             return Services.LostFight(fight);
                     }
                     else
-                        fight.Add(String.Format("BOLD|{0} не преуспели", wounds[1].TrimStart()));
+                        fight.Add($"BOLD|{wounds[1].TrimStart()} не преуспели");
 
                     fight.Add(String.Empty);
                 }
