@@ -79,8 +79,14 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             }
 
             foreach (Character enemy in Enemies)
-                enemies.Add(String.Format("{0}\nнападение {1}  защита {2}  жизнь {3}  инициатива {4}{5}",
-                    enemy.Name, enemy.Attack, enemy.Defence, enemy.Endurance, enemy.Initiative, enemy.GetSpecialTechniques()));
+            {
+                enemies.Add($"{enemy.Name}\n" +
+                    $"нападение {enemy.Attack}  " +
+                    $"защита {enemy.Defence}  " +
+                    $"жизнь {enemy.Endurance}  " +
+                    $"инициатива {enemy.Initiative}" +
+                    $"{enemy.GetSpecialTechniques()}");
+            }
 
             return enemies;
         }
