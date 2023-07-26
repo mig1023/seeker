@@ -65,10 +65,10 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
         public override List<string> AdditionalStatus() => new List<string>
         {
-            String.Format("Сила: {0}", protagonist.Strength),
-            String.Format("Жизни: {0}/30", protagonist.Hitpoints),
-            String.Format("Заклинаний: {0}", protagonist.Magicpoints),
-            String.Format("Золото: {0}", protagonist.Gold),
+            $"Сила: {protagonist.Strength}",
+            $"Жизни: {protagonist.Hitpoints}/30",
+            $"Заклинаний: {protagonist.Magicpoints}",
+            $"Золото: {protagonist.Gold}",
         };
 
         public override List<string> StaticButtons()
