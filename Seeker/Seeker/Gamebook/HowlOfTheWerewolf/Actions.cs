@@ -460,7 +460,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
             while (true)
             {
-                fight.Add(String.Format("HEAD|BOLD|Раунд: {0}", round));
+                fight.Add($"HEAD|BOLD|Раунд: {round}");
 
                 bool attackAlready = false;
                 int protagonistHitStrength = 0;
@@ -470,7 +470,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                     if ((enemy.Endurance <= 0) && !invulnerable)
                         continue;
 
-                    fight.Add(String.Format("{0} (выносливость {1})", enemy.Name, enemy.Endurance));
+                    fight.Add($"{enemy.Name} (выносливость {enemy.Endurance})");
 
                     if (blackWidowLastAttack == 4)
                     {
