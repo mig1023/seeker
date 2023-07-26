@@ -231,7 +231,10 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
         public static int MasteryRoundsToFight(ref List<string> fight)
         {
             int roundsToFight = 15 - Character.Protagonist.Mastery;
-            fight.Add(String.Format("Вам необходимо продержаться: 15 - {0} = {1} раундов", Character.Protagonist.Mastery, roundsToFight));
+
+            fight.Add($"Вам необходимо продержаться: 15 - " +
+                $"{Character.Protagonist.Mastery} = {roundsToFight} раундов");
+
             fight.Add(String.Empty);
 
             return roundsToFight;
