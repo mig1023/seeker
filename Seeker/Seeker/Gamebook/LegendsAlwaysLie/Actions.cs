@@ -495,7 +495,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                     {
                         int dice = Game.Dice.Roll();
                         zombieWound = dice % 2 == 0;
-                        fight.Add(String.Format("Бросок на пробитие: {0} - {1}", Game.Dice.Symbol(dice), (zombieWound ? "чёт" : "нечет")));
+                        string odd = zombieWound ? "чёт" : "нечет";
+                        fight.Add($"Бросок на пробитие: {Game.Dice.Symbol(dice)} - {odd}");
 
                         if (warriorFight)
                             zombieWound = true;
