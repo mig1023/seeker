@@ -358,7 +358,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
         {
             int witchAttack = Game.Dice.Roll();
 
-            fight.Add(String.Format("Кубик атаки: {0}", Game.Dice.Symbol(witchAttack)));
+            fight.Add($"Кубик атаки: {Game.Dice.Symbol(witchAttack)}");
 
             if (witchAttack < 3)
             {
@@ -368,13 +368,15 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             else if (witchAttack == 3)
             {
                 protagonist.Endurance -= 3;
-                fight.Add("Сильный удар: вы потеряли 3 Выносливости и в следующий раунд не сможете атаковать пытаясь подняться на ноги");
+                fight.Add("Сильный удар: вы потеряли 3 Выносливости " +
+                    "и в следующий раунд не сможете атаковать пытаясь подняться на ноги");
 
                 return 3;
             }
             else if (witchAttack == 4)
             {
-                fight.Add("Плевок паутиной: вы не ранены, но следующий Раунд Атаки не можете защититься");
+                fight.Add("Плевок паутиной: вы не ранены, " +
+                    "но следующий Раунд Атаки не можете защититься");
 
                 return 4;
             }
@@ -388,7 +390,8 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                 int spiders = Game.Dice.Roll();
                 protagonist.Endurance -= spiders;
 
-                fight.Add(String.Format("Стая пауков: вы теряете {0}, но и она теряет 2 Выносливости", Game.Dice.Symbol(spiders)));
+                fight.Add($"Стая пауков: вы теряете {Game.Dice.Symbol(spiders)}, " +
+                    $"но и она теряет 2 Выносливости");
 
                 return 6;
             }
