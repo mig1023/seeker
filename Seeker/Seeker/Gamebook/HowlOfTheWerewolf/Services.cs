@@ -214,7 +214,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
             int clubAttack = Game.Dice.Roll();
 
-            fight.Add(String.Format("Удар палицы: {0}", Game.Dice.Symbol(clubAttack)));
+            fight.Add($"Удар палицы: {Game.Dice.Symbol(clubAttack)}");
 
             if (clubAttack == 6)
             {
