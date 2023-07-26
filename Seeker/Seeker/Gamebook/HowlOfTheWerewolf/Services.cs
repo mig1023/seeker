@@ -403,7 +403,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
         {
             int werewolfAttack = Game.Dice.Roll();
 
-            fight.Add(String.Format("Кубик атаки: {0}", Game.Dice.Symbol(werewolfAttack)));
+            fight.Add($"Кубик атаки: {Game.Dice.Symbol(werewolfAttack)}");
 
             if (werewolfAttack == 6)
             {
