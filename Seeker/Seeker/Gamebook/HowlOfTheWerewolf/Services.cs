@@ -180,7 +180,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
         {
             int witchAttack = Game.Dice.Roll();
 
-            fight.Add(String.Format("Кубик атаки: {0}", Game.Dice.Symbol(witchAttack)));
+            fight.Add($"Кубик атаки: {Game.Dice.Symbol(witchAttack)}");
 
             if (witchAttack < 3)
             {
