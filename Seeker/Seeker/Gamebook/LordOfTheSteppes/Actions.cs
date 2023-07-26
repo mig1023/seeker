@@ -120,9 +120,9 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
         public override List<string> AdditionalStatus() => new List<string>
         {
-            String.Format("Нападение: {0}", protagonist.Attack),
-            String.Format("Защита: {0}", protagonist.Defence),
-            String.Format("Инициатива: {0}", protagonist.Initiative),
+            $"Нападение: {protagonist.Attack}",
+            $"Защита: {protagonist.Attack}",
+            $"Инициатива: {protagonist.Attack}",
         };
 
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
