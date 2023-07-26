@@ -114,8 +114,8 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
         public override List<string> Status() => new List<string>
         {
-            String.Format("Жизнь: {0}/{1}", protagonist.Endurance, protagonist.MaxEndurance),
-            String.Format("Монеты: {0}", protagonist.Coins),
+            $"Жизнь: {protagonist.Endurance}/{protagonist.MaxEndurance}",
+            $"Монеты: {protagonist.Coins}",
         };
 
         public override List<string> AdditionalStatus() => new List<string>
