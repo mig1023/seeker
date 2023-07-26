@@ -537,7 +537,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                         if (lightningLunge)
                             fight.Add("BOLD|Вы сделали 'Молниеносный выпад'!");
 
-                        fight.Add(String.Format("GOOD|{0} ранен", enemy.Name));
+                        fight.Add($"GOOD|{enemy.Name} ранен");
 
                         if (String.IsNullOrEmpty(ReactionHit))
                         {
@@ -546,7 +546,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                             if (poisonBlade)
                             {
                                 wound += 2;
-                                fight.Add(String.Format("Вы нанесли урон ядом: {0}", wound));
+                                fight.Add($"Вы нанесли урон ядом: {wound}");
                             }
 
                             enemy.Hitpoints -= wound;
