@@ -350,7 +350,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
             enemyWounds += 1;
 
-            fight.Add(String.Format("GOOD|Вы стреляете из арбалета: {0} теряет 2 Выносливости", fightEnemies[0].Name));
+            fight.Add($"GOOD|Вы стреляете из арбалета: {fightEnemies[0].Name} теряет 2 Выносливости");
             fight.Add(String.Empty);
         }
 
