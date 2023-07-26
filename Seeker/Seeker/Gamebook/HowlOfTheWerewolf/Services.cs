@@ -279,13 +279,15 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             }
             else if (incomplete == 6)
             {
-                fight.Add("Доктор вырезал кишечник: Никакого эффекта, мертвецу он уже не нужен");
+                fight.Add("Доктор вырезал кишечник: " +
+                    "Никакого эффекта, мертвецу он уже не нужен");
             }
             else
             {
                 corpse.Endurance -= 1;
 
-                fight.Add(String.Format("Доктор вырезал сердце: Выносливость мертвеца снижается на единицу до {0}", corpse.Endurance));
+                fight.Add($"Доктор вырезал сердце: Выносливость мертвеца " +
+                    $"снижается на единицу до {corpse.Endurance}");
             }
 
             fight.Add(String.Empty);
