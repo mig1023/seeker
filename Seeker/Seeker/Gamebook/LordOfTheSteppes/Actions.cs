@@ -57,9 +57,12 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                 {
                     if (ally.Name == protagonist.Name)
                     {
-                        enemies.Add(String.Format("Вы\nнападение {0}  защита {1}  жизнь {2}  инициатива {3}{4}",
-                            protagonist.Attack, protagonist.Defence, protagonist.Endurance,
-                            protagonist.Initiative, protagonist.GetSpecialTechniques()));
+                        enemies.Add($"Вы\n" +
+                            $"нападение {protagonist.Attack}  " +
+                            $"защита {protagonist.Defence}  " +
+                            $"жизнь {protagonist.Endurance}  " +
+                            $"инициатива {protagonist.Initiative}" +
+                            $"{protagonist.GetSpecialTechniques()}");
                     }
                     else
                     {
