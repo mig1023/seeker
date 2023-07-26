@@ -9,12 +9,12 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
         public static bool GoodReaction(ref List<string> reaction)
         {
             int reactionLevel = (int)Math.Floor((double)Character.Protagonist.Hitpoints / 5);
-            reaction.Add(String.Format("Уровнь реакции: {0} / 5 = {1}", Character.Protagonist.Hitpoints, reactionLevel));
+            reaction.Add($"Уровнь реакции: {Character.Protagonist.Hitpoints} / 5 = {reactionLevel}");
 
             if (Game.Option.IsTriggered("EvilEye"))
             {
                 reactionLevel -= 1;
-                reaction.Add(String.Format("Из-за сглаза уровнь реакции снижается на единицу: {0}", reactionLevel));
+                reaction.Add($"Из-за сглаза уровнь реакции снижается на единицу: {reactionLevel}");
             }
 
             int reactionDice = Game.Dice.Roll();
