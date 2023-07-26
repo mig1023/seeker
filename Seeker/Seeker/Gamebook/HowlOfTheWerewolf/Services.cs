@@ -306,8 +306,9 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                 if (Character.Protagonist.Gun < shots)
                     shots = Character.Protagonist.Gun;
 
-                fight.Add(String.Format("Вы успеваете сделать выстрелов: {0} - {1} = {2}",
-                    Character.Protagonist.Mastery, fightEnemies[0].Mastery, shots));
+                fight.Add($"Вы успеваете сделать выстрелов: " +
+                    $"{Character.Protagonist.Mastery} - " +
+                    $"{fightEnemies[0].Mastery} = {shots}");
 
                 int enemyIndex = 0;
 
