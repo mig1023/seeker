@@ -19,7 +19,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             if (enemyLost || ((WoundsToWin > 0) && (WoundsToWin <= enemyWounds)))
             {
                 fight.Add(String.Empty);
-                fight.Add(String.Format("BIG|GOOD|Вы ПОБЕДИЛИ :)"));
+                fight.Add("BIG|GOOD|Вы ПОБЕДИЛИ :)");
                 return true;
             }
             else
@@ -37,12 +37,14 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             Game.Dice.DoubleRoll(out int ulrichRollFirst, out int ulrichRollSecond);
             int ulrichHitStrength = ulrichRollFirst + ulrichRollSecond + ulrichMastery;
 
-            fight.Add(String.Format("Сила удара Ульриха: {0} + {1} + {2} = {3}",
-                Game.Dice.Symbol(ulrichRollFirst), Game.Dice.Symbol(ulrichRollSecond), ulrichMastery, ulrichHitStrength));
+            fight.Add($"Сила удара Ульриха: " +
+                $"{Game.Dice.Symbol(ulrichRollFirst)} + " +
+                $"{Game.Dice.Symbol(ulrichRollSecond)} + " +
+                $"{ulrichMastery} = {ulrichHitStrength}");
 
             if (ulrichHitStrength > enemyHitStrength)
             {
-                fight.Add(String.Format("GOOD|{0} ранен", enemyName));
+                fight.Add($"GOOD|{enemyName} ранен");
                 return 2;
             }
             else
@@ -61,12 +63,14 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             Game.Dice.DoubleRoll(out int vanRichtenRollFirst, out int vanRichtenRollSecond);
             int vanRichtenHitStrength = vanRichtenRollFirst + vanRichtenRollSecond + vanRichtenMastery;
 
-            fight.Add(String.Format("Сила удара Ван Рихтена: {0} + {1} + {2} = {3}",
-                Game.Dice.Symbol(vanRichtenRollFirst), Game.Dice.Symbol(vanRichtenRollSecond), vanRichtenMastery, vanRichtenHitStrength));
+            fight.Add($"Сила удара Ван Рихтена: " +
+                $"{Game.Dice.Symbol(vanRichtenRollFirst)} + " +
+                $"{Game.Dice.Symbol(vanRichtenRollSecond)} + " +
+                $"{vanRichtenMastery} = {vanRichtenHitStrength}");
 
             if (vanRichtenHitStrength > enemyHitStrength)
             {
-                fight.Add(String.Format("GOOD|{0} ранен", enemyName));
+                fight.Add($"GOOD|{enemyName} ранен");
                 return 2;
             }
             else
