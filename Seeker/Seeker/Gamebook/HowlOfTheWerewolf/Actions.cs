@@ -591,7 +591,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
                             fight.Add(String.Empty);
                             fight.Add("BIG|BAD|Трансформация продолжается!");
-                            fight.Add(String.Format("BAD|Изменение увеличилось на единицу и достигло {0}", protagonist.Change));
+                            fight.Add($"BAD|Изменение увеличилось на единицу и достигло {protagonist.Change}");
                         }
 
                         if ((protagonist.Endurance <= 0) || ((WoundsToWin > 0) && (WoundsToWin <= enemyWounds)))
@@ -602,7 +602,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                         }
                     }
                     else
-                        fight.Add(String.Format("BOLD|Ничья в раунде"));
+                        fight.Add("BOLD|Ничья в раунде");
 
                     attackAlready = true;
 
