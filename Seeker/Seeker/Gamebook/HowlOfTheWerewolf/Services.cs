@@ -272,8 +272,10 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                 corpse.Mastery -= 1;
                 corpse.Endurance -= 1;
 
-                fight.Add(String.Format("Доктор вырезал мозг и сердце: Мастерство мертвеца снижается на единицу до {0}," +
-                    "Выносливость мертвеца снижается на единицу до {1},", corpse.Mastery, corpse.Endurance));
+                fight.Add($"Доктор вырезал мозг и сердце: Мастерство " +
+                    $"мертвеца снижается на единицу до {corpse.Mastery}," +
+                    $"Выносливость мертвеца снижается на единицу " +
+                    $"до {corpse.Endurance}");
             }
             else if (incomplete == 6)
             {
