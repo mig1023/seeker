@@ -91,17 +91,17 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
         {
             int dice = Game.Dice.Roll();
 
-            fight.Add(String.Format("Кубик {0}: {1}", diceType, Game.Dice.Symbol(dice)));
+            fight.Add($"Кубик {diceType}: {Game.Dice.Symbol(dice)}");
 
             if ((chance >= dice) && hitStrenghtInstead)
             {
-                fight.Add(String.Format("BAD|{0} {1}", fail, hisStrength));
+                fight.Add($"BAD|{fail} {hisStrength}");
                 return -1;
             }
             else if (chance >= dice)
             {
                 protagonist.Endurance -= wounds;
-                fight.Add(String.Format("BAD|{0}", fail));
+                fight.Add($"BAD|{fail}");
             }
             else
             {
