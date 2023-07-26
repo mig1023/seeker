@@ -258,13 +258,14 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
             int incomplete = Game.Dice.Roll();
 
-            fight.Add(String.Format("Кубик вскрытия: {0}", Game.Dice.Symbol(incomplete)));
+            fight.Add($"Кубик вскрытия: {Game.Dice.Symbol(incomplete)}");
 
             if (incomplete < 3)
             {
                 corpse.Mastery -= 1;
 
-                fight.Add(String.Format("Доктор вырезал мозг: Мастерство мертвеца снижается на единицу до {0}", corpse.Mastery));
+                fight.Add($"Доктор вырезал мозг: Мастерство мертвеца " +
+                    $"снижается на единицу до {corpse.Mastery}");
             }
             else if (incomplete == 5)
             {
