@@ -567,7 +567,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                     }
                     else if (protagonistHitStrength < enemyHitStrength)
                     {
-                        fight.Add(String.Format("BAD|{0} ранил вас", enemy.Name));
+                        fight.Add($"BAD|{enemy.Name} ранил вас");
 
                         if (!String.IsNullOrEmpty(ReactionWounds))
                         {
@@ -576,11 +576,11 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
                             protagonist.Hitpoints -= wound;
 
-                            fight.Add(String.Format("{0} нанёс урон: {1}", enemy.Name, wound));
+                            fight.Add($"{enemy.Name} нанёс урон: {wound}");
                         }
                         else if (IncrementWounds)
                         {
-                            fight.Add(String.Format("{0} нанёс урон: {1}", enemy.Name, incrementWounds));
+                            fight.Add($"{enemy.Name} нанёс урон: {incrementWounds}");
 
                             protagonist.Hitpoints -= incrementWounds;
 
