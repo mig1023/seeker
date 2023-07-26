@@ -520,12 +520,12 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                         if (enemy.Hitpoints > 6)
                         {
                             enemy.Hitpoints /= 2;
-                            fight.Add(String.Format("GOOD|{0} ранен на половину своих жизней", enemy.Name));
+                            fight.Add($"GOOD|{enemy.Name} ранен на половину своих жизней");
                         }
                         else
                         {
                             enemy.Hitpoints = 0;
-                            fight.Add(String.Format("GOOD|{0} убит наповал", enemy.Name));
+                            fight.Add($"GOOD|{enemy.Name} убит наповал");
 
                             if (Services.EnemyLostFight(FightEnemies, ref fight))
                                 return fight;
