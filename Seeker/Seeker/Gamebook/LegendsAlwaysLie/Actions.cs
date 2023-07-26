@@ -614,7 +614,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                         }
                         else
                         {
-                            fight.Add(String.Format("GOOD|{0} ранен атакой Коннери", enemy.Name));
+                            fight.Add($"GOOD|{enemy.Name} ранен атакой Коннери");
                             enemy.Hitpoints -= 1;
 
                             if (Services.EnemyLostFight(FightEnemies, ref fight, connery: true))
