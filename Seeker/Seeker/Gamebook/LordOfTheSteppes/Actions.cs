@@ -33,14 +33,14 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             if (!String.IsNullOrEmpty(Stat))
             {
                 int diff = GetProperty(protagonist, Stat) - Constants.GetStartValues[Stat];
-                string diffLine = diff > 0 ? String.Format(" (+{0})", diff) : String.Empty;
+                string diffLine = diff > 0 ? $" (+{diff})" : String.Empty;
 
-                return new List<string> { String.Format("{0}{1}", Head, diffLine) };
+                return new List<string> { $"{Head}{diffLine}" };
             }
             else if (Price > 0)
             {
                 string coins = Game.Services.CoinsNoun(Price, "монета", "монеты", "монет");
-                return new List<string> { String.Format("{0}, {1} {2}", Head, Price, coins) };
+                return new List<string> { $"{Head}, {Price} {coins}" };
             }
             else if (!String.IsNullOrEmpty(Head) || (Type == "Get"))
             {
