@@ -485,9 +485,10 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                     Game.Dice.DoubleRoll(out int firstEnemyRoll, out int secondEnemyRoll);
                     int enemyHitStrength = firstEnemyRoll + secondEnemyRoll + enemy.Strength;
 
-                    fight.Add(String.Format("Его удар: {0} + {1} + {2} = {3}",
-                        Game.Dice.Symbol(firstEnemyRoll), Game.Dice.Symbol(secondEnemyRoll),
-                        enemy.Strength, enemyHitStrength));
+                    fight.Add($"Его удар: " +
+                        $"{Game.Dice.Symbol(firstEnemyRoll)} + " +
+                        $"{Game.Dice.Symbol(secondEnemyRoll)} + " +
+                        $"{enemy.Strength} = {enemyHitStrength}");
 
                     bool zombieWound = false;
 
