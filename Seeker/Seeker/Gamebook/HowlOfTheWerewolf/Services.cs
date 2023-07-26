@@ -316,8 +316,8 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                 {
                     int shotRoll = Game.Dice.Roll();
 
-                    fight.Add(String.Format("{0} выстрел по {1}: {2}",
-                        shot, fightEnemies[enemyIndex].Name, Game.Dice.Symbol(shotRoll)));
+                    fight.Add($"{shot} выстрел по {fightEnemies[enemyIndex].Name}: " +
+                        $"{Game.Dice.Symbol(shotRoll)}");
 
                     if (shotRoll == 6)
                     {
