@@ -502,15 +502,17 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                             zombieWound = true;
                     }
 
-                    bool lightningLunge = (warriorFight &&
-                        (firstProtagonistRoll == secondProtagonistRoll) && !Game.Option.IsTriggered("EvilEye"));
+                    bool doubleRoll = firstProtagonistRoll == secondProtagonistRoll;
+                    bool lightningLunge = (warriorFight && doubleRoll && !Game.Option.IsTriggered("EvilEye"));
 
                     if (ZombieFight && (protagonistHitStrength > enemyHitStrength) && !zombieWound)
+                    {
                         fight.Add("BOLD|Вы не смогли пробить до кости");
-
+                    }
                     else if (GolemFight && (protagonistHitStrength > enemyHitStrength))
+                    {
                         fight.Add("BOLD|Вы отбили все атаки");
-
+                    }
                     else if (warriorFight && (firstProtagonistRoll == secondProtagonistRoll) && (firstProtagonistRoll == 6))
                     {
                         fight.Add("BOLD|Вы сделали 'Крыло ястреба'!");
