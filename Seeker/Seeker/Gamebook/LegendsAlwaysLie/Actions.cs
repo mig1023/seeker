@@ -306,7 +306,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
             int dice = Game.Dice.Roll();
             
-            diceCheck.Add(String.Format("На кубикe выпало: {0}", Game.Dice.Symbol(dice)));
+            diceCheck.Add($"На кубикe выпало: {Game.Dice.Symbol(dice)}");
             diceCheck.Add(dice % 2 == 0 ? "BIG|ЧЁТНОЕ ЧИСЛО!" : "BIG|НЕЧЁТНОЕ ЧИСЛО!");
 
             return diceCheck;
