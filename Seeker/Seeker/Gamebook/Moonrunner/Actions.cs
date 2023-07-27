@@ -280,16 +280,17 @@ namespace Seeker.Gamebook.Moonrunner
                     if (Invulnerable)
                         fight.Add(enemy.Name);
                     else
-                        fight.Add(String.Format("{0} (выносливость {1})", enemy.Name, enemy.Endurance));
+                        fight.Add($"{enemy.Name} (выносливость {enemy.Endurance})");
 
                     if (!attackAlready)
                     {
                         Game.Dice.DoubleRoll(out int protagonistRollFirst, out int protagonistRollSecond);
                         protagonistHitStrength = protagonistRollFirst + protagonistRollSecond + protagonist.Mastery;
 
-                        fight.Add(String.Format("Сила вашего удара: {0} + {1} + {2} = {3}",
-                            Game.Dice.Symbol(protagonistRollFirst), Game.Dice.Symbol(protagonistRollSecond),
-                            protagonist.Mastery, protagonistHitStrength));
+                        fight.Add($"Сила вашего удара: " +
+                            $"{Game.Dice.Symbol(protagonistRollFirst)} + " +
+                            $"{Game.Dice.Symbol(protagonistRollSecond)} + " +
+                            $"{protagonist.Mastery} = {protagonistHitStrength}");
                     }
 
                     int enemyHitStrength = 0;
