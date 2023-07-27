@@ -230,8 +230,10 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                 Game.Dice.DoubleRoll(out firstRoll, out secondRoll);
                 int enemyStrength = firstRoll + secondRoll + ENEMY_STRENGTH;
 
-                fight.Add(String.Format("Cила удара удальца: {0} + {1} + {2} = {3}",
-                    Game.Dice.Symbol(firstRoll), Game.Dice.Symbol(secondRoll), ENEMY_STRENGTH, enemyStrength));
+                fight.Add($"Cила удара удальца: " +
+                    $"{Game.Dice.Symbol(firstRoll)} + " +
+                    $"{Game.Dice.Symbol(secondRoll)} + " +
+                    $"{ENEMY_STRENGTH} = {enemyStrength}");
 
                 if (protagonistStrength > enemyStrength)
                 {
