@@ -184,19 +184,19 @@ namespace Seeker.Gamebook.OctopusIsland
                     }
                     else if (protagonistHitStrength < enemyHitStrength)
                     {
-                        fight.Add(String.Format("BAD|{0} ранил {1}", enemy.Name, protagonist.Name));
+                        fight.Add($"BAD|{enemy.Name} ранил {protagonist.Name}");
 
                         protagonist.Hitpoint -= 2;
 
                         if (!Services.SetCurrentWarrior(ref fight))
                         {
                             fight.Add(String.Empty);
-                            fight.Add(String.Format("BIG|BAD|Вы ПРОИГРАЛИ :("));
+                            fight.Add("BIG|BAD|Вы ПРОИГРАЛИ :(");
                             return fight;
                         }
                     }
                     else
-                        fight.Add(String.Format("BOLD|Ничья в раунде"));
+                        fight.Add("BOLD|Ничья в раунде");
 
                     fight.Add(String.Empty);
                 }
