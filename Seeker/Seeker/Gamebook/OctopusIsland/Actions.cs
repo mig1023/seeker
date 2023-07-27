@@ -23,23 +23,23 @@ namespace Seeker.Gamebook.OctopusIsland
                 return enemies;
 
             foreach (Character enemy in Enemies)
-                enemies.Add(String.Format("{0}\nловкость {1}  жизни {2}", enemy.Name, enemy.Skill, enemy.Hitpoint));
+                enemies.Add($"{enemy.Name}\nловкость {enemy.Skill}  жизни {enemy.Hitpoint}");
 
             return enemies;
         }
 
         public override List<string> Status() => new List<string>
         {
-            String.Format("Обедов: {0}", protagonist.Food),
-            String.Format("Животворная мазь: {0}", protagonist.LifeGivingOintment),
+            $"Обедов: {protagonist.Food}",
+            $"Животворная мазь: {protagonist.LifeGivingOintment}",
         };
 
         public override List<string> AdditionalStatus() => new List<string>
         {
-            String.Format("Серж: {0}/{1}", protagonist.SergeSkill, protagonist.SergeHitpoint),
-            String.Format("Ксолотл: {0}/{1}", protagonist.XolotlSkill, protagonist.XolotlHitpoint),
-            String.Format("Тибо: {0}/{1}", protagonist.ThibautSkill, protagonist.ThibautHitpoint),
-            String.Format("Суи: {0}/{1}", protagonist.SouhiSkill, protagonist.SouhiHitpoint),
+            $"Серж: {protagonist.SergeSkill}/{protagonist.SergeHitpoint}",
+            $"Ксолотл: {protagonist.XolotlSkill}/{protagonist.XolotlHitpoint}",
+            $"Тибо: {protagonist.ThibautSkill}/{protagonist.ThibautHitpoint}",
+            $"Суи: {protagonist.SouhiSkill}/{protagonist.SouhiHitpoint}",
         };
 
         public override List<string> StaticButtons()
