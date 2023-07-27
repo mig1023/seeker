@@ -285,7 +285,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
 
             List<string> stoneThrow = new List<string> { };
 
-            stoneThrow.Add(String.Format("На кубике выпало: {0}", Game.Dice.Symbol(dice)));
+            stoneThrow.Add($"На кубике выпало: {Game.Dice.Symbol(dice)}");
             stoneThrow.Add(Result(dice > 4, "Вы попали|Вы промахнулись"));
 
             return stoneThrow;
@@ -297,8 +297,8 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
 
             Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
 
-            game.Add(String.Format("На кубиках выпало: {0} и {1}", Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice)));
-            game.Add(String.Format("BIG|BOLD|Итого выпало: {0}", firstDice + secondDice));
+            game.Add($"На кубиках выпало: {Game.Dice.Symbol(firstDice)} и {Game.Dice.Symbol(secondDice)}");
+            game.Add($"BIG|BOLD|Итого выпало: {firstDice + secondDice}");
 
             return game;
         }
