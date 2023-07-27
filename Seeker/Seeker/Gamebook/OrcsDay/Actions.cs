@@ -42,23 +42,23 @@ namespace Seeker.Gamebook.OrcsDay
 
             if (OrcishnessTest && (Level > 0))
             {
-                return new List<string> { String.Format("Проверка {0}\nуровень Оркишность ({1}) + {2}",
-                    Constants.StatNames[Stat], protagonist.Orcishness, Level) };
+                return new List<string> { $"Проверка {Constants.StatNames[Stat]}\n" +
+                    $"уровень Оркишность ({protagonist.Orcishness}) + {Level}" };
             }
             else if (OrcishnessTest)
             {
-                return new List<string> { String.Format("Проверка {0}\nпо уровню Оркишности",
-                    Constants.StatNames[Stat]) };
+                return new List<string> { $"Проверка {Constants.StatNames[Stat]}\n" +
+                    $"по уровню Оркишности" };
             }
             else if (Level > 0)
             {
-                return new List<string> { String.Format("Проверка {0}, уровень {1}",
-                    Constants.StatNames[Stat], Level) };
+                return new List<string> { $"Проверка {Constants.StatNames[Stat]}, " +
+                    $"уровень {Level}" };
             }
             else if (!String.IsNullOrEmpty(Stat))
             {
-                return new List<string> { String.Format("{0}\n(текущее значение: {1})",
-                    Head, Game.Services.NegativeMeaning(GetProperty(protagonist, Stat))) };
+                return new List<string> { $"{Head}\n(текущее значение: " +
+                    $"{Game.Services.NegativeMeaning(GetProperty(protagonist, Stat))})" };
             }
             else if (Price > 0)
             {
@@ -70,8 +70,12 @@ namespace Seeker.Gamebook.OrcsDay
             }
 
             foreach (Character enemy in Enemies)
-                enemies.Add(String.Format("{0}\nатака {1}  защита {2}  здоровье {3}",
-                    enemy.Name, enemy.Attack, enemy.Defense, enemy.Hitpoints));
+            {
+                enemies.Add($"{enemy.Name}\nатака " +
+                    $"{enemy.Attack}  защита " +
+                    $"{enemy.Defense}  здоровье " +
+                    $"{enemy.Hitpoints}");
+            }
 
             return enemies;
         }
