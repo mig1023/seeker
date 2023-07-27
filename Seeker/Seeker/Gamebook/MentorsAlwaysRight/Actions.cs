@@ -548,14 +548,19 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                     if ((enemy.Hitpoints <= 0) && !Invincible)
                         continue;
 
-                    if (Regeneration && (round % 4 == 0) && (enemy.Hitpoints < Enemies.Where(x => x.Name == enemy.Name).FirstOrDefault().Hitpoints))
+                    if (Regeneration && (round % 4 == 0))
                     {
-                        enemy.Hitpoints += 1;
-                        fight.Add(String.Format("BOLD|{0} восстановил 1 жизнь", enemy.Name));
+                        int baseHitpoints = Enemies.Where(x => x.Name == enemy.Name).FirstOrDefault().Hitpoints;
+
+                        if (enemy.Hitpoints < baseHitpoints)
+                        {
+                            enemy.Hitpoints += 1;
+                            fight.Add($"BOLD|{enemy.Name} восстановил 1 жизнь");
+                        }
                     }
 
                     if (!Invincible)
-                        fight.Add(String.Format("{0} (жизни: {1})", enemy.Name, enemy.Hitpoints));
+                        fight.Add($"{enemy.Name} (жизни: {enemy.Hitpoints})");
 
                     int protagonistStrength = (bear ? 14 : protagonist.Strength);
 
