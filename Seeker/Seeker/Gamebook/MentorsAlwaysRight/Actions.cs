@@ -567,18 +567,18 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                     Game.Dice.DoubleRoll(out int firstProtagonistRoll, out int secondProtagonistRoll);
                     int protagonistHitStrength = firstProtagonistRoll + secondProtagonistRoll + protagonistStrength;
 
-                    fight.Add(String.Format(
-                        "Ваш удар: {0} + {1} + {2} = {3}",
-                        Game.Dice.Symbol(firstProtagonistRoll), Game.Dice.Symbol(secondProtagonistRoll),
-                        protagonistStrength, protagonistHitStrength));
+                    fight.Add($"Ваш удар: " +
+                        $"{Game.Dice.Symbol(firstProtagonistRoll)} + " +
+                        $"{Game.Dice.Symbol(secondProtagonistRoll)} + " +
+                        $"{protagonistStrength} = {protagonistHitStrength}");
 
                     Game.Dice.DoubleRoll(out int firstEnemyRoll, out int secondEnemyRoll);
                     int enemyHitStrength = firstEnemyRoll + secondEnemyRoll + enemy.Strength;
 
-                    fight.Add(String.Format(
-                        "Его удар: {0} + {1} + {2} = {3}",
-                        Game.Dice.Symbol(firstEnemyRoll), Game.Dice.Symbol(secondEnemyRoll),
-                        enemy.Strength, enemyHitStrength));
+                    fight.Add($"Его удар: " +
+                        $"{Game.Dice.Symbol(firstEnemyRoll)} + " +
+                        $"{Game.Dice.Symbol(secondEnemyRoll)} + " +
+                        $"{enemy.Strength} = {enemyHitStrength}");
 
                     if (ReactionFight)
                         reactionFail = !Services.GoodReaction(ref fight, showResult: true);
