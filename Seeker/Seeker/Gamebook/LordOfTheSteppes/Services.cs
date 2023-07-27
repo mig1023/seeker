@@ -256,12 +256,13 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                     defender.Endurance -= 3;
                 }
 
-                string defenderName = (IsProtagonist(defender.Name) ? "Вы ранены" : String.Format("{0} ранен", defender.Name));
+                string defenderName = IsProtagonist(defender.Name) ? "Вы ранены" : $"{defender.Name} ранен";
 
                 if (defender.Endurance > 0)
-                    defenderName += String.Format(" (осталось жизней: {0})", defender.Endurance);
+                    defenderName += $" (осталось жизней: {defender.Endurance})";
 
-                fight.Add(String.Format("{0}|{1}", (Allies.Contains(defender) ? "BAD" : "GOOD"), defenderName));
+                string sideType = Allies.Contains(defender) ? "BAD" : "GOOD";
+                fight.Add($"{sideType}|{defenderName}");
 
                 AttackStory[attacker.Name].Add(SUCCESSFUL_ATTACK);
                 AttackStory[defender.Name].Add(WOUND);
@@ -270,7 +271,8 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             }
             else
             {
-                fight.Add(String.Format("{0}|Атака отбита", (Allies.Contains(defender) ? "GOOD" : "BAD")));
+                string sideType = Allies.Contains(defender) ? "GOOD" : "BAD";
+                fight.Add($"{sideType}|Атака отбита");
 
                 if (specialRules["powerfulStrike"] && (round < 3))
                 {
