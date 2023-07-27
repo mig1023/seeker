@@ -130,17 +130,17 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
         public override bool IsButtonEnabled(bool secondButton = false)
         {
-            bool disabledByChoosed = (SpecialTechnique != Character.SpecialTechniques.Nope) &&
+            bool byChoosed = (SpecialTechnique != Character.SpecialTechniques.Nope) &&
                 (protagonist.SpecialTechnique.Count > 0);
 
-            bool disabledByBonusesRemove = !String.IsNullOrEmpty(Stat) &&
+            bool byBonusesRemove = !String.IsNullOrEmpty(Stat) &&
                 ((GetProperty(protagonist, Stat) - Constants.GetStartValues[Stat]) <= 0) && secondButton;
 
-            bool disabledByBonusesAdd = (!String.IsNullOrEmpty(Stat)) && (protagonist.Bonuses <= 0) && !secondButton;
-            bool disabledByPrice = (Price > 0) && (protagonist.Coins < Price);
-            bool disabledByUsed = ((Price > 0) ||(Price < 0)) && Used;
+            bool byBonusesAdd = (!String.IsNullOrEmpty(Stat)) && (protagonist.Bonuses <= 0) && !secondButton;
+            bool byPrice = (Price > 0) && (protagonist.Coins < Price);
+            bool byUsed = ((Price > 0) ||(Price < 0)) && Used;
 
-            return !(disabledByChoosed || disabledByBonusesAdd || disabledByBonusesRemove || disabledByPrice || disabledByUsed);
+            return !(byChoosed || byBonusesAdd || byBonusesRemove || byPrice || byUsed);
         }
 
         public override bool Availability(string option)
@@ -222,8 +222,10 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                 Game.Dice.DoubleRoll(out int firstRoll, out int secondRoll);
                 int protagonistStrength = firstRoll + secondRoll + protagonist.Attack;
 
-                fight.Add(String.Format("Ваша сила удара: {0} + {1} + {2} = {3}",
-                    Game.Dice.Symbol(firstRoll), Game.Dice.Symbol(secondRoll), protagonist.Attack, protagonistStrength));
+                fight.Add($"Ваша сила удара: " +
+                    $"{Game.Dice.Symbol(firstRoll)} + " +
+                    $"{Game.Dice.Symbol(secondRoll)} + " +
+                    $"{protagonist.Attack} = {protagonistStrength}");
 
                 Game.Dice.DoubleRoll(out firstRoll, out secondRoll);
                 int enemyStrength = firstRoll + secondRoll + ENEMY_STRENGTH;
