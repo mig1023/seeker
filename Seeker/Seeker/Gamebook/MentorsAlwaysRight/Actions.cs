@@ -70,10 +70,14 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                     currentSpells.Add(spell.ToLower(), 1);
             }
 
-            List<string> statusLines = new List<string> { String.Format("Золото: {0}", protagonist.Gold) };
+            List<string> statusLines = new List<string> { $"Золото: {protagonist.Gold}" };
 
             foreach (string spell in currentSpells.Keys.ToList().OrderBy(x => x))
-                statusLines.Insert(0, String.Format("Заклятье {0} - {1} шт", char.ToUpper(spell[0]) + spell.Substring(1), currentSpells[spell]));
+            {
+                string spellName = char.ToUpper(spell[0]) + spell.Substring(1);
+                string spellLine = $"Заклятье {spellName} - {currentSpells[spell]} шт";
+                statusLines.Insert(0, spellLine);
+            }
 
             return statusLines;
         }
