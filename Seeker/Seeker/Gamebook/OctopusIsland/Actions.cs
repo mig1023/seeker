@@ -152,12 +152,14 @@ namespace Seeker.Gamebook.OctopusIsland
                     Game.Dice.DoubleRoll(out int enemyRollFirst, out int enemyRollSecond);
                     int enemyHitStrength = enemyRollFirst + enemyRollSecond + enemy.Skill;
 
-                    fight.Add(String.Format("{0}: мощность удара: {1} + {2} + {3} = {4}",
-                        enemy.Name, Game.Dice.Symbol(enemyRollFirst), Game.Dice.Symbol(enemyRollSecond), enemy.Skill, enemyHitStrength));
+                    fight.Add($"{enemy.Name}: мощность удара: " +
+                        $"{Game.Dice.Symbol(enemyRollFirst)} + " +
+                        $"{Game.Dice.Symbol(enemyRollSecond)} + " +
+                        $"{enemy.Skill} = {enemyHitStrength}");
 
                     if (protagonistHitStrength > enemyHitStrength)
                     {
-                        fight.Add(String.Format("GOOD|{0} ранен", enemy.Name));
+                        fight.Add($"GOOD|{enemy.Name} ранен");
 
                         enemy.Hitpoint -= 2;
                         enemyWounds += 1;
@@ -167,11 +169,11 @@ namespace Seeker.Gamebook.OctopusIsland
                         if (enemyLost || ((WoundsToWin > 0) && (WoundsToWin <= enemyWounds)))
                         {
                             fight.Add(String.Empty);
-                            fight.Add(String.Format("BIG|GOOD|Вы ПОБЕДИЛИ :)"));
+                            fight.Add("BIG|GOOD|Вы ПОБЕДИЛИ :)");
 
                             if (ReturnedStuffs)
                             {
-                                fight.Add(String.Format("GOOD|Вы вернули украденные у вас рюкзаки!"));
+                                fight.Add("GOOD|Вы вернули украденные у вас рюкзаки!");
                                 protagonist.StolenStuffs = 0;
                             }
 
