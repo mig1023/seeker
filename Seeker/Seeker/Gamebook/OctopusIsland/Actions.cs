@@ -131,7 +131,7 @@ namespace Seeker.Gamebook.OctopusIsland
 
             while (true)
             {
-                fight.Add(String.Format("HEAD|Раунд: {0}", round));
+                fight.Add("HEAD|Раунд: {round}");
 
                 foreach (Character enemy in FightEnemies)
                 {
@@ -139,14 +139,15 @@ namespace Seeker.Gamebook.OctopusIsland
                         continue;
 
                     Character enemyInFight = enemy;
-                    fight.Add(String.Format("{0} (жизнь {1})", enemy.Name, enemy.Hitpoint));
+                    fight.Add($"{enemy.Name} (жизнь {enemy.Hitpoint})");
 
                     Game.Dice.DoubleRoll(out int protagonistRollFirst, out int protagonistRollSecond);
                     int protagonistHitStrength = protagonistRollFirst + protagonistRollSecond + protagonist.Skill;
 
-                    fight.Add(String.Format("{0}: мощность удара: {1} + {2} + {3} = {4}",
-                        protagonist.Name, Game.Dice.Symbol(protagonistRollFirst), Game.Dice.Symbol(protagonistRollSecond),
-                        protagonist.Skill, protagonistHitStrength));
+                    fight.Add($"{protagonist.Name}: мощность удара: " +
+                        $"{Game.Dice.Symbol(protagonistRollFirst)} + " +
+                        $"{Game.Dice.Symbol(protagonistRollSecond)} + " +
+                        $"{protagonist.Skill} = {protagonistHitStrength}");
 
                     Game.Dice.DoubleRoll(out int enemyRollFirst, out int enemyRollSecond);
                     int enemyHitStrength = enemyRollFirst + enemyRollSecond + enemy.Skill;
