@@ -123,21 +123,21 @@ namespace Seeker.Gamebook.LordOfTheSteppes
         }
 
         public static void OutputInitiative(ref List<string> fight, List<Character> FightEnemies, List<Character> FightOrder,
-            string iTemplate, string protagonistLine, string enemyLine, bool reverse = false, bool special = false)
+            string protagonistLine, string enemyLine, bool reverse = false, bool special = false)
         {
-            string fisrtTemplate = (special ? "{0} (особый приём Первый удар)" : iTemplate);
+            string fisrtTemplate = (special ? "{0} (особый приём Первый удар)" : "{0} (инициатива {1})");
 
             if (!reverse)
             {
                 fight.Add(String.Format(fisrtTemplate, Character.Protagonist.Name, protagonistLine));
-                fight.Add(String.Format(iTemplate, FightEnemies[0].Name, enemyLine));
+                fight.Add(String.Format("{0} (инициатива {1})", FightEnemies[0].Name, enemyLine));
 
                 FightOrder.Add(FightEnemies[0]);
             }
             else
             {
                 fight.Add(String.Format(fisrtTemplate, FightEnemies[0].Name, enemyLine));
-                fight.Add(String.Format(iTemplate, Character.Protagonist.Name, protagonistLine));
+                fight.Add(String.Format("{0} (инициатива {1})", Character.Protagonist.Name, protagonistLine));
 
                 FightOrder.Insert(0, FightEnemies[0]);
             }

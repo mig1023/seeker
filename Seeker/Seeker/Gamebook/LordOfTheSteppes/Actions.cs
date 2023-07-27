@@ -346,7 +346,6 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             List<string> fight = new List<string>();
 
             int iProtagonist, iEnemy, round = 1, enemyWounds = 0;
-            string protagonistLine, enemyLine, iTemplate = "{0} (инициатива {1})";
 
             List<Character> FightAllies = new List<Character>();
             List<Character> FightEnemies = new List<Character>();
@@ -398,13 +397,17 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                 FightOrder = FightAll.OrderByDescending(o => o.Initiative).ToList();
 
                 foreach (Character fighter in FightOrder)
-                    fight.Add(String.Format(iTemplate, fighter.Name, fighter.Initiative));
+                    fight.Add($"{fighter.Name} (инициатива {fighter.Initiative})");
             }
             else
             {
-                bool firstStrike = protagonist.SpecialTechnique.Contains(Character.SpecialTechniques.FirstStrike);
-                bool enemyFirstStrike = FightEnemies[0].SpecialTechnique.Contains(Character.SpecialTechniques.FirstStrike);
-                bool enemyIgnoreFirstStrike = FightEnemies[0].SpecialTechnique.Contains(Character.SpecialTechniques.IgnoreFirstStrike);
+                bool firstStrike = protagonist.SpecialTechnique
+                    .Contains(Character.SpecialTechniques.FirstStrike);
+                bool enemyFirstStrike = FightEnemies[0].SpecialTechnique
+                    .Contains(Character.SpecialTechniques.FirstStrike);
+                bool enemyIgnoreFirstStrike = FightEnemies[0].SpecialTechnique
+                    .Contains(Character.SpecialTechniques.IgnoreFirstStrike);
+                string protagonistLine, enemyLine;
 
                 FightOrder = new List<Character>();
 
@@ -418,16 +421,16 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                 FightOrder.Add(protagonist);
 
                 if (firstStrike && !enemyFirstStrike && !enemyIgnoreFirstStrike)
-                    Services.OutputInitiative(ref fight, FightEnemies, FightOrder, iTemplate, protagonistLine, enemyLine, special: true);
+                    Services.OutputInitiative(ref fight, FightEnemies, FightOrder, protagonistLine, enemyLine, special: true);
 
                 else if (!firstStrike && enemyFirstStrike)
-                    Services.OutputInitiative(ref fight, FightEnemies, FightOrder, iTemplate, protagonistLine, enemyLine, reverse: true, special: true);
+                    Services.OutputInitiative(ref fight, FightEnemies, FightOrder, protagonistLine, enemyLine, reverse: true, special: true);
 
                 else if (iProtagonist > iEnemy)
-                    Services.OutputInitiative(ref fight, FightEnemies, FightOrder, iTemplate, protagonistLine, enemyLine);
+                    Services.OutputInitiative(ref fight, FightEnemies, FightOrder, protagonistLine, enemyLine);
 
                 else
-                    Services.OutputInitiative(ref fight, FightEnemies, FightOrder, iTemplate, protagonistLine, enemyLine, reverse: true);
+                    Services.OutputInitiative(ref fight, FightEnemies, FightOrder, protagonistLine, enemyLine, reverse: true);
             }
 
             fight.Add(String.Empty);
