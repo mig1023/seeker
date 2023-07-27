@@ -16,7 +16,9 @@ namespace Seeker.Gamebook.Moonrunner
                 Character.Protagonist.Gold -= Character.Protagonist.Offer;
             }
             else
+            {
                 base.Do(Character.Protagonist);
+            }
         }
     }
 }

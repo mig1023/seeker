@@ -11,11 +11,11 @@ namespace Seeker.Gamebook.Moonrunner
             Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
 
             goodLuck = (firstDice + secondDice) <= Character.Protagonist.Luck;
+            string luckLine = goodLuck ? "<=" : ">";
 
-            List<string> luckCheck = new List<string> { String.Format(
-                "Проверка удачи: {0} + {1} {2} {3}",
-                Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), (goodLuck ? "<=" : ">"), Character.Protagonist.Luck
-            ) };
+            List<string> luckCheck = new List<string> { $"Проверка удачи: " +
+                $"{Game.Dice.Symbol(firstDice)} + {Game.Dice.Symbol(secondDice)} " +
+                $"{luckLine} {Character.Protagonist.Luck}" };
 
             luckCheck.Add(goodLuck ? "BIG|GOOD|УСПЕХ :)" : "BIG|BAD|НЕУДАЧА :(");
 
