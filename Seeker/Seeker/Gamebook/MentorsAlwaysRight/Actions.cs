@@ -104,9 +104,9 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             foreach (Character enemy in Enemies)
             {
                 if (enemy.Hitpoints > 0)
-                    enemies.Add(String.Format("{0}\nсила {1}  жизни {2}", enemy.Name, enemy.Strength, enemy.Hitpoints));
+                    enemies.Add($"{enemy.Name}\nсила {enemy.Strength}  жизни {enemy.Hitpoints}");
                 else
-                    enemies.Add(String.Format("{0}\nсила {1}", enemy.Name, enemy.Strength));
+                    enemies.Add($"{enemy.Name}\nсила {enemy.Strength}");
             }
 
             return enemies;
