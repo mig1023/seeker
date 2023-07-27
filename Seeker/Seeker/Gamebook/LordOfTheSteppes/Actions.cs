@@ -322,7 +322,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
             if (Dices == 1)
             {
-                diceCheck.Add(String.Format("{0}На кубикe выпало: {1}", size, Game.Dice.Symbol(firstDice)));
+                diceCheck.Add($"{size}На кубикe выпало: {Game.Dice.Symbol(firstDice)}");
             }
             else
             {
