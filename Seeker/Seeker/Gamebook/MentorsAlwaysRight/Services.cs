@@ -57,7 +57,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                 Character.Protagonist.Hitpoints += hitpointsBonus;
 
                 fight.Add(String.Empty);
-                fight.Add(String.Format("GOOD|Благодаря крови, попавшей на вас, вы восстановили {0} жизни", hitpointsBonus));
+                fight.Add($"GOOD|Благодаря крови, попавшей на вас, вы восстановили {hitpointsBonus} жизни");
             }
 
             if (Game.Option.IsTriggered("Rabies"))
@@ -113,8 +113,8 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             string woundWolfLine = Game.Services.CoinsNoun(wolfWound, "Силу", "Силы", "Сил");
             string woundLine = Game.Services.CoinsNoun(wound, "Силы", "Сил", "Сил");
 
-            fight.Add(String.Format("Форма волка защищает вас и вы теряете {0} {1} вместо {2} {3}!",
-                wolfWound, woundWolfLine, wound, woundLine));
+            fight.Add($"Форма волка защищает вас и вы теряете {wolfWound} " +
+                $"{woundWolfLine} вместо {wound} {woundLine}!");
 
             return wolfWound;
         }
