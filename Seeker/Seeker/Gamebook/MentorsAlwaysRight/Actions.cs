@@ -314,12 +314,12 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             {
                 int dice = Game.Dice.Roll();
                 dices += dice;
-                diceCheck.Add(String.Format("На {0} выпало: {1}", i, Game.Dice.Symbol(dice)));
+                diceCheck.Add($"На {i} выпало: {Game.Dice.Symbol(dice)}");
             }
 
             protagonist.Hitpoints -= dices;
 
-            diceCheck.Add(String.Format("BIG|BAD|Вы потеряли жизней: {0}", dices));
+            diceCheck.Add($"BIG|BAD|Вы потеряли жизней: {dices}");
 
             return diceCheck;
         }
