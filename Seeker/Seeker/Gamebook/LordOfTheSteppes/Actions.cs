@@ -465,9 +465,9 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                     fight.Add(String.Empty);
 
                     if (GroupFight)
-                        fight.Add(String.Format("BOLD|{0} выбрает противника для атаки: {1}", fighter.Name, enemy.Name));
+                        fight.Add($"BOLD|{fighter.Name} выбрает противника для атаки: {enemy.Name}");
                     else
-                        fight.Add(String.Format("BOLD|{0} атакует", fighter.Name));
+                        fight.Add($"BOLD|{fighter.Name} атакует");
 
                     enemyWounds += Services.Attack(fighter, enemy, ref fight, FightAllies, ref WoundsCount, ref AttackStory, round,
                         coherenceIndex, Coherence, out bool reactionSuccess);
@@ -477,11 +477,16 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                         fight.Add("Дополнительная атака (особый приём):");
 
                         if (reactionSuccess)
-                            fight.Add(String.Format("{0}|Уклонение от атаки благодаря Реакции (особый приём)",
-                                (FightAllies.Contains(enemy) ? "GOOD" : "BAD")));
+                        {
+                            string type = FightAllies.Contains(enemy) ? "GOOD" : "BAD";
+                            fight.Add($"{type}|Уклонение от атаки благодаря Реакции (особый приём)");
+                        }
                         else
-                            enemyWounds += Services.Attack(fighter, enemy, ref fight, FightAllies, ref WoundsCount, ref AttackStory, round,
-                                coherenceIndex, Coherence, out bool _, supplAttack: true);
+                        {
+                            enemyWounds += Services.Attack(fighter, enemy, ref fight, FightAllies,
+                                ref WoundsCount, ref AttackStory, round, coherenceIndex, Coherence,
+                                out bool _, supplAttack: true);
+                        }
                     }
 
                     if (FightEnemies.Contains(fighter))
