@@ -12,11 +12,12 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
         public static bool GoodReaction(ref List<string> reaction, bool showResult = false)
         {
             int reactionLevel = (int)Math.Floor((double)Character.Protagonist.Hitpoints / 5);
-            reaction.Add(String.Format("Уровнь реакции: {0} / 5 = {1}", Character.Protagonist.Hitpoints, reactionLevel));
+            reaction.Add($"Уровнь реакции: {Character.Protagonist.Hitpoints} / 5 = {reactionLevel}");
 
             int reactionDice = Game.Dice.Roll();
             bool goodReaction = reactionDice <= reactionLevel;
-            reaction.Add(String.Format("Реакция: {0} {1} {2}", Game.Dice.Symbol(reactionDice), (goodReaction ? "<=" : ">"), reactionLevel));
+            string reactionLine = goodReaction ? "<=" : ">";
+            reaction.Add($"Реакция: {Game.Dice.Symbol(reactionDice)} {reactionLine} {reactionLevel}");
 
             if (showResult)
                 reaction.Add(goodReaction ? "BOLD|Реакции хватило" : "BOLD|Реакция подвела");
