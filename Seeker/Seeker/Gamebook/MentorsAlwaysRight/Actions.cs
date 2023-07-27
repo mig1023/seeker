@@ -628,7 +628,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                         }
                         else
                         {
-                            fight.Add(String.Format("GOOD|{0} ранен", enemy.Name));
+                            fight.Add($"GOOD|{enemy.Name} ранен");
 
                             woundLine += 1;
                             roundsWin += 1;
@@ -636,7 +636,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                             if (Services.IsPoisonedBlade())
                             {
                                 enemy.Hitpoints -= 5;
-                                fight.Add(String.Format("BOLD|Из-за яда, рана отнимает у {0} сразу 5 жизней", enemy.Name));
+                                fight.Add($"BOLD|Из-за яда, рана отнимает у {enemy.Name} сразу 5 жизней");
                             }
                             else
                                 enemy.Hitpoints -= woundLevel;
@@ -650,7 +650,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                     }
                     else if ((protagonistHitStrength < enemyHitStrength) || reactionFail)
                     {
-                        fight.Add(String.Format("BAD|{0} ранил вас", enemy.Name));
+                        fight.Add($"BAD|{enemy.Name} ранил вас");
 
                         wounded += 1;
                         woundLine = 0;
@@ -663,13 +663,13 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                             protagonist.Hitpoints -= Services.HitWounds(ref fight, wound, wolf);
 
                             if (wound > 0)
-                                fight.Add(String.Format("{0} нанёс урон: {1}", enemy.Name, wound));
+                                fight.Add($"{enemy.Name} нанёс урон: {wound}");
                             else
-                                fight.Add(String.Format("GOOD|{0} не нанёс вам урона", enemy.Name));
+                                fight.Add($"GOOD|{enemy.Name} не нанёс вам урона");
                         }
                         else if (IncrementWounds)
                         {
-                            fight.Add(String.Format("{0} нанёс урон: {1}", enemy.Name, incrementWounds));
+                            fight.Add($"{enemy.Name} нанёс урон: {incrementWounds}");
 
                             protagonist.Hitpoints -= Services.HitWounds(ref fight, incrementWounds, wolf);
 
