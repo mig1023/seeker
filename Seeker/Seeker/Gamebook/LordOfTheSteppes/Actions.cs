@@ -328,10 +328,11 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             {
                 int secondDice = Game.Dice.Roll();
                 dicesResult += secondDice + (Initiative ? protagonist.Initiative : 0);
-                string initLine = (Initiative ? String.Format(" + {0} Инициатива", protagonist.Initiative) : String.Empty);
+                string initLine = (Initiative ? $" + {protagonist.Initiative} Инициатива" : String.Empty);
 
-                diceCheck.Add(String.Format("{0}На кубиках выпало: {1} + {2}{3} = {4}",
-                    size, Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), initLine, dicesResult));
+                diceCheck.Add($"{size}На кубиках выпало: " +
+                    $"{Game.Dice.Symbol(firstDice)} + " +
+                    $"{Game.Dice.Symbol(secondDice)}{initLine} = {dicesResult}");
             }
 
             if (Odd)
