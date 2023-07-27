@@ -523,7 +523,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
 
             while (true)
             {
-                fight.Add(String.Format("HEAD|BOLD|Раунд: {0}", round));
+                fight.Add($"HEAD|BOLD|Раунд: {round}");
 
                 bool block = EvenWound || ReactionFight;
                 bool reactionFail = false;
@@ -536,7 +536,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
 
                     FightEnemies[0].Hitpoints -= wound;
 
-                    fight.Add(String.Format("GOOD|{0} ранен метательными ножами и потерял {1} жизни", FightEnemies[0].Name, wound));
+                    fight.Add($"GOOD|{FightEnemies[0].Name} ранен метательными ножами и потерял {wound} жизни");
                     fight.Add(String.Empty);
 
                     if (Services.EnemyLostFight(FightEnemies, ref fight, WoundsLimit, Invincible, Poison, Regeneration))
