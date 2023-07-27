@@ -24,10 +24,10 @@ namespace Seeker.Gamebook.Moonrunner
 
         public override List<string> Status() => new List<string>
         {
-            String.Format("Мастерство: {0}", protagonist.Mastery),
-            String.Format("Выносливость: {0}/{1}", protagonist.Endurance, protagonist.MaxEndurance),
-            String.Format("Удача: {0}", protagonist.Luck),
-            String.Format("Золото: {0}", protagonist.Gold)
+            $"Мастерство: {protagonist.Mastery}",
+            $"Выносливость: {protagonist.Endurance}/{protagonist.MaxEndurance}",
+            $"Удача: {protagonist.Luck}",
+            $"Золото: {protagonist.Gold}",
         };
 
         public override bool Availability(string option)
@@ -119,7 +119,7 @@ namespace Seeker.Gamebook.Moonrunner
             if (Price > 0)
             {
                 string gold = Game.Services.CoinsNoun(Price, "золотой", "золотых", "золотых");
-                return new List<string> { String.Format("{0}, {1} {2}", Head, Price, gold) };
+                return new List<string> { $"{Head}, {Price} {gold}" };
             }
             else if (!String.IsNullOrEmpty(Stat))
             {
@@ -127,9 +127,9 @@ namespace Seeker.Gamebook.Moonrunner
                 string diffLine = String.Empty;
 
                 if (currentStat > 0)
-                    diffLine = String.Format(" (текущее: {0})", currentStat);
+                    diffLine = $" (текущее: {currentStat})";
 
-                return new List<string> { String.Format("{0}{1}", Head, diffLine) };
+                return new List<string> { $"{Head}{diffLine}" };
             }
             else if (ThisIsSkill)
                 return new List<string> { Head };
@@ -140,9 +140,9 @@ namespace Seeker.Gamebook.Moonrunner
             foreach (Character enemy in Enemies)
             {
                 if (enemy.Endurance > 0)
-                    enemies.Add(String.Format("{0}\nмастерство {1}  выносливость {2}", enemy.Name, enemy.Mastery, enemy.Endurance));
+                    enemies.Add($"{enemy.Name}\nмастерство {enemy.Mastery}  выносливость {enemy.Endurance}");
                 else
-                    enemies.Add(String.Format("{0}\nмастерство {1} ", enemy.Name, enemy.Mastery));
+                    enemies.Add($"{enemy.Name}\nмастерство {enemy.Mastery} ");
             }
 
             return enemies;
