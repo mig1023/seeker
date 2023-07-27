@@ -89,12 +89,13 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             if (Price > 0)
             {
                 string gold = Game.Services.CoinsNoun(Price, "золотой", "золотых", "золотых");
-                return new List<string> { String.Format("{0}, {1} {2}", Head, Price, gold) };
+                return new List<string> { $"{Head}, {Price} {gold}" };
             }
             else if (ThisIsSpell)
             {
                 int count = protagonist.Spells.Where(x => x == Head).Count();
-                return new List<string> { String.Format("{0}{1}", Head, (count > 0 ? String.Format(" ({0} шт)", count) : String.Empty)) };
+                string template = count > 0 ? $" ({count} шт)" : String.Empty;
+                return new List<string> { $"{Head}{template}" };
             }
 
             if (Enemies == null)
