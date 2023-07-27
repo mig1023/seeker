@@ -301,17 +301,22 @@ namespace Seeker.Gamebook.Moonrunner
 
                         enemyHitStrength += dices.Sum() - dices[failIndex] + enemy.Mastery;
 
-                        fight.Add(String.Format("Сила его удара: {0} + {1} + {2} (отбрасываем наименьшее значение: {3}) + {4} = {5}",
-                            Game.Dice.Symbol(dices[0]), Game.Dice.Symbol(dices[1]), Game.Dice.Symbol(dices[2]),
-                            dices[failIndex], enemy.Mastery, enemyHitStrength));
+                        fight.Add($"Сила его удара: " +
+                            $"{Game.Dice.Symbol(dices[0])} + " +
+                            $"{Game.Dice.Symbol(dices[1])} + " +
+                            $"{Game.Dice.Symbol(dices[2])} " +
+                            $"(отбрасываем наименьшее значение: {dices[failIndex]}) + " +
+                            $"{enemy.Mastery} = {enemyHitStrength}");
                     }
                     else
                     {
                         Game.Dice.DoubleRoll(out int enemyRollFirst, out int enemyRollSecond);
                         enemyHitStrength = enemyRollFirst + enemyRollSecond + enemy.Mastery;
 
-                        fight.Add(String.Format("Сила его удара: {0} + {1} + {2} = {3}",
-                            Game.Dice.Symbol(enemyRollFirst), Game.Dice.Symbol(enemyRollSecond), enemy.Mastery, enemyHitStrength));
+                        fight.Add($"Сила его удара: " +
+                            $"{Game.Dice.Symbol(enemyRollFirst)} + " +
+                            $"{Game.Dice.Symbol(enemyRollSecond)} + " +
+                            $"{enemy.Mastery} = {enemyHitStrength}");
 
                         if (DoubleFail && (enemyRollFirst == enemyRollSecond))
                         {
@@ -332,7 +337,7 @@ namespace Seeker.Gamebook.Moonrunner
                         }
                         else
                         {
-                            fight.Add(String.Format("GOOD|{0} ранен", enemy.Name));
+                            fight.Add($"GOOD|{enemy.Name} ранен");
 
                             enemy.Endurance -= 2;
 
