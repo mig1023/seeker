@@ -193,11 +193,14 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                 bonuses += Add(specialRules["defensive"], " - 1 за Оборонительный стиль боя");
                 bonuses += Add(specialRules["fullback"], " - 1 за Глухую оборону");
 
-                fight.Add(String.Format(
-                    "Мощность удара: {0} + {1} + {2}{3}{4} = {5}",
-                    Game.Dice.Symbol(firstRoll), Game.Dice.Symbol(secondRoll), attacker.Attack, bonuses,
-                    (coherenceBonus ? String.Format(" {0} {1} за Слаженность", (coherence > 0 ? "+" : "-"), Math.Abs(coherence)) : String.Empty),
-                    attackStrength));
+                string sign = coherence > 0 ? "+" : "-";
+                string coherenceTemplate = $" {sign} {Math.Abs(coherence)} за Слаженность";
+                string bonusLine = coherenceBonus ? coherenceTemplate : String.Empty;
+
+                fight.Add($"Мощность удара:" +
+                    $"{Game.Dice.Symbol(firstRoll)} + " +
+                    $"{Game.Dice.Symbol(secondRoll)} + " +
+                    $"{attacker.Attack}{bonuses}{bonusLine} = {attackStrength}");
 
                 bool defenceBonus = defender.SpecialTechnique.Contains(Character.SpecialTechniques.TotalProtection);
                 int defence = (defender.Defence + (defenceBonus ? 1 : 0) + (specialRules["defensiveEnemy"] ? 1 : 0) +
