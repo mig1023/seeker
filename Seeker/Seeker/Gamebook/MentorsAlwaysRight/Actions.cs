@@ -602,7 +602,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                         enemy.Hitpoints /= 2;
                         woundLine += 1;
 
-                        fight.Add(String.Format("GOOD|{0} ранен на половину своих жизней", enemy.Name));
+                        fight.Add($"GOOD|{enemy.Name} ранен на половину своих жизней");
                     }
                     else if ((protagonistHitStrength > enemyHitStrength) && (!ReactionFight || !reactionFail))
                     {
@@ -617,13 +617,13 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                                 enemy.Hitpoints -= woundLevel;
                                 woundLine += 1;
 
-                                fight.Add(String.Format("Бросок на пробитие: {0} - чётное", Game.Dice.Symbol(woundDice)));
-                                fight.Add(String.Format("GOOD|{0} ранен", enemy.Name));
+                                fight.Add($"Бросок на пробитие: {Game.Dice.Symbol(woundDice)} - чётное");
+                                fight.Add($"GOOD|{enemy.Name} ранен");
                             }
                             else
                             {
-                                fight.Add(String.Format("Бросок на пробитие: {0} - нечётное", Game.Dice.Symbol(woundDice)));
-                                fight.Add(String.Format("BAD|Вы не смогли пробить защиту {0}", enemy.Name));
+                                fight.Add($"Бросок на пробитие: {Game.Dice.Symbol(woundDice)} - нечётное");
+                                fight.Add($"BAD|Вы не смогли пробить защиту {enemy.Name}");
                             }
                         }
                         else
