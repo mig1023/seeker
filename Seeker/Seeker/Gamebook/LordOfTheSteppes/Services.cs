@@ -76,7 +76,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             {
                 Character.Protagonist.FightStyle = newFightStyles;
                 fight.Add(String.Empty);
-                fight.Add(String.Format("GRAY|{0} Меняем стиль боя на {1}", motivation, Constants.FightStyles()[newFightStyles]));
+                fight.Add($"GRAY|{motivation} Меняем стиль боя на {Constants.FightStyles()[newFightStyles]}");
             }
 
             return newFightStyles;
