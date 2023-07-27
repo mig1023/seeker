@@ -421,23 +421,32 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                 FightOrder.Add(protagonist);
 
                 if (firstStrike && !enemyFirstStrike && !enemyIgnoreFirstStrike)
-                    Services.OutputInitiative(ref fight, FightEnemies, FightOrder, protagonistLine, enemyLine, special: true);
-
+                {
+                    Services.OutputInitiative(ref fight, FightEnemies, FightOrder,
+                        protagonistLine, enemyLine, special: true);
+                }
                 else if (!firstStrike && enemyFirstStrike)
-                    Services.OutputInitiative(ref fight, FightEnemies, FightOrder, protagonistLine, enemyLine, reverse: true, special: true);
-
+                {
+                    Services.OutputInitiative(ref fight, FightEnemies, FightOrder,
+                        protagonistLine, enemyLine, reverse: true, special: true);
+                }
                 else if (iProtagonist > iEnemy)
-                    Services.OutputInitiative(ref fight, FightEnemies, FightOrder, protagonistLine, enemyLine);
-
+                {
+                    Services.OutputInitiative(ref fight, FightEnemies, FightOrder,
+                        protagonistLine, enemyLine);
+                }
                 else
-                    Services.OutputInitiative(ref fight, FightEnemies, FightOrder, protagonistLine, enemyLine, reverse: true);
+                {
+                    Services.OutputInitiative(ref fight, FightEnemies, FightOrder,
+                        protagonistLine, enemyLine, reverse: true);
+                }
             }
 
             fight.Add(String.Empty);
 
             while (true)
             {
-                fight.Add(String.Format("HEAD|BOLD|Раунд: {0}", round));
+                fight.Add($"HEAD|BOLD|Раунд: {round}");
 
                 int coherenceIndex = 0;
 
