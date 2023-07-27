@@ -255,7 +255,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
 
             int dice = Game.Dice.Roll();
 
-            fight.Add(String.Format("На кубиках выпало: {0}", Game.Dice.Symbol(dice)));
+            fight.Add($"На кубиках выпало: {Game.Dice.Symbol(dice)}");
 
             if (dice > 2)
                 fight.Add("BIG|GOOD|Вы раздавили пиявку :)");
@@ -272,7 +272,8 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
         public List<string> Dice()
         {
             int dice = Game.Dice.Roll();
-            return new List<string> { String.Format("BIG|На кубике выпало: {0} - {1}", Game.Dice.Symbol(dice), (dice % 2 == 0 ? "чёт" : "нечет")) };
+            string odd = dice % 2 == 0 ? "чёт" : "нечет";
+            return new List<string> { $"BIG|На кубике выпало: {Game.Dice.Symbol(dice)} - {odd}" };
         }
 
         public List<string> StoneThrow()
