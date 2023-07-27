@@ -142,7 +142,8 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             if ((SpecialTechnique.Count == 1) && (SpecialTechnique[0] == SpecialTechniques.Nope))
                 return String.Empty;
 
-            return String.Format("\n{0}", String.Join(", ", SpecialTechnique.ConvertAll(e => Constants.TechniquesNames()[e])));
+            List<string> techniques = SpecialTechnique.ConvertAll(x => Constants.TechniquesNames()[x]);
+            return $"\n{String.Join(", ", techniques)}";
         }
     }
 }
