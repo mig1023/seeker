@@ -186,10 +186,10 @@ namespace Seeker.Gamebook.Moonrunner
 
                 dicesResult += dice;
 
-                dices.Add(String.Format("На {0} кубикe выпало: {1}", i, Game.Dice.Symbol(dice)));
+                dices.Add($"На {i} кубикe выпало: {Game.Dice.Symbol(dice)}");
             }
 
-            dices.Add(String.Format("BOLD|Итого выпало: {0}", dicesResult));
+            dices.Add($"BOLD|Итого выпало: {dicesResult}");
 
             dices.Add(dicesResult > protagonist.Endurance ?
                 "BIG|BAD|Больше, чем выносливость :(" : "BIG|GOOD|Меньше, чем выносливость :)");
@@ -203,11 +203,11 @@ namespace Seeker.Gamebook.Moonrunner
 
             int dice = Game.Dice.Roll();
 
-            wounds.Add(String.Format("На кубике выпало: {0}", Game.Dice.Symbol(dice)));
+            wounds.Add($"На кубике выпало: {Game.Dice.Symbol(dice)}");
            
             protagonist.Endurance -= dice * 2;
 
-            wounds.Add(String.Format("BIG|BAD|Вы потеряли жизней: {0}", dice * 2));
+            wounds.Add($"BIG|BAD|Вы потеряли жизней: {dice * 2}");
 
             return wounds;
         }
