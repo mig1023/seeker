@@ -126,12 +126,12 @@ namespace Seeker.Gamebook.OrcsDay
             if (line.StartsWith("+"))
             {
                 protagonist.Orcishness += 1;
-                return String.Format("BAD|{0}", line);
+                return $"BAD|{line}";
             }
             else
             {
                 protagonist.Orcishness -= 1;
-                return String.Format("GOOD|{0}", line);
+                return $"GOOD|{line}";
             }
         }
 
@@ -161,7 +161,7 @@ namespace Seeker.Gamebook.OrcsDay
             if (orc.Courage > 2)
                 orcishness.Add(OrcishnessChange(Constants.Orcishness["TooMuch"]));
 
-            orcishness.Add(String.Format("BIG|BOLD|Итоговая Оркишность: {0}", orc.Orcishness));
+            orcishness.Add($"BIG|BOLD|Итоговая Оркишность: {orc.Orcishness}");
 
             return orcishness;
         }
