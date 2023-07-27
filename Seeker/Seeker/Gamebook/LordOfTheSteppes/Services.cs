@@ -203,8 +203,10 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                     $"{attacker.Attack}{bonuses}{bonusLine} = {attackStrength}");
 
                 bool defenceBonus = defender.SpecialTechnique.Contains(Character.SpecialTechniques.TotalProtection);
-                int defence = (defender.Defence + (defenceBonus ? 1 : 0) + (specialRules["defensiveEnemy"] ? 1 : 0) +
-                    (specialRules["fullbackEnemy"] ? 2 : 0) - (specialRules["aggressiveEnemy"] ? 1 : 0));
+                int defence = (defender.Defence + (defenceBonus ? 1 : 0) + 
+                    (specialRules["defensiveEnemy"] ? 1 : 0) +
+                    (specialRules["fullbackEnemy"] ? 2 : 0) - 
+                    (specialRules["aggressiveEnemy"] ? 1 : 0));
 
                 success = attackStrength > defence;
 
@@ -217,7 +219,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
                 string comparison = Game.Services.Сomparison(defence, attackStrength);
 
-                fight.Add(String.Format("Защита: {0}{1} — {2} Мощности удара", defender.Defence, bonuses, comparison));
+                fight.Add($"Защита: {defender.Defence}{bonuses} — {comparison} Мощности удара");
             }
 
             if (success)
@@ -227,7 +229,8 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
                 if (specialRules["enemyReaction"] && (WoundsCount[defender.Name] == 3))
                 {
-                    fight.Add(String.Format("{0}|Уклонение от атаки благодаря Реакции (особый приём)", (Allies.Contains(defender) ? "GOOD" : "BAD")));
+                    string type = Allies.Contains(defender) ? "GOOD" : "BAD";
+                    fight.Add($"{type}|Уклонение от атаки благодаря Реакции (особый приём)");
                     reactionSuccess = true;
                     WoundsCount[defender.Name] = 0;
 
