@@ -69,8 +69,11 @@ namespace Seeker.Gamebook.LordOfTheSteppes
         public static Character.FightStyles ChangeFightStyle(string motivation, ref List<string> fight,
             string direction, Character.FightStyles newFightStyles)
         {
-            bool goodDirectionUp = ((direction == "upTo") && ((int)Character.Protagonist.FightStyle < (int)newFightStyles));
-            bool goodDirectionDown = ((direction == "downTo") && ((int)Character.Protagonist.FightStyle > (int)newFightStyles));
+            bool goodDirectionUp = ((direction == "upTo") &&
+                ((int)Character.Protagonist.FightStyle < (int)newFightStyles));
+
+            bool goodDirectionDown = ((direction == "downTo") &&
+                ((int)Character.Protagonist.FightStyle > (int)newFightStyles));
 
             if (goodDirectionUp || goodDirectionDown)
             {
@@ -116,8 +119,9 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             Game.Dice.DoubleRoll(out int firstRoll, out int secondRoll);
             int initiative = firstRoll + secondRoll + character.Initiative;
 
-            line = String.Format("{0} + {1} + {2}, итого {3}",
-                character.Initiative, Game.Dice.Symbol(firstRoll), Game.Dice.Symbol(secondRoll), initiative);
+            line = $"{character.Initiative} + " +
+                $"{Game.Dice.Symbol(firstRoll)} + " +
+                $"{Game.Dice.Symbol(secondRoll)}, итого {initiative}";
 
             return initiative;
         }
