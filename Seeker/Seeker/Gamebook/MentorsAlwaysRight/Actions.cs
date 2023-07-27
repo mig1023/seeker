@@ -42,12 +42,12 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
         {
             List<string> statusLines = new List<string>
             {
-                String.Format("Сила: {0}", protagonist.Strength),
-                String.Format("Жизни: {0}/{1}", protagonist.Hitpoints, protagonist.MaxHitpoints),
+                $"Сила: {protagonist.Strength}",
+                $"Жизни: {protagonist.Hitpoints}/{protagonist.MaxHitpoints}",
             };
 
             if (protagonist.Transformation > 0)
-                statusLines.Add(String.Format("Обращений: {0}", protagonist.Transformation));
+                statusLines.Add($"Обращений: {protagonist.Transformation}");
 
             return statusLines;
         }
