@@ -213,9 +213,11 @@ namespace Seeker.Gamebook.OrcsDay
             List<string> testLines = new List<string>();
 
             bool okResult = protagonist.Courage >= protagonist.Orcishness + protagonist.Wits;
+            string compareLine = okResult ? ">=" : "<";
 
-            testLines.Add(String.Format("Проверка: {0} Смелость {1} {2} Оркишность + {3} Мозги",
-                protagonist.Courage, (okResult ? ">=" : "<"), protagonist.Orcishness, protagonist.Wits));
+            testLines.Add($"Проверка: {protagonist.Courage} " +
+                $"Смелость {compareLine} {protagonist.Orcishness} " +
+                $"Оркишность + {protagonist.Wits} Мозги");
 
             testLines.Add(Result(okResult, "УСПЕШНО|НЕУДАЧНО"));
 
@@ -230,8 +232,10 @@ namespace Seeker.Gamebook.OrcsDay
 
             int gameResult = (firstDice + secondDice) + protagonist.Luck;
 
-            gameLines.Add(String.Format("Выпавшие карты: {0} + {1} + {2} = {3}",
-                   Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), protagonist.Luck, gameResult));
+            gameLines.Add($"Выпавшие карты: " +
+                $"{Game.Dice.Symbol(firstDice)} + " +
+                $"{Game.Dice.Symbol(secondDice)} + " +
+                $"{protagonist.Luck} = {gameResult}");
 
             if (gameResult >= 15)
             {
