@@ -178,11 +178,13 @@ namespace Seeker.Gamebook.OrcsDay
             if (OrcishnessTest)
             {
                 okResult = (firstDice + secondDice) + currentStat >= protagonist.Orcishness + Level;
+                string compareLine = okResult ? ">=" : "<";
+                string level = Level > 0 ? $" + {Level}" : String.Empty;
 
-                testLines.Add(String.Format("Проверка на {0}: {1} + {2} + {3} {4} {5}{6}",
-                    Constants.StatNames[Stat], Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice),
-                    currentStat, (okResult ? ">=" : "<"), protagonist.Orcishness, 
-                    (Level > 0 ? String.Format(" + {0}", Level) : String.Empty)));
+                testLines.Add($"Проверка на {Constants.StatNames[Stat]}: " +
+                    $"{Game.Dice.Symbol(firstDice)} + " +
+                    $"{Game.Dice.Symbol(secondDice)} + {currentStat} " +
+                    $"{compareLine} {protagonist.Orcishness}{level}");
             }
             else
             {
