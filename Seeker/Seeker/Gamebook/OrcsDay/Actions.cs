@@ -189,10 +189,12 @@ namespace Seeker.Gamebook.OrcsDay
             else
             {
                 okResult = (firstDice + secondDice) + currentStat >= Level;
+                string compareLine = okResult ? ">=" : "<";
 
-                testLines.Add(String.Format("Проверка на {0}: {1} + {2} + {3} {4} {5}",
-                    Constants.StatNames[Stat], Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice),
-                    currentStat, (okResult ? ">=" : "<"), Level));
+                testLines.Add($"Проверка на {Constants.StatNames[Stat]}: " +
+                    $"{Game.Dice.Symbol(firstDice)} + " +
+                    $"{Game.Dice.Symbol(secondDice)} + {currentStat} " +
+                    $"{compareLine} {Level}");
             }
 
             testLines.Add(Result(okResult, "УСПЕШНО|НЕУДАЧНО"));
