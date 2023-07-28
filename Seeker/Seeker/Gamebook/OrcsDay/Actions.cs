@@ -287,8 +287,8 @@ namespace Seeker.Gamebook.OrcsDay
 
             while (true)
             {
-                fight.Add(String.Format("HEAD|BOLD|Раунд: {0}", round));
-                fight.Add(String.Format("BOLD|{0} нападает:", enemy.Name));
+                fight.Add($"HEAD|BOLD|Раунд: {round}");
+                fight.Add($"BOLD|{enemy.Name} нападает:");
 
                 bool otherOrcsUnderAttack = false, girlUnderAttack = false, enemyAttackFail = false;
 
@@ -297,7 +297,7 @@ namespace Seeker.Gamebook.OrcsDay
                     int whoUnderAttack = Game.Dice.Roll();
                     otherOrcsUnderAttack = whoUnderAttack < 3;
 
-                    fight.Add(String.Format("Кого атакует Мортимер: {0}", Game.Dice.Symbol(whoUnderAttack)));
+                    fight.Add($"Кого атакует Мортимер: {Game.Dice.Symbol(whoUnderAttack)}");
 
                     if (!otherOrcsUnderAttack)
                         fight.Add("BOLD|Он атакует тебя");
