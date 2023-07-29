@@ -154,14 +154,14 @@ namespace Seeker.Gamebook.StrikeBack
                 {
                     way.Add("BOLD|Поворачиваем направо...");
                     double newWayPoint = wayPoint * 4;
-                    way.Add(String.Format("{0} * 4 = {1}", wayPoint, newWayPoint));
+                    way.Add($"{wayPoint} * 4 = {newWayPoint}");
                     wayPoint = newWayPoint;
                 }
                 else
                 {
                     way.Add("BOLD|Поворачиваем налево...");
                     double newWayPoint = (wayPoint - 1) / 3;
-                    way.Add(String.Format("({0} - 1) / 3 = {1}", wayPoint, newWayPoint));
+                    way.Add($"({wayPoint} - 1) / 3 = {newWayPoint}");
                     wayPoint = newWayPoint;
                 }
 
@@ -178,7 +178,7 @@ namespace Seeker.Gamebook.StrikeBack
                     Game.Option.OpenButtonByGoto(cleanWayPoint);
 
                     way.Add(String.Empty);
-                    way.Add(String.Format("BIG|GOOD|Кхм, число {0} вроде бы подходит...", wayPoint));
+                    way.Add($"BIG|GOOD|Кхм, число {wayPoint} вроде бы подходит...");
                     return way;
                 }
             }
