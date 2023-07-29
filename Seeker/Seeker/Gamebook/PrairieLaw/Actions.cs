@@ -346,7 +346,9 @@ namespace Seeker.Gamebook.PrairieLaw
             List<string> gameReport = new List<string>();
 
             Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
-            gameReport.Add(String.Format("На рулетке выпали: {0} и {1}", Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice)));
+
+            gameReport.Add($"На рулетке выпали: " +
+                $"{Game.Dice.Symbol(firstDice)} и {Game.Dice.Symbol(secondDice)}");
 
             if (firstDice == secondDice)
             {
@@ -368,8 +370,9 @@ namespace Seeker.Gamebook.PrairieLaw
 
             int dice = Game.Dice.Roll();
             bool even = (dice % 2 == 0);
+            string evelLine = even ? "чётное" : "нечётное";
 
-            gameReport.Add(String.Format("На кубике выпало: {0} - {1}", Game.Dice.Symbol(dice), (even ? "чётное" : "нечётное")));
+            gameReport.Add($"На кубике выпало: {Game.Dice.Symbol(dice)} - {evelLine}");
 
             if (even)
             {
@@ -392,8 +395,9 @@ namespace Seeker.Gamebook.PrairieLaw
             int dice = Game.Dice.Roll();
             bool even = (dice % 2 == 0);
             bool nuggetsGame = Game.Option.IsTriggered("Игра на самородок");
+            string evelLine = even ? "чётное" : "нечётное";
 
-            gameReport.Add(String.Format("На кубике выпало: {0} - {1}", Game.Dice.Symbol(dice), (even ? "чётное" : "нечётное")));
+            gameReport.Add($"На кубике выпало: {Game.Dice.Symbol(dice)} - {evelLine}");
 
             if (even)
             {
