@@ -6,15 +6,22 @@ namespace Seeker.Gamebook.PrairieLaw
 {
     class Services
     {
-        public static string ToDollars(int cents) =>
-            String.Format("{0:f2}", (double)cents / 100).TrimEnd('0').TrimEnd(',').Replace(',', '.');
+        public static string ToDollars(int cents)
+        {
+            double dollars = (double)cents / 100;
+            string dollarsLine = dollars.ToString().TrimEnd('0').TrimEnd(',').Replace(',', '.');
+            return $"{dollarsLine:f2}";
+        }
 
         public static string LuckNumbers()
         {
             string luckListShow = String.Empty;
 
             for (int i = 1; i < 7; i++)
-                luckListShow += String.Format("{0} ", Constants.LuckList[Character.Protagonist.Luck[i] ? i : i + 10]);
+            {
+                string luck = Constants.LuckList[Character.Protagonist.Luck[i] ? i : i + 10];
+                luckListShow += $"{luck} ";
+            }
 
             return luckListShow;
         }
