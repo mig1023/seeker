@@ -449,7 +449,7 @@ namespace Seeker.Gamebook.PrairieLaw
             {
                 firefight = Services.FirefightContinue(FightEnemies, ref fight, firefight);
 
-                fight.Add(String.Format("HEAD|BOLD|Раунд: {0}", round));
+                fight.Add($"HEAD|BOLD|Раунд: {round}");
 
                 bool attackAlready = false;
                 int protagonistHitStrength = 0, enemyHitStrength = 0;
@@ -459,8 +459,8 @@ namespace Seeker.Gamebook.PrairieLaw
                     if (enemy.Strength <= 0)
                         continue;
 
-                    string cartridgesLine = (enemy.Cartridges > 0 ? String.Format(", патронов {0}", enemy.Cartridges) : String.Empty);
-                    fight.Add(String.Format("{0} (сила {1}{2})", enemy.Name, enemy.Strength, cartridgesLine));
+                    string cartLine = enemy.Cartridges > 0 ? $", патронов {enemy.Cartridges}" : String.Empty;
+                    fight.Add($"{enemy.Name} (сила {enemy.Strength}{cartLine})");
 
                     bool noCartridges = protagonist.Cartridges <= 0;
 
@@ -471,8 +471,10 @@ namespace Seeker.Gamebook.PrairieLaw
 
                         string protagonistHitLine = (firefight ? "Ваш выстрел" : "Мощность вашего удара");
 
-                        fight.Add(String.Format("{0}: {1} + {2} + {3} = {4}",
-                            protagonistHitLine, Game.Dice.Symbol(protagonistRollFirst), Game.Dice.Symbol(protagonistRollSecond), protagonist.Skill, protagonistHitStrength));
+                        fight.Add($"{protagonistHitLine}: " +
+                            $"{Game.Dice.Symbol(protagonistRollFirst)} + " +
+                            $"{Game.Dice.Symbol(protagonistRollSecond)} + " +
+                            $"{protagonist.Skill} = {protagonistHitStrength}");
 
                         if (firefight)
                             protagonist.Cartridges -= 1;
