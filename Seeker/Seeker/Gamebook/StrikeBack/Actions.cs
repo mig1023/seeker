@@ -331,7 +331,7 @@ namespace Seeker.Gamebook.StrikeBack
 
             while (true)
             {
-                fight.Add(String.Format("HEAD|BOLD|*  *  *    РАУНД: {0}    *  *  * ", round));
+                fight.Add($"HEAD|BOLD|*  *  *    РАУНД: {round}    *  *  * ");
                 fight.Add(String.Empty);
 
                 foreach (Character fighter in FightOrder)
@@ -345,9 +345,9 @@ namespace Seeker.Gamebook.StrikeBack
                         continue;
 
                     if (GroupFight)
-                        fight.Add(String.Format("BOLD|{0} выбрает противника для атаки: {1}", fighter.Name, enemy.Name));
+                        fight.Add($"BOLD|{fighter.Name} выбрает противника для атаки: {enemy.Name}");
                     else
-                        fight.Add(String.Format("BOLD|{0} атакует", fighter.Name));
+                        fight.Add($"BOLD|{fighter.Name} атакует");
 
                     Game.Dice.DoubleRoll(out int firstRoll, out int secondRoll);
                     int hitStrength = firstRoll + secondRoll + fighter.Attack;
