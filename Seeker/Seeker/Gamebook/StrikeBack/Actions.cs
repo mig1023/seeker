@@ -258,25 +258,23 @@ namespace Seeker.Gamebook.StrikeBack
                 Game.Dice.DoubleRoll(out int firstRoll, out int secondRoll);
                 int hitStrength = firstRoll + secondRoll + 1;
 
-                game.Add(String.Format(
-                    "Cила атаки кинжала: {0} + {1} + 1 = {2}",
-                    Game.Dice.Symbol(firstRoll), Game.Dice.Symbol(secondRoll), hitStrength));
+                game.Add($"Cила атаки кинжала: " +
+                    $"{Game.Dice.Symbol(firstRoll)} + " +
+                    $"{Game.Dice.Symbol(secondRoll)} + 1 = {hitStrength}");
 
                 int hitDiff = hitStrength - protagonist.Defence;
                 bool success = hitDiff > 0;
 
-                game.Add(String.Format(
-                    "Твоя защита: {0}, это {1} силы атаки",
-                    protagonist.Defence, Game.Services.Сomparison(protagonist.Defence, hitStrength)));
+                game.Add($"Твоя защита: " +
+                    $"{protagonist.Defence}, это " +
+                    $"{Game.Services.Сomparison(protagonist.Defence, hitStrength)} силы атаки");
 
                 if (success)
                 {
                     protagonist.Endurance -= hitDiff;
 
                     game.Add("BAD|BOLD|Ты ранен");
-
-                    game.Add(String.Format("Ты потерял вносливости: {0} (осталось: {1})",
-                       hitDiff, protagonist.Endurance));
+                    game.Add($"Ты потерял вносливости: {hitDiff} (осталось: {protagonist.Endurance})");
                 }
                 else
                 {
