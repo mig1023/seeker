@@ -323,18 +323,20 @@ namespace Seeker.Gamebook.OrcsDay
                     int protection = Services.Protection(ref fight);
 
                     enemyAttackFail = (enemyRollFirst + enemyRollSecond) + protection >= enemy.Attack;
+                    string attackFail = enemyAttackFail ? ">=" : "<";
 
-                    fight.Add(String.Format("Удар врага: {0} + {1} + {2} {3} {4}",
-                        Game.Dice.Symbol(enemyRollFirst), Game.Dice.Symbol(enemyRollSecond),
-                        protection, (enemyAttackFail ? ">=" : "<"), enemy.Attack));
+                    fight.Add($"Удар врага: " +
+                        $"{Game.Dice.Symbol(enemyRollFirst)} + " +
+                        $"{Game.Dice.Symbol(enemyRollSecond)} + " +
+                        $"{protection} {attackFail} {enemy.Attack}");
                 }
 
                 if (girlUnderAttack)
                 {
                     girlWounds -= 1;
 
-                    fight.Add(String.Format("BOLD|Противник атакует девушку!\n" +
-                        "Она теряет 1 Здоровье, осталось {0}", girlWounds));
+                    fight.Add($"BOLD|Противник атакует девушку!\n" +
+                        $"Она теряет 1 Здоровье, осталось {girlWounds}");
 
                     if (girlWounds <= 0)
                     {
