@@ -14,13 +14,13 @@ namespace Seeker.Gamebook.SilentSchool
 
         public override List<string> Status()
         {
-            List<string> statusLines = new List<string> { String.Format("Жизнь: {0}", protagonist.Life) };
+            List<string> statusLines = new List<string> { $"Жизнь: {protagonist.Life}" };
 
             if (protagonist.Grail > 0)
-                statusLines.Add(String.Format("Грааль: {0}", protagonist.Grail));
+                statusLines.Add($"Грааль: {protagonist.Grail}");
 
             if (!String.IsNullOrEmpty(protagonist.Weapon))
-                statusLines.Add(String.Format("Оружие: {0}", protagonist.Weapon));
+                statusLines.Add($"Оружие: {protagonist.Weapon}");
 
             return statusLines;
         }
