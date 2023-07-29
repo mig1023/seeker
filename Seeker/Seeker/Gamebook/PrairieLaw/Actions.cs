@@ -110,10 +110,9 @@ namespace Seeker.Gamebook.PrairieLaw
             };
 
             int goodLuck = Game.Dice.Roll();
+            string not = protagonist.Luck[goodLuck] ? "не " : String.Empty;
 
-            luckCheck.Add(String.Format("Проверка удачи: {0} - {1}зачёркунтый",
-                Game.Dice.Symbol(goodLuck), (protagonist.Luck[goodLuck] ? "не " : String.Empty)));
-
+            luckCheck.Add($"Проверка удачи: {Game.Dice.Symbol(goodLuck)} - {not}зачёркунтый");
             luckCheck.Add(Result(protagonist.Luck[goodLuck], "УСПЕХ|НЕУДАЧА"));
 
             protagonist.Luck[goodLuck] = !protagonist.Luck[goodLuck];
@@ -131,7 +130,7 @@ namespace Seeker.Gamebook.PrairieLaw
             {
                 if (!protagonist.Luck[i])
                 {
-                    luckRecovery.Add(String.Format("GOOD|Цифра {0} восстановлена!", i));
+                    luckRecovery.Add($"GOOD|Цифра {i} восстановлена!");
                     protagonist.Luck[i] = true;
                     success = true;
 
