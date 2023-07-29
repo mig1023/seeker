@@ -504,7 +504,7 @@ namespace Seeker.Gamebook.PrairieLaw
                     }
                     else if ((protagonistHitStrength > enemyHitStrength) && !attackAlready)
                     {
-                        fight.Add(String.Format("GOOD|{0} ранен", enemy.Name));
+                        fight.Add($"GOOD|{enemy.Name} ранен");
 
                         enemy.Strength -= (firefight ? 3 : 2);
 
@@ -513,30 +513,32 @@ namespace Seeker.Gamebook.PrairieLaw
                         if (enemyLost)
                         {
                             fight.Add(String.Empty);
-                            fight.Add(String.Format("BIG|GOOD|Вы ПОБЕДИЛИ :)"));
+                            fight.Add("BIG|GOOD|Вы ПОБЕДИЛИ :)");
                             return fight;
                         }
                     }
                     else if (protagonistHitStrength > enemyHitStrength)
                     {
-                        fight.Add(String.Format("BOLD|{0} не смог вас ранить", enemy.Name));
+                        fight.Add($"BOLD|{enemy.Name} не смог вас ранить");
                     }
                     else if (protagonistHitStrength < enemyHitStrength)
                     {
-                        fight.Add(String.Format("BAD|{0} ранил вас", enemy.Name));
+                        fight.Add($"BAD|{enemy.Name} ранил вас");
 
                         protagonist.Strength -= (firefight ? 3 : 2);
 
                         if ((protagonist.Strength <= 0) || (HeroWoundsLimit && (protagonist.Strength <= 2)))
                         {
                             fight.Add(String.Empty);
-                            fight.Add(String.Format("BIG|BAD|Вы ПРОИГРАЛИ :("));
+                            fight.Add("BIG|BAD|Вы ПРОИГРАЛИ :(");
                             return fight;
                         }
                     }
                     else
-                        fight.Add(String.Format("BOLD|Ничья в раунде"));
-
+                    {
+                        fight.Add("BOLD|Ничья в раунде");
+                    }
+                        
                     attackAlready = true;
 
                     fight.Add(String.Empty);
