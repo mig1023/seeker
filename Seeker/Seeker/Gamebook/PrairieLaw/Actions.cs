@@ -487,8 +487,10 @@ namespace Seeker.Gamebook.PrairieLaw
 
                         string enemyHitLine = (firefight ? "Его выстрел" : "Мощность его удара");
 
-                        fight.Add(String.Format("{0}: {1} + {2} + {3} = {4}",
-                            enemyHitLine, Game.Dice.Symbol(enemyRollFirst), Game.Dice.Symbol(enemyRollSecond), enemy.Skill, enemyHitStrength));
+                        fight.Add($"{enemyHitLine}: " +
+                            $"{Game.Dice.Symbol(enemyRollFirst)} + " +
+                            $"{Game.Dice.Symbol(enemyRollSecond)} + " +
+                            $"{enemy.Skill} = {enemyHitStrength}");
 
                         if (firefight)
                             enemy.Cartridges -= 1;
