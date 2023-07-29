@@ -430,17 +430,17 @@ namespace Seeker.Gamebook.OrcsDay
                 {
                     enemy.Hitpoints -= 1;
                     fight.Add("GOOD|BOLD|Ты ранил противника!");
-                    fight.Add(String.Format("Его здоровье стало равно {0}", enemy.Hitpoints));
+                    fight.Add($"Его здоровье стало равно {enemy.Hitpoints}");
                 }
                 else
-                    fight.Add(String.Format("Противник отбил твой удар"));
+                    fight.Add("Противник отбил твой удар");
 
                 if (enemy.Hitpoints <= 0)
                 {
                     Services.FightWinTriggers(enemy.Name, GirlHelp);
 
                     fight.Add(String.Empty);
-                    fight.Add(String.Format("BIG|GOOD|Ты ПОБЕДИЛ :)"));
+                    fight.Add("BIG|GOOD|Ты ПОБЕДИЛ :)");
                     return fight;
                 }
                  fight.Add(String.Empty);
