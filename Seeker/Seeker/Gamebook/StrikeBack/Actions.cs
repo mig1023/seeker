@@ -103,7 +103,7 @@ namespace Seeker.Gamebook.StrikeBack
             {
                 int dice = Game.Dice.Roll();
                 result += dice;
-                string diceNum = dices > 1 ? String.Format(" {0}", i) : String.Empty;
+                string diceNum = dices > 1 ? $" {i}" : String.Empty;
                 diceCheck.Add(String.Format(lineFormat, diceNum, Game.Dice.Symbol(dice)));
             }
 
@@ -111,16 +111,16 @@ namespace Seeker.Gamebook.StrikeBack
             {
                 if (WoundsMultiple > 0)
                 {
-                    diceCheck.Add(String.Format("Сумма ({0}) умножается на {1}", result, WoundsMultiple));
+                    diceCheck.Add($"Сумма ({result}) умножается на {WoundsMultiple}");
                     result *= WoundsMultiple;
                 }
 
                 protagonist.Endurance -= result;
-                diceCheck.Add(String.Format("BIG|BAD|Ты потерял выносливостей: {0}", result));
+                diceCheck.Add($"BIG|BAD|Ты потерял выносливостей: {result}");
             }
             else if (dices > 1)
             {
-                diceCheck.Add(String.Format("BIG|BOLD|Выпало всего: {0}", result));
+                diceCheck.Add($"BIG|BOLD|Выпало всего: {result}");
             }
 
             return diceCheck;
