@@ -140,12 +140,12 @@ namespace Seeker.Gamebook.SilentSchool
             {
                 int dice = Game.Dice.Roll();
                 dices += dice;
-                diceCheck.Add(String.Format("На {0} выпало: {1}", i, Game.Dice.Symbol(dice)));
+                diceCheck.Add($"На {i} выпало: {Game.Dice.Symbol(dice)}");
             }
 
             protagonist.Life -= dices;
 
-            diceCheck.Add(String.Format("BIG|BAD|Я потерял жизней: {0}", dices));
+            diceCheck.Add($"BIG|BAD|Я потерял жизней: {dices}");
 
             return diceCheck;
         }
