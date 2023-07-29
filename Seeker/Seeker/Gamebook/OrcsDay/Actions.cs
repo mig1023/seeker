@@ -366,8 +366,8 @@ namespace Seeker.Gamebook.OrcsDay
                 {
                     otherOrcsHitpoints -= 1;
 
-                    fight.Add(String.Format("BOLD|Он атакует других орков!\n" +
-                        "Они теряют 1 Здоровье, осталось {0}", otherOrcsHitpoints));
+                    fight.Add($"BOLD|Он атакует других орков!\n" +
+                        $"Они теряют 1 Здоровье, осталось {otherOrcsHitpoints}");
 
                     if (otherOrcsHitpoints <= 0)
                     {
@@ -386,8 +386,8 @@ namespace Seeker.Gamebook.OrcsDay
                 else
                 {
                     protagonist.Hitpoints -= 1;
-                    fight.Add(String.Format("BAD|BOLD|{0} ранил тебя", enemy.Name));
-                    fight.Add(String.Format("Твоё здоровье стало равно {0}", protagonist.Hitpoints));
+                    fight.Add($"BAD|BOLD|{enemy.Name} ранил тебя");
+                    fight.Add($"Твоё здоровье стало равно {protagonist.Hitpoints}");
 
                     if ((protagonist.Hitpoints == 2) && LateHelp)
                     {
