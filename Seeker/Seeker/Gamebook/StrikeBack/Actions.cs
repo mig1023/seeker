@@ -45,16 +45,20 @@ namespace Seeker.Gamebook.StrikeBack
             {
                 if (!SpecialTechniques.Contains(Character.SpecialTechniques.WithoutProtagonist))
                 {
-                    enemies.Add(String.Format("Вы\nнападение {0}  защита {1}  жизнь {2}{3}",
-                        protagonist.Attack, protagonist.Defence, protagonist.Endurance,
-                        protagonist.GetSpecialTechniques()));
+                    enemies.Add($"Вы\n" +
+                        $"нападение {protagonist.Attack}  " +
+                        $"защита {protagonist.Defence}  " +
+                        $"жизнь {protagonist.Endurance}" +
+                        $"{protagonist.GetSpecialTechniques()}");
                 }
 
                 foreach (Character ally in Allies)
                 {
-                    enemies.Add(String.Format("{0}\nнападение {1}  защита {2}  жизнь {3}{4}",
-                        ally.Name, ally.Attack, ally.Defence, ally.GetEndurance(),
-                        ally.GetSpecialTechniques()));
+                    enemies.Add($"{ally.Name}\n" +
+                        $"нападение {ally.Attack}  " +
+                        $"защита {ally.Defence}  " +
+                        $"жизнь {ally.GetEndurance()}" +
+                        $"{ally.GetSpecialTechniques()}");
                 }
 
                 enemies.Add("SPLITTER|против");
@@ -62,9 +66,11 @@ namespace Seeker.Gamebook.StrikeBack
 
             foreach (Character enemy in Enemies)
             {
-                enemies.Add(String.Format("{0}\nнападение {1}  защита {2}  жизнь {3}{4}",
-                    enemy.Name, enemy.Attack, enemy.Defence, enemy.GetEndurance(),
-                    enemy.GetSpecialTechniques()));
+                enemies.Add($"{enemy.Name}\n" +
+                    $"нападение {enemy.Attack}  " +
+                    $"защита {enemy.Defence}  " +
+                    $"жизнь {enemy.GetEndurance()}" +
+                    $"{enemy.GetSpecialTechniques()}");
             }
 
             return enemies;
