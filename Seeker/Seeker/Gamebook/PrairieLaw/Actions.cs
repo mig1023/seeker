@@ -208,25 +208,25 @@ namespace Seeker.Gamebook.PrairieLaw
             {
                 int dice = Game.Dice.Roll();
                 dices += dice;
-                diceCheck.Add(String.Format("На {0} выпало: {1}", i, Game.Dice.Symbol(dice)));
+                diceCheck.Add($"На {i} выпало: {Game.Dice.Symbol(dice)}");
             }
 
             protagonist.Strength -= dices;
 
-            diceCheck.Add(String.Format("BIG|BAD|Вы потеряли жизней: {0}", dices));
+            diceCheck.Add($"BIG|BAD|Вы потеряли жизней: {dices}");
 
             return diceCheck;
         }
 
         public override bool IsButtonEnabled(bool secondButton = false)
         {
-            bool disabledByUsed = (Price > 0) && Used;
-            bool disabledByPrice = (Price > 0) && (protagonist.Cents < Price);
-            bool disabledBySkins = (Type == "SellSkins") && (protagonist.AnimalSkins.Count == 0);
-            bool disabledByNuggets = (Type == "SellNuggets") && (protagonist.Nuggets == 0);
-            bool disabledByGame = Roulette && (protagonist.Cents < 100);
+            bool byUsed = (Price > 0) && Used;
+            bool byPrice = (Price > 0) && (protagonist.Cents < Price);
+            bool bySkins = (Type == "SellSkins") && (protagonist.AnimalSkins.Count == 0);
+            bool byNuggets = (Type == "SellNuggets") && (protagonist.Nuggets == 0);
+            bool byGame = Roulette && (protagonist.Cents < 100);
 
-            return !(disabledByUsed || disabledByPrice || disabledBySkins || disabledByNuggets || disabledByGame);
+            return !(byUsed || byPrice || bySkins || byNuggets || byGame);
         }
 
         public List<string> Get()
