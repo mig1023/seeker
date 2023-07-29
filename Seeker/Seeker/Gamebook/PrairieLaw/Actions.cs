@@ -271,13 +271,13 @@ namespace Seeker.Gamebook.PrairieLaw
                 {
                     int price = (anySkin ? prices["Любая шкура"] : prices[skin]);
 
-                    salesReport.Add(String.Format("{0} - купил за {1:f2}$", skin, Services.ToDollars(price)));
+                    salesReport.Add($"{skin} - купил за {Services.ToDollars(price):f2}$");
                     cents += price;
                     saledIndexes.Add(index);
                     sold += 1;
                 }
                 else
-                    salesReport.Add(String.Format("{0} - её не купит", skin));
+                    salesReport.Add($"{skin} - её не купит");
 
                 index += 1;
             }
@@ -289,8 +289,8 @@ namespace Seeker.Gamebook.PrairieLaw
 
             salesReport.Add(String.Empty);
             salesReport.Add("BIG|ИТОГО:");
-            salesReport.Add(String.Format("Вы продали шкур: {0}", sold));
-            salesReport.Add(String.Format("GOOD|Вы получили: {0:f2}$", Services.ToDollars(cents)));
+            salesReport.Add($"Вы продали шкур: {sold}");
+            salesReport.Add($"GOOD|Вы получили: {Services.ToDollars(cents):f2}$");
 
             protagonist.Cents += cents;
 
