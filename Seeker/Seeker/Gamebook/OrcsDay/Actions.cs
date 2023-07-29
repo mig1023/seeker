@@ -311,7 +311,7 @@ namespace Seeker.Gamebook.OrcsDay
                     else
                         otherOrcsUnderAttack = whoUnderAttack < 4;
 
-                    fight.Add(String.Format("Кого атакует противник: {0}", Game.Dice.Symbol(whoUnderAttack)));
+                    fight.Add($"Кого атакует противник: {Game.Dice.Symbol(whoUnderAttack)}");
 
                     if (!girlUnderAttack && !otherOrcsUnderAttack)
                         fight.Add("BOLD|Он атакует тебя");
