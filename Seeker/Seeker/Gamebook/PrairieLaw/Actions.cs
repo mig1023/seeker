@@ -40,7 +40,7 @@ namespace Seeker.Gamebook.PrairieLaw
             List<string> enemies = new List<string>();
 
             if (Price > 0)
-                return new List<string> { String.Format("{0}, {1:f2}$", Head, Services.ToDollars(Price)) };
+                return new List<string> { $"{Head}, {Services.ToDollars(Price):f2}$" };
 
             else if (!String.IsNullOrEmpty(Head))
                 return new List<string> { Head };
@@ -50,10 +50,10 @@ namespace Seeker.Gamebook.PrairieLaw
 
             foreach (Character enemy in Enemies)
             {
-                string line = String.Format("{0}\nловкость {1}  сила {2}", enemy.Name, enemy.Skill, enemy.Strength);
+                string line = $"{enemy.Name}\nловкость {enemy.Skill}  сила {enemy.Strength}";
 
                 if (Firefight)
-                    line += String.Format("  патроны {0}", enemy.Cartridges);
+                    line += $"  патроны {enemy.Cartridges}";
 
                 enemies.Add(line);
             }
