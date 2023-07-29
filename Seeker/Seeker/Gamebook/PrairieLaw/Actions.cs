@@ -21,15 +21,15 @@ namespace Seeker.Gamebook.PrairieLaw
 
         public override List<string> Status() => new List<string>
         {
-            String.Format("Ловкость: {0}", protagonist.Skill),
-            String.Format("Сила: {0}/{1}", protagonist.Strength, protagonist.MaxStrength),
-            String.Format("Обаяние: {0}", protagonist.Charm),
+            $"Ловкость: {protagonist.Skill}",
+            $"Сила: {protagonist.Strength}/{protagonist.MaxStrength}",
+            $"Обаяние: {protagonist.Charm}",
         };
 
         public override List<string> AdditionalStatus() => new List<string>
         {
-            String.Format("Долларов: {0:f2}", Services.ToDollars(protagonist.Cents)),
-            String.Format("Патронов: {0}", protagonist.Cartridges),
+            $"Долларов: {Services.ToDollars(protagonist.Cents):f2}",
+            $"Патронов: {protagonist.Cartridges}",
         };
 
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
