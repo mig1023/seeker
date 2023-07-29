@@ -23,9 +23,9 @@ namespace Seeker.Gamebook.StrikeBack
 
         public override List<string> Status() => new List<string>
         {
-            String.Format("Атака: {0}", protagonist.Attack),
-            String.Format("Защита: {0}", protagonist.Defence),
-            String.Format("Выносливость: {0}/{1}", protagonist.Endurance, protagonist.MaxEndurance),
+            $"Атака: {protagonist.Attack}",
+            $"Защита: {protagonist.Defence}",
+            $"Выносливость: {protagonist.Endurance}/{protagonist.MaxEndurance}",
         };
 
         public override List<string> Representer()
