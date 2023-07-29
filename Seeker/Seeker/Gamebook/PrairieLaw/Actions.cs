@@ -305,9 +305,9 @@ namespace Seeker.Gamebook.PrairieLaw
             int cents = protagonist.Nuggets * price;
             protagonist.Cents += cents;
 
-            salesReport.Add(String.Format("Вы продали самородков: {0}", protagonist.Nuggets));
-            salesReport.Add(String.Format("Цена за один: {0:f2}$", Services.ToDollars(price)));
-            salesReport.Add(String.Format("GOOD|Вы получили: {0:f2}$", Services.ToDollars(cents)));
+            salesReport.Add($"Вы продали самородков: {protagonist.Nuggets}");
+            salesReport.Add($"Цена за один: {Services.ToDollars(price):f2}$");
+            salesReport.Add($"GOOD|Вы получили: {Services.ToDollars(cents):f2}$");
 
             protagonist.Nuggets = 0;
 
@@ -321,9 +321,11 @@ namespace Seeker.Gamebook.PrairieLaw
             bool red = (Game.Dice.Roll() > 3);
             int dice = Game.Dice.Roll();
             bool even = (dice % 2 == 0);
+            string redLine = red ? "красное (чёт)" : "чёрное (нечет)";
+            string evenLine = even ? "красное" : "чёрное";
 
-            gameReport.Add(String.Format("Вы поставили на {0}", (red ? "красное (чёт)" : "чёрное (нечет)")));
-            gameReport.Add(String.Format("На рулетке выпало: {0} - {1}", Game.Dice.Symbol(dice), (even ? "красное" : "чёрное")));
+            gameReport.Add($"Вы поставили на {redLine}");
+            gameReport.Add($"На рулетке выпало: {Game.Dice.Symbol(dice)} - {evenLine}");
 
             if (red == even)
             {
