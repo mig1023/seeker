@@ -458,10 +458,14 @@ namespace Seeker.Gamebook.OrcsDay
             if (Character.Protagonist.Orcishness <= 0)
             {
                 results.Add("GOOD|+1 за то, что твоя Оркишность упала до нуля или ниже");
+
                 result += 1;
                 lines += 1;
 
-                if (Game.Option.IsTriggered("Кандидат в Властелины") && !Game.Option.IsTriggered("Тёмный Властелин"))
+                bool candidate = Game.Option.IsTriggered("Кандидат в Властелины");
+                bool lord = Game.Option.IsTriggered("Тёмный Властелин");
+
+                if (candidate && !lord)
                 {
                     results.Add("GOOD|+1 за то, что стал новым Темным Властелином");
                     result += 1;
