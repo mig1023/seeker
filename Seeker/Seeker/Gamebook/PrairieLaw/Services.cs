@@ -9,8 +9,7 @@ namespace Seeker.Gamebook.PrairieLaw
         public static string ToDollars(int cents)
         {
             double dollars = (double)cents / 100;
-            string dollarsLine = dollars.ToString().TrimEnd('0').TrimEnd(',').Replace(',', '.');
-            return $"{dollarsLine:f2}";
+            return $"{dollars:f2}".Replace(',', '.');
         }
 
         public static string LuckNumbers()

@@ -28,7 +28,7 @@ namespace Seeker.Gamebook.PrairieLaw
 
         public override List<string> AdditionalStatus() => new List<string>
         {
-            $"Долларов: {Services.ToDollars(protagonist.Cents):f2}",
+            $"Долларов: {Services.ToDollars(protagonist.Cents)}",
             $"Патронов: {protagonist.Cartridges}",
         };
 
@@ -40,7 +40,7 @@ namespace Seeker.Gamebook.PrairieLaw
             List<string> enemies = new List<string>();
 
             if (Price > 0)
-                return new List<string> { $"{Head}, {Services.ToDollars(Price):f2}$" };
+                return new List<string> { $"{Head}, {Services.ToDollars(Price)}$" };
 
             else if (!String.IsNullOrEmpty(Head))
                 return new List<string> { Head };
@@ -271,7 +271,7 @@ namespace Seeker.Gamebook.PrairieLaw
                 {
                     int price = (anySkin ? prices["Любая шкура"] : prices[skin]);
 
-                    salesReport.Add($"{skin} - купил за {Services.ToDollars(price):f2}$");
+                    salesReport.Add($"{skin} - купил за {Services.ToDollars(price)}$");
                     cents += price;
                     saledIndexes.Add(index);
                     sold += 1;
@@ -290,7 +290,7 @@ namespace Seeker.Gamebook.PrairieLaw
             salesReport.Add(String.Empty);
             salesReport.Add("BIG|ИТОГО:");
             salesReport.Add($"Вы продали шкур: {sold}");
-            salesReport.Add($"GOOD|Вы получили: {Services.ToDollars(cents):f2}$");
+            salesReport.Add($"GOOD|Вы получили: {Services.ToDollars(cents)}$");
 
             protagonist.Cents += cents;
 
@@ -306,8 +306,8 @@ namespace Seeker.Gamebook.PrairieLaw
             protagonist.Cents += cents;
 
             salesReport.Add($"Вы продали самородков: {protagonist.Nuggets}");
-            salesReport.Add($"Цена за один: {Services.ToDollars(price):f2}$");
-            salesReport.Add($"GOOD|Вы получили: {Services.ToDollars(cents):f2}$");
+            salesReport.Add($"Цена за один: {Services.ToDollars(price)}$");
+            salesReport.Add($"GOOD|Вы получили: {Services.ToDollars(cents)}$");
 
             protagonist.Nuggets = 0;
 
