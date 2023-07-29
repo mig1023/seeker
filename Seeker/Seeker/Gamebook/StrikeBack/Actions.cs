@@ -378,22 +378,23 @@ namespace Seeker.Gamebook.StrikeBack
                     }
                     else  if (FightAllies.Contains(enemy))
                     {
-                        fight.Add(success ? String.Format("BAD|{0} ранен", enemy.Name) : "GOOD|Атака отбита");
+                        fight.Add(success ? $"BAD|{enemy.Name} ранен" : "GOOD|Атака отбита");
                     }
                     else
                     {
-                        fight.Add(success ? String.Format("GOOD|BOLD|{0} ранен", enemy.Name) : "BAD|Атака отбита");
+                        fight.Add(success ? $"GOOD|BOLD|{enemy.Name} ранен" : "BAD|Атака отбита");
                     }
 
                     if (success)
                     {
-                        fight.Add(String.Format("Тяжесть раны: {0} (сила атаки) - {1} (защита) = {2}",
-                            hitStrength, enemy.Defence, hitDiff));
+                        fight.Add($"Тяжесть раны: " +
+                            $"{hitStrength} (сила атаки) - " +
+                            $"{enemy.Defence} (защита) = {hitDiff}");
 
                         enemy.Endurance -= hitDiff;
 
-                        fight.Add(String.Format("{0} потерял вносливости: {1} (осталось: {2})",
-                            enemy.Name, hitDiff, enemy.Endurance));
+                        fight.Add($"{enemy.Name} потерял вносливости: " +
+                            $"{hitDiff} (осталось: {enemy.Endurance})");
 
                         if (toFirstDeath && (enemy.Endurance <= 0) && !IsProtagonist(enemy.Name))
                         {
