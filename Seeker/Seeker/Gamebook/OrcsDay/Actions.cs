@@ -504,14 +504,14 @@ namespace Seeker.Gamebook.OrcsDay
 
                 overcome.Add("BOLD|Борьба:");
 
-                overcome.Add(String.Format("С одной стороны: {0} (смелость) + {1} (мозги) = {2}",
-                    protagonist.Courage, protagonist.Wits, sense));
+                overcome.Add($"С одной стороны: {protagonist.Courage} (смелость) + " +
+                    $"{protagonist.Wits} (мозги) = {sense}");
 
-                overcome.Add(String.Format("С другой: {0} (мышцы) + {1} (оркишность) + 5 = {2}",
-                    protagonist.Muscle, protagonist.Orcishness, orcishness));
+                overcome.Add($"С другой: {protagonist.Muscle} (мышцы) + " +
+                    $"{protagonist.Orcishness} (оркишность) + 5 = {orcishness}");
 
-                overcome.Add(String.Format("В результате: {0} {1} {2}",
-                    sense, Game.Services.Сomparison(sense, orcishness), orcishness));
+                overcome.Add($"В результате: {sense} " +
+                    $"{Game.Services.Сomparison(sense, orcishness)} {orcishness}");
 
                 if (sense >= orcishness)
                 {
