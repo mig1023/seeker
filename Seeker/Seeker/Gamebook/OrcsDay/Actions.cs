@@ -407,7 +407,7 @@ namespace Seeker.Gamebook.OrcsDay
                     else
                     {
                         fight.Add(String.Empty);
-                        fight.Add(String.Format("BIG|BAD|Ты ПРОИГРАЛ :("));
+                        fight.Add("BIG|BAD|Ты ПРОИГРАЛ :(");
                         return fight;
                     }
                 }
@@ -418,11 +418,13 @@ namespace Seeker.Gamebook.OrcsDay
                 Game.Dice.DoubleRoll(out int protRollFirst, out int protRollSecond);
                 int protagonistAttack = (protRollFirst + protRollSecond) + protagonist.Muscle + protagonist.Weapon;
                 bool protagonistAttackWin = protagonistAttack >= enemy.Defense;
+                string weapon = protagonist.Weapon > 0 ? $" + {protagonist.Weapon} меч" : String.Empty;
+                string compareLine = protagonistAttackWin ? ">=" : "<";
 
-                fight.Add(String.Format("Твой удар: {0} + {1} + {2}{3} {4} {5}",
-                    Game.Dice.Symbol(protRollFirst), Game.Dice.Symbol(protRollSecond),
-                    protagonist.Muscle, (protagonist.Weapon > 0 ? String.Format(" + {0} меч", protagonist.Weapon) : String.Empty),
-                    (protagonistAttackWin ? ">=" : "<"), enemy.Defense));
+                fight.Add($"Твой удар: " +
+                    $"{Game.Dice.Symbol(protRollFirst)} + " +
+                    $"{Game.Dice.Symbol(protRollSecond)} + " +
+                    $"{protagonist.Muscle}{weapon} {compareLine} {enemy.Defense}");
 
                 if (protagonistAttackWin)
                 {
