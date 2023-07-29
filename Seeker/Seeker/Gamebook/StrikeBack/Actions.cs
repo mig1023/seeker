@@ -352,17 +352,17 @@ namespace Seeker.Gamebook.StrikeBack
                     Game.Dice.DoubleRoll(out int firstRoll, out int secondRoll);
                     int hitStrength = firstRoll + secondRoll + fighter.Attack;
 
-                    fight.Add(String.Format(
-                        "Сила атаки: {0} + {1} + {2} (атака) = {3}",
-                        Game.Dice.Symbol(firstRoll), Game.Dice.Symbol(secondRoll), fighter.Attack, hitStrength));
+                    fight.Add($"Сила атаки: " +
+                        $"{Game.Dice.Symbol(firstRoll)} + " +
+                        $"{Game.Dice.Symbol(secondRoll)} + " +
+                        $"{fighter.Attack} (атака) = {hitStrength}");
 
                     int hitDiff = hitStrength - enemy.Defence;
                     bool success = hitDiff > 0;
+                    string name = IsProtagonist(enemy.Name) ? "Ваша защита" : "Защита противника";
 
-                    fight.Add(String.Format(
-                        "{0}: {1}, это {2} силы атаки",
-                        (IsProtagonist(enemy.Name) ? "Ваша защита" : "Защита противника"),
-                        enemy.Defence, Game.Services.Сomparison(enemy.Defence, hitStrength)));
+                    fight.Add($"{name}: {enemy.Defence}, это " +
+                        $"{Game.Services.Сomparison(enemy.Defence, hitStrength)} силы атаки");
 
                     if (IsProtagonist(enemy.Name))
                     {
