@@ -9,16 +9,21 @@ namespace Seeker.Gamebook.SilverAgeSilhouette
         public override void Do()
         {
             if (Name == "Verse")
+            {
                 Character.Protagonist.Verse.Add(ValueString);
-
+            }
             else if (Name == "Replace")
+            {
                 TriggerReplace(TriggerSplit(ValueString));
-
+            }
             else if (Name == "Add")
+            {
                 TriggerAdd(TriggerSplit(ValueString));
-
+            }
             else
+            {
                 base.Do(Character.Protagonist);
+            }
         }
 
         private void TriggerReplace(List<string> triggers)
@@ -29,7 +34,9 @@ namespace Seeker.Gamebook.SilverAgeSilhouette
                 Game.Option.Trigger(triggers[1]);
             }
             else
+            {
                 Game.Option.Trigger(triggers[0]);
+            }
         }
 
         private void TriggerAdd(List<string> triggers) =>
