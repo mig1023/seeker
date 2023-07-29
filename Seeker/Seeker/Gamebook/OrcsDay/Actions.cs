@@ -480,7 +480,7 @@ namespace Seeker.Gamebook.OrcsDay
                 if (!Services.CalculationCondition(trigger.Key))
                     continue;
 
-                results.Add(String.Format("{0}|{1}", color, trigger.Value));
+                results.Add($"{color}|{trigger.Value}");
                 result += (add ? 1 : -1);
                 lines += 1;
             }
@@ -488,7 +488,7 @@ namespace Seeker.Gamebook.OrcsDay
             if (lines == 0)
                 results.Add("Да уж, вообще нечего вспомнить...");
 
-            results.Add(String.Format("BIG|BOLD|ИТОГО: {0}",  Game.Services.NegativeMeaning(result)));
+            results.Add($"BIG|BOLD|ИТОГО: {Game.Services.NegativeMeaning(result)}");
 
             return results;
         }
