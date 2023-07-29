@@ -28,7 +28,9 @@ namespace Seeker.Gamebook.StrikeBack
                 protagonist.Endurance = protagonist.MaxEndurance;
             }
             else
+            {
                 base.Do(Character.Protagonist);
+            }
         }
     }
 }
