@@ -12,7 +12,7 @@ namespace Seeker.Gamebook.RendezVous
         public int Dices { get; set; }
 
         public override List<string> Status() =>
-            new List<string> { String.Format("Осознание: {0}", protagonist.Awareness) };
+            new List<string> { $"Осознание: {protagonist.Awareness}" };
 
         public override bool Availability(string option)
         {
@@ -62,14 +62,17 @@ namespace Seeker.Gamebook.RendezVous
 
             if (Dices == 1)
             {
-                diceCheck.Add(String.Format("На кубикe выпало: {0}", Game.Dice.Symbol(firstDice)));
+                diceCheck.Add($"На кубикe выпало: {Game.Dice.Symbol(firstDice)}");
             }
             else
             {
                 int secondDice = Game.Dice.Roll();
                 dicesResult += secondDice;
-                diceCheck.Add(String.Format("На кубиках выпало: {0} + {1} = {2}",
-                    Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), (firstDice + secondDice)));
+
+                diceCheck.Add($"На кубиках выпало:" +
+                    $"{Game.Dice.Symbol(firstDice)} + " +
+                    $"{Game.Dice.Symbol(secondDice)} = " +
+                    $"{firstDice + secondDice}");
             }
 
             diceCheck.Add(dicesResult % 2 == 0 ? "BIG|ЧЁТНОЕ ЧИСЛО!" : "BIG|НЕЧЁТНОЕ ЧИСЛО!");
