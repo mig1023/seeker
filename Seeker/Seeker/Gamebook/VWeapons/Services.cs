@@ -141,7 +141,8 @@ namespace Seeker.Gamebook.VWeapons
                 if (!dogfight)
                     enemy.Cartridges -= 1;
 
-                fight.Add(String.Format("{0} {1}!", enemy.Name, (dogfight ? "промедлил" : "промахнулся")));
+                string fail = dogfight ? "промедлил" : "промахнулся";
+                fight.Add($"{enemy.Name} {fail}!");
                 return false;
             }
 
@@ -149,12 +150,13 @@ namespace Seeker.Gamebook.VWeapons
             {
                 enemy.Cartridges -= 1;
                 wound = enemy.Accuracy;
-                fight.Add(String.Format("{0} стреляет в вас.", enemy.Name));
+                fight.Add($"{enemy.Name} стреляет в вас.");
             }
             else
             {
                 wound = (enemy.Animal ? 2 : 1);
-                fight.Add(String.Format("{0} {1} вас.", enemy.Name, (enemy.Animal ? "кусает" : "бьёт")));
+                string action = enemy.Animal ? "кусает" : "бьёт";
+                fight.Add($"{enemy.Name} {action} вас.");
             }
 
             ProtagonistWound(protagonist, ref fight, target, wound);
@@ -167,7 +169,9 @@ namespace Seeker.Gamebook.VWeapons
                 return true;
             }
             else
+            {
                 return false;
+            }
         }
     }
 }
