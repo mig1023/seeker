@@ -17,19 +17,19 @@ namespace Seeker.Gamebook.VWeapons
 
         public override List<string> Status() => new List<string>
         {
-            String.Format("Подозрение: {0}/5", protagonist.Suspicions),
-            String.Format("Время: {0}/12", protagonist.Time),
-            String.Format("Меткость: {0}/5", protagonist.Accuracy),
-            String.Format("Патроны: {0}/8", protagonist.Cartridges),
+            $"Подозрение: {protagonist.Suspicions}/5",
+            $"Время: {protagonist.Time}/12",
+            $"Меткость: {protagonist.Accuracy}/5",
+            $"Патроны: {protagonist.Cartridges}/8",
         };
 
         public override List<string> AdditionalStatus() => new List<string>
         {
-            String.Format("Голова: {0}/3", protagonist.Head),
-            String.Format("Плечи: {0}/4", protagonist.ShoulderGirdle),
-            String.Format("Корпус: {0}/4", protagonist.Body),
-            String.Format("Руки: {0}/4", protagonist.Hands),
-            String.Format("Ноги: {0}/4", protagonist.Legs),
+            $"Голова: {protagonist.Head}/3",
+            $"Плечи: {protagonist.ShoulderGirdle}/4",
+            $"Корпус: {protagonist.Body}/4",
+            $"Руки: {protagonist.Hands}/4",
+            $"Ноги: {protagonist.Legs}/4",
         };
 
         public override List<string> Representer()
