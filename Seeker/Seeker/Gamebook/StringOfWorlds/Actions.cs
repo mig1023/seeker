@@ -379,11 +379,11 @@ namespace Seeker.Gamebook.StringOfWorlds
                     }
                     else if (protagonistHitStrength > enemyHitStrength)
                     {
-                        fight.Add(String.Format("BOLD|{0} не смог вас ранить", enemy.Name));
+                        fight.Add($"BOLD|{enemy.Name} не смог вас ранить");
                     }
                     else if (protagonistHitStrength < enemyHitStrength)
                     {
-                        fight.Add(String.Format("BAD|{0} ранил вас", enemy.Name));
+                        fight.Add($"BAD|{enemy.Name} ранил вас");
 
                         protagonist.Strength -= (DevastatingAttack ? 3 : 2);
 
