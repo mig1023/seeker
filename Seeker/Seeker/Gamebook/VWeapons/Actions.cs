@@ -197,8 +197,9 @@ namespace Seeker.Gamebook.VWeapons
 
             foreach (Character enemy in Enemies)
                 FightEnemies.Add(enemy.Clone());
-            
-            bool dogFightprotagonist, dogfight = Dogfight || (Services.NoMoreCartridges(FightEnemies) && protagonist.Cartridges <= 0);
+
+            bool noCartridges = Services.NoMoreCartridges(FightEnemies) && protagonist.Cartridges <= 0;
+            bool dogFightprotagonist, dogfight = Dogfight || noCartridges;
             int damagedWeapon = 2;
 
             while (true)
@@ -208,8 +209,10 @@ namespace Seeker.Gamebook.VWeapons
                     if (enemy.Hitpoints <= 0)
                         continue;
 
-                    string cartridgesLine = (dogfight || enemy.Animal ? String.Empty : String.Format(", патронов {0}", enemy.Cartridges));
-                    fight.Add(String.Format("BOLD|{0}, здоровье {1}{2}", enemy.Name, enemy.Hitpoints, cartridgesLine));
+                    string cartridgesLine = dogfight || enemy.Animal ?
+                        String.Empty : $", патронов {enemy.Cartridges}";
+
+                    fight.Add($"BOLD|{enemy.Name}, здоровье {enemy.Hitpoints}{cartridgesLine}");
 
                     if (enemy.First && Services.EnemyAttack(protagonist, enemy, ref fight, Dogfight))
                         return fight;
@@ -221,7 +224,8 @@ namespace Seeker.Gamebook.VWeapons
 
                     if (!dogFightprotagonist)
                     {
-                        fight.Add(String.Format("Вы стреляете{0}…", DamagedWeapon ? " трижды" : String.Empty));
+                        string shots = DamagedWeapon ? " трижды" : String.Empty;
+                        fight.Add($"Вы стреляете{shots}…");
 
                         if (DamagedWeapon)
                             damagedWeapon -= 1;
@@ -229,7 +233,7 @@ namespace Seeker.Gamebook.VWeapons
                             protagonist.Cartridges -= 1;
 
                         enemy.Hitpoints -= protagonist.Accuracy;
-                        fight.Add(String.Format("GOOD|Ваш выстрел отнимает у него {0} ед. здоворья.", protagonist.Accuracy));
+                        fight.Add($"GOOD|Ваш выстрел отнимает у него {protagonist.Accuracy} ед. здоворья.");
                     }
                     else if (protagonist.ShoulderGirdle <= 0)
                     {
@@ -249,7 +253,7 @@ namespace Seeker.Gamebook.VWeapons
                     }
                     
                     if (enemy.Hitpoints <= 0)
-                        fight.Add(String.Format("GOOD|{0} убит!", enemy.Name));
+                        fight.Add($"GOOD|{enemy.Name} убит!");
 
                     else if (!enemy.First && Services.EnemyAttack(protagonist, enemy, ref fight, Dogfight))
                         return fight;
