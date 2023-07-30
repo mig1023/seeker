@@ -156,8 +156,10 @@ namespace Seeker.Gamebook.StringOfWorlds
             bool goodCharm = (firstDice + secondDice) <= protagonist.Charm;
             string charmLine = goodCharm ? "<=" : ">";
 
-            List<string> luckCheck = new List<string> { $"Проверка обаяния: " +
-                $"{Game.Dice.Symbol(firstDice)} + {Game.Dice.Symbol(secondDice)} " +
+            List<string> luckCheck = new List<string> {
+                $"Проверка обаяния: " +
+                $"{Game.Dice.Symbol(firstDice)} + " +
+                $"{Game.Dice.Symbol(secondDice)} " +
                 $"{charmLine} {protagonist.Charm}" };
 
             if (goodCharm)
@@ -185,10 +187,13 @@ namespace Seeker.Gamebook.StringOfWorlds
         {
             Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
             bool goodSkill = (firstDice + secondDice) <= protagonist.Skill;
+            string skillLine = goodSkill ? "<=" : ">";
 
-            List<string> luckCheck = new List<string> { String.Format(
-                "Проверка ловкости: {0} + {1} {2} {3}",
-                Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), (goodSkill ? "<=" : ">"), protagonist.Skill) };
+            List<string> luckCheck = new List<string> {
+                $"Проверка ловкости: " +
+                $"{Game.Dice.Symbol(firstDice)} + " +
+                $"{Game.Dice.Symbol(secondDice)} " +
+                $"{skillLine} {protagonist.Skill}" };
 
             luckCheck.Add(goodSkill ? "BIG|GOOD|УСПЕХ :)" : "BIG|BAD|НЕУДАЧА :(");
 
