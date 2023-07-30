@@ -291,7 +291,6 @@ namespace Seeker.Gamebook.SwampFever
                         {
                             fight.Add("GOOD|Вы накрыли противника огнём");
                         }
-                           
                     }
                     else if (!myCombination.Contains(range) && enemyCombination.Contains(range))
                     {
@@ -321,9 +320,9 @@ namespace Seeker.Gamebook.SwampFever
                             int myAttack = myDice + myBonus;
 
                             if (myBonus > 0)
-                                bonuses = String.Format(", +{0} за {1}-ки, итого {2}", myBonus, range, myAttack);
+                                bonuses = $", +{myBonus} за {range}-ки, итого {myAttack}";
 
-                            fight.Add(String.Format("Ваша атака: {0}{1}", Game.Dice.Symbol(myDice), bonuses));
+                            fight.Add($"Ваша атака: {Game.Dice.Symbol(myDice)}{bonuses}");
 
                             bonuses = String.Empty;
 
@@ -332,10 +331,10 @@ namespace Seeker.Gamebook.SwampFever
                             int enemyAttack = enemyDice + enemyBonus;
 
                             if (enemyBonus > 0)
-                                bonuses = String.Format(", +{0} за {1}-ки, итого {2}", enemyBonus, range, enemyAttack);
+                                bonuses = $", +{enemyBonus} за {range}-ки, итого {enemyAttack}";
 
 
-                            fight.Add(String.Format("Атака противника: {0}{1}", Game.Dice.Symbol(enemyDice), bonuses));
+                            fight.Add($"Атака противника: {Game.Dice.Symbol(enemyDice)}{bonuses}");
 
                             if ((myAttack > enemyAttack) && (range == 4))
                             {
