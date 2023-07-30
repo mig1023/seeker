@@ -804,7 +804,9 @@ namespace Seeker.Gamebook.SwampFever
                     reRoll = true;
 
                     mySpeed = Game.Dice.Roll();
-                    pursuitReport.Add(String.Format("Вы почти настигли куст и меняете скорость: {0}", Game.Dice.Symbol(mySpeed)));
+
+                    pursuitReport.Add($"Вы почти настигли куст и меняете скорость: " +
+                        $"{Game.Dice.Symbol(mySpeed)}");
 
                     if (mySpeed == tumbleweedSpeed)
                         return Services.PursuitWin(pursuitReport);
@@ -814,7 +816,8 @@ namespace Seeker.Gamebook.SwampFever
                     reRoll = true;
 
                     myDirection = Game.Dice.Roll();
-                    pursuitReport.Add(String.Format("Вы почти настигли куст и меняете направление: {0}", Game.Dice.Symbol(myDirection)));
+                    pursuitReport.Add($"Вы почти настигли куст и меняете направление: " +
+                        $"{Game.Dice.Symbol(myDirection)}");
 
                     if (myDirection == tumbleweedDirection)
                         return Services.PursuitWin(pursuitReport);
