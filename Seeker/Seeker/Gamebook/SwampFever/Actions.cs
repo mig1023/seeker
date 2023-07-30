@@ -687,7 +687,7 @@ namespace Seeker.Gamebook.SwampFever
                         break;
                 }
 
-                warReport.Add(String.Format("Общая тяга: {0}", totalForce));
+                warReport.Add($"Общая тяга: {totalForce}");
 
                 if (totalForce > yatiForce)
                 {
@@ -721,20 +721,23 @@ namespace Seeker.Gamebook.SwampFever
             while ((myPosition < 18) && (targetPosition < 18))
             {
                 targetPosition += 3;
-                huntReport.Add(String.Format("BOLD|Зверь убежал на клетку {0}", targetPosition));
+                huntReport.Add($"BOLD|Зверь убежал на клетку {targetPosition}");
 
                 if (skipStepAfterShot)
-                    huntReport.Add(String.Format("Вы остаётесь на клетке {0}, т.к. стреляли", myPosition));
-
+                {
+                    huntReport.Add($"Вы остаётесь на клетке {myPosition}, т.к. стреляли");
+                }
                 else if (targetPosition <= myPosition)
-                    huntReport.Add(String.Format("Вы остаётесь на клетке {0}, чтобы подстеречь зверя", myPosition));
-
+                {
+                    huntReport.Add($"Вы остаётесь на клетке {myPosition}, чтобы подстеречь зверя");
+                }
                 else
                 {
                     int forwarding = Game.Dice.Roll();
                     myPosition += forwarding;
 
-                    huntReport.Add(String.Format("Вы догоняете и проезжаете {0} до клетки {1}", Game.Dice.Symbol(forwarding), myPosition));
+                    huntReport.Add($"Вы догоняете и проезжаете " +
+                        $"{Game.Dice.Symbol(forwarding)} до клетки {myPosition}");
                 }
 
                 skipStepAfterShot = false;
@@ -743,11 +746,12 @@ namespace Seeker.Gamebook.SwampFever
 
                 if (distance <= 1)
                 {
+                    string distanceLine = distance == 0 ? "4, 5 или 6" : "5 или 6";
                     huntReport.Add("Зверь рядом и вы принимаете решение стрелять.");
-                    huntReport.Add(String.Format("Для попадания необходимо выкинуть {0}", (distance == 0 ? "4, 5 или 6" : "5 или 6")));
+                    huntReport.Add($"Для попадания необходимо выкинуть {distanceLine}");
 
                     int shot = Game.Dice.Roll();
-                    huntReport.Add(String.Format("Ваш выстрел: {0}", Game.Dice.Symbol(shot)));
+                    huntReport.Add($"Ваш выстрел: {Game.Dice.Symbol(shot)}");
 
                     if (((distance == 0) && (shot > 3)) || ((distance > 0) && (shot > 4)))
                     {
