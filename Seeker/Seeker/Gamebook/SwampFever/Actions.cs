@@ -836,12 +836,14 @@ namespace Seeker.Gamebook.SwampFever
                     if (myDirection > mySpeed)
                     {
                         mySpeed = Game.Dice.Roll();
-                        pursuitReport.Add(String.Format("Вы пытаетесь резко ускориться: {0}", Game.Dice.Symbol(mySpeed)));
+                        pursuitReport.Add($"Вы пытаетесь резко ускориться: " +
+                            $"{Game.Dice.Symbol(mySpeed)}");
                     }
                     else
                     {
                         myDirection = Game.Dice.Roll();
-                        pursuitReport.Add(String.Format("Вы пытаетесь резко сменить курс: {0}", Game.Dice.Symbol(myDirection)));
+                        pursuitReport.Add($"Вы пытаетесь резко сменить курс: " +
+                            $"{Game.Dice.Symbol(myDirection)}");
                     }
 
                     if ((tumbleweedDirection + tumbleweedSpeed) <= (myDirection + mySpeed))
@@ -893,15 +895,17 @@ namespace Seeker.Gamebook.SwampFever
 
             for (int step = 1; step <= 4; step++)
             {
-                cavityReport.Add(String.Format("BOLD|Ход № {0}", step));
+                cavityReport.Add($"BOLD|Ход № {step}");
 
                 List<int> bombs = new List<int>();
 
                 for (int bomb = 0; bomb < 3; bomb++)
                     bombs.Add(Game.Dice.Roll());
 
-                cavityReport.Add(String.Format("Вулканические бомбы бьют по клеткам: {0}, {1} и {2}",
-                    Game.Dice.Symbol(bombs[0]), Game.Dice.Symbol(bombs[1]), Game.Dice.Symbol(bombs[2])));
+                cavityReport.Add($"Вулканические бомбы бьют по клеткам: " +
+                    $"{Game.Dice.Symbol(bombs[0])}, " +
+                    $"{Game.Dice.Symbol(bombs[1])} и " +
+                    $"{Game.Dice.Symbol(bombs[2])}");
 
                 int myMovementType = ThinkAboutMovement(myPosition, step, bombs, ref cavityReport);
                 int myMove = 0;
@@ -909,7 +913,7 @@ namespace Seeker.Gamebook.SwampFever
                 if (myMovementType > 3)
                 {
                     myMove = Game.Dice.Roll();
-                    cavityReport.Add(String.Format("Движение на гусеницах, дальность: {0}", Game.Dice.Symbol(myMove)));
+                    cavityReport.Add($"Движение на гусеницах, дальность: {Game.Dice.Symbol(myMove)}");
                 }
                 else if (myMovementType > 0)
                 {
@@ -917,8 +921,9 @@ namespace Seeker.Gamebook.SwampFever
 
                     if (myMove > 2)
                     {
-                        cavityReport.Add(String.Format("Движение на гребных винтах, дальность: {0}, -2 за винты, итого {1}",
-                            Game.Dice.Symbol(myMove), (myMove - 2)));
+                        cavityReport.Add($"Движение на гребных винтах, " +
+                            $"дальность: {Game.Dice.Symbol(myMove)}, " +
+                            $"-2 за винты, итого {myMove - 2}");
 
                         myMove -= 2;
                     }
@@ -929,15 +934,19 @@ namespace Seeker.Gamebook.SwampFever
                         if (propBonus > 2)
                             propBonus -= 2;
 
-                        cavityReport.Add(String.Format("Движение на гребных винтах, дальность: {0}, +бонусный бросок: {1}, итого {2}",
-                            Game.Dice.Symbol(myMove), Game.Dice.Symbol(propBonus), (myMove + propBonus)));
+                        cavityReport.Add($"Движение на гребных винтах, " +
+                            $"дальность: {Game.Dice.Symbol(myMove)}, " +
+                            $"+бонусный бросок: {Game.Dice.Symbol(propBonus)}, " +
+                            $"итого {myMove + propBonus}");
 
                         myMove += propBonus;
                     }
                 }
 
                 myPosition += myMove;
-                cavityReport.Add(String.Format("Вы {0} на клетке {1}", (myMovementType == 0 ? "остаётесь" : "останавливаетесь"), myPosition));
+
+                string move = myMovementType == 0 ? "остаётесь" : "останавливаетесь";
+                cavityReport.Add($"Вы {move} на клетке {myPosition}");
 
                 if (bombs.Contains(myPosition))
                 {
