@@ -98,7 +98,7 @@ namespace Seeker.Gamebook.StringOfWorlds
                 return enemies;
 
             foreach (Character enemy in Enemies)
-                enemies.Add(String.Format("{0}\nловкость {1}  сила {2}", enemy.Name, enemy.Skill, enemy.Strength));
+                enemies.Add($"{enemy.Name}\nловкость {enemy.Skill}  сила {enemy.Strength}");
 
             return enemies;
         }
@@ -112,9 +112,9 @@ namespace Seeker.Gamebook.StringOfWorlds
             };
 
             int goodLuck = Game.Dice.Roll();
+            string not = protagonist.Luck[goodLuck] ? "не " : String.Empty;
 
-            luckCheck.Add(String.Format("Проверка удачи: {0} - {1}зачёркунтый",
-                Game.Dice.Symbol(goodLuck), (protagonist.Luck[goodLuck] ? "не " : String.Empty)));
+            luckCheck.Add($"Проверка удачи: {Game.Dice.Symbol(goodLuck)} - {not}зачёркунтый");
 
             luckCheck.Add(Result(protagonist.Luck[goodLuck], "УСПЕХ|НЕУДАЧА"));
 
