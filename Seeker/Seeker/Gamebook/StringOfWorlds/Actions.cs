@@ -154,10 +154,11 @@ namespace Seeker.Gamebook.StringOfWorlds
         {
             Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
             bool goodCharm = (firstDice + secondDice) <= protagonist.Charm;
+            string charmLine = goodCharm ? "<=" : ">";
 
-            List<string> luckCheck = new List<string> { String.Format(
-                "Проверка обаяния: {0} + {1} {2} {3}",
-                Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), (goodCharm ? "<=" : ">"), protagonist.Charm) };
+            List<string> luckCheck = new List<string> { $"Проверка обаяния: " +
+                $"{Game.Dice.Symbol(firstDice)} + {Game.Dice.Symbol(secondDice)} " +
+                $"{charmLine} {protagonist.Charm}" };
 
             if (goodCharm)
             {
