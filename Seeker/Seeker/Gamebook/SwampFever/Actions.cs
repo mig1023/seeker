@@ -378,13 +378,16 @@ namespace Seeker.Gamebook.SwampFever
                         int enemyEvasion = myDice + myBonus - myPenalty;
 
                         if (myBonus > 0)
-                            bonuses = String.Format(", +{0} за ваши 3-ки", myBonus);
+                            bonuses = $", +{myBonus} за ваши 3-ки";
 
                         if (myPenalty > 0)
-                            penalties = String.Format(", -{0} за его 2-ки", myPenalty);
+                            penalties = $", -{myPenalty} за его 2-ки";
 
-                        fight.Add(String.Format("Противник пытется уклониться: {0}{1}{2}, итого {3} - это {4} порогового значения '2'",
-                            Game.Dice.Symbol(myDice), bonuses, penalties, enemyEvasion, Game.Services.Сomparison(enemyEvasion, 2)));
+                        fight.Add($"Противник пытется уклониться: " +
+                            $"{Game.Dice.Symbol(myDice)}{bonuses}{penalties}, " +
+                            $"итого {enemyEvasion} - это " +
+                            $"{Game.Services.Сomparison(enemyEvasion, 2)} " +
+                            $"порогового значения '2'");
 
                         if (enemyEvasion > 2)
                         {
