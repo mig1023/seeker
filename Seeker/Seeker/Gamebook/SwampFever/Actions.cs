@@ -785,14 +785,16 @@ namespace Seeker.Gamebook.SwampFever
 
                 Game.Dice.DoubleRoll(out int tumbleweedDirection, out int tumbleweedSpeed);
 
-                pursuitReport.Add(String.Format("BOLD|Направление движения куста: {0}, скорость: {1}",
-                    Game.Dice.Symbol(tumbleweedDirection), Game.Dice.Symbol(tumbleweedSpeed)));
+                pursuitReport.Add($"BOLD|Направление движения куста: " +
+                    $"{Game.Dice.Symbol(tumbleweedDirection)}, " +
+                    $"скорость: {Game.Dice.Symbol(tumbleweedSpeed)}");
 
                 int myDirection = Game.Dice.Roll();
                 int mySpeed = Game.Dice.Roll();
 
-                pursuitReport.Add(String.Format("Ваше направление: {0}, скорость: {1}",
-                    Game.Dice.Symbol(myDirection), Game.Dice.Symbol(mySpeed)));
+                pursuitReport.Add($"Ваше направление: " +
+                    $"{Game.Dice.Symbol(myDirection)}, " +
+                    $"скорость: {Game.Dice.Symbol(mySpeed)}");
 
                 if ((myDirection == tumbleweedDirection) && (mySpeed == tumbleweedSpeed))
                     return Services.PursuitWin(pursuitReport);
