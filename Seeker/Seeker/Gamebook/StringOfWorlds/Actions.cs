@@ -268,8 +268,9 @@ namespace Seeker.Gamebook.StringOfWorlds
 
                 string result = (succesBreaked ? "удачный, дверь поддалась!" : "неудачный, -1 сила");
 
-                breakingDoor.Add(String.Format("Удар: {0} + {1} = {2}",
-                    Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), result));
+                breakingDoor.Add($"Удар: " +
+                    $"{Game.Dice.Symbol(firstDice)} + " +
+                    $"{Game.Dice.Symbol(secondDice)} = {result}");
             }
 
             breakingDoor.Add(Result(succesBreaked, "ДВЕРЬ ВЗЛОМАНА|ВЫ УБИЛИСЬ ОБ ДВЕРЬ"));
