@@ -165,17 +165,18 @@ namespace Seeker.Gamebook.SwampFever
 
             int upgradeDice = Game.Dice.Roll();
 
-            fight.Add(String.Format("Кубик проверки апгрейда: {0}", Game.Dice.Symbol(upgradeDice)));
+            fight.Add($"Кубик проверки апгрейда: {Game.Dice.Symbol(upgradeDice)}");
 
             for (int i = 1; i <= Constants.GetUpgrates.Count; i++)
             {
                 if (GetProperty(protagonist, Services.GetUpgratesValues(i, part: 1)) == 0)
                     continue;
 
-                bool inAction = (upgradeDice == i);
+                bool inAction = upgradeDice == i;
+                string good = inAction ? "GOOD|" : String.Empty;
+                string action = inAction ? "В ДЕЙСТВИИ!" : "нет";
 
-                fight.Add(String.Format("{0}{1} - {2}", (inAction ? "GOOD|" : String.Empty),
-                    Services.GetUpgratesValues(i, part: 2), (inAction ? "В ДЕЙСТВИИ!" : "нет")));
+                fight.Add($"{good}{Services.GetUpgratesValues(i, part: 2)} - {action}");
 
                 if (inAction)
                 {
@@ -208,7 +209,8 @@ namespace Seeker.Gamebook.SwampFever
                 myCombinationLine.Add(Game.Dice.Symbol(dice));
             }
 
-            fight.Add(String.Format("Ваша комбинация: {0}", String.Join(String.Empty, myCombinationLine.ToArray())));
+            string combination = String.Join(String.Empty, myCombinationLine.ToArray());
+            fight.Add($"Ваша комбинация: {combination}");
 
             List<int> enemyCombination = new List<int>();
             List<string> enemyCombinationLine = new List<string>();
@@ -218,12 +220,16 @@ namespace Seeker.Gamebook.SwampFever
                 int enemyNumber = int.Parse(dice);
                 enemyCombination.Add(enemyNumber);
                 enemyCombinationLine.Add(Game.Dice.Symbol(enemyNumber));
-            }             
+            }
 
-            fight.Add(String.Format("Его комбинация: {0}", String.Join(String.Empty, enemyCombinationLine.ToArray())));
+            string lineCombination = String.Join(String.Empty, enemyCombinationLine.ToArray());
+            fight.Add($"Его комбинация: {lineCombination}");
 
             if (Upgrade(ref myCombination, ref myCombinationLine, ref fight))
-                fight.Add(String.Format("Теперь ваша комбинация: {0}", String.Join(String.Empty, myCombinationLine.ToArray())));
+            {
+                string newCombination = String.Join(String.Empty, myCombinationLine.ToArray());
+                fight.Add($"Теперь ваша комбинация: {newCombination}");
+            }
 
             bool birds = Birds;
 
@@ -243,7 +249,7 @@ namespace Seeker.Gamebook.SwampFever
                         {
                             if ((enemyCombination[i] == dice) && (maneuvers > 0))
                             {
-                                fight.Add(String.Format("Убираем у противника {0}-ку за ваше маневрирование", dice));
+                                fight.Add($"Убираем у противника {dice}-ку за ваше маневрирование");
                                 enemyCombination[i] = 0;
                                 maneuvers -= 1;
                                 failManeuvers = false;
@@ -260,7 +266,7 @@ namespace Seeker.Gamebook.SwampFever
                 foreach (int range in new int[] { 6, 5, 4 })
                 {
                     fight.Add(String.Empty);
-                    fight.Add(String.Format("BOLD|{0}", rangeType[range]));
+                    fight.Add($"BOLD|{rangeType[range]}");
 
                     int roundResult = 0;
 
