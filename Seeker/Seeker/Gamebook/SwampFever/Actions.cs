@@ -664,7 +664,7 @@ namespace Seeker.Gamebook.SwampFever
                         totalForce += 2;
 
                         warReport.Add("Ваша тактика: «Резкий рывок»");
-                        warReport.Add(String.Format("+2 к вашей тяге за рывок, итого тяга: {0}", totalForce));
+                        warReport.Add($"+2 к вашей тяге за рывок, итого тяга: {totalForce}");
                         break;
 
                     case 4:
@@ -672,8 +672,12 @@ namespace Seeker.Gamebook.SwampFever
                         
                         if ((myForce == erikForce) || (myForce == jonyForce))
                         {
-                            string coincidence = (erikForce == jonyForce ? "у всех разом" : "со значением " + (myForce == erikForce ? "Эрика" : "Джонни"));
-                            warReport.Add(String.Format("Значения тяги совпало {0}, общая тяга умножается вдвое!", coincidence));
+                            string force = myForce == erikForce ? "Эрика" : "Джонни";
+                            string coincidence = erikForce == jonyForce ? 
+                                "у всех разом" : $"со значением {force}";
+
+                            warReport.Add($"Значения тяги совпало {coincidence}, " +
+                                $"общая тяга умножается вдвое!");
 
                             totalForce *= 2;
                         }
@@ -687,7 +691,8 @@ namespace Seeker.Gamebook.SwampFever
 
                 if (totalForce > yatiForce)
                 {
-                    warReport.Add(String.Format("GOOD|Вы пересилили яти! Он шагнул вперёд{0}!", twoStep ? " дважды" : String.Empty));
+                    string twoLine = twoStep ? " дважды" : String.Empty;
+                    warReport.Add($"GOOD|Вы пересилили яти! Он шагнул вперёд{twoLine}!");
                     position += (twoStep ? 2 : 1);
                 }
                 else if (totalForce < yatiForce)
