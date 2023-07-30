@@ -16,7 +16,7 @@ namespace Seeker.Gamebook.ThreePaths
             if (protagonist.Time == null)
                 return null;
                 
-            return new List<string> { String.Format("Время: {0:d2}:00", protagonist.Time) };
+            return new List<string> { $"Время: {protagonist.Time:d2}:00" };
         }
 
         public override bool IsButtonEnabled(bool secondButton = false)
@@ -81,8 +81,9 @@ namespace Seeker.Gamebook.ThreePaths
         public override List<string> Representer()
         {
             int count = protagonist.Spells.Where(x => x == Head).Count();
+            string line = count > 0 ? $" ({count} шт)" : String.Empty;
 
-            return new List<string> { String.Format("{0}{1}", Head, (count > 0 ? String.Format(" ({0} шт)", count) : String.Empty)) };
+            return new List<string> { $"{Head}{line}" };
         }
     }
 }
