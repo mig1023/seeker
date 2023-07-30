@@ -94,12 +94,15 @@ namespace Seeker.Gamebook.VWeapons
                     if (protagonist.ShoulderGirdle > 0)
                     {
                         protagonist.ShoulderGirdle -= wound;
-                        fight.Add(String.Format(
-                            "Вы потеряли {0} ед. здоровья плеча, теперь оно равно {1} из 4.",
-                            wound, protagonist.ShoulderGirdle));
+
+                        fight.Add($"Вы потеряли {wound} ед. здоровья плеча, " +
+                            $"теперь оно равно {protagonist.ShoulderGirdle} из 4.");
 
                         if (protagonist.ShoulderGirdle <= 0)
-                            fight.Add("BOLD|Вы больше не можете наносить ударов и обречены в рукопашной!");
+                        {
+                            fight.Add("BOLD|Вы больше не можете наносить ударов " +
+                                "и обречены в рукопашной!");
+                        }
                     }
 
                     break;
@@ -109,17 +112,18 @@ namespace Seeker.Gamebook.VWeapons
 
                     protagonist.Head -= wound;
 
-                    fight.Add(String.Format(
-                        "Вы потеряли {0} ед. здоровья головы, теперь оно равно {1} из 3.",
-                        wound, protagonist.Head));
+                    fight.Add($"Вы потеряли {wound} ед. здоровья головы," +
+                        $" теперь оно равно {protagonist.Head} из 3.");
 
                     if (protagonist.Head <= 0)
+                    {
                         protagonist.Dead = true;
-
+                    }
                     else if (protagonist.Suspicions < 5)
                     {
                         protagonist.Suspicions += 1;
-                        fight.Add("BOLD|Вы также получаете 1 ед. подозрений, так как скрыть рану не удастся.");
+                        fight.Add("BOLD|Вы также получаете 1 ед. подозрений, " +
+                            "так как скрыть рану не удастся.");
                     }
 
                     break;
