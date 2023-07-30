@@ -41,10 +41,10 @@ namespace Seeker.Gamebook.VWeapons
 
             foreach (Character enemy in Enemies)
             {
-                string accuracy = (Dogfight ? String.Empty : String.Format("меткость {0}  ", enemy.Accuracy));
-                string first = (enemy.First ? "  атакует первым" : String.Empty);
+                string accuracy = Dogfight ? String.Empty : $"меткость {enemy.Accuracy}  ";
+                string first = enemy.First ? "  атакует первым" : String.Empty;
 
-                enemies.Add(String.Format("{0}\n{1}здоровье {2}{3}", enemy.Name, accuracy, enemy.Hitpoints, first));
+                enemies.Add($"{enemy.Name}\n{accuracy}здоровье {enemy.Hitpoints}{first}");
             }
 
             return enemies;
@@ -133,7 +133,8 @@ namespace Seeker.Gamebook.VWeapons
 
             protagonist.Cartridges += Value;
 
-            damage.Add(String.Format("BIG|GOOD|+{0} патронов, их у вас теперь {1}.", Value, protagonist.Cartridges));
+            damage.Add($"BIG|GOOD|+{Value} патронов, " +
+                $"их у вас теперь {protagonist.Cartridges}.");
 
             return damage;
         }
