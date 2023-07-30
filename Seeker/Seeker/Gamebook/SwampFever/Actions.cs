@@ -39,10 +39,10 @@ namespace Seeker.Gamebook.SwampFever
 
         public override List<string> AdditionalStatus() => new List<string>
         {
-            String.Format("Ярость: {0}", Constants.GetFuryLevel[protagonist.Fury]),
-            String.Format("Креды: {0}", protagonist.Creds),
-            String.Format("Стигон: {0}/6", protagonist.Stigon),
-            String.Format("Котировка: 1:{0}", protagonist.Rate),
+            $"Ярость: {Constants.GetFuryLevel[protagonist.Fury]}",
+            $"Креды: {protagonist.Creds}",
+            $"Стигон: {protagonist.Stigon}/6",
+            $"Котировка: 1:{protagonist.Rate}",
         };
 
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
