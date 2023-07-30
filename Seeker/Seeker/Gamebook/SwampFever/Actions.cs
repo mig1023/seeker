@@ -458,8 +458,8 @@ namespace Seeker.Gamebook.SwampFever
             int soldStigon = protagonist.Stigon;
             int earnedCreds = 0, sellNum = 0;
 
-            accountingReport.Add(String.Format("В вашем грузовом отсеке {0} кубометров стигона", protagonist.Stigon));
-            accountingReport.Add(String.Format("Курс стигона на начало продажи: 1:{0}", protagonist.Rate)); 
+            accountingReport.Add($"В вашем грузовом отсеке {protagonist.Stigon} кубометров стигона");
+            accountingReport.Add($"Курс стигона на начало продажи: 1:{protagonist.Rate}"); 
 
             while (protagonist.Stigon > 0)
             {
@@ -468,13 +468,13 @@ namespace Seeker.Gamebook.SwampFever
 
                 protagonist.Stigon -= 1;
                 earnedCreds += protagonist.Rate;
-                accountingReport.Add(String.Format("BOLD|Продажа {0} кубометра стигона: +{1} кредов", sellNum, protagonist.Rate));
-                accountingReport.Add(String.Format("Подытог к зачислению: {0} кредов", earnedCreds));
+                accountingReport.Add($"BOLD|Продажа {sellNum} кубометра стигона: +{protagonist.Rate} кредов");
+                accountingReport.Add($"Подытог к зачислению: {earnedCreds} кредов");
 
                 if (protagonist.Rate > 5)
                 {
                     protagonist.Rate -= 5;
-                    accountingReport.Add(String.Format("Курс стигона упал до: {0} кредов", protagonist.Rate));
+                    accountingReport.Add($"Курс стигона упал до: {protagonist.Rate} кредов");
                 }
                 else
                     accountingReport.Add("Курсу стигона уже некуда падать...");
@@ -482,8 +482,8 @@ namespace Seeker.Gamebook.SwampFever
 
             accountingReport.Add(String.Empty);
             accountingReport.Add("BIG|ИТОГО:");
-            accountingReport.Add(String.Format("Вы продали: {0} кубометров стигона", soldStigon));
-            accountingReport.Add(String.Format("BOLD|GOOD|Вы получили по плавающему курсу: {0} кредов", earnedCreds));
+            accountingReport.Add($"Вы продали: {soldStigon} кубометров стигона");
+            accountingReport.Add($"BOLD|GOOD|Вы получили по плавающему курсу: {earnedCreds} кредов");
 
             protagonist.Creds += earnedCreds;
 
@@ -517,7 +517,7 @@ namespace Seeker.Gamebook.SwampFever
                 if (!anything)
                     Services.PurchasesHeads(ref purchasesReport, affordable, prevAffordable);
 
-                purchasesReport.Add(String.Format("{0}{1} — {2} кредов.", affLine, purchase.Key, purchase.Value));
+                purchasesReport.Add($"{affLine}{purchase.Key} — {purchase.Value} кредов.");
 
                 prevAffordable = affordable;
             }
