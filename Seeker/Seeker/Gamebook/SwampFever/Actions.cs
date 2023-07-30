@@ -21,11 +21,11 @@ namespace Seeker.Gamebook.SwampFever
             if (Price > 0)
             {
                 string creds = Game.Services.CoinsNoun(Price, "кредит", "кредита", "кредитов");
-                return new List<string> { String.Format("{0}, {1} {2}", Head, Price, creds) };
+                return new List<string> { $"{Head}, {Price} {creds}" };
             }
             else if (Level > 0)
             {
-                return new List<string> { String.Format("Ментальная проверка, уровень {0}", Level) };
+                return new List<string> { $"Ментальная проверка, уровень {Level}" };
             }
             else if (!String.IsNullOrEmpty(EnemyName))
             {
