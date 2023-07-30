@@ -348,20 +348,23 @@ namespace Seeker.Gamebook.StringOfWorlds
                         int protagonistSkill = (protagonist.Skill - skillPenalty);
                         protagonistHitStrength = protagonistRollFirst + protagonistRollSecond + protagonistSkill;
 
-                        fight.Add(String.Format("Мощность вашего удара: {0} + {1} + {2} = {3}",
-                            Game.Dice.Symbol(protagonistRollFirst), Game.Dice.Symbol(protagonistRollSecond),
-                            protagonistSkill, protagonistHitStrength));
+                        fight.Add($"Мощность вашего удара: " +
+                            $"{Game.Dice.Symbol(protagonistRollFirst)} + " +
+                            $"{Game.Dice.Symbol(protagonistRollSecond)} + " +
+                            $"{protagonistSkill} = {protagonistHitStrength}");
                     }
 
                     Game.Dice.DoubleRoll(out int enemyRollFirst, out int enemyRollSecond);
                     int enemyHitStrength = enemyRollFirst + enemyRollSecond + enemy.Skill;
 
-                    fight.Add(String.Format("Мощность его удара: {0} + {1} + {2} = {3}",
-                        Game.Dice.Symbol(enemyRollFirst), Game.Dice.Symbol(enemyRollSecond), enemy.Skill, enemyHitStrength));
+                    fight.Add($"Мощность его удара: " +
+                        $"{Game.Dice.Symbol(enemyRollFirst)} + " +
+                        $"{Game.Dice.Symbol(enemyRollSecond)} + " +
+                        $"{enemy.Skill} = {enemyHitStrength}");
 
                     if ((protagonistHitStrength > enemyHitStrength) && !attackAlready)
                     {
-                        fight.Add(String.Format("GOOD|{0} ранен", enemy.Name));
+                        fight.Add($"GOOD|{enemy.Name} ранен");
 
                         enemy.Strength -= 2;
 
