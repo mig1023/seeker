@@ -6,10 +6,14 @@ namespace Seeker.Gamebook.VWeapons
 {
     class Services
     {
-        public static bool SpecialCheck() =>
-            (Game.Option.IsTriggered("Mt") || Game.Option.IsTriggered("P"))
-            &&
-            !Game.Option.IsTriggered("B") && Character.Protagonist.Suspicions <= 3;
+        public static bool SpecialCheck()
+        {
+            bool mt = Game.Option.IsTriggered("Mt");
+            bool p = Game.Option.IsTriggered("P");
+            bool b = Game.Option.IsTriggered("B");
+
+            return (mt || p) && !b && Character.Protagonist.Suspicions <= 3;
+        }
 
         public static bool SpecialFCheck() =>
             ((Character.Protagonist.Suspicions >= 4) && !Game.Option.IsTriggered("F"));
@@ -20,7 +24,8 @@ namespace Seeker.Gamebook.VWeapons
         public static bool NoMoreCartridges(List<Character> enemies) =>
             enemies.Where(x => x.Cartridges > 0).Count() == 0;
 
-        public static void ProtagonistWound(Character protagonist, ref List<string> fight, int target, int wound)
+        public static void ProtagonistWound(Character protagonist,
+            ref List<string> fight, int target, int wound)
         {
             switch (target)
             {
@@ -31,12 +36,14 @@ namespace Seeker.Gamebook.VWeapons
                     {
                         protagonist.Legs -= wound;
 
-                        fight.Add(String.Format(
-                            "BAD|Вы потеряли {0} ед. здоровья ног, теперь оно равно {1} из 4.",
-                            wound, protagonist.Legs));
+                        fight.Add($"BAD|Вы потеряли {wound} ед. здоровья ног, " +
+                            $"теперь оно равно {protagonist.Legs} из 4.");
 
                         if (protagonist.Legs <= 0)
-                            fight.Add("BOLD|Вы больше не сможете спасаться бегством или прыгать с любой высоты!");
+                        {
+                            fight.Add("BOLD|Вы больше не сможете спасаться " +
+                                "бегством или прыгать с любой высоты!");
+                        }
                     }
 
                     break;
