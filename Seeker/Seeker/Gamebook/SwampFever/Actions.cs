@@ -610,7 +610,7 @@ namespace Seeker.Gamebook.SwampFever
                 if (position != 0)
                 {
                     string positionType = (position > 0 ? "побеждаете" : "проигрываете");
-                    warReport.Add(String.Format("BOLD|ПОЛОЖЕНИЕ: вы {0} на {1} шаг", positionType, Math.Abs(position)));
+                    warReport.Add($"BOLD|ПОЛОЖЕНИЕ: вы {positionType} на {Math.Abs(position)} шаг");
                 }
                 else
                     warReport.Add("BOLD|ПОЛОЖЕНИЕ: на исходной точке");
@@ -620,23 +620,24 @@ namespace Seeker.Gamebook.SwampFever
                 int myСhoice = 0;
 
                 int yatiForce = 10 + (Math.Abs(position) * 2);
-                warReport.Add(String.Format("Яти тянет: {0}", yatiForce));
+                warReport.Add($"Яти тянет: {yatiForce}");
 
                 int erikForce = Game.Dice.Roll();
-                warReport.Add(String.Format("Эрик тянет: {0}", Game.Dice.Symbol(erikForce)));
+                warReport.Add($"Эрик тянет: {Game.Dice.Symbol(erikForce)}");
 
                 int jonyForce = Game.Dice.Roll();
-                warReport.Add(String.Format("Джонни тянет: {0}", Game.Dice.Symbol(jonyForce)));
+                warReport.Add($"Джонни тянет: {Game.Dice.Symbol(jonyForce)}");
 
                 int myForce = Game.Dice.Roll();
-                warReport.Add(String.Format("Вы тянете: {0}", Game.Dice.Symbol(myForce)));
+                warReport.Add($"Вы тянете: {Game.Dice.Symbol(myForce)}");
 
                 int totalForce = erikForce + jonyForce + myForce;
 
                 if (battleCry)
                 {
                     totalForce += 1;
-                    warReport.Add(String.Format("+1 к тяге за боевой клич на прошлом этапе, итого тяга: {0}", totalForce));
+                    warReport.Add($"+1 к тяге за боевой клич на прошлом этапе, " +
+                        $"итого тяга: {totalForce}");
                 } 
                    
                 battleCry = false;
