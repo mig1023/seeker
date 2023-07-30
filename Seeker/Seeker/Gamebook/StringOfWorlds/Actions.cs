@@ -231,14 +231,16 @@ namespace Seeker.Gamebook.StringOfWorlds
                 Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
                 myResult = firstDice + secondDice;
 
-                diceGame.Add(String.Format("Вы бросили: {0} + {1} = {2}",
-                    Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), myResult));
+                diceGame.Add($"Вы бросили: " +
+                    $"{Game.Dice.Symbol(firstDice)} + " +
+                    $"{Game.Dice.Symbol(secondDice)} = {myResult}");
 
                 Game.Dice.DoubleRoll(out int hisFirstDice, out int hisSecondDice);
                 enemyResult = hisFirstDice + hisSecondDice;
 
-                diceGame.Add(String.Format("Он бросил: {0} + {1} = {2}",
-                    Game.Dice.Symbol(hisFirstDice), Game.Dice.Symbol(hisSecondDice), enemyResult));
+                diceGame.Add($"Он бросил: " +
+                    $"{Game.Dice.Symbol(hisFirstDice)} + " +
+                    $"{Game.Dice.Symbol(hisSecondDice)} = {enemyResult}");
 
                 diceGame.Add(String.Empty);
             }
