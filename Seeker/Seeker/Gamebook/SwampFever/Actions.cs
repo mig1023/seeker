@@ -551,12 +551,12 @@ namespace Seeker.Gamebook.SwampFever
             {
                 int pull = Game.Dice.Roll();
 
-                pullReport.Add(String.Format("Тяга гусениц: {0}", Game.Dice.Symbol(pull)));
+                pullReport.Add($"Тяга гусениц: {Game.Dice.Symbol(pull)}");
 
                 thrust += pull;
             }
 
-            pullReport.Add(String.Format("Итого, вы развили тягу: {0}", thrust));
+            pullReport.Add($"Итого, вы развили тягу: {thrust}");
             pullReport.Add(Result(thrust >= 14, "Вы вытащили ялик|Трос оборвался и ялик утонул"));
 
             return pullReport;
@@ -574,12 +574,16 @@ namespace Seeker.Gamebook.SwampFever
 
                 if (pull > 2)
                 {
-                    pullReport.Add(String.Format("Тяга гребных винтов: {0}, -2 за винты, итого {1}", Game.Dice.Symbol(pull), (pull - 2)));
+                    pullReport.Add($"Тяга гребных винтов: " +
+                        $"{Game.Dice.Symbol(pull)}, -2 за винты, итого {pull - 2}");
+
                     thrust += (pull - 2);
                 }
                 else
                 {
-                    pullReport.Add(String.Format("Тяга гребных винтов: {0}, +1 бонусный бросок", Game.Dice.Symbol(pull)));
+                    pullReport.Add($"Тяга гребных винтов: " +
+                        $"{Game.Dice.Symbol(pull)}, +1 бонусный бросок");
+
                     thrust += pull;
                     i -= 1;
                 }
@@ -588,7 +592,7 @@ namespace Seeker.Gamebook.SwampFever
                     break;
             }
 
-            pullReport.Add(String.Format("Итого, вы развили тягу: {0}", thrust));
+            pullReport.Add($"Итого, вы развили тягу: {thrust}");
             pullReport.Add(Result(thrust >= 14, "Вы вытащили ялик|Трос оборвался и ялик утонул"));
 
             return pullReport;
