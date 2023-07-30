@@ -55,21 +55,22 @@ namespace Seeker.Gamebook.VWeapons
                     {
                         protagonist.Hands -= wound;
 
-                        fight.Add(String.Format(
-                            "BAD|Вы потеряли {0} ед. здоровья рук, теперь оно равно {1} из 4.",
-                            wound, protagonist.Hands));
+                        fight.Add($"BAD|Вы потеряли {wound} ед. здоровья рук, " +
+                            $"теперь оно равно {protagonist.Hands} из 4.");
                     }
 
                     if (protagonist.Accuracy > 0)
                     {
                         protagonist.Accuracy -= 1;
 
-                        fight.Add(String.Format(
-                            "BAD|Вы также теряете 1 ед. меткости, теперь она равно {0}.",
-                            protagonist.Accuracy));
+                        fight.Add($"BAD|Вы также теряете 1 ед. меткости, " +
+                            $"теперь она равно {protagonist.Accuracy}.");
 
                         if (protagonist.Accuracy <= 0)
-                            fight.Add("BOLD|Вы больше не можете стрелять, придётся идти в рукопашную!");
+                        {
+                            fight.Add("BOLD|Вы больше не можете стрелять, " +
+                                "придётся идти в рукопашную!");
+                        }
                     }
 
                     break;
@@ -79,9 +80,8 @@ namespace Seeker.Gamebook.VWeapons
 
                     protagonist.Body -= wound;
 
-                    fight.Add(String.Format(
-                        "BAD|Вы потеряли {0} ед. здоровья тела, теперь оно равно {1} из 4.",
-                        wound, protagonist.Body));
+                    fight.Add($"BAD|Вы потеряли {wound} ед. здоровья тела, " +
+                        $"теперь оно равно {protagonist.Body} из 4.");
 
                     if (protagonist.Body <= 0)
                         protagonist.Dead = true;
