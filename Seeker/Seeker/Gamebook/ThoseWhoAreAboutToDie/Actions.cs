@@ -11,9 +11,9 @@ namespace Seeker.Gamebook.ThoseWhoAreAboutToDie
 
         public override List<string> Status() => new List<string>
         {
-            String.Format("Реакция: {0}/12", protagonist.Reaction),
-            String.Format("Сила: {0}/12", protagonist.Strength),
-            String.Format("Выносливость: {0}/12", protagonist.Endurance),
+            $"Реакция: {protagonist.Reaction}/12",
+            $"Сила: {protagonist.Strength}/12",
+            $"Выносливость: {protagonist.Endurance}/12",
         };
 
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
@@ -58,7 +58,7 @@ namespace Seeker.Gamebook.ThoseWhoAreAboutToDie
             List<string> report = new List<string>();
 
             int dice = Game.Dice.Roll();
-            report.Add(String.Format("На кубике выпало: {0}", Game.Dice.Symbol(dice)));
+            report.Add($"На кубике выпало: {Game.Dice.Symbol(dice)}");
 
             if (dice > 4)
             {
