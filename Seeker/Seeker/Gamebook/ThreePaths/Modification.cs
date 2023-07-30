@@ -9,8 +9,9 @@ namespace Seeker.Gamebook.ThreePaths
         public override void Do()
         {
             if (Name == "Trigger")
+            {
                 Game.Option.Trigger(Value.ToString());
-
+            }
             else if (Name == "Time")
             {
                 if (Init)
@@ -18,9 +19,11 @@ namespace Seeker.Gamebook.ThreePaths
                 else
                     Character.Protagonist.Time += Value;
             }
-
             else if (Name == "RemoveSpell")
-                Character.Protagonist.Spells.RemoveAt(Character.Protagonist.Spells.IndexOf(ValueString));
+            {
+                int index = Character.Protagonist.Spells.IndexOf(ValueString);
+                Character.Protagonist.Spells.RemoveAt(index);
+            }
         }
     }
 }
