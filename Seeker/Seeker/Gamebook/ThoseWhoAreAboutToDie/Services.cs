@@ -23,10 +23,10 @@ namespace Seeker.Gamebook.ThoseWhoAreAboutToDie
         {
             int level = Game.Services.LevelParse(option);
 
-            if (option.Contains(String.Format("{0} >", paramName)) && (level >= param))
+            if (option.Contains($"{paramName} >") && (level >= param))
                 return true;
 
-            else if (option.Contains(String.Format("{0} <=", paramName)) && (level < param))
+            else if (option.Contains($"{paramName} <=") && (level < param))
                 return true;
 
             else

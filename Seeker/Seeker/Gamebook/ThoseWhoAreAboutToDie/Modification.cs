@@ -12,7 +12,9 @@ namespace Seeker.Gamebook.ThoseWhoAreAboutToDie
                     Character.Protagonist.Reaction -= 2;
             }
             else
+            {
                 base.Do(Character.Protagonist);
+            }
         }
     }
 }
