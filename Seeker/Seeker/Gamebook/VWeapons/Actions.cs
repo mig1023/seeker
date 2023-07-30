@@ -161,15 +161,17 @@ namespace Seeker.Gamebook.VWeapons
             if (currentValue == maxHealing)
                 return;
 
-            int diff = ((maxHealing - currentValue) > healingPoints ? healingPoints : (maxHealing - currentValue));
+            int diff = (maxHealing - currentValue) > healingPoints ? 
+                healingPoints : (maxHealing - currentValue);
 
             healingPoints -= diff;
             currentValue += diff;
 
             SetProperty(protagonist, part, currentValue);
 
-            healing.Add(String.Format("Вы восстановили {0} ед. здоровья {1}, теперь оно равно {2} из {3}.",
-                diff, partName, currentValue, maxHealing));
+            healing.Add($"Вы восстановили {diff} ед. здоровья " +
+                $"{partName}, теперь оно равно {currentValue} " +
+                $"из {maxHealing}.");
         }
 
         public List<string> Healing()
