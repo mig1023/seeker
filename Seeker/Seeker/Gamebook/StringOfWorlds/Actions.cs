@@ -288,7 +288,7 @@ namespace Seeker.Gamebook.StringOfWorlds
             {
                 if (Game.Option.IsTriggered(thing))
                 {
-                    bargain.Add(String.Format("{0} - графиня покупает за монету", thing));
+                    bargain.Add($"{thing} - графиня покупает за монету");
                     numberOfDeals += 1;
                 }
             }
@@ -296,7 +296,7 @@ namespace Seeker.Gamebook.StringOfWorlds
             if (numberOfDeals > 0)
             {
                 string coins = Game.Services.CoinsNoun(numberOfDeals, "монету", "монеты", "монеты");
-                bargain.Add(String.Format("BIG|ИТОГО: вы получили {0} {1}", numberOfDeals, coins));
+                bargain.Add($"BIG|ИТОГО: вы получили {numberOfDeals} {coins}");
             }
             else
                 bargain.Add("BIG|Вам нечего предложить графини :(");
@@ -330,7 +330,7 @@ namespace Seeker.Gamebook.StringOfWorlds
 
             while (true)
             {
-                fight.Add(String.Format("HEAD|BOLD|Раунд: {0}", round));
+                fight.Add($"HEAD|BOLD|Раунд: {round}");
 
                 bool attackAlready = false;
                 int protagonistHitStrength = 0;
@@ -340,7 +340,7 @@ namespace Seeker.Gamebook.StringOfWorlds
                     if (enemy.Strength <= 0)
                         continue;
 
-                    fight.Add(String.Format("{0} (сила {1})", enemy.Name, enemy.Strength));
+                    fight.Add($"{enemy.Name} (сила {enemy.Strength})");
 
                     if (!attackAlready)
                     {
