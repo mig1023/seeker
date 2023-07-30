@@ -133,7 +133,7 @@ namespace Seeker.Gamebook.StringOfWorlds
             {
                 if (!protagonist.Luck[i])
                 {
-                    luckRecovery.Add(String.Format("GOOD|Цифра {0} восстановлена!", i));
+                    luckRecovery.Add($"GOOD|Цифра {i} восстановлена!");
                     protagonist.Luck[i] = true;
                     success = true;
 
