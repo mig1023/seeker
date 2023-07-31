@@ -261,12 +261,13 @@ namespace Seeker.Gamebook.YounglingTournament
 
             int result = shoot / deflecting;
 
-            defenseCheck.Add(String.Format("Результат: {0} выстрел / {1} отражение = {2}",
-                shoot, deflecting, result));
+            defenseCheck.Add($"Результат: " +
+                $"{shoot} выстрел / {deflecting} " +
+                $"отражение = {result}");
 
             protagonist.Hitpoints -= result;
 
-            defenseCheck.Add(String.Format("BIG|BAD|Вы потеряли жизней: {0}", result));
+            defenseCheck.Add($"BIG|BAD|Вы потеряли жизней: {result}");
 
             return defenseCheck;
         }
