@@ -154,11 +154,11 @@ namespace Seeker.Gamebook.YounglingTournament
 
             int dice = Game.Dice.Roll();
 
-            diceCheck.Add(String.Format("На кубике выпало: {0}", Game.Dice.Symbol(dice)));
+            diceCheck.Add($"На кубике выпало: {Game.Dice.Symbol(dice)}");
 
             protagonist.Hitpoints -= dice;
 
-            diceCheck.Add(String.Format("BIG|BAD|Вы потеряли жизней: {0}", dice));
+            diceCheck.Add($"BIG|BAD|Вы потеряли жизней: {dice}");
 
             return diceCheck;
         }
