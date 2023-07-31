@@ -199,9 +199,11 @@ namespace Seeker.Gamebook.YounglingTournament
             int testDice = Game.Dice.Roll();
             int forceLevel = protagonist.ForceTechniques.Values.Sum();
             bool testPassed = testDice + forceLevel >= Level;
+            string testLine = testPassed ? ">=" : "<";
 
-            test.Add(String.Format("Проверка Понимания: {0} + {1} {2} {3}",
-                Game.Dice.Symbol(testDice), forceLevel, (testPassed ? ">=" : "<"), Level));
+            test.Add($"Проверка Понимания: " +
+                $"{Game.Dice.Symbol(testDice)} + " +
+                $"{forceLevel} {testLine} {Level}");
 
             test.Add(Result(testPassed, "ПРОВЕРКА ПРОЙДЕНА|ПРОВЕРКА ПРОВАЛЕНА"));
 
