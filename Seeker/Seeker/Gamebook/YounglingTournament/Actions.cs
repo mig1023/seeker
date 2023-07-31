@@ -308,16 +308,18 @@ namespace Seeker.Gamebook.YounglingTournament
                 foreach (Character enemy in EnemiesList)
                 {
                     if (enemy.Hitpoints <= 0)
+                    {
                         FightEnemies[enemy] = -1;
-
+                    }
                     else
                     {
                         Game.Dice.DoubleRoll(out int enemyFirstDice, out int enemySecondDice);
                         FightEnemies[enemy] = enemy.Accuracy + enemyFirstDice + enemySecondDice;
 
-                        fight.Add(String.Format("{0} стреляет: {1} + {2} + {3} = {4}",
-                            enemy.Name, enemy.Accuracy, Game.Dice.Symbol(enemyFirstDice),
-                            Game.Dice.Symbol(enemySecondDice), FightEnemies[enemy]));
+                        fight.Add($"{enemy.Name} стреляет: " +
+                            $"{enemy.Accuracy} + " +
+                            $"{Game.Dice.Symbol(enemyFirstDice)} + " +
+                            $"{Game.Dice.Symbol(enemySecondDice)} = {FightEnemies[enemy]}");
                     }
                 }
 
