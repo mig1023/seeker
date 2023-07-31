@@ -290,16 +290,20 @@ namespace Seeker.Gamebook.YounglingTournament
 
             while (true)
             {
-                fight.Add(String.Format("HEAD|BOLD|Раунд: {0}", round));
+                fight.Add($"HEAD|BOLD|Раунд: {round}");
 
-                Game.Dice.DoubleRoll(out int protagonistFirstDice, out int protagonistSecondDice);
-                int shotAccuracy = protagonist.Accuracy + protagonistFirstDice + protagonistSecondDice + AccuracyBonus;
+                Game.Dice.DoubleRoll(out int protagonistFirstDice,
+                    out int protagonistSecondDice);
 
-                string bonus = (AccuracyBonus > 0 ? String.Format(" + {0} бонус", AccuracyBonus) : String.Empty);
+                int shotAccuracy = protagonist.Accuracy + 
+                    protagonistFirstDice + protagonistSecondDice + AccuracyBonus;
 
-                fight.Add(String.Format("Ваш выстрел: {0} меткость{1} + {2} + {3} = {4}",
-                    protagonist.Accuracy, bonus, Game.Dice.Symbol(protagonistFirstDice),
-                    Game.Dice.Symbol(protagonistSecondDice), shotAccuracy));
+                string bonus = (AccuracyBonus > 0 ? $" + {AccuracyBonus} бонус" : String.Empty);
+
+                fight.Add($"Ваш выстрел: " +
+                    $"{protagonist.Accuracy} меткость{bonus} + " +
+                    $"{Game.Dice.Symbol(protagonistFirstDice)} + " +
+                    $"{Game.Dice.Symbol(protagonistSecondDice)} = {shotAccuracy}");
 
                 foreach (Character enemy in EnemiesList)
                 {
