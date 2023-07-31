@@ -140,9 +140,9 @@ namespace Seeker.Gamebook.YounglingTournament
                 if (NoStrikeBack)
                     noStrikeBack = "\nзнает защиту от Встречного удара";
 
-                enemies.Add(String.Format("{0}\n{1}выносливость {2}{3}{4}{5}{6}{7}",
-                    enemy.Name, accuracy, enemy.GetHitpoints(EnemyHitpointsPenalty),
-                    firepower, shield, skill, technique, noStrikeBack));
+                enemies.Add($"{enemy.Name}\n{accuracy}выносливость " +
+                    $"{enemy.GetHitpoints(EnemyHitpointsPenalty)}" +
+                    $"{firepower}{shield}{skill}{technique}{noStrikeBack}");
             }
 
             return enemies;
