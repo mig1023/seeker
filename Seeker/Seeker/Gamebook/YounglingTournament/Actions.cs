@@ -424,7 +424,7 @@ namespace Seeker.Gamebook.YounglingTournament
 
             while (true)
             {
-                fight.Add(String.Format("HEAD|BOLD|Раунд: {0}", round));
+                fight.Add($"HEAD|BOLD|Раунд: {round}");
 
                 if (Services.UseForcesInFight(ref fight, ref speedActivate, EnemiesList, SpeedActivate, WithoutTechnique))
                 {
@@ -447,25 +447,29 @@ namespace Seeker.Gamebook.YounglingTournament
 
                 int protagonistFirstDice = Game.Dice.Roll();
                 int protagonistSecondDice = Game.Dice.Roll();
-                int hitSkill = skill + protagonist.SwordTechniques[currectSwordTechniques] + protagonistFirstDice + protagonistSecondDice;             
+                int hitSkill = skill + protagonist.SwordTechniques[currectSwordTechniques] + 
+                    protagonistFirstDice + protagonistSecondDice;
 
-                fight.Add(String.Format("Ваша скорость удара: {0} ловкость + {1} ранг + {2} + {3} = {4}",
-                    skill, protagonist.SwordTechniques[currectSwordTechniques], Game.Dice.Symbol(protagonistFirstDice),
-                    Game.Dice.Symbol(protagonistSecondDice), hitSkill));
+                fight.Add($"Ваша скорость удара: {skill} ловкость + " +
+                    $"{protagonist.SwordTechniques[currectSwordTechniques]} " +
+                    $"ранг + {Game.Dice.Symbol(protagonistFirstDice)} + " +
+                    $"{Game.Dice.Symbol(protagonistSecondDice)} = {hitSkill}");
 
                 foreach (Character enemy in EnemiesList)
                 {
                     if (enemy.Hitpoints <= 0)
+                    {
                         FightEnemies[enemy] = -1;
-
+                    }
                     else
                     {
                         Game.Dice.DoubleRoll(out int enemyFirstDice, out int enemySecondDice);
                         FightEnemies[enemy] = enemy.Skill + enemy.Rang + enemyFirstDice + enemySecondDice;
 
-                        fight.Add(String.Format("Скорость удара {0}: {1} ловкость + {2} ранг + {3} + {4} = {5}",
-                            enemy.Name, enemy.Skill, enemy.Rang, Game.Dice.Symbol(enemyFirstDice),
-                            Game.Dice.Symbol(enemySecondDice), FightEnemies[enemy]));
+                        fight.Add($"Скорость удара {enemy.Name}: " +
+                            $"{enemy.Skill} ловкость + {enemy.Rang} ранг + " +
+                            $"{Game.Dice.Symbol(enemyFirstDice)} + " +
+                            $"{Game.Dice.Symbol(enemySecondDice)} = {FightEnemies[enemy]}");
                     }
                 }
 
