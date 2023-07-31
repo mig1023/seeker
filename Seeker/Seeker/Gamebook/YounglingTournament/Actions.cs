@@ -546,7 +546,7 @@ namespace Seeker.Gamebook.YounglingTournament
                 if ((FightEnemies.Keys.Where(x => x.Hitpoints > hitpointsLimit).Count() == 0) || heroRound)
                 {
                     if (heroRound)
-                        fight.Add(String.Format("BIG|GOOD|Вы выиграли {0} раундов :)", heroRoundWin));
+                        fight.Add($"BIG|GOOD|Вы выиграли {heroRoundWin} раундов :)");
                     else
                         fight.Add("BIG|GOOD|Вы ПОБЕДИЛИ :)");
 
