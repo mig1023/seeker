@@ -503,8 +503,9 @@ namespace Seeker.Gamebook.YounglingTournament
                         protagonist.Hitpoints -= 3;
                         enemyRoundWin += 1;
 
-                        fight.Add(String.Format("BAD|{0} ранил вас, вы потеряли 3 ед.выносливости (осталось {1})",
-                            enemy.Key.Name, protagonist.Hitpoints));
+                        fight.Add($"BAD|{enemy.Key.Name} ранил вас, " +
+                            $"вы потеряли 3 ед.выносливости " +
+                            $"(осталось {protagonist.Hitpoints})");
 
                         if ((enemyRoundWin >= 3) && !strikeBack && Game.Option.IsTriggered("Встречный удар"))
                         {
