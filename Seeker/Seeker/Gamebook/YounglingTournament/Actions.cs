@@ -40,9 +40,9 @@ namespace Seeker.Gamebook.YounglingTournament
 
             if (protagonist.SecondPart == 0)
             {
-                newStatuses.Add(String.Format("Взлом: {0}", protagonist.Hacking));
-                newStatuses.Add(String.Format("Пилот: {0}", protagonist.Pilot));
-                newStatuses.Add(String.Format("Меткость: {0}", protagonist.Accuracy));
+                newStatuses.Add($"Взлом: {protagonist.Hacking}");
+                newStatuses.Add($"Пилот: {protagonist.Pilot}");
+                newStatuses.Add($"Меткость: {protagonist.Accuracy}");
             }
             else
             {
