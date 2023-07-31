@@ -73,8 +73,9 @@ namespace Seeker.Gamebook.YounglingTournament
                     bool thisIsTechnique = Enum.TryParse(oneOption, out Character.ForcesTypes techniqueType);
 
                     if (thisIsTechnique && (protagonist.ForceTechniques[techniqueType] == 0))
+                    {
                         return false;
-
+                    }
                     else if (oneOption.Contains(">") || oneOption.Contains("<"))
                     {
                         int level = Game.Services.LevelParse(option);
@@ -91,14 +92,15 @@ namespace Seeker.Gamebook.YounglingTournament
                         if (oneOption.Contains("УКОЛОВ У ВРАГА >") && (level >= protagonist.EnemyThrust))
                             return false;
                     }
-
                     else if (oneOption.Contains("!"))
                     {
                         if (Game.Option.IsTriggered(oneOption.Replace("!", String.Empty).Trim()))
                             return false;
                     }
                     else if (!Game.Option.IsTriggered(oneOption.Trim()))
+                    {
                         return false;
+                    }
                 }
 
                 return true;
@@ -108,7 +110,7 @@ namespace Seeker.Gamebook.YounglingTournament
         public override List<string> Representer()
         {
             if (Level > 0)
-                return new List<string> { String.Format("Пройдите проверку Понимания Силы, сложностью {0}", Level) };
+                return new List<string> { $"Пройдите проверку Понимания Силы, сложностью {Level}" };
 
             List<string> enemies = new List<string>();
 
