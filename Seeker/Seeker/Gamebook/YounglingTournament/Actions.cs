@@ -127,13 +127,14 @@ namespace Seeker.Gamebook.YounglingTournament
 
                 if (enemy.Rang > 0)
                 {
-                    bool anotherTechnique = Enum.TryParse(enemy.SwordTechnique, out SwordTypes currectSwordTechniques);
+                    bool anotherTechnique = Enum.TryParse(enemy.SwordTechnique,
+                        out SwordTypes currectSwordTechniques);
 
                     if (!anotherTechnique)
                         currectSwordTechniques = SwordTypes.Rivalry;
 
-                    technique = String.Format("\nиспользует Форму {0}",
-                        Services.GetSwordSkillName(currectSwordTechniques, rang: enemy.Rang));
+                    technique = $"\nиспользует Форму " +
+                        $"{Services.GetSwordSkillName(currectSwordTechniques, rang: enemy.Rang)}";
                 }
 
                 if (NoStrikeBack)
