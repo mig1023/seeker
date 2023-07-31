@@ -218,8 +218,9 @@ namespace Seeker.Gamebook.YounglingTournament
 
             attackCheck.Add("Выстрел: 10 (сила выстрела) x 9 (меткость) = 90");
 
-            attackCheck.Add(String.Format("Отражение: 4 + {0} ранг = {1}",
-                protagonist.SwordTechniques[SwordTypes.Rivalry], deflecting));
+            attackCheck.Add($"Отражение: 4 + " +
+                $"{protagonist.SwordTechniques[SwordTypes.Rivalry]} " +
+                $"ранг = {deflecting}");
 
             int result = 90 / deflecting;
 
