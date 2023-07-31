@@ -178,16 +178,16 @@ namespace Seeker.Gamebook.YounglingTournament
             if (withBonus)
             {
                 bonus = protagonist.ForceTechniques[techniqueType];
-                bonusLine = String.Format(" + {0} за ранг", bonus);
+                bonusLine = $" + {bonus} за ранг";
             }
 
-            diceCheck.Add(String.Format("На кубике выпало: {0}{1}", Game.Dice.Symbol(dice), bonusLine));
+            diceCheck.Add($"На кубике выпало: {Game.Dice.Symbol(dice)}{bonusLine}");
 
             dice += bonus;
 
             Character.SetHitpoints(enemy[0], dice, int.Parse(enemy[1]));
 
-            diceCheck.Add(String.Format("BIG|GOOD|{0} потерял жизней: {1}", enemy[0], dice));
+            diceCheck.Add($"BIG|GOOD|{enemy[0]} потерял жизней: {dice}");
 
             return diceCheck;
         }
