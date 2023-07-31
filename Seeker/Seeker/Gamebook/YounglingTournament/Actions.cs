@@ -487,8 +487,9 @@ namespace Seeker.Gamebook.YounglingTournament
                         enemy.Key.Hitpoints -= 3;
                         heroRoundWin += 1;
 
-                        fight.Add(String.Format("GOOD|Вы ранили {0}, он потерял 3 ед.выносливости (осталось {1})",
-                            enemy.Key.Name, enemy.Key.Hitpoints));
+                        fight.Add($"GOOD|Вы ранили {enemy.Key.Name}, " +
+                            $"он потерял 3 ед.выносливости " +
+                            $"(осталось {enemy.Key.Hitpoints})");
 
                         if ((heroRoundWin >= 3) && !irresistibleAttack && Game.Option.IsTriggered("Неотразимая атака"))
                         {
