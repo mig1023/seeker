@@ -409,11 +409,13 @@ namespace Seeker.Gamebook.YounglingTournament
             }
 
             SwordTypes currectSwordTechniques = Services.GetSwordType();
-            fight.Add(String.Format("Вы выбрали для боя Форму {0}", Services.GetSwordSkillName(currectSwordTechniques)));
+
+            fight.Add($"Вы выбрали для боя Форму " +
+                $"{Services.GetSwordSkillName(currectSwordTechniques)}");
 
             int skill = Services.SwordSkills(currectSwordTechniques, out string detail);
-            fight.Add(String.Format("Ваша Ловкость в этом бою: {0} (по формуле: {1})", skill, detail));
 
+            fight.Add($"Ваша Ловкость в этом бою: {skill} (по формуле: {detail})");
             fight.Add(String.Empty);
 
             int round = 1, heroRoundWin = 0, enemyRoundWin = 0;
