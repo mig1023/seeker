@@ -119,10 +119,10 @@ namespace Seeker.Gamebook.YounglingTournament
 
             foreach (Character enemy in Enemies)
             {
-                string accuracy = (enemy.Accuracy > 0 ? String.Format("  меткость {0}  ", enemy.Accuracy) : String.Empty);
-                string firepower = (enemy.Firepower > 5 ? String.Format("  сила выстрела {0}", enemy.Firepower) : String.Empty);
-                string shield = (enemy.Shield > 0 ? String.Format("  энергощит {0}", enemy.Shield) : String.Empty);
-                string skill = (enemy.Skill > 0 ? String.Format("  ловкость {0}", enemy.Skill) : String.Empty);
+                string accuracy = (enemy.Accuracy > 0 ? $"  меткость {enemy.Accuracy}  " : String.Empty);
+                string firepower = (enemy.Firepower > 5 ? $"  сила выстрела {enemy.Firepower}" : String.Empty);
+                string shield = (enemy.Shield > 0 ? $"  энергощит {enemy.Shield}" : String.Empty);
+                string skill = (enemy.Skill > 0 ? $"  ловкость {enemy.Skill}" : String.Empty);
                 string technique = String.Empty, noStrikeBack = String.Empty;
 
                 if (enemy.Rang > 0)
