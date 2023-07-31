@@ -533,7 +533,7 @@ namespace Seeker.Gamebook.YounglingTournament
                 if ((protagonist.Hitpoints <= hitpointsLimit) || enemyRound)
                 {
                     if (enemyRound)
-                        fight.Add(String.Format("BIG|BAD|Вы проиграли {0} раунда :(", enemyRoundWin));
+                        fight.Add($"BIG|BAD|Вы проиграли {enemyRoundWin} раунда :(");
                     else
                         fight.Add("BIG|BAD|Вы ПРОИГРАЛИ :(");
 
