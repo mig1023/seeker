@@ -250,8 +250,10 @@ namespace Seeker.Gamebook.YounglingTournament
             Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
             int shoot = firstDice + secondDice + 19;
 
-            defenseCheck.Add(String.Format("Выстрел: {0} + {1} + 10 (сила выстрела) + 9 (меткость) = {2}",
-                Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), shoot));
+            defenseCheck.Add($"Выстрел: " +
+                $"{Game.Dice.Symbol(firstDice)} + " +
+                $"{Game.Dice.Symbol(secondDice)} + " +
+                $"10 (сила выстрела) + 9 (меткость) = {shoot}");
 
             defenseCheck.Add(String.Format("Отражение: 4 + {0} ранг = {1}",
                 protagonist.SwordTechniques[SwordTypes.Rivalry], deflecting));
