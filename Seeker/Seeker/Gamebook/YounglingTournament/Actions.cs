@@ -47,7 +47,7 @@ namespace Seeker.Gamebook.YounglingTournament
             else
             {
                 if ((protagonist.Thrust > 0) || (protagonist.EnemyThrust > 0))
-                    newStatuses.Add(String.Format("Уколов: {0} vs {1}", protagonist.Thrust, protagonist.EnemyThrust));
+                    newStatuses.Add($"Уколов: {protagonist.Thrust} vs {protagonist.EnemyThrust}");
 
                 newStatuses.Add(String.Format("Понимание Силы: {0}", protagonist.ForceTechniques.Values.Sum()));
                 newStatuses.Add(String.Format("Форма {0}", Services.GetSwordSkillName(Services.GetSwordType())));
