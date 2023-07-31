@@ -28,8 +28,8 @@ namespace Seeker.Gamebook.YounglingTournament
 
         public override List<string> Status() => new List<string>
         {
-            String.Format("Cветлая сторона: {0}", protagonist.LightSide),
-            String.Format("Тёмная сторона: {0}", protagonist.DarkSide),
+            $"Cветлая сторона: {protagonist.LightSide}",
+            $"Тёмная сторона: {protagonist.DarkSide}",
         };
 
         public override List<string> AdditionalStatus()
