@@ -328,8 +328,9 @@ namespace Seeker.Gamebook.YounglingTournament
                 foreach (KeyValuePair<Character, int> shooter in FightEnemies.OrderBy(x => x.Value))
                 {
                     if (shooter.Value <= 0)
+                    {
                         continue;
-
+                    }
                     else if ((shooter.Value < shotAccuracy) && !protaganistMakeShoot)
                     {
                         protaganistMakeShoot = true;
@@ -340,14 +341,18 @@ namespace Seeker.Gamebook.YounglingTournament
 
                             if (damage <= 0)
                             {
-                                fight.Add(String.Format("GOOD|Вы подстрелили {0}, но его энергощит полностью поглотил урон", shooter.Key.Name));
+                                fight.Add($"GOOD|Вы подстрелили {shooter.Key.Name}, " +
+                                    $"но его энергощит полностью поглотил урон");
 
                                 shooter.Key.Shield -= protagonist.Firepower;
                             }
                             else
                             {
-                                fight.Add(String.Format("GOOD|Вы подстрелили {0}, его энергощит поглотил {1} ед.урона, " +
-                                    "в результате он потерял {2} ед.выносливости", shooter.Key.Name, shooter.Key.Shield, damage));
+                                fight.Add($"GOOD|Вы подстрелили " +
+                                    $"{shooter.Key.Name}, его энергощит " +
+                                    $"поглотил {shooter.Key.Shield} ед.урона, " +
+                                    $"в результате он потерял {damage} " +
+                                    $"ед.выносливости");
 
                                 shooter.Key.Hitpoints -= damage;
                                 shooter.Key.Shield = 0;
@@ -356,16 +361,18 @@ namespace Seeker.Gamebook.YounglingTournament
                         else
                         {
                             shooter.Key.Hitpoints -= protagonist.Firepower;
-                            fight.Add(String.Format("GOOD|Вы подстрелили {0}, он потерял {1} ед.выносливости",
-                                shooter.Key.Name, protagonist.Firepower));
+                            fight.Add($"GOOD|Вы подстрелили {shooter.Key.Name}, " +
+                                $"он потерял {protagonist.Firepower} ед.выносливости");
                         }
                     }
-
                     else if (shooter.Value > shotAccuracy)
                     {
                         protagonist.Hitpoints -= shooter.Key.Firepower;
-                        fight.Add(String.Format("BAD|{0} подстрелил вас, вы потерял {1} ед.выносливости (осталось {2})",
-                            shooter.Key.Name, shooter.Key.Firepower, protagonist.Hitpoints));
+
+                        fight.Add($"BAD|{shooter.Key.Name} " +
+                            $"подстрелил вас, вы потерял " +
+                            $"{shooter.Key.Firepower} ед.выносливости " +
+                            $"(осталось {protagonist.Hitpoints})");
                     }
                 }
 
