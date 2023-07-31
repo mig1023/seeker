@@ -255,8 +255,9 @@ namespace Seeker.Gamebook.YounglingTournament
                 $"{Game.Dice.Symbol(secondDice)} + " +
                 $"10 (сила выстрела) + 9 (меткость) = {shoot}");
 
-            defenseCheck.Add(String.Format("Отражение: 4 + {0} ранг = {1}",
-                protagonist.SwordTechniques[SwordTypes.Rivalry], deflecting));
+            defenseCheck.Add($"Отражение: 4 + " +
+                $"{protagonist.SwordTechniques[SwordTypes.Rivalry]} " +
+                $"ранг = {deflecting}");
 
             int result = shoot / deflecting;
 
