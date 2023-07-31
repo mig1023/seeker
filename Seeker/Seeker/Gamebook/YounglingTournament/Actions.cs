@@ -36,7 +36,7 @@ namespace Seeker.Gamebook.YounglingTournament
         {
             List<string> newStatuses = new List<string>();
 
-            newStatuses.Add(String.Format("Выносливость: {0}/{1}", protagonist.Hitpoints, protagonist.MaxHitpoints));
+            newStatuses.Add($"Выносливость: {protagonist.Hitpoints}/{protagonist.MaxHitpoints}");
 
             if (protagonist.SecondPart == 0)
             {
