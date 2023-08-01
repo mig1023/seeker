@@ -331,8 +331,15 @@ namespace Seeker
 
             if (singleton != null)
             {
-                foreach (Button button in Options.Children.Where(x => x != singleton))
+                foreach (View view in Options.Children.Where(x => x != singleton))
                 {
+                    Button button;
+
+                    if (view is Button)
+                        button = view as Button;
+                    else
+                        continue;
+
                     button.IsEnabled = false;
                     button.BackgroundColor = Color.Default;
 
