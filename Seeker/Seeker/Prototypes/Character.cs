@@ -38,13 +38,17 @@ namespace Seeker.Prototypes
 
                 if (value is Dictionary<string, string>)
                 {
-                    data = String.Join(",",
-                        (value as Dictionary<string, string>).Select(x => x.Key + " = " + x.Value).ToArray());
+                    Dictionary<string, string> dict = value as Dictionary<string, string>;
+                    string[] dictList = dict.Select(x => x.Key + " = " + x.Value).ToArray();
+
+                    data = String.Join(",", dictList);
                 }
                 else if (value is Dictionary<string, int>)
                 {
-                    data = String.Join(",",
-                        (value as Dictionary<string, int>).Select(x => x.Key + " = " + x.Value).ToArray());
+                    Dictionary<string, int> dict = value as Dictionary<string, int>;
+                    string[] dictList = dict.Select(x => x.Key + " = " + x.Value).ToArray();
+
+                    data = String.Join(",", dictList);
                 }
                 else if (value is List<string>)
                 {
@@ -54,12 +58,16 @@ namespace Seeker.Prototypes
                 {
                     data = String.Join(",", (value as List<bool>).ToArray());
                 }
+                else if (value == null)
+                {
+                    data = "null";
+                }
                 else
                 {
                     data = value.ToString();
                 }
 
-                propertiesList += $"{proterty}: {value}\n";
+                propertiesList += $"{proterty}: {data}\n";
             }
 
             return propertiesList;
