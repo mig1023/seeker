@@ -373,7 +373,9 @@
 			<Text>— Я их не убивала!\n\n— И голову бедняге Томми тоже не ты отрезала?\n\n— Я, но он уже был мертв.</Text>
 			<Options>
 				<Option Goto="57" Text="«А кто тогда их убил?»"/>
-				<Option Goto="55" Text="«Зачем ты это сделала?»"/>
+				<Option Goto="55" Text="«Зачем ты это сделала?»" Availability="!Зачем сделала">
+					<Trigger Value="Зачем сделала"/>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph No="47">
