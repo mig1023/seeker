@@ -6,12 +6,12 @@
 		</Copyright>
 		<Styles>
 			<Color Name="Main, Option" Value="d52b1e"/>
-			<Color Name="Continue" Value="e57f78"/>
 			<Color Name="ButtonFont, StatusFont" Value="eede49"/>
-			<Color Name="System" Value="eca5a0"/>
-			<Color Name="Background" Value="ffdadb"/>
-			<Color Name="StatusBar" Value="aa2218"/>
-			<Color Name="SystemFont" Value="f7f1b6"/>
+			<Continue Value="e57f78"/>
+			<System Value="eca5a0"/>
+			<Background Value="ffdadb"/>
+			<StatusBar Value="aa2218"/>
+			<SystemFont Value="f7f1b6"/>
 		</Styles>
 		<Data>
 			<List Name="GetApartments" Items="один, два, три, один, два, три"/>
