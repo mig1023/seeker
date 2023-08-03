@@ -5,11 +5,11 @@
 			<Author>Павел Горохов, 2016</Author>
 		</Copyright>
 		<Styles>
-			<Color Name="Main" Value="d8d8d8"/>
-			<Color Name="Continue" Value="e7e7e7"/>
-			<Color Name="System" Value="efefef"/>
-			<Color Name="SystemFont" Value="8f8f8f"/>
-			<Color Name="ButtonFont" Value="000000"/>
+			<Main Value="d8d8d8"/>
+			<Continue Value="e7e7e7"/>
+			<System Value="efefef"/>
+			<SystemFont Value="8f8f8f"/>
+			<ButtonFont Value="000000"/>
 		</Styles>
 		<Default>
 			<DisabledOption Value="Hide"/>
