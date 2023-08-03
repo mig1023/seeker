@@ -5,14 +5,14 @@
 			<Author>Владимир Сизиков, 2015</Author>
 		</Copyright>
 		<Styles>
-			<Color Name="Background" Value="dbeadc"/>
-			<Color Name="ActionBox" Value="7cb281"/>
-			<Color Name="StatusBar" Value="005100"/>
-			<Color Name="AdditionalStatus" Value="99b999"/>
-			<Color Name="Main" Value="5da130"/>
-			<Color Name="Action" Value="339933"/>
+			<Background Value="dbeadc"/>
+			<ActionBox Value="7cb281"/>
+			<StatusBar Value="005100"/>
+			<AdditionalStatus Value="99b999"/>
+			<Main Value="5da130"/>
+			<Action Value="339933"/>
+			<System Value="c7dfb9"/>
 			<Color Name="Option, Continue" Value="8dbd6e"/>
-			<Color Name="System" Value="c7dfb9"/>
 		</Styles>
 		<Data>
 			<List Name="WithoutStatuses" Items="0, 205"/>
