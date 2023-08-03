@@ -7,8 +7,8 @@
 		<Styles>
 			<Color Name="Main, Action, Option, StatusBar, Continue" Value="ffffff"/>
 			<Color Name="ButtonFont, StatusFont, StatusBorder, Border" Value="000000"/>
-			<Color Name="ActionBox" Value="efefef"/>
-			<Color Name="System" Value="f4f4f4"/>
+			<ActionBox Value="efefef"/>
+			<System Value="f4f4f4"/>
 		</Styles>
 		<Default>
 			<DisabledOption Value="Hide"/>
