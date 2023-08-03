@@ -5,13 +5,13 @@
 			<Author>Джонатан Грин, 2007</Author>
 		</Copyright>
 		<Styles>
-			<Color Name="Background" Value="c2cccd"/>
-			<Color Name="StatusBar" Value="253130"/>
-			<Color Name="AdditionalStatus, ActionBox" Value="a8b7b8"/>
-			<Color Name="Main" Value="383e3b"/>
-			<Color Name="Action" Value="516f72"/>
 			<Color Name="Option, Continue" Value="738b8e"/>
-			<Color Name="System" Value="9dadaf"/>
+			<Color Name="AdditionalStatus, ActionBox" Value="a8b7b8"/>
+			<Background Value="c2cccd"/>
+			<StatusBar Value="253130"/>
+			<Main Value="383e3b"/>
+			<Action Value="516f72"/>
+			<System Value="9dadaf"/>
 		</Styles>
 		<Data>
 			<Dictionary Name="GetCountName">
