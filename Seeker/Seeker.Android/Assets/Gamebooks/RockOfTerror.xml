@@ -5,15 +5,15 @@
 			<Author>Дмитрий Тышевич, 2009</Author>
 		</Copyright>
 		<Styles>
-			<Color Name="Background" Value="000000"/>
-			<Color Name="Font" Value="ffffff"/>
-			<Color Name="StatusBar" Value="151515"/>
-			<Color Name="StatusFont" Value="b2b2b2"/>
-			<Color Name="Main" Value="191919"/>
-			<Color Name="Action" Value="2a2a2a"/>
-			<Color Name="Option" Value="494949"/>
-			<Color Name="Continue" Value="2f2f2f"/>
-			<Color Name="SystemFont" Value="a8a8a8"/>
+			<Background Value="000000"/>
+			<Font Value="ffffff"/>
+			<StatusBar Value="151515"/>
+			<StatusFont Value="b2b2b2"/>
+			<Main Value="191919"/>
+			<Action Value="2a2a2a"/>
+			<Option Value="494949"/>
+			<Continue Value="2f2f2f"/>
+			<SystemFont Value="a8a8a8"/>
 		</Styles>
 		<Default>
 			<DisabledOption Value="Hide"/>
