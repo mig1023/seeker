@@ -5,9 +5,9 @@
 			<Author>Дмитрий Бродовский, 2019</Author>
 		</Copyright>
 		<Styles>
-			<Color Name="Main" Value="86964f"/>
-			<Color Name="Continue" Value="b6c095"/>
-			<Color Name="System" Value="cbd2b4"/>
+			<Main Value="86964f"/>
+			<Continue Value="b6c095"/>
+			<System Value="cbd2b4"/>
 		</Styles>
 		<Default>
 			<DisabledOption Value="Hide"/>
