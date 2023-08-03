@@ -5,15 +5,15 @@
 			<Author>Роман Островерхов, 2011</Author>
 		</Copyright>
 		<Styles>
-			<Color Name="Background" Value="e0e7f2"/>
-			<Color Name="ActionBox" Value="7988a4"/>
-			<Color Name="StatusBar" Value="364d77"/>
-			<Color Name="AdditionalStatus" Value="5e7092"/>
-			<Color Name="AdditionalFont" Value="ced4de"/>
-			<Color Name="Main" Value="3662ae"/>
-			<Color Name="Action" Value="203a68"/>
+			<Background Value="e0e7f2"/>
+			<ActionBox Value="7988a4"/>
+			<StatusBar Value="364d77"/>
+			<AdditionalStatus Value="5e7092"/>
+			<AdditionalFont Value="ced4de"/>
+			<Main Value="3662ae"/>
+			<Action Value="203a68"/>
+			<System Value="ccd7ea"/>
 			<Color Name="Option, Continue" Value="9ab0d6"/>
-			<Color Name="System" Value="ccd7ea"/>
 		</Styles>
 		<Data>
 			<List Name="WithoutStatuses" Items="0, 556, 557, 558, 559"/>
