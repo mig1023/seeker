@@ -5,9 +5,9 @@
 			<Author>Константин Таро, 2001</Author>
 		</Copyright>
 		<Styles>
+			<Continue Value="9a9a9a"/>
+			<System Value="d6d6d6"/>
 			<Color Name="Main, Option" Value="2e2e2e"/>
-			<Color Name="Continue" Value="9a9a9a"/>
-			<Color Name="System" Value="d6d6d6"/>
 		</Styles>
 		<Default>
 			<DisabledOption Value="Hide"/>
