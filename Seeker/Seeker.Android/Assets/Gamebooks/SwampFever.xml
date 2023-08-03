@@ -5,17 +5,17 @@
 			<Author>Пётр Прокошев, 2017</Author>
 		</Copyright>
 		<Styles>
-			<Color Name="Background" Value="485432"/>
-			<Color Name="Font" Value="eaece8"/>
-			<Color Name="ActionBox" Value="707a60"/>
-			<Color Name="AdditionalStatus" Value="34411c"/>
-			<Color Name="AdditionalFont" Value="ffffff"/>
+			<Background Value="485432"/>
+			<Font Value="eaece8"/>
+			<ActionBox Value="707a60"/>
+			<AdditionalStatus Value="34411c"/>
+			<AdditionalFont Value="ffffff"/>
+			<Action Value="5a6546"/>
+			<Continue Value="8c937f"/>
+			<System Value="717963"/>
+			<GoodColor Value="145314"/>
+			<BadColor Value="7f0000"/>
 			<Color Name="Main, Option" Value="5c6649"/>
-			<Color Name="Action" Value="5a6546"/>
-			<Color Name="Continue" Value="8c937f"/>
-			<Color Name="System" Value="717963"/>
-			<Color Name="GoodColor" Value="145314"/>
-			<Color Name="BadColor" Value="7f0000"/>
 		</Styles>
 		<Data>
 			<Dictionary Name="GetRangeTypes">
