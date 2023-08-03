@@ -5,11 +5,11 @@
 			<Author>Дмитрий Браславский, 1991</Author>
 		</Copyright>
 		<Styles>
-			<Color Name="StatusBar" Value="2a2a2a"/>
-			<Color Name="Main" Value="151515"/>
-			<Color Name="Action" Value="3f3f3f"/>
-			<Color Name="Option" Value="696969"/>
-			<Color Name="System" Value="f9f9f9"/>
+			<StatusBar Value="2a2a2a"/>
+			<Main Value="151515"/>
+			<Action Value="3f3f3f"/>
+			<Option Value="696969"/>
+			<System Value="f9f9f9"/>
 		</Styles>
 		<Data>
 			<List Name="WithoutStatuses" Items="0, 619, 753"/>
