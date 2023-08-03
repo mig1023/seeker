@@ -5,11 +5,11 @@
 			<Author>Геннадий Логинов, 2018</Author>
 		</Copyright>
 		<Styles>
-			<Color Name="StatusBar" Value="2f0b0c"/>
+			<StatusBar Value="2f0b0c"/>
+			<Continue Value="814548"/>
+			<Action Value="693f41"/>
+			<System Value="f3f0f0"/>
 			<Color Name="Main, Option" Value="441012"/>
-			<Color Name="Continue" Value="814548"/>
-			<Color Name="Action" Value="693f41"/>
-			<Color Name="System" Value="f3f0f0"/>
 		</Styles>
 		<Data>
 			<List Name="WithoutStatuses" Items="0, 1393, 1394"/>
