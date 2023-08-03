@@ -5,12 +5,12 @@
 			<Author>Константин Таро, 2010</Author>
 		</Copyright>
 		<Styles>
-			<Color Name="StatusBar" Value="520809"/>
-			<Color Name="Main" Value="670b0c"/>
-			<Color Name="Option" Value="f9f2e8"/>
-			<Color Name="Continue" Value="b38585"/>
-			<Color Name="Action" Value="6d0101"/>
-			<Color Name="System" Value="d1b5b5"/>
+			<StatusBar Value="520809"/>
+			<Main Value="670b0c"/>
+			<Option Value="f9f2e8"/>
+			<Continue Value="b38585"/>
+			<Action Value="6d0101"/>
+			<System Value="d1b5b5"/>
 		</Styles>
 		<Default>
 			<DisabledOption Value="Show"/>
