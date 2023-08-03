@@ -7,11 +7,11 @@
 		<Styles>
 			<Color Name="Main, Action" Value="ebd5b3"/>
 			<Color Name="Option, Background" Value="f9f2e8"/>
-			<Color Name="Continue" Value="f5ead9"/>
 			<Color Name="ButtonFont, StatusFont" Value="000000"/>
-			<Color Name="ActionBox" Value="f3e5d1"/>
-			<Color Name="StatusBar" Value="bcaa8f"/>
-			<Color Name="AdditionalStatus" Value="d0c3b0"/>
+			<Continue Value="f5ead9"/>
+			<ActionBox Value="f3e5d1"/>
+			<StatusBar Value="bcaa8f"/>
+			<AdditionalStatus Value="d0c3b0"/>
 		</Styles>
 		<Data>
 			<List Name="WithoutStaticsButtons" Items="0, 1"/>
