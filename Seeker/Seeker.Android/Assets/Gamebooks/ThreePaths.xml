@@ -5,10 +5,10 @@
 			<Author>Александр Бутягин, Дмитрий Чистов, 1999</Author>
 		</Copyright>
 		<Styles>
-			<Color Name="StatusBar" Value="007a7a"/>
+			<StatusBar Value="007a7a"/>
+			<Action Value="005b5b"/>
+			<Continue Value="6fc5c5"/>
 			<Color Name="Main, Option" Value="009999"/>
-			<Color Name="Action" Value="005b5b"/>
-			<Color Name="Continue" Value="6fc5c5"/>
 		</Styles>
 		<Default>
 			<DisabledOption Value="Hide"/>
