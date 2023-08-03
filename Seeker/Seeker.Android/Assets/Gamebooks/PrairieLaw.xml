@@ -5,11 +5,11 @@
 			<Author>Ольга Голотвина, 1995</Author>
 		</Copyright>
 		<Styles>
-			<Color Name="StatusBar" Value="b85d43"/>
-			<Color Name="AdditionalStatus" Value="d69b8b"/>
-			<Color Name="Main" Value="b66247"/>
-			<Color Name="Action" Value="8f4445"/>
-			<Color Name="Option" Value="a04c4d"/>
+			<StatusBar Value="b85d43"/>
+			<AdditionalStatus Value="d69b8b"/>
+			<Main Value="b66247"/>
+			<Action Value="8f4445"/>
+			<Option>a04c4d</Option>
 		</Styles>
 		<Data>
 			<Dictionary Name="Skills" ItemsByOrder=", 8, 10, 12, 9, 11, 9, 10, 8, 9, 10, 11"/>
