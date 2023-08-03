@@ -5,9 +5,9 @@
 			<Author>Филипп Эбли, 1992</Author>
 		</Copyright>
 		<Styles>
-			<Color Name="StatusBar" Value="ce4f36"/>
+			<StatusBar Value="ce4f36"/>
+			<System Value="eeeeee"/>
 			<Color Name="Main, Action, Option" Value="c93c20"/>
-			<Color Name="System" Value="eeeeee"/>
 		</Styles>
 		<Default>
 			<DisabledOption Value="Hide"/>
