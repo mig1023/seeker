@@ -5,8 +5,8 @@
 			<Author>Эдвард Райкер, 2018</Author>
 		</Copyright>
 		<Styles>
-			<Color Name="StatusBar" Value="003153"/>
-			<Color Name="SystemFont" Value="dce3e5"/>
+			<StatusBar Value="003153"/>
+			<SystemFont Value="dce3e5"/>
 		</Styles>
 		<Default>
 			<DisabledOption Value="Hide"/>
