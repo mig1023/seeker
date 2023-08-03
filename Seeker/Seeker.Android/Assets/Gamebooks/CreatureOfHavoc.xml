@@ -5,14 +5,14 @@
 			<Author>Стив Джексон, 1986</Author>
 		</Copyright>
 		<Styles>
-			<Color Name="Background" Value="c9d7d0"/>
-			<Color Name="StatusBar" Value="0e3b24"/>
-			<Color Name="Main" Value="145334"/>
-			<Color Name="Action" Value="104229"/>
-			<Color Name="Option" Value="42755c"/>
-			<Color Name="Continue" Value="7d9188"/>
-			<Color Name="System" Value="9db6aa"/>
-			<Color Name="ActionBox" Value="87a094"/>
+			<Background Value="c9d7d0"/>
+			<StatusBar Value="0e3b24"/>
+			<Main Value="145334"/>
+			<Action Value="104229"/>
+			<Option Value="42755c"/>
+			<Continue Value="7d9188"/>
+			<System Value="9db6aa"/>
+			<ActionBox Value="87a094"/>
 		</Styles>
 		<Default>
 			<DisabledOption Value="Hide"/>
