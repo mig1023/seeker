@@ -6,10 +6,10 @@
 		</Copyright>
 		<Styles>
 			<Color Name="Main, Action, Continue" Value="f8ecc2"/>
-			<Color Name="Option" Value="fdfaf0"/>
-			<Color Name="ButtonFont" Value="000000"/>
-			<Color Name="StatusBar" Value="dfd4ae"/>
-			<Color Name="ActionBox" Value="fcf9ec"/>
+			<Option Value="fdfaf0"/>
+			<ButtonFont Value="000000"/>
+			<StatusBar Value="dfd4ae"/>
+			<ActionBox Value="fcf9ec"/>
 		</Styles>
 		<Default>
 			<DisabledOption Value="Show"/>
