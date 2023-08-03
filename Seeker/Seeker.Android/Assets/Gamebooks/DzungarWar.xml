@@ -5,16 +5,16 @@
 			<Author>Владимир Сизиков, 2016</Author>
 		</Copyright>
 		<Styles>
-			<Color Name="Background" Value="f1e6d1"/>
-			<Color Name="ActionBox" Value="af8f69"/>
-			<Color Name="StatusBar" Value="dcc18c"/>
-			<Color Name="StatusFont" Value="000000"/>
-			<Color Name="AdditionalStatus" Value="ebdcbe"/>
-			<Color Name="Main" Value="93684f"/>
-			<Color Name="Action" Value="8c7254"/>
-			<Color Name="Option" Value="a88672"/>
-			<Color Name="Continue" Value="b99e8e"/>
-			<Color Name="System" Value="cebbaf"/>
+			<Background Value="f1e6d1"/>
+			<ActionBox Value="af8f69"/>
+			<StatusBar Value="dcc18c"/>
+			<StatusFont Value="000000"/>
+			<AdditionalStatus Value="ebdcbe"/>
+			<Main Value="93684f"/>
+			<Action Value="8c7254"/>
+			<Option Value="a88672"/>
+			<Continue Value="b99e8e"/>
+			<System Value="cebbaf"/>
 		</Styles>
 		<Data>
 			<List Name="WithoutStatuses" Items="0, 658, 659, 660"/>
