@@ -5,8 +5,8 @@
 			<Author>Геннадий Логинов, 2020</Author>
 		</Copyright>
 		<Styles>
-			<Color Name="Main" Value="9e003a"/>
-			<Color Name="System" Value="f9f9f9"/>
+			<Main Value="9e003a"/>
+			<System Value="f9f9f9"/>
 		</Styles>
 		<Default>
 			<DisabledOption Value="Hide"/>
