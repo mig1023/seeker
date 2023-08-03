@@ -6,7 +6,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
     {
         public static Constants StaticInstance = new Constants();
 
-        public static Dictionary<int, int> Masterys { get; set; }
+        public static Dictionary<int, int> Mastery { get; set; }
 
         public static Dictionary<int, int> Endurances { get; set; }
 
