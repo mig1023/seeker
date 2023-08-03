@@ -5,11 +5,11 @@
 			<Author>Дмитрий Браславский, 1995</Author>
 		</Copyright>
 		<Styles>
-			<Color Name="StatusBar" Value="870808"/>
-			<Color Name="Main" Value="911"/>
-			<Color Name="Action" Value="ba2020"/>
+			<StatusBar Value="870808"/>
+			<Main Value="911"/>
+			<Action Value="ba2020"/>
+			<System Value="f0dddd"/>
 			<Color Name="Option, Continue" Value="dbabab"/>
-			<Color Name="System" Value="f0dddd"/>
 		</Styles>
 		<Data>
 			<List Name="WithoutStatuses" Items="0, 660"/>
