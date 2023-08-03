@@ -5,13 +5,13 @@
 			<Author>Стивен Хэнд, 1992</Author>
 		</Copyright>
 		<Styles>
-			<Color Name="StatusBar" Value="44264b"/>
-			<Color Name="ActionBox" Value="e3d9d9"/>
-			<Color Name="Main" Value="72407d"/>
-			<Color Name="Option" Value="80538a"/>
-			<Color Name="Continue" Value="aa8cb1"/>
-			<Color Name="Action" Value="7e0059"/>
-			<Color Name="System" Value="ddd1df"/>
+			<StatusBar Value="44264b"/>
+			<ActionBox Value="e3d9d9"/>
+			<Main Value="72407d"/>
+			<Option Value="80538a"/>
+			<Continue Value="aa8cb1"/>
+			<Action Value="7e0059"/>
+			<System Value="ddd1df"/>
 		</Styles>
 		<Data>
 			<Dictionary Name="SpellsList">
