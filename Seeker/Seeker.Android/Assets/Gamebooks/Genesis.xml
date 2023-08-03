@@ -5,15 +5,15 @@
 			<Author>Андрей Журавлёв, 2013</Author>
 		</Copyright>
 		<Styles>
-			<Color Name="Background" Value="293342"/>
-			<Color Name="Font" Value="b6cbd8"/>
+			<Background Value="293342"/>
+			<Font Value="b6cbd8"/>
+			<ActionBox Value="69707a"/>
+			<StatusFont Value="b1b5ba"/>
+			<Main Value="4c687c"/>
+			<Option Value="6f8696"/>
+			<Action Value="445d6f"/>
+			<Continue Value="849fb3"/>
 			<Color Name="StatusBar, System" Value="3c5363"/>
-			<Color Name="ActionBox" Value="69707a"/>
-			<Color Name="StatusFont" Value="b1b5ba"/>
-			<Color Name="Main" Value="4c687c"/>
-			<Color Name="Option" Value="6f8696"/>
-			<Color Name="Action" Value="445d6f"/>
-			<Color Name="Continue" Value="849fb3"/>
 		</Styles>
 		<Data>
 			<List Name="WithoutStatuses" Items="0, 201, 202, 203, 204, 205, 206, 207"/>
