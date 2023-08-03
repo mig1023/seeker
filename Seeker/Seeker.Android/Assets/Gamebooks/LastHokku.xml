@@ -5,8 +5,8 @@
 			<Author>Юркий Слон, 2021</Author>
 		</Copyright>
 		<Styles>
-			<Color Name="Main" Value="deb887"/>
-			<Color Name="ButtonFont" Value="000000"/>
+			<Main Value="deb887"/>
+			<ButtonFont Value="000000"/>
 		</Styles>
 		<Data>
 			<List Name="GetParagraphsWithoutHokkuCreation" Items="0, 1, 9, 10, 11, 12"/>
