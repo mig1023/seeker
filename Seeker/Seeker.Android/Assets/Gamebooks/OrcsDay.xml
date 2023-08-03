@@ -5,12 +5,12 @@
 			<Author>Кейси Трэйвис, 2008</Author>
 		</Copyright>
 		<Styles>
-			<Color Name="Main" Value="a4be84"/>
-			<Color Name="Continue" Value="cad9b7"/>
 			<Color Name="Action, StatusBar" Value="72855c"/>
-			<Color Name="System" Value="e9efe2"/>
 			<Color Name="Font, ButtonFont, SystemFont" Value="000000"/>
 			<Color Name="ActionBox, AdditionalStatus" Value="c8d8b5"/>
+			<Main Value="a4be84"/>
+			<Continue Value="cad9b7"/>
+			<System Value="e9efe2"/>
 		</Styles>
 		<Data>
 			<List Name="WithoutStatuses" Items="0, 102, 103"/>
