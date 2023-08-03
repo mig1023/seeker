@@ -5,12 +5,12 @@
 			<Author>Александр Андросенко, 2018</Author>
 		</Copyright>
 		<Styles>
-			<Color Name="StatusBar" Value="e8d17e"/>
-			<Color Name="StatusFont" Value="000000"/>
+			<StatusBar Value="e8d17e"/>
+			<StatusFont Value="000000"/>
+			<Main Value="c0ac6c"/>
+			<Action Value="c0a23b"/>
+			<System Value="f9f9f9"/>
 			<Color Name="ActionBox, Continue" Value="e6d9ae"/>
-			<Color Name="Main" Value="c0ac6c"/>
-			<Color Name="Action" Value="c0a23b"/>
-			<Color Name="System" Value="f9f9f9"/>
 		</Styles>
 		<Default>
 			<DisabledOption Value="Show"/>
