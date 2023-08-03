@@ -5,11 +5,11 @@
 			<Author>Роман Островерхов, 2013</Author>
 		</Copyright>
 		<Styles>
-			<Color Name="StatusBar" Value="2a2a2a"/>
-			<Color Name="Main" Value="434343"/>
-			<Color Name="Action" Value="555555"/>
-			<Color Name="Option" Value="686868"/>
-			<Color Name="System" Value="eeeeee"/>
+			<StatusBar Value="2a2a2a"/>
+			<Main Value="434343"/>
+			<Action Value="555555"/>
+			<Option Value="686868"/>
+			<System Value="eeeeee"/>
 		</Styles>
 		<Default>
 			<DisabledOption Value="Hide"/>
