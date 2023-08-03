@@ -5,9 +5,9 @@
 			<Author>Zaratystra, 2022</Author>
 		</Copyright>
 		<Styles>
-			<Color Name="Main" Value="7d2c1c"/>
+			<Main Value="7d2c1c"/>
+			<System Value="f0d1b9"/>
 			<Color Name="Option, Continue" Value="b45b27"/>
-			<Color Name="System" Value="f0d1b9"/>
 		</Styles>
 		<Data>
 			<List Name="CleaningNotebookList" Items="Билли убит в амбаре, Все любили Билли, Убит ночью, Не успел защититься, У убийцы есть рука, Убийца женщина, Надо проверить салон мадам Жу-жу, Женская перчатка, Дробовик, Патроны, Портсигар"/>
