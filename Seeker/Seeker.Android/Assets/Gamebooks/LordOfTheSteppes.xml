@@ -5,13 +5,13 @@
 			<Author>Сергей Ступин, 2009</Author>
 		</Copyright>
 		<Styles>
-			<Color Name="StatusBar" Value="b42806"/>
-			<Color Name="StatusFont" Value="ffffff"/>
-			<Color Name="Main" Value="b80f0a"/>
-			<Color Name="Action" Value="a92605"/>
-			<Color Name="Option" Value="878787"/>
-			<Color Name="Continue" Value="db8784"/>
-			<Color Name="System" Value="f2f2f2"/>
+			<StatusBar Value="b42806"/>
+			<StatusFont Value="ffffff"/>
+			<Main Value="b80f0a"/>
+			<Action Value="a92605"/>
+			<Option Value="878787"/>
+			<Continue Value="db8784"/>
+			<System Value="f2f2f2"/>
 		</Styles>
 		<Data>
 			<List Name="WithoutStatuses" Items="0, 904, 905, 906"/>
