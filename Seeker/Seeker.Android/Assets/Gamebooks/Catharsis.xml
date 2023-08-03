@@ -5,14 +5,14 @@
 			<Author>Андрей Журавлёв, 2013</Author>
 		</Copyright>
 		<Styles>
-			<Color Name="Background" Value="cdcdcd"/>
+			<Background Value="cdcdcd"/>
+			<StatusFont Value="000000"/>
+			<AdditionalStatus Value="bfbfbf"/>
+			<Main Value="51514b"/>
+			<Option Value="858581"/>
+			<Action Value="939393"/>
+			<Continue Value="a9a9a6"/>
 			<Color Name="StatusBar, ActionBox, System" Value="b8b8b8"/>
-			<Color Name="StatusFont" Value="000000"/>
-			<Color Name="AdditionalStatus" Value="bfbfbf"/>
-			<Color Name="Main" Value="51514b"/>
-			<Color Name="Option" Value="858581"/>
-			<Color Name="Action" Value="939393"/>
-			<Color Name="Continue" Value="a9a9a6"/>
 		</Styles>
 		<Data>
 			<List Name="WithoutStatuses" Items="0, 401, 402"/>
