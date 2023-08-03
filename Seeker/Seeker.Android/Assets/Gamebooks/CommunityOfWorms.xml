@@ -5,8 +5,8 @@
 			<Author>Пётр Прокошев, 2017</Author>
 		</Copyright>
 		<Styles>
-			<Color Name="Main" Value="191039"/>
-			<Color Name="Option" Value="191039"/>
+			<Main Value="191039"/>
+			<Option Value="191039"/>
 		</Styles>
 		<Default>
 			<DisabledOption Value="Show"/>
