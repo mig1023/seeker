@@ -5,8 +5,8 @@
 			<Author>Zaratystra, the_arsonist, 2018</Author>
 		</Copyright>
 		<Styles>
-			<Color Name="Main" Value="030436"/>
-			<Color Name="Option" Value="35365e"/>
+			<Main Value="030436"/>
+			<Option Value="35365e"/>
 		</Styles>
 		<Default>
 			<DisabledOption Value="Hide"/>
