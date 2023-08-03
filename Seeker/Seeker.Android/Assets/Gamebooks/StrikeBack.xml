@@ -5,12 +5,12 @@
 			<Author>Хироси Ямамото, 1987</Author>
 		</Copyright>
 		<Styles>
-			<Color Name="Main" Value="4d5339"/>
-			<Color Name="Option" Value="405339"/>
-			<Color Name="Action" Value="454a33"/>
-			<Color Name="StatusBar" Value="33422d"/>
-			<Color Name="System" Value="9fa99c"/>
-			<Color Name="ActionBox" Value="bcc2b9"/>
+			<Main Value="4d5339"/>
+			<Option Value="405339"/>
+			<Action Value="454a33"/>
+			<StatusBar Value="33422d"/>
+			<System Value="9fa99c"/>
+			<ActionBox Value="bcc2b9"/>
 		</Styles>
 		<Default>
 			<DisabledOption Value="Show"/>
