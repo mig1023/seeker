@@ -15,13 +15,15 @@
 		</Styles>
 		<Data>
 			<List Name="WithoutStatuses" Items="0, 904, 905, 906"/>
-			<Dictionary Name="GetStartValues">
+		</Data>
+		<Dictionaries>
+			<GetStartValues>
 				<Item Name="Attack" Value="8"/>
 				<Item Name="Defence" Value="15"/>
 				<Item Name="Endurance" Value="14"/>
 				<Item Name="Initiative" Value="10"/>
-			</Dictionary>
-		</Data>
+			</GetStartValues>
+		</Dictionaries>
 		<Default>
 			<DisabledOption Value="Hide"/>
 			<FontSize Value="Little"/>
