@@ -17,21 +17,21 @@
 			<BadColor Value="7f0000"/>
 			<Color Name="Main, Option" Value="5c6649"/>
 		</Styles>
-		<Data>
-			<Dictionary Name="GetRangeTypes">
+		<Dictionaries>
+			<GetRangeTypes>
 				<Item Name="6" Value="ДАЛЬНЯЯ ДИСТАНЦИЯ"/>
 				<Item Name="5" Value="СРЕДНЯЯ ДИСТАНЦИЯ"/>
 				<Item Name="4" Value="БЛИЖНЯЯ ДИСТАНЦИЯ"/>
-			</Dictionary>
-			<Dictionary Name="GetUpgrates">
+			</GetRangeTypes>
+			<GetUpgrates>
 				<Item Name="1" Value="SecondEngine|Второй двигатель"/>
 				<Item Name="2" Value="Stealth|Стелс-покрытие"/>
 				<Item Name="3" Value="Radar|Радар"/>
 				<Item Name="4" Value="CircularSaw|Циркулярная пила"/>
 				<Item Name="5" Value="Flamethrower|Реактивный огнемёт"/>
 				<Item Name="6" Value="PlasmaCannon|Спаренная плазмопушка"/>
-			</Dictionary>
-			<Dictionary Name="GetPurchases">
+			</GetUpgrates>
+			<GetPurchases>
 				<Item Name="Месячное проживание на Земле" Value="5"/>
 				<Item Name="Круиз по галактике" Value="10"/>
 				<Item Name="Робот-помощник" Value="50"/>
@@ -44,15 +44,15 @@
 				<Item Name="Остров на Гидронее" Value="750"/>
 				<Item Name="Космический фрегат" Value="1000"/>
 				<Item Name="Колонизация нового планетоида" Value="1500"/>
-			</Dictionary>
-			<Dictionary Name="GetFuryLevel">
+			</GetPurchases>
+			<GetFuryLevel>
 				<Item Name="-2" Value="Монах"/>
 				<Item Name="-1" Value="Пацифист"/>
 				<Item Name="0" Value="Путник"/>
 				<Item Name="1" Value="Милитарист"/>
 				<Item Name="2" Value="Берсерк"/>
-			</Dictionary>
-		</Data>
+			</GetFuryLevel>
+		</Dictionaries>
 		<Default>
 			<DisabledOption Value="Hide"/>
 		</Default>
