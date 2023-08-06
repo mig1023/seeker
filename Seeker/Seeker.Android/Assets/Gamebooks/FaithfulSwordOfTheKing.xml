@@ -11,9 +11,9 @@
 			<System Value="f0dddd"/>
 			<Color Name="Option, Continue" Value="dbabab"/>
 		</Styles>
-		<Data>
-			<List Name="WithoutStatuses" Items="0, 660"/>
-		</Data>
+		<Lists>
+			<WithoutStatuses Items="0, 660"/>
+		</Lists>
 		<Dictionaries>
 			<Skills ItemsByOrder="12, 8, 10, 7, 9, 11"/>
 			<Strengths ItemsByOrder="22, 18, 14, 24, 16, 20"/>	
