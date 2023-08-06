@@ -13,9 +13,9 @@
 			<StatusBar Value="aa2218"/>
 			<SystemFont Value="f7f1b6"/>
 		</Styles>
-		<Data>
-			<List Name="GetApartments" Items="один, два, три, один, два, три"/>
-		</Data>
+		<Lists>
+			<GetApartments Items="один, два, три, один, два, три"/>
+		</Lists>
 		<Default>
 			<DisabledOption Value="Hide"/>
 		</Default>
