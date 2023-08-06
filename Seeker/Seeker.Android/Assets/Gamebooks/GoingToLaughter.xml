@@ -11,10 +11,10 @@
 			<System Value="f3f0f0"/>
 			<Color Name="Main, Option" Value="441012"/>
 		</Styles>
-		<Data>
-			<List Name="WithoutStatuses" Items="0, 1393, 1394"/>
-			<List Name="SleepCleaningSurvive" Items="Дежа вю, Се ля ви, Шерше ля фам, Триумфатор, Лютня, Записная книжка, Бревиарий"/>
-		</Data>
+		<Lists>
+			<WithoutStatuses Items="0, 1393, 1394"/>
+			<SleepCleaningSurvive Items="Дежа вю, Се ля ви, Шерше ля фам, Триумфатор, Лютня, Записная книжка, Бревиарий"/>
+		</Lists>
 		<Dictionaries>
 			<IncompatiblesDisadvantages>
 				<Item Name="Пьянство" Value="Набожность"/>
