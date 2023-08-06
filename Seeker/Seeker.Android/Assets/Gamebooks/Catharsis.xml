@@ -14,9 +14,9 @@
 			<Continue Value="a9a9a6"/>
 			<Color Name="StatusBar, ActionBox, System" Value="b8b8b8"/>
 		</Styles>
-		<Data>
-			<List Name="WithoutStatuses" Items="0, 401, 402"/>
-		</Data>
+		<Lists>
+			<WithoutStatuses Items="0, 401, 402"/>
+		</Lists>
 		<Dictionaries>
 			<GetStartValues>
 				<Item Name="Fight" Value="10"/>
