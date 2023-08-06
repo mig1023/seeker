@@ -202,10 +202,10 @@ namespace Seeker.Game
             foreach (XmlNode xmlNode in xmlFile.SelectNodes(Intro("Buttons/*")))
                 AddButtonsTexts(xmlNode);
 
-            foreach (XmlNode xmlNode in xmlFile.SelectNodes(Intro("Data/List")))
+            foreach (XmlNode xmlNode in xmlFile.SelectNodes(Intro("Lists/*")))
             {
                 List<string> values = xmlNode.Attributes["Items"].InnerText.Split(',').ToList();
-                Data.Constants.LoadList(xmlNode.Attributes["Name"].InnerText, values);
+                Data.Constants.LoadList(xmlNode.Name, values);
             }
 
             foreach (XmlNode xmlNode in xmlFile.SelectNodes(Intro("Dictionaries/*")))
