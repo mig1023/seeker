@@ -8,9 +8,9 @@
 			<Main Value="deb887"/>
 			<ButtonFont Value="000000"/>
 		</Styles>
-		<Data>
-			<List Name="GetParagraphsWithoutHokkuCreation" Items="0, 1, 9, 10, 11, 12"/>
-		</Data>
+		<Lists>
+			<GetParagraphsWithoutHokkuCreation Items="0, 1, 9, 10, 11, 12"/>
+		</Lists>
 		<Default>
 			<DisabledOption Value="Hide"/>
 			<StartParagraph Value="1"/>
