@@ -14,10 +14,10 @@
 			<System Value="c7dfb9"/>
 			<Color Name="Option, Continue" Value="8dbd6e"/>
 		</Styles>
-		<Data>
-			<List Name="WithoutStatuses" Items="0, 205"/>
-			<List Name="WithoutStaticsButtons" Items="0, 30, 60, 90"/>
-		</Data>
+		<Lists>
+			<WithoutStatuses Items="0, 205"/>
+			<WithoutStaticsButtons Items="0, 30, 60, 90"/>
+		</Lists>
 		<Dictionaries>
 			<StatNames>
 				<Item Name="Strength" Value="силы"/>
