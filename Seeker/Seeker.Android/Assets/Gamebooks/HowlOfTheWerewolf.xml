@@ -13,21 +13,21 @@
 			<Action Value="516f72"/>
 			<System Value="9dadaf"/>
 		</Styles>
-		<Data>
-			<Dictionary Name="GetCountName">
+		<Dictionaries>
+			<GetCountName>
 				<Item Name="1" Value="Первый"/>
 				<Item Name="2" Value="Второй"/>
 				<Item Name="3" Value="Третий"/>
 				<Item Name="4" Value="Четвёртый"/>
 				<Item Name="5" Value="Пятый"/>
 				<Item Name="6" Value="Шестой"/>
-			</Dictionary>
-			<Dictionary Name="GetPassageName">
+			</GetCountName>
+			<GetPassageName>
 				<Item Name="1" Value="дверь"/>
 				<Item Name="2" Value="первое окно"/>
 				<Item Name="3" Value="второе окно"/>
-			</Dictionary>
-		</Data>
+			</GetPassageName>
+		</Dictionaries>
 		<Default>
 			<DisabledOption Value="Hide"/>
 		</Default>
