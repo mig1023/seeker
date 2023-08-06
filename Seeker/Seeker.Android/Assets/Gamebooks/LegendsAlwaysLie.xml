@@ -14,10 +14,10 @@
 			<System Value="e6c5c5"/>
 			<Color Name="Option, Continue" Value="cc8888"/>
 		</Styles>
-		<Data>
-			<List Name="WithoutStatuses" Items="0, 714, 715, 716"/>
-			<List Name="WithoutStaticsButtons" Items="0, 687, 714, 715, 701, 702"/>
-		</Data>
+		<Lists>
+			<WithoutStatuses Items="0, 714, 715, 716"/>
+			<WithoutStaticsButtons Items="0, 687, 714, 715, 701, 702"/>
+		</Lists>
 		<Default>
 			<DisabledOption Value="Show"/>
 			<FontSize Value="Little"/>
