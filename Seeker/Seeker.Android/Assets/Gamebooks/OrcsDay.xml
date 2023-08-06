@@ -12,9 +12,9 @@
 			<Continue Value="cad9b7"/>
 			<System Value="e9efe2"/>
 		</Styles>
-		<Data>
-			<List Name="WithoutStatuses" Items="0, 102, 103"/>
-		</Data>
+		<Lists>
+			<WithoutStatuses Items="0, 102, 103"/>
+		</Lists>
 		<Dictionaries>
 			<StatNames>
 				<Item Name="Muscle" Value="мышцы"/>
