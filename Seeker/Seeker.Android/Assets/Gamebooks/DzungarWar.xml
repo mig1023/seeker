@@ -16,9 +16,9 @@
 			<Continue Value="b99e8e"/>
 			<System Value="cebbaf"/>
 		</Styles>
-		<Data>
-			<List Name="WithoutStatuses" Items="0, 658, 659, 660"/>
-		</Data>
+		<Lists>
+			<WithoutStatuses Items="0, 658, 659, 660"/>
+		</Lists>
 		<Dictionaries>
 			<StatNames>
 				<Item Name="Strength" Value="силы"/>
