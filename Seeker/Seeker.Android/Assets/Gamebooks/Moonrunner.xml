@@ -13,15 +13,17 @@
 			<Action Value="7e0059"/>
 			<System Value="ddd1df"/>
 		</Styles>
-		<Data>
-			<Dictionary Name="SpellsList">
+		<Dictionaries>
+			<SpellsList>
 				<Item Name="1" Value="первое"/>
 				<Item Name="2" Value="второе"/>
 				<Item Name="3" Value="третье"/>
 				<Item Name="4" Value="четвёртое"/>
 				<Item Name="5" Value="пятое"/>
 				<Item Name="6" Value="шестое"/>
-			</Dictionary>
+			</SpellsList>
+		</Dictionaries>
+		<Data>
 			<List Name="Skills" Items="Акробатика, Скалолазание, Сражение, Интеллект, Маскировка, Взлом, Ловкость рук, Скрытность, Поиск следов"/>
 		</Data>
 		<Default>
