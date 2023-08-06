@@ -15,9 +15,9 @@
 		<Default>
 			<DisabledOption Value="Show"/>
 		</Default>
-		<Data>
-			<List Name="ParagraphsStatusesLimit" Items="375, 417"/>
-		</Data>
+		<Lists>
+			<ParagraphsStatusesLimit Items="375, 417"/>
+		</Lists>
 		<Buttons>
 			<Get>Купить</Get>
 		</Buttons>
