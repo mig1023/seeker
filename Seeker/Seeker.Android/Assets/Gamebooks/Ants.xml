@@ -10,9 +10,9 @@
 			<ActionBox Value="efefef"/>
 			<System Value="f4f4f4"/>
 		</Styles>
-		<Data>
-			<List Name="WithoutStatuses" Items="0, 1"/>
-		</Data>	
+		<Lists>
+			<WithoutStatuses Items="0, 1"/>
+		</Lists>	
 		<Dictionaries>
 			<Government>
 				<Item Name="Королева Антуанетта Плодовитая" Value="Королева Антуанетта Плодовитая уделяет много времени потомству. Ей стало сложно управлять колонией."/>
