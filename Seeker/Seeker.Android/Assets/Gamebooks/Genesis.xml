@@ -17,12 +17,14 @@
 		</Styles>
 		<Data>
 			<List Name="WithoutStatuses" Items="0, 201, 202, 203, 204, 205, 206, 207"/>
-			<Dictionary Name="GetStartValues">
+		</Data>
+		<Dictionaries>
+			<GetStartValues>
 				<Item Name="Skill" Value="30"/>
 				<Item Name="Weapon" Value="15"/>
 				<Item Name="Stealth" Value="3"/>
-			</Dictionary>
-		</Data>
+			</GetStartValues>
+		</Dictionaries>
 		<Default>
 			<DisabledOption Value="Show"/>
 		</Default>
