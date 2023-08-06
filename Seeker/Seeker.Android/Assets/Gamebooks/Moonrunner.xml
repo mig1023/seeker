@@ -13,6 +13,9 @@
 			<Action Value="7e0059"/>
 			<System Value="ddd1df"/>
 		</Styles>
+		<Lists>
+			<Skills Items="Акробатика, Скалолазание, Сражение, Интеллект, Маскировка, Взлом, Ловкость рук, Скрытность, Поиск следов"/>
+		</Lists>
 		<Dictionaries>
 			<SpellsList>
 				<Item Name="1" Value="первое"/>
@@ -23,9 +26,6 @@
 				<Item Name="6" Value="шестое"/>
 			</SpellsList>
 		</Dictionaries>
-		<Data>
-			<List Name="Skills" Items="Акробатика, Скалолазание, Сражение, Интеллект, Маскировка, Взлом, Ловкость рук, Скрытность, Поиск следов"/>
-		</Data>
 		<Default>
 			<DisabledOption Value="Show"/>
 		</Default>
