@@ -18,15 +18,17 @@
 		</Styles>
 		<Data>
 			<List Name="WithoutStatuses" Items="0, 658, 659, 660"/>
-			<Dictionary Name="StatNames">
+		</Data>
+		<Dictionaries>
+			<StatNames>
 				<Item Name="Strength" Value="силы"/>
 				<Item Name="Skill" Value="ловкости"/>
 				<Item Name="Wisdom" Value="мудрости"/>
 				<Item Name="Cunning" Value="хитрости"/>
 				<Item Name="Oratory" Value="красноречия"/>
 				<Item Name="Danger" Value="опасности"/>
-			</Dictionary>
-		</Data>
+			</StatNames>
+		</Dictionaries>
 		<Default>
 			<DisabledOption Value="Show"/>
 		</Default>
