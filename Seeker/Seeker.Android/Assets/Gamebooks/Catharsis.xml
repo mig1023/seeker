@@ -16,12 +16,14 @@
 		</Styles>
 		<Data>
 			<List Name="WithoutStatuses" Items="0, 401, 402"/>
-			<Dictionary Name="GetStartValues">
+		</Data>
+		<Dictionaries>
+			<GetStartValues>
 				<Item Name="Fight" Value="10"/>
 				<Item Name="Accuracy" Value="10"/>
 				<Item Name="Stealth" Value="3"/>
-			</Dictionary>
-		</Data>
+			</GetStartValues>
+		</Dictionaries>
 		<Default>
 			<DisabledOption Value="Show"/>
 		</Default>
