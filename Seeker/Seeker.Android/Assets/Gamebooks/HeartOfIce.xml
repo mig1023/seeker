@@ -13,9 +13,9 @@
 			<Action Value="0679b0"/>
 			<System Value="1f93c9"/>
 		</Styles>
-		<Data>
-			<List Name="WithoutStatuses" Items="0, 454, 455, 456, 457"/>
-		</Data>
+		<Lists>
+			<WithoutStatuses Items="0, 454, 455, 456, 457"/>
+		</Lists>
 		<Default>
 			<DisabledOption Value="Show"/>
 		</Default>
