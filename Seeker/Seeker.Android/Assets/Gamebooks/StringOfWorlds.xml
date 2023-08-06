@@ -4,9 +4,9 @@
 			<Title>Вереница миров или выводы из закона Мэрфи</Title>
 			<Author>Ольга Голотвина, 1995</Author>
 		</Copyright>
-		<Data>
-			<List Name="WithoutStaticsButtons" Items="0, 1, 665"/>
-		</Data>
+		<Lists>
+			<WithoutStaticsButtons Items="0, 1, 665"/>
+		</Lists>
 		<Dictionaries>
 			<Skills ItemsByOrder=", 8, 10, 12, 9, 11, 9, 10, 8, 9, 10, 11"/>
 			<Strengths ItemsByOrder=", 22, 20, 16, 18, 20, 20, 16, 24, 22, 18, 20"/>
