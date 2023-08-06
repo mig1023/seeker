@@ -13,7 +13,10 @@
 		</Styles>
 		<Data>
 			<List Name="WithoutStatuses" Items="0, 1393, 1394"/>
-			<Dictionary Name="IncompatiblesDisadvantages">
+			<List Name="SleepCleaningSurvive" Items="Дежа вю, Се ля ви, Шерше ля фам, Триумфатор, Лютня, Записная книжка, Бревиарий"/>
+		</Data>
+		<Dictionaries>
+			<IncompatiblesDisadvantages>
 				<Item Name="Пьянство" Value="Набожность"/>
 				<Item Name="Алчность" Value="Набожность"/>
 				<Item Name="Суеверие" Value="Набожность"/>
@@ -24,15 +27,14 @@
 				<Item Name="Рассеянность" Value="Наблюдательность"/>
 				<Item Name="Обжорство" Value="Эквилибристика, Акробатика"/>
 				<Item Name="Малодушие" Value="Вспыльчивость"/>
-			</Dictionary>
-			<Dictionary Name="ParamNames">
+			</IncompatiblesDisadvantages>
+			<ParamNames>
 				<Item Name="Heroism" Value="Героизму"/>
 				<Item Name="Villainy" Value="Злодейству"/>
 				<Item Name="Buffoonery" Value="Шутовству"/>
 				<Item Name="Inspiration" Value="Вдохновению"/>
-			</Dictionary>
-			<List Name="SleepCleaningSurvive" Items="Дежа вю, Се ля ви, Шерше ля фам, Триумфатор, Лютня, Записная книжка, Бревиарий"/>
-		</Data>
+			</ParamNames>
+		</Dictionaries>
 		<Default>
 			<DisabledOption Value="Show"/>
 			<StartParagraph Value="1392"/>
