@@ -12,14 +12,16 @@
 		</Styles>
 		<Data>
 			<List Name="WithoutStatuses" Items="0, 266"/>
-			<Dictionary Name="HealingParts">
+		</Data>	
+		<Dictionaries>
+			<HealingParts>
 				<Item Name="головы" Value="Head"/>
 				<Item Name="плеч" Value="ShoulderGirdle"/>
 				<Item Name="корпуса" Value="Body"/>
 				<Item Name="рук" Value="Hands"/>
 				<Item Name="ног" Value="Legs"/>
-			</Dictionary>
-		</Data>
+			</HealingParts>
+		</Dictionaries>
 		<Default>
 			<DisabledOption Value="Hide"/>
 		</Default>
