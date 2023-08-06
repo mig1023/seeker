@@ -13,9 +13,9 @@
 			<StatusBar Value="bcaa8f"/>
 			<AdditionalStatus Value="d0c3b0"/>
 		</Styles>
-		<Data>
-			<List Name="WithoutStaticsButtons" Items="0, 1"/>
-		</Data>
+		<Lists>
+			<WithoutStaticsButtons Items="0, 1"/>
+		</Lists>
 		<Dictionaries>
 			<HealthLine>
 				<Item Name="0" Value="мертв"/>
