@@ -13,9 +13,9 @@
 			<Continue Value="db8784"/>
 			<System Value="f2f2f2"/>
 		</Styles>
-		<Data>
-			<List Name="WithoutStatuses" Items="0, 904, 905, 906"/>
-		</Data>
+		<Lists>
+			<WithoutStatuses Items="0, 904, 905, 906"/>
+		</Lists>
 		<Dictionaries>
 			<GetStartValues>
 				<Item Name="Attack" Value="8"/>
