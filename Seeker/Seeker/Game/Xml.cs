@@ -208,7 +208,7 @@ namespace Seeker.Game
                 Data.Constants.LoadList(xmlNode.Attributes["Name"].InnerText, values);
             }
 
-            foreach (XmlNode xmlNode in xmlFile.SelectNodes(Intro("Data/Dictionary")))
+            foreach (XmlNode xmlNode in xmlFile.SelectNodes(Intro("Dictionaries/*")))
             {
                 Dictionary<string, string> items = new Dictionary<string, string>();
 
@@ -231,7 +231,7 @@ namespace Seeker.Game
                     items = xmlNodes.ToDictionary(x => x.Attributes["Name"].InnerText, x => x.Attributes["Value"].InnerText);
                 }
 
-                Data.Constants.LoadDictionary(xmlNode.Attributes["Name"].InnerText, items);
+                Data.Constants.LoadDictionary(xmlNode.Name, items);
             }
         }
 
