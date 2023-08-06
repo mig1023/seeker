@@ -10,9 +10,9 @@
 			<ActionBox Value="efefef"/>
 			<System Value="f4f4f4"/>
 		</Styles>
-		<Data>
-			<List Name="WithoutStatuses" Items="0, 266"/>
-		</Data>	
+		<Lists>
+			<WithoutStatuses Items="0, 266"/>
+		</Lists>	
 		<Dictionaries>
 			<HealingParts>
 				<Item Name="головы" Value="Head"/>
