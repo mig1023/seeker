@@ -15,7 +15,9 @@
 		<Data>
 			<List Name="WithoutStatuses" Items="0, 587, 588, 589"/>
 			<List Name="NormalizationParams" Items="Planning, Preparation, Luck"/>
-			<Dictionary Name="CharactersParams">
+		</Data>
+		<Dictionaries>
+			<CharactersParams>
 				<Item Name="Planning" Value="Планирование"/>
 				<Item Name="Preparation" Value="Подготовка"/>
 				<Item Name="Luck" Value="Везение"/>
@@ -28,8 +30,8 @@
 				<Item Name="Selfcontrol50" Value="Самообладание 50"/>
 				<Item Name="Selfcontrol75" Value="Самообладание 75"/>
 				<Item Name="Selfcontrol100" Value="Самообладание 100"/>
-			</Dictionary>
-		</Data>
+			</CharactersParams>
+		</Dictionaries>
 		<Default>
 			<DisabledOption Value="Show"/>
 		</Default>
