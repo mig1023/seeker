@@ -14,14 +14,16 @@
 		</Styles>
 		<Data>
 			<List Name="WithoutStatuses" Items="0, 102, 103"/>
-			<Dictionary Name="StatNames">
+		</Data>
+		<Dictionaries>
+			<StatNames>
 				<Item Name="Muscle" Value="мышцы"/>
 				<Item Name="Wits" Value="мозги"/>
 				<Item Name="Courage" Value="смелость"/>
 				<Item Name="Luck" Value="удачу"/>
 				<Item Name="Orcishness" Value="оркишность"/>
-			</Dictionary>
-			<Dictionary Name="ResultCalculation">
+			</StatNames>
+			<ResultCalculation>
 				<Item Name="!Гибель" Value="+1 за то, что ты ещё жив"/>
 				<Item Name="Обрёл имя" Value="+1 за то, что обрёл имя"/>
 				<Item Name="Выбрался из подземелья" Value="+1 за то, что выбрался из подземелья"/>
@@ -35,16 +37,16 @@
 				<Item Name="Тёмный Властелин" Value="-1 за то, что стал новым Темным Властелином"/>
 				<Item Name="Ограблен" Value="-1 за то, что был ограблен"/>
 				<Item Name="Раб своей природы" Value="-1 за то, что стал рабом своей оркской натуры"/>
-			</Dictionary>
-			<Dictionary Name="Orcishness">
+			</ResultCalculation>
+			<Orcishness>
 				<Item Name="Negative" Value="-1 Оркишность за отрицательный параметр"/>
 				<Item Name="Wits" Value="-1 Оркишность за то, что Мозги круче Мускулов"/>
 				<Item Name="Luck" Value="-1 Оркишность за Удачу"/>
 				<Item Name="Muscle" Value="+1 Оркишность за то, что Мышцы самое крутое"/>
 				<Item Name="Courage" Value="+1 Оркишность за то, что Смелости больше, чем Мозгов"/>
 				<Item Name="TooMuch" Value="-1 Оркишность за то, что Смелости слишком много"/>
-			</Dictionary>
-		</Data>
+			</Orcishness>
+		</Dictionaries>
 		<Default>
 			<DisabledOption Value="Hide"/>
 		</Default>
