@@ -311,7 +311,7 @@
 		</Paragraph>
 		<Paragraph No="37">
 			<Images>
-				<Image Name="Woman"/>
+				<Woman/>
 			</Images>
 			<Options>
 				<Option Goto="68" Text="«У тебя уже получается намного лучше»"/>
