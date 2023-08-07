@@ -633,7 +633,7 @@
 		</Paragraph>
 		<Paragraph No="85">
 			<Images>
-				<Image Name="Place"/>
+				<Place/>
 			</Images>
 			<Options>
 				<Option Goto="67" Text="«Хм, неплохо»"/>
