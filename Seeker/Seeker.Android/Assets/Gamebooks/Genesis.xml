@@ -1855,9 +1855,9 @@
 		</Paragraph>
 		<Paragraph No="205">
 			<Images>
-				<Image Name="plan1">
+				<plan1>
 					<Text>СХЕМА СТАНЦИИ:\n1. Складской модуль.\n2. Рабочий модуль (шахта).\n3. Центр управления.\n4. Реактор.\n5. Жилой модуль.\n6. Ангар с техникой.\nA, B, C, D — переходы между модулями.</Text>
-				</Image>
+				</plan1>
 			</Images>
 			<Options>
 				<Option Goto="206"/>
