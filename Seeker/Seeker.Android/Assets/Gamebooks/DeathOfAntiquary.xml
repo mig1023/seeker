@@ -530,9 +530,9 @@
 		</Paragraph>
 		<Paragraph No="55">
 			<Images>
-				<Image Name="Parrot">
+				<Parrot>
 					<Text>Из зеркала на вас смотрел попугай!!</Text>
-				</Image>
+				</Parrot>
 			</Images>
 			<Options>
 				<Option Goto="23"/>
