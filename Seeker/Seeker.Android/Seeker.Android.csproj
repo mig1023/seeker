@@ -38,7 +38,7 @@
     <BundleAssemblies>false</BundleAssemblies>
     <MandroidI18n />
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
-    <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
+    <EmbedAssembliesIntoApk>false</EmbedAssembliesIntoApk>
     <AndroidSupportedAbis />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -224,18 +224,6 @@
     <AndroidAsset Include="Assets\Gamebooks\ThoseWhoAreAboutToDie.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\ThoseWhoAreAboutToDie_retiarius.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\ThoseWhoAreAboutToDie_secutor.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\ThoseWhoAreAboutToDie_thracians.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\ThoseWhoAreAboutToDie_essedarius.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidAsset Include="Assets\Gamebooks\OctopusIsland.xml" />
   </ItemGroup>
   <ItemGroup>
@@ -290,12 +278,6 @@
     <AndroidAsset Include="Assets\Gamebooks\Genesis.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\Genesis_plan1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\Genesis_plan2.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable\Catharsis.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -312,24 +294,6 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Gamebooks\PrairieLaw.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\AdventuresOfABeardlessDeceiver_Akyn_1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\AdventuresOfABeardlessDeceiver_Akyn_2.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\AdventuresOfABeardlessDeceiver_Akyn_3.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\AdventuresOfABeardlessDeceiver_Akyn_4.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\AdventuresOfABeardlessDeceiver_Akyn_5.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\AdventuresOfABeardlessDeceiver_Akyn_6.jpg" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Gamebooks\VWeapons.xml" />
@@ -465,6 +429,42 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Gamebooks\Ants.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\AdventuresOfABeardlessDeceiver_Akyn1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\AdventuresOfABeardlessDeceiver_Akyn2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\AdventuresOfABeardlessDeceiver_Akyn3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\AdventuresOfABeardlessDeceiver_Akyn4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\AdventuresOfABeardlessDeceiver_Akyn5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\AdventuresOfABeardlessDeceiver_Akyn6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Genesis_Plan2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Genesis_Plan1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ThoseWhoAreAboutToDie_Essedarius.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ThoseWhoAreAboutToDie_Secutor.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ThoseWhoAreAboutToDie_Thracians.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ThoseWhoAreAboutToDie_Retiarius.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>
