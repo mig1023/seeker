@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 
 namespace Seeker.Output
 {
@@ -10,6 +11,7 @@ namespace Seeker.Output
         public bool Box { get; set; }
 
         public Interface.TextFontSize Size { get; set; }
+        public string Background { get; set; }
 
         public bool Bold { get; set; }
         public bool Italic { get; set; }

@@ -76,7 +76,11 @@ namespace Seeker.Game
         private static Text TextLineParse(XmlNode text)
         {
             StringComparer ignoreCase = StringComparer.CurrentCultureIgnoreCase;
-            List<string> style = StringParse(text.Attributes["Style"]).Split(',').Select(x => x.Trim()).ToList();
+
+            List<string> style = StringParse(text.Attributes["Style"])
+                .Split(',')
+                .Select(x => x.Trim())
+                .ToList();
 
             Text output = new Text
             {
@@ -88,6 +92,7 @@ namespace Seeker.Game
             };
 
             output.Size = Interface.TextFontSize.nope;
+            output.Background = null;
 
             foreach (string styleLine in style)
             {
@@ -96,6 +101,16 @@ namespace Seeker.Game
 
                 if ((styleLine == "Center") || (styleLine == "Right"))
                     output.Alignment = styleLine;
+
+                if (styleLine.Contains("Background"))
+                {
+                    List<string> color = styleLine
+                        .Split(':')
+                        .Select(x => x.Trim())
+                        .ToList();
+
+                    output.Background = color[1];
+                }
             }
 
             return output;

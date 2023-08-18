@@ -563,8 +563,14 @@ namespace Seeker.Output
         {
             string backgroundColor = Game.Data.Constants.GetColor(ColorTypes.Background);
 
-            if (String.IsNullOrEmpty(backgroundColor))
+            if (!String.IsNullOrEmpty(text.Background))
+            {
+                backgroundColor = text.Background;
+            }
+            else if (String.IsNullOrEmpty(backgroundColor))
+            {
                 backgroundColor = Constants.DEFAULT_COLORS[ColorTypes.BookColor];
+            }
 
             StackLayout content = new StackLayout
             {
