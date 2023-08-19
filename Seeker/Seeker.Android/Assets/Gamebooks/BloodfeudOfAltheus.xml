@@ -561,7 +561,10 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="60">
-			<Text>Вы заслужили Благосклонность Геры (отметьте это на своем Листе хроник). Добавьте себе 2 очка Славы.</Text>
+			<Texts>
+				<Text>Вы заслужили Благосклонность Геры (отметьте это на своем Листе хроник).</Text>
+				<Text Style="Small">Добавьте себе 2 очка Славы.</Text>
+			</Texts>
 			<Modifications>
 				<Glory Value="2"/>
 				<FellIntoFavor Value="Гера"/>
