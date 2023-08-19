@@ -118,7 +118,8 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             IsProtagonist = true;
         }
 
-        public void FellIntoFavor(string godName, bool fellOut = false, bool indifferent = false, bool indifferentToAll = false)
+        public void FellIntoFavor(string godName, bool fellOut = false,
+            bool indifferent = false, bool indifferentToAll = false)
         {
             if (fellOut)
             {
@@ -141,11 +142,14 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             }
         }
 
-        public bool IsGodsFavor(string godName) => FavorOfTheGods.Contains(godName);
+        public bool IsGodsFavor(string godName) =>
+            FavorOfTheGods.Contains(godName);
 
-        public bool IsGodsDisFavor(string godName) => DisfavorOfTheGods.Contains(godName);
+        public bool IsGodsDisFavor(string godName) =>
+            DisfavorOfTheGods.Contains(godName);
 
-        public void AddWeapons(string weapon) => Weapons.Add(weapon);
+        public void AddWeapons(string weapon) =>
+            Weapons.Add(weapon);
 
         public void GetWeapons(out string name, out int strength, out int defence)
         {
@@ -166,13 +170,11 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             }
         }
 
-        public void AddArmour(string armour) => Armour.Add(armour);
+        public void AddArmour(string armour) =>
+            Armour.Add(armour);
 
         public void GetArmour(out int armourDefence, out string armourLine, bool status = false)
         {
-            Dictionary<string, int> currentArmour = new Dictionary<string, int>();
-            Dictionary<string, Dictionary<string, int>> allArmour = new Dictionary<string, Dictionary<string, int>>();
-
             int defence = 0;
             string defenceLine = String.Empty;
 
@@ -187,29 +189,38 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                 }
             }
 
+            List<ArmourAnnotation> armours = new List<ArmourAnnotation>();
+
             foreach (string armour in Armour)
             {
                 if (String.IsNullOrEmpty(armour))
                     continue;
 
-                string[] armourParams = armour.Split(',');
+                List<string> armourParams = armour
+                    .Split(',')
+                    .Select(x => x.Trim())
+                    .ToList();
 
-                if (!allArmour.ContainsKey(armourParams[2]))
-                    allArmour[armourParams[2]] = new Dictionary<string, int>();
-
-                allArmour[armourParams[2]].Add(armourParams[0], int.Parse(armourParams[1]));
+                armours.Add(new ArmourAnnotation
+                {
+                    Name = armourParams[0],
+                    Level = int.Parse(armourParams[1]),
+                    Type = armourParams[2],
+                });
             }
 
-            foreach (string armourType in allArmour.Keys)
-            {
-                KeyValuePair<string, int> armour = allArmour[armourType].FirstOrDefault(x => x.Value == allArmour[armourType].Values.Max());
+            List<ArmourAnnotation> MaxArmours = armours
+                .GroupBy(x => x.Type, (y, z) => z.Aggregate((a, b) => (b.Level > a.Level) ? b : a))
+                .ToList();
 
-                defence += armour.Value;
+            foreach (ArmourAnnotation actualArmour in MaxArmours)
+            {
+                defence += actualArmour.Level;
 
                 if (status)
-                    defenceLine += $"{armour.Key}, ";
+                    defenceLine += $"{actualArmour.Name}, ";
                 else
-                    defenceLine += $" + {armour.Value} {armour.Key}";
+                    defenceLine += $" + {actualArmour.Name} {actualArmour.Level}";
             }
 
             armourDefence = defence;
