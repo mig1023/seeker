@@ -1037,7 +1037,10 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="112">
-			<Text>Вы направляетесь к Дельфийскому оракулу. Попробуйте задать все интересующие вас вопросы ему. Получите 1 очко Позора.</Text>
+			<Texts>
+				<Text>Вы направляетесь к Дельфийскому оракулу. Попробуйте задать все интересующие вас вопросы ему.</Text>
+				<Text Style="Small">Получите 1 очко Позора.</Text>
+			</Texts>
 			<Modifications>
 				<Shame Value="1" IntuitiveSolution="true"/>
 			</Modifications>
