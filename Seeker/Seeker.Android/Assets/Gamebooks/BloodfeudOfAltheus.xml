@@ -804,7 +804,10 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="84">
-			<Text>Лахеса — одна из трех богинь судьбы (мойр). У нее есть две сестры, Клото и Атропа. Потеряйте 1 очко Славы за то, что не знали этого.</Text>
+			<Texts>
+				<Text>Лахеса — одна из трех богинь судьбы (мойр). У нее есть две сестры, Клото и Атропа.</Text>
+				<Text Style="Small">Потеряйте 1 очко Славы за то, что не знали этого.</Text>
+			</Texts>
 			<Modifications>
 				<Glory Value="-1" IntuitiveSolution="true"/>
 			</Modifications>
