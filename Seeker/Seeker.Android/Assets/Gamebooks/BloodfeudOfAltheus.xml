@@ -1314,7 +1314,10 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="145">
-			<Text>Вам удалось сбежать, но вы получаете 1 очко Позора. Кроме того, вы впали в Немилость у Асклепия.</Text>
+			<Texts>
+				<Text>Вам удалось сбежать.</Text>
+				<Text Style="Small">Но вы получаете 1 очко Позора. Кроме того, вы впали в Немилость у Асклепия.</Text>
+			</Texts>
 			<Modifications>
 				<Shame Value="1"/>
 				<FellOutOfFavor Value="Асклепий"/>
