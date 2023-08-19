@@ -1562,7 +1562,10 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="172">
-			<Text>Нет нужды спускаться так осторожно! Потеряйте 1 очко Славы.</Text>
+			<Texts>
+				<Text>Нет нужды спускаться так осторожно!</Text>
+				<Text Style="Small">Потеряйте 1 очко Славы.</Text>
+			</Texts>
 			<Modifications>
 				<Glory Value="-1" IntuitiveSolution="true"/>
 			</Modifications>
