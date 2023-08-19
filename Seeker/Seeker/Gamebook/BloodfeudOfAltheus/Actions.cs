@@ -489,10 +489,11 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                         weaponStrength + protagonist.Strength;
 
                     string useGloryLine = String.Empty;
-                    int useGlory = Services.UseGloryInFight(enemy, protagonistHitStrength,
-                        autoHit, autoFail, ref fight, out bool usedGlore);
 
-                    if (usedGlore)
+                    int useGlory = Services.UseGloryInFight(enemy,
+                        protagonistHitStrength, autoHit, autoFail, ref fight);
+
+                    if (useGlory > 0)
                     {
                         useGloryLine = $" + {useGlory} Славы";
                         protagonistHitStrength += useGlory;
