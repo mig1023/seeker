@@ -1872,7 +1872,10 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="205">
-			<Text>Неужели доблестный Альтей страшится темноты и одиночества?\n\nПотеряйте 1 очко Славы.</Text>
+			<Texts>
+				<Text>Неужели доблестный Альтей страшится темноты и одиночества?</Text>
+				<Text Style="Small">Потеряйте 1 очко Славы.</Text>
+			</Texts>
 			<Modifications>
 				<Glory Value="-1" IntuitiveSolution="true"/>
 			</Modifications>
