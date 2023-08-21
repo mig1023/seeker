@@ -2974,9 +2974,7 @@
 		</Paragraph>
 		<Paragraph No="318">
 			<Text>Где вы будете сражаться?</Text>
-				<Modifications>
-				<Shame Value="2"/>
-				<Glory Value="4"/>
+			<Modifications>
 				<Weapon Value="гарпун, 3, 0"/>
 			</Modifications>
 			<Options>
