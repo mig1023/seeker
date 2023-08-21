@@ -3438,9 +3438,6 @@
 					<FightToDeath/>
 				</Fight>
 			</Actions>	
-			<Modifications>
-				<Glory Value="4"/>
-			</Modifications>
 			<Options>
 				<Option Goto="490" Text="Решите отступить"/>
 				<Option Goto="51" Text="Погибли, но Зевс воскресил вас" Availability="ВОСКРЕШЕНИЕ">
