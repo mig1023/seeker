@@ -3746,7 +3746,10 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="400">
-			<Text>Получите 2 очка Славы и помните, что после боя раны заживают. Затем вы продолжаете путь в Эпидавр.</Text>
+			<Texts>
+				<Text Style="Small">Получите 2 очка Славы и помните, что после боя раны заживают.</Text>
+				<Text>Затем вы продолжаете путь в Эпидавр.</Text>
+			</Texts>
 			<IntuitiveSolution/>
 			<Modifications>
 				<Glory Value="2"/>
