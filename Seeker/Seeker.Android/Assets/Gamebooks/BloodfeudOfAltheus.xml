@@ -4346,7 +4346,10 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="468">
-			<Text>Вы возносите молитву своему покровителю Посейдону. Потеряйте 2 очка Славы.</Text>
+			<Texts>
+				<Text>Вы возносите молитву своему покровителю Посейдону.</Text>
+				<Text Style="Small">Потеряйте 2 очка Славы.</Text>
+			</Texts>
 			<Modifications>
 				<Glory Value="-2" IntuitiveSolution="true"/>
 			</Modifications>
