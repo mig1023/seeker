@@ -4266,7 +4266,10 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="461">
-			<Text>Усталость затуманила ваш разум. В доме отца вам абсолютно нечего бояться. Потеряйте 1 очко Славы.</Text>
+			<Texts>
+				<Text>Усталость затуманила ваш разум. В доме отца вам абсолютно нечего бояться.</Text>
+				<Text Style="Small">Потеряйте 1 очко Славы.</Text>
+			</Texts>
 			<Modifications>
 				<Glory Value="-1" IntuitiveSolution="true"/>
 			</Modifications>
