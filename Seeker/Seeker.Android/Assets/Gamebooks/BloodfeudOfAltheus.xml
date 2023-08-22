@@ -4602,7 +4602,10 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="496">
-			<Text>Сны много значат для людей в мире древнегреческих мифов. Часто говорят, что они ниспосланы самими богами. Получите 1 очко Позора.</Text>
+			<Texts>
+				<Text>Сны много значат для людей в мире древнегреческих мифов. Часто говорят, что они ниспосланы самими богами.</Text>
+				<Text Style="Small">Получите 1 очко Позора.</Text>
+			</Texts>
 			<Modifications>
 				<Shame Value="1" IntuitiveSolution="true"/>
 			</Modifications>
