@@ -1446,7 +1446,7 @@
 			</Modifications>
 			<Options>
 				<Option Goto="252" Text="Убьете амазонку и продолжите свой путь"/>
-				<Option Goto="80" Text="Сохраните ей жизнь, взяв себе навостренное копье (Сила 2)"/>
+				<Option Goto="80" Text="Сохраните ей жизнь, взяв себе навостренное копье"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="160">
