@@ -4478,7 +4478,10 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="485">
-			<Text>Ах, Альтей, ничто и никто не поможет вам в битве за спасение святилища самого Аполлона! Потеряйте 1 очко Славы.</Text>
+			<Texts>
+				<Text>Ах, Альтей, ничто и никто не поможет вам в битве за спасение святилища самого Аполлона!</Text>
+				<Text Style="Small">Потеряйте 1 очко Славы.</Text>
+			</Texts>
 			<Modifications>
 				<Glory Value="-1" IntuitiveSolution="true"/>
 			</Modifications>
