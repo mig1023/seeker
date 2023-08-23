@@ -623,7 +623,7 @@
 				<Text Style="Small">Вы теряете 1 очко Славы из-за своей робости, которая так сильно отличает вас от доблестного героя, каким был ваш брат.</Text>
 			</Texts>
 			<Modifications>
-				<Glory Value="-1" IntuitiveSolution="true"/>
+				<IntuitiveGlory Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Goto="45"/>
