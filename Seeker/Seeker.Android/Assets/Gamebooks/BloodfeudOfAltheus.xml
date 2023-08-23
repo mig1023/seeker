@@ -777,7 +777,7 @@
 				<Text Style="Small">Потеряйте 2 очка Славы.</Text>
 			</Texts>
 			<Modifications>
-				<Glory Value="-2" IntuitiveSolution="true"/>
+				<IntuitiveGlory Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Goto="263"/>
