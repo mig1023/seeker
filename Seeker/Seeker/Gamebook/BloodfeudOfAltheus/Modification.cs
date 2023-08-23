@@ -4,8 +4,6 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 {
     class Modification : Prototypes.Modification, Abstract.IModification
     {
-        public bool IntuitiveSolution { get; set; }
-
         public override void Do()
         {
             Character protagonist = Character.Protagonist;
@@ -90,11 +88,24 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             }
             else
             {
-                if (IntuitiveSolution && (Value < 0) && Game.Option.IsTriggered("NoPenaltyByIntuitiveSolution"))
-                    return;
+                if (Name.StartsWith("Intuitive"))
+                {
+                    bool noIntuitivePenalty = Game.Option.IsTriggered("NoIntuitivePenalty");
+                    bool noIntuitiveGloryPenalty = Game.Option.IsTriggered("NoIntuitiveGloryPenalty");
 
-                if (IntuitiveSolution && (Value < 0) && (Name == "Glory") && Game.Option.IsTriggered("NoGloryPenaltyByIntuitiveSolution"))
-                    return;
+                    if (noIntuitivePenalty)
+                    {
+                        return;
+                    }
+                    else if ((Name == "IntuitiveGlory") && noIntuitiveGloryPenalty)
+                    {
+                        return;
+                    }
+                    else
+                    {
+                        Name = Name.Replace("Intuitive", String.Empty);
+                    }
+                }
 
                 int currentValue = GetProperty(protagonist, Name);
 
