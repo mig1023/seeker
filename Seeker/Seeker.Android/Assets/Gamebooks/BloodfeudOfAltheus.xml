@@ -809,7 +809,7 @@
 				<Text Style="Small">Потеряйте 1 очко Славы за то, что не знали этого.</Text>
 			</Texts>
 			<Modifications>
-				<Glory Value="-1" IntuitiveSolution="true"/>
+				<IntuitiveGlory Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Goto="64"/>
