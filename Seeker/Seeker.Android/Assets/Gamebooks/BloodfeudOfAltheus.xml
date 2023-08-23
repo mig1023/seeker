@@ -2095,7 +2095,7 @@
 		<Paragraph No="229">
 			<Text>Потеряйте 1 очко Славы и получите 1 очко Позора.</Text>
 			<Modifications>
-				<Shame Value="1" IntuitiveSolution="true"/>
+				<IntuitiveShame Value="1"/>
 				<Glory Value="-1" IntuitiveSolution="true"/>
 			</Modifications>
 			<Options>
