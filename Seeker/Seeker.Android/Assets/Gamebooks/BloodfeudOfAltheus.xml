@@ -3094,7 +3094,7 @@
 		<Paragraph No="332">
 			<Text>Получите 1 очко Позора.</Text>
 			<Modifications>
-				<Shame Value="1" IntuitiveSolution="true"/>
+				<IntuitiveShame Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Goto="312"/>
