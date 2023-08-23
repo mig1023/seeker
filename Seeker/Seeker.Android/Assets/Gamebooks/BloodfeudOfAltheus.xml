@@ -3078,7 +3078,7 @@
 			<Text>Потеряйте 1 очко Славы и получите 1 очко Позора за подглядывание!</Text>
 			<Modifications>
 				<IntuitiveShame Value="1"/>
-				<Glory Value="-1" IntuitiveSolution="true"/>
+				<IntuitiveGlory Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Goto="134"/>
