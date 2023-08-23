@@ -1877,7 +1877,7 @@
 				<Text Style="Small">Потеряйте 1 очко Славы.</Text>
 			</Texts>
 			<Modifications>
-				<Glory Value="-1" IntuitiveSolution="true"/>
+				<IntuitiveGlory Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Goto="185"/>
