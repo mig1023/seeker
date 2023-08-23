@@ -3771,7 +3771,7 @@
 				<Text Style="Small">Получите 1 очко Позора.</Text>
 			</Texts>
 			<Modifications>
-				<Shame Value="1" IntuitiveSolution="true"/>
+				<IntuitiveShame Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Goto="459"/>
