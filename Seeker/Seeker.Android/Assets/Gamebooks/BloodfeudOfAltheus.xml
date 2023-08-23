@@ -5121,7 +5121,7 @@
 		<Paragraph No="551">
 			<Text>Получите 1 очко Позора за то, что не поверили этому человеку.</Text>
 			<Modifications>
-				<Shame Value="1" IntuitiveSolution="true"/>
+				<IntuitiveShame Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Goto="531"/>
