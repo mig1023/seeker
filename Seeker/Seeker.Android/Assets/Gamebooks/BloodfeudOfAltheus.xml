@@ -4068,7 +4068,7 @@
 				<Text>Кроме того, вы впали в Немилость у Деметры.</Text>
 			</Texts>
 			<Modifications>
-				<Shame Value="1" IntuitiveSolution="true"/>
+				<IntuitiveShame Value="1"/>
 				<FellOutOfFavor Value="Деметра"/>
 			</Modifications>
 			<Options>
