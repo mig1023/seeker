@@ -81,18 +81,11 @@ namespace Seeker.Output
             [4] = Constants.BIG_FONT,
         };
 
-        public static List<string> PLAYTHROUGH_TIME = new List<string>
+        public static Dictionary<string, int> PLAYTHROUGH_TIME = new Dictionary<string, int>
         {
-            "На пять минут",
-            "На часок-другой",
-            "На весь вечер",
-        };
-
-        public static Dictionary<string, int> PLAYTHROUGH_TIME_NODE = new Dictionary<string, int>
-        {
-            ["Short"] = 0,
-            ["Normal"] = 1,
-            ["Long"] = 2,
+            ["На пять минут"] = 0,
+            ["На часок-другой"] = 1,
+            ["На весь вечер"] = 2,
         };
 
         public static Dictionary<ButtonTypes, string> DEFAULT_BUTTONS = new Dictionary<ButtonTypes, string>

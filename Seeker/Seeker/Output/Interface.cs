@@ -30,7 +30,11 @@ namespace Seeker.Output
                 AddSplitter(gamebook.Title[0].ToString(), ref options, ref lastMarker);
 
             if (List.Sort() == Constants.SortBy["Time"])
-                AddSplitter(Constants.PLAYTHROUGH_TIME[gamebook.PlaythroughTime], ref options, ref lastMarker);
+            {
+                List<string> playthroughNames = Constants.PLAYTHROUGH_TIME.Keys.ToList();
+                AddSplitter(playthroughNames[gamebook.PlaythroughTime], ref options, ref lastMarker);
+            }
+                
         }
 
         private static void AddSplitter(string marker, ref StackLayout options, ref string lastMarker)
@@ -131,7 +135,7 @@ namespace Seeker.Output
             string text = !String.IsNullOrEmpty(gamebook.Authors) ?
                 gamebook.Authors.Split(new string[] { "\\n" }, StringSplitOptions.RemoveEmptyEntries)[0] : gamebook.Author;
 
-            if (List.Sort() == Constants.SORT_BY_AUTHORS)
+            if (List.Sort() == Constants.SortBy["Author"])
                 text = gamebook.AuthorsIndex();
 
             string disclaimerText = $"© {text.Trim() + AndOtherMark(gamebook)}, {gamebook.Year}";
