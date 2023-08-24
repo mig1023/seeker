@@ -20,16 +20,16 @@ namespace Seeker.Output
 
         public static void AddSplitters(Description gamebook, ref string lastMarker, ref StackLayout options)
         {
-            if ((List.Sort() == Constants.SORT_BY_SETTINGS) && (lastMarker != gamebook.Setting))
+            if ((List.Sort() == Constants.SortBy["Setting"]) && (lastMarker != gamebook.Setting))
                 AddSplitter(gamebook.Setting, ref lastMarker, gamebook.Setting, ref options);
 
-            if (List.Sort() == Constants.SORT_BY_AUTHORS)
+            if (List.Sort() == Constants.SortBy["Author"])
                 AddSplitter(gamebook.AuthorsIndex()[0].ToString(), ref options, ref lastMarker);
 
-            if (List.Sort() == Constants.SORT_BY_TITLE)
+            if (List.Sort() == Constants.SortBy["Title"])
                 AddSplitter(gamebook.Title[0].ToString(), ref options, ref lastMarker);
 
-            if (List.Sort() == Constants.SORT_BY_PLAYTHROUGH_TIME)
+            if (List.Sort() == Constants.SortBy["Time"])
                 AddSplitter(Constants.PLAYTHROUGH_TIME[gamebook.PlaythroughTime], ref options, ref lastMarker);
         }
 
