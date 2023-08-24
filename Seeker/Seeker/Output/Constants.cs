@@ -81,7 +81,7 @@ namespace Seeker.Output
             [4] = Constants.BIG_FONT,
         };
 
-        public static Dictionary<string, int> PLAYTHROUGH_TIME = new Dictionary<string, int>
+        public static Dictionary<string, int> PLAYTHROUGH_ORDER = new Dictionary<string, int>
         {
             ["На пять минут"] = 0,
             ["На часок-другой"] = 1,

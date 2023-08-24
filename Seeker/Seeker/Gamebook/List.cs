@@ -109,19 +109,31 @@ namespace Seeker.Gamebook
                     return SortByAuthors(list);
 
                 case 3:
-                    return list.OrderByDescending(x => x.ParagraphSize()).ToList();
+                    return list
+                        .OrderByDescending(x => x.ParagraphSize())
+                        .ToList();
 
                 case 4:
-                    return list.OrderByDescending(x => int.Parse(x.Size)).ToList();
+                    return list
+                        .OrderByDescending(x => int.Parse(x.Size))
+                        .ToList();
 
                 case 5:
-                    return list.OrderBy(x => x.Year).ToList();
+                    return list
+                        .OrderBy(x => x.Year)
+                        .ToList();
 
                 case 6:
-                    return list.OrderBy(x => x.Setting).ThenBy(x => x.Title).ToList();
+                    return list
+                        .OrderBy(x => x.Setting)
+                        .ThenBy(x => x.Title)
+                        .ToList();
 
                 case 7:
-                    return list.OrderBy(x => x.PlaythroughTime).ThenBy(x => x.ParagraphSize()).ToList();
+                    return list
+                        .OrderBy(x => Output.Constants.PLAYTHROUGH_ORDER[x.PlaythroughTime])
+                        .ThenBy(x => x.ParagraphSize())
+                        .ToList();
 
                 default:
                     return list;

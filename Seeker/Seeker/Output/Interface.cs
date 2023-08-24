@@ -30,11 +30,7 @@ namespace Seeker.Output
                 AddSplitter(gamebook.Title[0].ToString(), ref options, ref lastMarker);
 
             if (List.Sort() == Constants.SortBy["Time"])
-            {
-                List<string> playthroughNames = Constants.PLAYTHROUGH_TIME.Keys.ToList();
-                AddSplitter(playthroughNames[gamebook.PlaythroughTime], ref options, ref lastMarker);
-            }
-                
+                AddSplitter(gamebook.PlaythroughTime, ref options, ref lastMarker);   
         }
 
         private static void AddSplitter(string marker, ref StackLayout options, ref string lastMarker)
