@@ -11,10 +11,11 @@ namespace Seeker.Gamebook.Ants
 
         public override List<string> AdditionalStatus()
         {
-            List<string> statusLines = new List<string>();
-
-            statusLines.Add($"Количество: {protagonist.Quantity}");
-            statusLines.Add($"Прирост: {protagonist.Increase}");
+            List<string> statusLines = new List<string>
+            {
+                $"Количество: {protagonist.Quantity}",
+                $"Прирост: {protagonist.Increase}"
+            };
 
             if (protagonist.Defence > 0)
                 statusLines.Add($"Защита: {protagonist.Defence}");
