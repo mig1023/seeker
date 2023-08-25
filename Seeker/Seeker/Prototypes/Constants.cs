@@ -110,12 +110,11 @@ namespace Seeker.Prototypes
             return false;
         }
 
-        public void LoadEnabledDisabledOption(string option)
+        public void LoadEnabledDisabledOption(string option, string specific)
         {
             ShowDisabledOptionStatus = option == "Show";
-            HideSingletonOption = option == "HideAndSingletonsToo";
+            HideSingletonOption = specific == "SingletonsToo";
         }
-            
 
         public virtual bool ShowDisabledOption(out bool HideSingleton)
         {

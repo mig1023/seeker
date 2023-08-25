@@ -207,7 +207,9 @@ namespace Seeker.Game
                 }
             }
 
-            Data.Constants.LoadEnabledDisabledOption(SettingString(xmlFile, "DisabledOption"));
+            Data.Constants.LoadEnabledDisabledOption(SettingString(xmlFile, "DisabledOption"),
+                SettingString(xmlFile, "DisabledOption", specific: true));
+
             Data.Constants.LoadStartParagraphOption(SettingString(xmlFile, "StartParagraph"));
             Data.Constants.LoadDefaultFontSize(SettingString(xmlFile, "FontSize"));
 
@@ -253,8 +255,13 @@ namespace Seeker.Game
             return items[second ? 1 : 0];
         }
 
-        private static string SettingString(XmlDocument xmlFile, string option) =>
-            StringParse(xmlFile.SelectSingleNode(Intro($"Default/{option}"))?.Attributes["Value"]) ?? String.Empty;
+        private static string SettingString(XmlDocument xmlFile, string option, bool specific = false)
+        {
+            string path = Intro($"Default/{option}");
+            string attribute = specific ? "Specific" : "Value";
+
+            return StringParse(xmlFile.SelectSingleNode(path)?.Attributes[attribute]);
+        }
 
         private static void AddButtonsTexts(XmlNode xmlNode)
         {
