@@ -118,7 +118,7 @@ namespace Seeker.Gamebook.Ants
             List<string> resultLines = line.Split('!').ToList();
 
             results.Add($"{resultLines[0]}!");
-            results.Add(resultLines[1]);
+            results.Add($"BIG|BOLD|{resultLines[1].Trim()}");
 
             return results;
         }
