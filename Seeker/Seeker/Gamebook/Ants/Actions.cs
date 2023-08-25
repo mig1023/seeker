@@ -87,19 +87,10 @@ namespace Seeker.Gamebook.Ants
             bool prince = Game.Option.IsTriggered("Принц Мурадин Крылатый");
             bool soldier = Game.Option.IsTriggered("Солдат Руф Твердожвалый");
 
-            if (queen || prince || soldier)
-            {
-                results.Add("Муравейник вырос до гигантских размеров. Высотою в шесть метров и " +
-                    "диаметром двадцать, он попал в книгу рекордов Гиннесса.");
-                results.Add("Позже группа религиозных фанатиков сожгла муравейник, мотивируя это " +
-                    "тем, что продвинутый вид насекомых угрожает человечеству.");
-            }
-            else
-            {
-                results.Add("Став доминирующим видом в старом лесу, Формицин Ратус начал экспансию в другие места.");
-                results.Add("Прогрессивный вид муравьёв проник в города и расплодился там до чудовищных размеров.");
-                results.Add("Мировая экономика сократилась вдвое из - за нашествия новых паразитов.");
-            }
+            List<string> ending = queen || prince || soldier ? Constants.EndingOne : Constants.EndingTwo;
+
+            foreach (string endingLine in Constants.EndingOne)
+                results.Add(endingLine.Replace(';', ','));
 
             results.Add(String.Empty);
 

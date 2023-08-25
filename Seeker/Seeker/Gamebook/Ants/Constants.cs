@@ -10,6 +10,10 @@ namespace Seeker.Gamebook.Ants
 
         public static Dictionary<string, string> Government { get; set; }
 
+        public static List<string> EndingOne { get; set; }
+
+        public static List<string> EndingTwo { get; set; }
+
         public static Links GetLinks() => new Links
         {
             Protagonist = Character.Protagonist.Init,
