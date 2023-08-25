@@ -40,7 +40,7 @@
 			</Rating>
 		</Dictionaries>
 		<Default>
-			<DisabledOption Value="HideAndSingletonsToo"/>
+			<DisabledOption Value="Hide" Specific="SingletonsToo"/>
 		</Default>
 	</Introduction>
 	<Paragraphs>
