@@ -5364,7 +5364,7 @@
 					<Text>Еще раз побеседуете со свидетелями, но тогда с кем:</Text>
 				</Option>
 				<Option Goto="824" Text="С вдовой"/>
-				<Option Goto="835" Text="С братом убитого"/>
+				<Option Goto="526" Text="С братом убитого"/>
 				<Option Goto="255" Text="С соседом"/>
 			</Options>
 		</Paragraph>
