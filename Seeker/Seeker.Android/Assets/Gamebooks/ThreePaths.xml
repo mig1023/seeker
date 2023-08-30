@@ -5834,7 +5834,7 @@
 			<Options>
 				<Option Goto="615" Text="Нападёте на мёртвых воинов"/>
 				<Option Goto="707" Text="Не будете рисковать и вернётесь в зал с гробницей" Availability="ВРЕМЯ >= 7"/>
-				<Option Goto="699" Text="Не будете рисковать и вернётесь в зал с гробницей" Availability="ВРЕМЯ &lt; 7"/>
+				<Option Goto="805" Text="Не будете рисковать и вернётесь в зал с гробницей" Availability="ВРЕМЯ &lt; 7"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="790">
