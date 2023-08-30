@@ -550,7 +550,7 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="73">
-			<Text>Коридор поворачивает налево, на север.</Text>
+			<Text>Коридор поворачивает налево, на юг.</Text>
 			<Options>
 				<Option Goto="39" Text="Вернётесь обратно"/>
 				<Option Goto="29" Text="Идёте дальше"/>
