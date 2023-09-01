@@ -5,11 +5,9 @@
 			<Author>Андрей Рулин, Пётр Прокошев, Геннадий Логинов, 2019</Author>
 		</Copyright>
 		<Styles>
-			<Main Value="d8d8d8"/>
-			<Continue Value="e7e7e7"/>
-			<System Value="efefef"/>
-			<SystemFont Value="8f8f8f"/>
-			<ButtonFont Value="000000"/>
+			<Main Value="613a33"/>
+			<Continue Value="432823"/>
+			<System Value="bfb0ad"/>
 		</Styles>
 		<Default>
 			<DisabledOption Value="Hide"/>
