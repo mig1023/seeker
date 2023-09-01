@@ -466,6 +466,12 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\ThoseWhoAreAboutToDie_Retiarius.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Gamebooks\ConquistadorDiary.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ConquistadorDiary.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>

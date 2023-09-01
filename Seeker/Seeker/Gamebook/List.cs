@@ -54,6 +54,7 @@ namespace Seeker.Gamebook
             ["StrikeBack"] = StrikeBack.Constants.GetLinks(),
             ["CommunityOfWorms"] = CommunityOfWorms.Constants.GetLinks(),
             ["Ants"] = Ants.Constants.GetLinks(),
+            ["ConquistadorDiary"] = ConquistadorDiary.Constants.GetLinks(),
         };
 
         public static List<string> GetBooks() =>

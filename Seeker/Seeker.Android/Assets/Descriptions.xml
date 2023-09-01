@@ -552,4 +552,19 @@
 			<Border>000000</Border>
 		</Colors>
 	</Ants>
+	<ConquistadorDiary>
+		<Title>Муравьиная борьба</Title>
+		<Authors>Андрей Рулин\nПётр Прокошев\nГеннадий Логинов</Authors>
+		<Year>2019</Year>
+		<Text>Что предпочтительнее: прожить короткую, но достойную жизнь, или обрести бессмертие ценой бесчестья? Стоят ли выложенные золотом дороги Эльдорадо простого человеческого счастья? Покорители Нового Света грезили о несметных богатствах и Источнике вечной молодости, но часто находили лишь боль и страдания.</Text>
+		<Paragraphs>117</Paragraphs>
+		<Size>16847</Size>
+		<Playthrough>На пять минут</Playthrough>
+		<Setting>История</Setting>
+		<Colors>
+			<Book>ffffff</Book>
+			<Font>000000</Font>
+			<Border>000000</Border>
+		</Colors>
+	</ConquistadorDiary>
 </Gamebooks>
