@@ -38,7 +38,7 @@ namespace Seeker.Gamebook.ConquistadorDiary
             bool coin = Game.Dice.Roll() % 2 == 0;
 
             if (coin)
-                return new List<string> { $"BIG|GOD|На монетке выпал ОРЁЛ" };
+                return new List<string> { $"BIG|GOOD|На монетке выпал ОРЁЛ" };
             else
                 return new List<string> { $"BIG|BAD|На монетке выпала РЕШКА" };
         }
