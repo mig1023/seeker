@@ -29,9 +29,12 @@ namespace Seeker.Gamebook.ConquistadorDiary
             {
                 bool isTriggered = option
                     .Split(',')
-                    .Any(x => Game.Option.IsTriggered(x.Trim()));
+                    .Select(x => x.Trim().Trim('!'))
+                    .Any(x => Game.Option.IsTriggered(x));
 
-                return isTriggered;
+                bool negative = option.Contains("!");
+
+                return negative ? !isTriggered : isTriggered;
             }
             else if (option.Contains(">"))
             {
