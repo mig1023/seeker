@@ -471,8 +471,8 @@
 		<Paragraph No="61">
 			<Text>Перед уходом журналист из любопытства решает прочитать что-нибудь из местной прессы.</Text>
 			<Options>
-				<Option Goto="51" Text="Если у вас записана метка «BF»"/>
-				<Option Goto="80" Text="Не записана"/>
+				<Option Goto="51" Availability="BF"/>
+				<Option Goto="80" Availability="!BF"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="62">
