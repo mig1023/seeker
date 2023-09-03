@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Seeker.Gamebook.ConquistadorDiary
 {
@@ -21,16 +22,29 @@ namespace Seeker.Gamebook.ConquistadorDiary
         public override bool Availability(string option)
         {
             if (String.IsNullOrEmpty(option))
+            {
                 return true;
+            }
+            else if (option.Contains(","))
+            {
+                bool isTriggered = option
+                    .Split(',')
+                    .Any(x => Game.Option.IsTriggered(x.Trim()));
 
+                return isTriggered;
+            }
             else if (option.Contains(">"))
+            {
                 return protagonist.Score > Game.Services.LevelParse(option);
-
+            }
             else if (option.Contains("<"))
+            {
                 return protagonist.Score < Game.Services.LevelParse(option);
-
+            }
             else
+            {
                 return AvailabilityTrigger(option.Trim());
+            }
         }
 
         public List<string> RollCoin()
