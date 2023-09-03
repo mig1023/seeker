@@ -9,16 +9,82 @@ namespace Seeker.Gamebook.ConquistadorDiary
         public static Actions StaticInstance = new Actions();
         private static Character protagonist = Character.Protagonist;
 
+        public int Round { get; set; }
+        public int Bet { get; set; }
+
         public override List<string> Status()
         {
             List<string> score = new List<string>();
 
-            if (protagonist.Score != null)
+            if (protagonist.Points > 0)
+                score.Add($"Очки интервью: {protagonist.Points}");
+
+            if (protagonist.Score > 0)
                 score.Add($"Баллы: {protagonist.Score}");
 
             return score;
         }
-        
+
+        public override List<string> Representer()
+        {
+            if (Round > 0)
+            {
+                string diffLine = String.Empty;
+                int bet = protagonist.CurrentBet;
+
+                if ((bet >= 0) && (protagonist.Points == 0))
+                {
+                    diffLine = " всё, что осталось";
+                }
+                else if (bet > 0)
+                {
+                    string points = Game.Services.CoinsNoun(bet, "очко", "очка", "очков");
+                    diffLine = $" {bet} {points}";
+                }
+                else
+                {
+                    diffLine = " ни одного очка";
+                }
+
+                return new List<string> { $"{Head}{diffLine}" };
+            }
+            else
+            {
+                return new List<string> { };
+            }
+        }
+
+        public override bool IsButtonEnabled(bool secondButton = false)
+        {
+            if (Round > 0)
+            {
+                if (secondButton)
+                    return protagonist.CurrentBet > 1;
+                else
+                    return (protagonist.Points > 0) && (protagonist.CurrentBet < 6);
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        public List<string> Get()
+        {
+            protagonist.CurrentBet += 1;
+            protagonist.Points -= 1;
+
+            return new List<string> { "RELOAD" };
+        }
+
+        public List<string> Decrease()
+        {
+            protagonist.CurrentBet -= 1;
+            protagonist.Points += 1;
+
+            return new List<string> { "RELOAD" };
+        }
+
         public override bool Availability(string option)
         {
             if (String.IsNullOrEmpty(option))
