@@ -7,6 +7,7 @@ namespace Seeker.Gamebook.ConquistadorDiary
         public static Character Protagonist = new Character();
 
         public int Points { get; set; }
+        public int DiegoPoints { get; set; }
         public int? Score { get; set; }
         public int CurrentBet { get; set; }
         public int LastBet { get; set; }
@@ -18,6 +19,7 @@ namespace Seeker.Gamebook.ConquistadorDiary
 
             Name = "Главный герой";
             Points = 0;
+            DiegoPoints = 4;
             Score = 0;
             CurrentBet = 0;
             LastBet = 0;
@@ -29,6 +31,7 @@ namespace Seeker.Gamebook.ConquistadorDiary
             IsProtagonist = this.IsProtagonist,
             Name = this.Name,
             Points = this.Points,
+            DiegoPoints = this.DiegoPoints,
             Score = this.Score,
             CurrentBet = this.CurrentBet,
             LastBet = this.LastBet,
@@ -36,17 +39,18 @@ namespace Seeker.Gamebook.ConquistadorDiary
         };
 
         public override string Save() =>
-            String.Join("|", Points, Score, CurrentBet, Round);
+            String.Join("|", Points, DiegoPoints, Score, CurrentBet, Round);
 
         public override void Load(string saveLine)
         {
             string[] save = saveLine.Split('|');
 
-            Points = int.Parse(save[0]); 
-            Score = int.Parse(save[1]);
-            CurrentBet = int.Parse(save[2]);
-            LastBet = int.Parse(save[3]);
-            Round = int.Parse(save[4]);
+            Points = int.Parse(save[0]);
+            DiegoPoints = int.Parse(save[1]); 
+            Score = int.Parse(save[2]);
+            CurrentBet = int.Parse(save[3]);
+            LastBet = int.Parse(save[4]);
+            Round = int.Parse(save[5]);
             IsProtagonist = true;
         }
     }

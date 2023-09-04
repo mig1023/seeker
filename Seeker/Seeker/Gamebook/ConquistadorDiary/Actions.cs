@@ -9,9 +9,9 @@ namespace Seeker.Gamebook.ConquistadorDiary
         public static Actions StaticInstance = new Actions();
         private static Character protagonist = Character.Protagonist;
 
-        public string Round { get; set; }
-        public int CurrentRound { get; set; }
+        public int Round { get; set; }
         public int Bet { get; set; }
+        public int DiegoPoints { get; set; }
 
         public override List<string> Status()
         {
@@ -63,7 +63,7 @@ namespace Seeker.Gamebook.ConquistadorDiary
         {
             if (Type == "CountScore")
             {
-                return protagonist.Round < CurrentRound;
+                return protagonist.Round < Round;
             }
             if (Type == "Get-Decrease")
             {
@@ -139,38 +139,32 @@ namespace Seeker.Gamebook.ConquistadorDiary
         {
             List<string> result = new List<string> { $"Раунд {Round}:"} ;
 
-            if (Round == "1")
+            if (DiegoPoints < 0)
             {
-                if (protagonist.LastBet > 0)
-                {
-                    protagonist.Score += 1;
-
-                    result.Add("BIG|GOOD|Курт победил этот раунд!");
-                    result.Add("BIG|+1 балл");
-                }
-                else
-                {
-                    result.Add("BIG|BAD|Курт проиграл этот раунд...");
-                    result.Add("BIG|1 балл получает Диего");
-                }   
-            }
-            else if (Round == "2a")
-            {
-                if (protagonist.LastBet > 2)
-                {
-                    protagonist.Score += 2;
-
-                    result.Add("BIG|GOOD|Курт победил этот раунд!");
-                    result.Add("BIG|+2 балл");
-                }
-                else
-                {
-                    result.Add("BIG|BAD|Курт проиграл этот раунд...");
-                    result.Add("BIG|2 балла получает Диего");
-                }
+                DiegoPoints = protagonist.DiegoPoints;
+                protagonist.DiegoPoints = 0;
             }
 
-            protagonist.Round = CurrentRound;
+            result.Add($"Ставка Курта: {protagonist.LastBet} " +
+                $"{Game.Services.CoinsNoun(protagonist.LastBet, "очко", "очка", "очков")}");
+
+            result.Add($"Ставка Диего: {DiegoPoints} " +
+                $"{Game.Services.CoinsNoun(DiegoPoints, "очко", "очка", "очков")}");
+
+            if (protagonist.LastBet > DiegoPoints)
+            {
+                protagonist.Score += Round;
+                result.Add("BIG|GOOD|Курт победил этот раунд!");
+            }
+            else
+            {
+                result.Add("BIG|BAD|Диего победил этот раунд...");
+            }
+
+            result.Add($"BIG|Он получил {Round} " +
+                $"{Game.Services.CoinsNoun(DiegoPoints, "балл", "балла", "баллов")}");
+
+            protagonist.Round = Round;
             return result;
         }
     }
