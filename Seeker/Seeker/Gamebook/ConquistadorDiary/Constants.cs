@@ -6,6 +6,8 @@ namespace Seeker.Gamebook.ConquistadorDiary
     {
         public static Constants StaticInstance = new Constants();
 
+        public static List<int> WithStatuses { get; set; }
+
         public static Links GetLinks() => new Links
         {
             Protagonist = Character.Protagonist.Init,

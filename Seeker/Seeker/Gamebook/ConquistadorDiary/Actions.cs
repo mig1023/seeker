@@ -17,11 +17,11 @@ namespace Seeker.Gamebook.ConquistadorDiary
         {
             List<string> score = new List<string>();
 
-            if (protagonist.Points > 0)
+            if (Constants.WithStatuses.Contains(Game.Data.CurrentParagraphID))
+            {
                 score.Add($"Очки интервью: {protagonist.Points}");
-
-            if (protagonist.Score > 0)
                 score.Add($"Баллы: {protagonist.Score}");
+            }
 
             return score;
         }
@@ -143,6 +143,12 @@ namespace Seeker.Gamebook.ConquistadorDiary
             {
                 DiegoPoints = protagonist.DiegoPoints;
                 protagonist.DiegoPoints = 0;
+            }
+
+            if ((Round == 4) && (protagonist.Points > 0) && (protagonist.LastBet == 0))
+            {
+                protagonist.LastBet = protagonist.Points;
+                protagonist.Points = 0;
             }
 
             result.Add($"Ставка Курта: {protagonist.LastBet} " +
