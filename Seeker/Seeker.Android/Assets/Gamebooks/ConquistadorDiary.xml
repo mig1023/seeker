@@ -9,6 +9,8 @@
 			<Action Value="57342d"/>
 			<Continue Value="432823"/>
 			<System Value="bfb0ad"/>
+			<StatusBar Value="301d19"/>
+			<StatusFont Value="cfc3c1"/>
 		</Styles>
 		<Lists>
 			<WithStatuses Items="55, 68, 77, 84, 95, 60, 76"/>
