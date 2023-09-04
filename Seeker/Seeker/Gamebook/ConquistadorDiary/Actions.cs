@@ -10,6 +10,7 @@ namespace Seeker.Gamebook.ConquistadorDiary
         private static Character protagonist = Character.Protagonist;
 
         public string Round { get; set; }
+        public int CurrentRound { get; set; }
         public int Bet { get; set; }
 
         public override List<string> Status()
@@ -60,10 +61,10 @@ namespace Seeker.Gamebook.ConquistadorDiary
 
         public override bool IsButtonEnabled(bool secondButton = false)
         {
-            //if (Type == "CountScore")
-            //{
-            //    return protagonist.Round < Round;
-            //}
+            if (Type == "CountScore")
+            {
+                return protagonist.Round < CurrentRound;
+            }
             if (Type == "Get-Decrease")
             {
                 if (secondButton)
@@ -136,7 +137,7 @@ namespace Seeker.Gamebook.ConquistadorDiary
 
         public List<string> CountScore()
         {
-            List<string> result = new List<string>();
+            List<string> result = new List<string> { $"Раунд {Round}:"} ;
 
             if (Round == "1")
             {
@@ -169,6 +170,7 @@ namespace Seeker.Gamebook.ConquistadorDiary
                 }
             }
 
+            protagonist.Round = CurrentRound;
             return result;
         }
     }
