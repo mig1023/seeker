@@ -9,7 +9,7 @@ namespace Seeker.Gamebook.ConquistadorDiary
         public static Actions StaticInstance = new Actions();
         private static Character protagonist = Character.Protagonist;
 
-        public int Round { get; set; }
+        public string Round { get; set; }
         public int Bet { get; set; }
 
         public override List<string> Status()
@@ -27,6 +27,8 @@ namespace Seeker.Gamebook.ConquistadorDiary
 
         public override List<string> Representer()
         {
+            List<string> represent = new List<string>();
+
             if (Type == "Get-Decrease")
             {
                 string diffLine = String.Empty;
@@ -46,21 +48,23 @@ namespace Seeker.Gamebook.ConquistadorDiary
                     diffLine = " ни одного очка";
                 }
 
-                return new List<string> { $"{Head}{diffLine}" };
+                represent.Add($"{Head}{diffLine}");
             }
-            else
+            else if (Type == "CountScore")
             {
-                return new List<string> { Head };
+                represent.Add("Результат");
             }
+
+            return represent;
         }
 
         public override bool IsButtonEnabled(bool secondButton = false)
         {
-            if (Type == "CountScore")
-            {
-                return protagonist.Round < Round;
-            }
-            else if (Type == "Get-Decrease")
+            //if (Type == "CountScore")
+            //{
+            //    return protagonist.Round < Round;
+            //}
+            if (Type == "Get-Decrease")
             {
                 if (secondButton)
                     return protagonist.CurrentBet > 1;
@@ -134,7 +138,7 @@ namespace Seeker.Gamebook.ConquistadorDiary
         {
             List<string> result = new List<string>();
 
-            if (Round == 1)
+            if (Round == "1")
             {
                 if (protagonist.LastBet > 0)
                 {
@@ -148,6 +152,21 @@ namespace Seeker.Gamebook.ConquistadorDiary
                     result.Add("BIG|BAD|Курт проиграл этот раунд...");
                     result.Add("BIG|1 балл получает Диего");
                 }   
+            }
+            else if (Round == "2a")
+            {
+                if (protagonist.LastBet > 2)
+                {
+                    protagonist.Score += 2;
+
+                    result.Add("BIG|GOOD|Курт победил этот раунд!");
+                    result.Add("BIG|+2 балл");
+                }
+                else
+                {
+                    result.Add("BIG|BAD|Курт проиграл этот раунд...");
+                    result.Add("BIG|2 балла получает Диего");
+                }
             }
 
             return result;
