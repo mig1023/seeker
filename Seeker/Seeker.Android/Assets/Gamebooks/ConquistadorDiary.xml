@@ -436,7 +436,6 @@
 				<Get-Decrease>
 					<Button>Больше, Меньше</Button>
 					<Head>Потратить:</Head>
-					<Round>1</Round>
 				</Get-Decrease>
 			</Actions>
 			<Modifications>
@@ -541,7 +540,6 @@
 				<Get-Decrease>
 					<Button>Больше, Меньше</Button>
 					<Head>Потратить:</Head>
-					<Round>2</Round>
 					<Text>После этого киньте монетку:</Text>
 				</Get-Decrease>
 				<RollCoin/>
@@ -607,15 +605,23 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="77">
-			<Text>Испанец решил вложить во второй раунд почти всё своё красноречие – 2 очка обаяния. Чем же он будет крыть дальше? Так или иначе, если вы потратили 3 очка и более, то Курт победил, иначе, увы, раунд за испанцем. Добавьте 2 балла победителю раунда. Запишите, сколько потратили очков на третий раунд и киньте монетку.</Text>
+			<Text>Испанец решил вложить во второй раунд почти всё своё красноречие – 2 очка обаяния. Чем же он будет крыть дальше? Так или иначе, если вы потратили 3 очка и более, то Курт победил, иначе, увы, раунд за испанцем. Добавьте 2 балла победителю раунда:</Text>
 			<Actions>
+				<CountScore>
+					<Head>Результат</Head>
+					<Round>2a</Round>
+					<Text>Запишите, сколько потратили очков на третий раунд:</Text>
+				</CountScore>
 				<Get-Decrease>
 					<Button>Больше, Меньше</Button>
 					<Head>Потратить:</Head>
-					<Round>3</Round>
+					<Text>После этого киньте монетку:</Text>
 				</Get-Decrease>
 				<RollCoin/>
 			</Actions>
+			<Modifications>
+				<BetIsMade/>
+			</Modifications>
 			<Options>
 				<Option Goto="95" Text="Орёл"/>
 				<Option Goto="60" Text="Решка"/>
