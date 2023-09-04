@@ -53,7 +53,7 @@ namespace Seeker.Gamebook.ConquistadorDiary
             }
             else if (Type == "CountScore")
             {
-                represent.Add("Результат");
+                represent.Add("Узнать итог раунда");
             }
 
             return represent;
@@ -162,7 +162,7 @@ namespace Seeker.Gamebook.ConquistadorDiary
             }
 
             result.Add($"BIG|Он получил {Round} " +
-                $"{Game.Services.CoinsNoun(DiegoPoints, "балл", "балла", "баллов")}");
+                $"{Game.Services.CoinsNoun(Round, "балл", "балла", "баллов")}");
 
             protagonist.Round = Round;
             return result;
