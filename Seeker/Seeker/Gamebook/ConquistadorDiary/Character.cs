@@ -9,6 +9,8 @@ namespace Seeker.Gamebook.ConquistadorDiary
         public int Points { get; set; }
         public int? Score { get; set; }
         public int CurrentBet { get; set; }
+        public int LastBet { get; set; }
+        public int Round { get; set; }
 
         public override void Init()
         {
@@ -18,6 +20,8 @@ namespace Seeker.Gamebook.ConquistadorDiary
             Points = 0;
             Score = 0;
             CurrentBet = 0;
+            LastBet = 0;
+            Round = 0;
         }
 
         public Character Clone() => new Character()
@@ -27,10 +31,12 @@ namespace Seeker.Gamebook.ConquistadorDiary
             Points = this.Points,
             Score = this.Score,
             CurrentBet = this.CurrentBet,
+            LastBet = this.LastBet,
+            Round = this.Round,
         };
 
         public override string Save() =>
-            String.Join("|", Points, Score, CurrentBet);
+            String.Join("|", Points, Score, CurrentBet, Round);
 
         public override void Load(string saveLine)
         {
@@ -38,7 +44,9 @@ namespace Seeker.Gamebook.ConquistadorDiary
 
             Points = int.Parse(save[0]); 
             Score = int.Parse(save[1]);
-            CurrentBet = int.Parse(save[2]); 
+            CurrentBet = int.Parse(save[2]);
+            LastBet = int.Parse(save[3]);
+            Round = int.Parse(save[4]);
             IsProtagonist = true;
         }
     }

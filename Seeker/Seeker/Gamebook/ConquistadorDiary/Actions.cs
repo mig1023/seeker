@@ -27,7 +27,7 @@ namespace Seeker.Gamebook.ConquistadorDiary
 
         public override List<string> Representer()
         {
-            if (Round > 0)
+            if (Type == "Get-Decrease")
             {
                 string diffLine = String.Empty;
                 int bet = protagonist.CurrentBet;
@@ -50,13 +50,17 @@ namespace Seeker.Gamebook.ConquistadorDiary
             }
             else
             {
-                return new List<string> { };
+                return new List<string> { Head };
             }
         }
 
         public override bool IsButtonEnabled(bool secondButton = false)
         {
-            if (Round > 0)
+            if (Type == "CountScore")
+            {
+                return protagonist.Round < Round;
+            }
+            else if (Type == "Get-Decrease")
             {
                 if (secondButton)
                     return protagonist.CurrentBet > 1;
@@ -121,9 +125,32 @@ namespace Seeker.Gamebook.ConquistadorDiary
             bool coin = Game.Dice.Roll() % 2 == 0;
 
             if (coin)
-                return new List<string> { $"BIG|GOOD|На монетке выпал ОРЁЛ" };
+                return new List<string> { "BIG|GOOD|На монетке выпал ОРЁЛ" };
             else
-                return new List<string> { $"BIG|BAD|На монетке выпала РЕШКА" };
+                return new List<string> { "BIG|BAD|На монетке выпала РЕШКА" };
+        }
+
+        public List<string> CountScore()
+        {
+            List<string> result = new List<string>();
+
+            if (Round == 1)
+            {
+                if (protagonist.LastBet > 0)
+                {
+                    protagonist.Score += 1;
+
+                    result.Add("BIG|GOOD|Курт победил этот раунд!");
+                    result.Add("BIG|+1 балл");
+                }
+                else
+                {
+                    result.Add("BIG|BAD|Курт проиграл этот раунд...");
+                    result.Add("BIG|1 балл получает Диего");
+                }   
+            }
+
+            return result;
         }
     }
 }
