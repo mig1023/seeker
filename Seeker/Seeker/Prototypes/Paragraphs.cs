@@ -13,8 +13,10 @@ namespace Seeker.Prototypes
 
         public virtual Abstract.IActions ActionParse(XmlNode xmlAction) =>
             null;
+
         public virtual Option OptionParse(XmlNode xmlOption) =>
             OptionsTemplate(xmlOption);
+
         public virtual Abstract.IModification ModificationParse(XmlNode xmlxmlModification) =>
             null;
 
@@ -27,7 +29,7 @@ namespace Seeker.Prototypes
                 Option option = new Option
                 {
                     Goto = GetGoto(xmlOption),
-                    Text = Xml.TextStringParse(xmlOption.Attributes["Text"]),
+                    Text = Xml.OptionTextParse(xmlOption),
                 };
 
                 paragraph.Options.Add(option);
@@ -128,7 +130,7 @@ namespace Seeker.Prototypes
 
         public Option OptionsTemplateWithoutGoto(XmlNode xmlOption) => new Option()
         {
-            Text = Xml.TextStringParse(xmlOption.Attributes["Text"]),
+            Text = Xml.OptionTextParse(xmlOption),
             Availability = Xml.StringParse(xmlOption.Attributes["Availability"]),
             Dynamic = Xml.BoolParse(xmlOption.Attributes["Dynamic"]),
             Singleton = Xml.StringParse(xmlOption.Attributes["Singleton"]),

@@ -19,10 +19,12 @@ namespace Seeker.Game
         public static int IntParse(XmlNode xmlNode) =>
             IntParse(xmlNode?.InnerText ?? "0");
 
-        public static string TextStringParse(XmlNode xmlNode)
+        public static string OptionTextParse(XmlNode xmlOption)
         {
-            string text = StringParse(xmlNode);
-            return text == "Start" ? Constants.START_TEXT : text;
+            if (xmlOption.Name == "Start")
+                return Constants.START_TEXT;
+            else
+                return StringParse(xmlOption.Attributes["Text"]);
         }
 
         public static string StringParse(XmlNode xmlNode) =>
