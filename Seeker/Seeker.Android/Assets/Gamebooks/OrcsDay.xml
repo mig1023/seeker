@@ -1416,7 +1416,7 @@
 				</OrcishnessInit>
 			</Actions>
 			<Options>
-				<Option Goto="1"/>
+				<Start Goto="1"/>
 			</Options>
 		</Paragraph>
 	</Paragraphs>
