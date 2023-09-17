@@ -19,7 +19,7 @@
 				<Text Style="Bold">Ph’nglui mglw’nafh Cthulhu R’lyeh wgah’nagl fhtagn.</Text>
 			</Texts>
 			<Options>
-				<Option Goto="1" Text="Start"/>
+				<Start Goto="1"/>
 			</Options>
 		</Paragraph>	
 		<Paragraph No="1">
