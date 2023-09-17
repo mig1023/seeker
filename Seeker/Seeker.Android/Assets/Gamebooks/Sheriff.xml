@@ -23,7 +23,7 @@
 		<Paragraph No="0">
 			<Text>Вам предстоит найти убийцу и разобраться в непростом деле...</Text>
 			<Options>
-				<Option Goto="1" Text="Start"/>
+				<Start Goto="1"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="1">
