@@ -32,7 +32,7 @@
 			<Options>
 				<Option Goto="619" Text="Start"/>
 				<Option Goto="620" Text="Ты нужен Барладу Дэрту!" Style="696969"/>
-				<Option Goto="753" Text="Ремейк" Style="a5a5a5"/>
+				<Option Goto="753" Text="Ремейк" Style="696969"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="1">
