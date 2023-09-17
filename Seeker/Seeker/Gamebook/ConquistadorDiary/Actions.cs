@@ -15,15 +15,18 @@ namespace Seeker.Gamebook.ConquistadorDiary
 
         public override List<string> Status()
         {
-            List<string> score = new List<string>();
-
             if (Constants.WithStatuses.Contains(Game.Data.CurrentParagraphID))
             {
-                score.Add($"Очки интервью: {protagonist.Points}");
-                score.Add($"Баллы: {protagonist.Score}");
+                return new List<string>
+                {
+                    $"Очки интервью: {protagonist.Points}",
+                    $"Баллы: {protagonist.Score}"
+                };
             }
-
-            return score;
+            else
+            {
+                return null;
+            }
         }
 
         public override List<string> Representer()
