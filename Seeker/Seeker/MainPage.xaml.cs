@@ -565,7 +565,7 @@ namespace Seeker
             if (Game.Settings.IsEnabled("CheatingBack") && (Game.Data.Path.Count > 1))
                 Options.Children.Add(Output.Buttons.Additional("Читерство: Назад", Back_Click));
 
-            if (Game.Settings.IsEnabled("SystemMenu"))
+            if (!Game.Settings.IsEnabled("SystemMenu"))
                 Options.Children.Add(SystemMenu());
 
             if (Game.Settings.IsEnabled("Debug"))
