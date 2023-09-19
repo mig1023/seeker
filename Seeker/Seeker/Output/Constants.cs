@@ -71,6 +71,8 @@ namespace Seeker.Output
         {
             [0] = "YanoneFont",
             [1] = "RobotoFont",
+            [2] = "Daray",
+            [3] = "St.Sign",
         };
 
         public static Dictionary<int, double> FONT_SIZE_VALUES = new Dictionary<int, double>

@@ -24,8 +24,20 @@
         <OnPlatform x:TypeArguments="x:String" x:Key="RobotoFontBold">
             <On Platform="Android" Value="Fonts/Roboto-Bold.ttf#Roboto-Bold" />
         </OnPlatform>
-		<OnPlatform x:TypeArguments="x:String" x:Key="CourierFont">
+        <OnPlatform x:TypeArguments="x:String" x:Key="CourierFont">
             <On Platform="Android" Value="Fonts/CourierNew.ttf#Courier-New" />
+        </OnPlatform>
+        <OnPlatform x:TypeArguments="x:String" x:Key="Daray">
+            <On Platform="Android" Value="Fonts/Daray.ttf#Daray" />
+        </OnPlatform>
+        <OnPlatform x:TypeArguments="x:String" x:Key="DarayBold">
+            <On Platform="Android" Value="Fonts/Daray.ttf#Daray" />
+        </OnPlatform>
+        <OnPlatform x:TypeArguments="x:String" x:Key="St.Sign">
+            <On Platform="Android" Value="Fonts/St.Sign.ttf#St.Sign" />
+        </OnPlatform>
+        <OnPlatform x:TypeArguments="x:String" x:Key="St.SignBold">
+            <On Platform="Android" Value="Fonts/St.Sign.ttf#St.Sign" />
         </OnPlatform>
     </Application.Resources>
 </Application>

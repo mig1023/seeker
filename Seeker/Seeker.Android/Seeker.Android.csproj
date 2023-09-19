@@ -85,6 +85,8 @@
     <AndroidAsset Include="Assets\Fonts\Roboto-Italic.ttf" />
     <AndroidAsset Include="Assets\Fonts\Roboto-Bold.ttf" />
     <AndroidAsset Include="Assets\Fonts\Roboto-Light.ttf" />
+    <AndroidAsset Include="Assets\Fonts\Daray.ttf" />
+    <AndroidAsset Include="Assets\Fonts\St.Sign.ttf" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Properties\AndroidManifest.xml" />
   </ItemGroup>

@@ -5,6 +5,8 @@
 		<Options>
 			<Option>Yanone</Option>
 			<Option>Roboto</Option>
+			<Option>Daray</Option>
+			<Option>St.Sign</Option>
 		</Options>
 		<Description>Выбор шрифта определяет не только отображение текста параграфов, но и текст кнопок, а также меню. Будьте внимательны: не любой шрифт хорошо подойдёт под настройки некоторых игры.</Description>
 	</Setting>
