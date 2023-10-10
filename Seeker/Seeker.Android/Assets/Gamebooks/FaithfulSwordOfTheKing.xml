@@ -1645,7 +1645,7 @@
 			</Modifications>
 			<Options>
 				<Option Goto="358" Text="Перстень короля всё ещё у вас"/>
-				<Option Goto="44" Text="Неn"/>
+				<Option Goto="44" Text="Нет"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="173">
