@@ -2588,7 +2588,7 @@
 			<Text>Без приключений доходите вы до места, где тропка раздваивается.</Text>
 			<Options>
 				<Option Goto="243" Text="Пойдете дальше на север"/>
-				<Option Goto="595" Text="Cвернете на северо-запад"/>
+				<Option Goto="595" Text="Свернете на северо-запад"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="304">
