@@ -7871,7 +7871,7 @@
 				<Inspiration Value="1"/>
 			</Modifications>
 			<Options>
-				<Gameover Text="Ваc сразила пуля" Singleton="Невезение, Рассеянность, Малодушие">
+				<Gameover Text="Вас сразила пуля" Singleton="Невезение, Рассеянность, Малодушие">
 					<Static Value="Heroism=20, Inspiration=20, Дежа вю"/>
 					<Text>Если же всё прошло благополучно, то Вы потихонечку слиняли в лес, пока все эти ребята увлечены сражением...</Text>
 				</Gameover>
