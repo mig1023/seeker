@@ -3597,7 +3597,7 @@
 				</LtlDiceSpendGloryWithOne>
 			</Actions>
 			<Options>
-				<Option Goto="373" Text="Cделали это"/>
+				<Option Goto="373" Text="Сделали это"/>
 				<Option Goto="102" Text="Позволить себе помощь Геры или не хотите этого делать, потеряйте 1 очко Славы">
 					<Glory Value="-1"/>
 				</Option>
