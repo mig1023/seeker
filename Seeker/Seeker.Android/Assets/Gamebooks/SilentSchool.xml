@@ -102,7 +102,7 @@
 				<Life Value="-3"/>
 			</Modifications>
 			<Options>
-				<Option Goto="71" Text="Cделаю их, не сводя глаз с противниц"/>
+				<Option Goto="71" Text="Сделаю их, не сводя глаз с противниц"/>
 				<Option Goto="46" Text="На секунду приторможу и посмотрю, что собираются предпринять адские подружки"/>
 			</Options>
 		</Paragraph>
