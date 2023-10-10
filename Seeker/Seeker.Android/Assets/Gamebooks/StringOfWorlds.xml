@@ -2234,7 +2234,7 @@
 			</Actions>	
 			<Options>
 				<Option Goto="197" Text="Вы снизили его СИЛУ до 2"/>
-				<Option Goto="301" Text="Cоперник снизил вашу СИЛУ до 2"/>
+				<Option Goto="301" Text="Соперник снизил вашу СИЛУ до 2"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="262">
