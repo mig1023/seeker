@@ -990,8 +990,8 @@
 				<Option Goto="75" Text="Поскорее выйдете в коридор"/>
 				<Option Goto="145" Text="Пройдёте в дверь напротив" Availability="13"/>
 				<Option Goto="111" Text="Пройдёте в дверь напротив" Availability="!13"/>
-				<Option Goto="145" Text="Cначала тщательно исследуете эту комнату" Availability="13"/>
-				<Option Goto="105" Text="Cначала тщательно исследуете эту комнату" Availability="!13"/>
+				<Option Goto="145" Text="Сначала тщательно исследуете эту комнату" Availability="13"/>
+				<Option Goto="105" Text="Сначала тщательно исследуете эту комнату" Availability="!13"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="132">
