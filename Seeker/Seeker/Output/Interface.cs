@@ -212,6 +212,7 @@ namespace Seeker.Output
         private static TapGestureRecognizer CloseTapped(Frame disclaimer, Label changedPart)
         {
             TapGestureRecognizer close = new TapGestureRecognizer();
+
             close.Tapped += (s, e) =>
             {
                 disclaimer.IsVisible = false;
@@ -269,7 +270,7 @@ namespace Seeker.Output
 
             StackLayout disclaimer = new StackLayout();
 
-            if (!String.IsNullOrEmpty(gamebook.Original))
+            if (!String.IsNullOrEmpty(gamebook.Original)) { }
                 AddDisclaimerElement("Оригинальное название:", gamebook.Original, ref disclaimer, border, change);
 
             if (!String.IsNullOrEmpty(gamebook.Authors))
@@ -501,13 +502,17 @@ namespace Seeker.Output
                 italic = false;
 
             if (italic && Constants.FontSizeItalic.ContainsKey(size))
+            {
                 return Constants.FontSizeItalic[size];
-
+            }
             else if (!italic && Constants.FontSize.ContainsKey(size))
+            {
                 return Constants.FontSize[size];
-
+            }
             else
+            {
                 return Font(NamedSize.Medium);
+            }
         }
 
         public static double Font(NamedSize namedSize)
