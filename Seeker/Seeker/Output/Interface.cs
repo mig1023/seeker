@@ -524,7 +524,9 @@ namespace Seeker.Output
                 return Device.GetNamedSize(size, typeof(Label));
             }
             else
+            {
                 return Device.GetNamedSize(namedSize, typeof(Label));
+            }
         }
 
         private static string RedStyle(string line) =>
