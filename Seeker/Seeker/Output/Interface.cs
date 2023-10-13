@@ -535,13 +535,17 @@ namespace Seeker.Output
         public static View TextBySelect(Text text)
         {
             if (text.Selected)
+            {
                 return SelectedText(text);
-            
+            }
             else if (text.Box)
+            {
                 return BoxedText(text);
-
+            }
             else
+            {
                 return Text(text);
+            }
         }
 
         public static ExtendedLabel Text(Text text)
