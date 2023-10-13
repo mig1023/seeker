@@ -317,8 +317,8 @@ namespace Seeker.Output
 
             Color fontColor = Color.Gray;
 
-            if ((Game.Data.Constants != null) && !String.IsNullOrEmpty(Game.Data.Constants.GetColor(Game.Data.ColorTypes.Font)))
-                fontColor = Color.FromHex(Game.Data.Constants.GetColor(Game.Data.ColorTypes.Font));
+            if (ColorFormConstants(Game.Data.ColorTypes.Font, out string color))
+                fontColor = Color.FromHex(color);
 
             info.Children.Add(Line(fontColor, $"Текущий параграф: {id}"));
 
