@@ -664,16 +664,22 @@ namespace Seeker.Output
             int fontSize = Game.Settings.GetValue("FontSize");
 
             if (fontSize > 0)
+            {
                 label.FontSize = Constants.FONT_SIZE_VALUES[fontSize];
-
+            }
             else if (size != TextFontSize.nope)
+            {
                 label.FontSize = FontSize(size);
-
-            else if(Game.Data.Constants != null)
+            }
+            else if (Game.Data.Constants != null)
+            {
                 label.FontSize = FontSize(Game.Data.Constants.GetFontSize(), italic: italic);
+            }
 
-            if ((Game.Data.Constants != null) && !String.IsNullOrEmpty(Game.Data.Constants.GetColor(Game.Data.ColorTypes.Font)))
-                label.TextColor = Color.FromHex(Game.Data.Constants.GetColor(Game.Data.ColorTypes.Font));
+            string constantsColor = Game.Data.Constants?.GetColor(Game.Data.ColorTypes.Font) ?? String.Empty;
+
+            if (!String.IsNullOrEmpty(constantsColor))
+                label.TextColor = Color.FromHex(constantsColor);
 
             return label;
         }
