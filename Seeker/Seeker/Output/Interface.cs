@@ -676,10 +676,8 @@ namespace Seeker.Output
                 label.FontSize = FontSize(Game.Data.Constants.GetFontSize(), italic: italic);
             }
 
-            string constantsColor = Game.Data.Constants?.GetColor(Game.Data.ColorTypes.Font) ?? String.Empty;
-
-            if (!String.IsNullOrEmpty(constantsColor))
-                label.TextColor = Color.FromHex(constantsColor);
+            if (ColorFormConstants(Game.Data.ColorTypes.Font, out string color))
+                label.TextColor = Color.FromHex(color);
 
             return label;
         }
@@ -696,12 +694,22 @@ namespace Seeker.Output
                 BackgroundColor = Color.LightGray
             };
 
-            string constantsColor = Game.Data.Constants?.GetColor(Game.Data.ColorTypes.ActionBox) ?? String.Empty;
-
-            if (!String.IsNullOrEmpty(constantsColor))
-                stackLayout.BackgroundColor = Color.FromHex(constantsColor);
+            if (ColorFormConstants(Game.Data.ColorTypes.ActionBox, out string color))
+                stackLayout.BackgroundColor = Color.FromHex(color);
 
             return stackLayout;
+        }
+
+        private static bool ColorFormConstants(Game.Data.ColorTypes colorType, out string color)
+        {
+            color = String.Empty;
+
+            if (Game.Data.Constants == null)
+                return false;
+
+            color = Game.Data.Constants.GetColor(colorType);
+
+            return !String.IsNullOrEmpty(color);
         }
 
         public static StackLayout MultipleButtonsPlace() => new StackLayout
