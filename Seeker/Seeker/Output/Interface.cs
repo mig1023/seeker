@@ -696,8 +696,10 @@ namespace Seeker.Output
                 BackgroundColor = Color.LightGray
             };
 
-            if ((Game.Data.Constants != null) && !String.IsNullOrEmpty(Game.Data.Constants.GetColor(Game.Data.ColorTypes.ActionBox)))
-                stackLayout.BackgroundColor = Color.FromHex(Game.Data.Constants.GetColor(Game.Data.ColorTypes.ActionBox));
+            string constantsColor = Game.Data.Constants?.GetColor(Game.Data.ColorTypes.ActionBox) ?? String.Empty;
+
+            if (!String.IsNullOrEmpty(constantsColor))
+                stackLayout.BackgroundColor = Color.FromHex(constantsColor);
 
             return stackLayout;
         }
