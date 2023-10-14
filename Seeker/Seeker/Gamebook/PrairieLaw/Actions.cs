@@ -40,10 +40,13 @@ namespace Seeker.Gamebook.PrairieLaw
             List<string> enemies = new List<string>();
 
             if (Price > 0)
+            {
                 return new List<string> { $"{Head}, {Services.ToDollars(Price)}$" };
-
+            }
             else if (!String.IsNullOrEmpty(Head))
+            {
                 return new List<string> { Head };
+            }
 
             if (Enemies == null)
                 return enemies;
@@ -69,7 +72,12 @@ namespace Seeker.Gamebook.PrairieLaw
             }
             else if (option.Contains("|"))
             {
-                return option.Split('|').Where(x => Game.Option.IsTriggered(x.Trim())).Count() > 0;
+                int count = option
+                    .Split('|')
+                    .Where(x => Game.Option.IsTriggered(x.Trim()))
+                    .Count();
+
+                return count > 0;
             }
             else
             {
@@ -277,7 +285,9 @@ namespace Seeker.Gamebook.PrairieLaw
                     sold += 1;
                 }
                 else
+                {
                     salesReport.Add($"{skin} - её не купит");
+                }
 
                 index += 1;
             }
@@ -496,7 +506,9 @@ namespace Seeker.Gamebook.PrairieLaw
                             enemy.Cartridges -= 1;
                     }
                     else
+                    {
                         enemyHitStrength = 0;
+                    }
 
                     if ((protagonistHitStrength == 0) && (enemyHitStrength == 0))
                     { 
@@ -554,9 +566,13 @@ namespace Seeker.Gamebook.PrairieLaw
         public override void UseHealing(int healingLevel)
         {
             if (healingLevel == -1)
+            {
                 protagonist.Strength = protagonist.MaxStrength;
+            }
             else
+            {
                 protagonist.Strength += healingLevel;
+            }
         }
     }
 }

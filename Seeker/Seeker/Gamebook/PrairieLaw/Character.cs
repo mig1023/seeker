@@ -103,8 +103,7 @@ namespace Seeker.Gamebook.PrairieLaw
         public override string Save() => String.Join("|",
             MaxSkill, Skill, MaxStrength, Strength, Charm, Cents, Cartridges,
             String.Join(",", Luck.Select(x => x ? "1" : "0")),
-            String.Join(",", AnimalSkins).TrimEnd(','), Nuggets
-        );
+            String.Join(",", AnimalSkins).TrimEnd(','), Nuggets);
 
         public override void Load(string saveLine)
         {
