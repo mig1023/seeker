@@ -67,19 +67,26 @@ namespace Seeker.Gamebook.OctopusIsland
         public override bool StaticAction(string action)
         {
             if (action.Contains("СЕРЖА"))
+            {
                 protagonist.SergeHitpoint = Services.LifeGivingOintmentFor(protagonist.SergeHitpoint);
-
+            }
             else if (action.Contains("КСОЛОТЛА"))
+            {
                 protagonist.XolotlHitpoint = Services.LifeGivingOintmentFor(protagonist.XolotlHitpoint);
-
+            }
             else if (action.Contains("ТИБО"))
+            {
+
                 protagonist.ThibautHitpoint = Services.LifeGivingOintmentFor(protagonist.ThibautHitpoint);
-
+            }
             else if (action.Contains("СУИ"))
+            {
                 protagonist.SouhiHitpoint = Services.LifeGivingOintmentFor(protagonist.SouhiHitpoint);
-
+            }
             else
+            {
                 return false;
+            }
 
             return true;
         }
@@ -196,7 +203,9 @@ namespace Seeker.Gamebook.OctopusIsland
                         }
                     }
                     else
+                    {
                         fight.Add("BOLD|Ничья в раунде");
+                    }
 
                     fight.Add(String.Empty);
                 }

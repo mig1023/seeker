@@ -28,16 +28,21 @@ namespace Seeker.Gamebook.OctopusIsland
                 return;
 
             if (protagonist.Name == "Тибо")
+            {
                 protagonist.ThibautHitpoint = protagonist.Hitpoint;
-
+            }
             else if (Character.Protagonist.Name == "Ксолотл")
+            {
                 protagonist.XolotlHitpoint = protagonist.Hitpoint;
-
+            }
             else if (Character.Protagonist.Name == "Серж")
+            {
                 protagonist.SergeHitpoint = protagonist.Hitpoint;
-
+            }
             else
+            {
                 protagonist.SouhiHitpoint = protagonist.Hitpoint;
+            }
         }
 
         private static void ShowCurrentWarrior(ref List<string> fight, bool start)
@@ -83,7 +88,9 @@ namespace Seeker.Gamebook.OctopusIsland
                 protagonist.Hitpoint = protagonist.SouhiHitpoint;
             }
             else
+            {
                 return false;
+            }
 
             ShowCurrentWarrior(ref fight, start);
             return true;
