@@ -11,12 +11,18 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             if (Game.Data.CurrentParagraph.Actions == null)
                 return false;
 
-            if (Game.Data.CurrentParagraph.Options.Where(x => x.Text.ToUpper().Contains(spell)).Count() > 0)
+            int optionsCount = Game.Data.CurrentParagraph.Options
+                .Where(x => x.Text.ToUpper().Contains(spell))
+                .Count();
+
+            if (optionsCount > 0)
                 return false;
 
             foreach (Actions action in Game.Data.CurrentParagraph.Actions)
+            {
                 if (action.Enemies != null)
                     return true;
+            }
 
             return false;
         }
@@ -101,7 +107,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                             return false;
                     }
                     else
+                    {
                         fight.Add("BOLD|Ничья в раунде");
+                    }
 
                     attackAlready = true;
 

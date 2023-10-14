@@ -67,12 +67,19 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             if (Game.Data.Constants.GetParagraphsWithoutStaticsButtons().Contains(Game.Data.CurrentParagraphID))
                 return staticButtons;
 
-            if (protagonist.Spells.Contains("ЗАКЛЯТИЕ ИСЦЕЛЕНИЯ") && (protagonist.Endurance < protagonist.MaxEndurance))
+            bool healing = protagonist.Spells.Contains("ЗАКЛЯТИЕ ИСЦЕЛЕНИЯ");
+            bool wounded = protagonist.Endurance < protagonist.MaxEndurance;
+
+            if (healing && wounded)
                 staticButtons.Add("ЗАКЛЯТИЕ ИСЦЕЛЕНИЯ");
 
             foreach (string spell in Constants.StaticSpells)
-                if (Services.ParagraphWithFight(spell) && protagonist.Spells.Contains(spell) && !SpellActivate[spell])
+            {
+                bool spellAvailable = protagonist.Spells.Contains(spell) && !SpellActivate[spell];
+
+                if (Services.ParagraphWithFight(spell) && spellAvailable)
                     staticButtons.Add(spell);
+            }
 
             return staticButtons;
         }
@@ -106,16 +113,21 @@ namespace Seeker.Gamebook.BlackCastleDungeon
         public override bool Availability(string option)
         {
             if (String.IsNullOrEmpty(option))
+            {
                 return true;
-
+            }
             else if (option.Contains("ЗОЛОТО >="))
+            {
                 return int.Parse(option.Split('=')[1]) <= protagonist.Gold;
-
+            }
             else if (option.Contains("ЗАКЛЯТИЕ"))
+            {
                 return protagonist.Spells.Contains(option);
-
+            }
             else
+            {
                 return AvailabilityTrigger(option);
+            }
         }
 
         public override List<string> Representer()
@@ -238,15 +250,15 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                     fight.Add("BIG|GOOD|Копия ПОБЕДИЛА :)");
                     return fight;
                 }
-
                 else if ((RoundsToWin > 0) && (RoundsToWin <= round))
                 {
                     fight.Add("BIG|BAD|Вы ПРОИГРАЛИ :(");
                     return fight;
                 }
-
                 else
+                {
                     fight.Add("BOLD|BAD|Копия проиграла, дальше сражаться придётся вам");
+                }
 
                 fight.Add(String.Empty);
             }
