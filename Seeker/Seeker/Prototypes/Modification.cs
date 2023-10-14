@@ -35,10 +35,13 @@ namespace Seeker.Prototypes
                 int currentValue = 0;
 
                 if (Restore)
+                {
                     currentValue = GetProperty(Character, "Max" + Name);
-
+                }
                 else if (!Empty)
+                {
                     currentValue = GetProperty(Character, Name);
+                }
 
                 SetProperty(Character, Name, currentValue + Value);
 

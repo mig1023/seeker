@@ -64,11 +64,17 @@ namespace Seeker.Prototypes
         protected int GetGoto(XmlNode xmlOption, int? wayBack = null)
         {
             if (ThisIsGameover(xmlOption))
+            {
                 return Data.Constants.GetStartParagraph();
+            }
             else if (ThisIsBack(xmlOption))
+            {
                 return wayBack ?? 0;
+            }
             else
+            {
                 return Xml.IntParse(xmlOption.Attributes["Goto"]);
+            }
         }
 
         public Abstract.IActions ActionTemplate(XmlNode xmlAction, Abstract.IActions actions)
@@ -175,8 +181,10 @@ namespace Seeker.Prototypes
             Option option = OptionsTemplate(xmlOption);
 
             foreach (XmlNode optionMod in xmlOption.SelectNodes("*"))
+            {
                 if (!optionMod.Name.StartsWith("Text"))
                     option.Do.Add(Xml.ModificationParse(optionMod, modification));
+            }
 
             return option;
         }
@@ -189,16 +197,21 @@ namespace Seeker.Prototypes
             PropertyInfo param = action.GetType().GetProperty(paramName);
 
             if (param.PropertyType == typeof(bool))
+            {
                 return Xml.BoolParse(value);
-
+            }
             else if (param.PropertyType == typeof(int))
+            {
                 return Xml.IntParse(value);
-
+            }
             else if (param.PropertyType == typeof(string))
+            {
                 return Xml.StringParse(value);
-
+            }
             else
+            {
                 return null;
+            }
         }
 
         public List<string> GetProperties(object action) =>
@@ -209,9 +222,13 @@ namespace Seeker.Prototypes
             XmlNode value = null;
 
             if (xmlNode[param]?.Attributes["Value"] != null)
+            {
                 value = xmlNode[param].Attributes["Value"];
+            }
             else
+            {
                 value = xmlNode[param];
+            }
 
             object propetyValue = PropertyByType(action, value, param);
 
@@ -221,8 +238,11 @@ namespace Seeker.Prototypes
 
         public void SetPropertyByAttr(object action, string param, XmlNode value, bool maxPrefix = false)
         {
-            string propertyName = (maxPrefix && param.StartsWith("Max")) ? param.Substring(3) : param;
-            object propertyValue = PropertyByType(action, value.Attributes[Services.ValueStringFuse(propertyName)], propertyName);
+            string propertyName = (maxPrefix && param.StartsWith("Max")) ?
+                param.Substring(3) : param;
+
+            object propertyValue = PropertyByType(action,
+                value.Attributes[Services.ValueStringFuse(propertyName)], propertyName);
 
             if (propertyValue != null)
                 action.GetType().GetProperty(param).SetValue(action, propertyValue);
