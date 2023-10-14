@@ -218,8 +218,7 @@ namespace Seeker.Gamebook.YounglingTournament
             LightSide, DarkSide, MaxHitpoints, Hitpoints, Accuracy, Pilot, Stealth, Hacking, Firepower, WayBack,
             String.Join(",", ForceTechniques.Values), String.Join(",", SwordTechniques.Values),
             String.Join(",", HitpointsLoss.Select(x => x.Key + "=" + x.Value).ToArray()),
-            Thrust, EnemyThrust, Reading, SecondPart
-        );
+            Thrust, EnemyThrust, Reading, SecondPart);
 
         public override void Load(string saveLine)
         {

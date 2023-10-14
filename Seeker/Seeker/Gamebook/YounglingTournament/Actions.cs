@@ -478,8 +478,9 @@ namespace Seeker.Gamebook.YounglingTournament
                 foreach (KeyValuePair<Character, int> enemy in FightEnemies.OrderBy(x => x.Value))
                 {
                     if (enemy.Value <= 0)
+                    {
                         continue;
-
+                    }
                     else if ((enemy.Value < hitSkill) && !protaganistMakeHit)
                     {
                         protaganistMakeHit = true;
@@ -514,7 +515,9 @@ namespace Seeker.Gamebook.YounglingTournament
                         }
                     }
                     else
+                    {
                         fight.Add("BOLD|Вы парировали удары друг друга");
+                    }
                 }
 
                 if (speedActivate)
@@ -533,9 +536,13 @@ namespace Seeker.Gamebook.YounglingTournament
                 if ((protagonist.Hitpoints <= hitpointsLimit) || enemyRound)
                 {
                     if (enemyRound)
+                    {
                         fight.Add($"BIG|BAD|Вы проиграли {enemyRoundWin} раунда :(");
+                    }
                     else
+                    {
                         fight.Add("BIG|BAD|Вы ПРОИГРАЛИ :(");
+                    }
 
                     return fight;
                 }
@@ -546,9 +553,13 @@ namespace Seeker.Gamebook.YounglingTournament
                 if ((FightEnemies.Keys.Where(x => x.Hitpoints > hitpointsLimit).Count() == 0) || heroRound)
                 {
                     if (heroRound)
+                    {
                         fight.Add($"BIG|GOOD|Вы выиграли {heroRoundWin} раундов :)");
+                    }
                     else
+                    {
                         fight.Add("BIG|GOOD|Вы ПОБЕДИЛИ :)");
+                    }
 
                     return fight;
                 }

@@ -101,20 +101,28 @@ namespace Seeker.Gamebook.YounglingTournament
             character.Hitpoints -= wound;
 
             if (isProtagonist)
-                fight.Add(String.Format("BAD|Из-за применения Скорости Силы вы теряете {0} ед.выносливости (осталось {1})",
-                    wound, protagonist.Hitpoints));
+            {
+                fight.Add(String.Format("BAD|Из-за применения Скорости Силы вы теряете {0} " +
+                    "ед.выносливости (осталось {1})", wound, protagonist.Hitpoints));
+            }
             else
-                fight.Add(String.Format("GOOD|Из-за применения Скорости Силы {0} теряет {1} ед.выносливости (осталось {2})",
-                    character.Name, wound, character.Hitpoints));
+            {
+                fight.Add(String.Format("GOOD|Из-за применения Скорости Силы {0} теряет {1} " +
+                    "ед.выносливости (осталось {2})", character.Name, wound, character.Hitpoints));
+            }
         }
 
-        public static bool SpeedActivation(ref List<string> fight, ref bool speedActivate, List<Character> EnemiesList)
+        public static bool SpeedActivation(ref List<string> fight,
+            ref bool speedActivate, List<Character> EnemiesList)
         {
             fight.Add(String.Format("BOLD|Вы активируете Скорость Силы {0} ранга!",
                 protagonist.ForceTechniques[ForcesTypes.Speed]));
 
             foreach (Character enemy in EnemiesList)
-                fight.Add(String.Format("{0} активирует Скорость Силы {1} ранга.", enemy.Name, enemy.Speed));
+            {
+                fight.Add(String.Format("{0} активирует Скорость Силы {1} ранга.",
+                    enemy.Name, enemy.Speed));
+            }
 
             speedActivate = true;
 
