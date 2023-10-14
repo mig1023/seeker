@@ -48,8 +48,9 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             toEndText = String.Empty;
 
             if (protagonist.Strength <= 0)
+            {
                 toEndText = Output.Constants.GAMEOVER_TEXT;
-
+            }
             else if (protagonist.Honor <= 0)
             {
                 toEndParagraph = 150;
@@ -58,7 +59,9 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                 protagonist.Strength = 0;
             }
             else
+            {
                 return false;
+            }
 
             return true;
         }
@@ -196,7 +199,9 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                 diceWound.Add($"BIG|BAD|Вы потеряли сил: {wounds}");
             }
             else
+            {
                 diceWound.Add("BIG|BAD|Выпала шестёрка :(");
+            }
  
             return diceWound;
         }
@@ -234,13 +239,17 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                 $"{Game.Dice.Symbol(secondDice)} = {result}");
 
             if (firstDice == secondDice)
+            {
                 ambush.Add("BIG|BAD|Выпали одинаковые числа :(");
-            
+            }
             else if (evenNumber)
+            {
                 ambush.Add("BIG|GOOD|Получилось четное число :)");
-
+            }
             else
+            {
                 ambush.Add("BIG|BAD|Получилось нечетное число :(");
+            }
 
             return ambush;
         }
@@ -289,8 +298,9 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
         public List<string> Get()
         {
             if ((MeritalArt != Character.MeritalArts.Nope) && (protagonist.MeritalArt == Character.MeritalArts.Nope))
+            {
                 protagonist.MeritalArt = MeritalArt ?? Character.MeritalArts.Nope;
-
+            }
             else if ((Price > 0) && (protagonist.Ecu >= Price))
             {
                 protagonist.Ecu -= Price;
@@ -313,13 +323,21 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             bool multiplePistols = (protagonist.Pistols > 1) && (protagonist.BulletsAndGubpowder > 1);
 
             if (WithoutShooting)
+            {
                 return 0;
+            }
             else if ((protagonist.MeritalArt == Character.MeritalArts.TwoPistols) && multiplePistols)
+            {
                 return 2;
+            }
             else if ((protagonist.Pistols > 0) && (protagonist.BulletsAndGubpowder > 0))
+            {
                 return 1;
+            }
             else
+            {
                 return 0;
+            }
         }
 
         public List<string> Fight()

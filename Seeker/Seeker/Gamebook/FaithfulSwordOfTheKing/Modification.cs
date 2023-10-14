@@ -11,9 +11,13 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             if (Name == "Day")
             {
                 if (protagonist.HadFoodToday <= 0)
+                {
                     protagonist.Strength -= 3;
+                }
                 else
+                {
                     protagonist.HadFoodToday = 0;
+                }
             }
 
             base.Do(protagonist);
