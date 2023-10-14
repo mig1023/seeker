@@ -16,22 +16,29 @@ namespace Seeker.Gamebook.SilverAgeSilhouette
         public override bool Availability(string option)
         {
             if (String.IsNullOrEmpty(option))
+            {
                 return true;
-
+            }
             else if (option == "Нет издания или неудачник")
+            {
                 return AvailabilitySpecialTrigger();
-
+            }
             else if (option.Contains("||"))
+            {
                 return AvailabilityExclusiveTrigger(option);
-
+            }
             else if (option.Contains("|"))
+            {
                 return AvailabilityMultiplesTrigger(option);
-
+            }
             else if (option.Contains("ОЦЕНКА"))
+            {
                 return AvailabilityRating(option);
-
+            }
             else
+            {
                 return AvailabilityTrigger(option);
+            }
         }
 
         private bool AvailabilityRating(string option)
@@ -81,13 +88,17 @@ namespace Seeker.Gamebook.SilverAgeSilhouette
         private bool AvailabilitySpecialTrigger()
         {
             if (!Game.Option.IsTriggered("Собственное издание"))
+            {
                 return true;
-
+            }
             else if (Game.Option.IsTriggered("Неудачник"))
+            {
                 return true;
-
+            }
             else
+            {
                 return false;
+            }
         }
     }
 }

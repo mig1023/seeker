@@ -37,12 +37,18 @@ namespace Seeker.Gamebook.SilverAgeSilhouette
             Rating = int.Parse(save[0]);
 
             if (save[1].Contains('%'))
+            {
                 Verse = save[1].Split('%').ToList();
+            }
             else if (String.IsNullOrEmpty(save[1]))
+            {
                 Verse = new List<string> { save[1] };
+            }
             else
+            {
                 Verse = new List<string>();
-
+            }
+                
             IsProtagonist = true;
         }
     }
