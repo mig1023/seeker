@@ -25,7 +25,8 @@ namespace Seeker.Gamebook.InvisibleFront
             Recruitment = this.Recruitment,
         };
 
-        public override string Save() => String.Join("|", Dissatisfaction, Recruitment);
+        public override string Save() =>
+            String.Join("|", Dissatisfaction, Recruitment);
 
         public override void Load(string saveLine)
         {
