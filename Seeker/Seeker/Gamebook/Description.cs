@@ -55,13 +55,17 @@ namespace Seeker.Gamebook
             string[] elements = firstAuthor.Split(' ');
 
             if (!SinglePseudonym && !FullPseudonym && (elements.Length > 1))
+            {
                 return String.Format("{0} {1}", elements[1].Replace(",", String.Empty), elements[0]);
-
+            }
             else if (FullPseudonym)
+            {
                 return Author;
-
+            }
             else
+            {
                 return elements[0].Replace(",", String.Empty);
+            }
         }
 
         public int ParagraphSize()
