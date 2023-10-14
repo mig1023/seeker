@@ -41,12 +41,18 @@ namespace Seeker.Game
 
         public static void Use(string name)
         {
-            List<string> healingName = name.Split('(').ToList();
+            List<string> healingName = name
+                .Split('(')
+                .ToList();
 
-            foreach (Healing currentHealing in HealingList.Where(x => x.Name == healingName[0].Trim()))
+            List<Healing> healings = HealingList
+                .Where(x => x.Name == healingName[0].Trim())
+                .ToList();
+
+            foreach (Healing healing in healings)
             {
-                currentHealing.Portion -= 1;
-                Data.Actions.UseHealing(currentHealing.Level);
+                healing.Portion -= 1;
+                Data.Actions.UseHealing(healing.Level);
                 return;
             }
         }
@@ -58,8 +64,12 @@ namespace Seeker.Game
             if (!Data.Actions.IsHealingEnabled())
                 return allHealing;
 
-            foreach (Healing currentHealing in HealingList.Where(x => x.Portion > 0))
-                allHealing.Add($"{currentHealing.Name} (осталось {currentHealing.Portion})");
+            List<Healing> healings = HealingList
+                .Where(x => x.Portion > 0)
+                .ToList();
+
+            foreach (Healing healing in healings)
+                allHealing.Add($"{healing.Name} (осталось {healing.Portion})");
 
             return allHealing;
         }
@@ -69,8 +79,11 @@ namespace Seeker.Game
             List<string> allHealing = new List<string>();
 
             foreach (Healing currentHealing in HealingList)
-                allHealing.Add($"{currentHealing.Name} (восстанавливает {currentHealing.Level}, " +
+            {
+                allHealing.Add($"{currentHealing.Name} " +
+                    $"(восстанавливает {currentHealing.Level}, " +
                     $"осталось {currentHealing.Portion})");
+            }
 
             return allHealing;
         }
@@ -109,6 +122,7 @@ namespace Seeker.Game
             }
         }
 
-        public static void Clear() => HealingList.Clear();
+        public static void Clear() =>
+            HealingList.Clear();
     }
 }

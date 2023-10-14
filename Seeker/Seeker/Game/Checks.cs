@@ -17,9 +17,13 @@ namespace Seeker.Game
                 }
 
             if (Data.CurrentParagraph.Options != null)
+            {
                 foreach (Option option in Data.CurrentParagraph.Options)
+                {
                     if (!String.IsNullOrEmpty(optionText) && option.Text.ToUpper().Contains(optionText.ToUpper()))
                         return true;
+                }
+            }
 
             return false;
         }

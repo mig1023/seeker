@@ -14,9 +14,13 @@ namespace Seeker.Game
         public static int? IntNullableParse(string line)
         {
             if (int.TryParse(line, out int value))
+            {
                 return (value == -1 ? (int?)null : value);
+            }
             else
+            {
                 return null;
+            }
         }
 
         public static bool IsGameSaved() =>
@@ -66,8 +70,10 @@ namespace Seeker.Game
                 App.Current.Properties.Remove(gamebook);
 
             foreach (string variable in Game.Data.OuterGameVariable)
+            {
                 if (App.Current.Properties.ContainsKey(variable))
                     App.Current.Properties.Remove(variable);
+            }
         }
     }
 }
