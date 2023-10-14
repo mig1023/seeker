@@ -46,8 +46,7 @@ namespace Seeker.Gamebook.ThoseWhoAreAboutToDie
         };
 
         public override string Save() => String.Join("|",
-            Reaction, Strength, Endurance
-        );
+            Reaction, Strength, Endurance);
 
         public override void Load(string saveLine)
         {
