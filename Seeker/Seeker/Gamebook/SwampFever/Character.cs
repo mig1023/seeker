@@ -100,8 +100,7 @@ namespace Seeker.Gamebook.SwampFever
         public override string Save() => String.Join("|",
             Fury, Creds, Stigon, Rate, (HarversterDestroyed ? "1" : "0"),
             SecondEngine, Stealth, Radar, CircularSaw, Flamethrower,
-            PlasmaCannon, Harmonizer, AcousticMembrane, LiveMucus
-        );
+            PlasmaCannon, Harmonizer, AcousticMembrane, LiveMucus);
 
         public override void Load(string saveLine)
         {

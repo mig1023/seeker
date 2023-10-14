@@ -477,7 +477,9 @@ namespace Seeker.Gamebook.SwampFever
                     accountingReport.Add($"Курс стигона упал до: {protagonist.Rate} кредов");
                 }
                 else
+                {
                     accountingReport.Add("Курсу стигона уже некуда падать...");
+                }
             }
 
             accountingReport.Add(String.Empty);
@@ -613,8 +615,9 @@ namespace Seeker.Gamebook.SwampFever
                     warReport.Add($"BOLD|ПОЛОЖЕНИЕ: вы {positionType} на {Math.Abs(position)} шаг");
                 }
                 else
+                {
                     warReport.Add("BOLD|ПОЛОЖЕНИЕ: на исходной точке");
-
+                }
 
                 bool twoStep = false;
                 int myСhoice = 0;
@@ -682,7 +685,9 @@ namespace Seeker.Gamebook.SwampFever
                             totalForce *= 2;
                         }
                         else
+                        {
                             warReport.Add("Значения тяги не совпали, общая тяга не изменилась...");
+                        }
 
                         break;
                 }
@@ -701,7 +706,9 @@ namespace Seeker.Gamebook.SwampFever
                     position -= 1;
                 }
                 else
+                {
                     warReport.Add("BOLD|Ничья на этом этапе.");
+                }
 
                 warReport.Add(String.Empty);
             }
@@ -826,11 +833,13 @@ namespace Seeker.Gamebook.SwampFever
                 pursuitReport.Add("BAD|Настигнуть куст не удалось");
 
                 if ((tumbleweedDirection + tumbleweedSpeed) <= (myDirection + mySpeed))
+                {
                     pursuitReport.Add("Преследование продолжается");
-
+                }
                 else if (reRoll)
+                {
                     return Services.PursuitFail(pursuitReport);
-
+                }
                 else
                 {
                     if (myDirection > mySpeed)
@@ -847,9 +856,13 @@ namespace Seeker.Gamebook.SwampFever
                     }
 
                     if ((tumbleweedDirection + tumbleweedSpeed) <= (myDirection + mySpeed))
+                    {
                         pursuitReport.Add("Преследование продолжается");
+                    }
                     else
+                    {
                         return Services.PursuitFail(pursuitReport);
+                    }
                 }
 
                 pursuitReport.Add(String.Empty);
@@ -876,7 +889,9 @@ namespace Seeker.Gamebook.SwampFever
                 myMovementType = 6;
             }
             else
+            {
                 cavityReport.Add("Думаем: лучше постоим нафиг");
+            }
 
             if (bombs.Contains(myPosition) && (myMovementType == 0))
             {

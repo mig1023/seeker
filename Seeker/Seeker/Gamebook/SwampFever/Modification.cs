@@ -12,11 +12,17 @@ namespace Seeker.Gamebook.SwampFever
             int currentValue = GetProperty(Character.Protagonist, Name);
 
             if (Multiplication)
+            {
                 currentValue *= Value;
+            }
             else if (Division)
+            {
                 currentValue /= Value;
+            }
             else
+            {
                 currentValue += Value;
+            }
 
             SetProperty(Character.Protagonist, Name, currentValue);
         }

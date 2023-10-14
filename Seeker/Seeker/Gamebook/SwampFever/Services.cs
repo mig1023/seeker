@@ -19,10 +19,13 @@ namespace Seeker.Gamebook.SwampFever
         public static void PurchasesHeads(ref List<string> purchasesReport, bool affordable, bool? prevAffordable)
         {
             if (affordable && (prevAffordable == null))
+            {
                 purchasesReport.Add("BOLD|ВАМ ДОСТУПНО:");
-
+            }
             else if (prevAffordable != affordable)
+            {
                 purchasesReport.Add("\nBOLD|ВАМ ПОКА ЕЩЁ НЕ ДОСТУПНО:");
+            }
         }
 
         public static List<string> PursuitWin(List<string> pursuitReport)
