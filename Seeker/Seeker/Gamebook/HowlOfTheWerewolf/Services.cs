@@ -20,6 +20,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             {
                 fight.Add(String.Empty);
                 fight.Add("BIG|GOOD|Вы ПОБЕДИЛИ :)");
+
                 return true;
             }
             else
@@ -78,9 +79,13 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                 Character.Protagonist.VanRichten -= 2;
 
                 if (Character.Protagonist.VanRichten <= 0)
+                {
                     fight.Add("BIG|BAD|Ван Рихтен погиб, дальше вам придётся одному :(");
+                }
                 else
+                {
                     fight.Add("BAD|Ван Рихтен ранен");
+                }
 
                 return 0;
             }
@@ -299,8 +304,9 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             int shots = Character.Protagonist.Mastery - fightEnemies[0].Mastery;
 
             if (shots <= 0)
+            {
                 fight.Add("BAD|Противник так ловок, что вы не успеваете выстрелить из пистолета");
-
+            }
             else
             {
                 if (Character.Protagonist.Gun < shots)

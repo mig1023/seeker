@@ -22,9 +22,13 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                 Option option = OptionsTemplateWithoutGoto(xmlOption);
 
                 if (ThisIsGameover(xmlOption) || ThisIsBack(xmlOption))
+                {
                     option.Goto = GetGoto(xmlOption, wayBack: Character.Protagonist.WayBack);
+                }
                 else
+                {
                     option.Goto = Xml.IntParse(xmlOption.Attributes["Goto"]);
+                }
 
                 XmlNode optionMod = xmlOption.SelectSingleNode("Modification");
 
@@ -65,9 +69,13 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                 Character enemy = EnemyParse(xmlAction["Enemy"]);
 
                 if (Xml.BoolParse(xmlAction["RandomEnemyCount"]))
+                {
                     EnemyMultiplier(Dice.Roll(), ref action, enemy);
+                }
                 else
+                {
                     action.Enemies = new List<Character> { enemy };
+                }
             }
             else if(xmlAction["Enemies"] != null)
             {

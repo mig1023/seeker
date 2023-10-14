@@ -124,9 +124,13 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                 $"{Game.Dice.Symbol(secondDice)} {masteryLine} {mastery}" };
 
             if (Value > 0)
+            {
                 masteryCheck.Add(Result(!masteryOk, "Мастерства НЕ хватило|Мастерства ХВАТИЛО"));
+            }
             else
+            {
                 masteryCheck.Add(Result(masteryOk, "Мастерства ХВАТИЛО|Мастерства НЕ хватило"));
+            }
 
             return masteryCheck;
         }
@@ -194,6 +198,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
             diceCheck.Add($"На кубиках выпало: {Game.Dice.Symbol(firstDice)} + " +
                 $"{Game.Dice.Symbol(firstDice)} = {result}");
+
             diceCheck.Add($"Текущий уровень тревоги: {protagonist.Anxiety}");
 
             diceCheck.Add(Result(result > protagonist.Anxiety, "Больше!|Меньше"));
@@ -226,7 +231,9 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                     inTarget = false;
                 }
                 else
+                {
                     competition.Add("GOOD|Это не превышает Мастерства: вы попали в цель!");
+                }
 
                 competition.Add(String.Empty);
 
@@ -239,7 +246,9 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                 protagonist.Gold += 5;
             }
             else
+            {
                 competition.Add("BIG|BAD|Вы ПРОИГРАЛИ :(");
+            }
 
             return competition;
         }
@@ -369,7 +378,9 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                             return false;
                     }
                     else if (!Game.Option.IsTriggered(oneOption.Trim()))
+                    {
                         return false;
+                    }
                 }
 
                 return true;
@@ -412,7 +423,9 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                 return fight;
             }
             else
+            {
                 fight.Add($"BOLD|Вам предстоит сразиться с волками в количестве: {woulfCount}");
+            }
 
             fight.Add(String.Empty);
 
@@ -486,17 +499,18 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                         string bonus = String.Empty;
 
                         if (HitStrengthBonus > 0)
+                        {
                             bonus = $" + {HitStrengthBonus} бонус";
-
+                        }
                         else if (HitStrengthBonus < 0)
+                        {
                             bonus = $" - {Math.Abs(HitStrengthBonus)} пенальти";
-
+                        }
                         else if (blackWidowLastAttack == 4)
                         {
                             bonus = " - 1 пенальти за паутину";
                             protagonistHitStrength -= 1;
                         }
-
                         else if (speed && !Game.Option.IsTriggered("Скорость"))
                         {
                             bonus = " - 1 за остутствие Скорости";
@@ -549,8 +563,9 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                         bool evenHit = (enemyHitStrength % 2 == 0);
 
                         if (Specificity == Specifics.WitchFight)
+                        {
                             Services.WitchFight(ref protagonist, ref fight);
-
+                        }
                         else if (Specificity == Specifics.NeedForSpeedAndDead)
                         {
                             if (Services.WerewolfDeadFight(ref protagonist, ref fight))
@@ -569,15 +584,18 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                             }
                         }
                         else if (Specificity == Specifics.SnakeFight)
+                        {
                             HitStrengthBonus -= Services.SnakeFight(ref protagonist, ref fight, round);
-
+                        }
                         else if (Game.Option.IsTriggered("Кольчуга") && evenHit)
                         {
                             fight.Add("Кольчуга защитила вас: вы теряете лишь 1 Выносливость");
                             protagonist.Endurance -= 1;
                         }
                         else
+                        {
                             protagonist.Endurance -= (ExtendedDamage > 0 ? ExtendedDamage : 2);
+                        }
 
                         roundFails += 1;
                         protagonistWounds += 1;
@@ -602,7 +620,9 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                         }
                     }
                     else
+                    {
                         fight.Add("BOLD|Ничья в раунде");
+                    }
 
                     attackAlready = true;
 
@@ -625,16 +645,21 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                         fight.Add(String.Empty);
 
                         if (notEnoughRounds)
+                        {
                             fight.Add("BIG|BAD|Отведённые на победу раунды истекли :(");
-
+                        }
                         else if (enoughRoundsFail)
+                        {
                             fight.Add("BIG|BAD|Вы проиграли слишком много раундов :(");
-
+                        }
                         else if (enoughRoundsWin)
+                        {
                             fight.Add("BIG|GOOD|Вы выиграли необходимое количество раундов :)");
-
+                        }
                         else
+                        {
                             fight.Add("BIG|GOOD|Вы продержались все отведённые на бой раунды :)");
+                        }
 
                         return fight;
                     }
@@ -658,16 +683,21 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
         public override void UseHealing(int healingLevel)
         {
             if (healingLevel == -1)
+            {
                 protagonist.Endurance = protagonist.MaxEndurance;
-
+            }
             else if (healingLevel == -2)
+            {
                 protagonist.Mastery = protagonist.MaxMastery;
-
+            }
             else if (healingLevel == -3)
+            {
                 protagonist.Luck = protagonist.MaxLuck;
-
+            }
             else
+            {
                 protagonist.Endurance += healingLevel;
+            }
         }
     }
 }
