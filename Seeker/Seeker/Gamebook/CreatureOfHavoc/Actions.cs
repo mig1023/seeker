@@ -60,7 +60,9 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                 $"Проверка удачи: {Game.Dice.Symbol(firstDice)} + " +
                 $"{Game.Dice.Symbol(secondDice)} {luckLine} {protagonist.Luck}" };
 
-            luckCheck.Add((notInline ? String.Empty : "BIG|") + (goodLuck ? "GOOD|УСПЕХ :)" : "BAD|НЕУДАЧА :("));
+            luckCheck.Add(
+                (notInline ? String.Empty : "BIG|") + 
+                (goodLuck ? "GOOD|УСПЕХ :)" : "BAD|НЕУДАЧА :("));
 
             if (protagonist.Luck > 2)
             {
@@ -91,7 +93,9 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                     bold = "BOLD|";
                 }
                 else
+                {
                     inTarget = "- не попали.";
+                }
 
                 rocks.Add($"{bold}Бросок камня: {Game.Dice.Symbol(rock)}{inTarget}");
             }
@@ -116,7 +120,10 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                 stoning.Add("BAD|и вы потеряли ещё 2 выносливости!");
             }
             else
-                stoning.Add("GOOD|Селяне, к счастью, оказались косоглазые и вы ушли без дополнительного ущерба!");
+            {
+                stoning.Add("GOOD|Селяне, к счастью, оказались косоглазые и " +
+                    "вы ушли без дополнительного ущерба!");
+            }
 
             return stoning;
         }
@@ -135,7 +142,9 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                 fruit.Add("GOOD|Вы восстанавливаете 4 выносливости!");
             }
             else
+            {
                 fruit.Add("BAD|Вам не удалось добыть плодов...");
+            }
 
             return fruit;
         }
@@ -282,10 +291,13 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                         fight.AddRange(GoodLuck(out bool goodLuck));
 
                         if (goodLuck)
+                        {
                             fight.Add($"BOLD|{enemy.Name} не смог вас ранить");
-
+                        }
                         else if (Services.WoundAndDeath(ref fight, ref protagonist, enemy.Name))
+                        {
                             return fight;
+                        }
                     }
                     else if (GiantHornet && doubleDiceEnemy)
                     {
@@ -297,11 +309,14 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                             fight.Add("BAD|Но вы теряете 6 пунктов выносливости");
 
                             if (Services.WoundAndDeath(ref fight, ref protagonist, enemy.Name, wounds: 6))
+                            {
                                 return fight;
+                            }
                             else
                             {
                                 fight.Add(String.Empty);
                                 fight.Add("BIG|GOOD|Вы ПОБЕДИЛИ :)");
+
                                 return fight;
                             }
                         }
@@ -312,6 +327,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                             fight.Add("BAD|Вы смертельно ранены шершнем");
                             fight.Add(String.Empty);
                             fight.Add("BIG|BAD|Вы ПРОИГРАЛИ :(");
+
                             return fight;
                         }
                     } 
@@ -329,7 +345,6 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                         }
 
                         enemyWounds += 1;
-
                         previousRoundWound = true;
 
                         bool enemyLost = Services.NoMoreEnemies(FightEnemies);
@@ -338,6 +353,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                         {
                             fight.Add(String.Empty);
                             fight.Add("BIG|GOOD|Вы ПОБЕДИЛИ :)");
+
                             return fight;
                         }
                     }
@@ -351,7 +367,9 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                             return fight;
                     }
                     else
+                    {
                         fight.Add("BOLD|Ничья в раунде");
+                    }
 
                     attackAlready = true;
 
@@ -360,6 +378,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                         fight.Add(String.Empty);
                         fight.Add("BAD|Отведённые на победу раунды истекли.");
                         fight.Add("BIG|BAD|Вы ПРОИГРАЛИ :(");
+
                         return fight;
                     }
 
@@ -367,6 +386,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                     {
                         fight.Add(String.Empty);
                         fight.Add("BOLD|Отведённые на бой раунды истекли.");
+
                         return fight;
                     }
 

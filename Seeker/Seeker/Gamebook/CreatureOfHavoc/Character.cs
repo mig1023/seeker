@@ -55,8 +55,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
         };
 
         public override string Save() => String.Join("|",
-            MaxMastery, Mastery, MaxEndurance, Endurance, MaxLuck, Luck
-        );
+            MaxMastery, Mastery, MaxEndurance, Endurance, MaxLuck, Luck);
 
         public override void Load(string saveLine)
         {
