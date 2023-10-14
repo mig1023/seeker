@@ -44,9 +44,15 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                 fight.Add(String.Empty);
 
                 if (Character.Protagonist.Specialization == Character.SpecializationType.Thrower)
-                    fight.Add("BOLD|Вы смазали ядом свои метательные ножи, теперь они будут отнимать у противника не 3, а 4 жизни");
+                {
+                    fight.Add("BOLD|Вы смазали ядом свои метательные ножи, " +
+                        "теперь они будут отнимать у противника не 3, а 4 жизни");
+                }
                 else
-                    fight.Add("BOLD|Вы смазали ядом свой меч, в следующем бою он будет отнимать у противника по 5 жизней");
+                {
+                    fight.Add("BOLD|Вы смазали ядом свой меч, в следующем бою " +
+                        "он будет отнимать у противника по 5 жизней");
+                }
 
                 Game.Option.Trigger("PoisonedBlade");
             }

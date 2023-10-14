@@ -65,9 +65,13 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                     continue;
 
                 if (currentSpells.ContainsKey(spell.ToLower()))
+                {
                     currentSpells[spell.ToLower()] += 1;
+                }
                 else
+                {
                     currentSpells.Add(spell.ToLower(), 1);
+                }
             }
 
             List<string> statusLines = new List<string> { $"Золото: {protagonist.Gold}" };
@@ -104,9 +108,13 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             foreach (Character enemy in Enemies)
             {
                 if (enemy.Hitpoints > 0)
+                {
                     enemies.Add($"{enemy.Name}\nсила {enemy.Strength}  жизни {enemy.Hitpoints}");
+                }
                 else
+                {
                     enemies.Add($"{enemy.Name}\nсила {enemy.Strength}");
+                }
             }
 
             return enemies;
@@ -164,24 +172,24 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                 protagonist.SpellsReplica.Add(Head);
                 protagonist.Magicpoints -= 1;
             }
-
             else if ((Specialization != null) && (protagonist.Specialization == Character.SpecializationType.Nope))
             {
                 protagonist.Specialization = Specialization ?? Character.SpecializationType.Nope;
 
                 if (Specialization == Character.SpecializationType.Warrior)
+                {
                     protagonist.Strength += 1;
-
+                }
                 else if (Specialization == Character.SpecializationType.Thrower)
+                {
                     protagonist.Magicpoints += 1;
-
+                }
                 else
                 {
                     protagonist.Magicpoints += 2;
                     protagonist.Transformation += 2;
                 }
             }
-
             else if ((Price > 0) && (protagonist.Gold >= Price))
             {
                 protagonist.Gold -= Price;
@@ -233,12 +241,25 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
 
         public List<string> RestoreSpells()
         {
-            protagonist.Spells = protagonist.Spells.Where(x => x == "ЛЕЧЕНИЕ").ToList();
-            protagonist.Spells.AddRange(protagonist.SpellsReplica.Where(x => x != "ЛЕЧЕНИЕ").ToList());
+            protagonist.Spells = protagonist.Spells
+                .Where(x => x == "ЛЕЧЕНИЕ")
+                .ToList();
+
+            List<string> spells = protagonist.SpellsReplica
+                .Where(x => x != "ЛЕЧЕНИЕ")
+                .ToList();
+
+            protagonist.Spells.AddRange(spells);
 
             protagonist.Gold -= 5;
 
-            return new List<string> { "BIG|GOOD|Вы восстановили заклинания :)", "Лечилка не восстанавливается, как и было сказано" };
+            List<string> result = new List<string>
+            {
+                "BIG|GOOD|Вы восстановили заклинания :)",
+                "Лечилка не восстанавливается, как и было сказано"
+            };
+
+            return result;
         }
         
         public List<string> GetMagicBlade()
@@ -258,7 +279,9 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             fight.Add($"На кубиках выпало: {Game.Dice.Symbol(dice)}");
 
             if (dice > 2)
+            {
                 fight.Add("BIG|GOOD|Вы раздавили пиявку :)");
+            }
             else
             {
                 protagonist.Hitpoints -= 2;
@@ -461,14 +484,21 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             }
             else if (option.Contains("ВОИН") || option.Contains("МАГ") || option.Contains("МЕТАТЕЛЬ"))
             {
-                Character.SpecializationType spec = Constants.GetSpecializationType()[option.Replace("!", String.Empty)];
-                return (option.Contains("!") ? (protagonist.Specialization != spec) : (protagonist.Specialization == spec));
+                string type = option.Replace("!", String.Empty);
+                Character.SpecializationType spec = Constants.GetSpecializationType()[type];
+
+                bool result = option.Contains("!") ?
+                    (protagonist.Specialization != spec) : (protagonist.Specialization == spec);
+
+                return result;
             }
             else if (option.Contains("|"))
             {
                 foreach (string opt in option.Split('|'))
+                {
                     if (Game.Option.IsTriggered(opt.Trim()))
                         return true;
+                }
 
                 return false;
             }
