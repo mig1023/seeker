@@ -13,10 +13,14 @@ namespace Seeker.Gamebook.PensionerSimulator
 
             foreach (string oneOption in option.Split(','))
             {
-                if (oneOption.Contains("!") && (Game.Option.IsTriggered(oneOption.Replace("!", String.Empty).Trim())))
+                bool negativeTrigger = Game.Option.IsTriggered(oneOption.Replace("!", String.Empty).Trim());
+
+                if (oneOption.Contains("!") && negativeTrigger)
                     return false;
 
-                else if (!oneOption.Contains("!") && (!Game.Option.IsTriggered(oneOption.Trim())))
+                bool positiveTrigger = Game.Option.IsTriggered(oneOption.Trim());
+
+                if (!oneOption.Contains("!") && !positiveTrigger)
                     return false;
             }
 
