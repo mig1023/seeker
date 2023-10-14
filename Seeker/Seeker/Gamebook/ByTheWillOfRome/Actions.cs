@@ -37,7 +37,9 @@ namespace Seeker.Gamebook.ByTheWillOfRome
                 };
             }
             else
+            {
                 return null;
+            }
         }
 
         public override List<string> Representer()
@@ -48,7 +50,9 @@ namespace Seeker.Gamebook.ByTheWillOfRome
                 return new List<string> { $"{Head}, {Price} {gold}" };
             }
             else
+            {
                 return new List<string> { };
+            }
         }
 
         public override bool GameOver(out int toEndParagraph, out string toEndText)
@@ -70,15 +74,24 @@ namespace Seeker.Gamebook.ByTheWillOfRome
             }
             else if (option.Contains("|"))
             {
-                foreach (string optionsPart in option.Split('|').Select(x => x.Trim()))
+                List<string> options = option
+                    .Split('|')
+                    .Select(x => x.Trim())
+                    .ToList();
+
+                foreach (string optionsPart in options)
+                {
                     if (Game.Option.IsTriggered(optionsPart))
                         return true;
+                }
 
                 return false;
             }
             else
             {
-                string[] options = option.Split(',');
+                List<string> options = option
+                    .Split(',')
+                    .ToList();
 
                 foreach (string oneOption in options)
                 {
