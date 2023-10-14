@@ -71,8 +71,7 @@ namespace Seeker.Gamebook.Genesis
         };
 
         public override string Save() => String.Join("|",
-            MaxLife, Life, Aura, Skill, Weapon, Stealth, Bonuses
-        );
+            MaxLife, Life, Aura, Skill, Weapon, Stealth, Bonuses);
 
         public override void Load(string saveLine)
         {
