@@ -93,14 +93,18 @@ namespace Seeker.Gamebook.OrcsDay
             else if (Stat == "Bet")
             {
                 if (secondButton)
+                {
                     return protagonist.Bet > 1;
-
+                }
                 else
+                {
                     return protagonist.Bet < 5;
+                }
             }
             else
             {
-                return String.IsNullOrEmpty(Stat) || (protagonist.StatBonuses > 0) || (Level > 0) || LevelNull || secondButton;
+                return String.IsNullOrEmpty(Stat) || (protagonist.StatBonuses > 0) ||
+                    (Level > 0) || LevelNull || secondButton;
             }
         }
 
@@ -248,7 +252,9 @@ namespace Seeker.Gamebook.OrcsDay
                 gameLines.Add("BAD|BIG|Провал! Ты потерял свою ставку!");
             }
             else
+            {
                 gameLines.Add("BIG|Выиграть не получилось, но ставка осталась при тебе!");
+            }
 
             return gameLines;
         }
@@ -307,9 +313,13 @@ namespace Seeker.Gamebook.OrcsDay
                     int whoUnderAttack = Game.Dice.Roll();
 
                     if (GirlHelp)
+                    {
                         girlUnderAttack = whoUnderAttack < 4;
+                    }
                     else
+                    {
                         otherOrcsUnderAttack = whoUnderAttack < 4;
+                    }
 
                     fight.Add($"Кого атакует противник: {Game.Dice.Symbol(whoUnderAttack)}");
 
@@ -344,7 +354,9 @@ namespace Seeker.Gamebook.OrcsDay
 
                         if (magicPotion)
                         {
-                            fight.Add("GOOD|BOLD|Ты использовал целительное снадобье и её здоровье восстановлено!");
+                            fight.Add("GOOD|BOLD|Ты использовал целительное снадобье и " +
+                                "её здоровье восстановлено!");
+
                             girlWounds = 3;
                             magicPotion = false;
                         }
@@ -433,7 +445,9 @@ namespace Seeker.Gamebook.OrcsDay
                     fight.Add($"Его здоровье стало равно {enemy.Hitpoints}");
                 }
                 else
+                {
                     fight.Add("Противник отбил твой удар");
+                }
 
                 if (enemy.Hitpoints <= 0)
                 {
@@ -443,7 +457,8 @@ namespace Seeker.Gamebook.OrcsDay
                     fight.Add("BIG|GOOD|Ты ПОБЕДИЛ :)");
                     return fight;
                 }
-                 fight.Add(String.Empty);
+                
+                fight.Add(String.Empty);
 
                 round += 1;
             }

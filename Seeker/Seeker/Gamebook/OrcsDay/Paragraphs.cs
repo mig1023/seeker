@@ -17,9 +17,13 @@ namespace Seeker.Gamebook.OrcsDay
                 Option option = OptionsTemplateWithoutGoto(xmlOption);
 
                 if (ThisIsGameover(xmlOption) || ThisIsBack(xmlOption))
+                {
                     option.Goto = GetGoto(xmlOption, wayBack: Character.Protagonist.WayBack);
+                }
                 else
+                {
                     option.Goto = Xml.IntParse(xmlOption.Attributes["Goto"]);
+                }
 
                 XmlNode optionMod = xmlOption.SelectSingleNode("Modification");
 

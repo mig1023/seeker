@@ -72,8 +72,7 @@ namespace Seeker.Gamebook.OrcsDay
 
         public override string Save() => String.Join("|",
             Name, Muscle, Wits, Courage, Luck, Hitpoints, Money, Orcishness,
-            StatBonuses, WayBack, Bet, Weapon
-        );
+            StatBonuses, WayBack, Bet, Weapon);
 
         public override void Load(string saveLine)
         {
