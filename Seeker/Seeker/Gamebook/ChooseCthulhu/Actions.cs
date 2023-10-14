@@ -17,16 +17,21 @@ namespace Seeker.Gamebook.ChooseCthulhu
         public override bool Availability(string option)
         {
             if (String.IsNullOrEmpty(option))
+            {
                 return true;
-
+            }
             else if (option.Contains(">"))
+            {
                 return protagonist.Initiation > Game.Services.LevelParse(option);
-
+            }
             else if (option.Contains("<"))
+            {
                 return protagonist.Initiation < Game.Services.LevelParse(option);
-
+            }
             else
+            {
                 return AvailabilityTrigger(option.Trim());
+            }
         }
     }
 }

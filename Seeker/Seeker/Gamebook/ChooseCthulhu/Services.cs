@@ -8,10 +8,13 @@ namespace Seeker.Gamebook.ChooseCthulhu
         public static int SubColor(int color, int value)
         {
             if (color >= value)
+            {
                 return color - value;
-
+            }
             else
+            {
                 return 0;
+            }
         }
 
         public static List<int> ModColors(List<int> color)

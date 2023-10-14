@@ -20,31 +20,41 @@ namespace Seeker.Gamebook.ChooseCthulhu
             bool supplButtons = (type == ButtonTypes.System) || (type == ButtonTypes.Continue);
 
             if (Game.Settings.IsEnabled("WithoutStyles"))
+            {
                 return base.GetColor(type);
-
+            }
             else if (mainDuttons || supplButtons)
+            {
                 return Services.HexColor(protagonist.BtnColor[0], protagonist.BtnColor[1], protagonist.BtnColor[2]);
-
+            }
             else if (type == ButtonTypes.Border)
+            {
                 return Services.СontrastBorder(protagonist.BackColor, protagonist.BtnColor);
-
+            }
             else
+            {
                 return base.GetColor(type);
+            }
         }
 
         public override string GetColor(ColorTypes type)
         {
             if (Game.Settings.IsEnabled("WithoutStyles"))
+            {
                 return base.GetColor(type);
-
+            }
             else if (type == ColorTypes.Background)
+            {
                 return Services.HexColor(protagonist.BackColor[0], protagonist.BackColor[1], protagonist.BackColor[2]);
-
+            }
             else if (type == ColorTypes.Font)
+            {
                 return Services.СontrastText(protagonist.BackColor);
-
+            }
             else
+            {
                 return base.GetColor(type);
+            }
         }
 
         public static Links GetLinks() => new Links

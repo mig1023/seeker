@@ -7,9 +7,13 @@ namespace Seeker.Gamebook.ChooseCthulhu
         public override void Do()
         {
             if (Name == "CursedForever")
+            {
                 Character.Protagonist.Cursed();
+            }
             else
+            {
                 base.Do(Character.Protagonist);
+            }
         }
     }
 }
