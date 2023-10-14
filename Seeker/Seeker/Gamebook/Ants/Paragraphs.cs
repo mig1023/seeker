@@ -19,8 +19,10 @@ namespace Seeker.Gamebook.Ants
             List<Abstract.IModification> modifications = new List<Abstract.IModification>();
 
             foreach (XmlNode optionMod in xmlOption.SelectNodes("*"))
+            {
                 if (!optionMod.Name.StartsWith("Text"))
                     modifications.Add(new Modification());
+            }
 
             return OptionParseWithDo(xmlOption, modifications);
         }

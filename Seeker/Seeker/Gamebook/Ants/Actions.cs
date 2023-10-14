@@ -102,9 +102,13 @@ namespace Seeker.Gamebook.Ants
             foreach (KeyValuePair<string, int> timelist in Constants.Rating.OrderBy(x => x.Value))
             {
                 if (speed < timelist.Value)
+                {
                     break;
+                }
                 else
+                {
                     line = timelist.Key;
+                }
             }
 
             List<string> resultLines = line.Split('!').ToList();
@@ -120,8 +124,10 @@ namespace Seeker.Gamebook.Ants
             List<string> changes = new List<string>();
 
             foreach (string head in Constants.Government.Keys)
+            {
                 if (Game.Option.IsTriggered(head))
                     changes.Add(Constants.Government[head]);
+            }
 
             return changes;
         }
