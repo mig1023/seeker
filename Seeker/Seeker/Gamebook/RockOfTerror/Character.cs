@@ -30,8 +30,7 @@ namespace Seeker.Gamebook.RockOfTerror
         };
 
         public override string Save() => String.Join("|",
-            Time, Injury, (MonksHeart == null ? -1 : MonksHeart)
-        );
+            Time, Injury, (MonksHeart == null ? -1 : MonksHeart));
 
         public override void Load(string saveLine)
         {

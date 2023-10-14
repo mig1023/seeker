@@ -13,10 +13,13 @@ namespace Seeker.Gamebook.RockOfTerror
             if (Name == "MonksHeart")
             {
                 if (Init && (protagonist.MonksHeart == null))
+                {
                     protagonist.MonksHeart = 0;
-
+                }
                 else if (!Init && (protagonist.MonksHeart != null))
+                {
                     protagonist.MonksHeart += Value;
+                }
             }
             else
             {
