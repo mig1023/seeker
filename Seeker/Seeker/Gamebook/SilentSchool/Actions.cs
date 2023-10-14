@@ -69,9 +69,13 @@ namespace Seeker.Gamebook.SilentSchool
                 int optionCount = options.Where(x => Game.Option.IsTriggered(x.Trim())).Count();
 
                 if (not)
+                {
                     return optionCount < optionMustBe;
+                }
                 else
+                {
                     return optionCount >= optionMustBe;
+                }
             }
             else
             {
@@ -95,10 +99,13 @@ namespace Seeker.Gamebook.SilentSchool
                         string value = oneOption.Split('=')[1].Trim();
 
                         if (oneOption.Contains("!") && (value == protagonist.Weapon))
+                        {
                             return false;
-
+                        }
                         else if (!oneOption.Contains("!") && (value != protagonist.Weapon))
+                        {
                             return false;
+                        }
                     }
                     else if (oneOption.Contains("!"))
                     {
@@ -106,7 +113,9 @@ namespace Seeker.Gamebook.SilentSchool
                             return false;
                     }
                     else if (!Game.Option.IsTriggered(oneOption.Trim()))
+                    {
                         return false;
+                    }
                 }
 
                 return true;
@@ -124,7 +133,9 @@ namespace Seeker.Gamebook.SilentSchool
                 protagonist.HarmSelfAlready = HarmedMyself;
             }
             else
+            {
                 protagonist.Weapon = Head;
+            }
 
             return new List<string> { "RELOAD" };
         }

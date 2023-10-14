@@ -38,14 +38,17 @@ namespace Seeker.Gamebook.SilentSchool
             else if (Name == "WoundsByWeapon")
             {
                 if (protagonist.Weapon == "Черенок от швабры")
+                {
                     protagonist.Life -= 4 * woundsBonus;
+                }
                 else
+                {
                     protagonist.Life -= (String.IsNullOrEmpty(protagonist.Weapon) ? 8 : 6) * woundsBonus;
+                }
             }
             else
             {
                 int currentValue = GetProperty(protagonist, Name);
-
                 currentValue += Value * ((woundsBonus > 1) && (Value < 1) ? woundsBonus : 1);
 
                 SetProperty(protagonist, Name, currentValue);

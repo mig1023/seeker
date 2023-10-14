@@ -41,8 +41,7 @@ namespace Seeker.Gamebook.SilentSchool
         };
 
         public override string Save() => String.Join("|",
-            Life, Weapon, Grail, ChangeDecision, HarmSelfAlready, WayBack
-        );
+            Life, Weapon, Grail, ChangeDecision, HarmSelfAlready, WayBack);
 
         public override void Load(string saveLine)
         {
