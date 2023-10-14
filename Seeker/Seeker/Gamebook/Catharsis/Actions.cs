@@ -87,7 +87,9 @@ namespace Seeker.Gamebook.Catharsis
                             return false;
                     }
                     else if (!Game.Option.IsTriggered(oneOption.Trim()))
+                    {
                         return false;
+                    }
                 }
 
                 return true;
