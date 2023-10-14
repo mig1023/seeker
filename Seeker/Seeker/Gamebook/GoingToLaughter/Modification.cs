@@ -32,9 +32,13 @@ namespace Seeker.Gamebook.GoingToLaughter
                 foreach (string param in ValueString.Split(','))
                 {
                     if (param.Contains("="))
+                    {
                         SetPropertyByLine(param);
+                    }
                     else
+                    {
                         Game.Option.Trigger(param.Trim());
+                    }
                 }
             }
             else if (name == "MusicalPerformance")
@@ -68,7 +72,8 @@ namespace Seeker.Gamebook.GoingToLaughter
         {
             string[] keyValue = line.Split('=');
             int currentValue = GetProperty(protagonist, keyValue[0].Trim());
-            SetProperty(protagonist, keyValue[0].Trim(), currentValue + int.Parse(keyValue[1].Trim()));
+            int newValue = currentValue + int.Parse(keyValue[1].Trim());
+            SetProperty(protagonist, keyValue[0].Trim(), newValue);
         }
 
         private void DynamicBonuses(string bonuses)
@@ -80,23 +85,29 @@ namespace Seeker.Gamebook.GoingToLaughter
                 if (bonus[1].Contains("+"))
                 {
                     foreach (string advantage in bonus[1].Split('+'))
+                    {
                         if (!protagonist.Advantages.Contains(advantage.Trim()))
                             return;
+                    }
 
                     SetPropertyByLine(bonus[2]);
                 }
                 else
                 {
                     foreach (string advantage in bonus[1].Split(','))
+                    {
                         if (protagonist.Advantages.Contains(advantage.Trim()))
                             SetPropertyByLine(bonus[2]);
+                    }
                 }
             }
             else if (bonus[0] == "Disadvantage")
             {
                 foreach (string disadvantage in bonus[1].Split(','))
+                {
                     if (protagonist.Disadvantages.Contains(disadvantage.Trim()))
                         SetPropertyByLine(bonus[2]);
+                }
             }
             else if (bonus[0] == "Param")
             {
@@ -109,8 +120,10 @@ namespace Seeker.Gamebook.GoingToLaughter
             else if ((bonus[0] == "Trigger") && Game.Option.IsTriggered(bonus[1]))
             {
                 foreach(string trigger in bonus[1].Split(','))
+                {
                     if (Game.Option.IsTriggered(trigger.Trim()))
                         SetPropertyByLine(bonus[2]);
+                }
             }
         }
     }

@@ -24,7 +24,6 @@ namespace Seeker.Gamebook.GoingToLaughter
                 protagonist.Advantages.Add(this.Button);
                 protagonist.Balance += 1;
             }
-
             else if (Disadvantage)
             {
                 protagonist.Disadvantages.Add(this.Button);
@@ -45,10 +44,13 @@ namespace Seeker.Gamebook.GoingToLaughter
         public override string ButtonText()
         {
             if (Type == "DiceValues")
+            {
                 return "Кинуть кубик" + (DiceOfDice || (Dices > 0) ? "и" : String.Empty);
-
+            }
             else
+            {
                 return Button;
+            }
         }
 
         public override bool GameOver(out int toEndParagraph, out string toEndText)
@@ -77,8 +79,13 @@ namespace Seeker.Gamebook.GoingToLaughter
             string incompatibles = Constants.IncompatiblesDisadvantages[disadvantage];
 
             foreach (string incompatible in incompatibles.Split(','))
-                if (protagonist.Advantages.Contains(incompatible.Trim()) || protagonist.Disadvantages.Contains(incompatible.Trim()))
+            {
+                bool isAdvantages = protagonist.Advantages.Contains(incompatible.Trim());
+                bool idDisadvantages = protagonist.Disadvantages.Contains(incompatible.Trim());
+
+                if (isAdvantages || idDisadvantages)
                     return true;
+            }
 
             return false;
         }
@@ -86,19 +93,25 @@ namespace Seeker.Gamebook.GoingToLaughter
         public override bool IsButtonEnabled(bool secondButton = false)
         {
             if (Advantage && protagonist.Advantages.Contains(this.Button))
+            {
                 return false;
-
+            }
             else if (Disadvantage && (protagonist.Balance == 0))
+            {
                 return false;
-
+            }
             else if (Disadvantage && Incompatible(this.Button))
+            {
                 return false;
-
+            }
             else if (Disadvantage && protagonist.Disadvantages.Contains(this.Button))
+            {
                 return false;
-
+            }
             else
+            {
                 return true;
+            }
         }
 
         public override bool Availability(string option)
@@ -121,6 +134,9 @@ namespace Seeker.Gamebook.GoingToLaughter
             {
                 foreach (string oneOption in option.Split(','))
                 {
+                    List<string> advantages = protagonist.Disadvantages;
+                    List<string> disadvantages = protagonist.Disadvantages;
+
                     if (oneOption.Contains(">") || oneOption.Contains("<"))
                     {
                         int level = Game.Services.LevelParse(oneOption);
@@ -145,11 +161,13 @@ namespace Seeker.Gamebook.GoingToLaughter
                     }
                     else if (oneOption.Contains("!"))
                     {
-                        if (protagonist.Disadvantages.Contains(oneOption.Trim().Replace("!", String.Empty).Trim()))
+                        if (disadvantages.Contains(oneOption.Trim().Replace("!", String.Empty).Trim()))
                             return false;
                     }
-                    else if (!protagonist.Advantages.Contains(oneOption.Trim()) && !protagonist.Disadvantages.Contains(oneOption.Trim()))
+                    else if (!advantages.Contains(oneOption.Trim()) && !disadvantages.Contains(oneOption.Trim()))
+                    {
                         return false;
+                    }
                 };
 
                 return true;

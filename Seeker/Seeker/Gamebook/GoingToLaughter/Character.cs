@@ -73,8 +73,7 @@ namespace Seeker.Gamebook.GoingToLaughter
         public override string Save() => String.Join("|",
             Heroism, Villainy, Buffoonery, Inspiration, Balance,
             String.Join(",", Advantages), String.Join(",", Disadvantages),
-            AbubakarOffer
-        );
+            AbubakarOffer);
 
         public override void Load(string saveLine)
         {
