@@ -160,9 +160,15 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             else
             {
                 if (option.Contains(">") || option.Contains("<"))
-                    return !(option.Contains("МОНЕТ >=") && (int.Parse(option.Split('=')[1]) > protagonist.Coins));
+                {
+                    int coins = int.Parse(option.Split('=')[1]);
+                    return !(option.Contains("МОНЕТ >=") && (coins > protagonist.Coins));
+                }
                 else
+                {
                     return Game.Option.IsTriggered(option);
+                }
+                    
             }
         }
 
@@ -193,7 +199,8 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             return new List<string> { "RELOAD" };
         }
 
-        public List<string> Decrease() => ParamChange(decrease: true);
+        public List<string> Decrease() =>
+            ParamChange(decrease: true);
 
         private List<string> ParamChange(bool decrease = false)
         {
@@ -262,7 +269,9 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                     }
                 }
                 else
+                {
                     fight.Add("Вы парировали удары друг друга");
+                }
 
                 fight.Add(String.Empty);
             }
@@ -450,7 +459,8 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
                 int coherenceIndex = 0;
 
-                protagonist.FightStyle = Services.ChooseFightStyle(ref fight, AttackStory, FightEnemies);
+                protagonist.FightStyle = Services.ChooseFightStyle(ref fight,
+                    AttackStory, FightEnemies);
 
                 foreach (Character fighter in FightOrder)
                 {
@@ -465,11 +475,16 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                     fight.Add(String.Empty);
 
                     if (GroupFight)
+                    {
                         fight.Add($"BOLD|{fighter.Name} выбрает противника для атаки: {enemy.Name}");
+                    }
                     else
+                    {
                         fight.Add($"BOLD|{fighter.Name} атакует");
+                    }
 
-                    enemyWounds += Services.Attack(fighter, enemy, ref fight, FightAllies, ref WoundsCount, ref AttackStory, round,
+                    enemyWounds += Services.Attack(fighter, enemy, ref fight,
+                        FightAllies, ref WoundsCount, ref AttackStory, round,
                         coherenceIndex, Coherence, out bool reactionSuccess);
 
                     if (fighter.SpecialTechnique.Contains(Character.SpecialTechniques.TwoBlades))
@@ -493,7 +508,8 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                         coherenceIndex += 1;
                 }
 
-                bool enemyLost = FightEnemies.Where(x => (x.Endurance > 0) || (x.MaxEndurance == 0)).Count() == 0;
+                bool enemyLost = FightEnemies
+                    .Where(x => (x.Endurance > 0) || (x.MaxEndurance == 0)).Count() == 0;
 
                 if (enemyLost || ((WoundsToWin > 0) && (WoundsToWin <= enemyWounds)))
                 {

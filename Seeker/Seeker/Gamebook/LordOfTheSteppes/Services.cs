@@ -15,32 +15,38 @@ namespace Seeker.Gamebook.LordOfTheSteppes
         public static Character FindEnemy(Character fighter, List<Character> Allies, List<Character> Enemies)
         {
             if (Allies.Contains(fighter))
+            {
                 return FindEnemyIn(Enemies);
-
+            }
             else if (Enemies.Contains(fighter))
+            {
                 return FindEnemyIn(Allies);
-
+            }
             else
+            {
                 return null;
+            }
         }
 
         public static Dictionary<string, bool> GetSpecialRules(Character attacker, Character defender, int round)
         {
             Dictionary<string, bool> specialRules = new Dictionary<string, bool>();
+            List<Character.SpecialTechniques> attackTech = attacker.SpecialTechnique;
+            List<Character.SpecialTechniques> defTech = defender.SpecialTechnique;
 
-            specialRules["firstStrike"] = attacker.SpecialTechnique.Contains(Character.SpecialTechniques.FirstStrike);
-            specialRules["powerfulStrike"] = attacker.SpecialTechnique.Contains(Character.SpecialTechniques.PowerfulStrike);
-            specialRules["ignoreReaction"] = attacker.SpecialTechnique.Contains(Character.SpecialTechniques.IgnoreReaction);
-            specialRules["ignoreFirstStrike"] = attacker.SpecialTechnique.Contains(Character.SpecialTechniques.IgnoreFirstStrike);
-            specialRules["poisonBlade"] = attacker.SpecialTechnique.Contains(Character.SpecialTechniques.PoisonBlade);
+            specialRules["firstStrike"] = attackTech.Contains(Character.SpecialTechniques.FirstStrike);
+            specialRules["powerfulStrike"] = attackTech.Contains(Character.SpecialTechniques.PowerfulStrike);
+            specialRules["ignoreReaction"] = attackTech.Contains(Character.SpecialTechniques.IgnoreReaction);
+            specialRules["ignoreFirstStrike"] = attackTech.Contains(Character.SpecialTechniques.IgnoreFirstStrike);
+            specialRules["poisonBlade"] = attackTech.Contains(Character.SpecialTechniques.PoisonBlade);
 
-            specialRules["enemyFirstStrike"] = defender.SpecialTechnique.Contains(Character.SpecialTechniques.FirstStrike) && (round <= 3);
-            specialRules["enemyIgnoreFirstStrike"] = defender.SpecialTechnique.Contains(Character.SpecialTechniques.IgnoreFirstStrike);
-            specialRules["enemyIgnorePowerfulStrike"] = defender.SpecialTechnique.Contains(Character.SpecialTechniques.IgnorePowerfulStrike);
-            specialRules["enemyReaction"] = defender.SpecialTechnique.Contains(Character.SpecialTechniques.Reaction);
-            specialRules["enemyTotalProtection"] = defender.SpecialTechnique.Contains(Character.SpecialTechniques.TotalProtection);
+            specialRules["enemyFirstStrike"] = defTech.Contains(Character.SpecialTechniques.FirstStrike) && (round <= 3);
+            specialRules["enemyIgnoreFirstStrike"] = defTech.Contains(Character.SpecialTechniques.IgnoreFirstStrike);
+            specialRules["enemyIgnorePowerfulStrike"] = defTech.Contains(Character.SpecialTechniques.IgnorePowerfulStrike);
+            specialRules["enemyReaction"] = defTech.Contains(Character.SpecialTechniques.Reaction);
+            specialRules["enemyTotalProtection"] = defTech.Contains(Character.SpecialTechniques.TotalProtection);
 
-            specialRules["extendedDamage"] = attacker.SpecialTechnique.Contains(Character.SpecialTechniques.ExtendedDamage);
+            specialRules["extendedDamage"] = attackTech.Contains(Character.SpecialTechniques.ExtendedDamage);
 
             if (specialRules["ignoreReaction"])
                 specialRules["enemyReaction"] = false;
@@ -94,10 +100,16 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             int enemyCount = Enemies.Where(e => e.Endurance > 0).Count();
 
             if (enemyCount > 2)
-                return ChangeFightStyle("Ох, сколько их набежало!", ref fight, "downTo", Character.FightStyles.Fullback);
+            {
+                return ChangeFightStyle("Ох, сколько их набежало!",
+                    ref fight, "downTo", Character.FightStyles.Fullback);
+            }
             else if (enemyCount > 1)
-                return ChangeFightStyle("Надо аккуратно бить их по очереди!", ref fight, "downTo", Character.FightStyles.Defensive);
-
+            {
+                return ChangeFightStyle("Надо аккуратно бить их по очереди!",
+                    ref fight, "downTo", Character.FightStyles.Defensive);
+            }
+                
             List<int> story = AttackStory[Character.Protagonist.Name];
 
             int fightBalance = 0;
@@ -107,11 +119,20 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                 fightBalance += story[story.Count - i];
 
             if (fightBalance < -1)
-                return ChangeFightStyle("Дела неважно заладились...", ref fight, "downTo", Character.FightStyles.Defensive);
+            {
+                return ChangeFightStyle("Дела неважно заладились...",
+                    ref fight, "downTo", Character.FightStyles.Defensive);
+            }
             else if (fightBalance > 3)
-                return ChangeFightStyle("Раздаю люлей!!", ref fight, "upTo", Character.FightStyles.Aggressive);
+            {
+                return ChangeFightStyle("Раздаю люлей!!",
+                    ref fight, "upTo", Character.FightStyles.Aggressive);
+            }
             else
-                return ChangeFightStyle("Надо потихоньку.", ref fight, "upTo", Character.FightStyles.Counterattacking);
+            {
+                return ChangeFightStyle("Надо потихоньку.",
+                    ref fight, "upTo", Character.FightStyles.Counterattacking);
+            }
         }
 
         public static int InitiativeAndDices(Character character, out string line)
@@ -238,11 +259,17 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                 }
 
                 if (specialRules["extendedDamage"] && !supplAttack)
+                {
                     defender.Endurance -= 3;
+                }
                 else if (supplAttack)
+                {
                     defender.Endurance -= 1;
+                }
                 else
+                {
                     defender.Endurance -= 2;
+                }
 
                 if (specialRules["firstStrike"] && (round == 1))
                 {
