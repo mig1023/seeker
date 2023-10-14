@@ -41,7 +41,8 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             return action;
         }
 
-        public override Option OptionParse(XmlNode xmlOption) => OptionParseWithDo(xmlOption, new Modification());
+        public override Option OptionParse(XmlNode xmlOption) =>
+            OptionParseWithDo(xmlOption, new Modification());
 
         public override Abstract.IModification ModificationParse(XmlNode xmlModification) =>
             (Abstract.IModification)base.ModificationParse(xmlModification, new Modification());

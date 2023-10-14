@@ -16,13 +16,17 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
         public static int WoundConverter(bool Wound, bool LastWound)
         {
             if (LastWound)
+            {
                 return 1;
-
+            }
             else if (Wound)
+            {
                 return 2;
-
+            }
             else
+            {
                 return 3;
+            }
         }
 
         public static int UseGloryInFight(Character enemy, int protagonistHitStrength,
@@ -39,7 +43,6 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             if (cantFightOtherwise && (availableGlory < 1))
             {
                 fight.Add("Кажется, что положение безнадёжно...");
-
                 return 0;
             }
 
@@ -48,7 +51,6 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             if (needGlory > availableGlory)
             {
                 fight.Add("Не хватит очков Славы, чтобы что-то исправить...");
-
                 return -1;
             }
             else
@@ -56,7 +58,6 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                 fight.Add("Вам придётся использовать Славу!");
 
                 Character.Protagonist.Glory -= needGlory;
-
                 return needGlory;
             }
         }
@@ -83,8 +84,10 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                 return bonus;
 
             for (int i = currentEnemy + 1; i < enemies.Count; i++)
+            {
                 if (enemies[i].Health > 1)
                     bonus += 1;
+            }
 
             return bonus;
         }

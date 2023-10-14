@@ -86,9 +86,13 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                 }
 
                 if (protagonist.Glory == 0)
+                {
                     protagonist.Glory = 1;
+                }
                 else
+                {
                     protagonist.Glory += Game.Dice.Roll();
+                }
 
                 return true;
             }
@@ -127,24 +131,38 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                 string value = (values.Length > 1 ? values[1] : "nope");
 
                 if (option.Contains("ПОКРОВИТЕЛЯ НЕТ"))
+                {
                     return String.IsNullOrEmpty(protagonist.Patron.Trim());
+                }
                 else if (option.Contains("!ПОКРОВИТЕЛЬ"))
+                {
                     return protagonist.Patron != value;
+                }
                 else if (option.Contains("ПОКРОВИТЕЛЬ"))
+                {
                     return protagonist.Patron == value;
+                }
 
                 if (option.Contains("БЕЗРАЗЛИЧЕН"))
                     return !protagonist.IsGodsFavor(value) && !protagonist.IsGodsDisFavor(value);
 
                 if (option.Contains("!БЛАГОСКЛОНЕН"))
+                {
                     return !protagonist.IsGodsFavor(value);
+                }
                 else if (option.Contains("БЛАГОСКЛОНЕН"))
+                {
                     return protagonist.IsGodsFavor(value);
+                }
 
                 if (option.Contains("!НЕМИЛОСТИВ"))
+                {
                     return !protagonist.IsGodsDisFavor(value);
+                }
                 else if (option.Contains("НЕМИЛОСТИВ"))
+                {
                     return protagonist.IsGodsDisFavor(value);
+                }
                     
                 if (option.Contains("ВОСКРЕШЕНИЕ"))
                     return Services.IsPosibleResurrection();
@@ -153,14 +171,22 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                 int level = (values.Length > 1 ? int.Parse(values[1]) : 0);
 
                 if (option.Contains("СЛАВА >"))
+                {
                     return level < protagonist.Glory;
+                }
                 else if (option.Contains("СЛАВА <="))
+                {
                     return level >= protagonist.Glory;
-
+                }
+                    
                 if (option.Contains("ПОЗОР >"))
+                {
                     return level < protagonist.Shame;
+                }
                 else if (option.Contains("ПОЗОР <="))
+                {
                     return level >= protagonist.Shame;
+                }
 
                 return AvailabilityTrigger(option);
             }
@@ -173,21 +199,27 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
             int sum = firstDice + secondDice;
 
-            diceCheck.Add($"Кубики: {Game.Dice.Symbol(firstDice)} + {Game.Dice.Symbol(secondDice)} = {sum}");
+            diceCheck.Add($"Кубики: {Game.Dice.Symbol(firstDice)} " +
+                $"+ {Game.Dice.Symbol(secondDice)} = {sum}");
 
             int difference = protagonist.Glory - protagonist.Shame;
 
             string comparison = Game.Services.Сomparison(sum, difference);
 
-            diceCheck.Add($"Разница между Славой и Позором: {protagonist.Glory} - {protagonist.Shame} = {difference}");
-            diceCheck.Add(sum > difference ? $"BIG|BAD|{comparison.ToUpper()} :(" : "BIG|GOOD|МЕНЬШЕ :)");
+            diceCheck.Add($"Разница между Славой и Позором: " +
+                $"{protagonist.Glory} - {protagonist.Shame} = {difference}");
+
+            diceCheck.Add(sum > difference ? 
+                $"BIG|BAD|{comparison.ToUpper()} :(" : "BIG|GOOD|МЕНЬШЕ :)");
 
             return diceCheck;
         }
 
-        public List<string> LtlDiceSpendGlory() => DiceSpendGlory(ltlDice: true);
+        public List<string> LtlDiceSpendGlory() =>
+            DiceSpendGlory(ltlDice: true);
 
-        public List<string> LtlDiceSpendGloryWithOne() => DiceSpendGlory(ltlDice: true, addOne: true);
+        public List<string> LtlDiceSpendGloryWithOne() =>
+            DiceSpendGlory(ltlDice: true, addOne: true);
 
         public List<string> DiceSpendGlory(bool ltlDice = false, bool addOne = false)
         {
@@ -198,7 +230,8 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
             spendGlory.Add($"Кубик: {Game.Dice.Symbol(dice)}{add}");
 
-            Dictionary<int, int> ltlDices = new Dictionary<int, int> { [1] = 1, [2] = 1, [3] = 2, [4] = 2, [5] = 3, [6] = 3 };
+            Dictionary<int, int> ltlDices = new Dictionary<int, int> {
+                [1] = 1, [2] = 1, [3] = 2, [4] = 2, [5] = 3, [6] = 3 };
 
             dice = (ltlDice ? ltlDices[dice] : dice);
 
@@ -301,7 +334,8 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                     ((teams[firstDice] == -1) && (teams[secondDice] == -1));
 
                 racing.Add(String.Empty);
-                racing.Add($"BOLD|Следующий бросок: {Game.Dice.Symbol(firstDice)} и {Game.Dice.Symbol(secondDice)}");
+                racing.Add($"BOLD|Следующий бросок: {Game.Dice.Symbol(firstDice)} " +
+                    $"и {Game.Dice.Symbol(secondDice)}");
 
                 if ((firstDice == 6) && diceDouble)
                 {
@@ -319,7 +353,8 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                     else if (crashDice == 6)
                     {
                         racing.Add(String.Empty);
-                        racing.Add("BIG|BAD|Произошла серьёзная авария, все колесницы выбывают, гонка остановлена :(");
+                        racing.Add("BIG|BAD|Произошла серьёзная авария, " +
+                            "все колесницы выбывают, гонка остановлена :(");
 
                         return racing;
                     }
@@ -339,19 +374,18 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                 }
                 else if (YourRacing && protagonist.IsGodsDisFavor("Посейдон") && ((firstDice == 6) || (secondDice == 6)))
                 {
-                    racing.Add("Все команды продвинулись вперёд, кроме вашей - сам Посейдон выказывает вам свою немилость!");
+                    racing.Add("Все команды продвинулись вперёд, кроме вашей - " +
+                        "сам Посейдон выказывает вам свою немилость!");
 
                     foreach (int i in new List<int> { 1, 3, 4 })
-                        if (teams[i] >= 0)
-                            teams[i] += 1;
+                        teams[i] += teams[i] >= 0 ? 1 : 0;
                 }
                 else if ((firstDice == 6) || (secondDice == 6))
                 {
                     racing.Add("Все команды продвинулись вперёд");
 
                     foreach (int i in new List<int> { 1, 2, 3, 4 })
-                        if (teams[i] >= 0)
-                            teams[i] += 1;
+                        teams[i] += teams[i] >= 0 ? 1 : 0;
                 }
                 else if (firstDice == secondDice)
                 {
@@ -361,11 +395,13 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                 else
                 {
                     foreach (int i in new List<int> { firstDice, secondDice })
+                    {
                         if (teams[i] >= 0)
                         {
                             racing.Add($"{names[i]} команда продвинулась вперёд");
                             teams[i] += 1;
                         }
+                    }
                 }
 
                 int maxSector = 0;
@@ -375,6 +411,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                 racing.Add(String.Empty);
 
                 foreach (int i in new List<int> { 1, 2, 3, 4 })
+                {
                     if (teams[i] < 0)
                     {
                         racing.Add($"{teamsColor[i]}{names[i]} команда выбыла из гонки");
@@ -399,6 +436,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                             winner = i;
                         }
                     }
+                }
 
                 if ((maxSector >= distance) && !doubleMaxSector)
                 {
@@ -504,11 +542,17 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                         $"{weaponName}{useGloryLine} = {protagonistHitStrength}");
 
                     if (autoHit)
+                    {
                         fight.Add("GRAY|На кубиках выпало больше 10, вы попадаете авоматически!");
+                    }
                     else if (autoFail)
+                    {
                         fight.Add("GRAY|На кубиках выпало слишком мало, вы промахиваетесь авоматически!");
+                    }
                     else
+                    {
                         fight.Add($"Его защита: {enemy.Defence}");
+                    }
 
                     if ((autoHit || (protagonistHitStrength > enemy.Defence)) && !autoFail)
                     {
@@ -568,12 +612,18 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                         String.Empty : $" = {protagonist.Defence + armourDefence}";
 
                     if (autoHit)
+                    {
                         fight.Add("GRAY|На кубиках выпало больше 10, он попадает авоматически!");
+                    }
                     else if (autoFail)
+                    {
                         fight.Add("GRAY|На кубиках выпало слишком мало, он промахиваетесь авоматически!");
+                    }
                     else
+                    {
                         fight.Add($"Ваша защита: {protagonist.Defence}{armourLine}{needTotal}");
-
+                    }
+                        
                     if ((autoHit || (enemyHitStrength > (protagonist.Defence + armourDefence))) && !autoFail)
                     {
                         fight.Add($"BOLD|BAD|{enemy.Name} ранил вас");
@@ -596,7 +646,9 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                         }
                     }
                     else
+                    {
                         fight.Add("BOLD|Противник не смог ранить вас");
+                    }
 
                     fight.Add(String.Empty);
                 }

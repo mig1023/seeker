@@ -94,8 +94,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
             return String.Join("|",
                 Strength, Defence, Glory, Shame, armours, weapons, Patron, Resurrection,
-                favor, disfavor, BroochResurrection, Ichor
-            );
+                favor, disfavor, BroochResurrection, Ichor);
         }
 
         public override void Load(string saveLine)
