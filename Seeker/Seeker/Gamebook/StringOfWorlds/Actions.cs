@@ -262,11 +262,16 @@ namespace Seeker.Gamebook.StringOfWorlds
                 Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
 
                 if (firstDice == secondDice)
+                {
                     succesBreaked = true;
+                }
                 else
+                {
                     protagonist.Strength -= 1;
+                }
 
-                string result = (succesBreaked ? "удачный, дверь поддалась!" : "неудачный, -1 сила");
+                string result = succesBreaked ?
+                    "удачный, дверь поддалась!" : "неудачный, -1 сила";
 
                 breakingDoor.Add($"Удар: " +
                     $"{Game.Dice.Symbol(firstDice)} + " +
@@ -283,8 +288,14 @@ namespace Seeker.Gamebook.StringOfWorlds
             List<string> bargain = new List<string>();
 
             int numberOfDeals = 0;
+            List<string> things = new List<string>
+            {
+                "Веер",
+                "Полоска ароматической смолы",
+                "Мягкая серебристая шкура"
+            };
 
-            foreach (string thing in new List<string> { "Веер", "Полоска ароматической смолы", "Мягкая серебристая шкура" })
+            foreach (string thing in things)
             {
                 if (Game.Option.IsTriggered(thing))
                 {
@@ -299,7 +310,9 @@ namespace Seeker.Gamebook.StringOfWorlds
                 bargain.Add($"BIG|ИТОГО: вы получили {numberOfDeals} {coins}");
             }
             else
+            {
                 bargain.Add("BIG|Вам нечего предложить графини :(");
+            }
 
             protagonist.Coins += numberOfDeals;
 
@@ -395,7 +408,9 @@ namespace Seeker.Gamebook.StringOfWorlds
                         }
                     }
                     else
+                    {
                         fight.Add("BOLD|Ничья в раунде");
+                    }
 
                     attackAlready = true;
 

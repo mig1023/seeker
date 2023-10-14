@@ -27,18 +27,24 @@ namespace Seeker.Gamebook.StringOfWorlds
                 else if (xmlOption.Attributes["Goto"].Value == "Gate")
                 {
                     if (Character.Protagonist.GateCode <= 0)
+                    {
                         continue;
+                    }
                     else
                     {
                         foreach (XmlNode xmlModification in xmlParagraph.SelectNodes("Modifications/*"))
+                        {
                             if (xmlModification.Name == "GateCode")
                                 Character.Protagonist.GateCode += Xml.IntParse(xmlModification.Attributes["Value"]);
+                        }
                         
                         option.Goto = Character.Protagonist.GateCode;
                     }
                 }
                 else if (int.TryParse(xmlOption.Attributes["Goto"].Value, out int _))
+                {
                     option.Goto = Xml.IntParse(xmlOption.Attributes["Goto"]);
+                }
                 else
                 {
                     List<string> link = xmlOption.Attributes["Goto"].Value.Split(',').ToList<string>();

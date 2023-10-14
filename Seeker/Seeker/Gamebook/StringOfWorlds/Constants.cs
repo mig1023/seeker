@@ -21,16 +21,21 @@ namespace Seeker.Gamebook.StringOfWorlds
         public override string GetColor(ButtonTypes type)
         {
             if (Game.Settings.IsEnabled("WithoutStyles"))
+            {
                 return base.GetColor(type);
-
+            }
             else if ((type == ButtonTypes.Border) || (type == ButtonTypes.Continue) || (type == ButtonTypes.System))
+            {
                 return String.Empty;
-
+            }
             else if (type == ButtonTypes.ButtonFont)
+            {
                 return СontrastColor(LastColor);
-
+            }
             else
+            {
                 return NextColor();
+            }
         }
 
         public static void RandomColor()
@@ -57,9 +62,13 @@ namespace Seeker.Gamebook.StringOfWorlds
         private static bool ShiftDirectionCheck()
         {
             if (ShiftDirectionUp)
+            {
                 return LastColor[ShiftFactor] < (255 - ColorShiftAmount);
+            }
             else
+            {
                 return LastColor[ShiftFactor] < ColorShiftAmount;
+            }
         }
 
         private static string HexColor(int r, int g, int b)
@@ -72,16 +81,21 @@ namespace Seeker.Gamebook.StringOfWorlds
         public override string GetColor(Game.Data.ColorTypes type) 
         {
             if (Game.Settings.IsEnabled("WithoutStyles"))
+            {
                 return base.GetColor(type);
-
-            if (type == ColorTypes.StatusBar)
+            }
+            else if (type == ColorTypes.StatusBar)
+            {
                 return HexColor(StatusColor[0], StatusColor[1], StatusColor[2]);
-
+            }
             else if (type == ColorTypes.StatusFont)
+            {
                 return СontrastColor(StatusColor);
-
+            }
             else
+            {
                 return String.Empty;
+            }
         }
 
         private string СontrastColor(List<int> color) =>

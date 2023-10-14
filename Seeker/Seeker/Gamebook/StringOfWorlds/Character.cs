@@ -89,8 +89,7 @@ namespace Seeker.Gamebook.StringOfWorlds
 
         public override string Save() => String.Join("|",
             MaxSkill, Skill, MaxStrength, Strength, Charm, Blaster, GateCode, Equipment, Coins,
-            String.Join(",", Luck.Select(x => x ? "1" : "0"))
-        );
+            String.Join(",", Luck.Select(x => x ? "1" : "0")));
 
         public override void Load(string saveLine)
         {
