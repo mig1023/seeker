@@ -9,8 +9,10 @@ namespace Seeker.Gamebook.Cyberpunk
             if (Name == "Normalization")
             {
                 foreach (string param in Constants.NormalizationParams)
+                {
                     if (GetProperty(Character.Protagonist, param) == 0)
                         SetProperty(Character.Protagonist, param, 30);
+                }
             }
             else
             {

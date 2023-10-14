@@ -161,9 +161,13 @@ namespace Seeker.Gamebook.Cyberpunk
             }
 
             if (Stat.Contains(','))
+            {
                 test.Add($"Параметры: {paramsLine.TrimEnd(' ', '+')} = {paramsLevel}");
+            }
             else
+            {
                 test.Add($"Параметр: {paramsLine.TrimEnd(' ', '+')}");
+            }
 
             int dice = Game.Dice.Roll(size: 100);
             bool success = ReverseCheck ? dice > paramsLevel : dice <= paramsLevel;
@@ -182,9 +186,9 @@ namespace Seeker.Gamebook.Cyberpunk
                 bool cybernetics = (Stat == "Cybernetics");
 
                 if (secondButton)
-                    return (stat > (cybernetics ? 1 : 0));
+                    return stat > (cybernetics ? 1 : 0);
                 else
-                    return (stat < (cybernetics ? 99 : 100));
+                    return stat < (cybernetics ? 99 : 100);
             }
             else if ((Type == "Test") && Stat.StartsWith("Selfcontrol"))
             {
