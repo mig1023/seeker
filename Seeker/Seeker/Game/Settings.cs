@@ -44,8 +44,14 @@ namespace Seeker.Game
             Load();
         }
 
-        private static void Save() =>
-            App.Current.Properties["Settings"] = string.Join(",", Values.Select(x => x.Key + "=" + x.Value).ToArray());
+        private static void Save()
+        {
+            string setting = string
+                .Join(",", Values.Select(x => x.Key + "=" + x.Value)
+                .ToArray());
+
+            App.Current.Properties["Settings"] = setting;
+        }
 
         private static bool IsSettingsSaved() =>
             App.Current.Properties.TryGetValue("Settings", out _);

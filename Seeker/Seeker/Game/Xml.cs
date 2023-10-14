@@ -19,13 +19,8 @@ namespace Seeker.Game
         public static int IntParse(XmlNode xmlNode) =>
             IntParse(xmlNode?.InnerText ?? "0");
 
-        public static string OptionTextParse(XmlNode xmlOption)
-        {
-            if (xmlOption.Name == "Start")
-                return Constants.START_TEXT;
-            else
-                return StringParse(xmlOption.Attributes["Text"]);
-        }
+        public static string OptionTextParse(XmlNode xmlOption) =>
+            xmlOption.Name == "Start" ? Constants.START_TEXT : StringParse(xmlOption.Attributes["Text"]);
 
         public static string StringParse(XmlNode xmlNode) =>
             xmlNode?.InnerText ?? String.Empty;
@@ -49,15 +44,14 @@ namespace Seeker.Game
         public static bool BoolParse(XmlNode xmlNode) =>
             xmlNode != null;
 
-        public static Abstract.IModification ModificationParse(XmlNode xmlNode, Abstract.IModification modification)
+        public static Abstract.IModification ModificationParse(XmlNode xmlNode,
+            Abstract.IModification modification)
         {
             if (xmlNode == null)
                 return null;
 
-            if (xmlNode.Attributes["Name"] != null)
-                modification.Name = xmlNode.Attributes["Name"].InnerText;
-            else
-                modification.Name = xmlNode.Name;
+            modification.Name = xmlNode.Attributes["Name"] != null ?
+                xmlNode.Attributes["Name"].InnerText : xmlNode.Name;
             
             modification.Empty = BoolParse(xmlNode.Attributes["Empty"]);
             modification.Restore = BoolParse(xmlNode.Attributes["Restore"]);
@@ -118,7 +112,8 @@ namespace Seeker.Game
             return output;
         }
 
-        public static void AllTextParse(ref StackLayout textPlace, int id, string optionName, out string text)
+        public static void AllTextParse(ref StackLayout textPlace,
+            int id, string optionName, out string text)
         {
             text = String.Empty;
 
@@ -230,21 +225,38 @@ namespace Seeker.Game
 
                 if (xmlNode.Attributes["ItemsByOrder"] != null)
                 {
-                    List<string> lines = xmlNode.Attributes["ItemsByOrder"].InnerText.Split(',').Select(x => x.Trim()).ToList();
+                    List<string> lines = xmlNode.Attributes["ItemsByOrder"]
+                        .InnerText
+                        .Split(',')
+                        .Select(x => x.Trim())
+                        .ToList();
 
                     for (int i = 1; i <= lines.Count; i++)
+                    {
                         if (!String.IsNullOrEmpty(lines[i - 1]))
                             items.Add(i.ToString(), lines[i - 1]);
+                    }
                 }
                 else if (xmlNode.Attributes["Items"] != null)
                 {
-                    List<string> lines = xmlNode.Attributes["Items"].InnerText.Split(',').Select(x => x.Trim()).ToList();
-                    items = lines.ToDictionary(x => ItemLineSplit(x), x => ItemLineSplit(x, second: true));
+                    List<string> lines = xmlNode.Attributes["Items"]
+                        .InnerText
+                        .Split(',')
+                        .Select(x => x.Trim())
+                        .ToList();
+
+                    items = lines
+                        .ToDictionary(x => ItemLineSplit(x), x => ItemLineSplit(x, second: true));
                 }
                 else
                 {
-                    List<XmlNode> xmlNodes = xmlNode.SelectNodes("Item").Cast<XmlNode>().ToList();
-                    items = xmlNodes.ToDictionary(x => x.Attributes["Name"].InnerText, x => x.Attributes["Value"].InnerText);
+                    List<XmlNode> xmlNodes = xmlNode
+                        .SelectNodes("Item")
+                        .Cast<XmlNode>()
+                        .ToList();
+
+                    items = xmlNodes
+                        .ToDictionary(x => x.Attributes["Name"].InnerText, x => x.Attributes["Value"].InnerText);
                 }
 
                 Data.Constants.LoadDictionary(xmlNode.Name, items);
@@ -268,10 +280,14 @@ namespace Seeker.Game
         private static void AddButtonsTexts(XmlNode xmlNode)
         {
             if (xmlNode.Attributes["Action"] == null)
+            {
                 Data.Constants.LoadButtonText(xmlNode.Name, xmlNode.InnerText);
+            }
             else
+            {
                 foreach (string type in Multiples(xmlNode, "Action"))
                     Data.Constants.LoadButtonText(type, xmlNode.InnerText);
+            }
         }
 
         private static List<string> Multiples(XmlNode xmlNode, string attributes) =>
@@ -315,7 +331,9 @@ namespace Seeker.Game
                 description.BorderColor = ColorLoad(colors, "Border", Data.ColorTypes.BookBorderColor);
             }
             else
+            {
                 description.BookColor = ColorLoad(data, "Color", Data.ColorTypes.BookColor);
+            }
         }
 
         public static List<Output.Settings> GetXmlSettings()
