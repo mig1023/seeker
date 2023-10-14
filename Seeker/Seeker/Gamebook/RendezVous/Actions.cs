@@ -33,10 +33,13 @@ namespace Seeker.Gamebook.RendezVous
                         int level = Game.Services.LevelParse(oneOption);
 
                         if (oneOption.Contains("ОСОЗНАНИЕ >") && (level >= protagonist.Awareness))
+                        {
                             return false;
-
+                        }
                         else if (oneOption.Contains("ОСОЗНАНИЕ <=") && (level < protagonist.Awareness))
+                        {
                             return false;
+                        }
                     }
                     else if (oneOption.Contains("!"))
                     {
