@@ -765,7 +765,9 @@ namespace Seeker.Output
                     actions.FontAttributes = FontAttributes.Bold;
                 }
                 else
+                {
                     actions.HorizontalTextAlignment = TextAlignment.Start;
+                }
 
                 if (text.Contains("LINE|"))
                     actionLabels.Add(SplitterLine(null, null));

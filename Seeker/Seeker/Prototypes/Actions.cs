@@ -52,11 +52,7 @@ namespace Seeker.Prototypes
                 return Button;
 
             Dictionary<string, string> texts = Data.Constants.ButtonText();
-
-            if (texts.ContainsKey(Type))
-                return texts[Type];
-            else
-                return String.Empty;
+            return texts.ContainsKey(Type) ? texts[Type] : String.Empty;
         }
                         
         public virtual List<string> Status() =>
@@ -77,13 +73,17 @@ namespace Seeker.Prototypes
         public static bool AvailabilityTrigger(string option)
         {
             if (String.IsNullOrEmpty(option))
+            {
                 return true;
-
+            }
             else if (option.Contains("!"))
+            {
                 return !Option.IsTriggered(option.Replace("!", String.Empty).Trim());
-
+            }
             else
+            {
                 return Option.IsTriggered(option);
+            }
         }
 
         public virtual bool GameOver(out int toEndParagraph, out string toEndText)

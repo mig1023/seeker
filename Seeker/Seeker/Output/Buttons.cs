@@ -228,7 +228,9 @@ namespace Seeker.Output
                     button.BorderWidth = Constants.BORDER_WIDTH;
                 }
                 else
+                {
                     button.BorderWidth = 0;
+                }
             }
           
             if (system)
