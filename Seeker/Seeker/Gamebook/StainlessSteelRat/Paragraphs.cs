@@ -27,7 +27,10 @@ namespace Seeker.Gamebook.StainlessSteelRat
                 }
                 else
                 {
-                    List<string> link = xmlOption.Attributes["Goto"].Value.Split(',').ToList<string>();
+                    List<string> link = xmlOption.Attributes["Goto"].Value
+                        .Split(',')
+                        .ToList<string>();
+
                     option.Goto = int.Parse(link[random.Next(link.Count())]);
                 }
 
