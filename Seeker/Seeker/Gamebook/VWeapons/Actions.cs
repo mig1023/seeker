@@ -100,7 +100,9 @@ namespace Seeker.Gamebook.VWeapons
                             return false;
                     }
                     else if (!Game.Option.IsTriggered(oneOption.Trim()))
+                    {
                         return false;
+                    }
                 }
 
                 return true;
@@ -117,9 +119,13 @@ namespace Seeker.Gamebook.VWeapons
             int target = Game.Dice.Roll();
 
             if (target == 6)
+            {
                 damage.Add("BIG|GOOD|Вам повезло и вы отделались лёгким испугом! :)");
+            }
             else
+            {
                 Services.ProtagonistWound(protagonist, ref damage, target, Value);
+            }
 
             return damage;
         }
@@ -218,9 +224,13 @@ namespace Seeker.Gamebook.VWeapons
                         return fight;
 
                     if (DamagedWeapon)
+                    {
                         dogFightprotagonist = (damagedWeapon <= 0);
+                    }
                     else
+                    {
                         dogFightprotagonist = Dogfight || (protagonist.Cartridges <= 0) || (protagonist.Accuracy <= 0);
+                    }
 
                     if (!dogFightprotagonist)
                     {
@@ -228,9 +238,13 @@ namespace Seeker.Gamebook.VWeapons
                         fight.Add($"Вы стреляете{shots}…");
 
                         if (DamagedWeapon)
+                        {
                             damagedWeapon -= 1;
+                        }
                         else
+                        {
                             protagonist.Cartridges -= 1;
+                        }
 
                         enemy.Hitpoints -= protagonist.Accuracy;
                         fight.Add($"GOOD|Ваш выстрел отнимает у него {protagonist.Accuracy} ед. здоворья.");
@@ -253,10 +267,13 @@ namespace Seeker.Gamebook.VWeapons
                     }
                     
                     if (enemy.Hitpoints <= 0)
+                    {
                         fight.Add($"GOOD|{enemy.Name} убит!");
-
+                    }
                     else if (!enemy.First && Services.EnemyAttack(protagonist, enemy, ref fight, Dogfight))
+                    {
                         return fight;
+                    }
 
                     if (Services.NoMoreEnemies(FightEnemies))
                     {
