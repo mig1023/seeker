@@ -71,9 +71,13 @@ namespace Seeker.Gamebook.ConquistadorDiary
             if (Type == "Get-Decrease")
             {
                 if (secondButton)
+                {
                     return protagonist.CurrentBet > 1;
+                }
                 else
+                {
                     return (protagonist.Points > 0) && (protagonist.CurrentBet < 6);
+                }
             }
             else
             {
@@ -131,11 +135,9 @@ namespace Seeker.Gamebook.ConquistadorDiary
         public List<string> RollCoin()
         {
             bool coin = Game.Dice.Roll() % 2 == 0;
+            string line = coin ? "GOOD|На монетке выпал ОРЁЛ" : "BAD|На монетке выпала РЕШКА";
 
-            if (coin)
-                return new List<string> { "BIG|GOOD|На монетке выпал ОРЁЛ" };
-            else
-                return new List<string> { "BIG|BAD|На монетке выпала РЕШКА" };
+            return new List<string> { $"BIG|{line}" };
         }
 
         public List<string> CountScore()
