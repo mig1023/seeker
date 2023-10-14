@@ -57,24 +57,32 @@ namespace Seeker.Prototypes
         public virtual void LoadColor(string type, string color)
         {
             if (Enum.TryParse(type, out ColorTypes colorTypes))
+            {
                 ColorsList.Add(colorTypes, $"#{color}");
-
+            }
             else if (Enum.TryParse(type, out ButtonTypes buttonTypes))
+            {
                 ButtonsColorsList.Add(buttonTypes, $"#{color}");
+            }
         }
 
-        public virtual List<int> GetParagraphsWithoutStatuses() => WithoutStatuses;
+        public virtual List<int> GetParagraphsWithoutStatuses() =>
+            WithoutStatuses;
 
-        public virtual List<int> GetParagraphsWithoutStaticsButtons() => WithoutStaticsButtons;
+        public virtual List<int> GetParagraphsWithoutStaticsButtons() =>
+            WithoutStaticsButtons;
+
+        private void SetPropertyValue(string name, object value) =>
+            this.GetType().GetProperty(name).SetValue(this, value);
 
         public virtual void LoadList(string name, List<string> list)
         {
             PropertyInfo listType = this.GetType().GetProperty(name);
 
             if (listType.PropertyType == typeof(List<int>))
-                this.GetType().GetProperty(name).SetValue(this, list.Select(x => int.Parse(x)).ToList());
+                SetPropertyValue(name, list.Select(x => int.Parse(x)).ToList());
             else
-                this.GetType().GetProperty(name).SetValue(this, list.Select(x => x.Trim()).ToList());
+                SetPropertyValue(name, list.Select(x => x.Trim()).ToList());
         }
 
         public virtual void LoadDictionary(string name, Dictionary<string, string> dictionary)
@@ -82,25 +90,28 @@ namespace Seeker.Prototypes
             PropertyInfo dictType = this.GetType().GetProperty(name);
 
             if (dictType.PropertyType == typeof(Dictionary<int, string>))
-                this.GetType().GetProperty(name).SetValue(
-                    this, dictionary.ToDictionary(x => int.Parse(x.Key), x => x.Value));
-
+            {
+                SetPropertyValue(name, dictionary.ToDictionary(x => int.Parse(x.Key), x => x.Value));
+            }
             else if (dictType.PropertyType == typeof(Dictionary<string, int>))
-                this.GetType().GetProperty(name).SetValue(
-                    this, dictionary.ToDictionary(x => x.Key, x => int.Parse(x.Value)));
-
+            {
+                SetPropertyValue(name, dictionary.ToDictionary(x => x.Key, x => int.Parse(x.Value)));
+            }
             else if (dictType.PropertyType == typeof(Dictionary<int, int>))
-                this.GetType().GetProperty(name).SetValue(
-                    this, dictionary.ToDictionary(x => int.Parse(x.Key), x => int.Parse(x.Value)));
-
+            {
+                SetPropertyValue(name, dictionary.ToDictionary(x => int.Parse(x.Key), x => int.Parse(x.Value)));
+            }
             else
-                this.GetType().GetProperty(name).SetValue(this, dictionary);
+            {
+                SetPropertyValue(name, dictionary);
+            }
         }
 
         public static string DefaultColor(Data.ColorTypes type) =>
             Output.Constants.DEFAULT_COLORS[type];
 
-        public virtual string GetFont() => String.Empty;
+        public virtual string GetFont() =>
+            String.Empty;
 
         public virtual bool GetParagraphsStatusesLimit(out int limitStart, out int limitEnd)
         {
@@ -136,12 +147,16 @@ namespace Seeker.Prototypes
                 TextFontSizeDefault = fontSize;
         }
 
-        public virtual Output.Interface.TextFontSize GetFontSize() => TextFontSizeDefault;
+        public virtual Output.Interface.TextFontSize GetFontSize() =>
+            TextFontSizeDefault;
 
-        public virtual int GetStartParagraph() => StartParagraph;
+        public virtual int GetStartParagraph() =>
+            StartParagraph;
 
-        public virtual Dictionary<string, string> ButtonText() => ButtonTextList;
+        public virtual Dictionary<string, string> ButtonText() =>
+            ButtonTextList;
 
-        public void LoadButtonText(string button, string text) => ButtonTextList.Add(button, text);
+        public void LoadButtonText(string button, string text) =>
+            ButtonTextList.Add(button, text);
     }
 }
