@@ -15,9 +15,13 @@ namespace Seeker.Gamebook.ThreePaths
             else if (Name == "Time")
             {
                 if (Init)
+                {
                     Character.Protagonist.Time = 0;
+                }
                 else
+                {
                     Character.Protagonist.Time += Value;
+                }
             }
             else if (Name == "RemoveSpell")
             {
