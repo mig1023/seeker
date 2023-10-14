@@ -161,23 +161,30 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             toEndText = String.Empty;
 
             if (protagonist.Hitpoints <= 0)
+            {
                 toEndText = Output.Constants.GAMEOVER_TEXT;
-
+            }
             else if (protagonist.ConneryHitpoints <= 0)
+            {
                 toEndText = "Коннери погиб, ваше путешествие окончено";
-
+            }
             else if (protagonist.ConneryTrust <= 0)
+            {
                 toEndText = "Коннери потерял к вам всякое доверие, ваше путешествие окончено";
-
+            }
             else
+            {
                 return false;
+            }
 
             return true;
         }
 
         public override bool IsButtonEnabled(bool secondButton = false)
         {
-            bool bySpecButton = (Specialization != null) && (protagonist.Specialization != Character.SpecializationType.Nope);
+            bool bySpecButton = (Specialization != null) &&
+                (protagonist.Specialization != Character.SpecializationType.Nope);
+
             bool byPrice = (Price > 0) && (protagonist.Gold < Price);
             bool byCureSprain = (Type == "CureSprain") && (protagonist.Magicpoints <= 0);
 
@@ -279,8 +286,13 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
                         if (option.Contains("ВОИН") || option.Contains("МАГ") || option.Contains("МЕТАТЕЛЬ"))
                         {
-                            Character.SpecializationType spec = Constants.GetSpecializationType()[option.Replace("!", String.Empty)];
-                            return (option.Contains("!") ? (protagonist.Specialization != spec) : (protagonist.Specialization == spec));
+                            string type = option.Replace("!", String.Empty);
+                            Character.SpecializationType spec = Constants.GetSpecializationType()[type];
+
+                            bool specialization = option.Contains("!") ?
+                                (protagonist.Specialization != spec) : (protagonist.Specialization == spec);
+
+                            return specialization;
                         }
                     }
                     else if (oneOption.Contains("!"))
@@ -288,12 +300,14 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                         if (Game.Option.IsTriggered(oneOption.Replace("!", String.Empty).Trim()))
                             return false;
                     }
-
                     else if (orLogic && Game.Option.IsTriggered(oneOption.Trim()))
+                    {
                         return true;
-
+                    }
                     else if (!orLogic && !Game.Option.IsTriggered(oneOption.Trim()))
+                    {
                         return false;
+                    }
                 }
 
                 return !orLogic;
@@ -320,7 +334,9 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 return new List<string> { "BIG|GOOD|Коннери хмыкнул и съел :)" };
             }
             else
+            {
                 return new List<string> { "BIG|BAD|Коннери отказался :(" };
+            }
         }
 
         public List<string> FootwrapsReplacement()
@@ -445,8 +461,10 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                             return Services.LostFight(fight);
                     }
                     else
+                    {
                         fight.Add($"BOLD|{wounds[1].TrimStart()} не преуспели");
-
+                    }
+                        
                     fight.Add(String.Empty);
                 }
 
@@ -587,17 +605,22 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                             incrementWounds += 1;
                         }
                         else
+                        {
                             protagonist.Hitpoints -= 2;
+                        }
 
                         if (protagonist.Hitpoints <= 0)
                             return Services.LostFight(fight);
                     }
                     else
+                    {
                         fight.Add("BOLD|Ничья в раунде");
+                    }
 
                     if (GolemFight && (golemRound > 0))
+                    {
                         golemRound -= 1;
-
+                    }
                     else if (GolemFight)
                     {
                         golemRound = 4;

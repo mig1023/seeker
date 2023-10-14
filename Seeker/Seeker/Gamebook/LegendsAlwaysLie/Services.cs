@@ -28,15 +28,21 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
         public static bool EnemyLostFight(List<Character> FightEnemies, ref List<string> fight, bool connery = false)
         {
             if (FightEnemies.Where(x => x.Hitpoints > 0).Count() > 0)
+            {
                 return false;
+            }
             else
             {
                 fight.Add(String.Empty);
 
                 if (connery)
+                {
                     fight.Add("BIG|GOOD|Коннери его добил, вы ПОБЕДИЛИ :)");
+                }
                 else
+                {
                     fight.Add("BIG|GOOD|Вы ПОБЕДИЛИ :)");
+                }
 
                 return true;
             }
