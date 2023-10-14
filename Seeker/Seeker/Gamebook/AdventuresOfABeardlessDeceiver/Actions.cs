@@ -20,8 +20,10 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
         public override List<string> Representer()
         {
             if (Level > 0)
-                return new List<string> { $"Проверка {Constants.StatNames[Stat]}, уровень {Level}" };
-
+            {
+                return new List<string> {
+                    $"Проверка {Constants.StatNames[Stat]}, уровень {Level}" };
+            }
             else if (!String.IsNullOrEmpty(Stat))
             {
                 int currentStat = GetProperty(protagonist, Stat);
@@ -30,13 +32,17 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                 return new List<string> { $"{Head}{diffLine}" };
             }
             else if (Price > 0)
+            {
                 return new List<string> { $"{Head}, {Price} таньга" };
-
+            }
             else if (!String.IsNullOrEmpty(Head))
+            {
                 return new List<string> { Head };
-
+            }
             else
+            {
                 return new List<string> { };
+            }
         }
 
         public override List<string> Status() => new List<string>
@@ -79,10 +85,16 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
         {
             List<string> staticButtons = new List<string> { };
 
-            if (Game.Data.Constants.GetParagraphsWithoutStaticsButtons().Contains(Game.Data.CurrentParagraphID))
+            bool withoutStaticButtons = Game.Data.Constants
+                .GetParagraphsWithoutStaticsButtons()
+                .Contains(Game.Data.CurrentParagraphID);
+
+            if (withoutStaticButtons)
                 return staticButtons;
 
-            if (Game.Checks.ExistsInParagraph(actionName: "TEST") && (protagonist.Kumis > 0) && !NextTestWithKumis)
+            bool testInParagraph = Game.Checks.ExistsInParagraph(actionName: "TEST");
+
+            if (testInParagraph && (protagonist.Kumis > 0) && !NextTestWithKumis)
                 staticButtons.Add("ВЫПИТЬ КУМЫСА");
 
             return staticButtons;
@@ -97,7 +109,9 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                 return true;
             }
             else
+            {
                 return false;
+            }
         }
 
         public override bool GameOver(out int toEndParagraph, out string toEndText)
@@ -111,22 +125,29 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
         public override bool IsButtonEnabled(bool secondButton = false)
         {
             if (Type == "SellHorse")
+            {
                 return Game.Option.IsTriggered("ArabianHorse");
-
+            }
             else if (Level > 0)
+            {
                 return true;
-
+            }
             else if ((Price <= 0) && secondButton)
+            {
                 return GetProperty(protagonist, Stat) > 1;
-
+            }
             else if ((Price <= 0) && !secondButton)
+            {
                 return protagonist.StatBonuses > 0;
-
+            }
             else if (Used)
+            {
                 return false;
-
+            }
             else
+            {
                 return protagonist.Tanga >= Price;
+            }
         }
 
         public override bool Availability(string option)
