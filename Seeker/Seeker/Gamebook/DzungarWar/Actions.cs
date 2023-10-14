@@ -38,10 +38,13 @@ namespace Seeker.Gamebook.DzungarWar
                 string diffLine = String.Empty;
 
                 if (currentStat > 11)
+                {
                     diffLine = " (максимум)";
-
+                }
                 else if (currentStat > 1)
+                {
                     diffLine = $" (+{currentStat - 1})";
+                }
 
                 return new List<string> { $"{Head}{diffLine}" };
             }
@@ -129,21 +132,20 @@ namespace Seeker.Gamebook.DzungarWar
                 protagonist.Tincture -= 1;
                 NextTestWithTincture = true;
             }
-
             else if (action == "ВЫПИТЬ ОТВАР ЖЕНЬШЕНЯ")
             {
                 protagonist.Ginseng -= 1;
                 NextTestWithGinseng = true;
             }
-
             else if (action == "ВЫПИТЬ АЙРАГА")
             {
                 protagonist.Airag -= 1;
                 NextTestWithAirag = true;
             }
-
             else
+            {
                 return false;
+            }
 
             return true;
         }
@@ -171,17 +173,21 @@ namespace Seeker.Gamebook.DzungarWar
         public override bool IsButtonEnabled(bool secondButton = false)
         {
             if (Level > 0)
+            {
                 return true;
-
+            }
             else if (Used)
+            {
                 return false;
-
+            }
             else if (Type == "Brother")
+            {
                 return protagonist.Brother <= 0;
-
+            }
             else if (StatToMax)
+            {
                 return protagonist.MaxBonus > 0;
-
+            }
             else if (!String.IsNullOrEmpty(Stat))
             {
                 int stat = GetProperty(protagonist, Stat);
@@ -191,12 +197,14 @@ namespace Seeker.Gamebook.DzungarWar
                 else 
                     return ((protagonist.StatBonuses > 0) && (stat < 12));
             }
-
             else if (Price >= 0)
+            {
                 return (protagonist.Tanga >= Price);
-
+            }
             else
+            {
                 return true;
+            }
         }
 
         public override bool Availability(string option)
@@ -247,7 +255,9 @@ namespace Seeker.Gamebook.DzungarWar
                             return false;
                     }
                     else if (!Game.Option.IsTriggered(oneOption.Trim()))
+                    {
                         return false;
+                    }
                 }
 
                 return true;

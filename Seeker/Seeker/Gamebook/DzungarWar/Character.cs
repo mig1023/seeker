@@ -99,8 +99,7 @@ namespace Seeker.Gamebook.DzungarWar
 
         public override string Save() => String.Join("|",
             Strength, Skill, Wisdom, Cunning, Oratory, Danger, Favour, Tanga,
-            StatBonuses, MaxBonus, Brother, Tincture, Ginseng, Airag
-        );
+            StatBonuses, MaxBonus, Brother, Tincture, Ginseng, Airag);
 
         public override void Load(string saveLine)
         {

@@ -31,7 +31,9 @@ namespace Seeker.Gamebook.DzungarWar
             }
 
             if (String.IsNullOrEmpty(TriggerTestPenalty))
+            {
                 return level;
+            }
 
             string[] penalties = TriggerTestPenalty.Split(';');
 
