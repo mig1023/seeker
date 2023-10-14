@@ -20,7 +20,8 @@ namespace Seeker.Gamebook.HeartOfIce
 
             if (xmlAction["Benefit"] != null)
             {
-                action.BenefitList = new List<Abstract.IModification> { ModificationParse(xmlAction["Benefit"]) };
+                action.BenefitList = new List<Abstract.IModification> {
+                    ModificationParse(xmlAction["Benefit"]) };
             }
             else if (xmlAction["Benefits"] != null)
             {

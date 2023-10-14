@@ -14,11 +14,13 @@ namespace Seeker.Gamebook.HeartOfIce
             bool byFood = DoByName("ByFood", () => LifeByFood());
 
             if (skill || rmSkill || rmTrigger || byTrigger || byNotTrigger || byFood)
+            {
                 return;
-
+            }
             else if (Name == "ReplaceTrigger")
             {
-                string[] triggers = ValueString.Split(new string[] { "->" }, StringSplitOptions.RemoveEmptyEntries);
+                string[] triggers = ValueString
+                    .Split(new string[] { "->" }, StringSplitOptions.RemoveEmptyEntries);
 
                 if (!Game.Option.IsTriggered(triggers[0].Trim()))
                     return;
@@ -27,7 +29,9 @@ namespace Seeker.Gamebook.HeartOfIce
                 Game.Option.Trigger(triggers[1].Trim());
             }
             else
+            {
                 base.Do(Character.Protagonist);
+            }
         }
 
         private bool IsTriggered(string triggersLine)
@@ -35,15 +39,20 @@ namespace Seeker.Gamebook.HeartOfIce
             string[] triggers = triggersLine.Split('|');
 
             foreach (string trigger in triggers)
-                if (Game.Option.IsTriggered(trigger.Trim()) || Character.Protagonist.Skills.Contains(trigger.Trim()))
+            {
+                bool isSkill = Character.Protagonist.Skills.Contains(trigger.Trim());
+
+                if (Game.Option.IsTriggered(trigger.Trim()) || isSkill)
                     return true;
+            }
 
             return false;
         }
 
         private void LifeByTrigger(bool notLogic = false)
         {
-            string[] values = ValueString.Split(new string[] { "->" }, StringSplitOptions.RemoveEmptyEntries);
+            string[] values = ValueString
+                .Split(new string[] { "->" }, StringSplitOptions.RemoveEmptyEntries);
 
             if (IsTriggered(values[0]) != notLogic)
                 Character.Protagonist.Life += int.Parse(values[1].Trim());
@@ -55,7 +64,8 @@ namespace Seeker.Gamebook.HeartOfIce
 
             if ((ValueString != null) && (ValueString.Contains("->")))
             {
-                string[] values = ValueString.Split(new string[] { "->" }, StringSplitOptions.RemoveEmptyEntries);
+                string[] values = ValueString
+                    .Split(new string[] { "->" }, StringSplitOptions.RemoveEmptyEntries);
 
                 if (!IsTriggered(values[0]))
                     protagonist.Life -= Game.Xml.IntParse(values[1]);

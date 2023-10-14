@@ -111,13 +111,17 @@ namespace Seeker.Gamebook.HeartOfIce
         public bool Available()
         {
             if (!String.IsNullOrEmpty(Untrigger))
+            {
                 return Game.Option.IsTriggered(Untrigger);
-
+            }
             else if (SellType == "Пистолет")
+            {
                 return protagonist.Shots > 0;
-
+            }
             else if (SellType == "Еда")
+            {
                 return protagonist.Food > 0;
+            }
 
             return false;
         }
