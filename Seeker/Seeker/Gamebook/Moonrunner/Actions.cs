@@ -84,7 +84,9 @@ namespace Seeker.Gamebook.Moonrunner
                             return false;
                     }
                     else if (!Game.Option.IsTriggered(oneOption.Trim()))
+                    {
                         return false;
+                    }
                 }
 
                 return true;
@@ -101,9 +103,13 @@ namespace Seeker.Gamebook.Moonrunner
                 int stat = GetProperty(protagonist, Stat);
 
                 if (secondButton)
-                    return (stat > 0);
+                {
+                    return stat > 0;
+                }
                 else
-                    return (stat < protagonist.Gold);
+                {
+                    return stat < protagonist.Gold;
+                }
             }
 
             bool disabledSkillSlots = ThisIsSkill && (protagonist.SkillSlots < 1);
@@ -132,7 +138,9 @@ namespace Seeker.Gamebook.Moonrunner
                 return new List<string> { $"{Head}{diffLine}" };
             }
             else if (ThisIsSkill)
+            {
                 return new List<string> { Head };
+            }
 
             if (Enemies == null)
                 return enemies;
@@ -140,9 +148,15 @@ namespace Seeker.Gamebook.Moonrunner
             foreach (Character enemy in Enemies)
             {
                 if (enemy.Endurance > 0)
-                    enemies.Add($"{enemy.Name}\nмастерство {enemy.Mastery}  выносливость {enemy.Endurance}");
+                {
+                    enemies.Add($"{enemy.Name}\nмастерство {enemy.Mastery}  " +
+                        $"выносливость {enemy.Endurance}");
+                }
                 else
+                {
                     enemies.Add($"{enemy.Name}\nмастерство {enemy.Mastery} ");
+                }
+                    
             }
 
             return enemies;
@@ -172,7 +186,8 @@ namespace Seeker.Gamebook.Moonrunner
             return new List<string> { "RELOAD" };
         }
 
-        public List<string> Decrease() => ChangeProtagonistParam(Stat, protagonist, String.Empty, decrease: true);
+        public List<string> Decrease() => 
+            ChangeProtagonistParam(Stat, protagonist, String.Empty, decrease: true);
 
         public List<string> ThreeDice()
         {
@@ -230,16 +245,19 @@ namespace Seeker.Gamebook.Moonrunner
 
                 spell.Add($"На кубике выпало: {Game.Dice.Symbol(dice)}");
 
-                if (Game.Option.IsTriggered(Constants.SpellsList[dice])) 
+                if (Game.Option.IsTriggered(Constants.SpellsList[dice]))
+                {
                     spell.Add("Уже было, кидаем ещё раз.");
+                }
                 else
+                {
                     break;
+                }
             }
 
             protagonist.EnemySpells -= dice;
 
             spell.Add($"Сила Натуры Грула снижается на {dice} и теперь равен {protagonist.EnemySpells}");
-
             spell.Add($"BIG|BAD|Вам нужно выдержать заклятье: {Constants.SpellsList[dice]}");
 
             if (Game.Option.IsTriggered("ecproc"))
@@ -278,9 +296,13 @@ namespace Seeker.Gamebook.Moonrunner
                         continue;
 
                     if (Invulnerable)
+                    {
                         fight.Add(enemy.Name);
+                    }
                     else
+                    {
                         fight.Add($"{enemy.Name} (выносливость {enemy.Endurance})");
+                    }
 
                     if (!attackAlready)
                     {
@@ -376,7 +398,9 @@ namespace Seeker.Gamebook.Moonrunner
                         }
                     }
                     else
+                    {
                         fight.Add("BOLD|Ничья в раунде");
+                    }
 
                     attackAlready = true;
 

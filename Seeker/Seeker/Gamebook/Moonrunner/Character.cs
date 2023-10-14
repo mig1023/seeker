@@ -84,8 +84,7 @@ namespace Seeker.Gamebook.Moonrunner
 
         public override string Save() => String.Join("|",
             MaxMastery, Mastery, MaxEndurance, Endurance, MaxLuck,
-            Luck, Gold, SkillSlots, EnemySpells, Offer
-        );
+            Luck, Gold, SkillSlots, EnemySpells, Offer);
 
         public override void Load(string saveLine)
         {
