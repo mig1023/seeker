@@ -91,7 +91,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             return this;
         }
 
-        public int GetEndurance() => (EnduranceLoss.ContainsKey(this.Name) ? EnduranceLoss[this.Name] : this.Endurance);
+        public int GetEndurance() =>
+            EnduranceLoss.ContainsKey(this.Name) ? EnduranceLoss[this.Name] : this.Endurance;
 
         public override string Save() => String.Join("|",
             MaxMastery, Mastery, MaxEndurance, Endurance, Gold, ExtendedDamage, MasteryDamage,

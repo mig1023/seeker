@@ -30,16 +30,26 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
         public override bool Availability(string option)
         {
             if (String.IsNullOrEmpty(option))
+            {
                 return true;
-
+            }
             else if (option.Contains(","))
-                return !(option.Split(',').Where(x => !Game.Option.IsTriggered(x.Trim())).Count() > 0);
+            {
+                int count = option
+                    .Split(',')
+                    .Where(x => !Game.Option.IsTriggered(x.Trim()))
+                    .Count();
 
+                return count == 0;
+            }
             else if (option.Contains("ЗОЛОТО >="))
+            {
                 return int.Parse(option.Split('=')[1]) <= protagonist.Gold;
-
+            }
             else
+            {
                 return AvailabilityTrigger(option);
+            }
         }
 
         public override List<string> Representer()
@@ -98,9 +108,13 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                 Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
 
                 if (((firstDice == 1) || (firstDice == 6)) && (firstDice == secondDice))
+                {
                     succesBreaked = true;
+                }
                 else
+                {
                     protagonist.Endurance -= 1;
+                }
 
                 string result = (succesBreaked ? "удачный, дверь поддалась!" : "неудачный, -1 сила" );
 
@@ -137,7 +151,9 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                     return luckCheck;
                 }
                 else
+                {
                     luckCheck.Add("Увы, Заклятье Удачи тут не поможет...");
+                }
             }
 
             string luckLine = protagonist.Luck[goodLuck] ? "не " : String.Empty;
@@ -284,10 +300,12 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             else
             {
                 foreach (Character ally in Allies)
+                {
                     if (ally == protagonist)
                         FightAllies.Add(ally);
                     else
                         FightAllies.Add(ally.Clone().SetEndurance());
+                }
             }
 
             while (true)
@@ -338,7 +356,9 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                         if ((allyHitStrength > enemyHitStrength) && !attackAlready)
                         {
                             if (enemy.SeaArmour && (firstAllyRoll == secondAllyRoll))
+                            {
                                 fight.Add("BOLD|Чешуя отразила ваш удар");
+                            }
                             else
                             {
                                 string group = GroupFight ? enemy.Name : "Он";
