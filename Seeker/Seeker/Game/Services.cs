@@ -10,13 +10,17 @@ namespace Seeker.Game
         public static string Сomparison(int a, int b)
         {
             if (a > b)
+            {
                 return "больше";
-
+            }
             else if (a < b)
+            {
                 return "меньше";
-
+            }
             else
+            {
                 return "равно";
+            }
         }
 
         public static string CoinsNoun(int value, string one, string two, string five)
@@ -48,7 +52,8 @@ namespace Seeker.Game
         public static int LevelParse(string option) =>
             int.Parse(option.Contains("=") ? option.Split('=')[1] : option.Split('>', '<')[1]);
 
-        public static bool DoNothing() => true;
+        public static bool DoNothing() =>
+            true;
 
         public static string SizeParse(string size)
         {
@@ -60,7 +65,9 @@ namespace Seeker.Game
                 return $"{fullSize} {line}";
             }
             else
+            {
                 return $"{fullSize / 1000} тыс. слов";
+            }
         }
 
         public static string ValueStringFuse(string value) =>
@@ -76,9 +83,15 @@ namespace Seeker.Game
             bool statusesLimit = false;
 
             if (statuses == null)
+            {
                 statusesLimit = false;
+            }
             else if (isLimited)
-                statusesLimit = (Data.CurrentParagraphID >= limitStart) && (Data.CurrentParagraphID <= limitEnd);
+            {
+                bool moreThenMinimum = Data.CurrentParagraphID >= limitStart;
+                bool lessThenMaximum = Data.CurrentParagraphID <= limitEnd;
+                statusesLimit = moreThenMinimum && lessThenMaximum;
+            }
 
             return (withoutStatuses || statusesLimit);
         }

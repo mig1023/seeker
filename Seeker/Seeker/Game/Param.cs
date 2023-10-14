@@ -4,18 +4,26 @@ namespace Seeker.Game
 {
     class Param
     {
-        public static int Setter(int value) => (value < 0 ? 0 : value);
+        public static int Setter(int value) =>
+            value < 0 ? 0 : value;
 
         public static int Setter(int value, int current, Abstract.ICharacter character)
         {
-            if (Settings.IsEnabled("Godmode") && character.ThisIsProtagonist() && (value < current))
+            bool godmode = Settings.IsEnabled("Godmode");
+            bool descent = character.ThisIsProtagonist() && (value < current);
+
+            if (godmode && descent)
+            {
                 return current;
-
+            }
             else if (value < 0)
+            {
                 return 0;
-
+            }
             else
+            {
                 return value;
+            }
         }
 
         public static int Setter(int value, int max) =>

@@ -28,10 +28,16 @@ namespace Seeker.Game
             string[] triggerList = triggers.Split(',');
 
             foreach (string trigger in triggerList)
+            {
                 if (remove)
+                {
                     Data.Triggers.RemoveAll(x => x == trigger.Trim());
+                }
                 else
+                {
                     Data.Triggers.Add(trigger.Trim());
+                }
+            }
         }
 
         public static bool IsTriggered(string trigger) =>
