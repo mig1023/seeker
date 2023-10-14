@@ -79,9 +79,13 @@ namespace Seeker.Gamebook.StrikeBack
         public override bool GameOver(out int toEndParagraph, out string toEndText)
         {
             if (SpecialTechniques?.Contains(Character.SpecialTechniques.WithoutGameover) ?? false)
+            {
                 return base.GameOver(out toEndParagraph, out toEndText);
+            }
             else
+            {
                 return GameOverBy(protagonist.Endurance, out toEndParagraph, out toEndText);
+            }
         }
 
         public List<string> InlineWoundsByDices()
@@ -193,8 +197,10 @@ namespace Seeker.Gamebook.StrikeBack
             else if (option.Contains('|'))
             {
                 foreach (string optionsPart in option.Split('|'))
+                {
                     if (protagonist.Creature == optionsPart)
                         return true;
+                }
 
                 return false;
             }
@@ -207,8 +213,10 @@ namespace Seeker.Gamebook.StrikeBack
                     .ToList();
 
                 foreach (string optionsPart in singlOption)
+                {
                     if (protagonist.Creature == optionsPart)
                         return false;
+                }
 
                 return true;
             }
@@ -232,13 +240,17 @@ namespace Seeker.Gamebook.StrikeBack
         private static Character FindEnemy(Character fighter, List<Character> Allies, List<Character> Enemies)
         {
             if (Allies.Contains(fighter))
+            {
                 return FindEnemyIn(Enemies);
-
+            }
             else if (Enemies.Contains(fighter))
+            {
                 return FindEnemyIn(Allies);
-
+            }
             else
+            {
                 return null;
+            }
         }
 
         private static bool IsProtagonist(string name) =>
@@ -312,9 +324,11 @@ namespace Seeker.Gamebook.StrikeBack
                 FightEnemies.Add(enemy.Clone().SetEndurance());
 
             if (Allies != null)
+            {
                 foreach (Character ally in Allies)
                     FightAllies.Add(ally.Clone().SetEndurance());
-
+            }
+                
             if ((FightEnemies.Count > 1) && (FightAllies.Count == 1) && !withoutProtagonist)
             {
                 fight.Add("Противников много, а ты один, поэтому атакуют они первые :(");
@@ -345,9 +359,13 @@ namespace Seeker.Gamebook.StrikeBack
                         continue;
 
                     if (GroupFight)
+                    {
                         fight.Add($"BOLD|{fighter.Name} выбрает противника для атаки: {enemy.Name}");
+                    }
                     else
+                    {
                         fight.Add($"BOLD|{fighter.Name} атакует");
+                    }
 
                     Game.Dice.DoubleRoll(out int firstRoll, out int secondRoll);
                     int hitStrength = firstRoll + secondRoll + fighter.Attack;
@@ -366,7 +384,10 @@ namespace Seeker.Gamebook.StrikeBack
 
                     if (IsProtagonist(enemy.Name))
                     {
-                        if (werewolf && success && !fighter.SpecialTechnique.Contains(Character.SpecialTechniques.RumbleKnife))
+                        bool rumbleKnife = fighter.SpecialTechnique
+                            .Contains(Character.SpecialTechniques.RumbleKnife);
+
+                        if (werewolf && success && !rumbleKnife)
                         {
                             fight.Add("GOOD|Атака противника не может навредить оборотню!");
                             success = false;
@@ -406,7 +427,8 @@ namespace Seeker.Gamebook.StrikeBack
                     fight.Add(String.Empty);
                 }
 
-                bool enemyLost = FightEnemies.Where(x => (x.Endurance > 0) || (x.MaxEndurance == 0)).Count() == 0;
+                bool enemyLost = FightEnemies
+                    .Where(x => (x.Endurance > 0) || (x.MaxEndurance == 0)).Count() == 0;
 
                 if (enemyLost || ((WoundsToWin > 0) && (WoundsToWin <= enemyWounds)))
                 {
@@ -414,9 +436,11 @@ namespace Seeker.Gamebook.StrikeBack
                     return fight;
                 }
 
-                bool allyLost = FightAllies.Where(x => x.Endurance > 0).Count() == 0;
+                int allyLost = FightAllies
+                    .Where(x => x.Endurance > 0)
+                    .Count();
 
-                if (allyLost)
+                if (allyLost == 0)
                 {
                     fight.Add("BIG|BAD|ТЫ ПРОИГРАЛ :(");
 

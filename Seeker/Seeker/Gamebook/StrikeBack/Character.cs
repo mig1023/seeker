@@ -146,8 +146,10 @@ namespace Seeker.Gamebook.StrikeBack
             if ((SpecialTechnique.Count == 1) && (SpecialTechnique[0] == SpecialTechniques.Nope))
                 return String.Empty;
 
-            string techniques = String.Join(", ", SpecialTechnique.ConvertAll(e => Constants.TechniquesNames()[e]));
-            return $"\n{techniques}";
+            List<string> techniques = SpecialTechnique
+                .ConvertAll(x => Constants.TechniquesNames()[x]);
+
+            return $"\n{String.Join(", ", techniques)}";
         }
     }
 }
