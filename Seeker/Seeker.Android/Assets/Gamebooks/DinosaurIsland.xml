@@ -404,5 +404,8 @@
 				<Option Goto="102" Text="Поворачиваешь назад и стараешься проскользнуть между его лапами"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="70">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
