@@ -55,6 +55,7 @@ namespace Seeker.Gamebook
             ["CommunityOfWorms"] = CommunityOfWorms.Constants.GetLinks(),
             ["Ants"] = Ants.Constants.GetLinks(),
             ["ConquistadorDiary"] = ConquistadorDiary.Constants.GetLinks(),
+            ["DinosaurIsland"] = DinosaurIsland.Constants.GetLinks(),
         };
 
         public static List<string> GetBooks() =>

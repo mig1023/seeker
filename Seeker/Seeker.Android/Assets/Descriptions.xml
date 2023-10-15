@@ -516,7 +516,6 @@
 	</SilverAgeSilhouette>
 	<StrikeBack>
 		<Title>Монстр наносит ответный удар</Title>
-		<Original>モンスターの逆襲</Original>
 		<Author>Хироси Ямамото</Author>
 		<Translator>Сергей Посниченко</Translator>
 		<Year>1987</Year>
@@ -564,4 +563,17 @@
 		<Setting>История</Setting>
 		<Color>613a33</Color>
 	</ConquistadorDiary>
+	<DinosaurIsland>
+		<Title>Остров динозавров</Title>
+		<Original>Dinosaur island</Original>
+		<Author>Эдвард Паккард</Author>
+		<Translator>Е. Нестерова</Translator>
+		<Year>1993</Year>
+		<Text>После крушения самолета тебе удалось спастись, и море выбросило тебя на остров, где живут динозавры. Эти доисторические животные появились там благодаря экспериментам сумасшедшего ученого. Если он узнает, что ты раскрыл его тайну, тебе несдобровать. Да и сами динозавры очень опасны.\n\nЧто же делать? Удрать отсюда при первой же возможности или остаться и побольше узнать о динозаврах? Все зависит от твоего выбора и смекалки.</Text>
+		<Paragraphs>0</Paragraphs>
+		<Size>0</Size>
+		<Playthrough>На пять минут</Playthrough>
+		<Setting>Приключения</Setting>
+		<Color>078752</Color>
+	</DinosaurIsland>
 </Gamebooks>
