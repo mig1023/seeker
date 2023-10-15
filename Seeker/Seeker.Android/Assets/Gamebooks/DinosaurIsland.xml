@@ -258,5 +258,8 @@
 				<Option Goto="76" Text="Побежишь за Артуро"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="44">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
