@@ -88,5 +88,11 @@
 				<Option Goto="22" Text="На этот раз с пристрастием"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="11">
+			<Text>- А ничего, - отвечаете вы. - Забираю я у тебя этих голубчиков в прокуратуру. Доказательств достаточно. Передадим дело в суд. Вы жмете ротному руку и прощаетесь.</Text>
+			<Options>
+				<Option Goto="21"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
