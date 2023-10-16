@@ -270,21 +270,39 @@ namespace Seeker.Output
 
             StackLayout disclaimer = new StackLayout();
 
-            if (!String.IsNullOrEmpty(gamebook.Original)) { }
-                AddDisclaimerElement("Оригинальное название:", gamebook.Original, ref disclaimer, border, change);
-
+            if (!String.IsNullOrEmpty(gamebook.Original))
+            {
+                AddDisclaimerElement("Оригинальное название:",
+                    gamebook.Original, ref disclaimer, border, change);
+            }
+                
             if (!String.IsNullOrEmpty(gamebook.Authors))
-                AddDisclaimerElement("Авторы:", Regex.Unescape(gamebook.Authors), ref disclaimer, border, change);
+            {
+                AddDisclaimerElement("Авторы:",
+                    Regex.Unescape(gamebook.Authors), ref disclaimer, border, change);
+            }
             else
-                AddDisclaimerElement("Автор:", gamebook.Author, ref disclaimer, border, change);
+            {
+                AddDisclaimerElement("Автор:",
+                    gamebook.Author, ref disclaimer, border, change);
+            }
 
             if (!String.IsNullOrEmpty(gamebook.Translators))
-                AddDisclaimerElement("Переводчики:", Regex.Unescape(gamebook.Translators), ref disclaimer, border, change);
+            {
+                AddDisclaimerElement("Переводчики:",
+                    Regex.Unescape(gamebook.Translators), ref disclaimer, border, change);
+            }
             else if (!String.IsNullOrEmpty(gamebook.Translator))
-                AddDisclaimerElement("Переводчик:", gamebook.Translator, ref disclaimer, border, change);
+            {
+                AddDisclaimerElement("Переводчик:",
+                    gamebook.Translator, ref disclaimer, border, change);
+            }
 
             if (!String.IsNullOrEmpty(gamebook.Text))
-                AddDisclaimerElement("Описание:", Regex.Unescape(gamebook.Text), ref disclaimer, border, change, little: true);
+            {
+                AddDisclaimerElement("Описание:",
+                    Regex.Unescape(gamebook.Text), ref disclaimer, border, change, little: true);
+            }
 
             string paragraphs = gamebook.ParagraphSizeLine();
             string size = Game.Services.SizeParse(gamebook.Size);
