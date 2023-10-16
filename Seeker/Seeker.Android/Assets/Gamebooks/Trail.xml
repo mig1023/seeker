@@ -410,5 +410,11 @@
 				<Option Goto="37" Text="Рядовой Близоруков"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="60">
+			<Text>ИГРА ОКОНЧЕНА.</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
