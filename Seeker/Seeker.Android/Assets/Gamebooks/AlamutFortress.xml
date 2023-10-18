@@ -642,5 +642,17 @@
 				<Option Goto="126" Text="Обнажить меч и атаковать шестерых стражей"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="94">
+			<Text>Вы открываете сумку. Что хотите достать?</Text>
+			<Options>
+				<Option Goto="264" Text="Синий флакон"/>
+				<Option Goto="337" Text="Яд"/>
+				<Option Goto="629" Text="Флакон с жёлтым порошком"/>
+				<Option Goto="376" Text="Два кинжала или лук со стрелами">
+					<Text>Если ничего из перечисленного у вас нет, возвращайтесь и сделайте другой выбор...</Text>
+				</Option>
+				<Option Goto="298"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
