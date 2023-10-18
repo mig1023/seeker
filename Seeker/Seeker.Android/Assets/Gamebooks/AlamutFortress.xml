@@ -183,5 +183,12 @@
 				<Option Goto="474"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="25">
+			<Text>Вы снова стоите в восточном коридоре крепости. Выбирайте:</Text>
+			<Options>
+				<Option Goto="607" Text="Откроете дверь перед собой"/>
+				<Option Goto="261" Text="Попытаетесь открыть решётку в конце коридора"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
