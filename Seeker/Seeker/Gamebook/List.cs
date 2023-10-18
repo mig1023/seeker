@@ -58,6 +58,7 @@ namespace Seeker.Gamebook
             ["DinosaurIsland"] = DinosaurIsland.Constants.GetLinks(),
             ["Trail"] = Trail.Constants.GetLinks(),
             ["OutlawsOfSherwoodForest"] = OutlawsOfSherwoodForest.Constants.GetLinks(),
+            ["AlamutFortress"] = AlamutFortress.Constants.GetLinks(),
         };
 
         public static List<string> GetBooks() =>
