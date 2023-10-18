@@ -597,5 +597,11 @@
 				<Option Goto="205" Text="Мост не внушает вам доверия, и вы пересечёте реку вплавь"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="87">
+			<Text>Во флаконе, который вы достаёте из сумки, клей! Сейчас от него никакого толку. Обнажите меч!</Text>
+			<Options>
+				<Option Goto="633"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
