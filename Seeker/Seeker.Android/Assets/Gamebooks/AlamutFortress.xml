@@ -369,5 +369,12 @@
 				<Option Goto="169"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="52">
+			<Text>Только противоядие может вернуть ваши уши в норму.\n\nМожет быть вы купили какое-нибудь зелье в аптеке?</Text>
+			<Options>
+				<Option Goto="614" Text="Да"/>
+				<Option Goto="190" Text="Нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
