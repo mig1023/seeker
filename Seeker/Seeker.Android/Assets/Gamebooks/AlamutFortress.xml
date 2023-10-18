@@ -257,5 +257,17 @@
 				<Option Goto="542"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="36">
+			<Text>Чем вы воспользуетесь против ядовитого осьминога?</Text>
+			<Options>
+				<Option Goto="250" Text="Зельем контроля животных"/>
+				<Option Goto="2" Text="Ядом"/>
+				<Option Goto="566" Text="Лампой Алладина"/>
+				<Option Goto="458" Text="Луком и стрелами">
+					<Text>Если ни одного из этих предметов у вас нет, возвращайтесь и сражайтесь с осьминогом кинжалом или мечом...</Text>
+				</Option>
+				<Option Goto="587"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
