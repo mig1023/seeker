@@ -152,5 +152,12 @@
 				<Option Goto="311"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="20">
+			<Text>Ваша голова увеличивается в размерах! Шлем становится слишком тесен — вы вскоре задохнётесь, если не сумеете снять его.\n\nКиньте один кубик, чтобы узнать свои шансы.</Text>
+			<Options>
+				<Option Goto="188" Text="Выпало чётное число"/>
+				<Option Goto="572" Text="Выпало нечётное"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
