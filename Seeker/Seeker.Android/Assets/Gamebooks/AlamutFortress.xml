@@ -674,5 +674,12 @@
 				<Option Goto="155"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="98">
+			<Text>Еда, что принёс трактирщик, не больно аппетитна, но вашему голодному желудку не до привередливости. Вы получаете 2 очка Здоровья.</Text>
+			<Options>
+				<Option Goto="666" Text="Заночуете на постоялом дворе"/>
+				<Option Goto="612" Text="Проведёте ночь на природе"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
