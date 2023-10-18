@@ -629,5 +629,11 @@
 				<Option Goto="630"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="92">
+			<Text>Вы швыряете флакон о стену напротив. Зелёная жидкость разливается по грязным кирпичам. Ничего не происходит! Вы должны обнажить меч!</Text>
+			<Options>
+				<Option Goto="546"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
