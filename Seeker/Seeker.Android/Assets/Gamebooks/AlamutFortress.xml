@@ -323,5 +323,12 @@
 				<Option Goto="192" Text="Атакуете"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="45">
+			<Text>Сам стол никакого интереса не представляет, но в нём есть два выдвижных ящичка. Откроете:</Text>
+			<Options>
+				<Option Goto="146" Text="Левый"/>
+				<Option Goto="520" Text="Правый"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
