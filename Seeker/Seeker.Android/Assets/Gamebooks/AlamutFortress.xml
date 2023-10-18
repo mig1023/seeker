@@ -506,5 +506,11 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="73">
+			<Text>Вы ковыляете к левой двери, из последних сил поворачиваете ручку, напоминающую скользкую змею, и выходите из арсенала.</Text>
+			<Options>
+				<Option Goto="283"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
