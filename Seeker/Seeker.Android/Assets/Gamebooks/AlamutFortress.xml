@@ -700,5 +700,11 @@
 				<Option Goto="52" Text="Если же нет"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="102">
+			<Text>Чувствуя, что позже оно вам пригодится, вы забираете зелье контроля животных (запишите его в список снаряжения). Затем вы покидаете комнату.</Text>
+			<Options>
+				<Option Goto="128"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
