@@ -460,5 +460,12 @@
 				<Option Goto="131" Text="Хотите проигнорировать знак и войти"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="66">
+			<Text>Люди-ящерицы лежат на земле. На шее одного из них висит богатое ожерелье с серебряным ключом. Возьмёте ключ себе?</Text>
+			<Options>
+				<Option Goto="545" Text="Да"/>
+				<Option Goto="360" Text="Нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
