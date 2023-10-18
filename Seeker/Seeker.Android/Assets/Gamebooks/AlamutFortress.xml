@@ -394,5 +394,11 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="56">
+			<Text>Вы шагаете с большой осторожностью. Древесина трещит, но вы добираетесь до другого берега без происшествий.</Text>
+			<Options>
+				<Option Goto="459"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
