@@ -453,5 +453,12 @@
 				<Option Goto="495"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="65">
+			<Text>Правую дверь украшает мрачная эмблема — череп с зияющими провалами глазниц. Решите внять этому предупреждающему знаку?</Text>
+			<Options>
+				<Option Goto="474" Text="В таком случае вернитесь и сделайте другой выбор"/>
+				<Option Goto="131" Text="Хотите проигнорировать знак и войти"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
