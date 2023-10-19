@@ -1512,5 +1512,13 @@
 				<Option Goto="396"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="215">
+			<Text>Вы показываете огромному стражу пустые ладони как знак мирных намерений. Он останавливается на мгновение, и вы бормочете пароль. Но что вы ему скажете?</Text>
+			<Options>
+				<Option Goto="60" Text="Константинополь!"/>
+				<Option Goto="191" Text="Вавилон!"/>
+				<Option Goto="455" Text="Самарканд!"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
