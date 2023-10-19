@@ -789,5 +789,13 @@
 				<Option Goto="373" Text="Выйдете из сада и обследуете один из коридоров"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="114">
+			<Text>Какой флакон у вас есть?</Text>
+			<Options>
+				<Option Goto="87" Text="Синий"/>
+				<Option Goto="201" Text="Жёлтый"/>
+				<Option Goto="559" Text="Зелёный"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
