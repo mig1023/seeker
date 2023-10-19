@@ -1108,5 +1108,11 @@
 				<Option Goto="522"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="157">
+			<Text>Ничего не остается, как попытаться отдохнуть в караван-сарае, где подкрепляются стражи и те немногие путники, которых пропустили в крепость.</Text>
+			<Options>
+				<Option Goto="532"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
