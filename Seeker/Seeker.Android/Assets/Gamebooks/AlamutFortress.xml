@@ -1048,5 +1048,11 @@
 				<Option Goto="523" Text="Выпал нечет"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="148">
+			<Text>Вы швыряете флакон на пол. Из разбитого флакона вытекает зелёная жидкость, но на людей-ящериц она не производит ни малейшего впечатления. Вы должны атаковать мечом.</Text>
+			<Options>
+				<Option Goto="295"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
