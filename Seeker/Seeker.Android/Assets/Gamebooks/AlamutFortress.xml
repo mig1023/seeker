@@ -797,5 +797,11 @@
 				<Option Goto="559" Text="Зелёный"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="115">
+			<Text>Листья водяных лилий слегка прогибаются у вас под ногами, но выдерживают ваш вес и не рвутся. Вы легко перебираетесь на тот берег.</Text>
+			<Options>
+				<Option Goto="423"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
