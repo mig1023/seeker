@@ -1394,5 +1394,13 @@
 				<Option Goto="554" Text="Нападёте без предупреждения"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="198">
+			<Text>На краю леса гоблины ухаживают за растениями в саду. Как вы себя поведёте?</Text>
+			<Options>
+				<Option Goto="203" Text="Проигнорируете их и пойдёте своей дорогой"/>
+				<Option Goto="659" Text="Спросите одного из них, как найти Хасана ибн-Саббаха"/>
+				<Option Goto="112" Text="Зайдёте в сад и сорвёте растение"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
