@@ -45,7 +45,6 @@ namespace Seeker.Gamebook
             ["Damanskiy"] = Damanskiy.Constants.GetLinks(),
             ["ByTheWillOfRome"] = ByTheWillOfRome.Constants.GetLinks(),
             ["OrcsDay"] = OrcsDay.Constants.GetLinks(),
-            ["MasterOfTaiga"] = MasterOfTaiga.Constants.GetLinks(),
             ["Sheriff"] = Sheriff.Constants.GetLinks(),
             ["Moonrunner"] = Moonrunner.Constants.GetLinks(),
             ["DeathOfAntiquary"] = DeathOfAntiquary.Constants.GetLinks(),
