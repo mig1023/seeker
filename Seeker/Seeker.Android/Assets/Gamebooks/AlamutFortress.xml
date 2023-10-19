@@ -1338,5 +1338,11 @@
 				<Option Goto="449"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="190">
+			<Text>К несчастью для вас, его лавочка закрыта, и ваши уши начинают чесаться.</Text>
+			<Options>
+				<Option Goto="275"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
