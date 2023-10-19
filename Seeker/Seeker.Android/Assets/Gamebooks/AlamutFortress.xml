@@ -1211,5 +1211,11 @@
 				<Option Goto="167"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="172">
+			<Text>Вы срываете ключ с шеи человека-ящерицы. Теперь вы можете открыть запретную дверь, последнюю преграду на пути в крепость.</Text>
+			<Options>
+				<Option Goto="129"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
