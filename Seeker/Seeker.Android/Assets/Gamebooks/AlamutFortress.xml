@@ -890,5 +890,12 @@
 				<Option Goto="162"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="128">
+			<Text>Вы закрываете дверь в комнату псаря и разворачиваетесь на каблуках.</Text>
+			<Options>
+				<Option Goto="261" Text="Попробуете открыть дверь дальше по коридору"/>
+				<Option Goto="452" Text="Если вы этого ещё не делали, откроете окованную мощными железными полосами дверь перед вами"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
