@@ -1483,5 +1483,12 @@
 				<Option Goto="505"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="211">
+			<Text>Есть ли у вас исцеляющее зелье или заклинание?</Text>
+			<Options>
+				<Option Goto="418" Text="Есть"/>
+				<Option Goto="397" Text="Нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
