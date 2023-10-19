@@ -1026,5 +1026,17 @@
 				<Option Goto="344"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="146">
+			<Text>Вы открываете левый ящичек. К вашему сожалению он пуст. Теперь можете:</Text>
+			<Options>
+				<Option Goto="520" Text="Открыть правый ящичек"/>
+				<Option Goto="195" Text="Если вы этого ещё не делали, обыскать сундук">
+					<Text>Если вы считаете, что уже потеряли здесь достаточно времени, выходите из комнаты в коридор. Там вы откроете:</Text>
+				</Option>
+				<Option Goto="452" Text="Правую дверь"/>
+				<Option Goto="600" Text="Левую дверь"/>
+				<Option Goto="261" Text="Заднюю дверь"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
