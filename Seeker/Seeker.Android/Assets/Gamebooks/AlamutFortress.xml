@@ -1972,5 +1972,11 @@
 				<Option Goto="543" Text="Выпало нечётное"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="281">
+			<Text>Вы берёте связку ключей и взвешиваете на руке. Удовлетворенный находкой, которая, как вы догадываетесь, вскоре вам пригодится, вы выходите в коридор.</Text>
+			<Options>
+				<Option Goto="336"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
