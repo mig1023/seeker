@@ -1745,5 +1745,13 @@
 				<Option Goto="422" Text="К старику, сидящему на доске с гвоздями"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="249">
+			<Text>— Ура! Наконец-то мне есть с кем сыграть! — кричит волшебник, стоит вам переступить порог.</Text>
+			<Options>
+				<Option Goto="240" Text="Примете его предложение"/>
+				<Option Goto="271" Text="Выскочите обратно за дверь"/>
+				<Option Goto="101" Text="Обнажите меч и атакуете"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
