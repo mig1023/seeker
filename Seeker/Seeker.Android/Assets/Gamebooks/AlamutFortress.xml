@@ -1539,5 +1539,13 @@
 				<Option Goto="522" Text="Вернётесь к колодцу"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="219">
+			<Text>Вы проверяете, не потерялся ли полученный от Джамаля железный ключ. Убедившись, что тот на месте, выбирайте, по какой дороге направитесь.</Text>
+			<Options>
+				<Option Goto="44" Text="Направо"/>
+				<Option Goto="263" Text="Налево"/>
+				<Option Goto="378" Text="Прямо"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
