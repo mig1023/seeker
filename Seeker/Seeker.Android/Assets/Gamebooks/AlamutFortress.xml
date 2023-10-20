@@ -1791,5 +1791,11 @@
 				<Option Goto="312"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="256">
+			<Text>Полученный от отшельника пергамент лежит в вашей сумке. Вы выбираете правую улицу и отправляетесь на поиски дома Шавара.</Text>
+			<Options>
+				<Option Goto="44"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
