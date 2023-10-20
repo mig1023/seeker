@@ -1785,5 +1785,11 @@
 				<Option Goto="198"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="255">
+			<Text>Вы швыряете флакон на пол. Тот разбивается, разливая зеленоватую жидкость, но Крысолюдов это, похоже, совершенно не волнует. Вы должны атаковать мечом.</Text>
+			<Options>
+				<Option Goto="312"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
