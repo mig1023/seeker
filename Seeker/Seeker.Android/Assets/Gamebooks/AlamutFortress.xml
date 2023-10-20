@@ -1598,5 +1598,11 @@
 				<Option Goto="91" Text="Нырнуть в расщелину в скале слева от вас"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="227">
+			<Text>Флакон содержит зелье контроля растений.</Text>
+			<Options>
+				<Option Goto="421"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
