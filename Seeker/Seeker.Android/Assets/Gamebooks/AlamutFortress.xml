@@ -1584,5 +1584,12 @@
 				<Option Goto="47" Text="Сразу же покинуть Акру"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="225">
+			<Text>Вы можете:</Text>
+			<Options>
+				<Option Goto="93" Text="Убежать через дверь, через которую сюда зашли"/>
+				<Option Goto="283" Text="Пробежать через комнату и выскочить в заднюю дверь"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
