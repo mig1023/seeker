@@ -1820,5 +1820,12 @@
 				<Option Goto="439" Text="Оба сразу"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="260">
+			<Text>Во время вашего приключения вам могла попасться пара туфель.</Text>
+			<Options>
+				<Option Goto="174" Text="Они у вас есть"/>
+				<Option Goto="588" Text="В противном случае вы должны идти по мосту"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
