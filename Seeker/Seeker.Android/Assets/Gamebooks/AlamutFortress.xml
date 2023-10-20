@@ -1995,5 +1995,12 @@
 				<Option Goto="261" Text="Дверь в коридоре"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="284">
+			<Text>Крысолюды валяются на земле. На одном из них вы видите богатое ожерелье с серебряным ключом. Возьмёте его себе?</Text>
+			<Options>
+				<Option Goto="575" Text="Да"/>
+				<Option Goto="534" Text="Нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
