@@ -1628,6 +1628,13 @@
 			<Options>
 				<Option Goto="129"/>
 			</Options>
+		</Paragraph>
+		<Paragraph No="232">
+			<Text>Вы слишком резко дёргаетесь! Ц Бросьте кубик ещё раз.</Text>
+			<Options>
+				<Option Goto="318" Text="Опять выпало чётное число"/>
+				<Option Goto="426" Text="Выпало нечётное"/>
+			</Options>
 		</Paragraph>		
 	</Paragraphs>
 </Gamebook>
