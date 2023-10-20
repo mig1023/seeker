@@ -1922,5 +1922,13 @@
 				<Option Goto="445"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="275">
+			<Text>Что вы хотите предпринять?</Text>
+			<Options>
+				<Option Goto="223" Text="Остановитесь на постоялом дворе"/>
+				<Option Goto="581" Text="Осмотрите отдельно стоящий дом рядом"/>
+				<Option Goto="612" Text="Покинете деревню"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
