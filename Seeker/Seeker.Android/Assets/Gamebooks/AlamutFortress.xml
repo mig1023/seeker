@@ -1807,5 +1807,11 @@
 				<Option Goto="283"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="258">
+			<Text>Флакон разбивается о землю, и появляется запах клея. Ничего не происходит! Какой же вы глупец!\n\nТеперь вы должен сражаться.</Text>
+			<Options>
+				<Option Goto="546"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
