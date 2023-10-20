@@ -1813,5 +1813,12 @@
 				<Option Goto="546"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="259">
+			<Text>Резкий импульс сотрясает всё ваше тело. Потеряйте 3 очка Здоровья. Дверь остаётся запертой.</Text>
+			<Options>
+				<Option Goto="467" Text="Хотите дёрнуть чёрный рычаг"/>
+				<Option Goto="439" Text="Оба сразу"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
