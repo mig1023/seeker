@@ -1623,5 +1623,11 @@
 				<Option Goto="547" Text="Нет"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="231">
+			<Text>Вы срываете ключ с шеи крысолюда. Теперь вы сможете открыть запретную дверь, последнее препятствие на пути в крепость.</Text>
+			<Options>
+				<Option Goto="129"/>
+			</Options>
+		</Paragraph>		
 	</Paragraphs>
 </Gamebook>
