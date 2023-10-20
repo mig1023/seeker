@@ -1779,5 +1779,11 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="254">
+			<Text>Вы едва спаслись! Растение выпускает вас, и вы отбегаете подальше от этого извращения природы. Потирая ноющую лодыжку, вы шагаете дальше.</Text>
+			<Options>
+				<Option Goto="198"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
