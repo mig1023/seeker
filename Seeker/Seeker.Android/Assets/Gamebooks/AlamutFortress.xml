@@ -2016,5 +2016,12 @@
 				<Option Goto="154" Text="Продолжите свой путь"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="287">
+			<Text>Впереди мост.</Text>
+			<Options>
+				<Option Goto="588" Text="Вы ещё не пересекли реку"/>
+				<Option Goto="459" Text="В противном случае"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
