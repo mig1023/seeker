@@ -2418,5 +2418,11 @@
 				<Option Goto="58"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="346">
+			<Text>Росянка сдаётся перед вашей решимостью не дать себя съесть. Ваша лодыжка слегка побаливает, но вы можете идти дальше без особых проблем.</Text>
+			<Options>
+				<Option Goto="198"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
