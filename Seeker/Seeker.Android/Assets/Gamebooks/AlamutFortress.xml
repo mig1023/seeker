@@ -2233,5 +2233,11 @@
 				<Option Goto="550" Text="Во всех остальных случаях"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="318">
+			<Text>С невероятными усилиями, но вы выбираетесь из болота. Потеряйте 3 очка Здоровья. С крайней осторожностью вы подходите к беседке.</Text>
+			<Options>
+				<Option Goto="586"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
