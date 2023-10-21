@@ -2386,5 +2386,12 @@
 				<Option Goto="453"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="341">
+			<Text>Вы осторожно идёте вперёд. Примерно в метре перед вами блестящий след исчезает в подлеске.</Text>
+			<Options>
+				<Option Goto="289" Text="Хотите выяснить, куда он ведёт"/>
+				<Option Goto="634" Text="В противном случае"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
