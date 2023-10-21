@@ -2506,5 +2506,12 @@
 				<Option Goto="360" Text="Выйдете не задерживаясь"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="357">
+			<Text>Тропинка обрывается у высокой и гладкой стены. Перелезть через окружающую сад крепости Аламут стену невозможно. Вы возвращаетесь назад.</Text>
+			<Options>
+				<Option Goto="179" Text="Там вы пойдёте налево"/>
+				<Option Goto="54" Text="Направитесь к беседке"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
