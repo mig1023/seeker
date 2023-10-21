@@ -2463,5 +2463,11 @@
 				<Option Goto="612"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="352">
+			<Text>Вы продолжаете ждать. Через какое-то время вы начинаете понимать, что валяете дурака. Что ещё вам нужно, чтобы сразиться с Талосом? Довольно проволочек!</Text>
+			<Options>
+				<Option Goto="503"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
