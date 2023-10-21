@@ -2646,5 +2646,12 @@
 				<Option Goto="474"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="377">
+			<Text>Вы собираетесь объехать лагерь стороной. Но есть ли у вас полученное от отшельника кольцо невидимости?</Text>
+			<Options>
+				<Option Goto="535" Text="Да"/>
+				<Option Goto="504" Text="В противном случае"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
