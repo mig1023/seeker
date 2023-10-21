@@ -2239,5 +2239,11 @@
 				<Option Goto="586"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="319">
+			<Text>Получившийся при броске кубика результат покажет сколько очков Здоровья вы теряете из-за ядовитых ожогов. Вы продолжаете идти вдоль реки.</Text>
+			<Options>
+				<Option Goto="287"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
