@@ -2640,5 +2640,11 @@
 				<Option Goto="198"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="376">
+			<Text>Вы поражаете двух стражей вашими снарядами, и те валятся без единого крика. Благодарение Господу, что снарядов было два!</Text>
+			<Options>
+				<Option Goto="474"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
