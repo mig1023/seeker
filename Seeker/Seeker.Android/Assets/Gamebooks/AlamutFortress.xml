@@ -2245,5 +2245,11 @@
 				<Option Goto="287"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="320">
+			<Text>— Ты найдёшь дом Шавара, пройдя метров двести в ту сторону, чужеземец,— отвечает он, указывая пальцем направление. Вы благодарите за помощь и оставляете патруль за спиной.</Text>
+			<Options>
+				<Option Goto="351"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
