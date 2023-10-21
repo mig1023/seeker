@@ -2752,5 +2752,13 @@
 				<Option Goto="22"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="392">
+			<Text>Какое зёрнышко риса вы съедите?</Text>
+			<Options>
+				<Option Goto="580" Text="Правое"/>
+				<Option Goto="78" Text="Левое"/>
+				<Option Goto="435" Text="Оба сразу"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
