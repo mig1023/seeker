@@ -2275,5 +2275,12 @@
 				<Option Goto="83"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="325">
+			<Text>Пропустив ещё по одной, стражи уходят. Самый пьяный из пяти отстаёт.</Text>
+			<Options>
+				<Option Goto="540" Text="Последуете за ними, не теряя времени"/>
+				<Option Goto="210" Text="Сперва выждете, чтобы не наступать им на пятки"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
