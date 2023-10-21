@@ -2485,6 +2485,19 @@
 				<Option Goto="336" Text="Закроете дверь и пойдёте куда-то ещё"/>
 				<Option Goto="578" Text="Осторожно войдёте"/>
 			</Options>
+		</Paragraph><Paragraph No="355">
+			<Text>Вы решаете поразить монстра метательным кинжалом в глаз.\n\nЦ Бросьте два кубика.</Text>
+			<Options>
+				<Option Goto="214" Text="Если выпало 10 или меньше"/>
+				<Option Goto="71" Text="Если выпало 11 или 12"/>
+			</Options>
+		</Paragraph>
+		<Paragraph No="355">
+			<Text>Вы решаете поразить монстра метательным кинжалом в глаз.\n\nЦ Бросьте два кубика.</Text>
+			<Options>
+				<Option Goto="214" Text="Если выпало 10 или меньше"/>
+				<Option Goto="71" Text="Если выпало 11 или 12"/>
+			</Options>
 		</Paragraph>
 	</Paragraphs>
 </Gamebook>
