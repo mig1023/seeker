@@ -2621,5 +2621,12 @@
 				<Option Goto="269"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="373">
+			<Text>Вы снова стоите перед центральной башней, высящейся за колоннами сада.</Text>
+			<Options>
+				<Option Goto="189" Text="Пойдёте в восточный коридор направо"/>
+				<Option Goto="123" Text="Пойдёте в западный коридор налево"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
