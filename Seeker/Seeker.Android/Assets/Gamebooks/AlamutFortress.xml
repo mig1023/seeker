@@ -2678,5 +2678,11 @@
 				<Option Goto="270"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="381">
+			<Text>Вы разбиваете флакон об пол. Увы! Ни дыма, ни ядовитых испарений! Вы разбили флакон с клеем — и сильно оно вам помогло? Вы должны атаковать людей-ящериц мечом.</Text>
+			<Options>
+				<Option Goto="312"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
