@@ -3228,5 +3228,11 @@
 				<Option Goto="396"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="459">
+			<Text>За мостом тропинка ныряет под зелёный свод, образованный переплетёнными ветвями ив. В конце тропинки видна беседка. Готовый к любой опасности, вы шагаете под деревья.</Text>
+			<Options>
+				<Option Goto="230"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
