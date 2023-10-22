@@ -3292,5 +3292,12 @@
 				<Option Goto="656"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="469">
+			<Text>Вы берёте флакон с зельем контроля животных. Должно быть, это зелье весьма полезно для псаря, но как оно работает?</Text>
+			<Options>
+				<Option Goto="486" Text="Выпьете его"/>
+				<Option Goto="102" Text="Положите в сумку"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
