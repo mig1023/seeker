@@ -3349,5 +3349,13 @@
 				<Option Goto="162"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="478">
+			<Text>Вы открываете дверцу и входите внутрь. Тут очень темно, и плохо пахнет. Очень скользкие ступени спускаются во мрак комнаты. Что вы сделаете?</Text>
+			<Options>
+				<Option Goto="106" Text="Спуститесь вниз"/>
+				<Option Goto="449" Text="Выйдете и закроете дверь"/>
+				<Option Goto="182" Text="Подождёте, что будет дальше"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
