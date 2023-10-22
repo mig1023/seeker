@@ -2930,5 +2930,12 @@
 				<Option Goto="593"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="418">
+			<Text>Вы заразились во время боя с прокажёнными, а слова их вожака лишь усиливают ваш гнев.</Text>
+			<Options>
+				<Option Goto="31" Text="Собираетесь ли вы использовать имеющиеся у вас исцеляющие силы лишь для себя"/>
+				<Option Goto="247" Text="Исцелите вожака прокаженных"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
