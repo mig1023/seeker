@@ -3413,5 +3413,11 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="487">
+			<Text>Несколько часов вы едете среди камней и пустынных холмов. Тропинка ныряет в узкое ущелье...</Text>
+			<Options>
+				<Option Goto="105"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
