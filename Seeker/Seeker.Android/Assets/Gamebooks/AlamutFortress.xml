@@ -3014,5 +3014,12 @@
 				<Option Goto="243" Text="Если же вы победили"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="430">
+			<Text>Река выглядит глубокой, а вы не знаете, как далеко другой берег.</Text>
+			<Options>
+				<Option Goto="658" Text="Cчитаете, что лучше снять доспехи, прежде чем войти в воду"/>
+				<Option Goto="313" Text="Jстаётесь в доспехах"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
