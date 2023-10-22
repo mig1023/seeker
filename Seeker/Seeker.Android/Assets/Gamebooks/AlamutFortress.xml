@@ -2969,5 +2969,12 @@
 				<Option Goto="177" Text="Побежите спасать факира"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="423">
+			<Text>Непролазные кусты не дают вам пройти влево по берегу. Вы видите в саду беседку.</Text>
+			<Options>
+				<Option Goto="551" Text="Хотите пойти к ней"/>
+				<Option Goto="492" Text="Направо вдоль берега"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
