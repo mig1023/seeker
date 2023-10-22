@@ -3151,5 +3151,12 @@
 				<Option Goto="311"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="449">
+			<Options>
+				<Option Goto="189" Text="Будете и дальше обследовать восточный коридор"/>
+				<Option Goto="123" Text="Если вы этого ещё не делали, осмотрите западный коридор"/>
+				<Option Goto="113" Text="Предпочтёте отправиться в сад, если вы там ещё не были"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
