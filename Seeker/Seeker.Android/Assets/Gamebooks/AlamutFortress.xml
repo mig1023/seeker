@@ -3046,5 +3046,11 @@
 				<Option Goto="611" Text="Во всех остальных случаях"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="435">
+			<Text>Вы не ощущаете никакого эффекта. Вам ничего не остаётся, как коснуться идола.</Text>
+			<Options>
+				<Option Goto="265"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
