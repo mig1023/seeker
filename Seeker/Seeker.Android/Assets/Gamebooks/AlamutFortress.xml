@@ -3201,5 +3201,11 @@
 				<Option Goto="379" Text="Пересечёте двор к вратам цитадели и попросите впустить вас"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="456">
+			<Text>К счастью, вы невредимы!</Text>
+			<Options>
+				<Option Goto="368"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
