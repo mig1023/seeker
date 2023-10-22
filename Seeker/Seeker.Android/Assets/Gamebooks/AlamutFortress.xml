@@ -3280,5 +3280,11 @@
 				<Option Goto="383"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="467">
+			<Text>Вы тянете рычаг... и пол под ногами исчезает! Вы едва успеваете отпрыгнуть в сторону — в полу открылся люк. Вы спускаетесь по лестнице, ведущей в темноту.</Text>
+			<Options>
+				<Option Goto="173"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
