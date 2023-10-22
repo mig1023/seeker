@@ -3376,5 +3376,12 @@
 				<Option Goto="387" Text="В противном случае"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="482">
+			<Text>Вы видите два возможных входа в башню. Какой вы выберете?</Text>
+			<Options>
+				<Option Goto="574" Text="Маленькую винтовую лестницу внутри башни"/>
+				<Option Goto="93" Text="Обходную дорожку, что идёт вдоль стен башни"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
