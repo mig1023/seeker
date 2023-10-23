@@ -4019,5 +4019,11 @@
 				<Option Goto="511" Text="Воспользуетесь купленным в аптеке Абдальсана зельем"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="575">
+			<Text>Перед вами тонко сработанный серебряный ключ. Одно только серебро можно продать за хорошие деньги.</Text>
+			<Options>
+				<Option Goto="13"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
