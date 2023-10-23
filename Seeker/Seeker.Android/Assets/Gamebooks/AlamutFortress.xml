@@ -3903,5 +3903,11 @@
 				<Option Goto="475" Text="В этом случае вы выходите из лавки алхимика"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="559">
+			<Text>Флакон в ваших руках содержит зелье контроля растений.</Text>
+			<Options>
+				<Option Goto="145"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
