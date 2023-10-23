@@ -3683,5 +3683,11 @@
 				<Option Goto="132" Text="Громко закричите"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="527">
+			<Text>Вы выходите из странного лабиринта, оставив позади колодец с голубой жидкостью. Вы молча проходите к двери, ведущей в коридор, откуда вы попали в библиотеку.</Text>
+			<Options>
+				<Option Goto="411"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
