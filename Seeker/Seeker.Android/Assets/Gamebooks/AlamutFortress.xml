@@ -3604,5 +3604,13 @@
 				<Option Goto="172"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="516">
+			<Text>Вы осматриваете пьедестал поближе. Самый обычный кедр... но тут у вас над головой нарастает пронзительный свист!\n\nЦ Бросьте два кубика.</Text>
+			<Options>
+				<Option Goto="428" Text="Выпало 4 или меньше"/>
+				<Option Goto="444" Text="Выпало 5-8"/>
+				<Option Goto="236" Text="Выпало 9 или больше"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
