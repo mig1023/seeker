@@ -3553,5 +3553,12 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="509">
+			<Text>Вы закрываете дверь псарни и поворачиваетесь кругом.</Text>
+			<Options>
+				<Option Goto="261" Text="Попробуете теперь дверь в глубине коридора"/>
+				<Option Goto="600" Text="Если вы этого ещё не делали, откроете дверь перед вами, украшенную изображением собачьей головы"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
