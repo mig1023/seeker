@@ -3864,5 +3864,16 @@
 				<Option Goto="336"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="554">
+			<Text>Воспользуетесь загадочным зельем, купленным у аптекаря?</Text>
+			<Options>
+				<Option Goto="381" Text="Синим"/>
+				<Option Goto="438" Text="Жёлтым"/>
+				<Option Goto="255" Text="Зелёным">
+					<Text>Если у вас нет ни одного из этих флаконов, или вы не хотите рисковать без нужды, обнажайте меч!</Text>
+				</Option>
+				<Option Goto="312"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
