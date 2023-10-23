@@ -3612,5 +3612,11 @@
 				<Option Goto="236" Text="Выпало 9 или больше"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="517">
+			<Text>Охваченный сомнением вы всё же надеваете кольцо на палец. Но вы уже вне зоны крепости, и чары работают! Вы проходите мимо дракона без проблем и идёте дальше...</Text>
+			<Options>
+				<Option Goto="287"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
