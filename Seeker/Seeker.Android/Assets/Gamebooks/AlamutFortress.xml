@@ -3807,5 +3807,11 @@
 				<Option Goto="315" Text="Нападёте без предупреждения"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="545">
+			<Text>Перед вами тонко сработанный серебряный ключ. Одно только серебро можно продать за хорошие деньги.</Text>
+			<Options>
+				<Option Goto="356"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
