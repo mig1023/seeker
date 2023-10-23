@@ -3649,5 +3649,12 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="522">
+			<Text>Вам ничего не остаётся, как вернуться назад. Вы хватаетесь за веревку и залезаете...</Text>
+			<Options>
+				<Option Goto="570" Text="На уровень второго туннеля"/>
+				<Option Goto="328" Text="На уровень первого"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
