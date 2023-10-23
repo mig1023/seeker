@@ -3992,5 +3992,12 @@
 				<Option Goto="299" Text="Продолжите спуск"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="571">
+			<Text>Вам везёт! Больше ни одна жаба в вас не попала. Вы бежите вдоль берега к мосту над речкой.</Text>
+			<Options>
+				<Option Goto="588" Text="Вы не пересекали реку"/>
+				<Option Goto="459" Text="В противном случае"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
