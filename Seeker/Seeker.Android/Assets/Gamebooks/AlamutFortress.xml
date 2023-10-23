@@ -3839,5 +3839,11 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="550">
+			<Text>Капли слизи попадют вам в глаза. Вы временно ослепли, и улитка тут же наносит первый удар. Вы проигрываете первую атаку. Продолжайте бой.</Text>
+			<Options>
+				<Option Goto="368"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
