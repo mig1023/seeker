@@ -4512,5 +4512,11 @@
 				<Option Goto="369" Text="В противном случае"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="644">
+			<Text>Вы въезжаете на мост и спокойно пересекаете его. Пейзаж на том берегу столь же уныл, и вы едете дальше.</Text>
+			<Options>
+				<Option Goto="560"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
