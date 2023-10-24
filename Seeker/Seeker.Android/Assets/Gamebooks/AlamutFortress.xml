@@ -4438,5 +4438,13 @@
 				<Option Goto="344"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="634">
+			<Text>Тропинка останавливается перед широкой рекой с прозрачной водой и обилием рыбы. Густой туман не даёт разглядеть другой берег. Что вы решите делать дальше?</Text>
+			<Options>
+				<Option Goto="597" Text="Пойти вдоль берега направо"/>
+				<Option Goto="179" Text="Пойти налево"/>
+				<Option Goto="430" Text="Пересечь реку"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
