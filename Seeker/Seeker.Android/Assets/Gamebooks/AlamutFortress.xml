@@ -4641,5 +4641,11 @@
 				<Option Goto="287"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="662">
+			<Text>Вы шагаете с осторожностью, старясь не коснуться другой статуи. Вдруг в настиле моста открывается люк. Вы летите в реку.</Text>
+			<Options>
+				<Option Goto="403"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
