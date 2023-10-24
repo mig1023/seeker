@@ -4452,5 +4452,13 @@
 				<Option Goto="137"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="636">
+			<Text>Каким флаконом вы воспользуетесь?</Text>
+			<Options>
+				<Option Goto="608" Text="Синим"/>
+				<Option Goto="362" Text="Жёлтым"/>
+				<Option Goto="227" Text="Зеленым"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
