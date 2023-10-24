@@ -4138,5 +4138,12 @@
 				<Option Goto="669"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="591">
+			<Text>Есть ли в вашей сумке противоядие?</Text>
+			<Options>
+				<Option Goto="367" Text="Немедленно выпейте его"/>
+				<Option Goto="549" Text="Его нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
