@@ -4591,5 +4591,16 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="655">
+			<Text>Резким движением Крысолюд хватает вас за руку — вы были недостаточно осторожны! Вы должны действовать без промедления.</Text>
+			<Options>
+				<Option Goto="546" Text="Обнажите оружие">
+					<Text>Воспользуетесь загадочным флаконом, купленным у аптекаря? Но каким?</Text>
+				</Option>
+				<Option Goto="258" Text="Синим"/>
+				<Option Goto="171" Text="Жёлтым"/>
+				<Option Goto="92" Text="Зеленым"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
