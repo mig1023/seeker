@@ -4481,5 +4481,16 @@
 				<Option Goto="185"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="640">
+			<Text>Резким движением человек-ящерица хватает вас за руку — вы были недостаточно осторожны! Вы должны действовать без промедления.</Text>
+			<Options>
+				<Option Goto="385" Text="Обнажите оружие">
+					<Text>Воспользуетесь загадочным флаконом, купленным у аптекаря? Но каким?</Text>
+				</Option>
+				<Option Goto="180" Text="Синим"/>
+				<Option Goto="473" Text="Жёлтым"/>
+				<Option Goto="619" Text="Зелёным"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
