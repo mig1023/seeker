@@ -4665,5 +4665,12 @@
 				<Option Goto="472"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="666">
+			<Text>Вы отправляетесь в свою комнату. До утра никто вас не беспокоит, и вы встаёте отдохнувшим. Прибавьте 2 очка Здоровья. Вы одеваетесь и решаете отправиться в крепость Аламут.</Text>
+			<Options>
+				<Option Goto="524" Text="Конь ещё с вами"/>
+				<Option Goto="643" Text="Коня уже нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
