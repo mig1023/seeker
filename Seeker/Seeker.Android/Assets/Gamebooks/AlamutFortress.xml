@@ -4337,5 +4337,11 @@
 				<Option Goto="340"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="618">
+			<Text>Смерив вас презрительным взглядом, гоблин возвращается к прерванной работе, не удостаивая больше вас вниманием. Вы уходите своей дорогой...</Text>
+			<Options>
+				<Option Goto="203"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
