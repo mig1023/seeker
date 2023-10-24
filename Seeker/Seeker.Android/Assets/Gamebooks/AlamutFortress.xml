@@ -4249,5 +4249,15 @@
 				<Option Goto="154" Text="Бросите её обратно в колодец и покинете оазис"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="607">
+			<Text>Дверь заперта. Есть ли у вас медный ключ?</Text>
+			<Options>
+				<Option Goto="5" Text="Есть">
+					<Text>В противном случае можете попробовать:</Text>
+				</Option>
+				<Option Goto="261" Text="Дверь в конце коридора"/>
+				<Option Goto="131" Text="Дверь перед вами, если вы там ещё не были"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
