@@ -4419,5 +4419,11 @@
 				<Option Goto="656"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="631">
+			<Text>Вы были на волосок от гибели! Вы продолжаете переправу с удвоенной осторожностью и добираетесь до другого берега.</Text>
+			<Options>
+				<Option Goto="423"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
