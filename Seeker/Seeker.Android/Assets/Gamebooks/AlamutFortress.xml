@@ -4506,5 +4506,11 @@
 				<Option Goto="558" Text="Нет"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="643">
+			<Options>
+				<Option Goto="626" Text="Если волшебник Шавар рассказал вам о сухом колодце на выезде из деревни, вы можете отправиться туда"/>
+				<Option Goto="369" Text="В противном случае"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
