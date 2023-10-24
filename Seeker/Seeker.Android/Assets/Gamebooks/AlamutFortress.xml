@@ -4316,5 +4316,11 @@
 				<Option Goto="275"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="615">
+			<Text>Вы чувствуете, что ключ из неизвестного металла должен подойти к скважине. Он и впрямь точно входит в замок и плавно поворачивается.</Text>
+			<Options>
+				<Option Goto="557"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
