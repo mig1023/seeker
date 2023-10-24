@@ -4343,5 +4343,11 @@
 				<Option Goto="203"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="619">
+			<Text>Вы швыряете флакон в дальнюю стену. По грязным кирпичам разливается зелёная жидкость. Ничего не происходит! Вы должны взяться за меч.</Text>
+			<Options>
+				<Option Goto="385"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
