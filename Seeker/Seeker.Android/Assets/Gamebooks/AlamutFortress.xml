@@ -7,11 +7,15 @@
 		<Styles>
 			<Main Value="fe2b01"/>
 			<StatusBar Value="981900"/>
+			<Action Value="981900"/>
 			<Color Name="Option, System, Continue" Value="fdd815"/>
 		</Styles>
 		<Default>
 			<DisabledOption Value="Hide"/>
 		</Default>
+		<Buttons>
+			<Fight>Сразиться</Fight>
+		</Buttons>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph No="0">
@@ -167,7 +171,13 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="22">
-			<Text>Резким пинком опрокидываете деревянный стол на сборщика налогов. И пока он с трудом поднимается, разгребая обломки мебели, вы обнажаете свой меч.\n\nX  СБОРЩИК НАЛОГОВ Сила 6, Здоровье 10\n\nЕсли вы победили:</Text>
+			<Text>Резким пинком опрокидываете деревянный стол на сборщика налогов. И пока он с трудом поднимается, разгребая обломки мебели, вы обнажаете свой меч.</Text>
+			<Actions>
+				<Fight>
+					<Enemy Name="СБОРЩИК НАЛОГОВ" Strength="6" Hitpoints="10"/>
+					<Text>Если вы победили:</Text>
+				</Fight>
+			</Actions>
 			<Options>
 				<Option Goto="621"/>
 			</Options>
