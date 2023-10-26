@@ -11,6 +11,10 @@ namespace Seeker.Gamebook.AlamutFortress
 
         public List<Character> Enemies { get; set; }
 
+        public int Count { get; set; }
+        public bool Odd { get; set; }
+        public bool Wound { get; set; }
+
         public override List<string> Status() => new List<string>
         {
             $"Сила: {protagonist.Strength}",
@@ -29,6 +33,43 @@ namespace Seeker.Gamebook.AlamutFortress
                 enemies.Add($"{enemy.Name}\nсила {enemy.Strength}  здоровье {enemy.Hitpoints}");
 
             return enemies;
+        }
+
+        public List<string> Dices()
+        {
+            List<string> diceCheck = new List<string> { };
+
+            int firstDice = Game.Dice.Roll();
+            int dicesResult = firstDice;
+
+            string size = (Odd ? String.Empty : "BIG|");
+
+            if (Count < 2)
+            {
+                diceCheck.Add($"{size}На кубикe выпало: {Game.Dice.Symbol(firstDice)}");
+            }
+            else
+            {
+                int secondDice = Game.Dice.Roll();
+                dicesResult += secondDice;
+
+                diceCheck.Add($"{size}На кубиках выпало: " +
+                    $"{Game.Dice.Symbol(firstDice)} + " +
+                    $"{Game.Dice.Symbol(secondDice)} = {dicesResult}");
+            }
+
+            if (Odd)
+            {
+                diceCheck.Add(dicesResult % 2 == 0 ? "BIG|ЧЁТНОЕ ЧИСЛО!" : "BIG|НЕЧЁТНОЕ ЧИСЛО!");
+            }
+            else if (Wound)
+            {
+                protagonist.Hitpoints -= dicesResult;
+                string pointsLine = Game.Services.CoinsNoun(Math.Abs(dicesResult), "очко", "очка", "очков");
+                diceCheck.Add($"BAD|Потеряно {dicesResult} {pointsLine} Здоровья");
+            }
+
+            return diceCheck;
         }
 
         public static bool NoMoreEnemies(List<Character> enemies) =>
