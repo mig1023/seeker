@@ -7,7 +7,6 @@
 		<Styles>
 			<Main Value="fe2b01"/>
 			<StatusBar Value="981900"/>
-			<StatusFont Value="fdd815"/>
 			<Color Name="Option, System, Continue" Value="fdd815"/>
 		</Styles>
 		<Default>
