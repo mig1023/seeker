@@ -15,7 +15,7 @@ namespace Seeker.Gamebook.AlamutFortress
         public bool Double { get; set; }
         public bool Odd { get; set; }
         public bool DivisibleByThree { get; set; }
-        public bool Wound { get; set; }
+        public bool SubWound { get; set; }
 
         public override List<string> Status() => new List<string>
         {
@@ -75,7 +75,7 @@ namespace Seeker.Gamebook.AlamutFortress
             {
                 diceCheck.Add(dicesResult % 2 == 0 ? "BIG|ЧЁТНОЕ ЧИСЛО!" : "BIG|НЕЧЁТНОЕ ЧИСЛО!");
             }
-            else if (Wound)
+            else if (SubWound)
             {
                 protagonist.Hitpoints -= dicesResult;
                 string pointsLine = Game.Services.CoinsNoun(Math.Abs(dicesResult), "очко", "очка", "очков");
