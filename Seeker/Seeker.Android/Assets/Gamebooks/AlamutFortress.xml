@@ -3789,6 +3789,7 @@
 			<Actions>
 				<Dices>
 					<Count>2</Count>
+					<DivisibleByThree/>
 				</Dices>
 			</Actions>
 			<Options>
