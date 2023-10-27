@@ -16,6 +16,7 @@ namespace Seeker.Gamebook.AlamutFortress
         public bool Odd { get; set; }
         public bool DivisibleByThree { get; set; }
         public bool SubWound { get; set; }
+        public bool SubStrength { get; set; }
 
         public override List<string> Status() => new List<string>
         {
@@ -63,6 +64,8 @@ namespace Seeker.Gamebook.AlamutFortress
                 isDouble = firstDice == secondDice;
             }
 
+            string pointsLine = Game.Services.CoinsNoun(Math.Abs(dicesResult), "очко", "очка", "очков");
+
             if (DivisibleByThree)
             {
                 diceCheck.Add(dicesResult % 3 == 0 ? "BIG|ДЕЛИТСЯ на ТРИ!" : "BIG|НЕ делится на три!");
@@ -78,8 +81,12 @@ namespace Seeker.Gamebook.AlamutFortress
             else if (SubWound)
             {
                 protagonist.Hitpoints -= dicesResult;
-                string pointsLine = Game.Services.CoinsNoun(Math.Abs(dicesResult), "очко", "очка", "очков");
                 diceCheck.Add($"BAD|Потеряно {dicesResult} {pointsLine} Здоровья");
+            }
+            else if (SubStrength)
+            {
+                protagonist.Strength -= dicesResult;
+                diceCheck.Add($"BAD|Потеряно {dicesResult} {pointsLine} Силы");
             }
 
             return diceCheck;
