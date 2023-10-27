@@ -12,6 +12,7 @@ namespace Seeker.Gamebook.AlamutFortress
         public List<Character> Enemies { get; set; }
 
         public int Count { get; set; }
+        public bool Double { get; set; }
         public bool Odd { get; set; }
         public bool Wound { get; set; }
 
@@ -41,6 +42,7 @@ namespace Seeker.Gamebook.AlamutFortress
 
             int firstDice = Game.Dice.Roll();
             int dicesResult = firstDice;
+            bool isDouble = false;
 
             string size = (Odd ? String.Empty : "BIG|");
 
@@ -56,9 +58,15 @@ namespace Seeker.Gamebook.AlamutFortress
                 diceCheck.Add($"{size}На кубиках выпало: " +
                     $"{Game.Dice.Symbol(firstDice)} + " +
                     $"{Game.Dice.Symbol(secondDice)} = {dicesResult}");
+
+                isDouble = firstDice == secondDice;
             }
 
-            if (Odd)
+            if (Double)
+            {
+                diceCheck.Add(isDouble ? "BIG|GOOD|ВЫПАЛ ДУБЛЬ!" : "BIG|BAD|Выпал НЕ дубль!");
+            }
+            else if (Odd)
             {
                 diceCheck.Add(dicesResult % 2 == 0 ? "BIG|ЧЁТНОЕ ЧИСЛО!" : "BIG|НЕЧЁТНОЕ ЧИСЛО!");
             }
