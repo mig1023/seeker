@@ -17,6 +17,7 @@ namespace Seeker.Gamebook.AlamutFortress
         public bool DivisibleByThree { get; set; }
         public bool SubWound { get; set; }
         public bool SubStrength { get; set; }
+        public bool HalfResult { get; set; }
 
         public override List<string> Status() => new List<string>
         {
@@ -46,22 +47,36 @@ namespace Seeker.Gamebook.AlamutFortress
             int dicesResult = firstDice;
             bool isDouble = false;
 
-            string size = (Odd ? String.Empty : "BIG|");
-
             if (Count < 2)
             {
-                diceCheck.Add($"{size}На кубикe выпало: {Game.Dice.Symbol(firstDice)}");
+                diceCheck.Add($"BIG|На кубикe выпало: {Game.Dice.Symbol(firstDice)}");
             }
             else
             {
                 int secondDice = Game.Dice.Roll();
                 dicesResult += secondDice;
 
-                diceCheck.Add($"{size}На кубиках выпало: " +
+                diceCheck.Add($"BIG|На кубиках выпало: " +
                     $"{Game.Dice.Symbol(firstDice)} + " +
                     $"{Game.Dice.Symbol(secondDice)} = {dicesResult}");
 
                 isDouble = firstDice == secondDice;
+            }
+
+            if (HalfResult)
+            {
+                double half = (double)dicesResult / 2;
+                diceCheck.Add($"{dicesResult} делим на 2 = {half}");
+
+                if (half == Math.Floor(half))
+                {
+                    dicesResult = (int)half;
+                }
+                else
+                {
+                    dicesResult = (int)Math.Floor(half);
+                    diceCheck.Add($"Округляем в меньшую сторону до {dicesResult}");
+                }
             }
 
             string pointsLine = Game.Services.CoinsNoun(Math.Abs(dicesResult), "очко", "очка", "очков");
@@ -81,12 +96,12 @@ namespace Seeker.Gamebook.AlamutFortress
             else if (SubWound)
             {
                 protagonist.Hitpoints -= dicesResult;
-                diceCheck.Add($"BAD|Потеряно {dicesResult} {pointsLine} Здоровья");
+                diceCheck.Add($"BIG|BAD|Потеряно {dicesResult} {pointsLine} Здоровья");
             }
             else if (SubStrength)
             {
                 protagonist.Strength -= dicesResult;
-                diceCheck.Add($"BAD|Потеряно {dicesResult} {pointsLine} Силы");
+                diceCheck.Add($"BIG|BAD|Потеряно {dicesResult} {pointsLine} Силы");
             }
 
             return diceCheck;
