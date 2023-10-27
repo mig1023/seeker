@@ -14,6 +14,7 @@ namespace Seeker.Gamebook.AlamutFortress
         public int Count { get; set; }
         public bool Double { get; set; }
         public bool Odd { get; set; }
+        public bool DivisibleByThree { get; set; }
         public bool Wound { get; set; }
 
         public override List<string> Status() => new List<string>
@@ -62,7 +63,11 @@ namespace Seeker.Gamebook.AlamutFortress
                 isDouble = firstDice == secondDice;
             }
 
-            if (Double)
+            if (DivisibleByThree)
+            {
+                diceCheck.Add(dicesResult % 3 == 0 ? "BIG|ДЕЛИТСЯ на ТРИ!" : "BIG|НЕ делится на три!");
+            }
+            else if (Double)
             {
                 diceCheck.Add(isDouble ? "BIG|GOOD|ВЫПАЛ ДУБЛЬ!" : "BIG|BAD|Выпал НЕ дубль!");
             }
