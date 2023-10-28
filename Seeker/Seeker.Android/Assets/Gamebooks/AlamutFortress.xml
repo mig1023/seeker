@@ -1353,6 +1353,9 @@
 					<Count>2</Count>
 				</Dices>
 			</Actions>
+			<Modifications>
+				<Hitpoints Value="2"/>
+			</Modifications>
 			<Options>
 				<Option Goto="645" Text="Результат кратен 2 или 3"/>
 				<Option Goto="502" Text="В противном случае (выпало 5, 7 или 11)"/>
