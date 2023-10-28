@@ -7,6 +7,7 @@ namespace Seeker.Gamebook.AlamutFortress
         public static Character Protagonist = new Character();
 
         private int _strength;
+        public int MaxStrength { get; set; }
         public int Strength
         {
             get => _strength;
@@ -32,7 +33,8 @@ namespace Seeker.Gamebook.AlamutFortress
         {
             base.Init();
 
-            Strength = Game.Dice.Roll(dices: 2) + 6;
+            MaxStrength = Game.Dice.Roll(dices: 2) + 6;
+            Strength = MaxStrength;
             MaxHitpoints = Game.Dice.Roll(dices: 2) + 18;
             Hitpoints = MaxHitpoints;
             Gold = Game.Dice.Roll(dices: 4);
@@ -42,6 +44,7 @@ namespace Seeker.Gamebook.AlamutFortress
         {
             IsProtagonist = this.IsProtagonist,
             Name = this.Name,
+            MaxStrength = this.MaxStrength,
             Strength = this.Strength,
             MaxHitpoints = this.MaxHitpoints,
             Hitpoints = this.Hitpoints,
@@ -49,17 +52,18 @@ namespace Seeker.Gamebook.AlamutFortress
         };
 
         public override string Save() => String.Join("|",
-            Strength, MaxHitpoints, Hitpoints, Gold
+            MaxStrength, Strength, MaxHitpoints, Hitpoints, Gold
         );
 
         public override void Load(string saveLine)
         {
             string[] save = saveLine.Split('|');
 
-            Strength = int.Parse(save[0]);
-            MaxHitpoints = int.Parse(save[1]);
-            Hitpoints = int.Parse(save[2]);
-            Gold = int.Parse(save[3]);
+            MaxStrength = int.Parse(save[0]);
+            Strength = int.Parse(save[1]);
+            MaxHitpoints = int.Parse(save[2]);
+            Hitpoints = int.Parse(save[3]);
+            Gold = int.Parse(save[4]);
 
             IsProtagonist = true;
         }

@@ -51,6 +51,7 @@ namespace Seeker.Gamebook.AlamutFortress
             foreach (string param in GetProperties(enemy))
                 SetPropertyByAttr(enemy, param, xmlEnemy, maxPrefix: true);
 
+            enemy.Strength = enemy.MaxStrength;
             enemy.Hitpoints = enemy.MaxHitpoints;
 
             return enemy;
