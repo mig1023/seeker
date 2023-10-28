@@ -888,6 +888,9 @@
 					<Count>2</Count>
 				</Dices>
 			</Actions>
+			<Modifications>
+				<Hitpoints Value="2"/>
+			</Modifications>
 			<Options>
 				<Option Goto="143" Text="Результат кратен 2 или 3"/>
 				<Option Goto="285" Text="Выпало 5, 7 или 11"/>
