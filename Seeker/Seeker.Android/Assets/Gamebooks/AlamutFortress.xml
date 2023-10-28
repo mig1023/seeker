@@ -782,6 +782,9 @@
 		</Paragraph>
 		<Paragraph No="98">
 			<Text>Еда, что принёс трактирщик, не больно аппетитна, но вашему голодному желудку не до привередливости. Вы получаете 2 очка Здоровья.</Text>
+			<Modifications>
+				<Hitpoints Value="2"/>
+			</Modifications>
 			<Options>
 				<Option Goto="666" Text="Заночуете на постоялом дворе"/>
 				<Option Goto="612" Text="Проведёте ночь на природе"/>
