@@ -629,6 +629,9 @@
 		</Paragraph>
 		<Paragraph No="78">
 			<Text>Вы чувствуете прилив сил. Прибавьте 5 очков Здоровья.</Text>
+			<Modifications>
+				<Hitpoints Value="5"/>
+			</Modifications>
 			<Options>
 				<Option Goto="580" Text="Съедите другое зёрнышко риса, если вы этого ещё не делали"/>
 				<Option Goto="265" Text="Возложите руки на идола"/>
