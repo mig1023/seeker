@@ -1521,6 +1521,9 @@
 		</Paragraph>
 		<Paragraph No="188">
 			<Text>Разрывающая голову боль быстро проходит. Вы нервно ерошите волосы. Уф! Повезло! Однако, 1 очко Здоровья вы всё-таки потеряли.</Text>
+			<Modifications>
+				<Hitpoints Value="-1"/>
+			</Modifications>
 			<Options>
 				<Option Goto="341"/>
 			</Options>
