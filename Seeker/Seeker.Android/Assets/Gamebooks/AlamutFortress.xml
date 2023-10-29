@@ -2897,6 +2897,9 @@
 		</Paragraph>
 		<Paragraph No="358">
 			<Text>Рот наполняет горький, но не так, чтобы неприятный вкус. Восстановите 1 очко Здоровья. Но у вас мгновенно начинается головокружение и ужасная головная боль.</Text>
+			<Modifications>
+				<Hitpoints Value="1"/>
+			</Modifications>
 			<Options>
 				<Option Goto="20" Text="На вас надет шлем"/>
 				<Option Goto="188" Text="Шлема на вас нет"/>
