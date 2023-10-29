@@ -126,6 +126,7 @@ namespace Seeker.Gamebook.AlamutFortress
                 fight.Add($"HEAD|BOLD|Раунд: {round}");
 
                 bool attackAlready = false;
+                bool godsJudgment = false;
                 int protagonistHitStrength = 0;
 
                 foreach (Character enemy in FightEnemies)
@@ -144,6 +145,26 @@ namespace Seeker.Gamebook.AlamutFortress
                             $"{Game.Dice.Symbol(protagonistRollFirst)} + " +
                             $"{Game.Dice.Symbol(protagonistRollSecond)} + " +
                             $"{protagonist.Strength} = {protagonistHitStrength}");
+
+                        godsJudgment = (protagonistRollFirst == 6) &&
+                            (protagonistRollFirst == protagonistRollSecond);
+                    }
+
+                    if (godsJudgment)
+                    {
+                        fight.Add($"GOOD|BOLD|Свершился БОЖИЙ СУД! {enemy.Name} убит!");
+                        enemy.Hitpoints = 0;
+
+                        if (NoMoreEnemies(FightEnemies))
+                        {
+                            fight.Add(String.Empty);
+                            fight.Add("BIG|GOOD|Вы ПОБЕДИЛИ :)");
+                            return fight;
+                        }
+                        else
+                        {
+                            continue;
+                        }
                     }
 
                     Game.Dice.DoubleRoll(out int enemyRollFirst, out int enemyRollSecond);
@@ -153,6 +174,19 @@ namespace Seeker.Gamebook.AlamutFortress
                         $"{Game.Dice.Symbol(enemyRollFirst)} + " +
                         $"{Game.Dice.Symbol(enemyRollSecond)} + " +
                         $"{enemy.Strength} = {enemyHitStrength}");
+
+                    bool diabolicalMeanness = (enemyRollFirst == 1) &&
+                        (enemyRollFirst == enemyRollSecond);
+
+                    if (diabolicalMeanness)
+                    {
+                        fight.Add($"BAD|BOLD|Дьявольская атака! {enemy.Name} убил вас!");
+                        fight.Add(String.Empty);
+                        fight.Add("BIG|BAD|Вы ПРОИГРАЛИ :(");
+
+                        protagonist.Hitpoints = 0;
+                        return fight;
+                    }
 
                     int hitPointsLoses = protagonistHitStrength - enemyHitStrength;
                     string losesLine = Game.Services.CoinsNoun(Math.Abs(hitPointsLoses), "очко", "очка", "очков");
@@ -164,9 +198,7 @@ namespace Seeker.Gamebook.AlamutFortress
 
                         enemy.Hitpoints -= hitPointsLoses;
 
-                        bool enemyLost = NoMoreEnemies(FightEnemies);
-
-                        if (enemyLost)
+                        if (NoMoreEnemies(FightEnemies))
                         {
                             fight.Add(String.Empty);
                             fight.Add("BIG|GOOD|Вы ПОБЕДИЛИ :)");
@@ -180,11 +212,11 @@ namespace Seeker.Gamebook.AlamutFortress
                     else if (hitPointsLoses < 0)
                     {
                         fight.Add($"BAD|{enemy.Name} ранил вас");
-                        fight.Add($"Он теряет {Math.Abs(hitPointsLoses)} {losesLine} Здоровья");
+                        fight.Add($"Вы теряете {Math.Abs(hitPointsLoses)} {losesLine} Здоровья");
 
                         protagonist.Hitpoints += hitPointsLoses;
 
-                        if (protagonist.Strength <= 0)
+                        if (protagonist.Hitpoints <= 0)
                         {
                             fight.Add(String.Empty);
                             fight.Add("BIG|BAD|Вы ПРОИГРАЛИ :(");
