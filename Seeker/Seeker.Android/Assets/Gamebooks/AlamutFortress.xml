@@ -2084,6 +2084,9 @@
 		</Paragraph>
 		<Paragraph No="259">
 			<Text>Резкий импульс сотрясает всё ваше тело. Потеряйте 3 очка Здоровья. Дверь остаётся запертой.</Text>
+			<Modifications>
+				<Hitpoints Value="-3"/>
+			</Modifications>
 			<Options>
 				<Option Goto="467" Text="Хотите дёрнуть чёрный рычаг"/>
 				<Option Goto="439" Text="Оба сразу"/>
