@@ -2311,6 +2311,9 @@
 		</Paragraph>
 		<Paragraph No="288">
 			<Text>Вы жадно выпиваете жидкость — эффект следует незамедлительно, и ваши уши принимают нормальную форму. Восстановите потерянное 1 очко Здоровья.</Text>
+			<Modifications>
+				<Hitpoints Value="1"/>
+			</Modifications>
 			<Options>
 				<Option Goto="275"/>
 			</Options>
