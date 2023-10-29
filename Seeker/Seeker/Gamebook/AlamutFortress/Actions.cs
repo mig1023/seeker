@@ -130,7 +130,7 @@ namespace Seeker.Gamebook.AlamutFortress
 
                 foreach (Character enemy in FightEnemies)
                 {
-                    if (enemy.Strength <= 0)
+                    if (enemy.Hitpoints <= 0)
                         continue;
 
                     fight.Add($"{enemy.Name} (здоровье {enemy.Hitpoints})");
