@@ -2576,6 +2576,9 @@
 		</Paragraph>
 		<Paragraph No="318">
 			<Text>С невероятными усилиями, но вы выбираетесь из болота. Потеряйте 3 очка Здоровья. С крайней осторожностью вы подходите к беседке.</Text>
+			<Modifications>
+				<Hitpoints Value="-3"/>
+			</Modifications>
 			<Options>
 				<Option Goto="586"/>
 			</Options>
