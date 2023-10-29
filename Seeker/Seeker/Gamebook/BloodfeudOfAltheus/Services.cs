@@ -62,6 +62,17 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             }
         }
 
+        public static void OnlyOneDice(ref List<string> fight) =>
+            fight.Add($"GRAY|Из-за тяжести ранения, мощность удара будет определяться только одним кубом");
+
+        public static bool EveryoneIsSeriouslyWounded(Character protagonist, List<Character> enemies)
+        {
+            if (protagonist.Health > 1)
+                return false;
+
+            return NoMoreEnemies(enemies, noHealthy: true);
+        }
+
         public static bool NoMoreEnemies(List<Character> enemies, bool noHealthy = false)
         {
             foreach (Character enemy in enemies)

@@ -510,7 +510,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                     string secondRollLine = String.Empty;
                     bool autoFail = false;
 
-                    if ((protagonist.Health > 1) || Services.NoMoreEnemies(FightEnemies, noHealthy: true))
+                    if ((protagonist.Health > 1) || Services.EveryoneIsSeriouslyWounded(protagonist, FightEnemies))
                     {
                         protagonistRollSecond = Game.Dice.Roll();
                         secondRollLine = $" + {Game.Dice.Symbol(protagonistRollSecond)}";
@@ -518,6 +518,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                     }
                     else
                     {
+                        Services.OnlyOneDice(ref fight);
                         autoFail = (protagonistRollFirst == 1);
                     }
 
@@ -578,7 +579,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                     int enemyRollSecond = 0;
                     string ememySecondRollLine = String.Empty;
 
-                    if ((enemy.Health > 1) || Services.NoMoreEnemies(FightEnemies, noHealthy: true))
+                    if ((enemy.Health > 1) || Services.EveryoneIsSeriouslyWounded(protagonist, FightEnemies))
                     {
                         enemyRollSecond = Game.Dice.Roll();
                         ememySecondRollLine = $" + {Game.Dice.Symbol(enemyRollSecond)}";
@@ -586,6 +587,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                     }
                     else
                     {
+                        Services.OnlyOneDice(ref fight);
                         autoFail = (enemyRollFirst == 1);
                     }
 
