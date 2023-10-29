@@ -4692,6 +4692,9 @@
 		</Paragraph>
 		<Paragraph No="580">
 			<Text>Вы чувствуете огромную слабость. Потеряйте 5 очков Здоровья.</Text>
+			<Modifications>
+				<Hitpoints Value="-5"/>
+			</Modifications>
 			<Options>
 				<Option Goto="78" Text="Съедите другое зёрнышко риса, если вы ещё этого не делали"/>
 				<Option Goto="265" Text="Возложите руку на идола в специальном месте"/>
