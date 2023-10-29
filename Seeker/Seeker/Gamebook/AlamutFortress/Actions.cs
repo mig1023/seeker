@@ -39,6 +39,9 @@ namespace Seeker.Gamebook.AlamutFortress
             return enemies;
         }
 
+        public override bool GameOver(out int toEndParagraph, out string toEndText) =>
+            GameOverBy(protagonist.Hitpoints, out toEndParagraph, out toEndText);
+
         public List<string> Dices()
         {
             List<string> diceCheck = new List<string> { };
