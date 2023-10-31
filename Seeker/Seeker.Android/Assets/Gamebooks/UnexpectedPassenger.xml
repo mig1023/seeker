@@ -406,5 +406,14 @@
 				<Option Goto="212"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="59">
+			<Text>Ты находишься около квиги, которая теперь ярко освещена лампами на потолке зала, так, что можно рассмотреть, что делается внутри корабля.</Text>
+			<Options>
+				<Option Goto="185" Text="Хочешь пойти к аварийному выходу"/>
+				<Option Goto="104" Text="Пойти к воротам"/>
+				<Option Goto="21" Text="Просто осмотреться"/>
+				<Option Goto="36" Text="Направишься к лифту"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
