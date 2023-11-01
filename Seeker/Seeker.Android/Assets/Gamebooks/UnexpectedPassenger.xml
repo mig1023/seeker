@@ -731,5 +731,11 @@
 				<Option Goto="71"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="107">
+			<Text>Ты нажимаешь кнопку "4", двери закрываются и лифт начинает двигаться куда-то вниз, уровень воды в лифте резко повышается.</Text>
+			<Options>
+				<Option Goto="186"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
