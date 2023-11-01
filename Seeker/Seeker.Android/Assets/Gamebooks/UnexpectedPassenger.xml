@@ -643,5 +643,11 @@
 				<Option Goto="71"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="93">
+			<Text>Ты нажимаешь кнопку "1", кнопка мигает, но лифт никуда не движется. Тут до тебя доходит, что ты уже на этаже 1, поэтому никуда лифт ехать и не хочет.</Text>
+			<Options>
+				<Option Goto="206"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
