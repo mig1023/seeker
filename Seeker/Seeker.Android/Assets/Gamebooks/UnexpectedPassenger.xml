@@ -516,5 +516,11 @@
 				<Option Goto="173" Text="Отойдешь от прибора"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="74">
+			<Text>Ты несколько раз нажимаешь кнопку "3", кнопка мигает, но лифт никуда не движется. Тебе вдруг приходит в голову простая мысль - ты уже на этаже "3"...</Text>
+			<Options>
+				<Option Goto="179"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
