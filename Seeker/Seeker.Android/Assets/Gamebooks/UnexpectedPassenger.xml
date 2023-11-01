@@ -865,5 +865,14 @@
 				<Option Goto="108"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="126">
+			<Text>Ты стоишь около квиги, примерно в центре зала. Света совсем мало, а все освещение у квиги почему-то выключено.</Text>
+			<Options>
+				<Option Goto="20" Text="Хочешь еще раз внимательно осмотреться"/>
+				<Option Goto="150" Text="Пойти к воротам"/>
+				<Option Goto="210" Text="Небольшой двери"/>
+				<Option Goto="63" Text="К лифту"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
