@@ -1277,5 +1277,14 @@
 				<Option Goto="59"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="182">
+			<Text>Ты продолжаешь сидишь в сырой и темной трубе. Гудение робота становится все ближе.</Text>
+			<Options>
+				<Option Goto="29" Text="Осторожно выглянешь и осмотришься"/>
+				<Option Goto="200" Text="Предпочтешь подождать"/>
+				<Option Goto="51" Text="Можно выйти и осторожно пойти к калоше"/>
+				<Option Goto="144" Text="Отправиться подальше от здания и робота, куда-нибудь в джунгли"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
