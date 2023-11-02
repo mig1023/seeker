@@ -1222,5 +1222,18 @@
 				<Option Goto="12"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="175">
+			<Text>Ты стоишь около выхода из этого помещения. Рядом с дверью светится маленький экран с двумя кнопками.</Text>
+			<Options>
+				<Option Goto="111" Text="Хочешь вернуться в центр помещения к приборам"/>
+				<Option Goto="60" Text="Осмотреть дверь и то, что видно сквозь окошко"/>
+				<Option Goto="3" Text="Выйти за дверь"/>
+				<Option Goto="38" Text="Посмотреть на экран">
+					<Text>Нажать на кнопку:</Text>
+				</Option>
+				<Option Goto="112" Text="На правую"/>
+				<Option Goto="45" Text="На левую"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
