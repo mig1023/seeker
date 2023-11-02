@@ -1302,5 +1302,13 @@
 				<Option Goto="36" Text="Останешься снаружи"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="185">
+			<Text>Ты стоишь около небольшой двери, которая ближе к носу квиги, через которую ты выходил и включал аварийный генератор.</Text>
+			<Options>
+				<Option Goto="100" Text="Хочешь попробовать открыть и выйти еще раз"/>
+				<Option Goto="59" Text="Вернуться к квиге"/>
+				<Option Goto="113" Text="Прислушаться и осмотреться"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
