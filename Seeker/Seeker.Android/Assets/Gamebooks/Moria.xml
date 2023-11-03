@@ -96,5 +96,16 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="12">
+			<Text>Пройдя немного вперед, путники вошли в небольшой зал, из которого вели 3 коридора - на север, запад и восток, кроме того, в северной стене была заметна небольшая каменная дверь.</Text>
+			<Options>
+				<Option Goto="222" Text="Вы можете зайти в комнату">
+					<Text>А можете пройти по коридорам:</Text>
+				</Option>
+				<Option Goto="221" Text="По северному"/>
+				<Option Goto="28" Text="По западному"/>
+				<Option Goto="118" Text="По восточному"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
