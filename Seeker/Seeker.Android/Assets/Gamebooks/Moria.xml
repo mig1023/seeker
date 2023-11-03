@@ -84,5 +84,17 @@
 				<Option Goto="89"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="10">
+			<Text>[битый параграф]</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
+		<Paragraph No="11">
+			<Text>[битый параграф]</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
