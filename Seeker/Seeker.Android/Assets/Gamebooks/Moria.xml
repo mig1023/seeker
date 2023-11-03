@@ -178,5 +178,11 @@
 				<Option Goto="231" Text="Средний - горизонтальный, но узкий"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="23">
+			<Text>Через несколько поворотов Хранители увидели сторожевой пост орков, карауливший выход из Мории. Орков было всего 5.</Text>
+			<Options>
+				<Option Goto="227" Text="В случае победы"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
