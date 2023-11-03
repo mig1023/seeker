@@ -6,13 +6,13 @@
 		</Copyright>
 		<Styles>
 			<Background Value="361e22"/>
-			<Font Value="f2cebf"/>
 			<ActionBox Value="bf8976"/>
 			<AdditionalStatus Value="b66956"/>
 			<AdditionalFont Value="f2cebf"/>
 			<Action Value="7e4736"/>
-			<Color Name="Continue, System" Value="573b41"/>
-			<Color Name="Main, Option" Value="45262c"/>
+			<Color Name="Font, ButtonFont, SystemFont" Value="f2cebf"/>
+			<Color Name="Continue, System" Value="514244"/>
+			<Color Name="Main, Option" Value="3e2d30"/>
 		</Styles>
 		<Default>
 			<DisabledOption Value="Hide"/>
@@ -30,6 +30,12 @@
 			<Options>
 				<Option Goto="54" Text="Cогласны с Гэндальфом, ваш путь лежит в горы"/>
 				<Option Goto="46" Text="Если согласны с Боромиром - послушайте все-таки слова мудрого мага"/>
+			</Options>
+		</Paragraph>
+		<Paragraph No="2">
+			<Text>Выйдя из комнаты, Хранители продолжили свой путь.</Text>
+			<Options>
+				<Option Goto="200"/>
 			</Options>
 		</Paragraph>
 	</Paragraphs>
