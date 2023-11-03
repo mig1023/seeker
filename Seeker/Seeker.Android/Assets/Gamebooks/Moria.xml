@@ -78,5 +78,11 @@
 				<Option Goto="341"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="9">
+			<Text>Немного задержавшись перед входом, Хранители вошли в комнату.</Text>
+			<Options>
+				<Option Goto="89"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
