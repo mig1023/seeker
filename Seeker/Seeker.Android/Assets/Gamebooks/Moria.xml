@@ -66,5 +66,11 @@
 				<Option Goto="255"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="7">
+			<Text>Сэм мгновенно выхватил меч и рубанул им по щупальцу. Оно бессильно замерло, и Мэрри торопливо поднялся на ноги.</Text>
+			<Options>
+				<Option Goto="103"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
