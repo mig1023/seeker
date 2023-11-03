@@ -184,5 +184,8 @@
 				<Option Goto="227" Text="В случае победы"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="24">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
