@@ -139,5 +139,12 @@
 				<Option Goto="252"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="18">
+			<Text>Хранители оказались в длинном коридоре, по обеим сторонам которого они обнаружили несколько дверей.</Text>
+			<Options>
+				<Option Goto="87" Text="Будете осматривать комнаты"/>
+				<Option Goto="170" Text="Пойдете дальше по коридору"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
