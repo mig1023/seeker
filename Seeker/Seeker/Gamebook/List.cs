@@ -59,6 +59,7 @@ namespace Seeker.Gamebook
             ["OutlawsOfSherwoodForest"] = OutlawsOfSherwoodForest.Constants.GetLinks(),
             ["AlamutFortress"] = AlamutFortress.Constants.GetLinks(),
             ["UnexpectedPassenger"] = UnexpectedPassenger.Constants.GetLinks(),
+            ["Moria"] = Moria.Constants.GetLinks(),
         };
 
         public static List<string> GetBooks() =>
