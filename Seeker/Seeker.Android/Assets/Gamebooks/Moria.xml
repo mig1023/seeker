@@ -146,5 +146,12 @@
 				<Option Goto="170" Text="Пойдете дальше по коридору"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="19">
+			<Text>Боромир бросился вперед и поднял из воды тело гнома. Проверьте еще раз Удачу Отряда.</Text>
+			<Options>
+				<Option Goto="347" Text="Отряду повезло"/>
+				<Option Goto="391" Text="Нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
