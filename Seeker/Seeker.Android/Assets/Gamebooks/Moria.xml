@@ -127,5 +127,11 @@
 				<Option Goto="23"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="16">
+			<Text>Но было уже поздно - 12 орков поджидали Отряд за первым же поворотом.</Text>
+			<Options>
+				<Option Goto="346" Text="В случае победы над ними"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
