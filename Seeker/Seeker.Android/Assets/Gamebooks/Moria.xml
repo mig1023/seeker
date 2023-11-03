@@ -170,5 +170,13 @@
 				<Option Goto="358" Text="На восток"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="22">
+			<Text>Перед Отрядом вновь встала проблема с выбором пути. Итак, какой коридор вы выбирает:</Text>
+			<Options>
+				<Option Goto="397" Text="Левый - опускающийся"/>
+				<Option Goto="238" Text="Правый - поднимающийся"/>
+				<Option Goto="231" Text="Средний - горизонтальный, но узкий"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
