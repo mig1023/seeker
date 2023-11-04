@@ -848,5 +848,12 @@
 				<Option Goto="348"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="128">
+			<Text>Хранители вошли в большую комнату правильной четырехугольной формы. Из нее было только два выхода...</Text>
+			<Options>
+				<Option Goto="288" Text="На запад"/>
+				<Option Goto="175" Text="На восток"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
