@@ -267,5 +267,11 @@
 				<Option Goto="387" Text="Нет"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="38">
+			<Text>Никто не успел даже сдвинуться с места, как это щупальце утянуло Мерри за собой.</Text>
+			<Options>
+				<Option Goto="136"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
