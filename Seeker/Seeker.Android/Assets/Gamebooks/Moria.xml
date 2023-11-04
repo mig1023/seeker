@@ -414,5 +414,11 @@
 				<Option Goto="353"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="62">
+			<Text>Хорошая победа, но впереди еще 10 орков.</Text>
+			<Options>
+				<Option Goto="394" Text="В случае победы"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
