@@ -626,5 +626,13 @@
 				<Option Goto="29"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="94">
+			<Text>На первый взгляд, комната не отличалась ничем особенным, но в ней было что-то, что говорило о частых посетителях. В комнате было три двери:</Text>
+			<Options>
+				<Option Goto="138" Text="На север"/>
+				<Option Goto="292" Text="На запад"/>
+				<Option Goto="281" Text="На восток"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
