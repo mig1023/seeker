@@ -883,5 +883,11 @@
 				<Option Goto="45" Text="Еще глубже вниз"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="133">
+			<Text>Как только нога мага коснулась ступеньки, раздался оглушительный свист, и в тот же миг на путников накинулись семь орков.</Text>
+			<Options>
+				<Option Goto="61" Text="В случае победы"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
