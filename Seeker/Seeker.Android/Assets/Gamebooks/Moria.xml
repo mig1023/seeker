@@ -770,5 +770,11 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="116">
+			<Text>Этот коридор то поднимался, то опускался, не давая нигде никаких ответвлений, так что даже Гэндальф не мог понять, где они находятся.</Text>
+			<Options>
+				<Option Goto="364"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
