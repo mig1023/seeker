@@ -727,5 +727,13 @@
 				<Option Goto="76"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="110">
+			<Text>Почти сразу коридор вновь разделился. Вы можете идти дальше:</Text>
+			<Options>
+				<Option Goto="379" Text="Прямо"/>
+				<Option Goto="78" Text="Налево"/>
+				<Option Goto="278" Text="Направо"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
