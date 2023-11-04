@@ -525,5 +525,12 @@
 				<Option Goto="110"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="79">
+			<Text>Гэндальф произнес заклинание, но дверь не открылась. - На дверь наложено сильное заклятье, - сказал маг. Бросьте кубик за мага и за заклятье:</Text>
+			<Options>
+				<Option Goto="93" Text="Три раза подряд у мага выпадет больше"/>
+				<Option Goto="29" Text="Нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
