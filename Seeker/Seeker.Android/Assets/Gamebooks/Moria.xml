@@ -402,5 +402,11 @@
 				<Option Goto="416"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="60">
+			<Text>Этот коридор был очень узкий и длинный, и Хранителям пришлось идти по одному. Но, наконец, коридор кончился и вывел отряд в комнату.</Text>
+			<Options>
+				<Option Goto="329"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
