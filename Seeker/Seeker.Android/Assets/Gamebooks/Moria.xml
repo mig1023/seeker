@@ -273,5 +273,11 @@
 				<Option Goto="136"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="39">
+			<Text>Коридор круто повернул на запад и вывел путников к небольшой комнате.</Text>
+			<Options>
+				<Option Goto="280"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
