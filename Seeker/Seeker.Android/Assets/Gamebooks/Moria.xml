@@ -447,5 +447,13 @@
 				<Option Goto="300" Text="Вернуться назад"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="67">
+			<Text>Гэндальф долго изучал эту надпись, но так ничего и не сумел в ней разобрать. Дальнейший путь может лежать:</Text>
+			<Options>
+				<Option Goto="32" Text="На север"/>
+				<Option Goto="358" Text="На запад"/>
+				<Option Goto="94" Text="На восток"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
