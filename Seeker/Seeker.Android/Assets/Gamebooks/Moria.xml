@@ -607,5 +607,11 @@
 				<Option Goto="390" Text="Не согласны"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="91">
+			<Text>То ли усталость взяла свое, то ли по какой другой причине часовой не сумел вовремя распознать опасность, и орки, поднявшиеся по коридору, смогли внезапно напасть на отряд.</Text>
+			<Options>
+				<Option Goto="34"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
