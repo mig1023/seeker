@@ -855,5 +855,12 @@
 				<Option Goto="175" Text="На восток"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="129">
+			<Text>Орк бросился к Фродо и метнул копье, пригвоздившее хоббита к стене. И тут на пути орка встал Арагорн.</Text>
+			<Options>
+				<Option Goto="295" Text="В случае победы орка"/>
+				<Option Goto="325" Text="Победил Арагорн"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
