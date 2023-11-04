@@ -735,5 +735,12 @@
 				<Option Goto="278" Text="Направо"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="111">
+			<Text>Из комнаты путники вышли в коридор, который повернул направо и вывел их к двери.</Text>
+			<Options>
+				<Option Goto="220" Text="Войти в неё"/>
+				<Option Goto="300" Text="Вернуться"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
