@@ -213,5 +213,13 @@
 				<Option Goto="252" Text="Вернуться назад"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="29">
+			<Text>Вы можете продолжить путь...</Text>
+			<Options>
+				<Option Goto="239" Text="Первый вариант"/>
+				<Option Goto="406" Text="Второй вариант"/>
+				<Option Goto="313" Text="Третий вариант"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
