@@ -634,5 +634,15 @@
 				<Option Goto="281" Text="На восток"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="95">
+			<Text>Хранители долго шли по этому коридору, обнаружив по пути небольшое ответвление на север.</Text>
+			<Options>
+				<Option Goto="72" Text="Свернуть в него">
+					<Text>Кроме того, можно продолжить идти...</Text>
+				</Option>
+				<Option Goto="229" Text="На восток"/>
+				<Option Goto="290" Text="На запад"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
