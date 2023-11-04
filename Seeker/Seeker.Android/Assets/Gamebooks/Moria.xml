@@ -455,5 +455,11 @@
 				<Option Goto="94" Text="На восток"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="68">
+			<Text>Хранители тщательно осмотрели пол, но ничего не нашли. Время уходить...</Text>
+			<Options>
+				<Option Goto="299"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
