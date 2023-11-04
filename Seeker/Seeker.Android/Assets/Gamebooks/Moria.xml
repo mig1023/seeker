@@ -808,5 +808,12 @@
 				<Option Goto="218"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="122">
+			<Text>Впереди находится десять орков, а сзади - семь. Вы можете напасть...</Text>
+			<Options>
+				<Option Goto="342" Text="На первый отряд"/>
+				<Option Goto="401" Text="На второй отряд"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
