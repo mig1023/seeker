@@ -715,5 +715,11 @@
 				<Option Goto="387"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="108">
+			<Text>Что-ж, вы возвращаетесь в Раздол, чтобы дождаться того неминуемого поражения, о котором говорил Гэндальф. Жаль, что первое же серьезное препятствие смогло остановить вас.</Text>
+			<Options>
+				<Option Goto="0"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
