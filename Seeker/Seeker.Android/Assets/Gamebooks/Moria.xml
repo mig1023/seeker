@@ -594,5 +594,11 @@
 				<Option Goto="353"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="89">
+			<Text>Хранители оказались в очень темной комнате, но на северной стене ярко выделялась надпись, сделанная на Морийском языке. Гэндальф подошел к ней поближе...</Text>
+			<Options>
+				<Option Goto="117"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
