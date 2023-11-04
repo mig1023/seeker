@@ -709,5 +709,11 @@
 				<Option Goto="367" Text="В случае победы"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="107">
+			<Text>Пол, не выдержав тяжести Отряда, провалился под ними, и Хранители упали вместе с обломками...</Text>
+			<Options>
+				<Option Goto="387"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
