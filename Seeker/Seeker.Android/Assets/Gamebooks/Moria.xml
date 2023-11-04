@@ -559,5 +559,12 @@
 				<Option Goto="323" Text="На восток"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="84">
+			<Text>Гимли, которому было не по себе от всего происходящего, шагнул вперед первым. Залив был небольшой глубины, но со скользким дном. Проверьте удачу гнома.</Text>
+			<Options>
+				<Option Goto="321" Text="Она с ним"/>
+				<Option Goto="334" Text="Нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
