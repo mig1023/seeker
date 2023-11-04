@@ -235,5 +235,12 @@
 				<Option Goto="292" Text="Вернуться"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="33">
+			<Text>Да, тяжелое путешествие по Мории повлияло на ваши представления о чести и отваге, но выбор сделан... Без труда зарезав спящих, вы можете:</Text>
+			<Options>
+				<Option Goto="269" Text="Осмотреть комнату"/>
+				<Option Goto="299" Text="Выйти из нее"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
