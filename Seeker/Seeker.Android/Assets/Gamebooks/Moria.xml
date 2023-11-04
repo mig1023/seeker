@@ -697,5 +697,11 @@
 				<Option Goto="250" Text="Осталось меньше"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="105">
+			<Text>Вскоре им открылась черная пропасть и узкая, без перил, арка Моста длиной в 50-60 шагов.</Text>
+			<Options>
+				<Option Goto="63"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
