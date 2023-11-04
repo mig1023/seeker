@@ -795,5 +795,12 @@
 				<Option Goto="303"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="120">
+			<Text>Под окном, напротив двери в коридор, Хранители обнаружили еще одну дверь.</Text>
+			<Options>
+				<Option Goto="234" Text="Зайдете в нее"/>
+				<Option Goto="207" Text="Не станете"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
