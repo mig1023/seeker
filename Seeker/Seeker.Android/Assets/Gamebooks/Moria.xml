@@ -488,5 +488,11 @@
 				<Option Goto="301" Text="На восток"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="73">
+			<Text>Не успев отразить нападение этих орков, Хранители были атакованы другим, более многочисленным отрядом.</Text>
+			<Options>
+				<Option Goto="34"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
