@@ -336,5 +336,12 @@
 				<Option Goto="372" Text="На запад"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="49">
+			<Text>Гэндальф вошел в открытые ворота и начал подниматься по лестнице. Проверьте удачу отряда:</Text>
+			<Options>
+				<Option Goto="86" Text="В порядке"/>
+				<Option Goto="43" Text="Нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
