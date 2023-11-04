@@ -286,5 +286,11 @@
 				<Option Goto="125" Text="Перейти через мост"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="41">
+			<Text>Время, неумолимо разрушавшее статую, не пощадило и подписи - вы не смогли прочитать ни слова. А теперь догоняйте отряд.</Text>
+			<Options>
+				<Option Goto="123"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
