@@ -748,5 +748,13 @@
 				<Option Goto="123"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="113">
+			<Text>Хранители вошли в небольшую комнату с низким потолком и тремя выходами:</Text>
+			<Options>
+				<Option Goto="9" Text="На запад"/>
+				<Option Goto="307" Text="На восток"/>
+				<Option Goto="245" Text="На юг"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
