@@ -519,5 +519,11 @@
 				<Option Goto="34"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="78">
+			<Text>После поворота направо, коридор закончился тупиком. Придется вернуться назад...</Text>
+			<Options>
+				<Option Goto="110"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
