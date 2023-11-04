@@ -869,5 +869,11 @@
 				<Option Goto="300" Text="Вернуться назад"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="131">
+			<Text>За первым боем тут же следует второй с 15 орками.</Text>
+			<Options>
+				<Option Goto="184" Text="В случае победы"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
