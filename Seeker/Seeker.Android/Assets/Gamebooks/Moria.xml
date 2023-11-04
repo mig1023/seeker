@@ -644,5 +644,13 @@
 				<Option Goto="290" Text="На запад"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="96">
+			<Text>- Да, мы добрались до жилых Ярусов, - проговорил маг. - Пока нам сопутствовала удача, и большая часть пути уже пройдена, однако мы еще не покинули Морию, а Восточные Ворота - далеко внизу.\n\nКуда вы продолжите путь:</Text>
+			<Options>
+				<Option Goto="57" Text="На север"/>
+				<Option Goto="388" Text="На восток"/>
+				<Option Goto="185" Text="На юг"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
