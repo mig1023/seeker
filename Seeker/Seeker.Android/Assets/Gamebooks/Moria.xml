@@ -690,5 +690,12 @@
 				<Option Goto="277"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="104">
+			<Text>Когда путники вошли в эту комнату, дверь тут же затворилась за ними.</Text>
+			<Options>
+				<Option Goto="107" Text="Хранителей осталось 8 или 9"/>
+				<Option Goto="250" Text="Осталось меньше"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
