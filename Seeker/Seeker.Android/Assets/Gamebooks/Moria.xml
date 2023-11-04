@@ -427,5 +427,12 @@
 				<Option Goto="40" Text="Остаетесь"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="64">
+			<Text>Эта комната была длинной и узкой и походила на небольшой коридор. Из комнаты можно выйти:</Text>
+			<Options>
+				<Option Goto="358" Text="На север"/>
+				<Option Goto="53" Text="На юг"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
