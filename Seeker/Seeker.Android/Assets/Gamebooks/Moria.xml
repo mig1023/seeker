@@ -390,5 +390,11 @@
 				<Option Goto="163"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="58">
+			<Text>Коридор долго петлял и, наконец, уперся в стену. Если у вас есть с собой кирка - самое время ей воспользоваться, а если нет - то возвращайтесь назад.</Text>
+			<Options>
+				<Option Goto="313"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
