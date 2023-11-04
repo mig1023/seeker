@@ -573,5 +573,11 @@
 				<Option Goto="119" Text="Идти прямо"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="86">
+			<Text>Первый шаг в Морийские пещеры был сделан и теперь, ободренные успехом, Хранители пошли вслед за Гэндальфом по темной лестнице...</Text>
+			<Options>
+				<Option Goto="353"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
