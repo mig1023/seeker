@@ -875,5 +875,13 @@
 				<Option Goto="184" Text="В случае победы"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="132">
+			<Text>Хранители оказались на большой лестнице, которая могла вывести их:</Text>
+			<Options>
+				<Option Goto="18" Text="Наверх"/>
+				<Option Goto="303" Text="Вниз"/>
+				<Option Goto="45" Text="Еще глубже вниз"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
