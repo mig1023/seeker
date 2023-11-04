@@ -613,5 +613,12 @@
 				<Option Goto="34"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="92">
+			<Text>Вскоре коридор повернул почти под прямым углом, и Хранители увидели еще одну дверь, очень похожую на ту, из которой они вышли. Пойдете...</Text>
+			<Options>
+				<Option Goto="9" Text="В северную комнату"/>
+				<Option Goto="140" Text="В восточную комнату"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
