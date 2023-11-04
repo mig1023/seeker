@@ -862,5 +862,12 @@
 				<Option Goto="325" Text="Победил Арагорн"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="130">
+			<Text>Этот коридор был точным повторением того коридора, по которому они пришли, и вывел Хранителей к двери.</Text>
+			<Options>
+				<Option Goto="115" Text="Войти"/>
+				<Option Goto="300" Text="Вернуться назад"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
