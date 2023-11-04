@@ -199,5 +199,12 @@
 				<Option Goto="142"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="27">
+			<Text>В голубом свете Магического Жезла путники заметили небольшую дверь в южной стене зала.</Text>
+			<Options>
+				<Option Goto="228" Text="Вы можете войти в эту дверь"/>
+				<Option Goto="350" Text="остаться ночевать в зале"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
