@@ -362,5 +362,13 @@
 				<Option Goto="299" Text="Пойдёте дальше"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="53">
+			<Text>Это была маленькая комната с низким потолком, настолько низким, что Хранителям даже показалось, что потолок опускается и они поспешили выйти из этой комнаты:</Text>
+			<Options>
+				<Option Goto="64" Text="На север"/>
+				<Option Goto="197" Text="На восток"/>
+				<Option Goto="44" Text="На юг"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
