@@ -895,5 +895,15 @@
 				<Option Goto="45"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="135">
+			<Text>За дверью продолжался коридор, тянущийся с севера на юг. Но вскоре Хранители заметили дверь, ведущую на запад.</Text>
+			<Options>
+				<Option Goto="9" Text="Войти">
+					<Text>Кроме того, можно идти по коридору:</Text>
+				</Option>
+				<Option Goto="315" Text="На юг"/>
+				<Option Goto="281" Text="На север"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
