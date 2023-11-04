@@ -480,5 +480,13 @@
 				<Option Goto="211"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="72">
+			<Text>Этот коридор мог вывести Отряд:</Text>
+			<Options>
+				<Option Goto="351" Text="На север"/>
+				<Option Goto="95" Text="На юг"/>
+				<Option Goto="301" Text="На восток"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
