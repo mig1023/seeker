@@ -917,5 +917,12 @@
 				<Option Goto="206"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="138">
+			<Text>Путники оказались в коридоре, который вскоре поворачивал на восток.</Text>
+			<Options>
+				<Option Goto="241" Text="Идете по нему дальше"/>
+				<Option Goto="94" Text="Вернетесь назад"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
