@@ -228,5 +228,12 @@
 				<Option Goto="399" Text="Предложить какой-либо иной выход"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="32">
+			<Text>Выйдя из комнаты, путники попали в коридор, резко поворачивающий на запад.</Text>
+			<Options>
+				<Option Goto="180" Text="Идти по нему"/>
+				<Option Goto="292" Text="Вернуться"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
