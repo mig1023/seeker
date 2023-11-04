@@ -461,5 +461,11 @@
 				<Option Goto="299"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="69">
+			<Text>Небольшой подъем и вперед к выходу...</Text>
+			<Options>
+				<Option Goto="105"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
