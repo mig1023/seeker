@@ -889,5 +889,11 @@
 				<Option Goto="61" Text="В случае победы"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="134">
+			<Text>Коридор шел под небольшим уклоном вниз, несколько раз, поворачивая и меняя направление. Путники шли довольно долго и в конце концов вышли на небольшую площадку...</Text>
+			<Options>
+				<Option Goto="45"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
