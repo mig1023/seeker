@@ -539,5 +539,11 @@
 				<Option Goto="286" Text="Останетесь стоять перед заливом"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="81">
+			<Text>Отряд не успел пройти и сотни шагов - сзади их догоняли орки и другие порождения Тьмы. Выхода нет, придется драться.</Text>
+			<Options>
+				<Option Goto="34"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
