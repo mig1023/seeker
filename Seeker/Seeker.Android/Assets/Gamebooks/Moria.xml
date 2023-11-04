@@ -494,5 +494,11 @@
 				<Option Goto="34"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="74">
+			<Text>Дверь отворилась, и путники увидели небольшой коридор, резко поворачивающий на восток.</Text>
+			<Options>
+				<Option Goto="223"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
