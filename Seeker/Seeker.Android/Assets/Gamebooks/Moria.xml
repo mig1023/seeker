@@ -279,5 +279,12 @@
 				<Option Goto="280"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="40">
+			<Text>Оглянувшись назад и увидев множество орков и троллей.</Text>
+			<Options>
+				<Option Goto="359" Text="Смело на них напасть"/>
+				<Option Goto="125" Text="Перейти через мост"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
