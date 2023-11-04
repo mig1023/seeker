@@ -684,5 +684,11 @@
 				<Option Goto="404"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="103">
+			<Text>Мерри оправился от страха и уже вместе со всеми начал искать вход в Морию.</Text>
+			<Options>
+				<Option Goto="277"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
