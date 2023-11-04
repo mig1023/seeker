@@ -261,5 +261,11 @@
 				<Option Goto="355" Text="Нет"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="37">
+			<Options>
+				<Option Goto="21" Text="Маг еще может пользоваться отворяющим заклинанием"/>
+				<Option Goto="387" Text="Нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
