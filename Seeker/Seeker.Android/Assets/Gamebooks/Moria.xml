@@ -566,5 +566,12 @@
 				<Option Goto="334" Text="Нет"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="85">
+			<Text>Благополучно перебравшись через трещину, Хранители вошли в темный коридор. Вскоре они заметили широкую каменную лестницу, поднимавшуюся вверх.</Text>
+			<Options>
+				<Option Goto="69" Text="Пойти по этой лестнице"/>
+				<Option Goto="119" Text="Идти прямо"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
