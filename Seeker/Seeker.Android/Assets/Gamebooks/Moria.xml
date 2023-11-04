@@ -551,5 +551,13 @@
 				<Option Goto="16"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="83">
+			<Text>Путники вышли из комнаты и попали в коридор, из которого можно было попасть:</Text>
+			<Options>
+				<Option Goto="115" Text="На юг"/>
+				<Option Goto="212" Text="На север"/>
+				<Option Goto="323" Text="На восток"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
