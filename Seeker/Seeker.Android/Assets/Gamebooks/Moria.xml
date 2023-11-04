@@ -579,5 +579,14 @@
 				<Option Goto="353"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="87">
+			<Text>В какую комнату вы заглянете вначале:</Text>
+			<Options>
+				<Option Goto="248" Text="В первую"/>
+				<Option Goto="326" Text="Во вторую"/>
+				<Option Goto="344" Text="В третью"/>
+				<Option Goto="258" Text="В четвертую"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
