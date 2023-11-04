@@ -326,5 +326,15 @@
 				<Option Goto="247" Text="На восток"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="48">
+			<Text>Путники дошли до коридора, который отходил от главного на север:</Text>
+			<Options>
+				<Option Goto="39" Text="Зайти в него">
+					<Text>Но отряд может продолжить путь:</Text>
+				</Option>
+				<Option Goto="335" Text="На восток"/>
+				<Option Goto="372" Text="На запад"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
