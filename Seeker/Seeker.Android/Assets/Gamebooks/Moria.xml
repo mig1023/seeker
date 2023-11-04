@@ -756,5 +756,13 @@
 				<Option Goto="245" Text="На юг"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="114">
+			<Text>- Орки! - в один голос воскликнули Хранители. Что вы будете делать:</Text>
+			<Options>
+				<Option Goto="146" Text="Пробиваться в Купольный зал"/>
+				<Option Goto="393" Text="Отступите по северному коридору"/>
+				<Option Goto="186" Text="Останетесь в Летописном чертоге"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
