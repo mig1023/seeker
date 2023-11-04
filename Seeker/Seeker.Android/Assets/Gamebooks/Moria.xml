@@ -513,5 +513,11 @@
 				<Option Goto="2" Text="Не искать"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="77">
+			<Text>Хранители не успели разбить первый отряд, как на них навалился второй.</Text>
+			<Options>
+				<Option Goto="34"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
