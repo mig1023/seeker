@@ -905,5 +905,11 @@
 				<Option Goto="281" Text="На север"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="136">
+			<Text>Все молча смотрели на круги, расплывающиеся по поверхности озера. И вдруг лунный луч осветил участок стены, рядом с которым они стояли.</Text>
+			<Options>
+				<Option Goto="187"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
