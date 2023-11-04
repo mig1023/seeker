@@ -789,5 +789,11 @@
 				<Option Goto="327" Text="Продолжать путь"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="119">
+			<Text>После нескольких десятков метров коридор вывел путников к лестнице, ведущей вниз.</Text>
+			<Options>
+				<Option Goto="303"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
