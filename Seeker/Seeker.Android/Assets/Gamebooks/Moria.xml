@@ -600,5 +600,12 @@
 				<Option Goto="117"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="90">
+			<Text>”Пробиваться вперед бессмысленно и опасно, - сказал Гэндальф. - Но я знаю другую дорогу через горы. Эта дорога трудна, ибо проходит через Морийские пещеры”.</Text>
+			<Options>
+				<Option Goto="127" Text="Согласны идти через Морию"/>
+				<Option Goto="390" Text="Не согласны"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
