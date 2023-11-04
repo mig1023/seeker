@@ -355,5 +355,12 @@
 				<Option Goto="153"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="52">
+			<Text>Вскоре путники заметили небольшую дверь, ведущую в комнату.</Text>
+			<Options>
+				<Option Goto="217" Text="Зайдете внутрь"/>
+				<Option Goto="299" Text="Пойдёте дальше"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
