@@ -319,5 +319,12 @@
 				<Option Goto="417" Text="Он отделится от него и один пойдёт в Гондор"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="47">
+			<Text>За дверью Хранители снова увидели коридор, идущий с запада на восток. Вы можете идти по этому коридору:</Text>
+			<Options>
+				<Option Goto="154" Text="На запад"/>
+				<Option Goto="247" Text="На восток"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
