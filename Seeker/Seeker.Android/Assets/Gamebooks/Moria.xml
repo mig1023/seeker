@@ -836,5 +836,11 @@
 				<Option Goto="291"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="126">
+			<Text>Хранители не успели сделать даже десятка шагов, как на них накинулось множество орков.</Text>
+			<Options>
+				<Option Goto="34"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
