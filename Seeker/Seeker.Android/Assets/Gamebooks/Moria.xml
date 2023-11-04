@@ -306,5 +306,11 @@
 				<Option Goto="276" Text="На восток"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="45">
+			<Text>Хранители оказались перед прикрытой дверью очень странной формы и маг долго не решался открыть ее, однако времени на долгие раздумья не было и он вошел в нее.</Text>
+			<Options>
+				<Option Goto="407"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
