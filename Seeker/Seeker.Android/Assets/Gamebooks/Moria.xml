@@ -703,5 +703,11 @@
 				<Option Goto="63"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="106">
+			<Text>Неожиданно из левого коридора в зал вышли 12 орков. Не говоря ни слова, они накинулись на Хранителей.</Text>
+			<Options>
+				<Option Goto="367" Text="В случае победы"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
