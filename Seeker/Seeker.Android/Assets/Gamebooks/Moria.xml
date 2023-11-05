@@ -1541,5 +1541,12 @@
 				<Option Goto="218"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="231">
+			<Text>Через этот коридор Хранители могли идти только цепочкой по одному (порядок - выберите сами). Вскоре коридор разделился на два:</Text>
+			<Options>
+				<Option Goto="194" Text="Один из которых вел вниз"/>
+				<Option Goto="110" Text="Другой - налево"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
