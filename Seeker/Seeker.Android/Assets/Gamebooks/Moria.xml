@@ -1049,5 +1049,11 @@
 				<Option Goto="59"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="157">
+			<Text>Когда Хранители вошли в эту комнату, что-то показалось им странным, но сделать они ничего не успели: огромная плита, обрушившись сверху, навсегда похоронила под собой Отряд.</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
