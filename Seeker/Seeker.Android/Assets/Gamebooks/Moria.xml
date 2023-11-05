@@ -1397,5 +1397,12 @@
 				<Option Goto="8" Text="Начать спускаться вниз"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="210">
+			<Text>Дверь отворилась, и перед глазами путников оказался связанный гном.</Text>
+			<Options>
+				<Option Goto="50" Text="Вы зайдете в комнату"/>
+				<Option Goto="87" Text="Уйдете оттуда"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
