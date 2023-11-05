@@ -1411,5 +1411,12 @@
 				<Option Goto="295" Text="Не может"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="212">
+			<Text>Хранители вошли в длинный узкий коридор, который повернул налево, затем направо и вывел путников к двери.</Text>
+			<Options>
+				<Option Goto="30" Text="Зайти"/>
+				<Option Goto="83" Text="Выйти обратно"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
