@@ -1463,5 +1463,12 @@
 				<Option Goto="364"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="220">
+			<Text>Но дверь не открывалась.</Text>
+			<Options>
+				<Option Goto="66" Text="Маг может воспользоваться заклинанием, отворяющим двери"/>
+				<Option Goto="300" Text="Не может и придется возвращаться назад"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
