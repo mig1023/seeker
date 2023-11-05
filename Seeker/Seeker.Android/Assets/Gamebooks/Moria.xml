@@ -1596,5 +1596,11 @@
 				<Option Goto="271"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="239">
+			<Text>Хранители попали на огромную лестницу, которая вывела их вниз.</Text>
+			<Options>
+				<Option Goto="254"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
