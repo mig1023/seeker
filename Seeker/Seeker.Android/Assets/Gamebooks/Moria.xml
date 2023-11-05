@@ -1363,5 +1363,11 @@
 				<Option Goto="105"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="205">
+			<Text>Как это ни печально, но клинок светился ровным ярким светом, показывая, что орки были где-то рядом, и Хранители приготовились к сраженью.</Text>
+			<Options>
+				<Option Goto="292"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
