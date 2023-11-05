@@ -1253,5 +1253,12 @@
 				<Option Goto="320"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="188">
+			<Text>Вы нашли небольшой серебряный рог.</Text>
+			<Options>
+				<Option Goto="386" Text="Хотите узнать что-либо о нем, спросите у Гэндальфа"/>
+				<Option Goto="252" Text="Сразу возвращайтесь в зал"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
