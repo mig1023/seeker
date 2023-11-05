@@ -976,5 +976,12 @@
 				<Option Goto="90" Text="Выслушать слова Гэндальфа"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="146">
+			<Text>Пройдя назад по коридору навстречу шуму и топоту, Хранители увидели много орков, горных урхов из Мордорских земель и пару пещерных троллей.</Text>
+			<Options>
+				<Option Goto="34" Text="Будете драться"/>
+				<Option Goto="186" Text="Отступите в Летописный Чертог"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
