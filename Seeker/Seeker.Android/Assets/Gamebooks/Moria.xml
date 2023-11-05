@@ -1476,5 +1476,14 @@
 				<Option Goto="249"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="222">
+			<Text>В маленькой комнате, освещенной волшебным светом Жезла, путники обнаружили моток веревки, кольчужную рубаху, меч и кирку. Выберите 1 предмет и возвращайтесь в зал. Какой предмет вы выберите:</Text>
+			<Options>
+				<Option Goto="361" Text="Веревку"/>
+				<Option Goto="17" Text="Кольчужную рубаху"/>
+				<Option Goto="356" Text="Меч"/>
+				<Option Goto="139" Text="Кирку"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
