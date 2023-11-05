@@ -1318,5 +1318,12 @@
 				<Option Goto="276" Text="На восток"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="198">
+			<Text>Прошло уже больше двух часов, но ничего не происходило.</Text>
+			<Options>
+				<Option Goto="251" Text="Будете ждать дальнейших событий"/>
+				<Option Goto="192" Text="Сами нападете на орков"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
