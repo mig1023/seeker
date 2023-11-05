@@ -937,5 +937,12 @@
 				<Option Goto="225" Text="На восток"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="141">
+			<Text>Гэндальф произнес: “Я вспомнил, что этот коридор ведет далеко вглубь Мории, а там нам делать нечего”.</Text>
+			<Options>
+				<Option Goto="374" Text="Возвратитесь вместе с ним"/>
+				<Option Goto="126" Text="Подождете дальнейших событий"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
