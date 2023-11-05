@@ -1351,5 +1351,11 @@
 				<Option Goto="45" Text="До второго яруса"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="203">
+			<Text>Пока Хранители стояли, ветер утих, а через несколько минут прекратился и снегопад.</Text>
+			<Options>
+				<Option Goto="31"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
