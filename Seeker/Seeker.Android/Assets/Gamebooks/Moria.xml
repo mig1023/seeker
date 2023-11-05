@@ -1228,5 +1228,11 @@
 				<Option Goto="225"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="184">
+			<Text>Если вы устали - вас освежит глоток здравура. А вслед за этим - вас ждет дорога дальше вперед.</Text>
+			<Options>
+				<Option Goto="260"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
