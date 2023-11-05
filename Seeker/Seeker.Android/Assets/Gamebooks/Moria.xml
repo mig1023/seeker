@@ -1635,5 +1635,13 @@
 				<Option Goto="106"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="245">
+			<Text>Вскоре коридор разделился, и Отряд мог продолжить свой путь:</Text>
+			<Options>
+				<Option Goto="113" Text="На север"/>
+				<Option Goto="306" Text="На запад"/>
+				<Option Goto="331" Text="На восток"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
