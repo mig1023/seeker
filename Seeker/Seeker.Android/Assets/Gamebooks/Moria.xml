@@ -1104,5 +1104,12 @@
 				</Option>
 			</Options>
 		</Paragraph>
+		<Paragraph No="165">
+			<Text>Через несколько десятков шагов коридор разделился на два. По какому из них вы пойдете дальше:</Text>
+			<Options>
+				<Option Goto="377" Text="По правому"/>
+				<Option Goto="374" Text="По левому"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
