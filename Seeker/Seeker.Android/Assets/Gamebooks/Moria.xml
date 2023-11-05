@@ -1167,5 +1167,13 @@
 				<Option Goto="12"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="175">
+			<Text>Эта маленькая комнатка очень сильно напоминала о чем-то знакомом, домашнем, но время на раздумья не было. Ваш путь лежит:</Text>
+			<Options>
+				<Option Goto="128" Text="На запад"/>
+				<Option Goto="285" Text="На восток"/>
+				<Option Goto="225" Text="На юг"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
