@@ -1418,5 +1418,11 @@
 				<Option Goto="83" Text="Выйти обратно"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="213">
+			<Text>К сожалению, отдых был слишком коротким: орки, выследившие отряд, поднимались по лестнице. Хранителям придется сражаться...</Text>
+			<Options>
+				<Option Goto="363"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
