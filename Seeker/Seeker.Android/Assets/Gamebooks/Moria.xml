@@ -1437,5 +1437,12 @@
 				<Option Goto="170"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="216">
+			<Text>В комнату протиснулся предводитель врагов - огромный орк со смуглым, широким и плоским лицом и маленькими горящими глазами. Проверьте свою удачу.</Text>
+			<Options>
+				<Option Goto="261" Text="Она с вами"/>
+				<Option Goto="129" Text="Нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
