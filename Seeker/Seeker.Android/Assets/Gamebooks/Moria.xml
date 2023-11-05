@@ -1485,5 +1485,12 @@
 				<Option Goto="139" Text="Кирку"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="223">
+			<Text>Коридор довел путников до потайной двери.</Text>
+			<Options>
+				<Option Goto="272" Text="Маг еще может пользоваться волшебным заклинанием"/>
+				<Option Goto="412" Text="Не может, придется возвращаться"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
