@@ -991,5 +991,11 @@
 				<Option Goto="410" Text="На восток"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="148">
+			<Text>Вот когда пригодилась кирка! Несколько сильных ударов и... в стене образовался небольшой проем, через который Хранители попали в комнату.</Text>
+			<Options>
+				<Option Goto="66"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
