@@ -1207,5 +1207,12 @@
 				<Option Goto="292" Text="Отряд может также вернуться назад"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="181">
+			<Text>Но сзади тоже показались орки - их было около пятнадцати.</Text>
+			<Options>
+				<Option Goto="192" Text="Нападете на этот отряд"/>
+				<Option Goto="35" Text="Отступите в комнату"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
