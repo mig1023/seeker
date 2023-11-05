@@ -1055,5 +1055,11 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="158">
+			<Text>Никто не успел даже сдвинуться с места, как щупальце, обвившись вокруг ноги Мерри, утянуло его за собой.</Text>
+			<Options>
+				<Option Goto="354"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
