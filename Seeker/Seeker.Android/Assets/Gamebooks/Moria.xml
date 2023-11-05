@@ -1357,5 +1357,11 @@
 				<Option Goto="31"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="204">
+			<Text>Стрелами орков убило двух Хранителей, которые шли последними. Ваше право решать - кто это был.</Text>
+			<Options>
+				<Option Goto="105"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
