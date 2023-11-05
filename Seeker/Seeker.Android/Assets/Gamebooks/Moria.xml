@@ -1290,5 +1290,11 @@
 				<Option Goto="142"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="194">
+			<Text>Короткий спуск - и Хранители оказались на другом Ярусе. Теперь их путь лежал к Воротам на восток.</Text>
+			<Options>
+				<Option Goto="18"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
