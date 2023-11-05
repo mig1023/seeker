@@ -1130,5 +1130,11 @@
 				<Option Goto="340" Text="Она отвернулась от вас"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="169">
+			<Text>Пока Хранители стояли, ветер утих, а через несколько минут прекратился и снегопад. Можно продолжать восхождение.</Text>
+			<Options>
+				<Option Goto="371"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
