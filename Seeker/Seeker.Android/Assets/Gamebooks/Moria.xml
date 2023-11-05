@@ -1337,5 +1337,11 @@
 				<Option Goto="34"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="201">
+			<Text>Но Хранители не успели далеко отойти: спереди, оттуда, где располагались Ворота, выбежали семь орков.</Text>
+			<Options>
+				<Option Goto="121" Text="В случае победы"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
