@@ -1003,5 +1003,11 @@
 				<Option Goto="323"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="150">
+			<Text>Если даже слова мудрого мага не могут заставить вас изменить решение, то...</Text>
+			<Options>
+				<Option Goto="108"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
