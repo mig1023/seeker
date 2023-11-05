@@ -1149,5 +1149,11 @@
 				<Option Goto="203" Text="Переждете метель"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="172">
+			<Text>Помянув погибших, Хранители вновь были готовы лицом к лицу встретиться с любой опасностью.</Text>
+			<Options>
+				<Option Goto="22"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
