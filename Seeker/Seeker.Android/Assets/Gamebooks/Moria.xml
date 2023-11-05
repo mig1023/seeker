@@ -1331,5 +1331,11 @@
 				<Option Goto="232"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="200">
+			<Text>Пройдя несколько десятков шагов по коридору, Хранители услышали странный гул, доносившийся отовсюду - приближались орки. Отступать было некуда - нужно принимать бой.</Text>
+			<Options>
+				<Option Goto="34"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
