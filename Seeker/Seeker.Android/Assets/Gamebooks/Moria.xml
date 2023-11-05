@@ -1528,5 +1528,12 @@
 				<Option Goto="65" Text="Нет"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="229">
+			<Text>Коридор резко повернул под углом девяносто градусов.</Text>
+			<Options>
+				<Option Goto="297" Text="Идти дальше"/>
+				<Option Goto="95" Text="Идти назад"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
