@@ -1492,5 +1492,11 @@
 				<Option Goto="412" Text="Не может, придется возвращаться"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="224">
+			<Text>- Бегите! Живо! - сказал Гэндальф, обращаясь к своим спутникам. - Поднимайтесь к Воротам и уходите к Зеркальному озеру.</Text>
+			<Options>
+				<Option Goto="317"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
