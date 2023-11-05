@@ -1325,5 +1325,11 @@
 				<Option Goto="192" Text="Сами нападете на орков"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="199">
+			<Text>Фродо взглянул на кинжал - он светился неярким голубоватым светом. Он уже собрался предупредить друзей об опасности, как в зал из левого коридора вошли орки.</Text>
+			<Options>
+				<Option Goto="232"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
