@@ -1222,5 +1222,11 @@
 				<Option Goto="406" Text="Прямо"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="183">
+			<Text>Странно, но заклинание не подействовало на эту дверь. Возвращайтесь назад...</Text>
+			<Options>
+				<Option Goto="225"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
