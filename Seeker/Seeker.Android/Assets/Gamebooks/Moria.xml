@@ -1278,5 +1278,11 @@
 				<Option Goto="215"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="192">
+			<Text>Словно сговорившись между собой, орки одновременно накинулись на Хранителей.</Text>
+			<Options>
+				<Option Goto="34"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
