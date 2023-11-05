@@ -1234,5 +1234,12 @@
 				<Option Goto="260"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="185">
+			<Text>Через несколько шагов путники оказались перед развилкой: хотя они оба в общем-то ведут в одну сторону. Пойдёте...</Text>
+			<Options>
+				<Option Goto="163" Text="По более светлому коридору"/>
+				<Option Goto="411" Text="По более темному коридору"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
