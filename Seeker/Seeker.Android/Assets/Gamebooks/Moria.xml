@@ -962,5 +962,12 @@
 				<Option Goto="174" Text="Вперед"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="144">
+			<Text>Как и предполагали Хранители, этот коридор довел их только до шестого Яруса.</Text>
+			<Options>
+				<Option Goto="368" Text="Продолжить свой путь по этому Ярусу"/>
+				<Option Goto="267" Text="Вернуться на седьмой и выбрать другой коридор"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
