@@ -1155,5 +1155,11 @@
 				<Option Goto="22"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="173">
+			<Text>Проверьте удачу каждого Хранителя (кроме Гэндальфа и Фродо). Те, кому Фортуна улыбнулась, смогли добраться до противоположного края Привратного Чертога.</Text>
+			<Options>
+				<Option Goto="105"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
