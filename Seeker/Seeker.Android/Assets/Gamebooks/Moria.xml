@@ -1583,5 +1583,12 @@
 				<Option Goto="200"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="237">
+			<Text>Хранители прошли по этому коридору до двери в комнату.</Text>
+			<Options>
+				<Option Goto="319" Text="Зайти"/>
+				<Option Goto="151" Text="Вернуться назад"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
