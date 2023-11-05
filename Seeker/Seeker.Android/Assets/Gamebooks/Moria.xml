@@ -1214,5 +1214,13 @@
 				<Option Goto="35" Text="Отступите в комнату"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="182">
+			<Text>Вы не напрасно взяли с собой кирку: несколько ударов и перед вами открылся небольшой лаз, через который можно было проползти дальше. Осветив дорогу перед собой, Хранители увидели три коридора:</Text>
+			<Options>
+				<Option Goto="239" Text="Направо"/>
+				<Option Goto="279" Text="Налево"/>
+				<Option Goto="406" Text="Прямо"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
