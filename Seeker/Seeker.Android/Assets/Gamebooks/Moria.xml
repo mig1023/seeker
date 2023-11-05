@@ -1451,5 +1451,11 @@
 				<Option Goto="299" Text="Идете дальше"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="218">
+			<Options>
+				<Option Goto="294" Text="Встретить Барлога на Мосту"/>
+				<Option Goto="403" Text="Рядом с ним"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
