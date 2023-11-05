@@ -1382,5 +1382,13 @@
 				<Option Goto="2"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="208">
+			<Text>Тот, кто выпьет этой воды, может прибавить себе 1 единицу силы. Свой путь вы можете продолжить:</Text>
+			<Options>
+				<Option Goto="11" Text="На запад"/>
+				<Option Goto="247" Text="На север"/>
+				<Option Goto="358" Text="На восток"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
