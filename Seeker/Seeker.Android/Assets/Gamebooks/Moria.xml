@@ -1567,5 +1567,15 @@
 				<Option Goto="385"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="235">
+			<Text>Путники обнаружили потайную дверь, ведущую на юг.</Text>
+			<Options>
+				<Option Goto="56" Text="Маг может пользоваться заклинанием, отворяющим двери">
+					<Text>Если нет, то вы можете продолжить свой путь:</Text>
+				</Option>
+				<Option Goto="287" Text="На восток"/>
+				<Option Goto="44" Text="На запад"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
