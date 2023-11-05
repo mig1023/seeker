@@ -1284,5 +1284,11 @@
 				<Option Goto="34"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="193">
+			<Text>Обессиленный гном умирает на руках мага. Делать в этой комнате больше нечего и вы выходите из комнаты.</Text>
+			<Options>
+				<Option Goto="142"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
