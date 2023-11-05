@@ -1577,5 +1577,11 @@
 				<Option Goto="44" Text="На запад"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="236">
+			<Text>Благоразумно решив, что в неизвестной комнате может таиться какая-то опасность, Хранители продолжили свой путь.</Text>
+			<Options>
+				<Option Goto="200"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
