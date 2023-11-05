@@ -1343,5 +1343,13 @@
 				<Option Goto="121" Text="В случае победы"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="202">
+			<Text>Отряд вышел на лестницу, которая спускалась далеко вниз. По ней можно было дойти вниз:</Text>
+			<Options>
+				<Option Goto="303" Text="До третьего яруса"/>
+				<Option Goto="254" Text="До четвертого яруса"/>
+				<Option Goto="45" Text="До второго яруса"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
