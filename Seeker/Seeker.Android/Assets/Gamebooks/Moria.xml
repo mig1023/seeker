@@ -1200,5 +1200,12 @@
 				<Option Goto="303"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="180">
+			<Text>Коридор довел путников до какой-то двери.</Text>
+			<Options>
+				<Option Goto="378" Text="Зайти"/>
+				<Option Goto="292" Text="Отряд может также вернуться назад"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
