@@ -983,5 +983,13 @@
 				<Option Goto="186" Text="Отступите в Летописный Чертог"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="147">
+			<Text>Эта комната была очень длинной. На полу валялись остатки различной домашней утвари и мебели. “Наверное, - сказал Гэндальф, - это был Обеденный зал”. Из Зала можно было попасть:</Text>
+			<Options>
+				<Option Goto="378" Text="На юг"/>
+				<Option Goto="409" Text="На север"/>
+				<Option Goto="410" Text="На восток"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
