@@ -1671,5 +1671,12 @@
 				<Option Goto="252" Text="Возвращаетесь назад"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="250">
+			<Text>Осмотревшись, Гэндальф заметил еще одну дверь, но она также оказалась заперта.</Text>
+			<Options>
+				<Option Goto="324" Text="Он может применить заклинание, отворяющее дверь"/>
+				<Option Goto="387" Text="Нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
