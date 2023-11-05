@@ -1498,5 +1498,16 @@
 				<Option Goto="317"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="225">
+			<Text>Путники оказались в комнате, очень похожей на ту, первую, в которой они очутились на этом Ярусе: те же три выхода:</Text>
+			<Options>
+				<Option Goto="175" Text="На север"/>
+				<Option Goto="140" Text="На запад"/>
+				<Option Goto="159" Text="На восток">
+					<Text>Если маг может пользоваться заклинанием, отворяющим двери:</Text>
+				</Option>
+				<Option Goto="183" Text="Маг использует заклинание"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
