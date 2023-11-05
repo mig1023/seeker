@@ -1521,5 +1521,12 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="228">
+			<Text>Хоббиты с радостным возгласом юркнули за дверь, решив, что здесь они отдохнут спокойней, чем на каменном полу неуютного зала. Проверьте удачу Пина:</Text>
+			<Options>
+				<Option Goto="304" Text="Она с ним"/>
+				<Option Goto="65" Text="Нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
