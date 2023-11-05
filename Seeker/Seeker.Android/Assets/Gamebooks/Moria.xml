@@ -944,5 +944,15 @@
 				<Option Goto="126" Text="Подождете дальнейших событий"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="142">
+			<Text>Если хотите, вы можете заглянуть в любую другую комнату:</Text>
+			<Options>
+				<Option Goto="344" Text="Одну"/>
+				<Option Goto="87" Text="Другую">
+					<Text>Или можете уйти отсюда подальше...</Text>
+				</Option>
+				<Option Goto="170"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
