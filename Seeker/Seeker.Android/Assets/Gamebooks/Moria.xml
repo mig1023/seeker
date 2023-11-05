@@ -1554,5 +1554,12 @@
 				<Option Goto="367"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="233">
+			<Text>Разбудить спящего орка - тяжелая работа:</Text>
+			<Options>
+				<Option Goto="33" Text="Лучше ли покончить все несколькими ударами"/>
+				<Option Goto="75" Text="Все-таки разбудить их"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
