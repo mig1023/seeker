@@ -1037,5 +1037,11 @@
 				<Option Goto="47" Text="Вернетесь назад"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="155">
+			<Text>Дверь легко отворилась и Хранители увидели шесть орков, жестоко пытающих какого-то гнома. Орки также заметили Отряд и приготовились к бою. В случае победы.</Text>
+			<Options>
+				<Option Goto="338"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
