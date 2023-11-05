@@ -1136,5 +1136,11 @@
 				<Option Goto="371"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="170">
+			<Text>Хранители прошли около сотни шагов и вдруг впереди показались орки, оглянувшись, путники также заметили орков: отступать было некуда. Необходимо принять бой.</Text>
+			<Options>
+				<Option Goto="122"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
