@@ -2181,5 +2181,12 @@
 				<Option Goto="97" Text="Подойдете к нему"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="324">
+			<Text>Дверь открылась, и Хранители могут продолжить свой путь:</Text>
+			<Options>
+				<Option Goto="315" Text="На север"/>
+				<Option Goto="287" Text="На запад"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
