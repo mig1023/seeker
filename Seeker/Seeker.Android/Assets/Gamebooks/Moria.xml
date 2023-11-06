@@ -2026,5 +2026,12 @@
 				<Option Goto="72" Text="На запад"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="302">
+			<Text>Из Привратного Чертога вело два коридора:</Text>
+			<Options>
+				<Option Goto="332" Text="Налево"/>
+				<Option Goto="116" Text="Направо вниз"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
