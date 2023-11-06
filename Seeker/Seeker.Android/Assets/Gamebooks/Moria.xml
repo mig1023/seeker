@@ -2107,5 +2107,12 @@
 				<Option Goto="329"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="314">
+			<Text>Бросьте кубик и отнимите выпавшее число от 12 - с оставшимися орками придется драться. Внезапно Хранители заметили еще один отряд орков.</Text>
+			<Options>
+				<Option Goto="131" Text="Хранители победят своих противников в первой же схватке"/>
+				<Option Goto="73" Text="Нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
