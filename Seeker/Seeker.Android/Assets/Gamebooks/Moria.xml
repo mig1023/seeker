@@ -2282,5 +2282,12 @@
 				<Option Goto="193" Text="Его нет"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="339">
+			<Text>Отдохнув и немного подкрепившись, Хранители вошли в открывавшийся перед ними туннель. Пройдя несколько десятков шагов, они увидели, что туннель раздваивается. Вы идете:</Text>
+			<Options>
+				<Option Goto="52" Text="Налево"/>
+				<Option Goto="60" Text="Направо"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
