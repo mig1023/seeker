@@ -2070,5 +2070,16 @@
 				<Option Goto="252" Text="Также можно вернуться назад"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="309">
+			<Text>Но просто так дверь не открывалась.</Text>
+			<Options>
+				<Option Goto="177" Text="Гэндальф может применить заклинание, отворяющее дверь">
+					<Text>Если же нет, то выходите из комнаты либо:</Text>
+				</Option>
+				<Option Goto="64" Text="На юг"/>
+				<Option Goto="21" Text="На запад"/>
+				<Option Goto="292" Text="На восток"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
