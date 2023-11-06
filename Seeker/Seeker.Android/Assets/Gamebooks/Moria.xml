@@ -1775,5 +1775,11 @@
 				<Option Goto="255" Text="Выйдете из комнаты"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="266">
+			<Text>Короткая передышка после тяжелого боя и Хранители вновь готовы встретить любую опасность лицом к лицу.</Text>
+			<Options>
+				<Option Goto="22"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
