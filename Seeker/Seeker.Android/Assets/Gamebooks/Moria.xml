@@ -2247,5 +2247,12 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="334">
+			<Text>Гимли поскользнулся, потерял равновесие и упал. Тяжелая кольчуга не давала ему возможности подняться.</Text>
+			<Options>
+				<Option Goto="336" Text="Если у вас есть палка - вы можете ему помочь"/>
+				<Option Goto="19" Text="Ее нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
