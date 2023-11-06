@@ -2254,5 +2254,14 @@
 				<Option Goto="19" Text="Ее нет"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="335">
+			<Text>Отряд вошел в небольшой зал, из которого вело четыре коридора:</Text>
+			<Options>
+				<Option Goto="392" Text="На север"/>
+				<Option Goto="275" Text="На восток"/>
+				<Option Goto="48" Text="На запад"/>
+				<Option Goto="285" Text="В небольшой коридор на северо-восток"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
