@@ -2331,5 +2331,11 @@
 				<Option Goto="267" Text="Поднимитесь и выйдете на другом Ярусе"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="346">
+			<Text>Путники вернулись назад и пошли по коридору...</Text>
+			<Options>
+				<Option Goto="362"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
