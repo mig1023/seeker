@@ -1862,5 +1862,15 @@
 				<Option Goto="303"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="279">
+			<Text>Дверь была заперта.</Text>
+			<Options>
+				<Option Goto="79" Text="Гэндальф еще может применять заклинания, отворяющие двери">
+					<Text>Если нет, то делайте свой выбор между двумя лестницами:</Text>
+				</Option>
+				<Option Goto="239" Text="Первой"/>
+				<Option Goto="406" Text="Второй"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
