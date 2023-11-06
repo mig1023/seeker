@@ -1843,5 +1843,12 @@
 				<Option Goto="285" Text="На юг"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="276">
+			<Text>Путники оказались в длинном узком коридоре. Вы пойдете по нему:</Text>
+			<Options>
+				<Option Goto="235" Text="На восток"/>
+				<Option Goto="44" Text="На запад"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
