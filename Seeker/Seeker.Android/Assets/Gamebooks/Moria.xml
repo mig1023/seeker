@@ -2307,5 +2307,22 @@
 				<Option Goto="77" Text="Не успели"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="343">
+			<Text>Подойдя к ближайшему утесу, Вы увидели, что это вовсе не простой камень, а искусно вырубленная фигура гнома. Проверьте свою удачу.</Text>
+			<Options>
+				<Option Goto="112" Text="Она с вами"/>
+				<Option Goto="41" Text="Нет"/>
+			</Options>
+		</Paragraph>
+		<Paragraph No="344">
+			<Text>Дверь в эту комнату была заперта.</Text>
+			<Options>
+				<Option Goto="210" Text="Маг может открыть ее">
+					<Text>Если нет, то Отряд может:</Text>
+				</Option>
+				<Option Goto="170" Text="Продолжить свой путь"/>
+				<Option Goto="258" Text="Идти к другой двери"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
