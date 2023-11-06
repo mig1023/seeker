@@ -2159,5 +2159,11 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="321">
+			<Text>Подскользнувшись, Гимли едва не упал, однако сумел удержаться и вскоре выбрался на сухое место. Вслед за ним последовали и остальные Хранители.</Text>
+			<Options>
+				<Option Goto="226"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
