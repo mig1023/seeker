@@ -2101,5 +2101,11 @@
 				<Option Goto="21" Text="На запад"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="313">
+			<Text>После нескольких поворотов коридор вывел Отряд в небольшую комнату...</Text>
+			<Options>
+				<Option Goto="329"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
