@@ -1706,5 +1706,12 @@
 				<Option Goto="82" Text="Направо"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="255">
+			<Text>Выйдя из комнаты, Хранители снова оказались в коридоре, тянущемся с запада на восток.</Text>
+			<Options>
+				<Option Goto="47" Text="Пойти на запад"/>
+				<Option Goto="247" Text="Пойти на восток"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
