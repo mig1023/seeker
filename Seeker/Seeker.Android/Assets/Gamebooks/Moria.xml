@@ -2051,5 +2051,11 @@
 				<Option Goto="262"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="306">
+			<Text>Коридор опять повернул и вывел Хранителей к комнате...</Text>
+			<Options>
+				<Option Goto="319"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
