@@ -1915,5 +1915,17 @@
 				<Option Goto="84"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="287">
+			<Text>Коридор был довольно длинным и путники уже чувствовали усталость, когда наконец добрались до двери...</Text>
+			<Options>
+				<Option Goto="104" Text="Зайти в неё">
+					<Text>Но рядом они обнаружили еще одну потайную дверь на юг:</Text>
+				</Option>
+				<Option Goto="74" Text="Гэндальф может ее открыть">
+					<Text>Иначе можно пойти на запад...</Text>
+				</Option>
+				<Option Goto="235"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
