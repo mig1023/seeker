@@ -2301,5 +2301,11 @@
 				<Option Goto="165"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="342">
+			<Options>
+				<Option Goto="384" Text="Вы убили всех орков за два раунда атаки"/>
+				<Option Goto="77" Text="Не успели"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
