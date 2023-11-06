@@ -1856,5 +1856,11 @@
 				<Option Goto="187"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="278">
+			<Text>Коридор повернул направо вниз и вывел Отряд к лестнице.</Text>
+			<Options>
+				<Option Goto="303"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
