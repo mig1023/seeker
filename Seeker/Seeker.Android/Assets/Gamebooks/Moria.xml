@@ -2263,5 +2263,11 @@
 				<Option Goto="285" Text="В небольшой коридор на северо-восток"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="336">
+			<Text>А разве у вас есть палка?! Вернитесь назад...</Text>
+			<Options>
+				<Option Goto="334"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
