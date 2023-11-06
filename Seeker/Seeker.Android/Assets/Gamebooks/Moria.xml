@@ -1872,5 +1872,11 @@
 				<Option Goto="406" Text="Второй"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="280">
+			<Text>Коридор сделал несколько поворотов и окончился тупиком. Делать нечего, придется возвращаться назад...</Text>
+			<Options>
+				<Option Goto="160"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
