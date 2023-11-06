@@ -2011,5 +2011,13 @@
 				<Option Goto="313" Text="Направо"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="300">
+			<Text>Следы большого сражения были и в этой комнате: обломки костей хрустели под ногами, и путники иногда наступали на щиты и кольчуги. Из комнаты можно было выйти:</Text>
+			<Options>
+				<Option Goto="111" Text="На юг"/>
+				<Option Goto="149" Text="На север"/>
+				<Option Goto="44" Text="На восток"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
