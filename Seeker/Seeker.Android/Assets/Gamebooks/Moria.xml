@@ -1713,5 +1713,11 @@
 				<Option Goto="247" Text="Пойти на восток"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="256">
+			<Text>Если у вас еще остался здравур - сделайте по глотку и восста- новите свои силы. А затем, поставив часового, можете отдохнуть и приготовиться к новым испытаниям.</Text>
+			<Options>
+				<Option Goto="370"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
