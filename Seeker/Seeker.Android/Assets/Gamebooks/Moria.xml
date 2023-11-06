@@ -2171,5 +2171,15 @@
 				<Option Goto="161"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="323">
+			<Text>Хранители оказались в комнате, из которой вело два выхода:</Text>
+			<Options>
+				<Option Goto="30" Text="На север"/>
+				<Option Goto="83" Text="На запад">
+					<Text>Посередине комнаты возвышался старый полуразрушенный фонтан. Может быть, в начале вы подойдете к нему?</Text>
+				</Option>
+				<Option Goto="97" Text="Подойдете к нему"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
