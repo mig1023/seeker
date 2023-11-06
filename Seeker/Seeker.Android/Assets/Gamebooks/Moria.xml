@@ -2087,5 +2087,11 @@
 				<Option Goto="269" Text="Осмотреть ее"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="311">
+			<Text>Если вы хотите взглянуть на эльфийский кинжал - сделайте это, а если нет...</Text>
+			<Options>
+				<Option Goto="256"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
