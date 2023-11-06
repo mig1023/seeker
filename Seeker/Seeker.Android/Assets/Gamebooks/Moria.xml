@@ -1897,5 +1897,11 @@
 				<Option Goto="398"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="284">
+			<Text>Хранители вышли к Привратному Чертогу, где в это время было множество орков. Отряд храбро сражался, но... все равно был побежден.</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
