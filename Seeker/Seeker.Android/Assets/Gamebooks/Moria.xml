@@ -1824,5 +1824,11 @@
 				<Option Goto="412"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="273">
+			<Options>
+				<Option Goto="33" Text="Нападете на спящих орков"/>
+				<Option Goto="233" Text="Хотите вначале разбудить их"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
