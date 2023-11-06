@@ -1935,5 +1935,12 @@
 				<Option Goto="92" Text="На юг"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="289">
+			<Text>Путники шли по коридору на юг. И неожиданно увидели отблески пожара впереди.</Text>
+			<Options>
+				<Option Goto="160" Text="Идете дальше"/>
+				<Option Goto="280" Text="Свернете в коридор направо"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
