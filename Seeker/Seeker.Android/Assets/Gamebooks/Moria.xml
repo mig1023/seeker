@@ -1850,5 +1850,11 @@
 				<Option Goto="44" Text="На запад"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="277">
+			<Text>Но до наступления темноты Гэндальф так и не нашел ворот. И вот взошла луна...</Text>
+			<Options>
+				<Option Goto="187"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
