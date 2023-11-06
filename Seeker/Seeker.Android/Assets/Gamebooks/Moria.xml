@@ -2081,5 +2081,11 @@
 				<Option Goto="292" Text="На восток"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="310">
+			<Options>
+				<Option Goto="299" Text="Уйти из комнаты"/>
+				<Option Goto="269" Text="Осмотреть ее"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
