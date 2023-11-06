@@ -2275,5 +2275,12 @@
 				<Option Goto="369"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="338">
+			<Text>Хранители освободили гнома, но он был в очень тяжелом состоянии.</Text>
+			<Options>
+				<Option Goto="26" Text="Если у мага остался здравур - скорее воспользуйтесь им"/>
+				<Option Goto="193" Text="Его нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
