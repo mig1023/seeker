@@ -1942,5 +1942,14 @@
 				<Option Goto="280" Text="Свернете в коридор направо"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="290">
+			<Text>Из этой странной темной комнаты было четыре выхода:</Text>
+			<Options>
+				<Option Goto="319" Text="На юг"/>
+				<Option Goto="331" Text="На север"/>
+				<Option Goto="316" Text="На запад"/>
+				<Option Goto="95" Text="На восток"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
