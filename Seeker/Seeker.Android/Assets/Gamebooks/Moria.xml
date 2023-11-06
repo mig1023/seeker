@@ -1971,5 +1971,11 @@
 				<Option Goto="407"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="294">
+			<Options>
+				<Option Goto="224" Text="На бой с Барлогом выходит Гэндальф"/>
+				<Option Goto="257" Text="Хочет кто-нибудь другой"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
