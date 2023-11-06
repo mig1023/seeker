@@ -2441,5 +2441,11 @@
 				<Option Goto="383"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="363">
+			<Text>На Хранителей напали семь орков.</Text>
+			<Options>
+				<Option Goto="253" Text="В случае победы"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
