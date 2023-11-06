@@ -1836,5 +1836,12 @@
 				<Option Goto="176"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="275">
+			<Text>Хранители вошли в коридор, который вскоре повернул под углом 45 градусов. Из этого коридора путники могли попасть:</Text>
+			<Options>
+				<Option Goto="335" Text="На запад"/>
+				<Option Goto="285" Text="На юг"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
