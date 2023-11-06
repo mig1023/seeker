@@ -1878,5 +1878,12 @@
 				<Option Goto="160"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="281">
+			<Text>Путники оказались в коридоре, который шел с севера на юг.</Text>
+			<Options>
+				<Option Goto="241" Text="На север"/>
+				<Option Goto="135" Text="На юг"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
