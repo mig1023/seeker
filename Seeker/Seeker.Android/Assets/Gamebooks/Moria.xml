@@ -1678,5 +1678,11 @@
 				<Option Goto="387" Text="Нет"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="251">
+			<Text>Но вот, кажется, у орков кончилось терпение и они начали атаку с обеих сторон...</Text>
+			<Options>
+				<Option Goto="192"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
