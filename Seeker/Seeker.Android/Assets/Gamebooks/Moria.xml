@@ -1927,5 +1927,13 @@
 				<Option Goto="235"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="288">
+			<Text>Хранители оказались в коридоре, из которого можно было попасть:</Text>
+			<Options>
+				<Option Goto="147" Text="На запад"/>
+				<Option Goto="128" Text="На восток"/>
+				<Option Goto="92" Text="На юг"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
