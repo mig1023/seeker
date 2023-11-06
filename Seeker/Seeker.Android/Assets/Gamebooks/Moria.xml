@@ -2382,5 +2382,11 @@
 				<Option Goto="143"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="354">
+			<Text>Все молча стояли и смотрели на круги, расходившиеся по поверхности озера, но вдруг взошла луна и...</Text>
+			<Options>
+				<Option Goto="187"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
