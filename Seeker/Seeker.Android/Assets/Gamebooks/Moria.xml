@@ -1797,5 +1797,13 @@
 				<Option Goto="11"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="269">
+			<Text>Эта комната на первый взгляд ничем особенным не выделялась, но маг почему-то медлил выходить из нее. Что вы предпримете:</Text>
+			<Options>
+				<Option Goto="299" Text="Уйдете из комнаты"/>
+				<Option Goto="405" Text="Проверите стены"/>
+				<Option Goto="68" Text="Проверите пол"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
