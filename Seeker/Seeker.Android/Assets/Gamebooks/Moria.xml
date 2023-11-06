@@ -2220,5 +2220,12 @@
 				<Option Goto="181" Text="Вернетесь назад"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="330">
+			<Text>Через некоторое время, когда все Хранители крепко спали из левого коридора вышел отряд вооруженных орков. Проверьте удачу Хранителей.</Text>
+			<Options>
+				<Option Goto="232" Text="Она с ними"/>
+				<Option Goto="167" Text="Нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
