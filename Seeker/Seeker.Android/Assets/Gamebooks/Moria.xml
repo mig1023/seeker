@@ -2423,5 +2423,11 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="360">
+			<Text>Сэм долго крепился, пытаясь не уснуть, но ему это не удавалось. Он разбудил Фродо и уговорил его посидеть на карауле.</Text>
+			<Options>
+				<Option Goto="305"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
