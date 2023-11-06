@@ -1818,5 +1818,11 @@
 				<Option Goto="96"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="272">
+			<Text>В комнате, в которую попали Хранители, они увидели четыре лука, лежащих около стены и несколько колчанов со стрелами. Возьмите их с собой и возвращайтесь...</Text>
+			<Options>
+				<Option Goto="412"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
