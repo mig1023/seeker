@@ -2417,5 +2417,11 @@
 				<Option Goto="309" Text="Хотите открыть эту дверь"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="359">
+			<Text>Битва была жестокая, но недолгая: слишком много было орков и другой нечисти. Хранители пали смертью храбрых совсем немного не дойдя до конца.</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
