@@ -1965,5 +1965,11 @@
 				<Option Goto="67" Text="Нет"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="293">
+			<Text>Не известно почему, но заклинание не сработало - вернитесь назад...</Text>
+			<Options>
+				<Option Goto="407"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
