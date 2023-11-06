@@ -1762,5 +1762,11 @@
 				<Option Goto="103"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="264">
+			<Text>Оставшись без мага, Хранители оказались в полной темноте и без проводника и им уже было не суждено выбраться из Морийских Пещер никогда.</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
