@@ -1990,5 +1990,12 @@
 				<Option Goto="300" Text="Не может"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="297">
+			<Text>Коридор пошел вниз - Хранители вышли на лестницу, ведущую на первый Ярус.</Text>
+			<Options>
+				<Option Goto="282" Text="Идти по ней"/>
+				<Option Goto="229" Text="Вернуться назад"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
