@@ -2093,5 +2093,13 @@
 				<Option Goto="256"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="312">
+			<Text>Из этой комнаты можно было выйти:</Text>
+			<Options>
+				<Option Goto="64" Text="На юг"/>
+				<Option Goto="292" Text="На восток"/>
+				<Option Goto="21" Text="На запад"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
