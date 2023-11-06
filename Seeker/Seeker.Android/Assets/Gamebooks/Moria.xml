@@ -2289,5 +2289,11 @@
 				<Option Goto="60" Text="Направо"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="340">
+			<Text>Ничего особенного и важного Хранители не нашли. Выход из комнаты был только один...</Text>
+			<Options>
+				<Option Goto="255"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
