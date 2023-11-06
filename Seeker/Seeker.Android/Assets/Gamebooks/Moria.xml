@@ -2370,5 +2370,11 @@
 				<Option Goto="333" Text="На восток"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="352">
+			<Text>Первый шаг в Морийские Пещеры был сделан и теперь, ободренные успехом, Хранители пошли вслед за Гэндальфом по темной лестнице.</Text>
+			<Options>
+				<Option Goto="61"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
