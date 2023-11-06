@@ -2114,5 +2114,13 @@
 				<Option Goto="73" Text="Нет"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="315">
+			<Text>Путники оказались в длинной комнате, посредине которой горел огонь. Это показалось Хранителям странным и, возможно, опасным, поэтому они поспешили выйти из комнаты либо:</Text>
+			<Options>
+				<Option Goto="135" Text="На север"/>
+				<Option Goto="246" Text="На запад"/>
+				<Option Goto="104" Text="На юг"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
