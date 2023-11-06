@@ -2137,5 +2137,15 @@
 				<Option Goto="413" Text="Маг погиб"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="318">
+			<Text>За открывшейся дверью путники увидели темный коридор, поворачивающий на восток.</Text>
+			<Options>
+				<Option Goto="396" Text="Идете по нему">
+					<Text>Продолжите путь по коридору:</Text>
+				</Option>
+				<Option Goto="53" Text="На запад"/>
+				<Option Goto="337" Text="На восток"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
