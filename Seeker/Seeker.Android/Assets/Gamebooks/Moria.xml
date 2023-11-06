@@ -2461,5 +2461,11 @@
 				<Option Goto="236" Text="Пойдете назад"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="366">
+			<Text>Гэндальф долго всматривался в Палантир, пытаясь что-то в нем увидеть, и на миг ему показалось, что камень подсказал ему путь.</Text>
+			<Options>
+				<Option Goto="254"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
