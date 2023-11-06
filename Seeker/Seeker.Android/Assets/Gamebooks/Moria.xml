@@ -2447,5 +2447,12 @@
 				<Option Goto="253" Text="В случае победы"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="364">
+			<Text>Вскоре путники заметили два коридора. Оба вели вниз, но один из них был более пологим, чем другой. По которому из них вы продолжите свой путь:</Text>
+			<Options>
+				<Option Goto="144" Text="По первому"/>
+				<Option Goto="267" Text="По второму"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
