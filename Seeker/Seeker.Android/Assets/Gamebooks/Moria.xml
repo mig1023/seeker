@@ -2227,5 +2227,12 @@
 				<Option Goto="167" Text="Нет"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="331">
+			<Text>Хранители попали в коридор, из которого было два выхода:</Text>
+			<Options>
+				<Option Goto="245" Text="На запад"/>
+				<Option Goto="290" Text="На юг"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
