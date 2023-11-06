@@ -2194,5 +2194,12 @@
 				<Option Goto="34"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="326">
+			<Text>Подойдя к этой комнате, Хранители услышали крик, доносившийся из-за нее.</Text>
+			<Options>
+				<Option Goto="155" Text="Зайдете в комнату"/>
+				<Option Goto="170" Text="Продолжите свой путь"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
