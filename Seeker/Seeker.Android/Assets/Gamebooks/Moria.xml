@@ -1830,5 +1830,11 @@
 				<Option Goto="233" Text="Хотите вначале разбудить их"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="274">
+			<Text>Гэндальф подал знак остановиться, вошел под арку и на мгновение замер - его осветили розоватые всполохи огня.</Text>
+			<Options>
+				<Option Goto="176"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
