@@ -1909,5 +1909,11 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="286">
+			<Text>Но ведь другого выхода у Хранителей нет! Поэтому надо идти...</Text>
+			<Options>
+				<Option Goto="84"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
