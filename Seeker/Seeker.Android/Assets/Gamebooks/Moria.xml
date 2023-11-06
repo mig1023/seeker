@@ -2213,5 +2213,12 @@
 				<Option Goto="73"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="329">
+			<Text>Войдя в комнату, Хранители услышали голоса орков.</Text>
+			<Options>
+				<Option Goto="35" Text="Идете дальше"/>
+				<Option Goto="181" Text="Вернетесь назад"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
