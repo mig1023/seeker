@@ -2147,5 +2147,11 @@
 				<Option Goto="337" Text="На восток"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="319">
+			<Text>Не успели Хранители сделать и трех шагов внутрь комнаты, как на них сверху обрушилась огромная плита, похоронившая под собой всех путников...</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
