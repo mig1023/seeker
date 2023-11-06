@@ -2122,5 +2122,12 @@
 				<Option Goto="104" Text="На юг"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="316">
+			<Text>Хранители вошли в большую комнату правильной четырехугольной формы. Из нее было только два выхода:</Text>
+			<Options>
+				<Option Goto="410" Text="На запад"/>
+				<Option Goto="290" Text="На восток"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
