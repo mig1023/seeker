@@ -2063,5 +2063,12 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="308">
+			<Text>Коридор довел путников до двери.</Text>
+			<Options>
+				<Option Goto="36" Text="Зайти"/>
+				<Option Goto="252" Text="Также можно вернуться назад"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
