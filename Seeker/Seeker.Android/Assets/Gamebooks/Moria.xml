@@ -2241,5 +2241,11 @@
 				<Option Goto="204" Text="Нет"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="333">
+			<Text>Хранители вошли в эту комнату и сделали несколько шагов по ней, и вдруг сверху на них посыпались камни - Отряд попал в засаду...</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
