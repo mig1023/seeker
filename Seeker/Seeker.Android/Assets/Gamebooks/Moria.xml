@@ -1885,5 +1885,11 @@
 				<Option Goto="135" Text="На юг"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="282">
+			<Text>Если у вас есть Морийский Палантир - воспользуйтесь им, а если нет...</Text>
+			<Options>
+				<Option Goto="415"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
