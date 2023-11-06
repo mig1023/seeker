@@ -1719,5 +1719,11 @@
 				<Option Goto="370"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="257">
+			<Text>- Этот противник вам не по силам, - сказал Гэндальф. - Бегите! Живо! \n\nПоднимайтесь к Воротам и уходите к Зеркальному Озеру.</Text>
+			<Options>
+				<Option Goto="317"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
