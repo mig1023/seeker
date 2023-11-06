@@ -2363,5 +2363,12 @@
 				<Option Goto="330"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="351">
+			<Text>Очень скоро коридор разделился на два:</Text>
+			<Options>
+				<Option Goto="89" Text="На запад"/>
+				<Option Goto="333" Text="На восток"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
