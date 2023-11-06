@@ -2188,5 +2188,11 @@
 				<Option Goto="287" Text="На запад"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="325">
+			<Text>Арагорн выиграл этот бой, но не выиграл всего сражения - из-за открывшейся двери на Хранителей накинулись орки...</Text>
+			<Options>
+				<Option Goto="34"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
