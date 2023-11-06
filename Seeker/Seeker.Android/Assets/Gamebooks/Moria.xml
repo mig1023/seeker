@@ -1738,5 +1738,11 @@
 				<Option Goto="165" Text="Вернетесь на первый Ярус и пойдете по нему"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="260">
+			<Text>Немного постояв перед дверью, Хранители вошли в комнату.</Text>
+			<Options>
+				<Option Goto="89"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
