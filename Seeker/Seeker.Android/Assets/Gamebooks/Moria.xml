@@ -2033,5 +2033,11 @@
 				<Option Goto="116" Text="Направо вниз"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="303">
+			<Text>Хранители вышли на ровную небольшую площадку. Ни сверху ни снизу не доносилось никаких звуков, и поэтому путники решили отдохнуть.</Text>
+			<Options>
+				<Option Goto="339"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
