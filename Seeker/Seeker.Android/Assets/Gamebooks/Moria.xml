@@ -1684,5 +1684,13 @@
 				<Option Goto="192"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="252">
+			<Text>Итак, Хранители вернулись в зал с тремя коридорами. По какому из них вы пойдете:</Text>
+			<Options>
+				<Option Goto="221" Text="По северному"/>
+				<Option Goto="28" Text="По западному"/>
+				<Option Goto="118" Text="По восточному"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
