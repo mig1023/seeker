@@ -1750,5 +1750,11 @@
 				<Option Goto="5"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="262">
+			<Text>В это время в зал вошло восемь орков, но Фродо заметил их и поднял тревогу. В случае победы.</Text>
+			<Options>
+				<Option Goto="367"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
