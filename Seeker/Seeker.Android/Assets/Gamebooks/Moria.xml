@@ -2756,5 +2756,12 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="412">
+			<Text>Отсюда вы можете идти:</Text>
+			<Options>
+				<Option Goto="276" Text="На запад"/>
+				<Option Goto="104" Text="На восток"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
