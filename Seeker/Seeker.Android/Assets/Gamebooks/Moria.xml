@@ -2677,5 +2677,12 @@
 				<Option Goto="150" Text="Не убедили"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="400">
+			<Text>Гэндальф поднял свой Жезл, который тут же засветился голубоватым светом, и в этом свете путники заметили в южной стене небольшую дверь.</Text>
+			<Options>
+				<Option Goto="228" Text="Войдете в нее"/>
+				<Option Goto="350" Text="Переночуете в зале"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
