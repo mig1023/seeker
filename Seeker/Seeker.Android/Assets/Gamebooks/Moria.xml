@@ -2595,5 +2595,11 @@
 				<Option Goto="12"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="387">
+			<Text>Через несколько дней все Хранители погибли от недостатка воды и пищи.</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
