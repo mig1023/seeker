@@ -2532,5 +2532,11 @@
 				<Option Goto="45"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="377">
+			<Text>И тут же на Отряд набросились восемь орков.</Text>
+			<Options>
+				<Option Goto="141" Text="В случае победы"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
