@@ -2769,5 +2769,11 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="414">
+			<Text>Если вы победили в этой битве:</Text>
+			<Options>
+				<Option Goto="184"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
