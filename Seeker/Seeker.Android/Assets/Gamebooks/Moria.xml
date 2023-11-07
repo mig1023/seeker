@@ -2728,5 +2728,11 @@
 				<Option Goto="151" Text="Не может"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="408">
+			<Text>Но орки сами заметили Хранителей и напали на них.</Text>
+			<Options>
+				<Option Goto="414"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
