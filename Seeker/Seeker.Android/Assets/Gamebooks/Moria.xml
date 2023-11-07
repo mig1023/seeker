@@ -2702,5 +2702,12 @@
 				<Option Goto="294"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="404">
+			<Text>Коридор вел вниз, в сторону от Ворот, но идти назад к Привратному Чертогу под обстрел орков было опасно.</Text>
+			<Options>
+				<Option Goto="173" Text="Рискнуть и сделать это"/>
+				<Option Goto="164" Text="Спускаться дальше по коридору"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
