@@ -2505,5 +2505,13 @@
 				<Option Goto="290" Text="Идти на запад"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="373">
+			<Text>В какую комнату вы пойдете:</Text>
+			<Options>
+				<Option Goto="326" Text="В первую"/>
+				<Option Goto="344" Text="В вторую"/>
+				<Option Goto="258" Text="В третью"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
