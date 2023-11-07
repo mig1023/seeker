@@ -2498,5 +2498,12 @@
 				<Option Goto="145"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="372">
+			<Text>Путники попали в очень длинный коридор, тянувшийся с востока на запад.</Text>
+			<Options>
+				<Option Goto="48" Text="Идти на восток"/>
+				<Option Goto="290" Text="Идти на запад"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
