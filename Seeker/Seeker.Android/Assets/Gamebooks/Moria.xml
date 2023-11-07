@@ -2577,5 +2577,11 @@
 				<Option Goto="165" Text="Продолжите путь"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="384">
+			<Text>Удачный бой, но сзади еще семь орков.</Text>
+			<Options>
+				<Option Goto="394" Text="В случае победы"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
