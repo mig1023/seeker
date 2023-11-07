@@ -2626,5 +2626,12 @@
 				<Option Goto="226"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="392">
+			<Text>Из этой комнаты было два выхода:</Text>
+			<Options>
+				<Option Goto="39" Text="На запад"/>
+				<Option Goto="335" Text="На юг"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
