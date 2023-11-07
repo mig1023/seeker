@@ -2721,5 +2721,12 @@
 				<Option Goto="45"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="407">
+			<Text>Путники вошли в комнату, и вдруг сработал секретный механизм, и дверь затворилась за ними.</Text>
+			<Options>
+				<Option Goto="293" Text="Гэндальф может воспользоваться заклинанием"/>
+				<Option Goto="151" Text="Не может"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
