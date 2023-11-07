@@ -2583,5 +2583,11 @@
 				<Option Goto="394" Text="В случае победы"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="385">
+			<Options>
+				<Option Goto="240" Text="Будете читать рукопись сейчас"/>
+				<Option Goto="51" Text="Когда-нибудь попозже"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
