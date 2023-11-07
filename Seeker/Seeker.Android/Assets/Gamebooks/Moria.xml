@@ -7,11 +7,10 @@
 		<Styles>
 			<Background Value="361e22"/>
 			<ActionBox Value="bf8976"/>
-			<AdditionalStatus Value="b66956"/>
-			<AdditionalFont Value="f2cebf"/>
 			<Action Value="7e4736"/>
-			<Color Name="Font, ButtonFont, SystemFont" Value="f2cebf"/>
-			<Color Name="Continue, System" Value="514244"/>
+			<StatusBar Value="483b3d"/>
+			<Color Name="Font, ButtonFont, SystemFont, AdditionalFont" Value="f2cebf"/>
+			<Color Name="Continue, System, AdditionalStatus" Value="514244"/>
 			<Color Name="Main, Option" Value="3e2d30"/>
 		</Styles>
 		<Dictionaries>
