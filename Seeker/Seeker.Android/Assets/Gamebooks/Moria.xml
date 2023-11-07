@@ -2633,5 +2633,12 @@
 				<Option Goto="335" Text="На юг"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="393">
+			<Text>Коридор пока был пуст, но уже было слышно как сзади приближались орки.</Text>
+			<Options>
+				<Option Goto="394" Text="Вернуться в Летописный Чертог"/>
+				<Option Goto="81" Text="Продолжить отступление по коридору"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
