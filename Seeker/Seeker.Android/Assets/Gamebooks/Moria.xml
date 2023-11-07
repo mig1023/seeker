@@ -2544,5 +2544,11 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="379">
+			<Text>Коридор повернул налево и повел Отряд вниз до четвертого яруса.</Text>
+			<Options>
+				<Option Goto="303"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
