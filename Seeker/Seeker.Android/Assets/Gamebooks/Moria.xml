@@ -2513,5 +2513,11 @@
 				<Option Goto="258" Text="В третью"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="374">
+			<Text>Хранители вышли к противоположному краю Привратного Чертога.</Text>
+			<Options>
+				<Option Goto="105"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
