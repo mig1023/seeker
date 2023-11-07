@@ -2479,5 +2479,11 @@
 				<Option Goto="45"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="369">
+			<Text>Щель была узкой - дверь заклинило - и враги могли протиснуться внутрь только поодиночке. Когда вы убьете семь орков:</Text>
+			<Options>
+				<Option Goto="216"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
