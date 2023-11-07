@@ -2709,5 +2709,11 @@
 				<Option Goto="164" Text="Спускаться дальше по коридору"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="405">
+			<Text>Хранители тщательно простучали все стены, но ничего не нашли. Однако время не ждет, вам нужно идти.</Text>
+			<Options>
+				<Option Goto="299"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
