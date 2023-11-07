@@ -2485,5 +2485,12 @@
 				<Option Goto="216"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="370">
+			<Text>Проверьте свою удачу:</Text>
+			<Options>
+				<Option Goto="213" Text="Она с вами"/>
+				<Option Goto="91" Text="Нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
