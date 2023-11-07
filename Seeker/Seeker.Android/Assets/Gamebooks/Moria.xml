@@ -2763,5 +2763,11 @@
 				<Option Goto="104" Text="На восток"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="413">
+			<Text>Хранители попытались оказать сопротивление багровому ужасу подземелий, но против Барлога они оказались бессильны...</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
