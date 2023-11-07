@@ -2696,5 +2696,11 @@
 				<Option Goto="85"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="403">
+			<Text>- На Мосту у нас еще есть шанс, но здесь, - Гэндальф развел руками, - ни одного.</Text>
+			<Options>
+				<Option Goto="294"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
