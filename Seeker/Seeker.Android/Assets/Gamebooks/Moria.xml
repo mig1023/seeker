@@ -2467,5 +2467,11 @@
 				<Option Goto="254"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="367">
+			<Options>
+				<Option Goto="172" Text="Во время боя погиб кто-нибудь из отряда"/>
+				<Option Goto="266" Text="Никто не погиб"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
