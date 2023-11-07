@@ -2690,5 +2690,11 @@
 				<Option Goto="77" Text="Не успели"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="402">
+			<Text>- Не зря мы захватили веревку, - сказал Гэндальф. - Теперь мы сможем пробраться к Привратному Чертогу, минуя орков.</Text>
+			<Options>
+				<Option Goto="85"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
