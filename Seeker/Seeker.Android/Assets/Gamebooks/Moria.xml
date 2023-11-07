@@ -2640,5 +2640,11 @@
 				<Option Goto="81" Text="Продолжить отступление по коридору"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="394">
+			<Text>Если у вас остался здравур - самое время восстановить свои силы, а затем продолжить свой путь.</Text>
+			<Options>
+				<Option Goto="202"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
