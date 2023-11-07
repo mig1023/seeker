@@ -2473,5 +2473,11 @@
 				<Option Goto="266" Text="Никто не погиб"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="368">
+			<Text>Хранители пошли по коридору вперед, повернули направо, затем налево и оказались небольшой площадке.</Text>
+			<Options>
+				<Option Goto="45"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
