@@ -2570,5 +2570,12 @@
 				<Option Goto="298" Text="Переночевать и отложить поиски Ворот на завтра"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="383">
+			<Text>И действительно, через несколько шагов путники увидели коридор, который поднимался вверх.</Text>
+			<Options>
+				<Option Goto="259" Text="Пойдете по нему"/>
+				<Option Goto="165" Text="Продолжите путь"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
