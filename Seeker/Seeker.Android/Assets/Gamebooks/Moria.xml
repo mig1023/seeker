@@ -2715,5 +2715,11 @@
 				<Option Goto="299"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="406">
+			<Text>Лестница привела Хранителей на небольшую площадку.</Text>
+			<Options>
+				<Option Goto="45"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
