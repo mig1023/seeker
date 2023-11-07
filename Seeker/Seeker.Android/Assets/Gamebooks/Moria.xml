@@ -2601,5 +2601,11 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="388">
+			<Text>Здесь Хранителей уже давно готовилась встреча: орки и тролли накинулись на Отряд.</Text>
+			<Options>
+				<Option Goto="34"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
