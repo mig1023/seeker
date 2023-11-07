@@ -6,6 +6,8 @@ namespace Seeker.Gamebook.Moria
     {
         public static Constants StaticInstance = new Constants();
 
+        public static Dictionary<string, int> Fellowship { get; set; }
+
         public static Links GetLinks() => new Links
         {
             Protagonist = Character.Protagonist.Init,

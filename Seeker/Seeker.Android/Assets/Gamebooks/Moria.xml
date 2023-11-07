@@ -14,6 +14,19 @@
 			<Color Name="Continue, System" Value="514244"/>
 			<Color Name="Main, Option" Value="3e2d30"/>
 		</Styles>
+		<Dictionaries>
+			<Fellowship>
+				<Item Name="Фродо" Value="3"/>
+				<Item Name="Гэндальф" Value="6"/>
+				<Item Name="Арагорн" Value="5"/>
+				<Item Name="Боромир" Value="5"/>
+				<Item Name="Леголас" Value="4"/>
+				<Item Name="Гимли" Value="2"/>
+				<Item Name="Сэм" Value="2"/>
+				<Item Name="Пин" Value="2"/>
+				<Item Name="Мэрри" Value="2"/>
+			</Fellowship>
+		</Dictionaries>
 		<Default>
 			<DisabledOption Value="Hide"/>
 		</Default>
