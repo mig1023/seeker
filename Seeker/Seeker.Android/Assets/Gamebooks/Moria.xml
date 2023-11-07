@@ -26,6 +26,11 @@
 				<Item Name="Пин" Value="2"/>
 				<Item Name="Мэрри" Value="2"/>
 			</Fellowship>
+			<Enemies>
+				<Item Name="Орк" Value="5"/>
+				<Item Name="Волколак" Value="4"/>
+				<Item Name="Тролль" Value="7"/>
+			</Enemies>
 		</Dictionaries>
 		<Default>
 			<DisabledOption Value="Hide"/>
