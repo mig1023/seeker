@@ -2652,5 +2652,11 @@
 				<Option Goto="404"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="396">
+			<Text>Сделав несколько шагов, путники ощутили какую-то опасность, но было уже поздно - огромная плита, упавшая сверху навсегда похоронила под собой Отряд Хранителей...</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
