@@ -2734,5 +2734,13 @@
 				<Option Goto="414"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="409">
+			<Text>Эта комната, в отличии от предыдущих, была округлой формы и из нее было три выхода:</Text>
+			<Options>
+				<Option Goto="89" Text="На север"/>
+				<Option Goto="147" Text="На юг"/>
+				<Option Goto="372" Text="На восток"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
