@@ -2620,5 +2620,11 @@
 				<Option Goto="150" Text="Не убедили"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="391">
+			<Text>Оплакав судьбу погибшего друга, Хранители с большой осторожностью перебрались через залив.</Text>
+			<Options>
+				<Option Goto="226"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
