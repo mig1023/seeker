@@ -2657,6 +2657,12 @@
 			<Options>
 				<Gameover/>
 			</Options>
+		</Paragraph><Paragraph No="397">
+			<Text>Коридор шел вниз, не давая по своему ходу ни одного ответвления. Становилось заметно теплее.</Text>
+			<Options>
+				<Option Goto="22" Text="Вернуться"/>
+				<Option Goto="376" Text="Продолжить путь"/>
+			</Options>
 		</Paragraph>
 	</Paragraphs>
 </Gamebook>
