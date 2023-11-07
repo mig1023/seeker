@@ -2742,5 +2742,13 @@
 				<Option Goto="372" Text="На восток"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="410">
+			<Text>Из этой комнаты Хранители могли продолжить путь:</Text>
+			<Options>
+				<Option Goto="285" Text="На запад"/>
+				<Option Goto="316" Text="На восток"/>
+				<Option Goto="151" Text="На юг"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
