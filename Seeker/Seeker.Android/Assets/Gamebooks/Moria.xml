@@ -2781,5 +2781,11 @@
 				<Option Goto="98" Text="В случае победы"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="415">
+			<Text>Хранители сделали несколько шагов по лестнице, но неожиданно она обвалилась, похоронив под своими обломками весь Отряд...</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
