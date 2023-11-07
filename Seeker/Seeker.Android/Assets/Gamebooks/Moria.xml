@@ -2684,5 +2684,11 @@
 				<Option Goto="350" Text="Переночуете в зале"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="401">
+			<Options>
+				<Option Goto="62" Text="Вы убили всех орков за один раунд атаки"/>
+				<Option Goto="77" Text="Не успели"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
