@@ -463,6 +463,11 @@
 		</Paragraph>
 		<Paragraph No="62">
 			<Text>Хорошая победа, но впереди еще 10 орков.</Text>
+			<Actions>
+				<Fight>
+					<Enemy Name="Орк" Count="10"/>
+				</Fight>
+			</Actions>
 			<Options>
 				<Option Goto="394" Text="В случае победы"/>
 			</Options>
