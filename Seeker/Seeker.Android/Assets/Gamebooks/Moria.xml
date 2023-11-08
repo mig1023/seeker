@@ -2647,6 +2647,9 @@
 		</Paragraph>
 		<Paragraph No="370">
 			<Text>Проверьте свою удачу:</Text>
+			<Actions>
+				<Goodluck/>
+			</Actions>
 			<Options>
 				<Option Goto="213" Text="Она с вами"/>
 				<Option Goto="91" Text="Нет"/>
