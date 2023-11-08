@@ -1848,9 +1848,14 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="262">
-			<Text>В это время в зал вошло восемь орков, но Фродо заметил их и поднял тревогу. В случае победы.</Text>
+			<Text>В это время в зал вошло восемь орков, но Фродо заметил их и поднял тревогу.</Text>
+			<Actions>
+				<Fight>
+					<Enemy Name="Орк" Count="8"/>
+				</Fight>
+			</Actions>
 			<Options>
-				<Option Goto="367"/>
+				<Option Goto="367" Text="В случае победы"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="263">
