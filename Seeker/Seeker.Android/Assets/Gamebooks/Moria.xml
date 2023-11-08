@@ -919,6 +919,11 @@
 		</Paragraph>
 		<Paragraph No="129">
 			<Text>Орк бросился к Фродо и метнул копье, пригвоздившее хоббита к стене. И тут на пути орка встал Арагорн.</Text>
+			<Actions>
+				<Fight>
+					<Enemy Name="Орк" Count="1"/>
+				</Fight>
+			</Actions>
 			<Options>
 				<Option Goto="295" Text="В случае победы орка"/>
 				<Option Goto="325" Text="Победил Арагорн"/>
