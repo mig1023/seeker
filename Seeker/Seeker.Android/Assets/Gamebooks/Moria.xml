@@ -71,8 +71,8 @@
 				<Goodluck/>
 			</Actions>
 			<Options>
-				<Option Goto="352" Text="Если Удача на его стороне"/>
-				<Option Goto="133" Text="Если нет"/>
+				<Option Goto="352" Text="Удача на его стороне"/>
+				<Option Goto="133" Text="Нет"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="4">
@@ -183,6 +183,9 @@
 		</Paragraph>
 		<Paragraph No="19">
 			<Text>Боромир бросился вперед и поднял из воды тело гнома. Проверьте еще раз Удачу Отряда.</Text>
+			<Actions>
+				<Goodluck/>
+			</Actions>
 			<Options>
 				<Option Goto="347" Text="Отряду повезло"/>
 				<Option Goto="391" Text="Нет"/>
