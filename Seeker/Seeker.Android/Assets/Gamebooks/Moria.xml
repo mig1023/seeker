@@ -1421,6 +1421,11 @@
 		</Paragraph>
 		<Paragraph No="201">
 			<Text>Но Хранители не успели далеко отойти: спереди, оттуда, где располагались Ворота, выбежали семь орков.</Text>
+			<Actions>
+				<Fight>
+					<Enemy Name="Орк" Count="7"/>
+				</Fight>
+			</Actions>
 			<Options>
 				<Option Goto="121" Text="В случае победы"/>
 			</Options>
