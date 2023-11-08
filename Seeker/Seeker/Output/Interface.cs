@@ -106,7 +106,9 @@ namespace Seeker.Output
             List<VerticalText> statusLabels = new List<VerticalText>();
 
             bool whiteColor = !String.IsNullOrEmpty(Game.Data.Constants.GetColor(ColorTypes.AdditionalFont));
-            double heightPart = (int)Application.Current.MainPage.Height / statusLines.Sum(x => x.Length);
+
+            double heightPart = statusLines.Count == 0 ? 1 :
+                (int)Application.Current.MainPage.Height / statusLines.Sum(x => x.Length);
 
             foreach (string status in statusLines)
             {
