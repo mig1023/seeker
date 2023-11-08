@@ -41,7 +41,13 @@ namespace Seeker.Gamebook.Moria
         {
             List<string> enemies = new List<string>();
 
-            int count = int.Parse(xmlEnemy.Attributes["Count"].InnerText);
+            int count = 0;
+
+            if (xmlEnemy.Attributes["Count"].InnerText == "RANDOM")
+                count = 12 - Dice.Roll(dices: 2);
+            else
+                count = int.Parse(xmlEnemy.Attributes["Count"].InnerText);
+
             string name = xmlEnemy.Attributes["Name"].InnerText;
 
             for (int i = 0; i < count; i++)
