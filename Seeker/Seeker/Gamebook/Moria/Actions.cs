@@ -171,5 +171,26 @@ namespace Seeker.Gamebook.Moria
 
             return fight;
         }
+
+        public List<string> Goodluck()
+        {
+            List<string> diceCheck = new List<string> { };
+
+            int dice = Game.Dice.Roll();
+            bool coin = dice > 3;
+
+            if (coin)
+            {
+                diceCheck.Add("На кубике выпал: Орел");
+                diceCheck.Add("BIG|GOOD|BOLD|Удача на вашей стороне! :)");
+            }
+            else
+            {
+                diceCheck.Add("На кубике выпала: Решка");
+                diceCheck.Add("BIG|BAD|BOLD|Удача отвернулась от вас! :(");
+            }
+
+            return diceCheck;
+        }
     }
 }
