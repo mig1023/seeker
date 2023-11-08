@@ -34,7 +34,6 @@ namespace Seeker.Droid
     {
         int textSize = 22;
         string text = String.Empty;
-        bool whiteText = false;
         bool leftRotate = false;
 
         TextPaint textPaint = null;
@@ -42,19 +41,23 @@ namespace Seeker.Droid
         public RotatedTextView(Context c, string title, bool white, bool left) : base(c)
         {
             text = title;
-            whiteText = white;
             leftRotate = left;
 
-            InitLabelView();
-        }
+            this.textPaint = new TextPaint
+            {
+                AntiAlias = true,
+                TextAlign = Paint.Align.Center,
+                TextSize = textSize,
+                Color = (white ? Android.Graphics.Color.White : Android.Graphics.Color.Black),
+            };
 
-        private void InitLabelView() => this.textPaint = new TextPaint
-        {
-            AntiAlias = true,
-            TextAlign = Paint.Align.Center,
-            TextSize = textSize,
-            Color = (this.whiteText ? Android.Graphics.Color.White : Android.Graphics.Color.Black),
-        };
+            if (title.Contains("CROSSEDOUT|"))
+            {
+                text = text.Replace("CROSSEDOUT|", String.Empty);
+                this.textPaint.StrikeThruText = true;
+                this.textPaint.Color = Android.Graphics.Color.Black;
+            }
+        }
 
         public override void Draw(Canvas canvas)
         {

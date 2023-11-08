@@ -10,6 +10,8 @@ namespace Seeker.Gamebook.Moria
 
         public static Dictionary<string, int> Enemies { get; set; }
 
+        public static Dictionary<string, string> Declination { get; set; }
+
         public static Links GetLinks() => new Links
         {
             Protagonist = Character.Protagonist.Init,

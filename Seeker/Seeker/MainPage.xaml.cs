@@ -500,35 +500,52 @@ namespace Seeker
                 Status.IsVisible = true;
 
                 MainGrid.RowDefinitions[2].Height = 30;
-                Status.BackgroundColor = Color.FromHex(Game.Data.Constants.GetColor(Game.Data.ColorTypes.StatusBar));
+
+                Status.BackgroundColor = Color.FromHex(
+                    Game.Data.Constants.GetColor(Game.Data.ColorTypes.StatusBar));
 
                 foreach (Label status in Output.Interface.StatusBar(statuses))
                     Status.Children.Add(status);
 
-                if (!String.IsNullOrEmpty(Game.Data.Constants.GetColor(Game.Data.ColorTypes.StatusBorder)))
+                string borderColor = Game.Data.Constants.GetColor(Game.Data.ColorTypes.StatusBorder);
+
+                if (!String.IsNullOrEmpty(borderColor))
                 {
-                    StatusBorder.BackgroundColor = Color.FromHex(Game.Data.Constants.GetColor(Game.Data.ColorTypes.StatusBorder));
+                    StatusBorder.BackgroundColor = Color.FromHex(borderColor);
+
                     StatusBorder.IsVisible = true;
                     MainGrid.RowDefinitions[1].Height = 1;
                 }
             }
 
-            List<string> additionalStatuses = (Game.Data.Actions == null ? null : Game.Data.Actions.AdditionalStatus());
+            List<string> additionalStatuses = Game.Data.Actions == null ?
+                null : Game.Data.Actions.AdditionalStatus();
 
-            if ((additionalStatuses == null) || Game.Data.Constants.GetParagraphsWithoutStatuses().Contains(Game.Data.CurrentParagraphID))
+            bool noAdditionalStatuses = additionalStatuses == null || Game.Data.Constants
+                .GetParagraphsWithoutStatuses()
+                .Contains(Game.Data.CurrentParagraphID);
+
+            if (noAdditionalStatuses)
             {
                 AdditionalStatus.IsVisible = false;
                 MainGrid.ColumnDefinitions[1].Width = 0;
             }
             else
             {
-                string backgroundColor = Game.Data.Constants.GetColor(Game.Data.ColorTypes.AdditionalStatus);
+                string backgroundColor = Game.Data.Constants.GetColor(
+                    Game.Data.ColorTypes.AdditionalStatus);
 
                 MainGrid.ColumnDefinitions[1].Width = 20;
-                AdditionalStatus.BackgroundColor = String.IsNullOrEmpty(backgroundColor) ? Color.LightGray : Color.FromHex(backgroundColor);
+
+                AdditionalStatus.BackgroundColor = String.IsNullOrEmpty(backgroundColor) ?
+                    Color.LightGray : Color.FromHex(backgroundColor);
+
                 AdditionalStatus.IsVisible = true;
 
-                foreach (Output.VerticalText status in Output.Interface.AdditionalStatusBar(additionalStatuses))
+                List<Output.VerticalText> statusesInBar = Output.Interface
+                    .AdditionalStatusBar(additionalStatuses);
+
+                foreach (Output.VerticalText status in statusesInBar)
                     AdditionalStatus.Children.Add(status);
             }
         }

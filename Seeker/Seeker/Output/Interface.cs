@@ -101,6 +101,9 @@ namespace Seeker.Output
             return statusLabels;
         }
 
+        private static int ClearLen(string line) =>
+            line.Replace("CROSSEDOUT|", String.Empty).Length;
+
         public static List<VerticalText> AdditionalStatusBar(List<string> statusLines)
         {
             List<VerticalText> statusLabels = new List<VerticalText>();
@@ -108,7 +111,7 @@ namespace Seeker.Output
             bool whiteColor = !String.IsNullOrEmpty(Game.Data.Constants.GetColor(ColorTypes.AdditionalFont));
 
             double heightPart = statusLines.Count == 0 ? 1 :
-                (int)Application.Current.MainPage.Height / statusLines.Sum(x => x.Length);
+                (int)Application.Current.MainPage.Height / statusLines.Sum(x => ClearLen(x));
 
             foreach (string status in statusLines)
             {
