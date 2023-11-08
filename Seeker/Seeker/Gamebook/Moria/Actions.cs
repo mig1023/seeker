@@ -125,11 +125,14 @@ namespace Seeker.Gamebook.Moria
         private List<string> StrongWarriorsInFellowship() =>
             protagonist.Fellowship.Where(x => Constants.Fellowship[x] > 3).ToList();
 
+        private bool IsStillSomeoneToFight() =>
+            (Enemies.Count > 0) && (protagonist.Fellowship.Count > 0);
+
         public List<string> Fight()
         {
             List<string> fight = new List<string>();
 
-            while ((Enemies.Count > 0) && (protagonist.Fellowship.Count > 0))
+            while (IsStillSomeoneToFight())
             {
                 List<string> strongWarriors = StrongWarriorsInFellowship();
 
@@ -153,6 +156,11 @@ namespace Seeker.Gamebook.Moria
 
                     foreach (string warrior in allWarriors)
                         PartOfFight(ref fight, warrior, countForEach);
+                }
+
+                if (IsStillSomeoneToFight())
+                {
+                    fight.Add($"GRAY|Осталось ещё {Declination(Enemies[0], Enemies.Count)}!");
                 }
             }
 
