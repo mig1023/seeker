@@ -2752,6 +2752,11 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="401">
+			<Actions>
+				<Fight>
+					<Enemy Name="Орк" Count="7"/>
+				</Fight>
+			</Actions>
 			<Options>
 				<Option Goto="62" Text="Вы убили всех орков за один раунд атаки"/>
 				<Option Goto="77" Text="Не успели"/>
