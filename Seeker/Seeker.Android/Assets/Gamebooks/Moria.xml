@@ -395,6 +395,9 @@
 		</Paragraph>
 		<Paragraph No="49">
 			<Text>Гэндальф вошел в открытые ворота и начал подниматься по лестнице. Проверьте удачу отряда:</Text>
+			<Actions>
+				<Goodluck/>
+			</Actions>
 			<Options>
 				<Option Goto="86" Text="В порядке"/>
 				<Option Goto="43" Text="Нет"/>
