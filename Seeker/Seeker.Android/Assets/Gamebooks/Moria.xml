@@ -2651,6 +2651,11 @@
 		</Paragraph>
 		<Paragraph No="377">
 			<Text>И тут же на Отряд набросились восемь орков.</Text>
+			<Actions>
+				<Fight>
+					<Enemy Name="Орк" Count="8"/>
+				</Fight>
+			</Actions>
 			<Options>
 				<Option Goto="141" Text="В случае победы"/>
 			</Options>
