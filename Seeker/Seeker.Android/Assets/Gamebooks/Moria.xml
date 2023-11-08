@@ -780,7 +780,7 @@
 		<Paragraph No="108">
 			<Text>Что-ж, вы возвращаетесь в Раздол, чтобы дождаться того неминуемого поражения, о котором говорил Гэндальф. Жаль, что первое же серьезное препятствие смогло остановить вас.</Text>
 			<Options>
-				<Option Goto="0"/>
+				<Gameover/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="109">
@@ -2364,6 +2364,11 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="342">
+			<Actions>
+				<Fight>
+					<Enemy Name="Орк" Count="10"/>
+				</Fight>
+			</Actions>
 			<Options>
 				<Option Goto="384" Text="Вы убили всех орков за два раунда атаки"/>
 				<Option Goto="77" Text="Не успели"/>
