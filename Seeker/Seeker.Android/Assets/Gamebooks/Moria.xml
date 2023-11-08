@@ -305,6 +305,9 @@
 		</Paragraph>
 		<Paragraph No="36">
 			<Text>В этой комнате, освещенной естественным дневным светом, Хранители обнаружили странную рукопись. Проверьте свою удачу.</Text>
+			<Actions>
+				<Goodluck/>
+			</Actions>
 			<Options>
 				<Option Goto="349" Text="Вы удачливы"/>
 				<Option Goto="355" Text="Нет"/>
