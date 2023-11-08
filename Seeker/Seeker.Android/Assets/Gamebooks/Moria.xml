@@ -39,6 +39,7 @@
 		</Dictionaries>
 		<Buttons>
 			<Fight>Сражаться</Fight>
+			<Goodluck>Проверить удачу</Goodluck>
 		</Buttons>
 		<Default>
 			<DisabledOption Value="Hide"/>
@@ -66,6 +67,9 @@
 		</Paragraph>
 		<Paragraph No="3">
 			<Text>Гэндальф вошел в открытые ворота и начал спускаться по лестнице. Проверьте Удачу мага.</Text>
+			<Actions>
+				<Goodluck/>
+			</Actions>
 			<Options>
 				<Option Goto="352" Text="Если Удача на его стороне"/>
 				<Option Goto="133" Text="Если нет"/>
