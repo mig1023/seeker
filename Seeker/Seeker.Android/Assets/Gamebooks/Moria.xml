@@ -2857,6 +2857,11 @@
 		</Paragraph>
 		<Paragraph No="408">
 			<Text>Но орки сами заметили Хранителей и напали на них.</Text>
+			<Actions>
+				<Fight>
+					<Enemy Name="Орк" Count="RANDOM"/>
+				</Fight>
+			</Actions>
 			<Options>
 				<Option Goto="414"/>
 			</Options>
