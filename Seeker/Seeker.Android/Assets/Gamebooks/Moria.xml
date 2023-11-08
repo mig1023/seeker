@@ -957,6 +957,11 @@
 		</Paragraph>
 		<Paragraph No="133">
 			<Text>Как только нога мага коснулась ступеньки, раздался оглушительный свист, и в тот же миг на путников накинулись семь орков.</Text>
+			<Actions>
+				<Fight>
+					<Enemy Name="Орк" Count="7"/>
+				</Fight>
+			</Actions>
 			<Options>
 				<Option Goto="61" Text="В случае победы"/>
 			</Options>
