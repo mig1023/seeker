@@ -762,6 +762,11 @@
 		</Paragraph>
 		<Paragraph No="106">
 			<Text>Неожиданно из левого коридора в зал вышли 12 орков. Не говоря ни слова, они накинулись на Хранителей.</Text>
+			<Actions>
+				<Fight>
+					<Enemy Name="Орк" Count="12"/>
+				</Fight>
+			</Actions>
 			<Options>
 				<Option Goto="367" Text="В случае победы"/>
 			</Options>
