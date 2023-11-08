@@ -554,6 +554,11 @@
 		</Paragraph>
 		<Paragraph No="75">
 			<Text>Но, в конце концов, они проснулись и тут же вскочили на ноги.</Text>
+			<Actions>
+				<Fight>
+					<Enemy Name="Орк" Count="8"/>
+				</Fight>
+			</Actions>
 			<Options>
 				<Option Goto="310" Text="В случае победы вы можете продолжить путь"/>
 			</Options>
