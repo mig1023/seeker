@@ -133,7 +133,7 @@ namespace Seeker.Gamebook.Moria
             {
                 List<string> strongWarriors = StrongWarriorsInFellowship();
 
-                if (Enemies.Count > (strongWarriors.Count * 4))
+                if (Enemies.Count <= (strongWarriors.Count * 3))
                 {
                     fight.Add($"GRAY|Врагов не так уж много, поэтому против них выходят сильные войны!");
                     fight.Add(String.Empty);
