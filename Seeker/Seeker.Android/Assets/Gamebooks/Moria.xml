@@ -6,9 +6,10 @@
 		</Copyright>
 		<Styles>
 			<Background Value="361e22"/>
-			<ActionBox Value="bf8976"/>
-			<Action Value="7e4736"/>
+			<ActionBox Value="726164"/>
+			<Action Value="2c1f21"/>
 			<StatusBar Value="483b3d"/>
+			<GoodColor Value="145314"/>
 			<Color Name="Font, ButtonFont, SystemFont, AdditionalFont" Value="f2cebf"/>
 			<Color Name="Continue, System, AdditionalStatus" Value="514244"/>
 			<Color Name="Main, Option" Value="3e2d30"/>
@@ -30,7 +31,15 @@
 				<Item Name="Волколак" Value="4"/>
 				<Item Name="Тролль" Value="7"/>
 			</Enemies>
+			<Declination>
+				<Item Name="Орк" Value="Орка, Орков"/>
+				<Item Name="Волколак" Value="Волколака, Волколаков"/>
+				<Item Name="Тролль" Value="Тролля, Троллей"/>
+			</Declination>
 		</Dictionaries>
+		<Buttons>
+			<Fight>Сражаться</Fight>
+		</Buttons>
 		<Default>
 			<DisabledOption Value="Hide"/>
 		</Default>
@@ -127,9 +136,9 @@
 		<Paragraph No="13">
 			<Text>Все же Гэндальф сумел разобрать надпись и, прочитав, нахмурился. “Это - одно из упоминаний о Глубинном Ужасе, по сравнению с которым Барлог - просто беспомощный хоббит” - сказал он остальным.\n\nВ комнате было три двери:</Text>
 			<Options>
-				<Option Goto="32" Text="на север"/>
-				<Option Goto="358" Text="на запад"/>
-				<Option Goto="94" Text="на восток"/>
+				<Option Goto="32" Text="На север"/>
+				<Option Goto="358" Text="На запад"/>
+				<Option Goto="94" Text="На восток"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="14">
