@@ -52,6 +52,9 @@ namespace Seeker.Gamebook.Moria
             return new List<string> { $"{name}\n{strength} сила каждого, всего {count} {line}" };
         }
 
+        public override bool GameOver(out int toEndParagraph, out string toEndText) =>
+            GameOverBy(protagonist.Fellowship.Count, out toEndParagraph, out toEndText);
+
         private string Declination(string enemy, int count)
         {
             List<string> declin = Constants.Declination[enemy]
