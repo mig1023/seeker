@@ -2058,7 +2058,8 @@
 				<Option Goto="104" Text="Зайти в неё">
 					<Text>Но рядом они обнаружили еще одну потайную дверь на юг:</Text>
 				</Option>
-				<Option Goto="74" Text="Гэндальф может ее открыть">
+				<Option Goto="74" Text="Гэндальф может ее открыть" Availability="GandalfMagic">
+					<GandalfCastSpell/>
 					<Text>Иначе можно пойти на запад...</Text>
 				</Option>
 				<Option Goto="235"/>
