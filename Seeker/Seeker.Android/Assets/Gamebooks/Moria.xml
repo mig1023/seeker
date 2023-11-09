@@ -2478,7 +2478,8 @@
 		<Paragraph No="344">
 			<Text>Дверь в эту комнату была заперта.</Text>
 			<Options>
-				<Option Goto="210" Text="Маг может открыть ее">
+				<Option Goto="210" Text="Маг может открыть ее" Availability="GandalfMagic">
+					<GandalfCastSpell/>
 					<Text>Если нет, то Отряд может:</Text>
 				</Option>
 				<Option Goto="170" Text="Продолжить свой путь"/>
