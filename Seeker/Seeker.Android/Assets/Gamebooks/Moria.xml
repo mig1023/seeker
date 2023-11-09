@@ -1518,7 +1518,9 @@
 		<Paragraph No="211">
 			<Text>Если Гэндальф может применить заклинание, затворяющее двери, пусть он сделает это.</Text>
 			<Options>
-				<Option Goto="189" Text="Гэндальф может применить заклинание"/>
+				<Option Goto="189" Text="Гэндальф может применить заклинание" Availability="GandalfMagic">
+					<GandalfCastSpell/>
+				</Option>
 				<Option Goto="295" Text="Не может"/>
 			</Options>
 		</Paragraph>
