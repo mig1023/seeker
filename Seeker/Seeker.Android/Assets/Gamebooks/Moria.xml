@@ -316,7 +316,9 @@
 		</Paragraph>
 		<Paragraph No="37">
 			<Options>
-				<Option Goto="21" Text="Маг еще может пользоваться отворяющим заклинанием"/>
+				<Option Goto="21" Text="Маг еще может пользоваться отворяющим заклинанием"Availability="GandalfMagic">
+					<GandalfCastSpell/>
+				</Option>
 				<Option Goto="387" Text="Нет"/>
 			</Options>
 		</Paragraph>
