@@ -8,8 +8,13 @@ namespace Seeker.Gamebook.Moria
     {
         public static Paragraphs StaticInstance = new Paragraphs();
 
-        public override Paragraph Get(int id, XmlNode xmlParagraph) =>
-           base.Get(xmlParagraph);
+        public override Paragraph Get(int id, XmlNode xmlParagraph)
+        {
+            if (Character.Protagonist.MagicPause > 0)
+                Character.Protagonist.MagicPause -= 1;
+
+            return base.Get(xmlParagraph);
+        }
 
         public override Abstract.IActions ActionParse(XmlNode xmlAction)
         {

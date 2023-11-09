@@ -192,5 +192,21 @@ namespace Seeker.Gamebook.Moria
 
             return diceCheck;
         }
+
+        public override bool Availability(string option)
+        {
+            if (String.IsNullOrEmpty(option))
+            {
+                return true;
+            }
+            else if (option.Contains("GandalfMagic"))
+            {
+                return protagonist.MagicPause == 0;
+            }
+            else
+            {
+                return true;
+            }
+        }
     }
 }
