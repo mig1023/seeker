@@ -13,12 +13,18 @@ namespace Seeker.Gamebook.Moria
 
         public override List<string> Status()
         {
-            bool canMakeMagic = protagonist.MagicPause == 0;
-
-            string magic = canMakeMagic ? "доступно" :
-                $"устал (ещё {protagonist.MagicPause} параграфа)";
-
-            return new List<string> { $"Волшебство Гэндальфа: {magic}" };
+            if (!protagonist.Fellowship.Contains("Гэндальф"))
+            {
+                return new List<string> { "Гэндальф погиб..." };
+            }
+            else if (protagonist.MagicPause == 0)
+            {
+                return new List<string> { $"Гэндальф устал: (ещё {protagonist.MagicPause} параграфа)" };
+            }
+            else
+            {
+                return new List<string> { "Гэндальф готов применять магию" };
+            }
         }
 
         public override List<string> AdditionalStatus()
@@ -201,7 +207,10 @@ namespace Seeker.Gamebook.Moria
             }
             else if (option.Contains("GandalfMagic"))
             {
-                return protagonist.MagicPause == 0;
+                if (!protagonist.Fellowship.Contains("Гэндальф"))
+                    return false;
+                else
+                    return protagonist.MagicPause == 0;
             }
             else
             {
