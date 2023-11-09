@@ -1695,7 +1695,8 @@
 		<Paragraph No="235">
 			<Text>Путники обнаружили потайную дверь, ведущую на юг.</Text>
 			<Options>
-				<Option Goto="56" Text="Маг может пользоваться заклинанием, отворяющим двери">
+				<Option Goto="56" Text="Маг может пользоваться заклинанием, отворяющим двери" Availability="GandalfMagic">
+					<GandalfCastSpell/>
 					<Text>Если нет, то вы можете продолжить свой путь:</Text>
 				</Option>
 				<Option Goto="287" Text="На восток"/>
