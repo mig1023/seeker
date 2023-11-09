@@ -2127,7 +2127,9 @@
 		<Paragraph No="296">
 			<Text>Просто так дверь не открывалась.</Text>
 			<Options>
-				<Option Goto="130" Text="Гэндальф может применить заклинание, отворяющее двери"/>
+				<Option Goto="130" Text="Гэндальф может применить заклинание, отворяющее двери" Availability="GandalfMagic">
+					<GandalfCastSpell/>
+				</Option>
 				<Option Goto="300" Text="Не может"/>
 			</Options>
 		</Paragraph>
