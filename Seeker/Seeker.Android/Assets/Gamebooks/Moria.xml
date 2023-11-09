@@ -1621,7 +1621,9 @@
 				<Option Goto="159" Text="На восток">
 					<Text>Если маг может пользоваться заклинанием, отворяющим двери:</Text>
 				</Option>
-				<Option Goto="183" Text="Маг использует заклинание"/>
+				<Option Goto="183" Text="Маг использует заклинание" Availability="GandalfMagic">
+					<GandalfCastSpell/>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph No="226">
