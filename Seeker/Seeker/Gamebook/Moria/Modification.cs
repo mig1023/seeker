@@ -10,6 +10,10 @@ namespace Seeker.Gamebook.Moria
             {
                 Character.Protagonist.MagicPause = 4;
             }
+            else if (Name == "WayBack")
+            {
+                Character.Protagonist.WayBack = Value;
+            }
             else
             {
                 base.Do(Character.Protagonist);

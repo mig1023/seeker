@@ -13,7 +13,31 @@ namespace Seeker.Gamebook.Moria
             if (Character.Protagonist.MagicPause > 0)
                 Character.Protagonist.MagicPause -= 1;
 
-            return base.Get(xmlParagraph);
+            Paragraph paragraph = ParagraphTemplate(xmlParagraph);
+
+            foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/*"))
+            {
+                Option option = OptionsTemplateWithoutGoto(xmlOption);
+
+                if (ThisIsGameover(xmlOption) || ThisIsBack(xmlOption))
+                {
+                    option.Goto = GetGoto(xmlOption, wayBack: Character.Protagonist.WayBack);
+                }
+                else
+                {
+                    option.Goto = Xml.IntParse(xmlOption.Attributes["Goto"]);
+                }
+
+                paragraph.Options.Add(option);
+            }
+
+            foreach (XmlNode xmlAction in xmlParagraph.SelectNodes("Actions/*"))
+                paragraph.Actions.Add(ActionParse(xmlAction));
+
+            foreach (XmlNode xmlModification in xmlParagraph.SelectNodes("Modifications/*"))
+                paragraph.Modification.Add(Xml.ModificationParse(xmlModification, new Modification()));
+
+            return paragraph;
         }
 
         public override Abstract.IActions ActionParse(XmlNode xmlAction)
