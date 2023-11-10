@@ -4,19 +4,25 @@ namespace Seeker.Gamebook.Moria
 {
     class Modification : Prototypes.Modification, Abstract.IModification
     {
+        private static Character protagonist = Character.Protagonist;
+
         public override void Do()
         {
             if (Name == "GandalfCastSpell")
             {
-                Character.Protagonist.MagicPause = 4;
+                protagonist.MagicPause = 4;
+            }
+            else if (Name == "Death")
+            {
+                protagonist.Fellowship.Remove(ValueString);
             }
             else if (Name == "WayBack")
             {
-                Character.Protagonist.WayBack = Value;
+                protagonist.WayBack = Value;
             }
             else
             {
-                base.Do(Character.Protagonist);
+                base.Do(protagonist);
             }
         }
     }
