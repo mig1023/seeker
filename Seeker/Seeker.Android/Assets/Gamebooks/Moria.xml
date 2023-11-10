@@ -2851,6 +2851,9 @@
 		</Paragraph>
 		<Paragraph No="391">
 			<Text>Оплакав судьбу погибшего друга, Хранители с большой осторожностью перебрались через залив.</Text>
+			<Modifications>
+				<Death Value="Гимли"/>
+			</Modifications>
 			<Options>
 				<Option Goto="226"/>
 			</Options>
