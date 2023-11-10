@@ -199,6 +199,9 @@
 		</Paragraph>
 		<Paragraph No="21">
 			<Text>Когда путники вошли в эту комнату, то они тут же услышали журчание воды - подземный источник пробил себе здесь дорогу.</Text>
+			<Modifications>
+				<WayBack Value="21"/>
+			</Modifications>
 			<Options>
 				<Option Goto="208" Text="Если хотите пить (заранее выберите, кто из отряда пьет воду)">
 					<Text>Если нет, то можете идти:</Text>
@@ -1504,6 +1507,9 @@
 		</Paragraph>
 		<Paragraph No="208">
 			<Text>Тот, кто выпьет этой воды, может прибавить себе 1 единицу силы. Свой путь вы можете продолжить:</Text>
+			<Modifications>
+				<WayBack Value="208"/>
+			</Modifications>
 			<Options>
 				<Option Goto="11" Text="На запад"/>
 				<Option Goto="247" Text="На север"/>
@@ -1947,7 +1953,7 @@
 		<Paragraph No="268">
 			<Text>При помощи веревки Хранители быстро смогли перебраться на другую сторону трещины. Дальше они могли идти только на север.</Text>
 			<Modifications>
-				<WayBack Value="242"/>
+				<WayBack Value="30"/>
 			</Modifications>
 			<Options>
 				<Option Goto="11"/>
