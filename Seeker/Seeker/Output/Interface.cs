@@ -119,7 +119,7 @@ namespace Seeker.Output
                 {
                     Value = status,
                     WhiteColor = whiteColor,
-                    HeightRequest = status.Length * heightPart,
+                    HeightRequest = ClearLen(status) * heightPart,
                 };
 
                 statusLabels.Add(text);
