@@ -214,7 +214,7 @@ namespace Seeker.Gamebook.Moria
             }
             else
             {
-                return true;
+                return AvailabilityTrigger(option);
             }
         }
     }
