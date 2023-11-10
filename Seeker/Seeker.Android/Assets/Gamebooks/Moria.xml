@@ -121,9 +121,9 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="11">
-			<Text>[битый параграф]</Text>
+			<Text>[битый параграф, отсутствующий в игре]</Text>
 			<Options>
-				<Gameover/>
+				<Back Text="Назад"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="12">
@@ -267,6 +267,14 @@
 				<Option Goto="239" Text="Первый вариант"/>
 				<Option Goto="406" Text="Второй вариант"/>
 				<Option Goto="313" Text="Третий вариант"/>
+			</Options>
+		</Paragraph>
+		<Paragraph No="30">
+			<Text>Эту комнату поперек пересекала огромная трещина. Если у вас есть веревка, то вы можете перебраться на другую сторону, а если нет, то вы выбирайте дорогу по эту сторону от трещины:</Text>
+			<Options>
+				<Option Goto="243" Text="На восток"/>
+				<Option Goto="323" Text="На юг"/>
+				<Option Goto="212" Text="На запад"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="31">
@@ -1938,6 +1946,9 @@
 		</Paragraph>
 		<Paragraph No="268">
 			<Text>При помощи веревки Хранители быстро смогли перебраться на другую сторону трещины. Дальше они могли идти только на север.</Text>
+			<Modifications>
+				<WayBack Value="242"/>
+			</Modifications>
 			<Options>
 				<Option Goto="11"/>
 			</Options>
