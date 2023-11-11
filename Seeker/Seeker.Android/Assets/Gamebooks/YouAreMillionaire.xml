@@ -248,5 +248,8 @@
 				<Option Goto="36" Text="Вместо этого ты принимаешь решение закопать деньги"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="42">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
