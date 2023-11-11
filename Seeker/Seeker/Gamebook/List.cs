@@ -60,6 +60,7 @@ namespace Seeker.Gamebook
             ["AlamutFortress"] = AlamutFortress.Constants.GetLinks(),
             ["UnexpectedPassenger"] = UnexpectedPassenger.Constants.GetLinks(),
             ["Moria"] = Moria.Constants.GetLinks(),
+            ["YouAreMillionaire"] = YouAreMillionaire.Constants.GetLinks(),
         };
 
         public static List<string> GetBooks() =>

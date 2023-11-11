@@ -1,0 +1,29 @@
+<Gamebook>
+	<Introduction>
+		<Copyright>
+			<Title>Ты – миллионер</Title>
+			<Author>Джей Либолд, 1990</Author>
+		</Copyright>
+		<Styles>
+			<Main Value="6b806b"/>
+			<Color Name="Option, System, Continue" Value="889988"/>
+		</Styles>
+		<Default>
+			<DisabledOption Value="Hide"/>
+		</Default>
+	</Introduction>
+	<Paragraphs>
+		<Paragraph No="0">
+			<Text>Состояние, которое ты неожиданно находишь, может стать мечтой, превратившейся в реальность, или... кошмаром! Что с тобой будет дальше? Чем все кончится? Только ты способен ответить на эти вопросы. А самое главное, ты сможешь читать и перечитывать эту книгу до тех пор, пока не попробуешь все варианты...</Text>
+			<Options>
+				<Start Goto="1"/>
+			</Options>
+		</Paragraph>
+		<Paragraph No="1">
+			<Text>END</Text>
+			<Options>
+				<Option Goto="0"/>
+			</Options>
+		</Paragraph>
+	</Paragraphs>
+</Gamebook>
