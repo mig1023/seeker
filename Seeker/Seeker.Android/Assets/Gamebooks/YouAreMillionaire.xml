@@ -44,5 +44,8 @@
 				<Option Goto="10" Text="Решаешь умолчать о набитом деньгами портфеле"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="5">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
