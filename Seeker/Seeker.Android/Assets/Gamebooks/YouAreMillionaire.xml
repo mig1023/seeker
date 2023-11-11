@@ -531,5 +531,8 @@
 				<Option Goto="57" Text="Вылезаешь из окна вслед за Уэстом"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="93">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
