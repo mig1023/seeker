@@ -115,5 +115,8 @@
 				<Option Goto="95" Text="Ты все-таки позволяешь Брюсу вручить деньги"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="18">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
