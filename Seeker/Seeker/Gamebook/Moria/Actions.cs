@@ -84,6 +84,7 @@ namespace Seeker.Gamebook.Moria
         {
             int frags = 0;
             int lastDice = 0;
+            bool secondRound = false;
             string enemy = Enemies[0];
 
             fight.Add($"BOLD|{hero} сражается против {Declination(enemy, count)}");
@@ -96,7 +97,7 @@ namespace Seeker.Gamebook.Moria
 
                 fight.Add($"{hero}: {strength} Сила + {Game.Dice.Symbol(dice)} = {heroAttack}");
 
-                if (dice < lastDice)
+                if ((dice < lastDice) && !secondRound)
                 {
                     fight.Add($"{hero} выкинул кубик меньше, чем с предудщим врагом - к сожалению, это смертельно...");
                     DeathInFight(ref fight, hero);
@@ -104,6 +105,7 @@ namespace Seeker.Gamebook.Moria
                 }
 
                 lastDice = dice;
+                secondRound = false;
 
                 strength = Constants.Enemies[enemy];
                 dice = Game.Dice.Roll();
@@ -125,6 +127,7 @@ namespace Seeker.Gamebook.Moria
                 else
                 {
                     fight.Add("BOLD|Ничья! Силы противников равны! Сейчас они сойдутся ещё раз!");
+                    secondRound = true;
                 }
             }
 
