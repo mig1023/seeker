@@ -40,6 +40,7 @@
 		<Buttons>
 			<Fight>Сражаться</Fight>
 			<Goodluck>Проверить удачу</Goodluck>
+			<DeathsByArrows>Узнать, кто это был</DeathsByArrows>
 		</Buttons>
 		<Default>
 			<DisabledOption Value="Show"/>
@@ -1500,7 +1501,10 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="204">
-			<Text>Стрелами орков убило двух Хранителей, которые шли последними. Ваше право решать - кто это был.</Text>
+			<Text>Стрелами орков убило двух Хранителей, которые шли последними.</Text>
+			<Actions>
+				<DeathsByArrows/>
+			</Actions>
 			<Options>
 				<Option Goto="105"/>
 			</Options>
