@@ -31,6 +31,10 @@ namespace Seeker.Abstract
 
         bool ShowDisabledOption(out bool HideSingleton);
 
+        void LoadAdditionalStatusesEqualParts(string option);
+
+        bool ShowAdditionalStatusesEqualParts();
+
         void LoadStartParagraphOption(string option);
 
         void LoadDefaultFontSize(string option);

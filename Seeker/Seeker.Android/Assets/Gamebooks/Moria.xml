@@ -43,6 +43,7 @@
 		</Buttons>
 		<Default>
 			<DisabledOption Value="Show"/>
+			<AdditionalStatuses Value="EqualParts"/>
 		</Default>
 	</Introduction>
 	<Paragraphs>

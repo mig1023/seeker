@@ -22,6 +22,7 @@ namespace Seeker.Prototypes
 
         private bool ShowDisabledOptionStatus = false;
         private bool HideSingletonOption = false;
+        private bool AdditionalStatusesEqualParts = false;
 
         private int StartParagraph = 0;
 
@@ -52,6 +53,7 @@ namespace Seeker.Prototypes
             ButtonTextList = new Dictionary<string, string>();
             ShowDisabledOptionStatus = false;
             HideSingletonOption = false;
+            AdditionalStatusesEqualParts = false;
         }
 
         public virtual void LoadColor(string type, string color)
@@ -120,6 +122,12 @@ namespace Seeker.Prototypes
 
             return false;
         }
+
+        public void LoadAdditionalStatusesEqualParts(string option) =>
+            AdditionalStatusesEqualParts = option == "EqualParts";
+
+        public bool ShowAdditionalStatusesEqualParts() =>
+             AdditionalStatusesEqualParts;
 
         public void LoadEnabledDisabledOption(string option, string specific)
         {
