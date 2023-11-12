@@ -339,6 +339,9 @@
 		</Paragraph>
 		<Paragraph No="38">
 			<Text>Никто не успел даже сдвинуться с места, как это щупальце утянуло Мерри за собой.</Text>
+			<Modifications>
+				<Death Value="Мерри"/>
+			</Modifications>
 			<Options>
 				<Option Goto="136"/>
 			</Options>
