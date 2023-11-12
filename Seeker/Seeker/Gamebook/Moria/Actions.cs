@@ -183,7 +183,7 @@ namespace Seeker.Gamebook.Moria
             List<string> diceCheck = new List<string> { };
 
             int dice = Game.Dice.Roll();
-            bool coin = dice > 3;
+            bool coin = dice % 2 == 0;
 
             if (coin)
             {
