@@ -37,7 +37,7 @@
 			<Options>
 				<Option Goto="175" Text="Хочешь вернуться в помещение, где ты запустил генератор"/>
 				<Option Goto="163" Text="Зайти в большое здание"/>
-				<Option Goto="91" Text="Пойти вдоль стены здания "/>
+				<Option Goto="91" Text="Пойти вдоль стены здания"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="4">
