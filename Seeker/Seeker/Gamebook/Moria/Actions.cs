@@ -217,5 +217,25 @@ namespace Seeker.Gamebook.Moria
                 return AvailabilityTrigger(option);
             }
         }
+
+        public List<string> DeathsByArrows()
+        {
+            List<string> deaths = new List<string> { };
+
+            for (int i = 0; i < 2; i++)
+            {
+                if (protagonist.Fellowship.Count < 1)
+                    continue;
+
+                int dice = Game.Dice.Roll(size: protagonist.Fellowship.Count) - 1;
+                string name = protagonist.Fellowship[dice];
+
+                deaths.Add($"BIG|BAD|BOLD|Погиб {name}! :(");
+
+                protagonist.Fellowship.Remove(name);
+            }
+
+            return deaths;
+        }
     }
 }
