@@ -17,9 +17,9 @@ namespace Seeker.Gamebook.Moria
             {
                 return new List<string> { "Гэндальф погиб..." };
             }
-            else if (protagonist.MagicPause == 0)
+            else if (protagonist.MagicPause > 0)
             {
-                return new List<string> { $"Гэндальф устал: (ещё {protagonist.MagicPause} параграфа)" };
+                return new List<string> { $"Гэндальф устал (ещё {protagonist.MagicPause} параграфа)" };
             }
             else
             {
