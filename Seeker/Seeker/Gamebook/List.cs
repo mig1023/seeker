@@ -56,9 +56,9 @@ namespace Seeker.Gamebook
             ["ConquistadorDiary"] = ConquistadorDiary.Constants.GetLinks(),
             ["DinosaurIsland"] = DinosaurIsland.Constants.GetLinks(),
             ["Trail"] = Trail.Constants.GetLinks(),
+            ["UnexpectedPassenger"] = UnexpectedPassenger.Constants.GetLinks(),
             ["OutlawsOfSherwoodForest"] = OutlawsOfSherwoodForest.Constants.GetLinks(),
             ["AlamutFortress"] = AlamutFortress.Constants.GetLinks(),
-            ["UnexpectedPassenger"] = UnexpectedPassenger.Constants.GetLinks(),
             ["Moria"] = Moria.Constants.GetLinks(),
             ["YouAreMillionaire"] = YouAreMillionaire.Constants.GetLinks(),
         };

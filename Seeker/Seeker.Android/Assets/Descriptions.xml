@@ -588,6 +588,17 @@
 		<Setting>Приключения</Setting>
 		<Color>151515</Color>
 	</Trail>
+	<UnexpectedPassenger>
+		<Title>Непредвиденный пассажир</Title>
+		<Author>Глеб Гадяцкий</Author>
+		<Year>2009</Year>
+		<Text>Ты поспорил, что прилетишь "зайцем" на кубок по спейсболу, а оказался на заброшенном руднике, где террористы спрятали угнанный корабль с заложникам. Теперь ты — единственный шанс на спасение для всех пассажиров, но... справишься ли ты? Уж слишком агрессивный мир вокруг, а ты — всего лишь студент космолетного училища с далекой окраины Галактики, а не боец императорского спецназа.</Text>
+		<Paragraphs>212</Paragraphs>
+		<Size>15824</Size>
+		<Playthrough>На часок-другой</Playthrough>
+		<Setting>Приключения</Setting>
+		<Color>b19081</Color>
+	</UnexpectedPassenger>
 	<OutlawsOfSherwoodForest>
 		<Title>Разбойники Шервудского леса</Title>
 		<Original>Outlaws of Sherwood Forest</Original>
@@ -614,17 +625,6 @@
 		<Setting>История</Setting>
 		<Color>fe2b01</Color>
 	</AlamutFortress>
-	<UnexpectedPassenger>
-		<Title>Непредвиденный пассажир</Title>
-		<Author>Глеб Гадяцкий</Author>
-		<Year>2009</Year>
-		<Text>Ты поспорил, что прилетишь "зайцем" на кубок по спейсболу, а оказался на заброшенном руднике, где террористы спрятали угнанный корабль с заложникам. Теперь ты — единственный шанс на спасение для всех пассажиров, но... справишься ли ты? Уж слишком агрессивный мир вокруг, а ты — всего лишь студент космолетного училища с далекой окраины Галактики, а не боец императорского спецназа.</Text>
-		<Paragraphs>212</Paragraphs>
-		<Size>15824</Size>
-		<Playthrough>На часок-другой</Playthrough>
-		<Setting>Приключения</Setting>
-		<Color>b19081</Color>
-	</UnexpectedPassenger>
 	<Moria>
 		<Title>Мория</Title>
 		<Author>А. Наймушин</Author>
