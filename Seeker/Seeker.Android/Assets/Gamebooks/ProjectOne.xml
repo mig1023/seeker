@@ -303,6 +303,18 @@
 				<Option Goto="298"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="43">
+			<Text>Если у Вас есть одна из следующих жидкостей, можете дать ее МУСОРЩИКУ:</Text>
+			<Options>
+				<Option Goto="84" Text="Колба с синей жидкостью"/>
+				<Option Goto="196" Text="Колба с зеленой жидкостью"/>
+				<Option Goto="221" Text="Колба с красной жидкостью">
+					<Text>Если у Вас нет ни одной из этих колб или Вы не хотите их тратить:</Text>
+				</Option>
+				<Option Goto="17" Text="Напасть на мутанта"/>
+				<Option Goto="251" Text="Убежать от него по дороге на север"/>
+			</Options>
+		</Paragraph>
 		
 		<Paragraph No="351">
 			<Texts>
