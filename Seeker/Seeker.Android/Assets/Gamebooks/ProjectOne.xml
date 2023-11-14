@@ -237,6 +237,12 @@
 				<Option Goto="220"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="33">
+			<Text>Полуторачасовой сон восстанавливает вашу СИЛУ до первоначального уровня и оглядев ещё раз помещение, вы опускаете рычаг, открывающий дверь наружу.</Text>
+			<Options>
+				<Option Goto="349"/>
+			</Options>
+		</Paragraph>
 		
 		<Paragraph No="351">
 			<Texts>
