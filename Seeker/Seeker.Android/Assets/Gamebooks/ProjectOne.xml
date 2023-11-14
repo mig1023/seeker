@@ -315,6 +315,12 @@
 				<Option Goto="251" Text="Убежать от него по дороге на север"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="44">
+			<Text>Битва с жителем пустыни обещает быть не из лёгких:\n\nРЕЙДЕР\n\nЛОВКОСТЬ 10\n\nСИЛА 10\n\nЕсли Вам удалось одолеть его:</Text>
+			<Options>
+				<Option Goto="181"/>
+			</Options>
+		</Paragraph>
 		
 		<Paragraph No="351">
 			<Texts>
