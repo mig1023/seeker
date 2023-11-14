@@ -354,6 +354,17 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="50">
+			<Text>Вы на первом этаже завода. Тут есть:</Text>
+			<Options>
+				<Option Goto="153" Text="Кабинка дежурного"/>
+				<Option Goto="45" Text="Склад из ящиков"/>
+				<Option Goto="244" Text="Белая дверь">
+					<Text>Если хотите вылезти через форточку наружу:</Text>
+				</Option>
+				<Option Goto="99"/>
+			</Options>
+		</Paragraph>
 		
 		<Paragraph No="351">
 			<Texts>
