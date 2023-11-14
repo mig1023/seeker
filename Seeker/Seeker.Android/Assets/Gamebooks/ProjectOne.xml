@@ -1,0 +1,29 @@
+<Gamebook>
+	<Introduction>
+		<Copyright>
+			<Title>Проект 1</Title>
+			<Author>Дмитрий Гавриченко, Пётр Александров, 2008</Author>
+		</Copyright>
+		<Styles>
+			<Main Value="6b806b"/>
+			<Color Name="Option, System, Continue" Value="889988"/>
+		</Styles>
+		<Default>
+			<DisabledOption Value="Hide"/>
+		</Default>
+	</Introduction>
+	<Paragraphs>
+		<Paragraph No="0">
+			<Text>START</Text>
+			<Options>
+				<Start Goto="1"/>
+			</Options>
+		</Paragraph>
+		<Paragraph No="1">
+			<Text>END</Text>
+			<Options>
+				<Option Goto="0"/>
+			</Options>
+		</Paragraph>
+	</Paragraphs>
+</Gamebook>
