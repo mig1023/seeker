@@ -129,6 +129,12 @@
 				<Option Goto="197" Text="Если любая другая"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="17">
+			<Text>Теперь Вам предстоит жестокая битва:\n\nМУСОРЩИК\n\nЛОВКОСТЬ 8\n\nСИЛА 9\n\nЕсли Вы убьете мутанта:</Text>
+			<Options>
+				<Option Goto="119"/>
+			</Options>
+		</Paragraph>
 		
 		<Paragraph No="351">
 			<Texts>
