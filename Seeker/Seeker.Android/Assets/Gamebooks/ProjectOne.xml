@@ -43,6 +43,13 @@
 				<Option Goto="149"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="4">
+			<Text>Вы понимаете, что длинные пальцы старика сейчас нащупают лежащее за пазухой оружие.</Text>
+			<Options>
+				<Option Goto="339" Text="Нападете на него"/>
+				<Option Goto="174" Text="Будете ждать дальше"/>
+			</Options>
+		</Paragraph>
 		<Paragraph No="351">
 			<Texts>
 				<Text Style="Bold, Center">Часть 2. Геополитическая карта мира на 2070 год</Text>
