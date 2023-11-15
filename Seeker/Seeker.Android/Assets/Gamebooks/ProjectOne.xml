@@ -764,6 +764,12 @@
 				<Option Goto="315"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="109">
+			<Text>Сражение со зверем обещает быть тяжелым:\n\nГЕПАРД\n\nЛОВКОСТЬ 10\n\nСИЛА 7\n\nЕсли Вы победили:</Text>
+			<Options>
+				<Option Goto="328"/>
+			</Options>
+		</Paragraph>
 		
 		<Paragraph No="351">
 			<Texts>
