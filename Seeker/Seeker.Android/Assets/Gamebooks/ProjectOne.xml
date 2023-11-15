@@ -934,6 +934,12 @@
 				<Option Goto="69"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="134">
+			<Text>Вернувшись обратно в залу, вы обнаруживаете небольшое ответвление, скрытое от взора высоким ящиком.\n\nНе теряя ни минуты вы покидаете её через этот проход.</Text>
+			<Options>
+				<Option Goto="230"/>
+			</Options>
+		</Paragraph>
 		
 		<Paragraph No="351">
 			<Texts>
