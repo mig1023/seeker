@@ -516,6 +516,13 @@
 				<Option Goto="100"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="73">
+			<Text>Оглядев свалку, Вы не обнаруживаете никаких признаков МУСОРЩИКА. Вздохнув с облегчением, Вы продолжаете свой путь...</Text>
+			<Options>
+				<Option Goto="86" Text="На юг"/>
+				<Option Goto="35" Text="На север"/>
+			</Options>
+		</Paragraph>
 		
 		<Paragraph No="351">
 			<Texts>
