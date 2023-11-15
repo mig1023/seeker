@@ -697,6 +697,15 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="99">
+			<Text>Вы находитесь около входа в заброшенный химический завод.</Text>
+			<Options>
+				<Option Goto="28" Text="Хотите залезть внутрь через окно сбоку от ворот"/>
+				<Option Goto="24" Text="Обойдете завод с юга"/>
+				<Option Goto="225" Text="Пойдете на юго-восток, где готовится к походу караван"/>
+				<Option Goto="86" Text="Хотите пойти по дорожке на север"/>
+			</Options>
+		</Paragraph>
 		
 		<Paragraph No="351">
 			<Texts>
