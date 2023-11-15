@@ -914,6 +914,14 @@
 				<Option Goto="218" Text="Между скал"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="131">
+			<Text>Присев на корточки, Вы осматриваете зеленоватую, немного мутную воду.</Text>
+			<Options>
+				<Option Goto="52" Text="Хотите умыться"/>
+				<Option Goto="274" Text="Попить"/>
+				<Option Goto="160" Text="Отойдете от воды и пойдете по узкой кромке на запад"/>
+			</Options>
+		</Paragraph>
 		
 		<Paragraph No="351">
 			<Texts>
