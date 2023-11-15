@@ -1028,6 +1028,14 @@
 				<Option Goto="214"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="148">
+			<Text>Пройдя с сотню шагов, Вы набредаете на очередную развилку.\n\nИтак, куда направитесь?</Text>
+			<Options>
+				<Option Goto="296" Text="На юг, к заводу"/>
+				<Option Goto="344" Text="На север, к деревне"/>
+				<Option Goto="78" Text="На восток, по узкой тропинке вдоль побережья"/>
+			</Options>
+		</Paragraph>
 		
 		<Paragraph No="351">
 			<Texts>
