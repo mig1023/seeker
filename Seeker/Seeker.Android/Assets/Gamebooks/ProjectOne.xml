@@ -744,6 +744,14 @@
 				<Option Goto="248"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="106">
+			<Text>Вы походите к металлической двери, пару раз дёргаете её, но открыть её привычным способом нет никакой возможности.</Text>
+			<Options>
+				<Option Goto="323" Text="Исследуете дверь повнимательнее"/>
+				<Option Goto="100" Text="Полезете по зубьям"/>
+				<Option Goto="216" Text="Обойдёте дом кругом"/>
+			</Options>
+		</Paragraph>
 		
 		<Paragraph No="351">
 			<Texts>
