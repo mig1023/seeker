@@ -881,6 +881,13 @@
 				<Option Goto="50" Text="Выйти из коридора"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="126">
+			<Text>Как Вы будете двигаться через свалку?</Text>
+			<Options>
+				<Option Goto="295" Text="Хотите лезть по крышам машин, в надежде раздобыть по дороге что ни будь полезное"/>
+				<Option Goto="207" Text="Обойдете залежи металла стороной"/>
+			</Options>
+		</Paragraph>
 		
 		<Paragraph No="351">
 			<Texts>
