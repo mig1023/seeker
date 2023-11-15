@@ -862,6 +862,17 @@
 				<Option Goto="308"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="124">
+			<Text>Вы заходите в комнату с кроватью.\n\nХотите прилечь и поспать?</Text>
+			<Options>
+				<Option Goto="103" Text="Поспать">
+					<Text>Если не хотите:</Text>
+				</Option>
+				<Option Goto="88" Text="Зайти в соседнюю комнату"/>
+				<Option Goto="191" Text="Подойти к шкафу на первом этаже"/>
+				<Option Goto="278" Text="Выйти из дома"/>
+			</Options>
+		</Paragraph>
 		
 		<Paragraph No="351">
 			<Texts>
