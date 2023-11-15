@@ -523,6 +523,12 @@
 				<Option Goto="35" Text="На север"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="74">
+			<Text>Оба противника мертвы и вы, после получасового отдыха, продолжаете свой путь.</Text>
+			<Options>
+				<Option Goto="223"/>
+			</Options>
+		</Paragraph>
 		
 		<Paragraph No="351">
 			<Texts>
