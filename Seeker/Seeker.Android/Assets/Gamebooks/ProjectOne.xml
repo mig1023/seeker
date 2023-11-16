@@ -1443,6 +1443,12 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="210">
+			<Text>Вы входите в комнату, и уже через секунду получаете разрывную пулю «дум-дум» в грудь.\n\nНа этом ваше приключение окончено!..</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 		
 		<Paragraph No="351">
 			<Texts>
