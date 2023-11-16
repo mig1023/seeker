@@ -1233,6 +1233,12 @@
 				<Option Goto="109"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="179">
+			<Text>Опасливо оглядываясь, Вы стараетесь тихо и быстро обойти это странное место.\n\nКажется, Ваш визит остался незамеченным.</Text>
+			<Options>
+				<Option Goto="267"/>
+			</Options>
+		</Paragraph>
 		
 		<Paragraph No="351">
 			<Texts>
