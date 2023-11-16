@@ -1467,6 +1467,17 @@
 				<Option Goto="261"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="214">
+			<Text>Вы в кабинете Профессора Бора.</Text>
+			<Options>
+				<Option Goto="136" Text="В лаборантскую"/>
+				<Option Goto="233" Text="Осмотреть стол"/>
+				<Option Goto="147" Text="Заглянуть на полку с книгами"/>
+				<Option Goto="222" Text="Изучить стеллаж с папками для бумаг"/>
+				<Option Goto="199" Text="Выйти из комнаты и зайти в следующую"/>
+				<Option Goto="50" Text="Выйти из коридора"/>
+			</Options>
+		</Paragraph>
 		
 		<Paragraph No="351">
 			<Texts>
