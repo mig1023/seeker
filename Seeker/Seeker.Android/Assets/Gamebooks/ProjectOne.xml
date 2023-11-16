@@ -1365,6 +1365,15 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="199">
+			<Text>Вы заходите в дверь с надписью «Администрация».\n\nТут стоит компьютер и стол с бумагами, а на стене висит металлический сейф.</Text>
+			<Options>
+				<Option Goto="237" Text="Подойти к компьютеру"/>
+				<Option Goto="24" Text="Подойти к сейфу"/>
+				<Option Goto="214" Text="Зайти в соседнюю комнату"/>
+				<Option Goto="50" Text="Выйти из коридора"/>
+			</Options>
+		</Paragraph>
 		
 		<Paragraph No="351">
 			<Texts>
