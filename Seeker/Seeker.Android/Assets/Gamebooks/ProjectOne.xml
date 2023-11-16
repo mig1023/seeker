@@ -1478,6 +1478,13 @@
 				<Option Goto="50" Text="Выйти из коридора"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="215">
+			<Text>ПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+			<Options>
+				<Option Goto="309" Text="Фортуна к Вам благосклонна"/>
+				<Option Goto="49" Text="Нет"/>
+			</Options>
+		</Paragraph>
 		
 		<Paragraph No="351">
 			<Texts>
