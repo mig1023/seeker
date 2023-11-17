@@ -1589,6 +1589,13 @@
 				<Option Goto="117"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="231">
+			<Text>Заложив динамит под основание каменной насыпи и воспользовавшись тирком, вы со всех ног несётесь за поворот, скрываясь от взрыва.\n\nПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+			<Options>
+				<Option Goto="276" Text="Она к Вам благосклонна"/>
+				<Option Goto="290" Text="Нет"/>
+			</Options>
+		</Paragraph>
 		
 		<Paragraph No="351">
 			<Texts>
