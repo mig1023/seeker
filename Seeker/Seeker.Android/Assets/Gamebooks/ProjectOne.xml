@@ -1952,6 +1952,13 @@
 				<Option Goto="171" Text="Покинете залу"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="284">
+			<Text>ПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+			<Options>
+				<Option Goto="8" Text="Фортуна на вашей стороне"/>
+				<Option Goto="335" Text="Нет"/>
+			</Options>
+		</Paragraph>
 		
 		<Paragraph No="351">
 			<Texts>
