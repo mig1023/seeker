@@ -1715,6 +1715,12 @@
 				<Option Goto="65" Text="Ничего не будете спрашивать"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="248">
+			<Text>Противник нанес Вам сильное раненье, но даже это не сломило Вас:\n\nНАЁМНИК\n\nЛОВКОСТЬ 8\n\nСИЛА 7\n\nЕдва ли вы выжили, но если это так...</Text>
+			<Options>
+				<Option Goto="228"/>
+			</Options>
+		</Paragraph>
 		
 		<Paragraph No="351">
 			<Texts>
