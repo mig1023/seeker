@@ -1676,6 +1676,14 @@
 				<Option Goto="189" Text="Решите вернуться к воротам, чтобы залезть в окно"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="243">
+			<Text>Спустившись, Вы обнаруживаете у самой кромки воды небольшой, всего в полметра, выступ.</Text>
+			<Options>
+				<Option Goto="160" Text="Пойти по нему"/>
+				<Option Goto="131" Text="Спуститься к воде"/>
+				<Option Goto="92" Text="Подняться обратно на обрыв, а затем пойти на восток"/>
+			</Options>
+		</Paragraph>
 		
 		<Paragraph No="351">
 			<Texts>
