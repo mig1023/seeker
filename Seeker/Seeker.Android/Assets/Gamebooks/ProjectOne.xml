@@ -1510,6 +1510,20 @@
 				<Option Goto="332"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="220">
+			<Text>Вы вышли на главную площадь Нессмара.\n\nКуда направитесь?</Text>
+			<Options>
+				<Option Goto="58" Text="На «Улицу торгашей»"/>
+				<Option Goto="71" Text="На «Улицу оборванцев»"/>
+				<Option Goto="265" Text="На «Улицу рыбаков»"/>
+				<Option Goto="32" Text="На рынок"/>
+				<Option Goto="183" Text="В гавань"/>
+				<Option Goto="304" Text="В гостиницу">
+					<Text>Выйдите из поселка? В таком случае Вам:</Text>
+				</Option>
+				<Option Goto="148"/>
+			</Options>
+		</Paragraph>
 		
 		<Paragraph No="351">
 			<Texts>
