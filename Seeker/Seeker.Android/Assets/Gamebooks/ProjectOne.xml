@@ -2029,6 +2029,12 @@
 				<Option Goto="343" Text="Решите посмотреть, что там творится"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="296">
+			<Text>Вы идете на юг почти полтора часа. Вдали виднеется двухэтажное кирпичное здание.</Text>
+			<Options>
+				<Option Goto="236"/>
+			</Options>
+		</Paragraph>
 		
 		<Paragraph No="351">
 			<Texts>
