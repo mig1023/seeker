@@ -2313,6 +2313,12 @@
 				<Option Goto="294"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="339">
+			<Text>Не дожидаясь того, что он предпримет, Вы стремительно атакуете:\n\nСМОТРИТЕЛЬ МАЯКА\n\nЛОВКОСТЬ 7\n\nСИЛА 8\n\nЕсли старик мертв:</Text>
+			<Options>
+				<Option Goto="53"/>
+			</Options>
+		</Paragraph>
 		
 		<Paragraph No="351">
 			<Texts>
