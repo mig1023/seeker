@@ -15,6 +15,7 @@ namespace Seeker.Gamebook.ProjectOne
         public int HitStrengthModificator { get; set; }
         public bool AntsAttack { get; set; }
         public bool Hyenas { get; set; }
+        public bool Mosquito { get; set; }
 
         public override List<string> Status() => new List<string>
         {
@@ -101,6 +102,7 @@ namespace Seeker.Gamebook.ProjectOne
 
                     int allyHitStrength = 0;
                     int enemyHitStrength = 0;
+                    int enemyAttackCount = 0;
 
                     foreach (Character enemy in FightEnemies)
                     {
@@ -185,10 +187,13 @@ namespace Seeker.Gamebook.ProjectOne
                                 fight.Add("BIG|GOOD|Вы ПОБЕДИЛИ :)");
                                 return fight;
                             }
+
+                            enemyAttackCount = 0;
                         }
                         else if (allyHitStrength > enemyHitStrength)
                         {
                             fight.Add($"BOLD|{enemy.Name} не смог нанести удар");
+                            enemyAttackCount = 0;
                         }
                         else if ((allyHitStrength < enemyHitStrength) && !alreadyAttack.Contains(enemy.Name))
                         {
@@ -196,6 +201,20 @@ namespace Seeker.Gamebook.ProjectOne
                             fight.Add(isEnemy ? $"BAD|{ally.Name} ранен" : "BAD|Вы ранены");
 
                             ally.Endurance -= enemy.ExtendedDamage > 0 ? enemy.ExtendedDamage : 2;
+
+                            enemyAttackCount += 1;
+
+                            if (Mosquito && (enemyAttackCount == 2))
+                            {
+                                ally.Endurance -= 5;
+                                fight.Add("Яд действует и отнимает сразу 6 единиц силы!");
+                            }
+                            else if (Mosquito && (enemyAttackCount > 2))
+                            {
+                                fight.Add(String.Empty);
+                                fight.Add("BIG|BAD|Москиту удастся 3 раунда битвы подряд атаковать Вас! :(");
+                                return fight;
+                            }
 
                             bool allyLost = FightAllies.Where(x => x.Endurance > 0).Count() == 0;
 
@@ -209,6 +228,7 @@ namespace Seeker.Gamebook.ProjectOne
                         else
                         {
                             fight.Add("BOLD|Ничья в раунде");
+                            enemyAttackCount = 0;
                         }
 
                         alreadyAttack.Add(ally.Name);
