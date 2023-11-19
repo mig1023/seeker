@@ -161,7 +161,13 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="20">
-			<Text>Вам предстоит сразиться с разъяренным дикарем:\n\n"ГОЛЕМ"\n\nЛОВКОСТЬ 11\n\nСИЛА 11\n\nЕсли Вам удалось одолеть его:</Text>
+			<Text>Вам предстоит сразиться с разъяренным дикарем:</Text>
+			<Actions>
+				<Fight>
+					<Enemy Name="ГОЛЕМ" Skill="11" Endurance="11"/>
+					<Text>Если Вам удалось одолеть его:</Text>
+				</Fight>
+			</Actions>
 			<Options>
 				<Option Goto="345"/>
 			</Options>
