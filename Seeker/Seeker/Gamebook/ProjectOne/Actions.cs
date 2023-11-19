@@ -13,6 +13,7 @@ namespace Seeker.Gamebook.ProjectOne
         public List<Character> Enemies { get; set; }
 
         public int ExtendedDamage { get; set; }
+        public bool AntsAttack { get; set; }
 
         public override List<string> Status() => new List<string>
         {
@@ -129,6 +130,22 @@ namespace Seeker.Gamebook.ProjectOne
                                 $"{Game.Dice.Symbol(enemyRollFirst)} + " +
                                 $"{Game.Dice.Symbol(enemyRollSecond)} + " +
                                 $"{enemy.Skill} ловкость = {enemyHitStrength}");
+                        }
+
+                        if (AntsAttack)
+                        {
+                            int antDice = Game.Dice.Roll();
+                            fight.Add($"Кидаем дополнительную кость за муравья: {Game.Dice.Symbol(antDice)}");
+
+                            if (antDice == 6)
+                            {
+                                fight.Add(String.Empty);
+                                fight.Add("BIG|BAD|Выпала ШЕСТЁРКА :(");
+                            }
+                            else
+                            {
+                                fight.Add("GRAY|Это не шестёрка - ничего важного не произошло");
+                            }
                         }
 
                         if ((allyHitStrength > enemyHitStrength) && !alreadyAttack.Contains(ally.Name))
