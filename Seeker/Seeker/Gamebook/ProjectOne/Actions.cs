@@ -16,6 +16,7 @@ namespace Seeker.Gamebook.ProjectOne
         public bool AntsAttack { get; set; }
         public bool Hyenas { get; set; }
         public bool Mosquito { get; set; }
+        public bool Fall { get; set; } 
 
         public override List<string> Status() => new List<string>
         {
@@ -254,6 +255,12 @@ namespace Seeker.Gamebook.ProjectOne
                 $"{Game.Dice.Symbol(secondDice)} {luckLine} {protagonist.Luck}" };
 
             luckCheck.Add(goodLuck ? "BIG|GOOD|ПОВЕЗЛО :)" : "BIG|BAD|НЕ ПОВЕЗЛО :(");
+
+            if (Fall && !goodLuck)
+            {
+                protagonist.Endurance -= 3;
+                luckCheck.Add("Вы больно ударились и потеряли 3 единицы Силы!");
+            }
 
             if (protagonist.Luck > 0)
             {
