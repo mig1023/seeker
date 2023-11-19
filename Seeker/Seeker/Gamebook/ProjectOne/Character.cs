@@ -34,6 +34,7 @@ namespace Seeker.Gamebook.ProjectOne
         {
             base.Init();
 
+            Name = "Главный герой";
             MaxSkill = Game.Dice.Roll() + 6;
             Skill = MaxSkill;
             MaxEndurance = Game.Dice.Roll() + 12;

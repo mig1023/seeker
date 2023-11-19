@@ -19,6 +19,18 @@ namespace Seeker.Gamebook.ProjectOne
             foreach (string param in GetProperties(action))
                 SetProperty(action, param, xmlAction);
 
+            if (xmlAction["Ally"] != null)
+            {
+                action.Allies = new List<Character> { EnemyParse(xmlAction["Ally"]) };
+            }
+            else if (xmlAction["Allies"] != null)
+            {
+                action.Allies = new List<Character>();
+
+                foreach (XmlNode xmlAlly in xmlAction.SelectNodes("Allies/Ally"))
+                    action.Allies.Add(EnemyParse(xmlAlly));
+            }
+
             if (xmlAction["Enemy"] != null)
             {
                 action.Enemies = new List<Character> { EnemyParse(xmlAction["Enemy"]) };
