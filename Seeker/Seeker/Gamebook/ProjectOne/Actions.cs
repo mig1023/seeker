@@ -270,5 +270,25 @@ namespace Seeker.Gamebook.ProjectOne
 
             return luckCheck;
         }
+
+        public List<string> Skill()
+        {
+            Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
+            int thirdDice = Game.Dice.Roll();
+
+            bool goodSkill = (firstDice + secondDice + thirdDice) <= protagonist.Skill;
+            string skillLine = goodSkill ? "<=" : ">";
+
+            List<string> skillCheck = new List<string> {
+                $"Проверка ловкости:" +
+                $"{Game.Dice.Symbol(firstDice)} + " +
+                $"{Game.Dice.Symbol(secondDice)} + " +
+                $"{Game.Dice.Symbol(thirdDice)} + " +
+                $" {skillLine} {protagonist.Skill}" };
+
+            skillCheck.Add(goodSkill ? "BIG|GOOD|ЛОВКОСТИ ХВАТИЛО :)" : "BIG|BAD|ЛОВКОСТИ НЕ ХВАТИЛО :(");
+
+            return skillCheck;
+        }
     }
 }
