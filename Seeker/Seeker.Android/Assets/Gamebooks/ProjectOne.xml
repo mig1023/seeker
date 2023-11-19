@@ -805,7 +805,13 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="109">
-			<Text>Сражение со зверем обещает быть тяжелым:\n\nГЕПАРД\n\nЛОВКОСТЬ 10\n\nСИЛА 7\n\nЕсли Вы победили:</Text>
+			<Text>Сражение со зверем обещает быть тяжелым:</Text>
+			<Actions>
+				<Fight>
+					<Enemy Name="ГЕПАРД" Skill="10" Endurance="7"/>
+					<Text>Если Вы победили:</Text>
+				</Fight>
+			</Actions>
 			<Options>
 				<Option Goto="328"/>
 			</Options>
