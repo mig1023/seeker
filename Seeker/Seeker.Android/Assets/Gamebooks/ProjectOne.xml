@@ -2467,7 +2467,13 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="339">
-			<Text>Не дожидаясь того, что он предпримет, Вы стремительно атакуете:\n\nСМОТРИТЕЛЬ МАЯКА\n\nЛОВКОСТЬ 7\n\nСИЛА 8\n\nЕсли старик мертв:</Text>
+			<Text>Не дожидаясь того, что он предпримет, Вы стремительно атакуете:</Text>
+			<Actions>
+				<Fight>
+					<Enemy Name="СМОТРИТЕЛЬ МАЯКА" Skill="7" Endurance="8"/>
+					<Text>Если старик мертв:</Text>
+				</Fight>
+			</Actions>
 			<Options>
 				<Option Goto="53"/>
 			</Options>
