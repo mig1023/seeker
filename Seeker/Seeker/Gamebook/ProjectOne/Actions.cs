@@ -13,6 +13,7 @@ namespace Seeker.Gamebook.ProjectOne
         public List<Character> Enemies { get; set; }
 
         public int ExtendedDamage { get; set; }
+        public int HitStrengthModificator { get; set; }
         public bool AntsAttack { get; set; }
 
         public override List<string> Status() => new List<string>
@@ -114,10 +115,18 @@ namespace Seeker.Gamebook.ProjectOne
                             allyHitStrength = allyRollFirst + allyRollSecond + ally.Skill;
                             string who = IsProtagonist(ally.Name) ? "Ваша" : $"{ally.Name} -";
 
-                            fight.Add($"{who} можность атаки: " +
+                            fight.Add($"{who} мощность атаки: " +
                                 $"{Game.Dice.Symbol(allyRollFirst)} + " +
                                 $"{Game.Dice.Symbol(allyRollSecond)} + " +
                                 $"{ally.Skill} ловкость = {allyHitStrength}");
+
+                            if (HitStrengthModificator != 0)
+                            {
+                                allyHitStrength -= HitStrengthModificator;
+
+                                fight.Add($"Мощность атаки снижается на {HitStrengthModificator} " +
+                                    $"и теперь равна {allyHitStrength}");
+                            }
                         }
 
                         if (!alreadyAttack.Contains(enemy.Name))
