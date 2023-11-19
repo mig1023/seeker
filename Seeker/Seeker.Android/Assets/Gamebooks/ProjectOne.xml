@@ -784,7 +784,16 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="107">
-			<Text>Придется расправиться с негодяями:\n\nПЕРВЫЙ БАНДИТ\n\nЛОВКОСТЬ 7\n\nСИЛА 6\n\nВТОРОЙ БАНДИТ\n\nЛОВКОСТЬ 6\n\nСИЛА 8\n\nЕсли Вам удалось победить:</Text>
+			<Text>Придется расправиться с негодяями:</Text>
+			<Actions>
+				<Fight>
+					<Enemies>
+						<Enemy Name="ПЕРВЫЙ БАНДИТ" Skill="7" Endurance="6"/>
+						<Enemy Name="ВТОРОЙ БАНДИТ" Skill="6" Endurance="8"/>
+					<Enemies>
+					<Text>Если Вам удалось победить:</Text>
+				</Fight>
+			</Actions>
 			<Options>
 				<Option Goto="66"/>
 			</Options>
