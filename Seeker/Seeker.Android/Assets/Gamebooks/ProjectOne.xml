@@ -5,9 +5,16 @@
 			<Author>Дмитрий Гавриченко, Пётр Александров, 2008</Author>
 		</Copyright>
 		<Styles>
-			<Main Value="352d39"/>
-			<Color Name="Option, System, Continue" Value="c88b64"/>
+			<Main Value="232322"/>
+			<Background Value="e3e8eb"/>
+			<Color Name="Option, System, Continue" Value="889293"/>
+			<StatusBar Value="474745"/>
+			<ActionBox Value="b7c1c3"/>
+			<Action Value="474745"/>
 		</Styles>
+		<Buttons>
+			<Fight>Сражаться</Fight>
+		</Buttons>
 		<Default>
 			<DisabledOption Value="Hide"/>
 		</Default>
@@ -130,7 +137,13 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="17">
-			<Text>Теперь Вам предстоит жестокая битва:\n\nМУСОРЩИК\n\nЛОВКОСТЬ 8\n\nСИЛА 9\n\nЕсли Вы убьете мутанта:</Text>
+			<Text>Теперь Вам предстоит жестокая битва:</Text>
+			<Actions>
+				<Fight>
+					<Enemy Name="МУСОРЩИК" Skill="8" Endurance="9"/>
+					<Text>Если Вы убьете мутанта:</Text>
+				</Fight>
+			</Actions>
 			<Options>
 				<Option Goto="119"/>
 			</Options>
