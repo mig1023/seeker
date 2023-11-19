@@ -335,7 +335,13 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="44">
-			<Text>Битва с жителем пустыни обещает быть не из лёгких:\n\nРЕЙДЕР\n\nЛОВКОСТЬ 10\n\nСИЛА 10\n\nЕсли Вам удалось одолеть его:</Text>
+			<Text>Битва с жителем пустыни обещает быть не из лёгких:</Text>
+			<Actions>
+				<Fight>
+					<Enemy Name="РЕЙДЕР" Skill="10" Endurance="10"/>
+					<Text>Если Вам удалось одолеть его:</Text>
+				</Fight>
+			</Actions>
 			<Options>
 				<Option Goto="181"/>
 			</Options>
