@@ -12,7 +12,6 @@ namespace Seeker.Gamebook.ProjectOne
         public List<Character> Allies { get; set; }
         public List<Character> Enemies { get; set; }
 
-        public int ExtendedDamage { get; set; }
         public int HitStrengthModificator { get; set; }
         public bool AntsAttack { get; set; }
 
@@ -179,7 +178,7 @@ namespace Seeker.Gamebook.ProjectOne
                             bool isEnemy = groupFight && !IsProtagonist(ally.Name);
                             fight.Add(isEnemy ? $"BAD|{ally.Name} ранен" : "BAD|Вы ранены");
 
-                            ally.Endurance -= ExtendedDamage > 0 ? ExtendedDamage : 2;
+                            ally.Endurance -= enemy.ExtendedDamage > 0 ? enemy.ExtendedDamage : 2;
 
                             bool allyLost = FightAllies.Where(x => x.Endurance > 0).Count() == 0;
 

@@ -30,6 +30,8 @@ namespace Seeker.Gamebook.ProjectOne
             set => _luck = Game.Param.Setter(value, max: MaxLuck, _luck, this);
         }
 
+        public int ExtendedDamage { get; set; }
+
         public override void Init()
         {
             base.Init();
@@ -41,6 +43,7 @@ namespace Seeker.Gamebook.ProjectOne
             Endurance = MaxEndurance;
             MaxLuck = Game.Dice.Roll() + 6;
             Luck = MaxLuck;
+            ExtendedDamage = 0;
         }
 
         public Character Clone() => new Character()
