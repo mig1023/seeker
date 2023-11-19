@@ -1371,6 +1371,7 @@
 						<Enemy Name="ПЕРВЫЙ НЕИЗВЕСТНЫЙ" Skill="7" Endurance="9"/>
 						<Enemy Name="ВТОРОЙ НЕИЗВЕСТНЫЙ" Skill="7" Endurance="8"/>
 					</Enemies>
+					<HitStrengthModificator Value="2"/>
 					<Text>Если чудо произошло и оба нападавших мертвы...</Text>
 				</Fight>
 			</Actions>
