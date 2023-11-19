@@ -152,7 +152,10 @@ namespace Seeker.Gamebook.ProjectOne
                                 if (anyDouble && (ones || sixes))
                                 {
                                     fight.Add(String.Empty);
-                                    fight.Add("BAD|Выпал дубль " + (ones ? "единиц" : "шестёрок"));
+
+                                    fight.Add(String.Format("BAD|Выпал дубль {0}!",
+                                        ones ? "единиц" : "шестёрок"));
+
                                     fight.Add("BIG|BAD|Вы ПРОИГРАЛИ :(");
                                     return fight;
                                 }

@@ -56,6 +56,7 @@ namespace Seeker.Gamebook.ProjectOne
             Endurance = this.Endurance,
             MaxLuck = this.MaxLuck,
             Luck = this.Luck,
+            ExtendedDamage = this.ExtendedDamage,
         };
 
         public override string Save() => String.Join("|",
