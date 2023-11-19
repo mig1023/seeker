@@ -12,6 +12,8 @@ namespace Seeker.Gamebook.ProjectOne
         public List<Character> Allies { get; set; }
         public List<Character> Enemies { get; set; }
 
+        public int ExtendedDamage { get; set; }
+
         public override List<string> Status() => new List<string>
         {
             $"Ловкость: {protagonist.Skill}/{protagonist.MaxSkill}",
@@ -151,7 +153,7 @@ namespace Seeker.Gamebook.ProjectOne
                             bool isEnemy = groupFight && !IsProtagonist(ally.Name);
                             fight.Add(isEnemy ? $"BAD|{ally.Name} ранен" : "BAD|Вы ранены");
 
-                            ally.Endurance -= 2;
+                            ally.Endurance -= ExtendedDamage > 0 ? ExtendedDamage : 2;
 
                             bool allyLost = FightAllies.Where(x => x.Endurance > 0).Count() == 0;
 
