@@ -1841,7 +1841,13 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="248">
-			<Text>Противник нанес Вам сильное раненье, но даже это не сломило Вас:\n\nНАЁМНИК\n\nЛОВКОСТЬ 8\n\nСИЛА 7\n\nЕдва ли вы выжили, но если это так...</Text>
+			<Text>Противник нанес Вам сильное раненье, но даже это не сломило Вас:</Text>
+			<Actions>
+				<Fight>
+					<Enemy Name="НАЁМНИК" Skill="8" Endurance="7"/>
+					<Text>Едва ли вы выжили, но если это так...</Text>
+				</Fight>
+			</Actions>
 			<Options>
 				<Option Goto="228"/>
 			</Options>
