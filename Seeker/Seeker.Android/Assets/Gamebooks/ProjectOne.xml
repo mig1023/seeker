@@ -1054,8 +1054,7 @@
 			<Text>Не давая ГНОМУ опомниться, Вы выхватываете оружие и бросаетесь на него.\n\nГНОМ сражается отравленным кинжалом, поэтому при каждом удачном ударе у вас будет отниматься не 2, а 3 пункта СИЛЫ!</Text>
 			<Actions>
 				<Fight>
-					<Enemy Name="ГНОМ" Skill="7" Endurance="9"/>
-					<ExtendedDamage Value="3"/>
+					<Enemy Name="ГНОМ" Skill="7" Endurance="9" ExtendedDamage="3"/>
 					<Text>Если убьете его:</Text>
 				</Fight>
 			</Actions>
@@ -2186,7 +2185,7 @@
 					</Allies>
 					<Enemies>
 						<Enemy Name="НАЁМНИК" Skill="6" Endurance="8"/>
-						<Enemy Name="ДЖИММИ" Skill="14" Endurance="18"/>
+						<Enemy Name="ДЖИММИ" Skill="14" Endurance="18" ExtendedDamage="4"/>
 					</Enemies>
 					<Text>Если Вам удалось выйти победителем из битвы с жутким существом.</Text>
 				</Fight>
