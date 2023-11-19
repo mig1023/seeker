@@ -241,5 +241,27 @@ namespace Seeker.Gamebook.ProjectOne
                 round += 1;
             }
         }
+
+        public List<string> Luck()
+        {
+            Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
+
+            bool goodLuck = (firstDice + secondDice) <= protagonist.Luck;
+            string luckLine = goodLuck ? "<=" : ">";
+
+            List<string> luckCheck = new List<string> {
+                $"Проверка удачи: {Game.Dice.Symbol(firstDice)} + " +
+                $"{Game.Dice.Symbol(secondDice)} {luckLine} {protagonist.Luck}" };
+
+            luckCheck.Add(goodLuck ? "BIG|GOOD|ПОВЕЗЛО :)" : "BIG|BAD|НЕ ПОВЕЗЛО :(");
+
+            if (protagonist.Luck > 0)
+            {
+                protagonist.Luck -= 1;
+                luckCheck.Add("Уровень удачи снижен на единицу");
+            }
+
+            return luckCheck;
+        }
     }
 }
