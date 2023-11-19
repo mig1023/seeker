@@ -83,6 +83,7 @@ namespace Seeker.Gamebook.ProjectOne
             }
 
             int round = 1;
+            int enemyAttackCount = 0;
 
             while (true)
             {
@@ -103,7 +104,6 @@ namespace Seeker.Gamebook.ProjectOne
 
                     int allyHitStrength = 0;
                     int enemyHitStrength = 0;
-                    int enemyAttackCount = 0;
 
                     foreach (Character enemy in FightEnemies)
                     {
@@ -216,7 +216,7 @@ namespace Seeker.Gamebook.ProjectOne
                             else if (Mosquito && (enemyAttackCount > 2))
                             {
                                 fight.Add(String.Empty);
-                                fight.Add("BIG|BAD|Москиту удастся 3 раунда битвы подряд атаковать Вас! :(");
+                                fight.Add("BIG|BAD|Москиту удалось 3 раунда подряд успешно атаковать Вас! :(");
                                 return fight;
                             }
 
