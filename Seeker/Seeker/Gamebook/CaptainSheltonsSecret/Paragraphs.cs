@@ -24,7 +24,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
 
             if (xmlAction["Ally"] != null)
             {
-                action.Enemies = new List<Character> { EnemyParse(xmlAction["Ally"]) };
+                action.Allies = new List<Character> { EnemyParse(xmlAction["Ally"]) };
             }
             else if (xmlAction["Allies"] != null)
             {
