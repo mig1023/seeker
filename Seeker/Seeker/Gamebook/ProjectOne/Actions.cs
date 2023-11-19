@@ -290,5 +290,8 @@ namespace Seeker.Gamebook.ProjectOne
 
             return skillCheck;
         }
+
+        public List<string> Dice() =>
+            new List<string> { $"BIG|На кубикe выпало: {Game.Dice.Symbol(Game.Dice.Roll())}" };
     }
 }
