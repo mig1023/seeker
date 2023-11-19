@@ -1094,7 +1094,16 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="149">
-			<Text>С сиплым тявканьем ГИЕНЫ подкрадываются к Вам.\n\nВ их глазах стынет ярость и голод:\n\nПЕРВАЯ ГИЕНА\n\nЛОВКОСТЬ 6\n\nСИЛА 7\n\nВТОРАЯ ГИЕНА\n\nЛОВКОСТЬ 7\n\nСИЛА 5\n\nЕсли вы победили:</Text>
+			<Text>С сиплым тявканьем ГИЕНЫ подкрадываются к Вам.\n\nВ их глазах стынет ярость и голод:</Text>
+			<Actions>
+				<Fight>
+					<Enemies>
+						<Enemy Name="ПЕРВАЯ ГИЕНА" Skill="6" Endurance="7"/>
+						<Enemy Name="ВТОРАЯ ГИЕНА" Skill="7" Endurance="9"/>
+					</Enemies>
+					<Text>Если вы победили:</Text>
+				</Fight>
+			</Actions>
 			<Options>
 				<Option Goto="74"/>
 			</Options>
