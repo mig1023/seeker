@@ -1055,6 +1055,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="ГНОМ" Skill="7" Endurance="9"/>
+					<ExtendedDamage Value="3"/>
 					<Text>Если убьете его:</Text>
 				</Fight>
 			</Actions>
