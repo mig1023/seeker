@@ -1811,7 +1811,7 @@
 						<Enemy Name="ПЕРВЫЙ НАЁМНИК" Skill="8" Endurance="7"/>
 						<Enemy Name="ВТОРОЙ НАЁМНИК" Skill="7" Endurance="7"/>
 						<Enemy Name="ТРЕТИЙ НАЁМНИК" Skill="7" Endurance="8"/>
-						<Enemy Name="ЧЕТВЕРТЫЙ  НАЁМНИК" Skill="8" Endurance="8"/>
+						<Enemy Name="ЧЕТВЕРТЫЙ НАЁМНИК" Skill="8" Endurance="8"/>
 						<Enemy Name="ГЛАВАРЬ НАЁМНИКОВ" Skill="11" Endurance="10"/>
 					</Enemies>
 					<Text>Если совместными усилиями вам удалось расправиться с пятеркой нападавших.</Text>
