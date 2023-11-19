@@ -14,6 +14,7 @@ namespace Seeker.Gamebook.ProjectOne
 
         public int HitStrengthModificator { get; set; }
         public bool AntsAttack { get; set; }
+        public bool Hyenas { get; set; }
 
         public override List<string> Status() => new List<string>
         {
@@ -138,6 +139,21 @@ namespace Seeker.Gamebook.ProjectOne
                                 $"{Game.Dice.Symbol(enemyRollFirst)} + " +
                                 $"{Game.Dice.Symbol(enemyRollSecond)} + " +
                                 $"{enemy.Skill} ловкость = {enemyHitStrength}");
+
+                            if (Hyenas)
+                            {
+                                bool anyDouble = enemyRollFirst == enemyRollSecond;
+                                bool ones = enemyRollFirst == 1;
+                                bool sixes = enemyRollFirst == 6;
+
+                                if (anyDouble && (ones || sixes))
+                                {
+                                    fight.Add(String.Empty);
+                                    fight.Add("BAD|Выпал дубль " + (ones ? "единиц" : "шестёрок"));
+                                    fight.Add("BIG|BAD|Вы ПРОИГРАЛИ :(");
+                                    return fight;
+                                }
+                            }
                         }
 
                         if (AntsAttack)
@@ -149,6 +165,7 @@ namespace Seeker.Gamebook.ProjectOne
                             {
                                 fight.Add(String.Empty);
                                 fight.Add("BIG|BAD|Выпала ШЕСТЁРКА :(");
+                                return fight;
                             }
                             else
                             {
@@ -160,7 +177,7 @@ namespace Seeker.Gamebook.ProjectOne
                         {
                             fight.Add($"GOOD|{enemy.Name} ранен");
 
-                            enemy.Endurance -= 2;
+                            enemy.Endurance -= (Hyenas ? 1 : 2);
 
                             if (NoMoreEnemies(FightEnemies))
                             {
