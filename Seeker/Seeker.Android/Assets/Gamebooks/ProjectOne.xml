@@ -790,7 +790,7 @@
 					<Enemies>
 						<Enemy Name="ПЕРВЫЙ БАНДИТ" Skill="7" Endurance="6"/>
 						<Enemy Name="ВТОРОЙ БАНДИТ" Skill="6" Endurance="8"/>
-					<Enemies>
+					</Enemies>
 					<Text>Если Вам удалось победить:</Text>
 				</Fight>
 			</Actions>
