@@ -166,6 +166,13 @@
 				<Option Goto="96"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="22">
+			<Text>Вы медленно расстегиваете пояс. Батраки нервничают, они явно опасаются вас. Пока не понятно, в состоянии ли они правильно истолковать ваши намерения. Проверьте Удачу.</Text>
+			<Options>
+				<Option Goto="220" Text="Удача с вами"/>
+				<Option Goto="8" Text="Нет"/>
+			</Options>
+		</Paragraph>
 		<Paragraph No="301">
 			<Texts>
 				<Text Style="Bold, Center">ПРОИСХОЖДЕНИЕ ГЛАВНОГО ГЕРОЯ</Text>
