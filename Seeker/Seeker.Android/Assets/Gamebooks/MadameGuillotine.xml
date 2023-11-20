@@ -48,6 +48,12 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="5">
+			<Text>— Старина Гросспьер? — переспрашивает он добродушно.— О, он ушел в отставку. Живёт на Сен-Мишель. Если ищешь его, сейчас он должен быть где-то там.\n\nВы благодарите его и покидаете заведение.</Text>
+			<Options>
+				<Option Goto="249"/>
+			</Options>
+		</Paragraph>
 		<Paragraph No="301">
 			<Texts>
 				<Text Style="Bold, Center">ПРОИСХОЖДЕНИЕ ГЛАВНОГО ГЕРОЯ</Text>
