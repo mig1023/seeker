@@ -417,6 +417,13 @@
 				<Option Goto="193"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="62">
+			<Text>Чтобы попасть в кого-нибудь из беглецов, вы должны проверить навык Огнестрельного оружия.</Text>
+			<Options>
+				<Option Goto="293" Text="Вы попали"/>
+				<Option Goto="260" Text="Нет"/>
+			</Options>
+		</Paragraph>
 		<Paragraph No="301">
 			<Texts>
 				<Text Style="Bold, Center">ПРОИСХОЖДЕНИЕ ГЛАВНОГО ГЕРОЯ</Text>
