@@ -337,6 +337,14 @@
 				<Option Goto="83" Text="Сдадитесь"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="50">
+			<Text>Батрак надвигается, придётся с ним фехтовать.\n\n1 Крестьянин: Вилы 7, Ранений 4</Text>
+			<Options>
+				<Option Goto="221" Text="Вам удается его убить за два раунда или меньше"/>
+				<Option Goto="173" Text="После двух раундов бой ещё продолжается"/>
+				<Option Goto="8" Text="Вы потерпели поражение в эти два раунда"/>
+			</Options>
+		</Paragraph>
 		<Paragraph No="301">
 			<Texts>
 				<Text Style="Bold, Center">ПРОИСХОЖДЕНИЕ ГЛАВНОГО ГЕРОЯ</Text>
