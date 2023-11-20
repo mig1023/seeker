@@ -528,10 +528,16 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\ProjectOne.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Gamebooks\MadameGuillotine.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\MadameGuillotine.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties XamarinHotReloadGenericExceptionInfoBarSeekerAndroidHideInfoBar="True" />
+      <UserProperties XamarinHotReloadGenericExceptionInfoBarSeekerAndroidHideInfoBar="True" XamarinHotReloadDebuggerTimeoutExceptionSeekerAndroidHideInfoBar="True" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>

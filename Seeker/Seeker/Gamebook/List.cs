@@ -62,6 +62,7 @@ namespace Seeker.Gamebook
             ["Moria"] = Moria.Constants.GetLinks(),
             ["YouAreMillionaire"] = YouAreMillionaire.Constants.GetLinks(),
             ["ProjectOne"] = ProjectOne.Constants.GetLinks(),
+            ["MadameGuillotine"] = MadameGuillotine.Constants.GetLinks(),
         };
 
         public static List<string> GetBooks() =>
