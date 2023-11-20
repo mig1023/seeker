@@ -127,6 +127,13 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="18">
+			<Text>Батраки готовы к вашей атаке. Они хватают вилы, один заходит слева, другой идёт прямо на вас.\n\n1 Первый крестьянин: Вилы 6, Ранений 3\n\n1 Второй крестьянин: Вилы 5, Ранений 3</Text>
+			<Options>
+				<Option Goto="221" Text="Победили их"/>
+				<Option Goto="8" Text="Не удалось"/>
+			</Options>
+		</Paragraph>
 		<Paragraph No="301">
 			<Texts>
 				<Text Style="Bold, Center">ПРОИСХОЖДЕНИЕ ГЛАВНОГО ГЕРОЯ</Text>
