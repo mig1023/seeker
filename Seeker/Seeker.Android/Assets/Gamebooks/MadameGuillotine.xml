@@ -5,8 +5,9 @@
 			<Author>Симон Фаррел, Джон Сазерленд, 1986</Author>
 		</Copyright>
 		<Styles>
-			<Main Value="0055a4"/>
-			<Color Name="Option, System, Continue" Value="ef4135"/>
+			<Main Value="011066"/>
+			<Color Name="Option, System, Continue" Value="6a0002"/>
+			<SystemFont Value="ffffff"/>
 		</Styles>
 		<Default>
 			<DisabledOption Value="Hide"/>
@@ -153,19 +154,6 @@
 				<Option Goto="96"/>
 			</Options>
 		</Paragraph>
-		<Paragraph No="20">
-			<Text>Вы осматриваете землю вокруг фургона, пытаясь понять в каком направлении покинули его пассажиры.\n\nПроверьте свою Удачу.</Text>
-			<Options>
-				<Option Goto="214" Text="Проверка провалилась"/>
-				<Option Goto="106" Text="Всё получилось"/>
-			</Options>
-		</Paragraph>
-		<Paragraph No="21">
-			<Text>У главных дверей дома никого нет. В замешательстве вы кричите «Все ко мне!», но никакой реакции не следует. Ваши люди пропали, вместе с лошадьми из амбара. Чертыхаясь, вы выдвигаетесь в сторону Кале в одиночестве.</Text>
-			<Options>
-				<Option Goto="96"/>
-			</Options>
-		</Paragraph>
 		<Paragraph No="22">
 			<Text>Вы медленно расстегиваете пояс. Батраки нервничают, они явно опасаются вас. Пока не понятно, в состоянии ли они правильно истолковать ваши намерения. Проверьте Удачу.</Text>
 			<Options>
@@ -258,6 +246,7 @@
 				<Option Goto="180"/>
 			</Options>
 		</Paragraph>
+		
 		<Paragraph No="301">
 			<Texts>
 				<Text Style="Bold, Center">ПРОИСХОЖДЕНИЕ ГЛАВНОГО ГЕРОЯ</Text>
