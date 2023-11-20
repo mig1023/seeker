@@ -308,6 +308,13 @@
 				<Option Goto="117"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="46">
+			<Text>Он наотрез отказывается вас впустить и вам, негодуя, приходится развернуться и уйти ни с чем.</Text>
+			<Options>
+				<Option Goto="172" Text="Можете продолжить патрулирование"/>
+				<Option Goto="39" Text="Попытаетесь сами разобраться с показаниями старухи"/>
+			</Options>
+		</Paragraph>
 		<Paragraph No="301">
 			<Texts>
 				<Text Style="Bold, Center">ПРОИСХОЖДЕНИЕ ГЛАВНОГО ГЕРОЯ</Text>
