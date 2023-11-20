@@ -475,6 +475,12 @@
 				<Option Goto="139" Text="Нет"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="71">
+			<Text>Умелым ударом, который вам не удаётся парировать, он перерезает вам на шее ярёмную вену.\n\nНа этом Ваше приключение заканчивается.</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 		<Paragraph No="301">
 			<Texts>
 				<Text Style="Bold, Center">ПРОИСХОЖДЕНИЕ ГЛАВНОГО ГЕРОЯ</Text>
