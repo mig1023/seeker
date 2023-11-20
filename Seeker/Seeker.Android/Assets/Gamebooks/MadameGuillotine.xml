@@ -121,6 +121,12 @@
 				<Option Goto="69" Text="Ударите его в ответ?"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="17">
+			<Text>Всадник рассекает вас саблей сверху вниз. Когда вы падаете на землю, он ударяет ещё раз, чтобы точно прикончить.\n\nНа этом ваше приключение заканчивается.</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 		<Paragraph No="301">
 			<Texts>
 				<Text Style="Bold, Center">ПРОИСХОЖДЕНИЕ ГЛАВНОГО ГЕРОЯ</Text>
