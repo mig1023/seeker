@@ -456,6 +456,12 @@
 				<Option Goto="47"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="68">
+			<Text>Лезвие противника пронзает вам сердце, и вы падаете вперёд, ещё сильнее насаживаясь на клинок.\n\nНа этом ваше приключение окончено.</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 		<Paragraph No="301">
 			<Texts>
 				<Text Style="Bold, Center">ПРОИСХОЖДЕНИЕ ГЛАВНОГО ГЕРОЯ</Text>
