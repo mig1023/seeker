@@ -914,6 +914,12 @@
 				<Option Goto="95"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="137">
+			<Text>Когда мужчина добирается до вас и начинает замахиваться дубиной, вы валите его на землю одним выверенным ударом шпаги.</Text>
+			<Options>
+				<Option Goto="123"/>
+			</Options>
+		</Paragraph>
 		<Paragraph No="301">
 			<Texts>
 				<Text Style="Bold, Center">ПРОИСХОЖДЕНИЕ ГЛАВНОГО ГЕРОЯ</Text>
