@@ -686,6 +686,12 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="102">
+			<Text>Клинок вылетает из руки второго аристократишки. Вы мгновенно делаете выпад и расправляетесь с ним. Остальные теряют всякую надежду и сдаются.</Text>
+			<Options>
+				<Option Goto="209"/>
+			</Options>
+		</Paragraph>
 		<Paragraph No="301">
 			<Texts>
 				<Text Style="Bold, Center">ПРОИСХОЖДЕНИЕ ГЛАВНОГО ГЕРОЯ</Text>
