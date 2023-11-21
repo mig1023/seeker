@@ -602,6 +602,13 @@
 				<Option Goto="181" Text="В противном случае, кто бы из вас не ранил первым другого"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="90">
+			<Text>Вагон с грохотом пересекает заграждение, всё более наращивая скорость.</Text>
+			<Options>
+				<Option Goto="10" Text="Вы получали раны за последние несколько минут"/>
+				<Option Goto="298" Text="Нет"/>
+			</Options>
+		</Paragraph>
 		<Paragraph No="301">
 			<Texts>
 				<Text Style="Bold, Center">ПРОИСХОЖДЕНИЕ ГЛАВНОГО ГЕРОЯ</Text>
