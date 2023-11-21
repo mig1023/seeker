@@ -712,6 +712,12 @@
 				<Option Goto="17" Text="Нет"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="106">
+			<Text>Следы ведут от повозки в глубь леса.\n\nВы следуете по ним.</Text>
+			<Options>
+				<Option Goto="169"/>
+			</Options>
+		</Paragraph>
 		<Paragraph No="301">
 			<Texts>
 				<Text Style="Bold, Center">ПРОИСХОЖДЕНИЕ ГЛАВНОГО ГЕРОЯ</Text>
