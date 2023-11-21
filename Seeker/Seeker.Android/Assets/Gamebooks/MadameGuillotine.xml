@@ -777,6 +777,13 @@
 				<Option Goto="90" Text="Нет, вы срываетесь, падаете и катитесь по земле, попутно ранясь (вычтите одно Ранение)"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="116">
+			<Text>Вы стреляете в Вальми.</Text>
+			<Options>
+				<Option Goto="248" Text="Попали"/>
+				<Option Goto="121" Text="Нет"/>
+			</Options>
+		</Paragraph>
 		<Paragraph No="301">
 			<Texts>
 				<Text Style="Bold, Center">ПРОИСХОЖДЕНИЕ ГЛАВНОГО ГЕРОЯ</Text>
