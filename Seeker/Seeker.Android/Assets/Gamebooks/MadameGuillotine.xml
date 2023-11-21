@@ -594,6 +594,14 @@
 				<Option Goto="219" Text="Поспешите на улицу, чтобы не упустить аристократишек"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="89">
+			<Text>Итак, дуэль, на саблях, до первой крови.\n\n1 Граф де ла Валье: Фехтование 8 Ран 4</Text>
+			<Options>
+				<Option Goto="271" Text="Вы случайно убиваете графа, выбросив две единицы"/>
+				<Option Goto="258" Text="Он убивает вас"/>
+				<Option Goto="181" Text="В противном случае, кто бы из вас не ранил первым другого"/>
+			</Options>
+		</Paragraph>
 		<Paragraph No="301">
 			<Texts>
 				<Text Style="Bold, Center">ПРОИСХОЖДЕНИЕ ГЛАВНОГО ГЕРОЯ</Text>
