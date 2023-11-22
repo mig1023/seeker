@@ -1265,6 +1265,13 @@
 				<Option Goto="145" Text="Прошла успешно"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="190">
+			<Text>Выхватив пистолет, вы стреляете в сержанта Вальми, перезаряжающего свой мушкет. Из-за тряски повозки вам придётся вычесть единицу из своего навыка Огнестрельного оружия.</Text>
+			<Options>
+				<Option Goto="61" Text="Попали"/>
+				<Option Goto="224" Text="Промахнулись"/>
+			</Options>
+		</Paragraph>
 		<Paragraph No="301">
 			<Texts>
 				<Text Style="Bold, Center">ПРОИСХОЖДЕНИЕ ГЛАВНОГО ГЕРОЯ</Text>
