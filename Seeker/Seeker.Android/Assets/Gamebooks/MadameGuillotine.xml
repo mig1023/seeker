@@ -1182,6 +1182,12 @@
 				<Option Goto="223"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="177">
+			<Text>Последнее, что вы видите — барона, наклонившегося над вами. Его злобная улыбка уплывает во тьму вместе с вашим сознанием.\n\nНа этом ваше приключение окончено.</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 		<Paragraph No="301">
 			<Texts>
 				<Text Style="Bold, Center">ПРОИСХОЖДЕНИЕ ГЛАВНОГО ГЕРОЯ</Text>
