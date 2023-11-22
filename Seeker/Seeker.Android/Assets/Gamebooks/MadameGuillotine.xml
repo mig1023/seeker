@@ -979,6 +979,12 @@
 				<Option Goto="265"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="147">
+			<Text>— Сожалею, что потревожил вас, мадемуазель,— вежливо отвечаете вы и разворачиваетесь, чтобы уйти. Она закрывает дверь за вашей спиной.</Text>
+			<Options>
+				<Option Goto="219"/>
+			</Options>
+		</Paragraph>
 		<Paragraph No="301">
 			<Texts>
 				<Text Style="Bold, Center">ПРОИСХОЖДЕНИЕ ГЛАВНОГО ГЕРОЯ</Text>
