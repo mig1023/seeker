@@ -940,6 +940,13 @@
 				<Option Goto="160" Text="нет"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="141">
+			<Text>Ночь приближается, и вы начинаете собирать повозку. Женщины, дети и пожилые поедут в фургоне. У вас же есть выбор — ехать первым на отдельной лошади, или вести повозку.</Text>
+			<Options>
+				<Option Goto="56" Text="поедете впереди"/>
+				<Option Goto="269" Text="поведёте повозку"/>
+			</Options>
+		</Paragraph>
 		<Paragraph No="301">
 			<Texts>
 				<Text Style="Bold, Center">ПРОИСХОЖДЕНИЕ ГЛАВНОГО ГЕРОЯ</Text>
