@@ -1238,6 +1238,13 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="186">
+			<Text>Вы скачете в сторону отряда, чтобы выиграть время для прорыва повозки сквозь ворота. Чтобы всё получилось, нужно успешно пройти проверку Верховой езды.</Text>
+			<Options>
+				<Option Goto="52" Text="Проверка успешна"/>
+				<Option Goto="170" Text="Нет"/>
+			</Options>
+		</Paragraph>
 		<Paragraph No="301">
 			<Texts>
 				<Text Style="Bold, Center">ПРОИСХОЖДЕНИЕ ГЛАВНОГО ГЕРОЯ</Text>
