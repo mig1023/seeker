@@ -1157,6 +1157,12 @@
 				<Option Goto="253"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="173">
+			<Text>Вдруг вы чувствуете тяжёлый удар сзади, голова мгновенно немеет. Кто-то подкрался со спины, пока вы занимались остальными. Сознание покидает вас, и вы валитесь на пол.</Text>
+			<Options>
+				<Option Goto="81"/>
+			</Options>
+		</Paragraph>
 		<Paragraph No="301">
 			<Texts>
 				<Text Style="Bold, Center">ПРОИСХОЖДЕНИЕ ГЛАВНОГО ГЕРОЯ</Text>
