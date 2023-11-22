@@ -1252,6 +1252,12 @@
 				<Option Goto="6" Text="Попытаетесь сбежать"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="188">
+			<Text>Ваш противник мёртв. Вытерев оружие о его плащ, вы запрыгиваете обратно на лошадь и мчитесь вслед за фургоном.</Text>
+			<Options>
+				<Option Goto="127"/>
+			</Options>
+		</Paragraph>
 		<Paragraph No="301">
 			<Texts>
 				<Text Style="Bold, Center">ПРОИСХОЖДЕНИЕ ГЛАВНОГО ГЕРОЯ</Text>
