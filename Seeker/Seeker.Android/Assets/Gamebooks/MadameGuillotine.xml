@@ -1226,6 +1226,12 @@
 				<Option Goto="53"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="184">
+			<Text>Пнув его для верности, вы проверяете нет ли у него при себе каких-нибудь бумаг. Ничего не найдя, вы переключаетесь на дворянина на кровати.\n\nМужчина лежит, слегка дрожа и глядя на вас с ужасом.</Text>
+			<Options>
+				<Option Goto="212"/>
+			</Options>
+		</Paragraph>
 		<Paragraph No="301">
 			<Texts>
 				<Text Style="Bold, Center">ПРОИСХОЖДЕНИЕ ГЛАВНОГО ГЕРОЯ</Text>
