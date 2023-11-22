@@ -991,6 +991,13 @@
 				<Option Goto="215"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="149">
+			<Text>С вами есть ещё люди?</Text>
+			<Options>
+				<Option Goto="293" Text="Да и они тоже начинают стрелять"/>
+				<Option Goto="62" Text="Вы один"/>
+			</Options>
+		</Paragraph>
 		<Paragraph No="301">
 			<Texts>
 				<Text Style="Bold, Center">ПРОИСХОЖДЕНИЕ ГЛАВНОГО ГЕРОЯ</Text>
