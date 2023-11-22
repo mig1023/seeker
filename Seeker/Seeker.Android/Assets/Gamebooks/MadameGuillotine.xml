@@ -1220,6 +1220,12 @@
 				<Option Goto="289"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="183">
+			<Text>Нехотя, двое молодцов отступают назад через двери за спиной. Мельком оглядев помещение, находящееся за ними, вы понимаете, что там спальня.</Text>
+			<Options>
+				<Option Goto="53"/>
+			</Options>
+		</Paragraph>
 		<Paragraph No="301">
 			<Texts>
 				<Text Style="Bold, Center">ПРОИСХОЖДЕНИЕ ГЛАВНОГО ГЕРОЯ</Text>
