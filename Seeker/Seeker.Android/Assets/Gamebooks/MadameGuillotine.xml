@@ -920,6 +920,13 @@
 				<Option Goto="123"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="138">
+			<Text>Вы почти догнали фургон. Не похоже, что человек на вожжах заметил вас, но фургон продолжает набирать скорость. После всех пробежек вы чувствуете немалую усталость.</Text>
+			<Options>
+				<Option Goto="90" Text="Откажетесь от погони"/>
+				<Option Goto="115" Text="Продолжите бежать за повозкой"/>
+			</Options>
+		</Paragraph>
 		<Paragraph No="301">
 			<Texts>
 				<Text Style="Bold, Center">ПРОИСХОЖДЕНИЕ ГЛАВНОГО ГЕРОЯ</Text>
