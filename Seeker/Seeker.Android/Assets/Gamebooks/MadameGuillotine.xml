@@ -1104,6 +1104,13 @@
 				<Option Goto="252" Text="Победить не удалось"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="165">
+			<Text>Что будете делать?</Text>
+			<Options>
+				<Option Goto="121" Text="Поскачете сквозь ворота"/>
+				<Option Goto="186" Text="Двинетесь в сторону охраны, пытающейся перехватить повозку"/>
+			</Options>
+		</Paragraph>
 		<Paragraph No="301">
 			<Texts>
 				<Text Style="Bold, Center">ПРОИСХОЖДЕНИЕ ГЛАВНОГО ГЕРОЯ</Text>
