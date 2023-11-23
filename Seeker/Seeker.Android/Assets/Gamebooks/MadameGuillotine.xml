@@ -1638,6 +1638,12 @@
 				<Option Goto="246"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="248">
+			<Text>Вальми заваливается на спину и повозка, стуча колёсами по брусчатке, мчится мимо вас через ворота.</Text>
+			<Options>
+				<Option Goto="193"/>
+			</Options>
+		</Paragraph>
 		<Paragraph No="301">
 			<Texts>
 				<Text Style="Bold, Center">ПРОИСХОЖДЕНИЕ ГЛАВНОГО ГЕРОЯ</Text>
