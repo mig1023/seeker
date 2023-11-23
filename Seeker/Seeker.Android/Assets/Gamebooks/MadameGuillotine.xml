@@ -1587,6 +1587,13 @@
 				<Option Goto="217"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="240">
+			<Text>Вы предусмотрительно решаете укрыться.</Text>
+			<Options>
+				<Option Goto="278" Text="С вами есть ещё солдаты"/>
+				<Option Goto="260" Text="Нет"/>
+			</Options>
+		</Paragraph>
 		<Paragraph No="301">
 			<Texts>
 				<Text Style="Bold, Center">ПРОИСХОЖДЕНИЕ ГЛАВНОГО ГЕРОЯ</Text>
