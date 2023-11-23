@@ -1800,6 +1800,13 @@
 				<Option Goto="68" Text="Вы проиграли бой"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="273">
+			<Text>Человек, что сидел на вёслах, выскакивает на берег. Придётся вам драться и с ним, и с аристократишкой.\n\n1 Старый аристократишка: Фехтование 5 Ранений 3\n\n1 Матрос: Фехтование 7 Ранений 5</Text>
+			<Options>
+				<Option Goto="14" Text="Победили их"/>
+				<Option Goto="68" Text="Проиграли"/>
+			</Options>
+		</Paragraph>
 		<Paragraph No="301">
 			<Texts>
 				<Text Style="Bold, Center">ПРОИСХОЖДЕНИЕ ГЛАВНОГО ГЕРОЯ</Text>
