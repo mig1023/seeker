@@ -1832,6 +1832,12 @@
 				<Option Goto="261"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="278">
+			<Text>Вы-то решили укрыться, но товарищи ваши более безрассудны. Из глубокого дверного проёма вы наблюдаете, как они открывают по кучке аристократов огонь.</Text>
+			<Options>
+				<Option Goto="293"/>
+			</Options>
+		</Paragraph>
 		<Paragraph No="301">
 			<Texts>
 				<Text Style="Bold, Center">ПРОИСХОЖДЕНИЕ ГЛАВНОГО ГЕРОЯ</Text>
