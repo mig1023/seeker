@@ -1581,6 +1581,12 @@
 				<Option Goto="92"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="239">
+			<Text>Ваш выстрел поражает его в грудь и выбивает из седла. Погоняя лошадей, вы устремляетесь вслед за графом в сторону ворот.</Text>
+			<Options>
+				<Option Goto="217"/>
+			</Options>
+		</Paragraph>
 		<Paragraph No="301">
 			<Texts>
 				<Text Style="Bold, Center">ПРОИСХОЖДЕНИЕ ГЛАВНОГО ГЕРОЯ</Text>
