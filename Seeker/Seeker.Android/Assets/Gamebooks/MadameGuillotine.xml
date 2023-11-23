@@ -1933,6 +1933,12 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="293">
+			<Text>Пуля попадает в одного из группы, и он падает на землю. Остальные бросаются врассыпную — каждый в свою сторону. Даже если с вами есть ещё люди, шансов поймать беглецов почти что никаких.</Text>
+			<Options>
+				<Option Goto="205"/>
+			</Options>
+		</Paragraph>
 		<Paragraph No="301">
 			<Texts>
 				<Text Style="Bold, Center">ПРОИСХОЖДЕНИЕ ГЛАВНОГО ГЕРОЯ</Text>
