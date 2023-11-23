@@ -1792,6 +1792,14 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="272">
+			<Text>1 Первый враг: Фехтование 8 Ранений 3\n\n1 Второй враг: Фехтование 5 Ранений 4\n\n1 Третий враг: Фехтование 6 Ранений 2</Text>
+			<Options>
+				<Option Goto="42" Text="Вы побеждаете"/>
+				<Option Goto="19" Text="Сдаётесь"/>
+				<Option Goto="68" Text="Вы проиграли бой"/>
+			</Options>
+		</Paragraph>
 		<Paragraph No="301">
 			<Texts>
 				<Text Style="Bold, Center">ПРОИСХОЖДЕНИЕ ГЛАВНОГО ГЕРОЯ</Text>
