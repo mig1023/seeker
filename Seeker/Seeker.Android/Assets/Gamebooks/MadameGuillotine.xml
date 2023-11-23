@@ -1490,6 +1490,12 @@
 				<Option Goto="216" Text="Нет"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="225">
+			<Text>Вернувшись на ферму, вы вручаете оружие маркизу.\n\n— Благодарю вас, д’Овернье,— говорит он.— Вы сильно рисковали, решив вернуться.\n\nВ момент, когда вы собираетесь ему ответить, вас прерывают.</Text>
+			<Options>
+				<Option Goto="180"/>
+			</Options>
+		</Paragraph>
 		<Paragraph No="301">
 			<Texts>
 				<Text Style="Bold, Center">ПРОИСХОЖДЕНИЕ ГЛАВНОГО ГЕРОЯ</Text>
