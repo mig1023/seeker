@@ -1600,6 +1600,12 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="242">
+			<Text>Обстреляв вас и промахнувшись, всадник, видимо, передумал продолжать преследовать вас, вскоре отстал и исчез из виду.</Text>
+			<Options>
+				<Option Goto="127"/>
+			</Options>
+		</Paragraph>
 		<Paragraph No="301">
 			<Texts>
 				<Text Style="Bold, Center">ПРОИСХОЖДЕНИЕ ГЛАВНОГО ГЕРОЯ</Text>
