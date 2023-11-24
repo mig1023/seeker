@@ -1822,6 +1822,9 @@
 					<Text>Если вы смогли одержать победу над агрессивной жидкостью:</Text>
 				</Fight>
 			</Actions>
+			<Modifications>
+				<Endurance Value="-2"/>
+			</Modifications>
 			<Options>
 				<Option Goto="312"/>
 			</Options>
