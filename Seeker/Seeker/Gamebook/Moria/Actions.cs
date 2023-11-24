@@ -183,7 +183,7 @@ namespace Seeker.Gamebook.Moria
 
         public List<string> Goodluck()
         {
-            List<string> diceCheck = new List<string> { };
+            List<string> diceCheck = new List<string>();
 
             int dice = Game.Dice.Roll();
             bool coin = dice % 2 == 0;
@@ -223,7 +223,7 @@ namespace Seeker.Gamebook.Moria
 
         public List<string> DeathsByArrows()
         {
-            List<string> deaths = new List<string> { };
+            List<string> deaths = new List<string>();
 
             for (int i = 0; i < 2; i++)
             {
@@ -243,7 +243,7 @@ namespace Seeker.Gamebook.Moria
 
         public List<string> Balrog()
         {
-            List<string> fight = new List<string> { };
+            List<string> fight = new List<string>();
 
             int strength = Constants.Fellowship["Гэндальф"];
             int success = 0;
@@ -310,7 +310,7 @@ namespace Seeker.Gamebook.Moria
 
         public List<string> Cast()
         {
-            List<string> fight = new List<string> { };
+            List<string> fight = new List<string>();
 
             fight.Add("BOLD|Гэндальф творит свои заклятья");
             fight.Add(String.Empty);
@@ -340,6 +340,41 @@ namespace Seeker.Gamebook.Moria
 
             fight.Add("BIG|GOOD|Волшебство преуспело :)");
             return fight;
+        }
+
+        public List<string> RunningUnderArrows()
+        {
+            List<string> deaths = new List<string>();
+            List<string> fellowship = new List<string>(protagonist.Fellowship);
+
+            foreach (string warrior in fellowship)
+            {
+                if ((warrior == "Гэндальф") || (warrior == "Фродо"))
+                    continue;
+
+                deaths.Add($"BOLD|Свою судьбу испытывает {warrior}");
+
+                int dice = Game.Dice.Roll();
+                bool coin = dice % 2 == 0;
+
+                if (coin)
+                {
+                    deaths.Add("На кубике выпал: Орел");
+                    deaths.Add("GOOD|Ему повезло!");
+                }
+                else
+                {
+                    deaths.Add("На кубике выпала: Решка");
+                    deaths.Add("BAD|Удача отвернулась от него!");
+                    deaths.Add("BAD|BOLD|Стрела орка его настигла...");
+
+                    protagonist.Fellowship.Remove(warrior);
+                }
+
+                fight.Add(String.Empty);
+            }
+
+            return deaths;
         }
     }
 }
