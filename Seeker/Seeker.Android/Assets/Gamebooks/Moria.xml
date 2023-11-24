@@ -43,6 +43,7 @@
 			<DeathsByArrows>Узнать, кто это был</DeathsByArrows>
 			<Balrog>Сразиться с Балрогом</Balrog>
 			<Cast>Гэндальф творит магию</Cast>
+			<RunningUnderArrows>Узнать, кому удалось</RunningUnderArrows>
 		</Buttons>
 		<Default>
 			<DisabledOption Value="Show"/>
@@ -1298,6 +1299,9 @@
 		</Paragraph>
 		<Paragraph No="173">
 			<Text>Проверьте удачу каждого Хранителя (кроме Гэндальфа и Фродо). Те, кому Фортуна улыбнулась, смогли добраться до противоположного края Привратного Чертога.</Text>
+			<Actions>
+				<RunningUnderArrows/>
+			</Actions>
 			<Options>
 				<Option Goto="105"/>
 			</Options>
