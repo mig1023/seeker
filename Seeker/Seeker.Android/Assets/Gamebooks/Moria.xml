@@ -42,6 +42,7 @@
 			<Goodluck>Проверить удачу</Goodluck>
 			<DeathsByArrows>Узнать, кто это был</DeathsByArrows>
 			<Balrog>Сразиться с Балрогом</Balrog>
+			<Cast>Гэндальф творит магию</Cast>
 		</Buttons>
 		<Default>
 			<DisabledOption Value="Show"/>
@@ -625,10 +626,13 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="79">
-			<Text>Гэндальф произнес заклинание, но дверь не открылась. - На дверь наложено сильное заклятье, - сказал маг. Бросьте кубик за мага и за заклятье:</Text>
+			<Text>Гэндальф произнес заклинание, но дверь не открылась.\n\n- На дверь наложено сильное заклятье, - сказал маг.\n\nБросьте кубик за мага и за заклятье:</Text>
+			<Actions>
+				<Cast/>
+			</Actions>
 			<Options>
 				<Option Goto="93" Text="Три раза подряд у мага выпадет больше"/>
-				<Option Goto="29" Text="Нет"/>
+				<Option Goto="29" Text="Не выпало"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="80">
