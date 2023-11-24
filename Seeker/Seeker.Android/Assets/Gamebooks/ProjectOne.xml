@@ -2206,6 +2206,9 @@
 		</Paragraph>
 		<Paragraph No="288">
 			<Text>Колодец доверху наполнен водой, на вид чистой.\n\nВы можете наполнить ей доверху свою флягу, а так же вдоволь напиться\n\n(Восстановите СИЛУ до начального значения).\n\nСделайте все, что хотите...</Text>
+			<Modifications>
+				<Endurance Restore="true"/>
+			</Modifications>
 			<Options>
 				<Option Goto="76"/>
 			</Options>
