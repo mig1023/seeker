@@ -240,5 +240,72 @@ namespace Seeker.Gamebook.Moria
 
             return deaths;
         }
+
+        public List<string> Balrog()
+        {
+            List<string> fight = new List<string> { };
+
+            int strength = Constants.Fellowship["Гэндальф"];
+            int success = 0;
+
+            fight.Add("BOLD|Гэндальф сражается против Балрога");
+            fight.Add(String.Empty);
+
+            for (int i = 1; i <= 4; i++)
+            {
+                if (success >= 3)
+                    continue;
+
+                fight.Add($"Раунд {i}");
+
+                int gendalfDice = Game.Dice.Roll();
+
+                fight.Add($"Бросок Гэндальфа: {Game.Dice.Symbol(gendalfDice)}");
+
+                if (gendalfDice > 4)
+                {
+                    fight.Add("BOLD|GOOD|Гэндальф успешно нанёс ранение Балрогу!");
+                    success += 1;
+                }
+                else
+                {
+                    fight.Add("BOLD|BAD|Гэндальф не смог ранить Балрога!");
+                }
+
+                if (success >= 3)
+                    continue;
+
+                int balrogDice = Game.Dice.Roll();
+
+                fight.Add($"Бросок Балрога: {Game.Dice.Symbol(balrogDice)}");
+
+                if (balrogDice >= strength)
+                {
+                    fight.Add("BOLD|BAD|Балрог наносит смертельный удар!");
+                    fight.Add("BOLD|BIG|BAD|Гэндальф погиб :(");
+                    protagonist.Fellowship.Remove("Гэндальф");
+
+                    return fight;
+                }
+                else
+                {
+                    fight.Add($"BOLD|GOOD|Балрог не смог ранить Гэндальфа!");
+                }
+
+                fight.Add(String.Empty);
+            }
+
+            if (success >= 3)
+            {
+                fight.Add("BIG|GOOD|Гэндальф ПОБЕДИЛ :)");
+            }
+            else
+            {
+                fight.Add("BIG|GOOD|Гэндальф не смог победить, Балрога, " +
+                    "но, тем не менее, он продержался все 4 раунда! :)");
+            }
+
+            return fight;
+        }
     }
 }
