@@ -307,5 +307,39 @@ namespace Seeker.Gamebook.Moria
 
             return fight;
         }
+
+        public List<string> Cast()
+        {
+            List<string> fight = new List<string> { };
+
+            fight.Add("BOLD|Гэндальф творит свои заклятья");
+            fight.Add(String.Empty);
+
+            int prev = 0;
+            List<string> rounds = new List<string> { "Первый", "Второй", "Третий" };
+
+            for (int i = 1; i <= 3; i++)
+            {
+                int dice = Game.Dice.Roll();
+
+                fight.Add($"{rounds[i - 1]} бросок Гэндальфа: {Game.Dice.Symbol(dice)}");
+
+                if (dice < prev)
+                {
+                    fight.Add("BAD|Это меньше предыдущего броска!");
+                    fight.Add("BIG|BAD|Волшебство провалено :(");
+                    return fight;
+                }
+                else if (prev > 0)
+                {
+                    fight.Add("GOOD|Это больше предыдущего броска!");
+                }
+
+                prev = dice;
+            }
+
+            fight.Add("BIG|GOOD|Волшебство преуспело :)");
+            return fight;
+        }
     }
 }
