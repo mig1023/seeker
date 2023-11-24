@@ -1431,6 +1431,9 @@
 					<Text>Если чудо произошло и оба нападавших мертвы...</Text>
 				</Fight>
 			</Actions>
+			<Modifications>
+				<Endurance Value="-3"/>
+			</Modifications>
 			<Options>
 				<Option Goto="39"/>
 			</Options>
