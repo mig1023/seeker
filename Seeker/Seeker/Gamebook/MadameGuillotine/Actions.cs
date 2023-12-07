@@ -40,7 +40,7 @@ namespace Seeker.Gamebook.MadameGuillotine
                 List<string> enemies = new List<string>();
 
                 foreach (Character enemy in Enemies)
-                    enemies.Add($"{enemy.Name}\n{enemy.Weapon} {enemy.Skill}  ранений {enemy.Hitpoints}");
+                    enemies.Add($"{enemy.Name}\n{enemy.Weapon} {enemy.Skill}  Ранений {enemy.Hitpoints}");
 
                 return enemies;
             }

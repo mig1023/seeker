@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Xml;
 using Seeker.Game;
 
@@ -18,6 +19,18 @@ namespace Seeker.Gamebook.MadameGuillotine
             foreach (string param in GetProperties(action))
                 SetProperty(action, param, xmlAction);
 
+            if (xmlAction["Enemy"] != null)
+            {
+                action.Enemies = new List<Character> { EnemyParse(xmlAction["Enemy"]) };
+            }
+            else if (xmlAction["Enemies"] != null)
+            {
+                action.Enemies = new List<Character>();
+
+                foreach (XmlNode xmlEnemy in xmlAction.SelectNodes("Enemies/Enemy"))
+                    action.Enemies.Add(EnemyParse(xmlEnemy));
+            }
+
             if (action.Type == "Option")
                 action.Option = OptionParse(xmlAction);
 
@@ -29,5 +42,14 @@ namespace Seeker.Gamebook.MadameGuillotine
 
         public override Abstract.IModification ModificationParse(XmlNode xmlModification) =>
            (Abstract.IModification)base.ModificationParse(xmlModification, new Modification());
+
+        private static Character EnemyParse(XmlNode xmlEnemy) => new Character
+        {
+            Name = Xml.StringParse(xmlEnemy.Attributes["Name"]),
+            Weapon = Xml.StringParse(xmlEnemy.Attributes["Weapon"]),
+            Skill = Xml.IntParse(xmlEnemy.Attributes["Skill"]),
+            MaxHitpoints = Xml.IntParse(xmlEnemy.Attributes["Hitpoints"]),
+            Hitpoints = Xml.IntParse(xmlEnemy.Attributes["Hitpoints"]),
+        };
     }
 }
