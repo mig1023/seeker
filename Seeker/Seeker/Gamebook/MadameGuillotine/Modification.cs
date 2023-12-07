@@ -11,8 +11,8 @@ namespace Seeker.Gamebook.MadameGuillotine
             if (Name == "InitHitpoints")
             {
                 double hitpoint = (double)protagonist.Strength / 2;
-                protagonist.MaxHitpoints = (int)Math.Ceiling(hitpoint);
-                protagonist.Hitpoints = 0;
+                protagonist.Hitpoints = (int)Math.Ceiling(hitpoint);
+                protagonist.Wounds = 0;
             }
             else
             {

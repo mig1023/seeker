@@ -6,12 +6,12 @@ namespace Seeker.Gamebook.MadameGuillotine
     {
         public static Character Protagonist = new Character();
 
-        public int MaxHitpoints { get; set; }
-        private int _hipoints;
-        public int Hitpoints
+        public int Hitpoints { get; set; }
+        private int _wounds;
+        public int Wounds
         {
-            get => _hipoints;
-            set => _hipoints = Game.Param.Setter(value, max: MaxHitpoints, _hipoints, this);
+            get => _wounds;
+            set => _wounds = Game.Param.Setter(value, max: Hitpoints, _wounds, this);
         }
 
         private int _strength;
@@ -71,8 +71,8 @@ namespace Seeker.Gamebook.MadameGuillotine
         {
             base.Init();
 
-            MaxHitpoints = 1;
-            Hitpoints = 0;
+            Hitpoints = 1;
+            Wounds = 0;
             Strength = 2;
             Agility = 2;
             Luck = 2;
@@ -86,8 +86,8 @@ namespace Seeker.Gamebook.MadameGuillotine
         public Character Clone() => new Character()
         {
             IsProtagonist = this.IsProtagonist,
-            MaxHitpoints = this.MaxHitpoints,
             Hitpoints = this.Hitpoints,
+            Wounds = this.Wounds,
             Strength = this.Strength,
             Agility = this.Agility,
             Luck = this.Luck,
@@ -101,15 +101,15 @@ namespace Seeker.Gamebook.MadameGuillotine
         };
 
         public override string Save() => String.Join("|",
-            MaxHitpoints, Hitpoints, Strength, Agility, Luck,
+            Hitpoints, Wounds, Strength, Agility, Luck,
             Speech, Firearms, Fencing, HorseRiding, StatBonuses);
 
         public override void Load(string saveLine)
         {
             string[] save = saveLine.Split('|');
 
-            MaxHitpoints = int.Parse(save[0]);
-            Hitpoints = int.Parse(save[1]);
+            Hitpoints = int.Parse(save[0]);
+            Wounds = int.Parse(save[1]);
             Strength = int.Parse(save[2]);
             Agility = int.Parse(save[3]);
             Luck = int.Parse(save[4]);

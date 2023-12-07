@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Seeker.Gamebook.MadameGuillotine
 {
@@ -40,7 +41,7 @@ namespace Seeker.Gamebook.MadameGuillotine
                 List<string> enemies = new List<string>();
 
                 foreach (Character enemy in Enemies)
-                    enemies.Add($"{enemy.Name}\n{enemy.Weapon} {enemy.Skill}  Ранений {enemy.Hitpoints}");
+                    enemies.Add($"{enemy.Name}\n{enemy.Weapon} {enemy.Skill}  Ранений {enemy.Wounds}");
 
                 return enemies;
             }
@@ -52,7 +53,7 @@ namespace Seeker.Gamebook.MadameGuillotine
 
         public override List<string> Status() => new List<string>
         {
-            $"Ранений: {protagonist.Hitpoints} из {protagonist.MaxHitpoints}",
+            $"Ранений: {protagonist.Wounds} из {protagonist.Hitpoints}",
         };
 
         public override List<string> AdditionalStatus() => new List<string>
@@ -67,7 +68,7 @@ namespace Seeker.Gamebook.MadameGuillotine
         };
 
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
-           GameOverBy((protagonist.MaxHitpoints - protagonist.Hitpoints), out toEndParagraph, out toEndText);
+           GameOverBy((protagonist.Hitpoints - protagonist.Wounds), out toEndParagraph, out toEndText);
 
         public override bool IsButtonEnabled(bool secondButton = false)
         {
@@ -83,6 +84,107 @@ namespace Seeker.Gamebook.MadameGuillotine
             else
             {
                 return true;
+            }
+        }
+
+        public static bool NoMoreEnemies(List<Character> enemies) =>
+            enemies.Where(x => x.Wounds >= x.Hitpoints).Count() == 0;
+
+        public List<string> Fight()
+        {
+            List<string> fight = new List<string>();
+
+            List<Character> FightEnemies = new List<Character>();
+
+            foreach (Character enemy in Enemies)
+                FightEnemies.Add(enemy.Clone());
+
+            int round = 1;
+
+            while (true)
+            {
+                fight.Add($"HEAD|BOLD|Раунд: {round}");
+
+                bool attackAlready = false;
+
+                foreach (Character enemy in FightEnemies)
+                {
+                    if (enemy.Wounds <= 0)
+                        continue;
+
+                    if (!attackAlready)
+                    {
+                        fight.Add($"Вы атакуете {enemy.Name} ({enemy.Wounds} из {enemy.Hitpoints})");
+
+                        Game.Dice.DoubleRoll(out int firstRoll, out int secondRoll);
+                        
+                        fight.Add($"Бросок на попадание: " +
+                            $"{Game.Dice.Symbol(firstRoll)} + " +
+                            $"{Game.Dice.Symbol(secondRoll)}");
+
+                        bool doubleHit = (firstRoll == secondRoll);
+
+                        if (doubleHit && (firstRoll == 1))
+                        {
+                            fight.Add($"GOOD|Вы выбросили две единицы! {enemy.Name} убит наповал!");
+                            enemy.Wounds = enemy.Hitpoints;
+                        }
+                        else if (firstRoll + secondRoll <= protagonist.Fencing)
+                        {
+                            fight.Add($"GOOD|Вы ранили {enemy.Name}!");
+                            enemy.Wounds += 1;
+                        }
+                        else
+                        {
+                            fight.Add($"BAD|Вы не смогли ранить {enemy.Name}...");
+                        }
+
+                        if (NoMoreEnemies(FightEnemies))
+                        {
+                            fight.Add(String.Empty);
+                            fight.Add("BIG|GOOD|Вы ПОБЕДИЛИ :)");
+                            return fight;
+                        }
+                    }
+
+                    fight.Add($"{enemy.Name} атакует вас (у вас {protagonist.Wounds} из {protagonist.Hitpoints})");
+
+                    Game.Dice.DoubleRoll(out int enemyFirstRoll, out int enemySecondRoll);
+
+                    fight.Add($"Бросок на попадание: " +
+                            $"{Game.Dice.Symbol(enemyFirstRoll)} + " +
+                            $"{Game.Dice.Symbol(enemySecondRoll)}");
+
+                    bool enemyDoubleHit = (enemyFirstRoll == enemySecondRoll);
+
+                    if (enemyDoubleHit && (enemyFirstRoll == 1))
+                    {
+                        fight.Add($"BAD|{enemy.Name} выбросил две единицы! Он убил вас!");
+                        protagonist.Wounds = protagonist.Hitpoints;
+                    }
+                    else if (enemyFirstRoll + enemySecondRoll <= enemy.Skill)
+                    {
+                        fight.Add($"BAD|{enemy.Name} ранил вас!");
+                        protagonist.Wounds += 1;
+                    }
+                    else
+                    {
+                        fight.Add($"GOOD|{enemy.Name} не смог ранить вас...");
+                    }
+
+                    if (protagonist.Wounds == protagonist.Hitpoints)
+                    {
+                        fight.Add(String.Empty);
+                        fight.Add("BIG|BAD|Вы ПРОИГРАЛИ :(");
+                        return fight;
+                    }
+
+                    attackAlready = true;
+
+                    fight.Add(String.Empty);
+                }
+
+                round += 1;
             }
         }
 

@@ -48,8 +48,8 @@ namespace Seeker.Gamebook.MadameGuillotine
             Name = Xml.StringParse(xmlEnemy.Attributes["Name"]),
             Weapon = Xml.StringParse(xmlEnemy.Attributes["Weapon"]),
             Skill = Xml.IntParse(xmlEnemy.Attributes["Skill"]),
-            MaxHitpoints = Xml.IntParse(xmlEnemy.Attributes["Hitpoints"]),
             Hitpoints = Xml.IntParse(xmlEnemy.Attributes["Hitpoints"]),
+            Wounds = 0,
         };
     }
 }
