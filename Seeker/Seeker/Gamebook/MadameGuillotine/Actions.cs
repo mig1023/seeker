@@ -41,7 +41,7 @@ namespace Seeker.Gamebook.MadameGuillotine
                 List<string> enemies = new List<string>();
 
                 foreach (Character enemy in Enemies)
-                    enemies.Add($"{enemy.Name}\n{enemy.Weapon} {enemy.Skill}  Ранений {enemy.Wounds}");
+                    enemies.Add($"{enemy.Name}\n{enemy.Weapon} {enemy.Skill}  Ранений {enemy.Hitpoints}");
 
                 return enemies;
             }
@@ -88,7 +88,7 @@ namespace Seeker.Gamebook.MadameGuillotine
         }
 
         public static bool NoMoreEnemies(List<Character> enemies) =>
-            enemies.Where(x => x.Wounds >= x.Hitpoints).Count() == 0;
+            enemies.Where(x => x.Wounds < x.Hitpoints).Count() == 0;
 
         public List<string> Fight()
         {
@@ -109,12 +109,12 @@ namespace Seeker.Gamebook.MadameGuillotine
 
                 foreach (Character enemy in FightEnemies)
                 {
-                    if (enemy.Wounds <= 0)
+                    if (enemy.Wounds >= enemy.Hitpoints)
                         continue;
 
                     if (!attackAlready)
                     {
-                        fight.Add($"Вы атакуете {enemy.Name} ({enemy.Wounds} из {enemy.Hitpoints})");
+                        fight.Add($"Вы атакуете {enemy.Name} ({enemy.Wounds} ранений из {enemy.Hitpoints})");
 
                         Game.Dice.DoubleRoll(out int firstRoll, out int secondRoll);
                         
@@ -131,11 +131,17 @@ namespace Seeker.Gamebook.MadameGuillotine
                         }
                         else if (firstRoll + secondRoll <= protagonist.Fencing)
                         {
+                            fight.Add($"{firstRoll} + {secondRoll} = {firstRoll + secondRoll} " +
+                                $"<= {protagonist.Fencing} (уровня вашего фехтования)");
+
                             fight.Add($"GOOD|Вы ранили {enemy.Name}!");
                             enemy.Wounds += 1;
                         }
                         else
                         {
+                            fight.Add($"{firstRoll} + {secondRoll} = {firstRoll + secondRoll} " +
+                                $" > {protagonist.Fencing} (уровня вашего фехтования)");
+
                             fight.Add($"BAD|Вы не смогли ранить {enemy.Name}...");
                         }
 
@@ -147,7 +153,8 @@ namespace Seeker.Gamebook.MadameGuillotine
                         }
                     }
 
-                    fight.Add($"{enemy.Name} атакует вас (у вас {protagonist.Wounds} из {protagonist.Hitpoints})");
+                    fight.Add($"{enemy.Name} атакует вас (у вас {protagonist.Wounds} " +
+                        $"ранений из {protagonist.Hitpoints})");
 
                     Game.Dice.DoubleRoll(out int enemyFirstRoll, out int enemySecondRoll);
 
@@ -164,12 +171,20 @@ namespace Seeker.Gamebook.MadameGuillotine
                     }
                     else if (enemyFirstRoll + enemySecondRoll <= enemy.Skill)
                     {
-                        fight.Add($"BAD|{enemy.Name} ранил вас!");
+                        fight.Add($"{enemyFirstRoll} + {enemySecondRoll} = " +
+                            $"{enemyFirstRoll + enemySecondRoll} " +
+                            $"<= {enemy.Skill} (уровня его фехтования)");
+
+                        fight.Add($"BAD|{enemy.Name} ранил вас...");
                         protagonist.Wounds += 1;
                     }
                     else
                     {
-                        fight.Add($"GOOD|{enemy.Name} не смог ранить вас...");
+                        fight.Add($"{enemyFirstRoll} + {enemySecondRoll} = " +
+                           $"{enemyFirstRoll + enemySecondRoll} " +
+                           $"> {enemy.Skill} (уровня его фехтования)");
+
+                        fight.Add($"GOOD|{enemy.Name} не смог ранить вас!");
                     }
 
                     if (protagonist.Wounds == protagonist.Hitpoints)

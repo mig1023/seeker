@@ -86,6 +86,7 @@ namespace Seeker.Gamebook.MadameGuillotine
         public Character Clone() => new Character()
         {
             IsProtagonist = this.IsProtagonist,
+            Name = this.Name,
             Hitpoints = this.Hitpoints,
             Wounds = this.Wounds,
             Strength = this.Strength,
