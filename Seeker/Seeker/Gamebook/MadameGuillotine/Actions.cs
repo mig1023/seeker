@@ -77,9 +77,13 @@ namespace Seeker.Gamebook.MadameGuillotine
                 int stat = GetProperty(protagonist, Stat);
 
                 if (secondButton)
-                    return (stat > 2) && (stat < 12);
+                {
+                    return stat > 2;
+                }
                 else
-                    return ((protagonist.StatBonuses > 0) && (stat < 12));
+                {
+                    return (protagonist.StatBonuses > 0) && (stat < 12);
+                }
             }
             else
             {
@@ -131,7 +135,7 @@ namespace Seeker.Gamebook.MadameGuillotine
                         }
                         else if (firstRoll + secondRoll <= protagonist.Fencing)
                         {
-                            fight.Add($"{firstRoll} + {secondRoll} = {firstRoll + secondRoll} " +
+                            fight.Add($"{firstRoll} + {secondRoll} = {firstRoll + secondRoll} сумма " +
                                 $"<= {protagonist.Fencing} (уровня вашего фехтования)");
 
                             fight.Add($"GOOD|Вы ранили {enemy.Name}!");
@@ -139,8 +143,8 @@ namespace Seeker.Gamebook.MadameGuillotine
                         }
                         else
                         {
-                            fight.Add($"{firstRoll} + {secondRoll} = {firstRoll + secondRoll} " +
-                                $" > {protagonist.Fencing} (уровня вашего фехтования)");
+                            fight.Add($"{firstRoll} + {secondRoll} = {firstRoll + secondRoll} сумма " +
+                                $"> {protagonist.Fencing} (уровня вашего фехтования)");
 
                             fight.Add($"BAD|Вы не смогли ранить {enemy.Name}...");
                         }
@@ -172,7 +176,7 @@ namespace Seeker.Gamebook.MadameGuillotine
                     else if (enemyFirstRoll + enemySecondRoll <= enemy.Skill)
                     {
                         fight.Add($"{enemyFirstRoll} + {enemySecondRoll} = " +
-                            $"{enemyFirstRoll + enemySecondRoll} " +
+                            $"{enemyFirstRoll + enemySecondRoll} сумма " +
                             $"<= {enemy.Skill} (уровня его фехтования)");
 
                         fight.Add($"BAD|{enemy.Name} ранил вас...");
@@ -181,7 +185,7 @@ namespace Seeker.Gamebook.MadameGuillotine
                     else
                     {
                         fight.Add($"{enemyFirstRoll} + {enemySecondRoll} = " +
-                           $"{enemyFirstRoll + enemySecondRoll} " +
+                           $"{enemyFirstRoll + enemySecondRoll} сумма " +
                            $"> {enemy.Skill} (уровня его фехтования)");
 
                         fight.Add($"GOOD|{enemy.Name} не смог ранить вас!");
