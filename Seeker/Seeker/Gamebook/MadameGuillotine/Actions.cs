@@ -14,6 +14,7 @@ namespace Seeker.Gamebook.MadameGuillotine
         public int Skill { get; set; }
         public int Wounds { get; set; }
         public int Rounds { get; set; }
+        public bool FirstBloodOnly { get; set; }
 
         public List<Character> Enemies { get; set; }
         public bool FireFight { get; set; }
@@ -144,6 +145,13 @@ namespace Seeker.Gamebook.MadameGuillotine
 
                             fight.Add($"GOOD|Вы ранили {enemy.Name}!");
                             enemy.Wounds += 1;
+
+                            if (FirstBloodOnly)
+                            {
+                                fight.Add(String.Empty);
+                                fight.Add("BIG|BOLD|Дуэль заканчивается с первой кровью");
+                                return fight;
+                            }
                         }
                         else
                         {
@@ -185,6 +193,13 @@ namespace Seeker.Gamebook.MadameGuillotine
 
                         fight.Add($"BAD|{enemy.Name} ранил вас...");
                         protagonist.Wounds += Wounds > 0 ? Wounds : 1;
+
+                        if (FirstBloodOnly)
+                        {
+                            fight.Add(String.Empty);
+                            fight.Add("BIG|BOLD|Дуэль заканчивается с первой кровью");
+                            return fight;
+                        }
                     }
                     else
                     {
