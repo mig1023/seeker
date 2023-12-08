@@ -403,7 +403,13 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="50">
-			<Text>Батрак надвигается, придётся с ним фехтовать.\n\n1 Крестьянин: Вилы 7, Ранений 4</Text>
+			<Text>Батрак надвигается, придётся с ним фехтовать.</Text>
+			<Actions>
+				<Fight>
+					<Enemy Name="Первый крестьянин" Weapon="Вилы" Skill="7" Hitpoints="4"/>
+					<Rounds>2</Rounds>
+				</Fight>
+			</Actions>
 			<Options>
 				<Option Goto="221" Text="Вам удается его убить за два раунда или меньше"/>
 				<Option Goto="173" Text="После двух раундов бой ещё продолжается"/>
