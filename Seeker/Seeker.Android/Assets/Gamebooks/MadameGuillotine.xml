@@ -2015,10 +2015,18 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="272">
-			<Text>1 Первый враг: Фехтование 8 Ранений 3\n\n1 Второй враг: Фехтование 5 Ранений 4\n\n1 Третий враг: Фехтование 6 Ранений 2</Text>
+			<Actions>
+				<Option Goto="19" Text="Сдаётесь"/>
+				<Fight>
+					<Enemies>
+						<Enemy Name="Первый враг" Weapon="Фехтование" Skill="8" Hitpoints="3"/>
+						<Enemy Name="Второй враг" Weapon="Фехтование" Skill="5" Hitpoints="4"/>
+						<Enemy Name="Третий враг" Weapon="Фехтование" Skill="6" Hitpoints="2"/>
+					</Enemies>
+				</Fight>
+			</Actions>
 			<Options>
 				<Option Goto="42" Text="Вы побеждаете"/>
-				<Option Goto="19" Text="Сдаётесь"/>
 				<Option Goto="68" Text="Вы проиграли бой"/>
 			</Options>
 		</Paragraph>
