@@ -6,6 +6,8 @@ namespace Seeker.Gamebook.MadameGuillotine
     {
         public static Constants StaticInstance = new Constants();
 
+        public static Dictionary<string, string> StatNames { get; set; }
+
         public static Links GetLinks() => new Links
         {
             Protagonist = Character.Protagonist.Init,

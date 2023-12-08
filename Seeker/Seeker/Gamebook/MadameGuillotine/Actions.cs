@@ -10,6 +10,7 @@ namespace Seeker.Gamebook.MadameGuillotine
         private static Character protagonist = Character.Protagonist;
 
         public string Stat { get; set; }
+        public string Penalty { get; set; }
 
         public List<Character> Enemies { get; set; }
         public bool FireFight { get; set; }
@@ -91,7 +92,7 @@ namespace Seeker.Gamebook.MadameGuillotine
             }
         }
 
-        public static bool NoMoreEnemies(List<Character> enemies) =>
+        private static bool NoMoreEnemies(List<Character> enemies) =>
             enemies.Where(x => x.Wounds < x.Hitpoints).Count() == 0;
 
         public List<string> Fight()
@@ -220,5 +221,37 @@ namespace Seeker.Gamebook.MadameGuillotine
 
         public List<string> Decrease() =>
             ChangeProtagonistParam(Stat, protagonist, "StatBonuses", decrease: true);
+
+        public List<string> Test()
+        {
+            List<string> test = new List<string>();
+
+            int level = GetProperty(protagonist, Stat);
+            string stat = Constants.StatNames[Stat];
+
+            test.Add($"Текущий уровень {stat}: {level}");
+
+            if (!String.IsNullOrEmpty(Penalty))
+            {
+                test.Add($"GRAY| Пенальти {Penalty} к уровню навыка");
+                level += int.Parse(Penalty);
+            }
+
+            Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
+
+            bool result = (firstDice + secondDice) <= level;
+            string resultCompare = result ? "<=" : ">";
+
+            test.Add($"Проверка: " +
+                $"{Game.Dice.Symbol(firstDice)} + {Game.Dice.Symbol(secondDice)} " +
+                $"{resultCompare} {level}");
+
+            test.Add(Result(result, "ПРОВЕРКА ПРОЙДЕНА :)|ПРОВЕРКА ПРОВЕЛЕНА :("));
+
+            if ((Benefit != null) && result)
+                Benefit.Do();
+
+            return test;
+        }
     }
 }
