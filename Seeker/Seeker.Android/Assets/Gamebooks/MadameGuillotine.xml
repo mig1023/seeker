@@ -443,6 +443,11 @@
 		</Paragraph>
 		<Paragraph No="55">
 			<Text>Вам придётся проверить Красноречие.</Text>
+			<Actions>
+				<Test>
+					<Stat>Speech</Stat>
+				</Test>
+			</Actions>
 			<Options>
 				<Option Goto="120" Text="Проверка прошла успешно"/>
 				<Option Goto="15" Text="Нет"/>
