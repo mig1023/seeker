@@ -1577,7 +1577,12 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="221">
-			<Text>Убитые вами батраки лежат на полу, последний всё ещё подёргивается.\n\nПроверьте Удачу.</Text>
+			<Text>Убитые вами батраки лежат на полу, последний всё ещё подёргивается.</Text>
+			<Actions>
+				<Test>
+					<Stat>Luck</Stat>
+				</Test>
+			</Actions>
 			<Options>
 				<Option Goto="75" Text="Успешно"/>
 				<Option Goto="173" Text="Нет"/>
