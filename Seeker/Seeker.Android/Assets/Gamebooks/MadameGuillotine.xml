@@ -16,6 +16,17 @@
 		<Lists>
 			<WithoutStatuses Items="0, 301, 302"/>
 		</Lists>
+		<Dictionaries>
+			<StatNames>
+				<Item Name="Strength" Value="силы"/>
+				<Item Name="Agility" Value="ловкости"/>
+				<Item Name="Luck" Value="удачи"/>
+				<Item Name="Speech" Value="красноречия"/>
+				<Item Name="Firearms" Value="стрельбы"/>
+				<Item Name="Fencing" Value="фехтования"/>
+				<Item Name="HorseRiding" Value="верховой езды"/>
+			</StatNames>
+		</Dictionaries>
 		<Default>
 			<DisabledOption Value="Hide"/>
 		</Default>
@@ -164,7 +175,12 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="20">
-			<Text>Вы осматриваете землю вокруг фургона, пытаясь понять в каком направлении покинули его пассажиры.\n\nПроверьте свою Удачу.</Text>
+			<Text>Вы осматриваете землю вокруг фургона, пытаясь понять в каком направлении покинули его пассажиры.</Text>
+			<Actions>
+				<Test>
+					<Stat>Luck</Stat>
+				</Test>
+			</Actions>
 			<Options>
 				<Option Goto="214" Text="Проверка провалилась"/>
 				<Option Goto="106" Text="Всё получилось"/>
