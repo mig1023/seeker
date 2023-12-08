@@ -681,7 +681,13 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="89">
-			<Text>Итак, дуэль, на саблях, до первой крови.\n\n1 Граф де ла Валье: Фехтование 8 Ран 4</Text>
+			<Text>Итак, дуэль, на саблях, до первой крови.</Text>
+			<Actions>
+				<Fight>
+					<Enemy Name="Граф де ла Валье" Weapon="Фехтование" Skill="8" Hitpoints="4"/>
+					<FirstBloodOnly/>
+				</Fight>
+			</Actions>
 			<Options>
 				<Option Goto="271" Text="Вы случайно убиваете графа, выбросив две единицы"/>
 				<Option Goto="258" Text="Он убивает вас"/>
