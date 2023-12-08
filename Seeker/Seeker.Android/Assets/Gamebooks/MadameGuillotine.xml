@@ -926,6 +926,11 @@
 		</Paragraph>
 		<Paragraph No="116">
 			<Text>Вы стреляете в Вальми.</Text>
+			<Actions>
+				<Test>
+					<Stat>Firearms</Stat>
+				</Test>
+			</Actions>
 			<Options>
 				<Option Goto="248" Text="Попали"/>
 				<Option Goto="121" Text="Нет"/>
