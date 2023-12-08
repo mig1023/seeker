@@ -13,6 +13,7 @@ namespace Seeker.Gamebook.MadameGuillotine
         public string Penalty { get; set; }
         public int Skill { get; set; }
         public int Wounds { get; set; }
+        public int Rounds { get; set; }
 
         public List<Character> Enemies { get; set; }
         public bool FireFight { get; set; }
@@ -207,6 +208,13 @@ namespace Seeker.Gamebook.MadameGuillotine
                 }
 
                 round += 1;
+
+                if (round > Rounds)
+                {
+                    fight.Add(String.Empty);
+                    fight.Add("BIG|BAD|Отведённые на бой раунды кончились :(");
+                    return fight;
+                }
             }
         }
 
