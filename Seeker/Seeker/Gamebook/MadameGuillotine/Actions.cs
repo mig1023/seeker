@@ -11,6 +11,7 @@ namespace Seeker.Gamebook.MadameGuillotine
 
         public string Stat { get; set; }
         public string Penalty { get; set; }
+        public int Skill { get; set; }
 
         public List<Character> Enemies { get; set; }
         public bool FireFight { get; set; }
@@ -228,6 +229,11 @@ namespace Seeker.Gamebook.MadameGuillotine
 
             int level = GetProperty(protagonist, Stat);
             string stat = Constants.StatNames[Stat];
+
+            if (Skill > 0)
+            {
+                level = Skill;
+            }
 
             test.Add($"Текущий уровень {stat}: {level}");
 
