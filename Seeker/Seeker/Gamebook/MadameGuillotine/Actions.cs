@@ -12,6 +12,7 @@ namespace Seeker.Gamebook.MadameGuillotine
         public string Stat { get; set; }
         public string Penalty { get; set; }
         public int Skill { get; set; }
+        public int Wounds { get; set; }
 
         public List<Character> Enemies { get; set; }
         public bool FireFight { get; set; }
@@ -182,7 +183,7 @@ namespace Seeker.Gamebook.MadameGuillotine
                             $"<= {enemy.Skill} (уровня его фехтования)");
 
                         fight.Add($"BAD|{enemy.Name} ранил вас...");
-                        protagonist.Wounds += 1;
+                        protagonist.Wounds += Wounds > 0 ? Wounds : 1;
                     }
                     else
                     {
