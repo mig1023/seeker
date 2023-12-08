@@ -1437,6 +1437,11 @@
 		</Paragraph>
 		<Paragraph No="186">
 			<Text>Вы скачете в сторону отряда, чтобы выиграть время для прорыва повозки сквозь ворота. Чтобы всё получилось, нужно успешно пройти проверку Верховой езды.</Text>
+			<Actions>
+				<Test>
+					<Stat>HorseRiding</Stat>
+				</Test>
+			</Actions>
 			<Options>
 				<Option Goto="52" Text="Проверка успешна"/>
 				<Option Goto="170" Text="Нет"/>
@@ -1469,6 +1474,11 @@
 		</Paragraph>
 		<Paragraph No="190">
 			<Text>Выхватив пистолет, вы стреляете в сержанта Вальми, перезаряжающего свой мушкет. Из-за тряски повозки вам придётся вычесть единицу из своего навыка Огнестрельного оружия.</Text>
+			<Actions>
+				<Test>
+					<Stat>Firearms</Stat>
+				</Test>
+			</Actions>
 			<Options>
 				<Option Goto="61" Text="Попали"/>
 				<Option Goto="224" Text="Промахнулись"/>
