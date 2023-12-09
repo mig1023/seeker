@@ -389,7 +389,7 @@
 			</Actions>
 			<Options>
 				<Option Goto="239" Text="Попали"/>
-				<Option Goto="84" Text="Не попали"/>
+				<Option Goto="84" Text="Не попали">
 					<Text>Или погоните лошадей вперёд не стреляя?</Text>
 				</Option>
 				<Option Goto="84"/>
