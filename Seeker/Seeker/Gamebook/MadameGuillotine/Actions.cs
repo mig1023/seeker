@@ -21,7 +21,14 @@ namespace Seeker.Gamebook.MadameGuillotine
 
         public override List<string> Representer()
         {
-            if (!String.IsNullOrEmpty(Stat))
+            if (Type == "Test")
+            {
+                int level = GetProperty(protagonist, Stat);
+                string stat = Constants.StatNames[Stat];
+
+                return new List<string> { $"Проверка {Constants.StatNames[Stat]} (уровень {level})" };
+            }
+            else if (!String.IsNullOrEmpty(Stat))
             {
                 int currentStat = GetProperty(protagonist, Stat);
                 string diffLine = String.Empty;
@@ -227,7 +234,7 @@ namespace Seeker.Gamebook.MadameGuillotine
                 if (round > Rounds)
                 {
                     fight.Add(String.Empty);
-                    fight.Add("BIG|BAD|Отведённые на бой раунды кончились :(");
+                    fight.Add("BIG|BAD|Отведённые на бой раунды кончились");
                     return fight;
                 }
             }
