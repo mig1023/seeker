@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Seeker.Game;
 
 namespace Seeker.Prototypes
@@ -144,8 +145,8 @@ namespace Seeker.Prototypes
 
         public string Result(bool resultOk, string options)
         {
-            string result = options.Split('|')[1];
-            return resultOk ? $"BIG|GOOD|{result} :)" : $"BIG|BAD|{result} :(";
+            List<string> result = options.Split('|').ToList();
+            return resultOk ? $"BIG|GOOD|{result[0]} :)" : $"BIG|BAD|{result[1]} :(";
         }
     }
 }
