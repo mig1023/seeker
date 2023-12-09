@@ -84,7 +84,11 @@ namespace Seeker.Gamebook.MadameGuillotine
 
         public override bool IsButtonEnabled(bool secondButton = false)
         {
-            if (!String.IsNullOrEmpty(Stat))
+            if (Type == "Test")
+            {
+                return true;
+            }
+            else if (!String.IsNullOrEmpty(Stat))
             {
                 int stat = GetProperty(protagonist, Stat);
 
