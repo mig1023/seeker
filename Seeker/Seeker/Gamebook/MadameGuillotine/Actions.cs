@@ -238,7 +238,7 @@ namespace Seeker.Gamebook.MadameGuillotine
                 if ((Rounds < 0) && (round > Rounds))
                 {
                     fight.Add(String.Empty);
-                    fight.Add("BIG|BAD|Отведённые на бой раунды кончились");
+                    fight.Add("BIG|BOLD|Отведённые на бой раунды кончились");
                     return fight;
                 }
             }
