@@ -152,7 +152,7 @@ namespace Seeker.Gamebook.MadameGuillotine
                         else if (firstRoll + secondRoll <= protagonist.Fencing)
                         {
                             fight.Add($"{firstRoll} + {secondRoll} = {firstRoll + secondRoll} сумма " +
-                                $"<= {protagonist.Fencing} (уровня вашего фехтования)");
+                                $"<= {protagonist.Fencing}  (фехтование)");
 
                             fight.Add($"GOOD|Вы ранили {enemy.Name}!");
                             enemy.Wounds += 1;
@@ -167,7 +167,7 @@ namespace Seeker.Gamebook.MadameGuillotine
                         else
                         {
                             fight.Add($"{firstRoll} + {secondRoll} = {firstRoll + secondRoll} сумма " +
-                                $"> {protagonist.Fencing} (уровня вашего фехтования)");
+                                $"> {protagonist.Fencing} (фехтование)");
 
                             fight.Add($"BAD|Вы не смогли ранить {enemy.Name}...");
                         }
@@ -200,7 +200,7 @@ namespace Seeker.Gamebook.MadameGuillotine
                     {
                         fight.Add($"{enemyFirstRoll} + {enemySecondRoll} = " +
                             $"{enemyFirstRoll + enemySecondRoll} сумма " +
-                            $"<= {enemy.Skill} (уровня его фехтования)");
+                            $"<= {enemy.Skill} (фехтование)");
 
                         fight.Add($"BAD|{enemy.Name} ранил вас...");
                         protagonist.Wounds += Wounds > 0 ? Wounds : 1;
@@ -216,7 +216,7 @@ namespace Seeker.Gamebook.MadameGuillotine
                     {
                         fight.Add($"{enemyFirstRoll} + {enemySecondRoll} = " +
                            $"{enemyFirstRoll + enemySecondRoll} сумма " +
-                           $"> {enemy.Skill} (уровня его фехтования)");
+                           $"> {enemy.Skill} (фехтования)");
 
                         fight.Add($"GOOD|{enemy.Name} не смог ранить вас!");
                     }
@@ -235,7 +235,7 @@ namespace Seeker.Gamebook.MadameGuillotine
 
                 round += 1;
 
-                if (round > Rounds)
+                if ((Rounds < 0) && (round > Rounds))
                 {
                     fight.Add(String.Empty);
                     fight.Add("BIG|BAD|Отведённые на бой раунды кончились");
