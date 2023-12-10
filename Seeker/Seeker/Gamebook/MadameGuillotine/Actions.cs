@@ -23,10 +23,7 @@ namespace Seeker.Gamebook.MadameGuillotine
         {
             if (Type == "Test")
             {
-                int level = GetProperty(protagonist, Stat);
-                string stat = Constants.StatNames[Stat];
-
-                return new List<string> { $"Проверка {Constants.StatNames[Stat]} (уровень {level})" };
+                return new List<string> { $"Проверка {Constants.StatNames[Stat]}" };
             }
             else if (!String.IsNullOrEmpty(Stat))
             {
