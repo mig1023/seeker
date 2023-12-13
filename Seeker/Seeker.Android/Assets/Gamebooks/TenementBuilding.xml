@@ -582,5 +582,11 @@
 				<Option Goto="90" Text="Пройти к дому слева от туннеля"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="80">
+			<Text>Здесь не было больше ничего интересного. Нужно искать другой путь.</Text>
+			<Options>
+				<Option Goto="84" Text="Вернуться на площадку второго этажа"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
