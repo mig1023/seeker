@@ -64,5 +64,12 @@
 				<Option Goto="61" Text="Выйти в центр двора"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="6">
+			<Text>Сироткин неуверенно шагнул вниз и начал медленно спускаться.\n\nПроверьте Удачу.</Text>
+			<Options>
+				<Option Goto="19" Text="Вам повезло"/>
+				<Option Goto="24" Text="Нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
