@@ -565,5 +565,15 @@
 				<Option Goto="92" Text="Отойти от двери"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="78">
+			<Text>Пустой и окутанный в кромешную тьму первый этаж не давал никаких надежд на присутствие здесь кого-либо, кроме Яна.</Text>
+			<Options>
+				<Option Goto="102" Text="Пройти в левое крыло: если записано «ЧЕРТЁЖ»"/>
+				<Option Goto="96" Text="Иначе"/>
+				<Option Goto="111" Text="Пройти в правое крыло: если записано «ШКАФ»"/>
+				<Option Goto="71" Text="Иначе"/>
+				<Option Goto="84" Text="Подняться на второй этаж"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
