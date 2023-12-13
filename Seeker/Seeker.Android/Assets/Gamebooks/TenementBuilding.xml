@@ -210,5 +210,12 @@
 				<Option Goto="44" Text="Открыть ворота"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="26">
+			<Text>Сироткин вышел на площадку третьего этажа и почувствовал, как по парадной прошёлся морозный сквозняк: за окном стало заметно темнее и холоднее.</Text>
+			<Options>
+				<Option Goto="33" Text="Подняться на четвёртый этаж"/>
+				<Option Goto="41" Text="Спуститься на второй этаж"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
