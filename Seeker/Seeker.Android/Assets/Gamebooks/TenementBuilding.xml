@@ -128,5 +128,12 @@
 				<Option Goto="29" Text="Иначе"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="15">
+			<Text>Иван поёрзал на лавочке и неловко выдавил из себя оправдание: никогда не играл в карты, боится, да и ставить-то ему, впрочем, тоже нечего.\n\nПроверьте Удачу</Text>
+			<Options>
+				<Option Goto="30" Text="Вам повезло"/>
+				<Option Goto="51" Text="Нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
