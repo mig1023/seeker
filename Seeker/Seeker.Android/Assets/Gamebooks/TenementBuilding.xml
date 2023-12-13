@@ -645,5 +645,11 @@
 				<Option Goto="67" Text="Отойти от бра"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="89">
+			<Text>В попытке снять картину, Ян взялся за тот выделяющийся край, и что-то почувствовал пальцем. Он отодвинул край картины от стены, и от неё вниз свалился ключ.</Text>
+			<Options>
+				<Option Goto="72" Text="Подобрать ключ"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
