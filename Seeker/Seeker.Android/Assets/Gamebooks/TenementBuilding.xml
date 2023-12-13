@@ -1,0 +1,34 @@
+<Gamebook>
+	<Introduction>
+		<Copyright>
+			<Title>Доходный дом</Title>
+			<Author>Владислав Кривчиков, 2023</Author>
+		</Copyright>
+		<Styles>
+			<Continue Value="9a9a9a"/>
+			<System Value="280203"/>
+			<SystemFont Value="ffffff"/>
+			<Color Name="Main, Option" Value="280203"/>
+		</Styles>
+		<Buttons>
+			<Goodluck>Проверить удачу</Goodluck>
+		</Buttons>
+		<Default>
+			<DisabledOption Value="Show"/>
+		</Default>
+	</Introduction>
+	<Paragraphs>
+		<Paragraph No="0">
+			<Text>Санкт-Петербург, 18… год.В одном из доходных домов случается происшествие: умирает коллежский секретарь. Эта новость быстро разносится по всему Петербургу и за его пределы. Одновременно в доходный дом прибывают двое: Иван Сироткин, желающий обрести самого себя, и Карл Геккерен, жаждущий сокровищ, которые считает своими по праву. В этой книга-игре вам предстоит принять роль одного из двух героев. Именно вы поможете им достигнуть их цели. Будьте осторожны, ведь опасность подстерегает на каждом шагу. И помните: «Смерть – это ещё не конец».</Text>
+			<Options>
+				<Start Goto="1"/>
+			</Options>
+		</Paragraph>
+		<Paragraph No="1">
+			<Text>END</Text>
+			<Options>
+				<Option Goto="0"/>
+			</Options>
+		</Paragraph>
+	</Paragraphs>
+</Gamebook>

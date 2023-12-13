@@ -63,6 +63,7 @@ namespace Seeker.Gamebook
             ["YouAreMillionaire"] = YouAreMillionaire.Constants.GetLinks(),
             ["ProjectOne"] = ProjectOne.Constants.GetLinks(),
             ["MadameGuillotine"] = MadameGuillotine.Constants.GetLinks(),
+            ["TenementBuilding"] = TenementBuilding.Constants.GetLinks(),
         };
 
         public static List<string> GetBooks() =>
