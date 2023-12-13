@@ -663,5 +663,14 @@
 				<Option Goto="27" Text="Поднять ключ"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="92">
+			<Text>Сироткин стоял на площадке второго этажа и задумался о дальнейших действиях.</Text>
+			<Options>
+				<Option Goto="59" Text="Осмотреть бра"/>
+				<Option Goto="3" Text="Пройти в тамбур слева"/>
+				<Option Goto="23" Text="Спуститься на первый этаж"/>
+				<Option Goto="66" Text="Подняться на третий этаж"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
