@@ -731,5 +731,11 @@
 				<Option Goto="117" Text="Иначе"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="102">
+			<Text>В этой стороне делать было больше нечего. Следовало бы поискать проход где-нибудь ещё.</Text>
+			<Options>
+				<Option Goto="78" Text="Вернуться назад"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
