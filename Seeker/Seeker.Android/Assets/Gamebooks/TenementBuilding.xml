@@ -492,5 +492,12 @@
 				<Option Goto="92" Text="Вернуться на второй этаж"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="67">
+			<Text>Теперь следовало бы эту свечу зажечь.</Text>
+			<Options>
+				<Option Goto="58" Text="Пройти в тамбур слева"/>
+				<Option Goto="20" Text="Спуститься на первый этаж"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
