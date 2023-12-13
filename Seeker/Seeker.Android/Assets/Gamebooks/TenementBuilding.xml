@@ -164,5 +164,12 @@
 				<Option Goto="25" Text="Пройти дальше по внутреннему двору"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="20">
+			<Text>Ванютка спустился на первый этаж. Свечи горели в холле, рядом с указателем владельцев квартир, и одна – в тамбуре справа.</Text>
+			<Options>
+				<Option Goto="45" Text="Спуститься в холл"/>
+				<Option Goto="16" Text="Пройти в тамбур справа"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
