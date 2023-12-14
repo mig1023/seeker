@@ -1558,5 +1558,11 @@
 				<Option Goto="366" Text="Если у вас записано «ГЕОРГ»"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="217">
+			<Options>
+				<Option Goto="231" Text="Если записано «ОГОНЁК»"/>
+				<Option Goto="249" Text="Иначе"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
