@@ -1290,5 +1290,11 @@
 				<Option Goto="215" Text="Попробовать открыть двери"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="180">
+			<Options>
+				<Option Goto="185" Text="Если записано «ОГОНЁК»"/>
+				<Option Goto="224" Text="Иначе"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
