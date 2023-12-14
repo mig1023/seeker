@@ -1098,5 +1098,11 @@
 				<Option Goto="227" Text="Посмотреть в окно"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="154">
+			<Options>
+				<Option Goto="159" Text="Если у вас записано «ЛАМПА»"/>
+				<Option Goto="168" Text="Иначе"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
