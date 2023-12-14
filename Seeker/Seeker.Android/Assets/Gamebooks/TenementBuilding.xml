@@ -1063,5 +1063,11 @@
 				<Option Goto="78" Text="Вернуться на площадку первого этажа"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="149">
+			<Text>Возможно, рейка могла для чего-то пригодиться. Ян поднял её с пола.\n\nЗапишите «БАГЕТ».</Text>
+			<Options>
+				<Option Goto="84" Text="Вернуться на площадку второго этажа"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
