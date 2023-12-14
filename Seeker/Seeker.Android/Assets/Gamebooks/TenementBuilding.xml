@@ -1110,5 +1110,15 @@
 				<Option Goto="193" Text="Попробовать открыть двери"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="156">
+			<Text>Ян перевёл часовую стрелку на час вперёд.</Text>
+			<Options>
+				<Option Goto="182" Text="Перевести часовую стрелку назад"/>
+				<Option Goto="129" Text="Перевести минутную стрелку назад"/>
+				<Option Goto="194" Text="Перевести минутную стрелку вперёд"/>
+				<Option Goto="163" Text="Перевести часовую стрелку вперёд"/>
+				<Option Goto="211" Text="Оставить как есть"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
