@@ -1456,5 +1456,11 @@
 				<Option Goto="160" Text="Подойти к двери"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="203">
+			<Options>
+				<Option Goto="179" Text="Если у вас записано «ЧАСЫ»"/>
+				<Option Goto="155" Text="Иначе"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
