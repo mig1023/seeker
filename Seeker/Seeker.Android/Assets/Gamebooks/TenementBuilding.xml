@@ -1189,5 +1189,12 @@
 				<Option Goto="236" Text="Выйти в тамбур"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="166">
+			<Text>Окна выходили на внутренний дворик особняка. Правда, сам особняк уже был едва различим в полумраке.</Text>
+			<Options>
+				<Option Goto="176" Text="Спуститься на третий этаж"/>
+				<Option Goto="187" Text="Если у вас записано «СВЕЧА», зажечь свечу"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
