@@ -877,5 +877,13 @@
 				<Option Goto="130" Text="Отойти"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="123">
+			<Text>Третий этаж, наконец, окрасился в цвета и признаки жизни, едва стоило осветить поверхности. Правда, тамбуры всё ещё казались Ванютке мрачными и зловещими.</Text>
+			<Options>
+				<Option Goto="55" Text="Пройти в тамбур слева"/>
+				<Option Goto="47" Text="Пройти в тамбур справа"/>
+				<Option Goto="22" Text="Подняться на четвёртый этаж"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
