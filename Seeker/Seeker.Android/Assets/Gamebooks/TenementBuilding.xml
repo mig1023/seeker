@@ -1389,5 +1389,15 @@
 				<Option Goto="161" Text="Вернуться на площадку"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="194">
+			<Text>Ян провернул минутную стрелку вперёд.</Text>
+			<Options>
+				<Option Goto="182" Text="Перевести часовую стрелку назад"/>
+				<Option Goto="129" Text="Перевести минутную стрелку назад"/>
+				<Option Goto="150" Text="Перевести минутную стрелку вперёд"/>
+				<Option Goto="163" Text="Перевести часовую стрелку вперёд"/>
+				<Option Goto="134" Text="Отойти от часов"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
