@@ -919,5 +919,15 @@
 				<Option Goto="119" Text="Пройти к крайней квартире"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="129">
+			<Text>Ян прокрутил минутную стрелку в обратном направлении.</Text>
+			<Options>
+				<Option Goto="163" Text="Перевести часовую стрелку вперёд"/>
+				<Option Goto="182" Text="Перевести часовую стрелку назад"/>
+				<Option Goto="150" Text="Перевести минутную стрелку вперёд"/>
+				<Option Goto="219" Text="Перевести минутную стрелку назад"/>
+				<Option Goto="134" Text="Отойти от часов"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
