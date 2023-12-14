@@ -1203,5 +1203,13 @@
 				<Option Goto="197" Text="Иначе"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="168">
+			<Text>Ян задул свечу и некоторое время подождал, пока остынет воск, а затем положил её в карман к купюрам: свеча ещё могла ему пригодиться.\n\nЗачеркните «СВЕЧА».</Text>
+			<Options>
+				<Option Goto="202" Text="Посмотреть в окно"/>
+				<Option Goto="198" Text="Открыть окно"/>
+				<Option Goto="160" Text="Подойти к двери"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
