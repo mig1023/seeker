@@ -1480,5 +1480,11 @@
 				<Option Goto="217" Text="Уйти в длинный коридор"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="206">
+			<Options>
+				<Option Goto="250" Text="Если у вас записано «ОТХОД»"/>
+				<Option Goto="229" Text="Иначе"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
