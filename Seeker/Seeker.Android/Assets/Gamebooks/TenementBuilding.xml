@@ -792,5 +792,11 @@
 				<Option Goto="126" Text="Иначе"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="111">
+			<Text>Ничего интересного для Яна здесь больше не было.</Text>
+			<Options>
+				<Option Goto="78" Text="Вернуться назад"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
