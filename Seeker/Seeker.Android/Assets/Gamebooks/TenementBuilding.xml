@@ -847,5 +847,11 @@
 				<Option Goto="84" Text="Вернуться на площадку второго этажа"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="119">
+			<Options>
+				<Option Goto="134" Text="Если у вас записано «ТАРАН»"/>
+				<Option Goto="177" Text="Иначе"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
