@@ -1259,5 +1259,13 @@
 				<Option Goto="186" Text="Выйти к особняку"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="176">
+			<Text>Внизу послышались удары по входной двери, но Ян так и не понял, вошёл кто-нибудь внутрь или нет.</Text>
+			<Options>
+				<Option Goto="205" Text="Спуститься на второй этаж"/>
+				<Option Goto="190" Text="Пройти в тамбур третьего этажа"/>
+				<Option Goto="212" Text="Если записано «КИРПИЧ»"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
