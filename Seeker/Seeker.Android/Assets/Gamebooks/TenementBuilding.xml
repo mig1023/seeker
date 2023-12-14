@@ -1091,5 +1091,12 @@
 				<Option Goto="134" Text="Продолжить осмотр"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="153">
+			<Text>Ян влетел всем телом в дверь, отчего хруст стал слышнее, а внешне появились вмятины на двери и трещины возле замка.</Text>
+			<Options>
+				<Option Goto="167" Text="Продолжать выбивать дверь"/>
+				<Option Goto="227" Text="Посмотреть в окно"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
