@@ -892,5 +892,12 @@
 				<Option Goto="86" Text="Иначе"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="125">
+			<Text>Ян попытался бежать к двери, но противник не желал ему это позволить. Сирота ощущал угрозу за спиной, и этот страх мурашками расползался по спине, вызывая дрожь по всему телу.\n\nПроверьте Удачу.</Text>
+			<Options>
+				<Option Goto="137" Text="Вам повезло"/>
+				<Option Goto="36" Text="Иначе"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
