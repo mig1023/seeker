@@ -1690,5 +1690,12 @@
 				<Option Goto="366" Text="Если у вас записано «ГЕОРГ»"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="234">
+			<Text>Спускаться вниз оказалось делом нелёгким: голые ровные стены, где не за что зацепиться, и узкие ступени, где неровен час можно и поскользнуться.\n\nПроверьте Удачу.</Text>
+			<Options>
+				<Option Goto="240" Text="Вам повезло"/>
+				<Option Goto="225" Text="Иначе"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
