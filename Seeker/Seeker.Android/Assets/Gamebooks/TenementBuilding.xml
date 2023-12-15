@@ -2154,5 +2154,11 @@
 				<Option Goto="317" Text="Подняться на второй этаж"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="303">
+			<Text>Карл нажал на оба рычага. Механизм пришёл в действие, циферблат перелистнул все цифры от 0 до 9. Похоже, результат сбросился.</Text>
+			<Options>
+				<Option Goto="341" Text="Попробовать снова"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
