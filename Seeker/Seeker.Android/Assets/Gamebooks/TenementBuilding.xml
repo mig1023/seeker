@@ -2276,5 +2276,13 @@
 				<Option Goto="341" Text="Продолжить"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="322">
+			<Text>Карл нажал на левый рычаг, и механизм сразу пришёл в действие. На циферблате отобразилось «12».</Text>
+			<Options>
+				<Option Goto="327" Text="Нажать на правый рычаг"/>
+				<Option Goto="338" Text="Нажать на левый рычаг"/>
+				<Option Goto="303" Text="Нажать на оба рычага"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
