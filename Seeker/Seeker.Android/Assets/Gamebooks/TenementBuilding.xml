@@ -2192,5 +2192,11 @@
 				<Option Goto="317" Text="Подняться на второй этаж"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="309">
+			<Options>
+				<Option Goto="324" Text="Если у вас записано «ОГОНЁК»"/>
+				<Option Goto="287" Text="Иначе"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
