@@ -1983,5 +1983,12 @@
 				<Option Goto="260" Text="Выбрать другую отмычку"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="277">
+			<Text>Проверьте Удачу.</Text>
+			<Options>
+				<Option Goto="283" Text="Вам повезло"/>
+				<Option Goto="297" Text="Иначе"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
