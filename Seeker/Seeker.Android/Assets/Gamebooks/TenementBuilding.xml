@@ -2251,5 +2251,11 @@
 				<Option Goto="310" Text="Иначе"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="318">
+			<Text>Карл на цыпочках подкрался к двери и закрыл её изнутри. Он остался в одиночестве внутри мрачного тамбура, затаился, но подготовил пистолет к выстрелу.</Text>
+			<Options>
+				<Option Goto="287" Text="Выждать"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
