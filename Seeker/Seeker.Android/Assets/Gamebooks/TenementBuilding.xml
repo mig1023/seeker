@@ -2211,5 +2211,13 @@
 				<Option Goto="341" Text="Попробовать открыть сейф"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="312">
+			<Text>Снова правый рычаг. Провернулась одна лента: «18».</Text>
+			<Options>
+				<Option Goto="321" Text="Нажать на правый рычаг"/>
+				<Option Goto="337" Text="Нажать на левый рычаг"/>
+				<Option Goto="303" Text="Нажать на оба рычага"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
