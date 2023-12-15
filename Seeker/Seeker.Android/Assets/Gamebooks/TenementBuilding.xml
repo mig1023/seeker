@@ -2067,5 +2067,11 @@
 				<Option Goto="284" Text="Вернуться из арки"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="290">
+			<Options>
+				<Option Goto="263" Text="Если записано «БРОСОК»"/>
+				<Option Goto="280" Text="Иначе"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
