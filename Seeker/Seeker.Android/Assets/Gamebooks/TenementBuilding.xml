@@ -2245,5 +2245,11 @@
 				<Option Goto="335" Text="Иначе"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="317">
+			<Options>
+				<Option Goto="332" Text="Если у вас записано «СВЕТ»"/>
+				<Option Goto="310" Text="Иначе"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
