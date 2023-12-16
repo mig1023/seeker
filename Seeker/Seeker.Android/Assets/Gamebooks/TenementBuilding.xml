@@ -2672,5 +2672,12 @@
 				<Option Goto="372" Text="Иначе"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="381">
+			<Text>Враг «по гроб жизни» открыл замок и скинул его в сторону. Цепи – единственное, что ему препятствовало отворить врата.\n\nВосстановите Удачу. Попробовать ещё раз. Проверьте Удачу.</Text>
+			<Options>
+				<Option Goto="373" Text="Вам повезло"/>
+				<Option Goto="368" Text="Иначе"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
