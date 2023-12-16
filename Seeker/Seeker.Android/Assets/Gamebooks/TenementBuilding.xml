@@ -2767,5 +2767,13 @@
 				<Option Goto="380" Text="Иначе"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="395">
+			<Text>Мещанский дворянин подобрал с мостовой связку отмычек и принялся вскрывать замок. Дух Александра воплотился позади него.\n\nАтаковать Сироткина. Проверьте Удачу.</Text>
+			<Options>
+				<Option Goto="409" Text="Вам повезло"/>
+				<Option Goto="415" Text="Иначе"/>
+				<Option Goto="403" Text="Восстановиться"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
