@@ -2333,5 +2333,11 @@
 				<Option Goto="335" Text="Иначе"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="330">
+			<Text>В очередной раз Карл нажал на левый рычаг, и на циферблате отобразилось «08». После чего механизм снова начал прокручивать ленты циферблата.</Text>
+			<Options>
+				<Option Goto="341"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
