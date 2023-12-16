@@ -2438,5 +2438,11 @@
 				<Option Goto="341"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="346">
+			<Text>Выйдя в тамбур, Карл услышал, как кто-то вошёл в парадную.</Text>
+			<Options>
+				<Option Goto="355" Text="Взглянуть вниз"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
