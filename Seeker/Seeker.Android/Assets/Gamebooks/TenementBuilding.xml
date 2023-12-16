@@ -2664,5 +2664,13 @@
 				<Option Goto="394" Text="Отойти от арки"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="380">
+			<Text>Дух уже исчез, а Сироткин остался в одиночестве в кромешной темноте. У Александа было ещё немного времени, пока Сироткин собирается.</Text>
+			<Options>
+				<Option Goto="388" Text="Восстановиться"/>
+				<Option Goto="398" Text="Попробовать ещё раз. Проверьте Удачу. Если вам повезло"/>
+				<Option Goto="372" Text="Иначе"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
