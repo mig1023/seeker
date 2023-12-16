@@ -2809,5 +2809,12 @@
 				<Option Goto="366" Text="Начать историю заново"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="401">
+			<Text>Александр видел, как душа Сироткина в бренном теле плутает по этажам и рьяно врывается то в одну квартиру, то в другую.\n\nВосстановите Удачу.</Text>
+			<Options>
+				<Option Goto="387" Text="Преследовать Сироткина"/>
+				<Option Goto="410" Text="Восстановиться"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
