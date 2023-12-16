@@ -2865,5 +2865,11 @@
 				<Option Goto="432" Text="Конец"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="409">
+			<Options>
+				<Option Goto="377" Text="Если у вас записано «КЕРОСИН»"/>
+				<Option Goto="382" Text="Иначе"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
