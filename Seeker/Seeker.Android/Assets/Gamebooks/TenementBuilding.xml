@@ -2824,5 +2824,12 @@
 				<Option Goto="432" Text="Конец"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="403">
+			<Text>Сироткину удалось вскрыть замок. Осталось немного: откинуть цепи, отворить ворота и добраться до улицы.\n\nВосстановите Удачу.\n\nАтаковать Сироткина. Проверьте Удачу.</Text>
+			<Options>
+				<Option Goto="409" Text="Вам повезло"/>
+				<Option Goto="426" Text="Иначе"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
