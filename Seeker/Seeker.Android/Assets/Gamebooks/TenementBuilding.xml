@@ -2844,5 +2844,12 @@
 				<Option Goto="414" Text="Иначе"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="406">
+			<Text>Мещанский дворянин подобрал с мостовой связку отмычек и принялся вскрывать замок.\n\nВосстановите Удачу.\n\nВоплотиться. Проверьте Удачу.</Text>
+			<Options>
+				<Option Goto="415" Text="Вам повезло"/>
+				<Option Goto="426" Text="Иначе"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
