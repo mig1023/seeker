@@ -2464,5 +2464,11 @@
 				<Option Goto="311" Text="Подойти к почтовому ящику"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="350">
+			<Text>На письме под кляксой было начертано «57».</Text>
+			<Options>
+				<Option Goto="341" Text="Вернуться к сейфу"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
