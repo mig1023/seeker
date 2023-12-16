@@ -2679,5 +2679,11 @@
 				<Option Goto="368" Text="Иначе"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="382">
+			<Options>
+				<Option Goto="411" Text="Если у вас записано «УЛИЦА»"/>
+				<Option Goto="393" Text="Иначе"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
