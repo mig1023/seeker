@@ -2831,5 +2831,11 @@
 				<Option Goto="426" Text="Иначе"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="404">
+			<Options>
+				<Option Goto="417" Text="Если у вас записано «СТЕКЛО»"/>
+				<Option Goto="433" Text="Иначе"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
