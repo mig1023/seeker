@@ -760,7 +760,10 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="104">
-			<Text>Ян встал против квартиры и ударил ногой в дверь, затем снова и снова.\n\nПроверьте Удачу.</Text>
+			<Text>Ян встал против квартиры и ударил ногой в дверь, затем снова и снова.</Text>
+			<Actions>
+				<Goodluck/>
+			</Actions>
 			<Options>
 				<Option Goto="133" Text="Если повезло"/>
 				<Option Goto="113" Text="Иначе"/>
