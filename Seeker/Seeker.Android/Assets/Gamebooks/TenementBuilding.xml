@@ -2906,5 +2906,12 @@
 				<Option Goto="366" Text="Начать историю заново"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="415">
+			<Text>Сироткину удалось вскрыть замок. Осталось немного: откинуть цепи, отворить ворота и добраться до улицы.\n\nАтаковать Сироткина. Проверьте Удачу.</Text>
+			<Options>
+				<Option Goto="409" Text="Вам повезло"/>
+				<Option Goto="426" Text="Иначе"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
