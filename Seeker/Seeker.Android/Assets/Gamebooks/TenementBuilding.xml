@@ -2855,9 +2855,14 @@
 		</Paragraph>
 		<Paragraph No="390">
 			<Text>Враг «по гроб жизни» открыл замок и скинул его в сторону. Цепи – единственное, что ему препятствовало отворить врата.</Text>
+			<Actions>
+				<Option Goto="399" Text="Восстановиться">
+					<Text>Попробовать ещё раз:</Text>
+				</Option>
+				<Goodluck/>
+			</Actions>
 			<Options>
-				<Option Goto="399" Text="Восстановиться"/>
-				<Option Goto="373" Text="Попробовать ещё раз. Проверьте Удачу. Если вам повезло"/>
+				<Option Goto="373" Text="Если вам повезло"/>
 				<Option Goto="368" Text="Иначе"/>
 			</Options>
 		</Paragraph>
