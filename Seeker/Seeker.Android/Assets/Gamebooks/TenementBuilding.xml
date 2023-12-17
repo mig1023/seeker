@@ -3045,9 +3045,14 @@
 		</Paragraph>
 		<Paragraph No="413">
 			<Text>Мещанский дворянин подобрал с мостовой связку отмычек и принялся вскрывать замок.</Text>
+			<Actions>
+				<Option Goto="403" Text="Восстановиться">
+					<Text>Попробовать ещё раз:</Text>
+				</Option>
+				<Goodluck/>
+			</Actions>
 			<Options>
-				<Option Goto="403" Text="Восстановиться"/>
-				<Option Goto="415" Text="Попробовать ещё раз. Если вам повезло"/>
+				<Option Goto="415" Text="Если вам повезло"/>
 				<Option Goto="426" Text="Иначе"/>
 			</Options>
 		</Paragraph>
