@@ -7,20 +7,6 @@ namespace Seeker.Gamebook.TenementBuilding
     {
         public static Actions StaticInstance = new Actions();
         private static Character protagonist = Character.Protagonist;
-
-        //public override List<string> Representer()
-        //{
-        //    if (Enemies == null)
-        //        return new List<string>();
-
-        //    string name = Enemies[0];
-        //    int strength = Constants.Enemies[name];
-        //    int count = Enemies.Count;
-        //    string line = Game.Services.CoinsNoun(count, "штук", "штуки", "штук");
-
-        //    return new List<string> { $"{name}\n{strength} сила каждого, всего {count} {line}" };
-        //}
-
         public static string LuckNumbers()
         {
             string luckListShow = String.Empty;
@@ -38,7 +24,7 @@ namespace Seeker.Gamebook.TenementBuilding
         {
             List<string> luckCheck = new List<string>
             {
-                "Числа удачи:",
+                "Цифры удачи:",
                 "BIG|" + LuckNumbers()
             };
 
@@ -47,13 +33,21 @@ namespace Seeker.Gamebook.TenementBuilding
             string luckLine = protagonist.Luck[goodLuck] ? "не " : String.Empty;
             luckCheck.Add($"Проверка удачи: {Game.Dice.Symbol(goodLuck)} - {luckLine}зачёркунтый");
 
-            luckCheck.Add(Result(protagonist.Luck[goodLuck], "УСПЕХ|НЕУДАЧА"));
+            if (protagonist.Luck[goodLuck])
+            {
+                luckCheck.Add("BIG|GOOD|УСПЕХ :)");
+                luckCheck.Add($"GRAY|Цифра {goodLuck} теперь зачёркнута");
 
-            protagonist.Luck[goodLuck] = false;
+                protagonist.Luck[goodLuck] = false;
+            }
+            else
+            {
+                luckCheck.Add("BIG|BAD|НЕУДАЧА :(");
+            }
 
             return luckCheck;
         }
-        
+
         public List<string> LuckRecovery()
         {
             List<string> luckRecovery = new List<string> { "Восстановление удачи:" };
