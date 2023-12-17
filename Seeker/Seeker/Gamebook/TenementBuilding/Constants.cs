@@ -6,6 +6,8 @@ namespace Seeker.Gamebook.TenementBuilding
     {
         public static Constants StaticInstance = new Constants();
 
+        public static Dictionary<int, string> LuckList { get; set; }
+
         public static Links GetLinks() => new Links
         {
             Protagonist = Character.Protagonist.Init,
