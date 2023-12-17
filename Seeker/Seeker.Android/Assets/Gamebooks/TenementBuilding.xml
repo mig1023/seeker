@@ -3019,5 +3019,11 @@
 				<Option Goto="1" Text="Всё начать сначала"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="432">
+			<Options>
+				<Option Goto="422" Text="Если у вас записано «ПЧЕЛА»"/>
+				<Option Goto="428" Text="Иначе"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
