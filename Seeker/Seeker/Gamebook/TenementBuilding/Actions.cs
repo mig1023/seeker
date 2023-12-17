@@ -53,5 +53,32 @@ namespace Seeker.Gamebook.TenementBuilding
 
             return luckCheck;
         }
+        
+        public List<string> LuckRecovery()
+        {
+            List<string> luckRecovery = new List<string> { "Восстановление удачи:" };
+
+            bool success = false;
+
+            for (int i = 1; i < 7; i++)
+            {
+                if (!protagonist.Luck[i])
+                {
+                    luckRecovery.Add($"GOOD|Цифра {i} восстановлена!");
+                    protagonist.Luck[i] = true;
+                    success = true;
+
+                    break;
+                }
+            }
+
+            if (!success)
+                luckRecovery.Add("BAD|Все цифры и так счастливые!");
+
+            luckRecovery.Add("Цифры удачи теперь:");
+            luckRecovery.Add("BIG|" + LuckNumbers());
+
+            return luckRecovery;
+        }
     }
 }
