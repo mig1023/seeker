@@ -8,10 +8,14 @@
 			<Continue Value="9a9a9a"/>
 			<System Value="280203"/>
 			<SystemFont Value="ffffff"/>
+			<Action Value="4a0002"/>
 			<Color Name="Main, Option" Value="6b0103"/>
 		</Styles>
+		<Dictionaries>
+			<LuckList Items="1:①, 2:②, 3:③, 4:④, 5:⑤, 6:⑥, 11:❶, 12:❷, 13:❸, 14:❹, 15:❺, 16:❻"/>
+		</Dictionaries>
 		<Buttons>
-			<Goodluck>Проверить удачу</Goodluck>
+			<Goodluck>Проверьте удачу</Goodluck>
 		</Buttons>
 		<Default>
 			<DisabledOption Value="Hide"/>
@@ -65,7 +69,10 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="6">
-			<Text>Сироткин неуверенно шагнул вниз и начал медленно спускаться.\n\nПроверьте Удачу.</Text>
+			<Text>Сироткин неуверенно шагнул вниз и начал медленно спускаться.</Text>
+			<Actions>
+				<Goodluck/>
+			</Actions>
 			<Options>
 				<Option Goto="19" Text="Вам повезло"/>
 				<Option Goto="24" Text="Нет"/>
