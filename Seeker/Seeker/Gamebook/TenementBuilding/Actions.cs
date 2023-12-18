@@ -74,5 +74,8 @@ namespace Seeker.Gamebook.TenementBuilding
 
             return luckRecovery;
         }
+
+        public override bool Availability(string option) =>
+            AvailabilityTrigger(option);
     }
 }
