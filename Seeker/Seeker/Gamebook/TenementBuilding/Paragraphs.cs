@@ -1,4 +1,5 @@
-﻿using System.Xml;
+﻿using System.Collections.Generic;
+using System.Xml;
 using Seeker.Game;
 
 namespace Seeker.Gamebook.TenementBuilding
@@ -10,8 +11,18 @@ namespace Seeker.Gamebook.TenementBuilding
         public override Paragraph Get(int id, XmlNode xmlParagraph) =>
             base.Get(xmlParagraph, ParagraphTemplate(xmlParagraph));
 
-        public override Option OptionParse(XmlNode xmlOption) =>
-            OptionParseWithDo(xmlOption, new Modification());
+        public override Option OptionParse(XmlNode xmlOption)
+        {
+            List<Abstract.IModification> modifications = new List<Abstract.IModification>();
+
+            foreach (XmlNode optionMod in xmlOption.SelectNodes("*"))
+            {
+                if (!optionMod.Name.StartsWith("Text"))
+                    modifications.Add(new Modification());
+            }
+
+            return OptionParseWithDo(xmlOption, modifications);
+        }
 
         public override Abstract.IActions ActionParse(XmlNode xmlAction)
         {
