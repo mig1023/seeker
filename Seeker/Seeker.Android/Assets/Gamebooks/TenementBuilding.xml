@@ -1402,7 +1402,7 @@
 			<Options>
 				<Option Goto="205" Text="Спуститься на второй этаж"/>
 				<Option Goto="190" Text="Пройти в тамбур третьего этажа"/>
-				<Option Goto="212" Text="Если записано «КИРПИЧ»"/>
+				<Option Goto="212" Text="Если записано «КИРПИЧ»" Availability="КИРПИЧ"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="177">
