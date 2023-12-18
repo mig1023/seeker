@@ -1182,7 +1182,11 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="149">
-			<Text>Возможно, рейка могла для чего-то пригодиться. Ян поднял её с пола.\n\nЗапишите «БАГЕТ».</Text>
+			<Texts>
+				<Text>Возможно, рейка могла для чего-то пригодиться. Ян поднял её с пола.</Text>
+				<Text Style="Small">Запишите «БАГЕТ».</Text>
+			</Texts>
+			<Triggers>БАГЕТ</Triggers>
 			<Options>
 				<Option Goto="84" Text="Вернуться на площадку второго этажа"/>
 			</Options>
