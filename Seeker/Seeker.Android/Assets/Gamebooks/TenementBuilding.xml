@@ -345,8 +345,10 @@
 				<Option Goto="4" Text="Начать историю Ванютки сначала"/>
 				<Option Goto="28" Text="Вернуться к контрольной точке"/>
 				<Option Goto="1" Text="Вернуться к выбору героя"/>
-				<Option Goto="256" Text="Выбрать историю Карла Геккерена. Запишите «ВАНЮТКА»"/>
-				<Option Goto="366" Text="Если у вас записано «ГЕОРГ»"/>
+				<Option Goto="256" Text="Выбрать историю Карла Геккерена">
+					<Trigger Value="ВАНЮТКА"/>
+				</Option>
+				<Option Goto="366" Text="Если у вас записано «ГЕОРГ»" Availability="ГЕОРГ"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="41">
