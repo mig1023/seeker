@@ -25,5 +25,8 @@ namespace Seeker.Gamebook.TenementBuilding
 
             return action;
         }
+
+        public override Abstract.IModification ModificationParse(XmlNode xmlModification) =>
+           (Abstract.IModification)base.ModificationParse(xmlModification, new Modification());
     }
 }
