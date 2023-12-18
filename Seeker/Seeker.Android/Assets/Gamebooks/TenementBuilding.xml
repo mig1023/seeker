@@ -1363,8 +1363,8 @@
 		<Paragraph No="171">
 			<Text>Ян Кшиштоф на цыпочках поднялся вдоль стены на площадку третьего этажа и приковал свой взгляд к шкафу, которым там одиноко стоял.</Text>
 			<Options>
-				<Option Goto="209" Text="Если записано «ОГОНЁК»"/>
-				<Option Goto="221" Text="Иначе"/>
+				<Option Goto="209" Text="Записано слово «ОГОНЁК»" Availability="ОГОНЁК"/>
+				<Option Goto="221" Text="Не записано слово «ОГОНЁК»" Availability="!ОГОНЁК"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="172">
