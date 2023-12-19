@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Seeker.Gamebook.OrcsDay
 {
-    class Services
+    class Fights
     {
         public static int Protection(ref List<string> fight)
         {
@@ -20,13 +20,13 @@ namespace Seeker.Gamebook.OrcsDay
             }
         }
 
-        public static void FightBonus(Character enemy, bool sub = false, int bonusLevel = 2)
+        public static void Bonus(Character enemy, bool sub = false, int bonusLevel = 2)
         {
             enemy.Attack += bonusLevel * (sub ? -1 : 1);
             enemy.Defense += bonusLevel * (sub ? -1 : 1);
         }
 
-        public static void FightWinTriggers(string enemyName, bool GirlHelp)
+        public static void WinTriggers(string enemyName, bool GirlHelp)
         {
             List<string> enemies = new List<string> { "Галрос Бессмертный", "Мортимер Нечихающий" };
 
@@ -37,24 +37,7 @@ namespace Seeker.Gamebook.OrcsDay
                 Game.Option.Trigger("Вместе с ней");
         }
 
-        public static bool FightVsAdvanturer(string name) =>
+        public static bool VsAdvanturer(string name) =>
             name == "Приключенцы";
-
-        public static bool CalculationCondition(string conditionParam)
-        {
-            string[] conditions = conditionParam.Split(',');
-
-            foreach (string condition in conditions)
-            {
-                bool mustBeFalse = condition.Contains("!");
-                bool isTriggered = Game.Option.IsTriggered(condition.Replace("!", String.Empty).Trim());
-
-                if (mustBeFalse == isTriggered)
-                    return false;
-            }
-
-            return true;
-        }
-
     }
 }

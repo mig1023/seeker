@@ -125,50 +125,8 @@ namespace Seeker.Gamebook.OrcsDay
         public List<string> Decrease() =>
             ChangeProtagonistParam(Stat, protagonist, "StatBonuses", decrease: true);
 
-        private string OrcishnessChange(string line)
-        {
-            if (line.StartsWith("+"))
-            {
-                protagonist.Orcishness += 1;
-                return $"BAD|{line}";
-            }
-            else
-            {
-                protagonist.Orcishness -= 1;
-                return $"GOOD|{line}";
-            }
-        }
-
-        public List<string> OrcishnessInit()
-        {
-            Character orc = protagonist;
-
-            orc.Orcishness = 6;
-
-            List<string> orcishness = new List<string> { "BOLD|Изначальное значение: 6" };
-
-            if ((orc.Muscle < 0) || (orc.Wits < 0) || (orc.Courage < 0) || (orc.Luck < 0))
-                orcishness.Add(OrcishnessChange(Constants.Orcishness["Negative"]));
-
-            if (orc.Wits > orc.Muscle)
-                orcishness.Add(OrcishnessChange(Constants.Orcishness["Wits"]));
-
-            if (orc.Luck > 0)
-                orcishness.Add(OrcishnessChange(Constants.Orcishness["Luck"]));
-                
-            if ((orc.Muscle > orc.Wits) && (orc.Muscle > orc.Courage) || (orc.Muscle > orc.Luck))
-                orcishness.Add(OrcishnessChange(Constants.Orcishness["Muscle"]));
-
-            if (orc.Courage > orc.Wits)
-                orcishness.Add(OrcishnessChange(Constants.Orcishness["Courage"]));
-
-            if (orc.Courage > 2)
-                orcishness.Add(OrcishnessChange(Constants.Orcishness["TooMuch"]));
-
-            orcishness.Add($"BIG|BOLD|Итоговая Оркишность: {orc.Orcishness}");
-
-            return orcishness;
-        }
+        public List<string> OrcishnessInit() =>
+            Calculations.Orcishness();
 
         public List<string> Test()
         {
@@ -269,7 +227,7 @@ namespace Seeker.Gamebook.OrcsDay
 
             bool otherOrcs = false;
             int otherOrcsHitpoints = 3, girlWounds = 3;
-            bool magicPotion = GirlHelp && !Services.FightVsAdvanturer(enemy.Name);
+            bool magicPotion = GirlHelp && !Fights.VsAdvanturer(enemy.Name);
 
             if (OrcsHelp || Game.Option.IsTriggered("Много орков помогают"))
             {
@@ -280,13 +238,13 @@ namespace Seeker.Gamebook.OrcsDay
             if (MortimerFight && (otherOrcs || Game.Option.IsTriggered("Несколько орков помогают")))
             {
                 fight.Add("BOLD|-2 к Атаке и Защите противника из-за помощи других орков\n");
-                Services.FightBonus(enemy, sub: true);
+                Fights.Bonus(enemy, sub: true);
             }
             
             if (Game.Option.IsTriggered("Зомби-тролль"))
             {
                 fight.Add("BOLD|-3 к Атаке и Защите противника из-за помощи Зомби-тролля\n");
-                Services.FightBonus(enemy, sub: true, bonusLevel: 3);
+                Fights.Bonus(enemy, sub: true, bonusLevel: 3);
             }
 
             int round = 1;
@@ -330,7 +288,7 @@ namespace Seeker.Gamebook.OrcsDay
                 if (!otherOrcsUnderAttack && !girlUnderAttack)
                 {
                     Game.Dice.DoubleRoll(out int enemyRollFirst, out int enemyRollSecond);
-                    int protection = Services.Protection(ref fight);
+                    int protection = Fights.Protection(ref fight);
 
                     enemyAttackFail = (enemyRollFirst + enemyRollSecond) + protection >= enemy.Attack;
                     string attackFail = enemyAttackFail ? ">=" : "<";
@@ -366,10 +324,10 @@ namespace Seeker.Gamebook.OrcsDay
                             GirlHelp = false;
                             Game.Option.Trigger("Девушка погибла");
 
-                            if (Services.FightVsAdvanturer(enemy.Name))
+                            if (Fights.VsAdvanturer(enemy.Name))
                             {
                                 fight.Add("Приключенцы получают бонус к Атаке и Защите");
-                                Services.FightBonus(enemy);
+                                Fights.Bonus(enemy);
                             }
                         }
                     }
@@ -388,7 +346,7 @@ namespace Seeker.Gamebook.OrcsDay
 
                         OrcsHelp = false;
                         otherOrcs = false;
-                        Services.FightBonus(enemy);
+                        Fights.Bonus(enemy);
                     }
                 }
                 else if (enemyAttackFail)
@@ -404,7 +362,7 @@ namespace Seeker.Gamebook.OrcsDay
                     if ((protagonist.Hitpoints == 2) && LateHelp)
                     {
                         fight.Add("BOLD|Другие орки присоединяются к бою!\n-2 к Атаке и Защите противника!");
-                        Services.FightBonus(enemy, sub: true);
+                        Fights.Bonus(enemy, sub: true);
                     }
                 }
 
@@ -451,7 +409,7 @@ namespace Seeker.Gamebook.OrcsDay
 
                 if (enemy.Hitpoints <= 0)
                 {
-                    Services.FightWinTriggers(enemy.Name, GirlHelp);
+                    Fights.WinTriggers(enemy.Name, GirlHelp);
 
                     fight.Add(String.Empty);
                     fight.Add("BIG|GOOD|Ты ПОБЕДИЛ :)");
@@ -492,7 +450,7 @@ namespace Seeker.Gamebook.OrcsDay
                 bool add = trigger.Value.Contains("+");
                 string color = (add ? "GOOD" : "BAD");
 
-                if (!Services.CalculationCondition(trigger.Key))
+                if (!Calculations.Condition(trigger.Key))
                     continue;
 
                 results.Add($"{color}|{trigger.Value}");
