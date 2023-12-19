@@ -2442,8 +2442,8 @@
 		</Paragraph>
 		<Paragraph No="307">
 			<Options>
-				<Option Goto="334" Text="Если у вас записано «ПОЖАР»" Availability="ПОЖАР"/>
-				<Option Goto="313" Text="Если у вас не записано «ПОЖАР»" Availability="!ПОЖАР"/>
+				<Option Goto="334" Text="У вас записано «ПОЖАР»" Availability="ПОЖАР"/>
+				<Option Goto="313" Text="У вас не записано «ПОЖАР»" Availability="!ПОЖАР"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="308">
@@ -2456,8 +2456,8 @@
 		</Paragraph>
 		<Paragraph No="309">
 			<Options>
-				<Option Goto="324" Text="Если у вас записано «ОГОНЁК»"/>
-				<Option Goto="287" Text="Иначе"/>
+				<Option Goto="324" Text="У вас записано «ОГОНЁК»" Availability="ОГОНЁК"/>
+				<Option Goto="287" Text="У вас не записано «ОГОНЁК»" Availability="!ОГОНЁК"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="310">
