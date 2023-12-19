@@ -1611,8 +1611,8 @@
 		</Paragraph>
 		<Paragraph No="203">
 			<Options>
-				<Option Goto="179" Text="Если у вас записано «ЧАСЫ»"/>
-				<Option Goto="155" Text="Иначе"/>
+				<Option Goto="179" Text="У вас записано «ЧАСЫ»" Availability="ЧАСЫ"/>
+				<Option Goto="155" Text="У вас не записано «ЧАСЫ»" Availability="!ЧАСЫ"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="204">
