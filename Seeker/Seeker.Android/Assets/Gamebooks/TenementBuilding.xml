@@ -76,8 +76,8 @@
 				<Goodluck/>
 			</Actions>
 			<Options>
-				<Option Goto="19" Text="Вам повезло"/>
-				<Option Goto="24" Text="Нет"/>
+				<Option Goto="19" Text="Повезло"/>
+				<Option Goto="24" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="7">
@@ -153,8 +153,8 @@
 				<Goodluck/>
 			</Actions>
 			<Options>
-				<Option Goto="30" Text="Вам повезло"/>
-				<Option Goto="51" Text="Нет"/>
+				<Option Goto="30" Text="Повезло"/>
+				<Option Goto="51" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="16">
@@ -260,8 +260,8 @@
 				<Goodluck/>
 			</Actions>
 			<Options>
-				<Option Goto="91" Text="Вам повезло"/>
-				<Option Goto="40" Text="Нет"/>
+				<Option Goto="91" Text="Повезло"/>
+				<Option Goto="40" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="30">
@@ -760,8 +760,8 @@
 		<Paragraph No="95">
 			<Text>Ключи в связке были все как один с небольшими изменениями. Выбрав один случайный, Ян попытался его вставить в замок, но ничего не вышло. С четвёртого раза вышло вставить один из ключей, но на половине оборота, когда, показалось, послышался один щелчок, он застрял. Ян начал теребить ключ и прилагать больше усилий, буквально давить на него всей силой, и каким-то чудом ключ повернулся на полный оборот, прозвучал щелчок, после которого замок отварился.\n\nЦепи стали со звоном падать, отпускать из своих крепких объятий створку ворот. Ян решил ускорить процесс освобождения, и за звоном звеньев цепи перестал слышать шорохи позади.</Text>
 			<Options>
-				<Option Goto="83" Text="У вас записано слово «ЛАМПА»" Availability="ВОСКРЕШЕНИЕ"/>
-				<Option Goto="139" Text="У вас не записано слово «ЛАМПА»" Availability="!ВОСКРЕШЕНИЕ"/>
+				<Option Goto="83" Text="У вас записано слово «ЛАМПА»" Availability="ЛАМПА"/>
+				<Option Goto="139" Text="У вас не записано слово «ЛАМПА»" Availability="!ЛАМПА"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="96">
@@ -802,8 +802,8 @@
 				<Goodluck/>
 			</Actions>
 			<Options>
-				<Option Goto="74" Text="Если успешно"/>
-				<Option Goto="117" Text="Иначе"/>
+				<Option Goto="74" Text="Повезло"/>
+				<Option Goto="117" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="102">
@@ -824,8 +824,8 @@
 				<Goodluck/>
 			</Actions>
 			<Options>
-				<Option Goto="133" Text="Если повезло"/>
-				<Option Goto="113" Text="Иначе"/>
+				<Option Goto="133" Text="Повезло"/>
+				<Option Goto="113" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="105">
@@ -869,8 +869,8 @@
 				<Goodluck/>
 			</Actions>
 			<Options>
-				<Option Goto="141" Text="Вам повезло"/>
-				<Option Goto="126" Text="Иначе"/>
+				<Option Goto="141" Text="Повезло"/>
+				<Option Goto="126" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="111">
@@ -984,8 +984,8 @@
 				<Goodluck/>
 			</Actions>
 			<Options>
-				<Option Goto="95" Text="Вам повезло"/>
-				<Option Goto="86" Text="Иначе"/>
+				<Option Goto="95" Text="Повезло"/>
+				<Option Goto="86" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="125">
@@ -994,8 +994,8 @@
 				<Goodluck/>
 			</Actions>
 			<Options>
-				<Option Goto="137" Text="Вам повезло"/>
-				<Option Goto="36" Text="Иначе"/>
+				<Option Goto="137" Text="Повезло"/>
+				<Option Goto="36" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="126">
@@ -1044,8 +1044,8 @@
 				<Goodluck/>
 			</Actions>
 			<Options>
-				<Option Goto="70" Text="Успешно"/>
-				<Option Goto="86" Text="Иначе"/>
+				<Option Goto="70" Text="Повезло"/>
+				<Option Goto="86" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="132">
@@ -1331,8 +1331,8 @@
 				<Goodluck/>
 			</Actions>
 			<Options>
-				<Option Goto="208" Text="Вам повезло"/>
-				<Option Goto="197" Text="Иначе"/>
+				<Option Goto="208" Text="Повезло"/>
+				<Option Goto="197" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="168">
@@ -1372,8 +1372,8 @@
 				<Goodluck/>
 			</Actions>
 			<Options>
-				<Option Goto="228" Text="Вам повезло"/>
-				<Option Goto="191" Text="Иначе"/>
+				<Option Goto="228" Text="Повезло"/>
+				<Option Goto="191" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="173">
@@ -1430,8 +1430,8 @@
 		</Paragraph>
 		<Paragraph No="180">
 			<Options>
-				<Option Goto="185" Text="Если записано «ОГОНЁК»" Availability="ОГОНЁК"/>
-				<Option Goto="224" Text="Если не записано «ОГОНЁК»" Availability="!ОГОНЁК"/>
+				<Option Goto="185" Text="У вас записано «ОГОНЁК»" Availability="ОГОНЁК"/>
+				<Option Goto="224" Text="У вас не записано «ОГОНЁК»" Availability="!ОГОНЁК"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="181">
@@ -1598,8 +1598,8 @@
 				<Goodluck/>
 			</Actions>
 			<Options>
-				<Option Goto="181" Text="Вам повезло"/>
-				<Option Goto="164" Text="Иначе"/>
+				<Option Goto="181" Text="Повезло"/>
+				<Option Goto="164" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="202">
@@ -1766,8 +1766,8 @@
 				<Goodluck/>
 			</Actions>
 			<Options>
-				<Option Goto="228" Text="Вам повезло"/>
-				<Option Goto="235" Text="Иначе"/>
+				<Option Goto="228" Text="Повезло"/>
+				<Option Goto="235" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="222">
@@ -1797,8 +1797,8 @@
 				<Goodluck/>
 			</Actions>
 			<Options>
-				<Option Goto="237" Text="Вам повезло"/>
-				<Option Goto="214" Text="Иначе"/>
+				<Option Goto="237" Text="Повезло"/>
+				<Option Goto="214" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="225">
@@ -1856,8 +1856,8 @@
 				<Goodluck/>
 			</Actions>
 			<Options>
-				<Option Goto="207" Text="Вам повезло"/>
-				<Option Goto="223" Text="Иначе"/>
+				<Option Goto="207" Text="Повезло"/>
+				<Option Goto="223" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="232">
@@ -1885,8 +1885,8 @@
 				<Goodluck/>
 			</Actions>
 			<Options>
-				<Option Goto="240" Text="Вам повезло"/>
-				<Option Goto="225" Text="Иначе"/>
+				<Option Goto="240" Text="Повезло"/>
+				<Option Goto="225" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="235">
@@ -1960,8 +1960,8 @@
 				<Goodluck/>
 			</Actions>
 			<Options>
-				<Option Goto="261" Text="Вам повезло"/>
-				<Option Goto="233" Text="Иначе"/>
+				<Option Goto="261" Text="Повезло"/>
+				<Option Goto="233" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="244">
@@ -2042,8 +2042,8 @@
 			</Texts>
 			<Triggers>ВАНЮТКА, ПЧЕЛА</Triggers>
 			<Options>
-				<Option Goto="366" Text="Если у вас записано «ГЕОРГ»" Availability="ГЕОРГ"/>
-				<Option Goto="256" Text="Если у вас не записано «ГЕОРГ»" Availability="!ГЕОРГ"/>
+				<Option Goto="366" Text="У вас записано «ГЕОРГ»" Availability="ГЕОРГ"/>
+				<Option Goto="256" Text="У вас не записано «ГЕОРГ»" Availability="!ГЕОРГ"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="254">
@@ -2059,8 +2059,8 @@
 			</Texts>
 			<Triggers>ВАНЮТКА</Triggers>
 			<Options>
-				<Option Goto="366" Text="Если у вас записано «ГЕОРГ»" Availability="ГЕОРГ"/>
-				<Option Goto="256" Text="Если у вас не записано «ГЕОРГ»" Availability="!ГЕОРГ"/>
+				<Option Goto="366" Text="У вас записано «ГЕОРГ»" Availability="ГЕОРГ"/>
+				<Option Goto="256" Text="У вас не записано «ГЕОРГ»" Availability="!ГЕОРГ"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="256">
@@ -2083,8 +2083,8 @@
 				<Goodluck/>
 			</Actions>
 			<Options>
-				<Option Goto="283" Text="Вам повезло"/>
-				<Option Goto="297" Text="Иначе"/>
+				<Option Goto="283" Text="Повезло"/>
+				<Option Goto="297" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="259">
@@ -2101,8 +2101,8 @@
 				<Goodluck/>
 			</Actions>
 			<Options>
-				<Option Goto="276" Text="Вам повезло"/>
-				<Option Goto="298" Text="Иначе"/>
+				<Option Goto="276" Text="Повезло"/>
+				<Option Goto="298" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="261">
@@ -2111,8 +2111,8 @@
 				<Text Style="Small">Запишите «ВАНЮТКА».\nЗапишите «ПЧЕЛА».</Text>
 			</Texts>
 			<Options>
-				<Option Goto="366" Text="Если у вас записано «ГЕОРГ»" Availability="ГЕОРГ"/>
-				<Option Goto="256" Text="Если у вас не записано «ГЕОРГ»" Availability="!ГЕОРГ"/>
+				<Option Goto="366" Text="У вас записано «ГЕОРГ»" Availability="ГЕОРГ"/>
+				<Option Goto="256" Text="У вас не записано «ГЕОРГ»" Availability="!ГЕОРГ"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="262">
@@ -2128,8 +2128,8 @@
 				<Goodluck/>
 			</Actions>
 			<Options>
-				<Option Goto="288" Text="Вам повезло"/>
-				<Option Goto="269" Text="Иначе"/>
+				<Option Goto="288" Text="Повезло"/>
+				<Option Goto="269" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="264">
@@ -2189,8 +2189,8 @@
 				<Goodluck/>
 			</Actions>
 			<Options>
-				<Option Goto="276" Text="Вам повезло"/>
-				<Option Goto="298" Text="Иначе"/>
+				<Option Goto="276" Text="Повезло"/>
+				<Option Goto="298" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="272">
@@ -2231,8 +2231,8 @@
 				<Goodluck/>
 			</Actions>
 			<Options>
-				<Option Goto="283" Text="Вам повезло"/>
-				<Option Goto="297" Text="Иначе"/>
+				<Option Goto="283" Text="Повезло"/>
+				<Option Goto="297" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="278">
@@ -2325,8 +2325,8 @@
 		</Paragraph>
 		<Paragraph No="290">
 			<Options>
-				<Option Goto="263" Text="Если записано «БРОСОК»" Availability="БРОСОК"/>
-				<Option Goto="280" Text="Если не записано «БРОСОК»" Availability="!БРОСОК"/>
+				<Option Goto="263" Text="У вас записано «БРОСОК»" Availability="БРОСОК"/>
+				<Option Goto="280" Text="У вас не записано «БРОСОК»" Availability="!БРОСОК"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="291">
@@ -2493,8 +2493,8 @@
 				<Goodluck/>
 			</Actions>
 			<Options>
-				<Option Goto="300" Text="Вам повезло"/>
-				<Option Goto="293" Text="Иначе"/>
+				<Option Goto="300" Text="Повезло"/>
+				<Option Goto="293" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="315">
@@ -2508,8 +2508,8 @@
 				<Goodluck/>
 			</Actions>
 			<Options>
-				<Option Goto="304" Text="Вам повезло"/>
-				<Option Goto="335" Text="Иначе"/>
+				<Option Goto="304" Text="Повезло"/>
+				<Option Goto="335" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="317">
@@ -2601,8 +2601,8 @@
 				<Goodluck/>
 			</Actions>
 			<Options>
-				<Option Goto="304" Text="Вам повезло"/>
-				<Option Goto="335" Text="Иначе"/>
+				<Option Goto="304" Text="Повезло"/>
+				<Option Goto="335" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="330">
@@ -2623,8 +2623,8 @@
 				<Goodluck/>
 			</Actions>
 			<Options>
-				<Option Goto="306" Text="Вам повезло"/>
-				<Option Goto="325" Text="Иначе"/>
+				<Option Goto="306" Text="Повезло"/>
+				<Option Goto="325" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="333">
@@ -2790,8 +2790,8 @@
 				<Goodluck/>
 			</Actions>
 			<Options>
-				<Option Goto="347" Text="Вам повезло"/>
-				<Option Goto="359" Text="Иначе"/>
+				<Option Goto="347" Text="Повезло"/>
+				<Option Goto="359" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="357">
@@ -2836,8 +2836,8 @@
 				<Goodluck/>
 			</Actions>
 			<Options>
-				<Option Goto="365" Text="Вам повезло"/>
-				<Option Goto="353" Text="Иначе"/>
+				<Option Goto="365" Text="Повезло"/>
+				<Option Goto="353" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="363">
@@ -2874,8 +2874,8 @@
 				<Goodluck/>
 			</Actions>
 			<Options>
-				<Option Goto="376" Text="Вам повезло"/>
-				<Option Goto="370" Text="Иначе"/>
+				<Option Goto="376" Text="Повезло"/>
+				<Option Goto="370" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="368">
@@ -2884,8 +2884,8 @@
 				<Goodluck/>
 			</Actions>
 			<Options>
-				<Option Goto="373" Text="Вам повезло"/>
-				<Option Goto="385" Text="Иначе"/>
+				<Option Goto="373" Text="Повезло"/>
+				<Option Goto="385" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="369">
@@ -2903,8 +2903,8 @@
 				<Goodluck/>
 			</Actions>
 			<Options>
-				<Option Goto="376" Text="Если вам повезло"/>
-				<Option Goto="390" Text="Иначе"/>
+				<Option Goto="376" Text="Повезло"/>
+				<Option Goto="390" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="371">
@@ -2926,8 +2926,8 @@
 				<Goodluck/>
 			</Actions>
 			<Options>
-				<Option Goto="379" Text="Вам повезло"/>
-				<Option Goto="385" Text="Иначе"/>
+				<Option Goto="379" Text="Повезло"/>
+				<Option Goto="385" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="374">
@@ -2949,8 +2949,8 @@
 				<Goodluck/>
 			</Actions>
 			<Options>
-				<Option Goto="371" Text="Вам повезло"/>
-				<Option Goto="389" Text="Иначе"/>
+				<Option Goto="371" Text="Повезло"/>
+				<Option Goto="389" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="377">
@@ -2984,8 +2984,8 @@
 				<Goodluck/>
 			</Actions>
 			<Options>
-				<Option Goto="398" Text="Если вам повезло"/>
-				<Option Goto="372" Text="Иначе"/>
+				<Option Goto="398" Text="Повезло"/>
+				<Option Goto="372" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="381">
@@ -2997,8 +2997,8 @@
 				<Goodluck/>
 			</Actions>
 			<Options>
-				<Option Goto="373" Text="Вам повезло"/>
-				<Option Goto="368" Text="Иначе"/>
+				<Option Goto="373" Text="Повезло"/>
+				<Option Goto="368" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="382">
@@ -3019,8 +3019,8 @@
 				<Goodluck/>
 			</Actions>
 			<Options>
-				<Option Goto="396" Text="Вам повезло"/>
-				<Option Goto="374" Text="Иначе"/>
+				<Option Goto="396" Text="Повезло"/>
+				<Option Goto="374" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="385">
@@ -3035,8 +3035,8 @@
 				<Goodluck/>
 			</Actions>
 			<Options>
-				<Option Goto="395" Text="Вам повезло"/>
-				<Option Goto="413" Text="Иначе"/>
+				<Option Goto="395" Text="Повезло"/>
+				<Option Goto="413" Text="Не повезло"/>
 				<Option Goto="406" Text="Восстановиться"/>
 			</Options>
 		</Paragraph>
@@ -3046,8 +3046,8 @@
 				<Goodluck/>
 			</Actions>
 			<Options>
-				<Option Goto="434" Text="Вам повезло"/>
-				<Option Goto="397" Text="Иначе"/>
+				<Option Goto="434" Text="Повезло"/>
+				<Option Goto="397" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="388">
@@ -3059,8 +3059,8 @@
 				<Goodluck/>
 			</Actions>
 			<Options>
-				<Option Goto="398" Text="Вам повезло"/>
-				<Option Goto="372" Text="Иначе"/>
+				<Option Goto="398" Text="Повезло"/>
+				<Option Goto="372" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="389">
@@ -3078,8 +3078,8 @@
 				<Goodluck/>
 			</Actions>
 			<Options>
-				<Option Goto="373" Text="Если вам повезло"/>
-				<Option Goto="368" Text="Иначе"/>
+				<Option Goto="373" Text="Повезло"/>
+				<Option Goto="368" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="391">
@@ -3094,8 +3094,8 @@
 				<Goodluck/>
 			</Actions>
 			<Options>
-				<Option Goto="420" Text="Вам повезло"/>
-				<Option Goto="387" Text="Иначе"/>
+				<Option Goto="420" Text="Повезло"/>
+				<Option Goto="387" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="393">
@@ -3110,8 +3110,8 @@
 				<Goodluck/>
 			</Actions>
 			<Options>
-				<Option Goto="398" Text="Вам повезло"/>
-				<Option Goto="380" Text="Иначе"/>
+				<Option Goto="398" Text="Повезло"/>
+				<Option Goto="380" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="395">
@@ -3120,8 +3120,8 @@
 				<Goodluck/>
 			</Actions>
 			<Options>
-				<Option Goto="409" Text="Вам повезло"/>
-				<Option Goto="415" Text="Иначе"/>
+				<Option Goto="409" Text="Повезло"/>
+				<Option Goto="415" Text="Не повезло"/>
 				<Option Goto="403" Text="Восстановиться"/>
 			</Options>
 		</Paragraph>
@@ -3137,8 +3137,8 @@
 				<Goodluck/>
 			</Actions>
 			<Options>
-				<Option Goto="425" Text="Вам повезло"/>
-				<Option Goto="405" Text="Иначе"/>
+				<Option Goto="425" Text="Повезло"/>
+				<Option Goto="405" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="398">
@@ -3157,8 +3157,8 @@
 				<Goodluck/>
 			</Actions>
 			<Options>
-				<Option Goto="373" Text="Вам повезло"/>
-				<Option Goto="385" Text="Иначе"/>
+				<Option Goto="373" Text="Повезло"/>
+				<Option Goto="385" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="400">
@@ -3195,8 +3195,8 @@
 				<Goodluck/>
 			</Actions>
 			<Options>
-				<Option Goto="409" Text="Вам повезло"/>
-				<Option Goto="426" Text="Иначе"/>
+				<Option Goto="409" Text="Повезло"/>
+				<Option Goto="426" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="404">
@@ -3211,8 +3211,8 @@
 				<Goodluck/>
 			</Actions>
 			<Options>
-				<Option Goto="419" Text="Вам повезло"/>
-				<Option Goto="414" Text="Иначе"/>
+				<Option Goto="419" Text="Повезло"/>
+				<Option Goto="414" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="406">
@@ -3224,8 +3224,8 @@
 				<Goodluck/>
 			</Actions>
 			<Options>
-				<Option Goto="415" Text="Вам повезло"/>
-				<Option Goto="426" Text="Иначе"/>
+				<Option Goto="415" Text="Повезло"/>
+				<Option Goto="426" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="407">
@@ -3270,8 +3270,8 @@
 				<Goodluck/>
 			</Actions>
 			<Options>
-				<Option Goto="435" Text="Вам повезло"/>
-				<Option Goto="424" Text="Иначе"/>
+				<Option Goto="435" Text="Повезло"/>
+				<Option Goto="424" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="413">
@@ -3283,8 +3283,8 @@
 				<Goodluck/>
 			</Actions>
 			<Options>
-				<Option Goto="415" Text="Если вам повезло"/>
-				<Option Goto="426" Text="Иначе"/>
+				<Option Goto="415" Text="Повезло"/>
+				<Option Goto="426" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="414">
@@ -3300,8 +3300,8 @@
 				<Goodluck/>
 			</Actions>
 			<Options>
-				<Option Goto="409" Text="Вам повезло"/>
-				<Option Goto="426" Text="Иначе"/>
+				<Option Goto="409" Text="Повезло"/>
+				<Option Goto="426" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="416">
@@ -3310,8 +3310,8 @@
 				<Goodluck/>
 			</Actions>
 			<Options>
-				<Option Goto="402" Text="Вам повезло"/>
-				<Option Goto="430" Text="Иначе"/>
+				<Option Goto="402" Text="Повезло"/>
+				<Option Goto="430" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="417">
@@ -3320,8 +3320,8 @@
 				<Goodluck/>
 			</Actions>
 			<Options>
-				<Option Goto="407" Text="Вам повезло"/>
-				<Option Goto="421" Text="Иначе"/>
+				<Option Goto="407" Text="Повезло"/>
+				<Option Goto="421" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="418">
@@ -3342,8 +3342,8 @@
 				<Goodluck/>
 			</Actions>
 			<Options>
-				<Option Goto="404" Text="Вам повезло"/>
-				<Option Goto="434" Text="Иначе"/>
+				<Option Goto="404" Text="Повезло"/>
+				<Option Goto="434" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="421">
@@ -3382,8 +3382,8 @@
 				<Goodluck/>
 			</Actions>
 			<Options>
-				<Option Goto="404" Text="Вам повезло"/>
-				<Option Goto="419" Text="Иначе"/>
+				<Option Goto="404" Text="Повезло"/>
+				<Option Goto="419" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="426">
@@ -3400,8 +3400,8 @@
 				<Goodluck/>
 			</Actions>
 			<Options>
-				<Option Goto="416" Text="Вам повезло"/>
-				<Option Goto="400" Text="Иначе"/>
+				<Option Goto="416" Text="Повезло"/>
+				<Option Goto="400" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="428">
@@ -3440,8 +3440,8 @@
 				<Goodluck/>
 			</Actions>
 			<Options>
-				<Option Goto="402" Text="Вам повезло"/>
-				<Option Goto="430" Text="Иначе"/>
+				<Option Goto="402" Text="Повезло"/>
+				<Option Goto="430" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="434">
@@ -3450,8 +3450,8 @@
 				<Goodluck/>
 			</Actions>
 			<Options>
-				<Option Goto="404" Text="Вам повезло"/>
-				<Option Goto="425" Text="Иначе"/>
+				<Option Goto="404" Text="Повезло"/>
+				<Option Goto="425" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="435">
@@ -3460,8 +3460,8 @@
 				<Goodluck/>
 			</Actions>
 			<Options>
-				<Option Goto="407" Text="Вам повезло"/>
-				<Option Goto="421" Text="Иначе"/>
+				<Option Goto="407" Text="Повезло"/>
+				<Option Goto="421" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="436">
