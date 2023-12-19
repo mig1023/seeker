@@ -4,28 +4,8 @@ using System.Linq;
 
 namespace Seeker.Gamebook.MentorsAlwaysRight
 {
-    class Services
+    class Fights
     {
-        public static int CureSpellCount() =>
-            Character.Protagonist.Spells.Where(x => x.Contains("ЛЕЧЕНИЕ")).Count();
-
-        public static bool GoodReaction(ref List<string> reaction, bool showResult = false)
-        {
-            int reactionLevel = (int)Math.Floor((double)Character.Protagonist.Hitpoints / 5);
-            reaction.Add($"Уровнь реакции: {Character.Protagonist.Hitpoints} / 5 = {reactionLevel}");
-
-            int reactionDice = Game.Dice.Roll();
-            bool goodReaction = reactionDice <= reactionLevel;
-            string reactionLine = goodReaction ? "<=" : ">";
-            reaction.Add($"Реакция: {Game.Dice.Symbol(reactionDice)} {reactionLine} {reactionLevel}");
-
-            if (showResult)
-                reaction.Add(goodReaction ? "BOLD|Реакции хватило" : "BOLD|Реакция подвела");
-
-            return goodReaction;
-        }
-
-
         public static void WinFightEnding(ref List<string> fight, int wounded, bool Poison, bool Regeneration)
         {
             if (IsPoisonedBlade())
