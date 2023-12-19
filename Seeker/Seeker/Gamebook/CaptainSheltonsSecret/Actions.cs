@@ -132,7 +132,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             List<string> luckCheck = new List<string>
             {
                 "Квадраты удачи:",
-                "BIG|" + Services.LuckNumbers()
+                "BIG|" + CaptainSheltonsSecret.Luck.Numbers()
             };
 
             int goodLuck = Game.Dice.Roll();
@@ -190,25 +190,13 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
         {
             List<string> luckRecovery = new List<string> { "Восстановление удачи:" };
 
-            bool success = false;
-
-            for (int i = 1; i < 7; i++)
-            {
-                if (!protagonist.Luck[i])
-                {
-                    luckRecovery.Add($"GOOD|Цифра {i} восстановлена!");
-                    protagonist.Luck[i] = true;
-                    success = true;
-
-                    break;
-                }
-            }                
+            bool success = CaptainSheltonsSecret.Luck.Recovery(luckRecovery);
 
             if (!success)
                 luckRecovery.Add("BAD|Все цифры и так счастливые!");
 
             luckRecovery.Add("Цифры удачи теперь:");
-            luckRecovery.Add("BIG|" + Services.LuckNumbers());
+            luckRecovery.Add("BIG|" + CaptainSheltonsSecret.Luck.Numbers());
 
             return luckRecovery;
         }
@@ -217,25 +205,13 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
         {
             List<string> luckLose = new List<string> { "Потеря удачи:" };
 
-            bool success = true;
-
-            for (int i = 1; i < 7; i++)
-            {
-                if (protagonist.Luck[i])
-                {
-                    luckLose.Add($"BAD|Цифра {i} стала несчастливой...");
-                    protagonist.Luck[i] = false;
-                    success = false;
-
-                    break;
-                }
-            }
+            bool success = CaptainSheltonsSecret.Luck.Lose(luckLose);
 
             if (success)
                 luckLose.Add("GOOD|Все цифры и так несчастливые!\nВам повезло хоть в чём-то!");
 
             luckLose.Add("Цифры удачи теперь:");
-            luckLose.Add("BIG|" + Services.LuckNumbers());
+            luckLose.Add("BIG|" + CaptainSheltonsSecret.Luck.Numbers());
 
             return luckLose;
         }
@@ -280,6 +256,9 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             return new List<string> { "RELOAD" };
         }
 
+        private static bool IsProtagonist(string name) =>
+            name == Character.Protagonist.Name;
+
         public List<string> Fight()
         {
             List<string> fight = new List<string>();
@@ -319,7 +298,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
 
                     if (GroupFight)
                     {
-                        string person = (Services.IsProtagonist(ally.Name) ? "Вы" : ally.Name);
+                        string person = (IsProtagonist(ally.Name) ? "Вы" : ally.Name);
                         fight.Add($"{person} (сила {ally.Endurance})");
                     }
 
@@ -339,7 +318,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                         {
                             Game.Dice.DoubleRoll(out firstAllyRoll, out secondAllyRoll);
                             allyHitStrength = firstAllyRoll + secondAllyRoll + (ally.Mastery - MasteryPenalty);
-                            string who = Services.IsProtagonist(ally.Name) ? "Ваша" : $"{ally.Name} -";
+                            string who = IsProtagonist(ally.Name) ? "Ваша" : $"{ally.Name} -";
 
                             fight.Add($"{who} мощность удара: " +
                                 $"{Game.Dice.Symbol(firstAllyRoll)} + {Game.Dice.Symbol(secondAllyRoll)} + " +
@@ -376,7 +355,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                                 {
                                     fight.Add(String.Empty);
 
-                                    bool heroOrAlly = GroupFight && !Services.IsProtagonist(ally.Name);
+                                    bool heroOrAlly = GroupFight && !IsProtagonist(ally.Name);
                                     string who = heroOrAlly ? $"{ally.Name} ПОБЕДИЛ" : "ВЫ ПОБЕДИЛИ";
 
                                     fight.Add($"BIG|GOOD|{who} :)");
@@ -391,7 +370,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                         }
                         else if (allyHitStrength < enemyHitStrength)
                         {
-                            bool isEnemy = GroupFight && !Services.IsProtagonist(ally.Name);
+                            bool isEnemy = GroupFight && !IsProtagonist(ally.Name);
                             fight.Add(isEnemy ? $"BAD|{ally.Name} ранен" : "BAD|Вы ранены");
                             ally.Endurance -= 2 + enemy.ExtendedDamage;
                             ally.Mastery -= enemy.MasteryDamage;
@@ -402,7 +381,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             {
                                 fight.Add(String.Empty);
 
-                                bool heroOrAlly = Services.IsProtagonist(ally.Name);
+                                bool heroOrAlly = IsProtagonist(ally.Name);
                                 string who = heroOrAlly ? "ВЫ ПРОИГРАЛИ" : $"{ally.Name} ПРОИГРАЛ";
 
                                 fight.Add($"BIG|BAD|{who} :(");
@@ -419,7 +398,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
 
                         if ((RoundsToWin > 0) && (RoundsToWin <= round))
                         {
-                            bool isHero = Services.IsProtagonist(ally.Name);
+                            bool isHero = IsProtagonist(ally.Name);
                             string result = isHero ? "ВЫ ПРОИГРАЛИ" : $"{ally.Name} ПРОИГРАЛ";
 
                             fight.Add(String.Empty);
