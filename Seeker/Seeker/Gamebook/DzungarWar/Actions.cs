@@ -27,7 +27,7 @@ namespace Seeker.Gamebook.DzungarWar
             }
             else if (Level > 0)
             {
-                int testResult = Services.TestLevelWithPenalty(Level, out List<string> _,
+                int testResult = Tests.LevelWithPenalty(Level, out List<string> _,
                     ref NextTestWithTincture, ref NextTestWithGinseng, ref NextTestWithAirag, TriggerTestPenalty);
 
                 return new List<string> { $"Проверка {Constants.StatNames[Stat]}, уровень {testResult}" };
@@ -268,8 +268,8 @@ namespace Seeker.Gamebook.DzungarWar
         {
             List<string> testLines = new List<string>();
 
-            Services.TestParam(Stat, Level, out bool testIsOk, out List<string> result,
-                ref NextTestWithTincture, ref NextTestWithGinseng, ref  NextTestWithAirag,
+            Tests.Param(Stat, Level, out bool testIsOk, out List<string> result,
+                ref NextTestWithTincture, ref NextTestWithGinseng, ref NextTestWithAirag,
                 GetProperty(protagonist, Stat), TriggerTestPenalty);
 
             testLines.AddRange(result);
@@ -333,7 +333,7 @@ namespace Seeker.Gamebook.DzungarWar
 
             foreach (string test in tests)
             {
-                Services.TestParam(test, levels[test], out bool thisTestIsOk, out List<string> result,
+                Tests.Param(test, levels[test], out bool thisTestIsOk, out List<string> result,
                     ref NextTestWithTincture, ref NextTestWithGinseng, ref NextTestWithAirag,
                     GetProperty(protagonist, test), TriggerTestPenalty);
 

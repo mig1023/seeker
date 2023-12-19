@@ -4,11 +4,11 @@ using System.Linq;
 
 namespace Seeker.Gamebook.DzungarWar
 {
-    class Services
+    class Tests
     {
-        public static int TestLevelWithPenalty(int level, out List<string> penaltyLine,
-            ref bool NextTestWithTincture, ref bool NextTestWithGinseng, ref bool NextTestWithAirag,
-            string TriggerTestPenalty)
+        public static int LevelWithPenalty(int level, out List<string> penaltyLine,
+            ref bool NextTestWithTincture, ref bool NextTestWithGinseng,
+            ref bool NextTestWithAirag, string TriggerTestPenalty)
         {
             penaltyLine = new List<string> { };
 
@@ -65,13 +65,14 @@ namespace Seeker.Gamebook.DzungarWar
             return level;
         }
 
-        public static void TestParam(string stat, int level, out bool result, out List<string> resultLine,
-            ref bool NextTestWithTincture, ref bool NextTestWithGinseng, ref bool NextTestWithAirag, int currentStat,
-            string TriggerTestPenalty)
+        public static void Param(string stat, int level, out bool result,
+            out List<string> resultLine, ref bool NextTestWithTincture,
+            ref bool NextTestWithGinseng, ref bool NextTestWithAirag,
+            int currentStat, string TriggerTestPenalty)
         {
             resultLine = new List<string>();
 
-            level = TestLevelWithPenalty(level, out List<string> penalties,
+            level = LevelWithPenalty(level, out List<string> penalties,
                 ref NextTestWithTincture, ref NextTestWithGinseng, ref NextTestWithAirag, TriggerTestPenalty);
 
             NextTestWithTincture = false;
