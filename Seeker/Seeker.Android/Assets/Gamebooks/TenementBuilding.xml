@@ -3003,8 +3003,8 @@
 		</Paragraph>
 		<Paragraph No="382">
 			<Options>
-				<Option Goto="411" Text="Если у вас записано «УЛИЦА»"/>
-				<Option Goto="393" Text="Иначе"/>
+				<Option Goto="411" Text="У вас записано «УЛИЦА»" Availability="УЛИЦА"/>
+				<Option Goto="393" Text="У вас не записано «УЛИЦА»" Availability="!УЛИЦА"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="383">
