@@ -5,11 +5,8 @@ using System.Text;
 
 namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 {
-    class Services
+    class Fencing
     {
-        public static string ToEcu(int ecu) =>
-            String.Format("{0:f2}", (double)ecu / 100).TrimEnd('0').TrimEnd(',').Replace(',', '.');
-
         public static bool NoMoreEnemies(List<Character> enemies, bool EnemyWoundsLimit) =>
             enemies.Where(x => x.Strength > (EnemyWoundsLimit ? 2 : 0)).Count() == 0;
 

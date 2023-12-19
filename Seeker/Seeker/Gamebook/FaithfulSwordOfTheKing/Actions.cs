@@ -27,12 +27,15 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
         };
 
+        private static string ToEcu(int ecu) =>
+            String.Format("{0:f2}", (double)ecu / 100).TrimEnd('0').TrimEnd(',').Replace(',', '.');
+
         public override List<string> AdditionalStatus()
         {
             List<string> statusLines = new List<string>();
 
             statusLines.Add($"    День: {protagonist.Day}");
-            statusLines.Add($"Экю: {Services.ToEcu(protagonist.Ecu)}");
+            statusLines.Add($"Экю: {ToEcu(protagonist.Ecu)}");
 
             if (protagonist.BulletsAndGubpowder > 0)
                 statusLines.Add($"Выстрелов: {protagonist.BulletsAndGubpowder}");
@@ -115,7 +118,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             List<string> enemies = new List<string>();
 
             if (Price > 0)
-                return new List<string> { $"{Head}, {Services.ToEcu(Price)} экю" };
+                return new List<string> { $"{Head}, {ToEcu(Price)} экю" };
 
             if (Type == "Get")
                 return new List<string> { Head };
@@ -357,10 +360,10 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                 if (pistol == 1)
                     fight.Add("Прежде всего пытаемся выстрелить из пистолета.");
 
-                if (Services.NoMoreEnemies(FightEnemies, EnemyWoundsLimit))
+                if (Fencing.NoMoreEnemies(FightEnemies, EnemyWoundsLimit))
                     continue;
 
-                bool hit = Services.LuckyHit(out int shootDice);
+                bool hit = Fencing.LuckyHit(out int shootDice);
 
                 protagonist.BulletsAndGubpowder -= 1;
 
@@ -384,7 +387,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                 }
             }
 
-            if (Services.NoMoreEnemies(FightEnemies, EnemyWoundsLimit))
+            if (Fencing.NoMoreEnemies(FightEnemies, EnemyWoundsLimit))
             {
                 return fight;
             }
@@ -451,7 +454,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                         {
                             fight.Add($"GOOD|{enemy.Name} ранен");
 
-                            bool enemyWound = Services.EnemyWound(protagonist, ref enemyInFight, FightEnemies,
+                            bool enemyWound = Fencing.EnemyWound(protagonist, ref enemyInFight, FightEnemies,
                                 protagonistRoll, WoundsToWin, ref enemyWounds, ref fight, EnemyWoundsLimit);
 
                             if (enemyWound)
@@ -482,11 +485,11 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
                             bool swordAndDagger = (protagonist.MeritalArt == Character.MeritalArts.SwordAndDagger);
 
-                            if (swordAndDagger && Services.LuckyHit(out _, protagonistRoll))
+                            if (swordAndDagger && Fencing.LuckyHit(out _, protagonistRoll))
                             {
                                 fight.Add($"GOOD|{enemy.Name} ранен вашим кинжалом");
 
-                                bool wound = Services.EnemyWound(protagonist, ref enemyInFight, FightEnemies,
+                                bool wound = Fencing.EnemyWound(protagonist, ref enemyInFight, FightEnemies,
                                     protagonistRoll, WoundsToWin, ref enemyWounds, ref fight, EnemyWoundsLimit, dagger: true);
 
                                 if (wound)
