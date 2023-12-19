@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Seeker.Gamebook.HowlOfTheWerewolf.Personages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -393,7 +394,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             Character enemy = Enemies[0];
             Actions action = this;
 
-            Services.PassageDice(out int dice, out int protagonistPassage);
+            Fights.PassageDice(out int dice, out int protagonistPassage);
 
             fight.Add($"Вы обороняете:" +
                 $"{Game.Dice.Symbol(dice)} / 2 = {protagonistPassage}," +
@@ -405,7 +406,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
             for (int wolf = 1; wolf <= 8; wolf++)
             {
-                Services.PassageDice(out int wolfDice, out int wolfPassage);
+                Fights.PassageDice(out int wolfDice, out int wolfPassage);
 
                 fight.Add($"{wolf} волк: " +
                     $"{Game.Dice.Symbol(wolfDice)} / 2 = {wolfPassage}, " +
@@ -455,18 +456,18 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             bool speed = ((Specificity == Specifics.NeedForSpeed) || (Specificity == Specifics.NeedForSpeedAndDead));
 
             if (Specificity == Specifics.Bats)
-                RoundsToFight = Services.MasteryRoundsToFight(ref fight);
+                RoundsToFight = Fights.MasteryRoundsToFight(ref fight);
 
             if (Specificity == Specifics.WaterWitch)
-                RoundsToWin = Services.MasteryRoundToWin(ref fight);
+                RoundsToWin = Fights.MasteryRoundToWin(ref fight);
 
             if (Specificity == Specifics.IncompleteCorpse)
-                Services.IncompleteCorpse(ref FightEnemies, ref fight);
+                IncompleteCorpse.Specificity(ref FightEnemies, ref fight);
 
             if ((protagonist.Crossbow > 0) && !invulnerable)
-                Services.CrossbowShot(ref FightEnemies, ref fight, ref enemyWounds);
+                Fights.CrossbowShot(ref FightEnemies, ref fight, ref enemyWounds);
 
-            bool gunShot = Services.GunShot(ref FightEnemies, ref fight, ref enemyWounds, WoundsToWin, WoundsLimit);
+            bool gunShot = Fights.GunShot(ref FightEnemies, ref fight, ref enemyWounds, WoundsToWin, WoundsLimit);
 
             if ((protagonist.Gun > 0) && !invulnerable && gunShot)
                 return fight;
@@ -544,10 +545,10 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
                         roundWins += 1;
 
-                        if ((Specificity == Specifics.GlassKnight) && Services.GlassKnightFight(ref fight))
+                        if ((Specificity == Specifics.GlassKnight) && GlassKnight.Fight(ref fight))
                             enemy.Endurance = 0;
 
-                        if (Services.EnemyWound(FightEnemies, ref enemyWounds, ref fight, WoundsToWin, WoundsLimit))
+                        if (Fights.EnemyWound(FightEnemies, ref enemyWounds, ref fight, WoundsToWin, WoundsLimit))
                             return fight;
                     }
                     else if (protagonistHitStrength > enemyHitStrength)
@@ -564,28 +565,28 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
                         if (Specificity == Specifics.WitchFight)
                         {
-                            Services.WitchFight(ref protagonist, ref fight);
+                            Witch.Fight(ref protagonist, ref fight);
                         }
                         else if (Specificity == Specifics.NeedForSpeedAndDead)
                         {
-                            if (Services.WerewolfDeadFight(ref protagonist, ref fight))
+                            if (Werewolf.DeadFight(ref protagonist, ref fight))
                                 return fight;
                         }
                         else if (Specificity == Specifics.BlackWidow)
                         {
-                            blackWidowLastAttack = Services.BlackWidow(ref protagonist, ref fight);
+                            blackWidowLastAttack = BlackWidow.Fight(ref protagonist, ref fight);
 
                             if (blackWidowLastAttack == 6)
                             {
                                 enemy.Endurance -= 2;
 
-                                if (Services.EnemyWound(FightEnemies, ref enemyWounds, ref fight, WoundsToWin, WoundsLimit))
+                                if (Fights.EnemyWound(FightEnemies, ref enemyWounds, ref fight, WoundsToWin, WoundsLimit))
                                     return fight;
                             }
                         }
                         else if (Specificity == Specifics.SnakeFight)
                         {
-                            HitStrengthBonus -= Services.SnakeFight(ref protagonist, ref fight, round);
+                            HitStrengthBonus -= Snake.Fight(ref protagonist, ref fight, round);
                         }
                         else if (Game.Option.IsTriggered("Кольчуга") && evenHit)
                         {
@@ -600,7 +601,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                         roundFails += 1;
                         protagonistWounds += 1;
 
-                        HitStrengthBonus -= Services.CheckAdditionalWounds(ref protagonist, ref fight,
+                        HitStrengthBonus -= Fights.CheckAdditionalWounds(ref protagonist, ref fight,
                             protagonistWounds, HitStrengthBonus, Specificity);
 
                         if (protagonistWounds == WoundsForTransformation)
@@ -627,12 +628,12 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                     attackAlready = true;
 
                     if (Specificity == Specifics.Ulrich) 
-                        enemy.Endurance -= Services.UlrichFight(enemy.Name, ref fight, enemyHitStrength);
+                        enemy.Endurance -= Ulrich.Fight(enemy.Name, ref fight, enemyHitStrength);
                     
                     if (protagonist.VanRichten > 0) 
-                        enemy.Endurance -= Services.VanRichtenFight(enemy.Name, ref fight, enemyHitStrength);
+                        enemy.Endurance -= VanRichten.Fight(enemy.Name, ref fight, enemyHitStrength);
 
-                    if (Services.EnemyWound(FightEnemies, ref enemyWounds, ref fight, WoundsToWin, WoundsLimit, onlyCheck: true))
+                    if (Fights.EnemyWound(FightEnemies, ref enemyWounds, ref fight, WoundsToWin, WoundsLimit, onlyCheck: true))
                         return fight;
 
                     bool enoughRounds = (RoundsToFight > 0) && (RoundsToFight <= round);
