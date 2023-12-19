@@ -2697,8 +2697,8 @@
 		</Paragraph>
 		<Paragraph No="343">
 			<Options>
-				<Option Goto="352" Text="Если у вас записано «ПРОПУСК»"/>
-				<Option Goto="356" Text="Иначе"/>
+				<Option Goto="352" Text="У вас записано «ПРОПУСК»" Availability="ПРОПУСК"/>
+				<Option Goto="356" Text="У вас не записано «ПРОПУСК»" Availability="!ПРОПУСК"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="344">
