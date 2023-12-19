@@ -2965,8 +2965,8 @@
 				<LuckRecovery/>
 			</Actions>
 			<Options>
-				<Option Goto="383" Text="Если у вас записано «ЧАСЫ»"/>
-				<Option Goto="386" Text="Иначе"/>
+				<Option Goto="383" Text="У вас записано «ЧАСЫ»" Availability="ЧАСЫ"/>
+				<Option Goto="386" Text="У вас не записано «ЧАСЫ»" Availability="!ЧАСЫ"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="379">
