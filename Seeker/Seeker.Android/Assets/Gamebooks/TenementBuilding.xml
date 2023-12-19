@@ -2780,8 +2780,8 @@
 		</Paragraph>
 		<Paragraph No="355">
 			<Options>
-				<Option Goto="340" Text="Если у вас записано «СВЕТ»"/>
-				<Option Goto="361" Text="Иначе"/>
+				<Option Goto="340" Text="У вас записано «СВЕТ»" Availability="СВЕТ"/>
+				<Option Goto="361" Text="У вас не записано «СВЕТ»" Availability="!СВЕТ"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="356">
