@@ -1730,8 +1730,8 @@
 		</Paragraph>
 		<Paragraph No="217">
 			<Options>
-				<Option Goto="231" Text="Если записано «ОГОНЁК»"/>
-				<Option Goto="249" Text="Иначе"/>
+				<Option Goto="231" Text="У вас записано слово «ОГОНЁК»" Availability="ОГОНЁК"/>
+				<Option Goto="249" Text="У вас не записано слово «ОГОНЁК»" Availability="!ОГОНЁК"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="218">
