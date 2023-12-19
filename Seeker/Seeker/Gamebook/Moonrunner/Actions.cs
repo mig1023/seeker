@@ -319,7 +319,7 @@ namespace Seeker.Gamebook.Moonrunner
 
                     if (ThreeDiceAttack && !Game.Option.IsTriggered("Акробатика"))
                     {
-                        List<int> dices = Services.TripleDiceRoll(out int failIndex);
+                        List<int> dices = Fights.TripleDiceRoll(out int failIndex);
 
                         enemyHitStrength += dices.Sum() - dices[failIndex] + enemy.Mastery;
 
@@ -352,7 +352,7 @@ namespace Seeker.Gamebook.Moonrunner
                     {
                         if (Invulnerable)
                         {
-                            fight.AddRange(Services.Luck(out bool goodLuck));
+                            fight.AddRange(Luck.Check(out bool goodLuck));
 
                             if (goodLuck)
                                 return fight;
@@ -363,7 +363,7 @@ namespace Seeker.Gamebook.Moonrunner
 
                             enemy.Endurance -= 2;
 
-                            bool enemyLost = Services.NoMoreEnemies(FightEnemies, WoundsLimit);
+                            bool enemyLost = Fights.NoMoreEnemies(FightEnemies, WoundsLimit);
 
                             if (enemyLost)
                             {
