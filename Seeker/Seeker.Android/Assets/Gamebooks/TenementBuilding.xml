@@ -2118,8 +2118,8 @@
 		<Paragraph No="262">
 			<Text>От этого места веяло сыростью и запахом влажной штукатурки. Внизу виднелась дверь, которая вела, очевидно, к кладовой.</Text>
 			<Options>
-				<Option Goto="274" Text="Если записано «ЦОКОЛЬ»"/>
-				<Option Goto="291" Text="Иначе"/>
+				<Option Goto="274" Text="Записано «ЦОКОЛЬ»" Availability="ЦОКОЛЬ"/>
+				<Option Goto="291" Text="Не записано «ЦОКОЛЬ»" Availability="!ЦОКОЛЬ"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="263">
