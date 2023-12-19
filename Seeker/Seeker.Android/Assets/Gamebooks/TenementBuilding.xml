@@ -3406,8 +3406,8 @@
 		</Paragraph>
 		<Paragraph No="428">
 			<Options>
-				<Option Goto="418" Text="Если у вас записано «БЕГСТВО»"/>
-				<Option Goto="436" Text="Иначе"/>
+				<Option Goto="418" Text="У вас записано «БЕГСТВО»" Availability="БЕГСТВО"/>
+				<Option Goto="436" Text="У вас не записано «БЕГСТВО»" Availability="!БЕГСТВО"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="429">
