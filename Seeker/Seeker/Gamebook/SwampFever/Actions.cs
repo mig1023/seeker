@@ -156,7 +156,7 @@ namespace Seeker.Gamebook.SwampFever
             bool upgradeInAction = false;
 
             for (int i = 1; i <= Constants.GetUpgrates.Count; i++)
-                upgrades += GetProperty(protagonist, Services.GetUpgratesValues(i, part: 1));
+                upgrades += GetProperty(protagonist, Details.GetUpgratesValues(i, part: 1));
 
             if (upgrades == 0)
                 return upgradeInAction;
@@ -169,14 +169,14 @@ namespace Seeker.Gamebook.SwampFever
 
             for (int i = 1; i <= Constants.GetUpgrates.Count; i++)
             {
-                if (GetProperty(protagonist, Services.GetUpgratesValues(i, part: 1)) == 0)
+                if (GetProperty(protagonist, Details.GetUpgratesValues(i, part: 1)) == 0)
                     continue;
 
                 bool inAction = upgradeDice == i;
                 string good = inAction ? "GOOD|" : String.Empty;
                 string action = inAction ? "В ДЕЙСТВИИ!" : "нет";
 
-                fight.Add($"{good}{Services.GetUpgratesValues(i, part: 2)} - {action}");
+                fight.Add($"{good}{Details.GetUpgratesValues(i, part: 2)} - {action}");
 
                 if (inAction)
                 {
@@ -240,7 +240,7 @@ namespace Seeker.Gamebook.SwampFever
                     fight.Add(String.Empty);
                     fight.Add("BOLD|МАНЕВРИРОВАНИЕ");
 
-                    int maneuvers = Services.CountInCombination(myCombination, 1);
+                    int maneuvers = Details.CountInCombination(myCombination, 1);
                     bool failManeuvers = true;
 
                     foreach (int dice in new int[] { 6, 5, 4 })
@@ -316,7 +316,7 @@ namespace Seeker.Gamebook.SwampFever
                             string bonuses = String.Empty;
 
                             int myDice = Game.Dice.Roll();
-                            int myBonus = Services.CountInCombination(myCombination, range);
+                            int myBonus = Details.CountInCombination(myCombination, range);
                             int myAttack = myDice + myBonus;
 
                             if (myBonus > 0)
@@ -327,7 +327,7 @@ namespace Seeker.Gamebook.SwampFever
                             bonuses = String.Empty;
 
                             int enemyDice = Game.Dice.Roll();
-                            int enemyBonus = Services.CountInCombination(enemyCombination, range);
+                            int enemyBonus = Details.CountInCombination(enemyCombination, range);
                             int enemyAttack = enemyDice + enemyBonus;
 
                             if (enemyBonus > 0)
@@ -373,8 +373,8 @@ namespace Seeker.Gamebook.SwampFever
                         string bonuses = String.Empty, penalties = String.Empty;
 
                         int myDice = Game.Dice.Roll();
-                        int myBonus = Services.CountInCombination(myCombination, 3);
-                        int myPenalty = Services.CountInCombination(enemyCombination, 2);
+                        int myBonus = Details.CountInCombination(myCombination, 3);
+                        int myPenalty = Details.CountInCombination(enemyCombination, 2);
                         int enemyEvasion = myDice + myBonus - myPenalty;
 
                         if (myBonus > 0)
@@ -418,8 +418,8 @@ namespace Seeker.Gamebook.SwampFever
                         string bonuses = String.Empty, penalties = String.Empty;
 
                         int enemyDice = Game.Dice.Roll();
-                        int enemyBonus = Services.CountInCombination(enemyCombination, 3);
-                        int enemyPenalty = Services.CountInCombination(myCombination, 2);
+                        int enemyBonus = Details.CountInCombination(enemyCombination, 3);
+                        int enemyPenalty = Details.CountInCombination(myCombination, 2);
                         int myEvasion = enemyDice + enemyBonus - enemyPenalty;
 
                         if (enemyBonus > 0)
@@ -517,7 +517,7 @@ namespace Seeker.Gamebook.SwampFever
                 string affLine = (affordable ? "GOOD|BOLD|" : String.Empty);
 
                 if (!anything)
-                    Services.PurchasesHeads(ref purchasesReport, affordable, prevAffordable);
+                    Details.PurchasesHeads(ref purchasesReport, affordable, prevAffordable);
 
                 purchasesReport.Add($"{affLine}{purchase.Key} — {purchase.Value} кредов.");
 
@@ -804,7 +804,7 @@ namespace Seeker.Gamebook.SwampFever
                     $"скорость: {Game.Dice.Symbol(mySpeed)}");
 
                 if ((myDirection == tumbleweedDirection) && (mySpeed == tumbleweedSpeed))
-                    return Services.PursuitWin(pursuitReport);
+                    return Details.PursuitWin(pursuitReport);
 
                 if (myDirection == tumbleweedDirection)
                 {
@@ -816,7 +816,7 @@ namespace Seeker.Gamebook.SwampFever
                         $"{Game.Dice.Symbol(mySpeed)}");
 
                     if (mySpeed == tumbleweedSpeed)
-                        return Services.PursuitWin(pursuitReport);
+                        return Details.PursuitWin(pursuitReport);
                 }
                 else if (mySpeed == tumbleweedSpeed)
                 {
@@ -827,7 +827,7 @@ namespace Seeker.Gamebook.SwampFever
                         $"{Game.Dice.Symbol(myDirection)}");
 
                     if (myDirection == tumbleweedDirection)
-                        return Services.PursuitWin(pursuitReport);
+                        return Details.PursuitWin(pursuitReport);
                 }
 
                 pursuitReport.Add("BAD|Настигнуть куст не удалось");
@@ -838,7 +838,7 @@ namespace Seeker.Gamebook.SwampFever
                 }
                 else if (reRoll)
                 {
-                    return Services.PursuitFail(pursuitReport);
+                    return Details.PursuitFail(pursuitReport);
                 }
                 else
                 {
@@ -861,7 +861,7 @@ namespace Seeker.Gamebook.SwampFever
                     }
                     else
                     {
-                        return Services.PursuitFail(pursuitReport);
+                        return Details.PursuitFail(pursuitReport);
                     }
                 }
 

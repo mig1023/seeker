@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace Seeker.Gamebook.SwampFever
 {
-    class Services
+    class Details
     {
         private static Character protagonist = Character.Protagonist;
 
