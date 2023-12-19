@@ -4,9 +4,9 @@ using System.Linq;
 
 namespace Seeker.Gamebook.LordOfTheSteppes
 {
-    class Services
+    class Fights
     {
-        public static bool IsProtagonist(string name) =>
+        private static bool IsProtagonist(string name) =>
             name == Character.Protagonist.Name;
 
         public static Character FindEnemyIn(List<Character> Enemies) =>
@@ -168,7 +168,8 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             }
         }
 
-        public static string Add(bool condition, string line) => condition ? line : String.Empty;
+        public static string Add(bool condition, string line) =>
+            condition ? line : String.Empty;
 
         public static int Attack(Character attacker, Character defender, ref List<string> fight, List<Character> Allies,
             ref Dictionary<string, int> WoundsCount, ref Dictionary<string, List<int>> AttackStory, int round, int coherenceIndex,

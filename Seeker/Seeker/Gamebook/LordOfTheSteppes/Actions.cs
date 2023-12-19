@@ -422,8 +422,8 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
                 do
                 {
-                    iProtagonist = Services.InitiativeAndDices(protagonist, out protagonistLine);
-                    iEnemy = Services.InitiativeAndDices(FightEnemies[0], out enemyLine);
+                    iProtagonist = Fights.InitiativeAndDices(protagonist, out protagonistLine);
+                    iEnemy = Fights.InitiativeAndDices(FightEnemies[0], out enemyLine);
                 }
                 while (iProtagonist == iEnemy);
 
@@ -431,22 +431,22 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
                 if (firstStrike && !enemyFirstStrike && !enemyIgnoreFirstStrike)
                 {
-                    Services.OutputInitiative(ref fight, FightEnemies, FightOrder,
+                    Fights.OutputInitiative(ref fight, FightEnemies, FightOrder,
                         protagonistLine, enemyLine, special: true);
                 }
                 else if (!firstStrike && enemyFirstStrike)
                 {
-                    Services.OutputInitiative(ref fight, FightEnemies, FightOrder,
+                    Fights.OutputInitiative(ref fight, FightEnemies, FightOrder,
                         protagonistLine, enemyLine, reverse: true, special: true);
                 }
                 else if (iProtagonist > iEnemy)
                 {
-                    Services.OutputInitiative(ref fight, FightEnemies, FightOrder,
+                    Fights.OutputInitiative(ref fight, FightEnemies, FightOrder,
                         protagonistLine, enemyLine);
                 }
                 else
                 {
-                    Services.OutputInitiative(ref fight, FightEnemies, FightOrder,
+                    Fights.OutputInitiative(ref fight, FightEnemies, FightOrder,
                         protagonistLine, enemyLine, reverse: true);
                 }
             }
@@ -459,7 +459,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
                 int coherenceIndex = 0;
 
-                protagonist.FightStyle = Services.ChooseFightStyle(ref fight,
+                protagonist.FightStyle = Fights.ChooseFightStyle(ref fight,
                     AttackStory, FightEnemies);
 
                 foreach (Character fighter in FightOrder)
@@ -467,7 +467,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                     if (fighter.Endurance <= 0)
                         continue;
 
-                    Character enemy = Services.FindEnemy(fighter, FightAllies, FightEnemies);
+                    Character enemy = Fights.FindEnemy(fighter, FightAllies, FightEnemies);
 
                     if (enemy == null)
                         continue;
@@ -483,7 +483,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                         fight.Add($"BOLD|{fighter.Name} атакует");
                     }
 
-                    enemyWounds += Services.Attack(fighter, enemy, ref fight,
+                    enemyWounds += Fights.Attack(fighter, enemy, ref fight,
                         FightAllies, ref WoundsCount, ref AttackStory, round,
                         coherenceIndex, Coherence, out bool reactionSuccess);
 
@@ -498,7 +498,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                         }
                         else
                         {
-                            enemyWounds += Services.Attack(fighter, enemy, ref fight, FightAllies,
+                            enemyWounds += Fights.Attack(fighter, enemy, ref fight, FightAllies,
                                 ref WoundsCount, ref AttackStory, round, coherenceIndex, Coherence,
                                 out bool _, supplAttack: true);
                         }
