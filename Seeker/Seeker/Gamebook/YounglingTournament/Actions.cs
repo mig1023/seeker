@@ -50,7 +50,7 @@ namespace Seeker.Gamebook.YounglingTournament
                     newStatuses.Add($"Уколов: {protagonist.Thrust} vs {protagonist.EnemyThrust}");
 
                 newStatuses.Add($"Понимание Силы: {protagonist.ForceTechniques.Values.Sum()}");
-                newStatuses.Add($"Форма {Services.GetSwordSkillName(Services.GetSwordType())}");
+                newStatuses.Add($"Форма {Fights.GetSwordSkillName(Fights.GetSwordType())}");
             }
 
             return newStatuses;
@@ -134,7 +134,7 @@ namespace Seeker.Gamebook.YounglingTournament
                         currectSwordTechniques = SwordTypes.Rivalry;
 
                     technique = $"\nиспользует Форму " +
-                        $"{Services.GetSwordSkillName(currectSwordTechniques, rang: enemy.Rang)}";
+                        $"{Fights.GetSwordSkillName(currectSwordTechniques, rang: enemy.Rang)}";
                 }
 
                 if (NoStrikeBack)
@@ -408,12 +408,12 @@ namespace Seeker.Gamebook.YounglingTournament
                 EnemiesList.Add(newEnemy);
             }
 
-            SwordTypes currectSwordTechniques = Services.GetSwordType();
+            SwordTypes currectSwordTechniques = Fights.GetSwordType();
 
             fight.Add($"Вы выбрали для боя Форму " +
-                $"{Services.GetSwordSkillName(currectSwordTechniques)}");
+                $"{Fights.GetSwordSkillName(currectSwordTechniques)}");
 
-            int skill = Services.SwordSkills(currectSwordTechniques, out string detail);
+            int skill = Fights.SwordSkills(currectSwordTechniques, out string detail);
 
             fight.Add($"Ваша Ловкость в этом бою: {skill} (по формуле: {detail})");
             fight.Add(String.Empty);
@@ -426,7 +426,7 @@ namespace Seeker.Gamebook.YounglingTournament
             {
                 fight.Add($"HEAD|BOLD|Раунд: {round}");
 
-                if (Services.UseForcesInFight(ref fight, ref speedActivate, EnemiesList, SpeedActivate, WithoutTechnique))
+                if (Fights.UseForcesInFight(ref fight, ref speedActivate, EnemiesList, SpeedActivate, WithoutTechnique))
                 {
                     int enemyLimit = (EnemyHitpointsLimith > 0 ? EnemyHitpointsLimith : 0);
 
@@ -441,7 +441,7 @@ namespace Seeker.Gamebook.YounglingTournament
                 {
                     Character target = EnemiesList.Where(x => x.Hitpoints > 0).FirstOrDefault();
 
-                    irresistibleAttack = Services.AdditionalAttack(ref fight, target,
+                    irresistibleAttack = Fights.AdditionalAttack(ref fight, target,
                         "Вы проводите Скоростную атаку!", "Урон от атаки");
                 }                  
 
@@ -494,7 +494,7 @@ namespace Seeker.Gamebook.YounglingTournament
 
                         if ((heroRoundWin >= 3) && !irresistibleAttack && Game.Option.IsTriggered("Неотразимая атака"))
                         {
-                            irresistibleAttack = Services.AdditionalAttack(ref fight, enemy.Key,
+                            irresistibleAttack = Fights.AdditionalAttack(ref fight, enemy.Key,
                                 "Вы проводите Неотразимую атаку!", "Урон от атаки");
                         }
                     }
@@ -510,7 +510,7 @@ namespace Seeker.Gamebook.YounglingTournament
 
                         if ((enemyRoundWin >= 3) && !strikeBack && Game.Option.IsTriggered("Встречный удар"))
                         {
-                            strikeBack = Services.AdditionalAttack(ref fight, enemy.Key,
+                            strikeBack = Fights.AdditionalAttack(ref fight, enemy.Key,
                                 "Вы проводите Встречный удар!", "Урон от удара");
                         }
                     }
@@ -522,10 +522,10 @@ namespace Seeker.Gamebook.YounglingTournament
 
                 if (speedActivate)
                 {
-                    Services.SpeedFightHitpointsLoss(ref fight, protagonist);
+                    Fights.SpeedFightHitpointsLoss(ref fight, protagonist);
 
                     foreach (Character enemy in EnemiesList.Where(x => x.Hitpoints > 0))
-                        Services.SpeedFightHitpointsLoss(ref fight, enemy);
+                        Fights.SpeedFightHitpointsLoss(ref fight, enemy);
                 }
 
                 fight.Add(String.Empty);

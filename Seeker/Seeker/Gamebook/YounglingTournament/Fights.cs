@@ -5,7 +5,7 @@ using static Seeker.Gamebook.YounglingTournament.Character;
 
 namespace Seeker.Gamebook.YounglingTournament
 {
-    class Services
+    class Fights
     {
         private static Character protagonist = Character.Protagonist;
 
