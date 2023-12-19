@@ -2,9 +2,9 @@
 
 namespace Seeker.Gamebook.ThoseWhoAreAboutToDie
 {
-    class Services
+    class Params
     {
-        public static bool OneParamFail(string oneOption)
+        public static bool Fail(string oneOption)
         {
             if (ParamFail("СИЛА", oneOption, Character.Protagonist.Strength))
             {
@@ -24,7 +24,7 @@ namespace Seeker.Gamebook.ThoseWhoAreAboutToDie
             }
         }
 
-        public static bool ParamFail(string paramName, string option, int param)
+        private static bool ParamFail(string paramName, string option, int param)
         {
             int level = Game.Services.LevelParse(option);
 

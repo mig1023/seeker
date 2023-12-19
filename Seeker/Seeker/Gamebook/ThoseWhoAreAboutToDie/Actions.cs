@@ -27,7 +27,7 @@ namespace Seeker.Gamebook.ThoseWhoAreAboutToDie
             }
             else if (option.Contains("|"))
             {
-                return option.Split('|').Where(x => !Services.OneParamFail(x) || Game.Option.IsTriggered(x.Trim())).Count() > 0;
+                return option.Split('|').Where(x => !Params.Fail(x) || Game.Option.IsTriggered(x.Trim())).Count() > 0;
             }
             else
             {
@@ -35,7 +35,7 @@ namespace Seeker.Gamebook.ThoseWhoAreAboutToDie
                 {
                     if (oneOption.Contains(">") || oneOption.Contains("<"))
                     {
-                        if (Services.OneParamFail(oneOption))
+                        if (Params.Fail(oneOption))
                             return false;
                     }
                     else if (oneOption.Contains("!"))
