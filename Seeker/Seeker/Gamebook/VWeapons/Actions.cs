@@ -61,11 +61,11 @@ namespace Seeker.Gamebook.VWeapons
             }
             else if (option == "specialCheck")
             {
-                return (option.Contains("!") ? !Services.SpecialCheck() : Services.SpecialCheck());
+                return (option.Contains("!") ? !Checks.Special() : Checks.Special());
             }
             else if (option == "specialFCheck")
             {
-                return (option.Contains("!") ? !Services.SpecialFCheck() : Services.SpecialFCheck());
+                return (option.Contains("!") ? !Checks.SpecialF() : Checks.SpecialF());
             }
             else if (option.Contains("|"))
             {
@@ -124,7 +124,7 @@ namespace Seeker.Gamebook.VWeapons
             }
             else
             {
-                Services.ProtagonistWound(protagonist, ref damage, target, Value);
+                Fights.ProtagonistWound(protagonist, ref damage, target, Value);
             }
 
             return damage;
@@ -204,7 +204,7 @@ namespace Seeker.Gamebook.VWeapons
             foreach (Character enemy in Enemies)
                 FightEnemies.Add(enemy.Clone());
 
-            bool noCartridges = Services.NoMoreCartridges(FightEnemies) && protagonist.Cartridges <= 0;
+            bool noCartridges = Fights.NoMoreCartridges(FightEnemies) && protagonist.Cartridges <= 0;
             bool dogFightprotagonist, dogfight = Dogfight || noCartridges;
             int damagedWeapon = 2;
 
@@ -220,7 +220,7 @@ namespace Seeker.Gamebook.VWeapons
 
                     fight.Add($"BOLD|{enemy.Name}, здоровье {enemy.Hitpoints}{cartridgesLine}");
 
-                    if (enemy.First && Services.EnemyAttack(protagonist, enemy, ref fight, Dogfight))
+                    if (enemy.First && Fights.EnemyAttack(protagonist, enemy, ref fight, Dogfight))
                         return fight;
 
                     if (DamagedWeapon)
@@ -270,12 +270,12 @@ namespace Seeker.Gamebook.VWeapons
                     {
                         fight.Add($"GOOD|{enemy.Name} убит!");
                     }
-                    else if (!enemy.First && Services.EnemyAttack(protagonist, enemy, ref fight, Dogfight))
+                    else if (!enemy.First && Fights.EnemyAttack(protagonist, enemy, ref fight, Dogfight))
                     {
                         return fight;
                     }
 
-                    if (Services.NoMoreEnemies(FightEnemies))
+                    if (Fights.NoMoreEnemies(FightEnemies))
                     {
                         fight.Add(String.Empty);
                         fight.Add("BIG|GOOD|Вы ПОБЕДИЛИ :)");

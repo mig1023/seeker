@@ -4,20 +4,8 @@ using System.Linq;
 
 namespace Seeker.Gamebook.VWeapons
 {
-    class Services
+    class Fights
     {
-        public static bool SpecialCheck()
-        {
-            bool mt = Game.Option.IsTriggered("Mt");
-            bool p = Game.Option.IsTriggered("P");
-            bool b = Game.Option.IsTriggered("B");
-
-            return (mt || p) && !b && Character.Protagonist.Suspicions <= 3;
-        }
-
-        public static bool SpecialFCheck() =>
-            ((Character.Protagonist.Suspicions >= 4) && !Game.Option.IsTriggered("F"));
-
         public static bool NoMoreEnemies(List<Character> enemies) =>
             enemies.Where(x => x.Hitpoints > 0).Count() == 0;
 
