@@ -2763,8 +2763,13 @@
 				<Option Goto="256" Text="Начать историю Карла сначала"/>
 				<Option Goto="354" Text="Вернуться к контрольной точке"/>
 				<Option Goto="1" Text="Вернуться к выбору героя"/>
-				<Option Goto="4" Text="Выбрать историю Ивана Сироткина. Запишите «АРКА». Запишите «ГЕОРГ»"/>
-				<Option Goto="366" Text="Если у вас записано «ВАНЮТКА», то запишите «АРКА»"/>
+				<Option Goto="4" Text="Выбрать историю Ивана Сироткина">
+					<Trigger Value="АРКА"/>
+					<Trigger Value="ГЕОРГ"/>
+				</Option>
+				<Option Goto="366" Text="Если у вас записано «ВАНЮТКА»" Availability="ВАНЮТКА">
+					<Trigger Value="АРКА"/>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph No="354">
