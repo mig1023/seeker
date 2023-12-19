@@ -62,7 +62,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             if (Game.Data.Constants.GetParagraphsWithoutStaticsButtons().Contains(Game.Data.CurrentParagraphID))
                 return staticButtons;
 
-            if (Services.IsPosibleResurrection())
+            if (Resurrection.IsPosible())
                 staticButtons.Add("ВОЗЗВАТЬ К ЗЕВСУ ЗА РАВНОДУШИЕМ");
 
             if (protagonist.Resurrection > 0)
@@ -165,7 +165,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                 }
                     
                 if (option.Contains("ВОСКРЕШЕНИЕ"))
-                    return Services.IsPosibleResurrection();
+                    return Resurrection.IsPosible();
 
                 values = option.Split('>', '=');
                 int level = (values.Length > 1 ? int.Parse(values[1]) : 0);
@@ -464,7 +464,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             List<Character> FightEnemies = new List<Character>();
 
             foreach (Character enemy in Enemies)
-                FightEnemies.Add(enemy.Clone(Services.WoundConverter(Wound, LastWound)));
+                FightEnemies.Add(enemy.Clone(Fights.WoundConverter(Wound, LastWound)));
 
             int round = 1;
 
@@ -510,7 +510,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                     string secondRollLine = String.Empty;
                     bool autoFail = false;
 
-                    if ((protagonist.Health > 1) || Services.EveryoneIsSeriouslyWounded(protagonist, FightEnemies))
+                    if ((protagonist.Health > 1) || Fights.EveryoneIsSeriouslyWounded(protagonist, FightEnemies))
                     {
                         protagonistRollSecond = Game.Dice.Roll();
                         secondRollLine = $" + {Game.Dice.Symbol(protagonistRollSecond)}";
@@ -518,7 +518,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                     }
                     else
                     {
-                        Services.OnlyOneDice(ref fight);
+                        Fights.OnlyOneDice(ref fight);
                         autoFail = (protagonistRollFirst == 1);
                     }
 
@@ -529,7 +529,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
                     string useGloryLine = String.Empty;
 
-                    int useGlory = Services.UseGloryInFight(enemy,
+                    int useGlory = Fights.UseGloryInFight(enemy,
                         protagonistHitStrength, autoHit, autoFail, ref fight);
 
                     if (useGlory > 0)
@@ -561,7 +561,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
                         enemy.Health -= 1;
 
-                        bool enemyLost = Services.NoMoreEnemies(FightEnemies, noHealthy: !FightToDeath);
+                        bool enemyLost = Fights.NoMoreEnemies(FightEnemies, noHealthy: !FightToDeath);
 
                         if (enemyLost)
                         {
@@ -579,7 +579,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                     int enemyRollSecond = 0;
                     string ememySecondRollLine = String.Empty;
 
-                    if ((enemy.Health > 1) || Services.EveryoneIsSeriouslyWounded(protagonist, FightEnemies))
+                    if ((enemy.Health > 1) || Fights.EveryoneIsSeriouslyWounded(protagonist, FightEnemies))
                     {
                         enemyRollSecond = Game.Dice.Roll();
                         ememySecondRollLine = $" + {Game.Dice.Symbol(enemyRollSecond)}";
@@ -587,7 +587,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                     }
                     else
                     {
-                        Services.OnlyOneDice(ref fight);
+                        Fights.OnlyOneDice(ref fight);
                         autoFail = (enemyRollFirst == 1);
                     }
 
@@ -595,7 +595,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
                     int enemyHitStrength = enemyRollFirst + enemyRollSecond + enemy.Strength;
 
-                    int comradesBonus = Services.ComradeBonus(FightEnemies, currentEnemy);
+                    int comradesBonus = Fights.ComradeBonus(FightEnemies, currentEnemy);
                     string comradesBonusLine = String.Empty;
 
                     if (comradesBonus > 0)

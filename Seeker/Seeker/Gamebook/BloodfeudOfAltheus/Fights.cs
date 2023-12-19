@@ -2,17 +2,8 @@
 
 namespace Seeker.Gamebook.BloodfeudOfAltheus
 {
-    class Services
+    class Fights
     {
-        public static bool IsPosibleResurrection()
-        {
-            bool normal = (Character.Protagonist.Resurrection > 0);
-            bool glory = (Character.Protagonist.Glory - Character.Protagonist.Shame) >= 10;
-            bool brooch = (Character.Protagonist.BroochResurrection > 0) && glory;
-
-            return (normal || brooch);
-        }
-
         public static int WoundConverter(bool Wound, bool LastWound)
         {
             if (LastWound)
