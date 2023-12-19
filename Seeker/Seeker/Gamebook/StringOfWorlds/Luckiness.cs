@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace Seeker.Gamebook.StringOfWorlds
 {
-    class Services
+    class Luckiness
     {
-        public static string LuckNumbers()
+        public static string Numbers()
         {
             string luckListShow = String.Empty;
 
@@ -18,8 +16,5 @@ namespace Seeker.Gamebook.StringOfWorlds
 
             return luckListShow;
         }
-
-        public static bool NoMoreEnemies(List<Character> enemies, bool EnemyWoundsLimit) =>
-            enemies.Where(x => x.Strength > (EnemyWoundsLimit ? 2 : 0)).Count() == 0;
     }
 }

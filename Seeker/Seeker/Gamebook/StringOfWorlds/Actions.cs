@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Seeker.Gamebook.StringOfWorlds
 {
@@ -108,7 +109,7 @@ namespace Seeker.Gamebook.StringOfWorlds
             List<string> luckCheck = new List<string>
             {
                 "Цифры удачи:",
-                "BIG|" + Services.LuckNumbers()
+                "BIG|" + Luckiness.Numbers()
             };
 
             int goodLuck = Game.Dice.Roll();
@@ -145,7 +146,7 @@ namespace Seeker.Gamebook.StringOfWorlds
                 luckRecovery.Add("BAD|Все цифры и так счастливые!");
 
             luckRecovery.Add("Цифры удачи теперь:");
-            luckRecovery.Add("BIG|" + Services.LuckNumbers());
+            luckRecovery.Add("BIG|" + Luckiness.Numbers());
 
             return luckRecovery;
         }
@@ -327,6 +328,9 @@ namespace Seeker.Gamebook.StringOfWorlds
             return new List<string> { "RELOAD" };
         }
 
+        private static bool NoMoreEnemies(List<Character> enemies, bool EnemyWoundsLimit) =>
+            enemies.Where(x => x.Strength > (EnemyWoundsLimit ? 2 : 0)).Count() == 0;
+
         public List<string> Fight()
         {
             List<string> fight = new List<string>();
@@ -381,7 +385,7 @@ namespace Seeker.Gamebook.StringOfWorlds
 
                         enemy.Strength -= 2;
 
-                        bool enemyLost = Services.NoMoreEnemies(FightEnemies, EnemyWoundsLimit);
+                        bool enemyLost = NoMoreEnemies(FightEnemies, EnemyWoundsLimit);
 
                         if (enemyLost)
                         {
