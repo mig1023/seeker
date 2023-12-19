@@ -2820,8 +2820,8 @@
 		</Paragraph>
 		<Paragraph No="360">
 			<Options>
-				<Option Goto="344" Text="Если у вас записано «СТЕКЛО»"/>
-				<Option Goto="354" Text="Иначе"/>
+				<Option Goto="344" Text="У вас записано «СТЕКЛО»" Availability="СТЕКЛО"/>
+				<Option Goto="354" Text="У вас не записано «СТЕКЛО»" Availability="!СТЕКЛО"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="361">
