@@ -294,7 +294,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                         {
                             fight.Add($"BOLD|{enemy.Name} не смог вас ранить");
                         }
-                        else if (Services.WoundAndDeath(ref fight, ref protagonist, enemy.Name))
+                        else if (Enemy.WoundAndDeath(ref fight, ref protagonist, enemy.Name))
                         {
                             return fight;
                         }
@@ -308,13 +308,13 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                             fight.Add("GOOD|Вы наносите шершню удар Мгновенной Смерти");
                             fight.Add("BAD|Но вы теряете 6 пунктов выносливости");
 
-                            if (Services.WoundAndDeath(ref fight, ref protagonist, enemy.Name, wounds: 6))
+                            if (Enemy.WoundAndDeath(ref fight, ref protagonist, enemy.Name, wounds: 6))
                             {
                                 return fight;
                             }
                             else
                             {
-                                fight.Add(String.Empty);
+                                fight.Add(string.Empty);
                                 fight.Add("BIG|GOOD|Вы ПОБЕДИЛИ :)");
 
                                 return fight;
@@ -347,7 +347,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                         enemyWounds += 1;
                         previousRoundWound = true;
 
-                        bool enemyLost = Services.NoMoreEnemies(FightEnemies);
+                        bool enemyLost = Enemy.NoMore(FightEnemies);
 
                         if (enemyLost || ((WoundsToWin > 0) && (WoundsToWin <= enemyWounds)))
                         {
@@ -363,7 +363,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                     }
                     else if (protagonistHitStrength < enemyHitStrength)
                     {
-                        if (Services.WoundAndDeath(ref fight, ref protagonist, enemy.Name))
+                        if (Enemy.WoundAndDeath(ref fight, ref protagonist, enemy.Name))
                             return fight;
                     }
                     else

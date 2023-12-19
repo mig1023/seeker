@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace Seeker.Gamebook.CreatureOfHavoc
 {
-    class Services
+    class Enemy
     {
         public static bool WoundAndDeath(ref List<string> fight, ref Character protagonist, string enemy, int wounds = 2)
         {
@@ -25,7 +25,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
             }
         }
 
-        public static bool NoMoreEnemies(List<Character> enemies) =>
+        public static bool NoMore(List<Character> enemies) =>
             enemies.Where(x => x.Endurance > 0).Count() == 0;
     }
 }
