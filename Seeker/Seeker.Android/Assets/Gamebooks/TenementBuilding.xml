@@ -2325,8 +2325,8 @@
 		</Paragraph>
 		<Paragraph No="290">
 			<Options>
-				<Option Goto="263" Text="Если записано «БРОСОК»"/>
-				<Option Goto="280" Text="Иначе"/>
+				<Option Goto="263" Text="Если записано «БРОСОК»" Availability="БРОСОК"/>
+				<Option Goto="280" Text="Если не записано «БРОСОК»" Availability="!БРОСОК"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="291">
