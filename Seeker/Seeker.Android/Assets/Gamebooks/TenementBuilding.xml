@@ -3430,8 +3430,8 @@
 		</Paragraph>
 		<Paragraph No="432">
 			<Options>
-				<Option Goto="422" Text="Если у вас записано «ПЧЕЛА»"/>
-				<Option Goto="428" Text="Иначе"/>
+				<Option Goto="422" Text="У вас записано «ПЧЕЛА»" Availability="ПЧЕЛА"/>
+				<Option Goto="428" Text="У вас не записано «ПЧЕЛА»" Availability="!ПЧЕЛА"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="433">
