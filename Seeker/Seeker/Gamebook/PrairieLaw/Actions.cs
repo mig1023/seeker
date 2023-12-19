@@ -28,9 +28,15 @@ namespace Seeker.Gamebook.PrairieLaw
 
         public override List<string> AdditionalStatus() => new List<string>
         {
-            $"Долларов: {Services.ToDollars(protagonist.Cents)}",
+            $"Долларов: {ToDollars(protagonist.Cents)}",
             $"Патронов: {protagonist.Cartridges}",
         };
+
+        private static string ToDollars(int cents)
+        {
+            double dollars = (double)cents / 100;
+            return $"{dollars:f2}".Replace(',', '.');
+        }
 
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
             GameOverBy(protagonist.Strength, out toEndParagraph, out toEndText);
@@ -41,7 +47,7 @@ namespace Seeker.Gamebook.PrairieLaw
 
             if (Price > 0)
             {
-                return new List<string> { $"{Head}, {Services.ToDollars(Price)}$" };
+                return new List<string> { $"{Head}, {ToDollars(Price)}$" };
             }
             else if (!String.IsNullOrEmpty(Head))
             {
@@ -114,7 +120,7 @@ namespace Seeker.Gamebook.PrairieLaw
             List<string> luckCheck = new List<string>
             {
                 "Цифры удачи:",
-                "BIG|" + Services.LuckNumbers()
+                "BIG|" + Luckiness.Numbers()
             };
 
             int goodLuck = Game.Dice.Roll();
@@ -132,19 +138,7 @@ namespace Seeker.Gamebook.PrairieLaw
         {
             List<string> luckRecovery = new List<string> { "Восстановление удачи:" };
 
-            bool success = false;
-
-            for (int i = 1; i < 7; i++)
-            {
-                if (!protagonist.Luck[i])
-                {
-                    luckRecovery.Add($"GOOD|Цифра {i} восстановлена!");
-                    protagonist.Luck[i] = true;
-                    success = true;
-
-                    break;
-                }
-            }
+            bool success = Luckiness.Recovery(luckRecovery);
 
             if (!success)
             {
@@ -152,7 +146,7 @@ namespace Seeker.Gamebook.PrairieLaw
             }
 
             luckRecovery.Add("Цифры удачи теперь:");
-            luckRecovery.Add("BIG|" + Services.LuckNumbers());
+            luckRecovery.Add("BIG|" + Luckiness.Numbers());
 
             return luckRecovery;
         }
@@ -279,7 +273,7 @@ namespace Seeker.Gamebook.PrairieLaw
                 {
                     int price = (anySkin ? prices["Любая шкура"] : prices[skin]);
 
-                    salesReport.Add($"{skin} - купил за {Services.ToDollars(price)}$");
+                    salesReport.Add($"{skin} - купил за {ToDollars(price)}$");
                     cents += price;
                     saledIndexes.Add(index);
                     sold += 1;
@@ -300,7 +294,7 @@ namespace Seeker.Gamebook.PrairieLaw
             salesReport.Add(String.Empty);
             salesReport.Add("BIG|ИТОГО:");
             salesReport.Add($"Вы продали шкур: {sold}");
-            salesReport.Add($"GOOD|Вы получили: {Services.ToDollars(cents)}$");
+            salesReport.Add($"GOOD|Вы получили: {ToDollars(cents)}$");
 
             protagonist.Cents += cents;
 
@@ -316,8 +310,8 @@ namespace Seeker.Gamebook.PrairieLaw
             protagonist.Cents += cents;
 
             salesReport.Add($"Вы продали самородков: {protagonist.Nuggets}");
-            salesReport.Add($"Цена за один: {Services.ToDollars(price)}$");
-            salesReport.Add($"GOOD|Вы получили: {Services.ToDollars(cents)}$");
+            salesReport.Add($"Цена за один: {ToDollars(price)}$");
+            salesReport.Add($"GOOD|Вы получили: {ToDollars(cents)}$");
 
             protagonist.Nuggets = 0;
 
@@ -457,7 +451,7 @@ namespace Seeker.Gamebook.PrairieLaw
 
             while (true)
             {
-                firefight = Services.FirefightContinue(FightEnemies, ref fight, firefight);
+                firefight = Fights.FirefightContinue(FightEnemies, ref fight, firefight);
 
                 fight.Add($"HEAD|BOLD|Раунд: {round}");
 
@@ -520,7 +514,7 @@ namespace Seeker.Gamebook.PrairieLaw
 
                         enemy.Strength -= (firefight ? 3 : 2);
 
-                        bool enemyLost = Services.NoMoreEnemies(FightEnemies, EnemyWoundsLimit);
+                        bool enemyLost = Fights.NoMoreEnemies(FightEnemies, EnemyWoundsLimit);
 
                         if (enemyLost)
                         {
