@@ -4,9 +4,9 @@ using System.Linq;
 
 namespace Seeker.Gamebook.BlackCastleDungeon
 {
-    class Services
+    class Fights
     {
-        public static bool ParagraphWithFight(string spell)
+        public static bool ParagraphWith(string spell)
         {
             if (Game.Data.CurrentParagraph.Actions == null)
                 return false;
@@ -27,7 +27,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             return false;
         }
 
-        public static bool WinInFight(ref List<string> fight, ref int round, ref Character protagonist,
+        public static bool Win(ref List<string> fight, ref int round, ref Character protagonist,
             ref List<Character> FightEnemies, ref int enemyWounds, int StrengthPenlty, int WoundsToWin,
             int RoundsToWin, int ExtendedDamage, bool copyFight = false)
         {

@@ -77,7 +77,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             {
                 bool spellAvailable = protagonist.Spells.Contains(spell) && !SpellActivate[spell];
 
-                if (Services.ParagraphWithFight(spell) && spellAvailable)
+                if (Fights.ParagraphWith(spell) && spellAvailable)
                     staticButtons.Add(spell);
             }
 
@@ -239,7 +239,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                 Character enemyCopy = FightEnemies[0].Clone();
                 enemyCopy.Name += "-копия";
 
-                bool copyWin = Services.WinInFight(ref fight, ref round, ref enemyCopy,
+                bool copyWin = Fights.Win(ref fight, ref round, ref enemyCopy,
                     ref FightEnemies, ref enemyWounds, StrengthPenlty, WoundsToWin, RoundsToWin,
                     ExtendedDamage, copyFight: true);
 
@@ -277,7 +277,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                 fight.Add(String.Empty);
             }
 
-            bool win = Services.WinInFight(ref fight, ref round, ref protagonist, ref FightEnemies,
+            bool win = Fights.Win(ref fight, ref round, ref protagonist, ref FightEnemies,
                 ref enemyWounds, StrengthPenlty, WoundsToWin, RoundsToWin, ExtendedDamage);
 
             protagonist.Mastery = oldMastery;
