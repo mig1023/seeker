@@ -1977,8 +1977,8 @@
 			</Texts>
 			<Triggers>ВАНЮТКА</Triggers>
 			<Options>
-				<Option Goto="366" Text="Если у вас записано «ГЕОРГ»"/>
-				<Option Goto="256" Text="Иначе"/>
+				<Option Goto="366" Text="У вас записано «ГЕОРГ»" Availability="ГЕОРГ"/>
+				<Option Goto="256" Text="У вас не записано «ГЕОРГ»" Availability="!ГЕОРГ"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="246">
