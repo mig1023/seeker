@@ -3201,8 +3201,8 @@
 		</Paragraph>
 		<Paragraph No="404">
 			<Options>
-				<Option Goto="417" Text="Если у вас записано «СТЕКЛО»"/>
-				<Option Goto="433" Text="Иначе"/>
+				<Option Goto="417" Text="У вас записано «СТЕКЛО»" Availability="СТЕКЛО"/>
+				<Option Goto="433" Text="У вас не записано «СТЕКЛО»" Availability="!СТЕКЛО"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="405">
