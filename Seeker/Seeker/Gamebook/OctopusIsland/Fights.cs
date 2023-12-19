@@ -4,20 +4,9 @@ using System.Linq;
 
 namespace Seeker.Gamebook.OctopusIsland
 {
-    class Services
+    class Fights
     {
         private static Character protagonist = Character.Protagonist;
-
-        public static int LifeGivingOintmentFor(int protagonistHitpoint)
-        {
-            while ((protagonist.LifeGivingOintment > 0) && (protagonistHitpoint < 20))
-            {
-                protagonist.LifeGivingOintment -= 1;
-                protagonistHitpoint += 1;
-            }
-
-            return protagonistHitpoint;
-        }
 
         public static bool NoMoreEnemies(List<Character> enemies) =>
             enemies.Where(x => x.Hitpoint > 0).Count() == 0;

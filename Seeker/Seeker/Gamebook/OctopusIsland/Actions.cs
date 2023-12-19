@@ -68,20 +68,20 @@ namespace Seeker.Gamebook.OctopusIsland
         {
             if (action.Contains("СЕРЖА"))
             {
-                protagonist.SergeHitpoint = Services.LifeGivingOintmentFor(protagonist.SergeHitpoint);
+                protagonist.SergeHitpoint = Ointment.Cure(protagonist.SergeHitpoint);
             }
             else if (action.Contains("КСОЛОТЛА"))
             {
-                protagonist.XolotlHitpoint = Services.LifeGivingOintmentFor(protagonist.XolotlHitpoint);
+                protagonist.XolotlHitpoint = Ointment.Cure(protagonist.XolotlHitpoint);
             }
             else if (action.Contains("ТИБО"))
             {
 
-                protagonist.ThibautHitpoint = Services.LifeGivingOintmentFor(protagonist.ThibautHitpoint);
+                protagonist.ThibautHitpoint = Ointment.Cure(protagonist.ThibautHitpoint);
             }
             else if (action.Contains("СУИ"))
             {
-                protagonist.SouhiHitpoint = Services.LifeGivingOintmentFor(protagonist.SouhiHitpoint);
+                protagonist.SouhiHitpoint = Ointment.Cure(protagonist.SouhiHitpoint);
             }
             else
             {
@@ -134,7 +134,7 @@ namespace Seeker.Gamebook.OctopusIsland
 
             int round = 1, enemyWounds = 0;
 
-            Services.SetCurrentWarrior(ref fight, start: true);
+            Fights.SetCurrentWarrior(ref fight, start: true);
 
             while (true)
             {
@@ -171,7 +171,7 @@ namespace Seeker.Gamebook.OctopusIsland
                         enemy.Hitpoint -= 2;
                         enemyWounds += 1;
 
-                        bool enemyLost = Services.NoMoreEnemies(FightEnemies);
+                        bool enemyLost = Fights.NoMoreEnemies(FightEnemies);
 
                         if (enemyLost || ((WoundsToWin > 0) && (WoundsToWin <= enemyWounds)))
                         {
@@ -184,7 +184,7 @@ namespace Seeker.Gamebook.OctopusIsland
                                 protagonist.StolenStuffs = 0;
                             }
 
-                            Services.SaveCurrentWarriorHitPoints();
+                            Fights.SaveCurrentWarriorHitPoints();
 
                             return fight;
                         }
@@ -195,7 +195,7 @@ namespace Seeker.Gamebook.OctopusIsland
 
                         protagonist.Hitpoint -= 2;
 
-                        if (!Services.SetCurrentWarrior(ref fight))
+                        if (!Fights.SetCurrentWarrior(ref fight))
                         {
                             fight.Add(String.Empty);
                             fight.Add("BIG|BAD|Вы ПРОИГРАЛИ :(");
