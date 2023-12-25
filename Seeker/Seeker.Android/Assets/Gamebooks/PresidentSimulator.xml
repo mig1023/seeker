@@ -5,9 +5,13 @@
 			<Author>СтепанОншин, 2023</Author>
 		</Copyright>
 		<Styles>
-			<Main Value="ffb732"/>
-			<Option Value="ffcc6f"/>
-			<ButtonFont Value="000000"/>
+			<Main Value="e29e00"/>
+			<Color Name="Option, Continue" Value="e9b846"/>		
+			<Background Value="f4c689"/>
+			<StatusBar Value="cb8e00"/>
+			<AdditionalStatus Value="db8314"/>
+			<System Value="e9b846"/>
+			<SystemFont Value="ffffff"/>
 		</Styles>
 		<Default>
 			<DisabledOption Value="Hide"/>
@@ -16,7 +20,7 @@
 	</Introduction>
 	<Paragraphs>
 		<Paragraph No="0">
-			<Text>START</Text>
+			<Text>Республика Сан-Стефано - маленькое государство на побережье Карибского моря. Джунгли, горы, речные долины и кровая история.\n\nВам предстоит возглавить это государство и решать многие проблемы. Будь то крестьяне, восставшие из-за малоземелья, или наркобароны...</Text>
 			<Options>
 				<Start Goto="1"/>
 			</Options>

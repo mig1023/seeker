@@ -684,7 +684,7 @@
 		<Color>6b0103</Color>
 	</TenementBuilding>
 	<PresidentSimulator>
-		<Title>Симулятор Президента (демократии Южной Америки)</Title>
+		<Title>Симулятор Президента</Title>
 		<Author>СтепанОншин</Author>
 		<SinglePseudonym/>
 		<Year>2023</Year>
@@ -693,9 +693,6 @@
 		<Size>0</Size>
 		<Playthrough>На пять минут</Playthrough>
 		<Setting>Приключения</Setting>
-		<Colors>
-			<Book>ffb732</Book>
-			<Font>000000</Font>
-		</Colors>
+		<Color>e29e00</Color>
 	</PresidentSimulator>
 </Gamebooks>
