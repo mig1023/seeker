@@ -28,13 +28,95 @@
 		<Paragraph No="1">
 			<Text>Генерал РайОн, правящий в течение 10 лет, пал. На честных выборах народ избрал вас. В Сан-Стефано действует 2 партии. Более правые "Консерваторы" и более левые "Либералы", от какой вы бы хотели баллотироваться?</Text>
 			<Options>
-				<Option Goto="Я член консервативной партии">
+				<Option Goto="24" Text="Я член консервативной партии">
 					<Trigger Value="Вы из консервативной партии"/>
 					<Trigger Value="Правый провластный парламент"/>
 				</Option>
-				<Option Goto="Я член либеральной партии">
+				<Option Goto="24" Text="Я член либеральной партии">
 					<Trigger Value="Вы из либеральной партии"/>
 					<Trigger Value="Левый провластный парламент"/>
+				</Option>
+			</Options>
+		</Paragraph>
+		<Paragraph No="2">
+			<Text>Настало время принимать решения:</Text>
+			<Options>
+				<Option Goto="11" Text="Бомбить города занятые повстанцами" Availability="СИЛА ПОВСТАНЦЕВ > 0">
+					<Rebels Value="-2"/>
+					<Rating Value="-20"/>
+				</Option>
+				<Option Goto="11" Text="Провести волну мобилизации">
+					<Army Value="1"/>
+					<Rating Value="-10"/>
+				</Option>
+				<Option Goto="11" Text="Разрешить применение напалма" Availability="!Огнеметы">
+					<Trigger Value="Огнеметы"/>
+					<Rebels Value="-1"/>
+					<Rating Value="-7"/>
+					<ArmyLoyalty Value="10"/>
+				</Option>
+				<Option Goto="11" Text="Запретить жечь села напалмом" Availability="Огнеметы">
+					<Untrigger Value="Огнеметы"/>
+					<Rebels Value="1"/>
+					<Rating Value="7"/>
+					<ArmyLoyalty Value="-10"/>
+				</Option>
+				<Option Goto="11" Text="Обмен пленными" Availability="СИЛА ВОЙСК > 7">
+					<Rebels Value="1"/>
+					<Army Value="1"/>
+				</Option>
+				<Option Goto="11" Text="Перекупить одного из лидеров боевиков" Availability="МОНЕТКИ > 0">
+					<Rebels Value="-1"/>
+					<Money Value="-1"/>
+				</Option>
+				<Option Goto="11" Text="Сократить военные расходы">
+					<ArmyLoyalty Value="-30"/>
+					<Army Value="-1"/>
+					<Money Value="1"/>
+				</Option>
+				<Option Goto="11" Text="Улучшить снабжение войск" Availability="МОНЕТКИ > 0">
+					<ArmyLoyalty Value="10"/>
+					<Army Value="2"/>
+					<Money Value="-1"/>
+				</Option>
+				<Option Goto="11" Text="Снабдить армию запрашиваемым числом боеприпасов" Availability="МОНЕТКИ > 1">
+					<ArmyLoyalty Value="20"/>
+					<Army Value="3"/>
+					<Rebels Value="-1"/>
+					<Money Value="-2"/>
+				</Option>
+				<Option Goto="11" Text="Союз с правыми боевиками" Availability="Ультраправые террористы, !Союз с правыми">
+					<Trigger Value="Союз с правыми"/>
+					<Rebels Value="-1"/>
+					<Army Value="1"/>
+					<Rating Value="-7"/>
+					<Money Value="1"/>
+				</Option>
+				<Option Goto="11" Text="Расторгнуть союз с правыми боевиками" Availability="Союз с правыми">
+					<Untrigger Value="Союз с правыми"/>
+					<Untrigger Value="Ультраправые террористы"/>
+					<ArmyLoyalty Value="-10"/>
+					<Army Value="-1"/>
+					<Rating Value="10"/>
+				</Option>
+				<Option Goto="19" Text="Бороться с правыми террористами" Availability="Ультраправые террористы, !Союз с правыми">
+					<Untrigger Value="Ультраправые террористы"/>
+				</Option>
+				<Option Goto="11" Text="Наступление в джунгли" Availability="СИЛА ВОЙСК > 6, СИЛА ВОЙСК != 8, СИЛА ПОВСТАНЦЕВ != 6, СИЛА ПОВСТАНЦЕВ != 8">
+					<Rebels Value="-1"/>
+				</Option>
+				<Option Goto="11" Text="Наступление в джунгли" Availability="СИЛА ВОЙСК = 6, СИЛА ПОВСТАНЦЕВ != 6">
+					<Rebels Value="-2"/>
+					<Army Value="-1"/>
+				</Option>
+				<Option Goto="11" Text="Наступление в джунгли" Availability="СИЛА ПОВСТАНЦЕВ = 6">
+					<ArmyLoyalty Value="-20"/>
+					<Army Value="-2"/>
+				</Option>
+				<Option Goto="11" Text="Спровоцировать атаку" Availability="СИЛЫ ВОЙСК И ПОВСТАНЦЕВ РАВНЫ">
+					<Rebels Value="-1"/>
+				</Option>
+				<Option Goto="19" Text="Спровоцировать выступление нелояльных элементов"/>
 				</Option>
 			</Options>
 		</Paragraph>
