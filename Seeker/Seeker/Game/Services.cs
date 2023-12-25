@@ -69,13 +69,15 @@ namespace Seeker.Game
             else if (line.Contains(">") && (value <= level))
                 return false;
 
+            else if (line.Contains("!=") && (value == level))
+                return false;
+
             else if (line.Contains("=") && (value != level))
                 return false;
 
             else
                 return true;
         }
-           int.Parse(option.Contains("=") ? option.Split('=')[1] : option.Split('>', '<')[1]);
 
         public static bool DoNothing() =>
             true;

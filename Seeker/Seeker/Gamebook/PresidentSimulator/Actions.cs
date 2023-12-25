@@ -48,7 +48,7 @@ namespace Seeker.Gamebook.PresidentSimulator
             {
                 foreach (string line in option.Split(','))
                 {
-                    if (line.Contains(">") || line.Contains("<"))
+                    if (line.Contains(">") || line.Contains("<") || line.Contains("="))
                     {
                         int level = Services.LevelParse(line);
 
@@ -81,6 +81,10 @@ namespace Seeker.Gamebook.PresidentSimulator
 
                         else if (!Services.LevelAvailability("АГРАРНАЯ РЕФОРМА", line, protagonist.AgrarianReform, level))
                             return false;
+                    }
+                    else if (line == "СИЛЫ ВОЙСК И ПОВСТАНЦЕВ РАВНЫ")
+                    {
+                        return protagonist.Army == protagonist.Rebels;
                     }
                     else if (line.Contains("!"))
                     {
