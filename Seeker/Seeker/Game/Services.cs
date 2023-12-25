@@ -52,6 +52,31 @@ namespace Seeker.Game
         public static int LevelParse(string option) =>
             int.Parse(option.Contains("=") ? option.Split('=')[1] : option.Split('>', '<')[1]);
 
+        public static bool LevelAvailability(string option, string line, int value, int level)
+        {
+            if (!line.Contains(option))
+                return true;
+
+            else if (line.Contains("<=") && (value > level))
+                return false;
+
+            else if (line.Contains(">=") && (value < level))
+                return false;
+
+            else if (line.Contains("<") && (value >= level))
+                return false;
+
+            else if (line.Contains(">") && (value <= level))
+                return false;
+
+            else if (line.Contains("=") && (value != level))
+                return false;
+
+            else
+                return true;
+        }
+           int.Parse(option.Contains("=") ? option.Split('=')[1] : option.Split('>', '<')[1]);
+
         public static bool DoNothing() =>
             true;
 
