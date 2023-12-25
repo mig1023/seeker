@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Seeker.Game;
 
@@ -8,6 +9,21 @@ namespace Seeker.Gamebook.PresidentSimulator
     {
         public static Actions StaticInstance = new Actions();
         private static Character protagonist = Character.Protagonist;
+
+        public override List<string> Status() => new List<string>
+        {
+            $"Год: {protagonist.Year}",
+            $"Рейтинг: {protagonist.Rating}%",
+            $"Монетки: {protagonist.Money}",
+        };
+
+        public override List<string> AdditionalStatus() => new List<string>
+        {
+            $"Лояльность бизнеса: {protagonist.BusinessLoyalty}",
+            $"Лояльность армии: {protagonist.ArmyLoyalty}",
+            $"Отношения с США: {protagonist.RelationWithUSA}",
+            $"Отношения с СССР: {protagonist.RelationWithUSSR}",
+        };
 
         public override bool Availability(string option)
         {
