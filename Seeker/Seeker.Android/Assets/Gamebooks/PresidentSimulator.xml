@@ -134,5 +134,21 @@
 				</Option>
 			</Options>
 		</Paragraph>
+		<Paragraph No="4">
+			<Text>Министр иностранных дел интересуется с кем провести переговоры?</Text>
+			<Options>
+				<Option Goto="23" Text="Посольство США"/>
+				<Option Goto="6" Text="Восстановить дип.отношения с СССР" Availability="!ПосолСССР">
+					<RelationWithUSSR Value="1"/>
+					<RelationWithUSA Value="-1"/>
+					<Trigger Value="ПосолСССР"/>
+				</Option>
+				<Option Goto="13" Text="Посольство СССР" Availability="ПосолСССР"/>
+				<Option Goto="31" Text="Мирные переговоры с повстанцами" Availability="Повстанцы-коммунисты, !Ультраправые террористы"/>
+				<Option Goto="10" Text="Ужин с директором AmericanOil"/>
+				<Option Goto="34" Text="Переговоры с МВФ об реструктуризации долга"/>
+				<Option Goto="6" Text="Пропустить ход"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
