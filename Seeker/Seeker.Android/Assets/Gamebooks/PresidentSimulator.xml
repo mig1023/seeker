@@ -184,5 +184,47 @@
 				</Option>
 			</Options>
 		</Paragraph>
+		<Paragraph No="5">
+			<Text>Сначала стоит брать красное, потом синие, затем оранжевое и белое.</Text>
+			<Options>
+				<Option Goto="17" Text="Американское вторжение" Availability="ОТНОШЕНИЯ С США &lt; 1"/>
+				<Option Goto="17" Text="Американское вторжение с базы" Availability="ВоеннаяБаза, ОТНОШЕНИЯ С США &lt; 4"/>
+				<Option Goto="19" Text="Путч" Availability="ЛОЯЛЬНОСТЬ АРМИИ &lt; 50"/>
+				<Option Goto="17" Text="Военный переворот" Availability="ЛОЯЛЬНОСТЬ АРМИИ &lt; 1"/>
+				<Option Goto="15" Text="Массовые протесты" Availability="РЕЙТИНГ &lt; 25"/>
+				<Option Goto="7" Text="Бизнес недоволен" Availability="!БегствоКапиталов, ЛОЯЛЬНОСТЬ БИЗНЕСА &lt; 50">
+					<Rating Value="-15"/>
+					<Money Value="-1"/>
+					<Trigger Value="БегствоКапиталов"/>
+				</Option>
+				<Option Goto="7" Text="Олигархи готовят переворот" Availability="БегствоКапиталов, ЛОЯЛЬНОСТЬ БИЗНЕСА &lt; 31">
+					<Rating Value="-15"/>
+					<Money Value="-1"/>
+					<ArmyLoyalty Value="-15"/>
+				</Option>
+				<Option Goto="7" Text="Коррупционный скандал" Availability="ОТНОШЕНИЯ С США > 4, ЛОЯЛЬНОСТЬ БИЗНЕСА > 49, ЛОЯЛЬНОСТЬ АРМИИ > 29, РЕЙТИНГ > 24, ОТНОШЕНИЯ С СССР > 1, МОНЕТКИ > 0, !Цензура, !БегствоКапиталов, РЕЙТИНГ &lt; 70">
+					<Rating Value="-5"/>
+				</Option>
+				<Option Goto="7" Text="Спокойно продолжить дальше" Availability="ОТНОШЕНИЯ С США > 4, ЛОЯЛЬНОСТЬ БИЗНЕСА > 49, ЛОЯЛЬНОСТЬ АРМИИ > 29, РЕЙТИНГ > 24, ОТНОШЕНИЯ С СССР > 1, МОНЕТКИ > 0, Цензура, !БегствоКапиталов, РЕЙТИНГ &lt; 70"/>
+				<Option Goto="7" Text="СССР снабжает повстанцев" Availability="Повстанцы-коммунисты, ОТНОШЕНИЯ С СССР &lt; 2">
+					<Rebels Value="3"/>
+					<RelationWithUSSR Value="1"/>
+				</Option>
+				<Option Goto="17" Text="Дефолт" Availability="МОНЕТКИ &lt; 1"/>
+				<Option Goto="7" Text="Безработица и инфляция беспокоят населения больше" Availability="БегствоКапиталов, ОТНОШЕНИЯ С США > 4, ОТНОШЕНИЯ С СССР > 1, РЕЙТИНГ > 24, ЛОЯЛЬНОСТЬ БИЗНЕСА > 49, ЛОЯЛЬНОСТЬ АРМИИ > 29, МОНЕТКИ > 0">
+					<Rating Value="-3"/>
+				</Option>
+				<Option Goto="7" Text="Посетить ассоциацию бизнесменов" Availability="БегствоКапиталов, ЛОЯЛЬНОСТЬ БИЗНЕСА > 49, ОТНОШЕНИЯ С США > 4, ОТНОШЕНИЯ С СССР > 1, РЕЙТИНГ > 24, ЛОЯЛЬНОСТЬ АРМИИ > 29, МОНЕТКИ > 0">
+					<Rating Value="10"/>
+					<BusinessLoyalty Value="10"/>
+					<Untrigger Value="БегствоКапиталов"/>
+				</Option>
+				<Option Goto="7" Text="Развестись с женой" Availability="РЕЙТИНГ > 69, !Развод">
+					<Rating Value="-20"/>
+					<Trigger Value="Развод"/>
+				</Option>
+				<Option Goto="7" Text="Защита от багов!!! не нажимать если есть выбор"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
