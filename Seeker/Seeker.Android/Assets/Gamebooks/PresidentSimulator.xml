@@ -150,5 +150,39 @@
 				<Option Goto="6" Text="Пропустить ход"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="5">
+			<Text>В парламенте идут дебаты по реформе Сандатера. Министр настаивает на номинальной компенсации т.к помещики занижали цену земли для ухода от налогов, он хочет сохранить деньги для снабжение кооперативов техникой. Многие депутаты и есть помещики, и хотят большую компенсацию или отмены реформы.</Text>
+			<Options>
+				<Option Goto="18" Text="Мы снабдим крестьян техникой, а не помещиков средствами" Availability="!Правый оппозиционный парламент">
+					<AgrarianReform Value="3"/>
+					<Money Value="-1"/>
+					<BusinessLoyalty Value="-30"/>
+					<Untrigger Value="РеформаРад"/>
+				</Option>
+				<Option Goto="18" Text="У Сан-Стефано есть деньги на обе инициативы" Availability="МОНЕТКИ > 1">
+					<AgrarianReform Value="3"/>
+					<Money Value="-2"/>
+					<Untrigger Value="РеформаРад"/>
+				</Option>
+				<Option Goto="18" Text="Важно выплатить компенсацию" Availability="Левый оппозиционный парламент">
+					<AgrarianReform Value="2"/>
+					<Money Value="-1"/>
+					<BusinessLoyalty Value="-10"/>
+					<Untrigger Value="РеформаРад"/>
+				</Option>
+				<Option Goto="18" Text="А можно вообще не тратить денег?" Availability="Расстрелянный парламент">
+					<AgrarianReform Value="2"/>
+					<BusinessLoyalty Value="-30"/>
+					<Untrigger Value="РеформаРад"/>
+				</Option>
+				<Option Goto="18" Text="А можно вообще не тратить денег?" Availability="Левый провластный парламент">
+					<AgrarianReform Value="1"/>
+					<Untrigger Value="РеформаРад"/>
+				</Option>
+				<Option Goto="18" Text="Давайте отложим принятие закона из-за сопротивления парламента">
+					<Untrigger Value="РеформаРад"/>
+				</Option>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
