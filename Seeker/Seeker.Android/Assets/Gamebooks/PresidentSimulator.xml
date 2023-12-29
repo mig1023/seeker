@@ -184,7 +184,7 @@
 				</Option>
 			</Options>
 		</Paragraph>
-		<Paragraph No="5">
+		<Paragraph No="6">
 			<Text>Сначала стоит брать красное, потом синие, затем оранжевое и белое.</Text>
 			<Options>
 				<Option Goto="17" Text="Американское вторжение" Availability="ОТНОШЕНИЯ С США &lt; 1"/>
@@ -224,6 +224,33 @@
 					<Trigger Value="Развод"/>
 				</Option>
 				<Option Goto="7" Text="Защита от багов!!! не нажимать если есть выбор"/>
+			</Options>
+		</Paragraph>
+		<Paragraph No="7">
+			<Text>Вместе с командой вы напились и отдохнули.</Text>
+			<Options>
+				<Option Goto="9" Text="Прошло полгода, передохнуть и работать" Availability="!полугодие">
+					<Trigger Value="полугодие"/>
+				</Option>
+				<Option Goto="9" Text="Новый год!" Availability="полугодие, ГОД != 1982, ГОД != 1980, ГОД != 1984, ГОД != 1986">
+					<Untrigger Value="полугодие"/>
+					<Year Value="1"/>
+				</Option>
+				<Option Goto="21" Text="Выборы в Ассамблею" Availability="полугодие, ГОД = 1980">
+					<Untrigger Value="полугодие"/>
+					<Year Value="1"/>
+				</Option>
+				<Option Goto="21" Text="Выборы в Ассамблею" Availability="полугодие, ГОД = 1984">
+					<Untrigger Value="полугодие"/>
+					<Year Value="1"/>
+				</Option>
+				<Option Goto="26" Text="Выборы президента" Availability="полугодие, ГОД = 1982">
+					<Untrigger Value="полугодие"/>
+					<Year Value="1"/>
+				</Option>
+				<Option Goto="17" Text="Конец второго срока/вы умерли от рака" Availability="полугодие, ГОД = 1986">
+					<Year Value="1"/>
+				</Option>
 			</Options>
 		</Paragraph>
 	</Paragraphs>
