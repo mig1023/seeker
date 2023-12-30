@@ -486,5 +486,19 @@
 				</Option>
 			</Options>
 		</Paragraph>
+		<Paragraph No="15">
+			<Text>Улицы столицы охватили массовые демонстрации, возглавляемые профсоюзами. Народ требует вашей отставки.</Text>
+			<Options>
+				<Option Goto="17" Text="Я устал, я ухожу"/>
+				<Option Goto="7" Text="Ввести войска" Availability="ЛОЯЛЬНОСТЬ АРМИИ > 59, !Левый оппозиционный парламент, !Правый оппозиционный парламент">
+					<Rating Value="10"/>
+					<ArmyLoyalty Value="-25"/>
+					<Rebels Value="3"/>
+					<Untrigger Value="Сильные профсоюзы"/>
+				</Option>
+				<Option Goto="17" Text="Импичмент" Availability="Левый оппозиционный парламент"/>
+				<Option Goto="17" Text="Импичмент" Availability="Правый оппозиционный парламент"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
