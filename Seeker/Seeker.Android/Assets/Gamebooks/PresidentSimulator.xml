@@ -350,5 +350,45 @@
 				<Option Goto="4" Text="Снять девушек и вернуться в МИД"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="11">
+			<Text>Национальная Ассамблея открыла новую сессию.</Text>
+			<Options>
+				<Option Goto="18" Text="Запретить критику правительства" Availability="Правый провластный парламент, !Цензура">
+					<Trigger Value="Цензура"/>
+					<Rating Value="-15"/>
+				</Option>
+				<Option Goto="18" Text="Запретить критику правительства" Availability="Левый провластный парламент, !Цензура">
+					<Trigger Value="Цензура"/>
+					<Rating Value="-15"/>
+				</Option>
+				<Option Goto="18" Text="Запретить критику правительства" Availability="Расстрелянный парламент, !Цензура, !Правый провластный парламент, !Левый провластный парламент">
+					<Trigger Value="Цензура"/>
+					<Rating Value="-15"/>
+				</Option>
+				<Option Goto="18" Text="Отменить цензуру" Availability="Цензура">
+					<Untrigger Value="Цензура"/>
+					<Rating Value="5"/>
+				</Option>
+				<Option Goto="5" Text="Внести аграрную реформу Сандатера" Availability="РеформаРад">
+					<Untrigger Value="Комиссия по земельной реформе"/>
+				</Option>
+				<Option Goto="22" Text="Внести аграрную реформу Оскарио" Availability="РеформаУМ">
+					<Untrigger Value="Комиссия по земельной реформе"/>
+				</Option>
+				<Option Goto="28" Text="Какой важный закон предлагает консервативная партия?" Availability="!Левый провластный парламент, !Левый оппозиционный парламент"/>
+				<Option Goto="30" Text="Какой важный закон предлагает либеральная партия?" Availability="!Правый оппозиционный парламент, !Правый провластный парламент"/>
+				<Option Goto="18" Text="Распустить парламент" Availability="ЛОЯЛЬНОСТЬ АРМИИ > 79, РЕЙТИНГ > 50, !Расстрелянный парламент">
+					<ArmyLoyalty Value="-10"/>
+					<Rating Value="-10"/>
+					<Trigger Value="Расстрелянный парламент"/>
+					<Untrigger Value="Правый оппозиционный парламент"/>
+					<Untrigger Value="Левый оппозиционный парламент"/>
+					<Untrigger Value="Правый провластный парламент"/>
+					<Untrigger Value="Левый провластный парламент"/>
+					<BusinessLoyalty Value="-10"/>
+				</Option>
+				<Option Goto="18" Text="Мое величество не желает принимать бывших депутатов" Availability="Расстрелянный парламент"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
