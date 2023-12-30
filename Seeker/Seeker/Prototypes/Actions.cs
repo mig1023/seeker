@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Xml;
 using Seeker.Game;
 
 namespace Seeker.Prototypes
@@ -133,6 +134,9 @@ namespace Seeker.Prototypes
 
         public virtual string TextByOptions(string option) =>
             String.Empty;
+        
+        public virtual List<string> TextByProperties(XmlNode text) =>
+            null;
 
         public List<string> SimpleDice() =>
             new List<string> { $"BIG|Кубик: {Dice.Symbol(Dice.Roll())}" };

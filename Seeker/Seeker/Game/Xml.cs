@@ -124,27 +124,33 @@ namespace Seeker.Game
             }
         }
 
+        private static Text TextLine(string line) => new Text
+        {
+            Content = line,
+            Size = Interface.TextFontSize.Big,
+        };
+
         public static List<Text> TextsParse(XmlNode xmlNode, string optionName = "")
         {
+            List<string> textsByProperties = Data.Actions.TextByProperties(xmlNode["Text"]);
             string textByOption = Data.Actions.TextByOptions(optionName);
 
-            if (!String.IsNullOrEmpty(optionName) && !String.IsNullOrEmpty(textByOption))
+            if (textsByProperties != null)
             {
-                return new List<Text>
-                {
-                    new Text
-                    {
-                        Content = textByOption,
-                        Size = Interface.TextFontSize.Big,
-                    }
-                };
+                List<Text> texts = new List<Text>();
+
+                foreach (string text in textsByProperties)
+                    texts.Add(TextLine(text));
+
+                return texts;
+            }
+            else if (!String.IsNullOrEmpty(optionName) && !String.IsNullOrEmpty(textByOption))
+            {
+                return new List<Text> { TextLine(textByOption) };
             }
             else if (xmlNode["Text"] != null)
             {
-                return new List<Text>
-                {
-                    TextLineParse(xmlNode["Text"])
-                };
+                return new List<Text> { TextLineParse(xmlNode["Text"]) };
             }
             else
             {
