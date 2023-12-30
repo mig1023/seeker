@@ -475,5 +475,16 @@
 				</Option>
 			</Options>
 		</Paragraph>
+		<Paragraph No="14">
+			<Text>Пабло, "Uno Canal". В силу галопирующей инфляции, пенсионеры и бюджетники со всей страны спрашивают нас об индексации своих выплат. Как скоро новое правительство обратит внимание на нужды стариков?</Text>
+			<Options>
+				<Option Goto="9" Text="Мы проведем индексации">
+					<Trigger Value="Индексации"/>
+				</Option>
+				<Option Goto="9" Text="Сейчас у страны нет денег, Район сбежал с бюджетом, но вы держитесь">
+					<Rating Value="-10"/>
+				</Option>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
