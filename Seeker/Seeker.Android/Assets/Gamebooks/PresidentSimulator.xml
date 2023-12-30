@@ -248,7 +248,7 @@
 					<Untrigger Value="полугодие"/>
 					<Year Value="1"/>
 				</Option>
-				<Option Goto="17" Text="Конец второго срока/вы умерли от рака" Availability="полугодие, ГОД = 1986">
+				<Option Goto="17" Text="Конец второго срока" Availability="полугодие, ГОД = 1986">
 					<Year Value="1"/>
 				</Option>
 			</Options>
@@ -511,6 +511,18 @@
 				<Option Goto="2" Text="Спасать мирных граждан от наводнения">
 					<Rating Value="10"/>
 					<Trigger Value="Река"/>
+				</Option>
+			</Options>
+		</Paragraph>
+		<Paragraph No="17">
+			<Text>Вашей власти пришел конец...</Text>
+			<Options>
+				<Option Goto="29" Text="Это был классынй опыт">
+					<Rating Value="100"/>
+					<ArmyLoyalty Value="100"/>
+					<BusinessLoyalty Value="100"/>
+					<Money Value="10"/>
+					<Untrigger Value="БегствоКапиталов"/>
 				</Option>
 			</Options>
 		</Paragraph>
