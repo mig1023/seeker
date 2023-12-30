@@ -139,7 +139,6 @@
 					<Rebels Value="-1"/>
 				</Option>
 				<Option Goto="19" Text="Спровоцировать выступление нелояльных элементов"/>
-				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph No="3">
