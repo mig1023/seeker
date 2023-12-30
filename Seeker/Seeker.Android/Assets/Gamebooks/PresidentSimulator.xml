@@ -325,5 +325,30 @@
 				</Option>
 			</Options>
 		</Paragraph>
+		<Paragraph No="10">
+			<Text>Вы пошли ужинать с директором AmericanOil по Сан-Стефано. Эта компания контролирует нефтяные скважины страны, платя копейки.</Text>
+			<Options>
+				<Option Goto="6" Text="Новая скважина в джунглях" Availability="!Повстанцы-коммунисты, !Левый оппозиционный парламент">
+					<Money Value="1"/>
+				</Option>
+				<Option Goto="6" Text="Сан-Стефано национализирует скважины за компенсацию" Availability="AmericanOil, !Правый оппозиционный парламент">
+					<Rating Value="10"/>
+					<RelationWithUSA Value="-1"/>
+					<Untrigger Value="AmericanOil"/>
+				</Option>
+				<Option Goto="6" Text="Мы 'временно' берем скважины под контроль правительства" Availability="AmericanOil, !Правый оппозиционный парламент">
+					<Rating Value="10"/>
+					<Money Value="3"/>
+					<RelationWithUSA Value="-3"/>
+					<RelationWithUSSR Value="1"/>
+					<Untrigger Value="AmericanOil"/>
+				</Option>
+				<Option Goto="6" Text="Больше выплат по концессиям под гарантии собственности" Availability="AmericanOil">
+					<Money Value="2"/>
+					<Untrigger Value="AmericanOil"/>
+				</Option>
+				<Option Goto="4" Text="Снять девушек и вернуться в МИД"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
