@@ -256,5 +256,74 @@
 		<Paragraph No="8">
 			<Text>[пустой параграф]</Text>
 		</Paragraph>
+		<Paragraph No="9">
+			<Text>Ваши экономические и социальные министры в сборе. Пора решать судьбы страны.</Text>
+			<Options>
+				<Option Goto="12" Text="Поднять налоги на доходы богатых" Availability="!Правый оппозиционный парламент">
+					<Money Value="1"/>
+					<Rating Value="2"/>
+					<BusinessLoyalty Value="-20"/>
+				</Option>
+				<Option Goto="12" Text="Поднять акциз на алкоголь для бедных" Availability="!Левый оппозиционный парламент">
+					<Money Value="1"/>
+					<Rating Value="-7"/>
+				</Option>
+				<Option Goto="12" Text="Сократить налоги на бизнес" Availability="МОНЕТКИ > 0, !Левый оппозиционный парламент">
+					<Money Value="-1"/>
+					<Rating Value="+2"/>
+					<BusinessLoyalty Value="20"/>
+				</Option>
+				<Option Goto="12" Text="Сократить налоги для бедных" Availability="МОНЕТКИ > 0, !Правый оппозиционный парламент">
+					<Money Value="-1"/>
+					<Rating Value="+5"/>
+				</Option>
+				<Option Goto="12" Text="Взять в долг у бизнеса (но надо вернуть)" Availability="ЛОЯЛЬНОСТЬ БИЗНЕСА > 50, !Кидала, !Вернуть долг бизнесу">
+					<Money Value="1"/>
+					<Trigger Value="Вернуть долг бизнесу"/>
+				</Option>
+				<Option Goto="12" Text="Вернуть долг бизнесу" Availability="Вернуть долг бизнесу">
+					<Money Value="-1"/>
+					<Untrigger Value="Вернуть долг бизнесу"/>
+				</Option>
+				<Option Goto="12" Text="Больше школ, дорог, ОВД и больниц" Availability="МОНЕТКИ > 1">
+					<Money Value="-2"/>
+					<Rating Value="+15"/>
+					<BusinessLoyalty Value="10"/>
+				</Option>
+				<Option Goto="12" Text="Индексировать пенсии" Availability="Индексации">
+					<Money Value="-1"/>
+					<Rating Value="+15"/>
+					<Untrigger Value="Индексации"/>
+				</Option>
+				<Option Goto="12" Text="Построить важный проект: Университет или порт" Availability="МОНЕТКИ > 0">
+					<Money Value="-1"/>
+					<Rating Value="+10"/>
+				</Option>
+				<Option Goto="12" Text="Начать разработку аграрной реформы" Availability="Аграрный вопрос">
+					<Trigger Value="Комиссия по земельной реформе"/>
+					<Untrigger Value="Аграрный вопрос"/>
+				</Option>
+				<Option Goto="3" Text="Утвердить план аграрной реформы" Availability="Комиссия по земельной реформе">
+					<Untrigger Value="Комиссия по земельной реформе"/>
+				</Option>
+				<Option Goto="25" Text="Сопротивление земельной реформе на местах" Availability="АГРАРНАЯ РЕФОРМА > 0, !ЖалЗемлпю">
+					<Trigger Value="ЖалЗемлпю"/>
+				</Option>
+				<Option Goto="12" Text="Успешная аграрная реформа" Availability="АГРАРНАЯ РЕФОРМА > 2, битваЗаземлю, !Решенный аграрный вопрос">
+					<Rating Value="25"/>
+					<Rebels Value="-3"/>
+					<Trigger Value="Решенный аграрный вопрос"/>
+				</Option>
+				<Option Goto="12" Text="'Рационализировать' социальные расходы">
+					<Money Value="2"/>
+					<Rating Value="-20"/>
+				</Option>
+				<Option Goto="12" Text="Согласовать строительство завода" Availability="ЛОЯЛЬНОСТЬ БИЗНЕСА > 80">
+					<Money Value="1"/>
+					<Rating Value="10"/>
+					<BusinessLoyalty Value="-10"/>
+				</Option>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
