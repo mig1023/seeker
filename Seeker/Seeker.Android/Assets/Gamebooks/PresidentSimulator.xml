@@ -526,5 +526,12 @@
 				</Option>
 			</Options>
 		</Paragraph>
+		
+		<Paragraph No="29">
+			<Text>Без вас всё стало так плохо, что вас переизбрали!</Text>
+			<Options>
+				<Option Goto="24" Text="Ну что ж, это воля народа"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
