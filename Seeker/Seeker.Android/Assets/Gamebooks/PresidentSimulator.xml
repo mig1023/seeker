@@ -443,5 +443,37 @@
 				</Option>
 			</Options>
 		</Paragraph>
+		<Paragraph No="13">
+			<Text>Статный советский посол ИВАН Горумалко вошел во дворец.</Text>
+			<Options>
+				<Option Goto="6" Text="Закупить калашей" Availability="ОТНОШЕНИЯ С СССР > 7">
+					<Money Value="-1"/>
+					<Army Value="2"/>
+				</Option>
+				<Option Goto="4" Text="Что думаете о нашей водке?"/>
+				<Option Goto="6" Text="Начать торговлю медью" Availability="ОТНОШЕНИЯ С СССР > 5, !ТорговляМедью">
+					<Rating Value="10"/>
+					<Money Value="1"/>
+					<BusinessLoyalty Value="10"/>
+					<RelationWithUSA Value="-1"/>
+					<RelationWithUSSR Value="1"/>
+					<Trigger Value="ТорговляМедью"/>
+				</Option>
+				<Option Goto="6" Text="Требовать льготный 'кредит'" Availability="ОТНОШЕНИЯ С СССР > 7, !ТорговляМедью">
+					<Money Value="1"/>
+					<RelationWithUSSR Value="-1"/>
+				</Option>
+				<Option Goto="6" Text="Расторгнуть торговое соглашение" Availability="ТорговляМедью">
+					<RelationWithUSA Value="2"/>
+					<RelationWithUSSR Value="-2"/>
+					<Rating Value="-10"/>
+					<Untrigger Value="ТорговляМедью"/>
+				</Option>
+				<Option Goto="6" Text="Прекратить отношения" Availability="ОТНОШЕНИЯ С СССР &lt; 4">
+					<RelationWithUSSR Value="-1"/>
+					<RelationWithUSA Value="1"/>
+				</Option>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
