@@ -390,5 +390,58 @@
 				<Option Goto="18" Text="Мое величество не желает принимать бывших депутатов" Availability="Расстрелянный парламент"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="12">
+			<Text>Теперь у вас совещание с генералами армии, полиции и разведки.</Text>
+			<Options>
+				<Option Goto="11" Text="Никаких значимых угроз, совещание прошло спокойно и скучно" Availability="!Повстанцы-коммунисты"/>
+				<Option Goto="11" Text="Мы решили спровоцировать коммунистов нарушить перемирие и отнять у них оружие" Availability="Ком.партия, !Повстанцы-коммунисты">
+					<RelationWithUSSR Value="-4"/>
+					<RelationWithUSA Value="3"/>
+					<Untrigger Value="Ком.партия"/>
+					<Trigger Value="Повстанцы-коммунисты"/>
+					<Rebels Value="-4"/>
+					<Rating Value="-20"/>
+					<ArmyLoyalty Value="30"/>
+					<Money Value="1"/>
+				</Option>
+				<Option Goto="2" Text="Индивидуальный террор семей офицеров" Availability="Повстанцы-коммунисты, СИЛА ПОВСТАНЦЕВ &lt; 1">
+					<ArmyLoyalty Value="-5"/>
+				</Option>
+				<Option Goto="2" Text="Повстанцы копят силы и не нападают" Availability="СИЛЫ ВОЙСК НЕ МЕНЬШЕ СИЛЫ ПОВСТАНЦЕВ, СИЛА ПОВСТАНЦЕВ &lt; 4, Повстанцы-коммунисты">
+					<Rebels Value="2"/>
+				</Option>
+				<Option Goto="2" Text="Диверсия повстанцев" Availability="СИЛЫ ВОЙСК НЕ МЕНЬШЕ СИЛЫ ПОВСТАНЦЕВ, СИЛА ПОВСТАНЦЕВ > 3, СИЛА ПОВСТАНЦЕВ &lt; 6, Повстанцы-коммунисты">
+					<Army Value="-1"/>
+				</Option>
+				<Option Goto="2" Text="Успешнейшая диверсия повстанцев" Availability="СИЛЫ ВОЙСК НЕ МЕНЬШЕ СИЛЫ ПОВСТАНЦЕВ, СИЛА ПОВСТАНЦЕВ = 6">
+					<Army Value="-1"/>
+					<Rebels Value="1"/>
+				</Option>
+				<Option Goto="32" Text="Захват посольства США" Availability="СИЛЫ ВОЙСК НЕ МЕНЬШЕ СИЛЫ ПОВСТАНЦЕВ, СИЛА ПОВСТАНЦЕВ > 6, !Был штурм посольства, Повстанцы-коммунисты">
+					<Trigger Value="Был штурм посольства"/>
+				</Option>
+				<Option Goto="2" Text="Штурм города мятежниками" Availability="СИЛЫ ВОЙСК НЕ МЕНЬШЕ СИЛЫ ПОВСТАНЦЕВ, СИЛА ПОВСТАНЦЕВ > 6, Повстанцы-коммунисты">
+					<Army Value="-2"/>
+				</Option>
+				<Option Goto="17" Text="Мятежники идут на столицу" Availability="СИЛА ПОВСТАНЦЕВ = 10">
+					<Army Value="-2"/>
+				</Option>
+				<Option Goto="16" Text="Разведка обнаружила базу повстанцев в Речной Долине. Ее стоит немедленно атаковать" Availability="СИЛА ПОВСТАНЦЕВ = 3, Повстанцы-коммунисты, !Река"/>
+				<Option Goto="16" Text="Разведка обнаружила базу повстанцев в Речной Долине. Ее стоит немедленно атаковать" Availability="СИЛА ПОВСТАНЦЕВ = 4, Повстанцы-коммунисты, !Река"/>
+				<Option Goto="17" Text="Коммунисты идут на столицу!!!" Availability="СИЛЫ ВОЙСК МЕНЬШЕ СИЛЫ ПОВСТАНЦЕВ"/>
+				<Option Goto="11" Text="Покупать лояльность армии" Availability="МОНЕТКИ > 0, !Повстанцы-коммунисты">
+					<ArmyLoyalty Value="20"/>
+					<Money Value="-1"/>
+				</Option>
+				<Option Goto="11" Text="Провести чистки генералов" Availability="!Повстанцы-коммунисты">
+					<Army Value="-1"/>
+					<ArmyLoyalty Value="10"/>
+				</Option>
+				<Option Goto="11" Text="Сократить финансирование войск" Availability="!Повстанцы-коммунисты">
+					<Money Value="1"/>
+					<ArmyLoyalty Value="-10"/>
+				</Option>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
