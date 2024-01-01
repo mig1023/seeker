@@ -801,6 +801,17 @@
 				<Option Goto="12" Text="Смена комиссара полиции решит проблему" Availability="!Ультраправые террористы"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="26">
+			<Text>Скоро выборы.</Text>
+			<Options>
+				<Option Goto="27" Text="Я иду еще на один срок" Availability="!Вернуть долг бизнесу"/>
+				<Option Goto="27" Text="Эх, долги бизнесу стоило вернуть" Availability="Вернуть долг бизнесу">
+					<Untrigger Value="Вернуть долг бизнесу"/>
+					<Trigger Value="Кидала"/>
+					<BusinessLoyalty Value="-20"/>
+				</Option>
+			</Options>
+		</Paragraph>
 		
 		<Paragraph No="29">
 			<Text>Без вас всё стало так плохо, что вас переизбрали!</Text>
