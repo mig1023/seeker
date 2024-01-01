@@ -737,6 +737,30 @@
 				<Option Goto="18" Text="Временно отозвать реформы из-за сопротивления"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="23">
+			<Text>Американский посол приехал в президентский дворец.</Text>
+			<Options>
+				<Option Goto="6" Text="Согласовать военную базу" Availability="!ВоеннаяБаза">
+					<RelationWithUSA Value="3"/>
+					<RelationWithUSSR Value="-2"/>
+					<Rebels Value="-2"/>
+					<Rating Value="-10"/>
+					<Trigger Value="ВоеннаяБаза"/>
+				</Option>
+				<Option Goto="6" Text="Договор об экстрадиции" Availability="!Экстрадиция в США">
+					<RelationWithUSA Value="1"/>
+					<BusinessLoyalty Value="-10"/>
+					<Trigger Value="Экстрадиция в США"/>
+				</Option>
+				<Option Goto="4" Text="Какая хорошая погода"/>
+				<Option Goto="6" Text="Потребовать вывести войска" Availability="ВоеннаяБаза">
+					<RelationWithUSA Value="-3"/>
+					<RelationWithUSSR Value="2"/>
+					<Rebels Value="1"/>
+					<Rating Value="10"/>
+				</Option>
+			</Options>
+		</Paragraph>
 		
 		<Paragraph No="29">
 			<Text>Без вас всё стало так плохо, что вас переизбрали!</Text>
