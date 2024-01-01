@@ -833,7 +833,32 @@
 				</Option>
 			</Options>
 		</Paragraph>
-		
+		<Paragraph No="28">
+			<Text>Консервативная партия предлагает новый закон.</Text>
+			<Options>
+				<Option Goto="18" Text="Принять антипрофсоюзный закон" Availability="Сильные профсоюзы">
+					<Rating Value="-15"/>
+					<BusinessLoyalty Value="20"/>
+					<Untrigger Value="Сильные профсоюзы"/>
+					<Money Value="1"/>
+					<Rebels Value="1"/>
+				</Option>
+				<Option Goto="18" Text="Наложить вето на антипрофсоюзный закон" Availability="Сильные профсоюзы">
+					<Rating Value="10"/>
+					<BusinessLoyalty Value="-10"/>
+				</Option>
+				<Option Goto="18" Text="Попросить друзей повременить с антипрофсоюзным законом" Availability="Сильные профсоюзы, Правый провластный парламент"/>
+				<Option Goto="18" Text="Принять какую-то популистскую дичь" Availability="!Сильные профсоюзы">
+					<ModsByArmyForces/>
+				</Option>
+				<Option Goto="18" Text="Отклонить популистскую консервативную идею как анти-научную" Availability="!Сильные профсоюзы"/>
+				<Option Goto="18" Text="Восстановить смертную казнь" Availability="!Смертная казнь">
+					<Army Value="1"/>
+					<ArmyLoyalty Value="10"/>
+					<Trigger Value="Смертная казнь"/>
+				</Option>
+			</Options>
+		</Paragraph>
 		<Paragraph No="29">
 			<Text>Без вас всё стало так плохо, что вас переизбрали!</Text>
 			<Options>
