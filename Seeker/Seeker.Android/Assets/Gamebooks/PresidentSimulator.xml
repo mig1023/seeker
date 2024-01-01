@@ -865,5 +865,32 @@
 				<Option Goto="24" Text="Ну что ж, это воля народа"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="30">
+			<Text>Вы встретились с председателем либеральной партии Диего Ариасом.</Text>
+			<Options>
+				<Option Goto="18" Text="Отменить смертную казнь" Availability="Смертная казнь">
+					<Army Value="-1"/>
+					<Rating Value="5"/>
+					<Untrigger Value="Смертная казнь"/>
+				</Option>
+				<Option Goto="18" Text="Наложить вето на отмену смертной казни" Availability="Смертная казнь">
+					<Army Value="-1"/>
+				</Option>
+				<Option Goto="18" Text="Попросить друзей повременить с реформами" Availability="Левый провластный парламент, Смертная казнь"/>
+				<Option Goto="18" Text="Принять выгодные рабочим поправки в Закон о труде" Availability="!Смертная казнь">
+					<Rating Value="5"/>
+					<BusinessLoyalty Value="-10"/>
+				</Option>
+				<Option Goto="18" Text="Отклонить выгодные рабочим поправки в Закон о труде" Availability="!Смертная казнь">
+					<Rating Value="-10"/>
+					<BusinessLoyalty Value="10"/>
+				</Option>
+				<Option Goto="18" Text="Восстановить влияние профсоюзов" Availability="Сильные профсоюзы">
+					<Rating Value="15"/>
+					<BusinessLoyalty Value="-20"/>
+					<Trigger Value="Сильные профсоюзы"/>
+				</Option>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
