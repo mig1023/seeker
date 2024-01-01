@@ -812,6 +812,27 @@
 				</Option>
 			</Options>
 		</Paragraph>
+		<Paragraph No="27">
+			<Text>Вы проводите встречи с избирателями, кампания в разгаре.</Text>
+			<Options>
+				<Option Goto="33" Text="Чудесно" Availability="!Ком.партия"/>
+				<Option Goto="17" Text="В вас стреляли террористы" Availability="Ультраправые террористы, Решенный аграрный вопрос"/>
+				<Option Goto="17" Text="В вас стреляли коммунисты" Availability="АГРАРНАЯ РЕФОРМА > 0, !Решенный аграрный вопрос"/>
+				<Option Goto="33" Text="Пойти на союз с коммунистами" Availability="Ком.партия, Вы из либеральной партии">
+					<Rating Value="10"/>
+					<BusinessLoyalty Value="-10"/>
+					<ArmyLoyalty Value="-20"/>
+					<RelationWithUSA Value="-1"/>
+					<RelationWithUSSR Value="2"/>
+				</Option>
+				<Option Goto="33" Text="Либералы пошли на союз с коммунистами" Availability="Ком.партия, Вы из консервативной партии">
+					<Rating Value="-12"/>
+				</Option>
+				<Option Goto="33" Text="Я верующий католик, какой союз с ком.партией?" Availability="Ком.партия, Вы из либеральной партии">
+					<Rating Value="-5"/>
+				</Option>
+			</Options>
+		</Paragraph>
 		
 		<Paragraph No="29">
 			<Text>Без вас всё стало так плохо, что вас переизбрали!</Text>
