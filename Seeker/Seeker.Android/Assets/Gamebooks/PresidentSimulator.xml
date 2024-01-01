@@ -547,10 +547,115 @@
 				</Option>
 			</Options>
 		</Paragraph>
-		<Paragraph No="17">
+		<Paragraph No="18">
 			<Text>[text by propertires]</Text>
 			<Options>
-				
+				<Option Goto="4" Text="Продать крупной американской компании" Availability="ГОД = 1979, !полугодие">
+					<Money Value="1"/>
+					<RelationWithUSA Value="1"/>
+					<Rating Value="-6"/>
+				</Option>
+				<Option Goto="4" Text="Разыграть честный аукцион" Availability="ГОД = 1979, !полугодие">
+					<Money Value="1"/>
+					<BusinessLoyalty Value="10"/>
+				</Option>
+				<Option Goto="4" Text="Подарить друзьям-олигархам за символическую плату" Availability="ГОД = 1979, !полугодие">
+					<BusinessLoyalty Value="20"/>
+				</Option>
+				<Option Goto="4" Text="Ничего не делать" Availability="ГОД = 1979, !полугодие">
+					<Rating Value="-5"/>
+					<BusinessLoyalty Value="-10"/>
+				</Option>
+				<Option Goto="4" Text="Осудить социализм" Availability="ГОД = 1981, полугодие">
+					<RelationWithUSSR Value="-1"/>
+					<RelationWithUSA Value="1"/>
+					<Rating Value="10"/>
+				</Option>
+				<Option Goto="4" Text="Не лезть в европейские вопросы" Availability="ГОД = 1981, полугодие"/>
+				<Option Goto="4" Text="Поддержать Аргентину (словесно)" Availability="ГОД = 1982, !полугодие">
+					<ArmyLoyalty Value="10"/>
+					<Rating Value="10"/>
+					<BusinessLoyalty Value="-10"/>
+				</Option>
+				<Option Goto="4" Text="Стоять в стороне" Availability="ГОД = 1982, полугодие">
+					<RelationWithUSA Value="1"/>
+					<BusinessLoyalty Value="10"/>
+				</Option>
+				<Option Goto="4" Text="Осудить США" Availability="ГОД = 1983, полугодие">
+					<RelationWithUSA Value="-1"/>
+					<RelationWithUSSR Value="2"/>
+				</Option>
+				<Option Goto="4" Text="Воздержаться от голосования" Availability="ГОД = 1983, полугодие">
+					<Rating Value="-15"/>
+				</Option>
+				<Option Goto="4" Text="Устроить праздник мира и индейки" Availability="ГОД = 1983, !полугодие, !Повстанцы-коммунисты">
+					<Rating Value="10"/>
+				</Option>
+				<Option Goto="4" Text="Согласиться на выпустить одного вожака" Availability="ГОД = 1983, !полугодие, Повстанцы-коммунисты">
+					<Rebels Value="1"/>
+				</Option>
+				<Option Goto="4" Text="Я назначу награду за их голову" Availability="ГОД = 1983, !полугодие, Повстанцы-коммунисты">
+					<Trigger Value="Мертвый сын"/>
+					<Rating Value="15"/>
+					<ArmyLoyalty Value="15"/>
+					<BusinessLoyalty Value="10"/>
+					<Money Value="-1"/>
+				</Option>
+				<Option Goto="4" Text="Убить губернатора" Availability="ГОД = 1982, полугодие, Расстрелянный парламент"/>
+				<Option Goto="17" Text="Уступить право выдвигаться в президенты" Availability="ГОД = 1982, полугодие"/>
+				<Option Goto="4" Text="Не боюсь этого клоуна, моя партия мне лояльна" Availability="ГОД = 1982, полугодие, РЕЙТИНГ > 44, Вы из либеральной партии, !Смертная казнь"/>
+				<Option Goto="4" Text="Не боюсь этого клоуна, моя партия мне лояльна" Availability="ГОД = 1982, полугодие, РЕЙТИНГ > 44, Вы из консервативной партии, !Сильные профсоюзы"/>
+				<Option Goto="4" Text="Молодой и перспективный офицер" Availability="ГОД = 1979, полугодие">
+					<ArmyLoyalty Value="10"/>
+				</Option>
+				<Option Goto="4" Text="Я не собираюсь лезть в ее личную жизнь" Availability="ГОД = 1979, полугодие">
+					<Rating Value="5"/>
+				</Option>
+				<Option Goto="4" Text="Олигархам и иностранному капиталу стоит выполнить требования" Availability="ГОД = 1980, !полугодие">
+					<Rating Value="10"/>
+					<BusinessLoyalty Value="-20"/>
+					<RelationWithUSSR Value="1"/>
+					<RelationWithUSA Value="-1"/>
+				</Option>
+				<Option Goto="4" Text="Мы восстановим порядок, восстания недопустимы" Availability="ГОД = 1980, !полугодие">
+					<Rating Value="-15"/>
+					<ArmyLoyalty Value="-10"/>
+					<RelationWithUSA Value="1"/>
+					<BusinessLoyalty Value="20"/>
+					<Rebels Value="1"/>
+				</Option>
+				<Option Goto="4" Text="Черт" Availability="ГОД = 1980, полугодие, !Ультраправые террористы"/>
+				<Option Goto="4" Text="Мда" Availability="ГОД = 1980, полугодие, Ультраправые террористы">
+					<Rating Value="-12"/>
+				</Option>
+				<Option Goto="17" Text="Подать в отставку на новый год" Availability="ГОД = 1985, полугодие"/>
+				<Option Goto="4" Text="Согласиться с либералами и провести амнистию" Availability="ГОД = 1981, !полугодие, !Правый оппозиционный парламент»">
+					<Rating Value="5"/>
+				</Option>
+				<Option Goto="4" Text="Согласиться с либералами и провести амнистию" Availability="ГОД = 1985, !полугодие, !Правый оппозиционный парламент»">
+					<Rating Value="5"/>
+				</Option>
+				<Option Goto="4" Text="Согласиться с консерваторами и не проводить" Availability="ГОД = 1981, !полугодие, !Левый оппозиционный парламент»"/>
+				<Option Goto="4" Text="Согласиться с консерваторами и не проводить" Availability="ГОД = 1985, !полугодие, !Левый оппозиционный парламент»"/>
+				<Option Goto="4" Text="Продолжать править" Availability="ГОД = 1985, полугодие"/>
+				<Option Goto="4" Text="Вы стали дедушкой" Availability="ГОД = 1984, полугодие, !ДочьНабогатом"/>
+				<Option Goto="4" Text="Ваша дочь развелась и уехала во Францию" Availability="ГОД = 1984, полугодие, ДочьНабогатом"/>
+				<Option Goto="4" Text="Почитать книгу и посмотреть как коммунисты стреляют друг друга" Availability="ГОД = 1984, !полугодие">
+					<Rebels Value="-1"/>
+				</Option>
+				<Option Goto="4" Text="Поддержать вице-президента" Availability="ГОД = 1986, полугодие"/>
+				<Option Goto="4" Text="Поддержать министра Сандатера" Availability="ГОД = 1986, полугодие, Решенный аграрный вопрос, РеформаРад"/>
+				<Option Goto="4" Text="Поддержать министра обороны" Availability="ГОД = 1986, полугодие, ЛОЯЛЬНОСТЬ АРМИИ > 59"/>
+				<Option Goto="4" Text="Поддержать губернатора провинции Валле" Availability="ГОД = 1986, полугодие, ЛОЯЛЬНОСТЬ БИЗНЕСА > 49"/>
+				<Option Goto="4" Text="Авторитет упал" Availability="ГОД = 1986, !полугодие">
+					<Rating Value="-10"/>
+				</Option>
+				<Option Goto="4" Text="Привлечь советских специалистов" Availability="ГОД = 1979, !полугодие">
+					<RelationWithUSSR Value="1"/>
+				</Option>
+				<Option Goto="4" Text="Я пойду на выборы самостоятельно" Availability="ГОД = 1982, полугодие">
+					<Rating Value="-35"/>
+				</Option>
 			</Options>
 		</Paragraph>
 		
