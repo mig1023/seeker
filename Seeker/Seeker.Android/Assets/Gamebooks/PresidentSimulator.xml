@@ -776,6 +776,31 @@
 				</Option>
 			</Options>
 		</Paragraph>
+		<Paragraph No="25">
+			<Text>Помещики и ультраправые боевики оказывают силовое сопротивление земельной реформе в регионе Дерар, где наиболее остро выражен аграрный вопрос. Полиция, или куплена, или сама запугана.</Text>
+			<Triggers>битваЗаземлю</Triggers>
+			<Options>
+				<Option Goto="12" Text="Губернатор коммунист разберется" Availability="Ком.партия">
+					<AgrarianReform Value="1"/>
+				</Option>
+				<Option Goto="12" Text="Мы бессильны против ультраправых боевиков" Availability="Ультраправые террористы">
+					<Rating Value="-15"/>
+					<AgrarianReform Value="-2"/>
+					<Rebels Value="2"/>
+				</Option>
+				<Option Goto="12" Text="Против ультраправых отрядов мы применим армию" Availability="Ультраправые террористы, !Союз с правыми">
+					<Army Value="-1"/>
+					<ArmyLoyalty Value="-10"/>
+					<Rating Value="10"/>
+				</Option>
+				<Option Goto="12" Text="Запретить помещикам иметь свои отряды" Availability="!Ультраправые террористы, !Правый оппозиционный парламент, !Правый провластный парламент">
+					<BusinessLoyalty Value="-10"/>
+					<Rating Value="10"/>
+					<AgrarianReform Value="-10"/>
+				</Option>
+				<Option Goto="12" Text="Смена комиссара полиции решит проблему" Availability="!Ультраправые террористы"/>
+			</Options>
+		</Paragraph>
 		
 		<Paragraph No="29">
 			<Text>Без вас всё стало так плохо, что вас переизбрали!</Text>
