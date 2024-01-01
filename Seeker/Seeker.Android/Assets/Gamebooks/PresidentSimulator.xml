@@ -658,6 +658,23 @@
 				</Option>
 			</Options>
 		</Paragraph>
+		<Paragraph No="19">
+			<Text>Недовольный генерал устроил "Марш Справедливости" на столицу.</Text>
+			<Options>
+				<Option Goto="7" Text="Приказать верным войскам подавить мятеж" Availability="ЛОЯЛЬНОСТЬ АРМИИ > 59">
+					<Army Value="-1"/>
+					<ArmyLoyalty Value="10"/>
+				</Option>
+				<Option Goto="7" Text="Призвать народ к забастовке и сломать ЖД пути" Availability="Сильные профсоюзы, РЕЙТИНГ > 58">
+					<ArmyLoyalty Value="10"/>
+				</Option>
+				<Option Goto="7" Text="Попробовать договориться" Availability="ЛОЯЛЬНОСТЬ АРМИИ > 49">
+					<Money Value="-1"/>
+					<Trigger Value="Ультраправые террористы"/>
+				</Option>
+				<Option Goto="17" Text="Собрать вещи и бежать"/>
+			</Options>
+		</Paragraph>
 		
 		<Paragraph No="29">
 			<Text>Без вас всё стало так плохо, что вас переизбрали!</Text>
