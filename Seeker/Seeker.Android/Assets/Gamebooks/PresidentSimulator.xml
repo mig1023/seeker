@@ -961,5 +961,25 @@
 				<Option Goto="17" Text="Достойно принять поражение" Availability="РЕЙТИНГ &lt; 51"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="34">
+			<Text>Международный валютный фонд готов выдать новые кредиты, но только если мы выполним одно из условий:</Text>
+			<Options>
+				<Option Goto="6" Text="Грамотная оптимизация военных расходов экспертами фонда">
+					<Money Value="2"/>
+					<Army Value="-1"/>
+					<ArmyLoyalty Value="-40"/>
+				</Option>
+				<Option Goto="6" Text="Повышение пенсионного возраста">
+					<Money Value="2"/>
+					<Rating Value="-15"/>
+				</Option>
+				<Option Goto="6" Text="Девальвация валюты для стимулирования экспорта">
+					<Money Value="2"/>
+					<BusinessLoyalty Value="20"/>
+					<Rating Value="-15"/>
+				</Option>
+			</Options>
+			<Option Goto="4" Text="Боюсь, мы пока не готовы"/>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
