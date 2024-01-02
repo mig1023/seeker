@@ -892,5 +892,36 @@
 				</Option>
 			</Options>
 		</Paragraph>
+		<Paragraph No="31">
+			<Text>Тайные переговоры с повстанцами начались, если генералы, бизнес и американский посол узнают то придут в ярость.\n\nПереговоры возможно только в случае уголовного преследования ультра-правых боевиков.\n\nГлавное условие коммунистов - амнистия с сохранением оружия.\n\nНа втором месте - легализации ком.партии для участия в выборах.\n\nНа третьем - назначение их губернаторами занятых территорий.</Text>
+			<Options>
+				<Option Goto="6" Text="Мы не готовы к этим требованиям"/>
+				<Option Goto="6" Text="Амнистия" Availability="СИЛЫ ВОЙСК БОЛЬШЕ СИЛЫ ПОВСТАНЦЕВ > 4">
+					<Untrigger Value="Повстанцы-коммунисты"/>
+					<ArmyLoyalty Value="-30"/>
+					<RelationWithUSA Value="-2"/>
+					<RelationWithUSSR Value="1"/>
+					<Rating Value="25"/>
+				</Option>
+				<Option Goto="6" Text="Амнистия и ком.партия" Availability="СИЛЫ ВОЙСК БОЛЬШЕ СИЛЫ ПОВСТАНЦЕВ > 2">
+					<Untrigger Value="Повстанцы-коммунисты"/>
+					<Trigger Value="Ком.партия"/>
+					<ArmyLoyalty Value="-40"/>
+					<RelationWithUSA Value="-3"/>
+					<RelationWithUSSR Value="3"/>
+					<Rating Value="25"/>
+					<BusinessLoyalty Value="-30"/>
+				</Option>
+				<Option Goto="6" Text="Амнистия, комп.партия и губернаторы" Availability="СИЛЫ ВОЙСК БОЛЬШЕ СИЛЫ ПОВСТАНЦЕВ > 0">
+					<Untrigger Value="Повстанцы-коммунисты"/>
+					<Trigger Value="Ком.партия"/>
+					<ArmyLoyalty Value="-50"/>
+					<RelationWithUSA Value="-4"/>
+					<RelationWithUSSR Value="5"/>
+					<Rating Value="35"/>
+					<BusinessLoyalty Value="-30"/>
+				</Option>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
