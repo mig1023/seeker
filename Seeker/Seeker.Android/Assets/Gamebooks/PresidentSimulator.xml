@@ -923,5 +923,22 @@
 				</Option>
 			</Options>
 		</Paragraph>
+		<Paragraph No="32">
+			<Text>Коммунисты захватили в заложники персонал посольства США, требуя обмена пленными.</Text>
+			<Options>
+				<Option Goto="2" Text="Приказать АРМИИ взять штурмом посольство, только военные умеют мочить повстанцев в сортире">
+					<RelationWithUSA Value="-2"/>
+				</Option>
+				<Option Goto="2" Text="Пускай работают профессионалы из полиции" Availability="СИЛА ВОЙСК > 7">
+					<Rating Value="5"/>
+					<RelationWithUSA Value="1"/>
+					<ArmyLoyalty Value="10"/>
+				</Option>
+				<Option Goto="2" Text="Обмен пленными">
+					<Rebels Value="1"/>
+					<ArmyLoyalty Value="-30"/>
+				</Option>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
