@@ -940,5 +940,26 @@
 				</Option>
 			</Options>
 		</Paragraph>
+		<Paragraph No="33">
+			<Text>Вы выдвигаетесь на второй срок.</Text>
+			<Untriggers>Правый оппозиционный парламент, Правый провластный парламент, Левый оппозиционный парламент, Левый провластный парламент, Расстрелянный парламент</Untriggers>
+			<Options>
+				<Option Goto="9" Text="Я переизбрался на второй срок" Availability="РЕЙТИНГ > 50, Вы из либеральной партии">
+					<Trigger Value="Левый провластный парламент"/>
+				</Option>
+				<Option Goto="9" Text="Я переизбрался на второй срок" Availability="РЕЙТИНГ > 50, Вы из консервативной партии">
+					<Trigger Value="Правый провластный парламент"/>
+				</Option>
+				<Option Goto="17" Text="Красиво уйти и не идти на второй срок" Availability="РЕЙТИНГ > 50"/>
+				<Option Goto="9" Text="Пускай и проиграл, важно как голоса считают) профсоюзов все равно нет" Availability="РЕЙТИНГ &lt; 51, !Сильные профсоюзы">
+					<Rating Value="-15"/>
+					<ArmyLoyalty Value="-20"/>
+					<BusinessLoyalty Value="-20"/>
+					<Rebels Value="3"/>
+					<Trigger Value="Расстрелянный парламент"/>
+				</Option>
+				<Option Goto="17" Text="Достойно принять поражение" Availability="РЕЙТИНГ &lt; 51"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
