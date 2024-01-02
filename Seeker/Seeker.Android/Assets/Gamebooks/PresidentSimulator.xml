@@ -5,12 +5,12 @@
 			<Author>СтепанОншин, 2023</Author>
 		</Copyright>
 		<Styles>
-			<Main Value="e29e00"/>
-			<Color Name="Option, Continue" Value="e9b846"/>		
-			<Background Value="f4c689"/>
-			<StatusBar Value="cb8e00"/>
+			<Main Value="cc5500"/>
+			<Color Name="Option, Continue" Value="ff8833"/>		
+			<StatusBar Value="cc5200"/>
+			<Background Value="faddcb"/>
 			<AdditionalStatus Value="db8314"/>
-			<System Value="e9b846"/>
+			<System Value="ff8833"/>
 			<SystemFont Value="ffffff"/>
 		</Styles>
 		<Dictionaries>
