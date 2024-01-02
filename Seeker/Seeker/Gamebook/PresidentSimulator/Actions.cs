@@ -95,6 +95,11 @@ namespace Seeker.Gamebook.PresidentSimulator
                     {
                         return protagonist.Army < protagonist.Rebels;
                     }
+                    else if (line == "СИЛЫ ВОЙСК БОЛЬШЕ СИЛЫ ПОВСТАНЦЕВ")
+                    {
+                        int level = Services.LevelParse(line);
+                        return protagonist.Army > protagonist.Rebels + level;
+                    }
                     else if (line.Contains("!"))
                     {
                         if (Option.IsTriggered(line.Replace("!", String.Empty).Trim()))
