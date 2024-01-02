@@ -57,23 +57,23 @@ namespace Seeker.Game
             if (!line.Contains(option))
                 return true;
 
-            else if (line.Contains("<=") && (value > level))
-                return false;
+            else if (line.Contains("<="))
+                return value <= level;
 
-            else if (line.Contains(">=") && (value < level))
-                return false;
+            else if (line.Contains(">="))
+                return value >= level;
 
-            else if (line.Contains("<") && (value >= level))
-                return false;
+            else if (line.Contains("<"))
+                return value < level;
 
-            else if (line.Contains(">") && (value <= level))
-                return false;
+            else if (line.Contains(">"))
+                return value > level;
 
-            else if (line.Contains("!=") && (value == level))
-                return false;
+            else if (line.Contains("!="))
+                return value != level;
 
-            else if (line.Contains("=") && (value != level))
-                return false;
+            else if (line.Contains("="))
+                return value == level;
 
             else
                 return true;
