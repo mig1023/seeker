@@ -5,13 +5,13 @@
 			<Author>СтепанОншин, 2023</Author>
 		</Copyright>
 		<Styles>
-			<Main Value="cc5500"/>
-			<Color Name="Option, Continue" Value="ff8833"/>		
+			<Main Value="d89757"/>
+			<Color Name="Option, Continue" Value="a56245"/>		
 			<StatusBar Value="cc5200"/>
 			<Background Value="faddcb"/>
 			<AdditionalStatus Value="db8314"/>
-			<System Value="ff8833"/>
-			<SystemFont Value="ffffff"/>
+			<System Value="8c463e"/>
+			<Color Name="SystemFont, AdditionalFont" Value="ffffff"/>
 		</Styles>
 		<Dictionaries>
 			<TextByYears>
