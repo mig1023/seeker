@@ -219,7 +219,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                 string coherenceTemplate = $" {sign} {Math.Abs(coherence)} за Слаженность";
                 string bonusLine = coherenceBonus ? coherenceTemplate : String.Empty;
 
-                fight.Add($"Мощность удара:" +
+                fight.Add($"Мощность удара: " +
                     $"{Game.Dice.Symbol(firstRoll)} + " +
                     $"{Game.Dice.Symbol(secondRoll)} + " +
                     $"{attacker.Attack}{bonuses}{bonusLine} = {attackStrength}");
