@@ -114,7 +114,7 @@ namespace Seeker.Gamebook.YounglingTournament
 
             List<string> enemies = new List<string>();
 
-            if (Enemies == null)
+            if ((Enemies == null) || (Type == "EnemyDiceWounds"))
                 return enemies;
 
             foreach (Character enemy in Enemies)
