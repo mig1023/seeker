@@ -376,7 +376,7 @@ namespace Seeker.Output
                 info.Children.Add(Line(fontColor, "Снаряжение:"));
 
                 for (int i = 0; i < healings.Count; i++)
-                    info.Children.Add(Line(fontColor, "{i + 1}. {healings[i]}"));
+                    info.Children.Add(Line(fontColor, $"{i + 1}. {healings[i]}"));
             }
 
             return info;
