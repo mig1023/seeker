@@ -16,7 +16,6 @@ namespace Seeker.Gamebook.StrikeBack
         public bool GroupFight { get; set; }
         public int RoundsToWin { get; set; }
         public int WoundsToWin { get; set; }
-        public bool NotToDeath { get; set; }
         public int Count { get; set; }
         public bool WoundsByDices { get; set; }
         public int WoundsMultiple { get; set; }
@@ -443,10 +442,6 @@ namespace Seeker.Gamebook.StrikeBack
                 if (allyLost == 0)
                 {
                     fight.Add("BIG|BAD|ТЫ ПРОИГРАЛ :(");
-
-                    if (NotToDeath)
-                        protagonist.Endurance += 1;
-
                     return fight;
                 }
 
