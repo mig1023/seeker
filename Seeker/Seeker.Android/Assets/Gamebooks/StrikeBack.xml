@@ -1014,7 +1014,7 @@
 						<Enemy Name="Хобгоблин C" Attack="3" Defence="8" Endurance="4"/>
 						<Enemy Name="Хобгоблин D" Attack="3" Defence="8" Endurance="7"/>
 					</Enemies>
-					<SpecialTechnique>WithoutProtagonist</SpecialTechnique>
+					<SpecialTechnique>WithoutProtagonist, ToFirstDeathOnly</SpecialTechnique>
 					<Text>Поскольку ты сидишь в укрытии, тебя никто не атакует. Всё, что от тебя требуется — следить за боем хобгоблинов с лютоволком.</Text>
 				</Fight>
 			</Actions>
