@@ -266,10 +266,10 @@
 			<Actions>
 				<Fight>
 					<Enemies>
-						<Enemy Name="Хобгоблин А" Attack="3" Defence="8" Endurance="5"/>
-						<Enemy Name="Хобгоблин В" Attack="3" Defence="8" Endurance="6"/>
-						<Enemy Name="Хобгоблин С" Attack="3" Defence="8" Endurance="4"/>
-						<Enemy Name="Хобгоблин D" Attack="3" Defence="8" Endurance="7"/>
+						<Enemy Name="Вожак хобгоблинов" Attack="3" Defence="8" Endurance="5"/>
+						<Enemy Name="Хобгоблин Кувалда" Attack="3" Defence="8" Endurance="6"/>
+						<Enemy Name="Хобгоблин Слизняк" Attack="3" Defence="8" Endurance="4"/>
+						<Enemy Name="Хобгоблин Рык" Attack="3" Defence="8" Endurance="7"/>
 					</Enemies>
 					<SpecialTechnique>WithoutGameover, ToFirstDeathOnly</SpecialTechnique>
 				</Fight>
@@ -611,15 +611,15 @@
 			<Actions>
 				<Fight>
 					<Allies>
-						<Ally Name="Хобгоблин А" Attack="3" Defence="8" Endurance="5"/>
-						<Ally Name="Хобгоблин B" Attack="3" Defence="8" Endurance="6"/>
-						<Ally Name="Хобгоблин C" Attack="3" Defence="8" Endurance="4"/>
-						<Ally Name="Хобгоблин D" Attack="3" Defence="8" Endurance="7"/>
+						<Ally Name="Вожак хобгоблинов" Attack="3" Defence="8" Endurance="5"/>
+						<Ally Name="Хобгоблин Кувалда" Attack="3" Defence="8" Endurance="6"/>
+						<Ally Name="Хобгоблин Слизняк" Attack="3" Defence="8" Endurance="4"/>
+						<Ally Name="Хобгоблин Рык" Attack="3" Defence="8" Endurance="7"/>
 					</Allies>
 					<Enemies>
 						<Enemy Name="Бывший вор РАМБЛ" Attack="3" Defence="8" Endurance="12"/>
-						<Enemy Name="Воин А" Attack="2" Defence="8" Endurance="5"/>
-						<Enemy Name="Воин B" Attack="2" Defence="8" Endurance="6"/>
+						<Enemy Name="Первый воин" Attack="2" Defence="8" Endurance="5"/>
+						<Enemy Name="Второй воин" Attack="2" Defence="8" Endurance="6"/>
 					</Enemies>
 					<SpecialTechnique>ToFirstDeathOnly</SpecialTechnique>
 					<Text>Разумеется, ты тоже должен принять участие в драке.</Text>
@@ -1009,10 +1009,10 @@
 				<Fight>
 					<Ally Name="Лютоволк" Attack="5" Defence="8" Endurance="22"/>
 					<Enemies>
-						<Enemy Name="Хобгоблин А" Attack="3" Defence="8" Endurance="5"/>
-						<Enemy Name="Хобгоблин B" Attack="3" Defence="8" Endurance="6"/>
-						<Enemy Name="Хобгоблин C" Attack="3" Defence="8" Endurance="4"/>
-						<Enemy Name="Хобгоблин D" Attack="3" Defence="8" Endurance="7"/>
+						<Enemy Name="Вожак хобгоблинов" Attack="3" Defence="8" Endurance="5"/>
+						<Enemy Name="Хобгоблин Кувалда" Attack="3" Defence="8" Endurance="6"/>
+						<Enemy Name="Хобгоблин Слизняк" Attack="3" Defence="8" Endurance="4"/>
+						<Enemy Name="Хобгоблин Рык" Attack="3" Defence="8" Endurance="7"/>
 					</Enemies>
 					<SpecialTechnique>WithoutProtagonist, ToFirstDeathOnly</SpecialTechnique>
 					<Text>Поскольку ты сидишь в укрытии, тебя никто не атакует. Всё, что от тебя требуется — следить за боем хобгоблинов с лютоволком.</Text>
