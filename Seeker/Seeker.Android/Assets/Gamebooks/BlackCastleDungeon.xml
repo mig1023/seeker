@@ -15305,7 +15305,7 @@
 				<Option Goto="1477" Text="Подойдете к толу"/>
 				<Option Goto="1430" Text="К зеркалу">
 					<Text>Или если у вас есть заклятие Левитации, вылетите из окна? Тогда на уровень какого этажа:</Text>
-				</Option>		
+				</Option>
 				<Option Goto="1533" Text="Первого" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
 					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 				</Option>
