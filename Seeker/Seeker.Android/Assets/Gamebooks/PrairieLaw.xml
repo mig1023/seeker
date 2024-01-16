@@ -2910,7 +2910,7 @@
 					<Benefit Name="Healing" Value="Принять Золотую Панацею,-1"/>
 					<Price>300</Price>
 					<Multiple/>
-				</Get>	
+				</Get>
 			</Actions>
 			<Options>
 				<Option Goto="403" Text="Решили что-нибудь купить"/>
