@@ -12549,7 +12549,7 @@
 			</Actions>
 			<Modifications>
 				<Endurance Value="-4"/>
-			</Modifications>			
+			</Modifications>
 			<Options>
 				<Option Goto="1267" Text="Вы можете попытаться наложить заклятие Копии" Availability="ЗАКЛЯТИЕ КОПИИ">
 					<RemoveSpell Value="ЗАКЛЯТИЕ КОПИИ"/>
