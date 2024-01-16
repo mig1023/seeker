@@ -1088,7 +1088,7 @@
 				</Option>
 				<Option Goto="101" Text="Перейди к Подсчету результатов">
 					<Trigger Value="Гибель"/>
-				</Option>		
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph No="75">
