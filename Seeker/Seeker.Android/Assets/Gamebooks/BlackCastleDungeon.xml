@@ -4422,7 +4422,6 @@
 					<Text>Или скажете, что вы передумали и уйдете из библиотеки.</Text>
 				</Option>
 				<Option Goto="591"/>
-				
 			</Options>
 		</Paragraph>
 		<Paragraph No="481">
