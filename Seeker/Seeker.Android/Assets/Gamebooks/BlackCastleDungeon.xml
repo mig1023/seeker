@@ -13818,7 +13818,7 @@
 					<Text>В ином случае:</Text>
 				</Option>
 				<Option Goto="1076" Text="Подойдете к окну"/>
-				<Option Goto="1360" Text="Подойдете в дверь за вашей спиной"/>			
+				<Option Goto="1360" Text="Подойдете в дверь за вашей спиной"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="1557">
