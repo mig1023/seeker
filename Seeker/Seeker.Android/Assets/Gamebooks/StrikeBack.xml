@@ -930,7 +930,7 @@
 				<Text>Довольный, выходишь из комнаты.</Text>
 				<Text Style="Small">Брось одну кость:</Text>
 			</Texts>
-			<Actions>	
+			<Actions>
 				<Dices/>
 			</Actions>
 			<Transformation Value="СТРАШИЛА,5,9,15"/>
