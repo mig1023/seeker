@@ -2244,7 +2244,7 @@
 					<Roulette/>
 					<Text>Играть можно только на наличные, в долг здесь не верят.</Text>
 				</DoubleGame>
-			</Actions>	
+			</Actions>
 			<Options>
 				<Option Goto="242" Text="Сыграть ещё раз"/>
 				<Option Goto="579" Text="Выиграли три раза подряд"/>
