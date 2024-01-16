@@ -4228,7 +4228,7 @@
 					<Price>100</Price>
 					<Trigger>Зеркальце</Trigger>
 					<Text>Есть у разносчика даже динамитная шашка – за 8 монет.</Text>
-				</Get>	
+				</Get>
 				<Get>
 					<Button>Купить</Button>
 					<Head>Динамитная шашка</Head>
