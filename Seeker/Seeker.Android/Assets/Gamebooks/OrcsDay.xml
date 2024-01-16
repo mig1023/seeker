@@ -520,7 +520,7 @@
 				</Option>
 				<Option Goto="55" Text="Предпринять попытку противостоять своей природе">
 					<Text>Если в итоге ты смог одолеть:</Text>
-				</Option>		
+				</Option>
 				<Option Goto="51" Text="Если получилось"/>
 				<Option Goto="25" Text="Если не решишься пытаться"/>
 			</Options>
