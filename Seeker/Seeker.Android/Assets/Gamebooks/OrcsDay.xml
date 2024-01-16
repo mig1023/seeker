@@ -1383,7 +1383,7 @@
 					<Text>Если ты победишь приключенцев и...</Text>
 				</Option>
 				<Option Goto="85" Text="Здоровье девушки не достигло нуля"/>
-				<Option Goto="21" Text="Здоровье девушки равно нулю"/>		
+				<Option Goto="21" Text="Здоровье девушки равно нулю"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="97">
