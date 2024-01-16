@@ -438,7 +438,7 @@
 			<Modifications>
 				<Orcishness Value="-1"/>
 			</Modifications>
-			<Options>			
+			<Options>
 				<Option Goto="77" Text="Успешно"/>
 				<Option Goto="13" Text="Нет"/>
 			</Options>
