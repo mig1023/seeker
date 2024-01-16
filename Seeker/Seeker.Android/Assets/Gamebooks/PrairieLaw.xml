@@ -5048,7 +5048,7 @@
 					<Head>Зеркальце</Head>
 					<Price>50</Price>
 					<Trigger>Зеркальце</Trigger>
-				</Get>	
+				</Get>
 			</Actions>
 			<Options>
 				<Option Goto="325" Text="Купите что-нибудь"/>
