@@ -638,7 +638,7 @@
 				<Text>Что ж, используй новообретённую силу на полную катушку, устрой погром!\n\nВыходишь из комнаты.</Text>
 				<Text Style="Small">Брось одну кость:</Text>
 			</Texts>
-			<Actions>	
+			<Actions>
 				<Dices/>
 			</Actions>
 			<Transformation Value="ОБОРОТЕНЬ,5,9,18"/>
