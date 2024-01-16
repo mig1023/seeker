@@ -13214,7 +13214,7 @@
 					<Enemy Name="ГОБЛИН" Mastery="7" Endurance="10"/>
 					<RoundsToWin Value="5"/>
 				</Fight>
-			</Actions>			
+			</Actions>
 			<Options>
 				<Option Goto="1144" Text="Если вы победили его за 5 раундов атаки"/>
 				<Option Goto="935" Text="Если же за это время вы не смогли его одолеть"/>
