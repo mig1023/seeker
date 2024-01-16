@@ -839,7 +839,7 @@
 				<Text>Преисполнившись боевым духом, выходишь из комнаты.</Text>
 				<Text Style="Small">Брось одну кость:</Text>
 			</Texts>
-			<Actions>	
+			<Actions>
 				<Dices/>
 			</Actions>
 			<Transformation Value="ЯЩЕРОЛЮД,4,9,10"/>
