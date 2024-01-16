@@ -1144,7 +1144,7 @@
 					<OrcishnessTest/>
 				</Test>
 			</Actions>
-			<Options>	
+			<Options>
 				<Option Goto="38" Text="Если преуспеешь">
 					<Text>Если провалишься, значит, в тебе всё ещё слишком много от орка, чтобы взбунтоваться против порядка...</Text>
 				</Option>
