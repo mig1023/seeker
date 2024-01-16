@@ -1614,7 +1614,7 @@
 				<Text>Глен хватает висевший на груди крест и наставляет на тебя.</Text>
 				<Text Style="Small">Брось две кости:</Text>
 			</Texts>
-			<Actions>	
+			<Actions>
 				<Dices>
 					<Count>2</Count>
 				</Dices>
