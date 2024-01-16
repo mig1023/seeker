@@ -1218,7 +1218,7 @@
 			</Actions>
 			<Options>
 				<Option Goto="195" Text="Промахнулись"/>
-				<Option Goto="207" Text="Попали">	
+				<Option Goto="207" Text="Попали">
 					<Text>Подождёте, что он будет делать дальше:</Text>
 				</Option>
 				<Option Goto="197"/>
