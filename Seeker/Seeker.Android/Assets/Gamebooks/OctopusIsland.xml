@@ -177,7 +177,7 @@
 					<Enemy Name="Ро-пёс" Skill="9" Hitpoint="10"/>
 					<Text>На этот раз предстоит смертельная битва.</Text>
 				</Fight>
-			</Actions>	
+			</Actions>
 			<Options>
 				<Option Goto="86"/>
 			</Options>
