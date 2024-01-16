@@ -67,7 +67,7 @@
 				<Fight>
 					<Enemy Name="УДУШАЮЩИЕ ЛОЗЫ" Mastery="10" Endurance="13"/>
 				</Fight>
-			</Actions>	
+			</Actions>
 			<Options>
 				<Option Goto="36" Text="Тебе удастся вырваться из зеленого плена"/>
 			</Options>
