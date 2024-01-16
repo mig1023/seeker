@@ -706,7 +706,7 @@
 					<Level>10</Level>
 				</Test>
 			</Actions>
-			<Options>			
+			<Options>
 				<Option Goto="51" Text="Если проверка провалена">
 					<Text>Если успешна, тебе придётся выбрать один из предыдущих вариантов.</Text>
 				</Option>
