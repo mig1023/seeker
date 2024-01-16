@@ -514,7 +514,7 @@
 			<Modifications>
 				<WayBack Value="32"/>
 			</Modifications>
-			<Options>		
+			<Options>
 				<Option Goto="51" Text="Если успешно">
 					<Text>Если ты провалился, ты можешь сделать последнюю попытку победить свою Оркишность:</Text>
 				</Option>
