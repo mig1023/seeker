@@ -435,7 +435,7 @@
 				<Text>Насытившись, выходишь из кухни.</Text>
 				<Text Style="Small">Брось одну кость:</Text>
 			</Texts>
-			<Actions>	
+			<Actions>
 				<Dices/>
 			</Actions>
 			<Modifications>
