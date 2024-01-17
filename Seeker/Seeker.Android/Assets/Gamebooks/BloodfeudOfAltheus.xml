@@ -2454,7 +2454,7 @@
 				<Fight>
 					<Enemy Name="Воительница" Strength="7" Defence="14"/>
 				</Fight>
-			</Actions>	
+			</Actions>
 			<Options>
 				<Option Goto="180" Text="Умерли и спасены Зевсом" Availability="ВОСКРЕШЕНИЕ">
 					<Resurrection Value="-1"/>
