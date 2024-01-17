@@ -5439,7 +5439,7 @@
 					<Enemy Name="Пес" Strength="8" Defence="17"/>
 					<FightToDeath/>
 				</Fight>
-			</Actions>	
+			</Actions>
 			<IntuitiveSolution/>
 			<Options>
 				<Option Goto="147" Text="Отступаете"/>
