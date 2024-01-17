@@ -4287,7 +4287,7 @@
 						<Enemy Name="Второй разбойник" Strength="6" Defence="10"/>
 					</Enemies>
 				</Fight>
-			</Actions>	
+			</Actions>
 			<Options>
 				<Option Goto="600" Text="Они тяжело ранены"/>
 				<Option Goto="374" Text="Хотите сдаться"/>
