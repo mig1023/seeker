@@ -280,7 +280,7 @@
 					<Enemy Name="ШАР-ХИЩНИК" Skill="10" Strength="6"/>
 					<Text>Удалось ли вам победить?</Text>
 				</Fight>
-			</Actions>	
+			</Actions>
 			<Options>
 				<Option Goto="150"/>
 			</Options>
