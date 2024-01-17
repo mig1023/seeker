@@ -1977,7 +1977,7 @@
 			<Texts>
 				<Text>Греческие вина никогда не отличались изысканностью, особенно в ваше время.</Text>
 				<Text Style="Small">Потеряйте 1 очко Славы.</Text>
-			</Texts>	
+			</Texts>
 			<Modifications>
 				<IntuitiveGlory Value="-1"/>
 			</Modifications>
