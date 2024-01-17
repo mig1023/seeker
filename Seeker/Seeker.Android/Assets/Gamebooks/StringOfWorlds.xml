@@ -55,7 +55,7 @@
 					<Enemy Name="КУСТ-ХИЩНИК" Skill="9" Strength="10"/>
 					<Text>Удалось ли вам победить?</Text>
 				</Fight>
-			</Actions>	
+			</Actions>
 			<Options>
 				<Option Goto="411"/>
 			</Options>
