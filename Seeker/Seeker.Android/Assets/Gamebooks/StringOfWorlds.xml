@@ -1372,7 +1372,7 @@
 					</Enemies>
 					<Text>Удалось ли вам победить?</Text>
 				</Fight>
-			</Actions>	
+			</Actions>
 			<Options>
 				<Option Goto="564"/>
 			</Options>
