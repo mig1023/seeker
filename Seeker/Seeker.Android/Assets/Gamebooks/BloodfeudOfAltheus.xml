@@ -3109,7 +3109,7 @@
 						<Enemy Name="Второй бандит" Strength="6" Defence="10"/>
 					</Enemies>
 				</Fight>
-			</Actions>	
+			</Actions>
 			<Options>
 				<Option Goto="171" Text="Они оба тяжело ранены"/>
 				<Option Goto="374" Text="Вы сдались"/>
