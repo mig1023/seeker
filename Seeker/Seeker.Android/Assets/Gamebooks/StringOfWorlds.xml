@@ -1060,7 +1060,7 @@
 					<Enemy Name="«КУЗНЕЧИК»" Skill="10" Strength="10"/>
 					<Text>Вы победили?</Text>
 				</Fight>
-			</Actions>	
+			</Actions>
 			<Options>
 				<Option Goto="39"/>
 			</Options>
