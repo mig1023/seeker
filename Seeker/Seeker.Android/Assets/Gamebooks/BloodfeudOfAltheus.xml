@@ -5041,7 +5041,7 @@
 				<Fight>
 					<Enemy Name="Амазонка" Strength="7" Defence="14"/>
 				</Fight>
-			</Actions>	
+			</Actions>
 			<Options>
 				<Option Goto="242" Text="Хотите перед боем обратиться к своему божественному покровителю за помощью"/>
 				<Option Goto="320" Text="Отступаете"/>
