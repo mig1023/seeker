@@ -5704,7 +5704,7 @@
 					<Enemy Name="Медведь" Strength="6" Defence="13"/>
 					<FightToDeath/>
 				</Fight>
-			</Actions>	
+			</Actions>
 			<Options>
 				<Option Goto="526" Text="Победили"/>
 				<Option Goto="210" Text="Хотите отступить (не забудьте потерять 1 очко Славы, даже если ваша попытка к бегству не увенчалась успехом)">
