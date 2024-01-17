@@ -4584,7 +4584,7 @@
 				<Fight>
 					<Enemy Name="Толпа" Strength="8" Defence="11"/>
 				</Fight>
-			</Actions>	
+			</Actions>
 			<Options>
 				<Option Goto="407" Text="Отступаете"/>
 				<Option Goto="230" Text="Погибли, и Зевс воскресил вас" Availability="ВОСКРЕШЕНИЕ">
