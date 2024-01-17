@@ -468,7 +468,7 @@
 			<Options>
 				<Option Goto="61" Text="Трости" Availability="Трость"/>
 				<Option Goto="24" Text="Пистолета" Availability="Трофейный вальтер"/>
-				<Option Goto="59" Text="Ножа" Availability="Армейский нож"/>			
+				<Option Goto="59" Text="Ножа" Availability="Армейский нож"/>
 				<Option Goto="48" Text="Кастетом" Availability="Кастет, !Попойка"/>
 				<Option Goto="23" Text="Кастетом" Availability="Кастет, Попойка"/>
 			</Options>
