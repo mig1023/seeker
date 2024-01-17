@@ -3627,7 +3627,7 @@
 					</Enemies>
 					<FightToDeath/>
 				</Fight>
-			</Actions>	
+			</Actions>
 			<Options>
 				<Option Goto="422" Text="Сдаетесь"/>
 				<Option Goto="163" Text="Победили их"/>
