@@ -282,7 +282,7 @@
 					<FightToDeath/>
 					<Text>Вы не можете отступить.</Text>
 				</Fight>
-			</Actions>	
+			</Actions>
 			<IntuitiveSolution/>
 			<Options>
 				<Option Goto="617" Text="Ударили Талоса три раза"/>
