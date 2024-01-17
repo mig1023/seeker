@@ -1904,7 +1904,7 @@
 					<Enemy Name="Волк" Strength="2" Defence="12"/>
 					<FightToDeath/>
 				</Fight>
-			</Actions>	
+			</Actions>
 			<Options>
 				<Option Goto="400" Text="Убили его"/>
 				<Option Goto="277" Text="Умерли, но Зевс воскресил вас" Availability="ВОСКРЕШЕНИЕ">
