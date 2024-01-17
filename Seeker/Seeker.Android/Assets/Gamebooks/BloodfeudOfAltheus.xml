@@ -2547,7 +2547,7 @@
 					<Enemy Name="Прокруст" Strength="6" Defence="13"/>
 					<Wound/>
 				</Fight>
-			</Actions>	
+			</Actions>
 			<Options>
 				<Option Goto="21" Text="Удалось тяжело ранить его"/>
 				<Option Goto="571" Text="Сдаетесь"/>
