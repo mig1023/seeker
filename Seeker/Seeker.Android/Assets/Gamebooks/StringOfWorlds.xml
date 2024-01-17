@@ -408,7 +408,7 @@
 					<Enemy Name="«РОСЯНКА»" Skill="7" Strength="8"/>
 					<Text>Если вы победили, продолжайте путь.</Text>
 				</Fight>
-			</Actions>	
+			</Actions>
 			<Options>
 				<Option Goto="207"/>
 			</Options>
