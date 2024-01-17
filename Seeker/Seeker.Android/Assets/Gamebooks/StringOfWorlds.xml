@@ -358,7 +358,7 @@
 					<Enemy Name="СОРОКОНОЖКА" Skill="7" Strength="6"/>
 					<Text>Удалось ли вам победить?</Text>
 				</Fight>
-			</Actions>	
+			</Actions>
 			<Options>
 				<Option Goto="144"/>
 			</Options>
