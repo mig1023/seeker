@@ -2118,7 +2118,7 @@
 						<Enemy Name="Мегера" Strength="4" Defence="18"/>
 					</Enemies>
 				</Fight>
-			</Actions>	
+			</Actions>
 			<Options>
 				<Option Goto="153" Text="Сдаетесь"/>
 				<Option Goto="520" Text="Спасаетесь бегством"/>
