@@ -4322,7 +4322,7 @@
 					<Enemy Name="Человек" Strength="7" Defence="13"/>
 					<Text>Только на время этого боя отнимите 2 от своей Силы из-за морской болезни.</Text>
 				</Fight>
-			</Actions>	
+			</Actions>
 			<IntuitiveSolution/>
 			<Options>
 				<Option Goto="121" Text="Сдаетесь"/>
