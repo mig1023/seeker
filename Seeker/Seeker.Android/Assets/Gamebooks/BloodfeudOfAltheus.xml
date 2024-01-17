@@ -1834,7 +1834,7 @@
 					<Enemy Name="Бык" Strength="10" Defence="16"/>
 					<FightToDeath/>
 				</Fight>
-			</Actions>	
+			</Actions>
 			<Options>
 				<Option Goto="225" Text="Победили эту жуткую тварь"/>
 				<Option Goto="515" Text="Убегаете, отказавшись от задания, которое дал вам отец"/>
