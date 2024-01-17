@@ -4168,7 +4168,7 @@
 					<Enemy Name="Чудовище" Strength="16" Defence="10"/>
 					<FightToDeath/>
 				</Fight>
-			</Actions>	
+			</Actions>
 			<IntuitiveSolution/>
 			<Options>
 				<Option Goto="533" Text="Победили его"/>
