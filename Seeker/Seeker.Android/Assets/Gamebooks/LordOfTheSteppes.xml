@@ -6318,7 +6318,7 @@
 		</Paragraph>
 		<Paragraph No="716">
 			<Text>Путники, словно ожидавшие подобного поворота событий, выхватывают мечи — они готовы дать отпор.</Text>
-			<Actions>	
+			<Actions>
 				<Fight>
 					<Enemies>
 						<Enemy Name="Первый путник" Attack="8" Defence="14" Endurance="9" Initiative="9" SpecialTechnique="Reaction"/>
