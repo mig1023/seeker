@@ -2402,7 +2402,7 @@
 					<Enemy Name="КУСТ-ВАМПИР" Skill="11" Strength="8"/>
 					<Text>Если вы победили — можете продолжать путь.</Text>
 				</Fight>
-			</Actions>	
+			</Actions>
 			<Options>
 				<Option Goto="475"/>
 			</Options>
