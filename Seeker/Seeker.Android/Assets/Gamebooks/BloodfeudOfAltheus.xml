@@ -205,7 +205,7 @@
 					<Enemy Name="Прокруст" Strength="12" Defence="5"/>
 					<LastWound/>
 				</Fight>
-			</Actions>	
+			</Actions>
 			<IntuitiveSolution/>
 			<Options>
 				<Option Goto="315" Text="Убили его"/>
