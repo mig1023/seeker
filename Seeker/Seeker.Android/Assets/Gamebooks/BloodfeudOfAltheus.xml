@@ -2725,7 +2725,7 @@
 					<FightToDeath/>
 					<LastWound/>
 				</Fight>
-			</Actions>	
+			</Actions>
 			<Options>
 				<Option Goto="527" Text="В конечном итоге вы ее убили"/>
 				<Option Goto="275" Text="Бежали с поля боя"/>
