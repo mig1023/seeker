@@ -678,7 +678,7 @@
 					<Enemy Name="ЖУК" Skill="9" Strength="9"/>
 					<Text>Если вы покончили с ним, можете выбраться из воронки и идти дальше, огибая стену колючего кустарника.</Text>
 				</Fight>
-			</Actions>	
+			</Actions>
 			<Options>
 				<Option Goto="131"/>
 			</Options>
