@@ -714,7 +714,7 @@
 					<Price>27</Price>
 					<Benefit Name="ExtendedDamage"/>
 					<Text>третий стоимостью 38 монет, прибавит 1 к Нападению, 1 к Инициативе и наносит урон в 3 Жизни при каждом точном ударе:</Text>
-				</Get>			
+				</Get>
 				<Get>
 					<Head>Третий меч</Head>
 					<Price>38</Price>
