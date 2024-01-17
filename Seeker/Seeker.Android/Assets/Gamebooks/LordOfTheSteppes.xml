@@ -6240,7 +6240,7 @@
 		</Paragraph>
 		<Paragraph No="708">
 			<Text>Вы нападаете:</Text>
-			<Actions>	
+			<Actions>
 				<Fight>
 					<Enemies>
 						<Enemy Name="Первый воин" Attack="8" Defence="14" Endurance="10" Initiative="9"/>
