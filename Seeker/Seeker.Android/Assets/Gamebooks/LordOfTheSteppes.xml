@@ -5757,7 +5757,7 @@
 		</Paragraph>
 		<Paragraph No="651">
 			<Text>Он не собирается убегать и принимает бой с печальным взглядом, словно желает смерти.</Text>
-			<Actions>	
+			<Actions>
 				<Fight>
 					<Enemy Name="Оборотень" Attack="9" Defence="15" Endurance="14" Initiative="14" SpecialTechnique="PowerfulStrike"/>
 					<Benefits>
