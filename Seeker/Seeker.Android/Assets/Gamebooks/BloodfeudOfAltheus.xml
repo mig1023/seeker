@@ -1650,7 +1650,7 @@
 					<Enemy Name="Чудовище" Strength="22" Defence="14"/>
 					<FightToDeath/>
 				</Fight>
-			</Actions>	
+			</Actions>
 			<Options>
 				<Option Goto="533" Text="Победили его"/>
 				<Option Goto="562" Text="Подождете в надежде, что тварь не станет нападать на корабль"/>
