@@ -112,7 +112,7 @@
 					<Enemy Name="ЗМЕЯ" Skill="12" Strength="12"/>
 					<Text>Удалось ли вам победить?</Text>
 				</Fight>
-			</Actions>	
+			</Actions>
 			<Options>
 				<Option Goto="162"/>
 			</Options>
