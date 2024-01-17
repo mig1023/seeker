@@ -6356,7 +6356,7 @@
 		</Paragraph>
 		<Paragraph No="720">
 			<Text>В руке степняка легкая сабля, которая готова к встрече с вашим клинком.</Text>
-			<Actions>	
+			<Actions>
 				<Fight>
 					<Enemy Name="Степняк-лазутчик" Attack="8" Defence="14" Endurance="9" Initiative="11"/>
 					<Benefit Name="MaxInitiative" Value="1"/>
