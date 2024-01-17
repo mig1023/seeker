@@ -5100,7 +5100,7 @@
 					<Enemy Name="Колосс" Strength="14" Defence="18"/>
 					<FightToDeath/>
 				</Fight>
-			</Actions>	
+			</Actions>
 			<Options>
 				<Option Goto="443" Text="Сдаетесь"/>
 				<Option Goto="617" Text="Убили Талоса"/>
