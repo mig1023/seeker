@@ -472,7 +472,7 @@
 					<Ichor/>
 					<Text>Вместо сражения вы можете попробовать выдернуть пробку.</Text>
 				</Fight>
-			</Actions>	
+			</Actions>
 			<Options>
 				<Option Goto="365" Text="Попробовать выдернуть пробку"/>
 				<Option Goto="617" Text="Ударили его три раза"/>
