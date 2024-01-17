@@ -1757,7 +1757,7 @@
 				<Fight>
 					<Enemy Name="Хозяин" Strength="4" Defence="10"/>
 				</Fight>
-			</Actions>	
+			</Actions>
 			<Options>
 				<Option Goto="304" Text="Отступите"/>
 				<Option Goto="127" Text="Сдадитесь"/>
