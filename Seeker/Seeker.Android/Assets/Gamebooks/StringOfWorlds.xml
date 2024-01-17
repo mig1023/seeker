@@ -1939,7 +1939,7 @@
 				<Fight>
 					<Enemy Name="ПАУК" Skill="9" Strength="8"/>
 				</Fight>
-			</Actions>	
+			</Actions>
 			<Options>
 				<Option Goto="438" Text="Вы победили"/>
 			</Options>
