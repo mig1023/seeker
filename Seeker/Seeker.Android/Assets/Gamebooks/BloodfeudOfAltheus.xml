@@ -3437,7 +3437,7 @@
 					<Enemy Name="Стая крыс" Strength="3" Defence="15"/>
 					<FightToDeath/>
 				</Fight>
-			</Actions>	
+			</Actions>
 			<Options>
 				<Option Goto="490" Text="Решите отступить"/>
 				<Option Goto="51" Text="Погибли, но Зевс воскресил вас" Availability="ВОСКРЕШЕНИЕ">
