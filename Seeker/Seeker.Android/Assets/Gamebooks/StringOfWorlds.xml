@@ -2840,7 +2840,7 @@
 					<Enemy Name="БЕРТОЛЬД ИЗ СОРГЕЙЛЯ" Skill="10" Strength="10"/>
 					<Text>Вам удалось победить?</Text>
 				</Fight>
-			</Actions>	
+			</Actions>
 			<Options>
 				<Option Goto="663"/>
 			</Options>
