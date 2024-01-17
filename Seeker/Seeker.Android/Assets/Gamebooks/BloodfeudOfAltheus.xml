@@ -4776,7 +4776,7 @@
 				<Fight>
 					<Enemy Name="Амазонка" Strength="9" Defence="16"/>
 				</Fight>
-			</Actions>	
+			</Actions>
 			<Options>
 				<Option Goto="159" Text="Нанесли тяжелое ранение амазонке"/>
 				<Option Goto="550" Text="Сдаетесь"/>
