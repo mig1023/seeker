@@ -3690,7 +3690,7 @@
 					<Enemy Name="ПИРАТ" Skill="9" Strength="9"/>
 					<Text>Удалось ли вам победить?</Text>
 				</Fight>
-			</Actions>	
+			</Actions>
 			<Options>
 				<Option Goto="326"/>
 			</Options>
