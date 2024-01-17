@@ -5293,7 +5293,7 @@
 				<Fight>
 					<Enemy Name="Человек" Strength="7" Defence="12"/>
 				</Fight>
-			</Actions>	
+			</Actions>
 			<Options>
 				<Option Goto="121" Text="Сдаетесь"/>
 				<Option Goto="387" Text="Отступаете"/>
@@ -5365,7 +5365,7 @@
 				<Fight>
 					<Enemy Name="Морской змей" Strength="20" Defence="12"/>
 				</Fight>
-			</Actions>	
+			</Actions>
 			<Options>
 				<Option Goto="533" Text="Победили его"/>
 				<Option Goto="562" Text="Предпочтете затаиться, надеясь что чудовище не заметит корабль"/>
