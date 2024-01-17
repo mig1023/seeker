@@ -597,7 +597,7 @@
 					<Enemy Name="Вор" Strength="6" Defence="10"/>
 					<Wound/>
 				</Fight>
-			</Actions>	
+			</Actions>
 			<Options>
 				<Option Goto="438" Text="Удается тяжело ранить его"/>
 				<Option Goto="149" Text="Сдадитесь ему"/>
