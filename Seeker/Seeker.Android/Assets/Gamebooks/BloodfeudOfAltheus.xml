@@ -1161,7 +1161,7 @@
 					<Button>Потратить Славу</Button>
 					<Text>Иначе вам предстоит бороздить моря без вмешательства морского бога.</Text>
 				</DiceSpendGlory>
-			</Actions>		
+			</Actions>
 			<Options>
 				<Option Goto="424" Text="Вы попросили помощи у Посейдона"/>
 				<Option Goto="257" Text="Вы не стали этого делать"/>
