@@ -1248,7 +1248,7 @@
 					<Enemy Name="Бык" Strength="10" Defence="18"/>
 					<FightToDeath/>
 				</Fight>
-			</Actions>	
+			</Actions>
 			<Options>
 				<Option Goto="282" Text="Удалось его одолеть"/>
 				<Option Goto="515" Text="Отступаете"/>
