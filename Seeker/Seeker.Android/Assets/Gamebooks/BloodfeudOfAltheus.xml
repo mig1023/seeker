@@ -5076,7 +5076,7 @@
 				<Fight>
 					<Enemy Name="Чудовище" Strength="18" Defence="11"/>
 				</Fight>
-			</Actions>	
+			</Actions>
 			<IntuitiveSolution/>
 			<Options>
 				<Option Goto="533" Text="Победили это океанское отродье"/>
