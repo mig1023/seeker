@@ -3357,7 +3357,7 @@
 					<Enemy Name="ОБЕЗЬЯНОПАУК" Skill="10" Strength="10"/>
 					<Text>Если вы победили, то ура!</Text>
 				</Fight>
-			</Actions>	
+			</Actions>
 			<Options>
 				<Option Goto="93"/>
 			</Options>
