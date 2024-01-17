@@ -1144,7 +1144,7 @@
 				<Fight>
 					<Enemy Name="Амазонка" Strength="8" Defence="15"/>
 				</Fight>
-			</Actions>	
+			</Actions>
 			<Options>
 				<Option Goto="572" Text="Погибли, но были спасены Зевсом" Availability="ВОСКРЕШЕНИЕ">
 					<Resurrection Value="-1"/>
