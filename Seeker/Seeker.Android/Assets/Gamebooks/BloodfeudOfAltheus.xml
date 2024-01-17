@@ -2631,7 +2631,7 @@
 					</Enemies>
 					<Text>Вспомните правила битвы с несколькими противниками.</Text>
 				</Fight>
-			</Actions>	
+			</Actions>
 			<Options>
 				<Option Goto="166" Text="Погибаете, но Зевс вас спасает" Availability="ВОСКРЕШЕНИЕ">
 					<Resurrection Value="-1"/>
