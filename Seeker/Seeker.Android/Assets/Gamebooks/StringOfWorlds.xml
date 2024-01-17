@@ -2110,7 +2110,7 @@
 					<DevastatingAttack/>
 					<Text>Если вы разделались с ним, можете идти дальше.</Text>
 				</Fight>
-			</Actions>	
+			</Actions>
 			<Options>
 				<Option Goto="384"/>
 			</Options>
