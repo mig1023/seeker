@@ -2795,7 +2795,7 @@
 					<Button>Кинуть кубики</Button>
 					<Text>Полученное число больше или равно разнице между вашей Славой и Позором?</Text>
 				</DiceCheck>
-			</Actions>	
+			</Actions>
 			<Options>
 				<Option Goto="453" Text="Больше"/>
 				<Option Goto="477" Text="Меньше"/>
