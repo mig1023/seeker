@@ -1606,7 +1606,7 @@
 					<Enemy Name="Вепрь" Strength="10" Defence="18"/>
 					<FightToDeath/>
 				</Fight>
-			</Actions>	
+			</Actions>
 			<Options>
 				<Option Goto="615" Text="Побеждаете его"/>
 				<Option Goto="493" Text="Удается успешно отступить"/>
