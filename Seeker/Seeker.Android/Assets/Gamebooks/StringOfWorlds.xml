@@ -777,7 +777,7 @@
 					</Enemies>
 					<HeroWoundsLimit/>
 				</Fight>
-			</Actions>	
+			</Actions>
 			<Options>
 				<Option Goto="635" Text="Противники снизили вашу СИЛУ до 2"/>
 				<Option Goto="135" Text="Вы победили"/>
