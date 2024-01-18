@@ -4158,7 +4158,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="Дикая корова" Mastery="8" Endurance="9"/>
-					<Specificity>NeedForSpeed</Specificity>	
+					<Specificity>NeedForSpeed</Specificity>
 					<Text>Сражаться сложно, ноги увязают в грязи. Если у вас нет способности Скорость, придется уменьшать на 1 свою Силу Удара.</Text>
 				</Fight>
 			</Actions>
