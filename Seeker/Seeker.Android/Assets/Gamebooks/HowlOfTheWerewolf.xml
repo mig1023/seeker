@@ -1687,7 +1687,7 @@
 					<Specificity>ElectricDamage</Specificity>
 					<Text>Каждый раз, когда ему удасться ранить вас, киньте кубик. Если выпадет 5 или 6, то вы получите еще и удар током и 3 Выносливости придется потерять.</Text>
 				</Fight>
-			</Actions>	
+			</Actions>
 			<Options>
 				<Option Goto="169"/>
 			</Options>
