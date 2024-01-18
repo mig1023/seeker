@@ -25,7 +25,7 @@
 			<Options>
 				<Start Goto="1"/>
 			</Options>
-		</Paragraph>	
+		</Paragraph>
 		<Paragraph No="1">
 			<Text>До начала твоего боя есть ещё несколько часов. Амуницию ты проверил ещё вчера и теперь решаешь, чем занять себя?</Text>
 			<Options>
