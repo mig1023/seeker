@@ -4103,7 +4103,7 @@
 				<Heroism Value="5"/>
 				<Inspiration Value="5"/>
 			</Modifications>
-			<Triggers>Дежа вю</Triggers>		
+			<Triggers>Дежа вю</Triggers>
 			<Options>
 				<Gameover Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории"/>
 			</Options>
