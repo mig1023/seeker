@@ -1517,7 +1517,7 @@
 				<Option Goto="352" Text="Попробуете разомкнуть их самостоятельно"/>
 				<Option Goto="233" Text="МЕДВЕДЬ" Availability="МЕДВЕДЬ">
 					<Transformation/>
-				</Option>		
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph No="158">
