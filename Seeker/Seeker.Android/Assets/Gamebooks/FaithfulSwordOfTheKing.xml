@@ -16,7 +16,7 @@
 		</Lists>
 		<Dictionaries>
 			<Skills ItemsByOrder="12, 8, 10, 7, 9, 11"/>
-			<Strengths ItemsByOrder="22, 18, 14, 24, 16, 20"/>	
+			<Strengths ItemsByOrder="22, 18, 14, 24, 16, 20"/>
 		</Dictionaries>
 		<Default>
 			<DisabledOption Value="Hide"/>
