@@ -5263,7 +5263,7 @@
 			</Texts>
 			<Modifications>
 				<Hitpoints Value="3"/>
-			</Modifications>	
+			</Modifications>
 			<Options>
 				<Option Goto="487" Text="Записано ключевое слово: «Уайт»" Availability="Уайт"/>
 				<Option Goto="488"/>
