@@ -2735,7 +2735,7 @@
 					<Untrigger>Поляризационные очки</Untrigger>
 					<Price>4</Price>
 					<SellIfAvailable/>
-				</Get>			
+				</Get>
 				<Get>
 					<Button>Продать</Button>
 					<Head>Фонарик</Head>
