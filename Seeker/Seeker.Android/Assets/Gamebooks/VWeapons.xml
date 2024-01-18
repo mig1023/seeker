@@ -2035,7 +2035,7 @@
 				<Option Goto="252" Text="Ввести дату прихода к власти фашистской партии"/>
 			</Options>
 		</Paragraph>
-		<Paragraph No="212">	
+		<Paragraph No="212">
 			<Texts>
 				<Text>Сергей выстрелил трижды.</Text>
 				<Text Style="Small">Патроны -3</Text>
