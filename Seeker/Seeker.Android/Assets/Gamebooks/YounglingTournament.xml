@@ -5252,7 +5252,7 @@
 			</Texts>
 			<Modifications>
 				<Hitpoints Value="2"/>
-			</Modifications>	
+			</Modifications>
 			<Options>
 				<Option Goto="486"/>
 			</Options>
