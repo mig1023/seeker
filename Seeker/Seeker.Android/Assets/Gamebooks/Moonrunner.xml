@@ -635,7 +635,7 @@
 					<Text>Из-за огромной силы демона каждый его удар, попавший в цель, отнимет 4 Выносливости.</Text>
 				</Fight>
 			</Actions>
-			<Options>	
+			<Options>
 				<Option Goto="222" Text="Если вы победили"/>
 			</Options>
 		</Paragraph>
