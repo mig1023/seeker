@@ -4430,7 +4430,7 @@
 					<Button>Выбрать</Button>
 					<Head>Шпион</Head>
 					<Choice/>
-					<Benefits>	
+					<Benefits>
 						<Skill Value="Ловкость"/>
 						<Skill Value="Кибернетика"/>
 						<Skill Value="Знание улиц"/>
