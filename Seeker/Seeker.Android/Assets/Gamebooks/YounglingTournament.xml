@@ -4451,7 +4451,7 @@
 				<Text>Вы успеваете убрать ногу и избежать падения.</Text>
 				<Text Style="Small">Потеряйте 1 Выносливость</Text>
 				<Text>Противник, рыкнув от разочарования, атакует с удвоенной яростью.</Text>
-			</Texts>	
+			</Texts>
 			<Actions>
 				<SwordFight>
 					<Enemy Name="Жюль Трито" Skill="10" Rang="3" Speed="3" Hitpoints="26"/>
