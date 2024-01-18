@@ -2511,7 +2511,7 @@
 			</Texts>
 			<Options>
 				<Option Goto="255" Availability="ВРЕМЯ >= 1, specialFCheck"/>
-				<Option Goto="253" Availability="ВРЕМЯ >= 1, !specialFCheck"/>	
+				<Option Goto="253" Availability="ВРЕМЯ >= 1, !specialFCheck"/>
 				<Option Goto="254" Availability="ВРЕМЯ &lt; 1"/>
 			</Options>
 		</Paragraph>
