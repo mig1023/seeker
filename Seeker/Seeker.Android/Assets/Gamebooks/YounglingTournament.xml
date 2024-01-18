@@ -4818,7 +4818,7 @@
 					<EnemyHitpointsLimith Value="5"/>
 					<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
 				</SwordFight>
-			</Actions>	
+			</Actions>
 			<Options>
 				<Option Goto="449" Text="Если вам удалось отбавить Выносливость противника до 5"/>
 				<Option Goto="439" Text="Если вы нанесли ему 2 укола" Availability="УКОЛОВ > 1"/>
