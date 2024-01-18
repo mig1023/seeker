@@ -12,7 +12,7 @@
 		</Styles>
 		<Lists>
 			<WithoutStatuses Items="0, 266"/>
-		</Lists>	
+		</Lists>
 		<Dictionaries>
 			<HealingParts>
 				<Item Name="головы" Value="Head"/>
