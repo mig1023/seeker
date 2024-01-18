@@ -5484,7 +5484,7 @@
 			</Texts>
 			<Modifications>
 				<EnemyThrust Value="2"/>
-			</Modifications>	
+			</Modifications>
 			<Options>
 				<Option Goto="602" Text="У противников 3 и больше уколов"/>
 				<Option Goto="510" Text="Еще нет"/>
