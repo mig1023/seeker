@@ -5785,7 +5785,7 @@
 			<Options>
 				<Option Goto="691" Text="Прыгнете вперёд"/>
 				<Option Goto="679" Text="Сделаете шаг"/>
-				<Option Goto="649" Text="Переждёте"/>			
+				<Option Goto="649" Text="Переждёте"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="784">
