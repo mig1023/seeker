@@ -4621,7 +4621,7 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="435">
-			<Text>Начинается дуэль на световых мечах.</Text>	
+			<Text>Начинается дуэль на световых мечах.</Text>
 			<Actions>
 				<SwordFight>
 					<Enemy Name="Артхт Тархтхтх" Skill="12" Rang="4" Speed="3" Hitpoints="24"/>
