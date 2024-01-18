@@ -1929,7 +1929,7 @@
 				<Option Goto="186" Text="Бежать в приоткрытую дверь"/>
 			</Options>
 		</Paragraph>
-		<Paragraph No="200">	
+		<Paragraph No="200">
 			<Texts>
 				<Text>Сергей подполз к решётке, прицелился и послал пулю в сердце стоявшему внизу человеку.</Text>
 				<Text Style="Small">-1 патрон</Text>
