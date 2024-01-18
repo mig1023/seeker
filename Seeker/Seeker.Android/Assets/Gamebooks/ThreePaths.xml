@@ -4606,7 +4606,6 @@
 				<Option Goto="847" Availability="ВРЕМЯ >= 7"/>
 				<Option Goto="609" Text="Всё-таки войдёте под арку" Availability="ВРЕМЯ &lt; 7"/>
 				<Option Goto="683" Text="Ещё чуть-чуть подождёте" Availability="ВРЕМЯ &lt; 7"/>
-				
 			</Options>
 		</Paragraph>
 		<Paragraph No="624">
