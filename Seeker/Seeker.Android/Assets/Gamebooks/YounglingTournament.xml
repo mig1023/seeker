@@ -3165,7 +3165,7 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="318">
-			<Text>Начинается дуэль на световых мечах.</Text>	
+			<Text>Начинается дуэль на световых мечах.</Text>
 			<Actions>
 				<SwordFight>
 					<Enemy Name="Кирк Драгус" Skill="10" Rang="3" Speed="3" Hitpoints="30"/>
