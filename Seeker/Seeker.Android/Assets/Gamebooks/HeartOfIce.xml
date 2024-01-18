@@ -3849,7 +3849,7 @@
 					<Head>Нейлоновая веревка</Head>
 					<Price>2</Price>
 					<Trigger>Веревка</Trigger>
-				</Get>		
+				</Get>
 				<Get>
 					<Button>Купить</Button>
 					<Head>Лампа</Head>
