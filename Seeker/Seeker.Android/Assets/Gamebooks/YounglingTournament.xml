@@ -3397,7 +3397,7 @@
 					<EnemyHitpointsLimith Value="5"/>
 					<Text>Бой идет до трех уколов.</Text>
 				</SwordFight>
-			</Actions>	
+			</Actions>
 			<Modifications>
 				<Hitpoints Value="-5"/>
 				<EnemyThrust Value="1"/>
