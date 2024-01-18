@@ -9105,7 +9105,7 @@
 			<Modifications>
 				<Heroism Value="10"/>
 				<Inspiration Value="10"/>
-				<Buffoonery Value="1"/>	
+				<Buffoonery Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Goto="400"/>
