@@ -7053,7 +7053,7 @@
 					<Text>В случае провала: если это была первая проверка способностей в мире теней?</Text>
 				</Option>
 				<Option Goto="322" Text="Первая"/>
-				<Option Goto="414" Text="Уже были раньше"/>	
+				<Option Goto="414" Text="Уже были раньше"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="657">
