@@ -1563,7 +1563,7 @@
 					<Undice/>
 					<Untrigger Value="Окончание"/>
 					<Time Value="1"/>
-				</Option>		
+				</Option>
 				<Option Goto="15" Text="Медведь" Availability="СТАРТ = 3, ДАЙС = 1">
 					<Undice/>
 					<Untrigger Value="Окончание"/>
