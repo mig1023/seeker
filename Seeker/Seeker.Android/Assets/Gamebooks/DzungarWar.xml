@@ -7010,7 +7010,7 @@
 			</Actions>
 			<Options>
 				<Option Goto="620" Text="В случае успеха"/>
-				<Option Goto="611" Text="В случае провала"/>			
+				<Option Goto="611" Text="В случае провала"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="653">
