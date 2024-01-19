@@ -205,7 +205,7 @@
 			</Actions>
 			<Options>
 				<Option Goto="218" Text="В случае успеха"/>
-				<Option Goto="233" Text="В случае провала"/>	
+				<Option Goto="233" Text="В случае провала"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="14">
