@@ -699,7 +699,7 @@
 					<Trigger Value="Левый провластный парламент"/>
 					<Rating Value="-10"/>
 					<Untrigger Value="Расстрелянный парламент"/>
-				</Option>	
+				</Option>
 				<Option Goto="9" Text="Победили мои либералы" Availability="РЕЙТИНГ > 50, Вы из либеральной партии">
 					<Trigger Value="Левый провластный парламент"/>
 					<Untrigger Value="Расстрелянный парламент"/>
