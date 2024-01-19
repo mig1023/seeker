@@ -1740,7 +1740,7 @@
 		</Paragraph>
 		<Paragraph No="36">
 			<Text>Наступило новое правление.</Text>
-			<Options>		
+			<Options>
 				<Option Goto="13" Text="Горбатки" Availability="ДАЙС = 1">
 					<Undice/>
 					<Untrigger Value="Окончание"/>
