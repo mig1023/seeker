@@ -260,7 +260,7 @@
 					<Trigger Value="Окончание"/>
 					<Quantity Value="-1"/>
 					<NoMoreEnemy/>
-				</Option>			
+				</Option>
 				<Option Goto="6" Text="Голубянка" Availability="Окончание, ДАЙС = 1">
 					<Undice/>
 					<Untrigger Value="Окончание"/>
