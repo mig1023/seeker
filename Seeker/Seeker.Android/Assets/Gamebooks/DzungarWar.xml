@@ -3670,7 +3670,7 @@
 				<Option Goto="262" Text="Отмечены оба слова «Пастух» и «Дружба»" Availability="Пастух, Дружба"/>
 				<Option Goto="241" Text="Не отмечено слово «Пастух», но отмечено слово «Дружба»" Availability="Дружба, !Пастух">
 					<Text>В любом другом случае:</Text>
-				</Option>	
+				</Option>
 				<Test>
 					<Stat>Oratory</Stat>
 					<TriggerTestPenalty Value="Переговорщик, -7"/>
