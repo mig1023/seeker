@@ -7048,7 +7048,7 @@
 					<Level>12</Level>
 				</Test>
 			</Actions>
-			<Options>		
+			<Options>
 				<Option Goto="286" Text="В случае успеха">
 					<Text>В случае провала: если это была первая проверка способностей в мире теней?</Text>
 				</Option>
