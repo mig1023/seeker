@@ -220,7 +220,18 @@
 			<Author>Дэвид Хонигман</Author>
 			<Author>Филип Паркер</Author>
 		</Authors>
-		<Translators>Мария Ерошкина, GalinaSol, Xpromt, Johny Lee, fermalion, Тара-сан, Jumangee, Ajenta, Эргистал, Anuta и другие</Translators>
+		<Translators>
+			<Translator>Мария Ерошкина</Translator>
+			<Translator>GalinaSol</Translator>
+			<Translator>Xpromt</Translator>
+			<Translator>Johny Lee</Translator>
+			<Translator>fermalion</Translator>
+			<Translator>Тара-сан</Translator>
+			<Translator>Jumangee</Translator>
+			<Translator>Ajenta</Translator>
+			<Translator>Эргистал</Translator>
+			<Translator>Anuta</Translator>
+		</Translators>
 		<Year>1985</Year>
 		<Text>В этой книге вам предстоит стать Альтеем – греческим героем, которому выпала удивительная миссия. Для достижения цели вам придется сразиться с множеством противников, как с людьми, так и нет, да и еще попутно добиваться расположения богов. Путешествие будет трудным, но только вы определяете свою судьбу.</Text>
 		<Paragraphs>620</Paragraphs>
