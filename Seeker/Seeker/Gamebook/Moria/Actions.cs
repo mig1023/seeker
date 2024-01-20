@@ -371,7 +371,7 @@ namespace Seeker.Gamebook.Moria
                     protagonist.Fellowship.Remove(warrior);
                 }
 
-                fight.Add(String.Empty);
+                deaths.Add(String.Empty);
             }
 
             return deaths;
