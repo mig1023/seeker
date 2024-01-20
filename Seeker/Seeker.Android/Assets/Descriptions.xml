@@ -482,7 +482,13 @@
 		<Title>День Орка</Title>
 		<Author>Кейси Трэйвис</Author>
 		<Original>Orc’s Day</Original>
-		<Translator>Jumangee, Anuta, Danger, Эргистал, Тара-сан и другие</Translator>
+		<Translators>
+			<Translator>Jumangee</Translator>
+			<Translator>Anuta</Translator>
+			<Translator>Danger</Translator>
+			<Translator>Эргистал</Translator>
+			<Translator>Тара-сан</Translator>
+		</Translators>
 		<Year>2008</Year>
 		<Text>В этой книге ты сыграешь роль орка – пятого колеса в колеснице фэнтези. Ты не достоин даже имени, и судьба твоя – умереть от руки героя.\n\nА может и нет. Тебе решать. Но помни... Ты НЕ герой.</Text>
 		<Paragraphs>100</Paragraphs>
