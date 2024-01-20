@@ -245,7 +245,10 @@
 	</BloodfeudOfAltheus>
 	<PensionerSimulator>
 		<Title>Симулятор пенсионерки</Title>
-		<Authors>Zaratystra\nthe_arsonist (дополнение)</Authors>
+		<Authors>
+			<Author>Zaratystra</Author>
+			<Author>the_arsonist (дополнение)</Author>
+		</Authors>
 		<SinglePseudonym/>
 		<Translators>(дополнение) Мария Ерошкина, Zaratystra, Wervek</Translators>
 		<Year>2018</Year>
