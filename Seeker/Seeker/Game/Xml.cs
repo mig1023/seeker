@@ -25,14 +25,17 @@ namespace Seeker.Game
         public static string StringParse(XmlNode xmlNode) =>
             xmlNode?.InnerText ?? String.Empty;
 
-        private static List<string> AllStringParse(XmlNode xmlNode, string path)
+        private static List<string> AllStringParse(XmlNode single, XmlNode multiple, string path)
         {
+            if (single != null)
+                return new List<string> { single.InnerText };
+
             List<string> lines = new List<string>();
 
-            if (xmlNode == null)
+            if (multiple == null)
                 return lines;
 
-            foreach (XmlNode option in xmlNode.SelectNodes(path))
+            foreach (XmlNode option in multiple.SelectNodes(path))
                 lines.Add(option.InnerText);
 
             return lines;
@@ -328,12 +331,10 @@ namespace Seeker.Game
 
             description.Title = StringParse(data["Title"]);
             description.Original = StringParse(data["Original"]);
-            description.Author = StringParse(data["Author"]);
-            description.Authors = AllStringParse(data["Authors"], "Author");
+            description.Authors = AllStringParse(data["Author"], data["Authors"], "Author");
             description.SinglePseudonym = BoolParse(data["SinglePseudonym"]);
             description.FullPseudonym = BoolParse(data["FullPseudonym"]);
-            description.Translator = StringParse(data["Translator"]);
-            description.Translators = AllStringParse(data["Translators"], "Translator");
+            description.Translators = AllStringParse(data["Translator"], data["Translators"], "Translator");
             description.Year = IntParse(data["Year"]);
             description.Text = StringParse(data["Text"]);
             description.Paragraphs = StringParse(data["Paragraphs"]);

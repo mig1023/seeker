@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Seeker.Gamebook
 {
@@ -21,8 +22,6 @@ namespace Seeker.Gamebook
 
         public string Illustration;
 
-        public string Author;
-
         public List<string> Authors;
 
         public bool SinglePseudonym;
@@ -39,8 +38,6 @@ namespace Seeker.Gamebook
 
         public string PlaythroughTime;
 
-        public string Translator;
-
         public List<string> Translators;
 
         public string Text;
@@ -51,8 +48,7 @@ namespace Seeker.Gamebook
 
         public string AuthorsIndex()
         {
-            string firstAuthor = Authors.Count > 0 ? Authors[0] : Author;
-            string[] elements = firstAuthor.Split(' ');
+            string[] elements = Authors.First().Split(' ');
 
             if (!SinglePseudonym && !FullPseudonym && (elements.Length > 1))
             {
@@ -60,7 +56,7 @@ namespace Seeker.Gamebook
             }
             else if (FullPseudonym)
             {
-                return Author;
+                return Authors[0];
             }
             else
             {

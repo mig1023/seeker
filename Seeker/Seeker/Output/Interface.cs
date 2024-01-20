@@ -132,12 +132,11 @@ namespace Seeker.Output
         }
 
         private static string AndOtherMark(Description gamebook) =>
-            gamebook.Authors.Count > 0 ? " и др." : String.Empty;
+            gamebook.Authors.Count > 1 ? " и др." : String.Empty;
 
         public static Label GamebookDisclaimer(Description gamebook)
         {
-            string text = gamebook.Authors.Count > 0 ?
-                gamebook.Authors[0] : gamebook.Author;
+            string text = gamebook.Authors.First();
 
             if (List.Sort() == Constants.SortBy["Author"])
                 text = gamebook.AuthorsIndex();
@@ -284,26 +283,30 @@ namespace Seeker.Output
                     gamebook.Original, ref disclaimer, border, change);
             }
                 
-            if (gamebook.Authors.Count > 0)
+            if (gamebook.Authors.Count > 1)
             {
                 string authors = String.Join("\n", gamebook.Authors);
-                AddDisclaimerElement("Авторы:", authors, ref disclaimer, border, change);
+
+                AddDisclaimerElement("Авторы:",
+                    authors, ref disclaimer, border, change);
             }
             else
             {
                 AddDisclaimerElement("Автор:",
-                    gamebook.Author, ref disclaimer, border, change);
+                    gamebook.Authors.First(), ref disclaimer, border, change);
             }
 
-            if (gamebook.Translators.Count > 0)
+            if (gamebook.Translators.Count > 1)
             {
                 string translators = String.Join("\n", gamebook.Translators);
-                AddDisclaimerElement("Переводчики:", translators, ref disclaimer, border, change);
+
+                AddDisclaimerElement("Переводчики:",
+                    translators, ref disclaimer, border, change);
             }
-            else if (!String.IsNullOrEmpty(gamebook.Translator))
+            else if (gamebook.Translators.Count > 0)
             {
                 AddDisclaimerElement("Переводчик:",
-                    gamebook.Translator, ref disclaimer, border, change);
+                    gamebook.Translators.First(), ref disclaimer, border, change);
             }
 
             if (!String.IsNullOrEmpty(gamebook.Text))
