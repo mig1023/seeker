@@ -29,6 +29,9 @@ namespace Seeker.Game
         {
             List<string> lines = new List<string>();
 
+            if (xmlNode == null)
+                return lines;
+
             foreach (XmlNode option in xmlNode.SelectNodes(path))
                 lines.Add(option.InnerText);
 

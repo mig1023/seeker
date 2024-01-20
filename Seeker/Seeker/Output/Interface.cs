@@ -286,7 +286,7 @@ namespace Seeker.Output
                 
             if (gamebook.Authors.Count > 0)
             {
-                string authors = String.Join(", ", gamebook.Authors);
+                string authors = String.Join("\n", gamebook.Authors);
                 AddDisclaimerElement("Авторы:", authors, ref disclaimer, border, change);
             }
             else
@@ -297,7 +297,7 @@ namespace Seeker.Output
 
             if (gamebook.Translators.Count > 0)
             {
-                string translators = String.Join(", ", gamebook.Translators);
+                string translators = String.Join("\n", gamebook.Translators);
                 AddDisclaimerElement("Переводчики:", translators, ref disclaimer, border, change);
             }
             else if (!String.IsNullOrEmpty(gamebook.Translator))
