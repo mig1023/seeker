@@ -250,7 +250,11 @@
 			<Author>the_arsonist (дополнение)</Author>
 		</Authors>
 		<SinglePseudonym/>
-		<Translators>(дополнение) Мария Ерошкина, Zaratystra, Wervek</Translators>
+		<Translators>
+			<Translator>(дополнение) Мария Ерошкина</Translator>
+			<Translator>Zaratystra</Translator>
+			<Translator>Wervek</Translator>
+		</Translators>
 		<Year>2018</Year>
 		<Text>Все совпадения случайны. Всё написанное художественный вымысел. Автор уважает стариков.</Text>
 		<Paragraphs>64 (21+43)</Paragraphs>
