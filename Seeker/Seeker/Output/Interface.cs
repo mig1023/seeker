@@ -132,12 +132,12 @@ namespace Seeker.Output
         }
 
         private static string AndOtherMark(Description gamebook) =>
-            !String.IsNullOrEmpty(gamebook.Authors) ? " и др." : String.Empty;
+            gamebook.Authors.Count > 0 ? " и др." : String.Empty;
 
         public static Label GamebookDisclaimer(Description gamebook)
         {
-            string text = !String.IsNullOrEmpty(gamebook.Authors) ?
-                gamebook.Authors.Split(new string[] { "\\n" }, StringSplitOptions.RemoveEmptyEntries)[0] : gamebook.Author;
+            string text = gamebook.Authors.Count > 0 ?
+                gamebook.Authors[0] : gamebook.Author;
 
             if (List.Sort() == Constants.SortBy["Author"])
                 text = gamebook.AuthorsIndex();
@@ -284,10 +284,10 @@ namespace Seeker.Output
                     gamebook.Original, ref disclaimer, border, change);
             }
                 
-            if (!String.IsNullOrEmpty(gamebook.Authors))
+            if (gamebook.Authors.Count > 0)
             {
-                AddDisclaimerElement("Авторы:",
-                    Regex.Unescape(gamebook.Authors), ref disclaimer, border, change);
+                string authors = String.Join(", ", gamebook.Authors);
+                AddDisclaimerElement("Авторы:", authors, ref disclaimer, border, change);
             }
             else
             {
@@ -295,10 +295,10 @@ namespace Seeker.Output
                     gamebook.Author, ref disclaimer, border, change);
             }
 
-            if (!String.IsNullOrEmpty(gamebook.Translators))
+            if (gamebook.Translators.Count > 0)
             {
-                AddDisclaimerElement("Переводчики:",
-                    Regex.Unescape(gamebook.Translators), ref disclaimer, border, change);
+                string translators = String.Join(", ", gamebook.Translators);
+                AddDisclaimerElement("Переводчики:", translators, ref disclaimer, border, change);
             }
             else if (!String.IsNullOrEmpty(gamebook.Translator))
             {

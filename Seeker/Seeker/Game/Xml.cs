@@ -25,6 +25,16 @@ namespace Seeker.Game
         public static string StringParse(XmlNode xmlNode) =>
             xmlNode?.InnerText ?? String.Empty;
 
+        private static List<string> AllStringParse(XmlNode xmlNode, string path)
+        {
+            List<string> lines = new List<string>();
+
+            foreach (XmlNode option in xmlNode.SelectNodes(path))
+                lines.Add(option.InnerText);
+
+            return lines;
+        }
+        
         public static string ImageName(XmlNode xmlNode) =>
             $"{Data.CurrentGamebook}_{xmlNode.Name}.jpg";
 
@@ -316,11 +326,11 @@ namespace Seeker.Game
             description.Title = StringParse(data["Title"]);
             description.Original = StringParse(data["Original"]);
             description.Author = StringParse(data["Author"]);
-            description.Authors = StringParse(data["Authors"]);
+            description.Authors = AllStringParse(data["Authors"], "Author");
             description.SinglePseudonym = BoolParse(data["SinglePseudonym"]);
             description.FullPseudonym = BoolParse(data["FullPseudonym"]);
             description.Translator = StringParse(data["Translator"]);
-            description.Translators = StringParse(data["Translators"]);
+            description.Translators = AllStringParse(data["Translators"], "Translator");
             description.Year = IntParse(data["Year"]);
             description.Text = StringParse(data["Text"]);
             description.Paragraphs = StringParse(data["Paragraphs"]);
@@ -328,6 +338,7 @@ namespace Seeker.Game
             description.Size = StringParse(data["Size"]);
             description.PlaythroughTime = StringParse(data["Playthrough"]);
             description.Setting = StringParse(data["Setting"]);
+
 
             XmlNode colors = data.SelectSingleNode("Colors");
 

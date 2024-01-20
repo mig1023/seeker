@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Seeker.Gamebook
 {
@@ -22,7 +23,7 @@ namespace Seeker.Gamebook
 
         public string Author;
 
-        public string Authors;
+        public List<string> Authors;
 
         public bool SinglePseudonym;
 
@@ -40,7 +41,7 @@ namespace Seeker.Gamebook
 
         public string Translator;
 
-        public string Translators;
+        public List<string> Translators;
 
         public string Text;
 
@@ -50,8 +51,7 @@ namespace Seeker.Gamebook
 
         public string AuthorsIndex()
         {
-            string allAuthors = Author + Authors;
-            string firstAuthor = allAuthors.Split(new string[] { "\\n" }, StringSplitOptions.RemoveEmptyEntries)[0];
+            string firstAuthor = Authors.Count > 0 ? Authors[0] : Author;
             string[] elements = firstAuthor.Split(' ');
 
             if (!SinglePseudonym && !FullPseudonym && (elements.Length > 1))
