@@ -235,7 +235,7 @@ namespace Seeker.Gamebook.VWeapons
                     if (!dogFightprotagonist)
                     {
                         string shots = DamagedWeapon ? " трижды" : String.Empty;
-                        fight.Add($"Вы стреляете{shots}…");
+                        fight.Add($"Вы стреляете{shots}:");
 
                         if (DamagedWeapon)
                         {
@@ -261,7 +261,7 @@ namespace Seeker.Gamebook.VWeapons
                     } 
                     else
                     {
-                        fight.Add("Вы бьёте.");
+                        fight.Add("Вы бьёте:");
                         enemy.Hitpoints -= 2;
                         fight.Add("GOOD|Ваш удар отнимаете у него 2 ед. здоворья.");
                     }
