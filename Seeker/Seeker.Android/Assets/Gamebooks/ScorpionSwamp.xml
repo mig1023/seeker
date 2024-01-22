@@ -188,5 +188,11 @@
 				<Option Goto="249"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="25">
+			<Text>Орёл издаёт пронзительный крик и описывает широкий круг над прогалиной. Затем он садится в гнездо, а ты поспешно продолжаешь, прерванный было, путь.</Text>
+			<Options>
+				<Option Goto="202"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
