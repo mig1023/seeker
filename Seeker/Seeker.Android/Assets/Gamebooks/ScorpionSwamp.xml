@@ -336,5 +336,11 @@
 				<Option Goto="303" Text="Если с юга"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="46">
+			<Text>Ты пытаешься войти в домик, но на его дверях лежит запирающее заклятие, и тебе не удаётся отворить их. Ты решаешь отправиться дальше.</Text>
+			<Options>
+				<Option Goto="314"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
