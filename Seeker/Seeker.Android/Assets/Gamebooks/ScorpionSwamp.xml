@@ -391,5 +391,12 @@
 				<Option Goto="62" Text="Если, не долго думая, выхватишь меч и набросишься на человечка"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="54">
+			<Text>Лицо колдуна искажает дикая ярость. «Как посмел ты явиться ко мне с пустыми руками?!» — вопит он.\n\nИСПЫТАЙ УДАЧУ.</Text>
+			<Options>
+				<Option Goto="109" Text="Если тебе повезёт"/>
+				<Option Goto="285" Text="Если не повезёт"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
