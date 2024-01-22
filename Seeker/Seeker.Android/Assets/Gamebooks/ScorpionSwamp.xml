@@ -572,5 +572,13 @@
 				<Option Goto="128" Text="Если он первым ранит тебя"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="80">
+			<Text>Какое заклинание ты попробуешь использовать против Цветов Страха?</Text>
+			<Options>
+				<Option Goto="307" Text="Огненное Заклинание"/>
+				<Option Goto="196" Text="Заклинание Увядания"/>
+				<Option Goto="204" Text="Ни то, ни другое. Возвращайся и думай, что делать дальше"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
