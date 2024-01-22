@@ -497,5 +497,11 @@
 				<Option Goto="215" Text="В противном случае"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="69">
+			<Text>Убив Медведя, ты осматриваешь его зловонную берлогу, но не находишь ничего, достойного внимания. Больше на прогалине тебе нечего делать.</Text>
+			<Options>
+				<Option Goto="390"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
