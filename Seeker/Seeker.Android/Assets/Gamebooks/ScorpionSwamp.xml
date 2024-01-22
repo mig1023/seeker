@@ -491,5 +491,11 @@
 				<Option Goto="19"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="68">
+			<Options>
+				<Option Goto="302" Text="Если Повелитель Волков научил тебя специальному волшебному заклинанию"/>
+				<Option Goto="215" Text="В противном случае"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
