@@ -606,5 +606,11 @@
 				<Option Goto="363"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="85">
+			<Text>Никогда тебе ещё не доводилось бегать так быстро. Ловко проскользнув мимо Слизистого Монстра, ты несёшься прочь и выбери ту тропу, но которой вошёл на эту прогалину.</Text>
+			<Options>
+				<Option Goto="153"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
