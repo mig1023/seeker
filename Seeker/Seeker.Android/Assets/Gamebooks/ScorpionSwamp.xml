@@ -1,0 +1,29 @@
+<Gamebook>
+	<Introduction>
+		<Copyright>
+			<Title>Адское болото</Title>
+			<Author>Стив Джексон и Ян Ливингстон, 1984</Author>
+		</Copyright>
+		<Styles>
+			<Main Value="574c2d"/>
+			<Color Name="Option, Continue" Value="b09e7b"/>
+		</Styles>
+		<Default>
+			<DisabledOption Value="True"/>
+		</Default>
+	</Introduction>
+	<Paragraphs>
+		<Paragraph No="0">
+			<Text>START</Text>
+			<Options>
+				<Start Goto="1"/>
+			</Options>
+		</Paragraph>
+		<Paragraph No="1">
+			<Text>END</Text>
+			<Options>
+				<Option Goto="0"/>
+			</Options>
+		</Paragraph>
+	</Paragraphs>
+</Gamebook>
