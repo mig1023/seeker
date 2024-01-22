@@ -250,5 +250,14 @@
 				<Option Goto="167" Text="Если прибегнешь к помощи какого-нибудь Магического Заклинания"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="34">
+			<Text>Какое заклинание ты используешь против Прудовой Твари?</Text>
+			<Options>
+				<Option Goto="237" Text="Заклинание Увядания"/>
+				<Option Goto="291" Text="Огненное Заклинание"/>
+				<Option Goto="356" Text="Заклинание Страха"/>
+				<Option Goto="209" Text="Никакое из перечисленных выше. Возвращайся и думай, что делать дальше"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
