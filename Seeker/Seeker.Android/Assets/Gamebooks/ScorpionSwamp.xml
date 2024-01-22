@@ -530,5 +530,14 @@
 				<Option Goto="202"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="74">
+			<Text>Ты решаешь сразиться с Повелителем Пауков при помощи Магических Заклинаний. Какое заклинание ты хочешь наслать на него?</Text>
+			<Options>
+				<Option Goto="361" Text="Заклинание Дружбы"/>
+				<Option Goto="261" Text="Проклятие"/>
+				<Option Goto="113" Text="Огненное Заклинание"/>
+				<Option Goto="144" Text="Никакое из перечисленных выше. Возвращайся и думай, что делать дальше"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
