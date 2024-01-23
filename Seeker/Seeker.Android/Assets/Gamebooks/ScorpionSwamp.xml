@@ -714,5 +714,12 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="101">
+			<Text>Мост чрезвычайно стар, но, как ни странно, находится в довольно приличном состоянии.</Text>
+			<Options>
+				<Option Goto="350" Text="Если хочешь отправиться на север"/>
+				<Option Goto="118" Text="Если предпочтёшь повернуть на юг"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
