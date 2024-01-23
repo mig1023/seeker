@@ -1115,5 +1115,13 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="159">
+			<Text>Ты понимаешь, что сделал всё, что мог. Теперь ты должен вернуться к своему покровителю и доложить об успехе или же о провале своего путешествия. Итак, кому ты служишь?</Text>
+			<Options>
+				<Option Goto="6" Text="Салатару"/>
+				<Option Goto="226" Text="Гримслейду"/>
+				<Option Goto="56" Text="Пумчакару"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
