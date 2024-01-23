@@ -926,5 +926,12 @@
 				<Option Goto="288" Text="Если же твоим патроном является злой Гримслейд"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="132">
+			<Text>Ты победил гигантского орла!\n\nТеперь:</Text>
+			<Options>
+				<Option Goto="73" Text="Если хочешь забраться на дерево и осмотреть его гнездо"/>
+				<Option Goto="202" Text="Если предпочтёшь продолжить свой путь"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
