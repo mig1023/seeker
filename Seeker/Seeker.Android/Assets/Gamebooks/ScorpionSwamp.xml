@@ -1074,5 +1074,12 @@
 				<Option Goto="334" Text="Никакое из перечисленных выше. Возвращайся и думай, что делать дальше"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="153">
+			<Text>Ни секунды не задерживаясь, ты покидаешь прогалину.</Text>
+			<Options>
+				<Option Goto="218" Text="Если ты следуешь на север"/>
+				<Option Goto="65" Text="Если держишь путь на запад"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
