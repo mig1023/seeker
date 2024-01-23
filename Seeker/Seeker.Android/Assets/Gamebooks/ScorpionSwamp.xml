@@ -933,5 +933,11 @@
 				<Option Goto="202" Text="Если предпочтёшь продолжить свой путь"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="133">
+			<Text>Ты не обнаруживаешь никаких признаков Рейнджера — должно быть, он скрылся в своих родных лесах.</Text>
+			<Options>
+				<Option Goto="234"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
