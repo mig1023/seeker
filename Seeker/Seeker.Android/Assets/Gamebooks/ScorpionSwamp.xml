@@ -1129,5 +1129,13 @@
 				<Option Goto="176"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="161">
+			<Text>Оставив прогалину Великана за спиной, ты продолжаешь свой путь. В каком направлении ты собираешься идти?</Text>
+			<Options>
+				<Option Goto="92" Text="На север"/>
+				<Option Goto="41" Text="На юг"/>
+				<Option Goto="121" Text="На запад"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
