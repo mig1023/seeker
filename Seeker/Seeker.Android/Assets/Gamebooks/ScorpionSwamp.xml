@@ -849,5 +849,14 @@
 				<Option Goto="154" Text="Если тебе удастся убить обоих Волков и их Повелителя"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="121">
+			<Text>Ты выходишь на перекресток тропинок. В какую сторону ты пойдёшь?</Text>
+			<Options>
+				<Option Goto="170" Text="На север"/>
+				<Option Goto="14" Text="На юг"/>
+				<Option Goto="275" Text="На восток"/>
+				<Option Goto="218" Text="На запад"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
