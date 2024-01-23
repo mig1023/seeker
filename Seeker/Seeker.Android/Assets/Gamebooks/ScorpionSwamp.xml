@@ -787,5 +787,12 @@
 				<Option Goto="184"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="112">
+			<Text>Гигантское гнездо на вершине дерева вызывает у тебя сильнейшее любопытство.</Text>
+			<Options>
+				<Option Goto="73" Text="Если хочешь залезть на дерево и исследовать его"/>
+				<Option Goto="202" Text="Если предпочтёшь не рисковать и продолжишь свой путь"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
