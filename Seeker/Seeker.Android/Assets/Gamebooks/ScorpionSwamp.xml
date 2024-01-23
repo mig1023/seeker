@@ -832,5 +832,15 @@
 				<Option Goto="182" Text="Если не повезёт"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="119">
+			<Text>Какое заклинание ты нашлёшь на Единорога?</Text>
+			<Options>
+				<Option Goto="39" Text="Заклинание Дружбы"/>
+				<Option Goto="293" Text="Заклинание Страха"/>
+				<Option Goto="381" Text="Благословение"/>
+				<Option Goto="337" Text="Огненное Заклинание"/>
+				<Option Goto="320" Text="Никакое из перечисленных выше. Возвращайся и думай, что делать дальше"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
