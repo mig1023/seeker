@@ -1245,5 +1245,11 @@
 				<Option Goto="161"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="178">
+			<Text>Какая жалость, что ты не волшебник — что хорошо для них, может быть пагубным для обыкновенных смертных! Отними 1 от уровня своей УДАЧЛИВОСТИ.</Text>
+			<Options>
+				<Option Goto="352"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
