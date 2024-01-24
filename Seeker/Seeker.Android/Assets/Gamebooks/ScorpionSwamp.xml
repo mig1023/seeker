@@ -1614,5 +1614,12 @@
 				<Option Goto="259" Text="Если не повезёт"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="232">
+			<Text>Сорвав ягоду, ты бережно кладёшь её в заплечный мешок.</Text>
+			<Options>
+				<Option Goto="389" Text="Если ты служишь доброму волшебнику Салатару"/>
+				<Option Goto="342" Text="В противном случае ты покидаешь прогалину тем же путём, что пришёл на неё"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
