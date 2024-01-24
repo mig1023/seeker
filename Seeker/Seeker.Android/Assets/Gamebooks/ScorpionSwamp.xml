@@ -1331,5 +1331,15 @@
 				<Option Goto="270"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="191">
+			<Text>Какое заклинание ты нашлёшь на Повелителя Волков?</Text>
+			<Options>
+				<Option Goto="224" Text="Заклинание Страха"/>
+				<Option Goto="294" Text="Заклинание Дружбы"/>
+				<Option Goto="93" Text="Проклятие"/>
+				<Option Goto="64" Text="Огненное Заклинание"/>
+				<Option Goto="398" Text="Никакое из перечисленных выше. Возвращайся и думай, что делать дальше"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
