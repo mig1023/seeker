@@ -1405,5 +1405,13 @@
 				<Option Goto="217"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="202">
+			<Text>У тебя нет причин задерживаться на этой прогалине. Куда ты отправишься дальше?</Text>
+			<Options>
+				<Option Goto="138" Text="На юг"/>
+				<Option Goto="41" Text="На восток"/>
+				<Option Goto="14" Text="На север"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
