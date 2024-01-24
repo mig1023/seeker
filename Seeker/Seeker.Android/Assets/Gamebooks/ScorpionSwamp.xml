@@ -1158,5 +1158,12 @@
 				<Option Goto="248"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="165">
+			<Text>С паучьей прогалины существует всего два выхода.</Text>
+			<Options>
+				<Option Goto="388" Text="Если ты держишь путь на север"/>
+				<Option Goto="105" Text="Если направляешься на юг"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
