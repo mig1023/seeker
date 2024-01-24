@@ -1653,5 +1653,11 @@
 				<Option Goto="82"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="238">
+			<Text>Ты вновь оказываешься на прогалине Повелителя Садов. Здесь так же красиво, как и раньше, однако не видно ни души. Ты возвращаешься по той же тропинке, по какой пришёл сюда.</Text>
+			<Options>
+				<Option Goto="363"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
