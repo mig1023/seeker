@@ -1413,5 +1413,14 @@
 				<Option Goto="14" Text="На север"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="203">
+			<Text>Какое заклинание ты используешь против этих жутких созданий?</Text>
+			<Options>
+				<Option Goto="75" Text="Огненное Заклинание"/>
+				<Option Goto="393" Text="Заклинание Увядания"/>
+				<Option Goto="114" Text="Заклинание Роста"/>
+				<Option Goto="28" Text="Никакое из перечисленных выше. Возвращайся и бросайся в бой"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
