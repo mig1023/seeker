@@ -1580,5 +1580,13 @@
 				<Option Goto="194" Text="Три или больше"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="227">
+			<Text>От прогалины отходят три тропинки. Одна из них — восточная — кажется уже и темнее двух остальных.\n\nКакой путь ты изберёшь?</Text>
+			<Options>
+				<Option Goto="66" Text="На север"/>
+				<Option Goto="388" Text="На восток"/>
+				<Option Goto="320" Text="На запад"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
