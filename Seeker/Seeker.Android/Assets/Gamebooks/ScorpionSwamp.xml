@@ -1628,5 +1628,12 @@
 				<Option Goto="25" Text="Если не рискнешь связываться со столь грозным противником"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="234">
+			<Text>От прогалины в разные стороны отходят две тропинки.</Text>
+			<Options>
+				<Option Goto="305" Text="Если ты следуешь на восток"/>
+				<Option Goto="121" Text="Если держишь путь на юг"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
