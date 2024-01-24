@@ -1659,5 +1659,11 @@
 				<Option Goto="363"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="239">
+			<Text>Ты вновь оказываешься на прогалине Повелителя Волков. Хижина накрепко заперта, и кругом не видно ни души.</Text>
+			<Options>
+				<Option Goto="314"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
