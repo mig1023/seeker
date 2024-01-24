@@ -1239,5 +1239,11 @@
 				<Option Goto="125"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="177">
+			<Text>К сожалению, ты ничем не можешь помочь Великану. Впрочем, его воинственный пыл поутих, и ты беспрепятственно продолжаешь свой путь.</Text>
+			<Options>
+				<Option Goto="161"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
