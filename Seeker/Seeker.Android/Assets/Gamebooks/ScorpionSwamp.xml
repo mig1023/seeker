@@ -1251,5 +1251,13 @@
 				<Option Goto="352"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="179">
+			<Text>От прогалины в разные стороны расходятся три тропинки. Одна из них, что ведёт на север, заметно понижается. В какую сторону направишься ты?</Text>
+			<Options>
+				<Option Goto="183" Text="На север"/>
+				<Option Goto="10" Text="На юг"/>
+				<Option Goto="118" Text="На восток"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
