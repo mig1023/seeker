@@ -1852,5 +1852,11 @@
 				<Option Goto="386"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="268">
+			<Text>Прогалина пуста, лишь несколько обглоданных костей белеют в высокой траве. Ты поспешно продолжаешь свой путь.</Text>
+			<Options>
+				<Option Goto="390"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
