@@ -2220,5 +2220,11 @@
 				<Option Goto="30"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="322">
+			<Text>Заклинание Увядания мгновенно обращает нападающую на тебя Траву-Людоеда в груду жухлой соломы. Вычеркни его из Списка Заклинаний на Игровой Карте.</Text>
+			<Options>
+				<Option Goto="81"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
