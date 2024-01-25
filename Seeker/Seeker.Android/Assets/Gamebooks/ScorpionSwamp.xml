@@ -1834,5 +1834,11 @@
 				<Option Goto="379"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="265">
+			<Text>Ты выходишь на прогалину, на которой давеча встретил Единорога, но сейчас она пуста.</Text>
+			<Options>
+				<Option Goto="348"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
