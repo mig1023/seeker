@@ -2197,5 +2197,13 @@
 				<Option Goto="214"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="319">
+			<Text>Ты лихорадочно раздумываешь, какую тропинку выбрать. Куда ты хочешь идти?</Text>
+			<Options>
+				<Option Goto="138" Text="На север"/>
+				<Option Goto="47" Text="На восток"/>
+				<Option Goto="66" Text="На запад"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
