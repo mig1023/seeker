@@ -2226,5 +2226,12 @@
 				<Option Goto="81"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="323">
+			<Text>Ты вновь выходишь на прогалину, на которой давеча встретил трех Болотных Орков.</Text>
+			<Options>
+				<Option Goto="309" Text="Если ты убил их в прошлый раз"/>
+				<Option Goto="281" Text="В противном случае тебе вновь придётся сразиться с ними"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
