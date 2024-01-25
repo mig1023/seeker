@@ -1821,5 +1821,12 @@
 				<Option Goto="115" Text="Если нет"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="263">
+			<Text>Ты узнаешь поляну, на которой подвергся нападению ужасной Травы-Людоеда!</Text>
+			<Options>
+				<Option Goto="187" Text="Если ты уничтожил её в прошлый раз"/>
+				<Option Goto="33" Text="В противном случае"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
