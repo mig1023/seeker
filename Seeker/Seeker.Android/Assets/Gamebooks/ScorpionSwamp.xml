@@ -2284,5 +2284,12 @@
 				<Option Goto="268" Text="Если не видел"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="331">
+			<Text>Ты вновь оказываешься на Орлиной прогалине. Сейчас она пуста — всё, что ты видишь, это исполинское дерево с огромным гнездом на вершине.</Text>
+			<Options>
+				<Option Goto="202" Text="Ты уже сражался с Орлом"/>
+				<Option Goto="112" Text="В противном случае"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
