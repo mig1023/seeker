@@ -2499,5 +2499,13 @@
 				<Option Goto="22"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="363">
+			<Text>Ты снова выходишь на прогалину, на которой состоялась твоя встреча с Лесным Рейнджером. Чем она закончилась в прошлый раз?</Text>
+			<Options>
+				<Option Goto="133" Text="Вы расстались друзьями"/>
+				<Option Goto="234" Text="Ты убил его"/>
+				<Option Goto="306" Text="Ты сражался с ним, но отступил"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
