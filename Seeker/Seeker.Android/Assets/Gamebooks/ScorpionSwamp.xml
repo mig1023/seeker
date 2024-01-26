@@ -2525,5 +2525,12 @@
 				<Option Goto="161"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="367">
+			<Text>С прогалины существует два выхода.</Text>
+			<Options>
+				<Option Goto="304" Text="Если хочешь отправиться на север"/>
+				<Option Goto="265" Text="Если предпочтёшь повернуть на восток"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
