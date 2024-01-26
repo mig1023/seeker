@@ -2752,5 +2752,14 @@
 				<Option Goto="281" Text="Выхватите меч"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="400">
+			<Text>Какое заклинание ты используешь против Слизистого Монстра?</Text>
+			<Options>
+				<Option Goto="188" Text="Огненное Заклинание"/>
+				<Option Goto="380" Text="Заклинание Увядания"/>
+				<Option Goto="282" Text="Заклинание Льда"/>
+				<Option Goto="336" Text="Никакое из вышеперечисленных. Возвращайся и решай, что делать дальше"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
