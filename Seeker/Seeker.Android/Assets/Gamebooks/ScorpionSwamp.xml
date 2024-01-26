@@ -2729,5 +2729,11 @@
 				<Option Goto="363"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="397">
+			<Text>Решив не связываться с Прудовой Тварью, ты поворачиваешься и со всех ног бросаешься назад по выведшей тебя на прогалину западной тропинке.</Text>
+			<Options>
+				<Option Goto="330"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
