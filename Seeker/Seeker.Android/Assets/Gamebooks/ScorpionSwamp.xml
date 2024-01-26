@@ -2744,5 +2744,13 @@
 				<Option Goto="120" Text="Нападёшь на него"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="399">
+			<Text>Какое заклинание ты используешь против Болотных Орков?</Text>
+			<Options>
+				<Option Goto="346" Text="Заклинание Страха"/>
+				<Option Goto="169" Text="Заклинание Миража"/>
+				<Option Goto="281" Text="Выхватите меч"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
