@@ -2657,5 +2657,15 @@
 				<Option Goto="179"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="387">
+			<Text>Какое Магическое Заклинание ты используешь против Разбойников?</Text>
+			<Options>
+				<Option Goto="107" Text="Проклятие"/>
+				<Option Goto="278" Text="Заклинание Страха"/>
+				<Option Goto="148" Text="Заклинание Миража"/>
+				<Option Goto="318" Text="Заклинание Дружбы"/>
+				<Option Goto="65" Text="Никакое из перечисленных выше. Возвращайся и думай, что делать дальше"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
