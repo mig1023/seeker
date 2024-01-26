@@ -2375,5 +2375,11 @@
 				<Option Goto="301" Text="Если ты убежал от них, перехитрил их, или убил кого-нибудь из них"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="344">
+			<Text>Прижав уши, Волки бросаются прочь. Вскоре они скрываются среди деревьев, а ты продолжаешь, прерванный было, путь.</Text>
+			<Options>
+				<Option Goto="247"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
