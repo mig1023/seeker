@@ -2400,5 +2400,14 @@
 				<Option Goto="363" Text="Если откажешься от своей затеи и поспешно покинешь прогалину по той же самой тропинке, что пришёл на неё"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="348">
+			<Text>На прогалину выходят четыре тропинки. В какую сторону ты пойдёшь?</Text>
+			<Options>
+				<Option Goto="94" Text="На север"/>
+				<Option Goto="157" Text="На юг"/>
+				<Option Goto="10" Text="На восток"/>
+				<Option Goto="204" Text="На запад"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
