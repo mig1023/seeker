@@ -2532,5 +2532,11 @@
 				<Option Goto="265" Text="Если предпочтёшь повернуть на восток"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="368">
+			<Text>Ты можешь уйти лишь по той же самой тропинке, по которой попал на эту прогалину.</Text>
+			<Options>
+				<Option Goto="348"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
