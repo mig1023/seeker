@@ -2368,5 +2368,12 @@
 				<Option Goto="300" Text="В противном случае"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="343">
+			<Text>Ты узнаешь поляну, на которой встретил шайку Разбойников.</Text>
+			<Options>
+				<Option Goto="199" Text="Если ты расстался с ними в дружеских отношениях"/>
+				<Option Goto="301" Text="Если ты убежал от них, перехитрил их, или убил кого-нибудь из них"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
