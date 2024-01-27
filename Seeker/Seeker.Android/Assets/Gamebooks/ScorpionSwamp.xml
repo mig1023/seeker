@@ -6,11 +6,18 @@
 		</Copyright>
 		<Styles>
 			<Main Value="574c2d"/>
-			<Color Name="Option, Continue" Value="b09e7b"/>
+			<Option Value="b09e7b"/>	
+			<StatusBar Value="342d1b"/>
+			<Action Value="3c351f"/>
+			<System Value="675d42"/>
 		</Styles>
 		<Default>
 			<DisabledOption Value="True"/>
 		</Default>
+		<Buttons>
+			<Fight>Сражаться</Fight>
+			<Luck>Проверить удачу</Luck>
+		</Buttons>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph No="0">
