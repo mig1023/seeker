@@ -41,5 +41,17 @@ namespace Seeker.Gamebook.ScorpionSwamp
 
             return luckCheck;
         }
+
+        public override bool Availability(string option)
+        {
+            if (String.IsNullOrEmpty(option))
+            {
+                return true;
+            }
+            else
+            {
+                return AvailabilityTrigger(option);
+            }
+        }
     }
 }
