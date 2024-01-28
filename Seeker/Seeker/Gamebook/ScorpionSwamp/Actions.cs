@@ -10,6 +10,8 @@ namespace Seeker.Gamebook.ScorpionSwamp
         private static Character protagonist = Character.Protagonist;
 
         public List<Character> Enemies { get; set; }
+        public int ExtendedDamage { get; set; }
+
 
         public override List<string> Status() => new List<string>
         {
@@ -53,6 +55,19 @@ namespace Seeker.Gamebook.ScorpionSwamp
             {
                 return AvailabilityTrigger(option);
             }
+        }
+
+        public override List<string> Representer()
+        {
+            List<string> enemies = new List<string>();
+
+            if (Enemies == null)
+                return enemies;
+
+            foreach (Character enemy in Enemies)
+                enemies.Add($"{enemy.Name}\nмастерство {enemy.Mastery}  выносливость {enemy.Endurance}");
+
+            return enemies;
         }
 
         public static bool NoMoreEnemies(List<Character> enemies) =>
@@ -125,7 +140,7 @@ namespace Seeker.Gamebook.ScorpionSwamp
                         fight.Add($"BAD|{enemy.Name} ранил вас");
                         fight.Add($"Вы теряете 2 очка Выносливости");
 
-                        protagonist.Endurance -= 2;
+                        protagonist.Endurance -= ExtendedDamage > 0 ? ExtendedDamage : 2;
 
                         if (protagonist.Endurance <= 0)
                         {
