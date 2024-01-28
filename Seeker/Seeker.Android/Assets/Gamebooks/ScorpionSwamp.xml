@@ -10,6 +10,7 @@
 			<StatusBar Value="342d1b"/>
 			<Action Value="3c351f"/>
 			<System Value="675d42"/>
+			<SystemFont Value="ffffff"/>
 		</Styles>
 		<Default>
 			<DisabledOption Value="Show"/>
