@@ -11,6 +11,7 @@ namespace Seeker.Gamebook.ScorpionSwamp
 
         public List<Character> Enemies { get; set; }
         public int ExtendedDamage { get; set; }
+        public int UnluckDamage { get; set; }
         public bool UntilFirstBlood { get; set; }
 
         public override List<string> Status() => new List<string>
@@ -35,6 +36,12 @@ namespace Seeker.Gamebook.ScorpionSwamp
                 $"{Game.Dice.Symbol(secondDice)} {luckLine} {protagonist.Luck}" };
 
             luckCheck.Add(goodLuck ? "BIG|GOOD|УСПЕХ :)" : "BIG|BAD|НЕУДАЧА :(");
+
+            if (UnluckDamage > 0)
+            {
+                protagonist.Endurance -= UnluckDamage;
+                luckCheck.Add($"BAD|Вы теряете {UnluckDamage} очка Выносливости");
+            }
 
             if (protagonist.Luck > 2)
             {
@@ -121,7 +128,7 @@ namespace Seeker.Gamebook.ScorpionSwamp
                     if ((protagonistHitStrength > enemyHitStrength) && !attackAlready)
                     {
                         fight.Add($"GOOD|{enemy.Name} ранен");
-                        fight.Add($"Он теряет 2 очка Выносливости");
+                        fight.Add("Он теряет 2 очка Выносливости");
 
                         enemy.Endurance -= 2;
                         firstBlood = true;
@@ -140,7 +147,7 @@ namespace Seeker.Gamebook.ScorpionSwamp
                     else if (protagonistHitStrength < enemyHitStrength)
                     {
                         fight.Add($"BAD|{enemy.Name} ранил вас");
-                        fight.Add($"Вы теряете 2 очка Выносливости");
+                        fight.Add("Вы теряете 2 очка Выносливости");
 
                         protagonist.Endurance -= ExtendedDamage > 0 ? ExtendedDamage : 2;
                         firstBlood = true;
