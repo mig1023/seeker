@@ -12,6 +12,7 @@ namespace Seeker.Gamebook.ScorpionSwamp
         public List<Character> Enemies { get; set; }
         public int ExtendedDamage { get; set; }
         public int UnluckDamage { get; set; }
+        public int UnluckMasteryDamage { get; set; }
         public bool UntilFirstBlood { get; set; }
 
         public override List<string> Status() => new List<string>
@@ -40,7 +41,17 @@ namespace Seeker.Gamebook.ScorpionSwamp
             if (UnluckDamage > 0)
             {
                 protagonist.Endurance -= UnluckDamage;
-                luckCheck.Add($"BAD|Вы теряете {UnluckDamage} очка Выносливости");
+
+                string damageLine = Game.Services.CoinsNoun(Math.Abs(UnluckDamage), "очко", "очка", "очков");
+                luckCheck.Add($"BAD|Вы теряете {UnluckDamage} {damageLine} Выносливости");
+            }
+
+            if (UnluckMasteryDamage > 0)
+            {
+                protagonist.Endurance -= UnluckMasteryDamage;
+
+                string damageLine = Game.Services.CoinsNoun(Math.Abs(UnluckDamage), "очко", "очка", "очков");
+                luckCheck.Add($"BAD|Вы теряете {UnluckMasteryDamage} {damageLine} Мастерства");
             }
 
             if (protagonist.Luck > 2)
