@@ -11,7 +11,7 @@ namespace Seeker.Gamebook.ScorpionSwamp
 
         public List<Character> Enemies { get; set; }
         public int ExtendedDamage { get; set; }
-
+        public bool UntilFirstBlood { get; set; }
 
         public override List<string> Status() => new List<string>
         {
@@ -89,6 +89,7 @@ namespace Seeker.Gamebook.ScorpionSwamp
                 fight.Add($"HEAD|BOLD|Раунд: {round}");
 
                 bool attackAlready = false;
+                bool firstBlood = false;
                 int protagonistHitStrength = 0;
 
                 foreach (Character enemy in FightEnemies)
@@ -123,6 +124,7 @@ namespace Seeker.Gamebook.ScorpionSwamp
                         fight.Add($"Он теряет 2 очка Выносливости");
 
                         enemy.Endurance -= 2;
+                        firstBlood = true;
 
                         if (NoMoreEnemies(FightEnemies))
                         {
@@ -141,6 +143,7 @@ namespace Seeker.Gamebook.ScorpionSwamp
                         fight.Add($"Вы теряете 2 очка Выносливости");
 
                         protagonist.Endurance -= ExtendedDamage > 0 ? ExtendedDamage : 2;
+                        firstBlood = true;
 
                         if (protagonist.Endurance <= 0)
                         {
@@ -157,6 +160,12 @@ namespace Seeker.Gamebook.ScorpionSwamp
                     attackAlready = true;
 
                     fight.Add(String.Empty);
+
+                    if (UntilFirstBlood && firstBlood)
+                    {
+                        fight.Add("BIG|BOLD|Поединок окончен с первой кровью!");
+                        return fight;
+                    }
                 }
 
                 round += 1;
