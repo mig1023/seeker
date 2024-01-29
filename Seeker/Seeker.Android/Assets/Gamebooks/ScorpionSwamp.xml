@@ -378,7 +378,9 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="43">
-			<Text>ИСПЫТАЙ УДАЧУ.</Text>
+			<Actions>
+				<Luck/>
+			</Actions>
 			<Options>
 				<Option Goto="339" Text="Если тебе повезёт"/>
 				<Option Goto="313" Text="Если не повезёт"/>
