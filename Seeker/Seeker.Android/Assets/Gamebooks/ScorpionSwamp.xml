@@ -696,7 +696,7 @@
 				<Text Style="Small">Прибавь 1 к уровню своего МАСТЕРСТВА.</Text>
 			</Texts>
 			<Modifications>
-				<Mastery Value="1"/>
+				<MaxMastery Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Goto="166" Text="Если ты уже нашёл куст Антерики"/>
@@ -2079,7 +2079,7 @@
 				<Text>Пока ты с восхищением рассматриваешь меч, Гримслейд дотрагивается до тебя кончиком своего жезла. Если во время битвы ты призывал на помощь удачу, можешь восстановить её уровень до его начального значения.</Text>
 			</Texts>
 			<Modifications>
-				<Mastery Value="1"/>
+				<MaxMastery Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Goto="206"/>
