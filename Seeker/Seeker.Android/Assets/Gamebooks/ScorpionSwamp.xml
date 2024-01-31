@@ -783,7 +783,7 @@
 				</Fight>
 			</Actions>
 			<Options>
-				<Option Goto="308" Text="Если тебе удастся убить чудовище"/>
+				<Option Goto="308" Text="Тебе удалось убить чудовище"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="83">
