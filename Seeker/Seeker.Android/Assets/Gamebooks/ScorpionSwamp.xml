@@ -752,8 +752,8 @@
 				</Fight>
 			</Actions>
 			<Options>
-				<Option Goto="360" Text="Если ты первым ранишь Главаря Разбойников"/>
-				<Option Goto="128" Text="Если он первым ранит тебя"/>
+				<Option Goto="360" Text="Ты первым ранил Главаря Разбойников"/>
+				<Option Goto="128" Text="Он первым ранил тебя"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="80">
