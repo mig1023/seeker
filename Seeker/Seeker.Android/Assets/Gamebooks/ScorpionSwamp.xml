@@ -601,7 +601,7 @@
 				</Fight>
 			</Actions>
 			<Options>
-				<Option Goto="154" Text="Если тебе удастся одолеть Повелителя Волков"/>
+				<Option Goto="154" Text="Удалось одолеть Повелителя Волков"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="65">
