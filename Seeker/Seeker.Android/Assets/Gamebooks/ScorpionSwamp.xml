@@ -218,8 +218,8 @@
 				<Endurance Value="1"/>
 			</Modifications>
 			<Options>
-				<Option Goto="55" Text="Если хочешь посмотреть, кто или что находится в дереве"/>
-				<Option Goto="390" Text="Если предпочтёшь не рисковать и немедленно покинешь прогалину"/>
+				<Option Goto="55" Text="Посмотреть, кто или что находится в дереве"/>
+				<Option Goto="390" Text="Не рисковать и немедленно покинуть прогалину"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="22">
