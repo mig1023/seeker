@@ -831,8 +831,8 @@
 		<Paragraph No="88">
 			<Text>Ты покидаешь прогалину.</Text>
 			<Options>
-				<Option Goto="121" Text="Если хочешь отправиться на север"/>
-				<Option Goto="331" Text="Если предпочтёшь повернуть на юг"/>
+				<Option Goto="121" Text="Хочешь отправиться на север"/>
+				<Option Goto="331" Text="Предпочтёшь повернуть на юг"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="89">
