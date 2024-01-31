@@ -1101,7 +1101,7 @@
 				</Fight>
 			</Actions>
 			<Options>
-				<Option Goto="154" Text="Если тебе удастся убить обоих Волков и их Повелителя"/>
+				<Option Goto="154" Text="Тебе удалось убить обоих Волков и их Повелителя"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="121">
