@@ -366,7 +366,7 @@
 		<Paragraph No="36">
 			<Text>Ты доверчиво рассказываешь Повелителю Садов о своём задании.</Text>
 			<Options>
-				<Option Goto="283" Text="Если ты уже нашёл куст Антерики"/>
+				<Option Goto="283" Text="Ты уже нашёл куст Антерики"/>
 				<Option Goto="396" Text="В противном случае"/>
 			</Options>
 		</Paragraph>
