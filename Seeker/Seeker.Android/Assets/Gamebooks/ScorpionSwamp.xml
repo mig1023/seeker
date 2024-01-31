@@ -886,8 +886,8 @@
 				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
-				<Option Goto="295" Text="Теперь, если ты следовал на север"/>
-				<Option Goto="320" Text="Если держал путь на юг"/>
+				<Option Goto="295" Text="Ты следовал на север"/>
+				<Option Goto="320" Text="Держал путь на юг"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="95">
