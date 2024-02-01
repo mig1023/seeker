@@ -1168,8 +1168,8 @@
 		</Paragraph>
 		<Paragraph No="129">
 			<Options>
-				<Option Goto="268" Text="Если ты убил Медведя"/>
-				<Option Goto="181" Text="Если убежал от него"/>
+				<Option Goto="268" Text="Ты убил Медведя"/>
+				<Option Goto="181" Text="Ты убежал от него"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="130">
