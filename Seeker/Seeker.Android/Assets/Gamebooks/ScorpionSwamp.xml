@@ -1379,8 +1379,8 @@
 		<Paragraph No="153">
 			<Text>Ни секунды не задерживаясь, ты покидаешь прогалину.</Text>
 			<Options>
-				<Option Goto="218" Text="Если ты следуешь на север"/>
-				<Option Goto="65" Text="Если держишь путь на запад"/>
+				<Option Goto="218" Text="Ты следуешь на север"/>
+				<Option Goto="65" Text="Держишь путь на запад"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="154">
