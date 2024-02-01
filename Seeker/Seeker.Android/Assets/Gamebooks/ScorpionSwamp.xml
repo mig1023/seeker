@@ -1688,7 +1688,7 @@
 		<Paragraph No="192">
 			<Text>Ты вновь оказываешься на прогалине, где давеча встретил вора.</Text>
 			<Options>
-				<Option Goto="179" Text="Если ты убил его в прошлый раз"/>
+				<Option Goto="179" Text="Ты убил его в прошлый раз"/>
 				<Option Goto="267" Text="В противном случае"/>
 			</Options>
 		</Paragraph>
