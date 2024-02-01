@@ -2261,8 +2261,10 @@
 				<Option Goto="274" Text="Проклятие"/>
 				<Option Goto="365" Text="Заклинание Страха"/>
 				<Option Goto="385" Text="Огненное Заклинание"/>
-				<Option Goto="351" Text="Заклинание Миража"/>
-				<Option Goto="57" Text="Никакое из перечисленных выше"/>
+				<Option Goto="351" Text="Заклинание Миража">
+					<Text>Если никакое из перечисленных выше...</Text>
+				</Option>
+				<Option Goto="57"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="257">
