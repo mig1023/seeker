@@ -1959,7 +1959,7 @@
 				</Fight>
 			</Actions>
 			<Options>
-				<Option Goto="277" Text="Если тебе удастся убить Единорога"/>
+				<Option Goto="277" Text="Тебе удалось убить Единорога"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="222">
