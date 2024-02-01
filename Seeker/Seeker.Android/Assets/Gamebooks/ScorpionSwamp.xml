@@ -2381,8 +2381,8 @@
 		<Paragraph No="270">
 			<Text>С прогалины есть два выхода.</Text>
 			<Options>
-				<Option Goto="275" Text="Если хочешь повернуть на север"/>
-				<Option Goto="331" Text="Если решишь отправиться на запад"/>
+				<Option Goto="275" Text="Повернуть на север"/>
+				<Option Goto="331" Text="Отправиться на запад"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="271">
