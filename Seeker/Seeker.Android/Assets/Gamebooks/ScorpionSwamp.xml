@@ -1215,7 +1215,7 @@
 				</Fight>
 			</Actions>
 			<Options>
-				<Option Goto="81" Text="Если тебе удастся срубить всю траву на прогалине"/>
+				<Option Goto="81" Text="Удалось срубить всю траву на прогалине"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="135">
