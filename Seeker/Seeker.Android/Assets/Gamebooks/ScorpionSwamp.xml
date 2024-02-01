@@ -2513,7 +2513,7 @@
 				</Fight>
 			</Actions>
 			<Options>
-				<Option Goto="156" Text="Если тебе удастся справиться со Статуей"/>
+				<Option Goto="156" Text="Тебе удалось справиться со Статуей"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="285">
