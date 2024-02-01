@@ -2203,8 +2203,8 @@
 				</Luck>
 			</Actions>
 			<Options>
-				<Option Goto="336" Text="Если ты направляешься на юг"/>
-				<Option Goto="121" Text="Если держишь путь на восток"/>
+				<Option Goto="336" Text="Направляешься на юг"/>
+				<Option Goto="121" Text="Держишь путь на восток"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="250">
