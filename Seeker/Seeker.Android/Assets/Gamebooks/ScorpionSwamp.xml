@@ -1762,7 +1762,7 @@
 				</Fight>
 			</Actions>
 			<Options>
-				<Option Goto="69" Text="Если тебе удастся убить Медведя"/>
+				<Option Goto="69" Text="Тебе удалось убить Медведя"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="201">
