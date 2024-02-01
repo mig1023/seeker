@@ -2077,8 +2077,8 @@
 		<Paragraph No="234">
 			<Text>От прогалины в разные стороны отходят две тропинки.</Text>
 			<Options>
-				<Option Goto="305" Text="Если ты следуешь на восток"/>
-				<Option Goto="121" Text="Если держишь путь на юг"/>
+				<Option Goto="305" Text="Ты следуешь на восток"/>
+				<Option Goto="121" Text="Держишь путь на юг"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="235">
