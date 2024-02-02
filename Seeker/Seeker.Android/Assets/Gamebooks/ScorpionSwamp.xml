@@ -2739,8 +2739,8 @@
 				<Mastery Value="-2"/>
 			</Modifications>
 			<Options>
-				<Option Goto="85" Text="Если попытаешься спастись бегством"/>
-				<Option Goto="171" Text="Если вытащишь меч и набросишься на Слизистого Монстра"/>
+				<Option Goto="85" Text="Попытаешься спастись бегством"/>
+				<Option Goto="171" Text="Вытащишь меч и набросишься на Слизистого Монстра"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="312">
