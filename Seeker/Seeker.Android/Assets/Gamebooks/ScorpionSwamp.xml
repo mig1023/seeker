@@ -3283,7 +3283,7 @@
 				</Fight>
 			</Actions>
 			<Options>
-				<Option Goto="219" Text="Если тебе удастся победить Лесного Рейнджера"/>
+				<Option Goto="219" Text="Удалось победить Лесного Рейнджера"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="379">
