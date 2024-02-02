@@ -2659,7 +2659,7 @@
 				</Fight>
 			</Actions>
 			<Options>
-				<Option Goto="246" Text="Если тебе удастся убить обоих Разбойников"/>
+				<Option Goto="246" Text="Удалось убить обоих Разбойников"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="302">
