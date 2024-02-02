@@ -2983,7 +2983,7 @@
 				</Fight>
 			</Actions>
 			<Options>
-				<Option Goto="372" Text="Если тебе удастся победить Пумчакара"/>
+				<Option Goto="372" Text="Удалось победить Пумчакара"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="342">
