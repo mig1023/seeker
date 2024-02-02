@@ -2989,7 +2989,7 @@
 		<Paragraph No="342">
 			<Text>Ты узнаешь прогалину, на которой давеча встретил могучего Великана.</Text>
 			<Options>
-				<Option Goto="197" Text="Если ты убил его"/>
+				<Option Goto="197" Text="Ты убил его"/>
 				<Option Goto="300" Text="В противном случае"/>
 			</Options>
 		</Paragraph>
