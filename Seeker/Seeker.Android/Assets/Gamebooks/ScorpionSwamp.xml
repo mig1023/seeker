@@ -2754,7 +2754,7 @@
 				</Fight>
 			</Actions>
 			<Options>
-				<Option Goto="324" Text="Если тебе удастся победить Гигантского Скорпиона"/>
+				<Option Goto="324" Text="Удалось победить Гигантского Скорпиона"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="313">
