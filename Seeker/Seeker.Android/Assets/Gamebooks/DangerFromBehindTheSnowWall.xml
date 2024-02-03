@@ -1,0 +1,33 @@
+<Gamebook>
+	<Introduction>
+		<Copyright>
+			<Title>Угроза из-за снежной стены</Title>
+			<Author>Всеволод Тюпа, 2021</Author>
+		</Copyright>
+		<Styles>
+			<Main Value="acc6dc"/>
+			<Color Name="Continue, System" Value="9ab2c6"/>	
+			<Background Value="e7edf3"/>
+			<Color Name="ActionBox, StatusBar" Value="a0afc4"/>
+			<Color Name="Action, Option" Value="7c8898"/>
+			<SystemFont Value="ffffff"/>
+		</Styles>
+		<Default>
+			<DisabledOption Value="Hide"/>
+		</Default>
+	</Introduction>
+	<Paragraphs>
+		<Paragraph No="0">
+			<Text>START</Text>
+			<Options>
+				<Start Goto="1"/>
+			</Options>
+		</Paragraph>
+		<Paragraph No="1">
+			<Text>END</Text>
+			<Options>
+				<Option Goto="0"/>
+			</Options>
+		</Paragraph>
+	</Paragraphs>
+</Gamebook>
