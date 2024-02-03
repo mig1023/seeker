@@ -55,8 +55,8 @@
 			<Option>По умолчанию</Option>
 			<Option>По названию</Option>
 			<Option>По автору</Option>
-			<Option>По размеру (параграфы)</Option>
-			<Option>По размеру (объём)</Option>
+			<Option>По числу параграфов</Option>
+			<Option>По объёму</Option>
 			<Option>По году издания</Option>
 			<Option>По тематике</Option>
 			<Option>По времени прохождения</Option>
