@@ -38,7 +38,7 @@ namespace Seeker.Gamebook.ScorpionSwamp
 
             luckCheck.Add(goodLuck ? "BIG|GOOD|УСПЕХ :)" : "BIG|BAD|НЕУДАЧА :(");
 
-            if (UnluckDamage > 0)
+            if ((UnluckDamage > 0) && !goodLuck)
             {
                 protagonist.Endurance -= UnluckDamage;
 
@@ -46,7 +46,7 @@ namespace Seeker.Gamebook.ScorpionSwamp
                 luckCheck.Add($"BAD|Вы теряете {UnluckDamage} {damageLine} Выносливости");
             }
 
-            if (UnluckMasteryDamage > 0)
+            if ((UnluckMasteryDamage > 0) && !goodLuck)
             {
                 protagonist.Endurance -= UnluckMasteryDamage;
 
