@@ -1093,7 +1093,10 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="118">
-			<Text>Ты выходишь на обширную поляну, на которой сходятся три тропинки. Ты на Прогалине 13.</Text>
+			<Texts>
+				<Text>Ты выходишь на обширную поляну, на которой сходятся три тропинки.</Text>
+				<Text Style="Bold">ТЫ НА ПРОГАЛИНЕ 13.</Text>
+			</Texts>
 			<LateTriggers>Прогалина 13</LateTriggers>
 			<Actions>
 				<Option Goto="303" Text="Если ты уже бывал здесь ранее" Availability="Прогалина 13">
