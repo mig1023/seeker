@@ -640,7 +640,10 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="66">
-			<Text>Ты выходишь на просторную поляну, со всех сторон окружённую вековыми дубами. Ты на Прогалине 9.\n\n</Text>
+			<Texts>
+				<Text>Ты выходишь на просторную поляну, со всех сторон окружённую вековыми дубами.</Text>
+				<Text Style="Bold">ТЫ НА ПРОГАЛИНЕ 9.</Text>
+			</Texts>
 			<LateTriggers>Прогалина 9</LateTriggers>
 			<Options>
 				<Option Goto="192" Text="Если ты уже бывал здесь ранее" Availability="Прогалина 9">
