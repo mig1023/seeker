@@ -562,5 +562,11 @@
 				<Option Goto="125" Text="Нет"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="84">
+			<Options>
+				<Option Goto="655" Text="Вы подходите к сараю в первый раз"/>
+				<Option Goto="451" Text="Не в первый"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
