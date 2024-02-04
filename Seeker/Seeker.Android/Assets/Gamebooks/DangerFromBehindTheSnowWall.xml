@@ -640,5 +640,11 @@
 				<Option Goto="421" Text="Если же хотите потратить 20 Единиц Магии и сплести для него Заклятие Исцеления"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="96">
+			<Text>Через мгновение дыхание Снежного Дракона догоняет вас. И вы превращаетесь в ледяной памятник самому себе.</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
