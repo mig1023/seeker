@@ -406,5 +406,12 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="61">
+			<Text>Безуспешно. Вы с трудом разогнули быстро уставшую спину и вытерли пот со лба.</Text>
+			<Options>
+				<Option Goto="390" Text="Бросите затею и уйдете, пожелав мужику удачи"/>
+				<Option Goto="253" Text="Продолжите"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
