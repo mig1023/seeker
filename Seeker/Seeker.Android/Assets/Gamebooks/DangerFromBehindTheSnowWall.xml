@@ -847,5 +847,11 @@
 				<Option Goto="513"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="128">
+			<Text>Он охотно взял протянутые вами деньги одним из своих отвратительных, но весьма ловких щупалец.</Text>
+			<Options>
+				<Option Goto="332"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
