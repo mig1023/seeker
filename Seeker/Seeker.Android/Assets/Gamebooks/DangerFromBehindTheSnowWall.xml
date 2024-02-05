@@ -948,5 +948,11 @@
 				<Option Goto="504"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="143">
+			<Text>Вы поскользнулись и упали. И в следующий миг вас настигли два десятка врагов, которые навалились на вас кучей-малой и уже не дали встать.</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
