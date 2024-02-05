@@ -728,5 +728,12 @@
 				<Option Goto="367" Text="Устраиваться на ночлег в куче старой одежды"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="109">
+			<Text>А что вы пьете?</Text>
+			<Options>
+				<Option Goto="692" Text="Самогон на ягеле"/>
+				<Option Goto="316" Text="Чай из красного мха"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
