@@ -721,5 +721,12 @@
 				<Option Goto="97" Text="Можно и отказаться, оставив траву себе"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="108">
+			<Text>Грибы: +1 ЕДА.</Text>
+			<Options>
+				<Option Goto="52" Text="Теперь подниметесь по лестнице осмотреть чердак"/>
+				<Option Goto="367" Text="Устраиваться на ночлег в куче старой одежды"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
