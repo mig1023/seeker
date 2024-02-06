@@ -1000,5 +1000,13 @@
 				<Option Goto="526"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="151">
+			<Text>Сколько порций Еды вы бросили хищникам?</Text>
+			<Options>
+				<Option Goto="723" Text="Одну"/>
+				<Option Goto="92" Text="Две или три"/>
+				<Option Goto="659" Text="Четыре или больше"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
