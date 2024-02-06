@@ -1130,5 +1130,11 @@
 				<Option Goto="22"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="170">
+			<Options>
+				<Option Goto="11" Text="Если у вас осталось 10 Единиц Магии, то можете зажечь «Светляка», чтобы слегка подсветить себе путь"/>
+				<Option Goto="481" Text="Если нет, придется рыскать впотьмах, рассчитывая только на удачу"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
