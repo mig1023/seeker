@@ -1769,5 +1769,12 @@
 				<Option Goto="293" Text="Нет"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="263">
+			<Text>- Ооооо! — тянет гласную Глир в ответ на ваш вопрос, и вы не понимаете, с воодушевлением или с иронией. - О-о-орден! Они ребята. хм, необычные.\n\nКстати, а что вы пьете?</Text>
+			<Options>
+				<Option Goto="149" Text="Ягелевый самогон"/>
+				<Option Goto="470" Text="Чай из красного мха"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
