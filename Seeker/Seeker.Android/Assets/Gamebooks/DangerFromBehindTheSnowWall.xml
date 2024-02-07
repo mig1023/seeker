@@ -1214,5 +1214,11 @@
 				<Option Goto="440"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="183">
+			<Text>Стараясь унять сердце, колотящееся в груди, словно молот кузнеца, вы аккуратно переворачиваете дощечку, и...</Text>
+			<Options>
+				<Option Goto="409"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
