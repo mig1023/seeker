@@ -1445,5 +1445,12 @@
 				<Option Goto="2"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="216">
+			<Text>Какую монету вы ему бросили?</Text>
+			<Options>
+				<Option Goto="81" Text="Половинник или золотой"/>
+				<Option Goto="442" Text="Тройник"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
