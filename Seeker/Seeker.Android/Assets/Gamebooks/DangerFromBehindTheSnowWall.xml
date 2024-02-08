@@ -2509,5 +2509,12 @@
 				<Option Goto="409"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="376">
+			<Text>Бросьте Кубик и прибавьте выпавшее число к вашей Форме.</Text>
+			<Options>
+				<Option Goto="250" Text="Если сумма составит 9 или больше"/>
+				<Option Goto="557" Text="Если 8 или меньше"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
