@@ -2174,5 +2174,11 @@
 				<Option Goto="620"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="325">
+			<Text>Магия: -10. К сожалению, больше ничего интересного. Светляк немного погорел, скрашивая ваше грустное пребывание на дне колодца и погас. Пора выбираться.</Text>
+			<Options>
+				<Option Goto="79"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
