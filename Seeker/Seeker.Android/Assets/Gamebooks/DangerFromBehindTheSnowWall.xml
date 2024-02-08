@@ -2026,5 +2026,11 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="303">
+			<Options>
+				<Option Goto="714" Text="Хоть один из братьев-немьялов остался в живых"/>
+				<Option Goto="545" Text="Оба погибли"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
