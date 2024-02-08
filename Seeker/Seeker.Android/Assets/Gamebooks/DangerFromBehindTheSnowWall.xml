@@ -2180,5 +2180,12 @@
 				<Option Goto="79"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="326">
+			<Text>ПРОВЕРКА НАБЛЮДАТЕЛЬНОСТИ.</Text>
+			<Options>
+				<Option Goto="57" Text="Заметили"/>
+				<Option Goto="725" Text="Нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
