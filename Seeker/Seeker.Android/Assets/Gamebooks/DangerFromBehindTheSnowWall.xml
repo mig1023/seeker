@@ -2503,5 +2503,11 @@
 				<Option Goto="215"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="375">
+			<Text>Стараясь унять сердце, колотящееся в груди, словно молот кузнеца, вы аккуратно переворачиваете дощечку.</Text>
+			<Options>
+				<Option Goto="409"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
