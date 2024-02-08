@@ -1963,5 +1963,11 @@
 				<Option Goto="457"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="293">
+			<Text>До дерева вам не хватает нескольких шагов. Волки сжирают вас уже под его сенью.</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
