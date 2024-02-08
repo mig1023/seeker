@@ -2491,5 +2491,11 @@
 				<Option Goto="405"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="373">
+			<Text>Проклятая веревка лопается почти сразу, не успели вы спуститься еще и нескольких ярдов. Вы падаете, и расстояние до дна еще слишком велико, чтобы были шансы выжить.</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
