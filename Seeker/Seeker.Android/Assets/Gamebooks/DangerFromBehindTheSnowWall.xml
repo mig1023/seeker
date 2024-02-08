@@ -2187,5 +2187,12 @@
 				<Option Goto="725" Text="Нет"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="327">
+			<Text>Толщина ствола и размах ветвей могучего дерева-ролдо впечатляют и поражают.</Text>
+			<Options>
+				<Option Goto="688" Text="Подходите к дереву в первый раз"/>
+				<Option Goto="144" Text="Нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
