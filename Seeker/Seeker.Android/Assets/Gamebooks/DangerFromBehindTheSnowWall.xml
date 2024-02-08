@@ -2058,5 +2058,11 @@
 				<Option Goto="397"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="308">
+			<Options>
+				<Option Goto="685" Text="Если вы просмотрели первую книгу, то вернитесь и выберите еще одну"/>
+				<Option Goto="610" Text="Если вторую, то время вышло. Пора уходить, пожелав Марте не падать духом и скорейшего выздоровления Семгера"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
