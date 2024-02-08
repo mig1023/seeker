@@ -2304,5 +2304,11 @@
 				<Option Goto="530"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="344">
+			<Text>Ваша вера в людей не подводит. Уходя, спиной чувствуете цепкий взгляд странного человека, но он лишь смотрит вам вслед. Вы уходите своей дорогой.</Text>
+			<Options>
+				<Option Goto="77"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
