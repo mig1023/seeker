@@ -43,6 +43,9 @@ namespace Seeker.Output
         {
             ["Title"] = 1,
             ["Author"] = 2,
+            ["Paragraphs"] = 3,
+            ["Size"] = 4,
+            ["Year"] = 5,
             ["Setting"] = 6,
             ["Time"] = 7,
         };

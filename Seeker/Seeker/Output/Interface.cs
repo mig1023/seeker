@@ -137,11 +137,23 @@ namespace Seeker.Output
         public static Label GamebookDisclaimer(Description gamebook)
         {
             string text = gamebook.Authors.First();
+            string ltlInfo = gamebook.Year.ToString();
 
             if (List.Sort() == Constants.SortBy["Author"])
+            {
                 text = gamebook.AuthorsIndex();
+            }
 
-            string disclaimerText = $"© {text.Trim() + AndOtherMark(gamebook)}, {gamebook.Year}";
+            if (List.Sort() == Constants.SortBy["Paragraphs"])
+            {
+                ltlInfo = gamebook.ParagraphSizeLine();
+            }
+            else if (List.Sort() == Constants.SortBy["Size"])
+            {
+                ltlInfo = Game.Services.SizeParse(gamebook.Size);
+            }
+
+            string disclaimerText = $"© {text.Trim() + AndOtherMark(gamebook)}, {ltlInfo}";
 
             Label disclaimer = new Label
             {
