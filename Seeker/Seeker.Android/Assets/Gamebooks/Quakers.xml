@@ -8,6 +8,7 @@
 			<Main Value="646464"/>
 			<Continue Value="8f8f8f"/>
 			<StatusBar Value="8f8f8f"/>
+			<SystemFont Value="ffffff"/>
 		</Styles>
 		<Default>
 			<DisabledOption Value="Hide"/>
