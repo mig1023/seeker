@@ -169,7 +169,7 @@
 		<Paragraphs>200</Paragraphs>
 		<Size>19273</Size>
 		<Playthrough>На часок-другой</Playthrough>
-		<Setting>Приключения</Setting>
+		<Setting>Выживач</Setting>
 		<Color>151515</Color>
 	</SilentSchool>
 	<ThoseWhoAreAboutToDie>
@@ -378,7 +378,7 @@
 		<Paragraphs>111</Paragraphs>
 		<Size>10520</Size>
 		<Playthrough>На часок-другой</Playthrough>
-		<Setting>Приключения</Setting>
+		<Setting>Выживач</Setting>
 		<Color>3e5434</Color>
 	</MasterOfTaiga>
 	<VWeapons>
@@ -579,7 +579,7 @@
 		<Paragraphs>128</Paragraphs>
 		<Size>6983</Size>
 		<Playthrough>На часок-другой</Playthrough>
-		<Setting>Приключения</Setting>
+		<Setting>Выживач</Setting>
 		<Color>191039</Color>
 	</CommunityOfWorms>
 	<Ants>
@@ -644,7 +644,7 @@
 		<Paragraphs>212</Paragraphs>
 		<Size>15824</Size>
 		<Playthrough>На часок-другой</Playthrough>
-		<Setting>Приключения</Setting>
+		<Setting>Выживач</Setting>
 		<Color>b19081</Color>
 	</UnexpectedPassenger>
 	<OutlawsOfSherwoodForest>
