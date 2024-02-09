@@ -81,6 +81,9 @@ namespace Seeker.Gamebook
             return (SortBy)Enum.Parse(typeof(SortBy), value);
         }
 
+        public static bool Sort(SortBy sort) =>
+            Game.Settings.GetValue("Sort") == (int)sort;
+
         private static List<Description> SortByTitle(List<Description> list)
         {
             List<Description> engishList = new List<Description>(list
