@@ -39,15 +39,15 @@ namespace Seeker.Output
         public static double BOX_PADDING = 10;
         public static double DEBUG_GRIDROW_HEIGHT = 14;
 
-        public static Dictionary<string, int> SortBy = new Dictionary<string, int>
+        public enum SortBy 
         {
-            ["Title"] = 1,
-            ["Author"] = 2,
-            ["Paragraphs"] = 3,
-            ["Size"] = 4,
-            ["Year"] = 5,
-            ["Setting"] = 6,
-            ["Time"] = 7,
+            Title = 1,
+            Author,
+            Paragraphs,
+            Size,
+            Year,
+            Setting,
+            Time,
         };
 
         public static Dictionary<TextFontSize, double> FontSize = new Dictionary<TextFontSize, double>

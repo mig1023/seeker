@@ -1,6 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
+using static Seeker.Output.Constants;
 
 namespace Seeker.Gamebook
 {
@@ -73,8 +75,11 @@ namespace Seeker.Gamebook
         public static List<string> GetBooks() =>
             Books.Keys.ToList();
 
-        public static int Sort() =>
-            Game.Settings.GetValue("Sort");
+        public static SortBy Sort()
+        {
+            string value = Game.Settings.GetValue("Sort").ToString();
+            return (SortBy)Enum.Parse(typeof(SortBy), value);
+        }
 
         private static List<Description> SortByTitle(List<Description> list)
         {
@@ -116,37 +121,44 @@ namespace Seeker.Gamebook
 
             switch (Sort())
             {
-                case 1:
+                case SortBy.Title:
+
                     return SortByTitle(list);
 
-                case 2:
+                case SortBy.Author:
+
                     return SortByAuthors(list);
 
-                case 3:
+                case SortBy.Paragraphs:
+
                     return list
                         .OrderByDescending(x => x.ParagraphSize())
                         .ToList();
 
-                case 4:
+                case SortBy.Size:
+
                     return list
                         .OrderByDescending(x => int.Parse(x.Size))
                         .ToList();
 
-                case 5:
+                case SortBy.Year:
+
                     return list
                         .OrderBy(x => x.Year)
                         .ToList();
 
-                case 6:
+                case SortBy.Setting:
+
                     return list
                         .OrderBy(x => x.Setting)
                         .ThenBy(x => x.AuthorsIndex())
                         .ThenBy(x => x.Year)
                         .ToList();
 
-                case 7:
+                case SortBy.Time:
+
                     return list
-                        .OrderBy(x => Output.Constants.PLAYTHROUGH_ORDER[x.PlaythroughTime])
+                        .OrderBy(x => PLAYTHROUGH_ORDER[x.PlaythroughTime])
                         .ThenBy(x => x.ParagraphSize())
                         .ToList();
 

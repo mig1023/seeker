@@ -20,16 +20,16 @@ namespace Seeker.Output
 
         public static void AddSplitters(Description gamebook, ref string lastMarker, ref StackLayout options)
         {
-            if ((List.Sort() == Constants.SortBy["Setting"]) && (lastMarker != gamebook.Setting))
+            if ((List.Sort() == Constants.SortBy.Setting) && (lastMarker != gamebook.Setting))
                 AddSplitter(gamebook.Setting, ref lastMarker, gamebook.Setting, ref options);
 
-            if (List.Sort() == Constants.SortBy["Author"])
+            if (List.Sort() == Constants.SortBy.Author)
                 AddSplitter(gamebook.AuthorsIndex()[0].ToString(), ref options, ref lastMarker);
 
-            if (List.Sort() == Constants.SortBy["Title"])
+            if (List.Sort() == Constants.SortBy.Title)
                 AddSplitter(gamebook.Title[0].ToString(), ref options, ref lastMarker);
 
-            if (List.Sort() == Constants.SortBy["Time"])
+            if (List.Sort() == Constants.SortBy.Time)
                 AddSplitter(gamebook.PlaythroughTime, ref options, ref lastMarker);   
         }
 
@@ -139,16 +139,16 @@ namespace Seeker.Output
             string text = gamebook.Authors.First();
             string ltlInfo = gamebook.Year.ToString();
 
-            if (List.Sort() == Constants.SortBy["Author"])
+            if (List.Sort() == Constants.SortBy.Author)
             {
                 text = gamebook.AuthorsIndex();
             }
 
-            if (List.Sort() == Constants.SortBy["Paragraphs"])
+            if (List.Sort() == Constants.SortBy.Paragraphs)
             {
-                ltlInfo = gamebook.ParagraphSizeLine();
+                ltlInfo = gamebook.ParagraphSizeLine(split: true);
             }
-            else if (List.Sort() == Constants.SortBy["Size"])
+            else if (List.Sort() == Constants.SortBy.Size)
             {
                 ltlInfo = gamebook.SizeLine();
             }
