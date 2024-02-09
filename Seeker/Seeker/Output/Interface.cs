@@ -36,7 +36,7 @@ namespace Seeker.Output
         private static void AddSplitter(string marker, ref StackLayout options, ref string lastMarker)
         {
             if (lastMarker != marker)
-                AddSplitter(marker.ToUpper(), ref lastMarker, marker, ref options);
+                AddSplitter(marker, ref lastMarker, marker, ref options);
         }
 
         private static void AddSplitter(string splitter, ref string lastMarker, string marker, ref StackLayout options)
