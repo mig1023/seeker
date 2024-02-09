@@ -54,7 +54,7 @@ namespace Seeker.Gamebook
 
             if (!ConfusionOfAuthors && !SinglePseudonym && !FullPseudonym && (elements.Length > 1))
             {
-                return String.Format("{0} {1}", elements[1].Replace(",", String.Empty), elements[0]);
+                return String.Format("{0} {1}", elements[1], elements[0]);
             }
             else if (ConfusionOfAuthors)
             {
@@ -70,7 +70,7 @@ namespace Seeker.Gamebook
             }
             else
             {
-                return elements.First().Replace(",", String.Empty);
+                return elements.First();
             }
         }
 
