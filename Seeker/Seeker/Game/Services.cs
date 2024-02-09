@@ -82,21 +82,6 @@ namespace Seeker.Game
         public static bool DoNothing() =>
             true;
 
-        public static string SizeParse(string size)
-        {
-            int fullSize = int.Parse(size);
-
-            if (fullSize < 1000)
-            {
-                string line = CoinsNoun(fullSize, "слово", "слова", "слов");
-                return $"{fullSize} {line}";
-            }
-            else
-            {
-                return $"{fullSize / 1000} тыс. слов";
-            }
-        }
-
         public static string ValueStringFuse(string value) =>
             value == "ValueString" ? "Value" : value;
 

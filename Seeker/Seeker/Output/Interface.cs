@@ -150,7 +150,7 @@ namespace Seeker.Output
             }
             else if (List.Sort() == Constants.SortBy["Size"])
             {
-                ltlInfo = Game.Services.SizeParse(gamebook.Size);
+                ltlInfo = gamebook.SizeLine();
             }
 
             string disclaimerText = $"© {text.Trim() + AndOtherMark(gamebook)}, {ltlInfo}";
@@ -328,7 +328,7 @@ namespace Seeker.Output
             }
 
             string paragraphs = gamebook.ParagraphSizeLine();
-            string size = Game.Services.SizeParse(gamebook.Size);
+            string size = gamebook.SizeLine();
             string separator = (paragraphs.Contains('(') ? "\n" : " / ");
             AddDisclaimerElement("Обьём:", String.Join(String.Empty, paragraphs, separator, size), ref disclaimer, border, change);
 
