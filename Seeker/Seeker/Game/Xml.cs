@@ -334,6 +334,7 @@ namespace Seeker.Game
             description.Authors = AllStringParse(data["Author"], data["Authors"], "Author");
             description.SinglePseudonym = BoolParse(data["SinglePseudonym"]);
             description.FullPseudonym = BoolParse(data["FullPseudonym"]);
+            description.ConfusionOfAuthors = BoolParse(data["ConfusionOfAuthors"]);
             description.Translators = AllStringParse(data["Translator"], data["Translators"], "Translator");
             description.Year = IntParse(data["Year"]);
             description.Text = StringParse(data["Text"]);

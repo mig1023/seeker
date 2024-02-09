@@ -28,6 +28,8 @@ namespace Seeker.Gamebook
 
         public bool FullPseudonym;
 
+        public bool ConfusionOfAuthors;
+
         public int Year;
 
         public string Paragraphs;
@@ -50,17 +52,25 @@ namespace Seeker.Gamebook
         {
             string[] elements = Authors.First().Split(' ');
 
-            if (!SinglePseudonym && !FullPseudonym && (elements.Length > 1))
+            if (!ConfusionOfAuthors && !SinglePseudonym && !FullPseudonym && (elements.Length > 1))
             {
                 return String.Format("{0} {1}", elements[1].Replace(",", String.Empty), elements[0]);
             }
+            else if (ConfusionOfAuthors)
+            {
+                int lineLength = elements.Count() - 1;
+                string[] newElementsOrd = new string[lineLength];
+                Array.Copy(elements, newElementsOrd, lineLength);
+                string newAuthorLine = String.Join(" ", newElementsOrd);
+                return $"{elements.Last()} {newAuthorLine}";
+            }
             else if (FullPseudonym)
             {
-                return Authors[0];
+                return Authors.First();
             }
             else
             {
-                return elements[0].Replace(",", String.Empty);
+                return elements.First().Replace(",", String.Empty);
             }
         }
 
