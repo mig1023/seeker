@@ -92,10 +92,25 @@ namespace Seeker.Gamebook
             }
         }
 
-        public string ParagraphSizeLine()
+        public string ParagraphSizeLine(bool split = false)
         {
             string paragraphs = Game.Services.CoinsNoun(ParagraphSize(), "параграф", "параграфа", "параграфов");
-            return String.Format("{0} {1}", Paragraphs, paragraphs);
+            return String.Format("{0} {1}", ParagraphSize(), paragraphs);
+        }
+
+        public string SizeLine()
+        {
+            int fullSize = int.Parse(Size);
+
+            if (fullSize < 1000)
+            {
+                string line = Game.Services.CoinsNoun(fullSize, "слово", "слова", "слов");
+                return $"{fullSize} {line}";
+            }
+            else
+            {
+                return $"{fullSize / 1000} тыс. слов";
+            }
         }
     }
 }
