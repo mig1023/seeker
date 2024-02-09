@@ -140,7 +140,8 @@ namespace Seeker.Gamebook
                 case 6:
                     return list
                         .OrderBy(x => x.Setting)
-                        .ThenBy(x => x.Title)
+                        .ThenBy(x => x.AuthorsIndex())
+                        .ThenBy(x => x.Year)
                         .ToList();
 
                 case 7:
