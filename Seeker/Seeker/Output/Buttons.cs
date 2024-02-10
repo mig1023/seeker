@@ -125,7 +125,7 @@ namespace Seeker.Output
             return SetBorderAndTextColor(systemButton, system: true);
         }
 
-        public static Button GamebookButton(Description gamebook, EventHandler onClick)
+        public static Button Gamebook(Description gamebook, EventHandler onClick)
         {
             Button gamebookButton = new Button
             {
