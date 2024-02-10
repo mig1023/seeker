@@ -3030,5 +3030,12 @@
 				<Option Goto="443"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="450">
+			<Text>Что вы пьете?</Text>
+			<Options>
+				<Option Goto="244" Text="Дорогущее вино из морошки"/>
+				<Option Goto="657" Text="Любой другой напиток"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
