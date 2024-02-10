@@ -3049,5 +3049,11 @@
 				<Option Goto="219"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="453">
+			<Text>К тому времени, как вы касаетесь ногами дна колодца, вашу спину заливает пот. Случилось чудо — веревка выдержала!</Text>
+			<Options>
+				<Option Goto="16"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
