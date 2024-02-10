@@ -3,7 +3,7 @@ using Xamarin.Forms;
 
 namespace Seeker.Output
 {
-    internal class Splitter
+    class Splitter
     {
         public static void Add(Description gamebook, ref string lastMarker, ref StackLayout options)
         {

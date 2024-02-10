@@ -504,7 +504,7 @@ namespace Seeker
                 Status.BackgroundColor = Color.FromHex(
                     Game.Data.Constants.GetColor(Game.Data.ColorTypes.StatusBar));
 
-                foreach (Label status in Output.Interface.StatusBar(statuses))
+                foreach (Label status in Output.StatusBar.Main(statuses))
                     Status.Children.Add(status);
 
                 string borderColor = Game.Data.Constants.GetColor(Game.Data.ColorTypes.StatusBorder);
@@ -518,10 +518,10 @@ namespace Seeker
                 }
             }
 
-            List<string> additionalStatuses = Game.Data.Actions == null ?
+            List<string> addStatuses = Game.Data.Actions == null ?
                 null : Game.Data.Actions.AdditionalStatus();
 
-            bool noAdditionalStatuses = additionalStatuses == null || Game.Data.Constants
+            bool noAdditionalStatuses = addStatuses == null || Game.Data.Constants
                 .GetParagraphsWithoutStatuses()
                 .Contains(Game.Data.CurrentParagraphID);
 
@@ -542,8 +542,7 @@ namespace Seeker
 
                 AdditionalStatus.IsVisible = true;
 
-                List<Output.VerticalText> statusesInBar = Output.Interface
-                    .AdditionalStatusBar(additionalStatuses);
+                List<Output.VerticalText> statusesInBar = Output.StatusBar.Additional(addStatuses);
 
                 foreach (Output.VerticalText status in statusesInBar)
                     AdditionalStatus.Children.Add(status);

@@ -10,7 +10,15 @@ namespace Seeker.Output
 {
     class Interface
     {
-        public enum TextFontSize { Micro, Small, Little, Normal, Big, nope };
+        public enum TextFontSize
+        {
+            Micro,
+            Small,
+            Little,
+            Normal,
+            Big,
+            Nope
+        };
 
         public static Image GamebookImage(Description gamebookDescr) => new Image
         {
@@ -36,63 +44,6 @@ namespace Seeker.Output
             field.TextChanged += changed;
 
             return field;
-        }
-            
-        public static List<Label> StatusBar(List<string> statusLines)
-        {
-            List<Label> statusLabels = new List<Label>();
-
-            string textColor = Game.Data.Constants.GetColor(ColorTypes.StatusFont);
-
-            foreach (string status in statusLines)
-            {
-                Label label = new Label
-                {
-                    Text = status + Convert.ToChar(160),
-                    FontSize = Constants.STATUSBAR_FONT,
-                    TextColor = (String.IsNullOrEmpty(textColor) ? Color.White : Color.FromHex(textColor)),
-                    BackgroundColor = Color.FromHex(Game.Data.Constants.GetColor(ColorTypes.StatusBar)),
-
-                    HorizontalTextAlignment = TextAlignment.Center,
-                    VerticalTextAlignment = TextAlignment.Center,
-                    HorizontalOptions = LayoutOptions.FillAndExpand,
-                    VerticalOptions = LayoutOptions.FillAndExpand,
-                };
-
-                statusLabels.Add(label);
-            }
-
-            return statusLabels;
-        }
-
-        private static int ClearLen(string line) =>
-            line.Replace("CROSSEDOUT|", String.Empty).Length;
-
-        public static List<VerticalText> AdditionalStatusBar(List<string> statusLines)
-        {
-            List<VerticalText> statusLabels = new List<VerticalText>();
-
-            bool whiteColor = !String.IsNullOrEmpty(Game.Data.Constants.GetColor(ColorTypes.AdditionalFont));
-            bool equalParts = Game.Data.Constants.ShowAdditionalStatusesEqualParts();
-
-            double heightPart = statusLines.Count == 0 ? 1 :
-                (int)Application.Current.MainPage.Height / statusLines.Sum(x => ClearLen(x));
-
-            foreach (string status in statusLines)
-            {
-                VerticalText text = new VerticalText
-                {
-                    Value = status,
-                    WhiteColor = whiteColor,
-                };
-
-                if (!equalParts)
-                    text.HeightRequest = ClearLen(status) * heightPart;
-
-                statusLabels.Add(text);
-            }
-
-            return statusLabels;
         }
 
         public static void Footer(ref StackLayout footer, EventHandler settingsHandler)
@@ -453,7 +404,7 @@ namespace Seeker.Output
         }
 
         public static ExtendedLabel Text(string text, bool defaultParams = false, bool italic = false, bool bold = false,
-            TextFontSize size = TextFontSize.nope, bool selected = false)
+            TextFontSize size = TextFontSize.Nope, bool selected = false)
         {
             bool justyfy = (defaultParams ? false : (Game.Settings.IsEnabled("Justyfy")));
 
@@ -481,7 +432,7 @@ namespace Seeker.Output
             {
                 label.FontSize = Constants.FONT_SIZE_VALUES[fontSize];
             }
-            else if (size != TextFontSize.nope)
+            else if (size != TextFontSize.Nope)
             {
                 label.FontSize = FontSize(size);
             }
