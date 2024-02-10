@@ -3228,5 +3228,15 @@
 				<Option Goto="124"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="479">
+			<Options>
+				<Option Goto="327" Text="Пойдете к дереву"/>
+				<Option Goto="84" Text="Осмотрите сарай"/>
+				<Option Goto="516" Text="Колодец">
+					<Text>Когда надумаете отправиться дальше...</Text>
+				</Option>
+				<Option Goto="648"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
