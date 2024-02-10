@@ -37,10 +37,10 @@ namespace Seeker
                 if (!Game.Settings.IsEnabled("WithoutStyles"))
                     Options.Children.Add(Output.Interface.GamebookImage(gamebook));
 
-                Options.Children.Add(Output.Buttons.GamebookButton(gamebook,
+                Options.Children.Add(Output.Buttons.Gamebook(gamebook,
                     (sender, e) => Gamebook_Click(gamebook.Book)));
 
-                Output.Interface.GamebookDisclaimerAdd(gamebook, ref Options);
+                Output.Disclaimer.Gamebook(gamebook, ref Options);
             }
 
             Output.Interface.Footer(ref Footer, Settings_Click);
