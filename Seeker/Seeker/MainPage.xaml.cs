@@ -32,7 +32,7 @@ namespace Seeker
 
             foreach (Description gamebook in List.GetSortedBooks())
             {
-                Output.Interface.AddSplitters(gamebook, ref LastMarker, ref Options);
+                Output.Splitter.Add(gamebook, ref LastMarker, ref Options);
 
                 if (!Game.Settings.IsEnabled("WithoutStyles"))
                     Options.Children.Add(Output.Interface.GamebookImage(gamebook));

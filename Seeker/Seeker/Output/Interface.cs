@@ -18,42 +18,6 @@ namespace Seeker.Output
             Aspect = Aspect.AspectFill,
         };
 
-        public static void AddSplitters(Description gamebook, ref string lastMarker, ref StackLayout options)
-        {
-            if (List.Sort(Constants.SortBy.Setting) && (lastMarker != gamebook.Setting))
-                AddSplitter(gamebook.Setting, ref lastMarker, gamebook.Setting, ref options);
-
-            if (List.Sort(Constants.SortBy.Author))
-                AddSplitter(gamebook.AuthorsIndex()[0].ToString(), ref options, ref lastMarker);
-
-            if (List.Sort(Constants.SortBy.Title))
-                AddSplitter(gamebook.Title[0].ToString(), ref options, ref lastMarker);
-
-            if (List.Sort(Constants.SortBy.Time))
-                AddSplitter(gamebook.PlaythroughTime, ref options, ref lastMarker);   
-        }
-
-        private static void AddSplitter(string marker, ref StackLayout options, ref string lastMarker)
-        {
-            if (lastMarker != marker)
-                AddSplitter(marker, ref lastMarker, marker, ref options);
-        }
-
-        private static void AddSplitter(string splitter, ref string lastMarker, string marker, ref StackLayout options)
-        {
-            options.Children.Add(Interface.SortSplitter(splitter));
-            lastMarker = marker;
-        }
-
-        public static Label SortSplitter(string setting) => new Label
-        {
-            Text = $"― {setting} ―",
-            HorizontalTextAlignment = TextAlignment.Center,
-            FontSize = Font(NamedSize.Large),
-            HorizontalOptions = LayoutOptions.Center,
-            Margin = new Thickness(0, 20),
-        };
-
         public static Image IllustrationImage(string image) => new Image
         {
             Source = image,
@@ -78,16 +42,16 @@ namespace Seeker.Output
         {
             List<Label> statusLabels = new List<Label>();
 
-            string textColor = Game.Data.Constants.GetColor(Game.Data.ColorTypes.StatusFont);
+            string textColor = Game.Data.Constants.GetColor(ColorTypes.StatusFont);
 
             foreach (string status in statusLines)
             {
                 Label label = new Label
                 {
-                    Text = status + System.Convert.ToChar(160),
+                    Text = status + Convert.ToChar(160),
                     FontSize = Constants.STATUSBAR_FONT,
                     TextColor = (String.IsNullOrEmpty(textColor) ? Color.White : Color.FromHex(textColor)),
-                    BackgroundColor = Color.FromHex(Game.Data.Constants.GetColor(Game.Data.ColorTypes.StatusBar)),
+                    BackgroundColor = Color.FromHex(Game.Data.Constants.GetColor(ColorTypes.StatusBar)),
 
                     HorizontalTextAlignment = TextAlignment.Center,
                     VerticalTextAlignment = TextAlignment.Center,
@@ -175,20 +139,20 @@ namespace Seeker.Output
 
             Color fontColor = Color.Gray;
 
-            if (ColorFormConstants(Game.Data.ColorTypes.Font, out string color))
+            if (ColorFormConstants(ColorTypes.Font, out string color))
                 fontColor = Color.FromHex(color);
 
             info.Children.Add(Line(fontColor, $"Текущий параграф: {id}"));
 
-            if (Game.Data.Path.Count > 1)
-                info.Children.Add(Line(fontColor, $"Путь: {String.Join(" -> ", Game.Data.Path)}"));
+            if (Path.Count > 1)
+                info.Children.Add(Line(fontColor, $"Путь: {String.Join(" -> ", Path)}"));
 
-            if (Game.Data.Triggers.Count > 0)
-                info.Children.Add(Line(fontColor, $"Триггеры: {String.Join(", ", Game.Data.Triggers)}"));
+            if (Triggers.Count > 0)
+                info.Children.Add(Line(fontColor, $"Триггеры: {String.Join(", ", Triggers)}"));
 
-            info.Children.Add(Interface.SplitterLine(new Thickness(0, 15), Color.LightGray));
+            info.Children.Add(Splitter.Line(new Thickness(0, 15), Color.LightGray));
 
-            string debug = Game.Data.Debug();
+            string debug = Debug();
 
             if (!String.IsNullOrEmpty(debug))
             {
@@ -204,7 +168,7 @@ namespace Seeker.Output
 
             if (healings.Count > 0)
             {
-                info.Children.Add(Interface.SplitterLine(new Thickness(0, 15), Color.LightGray));
+                info.Children.Add(Splitter.Line(new Thickness(0, 15), Color.LightGray));
                 info.Children.Add(Line(fontColor, "Снаряжение:"));
 
                 for (int i = 0; i < healings.Count; i++)
@@ -255,14 +219,6 @@ namespace Seeker.Output
             TextColor = color,
         };
 
-        public static View SplitterLine(Thickness? thickness, Color? color) => new BoxView
-        {
-            HeightRequest = 1,
-            WidthRequest = 10,
-            Color = color ?? Color.Black,
-            Margin = thickness ?? new Thickness(0),
-        };
-
         public static List<View> Represent(List<string> enemiesLines)
         {
             List<View> enemies = new List<View>();
@@ -281,9 +237,9 @@ namespace Seeker.Output
                         Text = param[1],
                     };
 
-                    enemies.Add(SplitterLine(new Thickness(0, 10, 0, -2), null));
+                    enemies.Add(Splitter.Line(new Thickness(0, 10, 0, -2), null));
                     enemies.Add(splitter);
-                    enemies.Add(SplitterLine(new Thickness(0, -2, 0, 10), null));
+                    enemies.Add(Splitter.Line(new Thickness(0, -2, 0, 10), null));
                 }
                 else
                 {
@@ -486,7 +442,7 @@ namespace Seeker.Output
 
             BoxView verticalLine = new BoxView
             {
-                Color = Color.FromHex(Game.Data.Constants.GetColor(Game.Data.ColorTypes.StatusBar)),
+                Color = Color.FromHex(Game.Data.Constants.GetColor(ColorTypes.StatusBar)),
                 Margin = new Thickness(0, 3, 0, 0)
             };
 
@@ -534,7 +490,7 @@ namespace Seeker.Output
                 label.FontSize = FontSize(Game.Data.Constants.GetFontSize(), italic: italic);
             }
 
-            if (ColorFormConstants(Game.Data.ColorTypes.Font, out string color))
+            if (ColorFormConstants(ColorTypes.Font, out string color))
                 label.TextColor = Color.FromHex(color);
 
             return label;
@@ -577,7 +533,7 @@ namespace Seeker.Output
             HorizontalOptions = LayoutOptions.FillAndExpand,
         };
 
-        private static Color GetGoodColors(Game.Data.ColorTypes color, Color defaultColor)
+        private static Color GetGoodColors(ColorTypes color, Color defaultColor)
         {
             string hexColor = Game.Data.Constants.GetColor(color);
             return String.IsNullOrEmpty(hexColor) ? defaultColor : Color.FromHex(hexColor);
@@ -628,7 +584,7 @@ namespace Seeker.Output
                 }
 
                 if (text.Contains("LINE|"))
-                    actionLabels.Add(SplitterLine(null, null));
+                    actionLabels.Add(Splitter.Line(null, null));
 
                 foreach (string key in textTypes.Keys)
                     text = text.Replace(key, String.Empty);
@@ -652,8 +608,8 @@ namespace Seeker.Output
                 BackgroundColor = Color.Gainsboro,
             };
 
-            if (!String.IsNullOrEmpty(Game.Data.Constants.GetColor(Game.Data.ColorTypes.Font)))
-                field.TextColor = Color.FromHex(Game.Data.Constants.GetColor(Game.Data.ColorTypes.Font));
+            if (!String.IsNullOrEmpty(Game.Data.Constants.GetColor(ColorTypes.Font)))
+                field.TextColor = Color.FromHex(Game.Data.Constants.GetColor(ColorTypes.Font));
 
             return field;
         }
