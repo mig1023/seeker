@@ -103,7 +103,7 @@ namespace Seeker.Game
                 Box = style.Contains("Box", ignoreCase),
             };
 
-            output.Size = Interface.TextFontSize.nope;
+            output.Size = Interface.TextFontSize.Nope;
             output.Background = null;
 
             foreach (string styleLine in style)

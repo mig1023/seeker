@@ -78,98 +78,6 @@ namespace Seeker.Output
             HorizontalOptions = LayoutOptions.FillAndExpand,
         };
 
-        public static StackLayout DebugInformation(int id)
-        {
-            StackLayout info = new StackLayout
-            {
-                Orientation = StackOrientation.Vertical,
-                HorizontalOptions = LayoutOptions.FillAndExpand,
-                Spacing = 3,
-                Margin = new Thickness(0, 10, 0, 0),
-            };
-
-            Color fontColor = Color.Gray;
-
-            if (ColorFormConstants(ColorTypes.Font, out string color))
-                fontColor = Color.FromHex(color);
-
-            info.Children.Add(Line(fontColor, $"Текущий параграф: {id}"));
-
-            if (Path.Count > 1)
-                info.Children.Add(Line(fontColor, $"Путь: {String.Join(" -> ", Path)}"));
-
-            if (Triggers.Count > 0)
-                info.Children.Add(Line(fontColor, $"Триггеры: {String.Join(", ", Triggers)}"));
-
-            info.Children.Add(Splitter.Line(new Thickness(0, 15), Color.LightGray));
-
-            string debug = Debug();
-
-            if (!String.IsNullOrEmpty(debug))
-            {
-                List<string> debugLines = debug.Split('\n').Where(x => !String.IsNullOrEmpty(x)).ToList();
-
-                if (debugLines.Count > 3)
-                    info.Children.Add(GridDebugParams(debugLines, fontColor));
-                else
-                    info.Children.Add(Line(fontColor, debug));
-            }
-
-            List<string> healings = Game.Healing.Debug();
-
-            if (healings.Count > 0)
-            {
-                info.Children.Add(Splitter.Line(new Thickness(0, 15), Color.LightGray));
-                info.Children.Add(Line(fontColor, "Снаряжение:"));
-
-                for (int i = 0; i < healings.Count; i++)
-                    info.Children.Add(Line(fontColor, $"{i + 1}. {healings[i]}"));
-            }
-
-            return info;
-        }
-
-        private static View GridDebugParams(List<string> debugLines, Color fontColor)
-        {
-            Grid grid = new Grid
-            {
-                RowDefinitions =
-                {
-                    new RowDefinition { Height = Constants.DEBUG_GRIDROW_HEIGHT },
-                },
-                ColumnDefinitions =
-                {
-                    new ColumnDefinition(),
-                    new ColumnDefinition(),
-                },
-                Padding = 0,
-                RowSpacing = 0,
-            };
-
-            int currentRow = 0;
-
-            for (int i = 0; i < debugLines.Count; i++)
-            {
-                int column = 1 - ((i + 1) % 2);
-                grid.Children.Add(Line(fontColor, debugLines[i]), column, currentRow);
-
-                if ((i > 0) && (column == 1))
-                {
-                    grid.RowDefinitions.Add(new RowDefinition { Height = Constants.DEBUG_GRIDROW_HEIGHT });
-                    currentRow += 1;
-                }
-            }
-
-            return grid;
-        }
-
-        private static Label Line(Color color, string line) => new Label
-        {
-            Text = line, 
-            FontSize = FontSize(TextFontSize.Micro),
-            TextColor = color,
-        };
-
         public static List<View> Represent(List<string> enemiesLines)
         {
             List<View> enemies = new List<View>();
@@ -459,13 +367,13 @@ namespace Seeker.Output
                 BackgroundColor = Color.LightGray
             };
 
-            if (ColorFormConstants(Game.Data.ColorTypes.ActionBox, out string color))
+            if (ColorFormConstants(ColorTypes.ActionBox, out string color))
                 stackLayout.BackgroundColor = Color.FromHex(color);
 
             return stackLayout;
         }
 
-        private static bool ColorFormConstants(Game.Data.ColorTypes colorType, out string color)
+        public static bool ColorFormConstants(ColorTypes colorType, out string color)
         {
             color = String.Empty;
 
@@ -560,7 +468,9 @@ namespace Seeker.Output
             };
 
             if (!String.IsNullOrEmpty(Game.Data.Constants.GetColor(ColorTypes.Font)))
+            {
                 field.TextColor = Color.FromHex(Game.Data.Constants.GetColor(ColorTypes.Font));
+            }
 
             return field;
         }

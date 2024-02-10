@@ -585,7 +585,7 @@ namespace Seeker
                 Options.Children.Add(SystemMenu());
 
             if (Game.Settings.IsEnabled("Debug"))
-                Options.Children.Add(Output.Interface.DebugInformation(id));
+                Options.Children.Add(Output.Debug.Information(id));
         }
                
         private void Action_Click(Abstract.IActions action, StackLayout actionPlace, string anotherAction = "")
