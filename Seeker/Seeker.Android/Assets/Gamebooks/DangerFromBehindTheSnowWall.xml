@@ -3321,5 +3321,11 @@
 				<Option Goto="390" Text="Пойдете дальше"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="493">
+			<Text>Костер тлеет до самого утра, и ночной сон у огня восстанавливает вам 2 СИЛЫ. На рассвете желательно позавтракать (если, конечно, есть чем) и отправляться в путь.</Text>
+			<Options>
+				<Option Goto="103"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
