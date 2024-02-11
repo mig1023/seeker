@@ -3245,5 +3245,13 @@
 				<Option Goto="19" Text="Нет"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="481">
+			<Text>Искать неизвестно что в темноте, в которой видят лишь кошки и боги, да еще в метель, и правда, странное занятие. Натолкнуться на что-то можно лишь чудом.\n\nБросьте кубик.</Text>
+			<Options>
+				<Option Goto="744" Text="Если выпадет 1 или 4"/>
+				<Option Goto="612" Text="Если 2или 5"/>
+				<Option Goto="278" Text="Если 3 или 6"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
