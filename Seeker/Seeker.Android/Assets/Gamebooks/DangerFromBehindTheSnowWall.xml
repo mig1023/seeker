@@ -3445,5 +3445,11 @@
 				<Option Goto="745" Text="Проигнорируете урчание голодного желудка и будете скорее устраиваться на ночлег"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="511">
+			<Text>Северная Ярость действует успешно (Магия: -15). На время боя увеличьте свои ЛОВКОСТЬ и УДАР на 1.</Text>
+			<Options>
+				<Option Goto="110"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
