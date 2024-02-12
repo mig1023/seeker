@@ -3749,5 +3749,11 @@
 				<Option Goto="120"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="557">
+			<Text>К сожалению, не получается. Руки почти сразу соскальзывают, и вы срываетесь вниз. При этом дно колодца еще так далеко, что у вас нет шансов выжить...</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
