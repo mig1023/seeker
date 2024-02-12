@@ -3626,5 +3626,12 @@
 				<Option Goto="158"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="538">
+			<Text>Порубленная туша змея пропитывает снег бледно-коричневой слизью, сочащейся из его внутренностей. Остался ли жив Чор-Дой?</Text>
+			<Options>
+				<Option Goto="200" Text="Да"/>
+				<Option Goto="494" Text="Нет, он убит в бою"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
