@@ -4024,5 +4024,11 @@
 				<Option Goto="146" Text="Если 5, 8, 10 или 12"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="599">
+			<Options>
+				<Option Goto="85" Text="Вы установили на ночь Охранный Периметр"/>
+				<Option Goto="720" Text="Нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
