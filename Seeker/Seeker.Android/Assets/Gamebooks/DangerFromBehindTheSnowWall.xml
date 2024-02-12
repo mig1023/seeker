@@ -3717,5 +3717,13 @@
 				<Option Goto="479"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="552">
+			<Text>И кто вы?</Text>
+			<Options>
+				<Option Goto="249" Text="Певец и плясун"/>
+				<Option Goto="715" Text="Охотник и рыбак"/>
+				<Option Goto="399" Text="Лекарь и травник"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
