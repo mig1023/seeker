@@ -3679,5 +3679,11 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="546">
+			<Text>Вы выгребли из кошеля монеты, и даррат сгреб их гаденьким, но цепким щупальцем.</Text>
+			<Options>
+				<Option Goto="332"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
