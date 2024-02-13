@@ -4076,5 +4076,11 @@
 				<Option Goto="467" Text="Нет"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="607">
+			<Text>- Извини, не до тебя. - говорите вы, пытаясь пройти мимо.</Text>
+			<Options>
+				<Option Goto="378"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
