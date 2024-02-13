@@ -4120,5 +4120,11 @@
 				<Option Goto="570"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="614">
+			<Text>Вы отдаете деньги, и медный медальон (-45) переходит к вам. Вы можете убрать его в рюкзак или надеть под свитер. Места он в любом случае не займет.</Text>
+			<Options>
+				<Option Goto="169"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
