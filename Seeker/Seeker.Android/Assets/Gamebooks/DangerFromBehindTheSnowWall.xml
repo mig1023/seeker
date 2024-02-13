@@ -4056,5 +4056,12 @@
 				<Option Goto="267"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="604">
+			<Text>Вы бросаетесь бежать, прыжком слетаете с крыльца, но там скользко из-за постоянно выливаемых помоев.\n\nПРОВЕРЬТЕ УДАЧУ.</Text>
+			<Options>
+				<Option Goto="670" Text="Удачливы"/>
+				<Option Goto="143" Text="Нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
