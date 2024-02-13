@@ -4513,5 +4513,11 @@
 				<Option Goto="458" Text="Если меньше"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="669">
+			<Text>- Спасибо, зайка, — говорит Даррат, неспешно забирая деньги с вашей руки одним из своих мерзких, но весьма сноровистых щупалец.</Text>
+			<Options>
+				<Option Goto="332"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
