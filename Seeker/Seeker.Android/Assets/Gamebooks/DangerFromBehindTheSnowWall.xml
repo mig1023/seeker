@@ -4506,5 +4506,12 @@
 				<Option Goto="473" Text="Предложите какой-нибудь подарок"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="668">
+			<Text>Сколько денег вы решили оставить в качестве платы за постой?</Text>
+			<Options>
+				<Option Goto="69" Text="Если 3 золотых или больше"/>
+				<Option Goto="458" Text="Если меньше"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
