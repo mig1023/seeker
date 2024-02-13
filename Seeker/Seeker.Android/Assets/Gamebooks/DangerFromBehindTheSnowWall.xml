@@ -4476,5 +4476,11 @@
 				<Option Goto="357"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="664">
+			<Text>Магия: -25. Вы успешно сплетаете заклятие, и словно бесплотный призрак проходите сквозь стену сарая.</Text>
+			<Options>
+				<Option Goto="384"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
