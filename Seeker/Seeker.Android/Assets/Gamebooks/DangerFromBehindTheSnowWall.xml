@@ -4411,5 +4411,13 @@
 				<Option Goto="83" Text="Самый верхний"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="655">
+			<Text>Низкая дверь сарай заледенела и намертво примерзла к косякам. Открыть ее так просто не получится.</Text>
+			<Options>
+				<Option Goto="205" Text="Будете ломать"/>
+				<Option Goto="664" Text="Используете Заклятие Прохождения Сквозь Стены"/>
+				<Option Goto="479" Text="Оставите сарай в покое"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
