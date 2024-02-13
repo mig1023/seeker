@@ -4531,5 +4531,11 @@
 				<Option Goto="394"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="672">
+			<Text>Пока вы бились с этим, к месту схватки подоспели еще две дюжины. С таким преимуществом они быстро наделали из вас строганину.</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
