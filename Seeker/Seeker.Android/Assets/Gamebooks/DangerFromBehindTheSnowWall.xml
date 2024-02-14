@@ -4832,5 +4832,11 @@
 				<Option Goto="120"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="717">
+			<Text>- Не хочу, мало ли что там. - отвечаете вы.</Text>
+			<Options>
+				<Option Goto="378"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
