@@ -4555,5 +4555,11 @@
 				<Option Goto="397"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="676">
+			<Text>Но им надоел этот спектакль неподвижного актера, и, наконец, решившись, они атаковали. Вскоре вас доедают.</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
