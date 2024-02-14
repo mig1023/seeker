@@ -5025,5 +5025,11 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="747">
+			<Text>Магия: -15. Северная Ярость действует. В бою увеличьте ЛОВКОСТЬ и УДАР на 1.</Text>
+			<Options>
+				<Option Goto="55"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
