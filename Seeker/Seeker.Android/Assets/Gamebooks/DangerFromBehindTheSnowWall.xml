@@ -4765,5 +4765,12 @@
 				<Option Goto="414"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="707">
+			<Text>Едва вылетев из ложа, арбалетный болт пронзительно звенит, словно врезавшись в невидимую металлическую защиту, и рикошетит. Куда?\n\nБРОСЬТЕ КУБИК.</Text>
+			<Options>
+				<Option Goto="363" Text="Если выпадет 1, 2, 5 или 6"/>
+				<Option Goto="461" Text="Если 3 или 4"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
