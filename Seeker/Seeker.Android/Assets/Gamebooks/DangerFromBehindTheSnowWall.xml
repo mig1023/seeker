@@ -4590,5 +4590,11 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="681">
+			<Text>Проклятая веревка не выдерживает и рвется, когда до вожделенного края сруба вам остается всего несколько ярдов. Вы долго летите вниз, и... котлета.</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
