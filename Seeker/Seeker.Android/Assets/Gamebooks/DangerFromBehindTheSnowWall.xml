@@ -4972,5 +4972,12 @@
 				<Option Goto="63"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="739">
+			<Text>Поставили ли вы Охранный Периметр?</Text>
+			<Options>
+				<Option Goto="523" Text="Да"/>
+				<Option Goto="446" Text="Нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
