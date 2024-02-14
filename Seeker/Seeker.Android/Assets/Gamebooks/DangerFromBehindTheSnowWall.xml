@@ -4808,5 +4808,11 @@
 				<Option Goto="300"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="713">
+			<Text>Вы стоите на месте, они тоже. Минуту, три. Долго так продолжаться не может. Вернитесь и сделайте другой выбор.</Text>
+			<Options>
+				<Option Goto="427"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
