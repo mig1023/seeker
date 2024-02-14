@@ -23,7 +23,7 @@ namespace Seeker.Output
 
             if (List.Sort(Constants.SortBy.Paragraphs))
             {
-                ltlInfo = gamebook.ParagraphSizeLine(split: true);
+                ltlInfo = gamebook.ParagraphSizeLine();
             }
             else if (List.Sort(Constants.SortBy.Size))
             {
