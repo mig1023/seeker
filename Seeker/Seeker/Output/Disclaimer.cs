@@ -180,7 +180,7 @@ namespace Seeker.Output
                     Regex.Unescape(gamebook.Text), ref disclaimer, border, change, little: true);
             }
 
-            string paragraphs = gamebook.ParagraphSizeLine();
+            string paragraphs = gamebook.ParagraphSizeLine(full: true);
             string size = gamebook.SizeLine();
             string separator = (paragraphs.Contains('(') ? "\n" : " / ");
             AddElement("Обьём:", String.Join(String.Empty, paragraphs, separator, size), ref disclaimer, border, change);

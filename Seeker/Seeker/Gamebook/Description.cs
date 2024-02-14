@@ -74,9 +74,9 @@ namespace Seeker.Gamebook
             }
         }
 
-        public int ParagraphSize()
+        public int ParagraphSize(bool full = false)
         {
-            if (Paragraphs.Contains("(") && OnlyFirstParagraphsValue)
+            if (Paragraphs.Contains("(") && OnlyFirstParagraphsValue && !full)
             {
                 int start = Paragraphs.IndexOf("(") + 1;
                 int len = Paragraphs.IndexOf("+") - Paragraphs.IndexOf("(") - 1;
@@ -92,10 +92,10 @@ namespace Seeker.Gamebook
             }
         }
 
-        public string ParagraphSizeLine()
+        public string ParagraphSizeLine(bool full = false)
         {
-            string paragraphs = Game.Services.CoinsNoun(ParagraphSize(), "параграф", "параграфа", "параграфов");
-            return String.Format("{0} {1}", ParagraphSize(), paragraphs);
+            string paragraphs = Game.Services.CoinsNoun(ParagraphSize(full), "параграф", "параграфа", "параграфов");
+            return String.Format("{0} {1}", Paragraphs, paragraphs);
         }
 
         public string SizeLine()
