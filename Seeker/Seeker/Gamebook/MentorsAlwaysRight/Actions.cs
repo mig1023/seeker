@@ -402,7 +402,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                 return staticButtons;
 
             bool wounded = (protagonist.Hitpoints < protagonist.MaxHitpoints);
-            bool inOption = Game.Checks.ExistsInParagraph(actionText: "ЛЕЧИЛК", optionText: "ЛЕЧИЛК");
+            bool inOption = Game.Buttons.ExistsInParagraph(actionText: "ЛЕЧИЛК", optionText: "ЛЕЧИЛК");
 
             if (wounded && (CureSpellCount() > 0) && !inOption)
                 staticButtons.Add("ЛЕЧИЛКА");
@@ -412,10 +412,10 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
 
             bool alreadyTransform = NextFightWithWolf || NextFightWithBear;
 
-            if (Game.Checks.ExistsInParagraph(actionName: "Fight") && (protagonist.Transformation > 0) && !alreadyTransform)
+            if (Game.Buttons.ExistsInParagraph(actionName: "Fight") && (protagonist.Transformation > 0) && !alreadyTransform)
                 staticButtons.Add("ОБРАТИТЬСЯ ВОЛКОМ");
 
-            if (Game.Checks.ExistsInParagraph(actionName: "Fight") && (protagonist.Transformation > 0) && !alreadyTransform)
+            if (Game.Buttons.ExistsInParagraph(actionName: "Fight") && (protagonist.Transformation > 0) && !alreadyTransform)
                 staticButtons.Add("ОБРАТИТЬСЯ МЕДВЕДЕМ");
 
             return staticButtons;

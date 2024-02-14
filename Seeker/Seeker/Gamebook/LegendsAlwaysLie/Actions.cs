@@ -84,7 +84,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
             bool healingSpell = (protagonist.Magicpoints > 0) && !Game.Option.IsTriggered("HealingSpellLost");
 
-            if (healingSpell && !Game.Checks.ExistsInParagraph(actionText: "Вылечить"))
+            if (healingSpell && !Game.Buttons.ExistsInParagraph(actionText: "Вылечить"))
             {
                 if (protagonist.Hitpoints < 30)
                     staticButtons.Add("ЛЕЧИЛКА");

@@ -2,7 +2,7 @@
 
 namespace Seeker.Game
 {
-    class Checks
+    class Buttons
     {
         public static bool ExistsInParagraph(string actionName = "", string actionText = "", string optionText = "")
         {
@@ -27,6 +27,5 @@ namespace Seeker.Game
 
             return false;
         }
-
     }
 }

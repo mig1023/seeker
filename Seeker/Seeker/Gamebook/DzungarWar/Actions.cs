@@ -110,7 +110,7 @@ namespace Seeker.Gamebook.DzungarWar
         {
             List<string> staticButtons = new List<string> { };
 
-            if (!Game.Checks.ExistsInParagraph(actionName: "TEST"))
+            if (!Game.Buttons.ExistsInParagraph(actionName: "TEST"))
                 return staticButtons;
 
             if ((protagonist.Tincture > 0) && !NextTestWithTincture)
