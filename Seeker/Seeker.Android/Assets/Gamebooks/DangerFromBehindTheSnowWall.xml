@@ -4870,5 +4870,11 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="723">
+			<Text>На плюхнувшийся рядом с ними единственный кусок пищи песцы даже не обратили внимания, не сводя глаз с вожделенного живого мяса. Бой неизбежен.</Text>
+			<Options>
+				<Option Goto="499"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
