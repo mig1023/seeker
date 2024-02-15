@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Xml;
+﻿using System.Xml;
 using Seeker.Game;
 
 namespace Seeker.Gamebook.SilverAgeSilhouette
@@ -8,6 +6,7 @@ namespace Seeker.Gamebook.SilverAgeSilhouette
     class Paragraphs : Prototypes.Paragraphs, Abstract.IParagraphs
     {
         public static Paragraphs StaticInstance = new Paragraphs();
+        public static Paragraphs GetInstance() => StaticInstance;
 
         public override Paragraph Get(int id, XmlNode xmlParagraph) =>
             base.Get(xmlParagraph);
