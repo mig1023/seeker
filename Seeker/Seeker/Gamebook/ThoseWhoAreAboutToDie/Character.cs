@@ -5,6 +5,7 @@ namespace Seeker.Gamebook.ThoseWhoAreAboutToDie
     class Character : Prototypes.Character, Abstract.ICharacter
     {
         public static Character Protagonist = new Character();
+        public static Character GetInstance() => Protagonist;
 
         private int _reaction;
         public int Reaction
