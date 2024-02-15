@@ -6,6 +6,7 @@ namespace Seeker.Gamebook.GoingToLaughter
     class Character : Prototypes.Character, Abstract.ICharacter
     {
         public static Character Protagonist = new Character();
+        public static Character GetInstance() => Protagonist;
 
         private int _heroism;
         public int Heroism
