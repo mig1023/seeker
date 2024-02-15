@@ -5,6 +5,8 @@ namespace Seeker.Gamebook.OctopusIsland
     class Character : Prototypes.Character, Abstract.ICharacter
     {
         public static Character Protagonist = new Character();
+        public static Character GetInstance() => Protagonist;
+
 
         private int _sergeHitpoint;
         public int SergeHitpoint
