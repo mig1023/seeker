@@ -8,72 +8,8 @@ namespace Seeker.Gamebook
 {
     class List
     {
-        private static List<string> Books = new List<string>
-        {
-            "BlackCastleDungeon",
-            "CaptainSheltonsSecret",
-            "FaithfulSwordOfTheKing",
-            "AdventuresOfABeardlessDeceiver",
-            "DzungarWar",
-            "RockOfTerror",
-            "RendezVous",
-            "SwampFever",
-            "MentorsAlwaysRight",
-            "LegendsAlwaysLie",
-            "StringOfWorlds",
-            "ThreePaths",
-            "InvisibleFront",
-            "SilentSchool",
-            "ThoseWhoAreAboutToDie",
-            "OctopusIsland",
-            "CreatureOfHavoc",
-            "BloodfeudOfAltheus",
-            "PensionerSimulator",
-            "HowlOfTheWerewolf",
-            "LordOfTheSteppes",
-            "StainlessSteelRat",
-            "LastHokku",
-            "Genesis",
-            "Catharsis",
-            "PrairieLaw",
-            "HeartOfIce",
-            "MasterOfTaiga",
-            "VWeapons",
-            "LandOfUnwaryBears",
-            "YounglingTournament",
-            "GoingToLaughter",
-            "WildDeath",
-            "ChooseCthulhu",
-            "Damanskiy",
-            "ByTheWillOfRome",
-            "OrcsDay",
-            "Sheriff",
-            "Moonrunner",
-            "DeathOfAntiquary",
-            "Cyberpunk",
-            "SilverAgeSilhouette",
-            "StrikeBack",
-            "CommunityOfWorms",
-            "Ants",
-            "ConquistadorDiary",
-            "DinosaurIsland",
-            "Trail",
-            "UnexpectedPassenger",
-            "OutlawsOfSherwoodForest",
-            "AlamutFortress",
-            "Moria",
-            "YouAreMillionaire",
-            "ProjectOne",
-            "MadameGuillotine",
-            "TenementBuilding",
-            "PresidentSimulator",
-            "Quakers",
-            "ScorpionSwamp",
-            "DangerFromBehindTheSnowWall",
-        };
-
         public static List<string> GetBooks() =>
-            Books;
+            Game.Xml.GetGamebooksList();
 
         public static SortBy Sort()
         {

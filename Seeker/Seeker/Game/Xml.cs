@@ -330,6 +330,14 @@ namespace Seeker.Game
         private static string Intro(string node) =>
             $"Gamebook/Introduction/{node}";
 
+        public static List<string> GetGamebooksList()
+        {
+            if (Descriptions == null)
+                DescriptionLoad();
+
+            return Descriptions.Keys.ToList();
+        }
+
         public static void GetXmlDescriptionData(ref Description description)
         {
             if (Descriptions == null)
