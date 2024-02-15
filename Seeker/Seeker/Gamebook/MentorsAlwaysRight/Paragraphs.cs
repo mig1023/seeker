@@ -8,6 +8,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
     class Paragraphs : Prototypes.Paragraphs, Abstract.IParagraphs
     {
         public static Paragraphs StaticInstance = new Paragraphs();
+        public static Paragraphs GetInstance() => StaticInstance;
 
         public override Game.Paragraph Get(int id, XmlNode xmlParagraph) =>
             base.Get(xmlParagraph);
