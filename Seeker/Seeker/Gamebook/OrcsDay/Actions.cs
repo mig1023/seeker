@@ -6,6 +6,7 @@ namespace Seeker.Gamebook.OrcsDay
     class Actions : Prototypes.Actions, Abstract.IActions
     {
         public static Actions StaticInstance = new Actions();
+        public static Actions GetInstance() => StaticInstance;
         private static Character protagonist = Character.Protagonist;
 
         public List<Character> Enemies { get; set; }

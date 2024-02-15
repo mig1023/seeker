@@ -5,6 +5,7 @@ namespace Seeker.Gamebook.OrcsDay
     class Character : Prototypes.Character, Abstract.ICharacter
     {
         public static Character Protagonist = new Character();
+        public static Character GetInstance() => Protagonist;
 
         public int Muscle { get; set; }
         public int Wits { get; set; }
