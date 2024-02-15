@@ -5,6 +5,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
     class Constants : Prototypes.Constants, Abstract.IConstants
     {
         public static Constants StaticInstance = new Constants();
+        public static Constants GetInstance() => StaticInstance;
 
         public static Dictionary<int, int> Mastery { get; set; }
 
@@ -14,14 +15,9 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
 
         public static Links GetLinks() => new Links
         {
-            Protagonist = Character.Protagonist.Init,
-            Availability = Actions.StaticInstance.Availability,
             Paragraphs = Paragraphs.StaticInstance,
             Actions = Actions.StaticInstance,
             Constants = StaticInstance,
-            Save = Character.Protagonist.Save,
-            Load = Character.Protagonist.Load,
-            Debug = Character.Protagonist.Debug,
         };
     }
 }
