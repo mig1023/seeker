@@ -7,6 +7,7 @@ namespace Seeker.Gamebook.ByTheWillOfRome
     class Paragraphs : Prototypes.Paragraphs, Abstract.IParagraphs
     {
         public static Paragraphs StaticInstance = new Paragraphs();
+        public static Paragraphs GetInstance() => StaticInstance;
 
         public override Paragraph Get(int id, XmlNode xmlParagraph)
         {
@@ -18,7 +19,7 @@ namespace Seeker.Gamebook.ByTheWillOfRome
                 bool visibleBySetting = Game.Settings.GetValue("DisabledOption") == 1;
                 string availability = xmlOption.Attributes["Availability"]?.Value ?? String.Empty;
 
-                if (addon && !visibleBySetting && !Game.Data.Availability(availability))
+                if (addon && !visibleBySetting && !Actions.StaticInstance.Availability(availability))
                     continue;
 
                 paragraph.Options.Add(OptionParseWithDo(xmlOption, new Modification()));
