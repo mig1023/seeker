@@ -5,6 +5,7 @@ namespace Seeker.Gamebook.Sheriff
     class Character : Prototypes.Character, Abstract.ICharacter
     {
         public static Character Protagonist = new Character();
+        public static Character GetInstance() => Protagonist;
 
         private int _whoosh;
         public int Whoosh
