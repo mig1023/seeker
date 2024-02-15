@@ -5,6 +5,7 @@ namespace Seeker.Gamebook.ConquistadorDiary
     class Character : Prototypes.Character, Abstract.ICharacter
     {
         public static Character Protagonist = new Character();
+        public static Character GetInstance() => Protagonist;
 
         public int Points { get; set; }
         public int DiegoPoints { get; set; }
