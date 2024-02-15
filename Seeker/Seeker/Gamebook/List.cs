@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
 using System.Text.RegularExpressions;
 using static Seeker.Output.Constants;
 
@@ -171,19 +170,10 @@ namespace Seeker.Gamebook
             }
         }
 
-        private static Links GetLinksFromBook(string name)
-        {
-            Type gamebookClass = Type.GetType($"Seeker.Gamebook.{name}.Constants");
-            MethodInfo gamebookGetLinks = gamebookClass.GetMethod("GetLinks");
-
-            return gamebookGetLinks.Invoke(null, parameters: null) as Links;
-        }
-
         public static Description GetDescription(string name)
         {
             Description book = new Description
             {
-                Links = GetLinksFromBook(name),
                 Book = name,
                 Illustration = string.Format("{0}.jpg", name),
                 XmlBook = string.Format("Gamebooks/{0}.xml", name),

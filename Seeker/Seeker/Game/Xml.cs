@@ -5,6 +5,7 @@ using System.Xml;
 using Xamarin.Forms;
 using Seeker.Gamebook;
 using Seeker.Output;
+using System.Reflection;
 
 namespace Seeker.Game
 {
@@ -187,6 +188,14 @@ namespace Seeker.Game
             return xmlFile;
         }
 
+        private static Links GetLinksFromBook(string name)
+        {
+            Type gamebookClass = Type.GetType($"Seeker.Gamebook.{name}.Constants");
+            MethodInfo gamebookGetLinks = gamebookClass.GetMethod("GetLinks");
+
+            return gamebookGetLinks.Invoke(null, parameters: null) as Links;
+        }
+
         public static void GameLoad(string name)
         {
             Data.XmlParagraphs.Clear();
@@ -202,14 +211,16 @@ namespace Seeker.Game
             foreach (XmlNode xmlNode in xmlFile.SelectNodes("Gamebook/Paragraphs/Paragraph"))
                 Data.XmlParagraphs.Add(Xml.IntParse(xmlNode.Attributes["No"]), xmlNode);
 
-            Data.Paragraphs = gamebook.Links.Paragraphs;
-            Data.Actions = gamebook.Links.Actions;
-            Data.Constants = gamebook.Links.Constants;
-            Data.Protagonist = gamebook.Links.Protagonist;
-            Data.Save = gamebook.Links.Save;
-            Data.Load = gamebook.Links.Load;
-            Data.Debug = gamebook.Links.Debug;
-            Data.Availability = gamebook.Links.Availability;
+            Links methods = GetLinksFromBook(name);
+
+            Data.Paragraphs = methods.Paragraphs;
+            Data.Actions = methods.Actions;
+            Data.Constants = methods.Constants;
+            Data.Protagonist = methods.Protagonist;
+            Data.Save = methods.Save;
+            Data.Load = methods.Load;
+            Data.Debug = methods.Debug;
+            Data.Availability = methods.Availability;
 
             Data.Constants.Clean();
 
@@ -343,7 +354,6 @@ namespace Seeker.Game
             description.Size = StringParse(data["Size"]);
             description.PlaythroughTime = StringParse(data["Playthrough"]);
             description.Setting = StringParse(data["Setting"]);
-
 
             XmlNode colors = data.SelectSingleNode("Colors");
 
