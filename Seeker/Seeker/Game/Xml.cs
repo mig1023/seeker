@@ -216,11 +216,6 @@ namespace Seeker.Game
             Data.Paragraphs = methods.Paragraphs;
             Data.Actions = methods.Actions;
             Data.Constants = methods.Constants;
-            Data.Protagonist = methods.Protagonist;
-            Data.Save = methods.Save;
-            Data.Load = methods.Load;
-            Data.Debug = methods.Debug;
-            Data.Availability = methods.Availability;
             Data.DisableMethod = disableOption;
 
             Data.Constants.Clean();

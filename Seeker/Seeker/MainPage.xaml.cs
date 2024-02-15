@@ -199,6 +199,36 @@ namespace Seeker
             }     
         }
 
+        private void Availability(string option, string singleton,
+            out bool onlyIf, out bool singleIf)
+        {
+            onlyIf = true;
+
+            if (!String.IsNullOrEmpty(option))
+            {
+                Game.Data.MethodFromBook("Actions.Availability",
+                    out string onlyIfLine, param: option);
+
+                onlyIf = onlyIfLine == "True";
+            }
+
+            if (singleton == "Availability")
+            {
+                singleIf = onlyIf;
+            }
+            else if (!String.IsNullOrEmpty(singleton))
+            {
+                Game.Data.MethodFromBook("Actions.Availability",
+                    out string singleIfLine, param: singleton);
+
+                singleIf = singleIfLine == "True";
+            }
+            else
+            {
+                singleIf = false;
+            }
+        }
+
         public void Paragraph(int id, bool reload = false, bool loadGame = false,
             string optionName = "", List<Abstract.IModification> optionModifications = null)
         {
@@ -215,7 +245,7 @@ namespace Seeker
             if (startOfGame)
             {
                 Game.Data.Clean(reStart: true);
-                Game.Data.Protagonist();
+                Game.Data.MethodFromBook("Character.Init", out string _);
             }
 
             Game.Paragraph paragraph = null;
@@ -311,18 +341,8 @@ namespace Seeker
             {
                 int aftertextsCount = option.Aftertexts?.Count ?? 0;
                 bool mustBeVisible = OptionVisibility(aftertextsCount > 0);
-                bool onlyIf = Game.Data.Availability(option.Availability);
 
-                bool singleIf = false;
-
-                if (option.Singleton == "Availability")
-                {
-                    singleIf = Game.Data.Availability(option.Availability);
-                }
-                else if (!String.IsNullOrEmpty(option.Singleton))
-                {
-                    singleIf = Game.Data.Availability(option.Singleton);
-                }
+                Availability(option.Availability, option.Singleton, out bool onlyIf, out bool singleIf);
 
                 Button button = AddOptionButton(option, ref gameOver);
 

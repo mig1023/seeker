@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Reflection;
 using System.Xml;
 
 namespace Seeker.Game
@@ -49,11 +50,22 @@ namespace Seeker.Game
         public static Abstract.IActions Actions;
         public static Abstract.IConstants Constants;
 
-        public static Gamebook.Links.ProtagonistMethod Protagonist { get; set; }
-        public static Gamebook.Links.AvailabilityMethod Availability { get; set; }
-        public static Gamebook.Links.StringMethod Save { get; set; }
-        public static Gamebook.Links.LoadMethod Load { get; set; }
-        public static Gamebook.Links.StringMethod Debug { get; set; }
+        public static void MethodFromBook(string method,
+            out string result, string param = "")
+        {
+            string[] names = method.Split('.');
+
+            Type gamebookClass = Type.GetType($"Seeker.Gamebook.{CurrentGamebook}.{names[0]}");
+
+            MethodInfo gamebookInstance = gamebookClass.GetMethod("GetInstance");
+            object instance = gamebookInstance.Invoke(null, parameters: null);
+            
+            MethodInfo gamebookMethod = gamebookClass.GetMethod(names[1]);
+            object[] paramsIfExists = String.IsNullOrEmpty(param) ? null : new object[] { param };  
+            object methodResult = gamebookMethod.Invoke(instance, parameters: paramsIfExists);
+            result = methodResult?.ToString() ?? String.Empty;
+        }
+
         public static Gamebook.Links.DisableMethod DisableMethod { get; set; }
 
         public static string InputResponse { get; set; }
@@ -71,8 +83,6 @@ namespace Seeker.Game
             Paragraphs = null;
             Actions = null;
             Constants = null;
-            Protagonist = null;
-            Availability = null;
         }
     }
 }

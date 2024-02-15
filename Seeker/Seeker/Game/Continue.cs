@@ -34,8 +34,9 @@ namespace Seeker.Game
             string triggers = String.Join(",", Data.Triggers);
             string healing = Healing.Save();
             int paragraph = Data.CurrentParagraphID;
-            string character = Data.Save();
             string path = String.Join(",", Data.Path);
+
+            Data.MethodFromBook("Character.Save", out string character);
 
             App.Current.Properties[gameName] =
                 $"{paragraph}@{triggers}@{healing}@{character}@{path}";
@@ -54,7 +55,7 @@ namespace Seeker.Game
             Data.Triggers = save[1].Split(',').ToList();
 
             Healing.Load(save[2]);
-            Data.Load(save[3]);
+            Data.MethodFromBook("Character.Load", out string _, param: save[3]);
 
             Data.Path = save[4].Split(',').ToList();
 

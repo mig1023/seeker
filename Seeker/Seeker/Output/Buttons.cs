@@ -49,16 +49,26 @@ namespace Seeker.Output
 
             int aftertextsCount = option.Aftertexts?.Count ?? 0;
 
-            if (Game.Data.Constants.ShowDisabledOption(out bool _) || (aftertextsCount > 0))
-                optionColor = !String.IsNullOrEmpty(option.Availability) && !Game.Data.Availability(option.Availability);
+            bool availability = true;
 
+            if (!String.IsNullOrEmpty(option.Availability))
+            {
+                Game.Data.MethodFromBook("Actions.Availability",
+                    out string availabilityLine, param: option.Availability);
+
+                availability = availabilityLine == "True";
+            }
+
+            if (Game.Data.Constants.ShowDisabledOption(out bool _) || (aftertextsCount > 0))
+                optionColor = !availability;
+                
             string color = Game.Data.Constants.GetColor(optionColor ?
                 Buttons.ButtonTypes.Option : Buttons.ButtonTypes.Main);
 
             if (!String.IsNullOrEmpty(option.Style))
                 color = option.Style;
 
-            bool isEnabled = !(!String.IsNullOrEmpty(option.Availability) && !Game.Data.Availability(option.Availability));
+            bool isEnabled = !(!String.IsNullOrEmpty(option.Availability) && !availability);
 
             Button optionButton = new Button
             {
