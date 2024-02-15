@@ -49,11 +49,12 @@ namespace Seeker.Game
         public static Abstract.IActions Actions;
         public static Abstract.IConstants Constants;
 
-        public static Gamebook.Links.ProtagonistMethod Protagonist;
-        public static Gamebook.Links.AvailabilityMethod Availability;
-        public static Gamebook.Links.StringMethod Save;
-        public static Gamebook.Links.LoadMethod Load;
-        public static Gamebook.Links.StringMethod Debug;
+        public static Gamebook.Links.ProtagonistMethod Protagonist { get; set; }
+        public static Gamebook.Links.AvailabilityMethod Availability { get; set; }
+        public static Gamebook.Links.StringMethod Save { get; set; }
+        public static Gamebook.Links.LoadMethod Load { get; set; }
+        public static Gamebook.Links.StringMethod Debug { get; set; }
+        public static Gamebook.Links.DisableMethod DisableMethod { get; set; }
 
         public static string InputResponse { get; set; }
 

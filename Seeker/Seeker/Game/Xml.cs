@@ -196,7 +196,7 @@ namespace Seeker.Game
             return gamebookGetLinks.Invoke(null, parameters: null) as Links;
         }
 
-        public static void GameLoad(string name)
+        public static void GameLoad(string name, Links.DisableMethod disableOption)
         {
             Data.XmlParagraphs.Clear();
             Data.Triggers.Clear();
@@ -221,6 +221,7 @@ namespace Seeker.Game
             Data.Load = methods.Load;
             Data.Debug = methods.Debug;
             Data.Availability = methods.Availability;
+            Data.DisableMethod = disableOption;
 
             Data.Constants.Clean();
 

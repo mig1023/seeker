@@ -10,6 +10,8 @@ namespace Seeker.Gamebook
 
         public delegate void LoadMethod(string saveLine);
 
+        public delegate void DisableMethod(string name);
+
         public delegate bool AvailabilityMethod(string option);
 
         public ProtagonistMethod Protagonist;

@@ -27,5 +27,11 @@ namespace Seeker.Game
 
             return false;
         }
+
+        public static void Disable(string name) =>
+            Data.DisableMethod(name);
+
+        public static void Disable(bool okResult, string good, string bad) =>
+            Data.DisableMethod(okResult ? bad : good);
     }
 }

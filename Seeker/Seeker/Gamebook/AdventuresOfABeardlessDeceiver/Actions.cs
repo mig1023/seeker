@@ -242,6 +242,8 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 
             NextTestWithKumis = false;
 
+            Game.Buttons.Disable(testIsOk, "В случае успеха", "В случае провала");
+
             return testLines;
         }
 

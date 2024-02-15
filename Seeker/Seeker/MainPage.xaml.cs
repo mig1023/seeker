@@ -54,13 +54,32 @@ namespace Seeker
         private void ScrollToTop() =>
             MainScroll.ScrollToAsync(MainScroll, ScrollToPosition.Start, true);
 
+        public void DisableMethod(string name)
+        {
+            foreach (View option in Options.Children)
+            {
+                if (!(option is Button))
+                {
+                    continue;
+                }
+
+                Button button = option as Button;
+
+                if (button.Text == name)
+                {
+                    button.IsEnabled = false;
+                    button.BackgroundColor = Color.Default;
+                }
+            }
+        }
+
         private void Gamebook_Click(string gamebook)
         {
             Game.Continue.CurrentGame(gamebook);
 
             try
             {
-                Game.Xml.GameLoad(gamebook);
+                Game.Xml.GameLoad(gamebook, DisableMethod);
             }
             catch (Exception ex)
             {
@@ -177,8 +196,7 @@ namespace Seeker
 
                 foreach (string phrase in phrases)
                     await TextToSpeech.SpeakAsync(phrase.Trim());
-            }
-                
+            }     
         }
 
         public void Paragraph(int id, bool reload = false, bool loadGame = false,
@@ -210,7 +228,9 @@ namespace Seeker
                 Game.Data.CurrentParagraphID = id;
             }
             else
+            {
                 paragraph = Game.Data.CurrentParagraph;
+            }
 
             GamepageSettings();
 
