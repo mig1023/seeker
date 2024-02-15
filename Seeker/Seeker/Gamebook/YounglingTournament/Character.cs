@@ -7,6 +7,7 @@ namespace Seeker.Gamebook.YounglingTournament
     class Character : Prototypes.Character, Abstract.ICharacter
     {
         public static Character Protagonist = new Character();
+        public static Character GetInstance() => Protagonist;
 
         public enum ForcesTypes { Speed, Push, Attraction, Jump, Foresight, Conceal, Sight, StrengtheningTheBody, Healing, Suffocation }
         public enum SwordTypes { Decisiveness, Elasticity, Rivalry, Perseverance, Aggressiveness, Confidence, Vaapad, JarKai }
