@@ -7,6 +7,7 @@ namespace Seeker.Gamebook.RendezVous
     class Actions : Prototypes.Actions, Abstract.IActions
     {
         public static Actions StaticInstance = new Actions();
+        public static Actions GetInstance() => StaticInstance;
         private static Character protagonist = Character.Protagonist;
 
         public int Dices { get; set; }
