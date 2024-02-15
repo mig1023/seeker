@@ -7,6 +7,7 @@ namespace Seeker.Gamebook.TenementBuilding
     class Character : Prototypes.Character, Abstract.ICharacter
     {
         public static Character Protagonist = new Character();
+        public static Character GetInstance() => Protagonist;
 
         public List<bool> Luck { get; set; }
 
