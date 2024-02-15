@@ -5,6 +5,7 @@ namespace Seeker.Gamebook.SwampFever
     class Character : Prototypes.Character, Abstract.ICharacter
     {
         public static Character Protagonist = new Character();
+        public static Character GetInstance() => Protagonist;
 
         private int _fury;
         public int Fury
