@@ -5,6 +5,7 @@ namespace Seeker.Gamebook.StrikeBack
     class Constants : Prototypes.Constants, Abstract.IConstants
     {
         public static Constants StaticInstance = new Constants();
+        public static Constants GetInstance() => StaticInstance;
 
         public static Dictionary<Character.SpecialTechniques, string> TechniquesNames() =>
             new Dictionary<Character.SpecialTechniques, string>
@@ -14,14 +15,9 @@ namespace Seeker.Gamebook.StrikeBack
 
         public static Links GetLinks() => new Links
         {
-            Protagonist = Character.Protagonist.Init,
-            Availability = Actions.StaticInstance.Availability,
             Paragraphs = Paragraphs.StaticInstance,
             Actions = Actions.StaticInstance,
             Constants = StaticInstance,
-            Save = Character.Protagonist.Save,
-            Load = Character.Protagonist.Load,
-            Debug = Character.Protagonist.Debug,
         };
     }
 }
