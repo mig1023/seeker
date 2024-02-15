@@ -7,6 +7,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
     class Character : Prototypes.Character, Abstract.ICharacter
     {
         public static Character Protagonist = new Character();
+        public static Character GetInstance() => Protagonist;
 
         private int _strength;
         public int Strength
