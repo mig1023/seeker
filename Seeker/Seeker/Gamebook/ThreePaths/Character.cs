@@ -7,6 +7,7 @@ namespace Seeker.Gamebook.ThreePaths
     class Character : Prototypes.Character, Abstract.ICharacter
     {
         public static Character Protagonist = new Character();
+        public static Character GetInstance() => Protagonist;
 
         public int? Time { get; set; }
         public List<string> Spells { get; set; }
