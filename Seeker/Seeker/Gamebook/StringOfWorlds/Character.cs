@@ -7,6 +7,7 @@ namespace Seeker.Gamebook.StringOfWorlds
     class Character : Prototypes.Character, Abstract.ICharacter
     {
         public static Character Protagonist = new Character();
+        public static Character GetInstance() => Protagonist;
 
         private int _skill;
         public int MaxSkill { get; set; }

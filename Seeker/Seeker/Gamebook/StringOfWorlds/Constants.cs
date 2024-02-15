@@ -9,6 +9,7 @@ namespace Seeker.Gamebook.StringOfWorlds
     class Constants : Prototypes.Constants, Abstract.IConstants
     {
         public static Constants StaticInstance = new Constants();
+        public static Constants GetInstance() => StaticInstance;
 
         private static int ColorShiftAmount = 45;
         private static List<int> LastColor = new List<int>();
@@ -111,14 +112,9 @@ namespace Seeker.Gamebook.StringOfWorlds
 
         public static Links GetLinks() => new Links
         {
-            Protagonist = Character.Protagonist.Init,
-            Availability = Actions.StaticInstance.Availability,
             Paragraphs = Paragraphs.StaticInstance,
             Actions = Actions.StaticInstance,
             Constants = StaticInstance,
-            Save = Character.Protagonist.Save,
-            Load = Character.Protagonist.Load,
-            Debug = Character.Protagonist.Debug,
         };
     }
 }
