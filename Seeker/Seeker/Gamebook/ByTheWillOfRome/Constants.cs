@@ -18,12 +18,5 @@ namespace Seeker.Gamebook.ByTheWillOfRome
         public static List<int> ParagraphsStatusesLimit { get; set; }
 
         public static int AddonStartParagraph = 375;
-
-        public static Links GetLinks() => new Links
-        {
-            Paragraphs = Paragraphs.StaticInstance,
-            Actions = Actions.StaticInstance,
-            Constants = StaticInstance,
-        };
     }
 }
