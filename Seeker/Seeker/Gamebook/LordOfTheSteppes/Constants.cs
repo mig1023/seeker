@@ -32,12 +32,5 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             [Character.FightStyles.Defensive] = "оборонительный",
             [Character.FightStyles.Fullback] = "глухую защиту",
         };
-
-        public static Links GetLinks() => new Links
-        {
-            Paragraphs = Paragraphs.StaticInstance,
-            Actions = Actions.StaticInstance,
-            Constants = StaticInstance,
-        };
     }
 }
