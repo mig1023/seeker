@@ -8,12 +8,5 @@ namespace Seeker.Gamebook.LandOfUnwaryBears
         public static Constants GetInstance() => StaticInstance;
 
         public override string GetFont() => "RobotoFont";
-
-        public static Links GetLinks() => new Links
-        {
-            Paragraphs = Paragraphs.StaticInstance,
-            Actions = Actions.StaticInstance,
-            Constants = StaticInstance,
-        };
     }
 }
