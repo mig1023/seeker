@@ -4,8 +4,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 {
     class Constants : Prototypes.Constants, Abstract.IConstants
     {
-        public static Constants StaticInstance = new Constants();
-        public static Constants GetInstance() => StaticInstance;
+        public new static Constants StaticInstance = new Constants();
+        public new static Constants GetInstance() => StaticInstance;
 
         public static Dictionary<string, Character.SpecializationType> GetSpecializationType() =>
             new Dictionary<string, Character.SpecializationType>
