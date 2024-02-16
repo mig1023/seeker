@@ -14,12 +14,5 @@ namespace Seeker.Gamebook.SwampFever
         public static Dictionary<string, int> GetPurchases { get; set; }
 
         public static Dictionary<int, string> GetFuryLevel { get; set; }
-
-        public static Links GetLinks() => new Links
-        {
-            Paragraphs = Paragraphs.StaticInstance,
-            Actions = Actions.StaticInstance,
-            Constants = StaticInstance,
-        };
     }
 }
