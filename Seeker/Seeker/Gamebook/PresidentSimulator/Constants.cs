@@ -8,12 +8,5 @@ namespace Seeker.Gamebook.PresidentSimulator
         public static Constants GetInstance() => StaticInstance;
 
         public static Dictionary<string, string> TextByYears { get; set; }
-
-        public static Links GetLinks() => new Links
-        {
-            Paragraphs = Paragraphs.StaticInstance,
-            Actions = Actions.StaticInstance,
-            Constants = StaticInstance,
-        };
     }
 }
