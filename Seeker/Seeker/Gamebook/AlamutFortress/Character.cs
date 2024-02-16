@@ -4,8 +4,8 @@ namespace Seeker.Gamebook.AlamutFortress
 {
     class Character : Prototypes.Character, Abstract.ICharacter
     {
-        public static Character Protagonist = new Character();
-        public static Character GetInstance() => Protagonist;
+        public new static Character Protagonist = new Character();
+        public new static Character GetInstance() => Protagonist;
 
         private int _strength;
         public int MaxStrength { get; set; }
