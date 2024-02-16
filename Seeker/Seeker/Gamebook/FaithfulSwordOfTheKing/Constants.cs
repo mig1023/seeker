@@ -20,12 +20,5 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             [Character.MeritalArts.LefthandFencing] = "фехтование левой рукой",
             [Character.MeritalArts.Swimming] = "плавание",
         };
-
-        public static Links GetLinks() => new Links
-        {
-            Paragraphs = Paragraphs.StaticInstance,
-            Actions = Actions.StaticInstance,
-            Constants = StaticInstance,
-        };
     }
 }
