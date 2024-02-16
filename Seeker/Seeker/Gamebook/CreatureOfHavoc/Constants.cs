@@ -21,12 +21,5 @@ namespace Seeker.Gamebook.CreatureOfHavoc
             ['П'] = 'О',
             ['Ф'] = 'У',
         };
-
-        public static Links GetLinks() => new Links
-        {
-            Paragraphs = Paragraphs.StaticInstance,
-            Actions = Actions.StaticInstance,
-            Constants = StaticInstance,
-        };
     }
 }
