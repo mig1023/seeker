@@ -37,12 +37,5 @@ namespace Seeker.Gamebook.GoingToLaughter
         public static Dictionary<string, string> ParamNames { get; set; }
 
         public static List<string> SleepCleaningSurvive { get; set; }
-
-        public static Links GetLinks() => new Links
-        {
-            Paragraphs = Paragraphs.StaticInstance,
-            Actions = Actions.StaticInstance,
-            Constants = StaticInstance,
-        };
     }
 }
