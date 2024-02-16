@@ -4,8 +4,8 @@ namespace Seeker.Gamebook.VWeapons
 {
     class Character : Prototypes.Character, Abstract.ICharacter
     {
-        public static Character Protagonist = new Character();
-        public static Character GetInstance() => Protagonist;
+        public new static Character Protagonist = new Character();
+        public new static Character GetInstance() => Protagonist;
 
         private int _suspicions;
         public int Suspicions
