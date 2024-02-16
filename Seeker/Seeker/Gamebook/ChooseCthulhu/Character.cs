@@ -6,8 +6,8 @@ namespace Seeker.Gamebook.ChooseCthulhu
 {
     class Character : Prototypes.Character, Abstract.ICharacter
     {
-        public static Character Protagonist = new Character();
-        public static Character GetInstance() => Protagonist;
+        public new static Character Protagonist = new Character();
+        public new static Character GetInstance() => Protagonist;
 
         private int _initiation;
         public int Initiation

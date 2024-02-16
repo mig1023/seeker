@@ -5,8 +5,8 @@ namespace Seeker.Gamebook.ChooseCthulhu
 {
     class Constants : Prototypes.Constants, Abstract.IConstants
     {
-        public static Constants StaticInstance = new Constants();
-        public static Constants GetInstance() => StaticInstance;
+        public new static Constants StaticInstance = new Constants();
+        public new static Constants GetInstance() => StaticInstance;
         private static Character protagonist = Character.Protagonist;
 
         public static void ChangeBackground()
