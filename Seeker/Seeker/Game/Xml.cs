@@ -188,12 +188,18 @@ namespace Seeker.Game
             return xmlFile;
         }
 
-        private static Links GetLinksFromBook(string name)
+        private static object GetLinkFromBook(string name)
         {
-            Type gamebookClass = Type.GetType($"Seeker.Gamebook.{name}.Constants");
-            MethodInfo gamebookGetLinks = gamebookClass.GetMethod("GetLinks");
+            Type gamebookClass = Type.GetType($"Seeker.Gamebook.{name}");
+            MethodInfo gamebookGetLinks = gamebookClass.GetMethod("GetInstance");
+            return gamebookGetLinks.Invoke(null, parameters: null);
+        }
 
-            return gamebookGetLinks.Invoke(null, parameters: null) as Links;
+        private static void GetLinksFromBook(string name)
+        {
+            Data.Paragraphs = (Abstract.IParagraphs)GetLinkFromBook($"{name}.Paragraphs");
+            Data.Actions = (Abstract.IActions)GetLinkFromBook($"{name}.Actions");
+            Data.Constants = (Abstract.IConstants)GetLinkFromBook($"{name}.Constants");
         }
 
         public static void GameLoad(string name, Links.DisableMethod disableOption)
@@ -211,13 +217,9 @@ namespace Seeker.Game
             foreach (XmlNode xmlNode in xmlFile.SelectNodes("Gamebook/Paragraphs/Paragraph"))
                 Data.XmlParagraphs.Add(Xml.IntParse(xmlNode.Attributes["No"]), xmlNode);
 
-            Links methods = GetLinksFromBook(name);
+            GetLinksFromBook(name);
 
-            Data.Paragraphs = methods.Paragraphs;
-            Data.Actions = methods.Actions;
-            Data.Constants = methods.Constants;
             Data.DisableMethod = disableOption;
-
             Data.Constants.Clean();
 
             foreach (XmlNode xmlNode in xmlFile.SelectNodes(Intro("Styles/*")))
