@@ -4,14 +4,15 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 {
     class Constants : Prototypes.Constants, Abstract.IConstants
     {
-        public static Constants StaticInstance = new Constants();
-        public static Constants GetInstance() => StaticInstance;
+        public new static Constants StaticInstance = new Constants();
+        public new static Constants GetInstance() => StaticInstance;
 
         public static Dictionary<int, int> Skills { get; set; }
 
         public static Dictionary<int, int> Strengths { get; set; }
 
-        public static Dictionary<Character.MeritalArts, string> MeritalArtsNames = new Dictionary<Character.MeritalArts, string>
+        public static Dictionary<Character.MeritalArts, string> MeritalArtsNames = 
+            new Dictionary<Character.MeritalArts, string>
         {
             [Character.MeritalArts.Nope] = "нет",
             [Character.MeritalArts.SecretBlow] = "тайный удар шпагой",
