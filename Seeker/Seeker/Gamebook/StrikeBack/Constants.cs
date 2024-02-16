@@ -12,12 +12,5 @@ namespace Seeker.Gamebook.StrikeBack
         {
             [Character.SpecialTechniques.RumbleKnife] = "Волшебный кинжал",
         };
-
-        public static Links GetLinks() => new Links
-        {
-            Paragraphs = Paragraphs.StaticInstance,
-            Actions = Actions.StaticInstance,
-            Constants = StaticInstance,
-        };
     }
 }
