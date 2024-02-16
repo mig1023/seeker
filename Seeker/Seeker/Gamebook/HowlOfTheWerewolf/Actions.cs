@@ -7,15 +7,32 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {
-        public static Actions StaticInstance = new Actions();
-        public static Actions GetInstance() => StaticInstance;
+        public new static Actions StaticInstance = new Actions();
+        public new static Actions GetInstance() => StaticInstance;
         private static Character protagonist = Character.Protagonist;
 
         public enum Specifics
         {
-            Nope, ElectricDamage, WitchFight, Ulrich, BlackWidow, Invulnerable, Bats, NeedForSpeed,
-            NeedForSpeedAndDead, ToadVenom, IncompleteCorpse, Dehctaw, Moonstone, IcyTouch,
-            GlassKnight, AcidDamage, WaterWitch, SnakeFight, Plague, StoneGriffin
+            Nope,
+            ElectricDamage,
+            WitchFight,
+            Ulrich,
+            BlackWidow,
+            Invulnerable,
+            Bats,
+            NeedForSpeed,
+            NeedForSpeedAndDead,
+            ToadVenom,
+            IncompleteCorpse,
+            Dehctaw,
+            Moonstone,
+            IcyTouch,
+            GlassKnight,
+            AcidDamage,
+            WaterWitch,
+            SnakeFight,
+            Plague,
+            StoneGriffin,
         };
 
         public int Value { get; set; }
