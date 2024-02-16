@@ -109,12 +109,5 @@ namespace Seeker.Gamebook.StringOfWorlds
         public static Dictionary<int, int> Charms { get; set; }
 
         public static Dictionary<int, string> LuckList { get; set; }
-
-        public static Links GetLinks() => new Links
-        {
-            Paragraphs = Paragraphs.StaticInstance,
-            Actions = Actions.StaticInstance,
-            Constants = StaticInstance,
-        };
     }
 }
