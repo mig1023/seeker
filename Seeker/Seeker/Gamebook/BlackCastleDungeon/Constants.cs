@@ -18,12 +18,5 @@ namespace Seeker.Gamebook.BlackCastleDungeon
         public static List<int> ParagraphsStatusesLimit { get; set; }
 
         public static List<string> StaticSpells { get; set; }
-
-        public static Links GetLinks() => new Links
-        {
-            Paragraphs = Paragraphs.StaticInstance,
-            Actions = Actions.StaticInstance,
-            Constants = StaticInstance,
-        };
     }
 }
