@@ -12,12 +12,5 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
         public static Dictionary<int, int> Endurances { get; set; }
 
         public static Dictionary<int, string> LuckList { get; set; }
-
-        public static Links GetLinks() => new Links
-        {
-            Paragraphs = Paragraphs.StaticInstance,
-            Actions = Actions.StaticInstance,
-            Constants = StaticInstance,
-        };
     }
 }
