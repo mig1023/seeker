@@ -10,12 +10,5 @@ namespace Seeker.Gamebook.Sheriff
         public static List<string> CleaningNotebookList { get; set; }
 
         public static Dictionary<string, int> Levels { get; set; }
-
-        public static Links GetLinks() => new Links
-        {
-            Paragraphs = Paragraphs.StaticInstance,
-            Actions = Actions.StaticInstance,
-            Constants = StaticInstance,
-        };
     }
 }
