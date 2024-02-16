@@ -21,12 +21,5 @@ namespace Seeker.Gamebook.YounglingTournament
             [Character.SwordTypes.Vaapad] = "Ваапад",
             [Character.SwordTypes.JarKai] = "Джар-Кай",
         };
-
-        public static Links GetLinks() => new Links
-        {
-            Paragraphs = Paragraphs.StaticInstance,
-            Actions = Actions.StaticInstance,
-            Constants = StaticInstance,
-        };
     }
 }
