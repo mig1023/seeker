@@ -8,12 +8,5 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
         public static Constants GetInstance() => StaticInstance;
 
         public static Dictionary<int, string> HealthLine { get; set; }
-
-        public static Links GetLinks() => new Links
-        {
-            Paragraphs = Paragraphs.StaticInstance,
-            Actions = Actions.StaticInstance,
-            Constants = StaticInstance,
-        };
     }
 }
