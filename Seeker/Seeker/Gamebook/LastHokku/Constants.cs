@@ -8,12 +8,5 @@ namespace Seeker.Gamebook.LastHokku
         public static Constants GetInstance() => StaticInstance;
 
         public static List<int> GetParagraphsWithoutHokkuCreation { get; set; }
-
-        public static Links GetLinks() => new Links
-        {
-            Paragraphs = Paragraphs.StaticInstance,
-            Actions = Actions.StaticInstance,
-            Constants = StaticInstance,
-        };
     }
 }
