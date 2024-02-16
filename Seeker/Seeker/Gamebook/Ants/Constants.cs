@@ -14,12 +14,5 @@ namespace Seeker.Gamebook.Ants
         public static List<string> EndingOne { get; set; }
 
         public static List<string> EndingTwo { get; set; }
-
-        public static Links GetLinks() => new Links
-        {
-            Paragraphs = Paragraphs.StaticInstance,
-            Actions = Actions.StaticInstance,
-            Constants = StaticInstance,
-        };
     }
 }
