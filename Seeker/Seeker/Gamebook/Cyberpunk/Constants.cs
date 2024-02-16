@@ -10,12 +10,5 @@ namespace Seeker.Gamebook.Cyberpunk
         public static Dictionary<string, string> CharactersParams { get; set; }
 
         public static List<string> NormalizationParams { get; set; }
-
-        public static Links GetLinks() => new Links
-        {
-            Paragraphs = Paragraphs.StaticInstance,
-            Actions = Actions.StaticInstance,
-            Constants = StaticInstance,
-        };
     }
 }
