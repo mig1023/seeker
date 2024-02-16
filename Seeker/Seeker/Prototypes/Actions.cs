@@ -8,6 +8,9 @@ namespace Seeker.Prototypes
 {
     class Actions
     {
+        public static Constants StaticInstance = new Constants();
+        public static Constants GetInstance() => StaticInstance;
+
         public string Type { get; set; }
         public string Button { get; set; }
         public List<Output.Text> Texts { get; set; }

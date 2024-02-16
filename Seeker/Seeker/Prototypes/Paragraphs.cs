@@ -9,6 +9,9 @@ namespace Seeker.Prototypes
 {
     class Paragraphs
     {
+        public static Constants StaticInstance = new Constants();
+        public static Constants GetInstance() => StaticInstance;
+
         internal Random random = new Random();
 
         public virtual Abstract.IActions ActionParse(XmlNode xmlAction) =>

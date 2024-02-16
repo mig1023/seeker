@@ -192,14 +192,22 @@ namespace Seeker.Game
         {
             Type gamebookClass = Type.GetType($"Seeker.Gamebook.{name}");
             MethodInfo gamebookGetLinks = gamebookClass.GetMethod("GetInstance");
-            return gamebookGetLinks.Invoke(null, parameters: null);
+
+            if (gamebookGetLinks == null)
+            {
+                string[] className = name.Split('.');
+                gamebookClass = Type.GetType($"Seeker.Prototypes.{className[1]}");
+                gamebookGetLinks = gamebookClass.GetMethod("GetInstance");
+            }
+
+            return gamebookGetLinks?.Invoke(null, parameters: null) ?? null;
         }
 
         private static void GetLinksFromBook(string name)
         {
+            Data.Constants = (Abstract.IConstants)GetLinkFromBook($"{name}.Constants");
             Data.Paragraphs = (Abstract.IParagraphs)GetLinkFromBook($"{name}.Paragraphs");
             Data.Actions = (Abstract.IActions)GetLinkFromBook($"{name}.Actions");
-            Data.Constants = (Abstract.IConstants)GetLinkFromBook($"{name}.Constants");
         }
 
         public static void GameLoad(string name, Links.DisableMethod disableOption)

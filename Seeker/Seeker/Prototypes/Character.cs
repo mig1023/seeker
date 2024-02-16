@@ -6,6 +6,9 @@ namespace Seeker.Prototypes
 {
     class Character
     {
+        public static Constants Protagonist = new Constants();
+        public static Constants GetInstance() => Protagonist;
+
         public string Name { get; set; }
 
         public bool IsProtagonist { get; set; }
