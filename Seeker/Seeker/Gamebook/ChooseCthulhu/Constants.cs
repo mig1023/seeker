@@ -57,12 +57,5 @@ namespace Seeker.Gamebook.ChooseCthulhu
                 return base.GetColor(type);
             }
         }
-
-        public static Links GetLinks() => new Links
-        {
-            Paragraphs = Paragraphs.StaticInstance,
-            Actions = Actions.StaticInstance,
-            Constants = StaticInstance,
-        };
     }
 }
