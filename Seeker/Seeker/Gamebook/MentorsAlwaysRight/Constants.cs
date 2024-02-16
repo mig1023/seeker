@@ -14,12 +14,5 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             ["МАГ"] = Character.SpecializationType.Wizard,
             ["МЕТАТЕЛЬ"] = Character.SpecializationType.Thrower,
         };
-
-        public static Links GetLinks() => new Links
-        {
-            Paragraphs = Paragraphs.StaticInstance,
-            Actions = Actions.StaticInstance,
-            Constants = StaticInstance,
-        };
     }
 }
