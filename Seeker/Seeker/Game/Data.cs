@@ -52,22 +52,25 @@ namespace Seeker.Game
         public static Abstract.IActions Actions;
         public static Abstract.IConstants Constants;
 
+        public static MethodInfo GetGamebookInstance(string name, out Type gamebookClass)
+        {
+            gamebookClass = Type.GetType($"Seeker.Gamebook.{CurrentGamebook}.{name}");
+            MethodInfo gamebookGetLinks = gamebookClass.GetMethod("GetInstance");
+
+            if (gamebookGetLinks == null)
+            {
+                gamebookClass = Type.GetType($"Seeker.Prototypes.{name}");
+                gamebookGetLinks = gamebookClass.GetMethod("GetInstance");
+            }
+
+            return gamebookGetLinks;
+        }
+
         public static void MethodFromBook(string method,
             out string result, string param = "")
         {
-            string[] names = method.Split('.');
-
-            Type gamebookClass = Type.GetType($"Seeker.Gamebook.{CurrentGamebook}.{names[0]}");
-
-            MethodInfo gamebookInstance = gamebookClass.GetMethod("GetInstance");
-
-            if (gamebookInstance == null)
-            {
-                string[] className = method.Split('.');
-                gamebookClass = Type.GetType($"Seeker.Prototypes.{className[0]}");
-                gamebookInstance = gamebookClass.GetMethod("GetInstance");
-            }
-
+            string[] names = method.Split('.'); 
+            MethodInfo gamebookInstance = GetGamebookInstance(names[0], out Type gamebookClass);
             object instance = gamebookInstance.Invoke(null, parameters: null);
             
             MethodInfo gamebookMethod = gamebookClass.GetMethod(names[1]);

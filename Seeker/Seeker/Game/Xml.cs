@@ -129,56 +129,11 @@ namespace Seeker.Game
             return output;
         }
 
-        //public static void AllTextParse(ref StackLayout textPlace,
-        //    int id, string optionName, out string text)
-        //{
-        //    text = String.Empty;
-
-        //    foreach (Text texts in Xml.TextsParse(Data.XmlParagraphs[id], optionName))
-        //    {
-        //        textPlace.Children.Add(Interface.TextBySelect(texts));
-        //        text += $"{texts.Content}\\n\\n";
-        //    }
-        //}
-
         public static Text TextLine(string line) => new Text
         {
             Content = line,
             Size = Interface.TextFontSize.Big,
         };
-
-        //public static List<Text> TextsParse(XmlNode xmlNode, string optionName = "")
-        //{
-        //    List<string> textsByProperties = Data.Actions.TextByProperties(xmlNode["Text"]);
-        //    string textByOption = Data.Actions.TextByOptions(optionName);
-
-        //    if (textsByProperties != null)
-        //    {
-        //        List<Text> texts = new List<Text>();
-
-        //        foreach (string text in textsByProperties)
-        //            texts.Add(TextLine(text));
-
-        //        return texts;
-        //    }
-        //    else if (!String.IsNullOrEmpty(optionName) && !String.IsNullOrEmpty(textByOption))
-        //    {
-        //        return new List<Text> { TextLine(textByOption) };
-        //    }
-        //    else if (xmlNode["Text"] != null)
-        //    {
-        //        return new List<Text> { TextLineParse(xmlNode["Text"]) };
-        //    }
-        //    else
-        //    {
-        //        List<Text> texts = new List<Text>();
-
-        //        foreach (XmlNode text in xmlNode.SelectNodes("Texts/Text"))
-        //            texts.Add(TextLineParse(text));
-
-        //        return texts;
-        //    }
-        //}
 
         private static XmlDocument GetGamebookXmlFile(string name)
         {
@@ -188,26 +143,17 @@ namespace Seeker.Game
             return xmlFile;
         }
 
-        private static object GetLinkFromBook(string name)
+        private static object GetLinkFromBook(string className)
         {
-            Type gamebookClass = Type.GetType($"Seeker.Gamebook.{name}");
-            MethodInfo gamebookGetLinks = gamebookClass.GetMethod("GetInstance");
-
-            if (gamebookGetLinks == null)
-            {
-                string[] className = name.Split('.');
-                gamebookClass = Type.GetType($"Seeker.Prototypes.{className[1]}");
-                gamebookGetLinks = gamebookClass.GetMethod("GetInstance");
-            }
-
-            return gamebookGetLinks?.Invoke(null, parameters: null) ?? null;
+            MethodInfo gamebookInstance = Game.Data.GetGamebookInstance(className, out Type _);
+            return gamebookInstance?.Invoke(null, parameters: null) ?? null;
         }
 
         private static void GetLinksFromBook(string name)
         {
-            Data.Constants = (Abstract.IConstants)GetLinkFromBook($"{name}.Constants");
-            Data.Paragraphs = (Abstract.IParagraphs)GetLinkFromBook($"{name}.Paragraphs");
-            Data.Actions = (Abstract.IActions)GetLinkFromBook($"{name}.Actions");
+            Data.Constants = (Abstract.IConstants)GetLinkFromBook("Constants");
+            Data.Paragraphs = (Abstract.IParagraphs)GetLinkFromBook("Paragraphs");
+            Data.Actions = (Abstract.IActions)GetLinkFromBook("Actions");
         }
 
         public static void GameLoad(string name, Data.DisableMethodDelegate disableOption)

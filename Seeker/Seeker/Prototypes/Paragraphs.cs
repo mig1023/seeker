@@ -125,26 +125,8 @@ namespace Seeker.Prototypes
             return modification;
         }
 
-        //public virtual List<Text> TextsParse(XmlNode xmlNode, string optionName = "")
         public virtual List<Text> TextsParse(XmlNode xmlNode, bool main = false)
         {
-            //List<string> textsByProperties = Data.Actions.TextByProperties(xmlNode["Text"]);
-            //string textByOption = Data.Actions.TextByOptions(optionName);
-
-            //if (textsByProperties != null)
-            //{
-            //    List<Text> texts = new List<Text>();
-
-            //    foreach (string text in textsByProperties)
-            //        texts.Add(TextLine(text));
-
-            //    return texts;
-            //}
-            //else if (!String.IsNullOrEmpty(optionName) && !String.IsNullOrEmpty(textByOption))
-            //{
-            //    return new List<Text> { TextLine(textByOption) };
-            //}
-            //else
             if (xmlNode["Text"] != null)
             {
                 return new List<Text> { Xml.TextLineParse(xmlNode["Text"]) };
