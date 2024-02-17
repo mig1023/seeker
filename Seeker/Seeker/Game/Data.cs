@@ -7,6 +7,8 @@ namespace Seeker.Game
 {
     class Data
     {
+        public delegate void DisableMethodDelegate(string name);
+
         public static string CurrentGamebook { get; set; }
 
         public enum ColorTypes
@@ -66,7 +68,7 @@ namespace Seeker.Game
             result = methodResult?.ToString() ?? String.Empty;
         }
 
-        public static Gamebook.Links.DisableMethod DisableMethod { get; set; }
+        public static DisableMethodDelegate DisableMethod { get; set; }
 
         public static string InputResponse { get; set; }
 

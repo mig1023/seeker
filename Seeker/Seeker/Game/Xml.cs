@@ -210,7 +210,7 @@ namespace Seeker.Game
             Data.Actions = (Abstract.IActions)GetLinkFromBook($"{name}.Actions");
         }
 
-        public static void GameLoad(string name, Links.DisableMethod disableOption)
+        public static void GameLoad(string name, Data.DisableMethodDelegate disableOption)
         {
             Data.XmlParagraphs.Clear();
             Data.Triggers.Clear();

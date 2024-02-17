@@ -46,8 +46,6 @@ namespace Seeker.Gamebook
 
         public string Setting;
 
-        public Links Links;
-
         public string AuthorsIndex()
         {
             string[] elements = Authors.First().Split(' ');
