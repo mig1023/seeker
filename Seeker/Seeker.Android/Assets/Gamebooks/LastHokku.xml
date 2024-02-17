@@ -9,7 +9,7 @@
 			<ButtonFont Value="000000"/>
 		</Styles>
 		<Lists>
-			<GetParagraphsWithoutHokkuCreation Items="0, 1, 9, 10, 11, 12"/>
+			<GetParagraphsWithoutHokkuCreation Items="0, 8, 9, 10, 11, 12"/>
 		</Lists>
 		<Default>
 			<DisabledOption Value="Hide"/>
