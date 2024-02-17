@@ -4,10 +4,11 @@ using System.Linq;
 using System.Reflection;
 using System.Xml;
 using Seeker.Game;
+using Seeker.Output;
 
 namespace Seeker.Prototypes
 {
-    class Paragraphs
+    class Paragraphs : Abstract.IParagraphs
     {
         public static Constants StaticInstance = new Constants();
         public static Constants GetInstance() => StaticInstance;
@@ -84,7 +85,7 @@ namespace Seeker.Prototypes
         {
             actions.Type = xmlAction.Name;
             actions.Button = Xml.StringParse(xmlAction["Button"]);
-            actions.Texts = Xml.TextsParse(xmlAction);
+            actions.Texts = TextsParse(xmlAction);
             actions.Trigger = Xml.StringParse(xmlAction["Trigger"]);
             actions.Head = Xml.StringParse(xmlAction["Head"]);
             actions.Price = Xml.IntParse(xmlAction["Price"]);
@@ -124,8 +125,45 @@ namespace Seeker.Prototypes
             return modification;
         }
 
+        //public virtual List<Text> TextsParse(XmlNode xmlNode, string optionName = "")
+        public virtual List<Text> TextsParse(XmlNode xmlNode, bool main = false)
+        {
+            //List<string> textsByProperties = Data.Actions.TextByProperties(xmlNode["Text"]);
+            //string textByOption = Data.Actions.TextByOptions(optionName);
+
+            //if (textsByProperties != null)
+            //{
+            //    List<Text> texts = new List<Text>();
+
+            //    foreach (string text in textsByProperties)
+            //        texts.Add(TextLine(text));
+
+            //    return texts;
+            //}
+            //else if (!String.IsNullOrEmpty(optionName) && !String.IsNullOrEmpty(textByOption))
+            //{
+            //    return new List<Text> { TextLine(textByOption) };
+            //}
+            //else
+            if (xmlNode["Text"] != null)
+            {
+                return new List<Text> { Xml.TextLineParse(xmlNode["Text"]) };
+            }
+            else
+            {
+                List<Text> texts = new List<Text>();
+
+                foreach (XmlNode text in xmlNode.SelectNodes("Texts/Text"))
+                    texts.Add(Xml.TextLineParse(text));
+
+                return texts;
+            }
+        }
+
         public Paragraph ParagraphTemplate(XmlNode xmlParagraph) => new Paragraph
         {
+            Texts = TextsParse(xmlParagraph, main: true),
+
             Options = new List<Option>(),
             Actions = new List<Abstract.IActions>(),
             Modification = new List<Abstract.IModification>(),
@@ -144,7 +182,7 @@ namespace Seeker.Prototypes
             Dynamic = Xml.BoolParse(xmlOption.Attributes["Dynamic"]),
             Singleton = Xml.StringParse(xmlOption.Attributes["Singleton"]),
             Input = Xml.StringParse(xmlOption.Attributes["Input"]),
-            Aftertexts = Xml.TextsParse(xmlOption),
+            Aftertexts = TextsParse(xmlOption),
             Style = Xml.StringParse(xmlOption.Attributes["Style"]),
             Do = new List<Abstract.IModification>(),
         };

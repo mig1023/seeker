@@ -10,6 +10,9 @@ namespace Seeker.Game
         public delegate void DisableMethodDelegate(string name);
 
         public static string CurrentGamebook { get; set; }
+        public static Paragraph CurrentParagraph { get; set; }
+        public static int CurrentParagraphID { get; set; }
+        public static string CurrentSelectedOption { get; set; }
 
         public enum ColorTypes
         {
@@ -39,9 +42,6 @@ namespace Seeker.Game
             "ChooseCthulhu_Cursed",
         };
 
-        public static Paragraph CurrentParagraph { get; set; }
-        public static int CurrentParagraphID { get; set; }
-
         public static Dictionary<int, XmlNode> XmlParagraphs = new Dictionary<int, XmlNode>();
 
         public static List<string> Triggers = new List<string>();
@@ -60,6 +60,14 @@ namespace Seeker.Game
             Type gamebookClass = Type.GetType($"Seeker.Gamebook.{CurrentGamebook}.{names[0]}");
 
             MethodInfo gamebookInstance = gamebookClass.GetMethod("GetInstance");
+
+            if (gamebookInstance == null)
+            {
+                string[] className = method.Split('.');
+                gamebookClass = Type.GetType($"Seeker.Prototypes.{className[0]}");
+                gamebookInstance = gamebookClass.GetMethod("GetInstance");
+            }
+
             object instance = gamebookInstance.Invoke(null, parameters: null);
             
             MethodInfo gamebookMethod = gamebookClass.GetMethod(names[1]);

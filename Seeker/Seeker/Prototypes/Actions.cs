@@ -6,10 +6,10 @@ using Seeker.Game;
 
 namespace Seeker.Prototypes
 {
-    class Actions
+    class Actions : Abstract.IActions
     {
-        public static Constants StaticInstance = new Constants();
-        public static Constants GetInstance() => StaticInstance;
+        public static Actions StaticInstance = new Actions();
+        public static Actions GetInstance() => StaticInstance;
 
         public string Type { get; set; }
         public string Button { get; set; }
@@ -135,9 +135,6 @@ namespace Seeker.Prototypes
         public virtual void UseHealing(int healingLevel) =>
             Services.DoNothing();
 
-        public virtual string TextByOptions(string option) =>
-            String.Empty;
-        
         public virtual List<string> TextByProperties(XmlNode text) =>
             null;
 

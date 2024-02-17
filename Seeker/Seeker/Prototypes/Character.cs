@@ -4,10 +4,10 @@ using System.Linq;
 
 namespace Seeker.Prototypes
 {
-    class Character
+    class Character : Abstract.ICharacter
     {
-        public static Constants Protagonist = new Constants();
-        public static Constants GetInstance() => Protagonist;
+        public static Character Protagonist = new Character();
+        public static Character GetInstance() => Protagonist;
 
         public string Name { get; set; }
 

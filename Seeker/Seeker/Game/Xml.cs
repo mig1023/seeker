@@ -86,7 +86,7 @@ namespace Seeker.Game
             return modification;
         }
 
-        private static Text TextLineParse(XmlNode text)
+        public static Text TextLineParse(XmlNode text)
         {
             StringComparer ignoreCase = StringComparer.CurrentCultureIgnoreCase;
 
@@ -129,56 +129,56 @@ namespace Seeker.Game
             return output;
         }
 
-        public static void AllTextParse(ref StackLayout textPlace,
-            int id, string optionName, out string text)
-        {
-            text = String.Empty;
+        //public static void AllTextParse(ref StackLayout textPlace,
+        //    int id, string optionName, out string text)
+        //{
+        //    text = String.Empty;
 
-            foreach (Text texts in Xml.TextsParse(Data.XmlParagraphs[id], optionName))
-            {
-                textPlace.Children.Add(Interface.TextBySelect(texts));
-                text += $"{texts.Content}\\n\\n";
-            }
-        }
+        //    foreach (Text texts in Xml.TextsParse(Data.XmlParagraphs[id], optionName))
+        //    {
+        //        textPlace.Children.Add(Interface.TextBySelect(texts));
+        //        text += $"{texts.Content}\\n\\n";
+        //    }
+        //}
 
-        private static Text TextLine(string line) => new Text
+        public static Text TextLine(string line) => new Text
         {
             Content = line,
             Size = Interface.TextFontSize.Big,
         };
 
-        public static List<Text> TextsParse(XmlNode xmlNode, string optionName = "")
-        {
-            List<string> textsByProperties = Data.Actions.TextByProperties(xmlNode["Text"]);
-            string textByOption = Data.Actions.TextByOptions(optionName);
+        //public static List<Text> TextsParse(XmlNode xmlNode, string optionName = "")
+        //{
+        //    List<string> textsByProperties = Data.Actions.TextByProperties(xmlNode["Text"]);
+        //    string textByOption = Data.Actions.TextByOptions(optionName);
 
-            if (textsByProperties != null)
-            {
-                List<Text> texts = new List<Text>();
+        //    if (textsByProperties != null)
+        //    {
+        //        List<Text> texts = new List<Text>();
 
-                foreach (string text in textsByProperties)
-                    texts.Add(TextLine(text));
+        //        foreach (string text in textsByProperties)
+        //            texts.Add(TextLine(text));
 
-                return texts;
-            }
-            else if (!String.IsNullOrEmpty(optionName) && !String.IsNullOrEmpty(textByOption))
-            {
-                return new List<Text> { TextLine(textByOption) };
-            }
-            else if (xmlNode["Text"] != null)
-            {
-                return new List<Text> { TextLineParse(xmlNode["Text"]) };
-            }
-            else
-            {
-                List<Text> texts = new List<Text>();
-                
-                foreach (XmlNode text in xmlNode.SelectNodes("Texts/Text"))
-                    texts.Add(TextLineParse(text));
+        //        return texts;
+        //    }
+        //    else if (!String.IsNullOrEmpty(optionName) && !String.IsNullOrEmpty(textByOption))
+        //    {
+        //        return new List<Text> { TextLine(textByOption) };
+        //    }
+        //    else if (xmlNode["Text"] != null)
+        //    {
+        //        return new List<Text> { TextLineParse(xmlNode["Text"]) };
+        //    }
+        //    else
+        //    {
+        //        List<Text> texts = new List<Text>();
 
-                return texts;
-            }
-        }
+        //        foreach (XmlNode text in xmlNode.SelectNodes("Texts/Text"))
+        //            texts.Add(TextLineParse(text));
+
+        //        return texts;
+        //    }
+        //}
 
         private static XmlDocument GetGamebookXmlFile(string name)
         {
@@ -226,9 +226,8 @@ namespace Seeker.Game
                 Data.XmlParagraphs.Add(Xml.IntParse(xmlNode.Attributes["No"]), xmlNode);
 
             GetLinksFromBook(name);
-
-            Data.DisableMethod = disableOption;
             Data.Constants.Clean();
+            Data.DisableMethod = disableOption;
 
             foreach (XmlNode xmlNode in xmlFile.SelectNodes(Intro("Styles/*")))
             {

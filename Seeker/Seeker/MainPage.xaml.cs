@@ -248,6 +248,7 @@ namespace Seeker
                 Game.Data.MethodFromBook("Character.Init", out string _);
             }
 
+            Game.Data.CurrentSelectedOption = optionName;
             Game.Paragraph paragraph = null;
 
             if ((Game.Data.CurrentParagraphID != id) || startOfGame || loadGame)
@@ -264,7 +265,19 @@ namespace Seeker
 
             GamepageSettings();
 
-            Game.Xml.AllTextParse(ref Text, id, optionName, out string text);
+            //Game.Xml.AllTextParse(ref Text, id, optionName, out string text);
+
+            ///////////////////////////////////////////
+            string text = String.Empty;
+
+            //foreach (Output.Text texts in Game.Xml.TextsParse(Game.Data.XmlParagraphs[id], optionName))
+            foreach (Output.Text texts in paragraph.Texts)
+            {
+                Text.Children.Add(Output.Interface.TextBySelect(texts));
+                text += $"{texts.Content}\\n\\n";
+            }
+
+            ///////////////////////////////////////////
 
             if (Game.Settings.IsEnabled("Audiobook"))
                 Speach(text);
