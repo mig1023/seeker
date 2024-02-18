@@ -115,26 +115,5 @@ namespace Seeker.Gamebook.PresidentSimulator
                 return true;
             }
         }
-
-        public override List<string> TextByProperties(XmlNode text)
-        {
-            if ((text == null) || (text.InnerText != "[text by propertires]"))
-                return null;
-
-            int part = Option.IsTriggered("полугодие") ? 2 : 1;
-
-            if ((protagonist.Year == 1980) && (part == 2))
-            {
-                part = Option.IsTriggered("Ультраправые террористы") ? 3 : 2;
-            }
-            else if ((protagonist.Year == 1983) && (part == 1))
-            {
-                part = Option.IsTriggered("Повстанцы-коммунисты") ? 1 : 3;
-            }
-
-            string yearPart = $"{protagonist.Year}-{part}";
-            string yearLine = Constants.TextByYears[yearPart];
-            return yearLine.Split('|').ToList();
-        }
     }
 }
