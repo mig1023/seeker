@@ -83,6 +83,9 @@ namespace Seeker.Gamebook.Moria
 
         private void PartOfFight(ref List<string> fight, string hero, int count)
         {
+            if (!IsStillSomeoneToFight())
+                return;
+
             int frags = 0;
             int lastDice = 0;
             bool secondRound = false;
@@ -165,6 +168,10 @@ namespace Seeker.Gamebook.Moria
                     fight.Add(String.Empty);
 
                     int countForEach = Enemies.Count / protagonist.Fellowship.Count;
+
+                    if (countForEach <= 0)
+                        countForEach = 1;
+
                     List<string> allWarriors = new List<string>(protagonist.Fellowship);
 
                     foreach (string warrior in allWarriors)
