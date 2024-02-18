@@ -50,25 +50,20 @@ namespace Seeker.Gamebook.LastHokku
 
         public override List<Text> TextsParse(XmlNode xmlNode, bool main = false)
         {
-            string textByOption = TextByOptions(Game.Data.CurrentSelectedOption);
+            string textByOption = TextByOptions(Data.CurrentSelectedOption);
+
+            List<Text> text = new List<Text>();
 
             if (main && !String.IsNullOrEmpty(textByOption))
             {
-                return new List<Text> { Xml.TextLine(textByOption) };
+                text.Add(Xml.TextLine(textByOption));
             }
             else if (xmlNode["Text"] != null)
             {
-                return new List<Text> { Xml.TextLineParse(xmlNode["Text"]) };
+                text.Add(Xml.TextLineParse(xmlNode["Text"]));
             }
-            else
-            {
-                List<Text> texts = new List<Text>();
 
-                foreach (XmlNode text in xmlNode.SelectNodes("Texts/Text"))
-                    texts.Add(Xml.TextLineParse(text));
-
-                return texts;
-            }
+            return text;
         }
     }
 }
