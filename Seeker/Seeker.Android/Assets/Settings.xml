@@ -69,6 +69,11 @@
 		<Description>Вариант игры в высоком контрасте, без цветового оформления и без рисунков и иллюстраций.</Description>
 	</Setting>
 	<Setting>
+		<Name>Мгновенная прокрутка</Name>
+		<Type>WithoutScrolling</Type>
+		<Description>При переходе или возвращении на другую страницу будет мгновенный переход к её началу, а не плавный.</Description>
+	</Setting>
+	<Setting>
 		<Name>Режим аудиокниги</Name>
 		<Type>Audiobook</Type>
 	</Setting>

@@ -52,7 +52,7 @@ namespace Seeker
         }
 
         private void ScrollToTop() =>
-            MainScroll.ScrollToAsync(MainScroll, ScrollToPosition.Start, true);
+            MainScroll.ScrollToAsync(MainScroll, ScrollToPosition.Start, !Game.Settings.IsEnabled("WithoutScrolling"));
 
         public void DisableMethod(string name)
         {
