@@ -7,7 +7,8 @@
 		<Styles>
 			<Main Value="232322"/>
 			<Background Value="e3e8eb"/>
-			<Color Name="Option, System, Continue" Value="889293"/>
+			<Color Name="Option, Continue" Value="889293"/>
+			<System Value="b7bdbe"/>
 			<StatusBar Value="474745"/>
 			<ActionBox Value="b7c1c3"/>
 			<Action Value="474745"/>
