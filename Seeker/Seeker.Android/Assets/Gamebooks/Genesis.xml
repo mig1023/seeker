@@ -13,7 +13,8 @@
 			<Option Value="6f8696"/>
 			<Action Value="445d6f"/>
 			<Continue Value="849fb3"/>
-			<Color Name="StatusBar, System" Value="3c5363"/>
+			<StatusBar Value="3c5363"/>
+			<System Value="b1bac0"/>
 		</Styles>
 		<Lists>
 			<WithoutStatuses Items="0, 201, 202, 203, 204, 205, 206, 207"/>
