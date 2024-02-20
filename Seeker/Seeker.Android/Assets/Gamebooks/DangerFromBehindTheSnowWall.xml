@@ -12,6 +12,14 @@
 			<Color Name="Action, Option" Value="7c8898"/>
 			<SystemFont Value="ffffff"/>
 		</Styles>
+		<Dictionaries>
+			<Skills ItemsByOrder=", 9, 10, 12, 11, 11, 9"/>
+			<Strengths ItemsByOrder=", 27, 28, 24, 25, 20, 21"/>
+			<Damage ItemsByOrder=", 5, 4, 4, 4, 5, 4"/>
+			<Observation ItemsByOrder=", 3, 5, 4, 5, 4, 4"/>
+			<Money ItemsByOrder=", 200, 140, 125, 155, 50, 180"/>
+			<LuckList Items="1:①, 2:②, 3:③, 4:④, 5:⑤, 6:⑥, 11:❶, 12:❷, 13:❸, 14:❹, 15:❺, 16:❻"/>
+		</Dictionaries>
 		<Default>
 			<DisabledOption Value="Hide"/>
 			<FontSize Value="Little"/>
