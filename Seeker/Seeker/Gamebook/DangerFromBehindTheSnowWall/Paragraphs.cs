@@ -31,6 +31,9 @@ namespace Seeker.Gamebook.DangerFromBehindTheSnowWall
                     action.Enemies.Add(EnemyParse(xmlEnemy));
             }
 
+            if (action.Type == "Option")
+                action.Option = OptionParse(xmlAction);
+
             return action;
         }
 
