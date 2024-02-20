@@ -25,7 +25,6 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             $"Ловкость: {protagonist.Skill}",
             $"Сила: {protagonist.Strength}/{protagonist.MaxStrength}",
             $"Честь: {protagonist.Honor}",
-
         };
 
         private static string ToEcu(int ecu) =>
@@ -35,7 +34,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
         {
             List<string> statusLines = new List<string>();
 
-            statusLines.Add($"    День: {protagonist.Day}");
+            statusLines.Add($"День: {protagonist.Day}");
             statusLines.Add($"Экю: {ToEcu(protagonist.Ecu)}");
 
             if (protagonist.BulletsAndGubpowder > 0)
