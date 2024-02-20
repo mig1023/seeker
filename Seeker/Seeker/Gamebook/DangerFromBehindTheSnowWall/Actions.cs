@@ -16,8 +16,13 @@ namespace Seeker.Gamebook.DangerFromBehindTheSnowWall
             $"Ловкость: {protagonist.Skill}",
             $"Сила: {protagonist.Strength}/{protagonist.MaxStrength}",
             $"Удар: {protagonist.Damage}",
-            $"Деньги: {MoneyFormat(protagonist.Money)}",
+        };
 
+        public override List<string> AdditionalStatus() => new List<string>
+        {
+            $"Наблюдательность: {protagonist.Skill}",
+            $"Деньги: {MoneyFormat(protagonist.Money)}",
+            $"Магия: {protagonist.Magic}",
         };
 
         private static string MoneyFormat(int ecu) =>
