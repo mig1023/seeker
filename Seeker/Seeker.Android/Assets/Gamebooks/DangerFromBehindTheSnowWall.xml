@@ -11,6 +11,7 @@
 			<Color Name="ActionBox, StatusBar" Value="a0afc4"/>
 			<Color Name="Action, Option" Value="7c8898"/>
 			<SystemFont Value="ffffff"/>
+			<AdditionalStatus Value="bcc7d5"/>
 		</Styles>
 		<Dictionaries>
 			<Skills ItemsByOrder=", 9, 10, 12, 11, 11, 9"/>
