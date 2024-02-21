@@ -151,5 +151,36 @@ namespace Seeker.Gamebook.DangerFromBehindTheSnowWall
 
             return observationCheck;
         }
+
+        private static string Numbers()
+        {
+            string luckListShow = String.Empty;
+
+            for (int i = 1; i < 7; i++)
+            {
+                string luck = Constants.LuckList[Character.Protagonist.Luck[i] ? i : i + 10];
+                luckListShow += $"{luck} ";
+            }
+
+            return luckListShow;
+        }
+
+        public List<string> Luck()
+        {
+            List<string> luckCheck = new List<string>
+            {
+                "Числа удачи:",
+                "BIG|" + Numbers()
+            };
+
+            int goodLuck = Game.Dice.Roll();
+
+            string luckLine = protagonist.Luck[goodLuck] ? "не " : String.Empty;
+            luckCheck.Add($"Проверка удачи: {Game.Dice.Symbol(goodLuck)} - {luckLine}является Числом Удачи");
+
+            luckCheck.Add(Result(protagonist.Luck[goodLuck], "УСПЕХ|НЕУДАЧА"));
+
+            return luckCheck;
+        }
     }
 }
