@@ -134,5 +134,22 @@ namespace Seeker.Gamebook.DangerFromBehindTheSnowWall
                 round += 1;
             }
         }
+
+        public List<string> Observation()
+        {
+            Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
+
+            bool goodLuck = (firstDice + secondDice + protagonist.Observation) > 10;
+            string luckLine = goodLuck ? ">" : "<=";
+
+            List<string> observationCheck = new List<string> {
+                $"Проверка наблюдательности: {Game.Dice.Symbol(firstDice)} + " +
+                $"{Game.Dice.Symbol(secondDice)} + {protagonist.Observation} " +
+                $"{luckLine} 10" };
+
+            observationCheck.Add(goodLuck ? "BIG|GOOD|УСПЕХ :)" : "BIG|BAD|НЕУДАЧА :(");
+
+            return observationCheck;
+        }
     }
 }
