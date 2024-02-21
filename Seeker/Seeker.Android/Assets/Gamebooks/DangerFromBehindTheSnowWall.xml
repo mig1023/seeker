@@ -2273,7 +2273,9 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="326">
-			<Text>ПРОВЕРКА НАБЛЮДАТЕЛЬНОСТИ.</Text>
+			<Actions>
+				<Observation/>
+			</Actions>
 			<Options>
 				<Option Goto="57" Text="Заметили"/>
 				<Option Goto="725" Text="Нет"/>
