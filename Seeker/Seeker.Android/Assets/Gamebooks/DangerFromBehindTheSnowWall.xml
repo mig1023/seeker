@@ -1415,7 +1415,10 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="199">
-			<Text>А чем опасен сон на дереве, вы помните. ПРОВЕРЬТЕ УДАЧУ.</Text>
+			<Text>А чем опасен сон на дереве, вы помните.</Text>
+			<Actions>
+				<Luck/>
+			</Actions>
 			<Options>
 				<Option Goto="603" Text="Удачливы"/>
 				<Option Goto="666" Text="Нет"/>
