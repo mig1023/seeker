@@ -2335,6 +2335,7 @@
 			</Actions>
 			<Modifications>
 				<Strength Value="-10"/>
+				<Skill Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Goto="337"/>
