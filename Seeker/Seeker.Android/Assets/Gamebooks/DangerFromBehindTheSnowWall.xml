@@ -2684,6 +2684,9 @@
 		</Paragraph>
 		<Paragraph No="355">
 			<Text>Двух порций живительного тепла вам хватит впритык, чтобы не замерзнуть насмерть, но ночь будет очень тяжелой. К утру холод отнимет у вас 6 СИЛ (запомните это).</Text>
+			<Modifications>
+				<Strength Value="-6"/>
+			</Modifications>
 			<Options>
 				<Option Goto="418"/>
 			</Options>
