@@ -2092,6 +2092,7 @@
 			<Modifications>
 				<Strength Value="-8"/>
 				<Skill Value="-1"/>
+				<Observation Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Goto="387" Text="Хотите воспользоваться «Светляком», чтобы осветить дупло и рассмотреть негодяя"/>
