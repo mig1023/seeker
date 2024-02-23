@@ -29,6 +29,9 @@ namespace Seeker.Gamebook.DangerFromBehindTheSnowWall
         private static string MoneyFormat(int ecu) =>
             String.Format("{0:f1}", (double)ecu / 10).TrimEnd('0').TrimEnd(',').Replace(',', '.');
 
+        public override bool GameOver(out int toEndParagraph, out string toEndText) =>
+                GameOverBy(protagonist.Strength, out toEndParagraph, out toEndText);
+
         public override List<string> Representer()
         {
             List<string> enemies = new List<string>();
