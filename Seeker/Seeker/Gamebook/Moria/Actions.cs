@@ -144,6 +144,12 @@ namespace Seeker.Gamebook.Moria
         private bool IsStillSomeoneToFight() =>
             (Enemies.Count > 0) && (protagonist.Fellowship.Count > 0);
 
+        private int EnemiesForEach(int count)
+        {
+            int countForEach = Enemies.Count / count;
+            return countForEach > 0 ? countForEach : 1;
+        }
+
         public List<string> Fight()
         {
             List<string> fight = new List<string>();
@@ -157,7 +163,7 @@ namespace Seeker.Gamebook.Moria
                     fight.Add($"GRAY|Врагов не так уж много, поэтому против них выходят сильные войны!");
                     fight.Add(String.Empty);
 
-                    int countForEach = Enemies.Count / strongWarriors.Count;
+                    int countForEach = EnemiesForEach(strongWarriors.Count);
 
                     foreach (string warrior in strongWarriors)
                         PartOfFight(ref fight, warrior, countForEach);
@@ -167,10 +173,7 @@ namespace Seeker.Gamebook.Moria
                     fight.Add($"GRAY|Враги бесчисленны, сразиться придётся каждому!!");
                     fight.Add(String.Empty);
 
-                    int countForEach = Enemies.Count / protagonist.Fellowship.Count;
-
-                    if (countForEach <= 0)
-                        countForEach = 1;
+                    int countForEach = EnemiesForEach(protagonist.Fellowship.Count);
 
                     List<string> allWarriors = new List<string>(protagonist.Fellowship);
 
