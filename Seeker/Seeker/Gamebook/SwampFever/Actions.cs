@@ -6,10 +6,6 @@ namespace Seeker.Gamebook.SwampFever
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {
-        public new static Actions StaticInstance = new Actions();
-        public new static Actions GetInstance() => StaticInstance;
-        private static Character protagonist = Character.Protagonist;
-
         public string EnemyName { get; set; }
         public string EnemyCombination { get; set; }
 
@@ -40,30 +36,30 @@ namespace Seeker.Gamebook.SwampFever
 
         public override List<string> AdditionalStatus() => new List<string>
         {
-            $"Ярость: {Constants.GetFuryLevel[protagonist.Fury]}",
-            $"Креды: {protagonist.Creds}",
-            $"Стигон: {protagonist.Stigon}/6",
-            $"Котировка: 1:{protagonist.Rate}",
+            $"Ярость: {Constants.GetFuryLevel[Character.Protagonist.Fury]}",
+            $"Креды: {Character.Protagonist.Creds}",
+            $"Стигон: {Character.Protagonist.Stigon}/6",
+            $"Котировка: 1:{Character.Protagonist.Rate}",
         };
 
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
-            GameOverBy(protagonist.HarversterDestroyed, out toEndParagraph, out toEndText);
+            GameOverBy(Character.Protagonist.HarversterDestroyed, out toEndParagraph, out toEndText);
 
         public override bool IsButtonEnabled(bool secondButton = false)
         {
-            bool byPrice = (Price > 0) && (protagonist.Creds < Price);          
-            bool byMembrane = (Type == "SellAcousticMembrane") && (protagonist.AcousticMembrane <= 0);
-            bool byMucus = (Type == "SellLiveMucus") && (protagonist.LiveMucus <= 0);
+            bool byPrice = (Price > 0) && (Character.Protagonist.Creds < Price);          
+            bool byMembrane = (Type == "SellAcousticMembrane") && (Character.Protagonist.AcousticMembrane <= 0);
+            bool byMucus = (Type == "SellLiveMucus") && (Character.Protagonist.LiveMucus <= 0);
 
             bool byUsed = false;
 
             if ((Type == "Get") && (Head == "Серенитатин"))
             {
-                return (GetProperty(protagonist, Benefit.Name) > -2) && (protagonist.Creds > 0);
+                return (GetProperty(Character.Protagonist, Benefit.Name) > -2) && (Character.Protagonist.Creds > 0);
             }
             else
             {
-                bool already = Benefit != null && (GetProperty(protagonist, Benefit.Name) > 0);
+                bool already = Benefit != null && (GetProperty(Character.Protagonist, Benefit.Name) > 0);
                 byUsed = (String.IsNullOrEmpty(EnemyName) && (Benefit != null) && already);
             }
 
@@ -98,7 +94,7 @@ namespace Seeker.Gamebook.SwampFever
         public List<string> MentalTest()
         {
             int mentalDice = Game.Dice.Roll();
-            int fury = protagonist.Fury;
+            int fury = Character.Protagonist.Fury;
             int mentalAndFury = mentalDice + fury;
             int level = Level;
             string furyLine = fury < 0 ? "-" : "+";
@@ -112,7 +108,7 @@ namespace Seeker.Gamebook.SwampFever
 
             int ord = 3;
 
-            if (protagonist.Harmonizer > 0)
+            if (Character.Protagonist.Harmonizer > 0)
             {
                 level += 1;
                 ord += 1;
@@ -131,7 +127,7 @@ namespace Seeker.Gamebook.SwampFever
             if (DeathTest && !success)
             {
                 mentalCheck.Add("\nBOLD|Ваш харвестер подбит и уничтожен :(");
-                protagonist.HarversterDestroyed = true;
+                Character.Protagonist.HarversterDestroyed = true;
             }
 
             return mentalCheck;
@@ -139,9 +135,9 @@ namespace Seeker.Gamebook.SwampFever
 
         public List<string> Get()
         {
-            if ((Price > 0) && (protagonist.Creds >= Price))
+            if ((Price > 0) && (Character.Protagonist.Creds >= Price))
             {
-                protagonist.Creds -= Price;
+                Character.Protagonist.Creds -= Price;
 
                 if (Benefit != null)
                     Benefit.Do();
@@ -157,7 +153,7 @@ namespace Seeker.Gamebook.SwampFever
             bool upgradeInAction = false;
 
             for (int i = 1; i <= Constants.GetUpgrates.Count; i++)
-                upgrades += GetProperty(protagonist, Details.GetUpgratesValues(i, part: 1));
+                upgrades += GetProperty(Character.Protagonist, Details.GetUpgratesValues(i, part: 1));
 
             if (upgrades == 0)
                 return upgradeInAction;
@@ -170,7 +166,7 @@ namespace Seeker.Gamebook.SwampFever
 
             for (int i = 1; i <= Constants.GetUpgrates.Count; i++)
             {
-                if (GetProperty(protagonist, Details.GetUpgratesValues(i, part: 1)) == 0)
+                if (GetProperty(Character.Protagonist, Details.GetUpgratesValues(i, part: 1)) == 0)
                     continue;
 
                 bool inAction = upgradeDice == i;
@@ -201,7 +197,7 @@ namespace Seeker.Gamebook.SwampFever
             List<int> myCombination = new List<int>();
             List<string> myCombinationLine = new List<string>();
 
-            int combinationLength = 6 + protagonist.Fury;
+            int combinationLength = 6 + Character.Protagonist.Fury;
 
             for (int i = 0; i < combinationLength; i++)
             {
@@ -300,7 +296,7 @@ namespace Seeker.Gamebook.SwampFever
                         if (range == 4)
                         {
                             fight.Add("BIG|BAD|Противник уничтожил вас тараном :(");
-                            protagonist.HarversterDestroyed = true;
+                            Character.Protagonist.HarversterDestroyed = true;
                             return fight;
                         }
                         else
@@ -349,7 +345,7 @@ namespace Seeker.Gamebook.SwampFever
                             else if ((myAttack < enemyAttack) && (range == 4))
                             {
                                 fight.Add("BIG|BAD|Противник уничтожил вас тараном :(");
-                                protagonist.HarversterDestroyed = true;
+                                Character.Protagonist.HarversterDestroyed = true;
                                 return fight;
                             }
                             else if (myAttack > enemyAttack)
@@ -438,7 +434,7 @@ namespace Seeker.Gamebook.SwampFever
                         if (myEvasion > 2)
                         {
                             fight.Add("BIG|BAD|Противник уничтожил вас :(");
-                            protagonist.HarversterDestroyed = true;
+                            Character.Protagonist.HarversterDestroyed = true;
                             return fight;
                         }
                         else
@@ -456,26 +452,26 @@ namespace Seeker.Gamebook.SwampFever
         {
             List<string> accountingReport = new List<string>();
 
-            int soldStigon = protagonist.Stigon;
+            int soldStigon = Character.Protagonist.Stigon;
             int earnedCreds = 0, sellNum = 0;
 
-            accountingReport.Add($"В вашем грузовом отсеке {protagonist.Stigon} кубометров стигона");
-            accountingReport.Add($"Курс стигона на начало продажи: 1:{protagonist.Rate}"); 
+            accountingReport.Add($"В вашем грузовом отсеке {Character.Protagonist.Stigon} кубометров стигона");
+            accountingReport.Add($"Курс стигона на начало продажи: 1:{Character.Protagonist.Rate}"); 
 
-            while (protagonist.Stigon > 0)
+            while (Character.Protagonist.Stigon > 0)
             {
                 sellNum += 1;
                 accountingReport.Add(String.Empty);
 
-                protagonist.Stigon -= 1;
-                earnedCreds += protagonist.Rate;
-                accountingReport.Add($"BOLD|Продажа {sellNum} кубометра стигона: +{protagonist.Rate} кредов");
+                Character.Protagonist.Stigon -= 1;
+                earnedCreds += Character.Protagonist.Rate;
+                accountingReport.Add($"BOLD|Продажа {sellNum} кубометра стигона: +{Character.Protagonist.Rate} кредов");
                 accountingReport.Add($"Подытог к зачислению: {earnedCreds} кредов");
 
-                if (protagonist.Rate > 5)
+                if (Character.Protagonist.Rate > 5)
                 {
-                    protagonist.Rate -= 5;
-                    accountingReport.Add($"Курс стигона упал до: {protagonist.Rate} кредов");
+                    Character.Protagonist.Rate -= 5;
+                    accountingReport.Add($"Курс стигона упал до: {Character.Protagonist.Rate} кредов");
                 }
                 else
                 {
@@ -488,7 +484,7 @@ namespace Seeker.Gamebook.SwampFever
             accountingReport.Add($"Вы продали: {soldStigon} кубометров стигона");
             accountingReport.Add($"BOLD|GOOD|Вы получили по плавающему курсу: {earnedCreds} кредов");
 
-            protagonist.Creds += earnedCreds;
+            Character.Protagonist.Creds += earnedCreds;
 
             return accountingReport;
         }
@@ -501,12 +497,12 @@ namespace Seeker.Gamebook.SwampFever
             bool? prevAffordable = null;
 
            
-            if (protagonist.Creds >= 1500)
+            if (Character.Protagonist.Creds >= 1500)
             {
                 purchasesReport.Add("GOOD|BOLD|ВАМ ДОСТУПНО ВСЁ!! :)\n");
                 anything = true;
             }
-            else if (protagonist.Creds < 5)
+            else if (Character.Protagonist.Creds < 5)
             {
                 purchasesReport.Add("BAD|BOLD|ВАМ НЕ ДОСТУПНО НИЧЕГО!! :(\n");
                 anything = true;
@@ -514,7 +510,7 @@ namespace Seeker.Gamebook.SwampFever
                 
             foreach (KeyValuePair<string, int> purchase in Constants.GetPurchases.OrderBy(x => x.Value))
             {
-                affordable = (purchase.Value <= protagonist.Creds) && !anything;
+                affordable = (purchase.Value <= Character.Protagonist.Creds) && !anything;
                 string affLine = (affordable ? "GOOD|BOLD|" : String.Empty);
 
                 if (!anything)
@@ -530,16 +526,16 @@ namespace Seeker.Gamebook.SwampFever
 
         public List<string> SellAcousticMembrane()
         {
-            protagonist.Creds += 100;
-            protagonist.AcousticMembrane -= 1;
+            Character.Protagonist.Creds += 100;
+            Character.Protagonist.AcousticMembrane -= 1;
 
             return new List<string> { "RELOAD" };
         }
 
         public List<string> SellLiveMucus()
         {
-            protagonist.Creds += 100;
-            protagonist.LiveMucus -= 1;
+            Character.Protagonist.Creds += 100;
+            Character.Protagonist.LiveMucus -= 1;
 
             return new List<string> { "RELOAD" };
         }
@@ -763,7 +759,7 @@ namespace Seeker.Gamebook.SwampFever
 
                     if (((distance == 0) && (shot > 3)) || ((distance > 0) && (shot > 4)))
                     {
-                        protagonist.Stigon += 1;
+                        Character.Protagonist.Stigon += 1;
 
                         huntReport.Add("BIG|GOOD|Вы подстрелили зверя :)");
                         return huntReport;

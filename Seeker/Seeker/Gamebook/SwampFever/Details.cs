@@ -5,8 +5,6 @@ namespace Seeker.Gamebook.SwampFever
 {
     class Details
     {
-        private static Character protagonist = Character.Protagonist;
-
         public static string GetUpgratesValues(int index, int part) =>
             Constants.GetUpgrates[index].Split('|')[part - 1];
 
@@ -30,7 +28,7 @@ namespace Seeker.Gamebook.SwampFever
 
         public static List<string> PursuitWin(List<string> pursuitReport)
         {
-            protagonist.Stigon += 1;
+            Character.Protagonist.Stigon += 1;
 
             pursuitReport.Add("BIG|GOOD|Вы настигли шар :)");
             return pursuitReport;
@@ -38,7 +36,7 @@ namespace Seeker.Gamebook.SwampFever
 
         public static List<string> PursuitFail(List<string> pursuitReport)
         {
-            protagonist.Fury += 1;
+            Character.Protagonist.Fury += 1;
 
             pursuitReport.Add("BIG|BAD|Вы упустили куст :(");
             return pursuitReport;
