@@ -6,17 +6,13 @@ namespace Seeker.Gamebook.Catharsis
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {
-        public new static Actions StaticInstance = new Actions();
-        public new static Actions GetInstance() => StaticInstance;
-        private static Character protagonist = Character.Protagonist;
-
         public string Bonus { get; set; }
 
         public override List<string> Representer()
         {
             if (!String.IsNullOrEmpty(Bonus))
             {
-                int diff = (GetProperty(protagonist, Bonus) - Constants.GetStartValues[Bonus]);
+                int diff = (GetProperty(Character.Protagonist, Bonus) - Constants.GetStartValues[Bonus]);
                 string diffLine = (diff > 0 ? $" (+{diff})" : String.Empty);
 
                 return new List<string> { $"{Head}{diffLine}" };
@@ -27,26 +23,26 @@ namespace Seeker.Gamebook.Catharsis
 
         public override List<string> Status() => new List<string>
         {
-            $"Здоровье: {protagonist.Life}/{protagonist.MaxLife}",
-            $"Аура: {protagonist.Aura}",
+            $"Здоровье: {Character.Protagonist.Life}/{Character.Protagonist.MaxLife}",
+            $"Аура: {Character.Protagonist.Aura}",
         };
 
         public override List<string> AdditionalStatus() =>  new List<string>
         {
-            $"Меткость: {protagonist.Accuracy}",
-            $"Рукопашный бой: {protagonist.Fight}",
-            $"Стелс: {protagonist.Stealth}",
+            $"Меткость: {Character.Protagonist.Accuracy}",
+            $"Рукопашный бой: {Character.Protagonist.Fight}",
+            $"Стелс: {Character.Protagonist.Stealth}",
         };
 
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
-            GameOverBy(protagonist.Life, out toEndParagraph, out toEndText);
+            GameOverBy(Character.Protagonist.Life, out toEndParagraph, out toEndText);
 
         public override bool IsButtonEnabled(bool secondButton = false)
         {
             bool disabledByBonusesRemove = !String.IsNullOrEmpty(Bonus) &&
-                ((GetProperty(protagonist, Bonus) - Constants.GetStartValues[Bonus]) <= 0) && secondButton;
+                ((GetProperty(Character.Protagonist, Bonus) - Constants.GetStartValues[Bonus]) <= 0) && secondButton;
 
-            bool disabledByBonusesAdd = (!String.IsNullOrEmpty(Bonus)) && (protagonist.Bonuses <= 0) && !secondButton;
+            bool disabledByBonusesAdd = (!String.IsNullOrEmpty(Bonus)) && (Character.Protagonist.Bonuses <= 0) && !secondButton;
 
             return !(disabledByBonusesRemove || disabledByBonusesAdd);
         }
@@ -69,22 +65,22 @@ namespace Seeker.Gamebook.Catharsis
                     {
                         int level = Game.Services.LevelParse(oneOption);
 
-                        if (oneOption.Contains("СТЕЛС") && (level > protagonist.Stealth))
+                        if (oneOption.Contains("СТЕЛС") && (level > Character.Protagonist.Stealth))
                             return false;
 
-                        else if (oneOption.Contains("МЕТКОСТЬ") && (level > protagonist.Accuracy))
+                        else if (oneOption.Contains("МЕТКОСТЬ") && (level > Character.Protagonist.Accuracy))
                             return false;
 
-                        else if (oneOption.Contains("РУКОПАШКА") && (level > protagonist.Fight))
+                        else if (oneOption.Contains("РУКОПАШКА") && (level > Character.Protagonist.Fight))
                             return false;
 
-                        else if (oneOption.Contains("АУРА <") && (level <= protagonist.Aura))
+                        else if (oneOption.Contains("АУРА <") && (level <= Character.Protagonist.Aura))
                             return false;
 
-                        else if (oneOption.Contains("АУРА >") && (level > protagonist.Aura))
+                        else if (oneOption.Contains("АУРА >") && (level > Character.Protagonist.Aura))
                             return false;
 
-                        else if (oneOption.Contains("ЗДОРОВЬЕ") && (level > protagonist.Life))
+                        else if (oneOption.Contains("ЗДОРОВЬЕ") && (level > Character.Protagonist.Life))
                             return false;
                     }
                     else if (!Game.Option.IsTriggered(oneOption.Trim()))
@@ -99,19 +95,19 @@ namespace Seeker.Gamebook.Catharsis
 
         public List<string> Get()
         {
-            if (!String.IsNullOrEmpty(Bonus) && (protagonist.Bonuses >= 0))
-                ChangeProtagonistParam(Bonus, protagonist, "Bonuses");
+            if (!String.IsNullOrEmpty(Bonus) && (Character.Protagonist.Bonuses >= 0))
+                ChangeProtagonistParam(Bonus, Character.Protagonist, "Bonuses");
 
             return new List<string> { "RELOAD" };
         }
 
         public List<string> Decrease() =>
-            ChangeProtagonistParam(Bonus, protagonist, "Bonuses", decrease: true);
+            ChangeProtagonistParam(Bonus, Character.Protagonist, "Bonuses", decrease: true);
 
         public override bool IsHealingEnabled() =>
-            protagonist.Life < protagonist.MaxLife;
+            Character.Protagonist.Life < Character.Protagonist.MaxLife;
 
         public override void UseHealing(int healingLevel) =>
-            protagonist.Life += healingLevel;
+            Character.Protagonist.Life += healingLevel;
     }
 }
