@@ -26,7 +26,7 @@ namespace Seeker.Prototypes
 
         public virtual Paragraph Get(int id, XmlNode xmlParagraph)
         {
-            Paragraph paragraph = new Paragraph { Options = new List<Option>() };
+            Paragraph paragraph = ParagraphTemplate(xmlParagraph);
 
             foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/*"))
             {
