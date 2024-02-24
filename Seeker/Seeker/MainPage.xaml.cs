@@ -79,11 +79,12 @@ namespace Seeker
 
             try
             {
+                Game.Data.CreateGamebookInstances(gamebook);
                 Game.Xml.GameLoad(gamebook, DisableMethod);
             }
             catch (Exception ex)
             {
-                Error("Ошибка XML-кода книги:", ex.Message);
+                Error("Ошибка загрузки книги:", ex.Message);
                 return;
             }
 
@@ -206,10 +207,7 @@ namespace Seeker
 
             if (!String.IsNullOrEmpty(option))
             {
-                Game.Data.MethodFromBook("Actions.Availability",
-                    out string onlyIfLine, param: option);
-
-                onlyIf = onlyIfLine == "True";
+                onlyIf = Game.Data.Actions.Availability(option);
             }
 
             if (singleton == "Availability")
@@ -218,10 +216,7 @@ namespace Seeker
             }
             else if (!String.IsNullOrEmpty(singleton))
             {
-                Game.Data.MethodFromBook("Actions.Availability",
-                    out string singleIfLine, param: singleton);
-
-                singleIf = singleIfLine == "True";
+                singleIf = Game.Data.Actions.Availability(option);
             }
             else
             {
@@ -245,7 +240,7 @@ namespace Seeker
             if (startOfGame)
             {
                 Game.Data.Clean(reStart: true);
-                Game.Data.MethodFromBook("Character.Init", out string _);
+                Game.Data.Character.Init();
             }
 
             Game.Data.CurrentSelectedOption = optionName;

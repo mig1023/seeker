@@ -52,12 +52,7 @@ namespace Seeker.Output
             bool availability = true;
 
             if (!String.IsNullOrEmpty(option.Availability))
-            {
-                Game.Data.MethodFromBook("Actions.Availability",
-                    out string availabilityLine, param: option.Availability);
-
-                availability = availabilityLine == "True";
-            }
+                availability = Game.Data.Actions.Availability(option.Availability);
 
             if (Game.Data.Constants.ShowDisabledOption(out bool _) || (aftertextsCount > 0))
                 optionColor = !availability;

@@ -11,5 +11,9 @@ namespace Seeker.Abstract
         void Load(string saveLine);
 
         bool ThisIsProtagonist();
+
+        void Set(object character);
+
+        string Debug();
     }
 }

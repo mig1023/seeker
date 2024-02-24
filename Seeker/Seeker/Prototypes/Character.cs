@@ -6,8 +6,8 @@ namespace Seeker.Prototypes
 {
     class Character : Abstract.ICharacter
     {
-        public static Character Protagonist = new Character();
-        public static Character GetInstance() => Protagonist;
+        public virtual void Set(object character) =>
+            Game.Services.DoNothing();
 
         public string Name { get; set; }
 

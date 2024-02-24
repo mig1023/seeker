@@ -51,32 +51,19 @@ namespace Seeker.Game
         public static Abstract.IParagraphs Paragraphs;
         public static Abstract.IActions Actions;
         public static Abstract.IConstants Constants;
+        public static Abstract.ICharacter Character;
 
-        public static MethodInfo GetGamebookInstance(string name, out Type gamebookClass)
+        private static object CreateGamebookInstance(string name, string type) =>
+            Activator.CreateInstance(Type.GetType($"Seeker.Gamebook.{name}.{type}"));
+
+        public static void CreateGamebookInstances(string name)
         {
-            gamebookClass = Type.GetType($"Seeker.Gamebook.{CurrentGamebook}.{name}");
-            MethodInfo gamebookGetLinks = gamebookClass.GetMethod("GetInstance");
+            Data.Constants = (Abstract.IConstants)CreateGamebookInstance(name, "Constants");
+            Data.Paragraphs = (Abstract.IParagraphs)CreateGamebookInstance(name, "Paragraphs");
+            Data.Actions = (Abstract.IActions)CreateGamebookInstance(name, "Actions");
+            Data.Character = (Abstract.ICharacter)CreateGamebookInstance(name, "Character");
 
-            if (gamebookGetLinks == null)
-            {
-                gamebookClass = Type.GetType($"Seeker.Prototypes.{name}");
-                gamebookGetLinks = gamebookClass.GetMethod("GetInstance");
-            }
-
-            return gamebookGetLinks;
-        }
-
-        public static void MethodFromBook(string method,
-            out string result, string param = "")
-        {
-            string[] names = method.Split('.'); 
-            MethodInfo gamebookInstance = GetGamebookInstance(names[0], out Type gamebookClass);
-            object instance = gamebookInstance.Invoke(null, parameters: null);
-            
-            MethodInfo gamebookMethod = gamebookClass.GetMethod(names[1]);
-            object[] paramsIfExists = String.IsNullOrEmpty(param) ? null : new object[] { param };  
-            object methodResult = gamebookMethod.Invoke(instance, parameters: paramsIfExists);
-            result = methodResult?.ToString() ?? String.Empty;
+            Data.Character.Set(Data.Character);
         }
 
         public static DisableMethodDelegate DisableMethod { get; set; }

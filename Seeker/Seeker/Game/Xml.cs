@@ -143,19 +143,6 @@ namespace Seeker.Game
             return xmlFile;
         }
 
-        private static object GetLinkFromBook(string className)
-        {
-            MethodInfo gamebookInstance = Game.Data.GetGamebookInstance(className, out Type _);
-            return gamebookInstance?.Invoke(null, parameters: null) ?? null;
-        }
-
-        private static void GetLinksFromBook(string name)
-        {
-            Data.Constants = (Abstract.IConstants)GetLinkFromBook("Constants");
-            Data.Paragraphs = (Abstract.IParagraphs)GetLinkFromBook("Paragraphs");
-            Data.Actions = (Abstract.IActions)GetLinkFromBook("Actions");
-        }
-
         public static void GameLoad(string name, Data.DisableMethodDelegate disableOption)
         {
             Data.XmlParagraphs.Clear();
@@ -171,7 +158,6 @@ namespace Seeker.Game
             foreach (XmlNode xmlNode in xmlFile.SelectNodes("Gamebook/Paragraphs/Paragraph"))
                 Data.XmlParagraphs.Add(Xml.IntParse(xmlNode.Attributes["No"]), xmlNode);
 
-            GetLinksFromBook(name);
             Data.Constants.Clean();
             Data.DisableMethod = disableOption;
 

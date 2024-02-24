@@ -41,5 +41,7 @@ namespace Seeker.Abstract
         List<string> TextByProperties(XmlNode text);
 
         Game.Option Option { get; set; }
+
+        bool Availability(string option);
     }
 }

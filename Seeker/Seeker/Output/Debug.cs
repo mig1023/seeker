@@ -40,7 +40,7 @@ namespace Seeker.Output
 
             info.Children.Add(Splitter.Line(new Thickness(0, 15), Color.LightGray));
 
-            Game.Data.MethodFromBook("Character.Debug", out string debug);
+            string debug = Game.Data.Character.Debug();
 
             if (!String.IsNullOrEmpty(debug))
             {
