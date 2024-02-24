@@ -8,23 +8,19 @@ namespace Seeker.Gamebook.PresidentSimulator
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {
-        public new static Actions StaticInstance = new Actions();
-        public new static Actions GetInstance() => StaticInstance;
-        private static Character protagonist = Character.Protagonist;
-
         public override List<string> Status() => new List<string>
         {
-            $"Год: {protagonist.Year}",
-            $"Рейтинг: {protagonist.Rating}%",
-            $"Монетки: {protagonist.Money}",
+            $"Год: {Character.Protagonist.Year}",
+            $"Рейтинг: {Character.Protagonist.Rating}%",
+            $"Монетки: {Character.Protagonist.Money}",
         };
 
         public override List<string> AdditionalStatus() => new List<string>
         {
-            $"Лояльность бизнеса: {protagonist.BusinessLoyalty}",
-            $"Лояльность армии: {protagonist.ArmyLoyalty}",
-            $"Отношения с США: {protagonist.RelationWithUSA}",
-            $"Отношения с СССР: {protagonist.RelationWithUSSR}",
+            $"Лояльность бизнеса: {Character.Protagonist.BusinessLoyalty}",
+            $"Лояльность армии: {Character.Protagonist.ArmyLoyalty}",
+            $"Отношения с США: {Character.Protagonist.RelationWithUSA}",
+            $"Отношения с СССР: {Character.Protagonist.RelationWithUSSR}",
         };
 
         public override bool Availability(string option)
@@ -54,52 +50,52 @@ namespace Seeker.Gamebook.PresidentSimulator
                     {
                         int level = Services.LevelParse(line);
 
-                        if (!Services.LevelAvailability("РЕЙТИНГ", line, protagonist.Rating, level))
+                        if (!Services.LevelAvailability("РЕЙТИНГ", line, Character.Protagonist.Rating, level))
                             return false;
 
-                        else if (!Services.LevelAvailability("ГОД", line, protagonist.Year, level))
+                        else if (!Services.LevelAvailability("ГОД", line, Character.Protagonist.Year, level))
                             return false;
 
-                        else if (!Services.LevelAvailability("ОТНОШЕНИЯ С США", line, protagonist.RelationWithUSA, level))
+                        else if (!Services.LevelAvailability("ОТНОШЕНИЯ С США", line, Character.Protagonist.RelationWithUSA, level))
                             return false;
 
-                        else if (!Services.LevelAvailability("ОТНОШЕНИЯ С СССР", line, protagonist.RelationWithUSSR, level))
+                        else if (!Services.LevelAvailability("ОТНОШЕНИЯ С СССР", line, Character.Protagonist.RelationWithUSSR, level))
                             return false;
 
-                        else if (!Services.LevelAvailability("МОНЕТКИ", line, protagonist.Money, level))
+                        else if (!Services.LevelAvailability("МОНЕТКИ", line, Character.Protagonist.Money, level))
                             return false;
 
-                        else if (!Services.LevelAvailability("ЛОЯЛЬНОСТЬ БИЗНЕСА", line, protagonist.BusinessLoyalty, level))
+                        else if (!Services.LevelAvailability("ЛОЯЛЬНОСТЬ БИЗНЕСА", line, Character.Protagonist.BusinessLoyalty, level))
                             return false;
 
-                        else if (!Services.LevelAvailability("ЛОЯЛЬНОСТЬ АРМИИ", line, protagonist.ArmyLoyalty, level))
+                        else if (!Services.LevelAvailability("ЛОЯЛЬНОСТЬ АРМИИ", line, Character.Protagonist.ArmyLoyalty, level))
                             return false;
 
-                        else if (!Services.LevelAvailability("СИЛА ВОЙСК", line, protagonist.Army, level))
+                        else if (!Services.LevelAvailability("СИЛА ВОЙСК", line, Character.Protagonist.Army, level))
                             return false;
 
-                        else if (!Services.LevelAvailability("СИЛА ПОВСТАНЦЕВ", line, protagonist.Rebels, level))
+                        else if (!Services.LevelAvailability("СИЛА ПОВСТАНЦЕВ", line, Character.Protagonist.Rebels, level))
                             return false;
 
-                        else if (!Services.LevelAvailability("АГРАРНАЯ РЕФОРМА", line, protagonist.AgrarianReform, level))
+                        else if (!Services.LevelAvailability("АГРАРНАЯ РЕФОРМА", line, Character.Protagonist.AgrarianReform, level))
                             return false;
                     }
                     else if (line == "СИЛЫ ВОЙСК И ПОВСТАНЦЕВ РАВНЫ")
                     {
-                        return protagonist.Army == protagonist.Rebels;
+                        return Character.Protagonist.Army == Character.Protagonist.Rebels;
                     }
                     else if (line == "СИЛЫ ВОЙСК НЕ МЕНЬШЕ СИЛЫ ПОВСТАНЦЕВ")
                     {
-                        return protagonist.Army >= protagonist.Rebels;
+                        return Character.Protagonist.Army >= Character.Protagonist.Rebels;
                     }
                     else if (line == "СИЛЫ ВОЙСК МЕНЬШЕ СИЛЫ ПОВСТАНЦЕВ")
                     {
-                        return protagonist.Army < protagonist.Rebels;
+                        return Character.Protagonist.Army < Character.Protagonist.Rebels;
                     }
                     else if (line == "СИЛЫ ВОЙСК БОЛЬШЕ СИЛЫ ПОВСТАНЦЕВ")
                     {
                         int level = Services.LevelParse(line);
-                        return protagonist.Army > protagonist.Rebels + level;
+                        return Character.Protagonist.Army > Character.Protagonist.Rebels + level;
                     }
                     else if (line.Contains("!"))
                     {

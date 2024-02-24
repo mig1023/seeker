@@ -9,10 +9,6 @@ namespace Seeker.Gamebook.PresidentSimulator
 {
     class Paragraphs : Prototypes.Paragraphs, Abstract.IParagraphs
     {
-        public new static Paragraphs StaticInstance = new Paragraphs();
-        public new static Paragraphs GetInstance() => StaticInstance;
-        private static Character protagonist = Character.Protagonist;
-
         public override Paragraph Get(int id, XmlNode xmlParagraph) =>
             base.Get(xmlParagraph, ParagraphTemplate(xmlParagraph));
 
@@ -23,16 +19,16 @@ namespace Seeker.Gamebook.PresidentSimulator
 
             int part = Option.IsTriggered("полугодие") ? 2 : 1;
 
-            if ((protagonist.Year == 1980) && (part == 2))
+            if ((Character.Protagonist.Year == 1980) && (part == 2))
             {
                 part = Option.IsTriggered("Ультраправые террористы") ? 3 : 2;
             }
-            else if ((protagonist.Year == 1983) && (part == 1))
+            else if ((Character.Protagonist.Year == 1983) && (part == 1))
             {
                 part = Option.IsTriggered("Повстанцы-коммунисты") ? 1 : 3;
             }
 
-            string yearPart = $"{protagonist.Year}-{part}";
+            string yearPart = $"{Character.Protagonist.Year}-{part}";
             string yearLine = Constants.TextByYears[yearPart];
             return yearLine.Split('|').ToList();
         }
