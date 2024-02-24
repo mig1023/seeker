@@ -6,10 +6,6 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {
-        public new static Actions StaticInstance = new Actions();
-        public new static Actions GetInstance() => StaticInstance;
-        private static Character protagonist = Character.Protagonist;
-
         public List<Character> Allies { get; set; }
         public List<Character> Enemies { get; set; }
         public int RoundsToWin { get; set; }
@@ -20,13 +16,13 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
 
         public override List<string> Status() => new List<string>
         {
-            $"Мастерство: {protagonist.Mastery}",
-            $"Выносливость: {protagonist.Endurance}/{protagonist.MaxEndurance}",
-            $"Золото: {protagonist.Gold}",
+            $"Мастерство: {Character.Protagonist.Mastery}",
+            $"Выносливость: {Character.Protagonist.Endurance}/{Character.Protagonist.MaxEndurance}",
+            $"Золото: {Character.Protagonist.Gold}",
         };
 
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
-            GameOverBy(protagonist.Endurance, out toEndParagraph, out toEndText);
+            GameOverBy(Character.Protagonist.Endurance, out toEndParagraph, out toEndText);
 
         public override bool Availability(string option)
         {
@@ -45,7 +41,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             }
             else if (option.Contains("ЗОЛОТО >="))
             {
-                return int.Parse(option.Split('=')[1]) <= protagonist.Gold;
+                return int.Parse(option.Split('=')[1]) <= Character.Protagonist.Gold;
             }
             else
             {
@@ -104,7 +100,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
 
             bool succesBreaked = false;
 
-            while (!succesBreaked && (protagonist.Endurance > 0))
+            while (!succesBreaked && (Character.Protagonist.Endurance > 0))
             {
                 Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
 
@@ -114,7 +110,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                 }
                 else
                 {
-                    protagonist.Endurance -= 1;
+                    Character.Protagonist.Endurance -= 1;
                 }
 
                 string result = (succesBreaked ? "удачный, дверь поддалась!" : "неудачный, -1 сила" );
@@ -157,12 +153,12 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                 }
             }
 
-            string luckLine = protagonist.Luck[goodLuck] ? "не " : String.Empty;
+            string luckLine = Character.Protagonist.Luck[goodLuck] ? "не " : String.Empty;
             luckCheck.Add($"Проверка удачи: {Game.Dice.Symbol(goodLuck)} - {luckLine}зачёркунтый");
 
-            luckCheck.Add(Result(protagonist.Luck[goodLuck], "УСПЕХ|НЕУДАЧА"));
+            luckCheck.Add(Result(Character.Protagonist.Luck[goodLuck], "УСПЕХ|НЕУДАЧА"));
             
-            protagonist.Luck[goodLuck] = !protagonist.Luck[goodLuck];
+            Character.Protagonist.Luck[goodLuck] = !Character.Protagonist.Luck[goodLuck];
 
             return luckCheck;
         }
@@ -180,7 +176,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                 diceCheck.Add($"На {i} выпало: {Game.Dice.Symbol(dice)}");
             }
 
-            protagonist.Endurance -= dices;
+            Character.Protagonist.Endurance -= dices;
 
             diceCheck.Add($"BIG|BAD|Вы потеряли выносливости: {dices}");
 
@@ -232,12 +228,12 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
         {
             int firstDice = Game.Dice.Roll();
             int secondDice = Game.Dice.Roll();
-            bool goodMastery = (firstDice + secondDice) <= protagonist.Mastery;
+            bool goodMastery = (firstDice + secondDice) <= Character.Protagonist.Mastery;
             string lineMastery = goodMastery ? "<=" : ">";
 
             List<string> masteryCheck = new List<string> { $"Проверка мастерства: " +
                 $"{Game.Dice.Symbol(firstDice)} + {Game.Dice.Symbol(secondDice)} " +
-                $"{lineMastery} {protagonist.Mastery} мастерство" };
+                $"{lineMastery} {Character.Protagonist.Mastery} мастерство" };
 
             masteryCheck.Add(Result(goodMastery, "МАСТЕРСТВА ХВАТИЛО|МАСТЕРСТВА НЕ ХВАТИЛО"));
 
@@ -246,9 +242,9 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
 
         public List<string> Get()
         {
-            if ((Price > 0) && (protagonist.Gold >= Price))
+            if ((Price > 0) && (Character.Protagonist.Gold >= Price))
             {
-                protagonist.Gold -= Price;
+                Character.Protagonist.Gold -= Price;
 
                 if (!Multiple)
                     Used = true;
@@ -275,13 +271,13 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
 
             if (Allies == null)
             {
-                FightAllies.Add(protagonist);
+                FightAllies.Add(Character.Protagonist);
             }
             else
             {
                 foreach (Character ally in Allies)
                 {
-                    if (ally == protagonist)
+                    if (ally == Character.Protagonist)
                         FightAllies.Add(ally);
                     else
                         FightAllies.Add(ally.Clone().SetEndurance());
@@ -417,9 +413,9 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
         }
 
         public override bool IsHealingEnabled() =>
-            protagonist.Endurance < protagonist.MaxEndurance;
+            Character.Protagonist.Endurance < Character.Protagonist.MaxEndurance;
 
         public override void UseHealing(int healingLevel) =>
-            protagonist.Endurance += healingLevel;
+            Character.Protagonist.Endurance += healingLevel;
     }
 }
