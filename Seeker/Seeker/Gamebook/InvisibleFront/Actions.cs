@@ -5,13 +5,9 @@ namespace Seeker.Gamebook.InvisibleFront
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {
-        public new static Actions StaticInstance = new Actions();
-        public new static Actions GetInstance() => StaticInstance;
-        private static Character protagonist = Character.Protagonist;
-
-        public override List<string> Status() => new List<string> {
-            $"Недовольство резидента: {protagonist.Dissatisfaction}",
-            $"Вербовка: {protagonist.Recruitment}",
+         public override List<string> Status() => new List<string> {
+            $"Недовольство резидента: {Character.Protagonist.Dissatisfaction}",
+            $"Вербовка: {Character.Protagonist.Recruitment}",
         };
 
         public override bool Availability(string option)
@@ -30,16 +26,16 @@ namespace Seeker.Gamebook.InvisibleFront
                     {
                         int level = Game.Services.LevelParse(oneOption);
 
-                        if (oneOption.Contains("НЕДОВОЛЬСТВО >") && (level >= protagonist.Dissatisfaction))
+                        if (oneOption.Contains("НЕДОВОЛЬСТВО >") && (level >= Character.Protagonist.Dissatisfaction))
                             return false;
 
-                        else if (oneOption.Contains("НЕДОВОЛЬСТВО <=") && (level < protagonist.Dissatisfaction))
+                        else if (oneOption.Contains("НЕДОВОЛЬСТВО <=") && (level < Character.Protagonist.Dissatisfaction))
                             return false;
 
-                        else if (oneOption.Contains("ВЕРБОВКА >") && (level >= protagonist.Recruitment))
+                        else if (oneOption.Contains("ВЕРБОВКА >") && (level >= Character.Protagonist.Recruitment))
                             return false;
 
-                        else if (oneOption.Contains("ВЕРБОВКА <=") && (level < protagonist.Recruitment))
+                        else if (oneOption.Contains("ВЕРБОВКА <=") && (level < Character.Protagonist.Recruitment))
                             return false;
                     }
                     else if (oneOption.Contains("!"))
