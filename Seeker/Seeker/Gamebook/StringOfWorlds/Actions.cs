@@ -6,10 +6,6 @@ namespace Seeker.Gamebook.StringOfWorlds
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {
-        public new static Actions StaticInstance = new Actions();
-        public new static Actions GetInstance() => StaticInstance;
-        private static Character protagonist = Character.Protagonist;
-
         public int RoundsToWin { get; set; }
         public bool HeroWoundsLimit { get; set; }
         public bool EnemyWoundsLimit { get; set; }
@@ -21,9 +17,9 @@ namespace Seeker.Gamebook.StringOfWorlds
 
         public override List<string> Status() => new List<string>
         {
-            $"Ловкость: {protagonist.Skill}",
-            $"Сила: {protagonist.Strength}/{protagonist.MaxStrength}",
-            $"Обаяние: {protagonist.Charm}",
+            $"Ловкость: {Character.Protagonist.Skill}",
+            $"Сила: {Character.Protagonist.Strength}/{Character.Protagonist.MaxStrength}",
+            $"Обаяние: {Character.Protagonist.Charm}",
         };
 
         public override List<string> StaticButtons()
@@ -33,7 +29,7 @@ namespace Seeker.Gamebook.StringOfWorlds
             if (Game.Data.Constants.GetParagraphsWithoutStaticsButtons().Contains(Game.Data.CurrentParagraphID))
                 return staticButtons;
 
-            if ((protagonist.Equipment == "Тюбик") && (protagonist.Strength < protagonist.MaxStrength))
+            if ((Character.Protagonist.Equipment == "Тюбик") && (Character.Protagonist.Strength < Character.Protagonist.MaxStrength))
                 staticButtons.Add("СЪЕСТЬ ПАСТУ");
 
             return staticButtons;
@@ -43,8 +39,8 @@ namespace Seeker.Gamebook.StringOfWorlds
         {
             if (action == "СЪЕСТЬ ПАСТУ")
             {
-                protagonist.Equipment = String.Empty;
-                protagonist.Strength = protagonist.MaxStrength;
+                Character.Protagonist.Equipment = String.Empty;
+                Character.Protagonist.Strength = Character.Protagonist.MaxStrength;
 
                 return true;
             }
@@ -53,10 +49,10 @@ namespace Seeker.Gamebook.StringOfWorlds
         }
 
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
-            GameOverBy(protagonist.Strength, out toEndParagraph, out toEndText);
+            GameOverBy(Character.Protagonist.Strength, out toEndParagraph, out toEndText);
 
         public override bool IsButtonEnabled(bool secondButton = false) =>
-            !(!String.IsNullOrEmpty(Equipment) && !String.IsNullOrEmpty(protagonist.Equipment));
+            !(!String.IsNullOrEmpty(Equipment) && !String.IsNullOrEmpty(Character.Protagonist.Equipment));
 
         public override bool Availability(string option)
         {
@@ -70,19 +66,19 @@ namespace Seeker.Gamebook.StringOfWorlds
                 int level = (values.Length > 1 ? int.Parse(values[1]) : 0);
 
                 if (option.Contains("БЛАСТЕР >="))
-                    return level <= protagonist.Blaster;
+                    return level <= Character.Protagonist.Blaster;
 
                 else if (option.Contains("МОНЕТ >="))
-                    return level <= protagonist.Coins;
+                    return level <= Character.Protagonist.Coins;
 
                 else if (option.Contains("БЛАСТЕР <"))
-                    return level > protagonist.Blaster;
+                    return level > Character.Protagonist.Blaster;
 
                 else if (option.Contains("ОЧКИ"))
-                    return protagonist.Equipment == "Очки";
+                    return Character.Protagonist.Equipment == "Очки";
 
                 else if (option.Contains("ЗАЖИГАЛКА"))
-                    return protagonist.Equipment == "Зажигалка";
+                    return Character.Protagonist.Equipment == "Зажигалка";
 
                 else
                     return AvailabilityTrigger(option);
@@ -114,13 +110,13 @@ namespace Seeker.Gamebook.StringOfWorlds
             };
 
             int goodLuck = Game.Dice.Roll();
-            string not = protagonist.Luck[goodLuck] ? "не " : String.Empty;
+            string not = Character.Protagonist.Luck[goodLuck] ? "не " : String.Empty;
 
             luckCheck.Add($"Проверка удачи: {Game.Dice.Symbol(goodLuck)} - {not}зачёркунтый");
 
-            luckCheck.Add(Result(protagonist.Luck[goodLuck], "УСПЕХ|НЕУДАЧА"));
+            luckCheck.Add(Result(Character.Protagonist.Luck[goodLuck], "УСПЕХ|НЕУДАЧА"));
 
-            protagonist.Luck[goodLuck] = !protagonist.Luck[goodLuck];
+            Character.Protagonist.Luck[goodLuck] = !Character.Protagonist.Luck[goodLuck];
 
             return luckCheck;
         }
@@ -133,10 +129,10 @@ namespace Seeker.Gamebook.StringOfWorlds
 
             for (int i = 1; i < 7; i++)
             {
-                if (!protagonist.Luck[i])
+                if (!Character.Protagonist.Luck[i])
                 {
                     luckRecovery.Add($"GOOD|Цифра {i} восстановлена!");
-                    protagonist.Luck[i] = true;
+                    Character.Protagonist.Luck[i] = true;
                     success = true;
 
                     break;
@@ -155,30 +151,30 @@ namespace Seeker.Gamebook.StringOfWorlds
         public List<string> Charm()
         {
             Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
-            bool goodCharm = (firstDice + secondDice) <= protagonist.Charm;
+            bool goodCharm = (firstDice + secondDice) <= Character.Protagonist.Charm;
             string charmLine = goodCharm ? "<=" : ">";
 
             List<string> luckCheck = new List<string> {
                 $"Проверка обаяния: " +
                 $"{Game.Dice.Symbol(firstDice)} + " +
                 $"{Game.Dice.Symbol(secondDice)} " +
-                $"{charmLine} {protagonist.Charm}" };
+                $"{charmLine} {Character.Protagonist.Charm}" };
 
             if (goodCharm)
             {
                 luckCheck.Add("BIG|GOOD|УСПЕХ :)");
                 luckCheck.Add("Вы увеличили своё обаяние на единицу");
 
-                protagonist.Charm += 1;
+                Character.Protagonist.Charm += 1;
             }
             else
             {
                 luckCheck.Add("BIG|BAD|НЕУДАЧА :(");
 
-                if (protagonist.Charm > 2)
+                if (Character.Protagonist.Charm > 2)
                 {
                     luckCheck.Add("Вы уменьшили своё обаяние на единицу");
-                    protagonist.Charm -= 1;
+                    Character.Protagonist.Charm -= 1;
                 }
             }
 
@@ -188,14 +184,14 @@ namespace Seeker.Gamebook.StringOfWorlds
         public List<string> Skill()
         {
             Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
-            bool goodSkill = (firstDice + secondDice) <= protagonist.Skill;
+            bool goodSkill = (firstDice + secondDice) <= Character.Protagonist.Skill;
             string skillLine = goodSkill ? "<=" : ">";
 
             List<string> luckCheck = new List<string> {
                 $"Проверка ловкости: " +
                 $"{Game.Dice.Symbol(firstDice)} + " +
                 $"{Game.Dice.Symbol(secondDice)} " +
-                $"{skillLine} {protagonist.Skill}" };
+                $"{skillLine} {Character.Protagonist.Skill}" };
 
             luckCheck.Add(goodSkill ? "BIG|GOOD|УСПЕХ :)" : "BIG|BAD|НЕУДАЧА :(");
 
@@ -215,7 +211,7 @@ namespace Seeker.Gamebook.StringOfWorlds
                 diceCheck.Add($"На {i} выпало: {Game.Dice.Symbol(dice)}");
             }
 
-            protagonist.Strength -= dices;
+            Character.Protagonist.Strength -= dices;
 
             diceCheck.Add($"BIG|BAD|Вы потеряли жизней: {dices}");
 
@@ -259,7 +255,7 @@ namespace Seeker.Gamebook.StringOfWorlds
 
             bool succesBreaked = false;
 
-            while (!succesBreaked && (protagonist.Strength > 0))
+            while (!succesBreaked && (Character.Protagonist.Strength > 0))
             {
                 Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
 
@@ -269,7 +265,7 @@ namespace Seeker.Gamebook.StringOfWorlds
                 }
                 else
                 {
-                    protagonist.Strength -= 1;
+                    Character.Protagonist.Strength -= 1;
                 }
 
                 string result = succesBreaked ?
@@ -316,7 +312,7 @@ namespace Seeker.Gamebook.StringOfWorlds
                 bargain.Add("BIG|Вам нечего предложить графини :(");
             }
 
-            protagonist.Coins += numberOfDeals;
+            Character.Protagonist.Coins += numberOfDeals;
 
             return bargain;
         }
@@ -324,7 +320,7 @@ namespace Seeker.Gamebook.StringOfWorlds
         public List<string> Get()
         {
             if (!String.IsNullOrEmpty(Equipment))
-                protagonist.Equipment = Equipment;
+                Character.Protagonist.Equipment = Equipment;
 
             return new List<string> { "RELOAD" };
         }
@@ -343,7 +339,7 @@ namespace Seeker.Gamebook.StringOfWorlds
 
             int round = 1, skillPenalty = 0;
 
-            if (DarknessPenalty && (protagonist.Equipment != "Очки"))
+            if (DarknessPenalty && (Character.Protagonist.Equipment != "Очки"))
                 skillPenalty += 1;
 
             while (true)
@@ -363,7 +359,7 @@ namespace Seeker.Gamebook.StringOfWorlds
                     if (!attackAlready)
                     {
                         Game.Dice.DoubleRoll(out int protagonistRollFirst, out int protagonistRollSecond);
-                        int protagonistSkill = (protagonist.Skill - skillPenalty);
+                        int protagonistSkill = (Character.Protagonist.Skill - skillPenalty);
                         protagonistHitStrength = protagonistRollFirst + protagonistRollSecond + protagonistSkill;
 
                         fight.Add($"Мощность вашего удара: " +
@@ -403,9 +399,9 @@ namespace Seeker.Gamebook.StringOfWorlds
                     {
                         fight.Add($"BAD|{enemy.Name} ранил вас");
 
-                        protagonist.Strength -= (DevastatingAttack ? 3 : 2);
+                        Character.Protagonist.Strength -= (DevastatingAttack ? 3 : 2);
 
-                        if ((protagonist.Strength <= 0) || (HeroWoundsLimit && (protagonist.Strength <= 2)))
+                        if ((Character.Protagonist.Strength <= 0) || (HeroWoundsLimit && (Character.Protagonist.Strength <= 2)))
                         {
                             fight.Add(String.Empty);
                             fight.Add("BIG|BAD|Вы ПРОИГРАЛИ :(");
@@ -435,9 +431,9 @@ namespace Seeker.Gamebook.StringOfWorlds
         }
 
         public override bool IsHealingEnabled() =>
-            protagonist.Strength < protagonist.MaxStrength;
+            Character.Protagonist.Strength < Character.Protagonist.MaxStrength;
 
         public override void UseHealing(int healingLevel) =>
-            protagonist.Strength += healingLevel;
+            Character.Protagonist.Strength += healingLevel;
     }
 }
