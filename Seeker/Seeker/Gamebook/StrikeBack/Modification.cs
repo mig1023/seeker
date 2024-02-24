@@ -6,8 +6,6 @@ namespace Seeker.Gamebook.StrikeBack
 {
     class Modification : Prototypes.Modification, Abstract.IModification
     {
-        private static Character protagonist = Character.Protagonist;
-
         public override void Do()
         {
             if (Name == "Transformation")
@@ -17,15 +15,15 @@ namespace Seeker.Gamebook.StrikeBack
                     .Select(x => x.Trim())
                     .ToList();
 
-                protagonist.Creature = transformation[0];
+                Character.Protagonist.Creature = transformation[0];
 
-                protagonist.MaxAttack = int.Parse(transformation[1]);
-                protagonist.MaxDefence = int.Parse(transformation[2]);
-                protagonist.MaxEndurance = int.Parse(transformation[3]);
+                Character.Protagonist.MaxAttack = int.Parse(transformation[1]);
+                Character.Protagonist.MaxDefence = int.Parse(transformation[2]);
+                Character.Protagonist.MaxEndurance = int.Parse(transformation[3]);
 
-                protagonist.Attack = protagonist.MaxAttack;
-                protagonist.Defence = protagonist.MaxDefence;
-                protagonist.Endurance = protagonist.MaxEndurance;
+                Character.Protagonist.Attack = Character.Protagonist.MaxAttack;
+                Character.Protagonist.Defence = Character.Protagonist.MaxDefence;
+                Character.Protagonist.Endurance = Character.Protagonist.MaxEndurance;
             }
             else
             {

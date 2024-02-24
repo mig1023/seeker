@@ -6,10 +6,6 @@ namespace Seeker.Gamebook.StrikeBack
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {
-        public new static Actions StaticInstance = new Actions();
-        public new static Actions GetInstance() => StaticInstance;
-        private static Character protagonist = Character.Protagonist;
-
         public List<Character> Allies { get; set; }
         public List<Character> Enemies { get; set; }
         public List<Character.SpecialTechniques> SpecialTechniques { get; set; }
@@ -23,9 +19,9 @@ namespace Seeker.Gamebook.StrikeBack
 
         public override List<string> Status() => new List<string>
         {
-            $"Атака: {protagonist.Attack}",
-            $"Защита: {protagonist.Defence}",
-            $"Выносливость: {protagonist.Endurance}/{protagonist.MaxEndurance}",
+            $"Атака: {Character.Protagonist.Attack}",
+            $"Защита: {Character.Protagonist.Defence}",
+            $"Выносливость: {Character.Protagonist.Endurance}/{Character.Protagonist.MaxEndurance}",
         };
 
         public override List<string> Representer()
@@ -46,10 +42,10 @@ namespace Seeker.Gamebook.StrikeBack
                 if (!SpecialTechniques.Contains(Character.SpecialTechniques.WithoutProtagonist))
                 {
                     enemies.Add($"Вы\n" +
-                        $"нападение {protagonist.Attack}  " +
-                        $"защита {protagonist.Defence}  " +
-                        $"жизнь {protagonist.Endurance}" +
-                        $"{protagonist.GetSpecialTechniques()}");
+                        $"нападение {Character.Protagonist.Attack}  " +
+                        $"защита {Character.Protagonist.Defence}  " +
+                        $"жизнь {Character.Protagonist.Endurance}" +
+                        $"{Character.Protagonist.GetSpecialTechniques()}");
                 }
 
                 foreach (Character ally in Allies)
@@ -84,7 +80,7 @@ namespace Seeker.Gamebook.StrikeBack
             }
             else
             {
-                return GameOverBy(protagonist.Endurance, out toEndParagraph, out toEndText);
+                return GameOverBy(Character.Protagonist.Endurance, out toEndParagraph, out toEndText);
             }
         }
 
@@ -119,7 +115,7 @@ namespace Seeker.Gamebook.StrikeBack
                     result *= WoundsMultiple;
                 }
 
-                protagonist.Endurance -= result;
+                Character.Protagonist.Endurance -= result;
                 diceCheck.Add($"BIG|BAD|Ты потерял выносливостей: {result}");
             }
             else if (dices > 1)
@@ -198,7 +194,7 @@ namespace Seeker.Gamebook.StrikeBack
             {
                 foreach (string optionsPart in option.Split('|'))
                 {
-                    if (protagonist.Creature == optionsPart)
+                    if (Character.Protagonist.Creature == optionsPart)
                         return true;
                 }
 
@@ -214,17 +210,17 @@ namespace Seeker.Gamebook.StrikeBack
 
                 foreach (string optionsPart in singlOption)
                 {
-                    if (protagonist.Creature == optionsPart)
+                    if (Character.Protagonist.Creature == optionsPart)
                         return false;
                 }
 
                 return true;
             }
-            else if (protagonist.Creature == option)
+            else if (Character.Protagonist.Creature == option)
             {
                 return true;
             }
-            else if (protagonist.Creature == option.Replace("!", String.Empty))
+            else if (Character.Protagonist.Creature == option.Replace("!", String.Empty))
             {
                 return false;
             }
@@ -262,7 +258,7 @@ namespace Seeker.Gamebook.StrikeBack
 
             for (int round = 1; round < 5; round++)
             {
-                if (protagonist.Endurance <= 0)
+                if (Character.Protagonist.Endurance <= 0)
                     continue;
 
                 game.Add(String.Empty);
@@ -274,19 +270,19 @@ namespace Seeker.Gamebook.StrikeBack
                     $"{Game.Dice.Symbol(firstRoll)} + " +
                     $"{Game.Dice.Symbol(secondRoll)} + 1 = {hitStrength}");
 
-                int hitDiff = hitStrength - protagonist.Defence;
+                int hitDiff = hitStrength - Character.Protagonist.Defence;
                 bool success = hitDiff > 0;
 
                 game.Add($"Твоя защита: " +
-                    $"{protagonist.Defence}, это " +
-                    $"{Game.Services.Сomparison(protagonist.Defence, hitStrength)} силы атаки");
+                    $"{Character.Protagonist.Defence}, это " +
+                    $"{Game.Services.Сomparison(Character.Protagonist.Defence, hitStrength)} силы атаки");
 
                 if (success)
                 {
-                    protagonist.Endurance -= hitDiff;
+                    Character.Protagonist.Endurance -= hitDiff;
 
                     game.Add("BAD|BOLD|Ты ранен");
-                    game.Add($"Ты потерял вносливости: {hitDiff} (осталось: {protagonist.Endurance})");
+                    game.Add($"Ты потерял вносливости: {hitDiff} (осталось: {Character.Protagonist.Endurance})");
                 }
                 else
                 {
@@ -295,7 +291,7 @@ namespace Seeker.Gamebook.StrikeBack
             }
 
             game.Add(String.Empty);
-            game.Add(protagonist.Endurance > 0 ? "BIG|GOOD|ТЫ ПОБЕДИЛ :)" : "BIG|BAD|ТЫ ПРОИГРАЛ :(");
+            game.Add(Character.Protagonist.Endurance > 0 ? "BIG|GOOD|ТЫ ПОБЕДИЛ :)" : "BIG|BAD|ТЫ ПРОИГРАЛ :(");
 
             return game;
         }
@@ -315,10 +311,10 @@ namespace Seeker.Gamebook.StrikeBack
             bool withoutProtagonist = SpecialTechniques.Contains(Character.SpecialTechniques.WithoutProtagonist);
             bool toFirstDeath = SpecialTechniques.Contains(Character.SpecialTechniques.ToFirstDeathOnly);
             bool werewolf = SpecialTechniques.Contains(Character.SpecialTechniques.Werewolf) &&
-                (protagonist.Creature == "ОБОРОТЕНЬ");
+                (Character.Protagonist.Creature == "ОБОРОТЕНЬ");
 
             if (!withoutProtagonist)
-                FightAllies.Add(protagonist);
+                FightAllies.Add(Character.Protagonist);
 
             foreach (Character enemy in Enemies)
                 FightEnemies.Add(enemy.Clone().SetEndurance());
@@ -458,9 +454,9 @@ namespace Seeker.Gamebook.StrikeBack
         }
 
         public override bool IsHealingEnabled() =>
-            protagonist.Endurance < protagonist.MaxEndurance;
+            Character.Protagonist.Endurance < Character.Protagonist.MaxEndurance;
 
         public override void UseHealing(int healingLevel) =>
-            protagonist.Endurance += healingLevel;
+            Character.Protagonist.Endurance += healingLevel;
     }
 }
