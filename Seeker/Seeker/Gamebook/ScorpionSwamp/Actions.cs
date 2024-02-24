@@ -6,10 +6,6 @@ namespace Seeker.Gamebook.ScorpionSwamp
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {
-        public new static Actions StaticInstance = new Actions();
-        public new static Actions GetInstance() => StaticInstance;
-        private static Character protagonist = Character.Protagonist;
-
         public List<Character> Enemies { get; set; }
         public int ExtendedDamage { get; set; }
         public int UnluckDamage { get; set; }
@@ -18,30 +14,30 @@ namespace Seeker.Gamebook.ScorpionSwamp
 
         public override List<string> Status() => new List<string>
         {
-            $"Мастерство: {protagonist.Mastery}",
-            $"Выносливость: {protagonist.Endurance}/{protagonist.MaxEndurance}",
-            $"Удача: {protagonist.Luck}",
+            $"Мастерство: {Character.Protagonist.Mastery}",
+            $"Выносливость: {Character.Protagonist.Endurance}/{Character.Protagonist.MaxEndurance}",
+            $"Удача: {Character.Protagonist.Luck}",
         };
 
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
-            GameOverBy(protagonist.Endurance, out toEndParagraph, out toEndText);
+            GameOverBy(Character.Protagonist.Endurance, out toEndParagraph, out toEndText);
 
         public List<string> Luck()
         {
             Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
 
-            bool goodLuck = (firstDice + secondDice) <= protagonist.Luck;
+            bool goodLuck = (firstDice + secondDice) <= Character.Protagonist.Luck;
             string luckLine = goodLuck ? "<=" : ">";
 
             List<string> luckCheck = new List<string> {
                 $"Проверка удачи: {Game.Dice.Symbol(firstDice)} + " +
-                $"{Game.Dice.Symbol(secondDice)} {luckLine} {protagonist.Luck}" };
+                $"{Game.Dice.Symbol(secondDice)} {luckLine} {Character.Protagonist.Luck}" };
 
             luckCheck.Add(goodLuck ? "BIG|GOOD|УСПЕХ :)" : "BIG|BAD|НЕУДАЧА :(");
 
             if ((UnluckDamage > 0) && !goodLuck)
             {
-                protagonist.Endurance -= UnluckDamage;
+                Character.Protagonist.Endurance -= UnluckDamage;
 
                 string damageLine = Game.Services.CoinsNoun(Math.Abs(UnluckDamage), "очко", "очка", "очков");
                 luckCheck.Add($"BAD|Вы теряете {UnluckDamage} {damageLine} Выносливости");
@@ -49,15 +45,15 @@ namespace Seeker.Gamebook.ScorpionSwamp
 
             if ((UnluckMasteryDamage > 0) && !goodLuck)
             {
-                protagonist.Endurance -= UnluckMasteryDamage;
+                Character.Protagonist.Endurance -= UnluckMasteryDamage;
 
                 string damageLine = Game.Services.CoinsNoun(Math.Abs(UnluckDamage), "очко", "очка", "очков");
                 luckCheck.Add($"BAD|Вы теряете {UnluckMasteryDamage} {damageLine} Мастерства");
             }
 
-            if (protagonist.Luck > 2)
+            if (Character.Protagonist.Luck > 2)
             {
-                protagonist.Luck -= 1;
+                Character.Protagonist.Luck -= 1;
                 luckCheck.Add("Уровень удачи снижен на единицу");
             }
 
@@ -121,12 +117,12 @@ namespace Seeker.Gamebook.ScorpionSwamp
                     if (!attackAlready)
                     {
                         Game.Dice.DoubleRoll(out int protagonistRollFirst, out int protagonistRollSecond);
-                        protagonistHitStrength = protagonistRollFirst + protagonistRollSecond + protagonist.Mastery;
+                        protagonistHitStrength = protagonistRollFirst + protagonistRollSecond + Character.Protagonist.Mastery;
 
                         fight.Add($"Сила вашей атаки: " +
                             $"{Game.Dice.Symbol(protagonistRollFirst)} + " +
                             $"{Game.Dice.Symbol(protagonistRollSecond)} + " +
-                            $"{protagonist.Mastery} = {protagonistHitStrength}");
+                            $"{Character.Protagonist.Mastery} = {protagonistHitStrength}");
                     }
 
                     Game.Dice.DoubleRoll(out int enemyRollFirst, out int enemyRollSecond);
@@ -161,10 +157,10 @@ namespace Seeker.Gamebook.ScorpionSwamp
                         fight.Add($"BAD|{enemy.Name} ранил вас");
                         fight.Add("Вы теряете 2 очка Выносливости");
 
-                        protagonist.Endurance -= ExtendedDamage > 0 ? ExtendedDamage : 2;
+                        Character.Protagonist.Endurance -= ExtendedDamage > 0 ? ExtendedDamage : 2;
                         firstBlood = true;
 
-                        if (protagonist.Endurance <= 0)
+                        if (Character.Protagonist.Endurance <= 0)
                         {
                             fight.Add(String.Empty);
                             fight.Add("BIG|BAD|Вы ПРОИГРАЛИ :(");
