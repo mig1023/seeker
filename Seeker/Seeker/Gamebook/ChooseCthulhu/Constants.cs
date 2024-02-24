@@ -5,14 +5,10 @@ namespace Seeker.Gamebook.ChooseCthulhu
 {
     class Constants : Prototypes.Constants, Abstract.IConstants
     {
-        public new static Constants StaticInstance = new Constants();
-        public new static Constants GetInstance() => StaticInstance;
-        private static Character protagonist = Character.Protagonist;
-
         public static void ChangeBackground()
         {
-            protagonist.BackColor = Colors.Mod(protagonist.BackColor);
-            protagonist.BtnColor = Colors.Mod(protagonist.BtnColor);
+            Character.Protagonist.BackColor = Colors.Mod(Character.Protagonist.BackColor);
+            Character.Protagonist.BtnColor = Colors.Mod(Character.Protagonist.BtnColor);
         }
 
         public override string GetColor(ButtonTypes type)
@@ -26,11 +22,11 @@ namespace Seeker.Gamebook.ChooseCthulhu
             }
             else if (mainDuttons || supplButtons)
             {
-                return Colors.Hex(protagonist.BtnColor[0], protagonist.BtnColor[1], protagonist.BtnColor[2]);
+                return Colors.Hex(Character.Protagonist.BtnColor[0], Character.Protagonist.BtnColor[1], Character.Protagonist.BtnColor[2]);
             }
             else if (type == ButtonTypes.Border)
             {
-                return Colors.СontrastBorder(protagonist.BackColor, protagonist.BtnColor);
+                return Colors.СontrastBorder(Character.Protagonist.BackColor, Character.Protagonist.BtnColor);
             }
             else
             {
@@ -46,11 +42,11 @@ namespace Seeker.Gamebook.ChooseCthulhu
             }
             else if (type == ColorTypes.Background)
             {
-                return Colors.Hex(protagonist.BackColor[0], protagonist.BackColor[1], protagonist.BackColor[2]);
+                return Colors.Hex(Character.Protagonist.BackColor[0], Character.Protagonist.BackColor[1], Character.Protagonist.BackColor[2]);
             }
             else if (type == ColorTypes.Font)
             {
-                return Colors.СontrastText(protagonist.BackColor);
+                return Colors.СontrastText(Character.Protagonist.BackColor);
             }
             else
             {

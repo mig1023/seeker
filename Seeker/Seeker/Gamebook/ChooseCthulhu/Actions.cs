@@ -5,14 +5,10 @@ namespace Seeker.Gamebook.ChooseCthulhu
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {
-        public new static Actions StaticInstance = new Actions();
-        public new static Actions GetInstance() => StaticInstance;
-        private static Character protagonist = Character.Protagonist;
-
         public override List<string> Status()
         {
             string cursed = Character.Protagonist.IsCursed() ? " (проклят)" : String.Empty;
-            return new List<string> { $"Посвящение: {protagonist.Initiation}{cursed}" };
+            return new List<string> { $"Посвящение: {Character.Protagonist.Initiation}{cursed}" };
         }
 
         public override bool Availability(string option)
@@ -23,11 +19,11 @@ namespace Seeker.Gamebook.ChooseCthulhu
             }
             else if (option.Contains(">"))
             {
-                return protagonist.Initiation > Game.Services.LevelParse(option);
+                return Character.Protagonist.Initiation > Game.Services.LevelParse(option);
             }
             else if (option.Contains("<"))
             {
-                return protagonist.Initiation < Game.Services.LevelParse(option);
+                return Character.Protagonist.Initiation < Game.Services.LevelParse(option);
             }
             else
             {
