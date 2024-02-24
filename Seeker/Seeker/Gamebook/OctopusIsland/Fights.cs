@@ -6,31 +6,29 @@ namespace Seeker.Gamebook.OctopusIsland
 {
     class Fights
     {
-        private static Character protagonist = Character.Protagonist;
-
         public static bool NoMoreEnemies(List<Character> enemies) =>
             enemies.Where(x => x.Hitpoint > 0).Count() == 0;
 
         public static void SaveCurrentWarriorHitPoints()
         {
-            if (String.IsNullOrEmpty(protagonist.Name))
+            if (String.IsNullOrEmpty(Character.Protagonist.Name))
                 return;
 
-            if (protagonist.Name == "Тибо")
+            if (Character.Protagonist.Name == "Тибо")
             {
-                protagonist.ThibautHitpoint = protagonist.Hitpoint;
+                Character.Protagonist.ThibautHitpoint = Character.Protagonist.Hitpoint;
             }
             else if (Character.Protagonist.Name == "Ксолотл")
             {
-                protagonist.XolotlHitpoint = protagonist.Hitpoint;
+                Character.Protagonist.XolotlHitpoint = Character.Protagonist.Hitpoint;
             }
             else if (Character.Protagonist.Name == "Серж")
             {
-                protagonist.SergeHitpoint = protagonist.Hitpoint;
+                Character.Protagonist.SergeHitpoint = Character.Protagonist.Hitpoint;
             }
             else
             {
-                protagonist.SouhiHitpoint = protagonist.Hitpoint;
+                Character.Protagonist.SouhiHitpoint = Character.Protagonist.Hitpoint;
             }
         }
 
@@ -39,7 +37,7 @@ namespace Seeker.Gamebook.OctopusIsland
             if (!start)
                 fight.Add(String.Empty);
 
-            fight.Add($"HEAD|BOLD|*** В БОЙ ВСТУПАЕТ {protagonist.Name.ToUpper()} ***");
+            fight.Add($"HEAD|BOLD|*** В БОЙ ВСТУПАЕТ {Character.Protagonist.Name.ToUpper()} ***");
             
             if (start)
                 fight.Add(String.Empty);
@@ -47,34 +45,34 @@ namespace Seeker.Gamebook.OctopusIsland
         
         public static bool SetCurrentWarrior(ref List<string> fight, bool start = false)
         {
-            if ((protagonist.Hitpoint > 3) && !start)
+            if ((Character.Protagonist.Hitpoint > 3) && !start)
                 return true;
 
             SaveCurrentWarriorHitPoints();
 
-            if (protagonist.ThibautHitpoint > 3)
+            if (Character.Protagonist.ThibautHitpoint > 3)
             {
-                protagonist.Name = "Тибо";
-                protagonist.Skill = protagonist.ThibautSkill;
-                protagonist.Hitpoint = protagonist.ThibautHitpoint;
+                Character.Protagonist.Name = "Тибо";
+                Character.Protagonist.Skill = Character.Protagonist.ThibautSkill;
+                Character.Protagonist.Hitpoint = Character.Protagonist.ThibautHitpoint;
             }
-            else if (protagonist.XolotlHitpoint > 3)
+            else if (Character.Protagonist.XolotlHitpoint > 3)
             {
-                protagonist.Name = "Ксолотл";
-                protagonist.Skill = protagonist.XolotlSkill;
-                protagonist.Hitpoint = protagonist.XolotlHitpoint;
+                Character.Protagonist.Name = "Ксолотл";
+                Character.Protagonist.Skill = Character.Protagonist.XolotlSkill;
+                Character.Protagonist.Hitpoint = Character.Protagonist.XolotlHitpoint;
             }
-            else if (protagonist.SergeHitpoint > 3)
+            else if (Character.Protagonist.SergeHitpoint > 3)
             {
-                protagonist.Name = "Серж";
-                protagonist.Skill = protagonist.SergeSkill;
-                protagonist.Hitpoint = protagonist.SergeHitpoint;
+                Character.Protagonist.Name = "Серж";
+                Character.Protagonist.Skill = Character.Protagonist.SergeSkill;
+                Character.Protagonist.Hitpoint = Character.Protagonist.SergeHitpoint;
             }
-            else if (protagonist.SouhiHitpoint > 3)
+            else if (Character.Protagonist.SouhiHitpoint > 3)
             {
-                protagonist.Name = "Суи";
-                protagonist.Skill = protagonist.SouhiSkill;
-                protagonist.Hitpoint = protagonist.SouhiHitpoint;
+                Character.Protagonist.Name = "Суи";
+                Character.Protagonist.Skill = Character.Protagonist.SouhiSkill;
+                Character.Protagonist.Hitpoint = Character.Protagonist.SouhiHitpoint;
             }
             else
             {

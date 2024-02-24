@@ -4,13 +4,11 @@ namespace Seeker.Gamebook.OctopusIsland
 {
     class Ointment
     {
-        private static Character protagonist = Character.Protagonist;
-
-        public static int Cure(int protagonistHitpoint)
+         public static int Cure(int protagonistHitpoint)
         {
-            while ((protagonist.LifeGivingOintment > 0) && (protagonistHitpoint < 20))
+            while ((Character.Protagonist.LifeGivingOintment > 0) && (protagonistHitpoint < 20))
             {
-                protagonist.LifeGivingOintment -= 1;
+                Character.Protagonist.LifeGivingOintment -= 1;
                 protagonistHitpoint += 1;
             }
 
