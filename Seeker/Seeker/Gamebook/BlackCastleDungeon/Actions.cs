@@ -6,10 +6,6 @@ namespace Seeker.Gamebook.BlackCastleDungeon
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {
-        public new static Actions StaticInstance = new Actions();
-        public new static Actions GetInstance() => StaticInstance;
-        private static Character protagonist = Character.Protagonist;
-
         public List<Character> Enemies { get; set; }
         public int RoundsToWin { get; set; }
         public int WoundsToWin { get; set; }
@@ -27,20 +23,20 @@ namespace Seeker.Gamebook.BlackCastleDungeon
 
         public override List<string> Status() => new List<string>
         {
-            $"Мастерство: {protagonist.Mastery}",
-            $"Выносливость: {protagonist.Endurance}/{protagonist.MaxEndurance}",
-            $"Удача: {protagonist.Luck}",
-            $"Золото: {protagonist.Gold}"
+            $"Мастерство: {Character.Protagonist.Mastery}",
+            $"Выносливость: {Character.Protagonist.Endurance}/{Character.Protagonist.MaxEndurance}",
+            $"Удача: {Character.Protagonist.Luck}",
+            $"Золото: {Character.Protagonist.Gold}"
         };
 
         public override List<string> AdditionalStatus()
         {
             Dictionary<string, int> currentSpells = new Dictionary<string, int>();
 
-            if (protagonist.Spells == null)
+            if (Character.Protagonist.Spells == null)
                 return null;
 
-            foreach (string spell in protagonist.Spells)
+            foreach (string spell in Character.Protagonist.Spells)
             {
                 string shortSpellName = spell.Replace("ЗАКЛЯТИЕ ", String.Empty).ToLower();
 
@@ -68,15 +64,15 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             if (Game.Data.Constants.GetParagraphsWithoutStaticsButtons().Contains(Game.Data.CurrentParagraphID))
                 return staticButtons;
 
-            bool healing = protagonist.Spells.Contains("ЗАКЛЯТИЕ ИСЦЕЛЕНИЯ");
-            bool wounded = protagonist.Endurance < protagonist.MaxEndurance;
+            bool healing = Character.Protagonist.Spells.Contains("ЗАКЛЯТИЕ ИСЦЕЛЕНИЯ");
+            bool wounded = Character.Protagonist.Endurance < Character.Protagonist.MaxEndurance;
 
             if (healing && wounded)
                 staticButtons.Add("ЗАКЛЯТИЕ ИСЦЕЛЕНИЯ");
 
             foreach (string spell in Constants.StaticSpells)
             {
-                bool spellAvailable = protagonist.Spells.Contains(spell) && !SpellActivate[spell];
+                bool spellAvailable = Character.Protagonist.Spells.Contains(spell) && !SpellActivate[spell];
 
                 if (Fights.ParagraphWith(spell) && spellAvailable)
                     staticButtons.Add(spell);
@@ -87,10 +83,10 @@ namespace Seeker.Gamebook.BlackCastleDungeon
 
         public override bool StaticAction(string action)
         {
-            protagonist.Spells.Remove(action);
+            Character.Protagonist.Spells.Remove(action);
 
             if (action.Contains("ИСЦЕЛЕНИЯ"))
-                protagonist.Endurance += 8;
+                Character.Protagonist.Endurance += 8;
 
             if (Constants.StaticSpells.Contains(action))
                 SpellActivate[action] = true;
@@ -99,14 +95,14 @@ namespace Seeker.Gamebook.BlackCastleDungeon
         }
 
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
-            GameOverBy(protagonist.Endurance, out toEndParagraph, out toEndText);
+            GameOverBy(Character.Protagonist.Endurance, out toEndParagraph, out toEndText);
 
         public override bool IsButtonEnabled(bool secondButton = false)
         {
-            bool disabledSpellAdd = ThisIsSpell && (protagonist.SpellSlots <= 0) && !secondButton;
-            bool disabledSpellRemove = ThisIsSpell && !protagonist.Spells.Contains(Head) && secondButton;
+            bool disabledSpellAdd = ThisIsSpell && (Character.Protagonist.SpellSlots <= 0) && !secondButton;
+            bool disabledSpellRemove = ThisIsSpell && !Character.Protagonist.Spells.Contains(Head) && secondButton;
             bool disabledGetOptions = (Price > 0) && Used;
-            bool disabledByPrice = (Price > 0) && (protagonist.Gold < Price);
+            bool disabledByPrice = (Price > 0) && (Character.Protagonist.Gold < Price);
 
             return !(disabledSpellAdd || disabledSpellRemove || disabledGetOptions || disabledByPrice);
         }
@@ -119,11 +115,11 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             }
             else if (option.Contains("ЗОЛОТО >="))
             {
-                return int.Parse(option.Split('=')[1]) <= protagonist.Gold;
+                return int.Parse(option.Split('=')[1]) <= Character.Protagonist.Gold;
             }
             else if (option.Contains("ЗАКЛЯТИЕ"))
             {
-                return protagonist.Spells.Contains(option);
+                return Character.Protagonist.Spells.Contains(option);
             }
             else
             {
@@ -142,7 +138,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             }
             else if (ThisIsSpell)
             {
-                int count = (ThisIsSpell ? protagonist.Spells.Where(x => x == Head).Count() : 0);
+                int count = (ThisIsSpell ? Character.Protagonist.Spells.Where(x => x == Head).Count() : 0);
                 string line = count > 0 ? $" ({count} шт)" : String.Empty;
                 return new List<string> { $"{Head}{line}" };
             }
@@ -160,18 +156,18 @@ namespace Seeker.Gamebook.BlackCastleDungeon
         {
             Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
 
-            bool goodLuck = (firstDice + secondDice) <= protagonist.Luck;
+            bool goodLuck = (firstDice + secondDice) <= Character.Protagonist.Luck;
             string luckLine = goodLuck ? "<=" : ">";
 
             List<string> luckCheck = new List<string> {
                 $"Проверка удачи: {Game.Dice.Symbol(firstDice)} + " +
-                $"{Game.Dice.Symbol(secondDice)} {luckLine} {protagonist.Luck}" };
+                $"{Game.Dice.Symbol(secondDice)} {luckLine} {Character.Protagonist.Luck}" };
 
             luckCheck.Add(goodLuck ? "BIG|GOOD|УСПЕХ :)" : "BIG|BAD|НЕУДАЧА :(");
 
-            if (protagonist.Luck > 2)
+            if (Character.Protagonist.Luck > 2)
             {
-                protagonist.Luck -= 1;
+                Character.Protagonist.Luck -= 1;
                 luckCheck.Add("Уровень удачи снижен на единицу");
             }
 
@@ -180,14 +176,14 @@ namespace Seeker.Gamebook.BlackCastleDungeon
 
         public List<string> Get()
         {
-            if (ThisIsSpell && (protagonist.SpellSlots >= 1))
+            if (ThisIsSpell && (Character.Protagonist.SpellSlots >= 1))
             {
-                protagonist.Spells.Add(Head);
-                protagonist.SpellSlots -= 1;
+                Character.Protagonist.Spells.Add(Head);
+                Character.Protagonist.SpellSlots -= 1;
             }
-            else if ((Price > 0) && (protagonist.Gold >= Price))
+            else if ((Price > 0) && (Character.Protagonist.Gold >= Price))
             {
-                protagonist.Gold -= Price;
+                Character.Protagonist.Gold -= Price;
 
                 if (!Multiple)
                     Used = true;
@@ -201,8 +197,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
 
         public List<string> Decrease()
         {
-            protagonist.Spells.Remove(Head);
-            protagonist.SpellSlots += 1;
+            Character.Protagonist.Spells.Remove(Head);
+            Character.Protagonist.SpellSlots += 1;
 
             return new List<string> { "RELOAD" };
         }
@@ -264,24 +260,26 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                 fight.Add(String.Empty);
             }
 
-            int oldMastery = protagonist.Mastery;
+            int oldMastery = Character.Protagonist.Mastery;
 
             if (SpellActivate["ЗАКЛЯТИЕ СИЛЫ"])
             {
                 SpellActivate["ЗАКЛЯТИЕ СИЛЫ"] = false;
 
-                protagonist.Mastery += 2;
+                Character.Protagonist.Mastery += 2;
 
                 fight.Add($"BOLD|Заклятье Силы увеличивает ваше мастерство: " +
-                    $"на время этого боя она равна {protagonist.Mastery}");
+                    $"на время этого боя она равна {Character.Protagonist.Mastery}");
 
                 fight.Add(String.Empty);
             }
 
+            Character protagonist = Character.Protagonist;
+
             bool win = Fights.Win(ref fight, ref round, ref protagonist, ref FightEnemies,
                 ref enemyWounds, StrengthPenlty, WoundsToWin, RoundsToWin, ExtendedDamage);
 
-            protagonist.Mastery = oldMastery;
+            Character.Protagonist.Mastery = oldMastery;
 
             fight.Add(String.Empty);
             fight.Add(Result(win, "Вы ПОБЕДИЛИ|Вы ПРОИГРАЛИ"));
@@ -290,9 +288,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
         }
 
         public override bool IsHealingEnabled() =>
-            protagonist.Endurance < protagonist.MaxEndurance;
+            Character.Protagonist.Endurance < Character.Protagonist.MaxEndurance;
 
         public override void UseHealing(int healingLevel) =>
-            protagonist.Endurance += healingLevel;
+            Character.Protagonist.Endurance += healingLevel;
     }
 }
