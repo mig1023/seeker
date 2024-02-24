@@ -6,21 +6,17 @@ namespace Seeker.Gamebook.Moria
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {
-        public new static Actions StaticInstance = new Actions();
-        public new static Actions GetInstance() => StaticInstance;
-        private static Character protagonist = Character.Protagonist;
-
         public List<string> Enemies { get; set; }
 
         public override List<string> Status()
         {
-            if (!protagonist.Fellowship.Contains("Гэндальф"))
+            if (!Character.Protagonist.Fellowship.Contains("Гэндальф"))
             {
                 return new List<string> { "Гэндальф погиб..." };
             }
-            else if (protagonist.MagicPause > 0)
+            else if (Character.Protagonist.MagicPause > 0)
             {
-                return new List<string> { $"Гэндальф устал (ещё {protagonist.MagicPause} параграфа)" };
+                return new List<string> { $"Гэндальф устал (ещё {Character.Protagonist.MagicPause} параграфа)" };
             }
             else
             {
@@ -39,7 +35,7 @@ namespace Seeker.Gamebook.Moria
 
             foreach (string person in fellowship)
             {
-                bool stillAlive = protagonist.Fellowship.Contains(person);
+                bool stillAlive = Character.Protagonist.Fellowship.Contains(person);
                 actualFellowship.Add(stillAlive ? person : $"CROSSEDOUT|{person}");
             }
 
@@ -60,7 +56,7 @@ namespace Seeker.Gamebook.Moria
         }
 
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
-            GameOverBy(protagonist.Fellowship.Count, out toEndParagraph, out toEndText);
+            GameOverBy(Character.Protagonist.Fellowship.Count, out toEndParagraph, out toEndText);
 
         private string Declination(string enemy, int count)
         {
@@ -78,7 +74,7 @@ namespace Seeker.Gamebook.Moria
         {
             fight.Add($"BAD|BOLD|{hero} погиб в бою!");
             fight.Add(String.Empty);
-            protagonist.Fellowship.Remove(hero);
+            Character.Protagonist.Fellowship.Remove(hero);
         }
 
         private void PartOfFight(ref List<string> fight, string hero, int count)
@@ -139,10 +135,10 @@ namespace Seeker.Gamebook.Moria
         }
 
         private List<string> StrongWarriorsInFellowship() =>
-            protagonist.Fellowship.Where(x => Constants.Fellowship[x] > 3).ToList();
+            Character.Protagonist.Fellowship.Where(x => Constants.Fellowship[x] > 3).ToList();
 
         private bool IsStillSomeoneToFight() =>
-            (Enemies.Count > 0) && (protagonist.Fellowship.Count > 0);
+            (Enemies.Count > 0) && (Character.Protagonist.Fellowship.Count > 0);
 
         private int EnemiesForEach(int count)
         {
@@ -173,9 +169,9 @@ namespace Seeker.Gamebook.Moria
                     fight.Add($"GRAY|Враги бесчисленны, сразиться придётся каждому!!");
                     fight.Add(String.Empty);
 
-                    int countForEach = EnemiesForEach(protagonist.Fellowship.Count);
+                    int countForEach = EnemiesForEach(Character.Protagonist.Fellowship.Count);
 
-                    List<string> allWarriors = new List<string>(protagonist.Fellowship);
+                    List<string> allWarriors = new List<string>(Character.Protagonist.Fellowship);
 
                     foreach (string warrior in allWarriors)
                         PartOfFight(ref fight, warrior, countForEach);
@@ -187,7 +183,7 @@ namespace Seeker.Gamebook.Moria
                 }
             }
 
-            fight.Add(Result(protagonist.Fellowship.Count > 0, "Вы ПОБЕДИЛИ!|Вы ПРОИГРАЛИ..."));
+            fight.Add(Result(Character.Protagonist.Fellowship.Count > 0, "Вы ПОБЕДИЛИ!|Вы ПРОИГРАЛИ..."));
 
             return fight;
         }
@@ -221,10 +217,10 @@ namespace Seeker.Gamebook.Moria
             }
             else if (option.Contains("GandalfMagic"))
             {
-                if (!protagonist.Fellowship.Contains("Гэндальф"))
+                if (!Character.Protagonist.Fellowship.Contains("Гэндальф"))
                     return false;
                 else
-                    return protagonist.MagicPause == 0;
+                    return Character.Protagonist.MagicPause == 0;
             }
             else
             {
@@ -238,15 +234,15 @@ namespace Seeker.Gamebook.Moria
 
             for (int i = 0; i < 2; i++)
             {
-                if (protagonist.Fellowship.Count < 1)
+                if (Character.Protagonist.Fellowship.Count < 1)
                     continue;
 
-                int dice = Game.Dice.Roll(size: protagonist.Fellowship.Count) - 1;
-                string name = protagonist.Fellowship[dice];
+                int dice = Game.Dice.Roll(size: Character.Protagonist.Fellowship.Count) - 1;
+                string name = Character.Protagonist.Fellowship[dice];
 
                 deaths.Add($"BIG|BAD|BOLD|Погиб {name}! :(");
 
-                protagonist.Fellowship.Remove(name);
+                Character.Protagonist.Fellowship.Remove(name);
             }
 
             return deaths;
@@ -294,7 +290,7 @@ namespace Seeker.Gamebook.Moria
                 {
                     fight.Add("BOLD|BAD|Балрог наносит смертельный удар!");
                     fight.Add("BOLD|BIG|BAD|Гэндальф погиб :(");
-                    protagonist.Fellowship.Remove("Гэндальф");
+                    Character.Protagonist.Fellowship.Remove("Гэндальф");
 
                     return fight;
                 }
@@ -356,7 +352,7 @@ namespace Seeker.Gamebook.Moria
         public List<string> RunningUnderArrows()
         {
             List<string> deaths = new List<string>();
-            List<string> fellowship = new List<string>(protagonist.Fellowship);
+            List<string> fellowship = new List<string>(Character.Protagonist.Fellowship);
 
             foreach (string warrior in fellowship)
             {
@@ -379,7 +375,7 @@ namespace Seeker.Gamebook.Moria
                     deaths.Add("BAD|Удача отвернулась от него!");
                     deaths.Add("BAD|BOLD|Стрела орка его настигла...");
 
-                    protagonist.Fellowship.Remove(warrior);
+                    Character.Protagonist.Fellowship.Remove(warrior);
                 }
 
                 deaths.Add(String.Empty);
