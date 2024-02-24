@@ -4,10 +4,6 @@ namespace Seeker.Gamebook.Sheriff
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {
-        public new static Actions StaticInstance = new Actions();
-        public new static Actions GetInstance() => StaticInstance;
-        private static Character protagonist = Character.Protagonist;
-
         public override bool Availability(string option)
         {
             if (String.IsNullOrEmpty(option))
@@ -19,10 +15,10 @@ namespace Seeker.Gamebook.Sheriff
                 {
                     int level = Game.Services.LevelParse(oneOption);
 
-                    if (oneOption.Contains("ВЖУХ >=") && (level > protagonist.Whoosh))
+                    if (oneOption.Contains("ВЖУХ >=") && (level > Character.Protagonist.Whoosh))
                         return false;
 
-                    if (oneOption.Contains("ВЖУХ <") && (level <= protagonist.Whoosh))
+                    if (oneOption.Contains("ВЖУХ <") && (level <= Character.Protagonist.Whoosh))
                         return false;
 
                     return true;
