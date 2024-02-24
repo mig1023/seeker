@@ -6,14 +6,10 @@ namespace Seeker.Gamebook.RendezVous
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {
-        public new static Actions StaticInstance = new Actions();
-        public new static Actions GetInstance() => StaticInstance;
-        private static Character protagonist = Character.Protagonist;
-
         public int Dices { get; set; }
 
         public override List<string> Status() =>
-            new List<string> { $"Осознание: {protagonist.Awareness}" };
+            new List<string> { $"Осознание: {Character.Protagonist.Awareness}" };
 
         public override bool Availability(string option)
         {
@@ -33,11 +29,11 @@ namespace Seeker.Gamebook.RendezVous
                     {
                         int level = Game.Services.LevelParse(oneOption);
 
-                        if (oneOption.Contains("ОСОЗНАНИЕ >") && (level >= protagonist.Awareness))
+                        if (oneOption.Contains("ОСОЗНАНИЕ >") && (level >= Character.Protagonist.Awareness))
                         {
                             return false;
                         }
-                        else if (oneOption.Contains("ОСОЗНАНИЕ <=") && (level < protagonist.Awareness))
+                        else if (oneOption.Contains("ОСОЗНАНИЕ <=") && (level < Character.Protagonist.Awareness))
                         {
                             return false;
                         }
