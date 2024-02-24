@@ -6,10 +6,6 @@ namespace Seeker.Gamebook.MadameGuillotine
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {
-        public new static Actions StaticInstance = new Actions();
-        public new static Actions GetInstance() => StaticInstance;
-        private static Character protagonist = Character.Protagonist;
-
         public string Stat { get; set; }
         public string Penalty { get; set; }
         public int Skill { get; set; }
@@ -28,7 +24,7 @@ namespace Seeker.Gamebook.MadameGuillotine
             }
             else if (!String.IsNullOrEmpty(Stat))
             {
-                int currentStat = GetProperty(protagonist, Stat);
+                int currentStat = GetProperty(Character.Protagonist, Stat);
                 string diffLine = String.Empty;
 
                 if (currentStat > 11)
@@ -63,22 +59,22 @@ namespace Seeker.Gamebook.MadameGuillotine
 
         public override List<string> Status() => new List<string>
         {
-            $"Ранений: {protagonist.Wounds} из {protagonist.Hitpoints}",
+            $"Ранений: {Character.Protagonist.Wounds} из {Character.Protagonist.Hitpoints}",
         };
 
         public override List<string> AdditionalStatus() => new List<string>
         {
-            $"Сила: {protagonist.Strength}",
-            $"Ловкость: {protagonist.Agility}",
-            $"Удача: {protagonist.Luck}",
-            $"Красноречие: {protagonist.Speech}",
-            $"Стрельба: {protagonist.Firearms}",
-            $"Фехтование: {protagonist.Fencing}",
-            $"Верховая езда: {protagonist.HorseRiding}",
+            $"Сила: {Character.Protagonist.Strength}",
+            $"Ловкость: {Character.Protagonist.Agility}",
+            $"Удача: {Character.Protagonist.Luck}",
+            $"Красноречие: {Character.Protagonist.Speech}",
+            $"Стрельба: {Character.Protagonist.Firearms}",
+            $"Фехтование: {Character.Protagonist.Fencing}",
+            $"Верховая езда: {Character.Protagonist.HorseRiding}",
         };
 
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
-           GameOverBy((protagonist.Hitpoints - protagonist.Wounds), out toEndParagraph, out toEndText);
+           GameOverBy((Character.Protagonist.Hitpoints - Character.Protagonist.Wounds), out toEndParagraph, out toEndText);
 
         public override bool IsButtonEnabled(bool secondButton = false)
         {
@@ -88,7 +84,7 @@ namespace Seeker.Gamebook.MadameGuillotine
             }
             else if (!String.IsNullOrEmpty(Stat))
             {
-                int stat = GetProperty(protagonist, Stat);
+                int stat = GetProperty(Character.Protagonist, Stat);
 
                 if (secondButton)
                 {
@@ -96,7 +92,7 @@ namespace Seeker.Gamebook.MadameGuillotine
                 }
                 else
                 {
-                    return (protagonist.StatBonuses > 0) && (stat < 12);
+                    return (Character.Protagonist.StatBonuses > 0) && (stat < 12);
                 }
             }
             else
@@ -147,10 +143,10 @@ namespace Seeker.Gamebook.MadameGuillotine
                             fight.Add($"GOOD|Вы выбросили две единицы! {enemy.Name} убит наповал!");
                             enemy.Wounds = enemy.Hitpoints;
                         }
-                        else if (firstRoll + secondRoll <= protagonist.Fencing)
+                        else if (firstRoll + secondRoll <= Character.Protagonist.Fencing)
                         {
                             fight.Add($"{firstRoll} + {secondRoll} = {firstRoll + secondRoll} сумма " +
-                                $"<= {protagonist.Fencing}  (фехтование)");
+                                $"<= {Character.Protagonist.Fencing}  (фехтование)");
 
                             fight.Add($"GOOD|Вы ранили {enemy.Name}!");
                             enemy.Wounds += 1;
@@ -165,7 +161,7 @@ namespace Seeker.Gamebook.MadameGuillotine
                         else
                         {
                             fight.Add($"{firstRoll} + {secondRoll} = {firstRoll + secondRoll} сумма " +
-                                $"> {protagonist.Fencing} (фехтование)");
+                                $"> {Character.Protagonist.Fencing} (фехтование)");
 
                             fight.Add($"BAD|Вы не смогли ранить {enemy.Name}...");
                         }
@@ -178,8 +174,8 @@ namespace Seeker.Gamebook.MadameGuillotine
                         }
                     }
 
-                    fight.Add($"{enemy.Name} атакует вас (у вас {protagonist.Wounds} " +
-                        $"ранений из {protagonist.Hitpoints})");
+                    fight.Add($"{enemy.Name} атакует вас (у вас {Character.Protagonist.Wounds} " +
+                        $"ранений из {Character.Protagonist.Hitpoints})");
 
                     Game.Dice.DoubleRoll(out int enemyFirstRoll, out int enemySecondRoll);
 
@@ -192,7 +188,7 @@ namespace Seeker.Gamebook.MadameGuillotine
                     if (enemyDoubleHit && (enemyFirstRoll == 1))
                     {
                         fight.Add($"BAD|{enemy.Name} выбросил две единицы! Он убил вас!");
-                        protagonist.Wounds = protagonist.Hitpoints;
+                        Character.Protagonist.Wounds = Character.Protagonist.Hitpoints;
                     }
                     else if (enemyFirstRoll + enemySecondRoll <= enemy.Skill)
                     {
@@ -201,7 +197,7 @@ namespace Seeker.Gamebook.MadameGuillotine
                             $"<= {enemy.Skill} (фехтование)");
 
                         fight.Add($"BAD|{enemy.Name} ранил вас...");
-                        protagonist.Wounds += Wounds > 0 ? Wounds : 1;
+                        Character.Protagonist.Wounds += Wounds > 0 ? Wounds : 1;
 
                         if (FirstBloodOnly)
                         {
@@ -219,7 +215,7 @@ namespace Seeker.Gamebook.MadameGuillotine
                         fight.Add($"GOOD|{enemy.Name} не смог ранить вас!");
                     }
 
-                    if (protagonist.Wounds == protagonist.Hitpoints)
+                    if (Character.Protagonist.Wounds == Character.Protagonist.Hitpoints)
                     {
                         fight.Add(String.Empty);
                         fight.Add("BIG|BAD|Вы ПРОИГРАЛИ :(");
@@ -244,23 +240,23 @@ namespace Seeker.Gamebook.MadameGuillotine
 
         public List<string> Get()
         {
-            if (protagonist.StatBonuses >= 0)
+            if (Character.Protagonist.StatBonuses >= 0)
             {
-                SetProperty(protagonist, Stat, GetProperty(protagonist, Stat) + 1);
-                protagonist.StatBonuses -= 1;
+                SetProperty(Character.Protagonist, Stat, GetProperty(Character.Protagonist, Stat) + 1);
+                Character.Protagonist.StatBonuses -= 1;
             }
 
             return new List<string> { "RELOAD" };
         }
 
         public List<string> Decrease() =>
-            ChangeProtagonistParam(Stat, protagonist, "StatBonuses", decrease: true);
+            ChangeProtagonistParam(Stat, Character.Protagonist, "StatBonuses", decrease: true);
 
         public List<string> Test()
         {
             List<string> test = new List<string>();
 
-            int level = GetProperty(protagonist, Stat);
+            int level = GetProperty(Character.Protagonist, Stat);
             string stat = Constants.StatNames[Stat];
 
             if (Skill > 0)
