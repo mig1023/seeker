@@ -9,10 +9,6 @@ namespace Seeker.Gamebook.LastHokku
 {
     class Paragraphs : Prototypes.Paragraphs, Abstract.IParagraphs
     {
-        public new static Paragraphs StaticInstance = new Paragraphs();
-        public new static Paragraphs GetInstance() => StaticInstance;
-        private Character protagonist = Character.Protagonist;
-
         public override Paragraph Get(int id, XmlNode xmlParagraph) =>
             base.Get(xmlParagraph);
 
@@ -23,15 +19,15 @@ namespace Seeker.Gamebook.LastHokku
 
             bool wihoutHokku = Constants.GetParagraphsWithoutHokkuCreation.Contains(Game.Data.CurrentParagraphID);
 
-            bool needToAdd = (protagonist.Hokku.Count == 0) || (protagonist.Hokku.Last() != option);
-            bool fullHokku = (protagonist.Hokku.Count > 0) && protagonist.Hokku.Last().Contains('.');
+            bool needToAdd = (Character.Protagonist.Hokku.Count == 0) || (Character.Protagonist.Hokku.Last() != option);
+            bool fullHokku = (Character.Protagonist.Hokku.Count > 0) && Character.Protagonist.Hokku.Last().Contains('.');
 
             if (!wihoutHokku && !String.IsNullOrEmpty(option) && needToAdd && !fullHokku)
-                protagonist.Hokku.Add(option);
+                Character.Protagonist.Hokku.Add(option);
 
-            if (protagonist.Hokku.Count >= 7)
+            if (Character.Protagonist.Hokku.Count >= 7)
             {
-                List<string> oldHokku = protagonist.Hokku;
+                List<string> oldHokku = Character.Protagonist.Hokku;
 
                 oldHokku[2] = new System.Globalization.CultureInfo("ru-RU", false).TextInfo.ToTitleCase(oldHokku[2]);
 
@@ -42,10 +38,10 @@ namespace Seeker.Gamebook.LastHokku
                     $"{oldHokku[4]} - {oldHokku[5]} {oldHokku[6]}...",
                 };
 
-                protagonist.Hokku = newHokku;
+                Character.Protagonist.Hokku = newHokku;
             }
 
-            return String.Join("\n", protagonist.Hokku);
+            return String.Join("\n", Character.Protagonist.Hokku);
         }
 
         public override List<Text> TextsParse(XmlNode xmlNode, bool main = false)
