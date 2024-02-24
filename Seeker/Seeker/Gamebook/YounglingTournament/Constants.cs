@@ -4,9 +4,6 @@ namespace Seeker.Gamebook.YounglingTournament
 {
     class Constants : Prototypes.Constants, Abstract.IConstants
     {
-        public new static Constants StaticInstance = new Constants();
-        public new static Constants GetInstance() => StaticInstance;
-
         public static int GetMaxTechniqueValue() => 4;
 
         public static Dictionary<Character.SwordTypes, string> SwordSkillsNames() =>

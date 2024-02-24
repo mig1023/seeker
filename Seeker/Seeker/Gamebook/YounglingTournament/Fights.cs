@@ -7,16 +7,14 @@ namespace Seeker.Gamebook.YounglingTournament
 {
     class Fights
     {
-        private static Character protagonist = Character.Protagonist;
-
         public static Character.SwordTypes GetSwordType()
         {
-            int max = protagonist.SwordTechniques[Character.SwordTypes.Decisiveness];
+            int max = Character.Protagonist.SwordTechniques[Character.SwordTypes.Decisiveness];
             Character.SwordTypes swordTechniques = Character.SwordTypes.Decisiveness;
 
-            foreach (Character.SwordTypes swordType in protagonist.SwordTechniques.Keys)
+            foreach (Character.SwordTypes swordType in Character.Protagonist.SwordTechniques.Keys)
             {
-                if (protagonist.SwordTechniques[swordType] <= 0)
+                if (Character.Protagonist.SwordTechniques[swordType] <= 0)
                     continue;
 
                 int swordResult = SwordSkills(swordType, out string _);
@@ -33,7 +31,7 @@ namespace Seeker.Gamebook.YounglingTournament
 
         public static int SwordSkills(Character.SwordTypes skill, out string detail)
         {
-            int rang = protagonist.SwordTechniques[skill];
+            int rang = Character.Protagonist.SwordTechniques[skill];
 
             switch (skill)
             {
@@ -85,7 +83,7 @@ namespace Seeker.Gamebook.YounglingTournament
             fight.Add(String.Format("GOOD|Вы ранили {0}, он потерял {1} ед.выносливости (осталось {2})",
                 enemy.Name, strikeWound, enemy.Hitpoints));
 
-            protagonist.Thrust += 1;
+            Character.Protagonist.Thrust += 1;
 
             fight.Add("GOOD|BOLD|Вы наносите укол противнику!");
 
@@ -94,16 +92,16 @@ namespace Seeker.Gamebook.YounglingTournament
 
         public static void SpeedFightHitpointsLoss(ref List<string> fight, Character character)
         {
-            bool isProtagonist = (character == protagonist);
+            bool isProtagonist = (character == Character.Protagonist);
 
-            int technique = (isProtagonist ? protagonist.ForceTechniques[ForcesTypes.Speed] : character.Speed);
+            int technique = (isProtagonist ? Character.Protagonist.ForceTechniques[ForcesTypes.Speed] : character.Speed);
             int wound = (5 - technique);
             character.Hitpoints -= wound;
 
             if (isProtagonist)
             {
                 fight.Add(String.Format("BAD|Из-за применения Скорости Силы вы теряете {0} " +
-                    "ед.выносливости (осталось {1})", wound, protagonist.Hitpoints));
+                    "ед.выносливости (осталось {1})", wound, Character.Protagonist.Hitpoints));
             }
             else
             {
@@ -116,7 +114,7 @@ namespace Seeker.Gamebook.YounglingTournament
             ref bool speedActivate, List<Character> EnemiesList)
         {
             fight.Add(String.Format("BOLD|Вы активируете Скорость Силы {0} ранга!",
-                protagonist.ForceTechniques[ForcesTypes.Speed]));
+                Character.Protagonist.ForceTechniques[ForcesTypes.Speed]));
 
             foreach (Character enemy in EnemiesList)
             {
@@ -142,12 +140,12 @@ namespace Seeker.Gamebook.YounglingTournament
 
             int forceTechniques = 0;
 
-            for (int i = 0; i < protagonist.ForceTechniquesOrder.Count; i++)
+            for (int i = 0; i < Character.Protagonist.ForceTechniquesOrder.Count; i++)
             {
-                if (protagonist.ForceTechniquesOrder[i] != 0)
+                if (Character.Protagonist.ForceTechniquesOrder[i] != 0)
                 {
-                    forceTechniques = protagonist.ForceTechniquesOrder[i];
-                    protagonist.ForceTechniquesOrder[i] = 0;
+                    forceTechniques = Character.Protagonist.ForceTechniquesOrder[i];
+                    Character.Protagonist.ForceTechniquesOrder[i] = 0;
 
                     break;
                 }
@@ -162,11 +160,11 @@ namespace Seeker.Gamebook.YounglingTournament
                     fight.Add("BOLD|Вы применяете Толчок Силы!");
 
                     int pushWound = Game.Dice.Roll();
-                    target.Hitpoints -= (pushWound + protagonist.ForceTechniques[ForcesTypes.Push]);
+                    target.Hitpoints -= (pushWound + Character.Protagonist.ForceTechniques[ForcesTypes.Push]);
 
                     fight.Add(String.Format("GOOD|{0} теряет {1} + {2} (за ранг техники) ед.выносливости (осталось {3})",
                         target.Name, Game.Dice.Symbol(pushWound),
-                        protagonist.ForceTechniques[ForcesTypes.Push], target.Hitpoints));
+                        Character.Protagonist.ForceTechniques[ForcesTypes.Push], target.Hitpoints));
 
                     return true;
 
@@ -174,7 +172,7 @@ namespace Seeker.Gamebook.YounglingTournament
                     fight.Add("BOLD|Вы применяете Прыжок Силы!");
 
                     int jump = Game.Dice.Roll();
-                    int technique = protagonist.ForceTechniques[ForcesTypes.Jump];
+                    int technique = Character.Protagonist.ForceTechniques[ForcesTypes.Jump];
                     bool success = (jump + technique) > 6;
 
                     fight.Add(String.Format("Прыжок: {0} + {1} {2} 6 - {3}",
@@ -188,7 +186,7 @@ namespace Seeker.Gamebook.YounglingTournament
                         fight.Add(String.Format("GOOD|{0} теряет {1} ед.выносливости (осталось {2})",
                             target.Name, jump, target.Hitpoints));
 
-                        protagonist.Thrust += 1;
+                        Character.Protagonist.Thrust += 1;
 
                         fight.Add("GOOD|BOLD|Вы наносите укол противнику!");
                     }
@@ -198,7 +196,7 @@ namespace Seeker.Gamebook.YounglingTournament
                 case 3:
                     fight.Add("BOLD|Вы применяете Удушение Силы!");
 
-                    protagonist.DarkSide += 50;
+                    Character.Protagonist.DarkSide += 50;
                     Game.Option.Trigger("Темная сторона");
                     fight.Add("Вы получаете +50 к очкам Тёмной стороны и ключевое слово 'Тёмная сторона'.");
 
@@ -208,7 +206,7 @@ namespace Seeker.Gamebook.YounglingTournament
                     fight.Add(String.Format("GOOD|{0} теряет {1} ед.выносливости (осталось {2})",
                         target.Name, Game.Dice.Symbol(suffWound), target.Hitpoints));
 
-                    protagonist.Thrust += 1;
+                    Character.Protagonist.Thrust += 1;
 
                     fight.Add("GOOD|BOLD|Вы наносите укол противнику!");
 
@@ -224,7 +222,7 @@ namespace Seeker.Gamebook.YounglingTournament
             SwordTypes currectSwordTechniques = GetSwordType();
 
             string skillName = Constants.SwordSkillsNames()[currectSwordTechniques];
-            int skillRang = rang ?? protagonist.SwordTechniques[currectSwordTechniques];
+            int skillRang = rang ?? Character.Protagonist.SwordTechniques[currectSwordTechniques];
 
             return String.Format("{0} ({1} ранг)", skillName, skillRang);
         }

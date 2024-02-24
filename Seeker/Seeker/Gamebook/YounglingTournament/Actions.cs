@@ -7,10 +7,6 @@ namespace Seeker.Gamebook.YounglingTournament
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {
-        public new static Actions StaticInstance = new Actions();
-        public new static Actions GetInstance() => StaticInstance;
-        private static Character protagonist = Character.Protagonist;
-
         public List<Character> Enemies { get; set; }
         public string Enemy { get; set; }
         public int HeroHitpointsLimith { get; set; }
@@ -29,28 +25,28 @@ namespace Seeker.Gamebook.YounglingTournament
 
         public override List<string> Status() => new List<string>
         {
-            $"Cветлая сторона: {protagonist.LightSide}",
-            $"Тёмная сторона: {protagonist.DarkSide}",
+            $"Cветлая сторона: {Character.Protagonist.LightSide}",
+            $"Тёмная сторона: {Character.Protagonist.DarkSide}",
         };
 
         public override List<string> AdditionalStatus()
         {
             List<string> newStatuses = new List<string>();
 
-            newStatuses.Add($"Выносливость: {protagonist.Hitpoints}/{protagonist.MaxHitpoints}");
+            newStatuses.Add($"Выносливость: {Character.Protagonist.Hitpoints}/{Character.Protagonist.MaxHitpoints}");
 
-            if (protagonist.SecondPart == 0)
+            if (Character.Protagonist.SecondPart == 0)
             {
-                newStatuses.Add($"Взлом: {protagonist.Hacking}");
-                newStatuses.Add($"Пилот: {protagonist.Pilot}");
-                newStatuses.Add($"Меткость: {protagonist.Accuracy}");
+                newStatuses.Add($"Взлом: {Character.Protagonist.Hacking}");
+                newStatuses.Add($"Пилот: {Character.Protagonist.Pilot}");
+                newStatuses.Add($"Меткость: {Character.Protagonist.Accuracy}");
             }
             else
             {
-                if ((protagonist.Thrust > 0) || (protagonist.EnemyThrust > 0))
-                    newStatuses.Add($"Уколов: {protagonist.Thrust} vs {protagonist.EnemyThrust}");
+                if ((Character.Protagonist.Thrust > 0) || (Character.Protagonist.EnemyThrust > 0))
+                    newStatuses.Add($"Уколов: {Character.Protagonist.Thrust} vs {Character.Protagonist.EnemyThrust}");
 
-                newStatuses.Add($"Понимание Силы: {protagonist.ForceTechniques.Values.Sum()}");
+                newStatuses.Add($"Понимание Силы: {Character.Protagonist.ForceTechniques.Values.Sum()}");
                 newStatuses.Add($"Форма {Fights.GetSwordSkillName(Fights.GetSwordType())}");
             }
 
@@ -73,7 +69,7 @@ namespace Seeker.Gamebook.YounglingTournament
                 {
                     bool thisIsTechnique = Enum.TryParse(oneOption, out Character.ForcesTypes techniqueType);
 
-                    if (thisIsTechnique && (protagonist.ForceTechniques[techniqueType] == 0))
+                    if (thisIsTechnique && (Character.Protagonist.ForceTechniques[techniqueType] == 0))
                     {
                         return false;
                     }
@@ -81,16 +77,16 @@ namespace Seeker.Gamebook.YounglingTournament
                     {
                         int level = Game.Services.LevelParse(option);
 
-                        if (oneOption.Contains("ПИЛОТ >") && (level >= protagonist.Pilot))
+                        if (oneOption.Contains("ПИЛОТ >") && (level >= Character.Protagonist.Pilot))
                             return false;
 
-                        if (oneOption.Contains("БИБЛИОТЕКА <=") && (level < protagonist.Reading))
+                        if (oneOption.Contains("БИБЛИОТЕКА <=") && (level < Character.Protagonist.Reading))
                             return false;
 
-                        if (oneOption.Contains("УКОЛОВ >") && (level >= protagonist.Thrust))
+                        if (oneOption.Contains("УКОЛОВ >") && (level >= Character.Protagonist.Thrust))
                             return false;
 
-                        if (oneOption.Contains("УКОЛОВ У ВРАГА >") && (level >= protagonist.EnemyThrust))
+                        if (oneOption.Contains("УКОЛОВ У ВРАГА >") && (level >= Character.Protagonist.EnemyThrust))
                             return false;
                     }
                     else if (oneOption.Contains("!"))
@@ -157,7 +153,7 @@ namespace Seeker.Gamebook.YounglingTournament
 
             diceCheck.Add($"На кубике выпало: {Game.Dice.Symbol(dice)}");
 
-            protagonist.Hitpoints -= dice;
+            Character.Protagonist.Hitpoints -= dice;
 
             diceCheck.Add($"BIG|BAD|Вы потеряли жизней: {dice}");
 
@@ -178,7 +174,7 @@ namespace Seeker.Gamebook.YounglingTournament
             
             if (withBonus)
             {
-                bonus = protagonist.ForceTechniques[techniqueType];
+                bonus = Character.Protagonist.ForceTechniques[techniqueType];
                 bonusLine = $" + {bonus} за ранг";
             }
 
@@ -198,7 +194,7 @@ namespace Seeker.Gamebook.YounglingTournament
             List<string> test = new List<string>();
 
             int testDice = Game.Dice.Roll();
-            int forceLevel = protagonist.ForceTechniques.Values.Sum();
+            int forceLevel = Character.Protagonist.ForceTechniques.Values.Sum();
             bool testPassed = testDice + forceLevel >= Level;
             string testLine = testPassed ? ">=" : "<";
 
@@ -215,12 +211,12 @@ namespace Seeker.Gamebook.YounglingTournament
         {
             List<string> attackCheck = new List<string> { };
 
-            int deflecting = 4 + protagonist.SwordTechniques[SwordTypes.Rivalry];
+            int deflecting = 4 + Character.Protagonist.SwordTechniques[SwordTypes.Rivalry];
 
             attackCheck.Add("Выстрел: 10 (сила выстрела) x 9 (меткость) = 90");
 
             attackCheck.Add($"Отражение: 4 + " +
-                $"{protagonist.SwordTechniques[SwordTypes.Rivalry]} " +
+                $"{Character.Protagonist.SwordTechniques[SwordTypes.Rivalry]} " +
                 $"ранг = {deflecting}");
 
             int result = 90 / deflecting;
@@ -230,7 +226,7 @@ namespace Seeker.Gamebook.YounglingTournament
 
             if (result > 0)
             {
-                protagonist.Hitpoints -= result;
+                Character.Protagonist.Hitpoints -= result;
                 attackCheck.Add($"BIG|BAD|Вы потеряли жизней: {result}");
             }
             else
@@ -246,7 +242,7 @@ namespace Seeker.Gamebook.YounglingTournament
         {
             List<string> defenseCheck = new List<string> { };
 
-            int deflecting = 4 + protagonist.SwordTechniques[SwordTypes.Rivalry];
+            int deflecting = 4 + Character.Protagonist.SwordTechniques[SwordTypes.Rivalry];
 
             Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
             int shoot = firstDice + secondDice + 19;
@@ -257,7 +253,7 @@ namespace Seeker.Gamebook.YounglingTournament
                 $"10 (сила выстрела) + 9 (меткость) = {shoot}");
 
             defenseCheck.Add($"Отражение: 4 + " +
-                $"{protagonist.SwordTechniques[SwordTypes.Rivalry]} " +
+                $"{Character.Protagonist.SwordTechniques[SwordTypes.Rivalry]} " +
                 $"ранг = {deflecting}");
 
             int result = shoot / deflecting;
@@ -266,7 +262,7 @@ namespace Seeker.Gamebook.YounglingTournament
                 $"{shoot} выстрел / {deflecting} " +
                 $"отражение = {result}");
 
-            protagonist.Hitpoints -= result;
+            Character.Protagonist.Hitpoints -= result;
 
             defenseCheck.Add($"BIG|BAD|Вы потеряли жизней: {result}");
 
@@ -296,13 +292,13 @@ namespace Seeker.Gamebook.YounglingTournament
                 Game.Dice.DoubleRoll(out int protagonistFirstDice,
                     out int protagonistSecondDice);
 
-                int shotAccuracy = protagonist.Accuracy + 
+                int shotAccuracy = Character.Protagonist.Accuracy + 
                     protagonistFirstDice + protagonistSecondDice + AccuracyBonus;
 
                 string bonus = (AccuracyBonus > 0 ? $" + {AccuracyBonus} бонус" : String.Empty);
 
                 fight.Add($"Ваш выстрел: " +
-                    $"{protagonist.Accuracy} меткость{bonus} + " +
+                    $"{Character.Protagonist.Accuracy} меткость{bonus} + " +
                     $"{Game.Dice.Symbol(protagonistFirstDice)} + " +
                     $"{Game.Dice.Symbol(protagonistSecondDice)} = {shotAccuracy}");
 
@@ -338,14 +334,14 @@ namespace Seeker.Gamebook.YounglingTournament
 
                         if (shooter.Key.Shield > 0)
                         {
-                            int damage = (protagonist.Firepower - shooter.Key.Shield);
+                            int damage = (Character.Protagonist.Firepower - shooter.Key.Shield);
 
                             if (damage <= 0)
                             {
                                 fight.Add($"GOOD|Вы подстрелили {shooter.Key.Name}, " +
                                     $"но его энергощит полностью поглотил урон");
 
-                                shooter.Key.Shield -= protagonist.Firepower;
+                                shooter.Key.Shield -= Character.Protagonist.Firepower;
                             }
                             else
                             {
@@ -361,25 +357,25 @@ namespace Seeker.Gamebook.YounglingTournament
                         }
                         else
                         {
-                            shooter.Key.Hitpoints -= protagonist.Firepower;
+                            shooter.Key.Hitpoints -= Character.Protagonist.Firepower;
                             fight.Add($"GOOD|Вы подстрелили {shooter.Key.Name}, " +
-                                $"он потерял {protagonist.Firepower} ед.выносливости");
+                                $"он потерял {Character.Protagonist.Firepower} ед.выносливости");
                         }
                     }
                     else if (shooter.Value > shotAccuracy)
                     {
-                        protagonist.Hitpoints -= shooter.Key.Firepower;
+                        Character.Protagonist.Hitpoints -= shooter.Key.Firepower;
 
                         fight.Add($"BAD|{shooter.Key.Name} " +
                             $"подстрелил вас, вы потерял " +
                             $"{shooter.Key.Firepower} ед.выносливости " +
-                            $"(осталось {protagonist.Hitpoints})");
+                            $"(осталось {Character.Protagonist.Hitpoints})");
                     }
                 }
 
                 fight.Add(String.Empty);
 
-                if (protagonist.Hitpoints <= 0)
+                if (Character.Protagonist.Hitpoints <= 0)
                 {
                     fight.Add("BIG|BAD|Вы ПРОИГРАЛИ :(");
                     return fight;
@@ -448,11 +444,11 @@ namespace Seeker.Gamebook.YounglingTournament
 
                 int protagonistFirstDice = Game.Dice.Roll();
                 int protagonistSecondDice = Game.Dice.Roll();
-                int hitSkill = skill + protagonist.SwordTechniques[currectSwordTechniques] + 
+                int hitSkill = skill + Character.Protagonist.SwordTechniques[currectSwordTechniques] + 
                     protagonistFirstDice + protagonistSecondDice;
 
                 fight.Add($"Ваша скорость удара: {skill} ловкость + " +
-                    $"{protagonist.SwordTechniques[currectSwordTechniques]} " +
+                    $"{Character.Protagonist.SwordTechniques[currectSwordTechniques]} " +
                     $"ранг + {Game.Dice.Symbol(protagonistFirstDice)} + " +
                     $"{Game.Dice.Symbol(protagonistSecondDice)} = {hitSkill}");
 
@@ -502,12 +498,12 @@ namespace Seeker.Gamebook.YounglingTournament
 
                     else if (enemy.Value > hitSkill)
                     {
-                        protagonist.Hitpoints -= 3;
+                        Character.Protagonist.Hitpoints -= 3;
                         enemyRoundWin += 1;
 
                         fight.Add($"BAD|{enemy.Key.Name} ранил вас, " +
                             $"вы потеряли 3 ед.выносливости " +
-                            $"(осталось {protagonist.Hitpoints})");
+                            $"(осталось {Character.Protagonist.Hitpoints})");
 
                         if ((enemyRoundWin >= 3) && !strikeBack && Game.Option.IsTriggered("Встречный удар"))
                         {
@@ -523,7 +519,7 @@ namespace Seeker.Gamebook.YounglingTournament
 
                 if (speedActivate)
                 {
-                    Fights.SpeedFightHitpointsLoss(ref fight, protagonist);
+                    Fights.SpeedFightHitpointsLoss(ref fight, Character.Protagonist);
 
                     foreach (Character enemy in EnemiesList.Where(x => x.Hitpoints > 0))
                         Fights.SpeedFightHitpointsLoss(ref fight, enemy);
@@ -534,7 +530,7 @@ namespace Seeker.Gamebook.YounglingTournament
                 bool enemyRound = (EnemyRoundWin > 0) && (enemyRoundWin >= EnemyRoundWin);
                 int hitpointsLimit = (HeroHitpointsLimith > 0 ? HeroHitpointsLimith : 0);
 
-                if ((protagonist.Hitpoints <= hitpointsLimit) || enemyRound)
+                if ((Character.Protagonist.Hitpoints <= hitpointsLimit) || enemyRound)
                 {
                     if (enemyRound)
                     {
