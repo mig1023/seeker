@@ -6,10 +6,6 @@ namespace Seeker.Gamebook.ConquistadorDiary
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {
-        public new static Actions StaticInstance = new Actions();
-        public new static Actions GetInstance() => StaticInstance;
-        private static Character protagonist = Character.Protagonist;
-
         public int Round { get; set; }
         public int Bet { get; set; }
         public int DiegoPoints { get; set; }
@@ -20,8 +16,8 @@ namespace Seeker.Gamebook.ConquistadorDiary
             {
                 return new List<string>
                 {
-                    $"Очки интервью: {protagonist.Points}",
-                    $"Баллы: {protagonist.Score}"
+                    $"Очки интервью: {Character.Protagonist.Points}",
+                    $"Баллы: {Character.Protagonist.Score}"
                 };
             }
             else
@@ -37,9 +33,9 @@ namespace Seeker.Gamebook.ConquistadorDiary
             if (Type == "Get-Decrease")
             {
                 string diffLine = String.Empty;
-                int bet = protagonist.CurrentBet;
+                int bet = Character.Protagonist.CurrentBet;
 
-                if ((bet >= 0) && (protagonist.Points == 0))
+                if ((bet >= 0) && (Character.Protagonist.Points == 0))
                 {
                     diffLine = " всё, что осталось";
                 }
@@ -67,17 +63,17 @@ namespace Seeker.Gamebook.ConquistadorDiary
         {
             if (Type == "CountScore")
             {
-                return protagonist.Round < Round;
+                return Character.Protagonist.Round < Round;
             }
             if (Type == "Get-Decrease")
             {
                 if (secondButton)
                 {
-                    return protagonist.CurrentBet > 1;
+                    return Character.Protagonist.CurrentBet > 1;
                 }
                 else
                 {
-                    return (protagonist.Points > 0) && (protagonist.CurrentBet < 6);
+                    return (Character.Protagonist.Points > 0) && (Character.Protagonist.CurrentBet < 6);
                 }
             }
             else
@@ -88,16 +84,16 @@ namespace Seeker.Gamebook.ConquistadorDiary
 
         public List<string> Get()
         {
-            protagonist.CurrentBet += 1;
-            protagonist.Points -= 1;
+            Character.Protagonist.CurrentBet += 1;
+            Character.Protagonist.Points -= 1;
 
             return new List<string> { "RELOAD" };
         }
 
         public List<string> Decrease()
         {
-            protagonist.CurrentBet -= 1;
-            protagonist.Points += 1;
+            Character.Protagonist.CurrentBet -= 1;
+            Character.Protagonist.Points += 1;
 
             return new List<string> { "RELOAD" };
         }
@@ -121,11 +117,11 @@ namespace Seeker.Gamebook.ConquistadorDiary
             }
             else if (option.Contains(">"))
             {
-                return protagonist.Score > Game.Services.LevelParse(option);
+                return Character.Protagonist.Score > Game.Services.LevelParse(option);
             }
             else if (option.Contains("<"))
             {
-                return protagonist.Score < Game.Services.LevelParse(option);
+                return Character.Protagonist.Score < Game.Services.LevelParse(option);
             }
             else
             {
@@ -147,25 +143,25 @@ namespace Seeker.Gamebook.ConquistadorDiary
 
             if (DiegoPoints < 0)
             {
-                DiegoPoints = protagonist.DiegoPoints;
-                protagonist.DiegoPoints = 0;
+                DiegoPoints = Character.Protagonist.DiegoPoints;
+                Character.Protagonist.DiegoPoints = 0;
             }
 
-            if ((Round == 4) && (protagonist.Points > 0) && (protagonist.LastBet == 0))
+            if ((Round == 4) && (Character.Protagonist.Points > 0) && (Character.Protagonist.LastBet == 0))
             {
-                protagonist.LastBet = protagonist.Points;
-                protagonist.Points = 0;
+                Character.Protagonist.LastBet = Character.Protagonist.Points;
+                Character.Protagonist.Points = 0;
             }
 
-            result.Add($"Ставка Курта: {protagonist.LastBet} " +
-                $"{Game.Services.CoinsNoun(protagonist.LastBet, "очко", "очка", "очков")}");
+            result.Add($"Ставка Курта: {Character.Protagonist.LastBet} " +
+                $"{Game.Services.CoinsNoun(Character.Protagonist.LastBet, "очко", "очка", "очков")}");
 
             result.Add($"Ставка Диего: {DiegoPoints} " +
                 $"{Game.Services.CoinsNoun(DiegoPoints, "очко", "очка", "очков")}");
 
-            if (protagonist.LastBet > DiegoPoints)
+            if (Character.Protagonist.LastBet > DiegoPoints)
             {
-                protagonist.Score += Round;
+                Character.Protagonist.Score += Round;
                 result.Add("BIG|GOOD|Курт победил этот раунд!");
             }
             else
@@ -176,7 +172,7 @@ namespace Seeker.Gamebook.ConquistadorDiary
             result.Add($"BIG|Он получил {Round} " +
                 $"{Game.Services.CoinsNoun(Round, "балл", "балла", "баллов")}");
 
-            protagonist.Round = Round;
+            Character.Protagonist.Round = Round;
             return result;
         }
     }
