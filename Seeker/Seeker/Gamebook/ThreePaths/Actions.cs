@@ -6,40 +6,36 @@ namespace Seeker.Gamebook.ThreePaths
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {
-        public new static Actions StaticInstance = new Actions();
-        public new static Actions GetInstance() => StaticInstance;
-        private static Character protagonist = Character.Protagonist;
-
         public bool ThisIsSpell { get; set; }
 
         public override List<string> Status()
         {
-            if (protagonist.Time == null)
+            if (Character.Protagonist.Time == null)
                 return null;
                 
-            return new List<string> { $"Время: {protagonist.Time:d2}:00" };
+            return new List<string> { $"Время: {Character.Protagonist.Time:d2}:00" };
         }
 
         public override bool IsButtonEnabled(bool secondButton = false)
         {
-            bool bySpellAdd = ThisIsSpell && (protagonist.SpellSlots <= 0) && !secondButton;
-            bool bySpellRemove = ThisIsSpell && !protagonist.Spells.Contains(Head) && secondButton;
+            bool bySpellAdd = ThisIsSpell && (Character.Protagonist.SpellSlots <= 0) && !secondButton;
+            bool bySpellRemove = ThisIsSpell && !Character.Protagonist.Spells.Contains(Head) && secondButton;
 
             return !(bySpellAdd || bySpellRemove);
         }
 
         public List<string> Get()
         {
-            protagonist.Spells.Add(Head);
-            protagonist.SpellSlots -= 1;
+            Character.Protagonist.Spells.Add(Head);
+            Character.Protagonist.SpellSlots -= 1;
 
             return new List<string> { "RELOAD" };
         }
 
         public List<string> Decrease()
         {
-            protagonist.Spells.Remove(Head);
-            protagonist.SpellSlots += 1;
+            Character.Protagonist.Spells.Remove(Head);
+            Character.Protagonist.SpellSlots += 1;
 
             return new List<string> { "RELOAD" };
         }
@@ -55,15 +51,15 @@ namespace Seeker.Gamebook.ThreePaths
                 {
                     int level = Game.Services.LevelParse(option);
 
-                    if (oneOption.Contains("ВРЕМЯ <") && (level <= protagonist.Time))
+                    if (oneOption.Contains("ВРЕМЯ <") && (level <= Character.Protagonist.Time))
                         return false;
 
-                    if (oneOption.Contains("ВРЕМЯ >=") && (level > protagonist.Time))
+                    if (oneOption.Contains("ВРЕМЯ >=") && (level > Character.Protagonist.Time))
                         return false;
                 }
                 else if (oneOption.Contains("ЗАКЛЯТИЕ"))
                 {
-                    return protagonist.Spells.Contains(oneOption.Trim());
+                    return Character.Protagonist.Spells.Contains(oneOption.Trim());
                 }
                 else if (oneOption.Contains("!"))
                 {
@@ -81,7 +77,7 @@ namespace Seeker.Gamebook.ThreePaths
 
         public override List<string> Representer()
         {
-            int count = protagonist.Spells.Where(x => x == Head).Count();
+            int count = Character.Protagonist.Spells.Where(x => x == Head).Count();
             string line = count > 0 ? $" ({count} шт)" : String.Empty;
 
             return new List<string> { $"{Head}{line}" };
