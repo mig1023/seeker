@@ -7,10 +7,6 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {
-        public new static Actions StaticInstance = new Actions();
-        public new static Actions GetInstance() => StaticInstance;
-        private static Character protagonist = Character.Protagonist;
-
         public enum Specifics
         {
             Nope,
@@ -82,49 +78,49 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
         public override List<string> Status() => new List<string>
         {
-            $"Мастерство: {protagonist.Mastery}",
-            $"Выносливость: {protagonist.Endurance}/{protagonist.MaxEndurance}",
+            $"Мастерство: {Character.Protagonist.Mastery}",
+            $"Выносливость: {Character.Protagonist.Endurance}/{Character.Protagonist.MaxEndurance}",
         };
 
         public override List<string> AdditionalStatus()
         {
             List<string> statusLines = new List<string>
             {
-                $"Изменение: {protagonist.Change}",
-                $"Золото: {protagonist.Gold}",
-                $"Удача: {protagonist.Luck}/{protagonist.MaxLuck}",
+                $"Изменение: {Character.Protagonist.Change}",
+                $"Золото: {Character.Protagonist.Gold}",
+                $"Удача: {Character.Protagonist.Luck}/{Character.Protagonist.MaxLuck}",
             };
 
-            if (protagonist.Crossbow > 0)
-                statusLines.Add($"Арбалет: {protagonist.Crossbow}");
+            if (Character.Protagonist.Crossbow > 0)
+                statusLines.Add($"Арбалет: {Character.Protagonist.Crossbow}");
 
-            if (protagonist.Gun > 0)
-                statusLines.Add($"Пистолет: {protagonist.Gun}");
+            if (Character.Protagonist.Gun > 0)
+                statusLines.Add($"Пистолет: {Character.Protagonist.Gun}");
 
-            if (protagonist.VanRichten > 0)
-                statusLines.Add($"Выносливость Ван Рихтена: {protagonist.VanRichten}");
+            if (Character.Protagonist.VanRichten > 0)
+                statusLines.Add($"Выносливость Ван Рихтена: {Character.Protagonist.VanRichten}");
 
             return statusLines;
         }
 
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
-            GameOverBy(protagonist.Endurance, out toEndParagraph, out toEndText);
+            GameOverBy(Character.Protagonist.Endurance, out toEndParagraph, out toEndText);
 
         public List<string> Luck()
         {
             Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
-            bool goodLuck = (firstDice + secondDice) <= protagonist.Luck;
+            bool goodLuck = (firstDice + secondDice) <= Character.Protagonist.Luck;
             string luckLine = goodLuck ? "<=" : ">";
 
             List<string> luckCheck = new List<string> {
                 $"Проверка удачи: {Game.Dice.Symbol(firstDice)} + " +
-                $"{Game.Dice.Symbol(secondDice)} {luckLine} {protagonist.Luck}" };
+                $"{Game.Dice.Symbol(secondDice)} {luckLine} {Character.Protagonist.Luck}" };
 
             luckCheck.Add(Result(goodLuck, "УСПЕХ|НЕУДАЧА"));
 
-            if (protagonist.Luck > 2)
+            if (Character.Protagonist.Luck > 2)
             {
-                protagonist.Luck -= 1;
+                Character.Protagonist.Luck -= 1;
                 luckCheck.Add("Уровень удачи снижен на единицу");
             }
 
@@ -134,7 +130,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
         public List<string> Mastery()
         {
             Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
-            int mastery = (Value > 0 ? Value : protagonist.Mastery);
+            int mastery = (Value > 0 ? Value : Character.Protagonist.Mastery);
             bool masteryOk = (firstDice + secondDice) <= mastery;
             string masteryLine = masteryOk ? "<=" : ">";
 
@@ -172,13 +168,13 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                 bonusLine = " + 3 за Лунный камень";
             }
 
-            bool changeOk = result > protagonist.Change;
-            string cmpLine = Game.Services.Сomparison(result, protagonist.Change);
+            bool changeOk = result > Character.Protagonist.Change;
+            string cmpLine = Game.Services.Сomparison(result, Character.Protagonist.Change);
 
             List<string> changeCheck = new List<string> {
                 $"Проверка: {Game.Dice.Symbol(firstDice)} + " +
                 $"{Game.Dice.Symbol(secondDice)}{bonusLine} {cmpLine} " +
-                $"{protagonist.Change} изменение" };
+                $"{Character.Protagonist.Change} изменение" };
 
             changeCheck.Add(Result(changeOk, "Победил ЧЕЛОВЕК|Победил ВОЛК"));
 
@@ -203,7 +199,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
             diceCheck.Add($"BIG|Сумма на кубиках: {result}");
 
-            diceCheck.Add(Result(result < protagonist.Endurance, "Меньше!|Больше"));
+            diceCheck.Add(Result(result < Character.Protagonist.Endurance, "Меньше!|Больше"));
 
             return diceCheck;
         }
@@ -218,9 +214,9 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             diceCheck.Add($"На кубиках выпало: {Game.Dice.Symbol(firstDice)} + " +
                 $"{Game.Dice.Symbol(firstDice)} = {result}");
 
-            diceCheck.Add($"Текущий уровень тревоги: {protagonist.Anxiety}");
+            diceCheck.Add($"Текущий уровень тревоги: {Character.Protagonist.Anxiety}");
 
-            diceCheck.Add(Result(result > protagonist.Anxiety, "Больше!|Меньше"));
+            diceCheck.Add(Result(result > Character.Protagonist.Anxiety, "Больше!|Меньше"));
 
             return diceCheck;
         }
@@ -244,7 +240,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                 competition.Add($"{i} выстрел: {Game.Dice.Symbol(firstDice)} + " +
                     $"{Game.Dice.Symbol(secondDice)}{penaltyLine} = {result}");
 
-                if (result > protagonist.Mastery)
+                if (result > Character.Protagonist.Mastery)
                 {
                     competition.Add("BAD|Это больше Мастерства: вы промахнулись...");
                     inTarget = false;
@@ -262,7 +258,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             if (inTarget)
             {
                 competition.Add("BIG|GOOD|Вы ВЫИГРАЛИ и получаете выигрышь в 5 золотых! :)");
-                protagonist.Gold += 5;
+                Character.Protagonist.Gold += 5;
             }
             else
             {
@@ -284,17 +280,17 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
             if (dice < 3)
             {
-                protagonist.Mastery = protagonist.MaxMastery;
+                Character.Protagonist.Mastery = Character.Protagonist.MaxMastery;
                 line += "о Мастерство";
             }
             else if (dice > 4)
             {
-                protagonist.Luck = protagonist.MaxLuck;
+                Character.Protagonist.Luck = Character.Protagonist.MaxLuck;
                 line += "а Удача";
             }
             else
             {
-                protagonist.Endurance = protagonist.MaxEndurance;
+                Character.Protagonist.Endurance = Character.Protagonist.MaxEndurance;
                 line += "а Выносливость";
             }
 
@@ -313,7 +309,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
             diceCheck.Add($"На кубике выпало: {Game.Dice.Symbol(dice)}{bonus}");
 
-            protagonist.Endurance -= dice + Value;
+            Character.Protagonist.Endurance -= dice + Value;
 
             diceCheck.Add($"BIG|BAD|Вы потеряли жизней: {dice + Value}");
 
@@ -330,7 +326,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
             dice += Value;
 
-            protagonist.Gold -= dice;
+            Character.Protagonist.Gold -= dice;
 
             diceCheck.Add($"BIG|GOOD|Вы нашли золотых: {dice}");
 
@@ -340,16 +336,16 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
         public override bool IsButtonEnabled(bool secondButton = false)
         {
             bool disabledByUsed = (Price > 0) && Used;
-            bool disabledByPrice = (Price > 0) && (protagonist.Gold < Price);
+            bool disabledByPrice = (Price > 0) && (Character.Protagonist.Gold < Price);
 
             return !(disabledByUsed || disabledByPrice);
         }
 
         public List<string> Get()
         {
-            if ((Price > 0) && (protagonist.Gold >= Price))
+            if ((Price > 0) && (Character.Protagonist.Gold >= Price))
             {
-                protagonist.Gold -= Price;
+                Character.Protagonist.Gold -= Price;
 
                 if (!Multiple)
                     Used = true;
@@ -382,13 +378,13 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                     {
                         int level = Game.Services.LevelParse(oneOption);
 
-                        if (option.Contains("ЗОЛОТО >=") && (level > protagonist.Gold))
+                        if (option.Contains("ЗОЛОТО >=") && (level > Character.Protagonist.Gold))
                             return false;
 
-                        if (option.Contains("КИНЖАЛЫ >=") && (level > protagonist.SilverDaggers))
+                        if (option.Contains("КИНЖАЛЫ >=") && (level > Character.Protagonist.SilverDaggers))
                             return false;
 
-                        if (option.Contains("КИНЖАЛЫ <") && (level <= protagonist.SilverDaggers))
+                        if (option.Contains("КИНЖАЛЫ <") && (level <= Character.Protagonist.SilverDaggers))
                             return false;
                     }
                     else if (oneOption.Contains("!"))
@@ -463,6 +459,8 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
             List<Character> FightEnemies = new List<Character>();
 
+            Character protagonist = Character.Protagonist;
+
             foreach (Character enemy in Enemies)
                 FightEnemies.Add(enemy.Clone());
 
@@ -482,12 +480,12 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             if (Specificity == Specifics.IncompleteCorpse)
                 IncompleteCorpse.Specificity(ref FightEnemies, ref fight);
 
-            if ((protagonist.Crossbow > 0) && !invulnerable)
+            if ((Character.Protagonist.Crossbow > 0) && !invulnerable)
                 Fights.CrossbowShot(ref FightEnemies, ref fight, ref enemyWounds);
 
             bool gunShot = Fights.GunShot(ref FightEnemies, ref fight, ref enemyWounds, WoundsToWin, WoundsLimit);
 
-            if ((protagonist.Gun > 0) && !invulnerable && gunShot)
+            if ((Character.Protagonist.Gun > 0) && !invulnerable && gunShot)
                 return fight;
 
             while (true)
@@ -513,7 +511,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                     if (!attackAlready)
                     {
                         Game.Dice.DoubleRoll(out int protagonistRollFirst, out int protagonistRollSecond);
-                        protagonistHitStrength = protagonistRollFirst + protagonistRollSecond + protagonist.Mastery + HitStrengthBonus;
+                        protagonistHitStrength = protagonistRollFirst + protagonistRollSecond + Character.Protagonist.Mastery + HitStrengthBonus;
 
                         string bonus = String.Empty;
 
@@ -539,7 +537,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                         fight.Add($"Сила вашего удара: " +
                             $"{Game.Dice.Symbol(protagonistRollFirst)} + " +
                             $"{Game.Dice.Symbol(protagonistRollSecond)} + " +
-                            $"{protagonist.Mastery}{bonus} = {protagonistHitStrength}");
+                            $"{Character.Protagonist.Mastery}{bonus} = {protagonistHitStrength}");
 
                         if ((Specificity == Specifics.SnakeFight) && (round >= 2))
                             HitStrengthBonus = 0;
@@ -609,11 +607,11 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                         else if (Game.Option.IsTriggered("Кольчуга") && evenHit)
                         {
                             fight.Add("Кольчуга защитила вас: вы теряете лишь 1 Выносливость");
-                            protagonist.Endurance -= 1;
+                            Character.Protagonist.Endurance -= 1;
                         }
                         else
                         {
-                            protagonist.Endurance -= (ExtendedDamage > 0 ? ExtendedDamage : 2);
+                            Character.Protagonist.Endurance -= (ExtendedDamage > 0 ? ExtendedDamage : 2);
                         }
 
                         roundFails += 1;
@@ -624,14 +622,14 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
                         if (protagonistWounds == WoundsForTransformation)
                         {
-                            protagonist.Change += 1;
+                            Character.Protagonist.Change += 1;
 
                             fight.Add(String.Empty);
                             fight.Add("BIG|BAD|Трансформация продолжается!");
-                            fight.Add($"BAD|Изменение увеличилось на единицу и достигло {protagonist.Change}");
+                            fight.Add($"BAD|Изменение увеличилось на единицу и достигло {Character.Protagonist.Change}");
                         }
 
-                        if ((protagonist.Endurance <= 0) || ((WoundsToWin > 0) && (WoundsToWin <= enemyWounds)))
+                        if ((Character.Protagonist.Endurance <= 0) || ((WoundsToWin > 0) && (WoundsToWin <= enemyWounds)))
                         {
                             fight.Add(String.Empty);
                             fight.Add("BIG|BAD|Вы ПРОИГРАЛИ :(");
@@ -648,7 +646,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                     if (Specificity == Specifics.Ulrich) 
                         enemy.Endurance -= Ulrich.Fight(enemy.Name, ref fight, enemyHitStrength);
                     
-                    if (protagonist.VanRichten > 0) 
+                    if (Character.Protagonist.VanRichten > 0) 
                         enemy.Endurance -= VanRichten.Fight(enemy.Name, ref fight, enemyHitStrength);
 
                     if (Fights.EnemyWound(FightEnemies, ref enemyWounds, ref fight, WoundsToWin, WoundsLimit, onlyCheck: true))
@@ -692,9 +690,9 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
         public override bool IsHealingEnabled()
         {
-            bool enduranceDamage = protagonist.Endurance < protagonist.MaxEndurance;
-            bool masteryDamage = protagonist.Mastery < protagonist.MaxMastery;
-            bool luckDamage = protagonist.Luck < protagonist.MaxLuck;
+            bool enduranceDamage = Character.Protagonist.Endurance < Character.Protagonist.MaxEndurance;
+            bool masteryDamage = Character.Protagonist.Mastery < Character.Protagonist.MaxMastery;
+            bool luckDamage = Character.Protagonist.Luck < Character.Protagonist.MaxLuck;
 
             return (enduranceDamage || masteryDamage || luckDamage);
         }
@@ -703,19 +701,19 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
         {
             if (healingLevel == -1)
             {
-                protagonist.Endurance = protagonist.MaxEndurance;
+                Character.Protagonist.Endurance = Character.Protagonist.MaxEndurance;
             }
             else if (healingLevel == -2)
             {
-                protagonist.Mastery = protagonist.MaxMastery;
+                Character.Protagonist.Mastery = Character.Protagonist.MaxMastery;
             }
             else if (healingLevel == -3)
             {
-                protagonist.Luck = protagonist.MaxLuck;
+                Character.Protagonist.Luck = Character.Protagonist.MaxLuck;
             }
             else
             {
-                protagonist.Endurance += healingLevel;
+                Character.Protagonist.Endurance += healingLevel;
             }
         }
     }

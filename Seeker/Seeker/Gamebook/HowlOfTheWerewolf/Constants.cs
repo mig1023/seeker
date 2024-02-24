@@ -4,9 +4,6 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 {
     class Constants : Prototypes.Constants, Abstract.IConstants
     {
-        public new static Constants StaticInstance = new Constants();
-        public new static Constants GetInstance() => StaticInstance;
-
         public static Dictionary<int, string> GetCountName { get; set; }
 
         public static Dictionary<int, string> GetPassageName { get; set; }

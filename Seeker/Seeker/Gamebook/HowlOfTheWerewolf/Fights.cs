@@ -14,7 +14,9 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                 enemyWounds += 1;
             }
 
-            bool enemyLost = FightEnemies.Where(x => x.Endurance > (WoundsLimit > 0 ? WoundsLimit : 0)).Count() == 0;
+            bool enemyLost = FightEnemies
+                .Where(x => x.Endurance > (WoundsLimit > 0 ? WoundsLimit : 0))
+                .Count() == 0;
 
             if (enemyLost || ((WoundsToWin > 0) && (WoundsToWin <= enemyWounds)))
             {
