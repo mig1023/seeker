@@ -6,31 +6,27 @@ namespace Seeker.Gamebook.ByTheWillOfRome
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {
-        public new static Actions StaticInstance = new Actions();
-        public new static Actions GetInstance() => StaticInstance;
-        private static Character protagonist = Character.Protagonist;
-
         public override List<string> Status() => new List<string>
         {
-            $"Сестерциев: {protagonist.Sestertius}",
-            $"Честь: {protagonist.Honor}",
+            $"Сестерциев: {Character.Protagonist.Sestertius}",
+            $"Честь: {Character.Protagonist.Honor}",
         };
 
         public override List<string> AdditionalStatus()
         {
-            if (protagonist.Legionaries > 0)
+            if (Character.Protagonist.Legionaries > 0)
             {
-                string legionaries = new string('♙', protagonist.Legionaries);
+                string legionaries = new string('♙', Character.Protagonist.Legionaries);
 
                 return new List<string>
                 {
                     $"Легионеров: {legionaries}",
-                    $"Дисциплина: {Game.Services.NegativeMeaning(protagonist.Discipline)}",
+                    $"Дисциплина: {Game.Services.NegativeMeaning(Character.Protagonist.Discipline)}",
                 };
             }
-            else if (protagonist.Horsemen > 0)
+            else if (Character.Protagonist.Horsemen > 0)
             {
-                string horsemen = new string('♘', protagonist.Horsemen);
+                string horsemen = new string('♘', Character.Protagonist.Horsemen);
                 return new List<string>
                 {
                     $"Всадников: {horsemen}",
@@ -61,11 +57,11 @@ namespace Seeker.Gamebook.ByTheWillOfRome
             toEndParagraph = 0;
             toEndText = "Ущерб чести слишком велик, лучше броситься на меч, а игру начать сначала";
 
-            return protagonist.Honor <= 0;
+            return Character.Protagonist.Honor <= 0;
         }
 
         public override bool IsButtonEnabled(bool secondButton = false) =>
-            !(Used || ((Price > 0) && (protagonist.Sestertius < Price)));
+            !(Used || ((Price > 0) && (Character.Protagonist.Sestertius < Price)));
 
         public override bool Availability(string option)
         {
@@ -100,10 +96,10 @@ namespace Seeker.Gamebook.ByTheWillOfRome
                     {
                         int level = Game.Services.LevelParse(oneOption);
 
-                        if (oneOption.Contains("СЕСТЕРЦИЕВ >=") && (level <= protagonist.Sestertius))
+                        if (oneOption.Contains("СЕСТЕРЦИЕВ >=") && (level <= Character.Protagonist.Sestertius))
                             return true;
 
-                        if (oneOption.Contains("ДИСЦИПЛИНА >=") && (level <= protagonist.Discipline))
+                        if (oneOption.Contains("ДИСЦИПЛИНА >=") && (level <= Character.Protagonist.Discipline))
                             return true;
                     }
                     else if (oneOption.Contains("!"))
@@ -123,7 +119,7 @@ namespace Seeker.Gamebook.ByTheWillOfRome
 
         public List<string> Get()
         {
-            protagonist.Sestertius -= Price;
+            Character.Protagonist.Sestertius -= Price;
 
             Used = true;
 

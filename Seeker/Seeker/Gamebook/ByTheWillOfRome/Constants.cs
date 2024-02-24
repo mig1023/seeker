@@ -4,9 +4,6 @@ namespace Seeker.Gamebook.ByTheWillOfRome
 {
     class Constants : Prototypes.Constants, Abstract.IConstants
     {
-        public new static Constants StaticInstance = new Constants();
-        public new static Constants GetInstance() => StaticInstance;
-
         public override bool GetParagraphsStatusesLimit(out int limitStart, out int limitEnd)
         {
             limitStart = ParagraphsStatusesLimit[0];
