@@ -6,10 +6,6 @@ namespace Seeker.Gamebook.VWeapons
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {
-        public new static Actions StaticInstance = new Actions();
-        public new static Actions GetInstance() => StaticInstance;
-        private static Character protagonist = Character.Protagonist;
-
         public List<Character> Enemies { get; set; }
         public bool Dogfight { get; set; }
         public int Value { get; set; }
@@ -18,19 +14,19 @@ namespace Seeker.Gamebook.VWeapons
 
         public override List<string> Status() => new List<string>
         {
-            $"Подозрение: {protagonist.Suspicions}/5",
-            $"Время: {protagonist.Time}/12",
-            $"Меткость: {protagonist.Accuracy}/5",
-            $"Патроны: {protagonist.Cartridges}/8",
+            $"Подозрение: {Character.Protagonist.Suspicions}/5",
+            $"Время: {Character.Protagonist.Time}/12",
+            $"Меткость: {Character.Protagonist.Accuracy}/5",
+            $"Патроны: {Character.Protagonist.Cartridges}/8",
         };
 
         public override List<string> AdditionalStatus() => new List<string>
         {
-            $"Голова: {protagonist.Head}/3",
-            $"Плечи: {protagonist.ShoulderGirdle}/4",
-            $"Корпус: {protagonist.Body}/4",
-            $"Руки: {protagonist.Hands}/4",
-            $"Ноги: {protagonist.Legs}/4",
+            $"Голова: {Character.Protagonist.Head}/3",
+            $"Плечи: {Character.Protagonist.ShoulderGirdle}/4",
+            $"Корпус: {Character.Protagonist.Body}/4",
+            $"Руки: {Character.Protagonist.Hands}/4",
+            $"Ноги: {Character.Protagonist.Legs}/4",
         };
 
         public override List<string> Representer()
@@ -52,7 +48,7 @@ namespace Seeker.Gamebook.VWeapons
         }
 
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
-            GameOverBy(protagonist.Dead, out toEndParagraph, out toEndText);
+            GameOverBy(Character.Protagonist.Dead, out toEndParagraph, out toEndText);
 
         public override bool Availability(string option)
         {
@@ -80,19 +76,19 @@ namespace Seeker.Gamebook.VWeapons
                     {
                         int level = Game.Services.LevelParse(oneOption);
 
-                        if (oneOption.Contains("ПАТРОНЫ >=") && (level > protagonist.Cartridges))
+                        if (oneOption.Contains("ПАТРОНЫ >=") && (level > Character.Protagonist.Cartridges))
                             return false;
 
-                        if (oneOption.Contains("ПОДОЗРЕНИЕ >=") && (level > protagonist.Suspicions))
+                        if (oneOption.Contains("ПОДОЗРЕНИЕ >=") && (level > Character.Protagonist.Suspicions))
                             return false;
 
-                        if (oneOption.Contains("ПОДОЗРЕНИЕ <") && (level <= protagonist.Suspicions))
+                        if (oneOption.Contains("ПОДОЗРЕНИЕ <") && (level <= Character.Protagonist.Suspicions))
                             return false;
 
-                        if (oneOption.Contains("ВРЕМЯ >=") && (level > protagonist.Time))
+                        if (oneOption.Contains("ВРЕМЯ >=") && (level > Character.Protagonist.Time))
                             return false;
 
-                        if (oneOption.Contains("ВРЕМЯ <") && (level <= protagonist.Time))
+                        if (oneOption.Contains("ВРЕМЯ <") && (level <= Character.Protagonist.Time))
                             return false;
                     }
                     else if (oneOption.Contains("!"))
@@ -115,7 +111,7 @@ namespace Seeker.Gamebook.VWeapons
             List<string> damage = new List<string>();
 
             if (Time != 0)
-                protagonist.Time += Time;
+                Character.Protagonist.Time += Time;
 
             int target = Game.Dice.Roll();
 
@@ -125,7 +121,7 @@ namespace Seeker.Gamebook.VWeapons
             }
             else
             {
-                Fights.ProtagonistWound(protagonist, ref damage, target, Value);
+                Fights.ProtagonistWound(Character.Protagonist, ref damage, target, Value);
             }
 
             return damage;
@@ -136,12 +132,12 @@ namespace Seeker.Gamebook.VWeapons
             List<string> damage = new List<string>();
 
             if (Time != 0)
-                protagonist.Time += Time;
+                Character.Protagonist.Time += Time;
 
-            protagonist.Cartridges += Value;
+            Character.Protagonist.Cartridges += Value;
 
             damage.Add($"BIG|GOOD|+{Value} патронов, " +
-                $"их у вас теперь {protagonist.Cartridges}.");
+                $"их у вас теперь {Character.Protagonist.Cartridges}.");
 
             return damage;
         }
@@ -149,7 +145,7 @@ namespace Seeker.Gamebook.VWeapons
         public List<string> Bomb()
         {
             if (Time != 0)
-                protagonist.Time += Time;
+                Character.Protagonist.Time += Time;
 
             Game.Option.Trigger("B");
 
@@ -161,7 +157,7 @@ namespace Seeker.Gamebook.VWeapons
             if (healingPoints <= 0)
                 return;
 
-            int currentValue = GetProperty(protagonist, part);
+            int currentValue = GetProperty(Character.Protagonist, part);
 
             int maxHealing = (partName == "головы" ? 3 : 4);
 
@@ -174,7 +170,7 @@ namespace Seeker.Gamebook.VWeapons
             healingPoints -= diff;
             currentValue += diff;
 
-            SetProperty(protagonist, part, currentValue);
+            SetProperty(Character.Protagonist, part, currentValue);
 
             healing.Add($"Вы восстановили {diff} ед. здоровья " +
                 $"{partName}, теперь оно равно {currentValue} " +
@@ -188,7 +184,7 @@ namespace Seeker.Gamebook.VWeapons
             int healingPoints = Value;
 
             if (Time != 0)
-                protagonist.Time += Time;
+                Character.Protagonist.Time += Time;
 
             foreach (string parts in Constants.HealingParts.Keys.ToList())
                 HealingAction(ref healing, parts, ref healingPoints, Constants.HealingParts[parts]);
@@ -205,7 +201,7 @@ namespace Seeker.Gamebook.VWeapons
             foreach (Character enemy in Enemies)
                 FightEnemies.Add(enemy.Clone());
 
-            bool noCartridges = Fights.NoMoreCartridges(FightEnemies) && protagonist.Cartridges <= 0;
+            bool noCartridges = Fights.NoMoreCartridges(FightEnemies) && Character.Protagonist.Cartridges <= 0;
             bool dogFightprotagonist, dogfight = Dogfight || noCartridges;
             int damagedWeapon = 2;
 
@@ -221,7 +217,7 @@ namespace Seeker.Gamebook.VWeapons
 
                     fight.Add($"BOLD|{enemy.Name}, здоровье {enemy.Hitpoints}{cartridgesLine}");
 
-                    if (enemy.First && Fights.EnemyAttack(protagonist, enemy, ref fight, Dogfight))
+                    if (enemy.First && Fights.EnemyAttack(Character.Protagonist, enemy, ref fight, Dogfight))
                         return fight;
 
                     if (DamagedWeapon)
@@ -230,7 +226,7 @@ namespace Seeker.Gamebook.VWeapons
                     }
                     else
                     {
-                        dogFightprotagonist = Dogfight || (protagonist.Cartridges <= 0) || (protagonist.Accuracy <= 0);
+                        dogFightprotagonist = Dogfight || (Character.Protagonist.Cartridges <= 0) || (Character.Protagonist.Accuracy <= 0);
                     }
 
                     if (!dogFightprotagonist)
@@ -244,16 +240,16 @@ namespace Seeker.Gamebook.VWeapons
                         }
                         else
                         {
-                            protagonist.Cartridges -= 1;
+                            Character.Protagonist.Cartridges -= 1;
                         }
 
-                        enemy.Hitpoints -= protagonist.Accuracy;
-                        fight.Add($"GOOD|Ваш выстрел отнимает у него {protagonist.Accuracy} ед. здоворья.");
+                        enemy.Hitpoints -= Character.Protagonist.Accuracy;
+                        fight.Add($"GOOD|Ваш выстрел отнимает у него {Character.Protagonist.Accuracy} ед. здоворья.");
                     }
-                    else if (protagonist.ShoulderGirdle <= 0)
+                    else if (Character.Protagonist.ShoulderGirdle <= 0)
                     {
                         fight.Add("Ваши ранения слишком страшны, вы не способны противостоять противнику в этом бою...");
-                        protagonist.Dead = true;
+                        Character.Protagonist.Dead = true;
 
                         fight.Add(String.Empty);
                         fight.Add("BIG|BAD|Вы ПРОИГРАЛИ :(");
@@ -271,7 +267,7 @@ namespace Seeker.Gamebook.VWeapons
                     {
                         fight.Add($"GOOD|{enemy.Name} убит!");
                     }
-                    else if (!enemy.First && Fights.EnemyAttack(protagonist, enemy, ref fight, Dogfight))
+                    else if (!enemy.First && Fights.EnemyAttack(Character.Protagonist, enemy, ref fight, Dogfight))
                     {
                         return fight;
                     }

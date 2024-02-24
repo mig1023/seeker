@@ -4,22 +4,20 @@ namespace Seeker.Gamebook.VWeapons
 {
     class Modification : Prototypes.Modification, Abstract.IModification
     {
-        private static Character protagonist = Character.Protagonist;
-
         public override void Do()
         {
             if (Name == "Diary")
             {
-                DoByTrigger("E", () => protagonist.Suspicions += 1);
+                DoByTrigger("E", () => Character.Protagonist.Suspicions += 1);
             }
             else if (Name == "Shadow")
             {
-                DoByTrigger("V", () => protagonist.Suspicions += 1);
+                DoByTrigger("V", () => Character.Protagonist.Suspicions += 1);
             }
             else if (Name == "Davis")
             {
-                DoByTrigger("D", () => protagonist.Suspicions += 2);
-                DoByTrigger("D", () => protagonist.Suspicions += 1, not: true);
+                DoByTrigger("D", () => Character.Protagonist.Suspicions += 2);
+                DoByTrigger("D", () => Character.Protagonist.Suspicions += 1, not: true);
             }
             else if (Name == "Untrigger")
             {
@@ -27,7 +25,7 @@ namespace Seeker.Gamebook.VWeapons
             }
             else
             {
-                base.Do(protagonist);
+                base.Do(Character.Protagonist);
             }
         }
     }
