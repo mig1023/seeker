@@ -6,10 +6,6 @@ namespace Seeker.Gamebook.AlamutFortress
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {
-        public new static Actions StaticInstance = new Actions();
-        public new static Actions GetInstance() => StaticInstance;
-        private static Character protagonist = Character.Protagonist;
-
         public List<Character> Enemies { get; set; }
 
         public int Count { get; set; }
@@ -22,9 +18,9 @@ namespace Seeker.Gamebook.AlamutFortress
 
         public override List<string> Status() => new List<string>
         {
-            $"Сила: {protagonist.Strength}",
-            $"Здоровье: {protagonist.Hitpoints}/{protagonist.MaxHitpoints}",
-            $"Золото: {protagonist.Gold}"
+            $"Сила: {Character.Protagonist.Strength}",
+            $"Здоровье: {Character.Protagonist.Hitpoints}/{Character.Protagonist.MaxHitpoints}",
+            $"Золото: {Character.Protagonist.Gold}"
         };
 
         public override List<string> Representer()
@@ -41,7 +37,7 @@ namespace Seeker.Gamebook.AlamutFortress
         }
 
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
-            GameOverBy(protagonist.Hitpoints, out toEndParagraph, out toEndText);
+            GameOverBy(Character.Protagonist.Hitpoints, out toEndParagraph, out toEndText);
 
         public List<string> Dices()
         {
@@ -99,12 +95,12 @@ namespace Seeker.Gamebook.AlamutFortress
             }
             else if (SubWound)
             {
-                protagonist.Hitpoints -= dicesResult;
+                Character.Protagonist.Hitpoints -= dicesResult;
                 diceCheck.Add($"BIG|BAD|Потеряно {dicesResult} {pointsLine} Здоровья");
             }
             else if (SubStrength)
             {
-                protagonist.Strength -= dicesResult;
+                Character.Protagonist.Strength -= dicesResult;
                 diceCheck.Add($"BIG|BAD|Потеряно {dicesResult} {pointsLine} Силы");
             }
 
@@ -143,12 +139,12 @@ namespace Seeker.Gamebook.AlamutFortress
                     if (!attackAlready)
                     {
                         Game.Dice.DoubleRoll(out int protagonistRollFirst, out int protagonistRollSecond);
-                        protagonistHitStrength = protagonistRollFirst + protagonistRollSecond + protagonist.Strength;
+                        protagonistHitStrength = protagonistRollFirst + protagonistRollSecond + Character.Protagonist.Strength;
 
                         fight.Add($"Сила вашей атаки: " +
                             $"{Game.Dice.Symbol(protagonistRollFirst)} + " +
                             $"{Game.Dice.Symbol(protagonistRollSecond)} + " +
-                            $"{protagonist.Strength} = {protagonistHitStrength}");
+                            $"{Character.Protagonist.Strength} = {protagonistHitStrength}");
 
                         godsJudgment = (protagonistRollFirst == 6) &&
                             (protagonistRollFirst == protagonistRollSecond);
@@ -188,7 +184,7 @@ namespace Seeker.Gamebook.AlamutFortress
                         fight.Add(String.Empty);
                         fight.Add("BIG|BAD|Вы ПРОИГРАЛИ :(");
 
-                        protagonist.Hitpoints = 0;
+                        Character.Protagonist.Hitpoints = 0;
                         return fight;
                     }
 
@@ -218,9 +214,9 @@ namespace Seeker.Gamebook.AlamutFortress
                         fight.Add($"BAD|{enemy.Name} ранил вас");
                         fight.Add($"Вы теряете {Math.Abs(hitPointsLoses)} {losesLine} Здоровья");
 
-                        protagonist.Hitpoints += hitPointsLoses;
+                        Character.Protagonist.Hitpoints += hitPointsLoses;
 
-                        if (protagonist.Hitpoints <= 0)
+                        if (Character.Protagonist.Hitpoints <= 0)
                         {
                             fight.Add(String.Empty);
                             fight.Add("BIG|BAD|Вы ПРОИГРАЛИ :(");
