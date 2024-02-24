@@ -4,7 +4,8 @@ namespace Seeker.Gamebook.PensionerSimulator
 {
     class Character : Prototypes.Character, Abstract.ICharacter
     {
-        public new static Character Protagonist = new Character();
-        public new static Character GetInstance() => Protagonist;
+        public static Character Protagonist { get; set; }
+        public override void Set(object character) =>
+            Protagonist = (Character)character;
     }
 }
