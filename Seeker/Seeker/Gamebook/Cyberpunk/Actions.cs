@@ -6,10 +6,6 @@ namespace Seeker.Gamebook.Cyberpunk
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {
-        public new static Actions StaticInstance = new Actions();
-        public new static Actions GetInstance() => StaticInstance;
-        private static Character protagonist = Character.Protagonist;
-
         public string Stat { get; set; }
         public bool MultipliedLuck { get; set; }
         public bool DividedLuck { get; set; }
@@ -19,25 +15,25 @@ namespace Seeker.Gamebook.Cyberpunk
         {
             List<string> statusLines = new List<string>
             {
-                $"Планирование: {protagonist.Planning}",
-                $"Подготовка: {protagonist.Preparation}",
-                $"Везение: {protagonist.Luck}",
+                $"Планирование: {Character.Protagonist.Planning}",
+                $"Подготовка: {Character.Protagonist.Preparation}",
+                $"Везение: {Character.Protagonist.Luck}",
             };
 
-            if (protagonist.Cybernetics > 1)
-                statusLines.Add($"Кибернетика: {protagonist.Cybernetics}");
+            if (Character.Protagonist.Cybernetics > 1)
+                statusLines.Add($"Кибернетика: {Character.Protagonist.Cybernetics}");
 
-            if (protagonist.Morality > 1)
-                statusLines.Add($"Мораль: {protagonist.Morality}");
+            if (Character.Protagonist.Morality > 1)
+                statusLines.Add($"Мораль: {Character.Protagonist.Morality}");
 
-            if (protagonist.Careerism > 1)
-                statusLines.Add($"Карьеризм: {protagonist.Careerism}");
+            if (Character.Protagonist.Careerism > 1)
+                statusLines.Add($"Карьеризм: {Character.Protagonist.Careerism}");
 
-            if (protagonist.BlackMarket > 1)
-                statusLines.Add($"Чёрный рынок: {protagonist.BlackMarket}");
+            if (Character.Protagonist.BlackMarket > 1)
+                statusLines.Add($"Чёрный рынок: {Character.Protagonist.BlackMarket}");
 
-            if (protagonist.Clan > 1)
-                statusLines.Add($"Клан: {protagonist.Clan}");
+            if (Character.Protagonist.Clan > 1)
+                statusLines.Add($"Клан: {Character.Protagonist.Clan}");
 
             return statusLines;
         }
@@ -46,7 +42,7 @@ namespace Seeker.Gamebook.Cyberpunk
         {
             if (Type == "Get, Decrease")
             {
-                int statValue = GetProperty(protagonist, Stat);
+                int statValue = GetProperty(Character.Protagonist, Stat);
                 string statName = Constants.CharactersParams[Stat];
 
                 return new List<string> { $"{statName.ToUpper()} (значение: {statValue})" };
@@ -82,33 +78,33 @@ namespace Seeker.Gamebook.Cyberpunk
             }
             else if (option == "BlackMarketDominate")
             {
-                return (protagonist.BlackMarket > protagonist.Clan);
+                return (Character.Protagonist.BlackMarket > Character.Protagonist.Clan);
             }
             else if (option == "ClantDominate")
             {
-                return (protagonist.BlackMarket < protagonist.Clan);
+                return (Character.Protagonist.BlackMarket < Character.Protagonist.Clan);
             }
             else if (option == "BlackMarketEquality")
             {
-                return (protagonist.BlackMarket == protagonist.Clan);
+                return (Character.Protagonist.BlackMarket == Character.Protagonist.Clan);
             }
             else if (option.Contains(">") || option.Contains("<") || option.Contains("="))
             {
                 int level = Game.Services.LevelParse(option);
 
-                if (option.Contains("ПЛАНИРОВАНИЕ <=") && (level < protagonist.Planning))
+                if (option.Contains("ПЛАНИРОВАНИЕ <=") && (level < Character.Protagonist.Planning))
                     return false;
 
-                else if (option.Contains("ПОДГОТОВКА <=") && (level < protagonist.Preparation))
+                else if (option.Contains("ПОДГОТОВКА <=") && (level < Character.Protagonist.Preparation))
                     return false;
 
-                else if (option.Contains("ВЕЗЕНИЕ <=") && (level < protagonist.Luck))
+                else if (option.Contains("ВЕЗЕНИЕ <=") && (level < Character.Protagonist.Luck))
                     return false;
 
-                else if (option.Contains("МОРАЛЬ =") && (level != protagonist.Morality))
+                else if (option.Contains("МОРАЛЬ =") && (level != Character.Protagonist.Morality))
                     return false;
 
-                else if (option.Contains("КАРЬЕРИЗМ =") && (level != protagonist.Careerism))
+                else if (option.Contains("КАРЬЕРИЗМ =") && (level != Character.Protagonist.Careerism))
                     return false;
 
                 return true;
@@ -131,13 +127,13 @@ namespace Seeker.Gamebook.Cyberpunk
 
             if (MultipliedLuck)
             {
-                paramsLevel = protagonist.Luck * 2;
-                paramsLine += $"{protagonist.Luck} (везение) x 2";
+                paramsLevel = Character.Protagonist.Luck * 2;
+                paramsLine += $"{Character.Protagonist.Luck} (везение) x 2";
             }
             else if (DividedLuck)
             {
-                paramsLevel = protagonist.Luck / 2;
-                paramsLine += $"{protagonist.Luck} (везение) / 2";
+                paramsLevel = Character.Protagonist.Luck / 2;
+                paramsLine += $"{Character.Protagonist.Luck} (везение) / 2";
             }
             else if (Stat.StartsWith("Selfcontrol"))
             {
@@ -148,14 +144,14 @@ namespace Seeker.Gamebook.Cyberpunk
             }
             else if (!Stat.Contains(','))
             {
-                paramsLevel = GetProperty(protagonist, Stat.Trim());
+                paramsLevel = GetProperty(Character.Protagonist, Stat.Trim());
                 paramsLine += GetParamLine(paramsLevel, Stat.Trim());
             }
             else
             {
                 foreach (string stat in Stat.Split(','))
                 {
-                    int param = GetProperty(protagonist, stat.Trim());
+                    int param = GetProperty(Character.Protagonist, stat.Trim());
                     paramsLevel += param;
                     paramsLine += GetParamLine(param, stat.Trim());
                 }
@@ -183,7 +179,7 @@ namespace Seeker.Gamebook.Cyberpunk
         {
             if ((Type == "Get, Decrease") && (!String.IsNullOrEmpty(Stat)))
             {
-                int stat = GetProperty(protagonist, Stat);
+                int stat = GetProperty(Character.Protagonist, Stat);
                 bool cybernetics = (Stat == "Cybernetics");
 
                 if (secondButton)
@@ -217,9 +213,9 @@ namespace Seeker.Gamebook.Cyberpunk
         }
 
         public List<string> Get() =>
-            ChangeProtagonistParam(Stat, protagonist, String.Empty);
+            ChangeProtagonistParam(Stat, Character.Protagonist, String.Empty);
 
         public List<string> Decrease() =>
-            ChangeProtagonistParam(Stat, protagonist, String.Empty, decrease: true);
+            ChangeProtagonistParam(Stat, Character.Protagonist, String.Empty, decrease: true);
     }
 }
