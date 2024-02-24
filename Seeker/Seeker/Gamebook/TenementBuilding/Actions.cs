@@ -5,9 +5,6 @@ namespace Seeker.Gamebook.TenementBuilding
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {
-        public new static Actions StaticInstance = new Actions();
-        public new static Actions GetInstance() => StaticInstance;
-        private static Character protagonist = Character.Protagonist;
         public static string LuckNumbers()
         {
             string luckListShow = String.Empty;
@@ -31,15 +28,15 @@ namespace Seeker.Gamebook.TenementBuilding
 
             int goodLuck = Game.Dice.Roll();
 
-            string luckLine = protagonist.Luck[goodLuck] ? "не " : String.Empty;
+            string luckLine = Character.Protagonist.Luck[goodLuck] ? "не " : String.Empty;
             luckCheck.Add($"Проверка удачи: {Game.Dice.Symbol(goodLuck)} - {luckLine}зачёркунтый");
 
-            if (protagonist.Luck[goodLuck])
+            if (Character.Protagonist.Luck[goodLuck])
             {
                 luckCheck.Add("BIG|GOOD|УСПЕХ :)");
                 luckCheck.Add($"GRAY|Цифра {goodLuck} теперь зачёркнута");
 
-                protagonist.Luck[goodLuck] = false;
+                Character.Protagonist.Luck[goodLuck] = false;
             }
             else
             {
@@ -57,10 +54,10 @@ namespace Seeker.Gamebook.TenementBuilding
 
             for (int i = 1; i < 7; i++)
             {
-                if (!protagonist.Luck[i])
+                if (!Character.Protagonist.Luck[i])
                 {
                     luckRecovery.Add($"GOOD|Цифра {i} восстановлена!");
-                    protagonist.Luck[i] = true;
+                    Character.Protagonist.Luck[i] = true;
                     success = true;
 
                     break;
