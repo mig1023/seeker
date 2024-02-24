@@ -6,10 +6,6 @@ namespace Seeker.Gamebook.ProjectOne
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {
-        public new static Actions StaticInstance = new Actions();
-        public new static Actions GetInstance() => StaticInstance;
-        private static Character protagonist = Character.Protagonist;
-
         public List<Character> Allies { get; set; }
         public List<Character> Enemies { get; set; }
 
@@ -21,13 +17,13 @@ namespace Seeker.Gamebook.ProjectOne
 
         public override List<string> Status() => new List<string>
         {
-            $"Ловкость: {protagonist.Skill}/{protagonist.MaxSkill}",
-            $"Сила: {protagonist.Endurance}/{protagonist.MaxEndurance}",
-            $"Удача: {protagonist.Luck}/{protagonist.MaxLuck}",
+            $"Ловкость: {Character.Protagonist.Skill}/{Character.Protagonist.MaxSkill}",
+            $"Сила: {Character.Protagonist.Endurance}/{Character.Protagonist.MaxEndurance}",
+            $"Удача: {Character.Protagonist.Luck}/{Character.Protagonist.MaxLuck}",
         };
 
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
-            GameOverBy(protagonist.Endurance, out toEndParagraph, out toEndText);
+            GameOverBy(Character.Protagonist.Endurance, out toEndParagraph, out toEndText);
 
         public override List<string> Representer()
         {
@@ -38,7 +34,7 @@ namespace Seeker.Gamebook.ProjectOne
 
             if (Allies != null)
             {
-                enemies.Add($"Вы\nловкость {protagonist.Skill}  сила {protagonist.Endurance}");
+                enemies.Add($"Вы\nловкость {Character.Protagonist.Skill}  сила {Character.Protagonist.Endurance}");
 
                 foreach (Character ally in Allies)
                     enemies.Add($"{ally.Name}\nловкость {ally.Skill}  сила {ally.Endurance}");
@@ -72,12 +68,12 @@ namespace Seeker.Gamebook.ProjectOne
 
             if (Allies == null)
             {
-                FightAllies.Add(protagonist);
+                FightAllies.Add(Character.Protagonist);
             }
             else
             {
                 groupFight = true;
-                FightAllies.Add(protagonist);
+                FightAllies.Add(Character.Protagonist);
 
                 foreach (Character ally in Allies)
                     FightAllies.Add(ally.Clone());
@@ -251,24 +247,24 @@ namespace Seeker.Gamebook.ProjectOne
         {
             Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
 
-            bool goodLuck = (firstDice + secondDice) <= protagonist.Luck;
+            bool goodLuck = (firstDice + secondDice) <= Character.Protagonist.Luck;
             string luckLine = goodLuck ? "<=" : ">";
 
             List<string> luckCheck = new List<string> {
                 $"Проверка удачи: {Game.Dice.Symbol(firstDice)} + " +
-                $"{Game.Dice.Symbol(secondDice)} {luckLine} {protagonist.Luck}" };
+                $"{Game.Dice.Symbol(secondDice)} {luckLine} {Character.Protagonist.Luck}" };
 
             luckCheck.Add(goodLuck ? "BIG|GOOD|ПОВЕЗЛО :)" : "BIG|BAD|НЕ ПОВЕЗЛО :(");
 
             if (Fall && !goodLuck)
             {
-                protagonist.Endurance -= 3;
+                Character.Protagonist.Endurance -= 3;
                 luckCheck.Add("Вы больно ударились и потеряли 3 единицы Силы!");
             }
 
-            if (protagonist.Luck > 0)
+            if (Character.Protagonist.Luck > 0)
             {
-                protagonist.Luck -= 1;
+                Character.Protagonist.Luck -= 1;
                 luckCheck.Add("Уровень удачи снижен на единицу");
             }
 
@@ -280,7 +276,7 @@ namespace Seeker.Gamebook.ProjectOne
             Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
             int thirdDice = Game.Dice.Roll();
 
-            bool goodSkill = (firstDice + secondDice + thirdDice) <= protagonist.Skill;
+            bool goodSkill = (firstDice + secondDice + thirdDice) <= Character.Protagonist.Skill;
             string skillLine = goodSkill ? "<=" : ">";
 
             List<string> skillCheck = new List<string> {
@@ -288,7 +284,7 @@ namespace Seeker.Gamebook.ProjectOne
                 $"{Game.Dice.Symbol(firstDice)} + " +
                 $"{Game.Dice.Symbol(secondDice)} + " +
                 $"{Game.Dice.Symbol(thirdDice)} + " +
-                $" {skillLine} {protagonist.Skill}" };
+                $" {skillLine} {Character.Protagonist.Skill}" };
 
             skillCheck.Add(goodSkill ? "BIG|GOOD|ЛОВКОСТИ ХВАТИЛО :)" : "BIG|BAD|ЛОВКОСТИ НЕ ХВАТИЛО :(");
 
