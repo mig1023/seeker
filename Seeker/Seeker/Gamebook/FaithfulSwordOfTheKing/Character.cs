@@ -4,10 +4,19 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 {
     class Character : Prototypes.Character, Abstract.ICharacter
     {
-        public new static Character Protagonist = new Character();
-        public new static Character GetInstance() => Protagonist;
+        public static Character Protagonist { get; set; }
+        public override void Set(object character) =>
+            Protagonist = (Character)character;
 
-        public enum MeritalArts { SecretBlow, SwordAndDagger, TwoPistols, LefthandFencing, Swimming, Nope };
+        public enum MeritalArts
+        {
+            SecretBlow,
+            SwordAndDagger,
+            TwoPistols,
+            LefthandFencing,
+            Swimming,
+            Nope
+        };
 
         private int _skill;
         public int MaxSkill { get; set; }
