@@ -5,10 +5,6 @@ namespace Seeker.Gamebook.GoingToLaughter
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {
-        public new static Actions StaticInstance = new Actions();
-        public new static Actions GetInstance() => StaticInstance;
-        private static Character protagonist = Character.Protagonist;
-
         public bool Advantage { get; set; }
         public bool Disadvantage { get; set; }
 
@@ -22,13 +18,13 @@ namespace Seeker.Gamebook.GoingToLaughter
         {
             if (Advantage)
             {
-                protagonist.Advantages.Add(this.Button);
-                protagonist.Balance += 1;
+                Character.Protagonist.Advantages.Add(this.Button);
+                Character.Protagonist.Balance += 1;
             }
             else if (Disadvantage)
             {
-                protagonist.Disadvantages.Add(this.Button);
-                protagonist.Balance -= 1;
+                Character.Protagonist.Disadvantages.Add(this.Button);
+                Character.Protagonist.Balance -= 1;
             }
 
             return new List<string> { "RELOAD" };
@@ -36,10 +32,10 @@ namespace Seeker.Gamebook.GoingToLaughter
 
         public override List<string> Status() => new List<string>
         {
-            $"Героизм: {protagonist.Heroism}",
-            $"Злодеяние: {protagonist.Villainy}",
-            $"Шутовство: {protagonist.Buffoonery}",
-            $"Вдохновение: {protagonist.Inspiration}",
+            $"Героизм: {Character.Protagonist.Heroism}",
+            $"Злодеяние: {Character.Protagonist.Villainy}",
+            $"Шутовство: {Character.Protagonist.Buffoonery}",
+            $"Вдохновение: {Character.Protagonist.Inspiration}",
         };
 
         public override string ButtonText()
@@ -56,7 +52,7 @@ namespace Seeker.Gamebook.GoingToLaughter
 
         public override bool GameOver(out int toEndParagraph, out string toEndText)
         {
-            if (protagonist.Buffoonery <= 0)
+            if (Character.Protagonist.Buffoonery <= 0)
             {
                 toEndParagraph = 1392;
                 toEndText = "Это уже другая история...";
@@ -81,8 +77,8 @@ namespace Seeker.Gamebook.GoingToLaughter
 
             foreach (string incompatible in incompatibles.Split(','))
             {
-                bool isAdvantages = protagonist.Advantages.Contains(incompatible.Trim());
-                bool idDisadvantages = protagonist.Disadvantages.Contains(incompatible.Trim());
+                bool isAdvantages = Character.Protagonist.Advantages.Contains(incompatible.Trim());
+                bool idDisadvantages = Character.Protagonist.Disadvantages.Contains(incompatible.Trim());
 
                 if (isAdvantages || idDisadvantages)
                     return true;
@@ -93,11 +89,11 @@ namespace Seeker.Gamebook.GoingToLaughter
             
         public override bool IsButtonEnabled(bool secondButton = false)
         {
-            if (Advantage && protagonist.Advantages.Contains(this.Button))
+            if (Advantage && Character.Protagonist.Advantages.Contains(this.Button))
             {
                 return false;
             }
-            else if (Disadvantage && (protagonist.Balance == 0))
+            else if (Disadvantage && (Character.Protagonist.Balance == 0))
             {
                 return false;
             }
@@ -105,7 +101,7 @@ namespace Seeker.Gamebook.GoingToLaughter
             {
                 return false;
             }
-            else if (Disadvantage && protagonist.Disadvantages.Contains(this.Button))
+            else if (Disadvantage && Character.Protagonist.Disadvantages.Contains(this.Button))
             {
                 return false;
             }
@@ -125,7 +121,7 @@ namespace Seeker.Gamebook.GoingToLaughter
             {
                 foreach (string oneOption in option.Split('|'))
                 {
-                    if (protagonist.Advantages.Contains(oneOption.Trim()) || protagonist.Disadvantages.Contains(oneOption.Trim()))
+                    if (Character.Protagonist.Advantages.Contains(oneOption.Trim()) || Character.Protagonist.Disadvantages.Contains(oneOption.Trim()))
                         return true;
                 }
 
@@ -135,29 +131,29 @@ namespace Seeker.Gamebook.GoingToLaughter
             {
                 foreach (string oneOption in option.Split(','))
                 {
-                    List<string> advantages = protagonist.Disadvantages;
-                    List<string> disadvantages = protagonist.Disadvantages;
+                    List<string> advantages = Character.Protagonist.Disadvantages;
+                    List<string> disadvantages = Character.Protagonist.Disadvantages;
 
                     if (oneOption.Contains(">") || oneOption.Contains("<"))
                     {
                         int level = Game.Services.LevelParse(oneOption);
 
-                        if (oneOption.Contains("БАЛАНС <=") && (level < protagonist.Balance))
+                        if (oneOption.Contains("БАЛАНС <=") && (level < Character.Protagonist.Balance))
                             return false;
 
-                        if (oneOption.Contains("ГЕРОИЗМ >=") && (level > protagonist.Heroism))
+                        if (oneOption.Contains("ГЕРОИЗМ >=") && (level > Character.Protagonist.Heroism))
                             return false;
 
-                        if (oneOption.Contains("ЗЛОДЕЙСТВО >=") && (level > protagonist.Villainy))
+                        if (oneOption.Contains("ЗЛОДЕЙСТВО >=") && (level > Character.Protagonist.Villainy))
                             return false;
 
-                        if (oneOption.Contains("ЗЛОДЕЙСТВО <") && (level <= protagonist.Villainy))
+                        if (oneOption.Contains("ЗЛОДЕЙСТВО <") && (level <= Character.Protagonist.Villainy))
                             return false;
 
-                        if (oneOption.Contains("ПРЕДЛОЖЕНИЕ >=") && (level > protagonist.AbubakarOffer))
+                        if (oneOption.Contains("ПРЕДЛОЖЕНИЕ >=") && (level > Character.Protagonist.AbubakarOffer))
                             return false;
 
-                        if (oneOption.Contains("ПРЕДЛОЖЕНИЕ <") && (level <= protagonist.AbubakarOffer))
+                        if (oneOption.Contains("ПРЕДЛОЖЕНИЕ <") && (level <= Character.Protagonist.AbubakarOffer))
                             return false;
                     }
                     else if (oneOption.Contains("!"))
@@ -177,9 +173,9 @@ namespace Seeker.Gamebook.GoingToLaughter
 
         public List<string> HeroismCheck()
         {
-            List<string> luckCheck = new List<string> { $"Уровень героизма: {protagonist.Heroism}." };
+            List<string> luckCheck = new List<string> { $"Уровень героизма: {Character.Protagonist.Heroism}." };
 
-            if (protagonist.Heroism >= 5)
+            if (Character.Protagonist.Heroism >= 5)
             {
                 luckCheck.Add("В броске даже нет необходимости!");
                 luckCheck.Add("BIG|GOOD|УСПЕХ :)");
@@ -188,7 +184,7 @@ namespace Seeker.Gamebook.GoingToLaughter
             }
             else
             {
-                int level = 6 - protagonist.Heroism;
+                int level = 6 - Character.Protagonist.Heroism;
                 int dice = Game.Dice.Roll();
 
                 luckCheck.Add($"Для прохождения проверки нужно выбросить {level} или больше.");
@@ -234,7 +230,7 @@ namespace Seeker.Gamebook.GoingToLaughter
                 diceValues.Add($" +{ResultBonus} по условию");
             }
 
-            SetProperty(protagonist, Target, (GetProperty(protagonist, Target) + dicesResult));
+            SetProperty(Character.Protagonist, Target, (GetProperty(Character.Protagonist, Target) + dicesResult));
 
             diceValues.Add($"BIG|BOLD|Вы добавили +{dicesResult} к {Constants.ParamNames[Target]}");
 

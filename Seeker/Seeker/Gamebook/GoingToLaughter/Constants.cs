@@ -6,9 +6,6 @@ namespace Seeker.Gamebook.GoingToLaughter
 {
     class Constants : Prototypes.Constants, Abstract.IConstants
     {
-        public new static Constants StaticInstance = new Constants();
-        public new static Constants GetInstance() => StaticInstance;
-
         public override string GetColor(ColorTypes type)
         {
             if (Game.Settings.IsEnabled("WithoutStyles"))
