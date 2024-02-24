@@ -7,12 +7,8 @@ namespace Seeker.Gamebook.SilverAgeSilhouette
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {
-        public new static Actions StaticInstance = new Actions();
-        public new static Actions GetInstance() => StaticInstance;
-        private static Character protagonist = Character.Protagonist;
-
         public List<string> Verse() =>
-            protagonist.Verse.Select(x => Regex.Unescape(x)).ToList();
+            Character.Protagonist.Verse.Select(x => Regex.Unescape(x)).ToList();
 
         public override bool Availability(string option)
         {
@@ -56,10 +52,10 @@ namespace Seeker.Gamebook.SilverAgeSilhouette
             {
                 int level = Game.Services.LevelParse(rating);
 
-                if (rating.Contains("ОЦЕНКА >=") && (level > protagonist.Rating))
+                if (rating.Contains("ОЦЕНКА >=") && (level > Character.Protagonist.Rating))
                     return logic;
 
-                if (rating.Contains("ОЦЕНКА <") && (level <= protagonist.Rating))
+                if (rating.Contains("ОЦЕНКА <") && (level <= Character.Protagonist.Rating))
                     return logic;
             }
 
