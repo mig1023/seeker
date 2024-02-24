@@ -6,10 +6,17 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
 {
     class Character : Prototypes.Character, Abstract.ICharacter
     {
-        public new static Character Protagonist = new Character();
-        public new static Character GetInstance() => Protagonist;
+        public static Character Protagonist { get; set; }
+        public override void Set(object character) =>
+            Protagonist = (Character)character;
 
-        public enum SpecializationType { Warrior, Wizard, Thrower, Nope };
+        public enum SpecializationType
+        {
+            Warrior,
+            Wizard,
+            Thrower,
+            Nope
+        };
 
         private int _strength;
         public int Strength
