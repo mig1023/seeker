@@ -6,23 +6,19 @@ namespace Seeker.Gamebook.Ants
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {
-        public new static Actions StaticInstance = new Actions();
-        public new static Actions GetInstance() => StaticInstance;
-        private static Character protagonist = Character.Protagonist;
-
         public override List<string> AdditionalStatus()
         {
             List<string> statusLines = new List<string>
             {
-                $"Количество: {protagonist.Quantity}",
-                $"Прирост: {protagonist.Increase}"
+                $"Количество: {Character.Protagonist.Quantity}",
+                $"Прирост: {Character.Protagonist.Increase}"
             };
 
-            if (protagonist.Defence > 0)
-                statusLines.Add($"Защита: {protagonist.Defence}");
+            if (Character.Protagonist.Defence > 0)
+                statusLines.Add($"Защита: {Character.Protagonist.Defence}");
 
-            if (protagonist.EnemyHitpoints > 0)
-                statusLines.Add($"{protagonist.EnemyName}: {protagonist.EnemyHitpoints}");
+            if (Character.Protagonist.EnemyHitpoints > 0)
+                statusLines.Add($"{Character.Protagonist.EnemyName}: {Character.Protagonist.EnemyHitpoints}");
 
             return statusLines;
         }
@@ -45,25 +41,25 @@ namespace Seeker.Gamebook.Ants
                     {
                         int level = Game.Services.LevelParse(oneOption);
 
-                        if (oneOption.Contains("ДАЙС =") && !protagonist.Dice[level])
+                        if (oneOption.Contains("ДАЙС =") && !Character.Protagonist.Dice[level])
                             return false;
 
-                        if (oneOption.Contains("КОЛИЧЕСТВО >=") && (level > protagonist.Quantity))
+                        if (oneOption.Contains("КОЛИЧЕСТВО >=") && (level > Character.Protagonist.Quantity))
                             return false;
 
-                        if (oneOption.Contains("КОЛИЧЕСТВО <") && (level <= protagonist.Quantity))
+                        if (oneOption.Contains("КОЛИЧЕСТВО <") && (level <= Character.Protagonist.Quantity))
                             return false;
 
-                        if (oneOption.Contains("ВРАГ >=") && (level > protagonist.EnemyHitpoints))
+                        if (oneOption.Contains("ВРАГ >=") && (level > Character.Protagonist.EnemyHitpoints))
                             return false;
 
-                        if (oneOption.Contains("ВРАГ <") && (level <= protagonist.EnemyHitpoints))
+                        if (oneOption.Contains("ВРАГ <") && (level <= Character.Protagonist.EnemyHitpoints))
                             return false;
 
-                        if (oneOption.Contains("ЗАЩИТА >=") && (level > protagonist.Defence))
+                        if (oneOption.Contains("ЗАЩИТА >=") && (level > Character.Protagonist.Defence))
                             return false;
 
-                        if (oneOption.Contains("СТАРТ =") && (protagonist.Start != level))
+                        if (oneOption.Contains("СТАРТ =") && (Character.Protagonist.Start != level))
                             return false;
                     }
                     else if (oneOption.Contains("!"))
@@ -96,7 +92,7 @@ namespace Seeker.Gamebook.Ants
 
             results.Add(String.Empty);
 
-            int speed = 300 - protagonist.Time;
+            int speed = 300 - Character.Protagonist.Time;
 
             string line = String.Empty;
 

@@ -6,12 +6,10 @@ namespace Seeker.Gamebook.Ants
 {
     class Modification : Prototypes.Modification, Abstract.IModification
     {
-        private static Character protagonist = Character.Protagonist;
-
         public override void Do()
         {
             if (!AntsModification())
-                base.Do(protagonist);
+                base.Do(Character.Protagonist);
         }
 
         private bool AntsModification()
@@ -19,30 +17,30 @@ namespace Seeker.Gamebook.Ants
             switch (Name)
             {
                 case "Dice":
-                    protagonist.Dice[Game.Dice.Roll()] = true;
+                    Character.Protagonist.Dice[Game.Dice.Roll()] = true;
                     return true;
 
                 case "Undice":
-                    protagonist.Dice = new List<bool> { false, false, false, false, false, false, false };
+                    Character.Protagonist.Dice = new List<bool> { false, false, false, false, false, false, false };
                     return true;
 
                 case "Enemy":
                     List<string> enemy = ValueString.Split(',').ToList();
-                    protagonist.EnemyName = enemy[0].Trim();
-                    protagonist.EnemyHitpoints = int.Parse(enemy[1].Trim());
+                    Character.Protagonist.EnemyName = enemy[0].Trim();
+                    Character.Protagonist.EnemyHitpoints = int.Parse(enemy[1].Trim());
                     return true;
 
                 case "EnemyDiceWound":
-                    protagonist.EnemyHitpoints -= Game.Dice.Roll();
+                    Character.Protagonist.EnemyHitpoints -= Game.Dice.Roll();
                     return true;
 
                 case "NoMoreEnemy":
-                    protagonist.EnemyName = String.Empty;
-                    protagonist.EnemyHitpoints = 0;
+                    Character.Protagonist.EnemyName = String.Empty;
+                    Character.Protagonist.EnemyHitpoints = 0;
                     return true;
 
                 case "UseDefence":
-                    protagonist.Defence -= 1;
+                    Character.Protagonist.Defence -= 1;
                     return true;
 
                 case "TossCoin":
@@ -51,7 +49,7 @@ namespace Seeker.Gamebook.Ants
                     return true;
 
                 case "QuantityIncrease":
-                    protagonist.Quantity += protagonist.Increase;
+                    Character.Protagonist.Quantity += Character.Protagonist.Increase;
                     return true;
 
                 case "HeadChange":
