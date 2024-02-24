@@ -6,10 +6,6 @@ namespace Seeker.Gamebook.CreatureOfHavoc
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {
-        public new static Actions StaticInstance = new Actions();
-        public new static Actions GetInstance() => StaticInstance;
-        private static Character protagonist = Character.Protagonist;
-
         public List<Character> Enemies { get; set; }
 
         public int WoundsToWin { get; set; }
@@ -37,13 +33,13 @@ namespace Seeker.Gamebook.CreatureOfHavoc
 
         public override List<string> Status() => new List<string>
         {
-            $"Мастерство: {protagonist.Mastery}",
-            $"Выносливость: {protagonist.Endurance}/{protagonist.MaxEndurance}",
-            $"Удачливость: {protagonist.Luck}",
+            $"Мастерство: {Character.Protagonist.Mastery}",
+            $"Выносливость: {Character.Protagonist.Endurance}/{Character.Protagonist.MaxEndurance}",
+            $"Удачливость: {Character.Protagonist.Luck}",
         };
 
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
-            GameOverBy(protagonist.Endurance, out toEndParagraph, out toEndText);
+            GameOverBy(Character.Protagonist.Endurance, out toEndParagraph, out toEndText);
 
         public override bool Availability(string option) =>
             AvailabilityTrigger(option);
@@ -54,20 +50,20 @@ namespace Seeker.Gamebook.CreatureOfHavoc
         public List<string> GoodLuck(out bool goodLuck, bool notInline = false)
         {
             Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
-            goodLuck = (firstDice + secondDice) < protagonist.Luck;
+            goodLuck = (firstDice + secondDice) < Character.Protagonist.Luck;
 
             string luckLine = goodLuck ? "<=" : ">";
             List<string> luckCheck = new List<string> {
                 $"Проверка удачи: {Game.Dice.Symbol(firstDice)} + " +
-                $"{Game.Dice.Symbol(secondDice)} {luckLine} {protagonist.Luck}" };
+                $"{Game.Dice.Symbol(secondDice)} {luckLine} {Character.Protagonist.Luck}" };
 
             luckCheck.Add(
                 (notInline ? String.Empty : "BIG|") + 
                 (goodLuck ? "GOOD|УСПЕХ :)" : "BAD|НЕУДАЧА :("));
 
-            if (protagonist.Luck > 2)
+            if (Character.Protagonist.Luck > 2)
             {
-                protagonist.Luck -= 1;
+                Character.Protagonist.Luck -= 1;
                 luckCheck.Add("Уровень удачи снижен на единицу");
             }
 
@@ -89,7 +85,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
 
                 if (rock == 6)
                 {
-                    protagonist.Endurance -= 1;
+                    Character.Protagonist.Endurance -= 1;
                     inTarget = " - ПОПАЛИ!";
                     bold = "BOLD|";
                 }
@@ -101,7 +97,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                 rocks.Add($"{bold}Бросок камня: {Game.Dice.Symbol(rock)}{inTarget}");
             }
 
-            protagonist.Endurance += 3;
+            Character.Protagonist.Endurance += 3;
             rocks.Add("+3 выносливости за еду");
 
             return rocks;
@@ -115,7 +111,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
 
             if (!goodLuck)
             {
-                protagonist.Endurance -= 2;
+                Character.Protagonist.Endurance -= 2;
 
                 stoning.Add("Несколько камней попали по вам...");
                 stoning.Add("BAD|и вы потеряли ещё 2 выносливости!");
@@ -137,7 +133,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
 
             if (goodLuck)
             {
-                protagonist.Endurance += 4;
+                Character.Protagonist.Endurance += 4;
 
                 fruit.Add("Волшебный плод падает к вашим ногам!");
                 fruit.Add("GOOD|Вы восстанавливаете 4 выносливости!");
@@ -161,7 +157,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
 
             if (goodLuck)
             {
-                protagonist.Endurance += 2;
+                Character.Protagonist.Endurance += 2;
                 hunt.Add($"GOOD|Вы поймали {hunted} и получаете 2 выносливости");
             }
             else
@@ -181,12 +177,12 @@ namespace Seeker.Gamebook.CreatureOfHavoc
             if (goodLuck)
             {
                 food.Add("GOOD|Вы плотно и без помех поели и получаете 2 выносливости");
-                protagonist.Endurance += 4;
+                Character.Protagonist.Endurance += 4;
             }
             else
             {
                 food.Add("BAD|Вы по незнанию съели горсть ядовитых трав");
-                protagonist.Endurance -= 3;
+                Character.Protagonist.Endurance -= 3;
             }
 
             return food;
@@ -195,12 +191,12 @@ namespace Seeker.Gamebook.CreatureOfHavoc
         public List<string> Mastery()
         {
             Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
-            bool goodSkill = (firstDice + secondDice) <= protagonist.Mastery;
+            bool goodSkill = (firstDice + secondDice) <= Character.Protagonist.Mastery;
             string skillLine = goodSkill ? "<=" : ">";
 
             List<string> skillCheck = new List<string> {
                 $"Проверка мастерства: {Game.Dice.Symbol(firstDice)} + " +
-                $"{Game.Dice.Symbol(secondDice)} {skillLine} {protagonist.Mastery} мастерство" };
+                $"{Game.Dice.Symbol(secondDice)} {skillLine} {Character.Protagonist.Mastery} мастерство" };
 
             skillCheck.Add(Result(goodSkill, "МАСТЕРСТВА ХВАТИЛО|МАСТЕРСТВА НЕ ХВАТИЛО"));
 
@@ -232,6 +228,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
 
             int round = 1, enemyWounds = 0;
             bool previousRoundWound = false;
+            Character protagonist = Character.Protagonist;
 
             while (true)
             {
@@ -253,12 +250,12 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                     if (!attackAlready)
                     {
                         Game.Dice.DoubleRoll(out int protagonistRollFirst, out int protagonistRollSecond);
-                        protagonistHitStrength = protagonistRollFirst + protagonistRollSecond + protagonist.Mastery;
+                        protagonistHitStrength = protagonistRollFirst + protagonistRollSecond + Character.Protagonist.Mastery;
 
                         fight.Add($"Мощность вашего удара: " +
                             $"{Game.Dice.Symbol(protagonistRollFirst)} + " +
                             $"{Game.Dice.Symbol(protagonistRollSecond)} + " +
-                            $"{protagonist.Mastery} = {protagonistHitStrength}");
+                            $"{Character.Protagonist.Mastery} = {protagonistHitStrength}");
 
                         if (Game.Option.IsTriggered("Chestplate"))
                         {
@@ -323,7 +320,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                         }
                         else
                         {
-                            protagonist.Endurance = 0;
+                            Character.Protagonist.Endurance = 0;
 
                             fight.Add("BAD|Вы смертельно ранены шершнем");
                             fight.Add(String.Empty);
@@ -399,9 +396,9 @@ namespace Seeker.Gamebook.CreatureOfHavoc
         }
 
         public override bool IsHealingEnabled() =>
-            protagonist.Endurance < protagonist.MaxEndurance;
+            Character.Protagonist.Endurance < Character.Protagonist.MaxEndurance;
 
         public override void UseHealing(int healingLevel) =>
-            protagonist.Endurance += healingLevel;
+            Character.Protagonist.Endurance += healingLevel;
     }
 }
