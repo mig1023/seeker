@@ -6,31 +6,27 @@ namespace Seeker.Gamebook.DangerFromBehindTheSnowWall
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {
-        public new static Actions StaticInstance = new Actions();
-        public new static Actions GetInstance() => StaticInstance;
-        private static Character protagonist = Character.Protagonist;
-
         public List<Character> Enemies { get; set; }
 
         public override List<string> Status() => new List<string>
         {
-            $"Ловкость: {protagonist.Skill}",
-            $"Сила: {protagonist.Strength}/{protagonist.MaxStrength}",
-            $"Удар: {protagonist.Damage}",
+            $"Ловкость: {Character.Protagonist.Skill}",
+            $"Сила: {Character.Protagonist.Strength}/{Character.Protagonist.MaxStrength}",
+            $"Удар: {Character.Protagonist.Damage}",
         };
 
         public override List<string> AdditionalStatus() => new List<string>
         {
-            $"Наблюдательность: {protagonist.Skill}",
-            $"Деньги: {MoneyFormat(protagonist.Money)}",
-            $"Магия: {protagonist.Magic}",
+            $"Наблюдательность: {Character.Protagonist.Skill}",
+            $"Деньги: {MoneyFormat(Character.Protagonist.Money)}",
+            $"Магия: {Character.Protagonist.Magic}",
         };
 
         private static string MoneyFormat(int ecu) =>
             String.Format("{0:f1}", (double)ecu / 10).TrimEnd('0').TrimEnd(',').Replace(',', '.');
 
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
-                GameOverBy(protagonist.Strength, out toEndParagraph, out toEndText);
+                GameOverBy(Character.Protagonist.Strength, out toEndParagraph, out toEndText);
 
         public override List<string> Representer()
         {
@@ -76,11 +72,11 @@ namespace Seeker.Gamebook.DangerFromBehindTheSnowWall
                     if (!attackAlready)
                     {
                         int protagonistRoll = Game.Dice.Roll();
-                        protagonistHitStrength = (protagonistRoll * 2) + protagonist.Skill;
+                        protagonistHitStrength = (protagonistRoll * 2) + Character.Protagonist.Skill;
 
                         fight.Add($"Сила вашей атаки: " +
                             $"{Game.Dice.Symbol(protagonistRoll)} x 2 + " +
-                            $"{protagonist.Skill} = {protagonistHitStrength}");
+                            $"{Character.Protagonist.Skill} = {protagonistHitStrength}");
                     }
 
                     int enemyRoll = Game.Dice.Roll();
@@ -92,11 +88,11 @@ namespace Seeker.Gamebook.DangerFromBehindTheSnowWall
 
                     if ((protagonistHitStrength > enemyHitStrength) && !attackAlready)
                     {
-                        string points = Game.Services.CoinsNoun(protagonist.Damage, "очко", "очка", "очков");
+                        string points = Game.Services.CoinsNoun(Character.Protagonist.Damage, "очко", "очка", "очков");
                         fight.Add($"GOOD|{enemy.Name} ранен");
-                        fight.Add($"Он теряет {protagonist.Damage} {points} Силы");
+                        fight.Add($"Он теряет {Character.Protagonist.Damage} {points} Силы");
 
-                        enemy.Strength -= protagonist.Damage;
+                        enemy.Strength -= Character.Protagonist.Damage;
 
                         if (NoMoreEnemies(FightEnemies))
                         {
@@ -115,9 +111,9 @@ namespace Seeker.Gamebook.DangerFromBehindTheSnowWall
                         fight.Add($"BAD|{enemy.Name} ранил вас");
                         fight.Add($"Вы теряете {enemy.Damage} {points} Силы");
 
-                        protagonist.Strength -= enemy.Damage;
+                        Character.Protagonist.Strength -= enemy.Damage;
 
-                        if (protagonist.Strength <= 0)
+                        if (Character.Protagonist.Strength <= 0)
                         {
                             fight.Add(String.Empty);
                             fight.Add("BIG|BAD|Вы ПРОИГРАЛИ :(");
@@ -142,12 +138,12 @@ namespace Seeker.Gamebook.DangerFromBehindTheSnowWall
         {
             Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
 
-            bool goodLuck = (firstDice + secondDice + protagonist.Observation) > 10;
+            bool goodLuck = (firstDice + secondDice + Character.Protagonist.Observation) > 10;
             string luckLine = goodLuck ? ">" : "<=";
 
             List<string> observationCheck = new List<string> {
                 $"Проверка наблюдательности: {Game.Dice.Symbol(firstDice)} + " +
-                $"{Game.Dice.Symbol(secondDice)} + {protagonist.Observation} " +
+                $"{Game.Dice.Symbol(secondDice)} + {Character.Protagonist.Observation} " +
                 $"{luckLine} 10" };
 
             observationCheck.Add(goodLuck ? "BIG|GOOD|УСПЕХ :)" : "BIG|BAD|НЕУДАЧА :(");
@@ -178,10 +174,10 @@ namespace Seeker.Gamebook.DangerFromBehindTheSnowWall
 
             int goodLuck = Game.Dice.Roll();
 
-            string luckLine = protagonist.Luck[goodLuck] ? "не " : String.Empty;
+            string luckLine = Character.Protagonist.Luck[goodLuck] ? "не " : String.Empty;
             luckCheck.Add($"Проверка удачи: {Game.Dice.Symbol(goodLuck)} - {luckLine}является Числом Удачи");
 
-            luckCheck.Add(Result(protagonist.Luck[goodLuck], "УСПЕХ|НЕУДАЧА"));
+            luckCheck.Add(Result(Character.Protagonist.Luck[goodLuck], "УСПЕХ|НЕУДАЧА"));
 
             return luckCheck;
         }
