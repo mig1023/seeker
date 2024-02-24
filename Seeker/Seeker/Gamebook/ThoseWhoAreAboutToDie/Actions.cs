@@ -6,19 +6,15 @@ namespace Seeker.Gamebook.ThoseWhoAreAboutToDie
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {
-        public new static Actions StaticInstance = new Actions();
-        public new static Actions GetInstance() => StaticInstance;
-        private static Character protagonist = Character.Protagonist;
-
         public override List<string> Status() => new List<string>
         {
-            $"Реакция: {protagonist.Reaction}/12",
-            $"Сила: {protagonist.Strength}/12",
-            $"Выносливость: {protagonist.Endurance}/12",
+            $"Реакция: {Character.Protagonist.Reaction}/12",
+            $"Сила: {Character.Protagonist.Strength}/12",
+            $"Выносливость: {Character.Protagonist.Endurance}/12",
         };
 
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
-            GameOverBy(protagonist.Endurance, out toEndParagraph, out toEndText);
+            GameOverBy(Character.Protagonist.Endurance, out toEndParagraph, out toEndText);
 
         public override bool Availability(string option)
         {
@@ -63,7 +59,7 @@ namespace Seeker.Gamebook.ThoseWhoAreAboutToDie
 
             if (dice > 4)
             {
-                protagonist.Reaction += 3;
+                Character.Protagonist.Reaction += 3;
                 report.Add("BIG|GOOD|+3 к Реакции! :)");
             }
             else
