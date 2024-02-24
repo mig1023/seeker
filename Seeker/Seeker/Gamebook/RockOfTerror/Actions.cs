@@ -5,19 +5,15 @@ namespace Seeker.Gamebook.RockOfTerror
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {
-        public new static Actions StaticInstance = new Actions();
-        public new static Actions GetInstance() => StaticInstance;
-        private static Character protagonist = Character.Protagonist;
-
         public override List<string> Status()
         {
-            TimeSpan time = TimeSpan.FromMinutes(protagonist.Time);
+            TimeSpan time = TimeSpan.FromMinutes(Character.Protagonist.Time);
 
             List<string> statusLines = new List<string> {
                 $"Прошедшее время: {time.Hours:d2}:{time.Minutes:d2}" };
 
-            if (protagonist.MonksHeart != null)
-                statusLines.Add($"Сила сердца монаха: {protagonist.MonksHeart}");
+            if (Character.Protagonist.MonksHeart != null)
+                statusLines.Add($"Сила сердца монаха: {Character.Protagonist.MonksHeart}");
 
             return statusLines;
         }
@@ -27,7 +23,7 @@ namespace Seeker.Gamebook.RockOfTerror
             toEndParagraph = 0;
             toEndText = "Время вышло...";
 
-            return protagonist.Time >= 720;
+            return Character.Protagonist.Time >= 720;
         }
 
         public override bool Availability(string option)
@@ -40,13 +36,13 @@ namespace Seeker.Gamebook.RockOfTerror
             {
                 int level = Game.Services.LevelParse(option);
 
-                if (option.Contains("СИЛА СЕРДЦА МОНАХА >=") && (level > protagonist.MonksHeart))
+                if (option.Contains("СИЛА СЕРДЦА МОНАХА >=") && (level > Character.Protagonist.MonksHeart))
                     return false;
 
-                else if (option.Contains("ВРЕМЯ >=") && (level > protagonist.Time))
+                else if (option.Contains("ВРЕМЯ >=") && (level > Character.Protagonist.Time))
                     return false;
 
-                else if (option.Contains("ВРЕМЯ <") && (level < protagonist.Time))
+                else if (option.Contains("ВРЕМЯ <") && (level < Character.Protagonist.Time))
                     return false;
 
                 else

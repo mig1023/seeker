@@ -6,30 +6,28 @@ namespace Seeker.Gamebook.RockOfTerror
     {
         public bool Init { get; set; }
 
-        private static Character protagonist = Character.Protagonist;
-        
         public override void Do()
         {
             if (Name == "MonksHeart")
             {
-                if (Init && (protagonist.MonksHeart == null))
+                if (Init && (Character.Protagonist.MonksHeart == null))
                 {
-                    protagonist.MonksHeart = 0;
+                    Character.Protagonist.MonksHeart = 0;
                 }
-                else if (!Init && (protagonist.MonksHeart != null))
+                else if (!Init && (Character.Protagonist.MonksHeart != null))
                 {
-                    protagonist.MonksHeart += Value;
+                    Character.Protagonist.MonksHeart += Value;
                 }
             }
             else
             {
-                int currentValue = GetProperty(protagonist, Name);
+                int currentValue = GetProperty(Character.Protagonist, Name);
 
-                int injuryModificator = ((Name == "Time") && (protagonist.Injury > 0) ? 2 : 1);
+                int injuryModificator = ((Name == "Time") && (Character.Protagonist.Injury > 0) ? 2 : 1);
 
                 currentValue += Value * injuryModificator;
 
-                SetProperty(protagonist, Name, currentValue);
+                SetProperty(Character.Protagonist, Name, currentValue);
             }
         }
     }
