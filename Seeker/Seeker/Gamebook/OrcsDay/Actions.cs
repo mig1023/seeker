@@ -5,10 +5,6 @@ namespace Seeker.Gamebook.OrcsDay
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {
-        public new static Actions StaticInstance = new Actions();
-        public new static Actions GetInstance() => StaticInstance;
-        private static Character protagonist = Character.Protagonist;
-
         public List<Character> Enemies { get; set; }
 
         public string Stat { get; set; }
@@ -24,17 +20,17 @@ namespace Seeker.Gamebook.OrcsDay
 
         public override List<string> Status() => new List<string>
         {
-            $"Оркишность: {Game.Services.NegativeMeaning(protagonist.Orcishness)}",
-            $"Здоровье: {protagonist.Hitpoints}/5",
+            $"Оркишность: {Game.Services.NegativeMeaning(Character.Protagonist.Orcishness)}",
+            $"Здоровье: {Character.Protagonist.Hitpoints}/5",
         };
 
         public override List<string> AdditionalStatus() => new List<string>
         {
-            $"Мышцы: {Game.Services.NegativeMeaning(protagonist.Muscle)}",
-            $"Мозги: {Game.Services.NegativeMeaning(protagonist.Wits)}",
-            $"Смелость: {Game.Services.NegativeMeaning(protagonist.Courage)}",
-            $"Удача: {Game.Services.NegativeMeaning(protagonist.Luck)}",
-            $"Деньги: {protagonist.Money}",
+            $"Мышцы: {Game.Services.NegativeMeaning(Character.Protagonist.Muscle)}",
+            $"Мозги: {Game.Services.NegativeMeaning(Character.Protagonist.Wits)}",
+            $"Смелость: {Game.Services.NegativeMeaning(Character.Protagonist.Courage)}",
+            $"Удача: {Game.Services.NegativeMeaning(Character.Protagonist.Luck)}",
+            $"Деньги: {Character.Protagonist.Money}",
         };
 
         public override List<string> Representer()
@@ -44,7 +40,7 @@ namespace Seeker.Gamebook.OrcsDay
             if (OrcishnessTest && (Level > 0))
             {
                 return new List<string> { $"Проверка {Constants.StatNames[Stat]}\n" +
-                    $"уровень Оркишность ({protagonist.Orcishness}) + {Level}" };
+                    $"уровень Оркишность ({Character.Protagonist.Orcishness}) + {Level}" };
             }
             else if (OrcishnessTest)
             {
@@ -59,7 +55,7 @@ namespace Seeker.Gamebook.OrcsDay
             else if (!String.IsNullOrEmpty(Stat))
             {
                 return new List<string> { $"{Head}\n(текущее значение: " +
-                    $"{Game.Services.NegativeMeaning(GetProperty(protagonist, Stat))})" };
+                    $"{Game.Services.NegativeMeaning(GetProperty(Character.Protagonist, Stat))})" };
             }
             else if (Price > 0)
             {
@@ -95,16 +91,16 @@ namespace Seeker.Gamebook.OrcsDay
             {
                 if (secondButton)
                 {
-                    return protagonist.Bet > 1;
+                    return Character.Protagonist.Bet > 1;
                 }
                 else
                 {
-                    return protagonist.Bet < 5;
+                    return Character.Protagonist.Bet < 5;
                 }
             }
             else
             {
-                return String.IsNullOrEmpty(Stat) || (protagonist.StatBonuses > 0) ||
+                return String.IsNullOrEmpty(Stat) || (Character.Protagonist.StatBonuses > 0) ||
                     (Level > 0) || LevelNull || secondButton;
             }
         }
@@ -112,7 +108,7 @@ namespace Seeker.Gamebook.OrcsDay
         public List<string> Get()
         {
             if (!String.IsNullOrEmpty(Stat))
-                ChangeProtagonistParam(Stat, protagonist, "StatBonuses");
+                ChangeProtagonistParam(Stat, Character.Protagonist, "StatBonuses");
 
             if (Benefit != null)
                 Benefit.Do();
@@ -124,7 +120,7 @@ namespace Seeker.Gamebook.OrcsDay
         }
 
         public List<string> Decrease() =>
-            ChangeProtagonistParam(Stat, protagonist, "StatBonuses", decrease: true);
+            ChangeProtagonistParam(Stat, Character.Protagonist, "StatBonuses", decrease: true);
 
         public List<string> OrcishnessInit() =>
             Calculations.Orcishness();
@@ -134,20 +130,20 @@ namespace Seeker.Gamebook.OrcsDay
             List<string> testLines = new List<string>();
 
             Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
-            int currentStat = GetProperty(protagonist, Stat);
+            int currentStat = GetProperty(Character.Protagonist, Stat);
 
             bool okResult = false;
 
             if (OrcishnessTest)
             {
-                okResult = (firstDice + secondDice) + currentStat >= protagonist.Orcishness + Level;
+                okResult = (firstDice + secondDice) + currentStat >= Character.Protagonist.Orcishness + Level;
                 string compareLine = okResult ? ">=" : "<";
                 string level = Level > 0 ? $" + {Level}" : String.Empty;
 
                 testLines.Add($"Проверка на {Constants.StatNames[Stat]}: " +
                     $"{Game.Dice.Symbol(firstDice)} + " +
                     $"{Game.Dice.Symbol(secondDice)} + {currentStat} " +
-                    $"{compareLine} {protagonist.Orcishness}{level}");
+                    $"{compareLine} {Character.Protagonist.Orcishness}{level}");
             }
             else
             {
@@ -175,12 +171,12 @@ namespace Seeker.Gamebook.OrcsDay
         {
             List<string> testLines = new List<string>();
 
-            bool okResult = protagonist.Courage >= protagonist.Orcishness + protagonist.Wits;
+            bool okResult = Character.Protagonist.Courage >= Character.Protagonist.Orcishness + Character.Protagonist.Wits;
             string compareLine = okResult ? ">=" : "<";
 
-            testLines.Add($"Проверка: {protagonist.Courage} " +
-                $"Смелость {compareLine} {protagonist.Orcishness} " +
-                $"Оркишность + {protagonist.Wits} Мозги");
+            testLines.Add($"Проверка: {Character.Protagonist.Courage} " +
+                $"Смелость {compareLine} {Character.Protagonist.Orcishness} " +
+                $"Оркишность + {Character.Protagonist.Wits} Мозги");
 
             testLines.Add(Result(okResult, "УСПЕШНО|НЕУДАЧНО"));
 
@@ -193,21 +189,21 @@ namespace Seeker.Gamebook.OrcsDay
 
             Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
 
-            int gameResult = (firstDice + secondDice) + protagonist.Luck;
+            int gameResult = (firstDice + secondDice) + Character.Protagonist.Luck;
 
             gameLines.Add($"Выпавшие карты: " +
                 $"{Game.Dice.Symbol(firstDice)} + " +
                 $"{Game.Dice.Symbol(secondDice)} + " +
-                $"{protagonist.Luck} = {gameResult}");
+                $"{Character.Protagonist.Luck} = {gameResult}");
 
             if (gameResult >= 15)
             {
-                protagonist.Money += protagonist.Bet;
+                Character.Protagonist.Money += Character.Protagonist.Bet;
                 gameLines.Add("GOOD|BIG|Получилось! Ты не только вернул ставку, но и выиграл столько же!");
             }
             else if (((gameResult < 12) && !SecondGame) || ((gameResult < 10) && SecondGame))
             {
-                protagonist.Money -= protagonist.Bet;
+                Character.Protagonist.Money -= Character.Protagonist.Bet;
                 gameLines.Add("BAD|BIG|Провал! Ты потерял свою ставку!");
             }
             else
@@ -356,23 +352,23 @@ namespace Seeker.Gamebook.OrcsDay
                 }
                 else
                 {
-                    protagonist.Hitpoints -= 1;
+                    Character.Protagonist.Hitpoints -= 1;
                     fight.Add($"BAD|BOLD|{enemy.Name} ранил тебя");
-                    fight.Add($"Твоё здоровье стало равно {protagonist.Hitpoints}");
+                    fight.Add($"Твоё здоровье стало равно {Character.Protagonist.Hitpoints}");
 
-                    if ((protagonist.Hitpoints == 2) && LateHelp)
+                    if ((Character.Protagonist.Hitpoints == 2) && LateHelp)
                     {
                         fight.Add("BOLD|Другие орки присоединяются к бою!\n-2 к Атаке и Защите противника!");
                         Fights.Bonus(enemy, sub: true);
                     }
                 }
 
-                if (protagonist.Hitpoints <= 0)
+                if (Character.Protagonist.Hitpoints <= 0)
                 {
                     if (magicPotion)
                     {
                         fight.Add("GOOD|Ты использовал целительное снадобье и получаешь +3 к здоровью!\n");
-                        protagonist.Hitpoints += 3;
+                        Character.Protagonist.Hitpoints += 3;
                         magicPotion = false;
                     }
                     else
@@ -387,15 +383,15 @@ namespace Seeker.Gamebook.OrcsDay
                 fight.Add("BOLD|Ты нападаешь:");
 
                 Game.Dice.DoubleRoll(out int protRollFirst, out int protRollSecond);
-                int protagonistAttack = (protRollFirst + protRollSecond) + protagonist.Muscle + protagonist.Weapon;
+                int protagonistAttack = (protRollFirst + protRollSecond) + Character.Protagonist.Muscle + Character.Protagonist.Weapon;
                 bool protagonistAttackWin = protagonistAttack >= enemy.Defense;
-                string weapon = protagonist.Weapon > 0 ? $" + {protagonist.Weapon} меч" : String.Empty;
+                string weapon = Character.Protagonist.Weapon > 0 ? $" + {Character.Protagonist.Weapon} меч" : String.Empty;
                 string compareLine = protagonistAttackWin ? ">=" : "<";
 
                 fight.Add($"Твой удар: " +
                     $"{Game.Dice.Symbol(protRollFirst)} + " +
                     $"{Game.Dice.Symbol(protRollSecond)} + " +
-                    $"{protagonist.Muscle}{weapon} {compareLine} {enemy.Defense}");
+                    $"{Character.Protagonist.Muscle}{weapon} {compareLine} {enemy.Defense}");
 
                 if (protagonistAttackWin)
                 {
@@ -473,16 +469,16 @@ namespace Seeker.Gamebook.OrcsDay
 
             while (true)
             {
-                int sense = protagonist.Courage + protagonist.Wits;
-                int orcishness = protagonist.Muscle + protagonist.Orcishness + 5;
+                int sense = Character.Protagonist.Courage + Character.Protagonist.Wits;
+                int orcishness = Character.Protagonist.Muscle + Character.Protagonist.Orcishness + 5;
 
                 overcome.Add("BOLD|Борьба:");
 
-                overcome.Add($"С одной стороны: {protagonist.Courage} (смелость) + " +
-                    $"{protagonist.Wits} (мозги) = {sense}");
+                overcome.Add($"С одной стороны: {Character.Protagonist.Courage} (смелость) + " +
+                    $"{Character.Protagonist.Wits} (мозги) = {sense}");
 
-                overcome.Add($"С другой: {protagonist.Muscle} (мышцы) + " +
-                    $"{protagonist.Orcishness} (оркишность) + 5 = {orcishness}");
+                overcome.Add($"С другой: {Character.Protagonist.Muscle} (мышцы) + " +
+                    $"{Character.Protagonist.Orcishness} (оркишность) + 5 = {orcishness}");
 
                 overcome.Add($"В результате: {sense} " +
                     $"{Game.Services.Сomparison(sense, orcishness)} {orcishness}");
@@ -492,14 +488,14 @@ namespace Seeker.Gamebook.OrcsDay
                     overcome.Add("BOLD|GOOD|Ты выиграл!");
                     overcome.Add("Оркишность снизилась на единицу!");
 
-                    protagonist.Orcishness -= 1;
+                    Character.Protagonist.Orcishness -= 1;
 
-                    if (protagonist.Orcishness <= 0)
+                    if (Character.Protagonist.Orcishness <= 0)
                     {
                         overcome.Add("BIG|GOOD|Ты освободился от своей Оркской природы! :)");
                         overcome.Add("Ты получаешь за это дополнительно 3 единицы Смелости!");
 
-                        protagonist.Courage += 3;
+                        Character.Protagonist.Courage += 3;
 
                         if (Game.Option.IsTriggered("Кандидат в Властелины"))
                         {
@@ -515,9 +511,9 @@ namespace Seeker.Gamebook.OrcsDay
                     overcome.Add("BOLD|BAD|Ты проиграл!");
                     overcome.Add("Смелость снизилась на единицу!");
 
-                    protagonist.Courage -= 1;
+                    Character.Protagonist.Courage -= 1;
 
-                    if (protagonist.Courage <= 0)
+                    if (Character.Protagonist.Courage <= 0)
                     {
                         overcome.Add("BIG|BAD|Ты остался рабом своей Оркской природы :(");
                         return overcome;
@@ -527,9 +523,9 @@ namespace Seeker.Gamebook.OrcsDay
         }
 
         public override bool IsHealingEnabled() =>
-            protagonist.Hitpoints < 5;
+            Character.Protagonist.Hitpoints < 5;
 
         public override void UseHealing(int healingLevel) =>
-            protagonist.Hitpoints += healingLevel;
+            Character.Protagonist.Hitpoints += healingLevel;
     }
 }

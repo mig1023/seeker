@@ -6,8 +6,6 @@ namespace Seeker.Gamebook.OrcsDay
 {
     class Calculations
     {
-        private static Character protagonist = Character.Protagonist;
-
         public static bool Condition(string conditionParam)
         {
             string[] conditions = conditionParam.Split(',');
@@ -28,19 +26,19 @@ namespace Seeker.Gamebook.OrcsDay
         {
             if (line.StartsWith("+"))
             {
-                protagonist.Orcishness += 1;
+                Character.Protagonist.Orcishness += 1;
                 return $"BAD|{line}";
             }
             else
             {
-                protagonist.Orcishness -= 1;
+                Character.Protagonist.Orcishness -= 1;
                 return $"GOOD|{line}";
             }
         }
 
         public static List<string> Orcishness()
         {
-            Character orc = protagonist;
+            Character orc = Character.Protagonist;
 
             orc.Orcishness = 6;
 
