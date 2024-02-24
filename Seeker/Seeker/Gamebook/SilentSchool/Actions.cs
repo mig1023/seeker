@@ -6,22 +6,18 @@ namespace Seeker.Gamebook.SilentSchool
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {
-        public new static Actions StaticInstance = new Actions();
-        public new static Actions GetInstance() => StaticInstance;
-        private static Character protagonist = Character.Protagonist;
-
         public int HarmedMyself { get; set; }
         public int Dices { get; set; }
 
         public override List<string> Status()
         {
-            List<string> statusLines = new List<string> { $"Жизнь: {protagonist.Life}" };
+            List<string> statusLines = new List<string> { $"Жизнь: {Character.Protagonist.Life}" };
 
-            if (protagonist.Grail > 0)
-                statusLines.Add($"Грааль: {protagonist.Grail}");
+            if (Character.Protagonist.Grail > 0)
+                statusLines.Add($"Грааль: {Character.Protagonist.Grail}");
 
-            if (!String.IsNullOrEmpty(protagonist.Weapon))
-                statusLines.Add($"Оружие: {protagonist.Weapon}");
+            if (!String.IsNullOrEmpty(Character.Protagonist.Weapon))
+                statusLines.Add($"Оружие: {Character.Protagonist.Weapon}");
 
             return statusLines;
         }
@@ -40,16 +36,16 @@ namespace Seeker.Gamebook.SilentSchool
         {
             Game.Option.Trigger("Шоколадка", remove: true);
 
-            protagonist.Life += 3;
+            Character.Protagonist.Life += 3;
 
             return true;
         }
 
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
-            GameOverBy(protagonist.Life, out toEndParagraph, out toEndText);
+            GameOverBy(Character.Protagonist.Life, out toEndParagraph, out toEndText);
 
         public override bool IsButtonEnabled(bool secondButton = false) =>
-            !((HarmedMyself > 0) && ((protagonist.HarmSelfAlready > 0) || (protagonist.Life <= HarmedMyself)));
+            !((HarmedMyself > 0) && ((Character.Protagonist.HarmSelfAlready > 0) || (Character.Protagonist.Life <= HarmedMyself)));
 
         public override bool Availability(string option)
         {
@@ -86,24 +82,24 @@ namespace Seeker.Gamebook.SilentSchool
                     {
                         int level = Game.Services.LevelParse(option);
 
-                        if (oneOption.Contains("ГРААЛЬ >=") && (level > protagonist.Grail))
+                        if (oneOption.Contains("ГРААЛЬ >=") && (level > Character.Protagonist.Grail))
                             return false;
 
-                        if (oneOption.Contains("РАНА >=") && (level > protagonist.HarmSelfAlready))
+                        if (oneOption.Contains("РАНА >=") && (level > Character.Protagonist.HarmSelfAlready))
                             return false;
 
-                        if (oneOption.Contains("РАНА <") && (level <= protagonist.HarmSelfAlready))
+                        if (oneOption.Contains("РАНА <") && (level <= Character.Protagonist.HarmSelfAlready))
                             return false;
                     }
                     else if (oneOption.Contains("ОРУЖИЕ"))
                     {
                         string value = oneOption.Split('=')[1].Trim();
 
-                        if (oneOption.Contains("!") && (value == protagonist.Weapon))
+                        if (oneOption.Contains("!") && (value == Character.Protagonist.Weapon))
                         {
                             return false;
                         }
-                        else if (!oneOption.Contains("!") && (value != protagonist.Weapon))
+                        else if (!oneOption.Contains("!") && (value != Character.Protagonist.Weapon))
                         {
                             return false;
                         }
@@ -130,12 +126,12 @@ namespace Seeker.Gamebook.SilentSchool
         {
             if (HarmedMyself > 0)
             {
-                protagonist.Life -= HarmedMyself;
-                protagonist.HarmSelfAlready = HarmedMyself;
+                Character.Protagonist.Life -= HarmedMyself;
+                Character.Protagonist.HarmSelfAlready = HarmedMyself;
             }
             else
             {
-                protagonist.Weapon = Head;
+                Character.Protagonist.Weapon = Head;
             }
 
             return new List<string> { "RELOAD" };
@@ -155,7 +151,7 @@ namespace Seeker.Gamebook.SilentSchool
                 diceCheck.Add($"На {i} выпало: {Game.Dice.Symbol(dice)}");
             }
 
-            protagonist.Life -= dices;
+            Character.Protagonist.Life -= dices;
 
             diceCheck.Add($"BIG|BAD|Я потерял жизней: {dices}");
 
