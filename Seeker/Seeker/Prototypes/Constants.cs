@@ -41,7 +41,9 @@ namespace Seeker.Prototypes
 
         public virtual string GetColor(Data.ColorTypes type)
         {
-            Dictionary<ColorTypes, string> color = (Settings.IsEnabled("WithoutStyles") ?
+            bool defaultColors = Settings.IsEnabled("WithoutStyles") || (ColorsList == null);
+
+            Dictionary<ColorTypes, string> color = (defaultColors ?
                 Output.Constants.DEFAULT_COLORS : ColorsList);
 
             return (color.ContainsKey(type) ? color[type] : String.Empty);
