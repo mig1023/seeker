@@ -236,5 +236,17 @@
 				<Option Goto="22" Availability="!Укусил"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="21">
+			<Texts>
+				<Text Availability="!Умный">Вы слишком тупы для такого фокуса.\nВы ревёте от голода возле двери, но никто, почему-то так и не вышел.\nВремя не ждёт. Скоро приедет спецназ.\nНадо бежать дальше.</Text>
+				<Text Availability="Умный">Хорошо быть умным зомби!\nВы ловко открываете дверь в курилку и начинаете кушать.\nК сожалению, табачный дым плохо влияет на ваше здоровье, поэтому вы смогли укусить лишь двоих. Остальные курильщики убежали.</Text>
+			</Texts>
+			<Options>
+				<Option Goto="15" Availability="!Умный"/>
+				<Option Goto="15" Availability="Умный">
+					<Bitten Value="2"/>
+				</Option>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
