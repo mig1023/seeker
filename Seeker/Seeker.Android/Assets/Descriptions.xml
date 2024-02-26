@@ -169,7 +169,7 @@
 		<Paragraphs>200</Paragraphs>
 		<Size>19273</Size>
 		<Playthrough>На часок-другой</Playthrough>
-		<Setting>Выживач</Setting>
+		<Setting>Зомби</Setting>
 		<Color>151515</Color>
 	</SilentSchool>
 	<ThoseWhoAreAboutToDie>
@@ -801,7 +801,7 @@
 		<Paragraphs>59</Paragraphs>
 		<Size>0</Size>
 		<Playthrough>На пять минут</Playthrough>
-		<Setting>Приключения</Setting>
+		<Setting>Зомби</Setting>
 		<Colors>
 			<Book>ffffff</Book>
 			<Font>000000</Font>
