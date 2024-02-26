@@ -106,10 +106,23 @@
 				<Option Goto="30"/>
 			</Options>
 		</Paragraph>
-		<Paragraph No="8">
+		<Paragraph No="9">
 			<Text>Ваше приключение окончено.\nВы теперь окончательно мертвы, а зомби-апокалипсис так и не начался.</Text>
 			<Options>
 				<Gameover/>
+			</Options>
+		</Paragraph>
+		<Paragraph No="10">
+			<Texts>
+				<Text Availability="Водитель">Будучи ещё живым шофёром, вы водили машину довольно резко.</Text>
+				<Text Availability="Быстрый">Вы бежали слишком быстро, а потому не успели затормозить, выбили окно и выпали на улицу.\nПомните - вы зомби, а не человек-паук!</Text>
+				<Text Availability="!Быстрый">Отличный трюк!\nВы зацепили двоих, прежде чем остальные людишки успели разбежаться.</Text>
+			</Texts>
+			<Options>
+				<Option Goto="9" Availability="Быстрый"/>
+				<Option Goto="22" Availability="!Быстрый">
+					<Bitten Value="2"/>
+				</Option>
 			</Options>
 		</Paragraph>
 	</Paragraphs>
