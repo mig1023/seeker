@@ -276,5 +276,17 @@
 				</Option>
 			</Options>
 		</Paragraph>
+		<Paragraph No="25">
+			<Texts>
+				<Text Availability="!Умный">Поиск лестницы - слишком сложная задача для тупого зомби.</Text>
+				<Text Availability="Умный">Слишком поздно - люди разбегаются как кролики.\nНо можно попробовать обмануть их, побежав наперерез.</Text>
+			</Texts>
+			<Options>
+				<Option Goto="30" Availability="!Умный"/>
+				<Option Goto="17" Availability="Умный">
+					<RandomBit/>
+				</Option>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
