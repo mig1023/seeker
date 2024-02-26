@@ -23,7 +23,7 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="1">
-			<Text>Кто вы?\n\nНадо выбрать персонаж, за которого будете играть.</Text>
+			<Text>Кто вы?\nНадо выбрать персонаж, за которого будете играть.</Text>
 			<Options>
 				<Option Goto="33" Text="Водитель Витя">
 					<Trigger Value="Водитель"/>
@@ -33,6 +33,18 @@
 				</Option>
 				<Option Goto="33" Text="Дизайнер Олег">
 					<Trigger Value="Дизайнер"/>
+				</Option>
+			</Options>
+		</Paragraph>
+		<Paragraph No="2">
+			<Texts>
+				<Text Availability="!Укусил">Тут пусто.\nНадо бежать дальше.</Text>
+				<Text Availability="Укусил">Одна из кабинок закрыта.\nТам явно кто-то есть.</Text>
+			</Texts>
+			<Options>
+				<Option Goto="40" Text="Далее" Availability="!Укусил"/>
+				<Option Goto="56" Text="Подойти к кабинке" Availability="Укусил">
+					<RandomAction/>
 				</Option>
 			</Options>
 		</Paragraph>
