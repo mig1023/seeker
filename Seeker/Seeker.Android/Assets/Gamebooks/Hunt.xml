@@ -262,5 +262,19 @@
 				<Option Goto="36"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="24">
+			<Text>Но не совсем!\nТеперь вы зомби.\nНадо выбрать какой вы тип зомби - быстрый, умный или сильный.\nВремени на психологические тесты нет и выбрать надо прямо сейчас, пока коллеги не вызвали полицию с автоматами и прочими неприятными для зомби штуками.</Text>
+			<Options>
+				<Option Goto="27" Text="Быстрый">
+					<Trigger Value="Быстрый"/>
+				</Option>
+				<Option Goto="27" Text="Умный">
+					<Trigger Value="Умный"/>
+				</Option>
+				<Option Goto="27" Text="Сильный">
+					<Trigger Value="Сильный"/>
+				</Option>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
