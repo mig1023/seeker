@@ -43,8 +43,9 @@
 			</Texts>
 			<Options>
 				<Option Goto="40" Text="Далее" Availability="!Укусил"/>
-				<Option Goto="56" Text="Подойти к кабинке" Availability="Укусил">
+				<Option Goto="1" Text="Подойти к кабинке" Availability="Укусил">
 					<RandomAction/>
+					<RandomResponse/>
 				</Option>
 			</Options>
 		</Paragraph>
