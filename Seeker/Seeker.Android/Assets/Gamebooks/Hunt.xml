@@ -180,5 +180,17 @@
 				<Option Goto="25" Text="Искать лестницу"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="16">
+			<Texts>
+				<Text Availability="Укусил">Тут безуспешно пытался спрятаться ваш начальник Рубен.\nДля вас укусить его - особенное удовольствие.\nЕсть ещё один зомби!</Text>
+				<Text Availability="!Укусил">Тут никого нет.</Text>
+			</Texts>
+			<Options>
+				<Option Goto="39" Text="Бежать дальше" Availability="Укусил">
+					<Bitten Value="1"/>
+				</Option>
+				<Option Goto="39" Text="Бежать дальше" Availability="!Укусил"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
