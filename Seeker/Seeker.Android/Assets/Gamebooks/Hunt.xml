@@ -125,5 +125,17 @@
 				</Option>
 			</Options>
 		</Paragraph>
+		<Paragraph No="11">
+			<Texts>
+				<Text Availability="Укусил">Тут безуспешно пытался спрятаться ваш начальник Рубен.\nДля вас укусить его - особенное удовольствие.\nЕсть ещё один зомби!</Text>
+				<Text Availability="!Укусил">Тут никого нет.</Text>
+			</Texts>
+			<Options>
+				<Option Goto="39" Text="Бежать дальше" Availability="!Укусил"/>
+				<Option Goto="39" Text="Бежать дальше" Availability="Укусил">
+					<Bitten Value="1"/>
+				</Option>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
