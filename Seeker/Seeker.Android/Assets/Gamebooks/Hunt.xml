@@ -23,9 +23,17 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="1">
-			<Text>END</Text>
+			<Text>Кто вы?\n\nНадо выбрать персонаж, за которого будете играть.</Text>
 			<Options>
-				<Option Goto="0"/>
+				<Option Goto="33" Text="Водитель Витя">
+					<Trigger Value="Водитель"/>
+				</Option>
+				<Option Goto="33" Text="Уборщица Джамиля">
+					<Trigger Value="Уборщица"/>
+				</Option>
+				<Option Goto="33" Text="Дизайнер Олег">
+					<Trigger Value="Дизайнер"/>
+				</Option>
 			</Options>
 		</Paragraph>
 	</Paragraphs>
