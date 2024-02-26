@@ -78,9 +78,16 @@
 			</Texts>
 			<Options>
 				<Option Goto="39" Text="Бежать дальше" Availability="!Укусил"/>
-				<Option Goto="39" Text="Бежать дальше," Availability="Укусил">
+				<Option Goto="39" Text="Бежать дальше" Availability="Укусил">
 					<Bitten Value="1"/>
 				</Option>
+			</Options>
+		</Paragraph>
+		<Paragraph No="3">
+			<Text>Сергей стреляет.\nНесколько пуль попадает в вас.\nКак можно догадаться, это для зомби не помеха.\nКажется, стрелок тоже об этом подумал и явно хочет попасть вам между глаз.\nМожет, ну его?</Text>
+			<Options>
+				<Option Goto="48" Text="Убежать"/>
+				<Option Goto="3" Text="Продолжать атаку"/>
 			</Options>
 		</Paragraph>
 	</Paragraphs>
