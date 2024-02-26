@@ -16,6 +16,13 @@ namespace Seeker.Gamebook.Hunt
                 int response = Game.Dice.Roll(size: 10);
                 Game.Option.Trigger($"{response}ответ");
             }
+            else if (Name == "RandomBit")
+            {
+                int bit = Game.Dice.Roll(size: 2);
+
+                if (bit == 1)
+                    Game.Option.Trigger("Укусил");
+            }
             else
             {
                 base.Do(Character.Protagonist);
