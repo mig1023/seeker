@@ -172,5 +172,13 @@
 				<Option Goto="22" Availability="!Укусил"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="15">
+			<Text>Вы выбегаете на стеклянную галерею.\nПрямо под вами внизу стоит группа людей.\nЧто делать?</Text>
+			<Untriggers>Укусил</Untriggers>
+			<Options>
+				<Option Goto="8" Text="Разбить стекло и прыгнуть вниз"/>
+				<Option Goto="25" Text="Искать лестницу"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
