@@ -145,5 +145,19 @@
 				</Option>
 			</Options>
 		</Paragraph>
+		<Paragraph No="13">
+			<Texts>
+				<Text Availability="!Умный">К сожалению, вы слишком тупы, чтобы нагнуться и увидеть хитрого Лёшу под столом.\nУрча и топая вы идёте дальше.</Text>
+				<Text Availability="Умный, Укусил">Только умный зомби догадается искать еду под столом.\nТак как в мире мертвяков вы - вундеркинд, в армии зомби произошло пополнение.\nЕсть успешный укус!</Text>
+				<Text Availability="Умный, !Укусил">Только умный зомби догадается заглянуть под стол.\nНо надо быть ещё и ловким, чтобы укусить бойкого Алексея.\nВы промазали!</Text>
+			</Texts>
+			<Options>
+				<Option Goto="54" Availability="!Умный"/>
+				<Option Goto="54" Availability="Умный, Укусил">
+					<Bitten Value="1"/>
+				</Option>
+				<Option Goto="54" Availability="Умный, !Укусил"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
