@@ -224,5 +224,17 @@
 				<Option Goto="54" Availability="Сильный, !Укусил"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="20">
+			<Texts>
+				<Text Availability="!Укусил">Почти получилось, но ваших навыков оказалось недостаточно для этой драки.\nДевушка Оля плеснула вам в лицо горячим кофе. Вам не больно, но на мгновение вы ослепли.\nТолпе хватило этого времени, чтобы разбежаться.</Text>
+				<Text Availability="Укусил">Удача на вашей стороне!\nЕщё один укушенный скоро станет зомби.\nОстальные сотрудники в панике разбегаются кто куда.</Text>
+			</Texts>
+			<Options>
+				<Option Goto="22" Availability="Укусил">
+					<Bitten Value="1"/>
+				</Option>
+				<Option Goto="22" Availability="!Укусил"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
