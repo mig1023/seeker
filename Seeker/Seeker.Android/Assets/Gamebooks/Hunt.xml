@@ -204,5 +204,11 @@
 				<Option Goto="30" Availability="!Укусил"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="18">
+			<Text>Спецназ врывается в офис.\nСлышны выстрелы.\nВы с друзьями атакуете бойцов, стараясь выйти из здания.</Text>
+			<Options>
+				<Option Goto="57"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
