@@ -42,7 +42,7 @@
 				<Text Availability="Укусил">Одна из кабинок закрыта.\nТам явно кто-то есть.</Text>
 			</Texts>
 			<Options>
-				<Option Goto="40" Text="Далее" Availability="!Укусил"/>
+				<Option Goto="40" Availability="!Укусил"/>
 				<Option Goto="56" Text="Подойти к кабинке" Availability="Укусил">
 					<RandomAction/>
 					<RandomResponse/>
@@ -55,10 +55,20 @@
 				<Text Availability="!Умный">Какой меткий стрелок!\nОн попал вам в голову.\nХорошо, что вы тупой зомби и мозги вам не нужны.\nИнтересно, каким зомби теперь станет сам Сергей?</Text>
 			</Texts>
 			<Options>
-				<Option Goto="9" Text="Далее" Availability="Умный"/>
-				<Option Goto="43" Text="Далее" Availability="!Умный">
+				<Option Goto="9" Availability="Умный"/>
+				<Option Goto="43" Availability="!Умный">
 					<Bitten Value="1"/>
 				</Option>
+			</Options>
+		</Paragraph>
+		<Paragraph No="3">
+			<Texts>
+				<Text Availability="Быстрый">Что может противопоставить простой охранник такому быстрому зомби?!</Text>
+				<Text Availability="Умный">Выстоит ли охранник против умного зомби?</Text>
+				<Text Availability="Сильный">Ха! Куда там хилому прапорщику в отставке против такого сильного зомби!</Text>
+			</Texts>
+			<Options>
+				<Option Goto="53"/>
 			</Options>
 		</Paragraph>
 	</Paragraphs>
