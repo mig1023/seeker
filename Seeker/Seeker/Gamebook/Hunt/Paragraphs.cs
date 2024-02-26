@@ -24,19 +24,9 @@ namespace Seeker.Gamebook.Hunt
                 foreach (XmlNode text in xmlNode.SelectNodes("Texts/Text"))
                 {
                     string option = text.Attributes["Availability"].InnerText;
-                    bool isOptioned = !String.IsNullOrEmpty(option);
 
-                    if (isOptioned && option.Contains("!"))
-                    {
-                        if (Option.IsTriggered(option.Replace("!", String.Empty).Trim()))
-                            continue;
-                    }
-                    else if (isOptioned && !Option.IsTriggered(option))
-                    {
-                        continue;
-                    }
-
-                    texts.Add(Xml.TextLineParse(text));
+                    if (String.IsNullOrEmpty(option) || Data.Actions.Availability(option))
+                        texts.Add(Xml.TextLineParse(text));
                 }
 
                 return texts;

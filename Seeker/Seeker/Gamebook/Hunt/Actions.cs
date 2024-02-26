@@ -16,9 +16,26 @@ namespace Seeker.Gamebook.Hunt
             {
                 return true;
             }
-            else
+            else if (!option.Contains(","))
             {
                 return AvailabilityTrigger(option);
+            }
+            else
+            {
+                foreach (string oneOption in option.Split(','))
+                {
+                    if (oneOption.Contains("!"))
+                    {
+                        if (Game.Option.IsTriggered(oneOption.Replace("!", String.Empty).Trim()))
+                            return false;
+                    }
+                    else if (!Game.Option.IsTriggered(oneOption.Trim()))
+                    {
+                        return false;
+                    }
+                }
+
+                return true;
             }
         }
     }
