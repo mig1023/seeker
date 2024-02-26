@@ -210,5 +210,19 @@
 				<Option Goto="57"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="19">
+			<Texts>
+				<Text Availability="!Сильный">Саня хоть и тормоз, но довольно сильный мужик.\nОн легко отбрасывает такого дохляка как вы.</Text>
+				<Text Availability="Сильный, Укусил">Саня мощный, но вы сильнее.\nЕсть первый укус!</Text>
+				<Text Availability="Сильный, !Укусил">Даже сильному зомби нужна удача.\nВы промазали!</Text>
+			</Texts>
+			<Options>
+				<Option Goto="54" Availability="!Сильный"/>
+				<Option Goto="54" Availability="Сильный, Укусил">
+					<Bitten Value="1"/>
+				</Option>
+				<Option Goto="54" Availability="Сильный, !Укусил"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
