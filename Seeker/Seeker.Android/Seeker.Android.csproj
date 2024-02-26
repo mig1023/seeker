@@ -564,10 +564,16 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\DangerFromBehindTheSnowWall.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Gamebooks\Hunt.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Hunt.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties XamarinHotReloadDebuggerTimeoutExceptionSeekerAndroidHideInfoBar="True" XamarinHotReloadGenericExceptionInfoBarSeekerAndroidHideInfoBar="True" />
+      <UserProperties XamarinHotReloadGenericExceptionInfoBarSeekerAndroidHideInfoBar="True" XamarinHotReloadDebuggerTimeoutExceptionSeekerAndroidHideInfoBar="True" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>

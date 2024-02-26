@@ -792,4 +792,20 @@
 		<Setting>Фэнтези</Setting>
 		<Color>acc6dc</Color>
 	</DangerFromBehindTheSnowWall>
+	<Hunt>
+		<Title>Охота</Title>
+		<Author>Mak_Sim</Author>
+		<SinglePseudonym/>
+		<Year>2019</Year>
+		<Text>Начало зомби-апокалипсиса.\n\nВы – нулевой пациент. Вам нужно укусить десять людей до того, как приедет спецназ. Тогда зомби смогут вырваться из офиса и начать в городе настоящую эпидемию.</Text>
+		<Paragraphs>59</Paragraphs>
+		<Size>0</Size>
+		<Playthrough>На пять минут</Playthrough>
+		<Setting>Приключения</Setting>
+		<Colors>
+			<Book>ffffff</Book>
+			<Font>000000</Font>
+			<Border>000000</Border>
+		</Colors>
+	</Hunt>
 </Gamebooks>
