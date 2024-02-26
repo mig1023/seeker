@@ -192,5 +192,17 @@
 				<Option Goto="39" Text="Бежать дальше" Availability="!Укусил"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="17">
+			<Texts>
+				<Text Availability="Укусил">Попалась!\nДля такой тупой блондинки, как Зинка, стать зомби - хороший карьерный рост.</Text>
+				<Text Availability="!Укусил">Мимо!\nУдача тоже имеет значение.</Text>
+			</Texts>
+			<Options>
+				<Option Goto="30" Availability="Укусил">
+					<Bitten Value="1"/>
+				</Option>
+				<Option Goto="30" Availability="!Укусил"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
