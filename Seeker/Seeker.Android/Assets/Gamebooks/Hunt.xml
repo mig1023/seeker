@@ -137,5 +137,13 @@
 				</Option>
 			</Options>
 		</Paragraph>
+		<Paragraph No="12">
+			<Text>Простой план - самый эффективный.\nЧто можно сделать палкой от швабры злобному зомби?!\nТеперь Андрей сам живой мертвец.\nИнтересно, а за кого он болел, когда смотрел зомби-фильмы?</Text>
+			<Options>
+				<Option Goto="36">
+					<Bitten Value="1"/>
+				</Option>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
