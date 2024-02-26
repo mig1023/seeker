@@ -106,5 +106,11 @@
 				<Option Goto="30"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="8">
+			<Text>Ваше приключение окончено.\nВы теперь окончательно мертвы, а зомби-апокалипсис так и не начался.</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
