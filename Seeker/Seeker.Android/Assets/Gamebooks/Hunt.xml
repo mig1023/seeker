@@ -362,5 +362,16 @@
 				<Option Goto="18" Availability="!Укусил"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="32">
+			<Texts>
+				<Text Availability="Умный">Умный зомби - живой зомби.\nОбманное движение сбило вашему противнику прицел.</Text>
+				<Text Availability="!Умный">Такому мёртвому тупице как вы, трудно обмануть опытного топ-менеджера.\nНедаром он родственник самого мэра!</Text>
+			</Texts>
+			<Options>
+				<Option Goto="9" Availability="!Укусил, !Умный"/>
+				<Option Goto="58" Availability="Умный"/>
+				<Option Goto="58" Availability="Укусил, !Умный"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
