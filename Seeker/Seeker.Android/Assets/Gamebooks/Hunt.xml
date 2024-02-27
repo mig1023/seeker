@@ -373,5 +373,11 @@
 				<Option Goto="58" Availability="Укусил, !Умный"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="33">
+			<Text>Вскоре в глазах у вас окончательно помутилось и лёгкое недомогание переросло в смертельный случай на работе.\nВы умерли.</Text>
+			<Options>
+				<Option Goto="24"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
