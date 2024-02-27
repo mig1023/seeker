@@ -339,5 +339,16 @@
 				<Option Goto="32" Text="Сделать обманное движение"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="30">
+			<Text>Ваше сознание затуманивает голод.\nИз этого тумана перед вами внезапно возникают двери туалета.\nКуда пойти?</Text>
+			<Untriggers>Укусил</Untriggers>
+			<Modifications>
+				<RandomBit/>
+			</Modifications>
+			<Options>
+				<Option Goto="2" Text="Мужской"/>
+				<Option Goto="35" Text="Женский"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
