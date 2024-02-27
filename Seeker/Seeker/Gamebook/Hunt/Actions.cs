@@ -29,7 +29,12 @@ namespace Seeker.Gamebook.Hunt
             {
                 foreach (string oneOption in option.Split(','))
                 {
-                    if (oneOption.Contains("!"))
+                    if (oneOption.Contains("ЦИКЛ >"))
+                    {
+                        int level = Game.Services.LevelParse(oneOption);
+                        return Character.Protagonist.Cycle > level;
+                    }
+                    else if (oneOption.Contains("!"))
                     {
                         if (Game.Option.IsTriggered(oneOption.Replace("!", String.Empty).Trim()))
                             return false;
