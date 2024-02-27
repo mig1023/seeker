@@ -350,5 +350,17 @@
 				<Option Goto="35" Text="Женский"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="31">
+			<Texts>
+				<Text Availability="Укусил">Попался!\nТеперь в армии зомби будет свой мажор...</Text>
+				<Text Availability="!Укусил">Какая незадача! Вы промазали, а шеф отрубил вам ноги.\nТеперь он бежит навстречу спецназу, который уже появился в здании.</Text>
+			</Texts>
+			<Options>
+				<Option Goto="18" Availability="Укусил">
+					<Bitten Value="1"/>
+				</Option>
+				<Option Goto="18" Availability="!Укусил"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
