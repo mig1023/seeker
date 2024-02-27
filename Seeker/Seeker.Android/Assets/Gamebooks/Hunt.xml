@@ -420,5 +420,17 @@
 				</Option>
 			</Options>
 		</Paragraph>
+		<Paragraph No="37">
+			<Texts>
+				<Text Availability="Быстрый">Вы ловко уклоняетесь от попыток дяди Кости достать вас электрошокером.</Text>
+				<Text Availability="!Быстрый">Дядя Костя ловит вас и бьёт электрошокером.\nДурацкая идея с его стороны.\nНа вас это не оказывает никакого эффекта, а вот вы успешно кусаете дядю Костю.\nЕсть новый зомби!</Text>
+			</Texts>
+			<Options>
+				<Option Goto="34" Availability="Быстрый"/>
+				<Option Goto="34" Availability="!Быстрый">
+					<Bitten Value="1"/>
+				</Option>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
