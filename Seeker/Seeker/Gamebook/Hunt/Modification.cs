@@ -23,6 +23,11 @@ namespace Seeker.Gamebook.Hunt
                 if (bit == 1)
                     Game.Option.Trigger("Укусил");
             }
+            else if (Name == "CleanResponse")
+            {
+                for (int i = 0; i < 10; i++)
+                    Game.Option.Trigger($"{i}ответ", remove: true);
+            }
             else
             {
                 base.Do(Character.Protagonist);
