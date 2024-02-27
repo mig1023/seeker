@@ -288,5 +288,15 @@
 				</Option>
 			</Options>
 		</Paragraph>
+		<Paragraph No="26">
+			<Texts>
+				<Text Availability="Быстрый">Да, вы очень быстрый зомби!</Text>
+				<Text>Сергей стреляет.\nНесколько пуль попадает в вас.\nКак можно догадаться, это для зомби не помеха.\nКажется, стрелок тоже об этом подумал и явно хочет попасть вам между глаз.\nМожет, ну его?</Text>
+			</Texts>
+			<Options>
+				<Option Goto="48" Text="Убежать"/>
+				<Option Goto="3" Text="Продолжать атаку"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
