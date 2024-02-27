@@ -432,5 +432,25 @@
 				</Option>
 			</Options>
 		</Paragraph>
+		<Paragraph No="38">
+			<Text>И что теперь делать?</Text>
+			<Modifications>
+				<CleanResponse/>
+				<RandomResponse/>
+			</Modifications>
+			<Options>
+				<Option Goto="47" Text="Постучать в дверь головой" Availability="1действие|2действие|3действие"/>
+				<Option Goto="47" Text="Порычать" Availability="2действие|3действие|4действие"/>
+				<Option Goto="47" Text="Поскрестись в дверь" Availability="3действие|4действие|5действие"/>
+				<Option Goto="47" Text="Попытаться заглянуть сверху" Availability="4действие|5действие|6действие"/>
+				<Option Goto="47" Text="Попытаться заглянуть снизу" Availability="5действие|6действие|7действие"/>
+				<Option Goto="47" Text="Грызть ручку" Availability="6действие|7действие|8действие"/>
+				<Option Goto="47" Text="Скулить" Availability="7действие|8действие|9действие"/>
+				<Option Goto="47" Text="Царапать дверь" Availability="8действие|9действие|10действие"/>
+				<Option Goto="47" Text="Рыгать и реветь" Availability="9действие|10действие|1действие"/>
+				<Option Goto="47" Text="Ждать у двери молча" Availability="10действие|1действие|2действие"/>
+				<Option Goto="52" Text="Проломить дверь" Availability="ЦИКЛ > 4"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
