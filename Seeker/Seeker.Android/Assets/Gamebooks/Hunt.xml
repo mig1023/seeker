@@ -379,5 +379,17 @@
 				<Option Goto="24"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="34">
+			<Text>Голод сводит вас с ума.\nТрудно сосредоточиться.\nВы выбегаете в коридор и перед вами три закрытые двери.\nКакие хитрые людишки и какие хлипкие двери!\nКакую дверь ломать?</Text>
+			<Untriggers>Укусил</Untriggers>
+			<Modifications>
+				<RandomBit/>
+			</Modifications>
+			<Options>
+				<Option Goto="16" Text="Бухгалтерия"/>
+				<Option Goto="5" Text="Отдел кадров"/>
+				<Option Goto="11" Text="Кладовка"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
