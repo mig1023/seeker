@@ -404,5 +404,21 @@
 				</Option>
 			</Options>
 		</Paragraph>
+		<Paragraph No="36">
+			<Text>Теперь перед вами целая толпа, стоящая рядом с кофейным автоматом.\nОни глазеют в огромное окно во всю стену и не замечают ничего вокруг.\nСлишком много людей. Это может быть опасно для, пока, одинокого зомби.\nОбойти их нельзя - они заняли весь проход. Что делать?</Text>
+			<Untriggers>Укусил</Untriggers>
+			<Options>
+				<Option Goto="10" Text="Атаковать с разбега"/>
+				<Option Goto="28" Text="Испугать">
+					<RandomBit/>
+				</Option>
+				<Option Goto="14" Text="Подкрасться">
+					<RandomBit/>
+				</Option>
+				<Option Goto="20" Text="Просто напасть">
+					<RandomBit/>
+				</Option>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
