@@ -391,5 +391,18 @@
 				<Option Goto="11" Text="Кладовка"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="35">
+			<Texts>
+				<Text Availability="!Укусил">Тут пусто.\nНадо бежать дальше.</Text>
+				<Text Availability="Укусил">Одна из кабинок закрыта.\nТам явно кто-то есть.</Text>
+			</Texts>
+			<Options>
+				<Option Goto="40" Availability="!Укусил"/>
+				<Option Goto="56" Text="Подойти к кабинке" Availability="Укусил">
+					<RandomAction/>
+					<RandomResponse/>
+				</Option>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
