@@ -568,5 +568,14 @@
 				</Option>
 			</Options>
 		</Paragraph>
+		<Paragraph No="46">
+			<Texts>
+				<Text Availability="Умный">Верный ход для умного зомби.</Text>
+				<Text>Да, пока армия мертвецов мала, надо искать лёгкие цели.\nСергей стреляет вам вслед.\nДве-три пули в спине - это для зомби как иглоукалывание.</Text>
+			</Texts>
+			<Options>
+				<Option Goto="43"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
