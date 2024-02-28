@@ -533,5 +533,17 @@
 				<Option Goto="49" Text="Сломать шею"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="46">
+			<Texts>
+				<Text Availability="!Мимо">Попался!\nТеперь у вас будет новый друг.\nПоговорить с ним по душам, конечно нельзя, но трапезу разделить - вполне!</Text>
+				<Text Availability="Мимо">Неудача!\nВы промазали, а злобный электрик лупит вас молотком.</Text>
+			</Texts>
+			<Options>
+				<Option Goto="29" Availability="!Мимо">
+					<Bitten Value="1"/>
+				</Option>
+				<Option Goto="9" Availability="Мимо"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
