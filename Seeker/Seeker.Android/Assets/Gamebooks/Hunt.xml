@@ -545,5 +545,28 @@
 				<Option Goto="9" Availability="Мимо"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="47">
+			<Texts>
+				<Text Availability="1ответ">Раздаётся голос:\n"Одну минуту!"</Text>
+				<Text Availability="2ответ">За дверью шуршание туалетной бумаги.</Text>
+				<Text Availability="3ответ">За дверью спускают воду.</Text>
+				<Text Availability="4ответ">Раздаётся голос:\n"Сейчас выйду!"</Text>
+				<Text Availability="5ответ">За дверью утробные звуки.</Text>
+				<Text Availability="6ответ">Мёртвая тишина.</Text>
+				<Text Availability="7ответ">За дверью кряхтение и стон.</Text>
+				<Text Availability="8ответ">За дверью капает вода...\nИли не вода?\nВы слишком тупы, чтобы догадаться.</Text>
+				<Text Availability="9ответ">За дверью кто-то напевает.</Text>
+				<Text Availability="10ответ">За дверью кто-то громко пускает газы.</Text>
+			</Texts>
+			<Modifications>
+				<CleanAction/>
+				<RandomAction/>
+			</Modifications>
+			<Options>
+				<Option Goto="31">
+					<Cycle Value="1"/>
+				</Option>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
