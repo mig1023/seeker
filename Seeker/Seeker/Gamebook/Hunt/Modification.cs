@@ -11,10 +11,20 @@ namespace Seeker.Gamebook.Hunt
                 int action = Game.Dice.Roll(size: 10);
                 Game.Option.Trigger($"{action}действие");
             }
+            else if (Name == "CleanAction")
+            {
+                for (int i = 0; i < 10; i++)
+                    Game.Option.Trigger($"{i}действие", remove: true);
+            }
             else if (Name == "RandomResponse")
             {
                 int response = Game.Dice.Roll(size: 10);
                 Game.Option.Trigger($"{response}ответ");
+            }
+            else if (Name == "CleanResponse")
+            {
+                for (int i = 0; i < 10; i++)
+                    Game.Option.Trigger($"{i}ответ", remove: true);
             }
             else if (Name == "RandomBit")
             {
@@ -23,10 +33,12 @@ namespace Seeker.Gamebook.Hunt
                 if (bit == 1)
                     Game.Option.Trigger("Укусил");
             }
-            else if (Name == "CleanResponse")
+            else if (Name == "RandomMiss")
             {
-                for (int i = 0; i < 10; i++)
-                    Game.Option.Trigger($"{i}ответ", remove: true);
+                int miss = Game.Dice.Roll(size: 4);
+
+                if (miss == 1)
+                    Game.Option.Trigger("Мимо");
             }
             else
             {
