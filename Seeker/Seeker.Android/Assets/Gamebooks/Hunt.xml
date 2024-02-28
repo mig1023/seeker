@@ -484,5 +484,17 @@
 				<Option Goto="54" Availability="Быстрый, !Укусил"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="42">
+			<Texts>
+				<Text Availability="Умный">Удача на стороне мертвецов.\nОдин из курильщиков попался в вашу засаду.</Text>
+				<Text Availability="!Умный">Ничего не получается - вас заметили.\nОстаётся лишь биться головой о стенку.\nТупой зомби! Тупой! Тупой!</Text>
+			</Texts>
+			<Options>
+				<Option Goto="15" Availability="Умный">
+					<Bitten Value="1"/>
+				</Option>
+				<Option Goto="15" Availability="!Умный"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
