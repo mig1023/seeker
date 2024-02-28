@@ -568,13 +568,25 @@
 				</Option>
 			</Options>
 		</Paragraph>
-		<Paragraph No="46">
+		<Paragraph No="48">
 			<Texts>
 				<Text Availability="Умный">Верный ход для умного зомби.</Text>
 				<Text>Да, пока армия мертвецов мала, надо искать лёгкие цели.\nСергей стреляет вам вслед.\nДве-три пули в спине - это для зомби как иглоукалывание.</Text>
 			</Texts>
 			<Options>
 				<Option Goto="43"/>
+			</Options>
+		</Paragraph>
+		<Paragraph No="49">
+			<Text>Снова успех!\nВитёк очухался и схватился за молоток.\nКакой крутой электрик!\nНо и зомби никогда не отступают!\nПобеда или смерть...\nТочнее, смерть уже есть - осталась победа.</Text>
+			<Modifications>
+				<Bitten Value="1"/>
+				<RandomMiss/>
+			</Modifications>
+			<Options>
+				<Option Goto="46" Text="Прыгнуть"/>
+				<Option Goto="46" Text="Бежать"/>
+				<Option Goto="46" Text="Толнуть"/>
 			</Options>
 		</Paragraph>
 	</Paragraphs>
