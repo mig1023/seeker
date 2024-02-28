@@ -511,5 +511,19 @@
 				<Option Goto="42" Text="Ждать в засаде"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="44">
+			<Texts>
+				<Text Availability="Дизайнер">Фу, какое неэстетичное занятие! Вы же дизайнер, хоть и бывший!</Text>
+				<Text Availability="Укусил">Зомби - сила!\nЧеловек, укус, могила!\nЕсть ещё два новых бойца в армии мертвецов.\nОстальные, к сожалению, из-за вашей неловкости, убежали.</Text>
+				<Text Availability="!Укусил">Сколько бы вы не бились о пластиковую панель - ничего не получилось.\nНадо бежать дальше, ведь скоро приедет спецназ и вам нужна целая армия, чтобы справиться с ними.</Text>
+			</Texts>
+			<Untriggers>Укусил</Untriggers>
+			<Options>
+				<Option Goto="15" Availability="Укусил">
+					<Bitten Value="2"/>
+				</Option>
+				<Option Goto="15" Availability="!Укусил"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
