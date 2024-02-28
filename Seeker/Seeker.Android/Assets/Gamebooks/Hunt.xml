@@ -525,5 +525,13 @@
 				<Option Goto="15" Availability="!Укусил"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="45">
+			<Text>Витёк временно вышел из строя.\nНадо скорее прикончить второго.\nКак это сделать?\nПротивник схватил лестницу как копьё и тычет ею в вас.</Text>
+			<Options>
+				<Option Goto="49" Text="Свалить на землю"/>
+				<Option Goto="49" Text="Стремительный укус"/>
+				<Option Goto="49" Text="Сломать шею"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
