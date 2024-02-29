@@ -616,7 +616,7 @@
 				<Option Goto="58" Availability="!Укусил, !Быстрый"/>
 			</Options>
 		</Paragraph>
-		<Paragraph No="50">
+		<Paragraph No="52">
 			<Text>Попался, поганец!\nНадо было сразу дверь ломать.\nТеперь ещё одним зомби больше.\nБежим дальше.</Text>
 			<Modifications>
 				<Bitten Value="1"/>
@@ -624,6 +624,18 @@
 			<Untriggers>Укусил</Untriggers>
 			<Options>
 				<Option Goto="40"/>
+			</Options>
+		</Paragraph>
+		<Paragraph No="53">
+			<Texts>
+				<Text Availability="Укусил">Вам удалось откусить сочный кусок от дяди Кости.\nТеперь он с вами заодно.\nЧерез пару минут он тоже побежит по коридору в поисках пищи.</Text>
+				<Text Availability="!Укусил">Удивительно, но дядя Костя успешно отбился от нападения.\nХорошо, что у вас уже ничего не болит после яростных ударов его дубинки.</Text>
+			</Texts>
+			<Options>
+				<Option Goto="34" Availability="Укусил">
+					<Bitten Value="1"/>
+				</Option>
+				<Option Goto="34" Availability="!Укусил"/>
 			</Options>
 		</Paragraph>
 	</Paragraphs>
