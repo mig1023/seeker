@@ -667,5 +667,20 @@
 				<Option Goto="58" Availability="!Укусил, !Сильный"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="56">
+			<Text>Что делать дальше?</Text>
+			<Options>
+				<Option Goto="47" Text="Постучать в дверь головой" Availability="1действие"/>
+				<Option Goto="47" Text="Порычать" Availability="2действие"/>
+				<Option Goto="47" Text="Поскрестись в дверь" Availability="3действие"/>
+				<Option Goto="47" Text="Попытаться заглянуть сверху" Availability="4действие"/>
+				<Option Goto="47" Text="Попытаться заглянуть снизу" Availability="5действие"/>
+				<Option Goto="47" Text="Грызть ручку" Availability="6действие"/>
+				<Option Goto="47" Text="Скулить" Availability="7действие"/>
+				<Option Goto="47" Text="Царапать дверь" Availability="8действие"/>
+				<Option Goto="47" Text="Рыгать и реветь" Availability="9действие"/>
+				<Option Goto="47" Text="Ждать у двери молча" Availability="10действие"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
