@@ -5,10 +5,10 @@
 			<Author>Mak_Sim, 2019</Author>
 		</Copyright>
 		<Styles>
-			<Color Name="Main, Action, Option, StatusBar, Continue" Value="ffffff"/>
-			<Color Name="ButtonFont, StatusFont, StatusBorder, Border" Value="000000"/>
-			<ActionBox Value="efefef"/>
-			<System Value="f4f4f4"/>
+			<Color Name="Main, Option" Value="54c571"/>
+			<Continue Value="4bb165"/>
+			<System Value="a9e2b8"/>
+			<StatusBar Value="4bb165"/>
 		</Styles>
 		<Default>
 			<DisabledOption Value="Hide"/>
