@@ -802,10 +802,6 @@
 		<Size>0</Size>
 		<Playthrough>На пять минут</Playthrough>
 		<Setting>Зомби</Setting>
-		<Colors>
-			<Book>ffffff</Book>
-			<Font>000000</Font>
-			<Border>000000</Border>
-		</Colors>
+		<Color>4bb165</Color>
 	</Hunt>
 </Gamebooks>
