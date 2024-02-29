@@ -589,5 +589,21 @@
 				<Option Goto="46" Text="Толнуть"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="50">
+			<Texts>
+				<Text Availability="Умный, Укусил">Попался!\nДядя Костя неосторожно подошёл слишком близко.\nТеперь он тоже зомби!</Text>
+				<Text Availability="!Умный">Вы слишком тупы для такого хитрого трюка.\nК счастью, охранник тоже не из умников.\nОн пытается атаковать вас электрошокером.\nГлупый ход.\nЭто стоило ему жизни.\nТеперь он тоже зомби!</Text>
+				<Text Availability="Умный, !Укусил">Охранник попался на эту уловку, но, к сожалению, смог увернуться от вашей атаки.\nТеперь он убегает.</Text>
+			</Texts>
+			<Options>
+				<Option Goto="34" Availability="Умный, Укусил">
+					<Bitten Value="1"/>
+				</Option>
+				<Option Goto="34" Availability="Умный, !Укусил"/>
+				<Option Goto="34" Availability="!Умный">
+					<Bitten Value="1"/>
+				</Option>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
