@@ -616,5 +616,15 @@
 				<Option Goto="58" Availability="!Укусил, !Быстрый"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="50">
+			<Text>Попался, поганец!\nНадо было сразу дверь ломать.\nТеперь ещё одним зомби больше.\nБежим дальше.</Text>
+			<Modifications>
+				<Bitten Value="1"/>
+			</Modifications>
+			<Untriggers>Укусил</Untriggers>
+			<Options>
+				<Option Goto="40"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
