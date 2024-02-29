@@ -647,11 +647,24 @@
 			</Texts>
 			<Untriggers>Укусил</Untriggers>
 			<Options>
-				<Option Goto="4" Text="Кусать! Кусать! Кусать!" Availability="Укусил">
+				<Option Goto="4" Text="Кусать! Кусать! Кусать!">
 					<RandomBit/>
 				</Option>
 				<Option Goto="37" Text="Бежать мимо"/>
 				<Option Goto="50" Text="Притвориться мёртвым"/>
+			</Options>
+		</Paragraph>
+		<Paragraph No="55">
+			<Texts>
+				<Text Availability="Сильный">Тяжёлый стол для такого сильного зомби, как вы, не помеха.\nШеф, придавленный мебелью, машет свои мечом наугад.</Text>
+				<Text Availability="!Сильный">Какой тяжёлый стол!\nВам удалось лишь слегка его погрызть и обслюнявить.\nВаш босс, удачно прикрываясь мебелью, рубит вас как палкой крапиву.</Text>
+			</Texts>
+			<Options>
+				<Option Goto="9" Availability="Укусил, !Сильный"/>
+				<Option Goto="58" Availability="Сильный">
+					<Bitten Value="1"/>
+				</Option>
+				<Option Goto="58" Availability="!Укусил, !Сильный"/>
 			</Options>
 		</Paragraph>
 	</Paragraphs>
