@@ -23,18 +23,28 @@ namespace Seeker.Gamebook.Hunt
             }
             else if (!option.Contains(","))
             {
-                return AvailabilityTrigger(option);
+                if (option.Contains("ЦИКЛ >"))
+                {
+                    return Character.Protagonist.Cycle > Game.Services.LevelParse(option);
+                }
+                else if (option.Contains("УКУШЕННЫЕ >="))
+                {
+                    return Character.Protagonist.Bitten >= Game.Services.LevelParse(option);
+                }
+                else if (option.Contains("УКУШЕННЫЕ <"))
+                {
+                    return Character.Protagonist.Bitten < Game.Services.LevelParse(option);
+                }
+                else
+                {
+                    return AvailabilityTrigger(option);
+                }
             }
             else
             {
                 foreach (string oneOption in option.Split(','))
                 {
-                    if (oneOption.Contains("ЦИКЛ >"))
-                    {
-                        int level = Game.Services.LevelParse(oneOption);
-                        return Character.Protagonist.Cycle > level;
-                    }
-                    else if (oneOption.Contains("!"))
+                    if (oneOption.Contains("!"))
                     {
                         if (Game.Option.IsTriggered(oneOption.Replace("!", String.Empty).Trim()))
                             return false;
