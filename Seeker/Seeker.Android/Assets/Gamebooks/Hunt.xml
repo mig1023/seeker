@@ -605,5 +605,16 @@
 				</Option>
 			</Options>
 		</Paragraph>
+		<Paragraph No="51">
+			<Texts>
+				<Text Availability="Быстрый">Вы очень быстрый зомби.\nШеф машет мечом, но смог отрубить вам лишь левую руку.\nНу и ладно. Она вам лишь мешала.\nТеперь вы стали легче, а значит - ещё быстрее.</Text>
+				<Text Availability="!Быстрый">Медленному зомби тяжело угнаться за жертвой.\nПока вы лезете через стол, босс несколько раз бьёт вас мечом.</Text>
+			</Texts>
+			<Options>
+				<Option Goto="9" Availability="Укусил, !Быстрый"/>
+				<Option Goto="58" Availability="Быстрый"/>
+				<Option Goto="58" Availability="!Укусил, !Быстрый"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
