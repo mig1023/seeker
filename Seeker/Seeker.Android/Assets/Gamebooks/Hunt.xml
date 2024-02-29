@@ -691,5 +691,19 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="58">
+			<Text>Вы потеряли ухо, половину левой руки и четыре зуба.\nДля зомби это пустяки!\nВремя нанести ответный удар!</Text>
+			<Untriggers>Укусил</Untriggers>
+			<Modifications>
+				<RandomBit/>
+			</Modifications>
+			<Options>
+				<Option Goto="31" Text="Укусить в ногу"/>
+				<Option Goto="31" Text="Сделать подсечку"/>
+				<Option Goto="31" Text="Ударить рукой в глаза"/>
+				<Option Goto="31" Text="Обойти сбоку"/>
+				<Option Goto="31" Text="Схватиться за меч"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
