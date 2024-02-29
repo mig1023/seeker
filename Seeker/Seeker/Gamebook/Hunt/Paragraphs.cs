@@ -23,7 +23,7 @@ namespace Seeker.Gamebook.Hunt
 
                 foreach (XmlNode text in xmlNode.SelectNodes("Texts/Text"))
                 {
-                    string option = text.Attributes["Availability"].InnerText;
+                    string option = text.Attributes["Availability"]?.Value ?? String.Empty;
 
                     if (String.IsNullOrEmpty(option) || Data.Actions.Availability(option))
                         texts.Add(Xml.TextLineParse(text));
