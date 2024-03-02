@@ -3105,7 +3105,7 @@
 				<Option Goto="357" Text="Зайти в найденную комнату" Dynamic="true"/>
 				<Option Goto="448" Text="Зайти в найденную комнату" Dynamic="true"/>
 				<Option Goto="321" Text="Попробовать ещё раз">
-					<Text>Если всё-так это тупик...</Text>
+					<Text>Если всё-таки это тупик...</Text>
 				</Option>
 				<Option Goto="400"/>
 			</Options>
