@@ -958,7 +958,7 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="120">
-			<Text>Вы достаёте меч и пытаетесь ударить элементаля воздуха:n</Text>
+			<Text>Вы достаёте меч и пытаетесь ударить элементаля воздуха:</Text>
 			<Actions>
 				<Fight>
 					<Enemy Name="ЭЛЕМЕНТАЛЬ ВОЗДУХА" Strength="8" Hitpoints="8"/>
