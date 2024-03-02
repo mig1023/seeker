@@ -593,7 +593,7 @@
 			<Options>
 				<Option Goto="46" Text="Прыгнуть"/>
 				<Option Goto="46" Text="Бежать"/>
-				<Option Goto="46" Text="Толнуть"/>
+				<Option Goto="46" Text="Толкнуть"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="50">
