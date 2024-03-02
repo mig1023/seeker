@@ -4047,7 +4047,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="ТАЛОС" Strength="18" Hitpoints="22"/>
-					<Text>Поправка поверждений: +1</Text>
+					<Text>Поправка повреждений: +1</Text>
 				</Fight>
 			</Actions>
 			<Options>
