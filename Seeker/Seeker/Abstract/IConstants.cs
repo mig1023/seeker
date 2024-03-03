@@ -21,8 +21,6 @@ namespace Seeker.Abstract
 
         string GetFont();
 
-        Output.Interface.TextFontSize GetFontSize();
-
         List<int> GetParagraphsWithoutStatuses();
 
         List<int> GetParagraphsWithoutStaticsButtons();
@@ -36,8 +34,6 @@ namespace Seeker.Abstract
         void LoadAdditionalStatusesEqualParts(string option);
 
         bool ShowAdditionalStatusesEqualParts();
-
-        void LoadDefaultFontSize(string option);
 
         void LoadWalkingInCirclesAcceptable(string option);
 

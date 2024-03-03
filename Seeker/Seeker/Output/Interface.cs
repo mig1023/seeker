@@ -346,7 +346,13 @@ namespace Seeker.Output
             }
             else if (Game.Data.Constants != null)
             {
-                label.FontSize = FontSize(Game.Data.Constants.GetFontSize(), italic: italic);
+                string constantFontLine = Game.Data.Constants.GetString("FontSize");
+                TextFontSize labelFontSize = TextFontSize.Normal;
+
+                if (Enum.TryParse(constantFontLine, out TextFontSize constantFontSize))
+                    labelFontSize = constantFontSize;
+
+                label.FontSize = FontSize(labelFontSize, italic: italic);
             }
 
             if (ColorFormConstants(ColorTypes.Font, out string color))

@@ -27,7 +27,7 @@ namespace Seeker.Prototypes
 
         //private int StartParagraph = 0;
 
-        private Output.Interface.TextFontSize TextFontSizeDefault = Output.Interface.TextFontSize.Normal;
+        //private Output.Interface.TextFontSize TextFontSizeDefault = Output.Interface.TextFontSize.Normal;
 
         public void Load(string name, string value) =>
             ConstantSettings[name] = value;
@@ -145,15 +145,6 @@ namespace Seeker.Prototypes
 
         public bool GetWalkingInCirclesAcceptable() =>
             WalkingInCirclesAcceptable;
-
-        public void LoadDefaultFontSize(string option)
-        {
-            if (Enum.TryParse(option, out Output.Interface.TextFontSize fontSize))
-                TextFontSizeDefault = fontSize;
-        }
-
-        public virtual Output.Interface.TextFontSize GetFontSize() =>
-            TextFontSizeDefault;
 
         public virtual Dictionary<string, string> ButtonText() =>
             ButtonTextList;
