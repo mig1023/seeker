@@ -24,9 +24,6 @@
 				<Item Name="Stealth" Value="3"/>
 			</GetStartValues>
 		</Dictionaries>
-		<Default>
-			<DisabledOption Value="Show"/>
-		</Default>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph No="0">
