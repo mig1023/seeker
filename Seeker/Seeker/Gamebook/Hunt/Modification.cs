@@ -18,7 +18,7 @@ namespace Seeker.Gamebook.Hunt
 
         private void Clean(string trigger)
         {
-            for (int i = 0; i < 10; i++)
+            for (int i = 1; i <= 10; i++)
                 Game.Option.Trigger($"{i}{trigger}", remove: true);
         }
 
