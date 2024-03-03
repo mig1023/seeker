@@ -10,7 +10,7 @@
 			<System Value="9db4b6"/>
 		</Styles>
 		<Default>
-			<DisabledOption Value="Hide"/>
+			<HideDisabledOption/>
 		</Default>
 	</Introduction>
 	<Paragraphs>
