@@ -29,7 +29,7 @@
 			</StatNames>
 		</Dictionaries>
 		<Default>
-			<DisabledOption Value="Hide"/>
+			<HideDisabledOption/>
 		</Default>
 		<Buttons>
 			<Test>Проверить</Test>
