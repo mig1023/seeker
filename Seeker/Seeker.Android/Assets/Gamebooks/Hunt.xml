@@ -11,9 +11,9 @@
 			<StatusBar Value="4bb165"/>
 		</Styles>
 		<Default>
-			<DisabledOption Value="Hide"/>
+			<HideDisabledOption/>
+			<WalkingInCirclesAcceptable/>
 			<FontSize Value="Big"/>
-			<WalkingInCirclesAcceptable Value="True"/>
 		</Default>
 	</Introduction>
 	<Paragraphs>
