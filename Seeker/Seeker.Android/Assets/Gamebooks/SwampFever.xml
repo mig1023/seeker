@@ -54,7 +54,7 @@
 			</GetFuryLevel>
 		</Dictionaries>
 		<Default>
-			<DisabledOption Value="Hide"/>
+			<HideDisabledOption/>
 		</Default>
 		<Buttons>
 			<Fight>Сражаться</Fight>
