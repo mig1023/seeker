@@ -23,7 +23,7 @@
 			</HealingParts>
 		</Dictionaries>
 		<Default>
-			<DisabledOption Value="Hide"/>
+			<HideDisabledOption/>
 		</Default>
 		<Buttons>
 			<Fight>Перестрелка</Fight>
