@@ -46,8 +46,7 @@
 			<RunningUnderArrows>Узнать, кому удалось</RunningUnderArrows>
 		</Buttons>
 		<Default>
-			<DisabledOption Value="Show"/>
-			<AdditionalStatuses Value="EqualParts"/>
+			<EqualPartsInStatuses/>
 		</Default>
 	</Introduction>
 	<Paragraphs>
