@@ -26,9 +26,6 @@
 				<Item Name="6" Value="шестое"/>
 			</SpellsList>
 		</Dictionaries>
-		<Default>
-			<DisabledOption Value="Show"/>
-		</Default>
 		<Buttons>
 			<Fight>Сражаться</Fight>
 			<Luck>Проверить удачу</Luck>
