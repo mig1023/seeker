@@ -9,7 +9,7 @@
 			<System Value="f9f9f9"/>
 		</Styles>
 		<Default>
-			<DisabledOption Value="Hide"/>
+			<HideDisabledOption/>
 			<FontSize Value="Small"/>
 		</Default>
 	</Introduction>
