@@ -17,7 +17,7 @@
 			<GetApartments Items="один, два, три, один, два, три"/>
 		</Lists>
 		<Default>
-			<DisabledOption Value="Hide"/>
+			<HideDisabledOption/>
 		</Default>
 	</Introduction>
 	<Paragraphs>
