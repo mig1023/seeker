@@ -10,7 +10,7 @@
 			<Color Name="Main, Action, Option" Value="c93c20"/>
 		</Styles>
 		<Default>
-			<DisabledOption Value="Hide"/>
+			<HideDisabledOption/>
 		</Default>
 		<Buttons>
 			<Dinner>Пообедать</Dinner>
