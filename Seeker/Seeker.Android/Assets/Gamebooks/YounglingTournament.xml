@@ -12,9 +12,6 @@
 			<System Value="f9f9f9"/>
 			<Color Name="ActionBox, Continue" Value="e6d9ae"/>
 		</Styles>
-		<Default>
-			<DisabledOption Value="Show"/>
-		</Default>
 		<Buttons>
 			<Button Action="SwordFight, MixedFightAttack">Сражаться</Button>
 			<FireFight>Перестрелка</FireFight>
