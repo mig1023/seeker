@@ -12,9 +12,6 @@
 			<System Value="9fa99c"/>
 			<ActionBox Value="bcc2b9"/>
 		</Styles>
-		<Default>
-			<DisabledOption Value="Show"/>
-		</Default>
 		<Buttons>
 			<Fight>Сражаться</Fight>
 			<FindTheWay>Искать путь</FindTheWay>
