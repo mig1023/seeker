@@ -19,7 +19,6 @@
 			<WithoutStaticsButtons Items="0, 687, 714, 715, 701, 702"/>
 		</Lists>
 		<Default>
-			<DisabledOption Value="Show"/>
 			<FontSize Value="Little"/>
 		</Default>
 		<Buttons>
