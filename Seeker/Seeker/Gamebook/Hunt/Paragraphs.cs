@@ -9,7 +9,7 @@ namespace Seeker.Gamebook.Hunt
     class Paragraphs : Prototypes.Paragraphs, Abstract.IParagraphs
     {
         public override Paragraph Get(int id, XmlNode xmlParagraph) =>
-           base.Get(xmlParagraph, ParagraphTemplate(xmlParagraph));
+            base.Get(xmlParagraph);
 
         public override List<Text> TextsParse(XmlNode xmlNode, bool main = false)
         {
