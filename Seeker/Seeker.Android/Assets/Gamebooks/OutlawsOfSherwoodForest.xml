@@ -10,7 +10,7 @@
 			<Color Name="Option, System, Continue" Value="81958a"/>
 		</Styles>
 		<Default>
-			<DisabledOption Value="Hide"/>
+			<HideDisabledOption/>
 		</Default>
 	</Introduction>
 	<Paragraphs>
