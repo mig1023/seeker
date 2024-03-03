@@ -232,7 +232,7 @@ namespace Seeker
                     modification.Do();
 
             bool physicalStartOfGame = (id == Game.Data.PhysicalStartParagraph);
-            bool logicalStartOfGame = (id == Game.Data.Constants.GetStartParagraph());
+            bool logicalStartOfGame = (id == Prototypes.Paragraphs.GetStartParagraph());
             bool startOfGame = physicalStartOfGame || logicalStartOfGame;
 
             PageClean();

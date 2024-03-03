@@ -37,15 +37,11 @@ namespace Seeker.Abstract
 
         bool ShowAdditionalStatusesEqualParts();
 
-        void LoadStartParagraphOption(string option);
-
         void LoadDefaultFontSize(string option);
 
         void LoadWalkingInCirclesAcceptable(string option);
 
         bool GetWalkingInCirclesAcceptable();
-
-        int GetStartParagraph();
 
         Dictionary<string, string> ButtonText();
 

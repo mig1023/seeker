@@ -176,8 +176,8 @@ namespace Seeker.Game
 
             Data.Constants.Load("HideDisabledOption", SettingString(xmlFile, "HideDisabledOption"));
             Data.Constants.Load("HideSingletons", SettingString(xmlFile, "HideSingletons"));
+            Data.Constants.Load("StartParagraph", SettingString(xmlFile, "StartParagraph"));
 
-            Data.Constants.LoadStartParagraphOption(SettingString(xmlFile, "StartParagraph"));
             Data.Constants.LoadDefaultFontSize(SettingString(xmlFile, "FontSize"));
             Data.Constants.LoadAdditionalStatusesEqualParts(SettingString(xmlFile, "AdditionalStatuses"));
             Data.Constants.LoadWalkingInCirclesAcceptable(SettingString(xmlFile, "WalkingInCirclesAcceptable"));

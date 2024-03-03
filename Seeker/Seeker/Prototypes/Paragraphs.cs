@@ -65,11 +65,21 @@ namespace Seeker.Prototypes
         protected bool ThisIsBack(XmlNode xmlOption) =>
             xmlOption.Name == "Back";
 
+        public static int GetStartParagraph()
+        {
+            string setting = Data.Constants.GetString("StartParagraph");
+
+            if (int.TryParse(setting, out int startParagraph))
+                return startParagraph;
+            else
+                return 0;
+        }
+
         protected int GetGoto(XmlNode xmlOption, int? wayBack = null)
         {
             if (ThisIsGameover(xmlOption))
             {
-                return Data.Constants.GetStartParagraph();
+                return GetStartParagraph();
             }
             else if (ThisIsBack(xmlOption))
             {

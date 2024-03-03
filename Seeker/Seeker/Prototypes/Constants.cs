@@ -25,7 +25,7 @@ namespace Seeker.Prototypes
         private bool AdditionalStatusesEqualParts = false;
         private bool WalkingInCirclesAcceptable = false;
 
-        private int StartParagraph = 0;
+        //private int StartParagraph = 0;
 
         private Output.Interface.TextFontSize TextFontSizeDefault = Output.Interface.TextFontSize.Normal;
 
@@ -140,14 +140,6 @@ namespace Seeker.Prototypes
         public bool ShowAdditionalStatusesEqualParts() =>
              AdditionalStatusesEqualParts;
 
-        public void LoadStartParagraphOption(string option)
-        {
-            if (int.TryParse(option, out int paragraph) && (paragraph > 0))
-                StartParagraph = paragraph;
-            else
-                StartParagraph = 0;
-        }
-
         public void LoadWalkingInCirclesAcceptable(string option) =>
             WalkingInCirclesAcceptable = option == "True";
 
@@ -162,9 +154,6 @@ namespace Seeker.Prototypes
 
         public virtual Output.Interface.TextFontSize GetFontSize() =>
             TextFontSizeDefault;
-
-        public virtual int GetStartParagraph() =>
-            StartParagraph;
 
         public virtual Dictionary<string, string> ButtonText() =>
             ButtonTextList;
