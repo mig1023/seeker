@@ -40,6 +40,11 @@ namespace Seeker.Gamebook.Hunt
             {
                 Clean("ответ");
             }
+            else if (Name == "RandomActionAndResponse")
+            {
+                RandomTrigger("действие");
+                RandomTrigger("ответ");
+            }
             else if (Name == "RandomBit")
             {
                 ProbabilityTrigger(probability: 2, "Укусил");
