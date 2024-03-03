@@ -12,7 +12,6 @@
 			<ActionBox Value="fcf9ec"/>
 		</Styles>
 		<Default>
-			<DisabledOption Value="Show"/>
 			<FontSize Value="Little"/>
 		</Default>
 		<Buttons>
