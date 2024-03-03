@@ -25,7 +25,7 @@
 			</GetStartValues>
 		</Dictionaries>
 		<Default>
-			<DisabledOption Value="Hide"/>
+			<HideDisabledOption/>
 			<FontSize Value="Little"/>
 		</Default>
 	</Introduction>
