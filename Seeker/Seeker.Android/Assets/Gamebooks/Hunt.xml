@@ -13,6 +13,7 @@
 		<Default>
 			<DisabledOption Value="Hide"/>
 			<FontSize Value="Big"/>
+			<WalkingInCirclesAcceptable Value="True"/>
 		</Default>
 	</Introduction>
 	<Paragraphs>
