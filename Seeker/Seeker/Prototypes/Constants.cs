@@ -19,15 +19,9 @@ namespace Seeker.Prototypes
         private Dictionary<string, string> ConstantSettings = null;
 
         public List<int> WithoutStatuses { get; set; }
-
         public List<int> WithoutStaticsButtons { get; set; }
 
-        private bool AdditionalStatusesEqualParts = false;
         private bool WalkingInCirclesAcceptable = false;
-
-        //private int StartParagraph = 0;
-
-        //private Output.Interface.TextFontSize TextFontSizeDefault = Output.Interface.TextFontSize.Normal;
 
         public void Load(string name, string value) =>
             ConstantSettings[name] = value;
@@ -64,7 +58,6 @@ namespace Seeker.Prototypes
             WithoutStatuses = new List<int> { 0 };
             WithoutStaticsButtons = new List<int> { 0 };
             ButtonTextList = new Dictionary<string, string>();
-            AdditionalStatusesEqualParts = false;
         }
 
         public virtual void LoadColor(string type, string color)
@@ -133,12 +126,6 @@ namespace Seeker.Prototypes
 
             return false;
         }
-
-        public void LoadAdditionalStatusesEqualParts(string option) =>
-            AdditionalStatusesEqualParts = option == "EqualParts";
-
-        public bool ShowAdditionalStatusesEqualParts() =>
-             AdditionalStatusesEqualParts;
 
         public void LoadWalkingInCirclesAcceptable(string option) =>
             WalkingInCirclesAcceptable = option == "True";

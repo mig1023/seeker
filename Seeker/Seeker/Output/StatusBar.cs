@@ -43,7 +43,7 @@ namespace Seeker.Output
             List<VerticalText> statusLabels = new List<VerticalText>();
 
             bool whiteColor = !String.IsNullOrEmpty(Game.Data.Constants.GetColor(ColorTypes.AdditionalFont));
-            bool equalParts = Game.Data.Constants.ShowAdditionalStatusesEqualParts();
+            bool equalParts = Game.Data.Constants.GetBool("EqualPartsInStatuses");
 
             double heightPart = statusLines.Count == 0 ? 1 :
                 (int)Application.Current.MainPage.Height / statusLines.Sum(x => Clear(x));

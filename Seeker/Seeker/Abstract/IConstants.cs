@@ -31,10 +31,6 @@ namespace Seeker.Abstract
 
         bool GetParagraphsStatusesLimit(out int limitStart, out int limitEnd);
 
-        void LoadAdditionalStatusesEqualParts(string option);
-
-        bool ShowAdditionalStatusesEqualParts();
-
         void LoadWalkingInCirclesAcceptable(string option);
 
         bool GetWalkingInCirclesAcceptable();
