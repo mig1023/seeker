@@ -19,7 +19,7 @@
 			<Strengths ItemsByOrder="22, 18, 14, 24, 16, 20"/>
 		</Dictionaries>
 		<Default>
-			<DisabledOption Value="Hide"/>
+			<HideDisabledOption/>
 		</Default>
 		<Buttons>
 			<Fight>Сражаться</Fight>
