@@ -20,7 +20,7 @@
 			<LuckRecovery>Восстановить удачу</LuckRecovery>
 		</Buttons>
 		<Default>
-			<DisabledOption Value="Hide"/>
+			<HideDisabledOption/>
 		</Default>
 	</Introduction>
 	<Paragraphs>
