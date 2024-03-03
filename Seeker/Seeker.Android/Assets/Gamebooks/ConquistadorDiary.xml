@@ -16,7 +16,7 @@
 			<WithStatuses Items="55, 68, 77, 84, 95, 60, 76"/>
 		</Lists>
 		<Default>
-			<DisabledOption Value="Hide"/>
+			<HideDisabledOption/>
 		</Default>
 		<Buttons>
 			<RollCoin>Бросить монетку</RollCoin>
