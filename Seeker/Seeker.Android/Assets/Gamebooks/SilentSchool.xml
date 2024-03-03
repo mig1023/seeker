@@ -12,7 +12,7 @@
 			<System Value="eeeeee"/>
 		</Styles>
 		<Default>
-			<DisabledOption Value="Hide"/>
+			<HideDisabledOption/>
 		</Default>
 	</Introduction>
 	<Paragraphs>
