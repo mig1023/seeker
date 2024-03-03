@@ -11,7 +11,7 @@
 			<Color Name="Option, System, Continue" Value="fdd815"/>
 		</Styles>
 		<Default>
-			<DisabledOption Value="Hide"/>
+			<HideDisabledOption/>
 		</Default>
 		<Buttons>
 			<Fight>Поединок</Fight>
