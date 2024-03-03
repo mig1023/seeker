@@ -174,8 +174,11 @@ namespace Seeker.Game
                 }
             }
 
-            Data.Constants.LoadEnabledDisabledOption(SettingString(xmlFile, "DisabledOption"),
-                SettingString(xmlFile, "DisabledOption", specific: true));
+            Data.Constants.Load("ShowDisabledOption", SettingString(xmlFile, "ShowDisabledOption"));
+            Data.Constants.Load("HideSingletons", SettingString(xmlFile, "HideSingletons"));
+
+            //Data.Constants.LoadEnabledDisabledOption(SettingString(xmlFile, "DisabledOption"),
+            //    SettingString(xmlFile, "DisabledOption", specific: true));
 
             Data.Constants.LoadStartParagraphOption(SettingString(xmlFile, "StartParagraph"));
             Data.Constants.LoadDefaultFontSize(SettingString(xmlFile, "FontSize"));
@@ -239,6 +242,20 @@ namespace Seeker.Game
         {
             List<string> items = keyValue.Split(':').ToList();
             return items[second ? 1 : 0];
+        }
+
+        private static string SettingString(XmlDocument xmlFile, string option)
+        {
+            string path = Intro($"Default/{option}");
+            XmlNode xmlSetting = xmlFile.SelectSingleNode(path);
+
+            if (xmlSetting == null)
+                return String.Empty;
+
+            if (xmlSetting.Attributes["Value"] != null)
+                return xmlSetting.Attributes["Value"].InnerText;
+            else
+                return "True";
         }
 
         private static string SettingString(XmlDocument xmlFile, string option, bool specific = false)

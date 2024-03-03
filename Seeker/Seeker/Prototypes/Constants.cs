@@ -16,11 +16,13 @@ namespace Seeker.Prototypes
 
         private Dictionary<string, string> ButtonTextList = null;
 
+        private Dictionary<string, string> ConstantSettings = null;
+
         public List<int> WithoutStatuses { get; set; }
 
         public List<int> WithoutStaticsButtons { get; set; }
 
-        private bool ShowDisabledOptionStatus = false;
+        //private bool ShowDisabledOptionStatus = false;
         private bool HideSingletonOption = false;
         private bool AdditionalStatusesEqualParts = false;
         private bool WalkingInCirclesAcceptable = false;
@@ -28,6 +30,15 @@ namespace Seeker.Prototypes
         private int StartParagraph = 0;
 
         private Output.Interface.TextFontSize TextFontSizeDefault = Output.Interface.TextFontSize.Normal;
+
+        public void Load(string name, string value) =>
+            ConstantSettings[name] = value;
+
+        public bool GetBool(string name) =>
+            ConstantSettings.ContainsKey(name);
+
+        public string GetString(string name) =>
+            ConstantSettings[name];
 
         public virtual string GetColor(ButtonTypes type)
         {
@@ -49,12 +60,13 @@ namespace Seeker.Prototypes
 
         public void Clean()
         {
+            ConstantSettings = new Dictionary<string, string>();
             ButtonsColorsList = new Dictionary<ButtonTypes, string>();
             ColorsList = new Dictionary<ColorTypes, string>();
             WithoutStatuses = new List<int> { 0 };
             WithoutStaticsButtons = new List<int> { 0 };
             ButtonTextList = new Dictionary<string, string>();
-            ShowDisabledOptionStatus = false;
+            //ShowDisabledOptionStatus = false;
             HideSingletonOption = false;
             AdditionalStatusesEqualParts = false;
         }
@@ -132,17 +144,17 @@ namespace Seeker.Prototypes
         public bool ShowAdditionalStatusesEqualParts() =>
              AdditionalStatusesEqualParts;
 
-        public void LoadEnabledDisabledOption(string option, string specific)
-        {
-            ShowDisabledOptionStatus = option == "Show";
-            HideSingletonOption = specific == "SingletonsToo";
-        }
+        //public void LoadEnabledDisabledOption(string option, string specific)
+        //{
+        //    ShowDisabledOptionStatus = option == "Show";
+        //    HideSingletonOption = specific == "SingletonsToo";
+        //}
 
-        public virtual bool ShowDisabledOption(out bool HideSingleton)
-        {
-            HideSingleton = HideSingletonOption;
-            return ShowDisabledOptionStatus;
-        }
+        //public virtual bool ShowDisabledOption(out bool HideSingleton)
+        //{
+        //    HideSingleton = HideSingletonOption;
+        //    return ShowDisabledOptionStatus;
+        //}
 
         public void LoadStartParagraphOption(string option)
         {

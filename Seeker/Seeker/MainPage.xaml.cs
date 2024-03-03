@@ -285,6 +285,9 @@ namespace Seeker
 
             bool walkingInCircles = Game.Data.Path.Contains(id.ToString());
 
+            if (Game.Data.Constants.GetWalkingInCirclesAcceptable())
+                walkingInCircles = false;
+
             if (!loadGame && !reload && !walkingInCircles)
             {
                 Game.Option.Trigger(paragraph.Trigger);
@@ -337,7 +340,8 @@ namespace Seeker
 
             int optionCount = 0;
             Button singleton = null;
-            Game.Data.Constants.ShowDisabledOption(out bool hideAllSingletons);
+            //Game.Data.Constants.ShowDisabledOption(out bool hideAllSingletons);
+            bool hideAllSingletons = Game.Data.Constants.GetBool("HideSingletons");
 
             foreach (Game.Option option in paragraph.Options)
             {
@@ -461,7 +465,8 @@ namespace Seeker
             if (bySetting > 0)
                 return bySetting == 1;
 
-            return Game.Data.Constants.ShowDisabledOption(out bool _);
+            return !Game.Data.Constants.GetBool("HideDisabledOption");
+            //return Game.Data.Constants.ShowDisabledOption(out bool _);
         }
 
         private void AddAftertext(ref StackLayout layout, List<Output.Text> texts)

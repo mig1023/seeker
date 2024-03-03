@@ -5,6 +5,12 @@ namespace Seeker.Abstract
 {
     interface IConstants
     {
+        void Load(string name, string value);
+
+        bool GetBool(string name);
+
+        string GetString(string name);
+
         void Clean();
 
         void LoadColor(string type, string value);
@@ -27,9 +33,9 @@ namespace Seeker.Abstract
 
         bool GetParagraphsStatusesLimit(out int limitStart, out int limitEnd);
 
-        void LoadEnabledDisabledOption(string option, string specific);
+        //void LoadEnabledDisabledOption(string option, string specific);
 
-        bool ShowDisabledOption(out bool HideSingleton);
+        //bool ShowDisabledOption(out bool HideSingleton);
 
         void LoadAdditionalStatusesEqualParts(string option);
 

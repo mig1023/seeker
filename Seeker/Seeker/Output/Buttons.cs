@@ -54,7 +54,8 @@ namespace Seeker.Output
             if (!String.IsNullOrEmpty(option.Availability))
                 availability = Game.Data.Actions.Availability(option.Availability);
 
-            if (Game.Data.Constants.ShowDisabledOption(out bool _) || (aftertextsCount > 0))
+            //if (Game.Data.Constants.ShowDisabledOption(out bool _) || (aftertextsCount > 0))
+            if (!Game.Data.Constants.GetBool("HideDisabledOption") || (aftertextsCount > 0))
                 optionColor = !availability;
                 
             string color = Game.Data.Constants.GetColor(optionColor ?
