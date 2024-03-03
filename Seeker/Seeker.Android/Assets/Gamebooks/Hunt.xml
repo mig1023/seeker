@@ -568,7 +568,7 @@
 				<RandomAction/>
 			</Modifications>
 			<Options>
-				<Option Goto="31">
+				<Option Goto="38">
 					<Cycle Value="1"/>
 				</Option>
 			</Options>
