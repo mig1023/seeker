@@ -12,9 +12,6 @@
 			<System Value="675d42"/>
 			<SystemFont Value="ffffff"/>
 		</Styles>
-		<Default>
-			<DisabledOption Value="Show"/>
-		</Default>
 		<Buttons>
 			<Fight>Сражаться</Fight>
 			<Luck>Проверить удачу</Luck>
