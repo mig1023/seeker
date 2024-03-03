@@ -16,7 +16,7 @@
 			<Levels Items="Easy:100, Medium:1, Hard:0"/>
 		</Dictionaries>
 		<Default>
-			<DisabledOption Value="Hide"/>
+			<HideDisabledOption/>
 		</Default>
 	</Introduction>
 	<Paragraphs>
