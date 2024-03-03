@@ -36,7 +36,6 @@
 			</ParamNames>
 		</Dictionaries>
 		<Default>
-			<DisabledOption Value="Show"/>
 			<StartParagraph Value="1392"/>
 		</Default>
 	</Introduction>
