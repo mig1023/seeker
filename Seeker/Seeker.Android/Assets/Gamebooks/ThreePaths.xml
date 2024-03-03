@@ -11,7 +11,7 @@
 			<Color Name="Main, Option" Value="009999"/>
 		</Styles>
 		<Default>
-			<DisabledOption Value="Hide"/>
+			<HideDisabledOption/>
 		</Default>
 	</Introduction>
 	<Paragraphs>
