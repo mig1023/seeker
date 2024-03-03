@@ -9,7 +9,7 @@
 			<Option Value="35365e"/>
 		</Styles>
 		<Default>
-			<DisabledOption Value="Hide"/>
+			<HideDisabledOption/>
 			<FontSize Value="Big"/>
 		</Default>
 	</Introduction>
