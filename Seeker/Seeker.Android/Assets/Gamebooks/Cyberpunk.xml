@@ -32,9 +32,6 @@
 				<Item Name="Selfcontrol100" Value="Самообладание 100"/>
 			</CharactersParams>
 		</Dictionaries>
-		<Default>
-			<DisabledOption Value="Show"/>
-		</Default>
 		<Buttons>
 			<Test>Пройти проверку</Test>
 		</Buttons>
