@@ -16,9 +16,6 @@
 		<Lists>
 			<WithoutStatuses Items="0, 454, 455, 456, 457"/>
 		</Lists>
-		<Default>
-			<DisabledOption Value="Show"/>
-		</Default>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph No="0">
