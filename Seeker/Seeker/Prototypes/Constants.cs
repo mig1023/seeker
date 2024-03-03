@@ -21,8 +21,6 @@ namespace Seeker.Prototypes
         public List<int> WithoutStatuses { get; set; }
         public List<int> WithoutStaticsButtons { get; set; }
 
-        private bool WalkingInCirclesAcceptable = false;
-
         public void Load(string name, string value) =>
             ConstantSettings[name] = value;
 
@@ -126,12 +124,6 @@ namespace Seeker.Prototypes
 
             return false;
         }
-
-        public void LoadWalkingInCirclesAcceptable(string option) =>
-            WalkingInCirclesAcceptable = option == "True";
-
-        public bool GetWalkingInCirclesAcceptable() =>
-            WalkingInCirclesAcceptable;
 
         public virtual Dictionary<string, string> ButtonText() =>
             ButtonTextList;

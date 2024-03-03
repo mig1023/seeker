@@ -285,7 +285,7 @@ namespace Seeker
 
             bool walkingInCircles = Game.Data.Path.Contains(id.ToString());
 
-            if (Game.Data.Constants.GetWalkingInCirclesAcceptable())
+            if (Game.Data.Constants.GetBool("WalkingInCirclesAcceptable"))
                 walkingInCircles = false;
 
             if (!loadGame && !reload && !walkingInCircles)

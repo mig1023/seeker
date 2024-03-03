@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Xml;
 
 namespace Seeker.Abstract
 {
@@ -30,10 +29,6 @@ namespace Seeker.Abstract
         void LoadDictionary(string name, Dictionary<string, string> dictionary);
 
         bool GetParagraphsStatusesLimit(out int limitStart, out int limitEnd);
-
-        void LoadWalkingInCirclesAcceptable(string option);
-
-        bool GetWalkingInCirclesAcceptable();
 
         Dictionary<string, string> ButtonText();
 
