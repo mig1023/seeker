@@ -12,7 +12,7 @@
 			<ButtonFont Value="000000"/>
 		</Styles>
 		<Default>
-			<DisabledOption Value="Hide"/>
+			<HideDisabledOption/>
 		</Default>
 	</Introduction>
 	<Paragraphs>
