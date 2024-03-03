@@ -12,9 +12,6 @@
 			<Action Value="6d0101"/>
 			<System Value="d1b5b5"/>
 		</Styles>
-		<Default>
-			<DisabledOption Value="Show"/>
-		</Default>
 		<Lists>
 			<ParagraphsStatusesLimit Items="375, 417"/>
 		</Lists>
