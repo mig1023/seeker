@@ -10,7 +10,7 @@
 			<System Value="cbd2b4"/>
 		</Styles>
 		<Default>
-			<DisabledOption Value="Hide"/>
+			<HideDisabledOption/>
 			<FontSize Value="Big"/>
 		</Default>
 	</Introduction>
