@@ -174,11 +174,8 @@ namespace Seeker.Game
                 }
             }
 
-            Data.Constants.Load("ShowDisabledOption", SettingString(xmlFile, "ShowDisabledOption"));
+            Data.Constants.Load("HideDisabledOption", SettingString(xmlFile, "HideDisabledOption"));
             Data.Constants.Load("HideSingletons", SettingString(xmlFile, "HideSingletons"));
-
-            //Data.Constants.LoadEnabledDisabledOption(SettingString(xmlFile, "DisabledOption"),
-            //    SettingString(xmlFile, "DisabledOption", specific: true));
 
             Data.Constants.LoadStartParagraphOption(SettingString(xmlFile, "StartParagraph"));
             Data.Constants.LoadDefaultFontSize(SettingString(xmlFile, "FontSize"));
