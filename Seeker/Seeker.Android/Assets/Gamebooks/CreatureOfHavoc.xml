@@ -15,7 +15,7 @@
 			<ActionBox Value="87a094"/>
 		</Styles>
 		<Default>
-			<DisabledOption Value="Hide"/>
+			<HideDisabledOption/>
 		</Default>
 		<Buttons>
 			<Fight>Сражаться</Fight>
