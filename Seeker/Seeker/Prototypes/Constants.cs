@@ -10,9 +10,6 @@ namespace Seeker.Prototypes
 {
     class Constants : Abstract.IConstants
     {
-        public static Constants StaticInstance = new Constants();
-        public static Constants GetInstance() => StaticInstance;
-
         private Dictionary<ButtonTypes, string> ButtonsColorsList = null;
 
         private Dictionary<ColorTypes, string> ColorsList = null;
