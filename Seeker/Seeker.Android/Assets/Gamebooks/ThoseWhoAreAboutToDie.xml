@@ -10,9 +10,6 @@
 			<Color Name="Main, Action, Option" Value="fcdd76"/>
 			<Color Name="ButtonFont, StatusFont" Value="000000"/>
 		</Styles>
-		<Default>
-			<DisabledOption Value="Show"/>
-		</Default>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph No="0">
