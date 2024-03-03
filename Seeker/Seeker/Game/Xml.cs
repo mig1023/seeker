@@ -174,12 +174,8 @@ namespace Seeker.Game
                 }
             }
 
-            Data.Constants.Load("HideDisabledOption", SettingString(xmlFile, "HideDisabledOption"));
-            Data.Constants.Load("HideSingletons", SettingString(xmlFile, "HideSingletons"));
-            Data.Constants.Load("StartParagraph", SettingString(xmlFile, "StartParagraph"));
-            Data.Constants.Load("FontSize", SettingString(xmlFile, "FontSize"));
-            Data.Constants.Load("EqualPartsInStatuses", SettingString(xmlFile, "EqualPartsInStatuses"));
-            Data.Constants.Load("WalkingInCirclesAcceptable", SettingString(xmlFile, "WalkingInCirclesAcceptable"));
+            foreach (string settingConstant in Prototypes.Constants.AllSettings)
+                Data.Constants.Load(settingConstant, SettingString(xmlFile, settingConstant));
 
             foreach (XmlNode xmlNode in xmlFile.SelectNodes(Intro("Buttons/*")))
                 AddButtonsTexts(xmlNode);

@@ -10,6 +10,16 @@ namespace Seeker.Prototypes
 {
     class Constants : Abstract.IConstants
     {
+        public static List<string> AllSettings = new List<string>
+        {
+            "HideDisabledOption",
+            "HideSingletons",
+            "StartParagraph",
+            "FontSize",
+            "EqualPartsInStatuses",
+            "WalkingInCirclesAcceptable",
+        };
+
         private Dictionary<ButtonTypes, string> ButtonsColorsList = null;
 
         private Dictionary<ColorTypes, string> ColorsList = null;
