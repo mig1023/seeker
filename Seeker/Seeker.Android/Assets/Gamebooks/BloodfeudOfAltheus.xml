@@ -24,9 +24,6 @@
 				<Item Name="3" Value="здоров"/>
 			</HealthLine>
 		</Dictionaries>
-		<Default>
-			<DisabledOption Value="Show"/>
-		</Default>
 		<Buttons>
 			<Fight>Сражаться</Fight>
 		</Buttons>
