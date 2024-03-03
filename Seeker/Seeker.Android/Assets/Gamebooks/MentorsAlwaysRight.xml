@@ -20,7 +20,7 @@
 			<WithoutStaticsButtons Items="0, 556, 557, 558, 559"/>
 		</Lists>
 		<Default>
-			<DisabledOption Value="Hide"/>
+			<HideDisabledOption/>
 		</Default>
 		<Buttons>
 			<Fight>Сражаться</Fight>
