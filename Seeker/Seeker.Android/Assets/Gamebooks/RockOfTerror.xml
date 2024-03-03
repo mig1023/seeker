@@ -16,7 +16,7 @@
 			<SystemFont Value="a8a8a8"/>
 		</Styles>
 		<Default>
-			<DisabledOption Value="Hide"/>
+			<HideDisabledOption/>
 		</Default>
 	</Introduction>
 	<Paragraphs>
