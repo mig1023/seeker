@@ -19,7 +19,7 @@
 			<Skill>Проверьте свою ловкость</Skill>
 		</Buttons>
 		<Default>
-			<DisabledOption Value="Hide"/>
+			<HideDisabledOption/>
 		</Default>
 	</Introduction>
 	<Paragraphs>
