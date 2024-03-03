@@ -39,6 +39,10 @@ namespace Seeker.Abstract
 
         void LoadDefaultFontSize(string option);
 
+        void LoadWalkingInCirclesAcceptable(string option);
+
+        bool GetWalkingInCirclesAcceptable();
+
         int GetStartParagraph();
 
         Dictionary<string, string> ButtonText();

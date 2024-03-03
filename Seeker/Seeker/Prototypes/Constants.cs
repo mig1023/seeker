@@ -26,6 +26,7 @@ namespace Seeker.Prototypes
         private bool ShowDisabledOptionStatus = false;
         private bool HideSingletonOption = false;
         private bool AdditionalStatusesEqualParts = false;
+        private bool WalkingInCirclesAcceptable = false;
 
         private int StartParagraph = 0;
 
@@ -153,7 +154,13 @@ namespace Seeker.Prototypes
             else
                 StartParagraph = 0;
         }
-        
+
+        public void LoadWalkingInCirclesAcceptable(string option) =>
+            WalkingInCirclesAcceptable = option == "True";
+
+        public bool GetWalkingInCirclesAcceptable() =>
+            WalkingInCirclesAcceptable;
+
         public void LoadDefaultFontSize(string option)
         {
             if (Enum.TryParse(option, out Output.Interface.TextFontSize fontSize))

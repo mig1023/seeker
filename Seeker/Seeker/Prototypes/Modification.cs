@@ -2,7 +2,7 @@
 
 namespace Seeker.Prototypes
 {
-    class Modification
+    class Modification : Abstract.IModification
     {
         public string Name { get; set; }
         public int Value { get; set; }
