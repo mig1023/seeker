@@ -36,7 +36,7 @@
 			</TextByYears>
 		</Dictionaries>
 		<Default>
-			<DisabledOption Value="Hide"/>
+			<HideDisabledOption/>
 			<FontSize Value="Big"/>
 		</Default>
 	</Introduction>
