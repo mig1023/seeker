@@ -44,8 +44,7 @@
 			<Options>
 				<Option Goto="40" Availability="!Укусил"/>
 				<Option Goto="56" Text="Подойти к кабинке" Availability="Укусил">
-					<RandomAction/>
-					<RandomResponse/>
+					<RandomActionAndResponse/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -399,8 +398,7 @@
 			<Options>
 				<Option Goto="40" Availability="!Укусил"/>
 				<Option Goto="56" Text="Подойти к кабинке" Availability="Укусил">
-					<RandomAction/>
-					<RandomResponse/>
+					<RandomActionAndResponse/>
 				</Option>
 			</Options>
 		</Paragraph>
