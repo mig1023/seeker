@@ -153,12 +153,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                 }
             }
 
-            string luckLine = Character.Protagonist.Luck[goodLuck] ? "не " : String.Empty;
+            bool isLuck = Character.Protagonist.Luck[goodLuck];
+            string luckLine = isLuck ? "не " : String.Empty;
             luckCheck.Add($"Проверка удачи: {Game.Dice.Symbol(goodLuck)} - {luckLine}зачёркунтый");
 
-            luckCheck.Add(Result(Character.Protagonist.Luck[goodLuck], "УСПЕХ|НЕУДАЧА"));
+            luckCheck.Add(Result(isLuck, "УСПЕХ|НЕУДАЧА"));
             
             Character.Protagonist.Luck[goodLuck] = !Character.Protagonist.Luck[goodLuck];
+
+            Game.Buttons.Disable(isLuck, "Повезло", "Не повезло");
 
             return luckCheck;
         }
