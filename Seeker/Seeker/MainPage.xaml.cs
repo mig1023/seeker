@@ -54,21 +54,31 @@ namespace Seeker
         private void ScrollToTop() =>
             MainScroll.ScrollToAsync(MainScroll, ScrollToPosition.Start, !Game.Settings.IsEnabled("WithoutScrolling"));
 
-        public void DisableMethod(string name)
+        public void DisableMethod(string namesToDisable)
         {
-            foreach (View option in Options.Children)
+            List<string> names = namesToDisable
+                .Split(',')
+                .Select(x => x.Trim())
+                .ToList();
+
+            foreach (string name in names)
             {
-                if (!(option is Button))
+                foreach (View option in Options.Children)
                 {
-                    continue;
-                }
+                    if (!(option is Button))
+                    {
+                        continue;
+                    }
 
-                Button button = option as Button;
+                    Button button = option as Button;
 
-                if (button.Text == name)
-                {
-                    button.IsEnabled = false;
-                    button.BackgroundColor = Color.Default;
+                    if (button.Text == name)
+                    {
+                        button.IsEnabled = false;
+                        button.BackgroundColor = Color.Default;
+
+                        continue;
+                    }
                 }
             }
         }
