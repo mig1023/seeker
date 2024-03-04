@@ -171,6 +171,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                 luckCheck.Add("Уровень удачи снижен на единицу");
             }
 
+            Game.Buttons.Disable(goodLuck,
+                "Повезло, Дверь сломана", $"Не повезло, {Output.Constants.GAMEOVER_TEXT}");
+
             return luckCheck;
         }
 
