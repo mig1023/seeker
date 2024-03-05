@@ -140,6 +140,8 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
             luckCheck.Add(Result(goodLuck, "УСПЕХ|НЕУДАЧА"));
 
+            Game.Buttons.Disable(goodLuck, "Повезло", "Не повезло");
+
             return luckCheck;
         }
 
