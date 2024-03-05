@@ -4938,7 +4938,7 @@
 				<Reaction/>
 			</Actions>
 			<Options>
-				<Option Goto="329" Text="Успешно"/>
+				<Option Goto="329" Text="Успели"/>
 				<Option Goto="433" Text="Нет"/>
 			</Options>
 		</Paragraph>
