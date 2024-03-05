@@ -3536,8 +3536,8 @@
 				</Reaction>
 			</Actions>
 			<Options>
-				<Option Goto="393" Text="Ушли под воду"/>
 				<Option Goto="305" Text="Очутились на другом берегу"/>
+				<Option Goto="393" Text="Ушли под воду"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="356">
@@ -5883,12 +5883,12 @@
 		<Paragraph No="596">
 			<Text>Знать бы только – в чем здесь подвох. Ни в стенах, ни в потолке, ни в полу вроде бы ничего опасного нет. Вы делаете глубокий вдох и медленно идете вперед. Щелчок со стороны колонны!\n\nПопробуете отпрыгнуть?</Text>
 			<Actions>
+				<Option Goto="546" Text="ЗАСЛОН" Availability="ЗАКЛЯТИЙ > 0"/>
 				<Reaction/>
 			</Actions>
 			<Options>
 				<Option Goto="579" Text="Успели"/>
 				<Option Goto="567" Text="Нет"/>
-				<Option Goto="546" Text="ЗАСЛОН" Availability="ЗАКЛЯТИЙ > 0"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="597">
