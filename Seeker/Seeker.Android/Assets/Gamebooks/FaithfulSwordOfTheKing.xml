@@ -2178,7 +2178,7 @@
 				<Luck/>
 			</Actions>
 			<Options>
-				<Option Goto="432" Text="Удачлив"/>
+				<Option Goto="432" Text="Повезло"/>
 				<Option Goto="365" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
