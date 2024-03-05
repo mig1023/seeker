@@ -61,6 +61,8 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                 (notInline ? String.Empty : "BIG|") + 
                 (goodLuck ? "GOOD|УСПЕХ :)" : "BAD|НЕУДАЧА :("));
 
+            Game.Buttons.Disable(goodLuck, "Повезло", "Нет");
+
             if (Character.Protagonist.Luck > 2)
             {
                 Character.Protagonist.Luck -= 1;
