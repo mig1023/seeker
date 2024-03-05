@@ -3629,7 +3629,7 @@
 			</Actions>
 			<Options>
 				<Option Goto="264" Text="Повезло"/>
-				<Option Goto="512" Text="Нет"/>
+				<Option Goto="512" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="429">
