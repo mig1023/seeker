@@ -4506,8 +4506,8 @@
 				<Reaction/>
 			</Actions>
 			<Options>
-				<Option Goto="6" Text="Вы успели"/>
-				<Option Goto="286" Text="Тварь опередила вас"/>
+				<Option Goto="6" Text="Успели"/>
+				<Option Goto="286" Text="Нет"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="489">
