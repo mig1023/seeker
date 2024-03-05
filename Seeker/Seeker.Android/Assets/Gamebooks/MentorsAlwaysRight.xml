@@ -1553,7 +1553,7 @@
 			</Actions>
 			<Options>
 				<Option Goto="94" Text="Успели"/>
-				<Option Goto="286" Text="Атака твари удачна"/>
+				<Option Goto="286" Text="Нет"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="162">
