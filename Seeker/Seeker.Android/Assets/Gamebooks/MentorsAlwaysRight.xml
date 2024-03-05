@@ -4868,7 +4868,7 @@
 				<Reaction/>
 			</Actions>
 			<Options>
-				<Option Goto="476" Text="Ваша скорость на высоте">
+				<Option Goto="476" Text="Успели">
 					<Text>Если же ваша реакция запаздывает, то, увы, эльфийская стрела положит конец вашему походу...</Text>
 				</Option>
 				<Gameover/>
