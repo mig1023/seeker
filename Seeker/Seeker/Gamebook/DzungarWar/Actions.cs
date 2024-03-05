@@ -272,6 +272,8 @@ namespace Seeker.Gamebook.DzungarWar
             testLines.AddRange(result);
             testLines.Add(Result(testIsOk, "АЛДАР СПРАВИЛСЯ|АЛДАР НЕ СПРАВИЛСЯ"));
 
+            Game.Buttons.Disable(testIsOk, "В случае успеха, Обе проверки успешны", "В случае провала");
+
             if ((Benefit != null) && testIsOk)
                 Benefit.Do();
 
@@ -342,6 +344,8 @@ namespace Seeker.Gamebook.DzungarWar
             }
 
             testLines.Add(Result(testIsOk, "АЛДАР СПРАВИЛСЯ|АЛДАР НЕ СПРАВИЛСЯ"));
+
+            Game.Buttons.Disable(testIsOk, "Все четыре проверки успешны");
 
             return testLines;
         }
