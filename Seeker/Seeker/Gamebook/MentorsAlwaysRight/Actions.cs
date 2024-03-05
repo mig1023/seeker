@@ -234,6 +234,10 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             if (!goodReaction && (Damage != null))
                 Damage.Do();
 
+            Game.Buttons.Disable(goodReaction,
+                "Успели, Все в порядке, Вырвались из обители гулов, Хорошо, Ваша скорость на высоте",
+                "Нет, Чуть притормозили, Не очень");
+
             return reaction;
         }
 
