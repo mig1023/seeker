@@ -4478,8 +4478,10 @@
 				<Reaction/>
 			</Actions>
 			<Options>
-				<Option Goto="546" Text="Успели"/>
-				<Option Goto="245" Text="Иначе теряете 3 ЖИЗНИ и принимаете бой">
+				<Option Goto="546" Text="Успели">
+					<Text>Иначе теряете 3 ЖИЗНИ и принимаете бой...</Text>
+				</Option>
+				<Option Goto="245">
 					<Hitpoints Value="-3"/>
 				</Option>
 			</Options>
