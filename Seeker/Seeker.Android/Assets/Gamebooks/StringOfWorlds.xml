@@ -1162,7 +1162,7 @@
 			</Actions>
 			<Options>
 				<Option Goto="539" Text="Повезло"/>
-				<Option Goto="255" Text="Нет"/>
+				<Option Goto="255" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="136">
