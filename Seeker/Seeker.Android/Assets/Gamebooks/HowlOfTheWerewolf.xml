@@ -4387,7 +4387,7 @@
 			</Actions>
 			<Options>
 				<Option Goto="499" Text="Удача с вами"/>
-				<Option Goto="431" Text="Не повезло"/>
+				<Option Goto="431" Text="Удача изменила вам"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="415">
