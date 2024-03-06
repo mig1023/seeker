@@ -975,7 +975,7 @@
 			</Actions>
 			<Options>
 				<Option Goto="80" Text="Все в порядке"/>
-				<Option Goto="95" Text="В ином случае"/>
+				<Option Goto="95" Text="Не в порядке"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="94">
@@ -1493,7 +1493,7 @@
 			</Actions>
 			<Options>
 				<Option Goto="149" Text="Все в порядке"/>
-				<Option Goto="150" Text="В ином случае"/>
+				<Option Goto="150" Text="Не в порядке"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="142">
@@ -1791,7 +1791,7 @@
 			</Actions>
 			<Options>
 				<Option Goto="175" Text="Все в порядке"/>
-				<Option Goto="176" Text="В ином случае"/>
+				<Option Goto="176" Text="Не в порядке"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="175">
@@ -2393,7 +2393,7 @@
 			</Actions>
 			<Options>
 				<Option Goto="257" Text="Все в порядке"/>
-				<Option Goto="258" Text="В ином случае"/>
+				<Option Goto="258" Text="Не в порядке"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="246">
@@ -2498,14 +2498,14 @@
 			</Actions>
 			<Options>
 				<Option Goto="257" Text="Все в порядке"/>
-				<Option Goto="258" Text="В ином случае"/>
+				<Option Goto="258" Text="Не в порядке"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="257">
 			<Text>Взяв Ливию за руку, вы тянетесь к ней, пытаясь ощутить течение Силы внутри Ливии и в окружающем пространстве. На первый взгляд, и в ней самой, и вокруг все в порядке. И на второй, и на третий тоже, но вы знаете — это не так. Не может форс-юзер, впавший в кому по непонятным причинам, взаимодействовать с Силой как абсолютно здоровый организм. Только это знание и заставляет вас все пристальней и пристальней исследовать Ливию.\n\nНаконец, вам удается увидеть то, что вы ищете. Крошечная корпускула Темной Силы, рассасывающаяся со временем, была помещена прямо в мозг девушки, и частично блокировала его работу.</Text>
 			<Options>
 				<Option Goto="259" Text="Очки Темной стороны 25 или больше"/>
-				<Option Goto="260" Text="В ином случае"/>
+				<Option Goto="260" Text="Не в порядке"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="258">
@@ -2515,7 +2515,7 @@
 			</Texts>
 			<Options>
 				<Option Goto="261" Text="Очки Темной стороны 50 или больше"/>
-				<Option Goto="262" Text="В ином случае"/>
+				<Option Goto="262" Text="Не в порядке"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="259">
@@ -3420,7 +3420,7 @@
 			</Actions>
 			<Options>
 				<Option Goto="350" Text="Все в порядке"/>
-				<Option Goto="351" Text="В ином случае"/>
+				<Option Goto="351" Text="Не в порядке"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="336">
@@ -3498,7 +3498,7 @@
 			</Modifications>
 			<Options>
 				<Option Goto="346" Text="Вы нанесли 3 укола" Availability="УКОЛОВ > 2"/>
-				<Option Goto="345" Text="В ином случае"/>
+				<Option Goto="345" Text="Не в порядке"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="343">
@@ -3516,7 +3516,7 @@
 			</Actions>
 			<Options>
 				<Option Goto="344" Text="Он нанес 3 укола" Singleton="УКОЛОВ У ВРАГА > 2"/>
-				<Option Goto="345" Text="В ином случае"/>
+				<Option Goto="345" Text="Не в порядке"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="344">
@@ -3575,7 +3575,7 @@
 			</Actions>
 			<Options>
 				<Option Goto="347" Text="Все в порядке"/>
-				<Option Goto="349" Text="В ином случае"/>
+				<Option Goto="349" Text="Не в порядке"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="349">
@@ -3955,7 +3955,7 @@
 			<Text>Подловив момент, при помощи Прыжка Силы вы резко меняете местоположение, перепрыгнув за спину противнику, и наносите удар. Бросьте кубик и прибавьте к выпавшему числу ранг своего прыжка Силы.</Text>
 			<Options>
 				<Option Goto="415" Text="Получившееся число больше 6"/>
-				<Option Goto="416" Text="В ином случае"/>
+				<Option Goto="416" Text="Не в порядке"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="384">
@@ -4131,7 +4131,7 @@
 			</Actions>
 			<Options>
 				<Option Goto="410" Text="Все в порядке"/>
-				<Option Goto="411" Text="В ином случае"/>
+				<Option Goto="411" Text="Не в порядке"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="396">
@@ -4211,7 +4211,7 @@
 			</Modifications>
 			<Options>
 				<Option Goto="406" Text="Вы нанесли 3 укола" Availability="УКОЛОВ > 2"/>
-				<Option Goto="405" Text="В ином случае"/>
+				<Option Goto="405" Text="Не в порядке"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="403">
@@ -4229,7 +4229,7 @@
 			</Modifications>
 			<Options>
 				<Option Goto="404" Text="Он нанес 3 укола" Singleton="УКОЛОВ У ВРАГА > 2"/>
-				<Option Goto="405" Text="В ином случае"/>
+				<Option Goto="405" Text="Не в порядке"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="404">
@@ -4289,7 +4289,7 @@
 			</Actions>
 			<Options>
 				<Option Goto="407" Text="Все в порядке"/>
-				<Option Goto="409" Text="В ином случае"/>
+				<Option Goto="409" Text="Не в порядке"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="409">
@@ -4704,7 +4704,7 @@
 			<Text>Подловив момент, при помощи Прыжка Силы вы резко меняете местоположение, перепрыгнув за спину противнику, и резко наносите удар. Бросьте кубик и прибавьте к выпавшее числу ранг своего прыжка Силы.</Text>
 			<Options>
 				<Option Goto="472" Text="Получившееся число больше 6"/>
-				<Option Goto="473" Text="В ином случае"/>
+				<Option Goto="473" Text="Не в порядке"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="441">
@@ -4872,7 +4872,7 @@
 			</Actions>
 			<Options>
 				<Option Goto="467" Text="Все в порядке"/>
-				<Option Goto="468" Text="В ином случае"/>
+				<Option Goto="468" Text="Не в порядке"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="453">
@@ -4950,7 +4950,7 @@
 			</Modifications>
 			<Options>
 				<Option Goto="463" Text="Вы нанесли 3 укола" Availability="УКОЛОВ > 2"/>
-				<Option Goto="462" Text="В ином случае"/>
+				<Option Goto="462" Text="Не в порядке"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="460">
@@ -4968,7 +4968,7 @@
 			</Actions>
 			<Options>
 				<Option Goto="461" Text="Он нанес 3 укола" Singleton="УКОЛОВ У ВРАГА > 2"/>
-				<Option Goto="462" Text="В ином случае"/>
+				<Option Goto="462" Text="Не в порядке"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="461">
@@ -5027,7 +5027,7 @@
 			</Actions>
 			<Options>
 				<Option Goto="464" Text="Все в порядке"/>
-				<Option Goto="466" Text="В ином случае"/>
+				<Option Goto="466" Text="Не в порядке"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="466">
@@ -5782,7 +5782,7 @@
 			<Text>Вы уверенно тесните Марику, но после очередной атаки она смещается с линии и бьет вас навстречу!</Text>
 			<Options>
 				<Option Goto="576" Text="Вы знаете прием «Защита от встречного удара»" Availability="Защита от Встречного Удара"/>
-				<Option Goto="577" Text="В ином случае"/>
+				<Option Goto="577" Text="Не в порядке"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="538">
@@ -5804,7 +5804,7 @@
 			<Text>Подловив момент, при помощи Прыжка Силы вы резко меняете местоположение, перепрыгнув за спину противнице, и резко наносите удар. Бросьте кубик и прибавьте к выпавшему числу ранг своего Прыжка Силы.</Text>
 			<Options>
 				<Option Goto="571" Text="Получившееся число больше 8"/>
-				<Option Goto="572" Text="В ином случае"/>
+				<Option Goto="572" Text="Не в порядке"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="540">
@@ -5981,7 +5981,7 @@
 			</Actions>
 			<Options>
 				<Option Goto="566" Text="Все в порядке"/>
-				<Option Goto="567" Text="В ином случае"/>
+				<Option Goto="567" Text="Не в порядке"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="552">
@@ -6061,7 +6061,7 @@
 			</Modifications>
 			<Options>
 				<Option Goto="562" Text="Вы нанесли 3 укола" Availability="УКОЛОВ > 2"/>
-				<Option Goto="561" Text="В ином случае"/>
+				<Option Goto="561" Text="Не в порядке"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="559">
@@ -6138,7 +6138,7 @@
 			</Actions>
 			<Options>
 				<Option Goto="563" Text="Все в порядке"/>
-				<Option Goto="565" Text="В ином случае"/>
+				<Option Goto="565" Text="Не в порядке"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="565">
@@ -6532,7 +6532,7 @@
 			<Triggers>Одиночка</Triggers>
 			<Options>
 				<Option Goto="604" Text="Все в порядке"/>
-				<Option Goto="605" Text="В ином случае"/>
+				<Option Goto="605" Text="Не в порядке"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="604">
@@ -6545,7 +6545,7 @@
 			</Modifications>
 			<Options>
 				<Option Goto="615" Text="Ваша Выносливость упала до 0"/>
-				<Option Goto="606" Text="В ином случае"/>
+				<Option Goto="606" Text="Не в порядке"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="605">
@@ -6575,14 +6575,14 @@
 			</Actions>
 			<Options>
 				<Option Goto="607" Text="Все в порядке"/>
-				<Option Goto="608" Text="В ином случае"/>
+				<Option Goto="608" Text="Не в порядке"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="607">
 			<Text>Что-то изнутри подсказывает вам: кувырок вперед-влево одновременно с активацией меча, удар-парирование обратным хватом за спину... и вы блокируете атаку Ливии, которая, похоже, в Прыжке успела переместиться вам за спину!</Text>
 			<Options>
 				<Option Goto="615" Text="Ваша Выносливость упала до 0"/>
-				<Option Goto="609" Text="В ином случае"/>
+				<Option Goto="609" Text="Не в порядке"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="608">
@@ -6608,7 +6608,7 @@
 			<Text>Вы даже не успеваете пожалеть, что не смотрели бои Ливии до того, как столкнуться с ней — это могло бы здорово пригодиться, как стальные невидимые руки сжимаются у вас на горле, поднимая в воздух.</Text>
 			<Options>
 				<Option Goto="610" Text="У вас есть Техника Укрепление Тела Силой" Availability="StrengtheningTheBody"/>
-				<Option Goto="611" Text="В ином случае"/>
+				<Option Goto="611" Text="Не в порядке"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="610">
@@ -6701,7 +6701,7 @@
 			<Text>Вы заходите в Доки. Дым тянется из ангара № 66, и вы ускоренным шагом направляетесь туда.\n\nК вашему удивлению, тут относительно пустынно...\n\nБаааааааххххххх-р-р-р-р.\n\nОт мощнейшего взрыва задрожал не только пол под ногами, но и стены. Лампы в доке резко потухли, а потом перешли на аварийное освещение.\n\n— Что за.\n\nБааааа-бааааааххх-р-р-р.\n\nГулкое эхо очень близкого взрыва не просто ворвалось в доки — вместе с ним пыхнуло пылью и жаром из коридора!\n\nВы ощутили спазм в груди — ощущение от гибели тысяч людей, часть из которых имела отношение к Силе. Что происходит? Нападение на Храм? Кто? Кто мог посметь?</Text>
 			<Options>
 				<Option Goto="620" Text="Если Очки Темной стороны больше 100"/>
-				<Option Goto="621" Text="В ином случае"/>
+				<Option Goto="621" Text="Не в порядке"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="620">
@@ -6747,7 +6747,7 @@
 			</Actions>
 			<Options>
 				<Option Goto="628" Text="Все в порядке"/>
-				<Option Goto="629" Text="В ином случае"/>
+				<Option Goto="629" Text="Не в порядке"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="626">
@@ -6759,7 +6759,7 @@
 			</Actions>
 			<Options>
 				<Option Goto="628" Text="Все в порядке"/>
-				<Option Goto="629" Text="В ином случае"/>
+				<Option Goto="629" Text="Не в порядке"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="627">
@@ -6771,7 +6771,7 @@
 			</Actions>
 			<Options>
 				<Option Goto="628" Text="Все в порядке"/>
-				<Option Goto="629" Text="В ином случае"/>
+				<Option Goto="629" Text="Не в порядке"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="628">
@@ -6890,14 +6890,14 @@
 			<Text>Ливия приподнимает голову женщины... и вы одновременно вскрикиваете: это Юлиана ван Хельт!\n\n— Как? — восклицает Ливия. — Она же погибла!\n\nВы чувствуете странную смесь горечи и недоумения — как так получилось? Потом вспоминаете видение Ливии и ярость, которую несли мысли форс-юзера. Джедай так не мыслит. Неужели Юлиана перешла на Темную сторону?\n\n— Осторожно, Ливия. Ты помнишь, ее эмоции из видения? Вдруг она притворяется?\n\n— Перестань, Кай! — восклицает девушка. — Помоги лучше! Нам необходимо привести ее в чувство, чтобы узнать, что здесь произошло!</Text>
 			<Options>
 				<Option Goto="647" Text="Владеете техникой Лечение Силы"/>
-				<Option Goto="648" Text="В ином случае"/>
+				<Option Goto="648" Text="Не в порядке"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="646">
 			<Text>Ливия приподнимает голову женщины... и вы одновременно вскрикиваете: это Юлиана ван Хельт!\n\n— Как? — восклицает Ливия. — Она же погибла!\n\nВы чувствуете странную смесь горечи и недоумения — как так получилось?\n\n— Что с ней случилось?! Как она осталась жива и почему здесь? — недоумеваете вы.\n\n— Помоги мне! Нам необходимо привести ее в чувство, чтобы узнать, что здесь произошло!</Text>
 			<Options>
 				<Option Goto="647" Text="Владеете техникой Лечение Силы"/>
-				<Option Goto="648" Text="В ином случае"/>
+				<Option Goto="648" Text="Не в порядке"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="647">
@@ -6977,7 +6977,7 @@
 			</Actions>
 			<Options>
 				<Option Goto="662" Text="Все в порядке"/>
-				<Option Goto="663" Text="В ином случае"/>
+				<Option Goto="663" Text="Не в порядке"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="656">
@@ -6988,7 +6988,7 @@
 			</Actions>
 			<Options>
 				<Option Goto="662" Text="Все в порядке"/>
-				<Option Goto="663" Text="В ином случае"/>
+				<Option Goto="663" Text="Не в порядке"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="657">
@@ -6999,7 +6999,7 @@
 			</Actions>
 			<Options>
 				<Option Goto="664" Text="Все в порядке"/>
-				<Option Goto="665" Text="В ином случае"/>
+				<Option Goto="665" Text="Не в порядке"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="658">
@@ -7011,7 +7011,7 @@
 			</Actions>
 			<Options>
 				<Option Goto="667" Text="Все в порядке"/>
-				<Option Goto="668" Text="В ином случае"/>
+				<Option Goto="668" Text="Не в порядке"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="659">
@@ -7103,7 +7103,7 @@
 			</Actions>
 			<Options>
 				<Option Goto="675" Text="Все в порядке"/>
-				<Option Goto="676" Text="В ином случае"/>
+				<Option Goto="676" Text="Не в порядке"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="671">
@@ -7114,7 +7114,7 @@
 			</Actions>
 			<Options>
 				<Option Goto="672" Text="Все в порядке"/>
-				<Option Goto="673" Text="В ином случае"/>
+				<Option Goto="673" Text="Не в порядке"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="672">
