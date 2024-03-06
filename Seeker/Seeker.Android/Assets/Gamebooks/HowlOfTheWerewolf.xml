@@ -2139,7 +2139,7 @@
 			</Actions>
 			<Options>
 				<Option Goto="12" Text="Удача на вашей стороне"/>
-				<Option Goto="233" Text="Вам не повезло"/>
+				<Option Goto="233" Text="Удача изменила вам"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="196">
