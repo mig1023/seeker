@@ -118,6 +118,10 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
             luckCheck.Add(Result(goodLuck, "УСПЕХ|НЕУДАЧА"));
 
+            Game.Buttons.Disable(goodLuck,
+                "Удача с вами, Фортуна с вами, Удача на вашей стороне, Все в порядке и он быстро успокаивается",
+                "Удача отвернулась от вас, Удача изменила вам, Фортуна отвернулась от вас");
+
             if (Character.Protagonist.Luck > 2)
             {
                 Character.Protagonist.Luck -= 1;
@@ -146,6 +150,8 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             {
                 masteryCheck.Add(Result(masteryOk, "Мастерства ХВАТИЛО|Мастерства НЕ хватило"));
             }
+
+            Game.Buttons.Disable(masteryOk, "Мастерства хватило");
 
             return masteryCheck;
         }
