@@ -4332,13 +4332,12 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="487">
-			<Text>Проверьте свою удачу:</Text>
 			<Actions>
 				<Luck/>
 			</Actions>
 			<Options>
-				<Option Goto="534" Text="Вам повезло"/>
-				<Option Goto="366" Text="Нет"/>
+				<Option Goto="534" Text="Повезло"/>
+				<Option Goto="366" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="488">
