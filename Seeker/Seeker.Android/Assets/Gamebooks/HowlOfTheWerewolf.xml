@@ -4969,7 +4969,7 @@
 			</Actions>
 			<Options>
 				<Option Goto="137" Text="Удача с вами"/>
-				<Option Goto="270" Text="Она отвернулась от вас"/>
+				<Option Goto="270" Text="Удача отвернулась от вас"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="469">
