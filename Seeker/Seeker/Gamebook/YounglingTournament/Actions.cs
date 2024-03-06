@@ -204,6 +204,8 @@ namespace Seeker.Gamebook.YounglingTournament
 
             test.Add(Result(testPassed, "ПРОВЕРКА ПРОЙДЕНА|ПРОВЕРКА ПРОВАЛЕНА"));
 
+            Game.Buttons.Disable(testPassed, "Все в порядке", "Не в порядке");
+
             return test;
         }
 
