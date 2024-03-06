@@ -3642,7 +3642,7 @@
 			</Actions>
 			<Options>
 				<Option Goto="395" Text="Все в порядке и он быстро успокаивается"/>
-				<Option Goto="355" Text="Нет"/>
+				<Option Goto="355" Text="Фортуна отвернулась от вас"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="340">
