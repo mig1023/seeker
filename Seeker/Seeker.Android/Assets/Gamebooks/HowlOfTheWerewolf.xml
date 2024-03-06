@@ -5283,8 +5283,10 @@
 				<Luck/>
 			</Actions>
 			<Options>
-				<Option Goto="396" Text="Вам повезло"/>
-				<Option Goto="252" Text="Не повезло и теперь спасти вас сможет только меч"/>
+				<Option Goto="396" Text="Удача на вашей стороне">
+					<Text>Иначе спасти вас сможет только меч...</Text>
+				</Option>
+				<Option Goto="252"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="499">
