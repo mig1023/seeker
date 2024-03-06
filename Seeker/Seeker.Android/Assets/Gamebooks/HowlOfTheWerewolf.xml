@@ -5000,8 +5000,8 @@
 				<Luck/>
 			</Actions>
 			<Options>
-				<Option Goto="42" Text="Удача сопутствует вам"/>
-				<Option Goto="110" Text="Вам не повезло"/>
+				<Option Goto="42" Text="Удача на вашей стороне"/>
+				<Option Goto="110" Text="Удача изменила вам"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="472">
