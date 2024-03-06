@@ -5523,13 +5523,12 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="626">
-			<Text>Проверьте свою удачу:</Text>
 			<Actions>
 				<Luck/>
 			</Actions>
 			<Options>
-				<Option Goto="468" Text="Вам повезет"/>
-				<Option Goto="46" Text="Нет"/>
+				<Option Goto="468" Text="Повезло"/>
+				<Option Goto="46" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="627">
