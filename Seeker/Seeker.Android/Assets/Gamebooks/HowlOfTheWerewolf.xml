@@ -5056,7 +5056,7 @@
 			</Actions>
 			<Options>
 				<Option Goto="303" Text="Фортуна с вами"/>
-				<Option Goto="495" Text="Она отвернулась от вас"/>
+				<Option Goto="495" Text="Фортуна отвернулась от вас"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="477">
