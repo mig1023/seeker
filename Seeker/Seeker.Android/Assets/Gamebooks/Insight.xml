@@ -49,5 +49,11 @@
 				<Option Goto="49"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="6">
+			<Text>Зачеркните одну клетку времени.\n\nОблетев опасное место, приближаетесь к огромному камню.</Text>
+			<Options>
+				<Option Goto="53"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
