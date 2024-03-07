@@ -295,5 +295,12 @@
 				<Option Goto="108" Text="Если предпочтете не привлекать к себе лишнего внимания, убираете в карман"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="42">
+			<Text>Зачеркните одну клетку времени.</Text>
+			<Options>
+				<Option Goto="89" Text="Если вы здесь в первый раз"/>
+				<Option Goto="68" Text="Если уже были"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
