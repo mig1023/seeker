@@ -571,5 +571,12 @@
 				<Option Goto="108"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="82">
+			<Text>Взяв маньяка на мушку, тщательно прицеливаетесь. Расстояние в принципе небольшое, попасть будет не сложно.</Text>
+			<Options>
+				<Option Goto="92" Text="Если у вас лучемёт"/>
+				<Option Goto="46" Text="Иначе"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
