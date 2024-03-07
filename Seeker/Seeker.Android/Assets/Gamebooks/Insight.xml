@@ -36,5 +36,12 @@
 				<Option Goto="19"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="4">
+			<Options>
+				<Option Goto="299" Text="Просто побьёте его"/>
+				<Option Goto="15" Text="Примените электрошокер"/>
+				<Option Goto="83" Text="Выстрелите в ногу"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
