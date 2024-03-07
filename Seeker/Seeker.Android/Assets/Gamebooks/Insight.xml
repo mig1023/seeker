@@ -197,5 +197,12 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="28">
+			<Text>— Хм,— слышите удивленное хмыканье преступника.— Не думал, что избавиться от тебя будет так просто.\n\nС последними словами, он направляет на вас оружие и стреляет.</Text>
+			<Options>
+				<Option Goto="173" Text="Если есть энергощит"/>
+				<Option Goto="185" Text="Если нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
