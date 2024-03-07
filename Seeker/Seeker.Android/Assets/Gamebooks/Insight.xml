@@ -674,5 +674,11 @@
 				<Option Goto="54" Text="В лечебную капсулу"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="96">
+			<Options>
+				<Option Goto="141" Text="Если у вас записано ключевое слово «поломка»"/>
+				<Option Goto="167" Text="Если нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
