@@ -322,5 +322,13 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="46">
+			<Text>Направив оружие, целитесь в:</Text>
+			<Options>
+				<Option Goto="287" Text="Голову"/>
+				<Option Goto="103" Text="Спину"/>
+				<Option Goto="126" Text="По ногам"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
