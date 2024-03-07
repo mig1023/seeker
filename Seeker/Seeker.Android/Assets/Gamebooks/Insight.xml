@@ -399,5 +399,12 @@
 				<Option Goto="95"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="57">
+			<Text>Закончив с финансами, прощаетесь с капитаном.</Text>
+			<Options>
+				<Option Goto="111" Text="Если у вас записано ключевое слово «жалоба»"/>
+				<Option Goto="179" Text="Если нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
