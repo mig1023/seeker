@@ -302,5 +302,11 @@
 				<Option Goto="68" Text="Если уже были"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="43">
+			<Text>— Да, конечно,— махнув рукой, соглашается Лиг Томпсон.\n\nОткрыв сейф, он передает вам несколько пластин.\n\nЗапишите в артефакты 5 нипсов.</Text>
+			<Options>
+				<Option Goto="57"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
