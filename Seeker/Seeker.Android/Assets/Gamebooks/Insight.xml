@@ -118,5 +118,11 @@
 				<Option Goto="95"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="16">
+			<Text>От большинства камней удается увернуться и лишь несколько задевают вас.\n\nУменьшите Здоровье на 6 (или на 4, если на вас бронежилет).\n\nВскоре приближаетесь к цели своего полета.</Text>
+			<Options>
+				<Option Goto="53"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
