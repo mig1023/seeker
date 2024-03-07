@@ -570,10 +570,16 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\Hunt.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Gamebooks\Insight.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Insight.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties XamarinHotReloadGenericExceptionInfoBarSeekerAndroidHideInfoBar="True" XamarinHotReloadDebuggerTimeoutExceptionSeekerAndroidHideInfoBar="True" />
+      <UserProperties XamarinHotReloadDebuggerTimeoutExceptionSeekerAndroidHideInfoBar="True" XamarinHotReloadGenericExceptionInfoBarSeekerAndroidHideInfoBar="True" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>
