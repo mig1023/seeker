@@ -282,5 +282,11 @@
 				<Option Goto="307" Text="Откажетесь"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="40">
+			<Options>
+				<Option Goto="29" Text="Если вы здесь в первый раз"/>
+				<Option Goto="95" Text="Если уже были"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
