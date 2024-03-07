@@ -533,5 +533,11 @@
 				<Option Goto="301" Text="Вернётесь на капитанский мостик, чтобы ознакомится с предстоящим делом"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="76">
+			<Options>
+				<Option Goto="64" Text="Обезвредите его с помощью электрошокера"/>
+				<Option Goto="91" Text="Пригрозите более серьёзным оружием, а в случае неповиновения примените его"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
