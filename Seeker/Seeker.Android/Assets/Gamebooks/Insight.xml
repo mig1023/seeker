@@ -491,5 +491,12 @@
 				<Option Goto="176" Text="Если нет"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="70">
+			<Text>Астрозабойщик всё ещё здесь, коротает время со своими друзьями.</Text>
+			<Options>
+				<Option Goto="85" Text="Если решили воспользоваться его предложением охоты на живца"/>
+				<Option Goto="95" Text="Если нет, уходите"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
