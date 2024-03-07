@@ -178,5 +178,12 @@
 				<Option Goto="95"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="25">
+			<Text>Получая расчёт, напоминаете капитану и про обещанные нипсы за сложность.</Text>
+			<Options>
+				<Option Goto="127" Text="Если у вас есть ключевое слово «бойня»"/>
+				<Option Goto="43" Text="Если нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
