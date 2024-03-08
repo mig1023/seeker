@@ -1263,5 +1263,12 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="184">
+			<Options>
+				<Option Goto="200" Text="Если вы идёте к блогеру в первый раз"/>
+				<Option Goto="311" Text="Если повторно и зачёркнуто клеток времени 15 и меньше"/>
+				<Option Goto="223" Text="Если больше 15"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
