@@ -1124,5 +1124,12 @@
 				<Option Goto="221" Text="По лестнице"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="164">
+			<Text>Вы на чеку и успеваете нажать на спуск раньше. Несколько зарядов попадают маньяку в голову, поставив точку в его злодеяниях.\n\n[O]</Text>
+			<Options>
+				<Option Goto="107" Text="Если у вас записано ключевое слово «зерк»"/>
+				<Option Goto="88" Text="Если нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
