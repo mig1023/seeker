@@ -1117,5 +1117,12 @@
 				<Option Goto="191"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="163">
+			<Text>Пройдя через дыру шлюза, а затем и переходной отсек, в котором тоже обнаруживаете аккуратное круглое отверстие, оказываетесь перед лифтом. Вниз, в зал персонала можно спуститься:</Text>
+			<Options>
+				<Option Goto="321" Text="На лифте"/>
+				<Option Goto="221" Text="По лестнице"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
