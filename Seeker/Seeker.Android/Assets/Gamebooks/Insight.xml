@@ -1330,5 +1330,11 @@
 				<Option Goto="95"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="194">
+			<Options>
+				<Option Goto="263" Text="Если ваша Меткость больше или равна 3"/>
+				<Option Goto="129" Text="Если меньше"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
