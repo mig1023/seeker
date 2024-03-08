@@ -1472,5 +1472,11 @@
 				<Option Goto="95" Text="Вернётесь на станцию"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="215">
+			<Text>Спешите к маньяку, готовя на ходу наручники. Тот неожиданно разворачивается и бросает в вашу сторону какой-то предмет.\n\n— Граната! — кричит в ухо исин.</Text>
+			<Options>
+				<Option Goto="119"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
