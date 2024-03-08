@@ -1016,5 +1016,11 @@
 				<Option Goto="71" Text="Потребуете, чтобы он сдался"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="148">
+			<Text>Включив реактивный ранец, маневрируете и вновь приближаетесь к шахте. Маньяка возле неё уже нет. Приземляетесь у дыры в шлюзе, а затем идёте за ним.</Text>
+			<Options>
+				<Option Goto="163"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
