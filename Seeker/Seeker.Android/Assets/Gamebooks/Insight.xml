@@ -1188,5 +1188,12 @@
 				<Option Goto="232" Text="Расспросить его подробней"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="173">
+			<Text>Успеваете включить энергощит и все заряды бластера попадают в него, не причинив вам вреда.</Text>
+			<Options>
+				<Option Goto="265" Text="Если есть оружие"/>
+				<Option Goto="153" Text="Если стрелять нечем"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
