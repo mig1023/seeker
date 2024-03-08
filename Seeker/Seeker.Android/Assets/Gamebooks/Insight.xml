@@ -956,5 +956,12 @@
 				<Option Goto="275" Text="Если не собираетесь этого делать"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="139">
+			<Text>Не дожидаясь пока маньяк сядет, открываете по нему огонь.</Text>
+			<Options>
+				<Option Goto="151" Text="Если у вас лучемёт"/>
+				<Option Goto="231" Text="Иначе"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
