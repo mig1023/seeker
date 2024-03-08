@@ -1336,5 +1336,11 @@
 				<Option Goto="129" Text="Если меньше"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="195">
+			<Options>
+				<Option Goto="259" Text="Если ваша Меткость равна 6"/>
+				<Option Goto="208" Text="Если меньше"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
