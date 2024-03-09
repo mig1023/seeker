@@ -1941,5 +1941,12 @@
 				<Option Goto="152" Text="Если нет"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="283">
+			<Text>Осторожно подходите и сразу же отскакиваете назад, увидев вспышку.</Text>
+			<Options>
+				<Option Goto="143" Text="Если ваша Ловкость больше или равна 6"/>
+				<Option Goto="300" Text="Если меньше"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
