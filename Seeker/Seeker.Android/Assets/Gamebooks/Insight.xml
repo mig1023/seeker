@@ -1581,5 +1581,12 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="231">
+			<Text>Прицелившись получше, стреляете в цель.</Text>
+			<Options>
+				<Option Goto="252" Text="Если ваша Меткость равна или больше 8"/>
+				<Option Goto="269" Text="Если меньше"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
