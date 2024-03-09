@@ -2064,5 +2064,11 @@
 				<Option Goto="90"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="302">
+			<Text>Выставив перед собой лучемет, открываете шквальный огонь. Пунктиры лазерных лучей разносят чёрные хлопья в искрящуюся пыль. Не теряя ни секунды, бросаетесь к выходу.</Text>
+			<Options>
+				<Option Goto="49"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
