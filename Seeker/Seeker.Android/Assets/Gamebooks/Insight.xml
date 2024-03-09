@@ -1907,5 +1907,11 @@
 				<Option Goto="282" Text="Продолжить разговор"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="278">
+			<Text>Решив не искушать судьбу, нажимаете на спуск. Маньяк\n\n[O]\n\nрядом и вы попадаете ему точно в голову, отчего тот сразу заваливается на спину, сраженный наповал.</Text>
+			<Options>
+				<Option Goto="107"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
