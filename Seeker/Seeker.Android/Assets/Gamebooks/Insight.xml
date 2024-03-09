@@ -1968,5 +1968,11 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="287">
+			<Options>
+				<Option Goto="224" Text="Если ваша Меткость равна 8 или больше"/>
+				<Option Goto="99" Text="Если меньше"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
