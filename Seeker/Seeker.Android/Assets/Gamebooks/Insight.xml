@@ -1887,5 +1887,11 @@
 				<Option Goto="82" Text="Выстрелите в него из своего укрытия"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="275">
+			<Options>
+				<Option Goto="107" Text="Если есть ключевое слово «зерк»"/>
+				<Option Goto="203" Text="Если нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
