@@ -2267,5 +2267,12 @@
 				<Option Goto="95"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="333">
+			<Text>Приходится приложить все силы и изворотливость, чтобы избежать столкновений.</Text>
+			<Options>
+				<Option Goto="106" Text="Если ваша Ловкость меньше 8"/>
+				<Option Goto="16" Text="Если 8 и больше"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
