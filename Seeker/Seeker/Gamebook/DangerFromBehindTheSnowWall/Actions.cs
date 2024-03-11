@@ -177,7 +177,7 @@ namespace Seeker.Gamebook.DangerFromBehindTheSnowWall
             string luckLine = Character.Protagonist.Luck[goodLuck] ? "не " : String.Empty;
             luckCheck.Add($"Проверка удачи: {Game.Dice.Symbol(goodLuck)} - {luckLine}является Числом Удачи");
 
-            luckCheck.Add(Result(Character.Protagonist.Luck[goodLuck], "УСПЕХ|НЕУДАЧА"));
+            luckCheck.Add(Result(Character.Protagonist.Luck[goodLuck], "УСПЕХ", "НЕУДАЧА"));
 
             return luckCheck;
         }
