@@ -414,5 +414,14 @@
 				<Option Goto="58" Text="Прикажете водителю быстро идти к деревне, чтобы подавить пулемет врага"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="56">
+			<Text>Выполните тест попадания в лобовую броню.</Text>
+			<Options>
+				<Option Goto="76" Text="Если танк обездвижен"/>
+				<Option Goto="64" Text="Если ваш танк еще цел"/>
+				<Option Goto="60" Text="Если танк подбит и вы еще живы"/>
+				<Option Goto="30" Text="Если все погибли"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
