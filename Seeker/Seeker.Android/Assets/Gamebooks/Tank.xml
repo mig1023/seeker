@@ -137,5 +137,12 @@
 				<Option Goto="7" Text="Прикажете водителю продолжать движение в сторону врага"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="17">
+			<Text>Проверьте свою Удачу.</Text>
+			<Options>
+				<Option Goto="3" Text="Повезло"/>
+				<Option Goto="7" Text="Не повезло"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
