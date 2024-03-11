@@ -6,12 +6,14 @@
 		</Copyright>
 		<Styles>
 			<Main Value="8b0000"/>
-			<Background Value="a8b0b2"/>
-			<Color Name="Font, SystemFont" Value="dcb2b2 "/>
+			<Background Value="373737"/>
+			<Font Value="b4b4b4"/>
+			<SystemFont Value="ffffff"/>
 			<Color Name="Option, Continue, System" Value="610000"/>
 		</Styles>
 		<Default>
 			<HideDisabledOption/>
+			<FontSize Value="Big"/>
 		</Default>
 	</Introduction>
 	<Paragraphs>
