@@ -572,5 +572,11 @@
 				<Option Goto="65" Text="Будете отстреливаться до конца"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="78">
+			<Text>Полковник пообещал представить вас к награде - Медаль «За отвагу»\n\nЕсли вы подбили танк врага в ходе атаки.</Text>
+			<Options>
+				<Option Goto="91"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
