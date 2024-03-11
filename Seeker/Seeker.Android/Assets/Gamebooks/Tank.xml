@@ -52,5 +52,12 @@
 				<Option Goto="11" Text="Прикажете двигаться дальше и не терять темп атаки"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="5">
+			<Text>Нужно было срочно подавить вражеское орудие. Тест наводчика!</Text>
+			<Options>
+				<Option Goto="25" Text="Если тест прошли"/>
+				<Option Goto="15" Text="Если нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
