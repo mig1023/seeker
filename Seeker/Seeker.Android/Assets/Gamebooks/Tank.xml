@@ -339,5 +339,12 @@
 				<Option Goto="49"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="46">
+			<Text>Вы снова навели орудие на цель. Все решали секунды. Проверьте свою меткость.</Text>
+			<Options>
+				<Option Goto="41" Text="Удачно"/>
+				<Option Goto="35" Text="Нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
