@@ -327,5 +327,11 @@
 				<Option Goto="48"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="44">
+			<Text>Не успели вы высунуться из люка, как вражеская пуля ударила вам в голову и вы, потеряв сознание, сползли обратно в башню.</Text>
+			<Options>
+				<Option Goto="30"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
