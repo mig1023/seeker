@@ -501,5 +501,11 @@
 				<Option Goto="23" Text="Будете пробиваться обратно к своим позициям"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="68">
+			<Text>Разрыв накрыл вражеское орудие. Следом за вашим взрывом последовал еще один. Видно детонировали снаряды в ящике (вам +2 Победных очка).</Text>
+			<Options>
+				<Option Goto="74"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
