@@ -308,5 +308,11 @@
 				<Option Goto="30" Text="Если все погибли"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="41">
+			<Text>Вражеский танк вспыхнул и зачадил черным шлейфом. Из его люков начали вываливаться немецкие танкисты в черных комбинезонах (вам +4 Победных очка).</Text>
+			<Options>
+				<Option Goto="45"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
