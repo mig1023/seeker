@@ -321,5 +321,11 @@
 				<Option Goto="37" Text="Будете стрелять по броневику"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="43">
+			<Text>Броневик фрицев загорелся и, проехав по инерции еще десяток метров, уткнулся в канаву.\n\n- Ура-а-а!! - закричали ваши пехотинцы и бросились к вражеской траншее.</Text>
+			<Options>
+				<Option Goto="48"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
