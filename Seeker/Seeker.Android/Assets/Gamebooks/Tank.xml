@@ -163,5 +163,14 @@
 				<Option Goto="4" Text="Если нет"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="21">
+			<Text>Сильный удар стальной болванки в борт потряс вашу машину. Выполните тест попадания в борт по Таблице попаданий.</Text>
+			<Options>
+				<Option Goto="76" Text="Если танк обездвижен"/>
+				<Option Goto="29" Text="Если ваш танк еще цел"/>
+				<Option Goto="18" Text="Если танк подбит и вы еще живы"/>
+				<Option Goto="30" Text="Если все погибли"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
