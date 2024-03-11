@@ -650,5 +650,11 @@
 				<Option Goto="60"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="90">
+			<Text>Вы схватили немецкую гранату за длинную деревянную ручку и замахнулись, чтобы бросить ее обратно. Внезапно воздух разорвался перед вашими глазами ярким пламенем!!!</Text>
+			<Options>
+				<Option Goto="30"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
