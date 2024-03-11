@@ -150,5 +150,11 @@
 				<Option Goto="45"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="19">
+			<Text>Вам с экипажем удалось целыми выпрыгнуть из танка и вы, пригибаясь к земле, бросились бежать назад к своим позициям.</Text>
+			<Options>
+				<Option Goto="23"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
