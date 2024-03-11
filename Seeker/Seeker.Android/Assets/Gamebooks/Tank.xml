@@ -223,5 +223,12 @@
 				<Option Goto="47" Text="Остановите машину и подождете, пока не подтянется ваша пехота"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="29">
+			<Text>Наконец по вспышке выстрела вы обнаружили цель. Это был немецкий танк PzKpfw III. Он стоял чуть слева за сараем на околице села.</Text>
+			<Options>
+				<Option Goto="93" Text="Если у вас разбито орудие"/>
+				<Option Goto="92" Text="Если орудие целое"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
