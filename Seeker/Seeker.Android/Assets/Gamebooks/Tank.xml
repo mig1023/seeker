@@ -185,5 +185,13 @@
 				<Option Goto="30"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="24">
+			<Text>Тем временем ваша машина начала приближаться к вражеским траншеям.</Text>
+			<Options>
+				<Option Goto="31" Text="Если у вас НЕ записано слово «оптика» - можете оглядеть поле боя"/>
+				<Option Goto="36" Text="Если оптика разбита, можете рискнуть и высунуться из люка"/>
+				<Option Goto="27" Text="Можете приказать двигаться дальше"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
