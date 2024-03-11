@@ -102,5 +102,11 @@
 				<Option Goto="17" Text="Поищите вражеское орудие через оптические приборы башни"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="12">
+			<Options>
+				<Option Goto="16" Text="Если у вас записано слово «овраг»"/>
+				<Option Goto="5" Text="Если нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
