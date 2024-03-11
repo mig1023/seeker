@@ -626,5 +626,11 @@
 				<Option Goto="89"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="86">
+			<Text>Полковник пообещал представить вас к награде - ордену «Красного знамени».\n\nЕсли вы подбили танк врага в ходе атаки.</Text>
+			<Options>
+				<Option Goto="91"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
