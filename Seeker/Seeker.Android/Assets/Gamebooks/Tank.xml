@@ -656,5 +656,11 @@
 				<Option Goto="30"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="91">
+			<Text>Согласно приказу наркома обороны за каждый подбитый вражеский танк бойцу была положена денежная премия в размере 100 рублей! Премию выдавали облигациями:\n\nКОНЕЦ</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
