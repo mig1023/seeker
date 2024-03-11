@@ -543,5 +543,12 @@
 				<Option Goto="30"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="74">
+			<Text>- Командир! - крикнул вам водитель - Автоматчики обходят справа!</Text>
+			<Options>
+				<Option Goto="44" Text="Хотите вылезти из люка и осмотреться"/>
+				<Option Goto="60" Text="Немцы давно стали использовать «коктейли Молотова» против советских танков"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
