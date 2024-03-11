@@ -360,5 +360,14 @@
 				<Option Goto="52" Text="Остановите танк и подождете пехоту"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="49">
+			<Text>Выполните тест попадания в борт по Таблице попаданий.</Text>
+			<Options>
+				<Option Goto="76" Text="Если танк обездвижен"/>
+				<Option Goto="42" Text="Если ваш танк еще цел"/>
+				<Option Goto="60" Text="Если танк подбит и вы еще живы"/>
+				<Option Goto="30" Text="Если все погибли"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
