@@ -676,5 +676,16 @@
 				<Option Goto="76" Text="Будете медленно пятится назад, чтобы скрыться за гребнем холма"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="94">
+			<Text>Тест вашего наводчика (если ваше орудие не разбито).</Text>
+			<Options>
+				<Option Goto="96" Text="Успешно"/>
+				<Option Goto="100" Text="Нет">
+					<Text>Или тест вашего стрелка (если у вас не записано слово «пулемет №1»):</Text>
+				</Option>
+				<Option Goto="97" Text="Успешно"/>
+				<Option Goto="99" Text="Нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
