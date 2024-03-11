@@ -263,5 +263,11 @@
 				<Option Goto="40"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="35">
+			<Text>Ваш снаряд не попал в цель.\n\n- Бронебойный! Давай скорее! - кричали вы своему заряжающему.</Text>
+			<Options>
+				<Option Goto="40"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
