@@ -471,5 +471,15 @@
 				<Option Goto="56" Text="Нет"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="64">
+			<Options>
+				<Option Goto="70" Text="Прикажете водителю быстро отступать, пока вас не сожгли"/>
+				<Option Goto="57" Text="прикажете наводчику продолжать стрельбу по вражескому орудию">
+					<Text>Сами будете наводить прицел - проверьте свою меткость:</Text>
+				</Option>
+				<Option Goto="72" Text="Успешно"/>
+				<Option Goto="68" Text="Нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
