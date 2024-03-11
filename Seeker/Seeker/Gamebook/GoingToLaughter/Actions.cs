@@ -189,7 +189,7 @@ namespace Seeker.Gamebook.GoingToLaughter
 
                 luckCheck.Add($"Для прохождения проверки нужно выбросить {level} или больше.");
                 luckCheck.Add($"Бросок: {Game.Dice.Symbol(dice)}");
-                luckCheck.Add(Result(dice >= level, "УСПЕХ|НЕУДАЧА"));
+                luckCheck.Add(Result(dice >= level, "УСПЕХ", "НЕУДАЧА"));
 
                 return luckCheck;
             }
