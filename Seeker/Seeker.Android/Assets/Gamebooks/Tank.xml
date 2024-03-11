@@ -276,5 +276,12 @@
 				<Option Goto="28" Text="Прикажете водителю направить танк вдоль траншеи, чтобы разрушить ее бруствер и разогнать немецкую пехоту"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="37">
+			<Text>Тест вашего Наводчика!</Text>
+			<Options>
+				<Option Goto="43" Text="Успешный тест"/>
+				<Option Goto="50" Text="Провал теста"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
