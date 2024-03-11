@@ -724,5 +724,11 @@
 				<Option Goto="30" Text="Если все погибли"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="100">
+			<Text>Ваш снаряд прошел намного выше вражеского пулемета.</Text>
+			<Options>
+				<Option Goto="98"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
