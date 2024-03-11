@@ -578,5 +578,11 @@
 				<Option Goto="91"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="79">
+			<Text>Если вы подбили танк врага в ходе атаки.</Text>
+			<Options>
+				<Option Goto="91"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
