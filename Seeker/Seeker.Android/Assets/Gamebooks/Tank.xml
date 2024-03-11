@@ -88,5 +88,12 @@
 				<Option Goto="6"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="10">
+			<Text>Тест наводчика.</Text>
+			<Options>
+				<Option Goto="25" Text="Если тест пройден"/>
+				<Option Goto="15" Text="Если нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
