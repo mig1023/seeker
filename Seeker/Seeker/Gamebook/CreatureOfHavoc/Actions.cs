@@ -200,7 +200,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                 $"Проверка мастерства: {Game.Dice.Symbol(firstDice)} + " +
                 $"{Game.Dice.Symbol(secondDice)} {skillLine} {Character.Protagonist.Mastery} мастерство" };
 
-            skillCheck.Add(Result(goodSkill, "МАСТЕРСТВА ХВАТИЛО|МАСТЕРСТВА НЕ ХВАТИЛО"));
+            skillCheck.Add(Result(goodSkill, "МАСТЕРСТВА ХВАТИЛО", "МАСТЕРСТВА НЕ ХВАТИЛО"));
 
             return skillCheck;
         }
