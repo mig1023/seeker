@@ -819,4 +819,15 @@
 			<Border>000000</Border>
 		</Colors>
 	</Insight>
+	<Tank>
+		<Title>Танкист</Title>
+		<Author>Константин Таро</Author>
+		<Year>2011</Year>
+		<Text>Шел 1942 год. Вам 19 лет. Вы окончили первое танковое училище им. Горького и получили звание лейтенанта. Вам дали новенький танк Т-34 и экипаж...</Text>
+		<Paragraphs>100</Paragraphs>
+		<Size>0</Size>
+		<Playthrough>На пять минут</Playthrough>
+		<Setting>История</Setting>
+		<Color>8b0000</Color>
+	</Tank>
 </Gamebooks>

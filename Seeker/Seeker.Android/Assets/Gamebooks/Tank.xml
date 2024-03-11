@@ -1,0 +1,31 @@
+<Gamebook>
+	<Introduction>
+		<Copyright>
+			<Title>Танкист</Title>
+			<Author>Константин Таро, 2011</Author>
+		</Copyright>
+		<Styles>
+			<Main Value="8b0000"/>
+			<Background Value="a8b0b2"/>
+			<Color Name="Font, SystemFont" Value="dcb2b2 "/>
+			<Color Name="Option, Continue, System" Value="610000"/>
+		</Styles>
+		<Default>
+			<HideDisabledOption/>
+		</Default>
+	</Introduction>
+	<Paragraphs>
+		<Paragraph No="0">
+			<Text>START</Text>
+			<Options>
+				<Option Goto="1"/>
+			</Options>
+		</Paragraph>
+		<Paragraph No="1">
+			<Text>END</Text>
+			<Options>
+				<Option Goto="0"/>
+			</Options>
+		</Paragraph>
+	</Paragraphs>
+</Gamebook>
