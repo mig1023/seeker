@@ -522,5 +522,12 @@
 				<Option Goto="30" Text="Если все погибли"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="71">
+			<Text>Проверьте свою Удачу.</Text>
+			<Options>
+				<Option Goto="59" Text="Повезло"/>
+				<Option Goto="90" Text="Не повезло"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
