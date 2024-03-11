@@ -529,5 +529,13 @@
 				<Option Goto="90" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="72">
+			<Text>Выполните тест попадания в лобовую броню по Таблице попаданий.</Text>
+			<Options>
+				<Option Goto="76" Text="Если танк обездвижен"/>
+				<Option Goto="60" Text="Если ваш танк еще цел - если танк подбит и вы еще живы"/>
+				<Option Goto="30" Text="Если все погибли"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
