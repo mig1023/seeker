@@ -481,5 +481,12 @@
 				<Option Goto="68" Text="Нет"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="65">
+			<Text>Из окна в вашу сторону вылетела граната и упала в двух метрах от вас в траву.</Text>
+			<Options>
+				<Option Goto="80" Text="Броситесь бежать прочь"/>
+				<Option Goto="71" Text="Схватите ее и бросите обратно (в окно)"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
