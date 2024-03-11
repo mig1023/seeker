@@ -170,7 +170,7 @@ namespace Seeker.Gamebook.Cyberpunk
             bool success = ReverseCheck ? dice > paramsLevel : dice <= paramsLevel;
 
             test.Add($"BOLD|BIG|Бросок кубика: {dice} - {Game.Services.Сomparison(dice, paramsLevel)}!");
-            test.Add(Result(success, "УСПЕХ|НЕУДАЧА"));
+            test.Add(Result(success, "УСПЕХ", "НЕУДАЧА"));
 
             return test;
         }
