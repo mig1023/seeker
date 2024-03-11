@@ -230,5 +230,11 @@
 				<Option Goto="92" Text="Если орудие целое"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="30">
+			<Text>Извещение о гибели лейтенанта... «геройски погиб, защищая Родину!»\n\nКОНЕЦ</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
