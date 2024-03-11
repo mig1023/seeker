@@ -608,5 +608,11 @@
 				<Option Goto="87"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="83">
+			<Text>- Russischen!!! Panzersoldaten!! - услышали вы крики немецких солдат за забором.\n\n- Командир! Готово!! - крикнул вам ваш механик, бросая на землю ненужную железяку, и бросился в свой люк.\n\nВы вскочили и побежали к танку, чтобы забраться в башенный люк.</Text>
+			<Options>
+				<Option Goto="89"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
