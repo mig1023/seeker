@@ -270,7 +270,7 @@ namespace Seeker.Gamebook.DzungarWar
                 GetProperty(Character.Protagonist, Stat), TriggerTestPenalty);
 
             testLines.AddRange(result);
-            testLines.Add(Result(testIsOk, "АЛДАР СПРАВИЛСЯ|АЛДАР НЕ СПРАВИЛСЯ"));
+            testLines.Add(Result(testIsOk, "АЛДАР СПРАВИЛСЯ", "АЛДАР НЕ СПРАВИЛСЯ"));
 
             Game.Buttons.Disable(testIsOk, "В случае успеха, Обе проверки успешны", "В случае провала");
 
@@ -343,7 +343,7 @@ namespace Seeker.Gamebook.DzungarWar
                     testIsOk = false;
             }
 
-            testLines.Add(Result(testIsOk, "АЛДАР СПРАВИЛСЯ|АЛДАР НЕ СПРАВИЛСЯ"));
+            testLines.Add(Result(testIsOk, "АЛДАР СПРАВИЛСЯ", "АЛДАР НЕ СПРАВИЛСЯ"));
 
             Game.Buttons.Disable(testIsOk, "Все четыре проверки успешны");
 
