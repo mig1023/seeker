@@ -119,7 +119,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                     $"{Game.Dice.Symbol(secondDice)} = {result}");
             }
 
-            breakingDoor.Add(Result(succesBreaked, "ДВЕРЬ ВЗЛОМАНА|ВЫ УБИЛИСЬ ОБ ДВЕРЬ"));
+            breakingDoor.Add(Result(succesBreaked, "ДВЕРЬ ВЗЛОМАНА", "ВЫ УБИЛИСЬ ОБ ДВЕРЬ"));
 
             return breakingDoor;
         }
@@ -157,7 +157,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             string luckLine = isLuck ? "не " : String.Empty;
             luckCheck.Add($"Проверка удачи: {Game.Dice.Symbol(goodLuck)} - {luckLine}зачёркунтый");
 
-            luckCheck.Add(Result(isLuck, "УСПЕХ|НЕУДАЧА"));
+            luckCheck.Add(Result(isLuck, "УСПЕХ", "НЕУДАЧА"));
             
             Character.Protagonist.Luck[goodLuck] = !Character.Protagonist.Luck[goodLuck];
 
@@ -238,7 +238,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                 $"{Game.Dice.Symbol(firstDice)} + {Game.Dice.Symbol(secondDice)} " +
                 $"{lineMastery} {Character.Protagonist.Mastery} мастерство" };
 
-            masteryCheck.Add(Result(goodMastery, "МАСТЕРСТВА ХВАТИЛО|МАСТЕРСТВА НЕ ХВАТИЛО"));
+            masteryCheck.Add(Result(goodMastery, "МАСТЕРСТВА ХВАТИЛО", "МАСТЕРСТВА НЕ ХВАТИЛО"));
 
             return masteryCheck;
         }
