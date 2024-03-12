@@ -670,7 +670,13 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="68">
-			<Text>Разрыв накрыл вражеское орудие. Следом за вашим взрывом последовал еще один. Видно детонировали снаряды в ящике (вам +2 Победных очка).</Text>
+			<Texts>
+				<Text>Разрыв накрыл вражеское орудие. Следом за вашим взрывом последовал еще один. Видно детонировали снаряды в ящике.</Text>
+				<Text Style="Small">Вам +2 Победных очка</Text>
+			</Texts>
+			<Modifications>
+				<VictoryPoints Value="2"/>
+			</Modifications>
 			<Options>
 				<Option Goto="74"/>
 			</Options>
