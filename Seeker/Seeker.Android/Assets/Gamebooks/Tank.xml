@@ -16,6 +16,7 @@
 		</Styles>
 		<Lists>
 			<WithoutStatuses Items="0, 101"/>
+			<FrontMisses Items="6, 7, 8, 9, 11, 12"/>
 		</Lists>
 		<Dictionaries>
 			<CrewNames>
@@ -29,7 +30,7 @@
 				<Item Name="4" Value="Пробит люк водителя (механик убит и танк подбит)"/>
 				<Item Name="5" Value="Разбита «гусеница» (танк обездвижен)"/>
 				<Item Name="6" Value="Разбита «гусеница» (танк обездвижен)"/>
-				<Item Name="7" Value="Мимо"/>
+				<Item Name="7" Value="Мимо!"/>
 				<Item Name="8" Value="Танк подбит (экипаж убит)"/>
 				<Item Name="9" Value="Танк подбит в башню (командир и наводчик убиты)"/>
 				<Item Name="10" Value="Орудие и спаренный пулемет разбиты"/>
