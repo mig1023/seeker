@@ -116,7 +116,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                 $"Проверка удачи: {Game.Dice.Symbol(firstDice)} + " +
                 $"{Game.Dice.Symbol(secondDice)} {luckLine} {Character.Protagonist.Luck}" };
 
-            luckCheck.Add(Result(goodLuck, "УСПЕХ|НЕУДАЧА"));
+            luckCheck.Add(Result(goodLuck, "УСПЕХ", "НЕУДАЧА"));
 
             Game.Buttons.Disable(goodLuck,
                 "Удача с вами, Фортуна с вами, Удача на вашей стороне, Все в порядке и он быстро успокаивается",
@@ -144,11 +144,11 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
             if (Value > 0)
             {
-                masteryCheck.Add(Result(!masteryOk, "Мастерства НЕ хватило|Мастерства ХВАТИЛО"));
+                masteryCheck.Add(Result(!masteryOk, "Мастерства НЕ хватило", "Мастерства ХВАТИЛО"));
             }
             else
             {
-                masteryCheck.Add(Result(masteryOk, "Мастерства ХВАТИЛО|Мастерства НЕ хватило"));
+                masteryCheck.Add(Result(masteryOk, "Мастерства ХВАТИЛО", "Мастерства НЕ хватило"));
             }
 
             Game.Buttons.Disable(masteryOk, "Мастерства хватило");
@@ -182,7 +182,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                 $"{Game.Dice.Symbol(secondDice)}{bonusLine} {cmpLine} " +
                 $"{Character.Protagonist.Change} изменение" };
 
-            changeCheck.Add(Result(changeOk, "Победил ЧЕЛОВЕК|Победил ВОЛК"));
+            changeCheck.Add(Result(changeOk, "Победил ЧЕЛОВЕК", "Победил ВОЛК"));
 
             return changeCheck;
         }
@@ -205,7 +205,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
             diceCheck.Add($"BIG|Сумма на кубиках: {result}");
 
-            diceCheck.Add(Result(result < Character.Protagonist.Endurance, "Меньше!|Больше"));
+            diceCheck.Add(Result(result < Character.Protagonist.Endurance, "Меньше!", "Больше"));
 
             return diceCheck;
         }
@@ -222,7 +222,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
             diceCheck.Add($"Текущий уровень тревоги: {Character.Protagonist.Anxiety}");
 
-            diceCheck.Add(Result(result > Character.Protagonist.Anxiety, "Больше!|Меньше"));
+            diceCheck.Add(Result(result > Character.Protagonist.Anxiety, "Больше!", "Меньше"));
 
             return diceCheck;
         }
