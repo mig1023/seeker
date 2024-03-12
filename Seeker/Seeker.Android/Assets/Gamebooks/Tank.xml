@@ -17,6 +17,13 @@
 		<Lists>
 			<WithoutStatuses Items="0, 101"/>
 		</Lists>
+		<Dictionaries>
+			<CrewNames>
+				<Item Name="Driver" Value="Механика|Механик"/>
+				<Item Name="Shooter" Value="Стрелка|Стрелок"/>
+				<Item Name="Gunner" Value="Наводчика|Наводчик"/>
+			</CrewNames>
+		</Dictionaries>
 		<Default>
 			<HideDisabledOption/>
 			<FontSize Value="Big"/>
@@ -65,6 +72,11 @@
 		</Paragraph>
 		<Paragraph No="5">
 			<Text>Нужно было срочно подавить вражеское орудие. Тест наводчика!</Text>
+			<Actions>
+				<Test>
+					<Crew>Gunner</Crew>
+				</Test>
+			</Actions>
 			<Options>
 				<Option Goto="25" Text="Если тест прошли"/>
 				<Option Goto="15" Text="Если нет"/>
@@ -747,17 +759,17 @@
 				<Get-Decrease>
 					<Button>Увеличить, Уменьшить</Button>
 					<Head>МЕХАНИК</Head>
-					<Stat>Driver</Stat>
+					<Crew>Driver</Crew>
 				</Get-Decrease>
 				<Get-Decrease>
 					<Button>Увеличить, Уменьшить</Button>
 					<Head>СТРЕЛОК</Head>
-					<Stat>Shooter</Stat>
+					<Crew>Shooter</Crew>
 				</Get-Decrease>
 				<Get-Decrease>
 					<Button>Увеличить, Уменьшить</Button>
 					<Head>НАВОДЧИК</Head>
-					<Stat>Gunner</Stat>
+					<Crew>Gunner</Crew>
 					<Text>По ходу игры вы будете иногда тестировать умения ваших бойцов. Если выбросить на кубике меньше или равно опыту бойца – то он успешно прошел тест</Text>
 				</Get-Decrease>
 			</Actions>
