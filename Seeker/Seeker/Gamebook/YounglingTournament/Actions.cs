@@ -202,7 +202,7 @@ namespace Seeker.Gamebook.YounglingTournament
                 $"{Game.Dice.Symbol(testDice)} + " +
                 $"{forceLevel} {testLine} {Level}");
 
-            test.Add(Result(testPassed, "ПРОВЕРКА ПРОЙДЕНА|ПРОВЕРКА ПРОВАЛЕНА"));
+            test.Add(Result(testPassed, "ПРОВЕРКА ПРОЙДЕНА", "ПРОВЕРКА ПРОВАЛЕНА"));
 
             Game.Buttons.Disable(testPassed, "Все в порядке", "Не в порядке");
 
