@@ -141,7 +141,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 Game.Option.Trigger("WardSave", remove: true);
             }
 
-            reaction.Add(Result(goodReaction, "СРЕАГИРОВАЛИ|НЕ СРЕАГИРОВАЛИ"));
+            reaction.Add(Result(goodReaction, "СРЕАГИРОВАЛИ", "НЕ СРЕАГИРОВАЛИ"));
 
             Game.Buttons.Disable(goodReaction,
                 "Успели, Очутились на другом берегу, Все в порядке, Вы были быстрее дракона",
