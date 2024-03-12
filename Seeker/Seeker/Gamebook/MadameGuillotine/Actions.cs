@@ -281,7 +281,7 @@ namespace Seeker.Gamebook.MadameGuillotine
                 $"{Game.Dice.Symbol(firstDice)} + {Game.Dice.Symbol(secondDice)} " +
                 $"{resultCompare} {level}");
 
-            test.Add(Result(result, "ПРОВЕРКА ПРОЙДЕНА|ПРОВЕРКА ПРОВЕЛЕНА"));
+            test.Add(Result(result, "ПРОВЕРКА ПРОЙДЕНА", "ПРОВЕРКА ПРОВЕЛЕНА"));
 
             if ((Benefit != null) && result)
                 Benefit.Do();
