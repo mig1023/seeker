@@ -156,7 +156,7 @@ namespace Seeker.Gamebook.OrcsDay
                     $"{compareLine} {Level}");
             }
 
-            testLines.Add(Result(okResult, "УСПЕШНО|НЕУДАЧНО"));
+            testLines.Add(Result(okResult, "УСПЕШНО", "НЕУДАЧНО"));
 
             if (ZombiePotionTest && okResult)
             {
@@ -178,7 +178,7 @@ namespace Seeker.Gamebook.OrcsDay
                 $"Смелость {compareLine} {Character.Protagonist.Orcishness} " +
                 $"Оркишность + {Character.Protagonist.Wits} Мозги");
 
-            testLines.Add(Result(okResult, "УСПЕШНО|НЕУДАЧНО"));
+            testLines.Add(Result(okResult, "УСПЕШНО", "НЕУДАЧНО"));
 
             return testLines;
         }
