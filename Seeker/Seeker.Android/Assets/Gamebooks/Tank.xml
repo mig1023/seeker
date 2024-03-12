@@ -544,13 +544,16 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="64">
-			<Options>
+			<Actions>
 				<Option Goto="70" Text="Прикажете водителю быстро отступать, пока вас не сожгли"/>
 				<Option Goto="57" Text="Прикажете наводчику продолжать стрельбу по вражескому орудию">
 					<Text>Сами будете наводить прицел - проверьте свою удачу:</Text>
 				</Option>
-				<Option Goto="68" Text="Успешно"/>
-				<Option Goto="72" Text="Нет"/>
+				<Luck/>
+			</Actions>
+			<Options>
+				<Option Goto="68" Text="Повезло"/>
+				<Option Goto="72" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="65">
