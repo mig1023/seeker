@@ -319,10 +319,14 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="37">
-			<Text>Тест вашего Наводчика!</Text>
+			<Actions>
+				<Test>
+					<Crew>Gunner</Crew>
+				</Test>
+			</Actions>
 			<Options>
-				<Option Goto="43" Text="Успешный тест"/>
-				<Option Goto="50" Text="Провал теста"/>
+				<Option Goto="43" Text="В случае успеха"/>
+				<Option Goto="50" Text="В случае провала"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="38">
