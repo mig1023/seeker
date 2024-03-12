@@ -66,6 +66,35 @@ namespace Seeker.Gamebook.Tank
                 return (Character.Protagonist.StatBonuses > 0);
         }
 
+        public override bool Availability(string option)
+        {
+            if (String.IsNullOrEmpty(option))
+            {
+                return true;
+            }
+            else
+            {
+                if (option.Contains("ПОБЕДНЫХ ОЧКОВ МАЛО"))
+                {
+                    return Character.Protagonist.VictoryPoints < 4;
+                }
+                else if (option.Contains("ПОБЕДНЫХ ОЧКОВ СРЕДНЕ"))
+                {
+                    bool less = Character.Protagonist.VictoryPoints < 7;
+                    bool more = Character.Protagonist.VictoryPoints >= 4;
+                    return less && more;
+                }
+                else if (option.Contains("ПОБЕДНЫХ ОЧКОВ МНОГО"))
+                {
+                    return Character.Protagonist.VictoryPoints > 7;
+                }
+                else
+                {
+                    return AvailabilityTrigger(option);
+                }
+            }
+        }
+
         public List<string> Get() =>
             ChangeProtagonistParam(Crew, Character.Protagonist, "StatBonuses");
 
