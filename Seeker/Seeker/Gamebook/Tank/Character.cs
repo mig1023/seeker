@@ -16,6 +16,7 @@ namespace Seeker.Gamebook.Tank
 
         public int VictoryPoints { get; set; }
         public int Immobilized { get; set; }
+        public int Dead { get; set; }
 
         public override void Init()
         {
@@ -27,6 +28,7 @@ namespace Seeker.Gamebook.Tank
             StatBonuses = 6;
             VictoryPoints = 0;
             Immobilized = 0;
+            Dead = 0;
         }
 
         public Character Clone() => new Character()
@@ -38,10 +40,11 @@ namespace Seeker.Gamebook.Tank
             StatBonuses = this.StatBonuses,
             VictoryPoints = this.VictoryPoints,
             Immobilized = this.Immobilized,
+            Dead = this.Dead,
         };
 
         public override string Save() => String.Join("|",
-            Driver, Shooter, Gunner, StatBonuses, VictoryPoints, Immobilized);
+            Driver, Shooter, Gunner, StatBonuses, VictoryPoints, Immobilized, Dead);
 
         public override void Load(string saveLine)
         {
@@ -53,6 +56,7 @@ namespace Seeker.Gamebook.Tank
             StatBonuses = int.Parse(save[3]);
             VictoryPoints = int.Parse(save[4]);
             Immobilized = int.Parse(save[5]);
+            Dead = int.Parse(save[6]);
 
             IsProtagonist = true;
         }

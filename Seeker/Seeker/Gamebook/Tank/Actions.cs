@@ -22,16 +22,25 @@ namespace Seeker.Gamebook.Tank
         }
 
         public override List<string> Representer()
-        {
-            CrewNames(Crew, out string nominative, out string accusative);
+        {         
             string line = String.Empty;
 
             if (Type == "Test")
             {
+                CrewNames(Crew, out string _, out string accusative);
                 line = $"ТЕСТ {accusative}";
+            }
+            else if (Type == "Luck")
+            {
+                return new List<string>();
+            }
+            else if (Type == "HitTable")
+            {
+                line = "Бросок по Таблице попаданий";
             }
             else
             {
+                CrewNames(Crew, out string nominative, out string _);
                 int currentStat = GetProperty(Character.Protagonist, Crew);
                 string points = Game.Services.CoinsNoun(currentStat, "очко", "очка", "очков");
                 line = $"{nominative}" + (currentStat > 0 ? $" (опыт {currentStat} {points})" : String.Empty);
@@ -39,6 +48,9 @@ namespace Seeker.Gamebook.Tank
 
             return new List<string> { line };
         }
+
+        public override bool GameOver(out int toEndParagraph, out string toEndText) =>
+            GameOverBy(Character.Protagonist.Dead > 0, out toEndParagraph, out toEndText);
 
         public override bool IsButtonEnabled(bool secondButton = false)
         {
@@ -73,27 +85,86 @@ namespace Seeker.Gamebook.Tank
             string diffLine = testIsOk ? "<=" : ">";
             testLines.Add($"Тест: {Game.Dice.Symbol(dice)} {diffLine} {experience} опыта");
 
-            testLines.Add(Result(testIsOk, $"BOLD|{nominative} СПРАВИЛСЯ", $"BOLD|{nominative} НЕ СПРАВИЛСЯ"));
+            testLines.Add(Result(testIsOk, $"BIG|BOLD|{nominative} СПРАВИЛСЯ", $"BIG|BOLD|{nominative} НЕ СПРАВИЛСЯ"));
 
             Game.Buttons.Disable(testIsOk, "В случае успеха", "В случае провала");
 
             return testLines;
         }
 
-        public List<string> Luck()
+        private void LuckCheck(out bool goodLuck, ref List<string> luckLines)
         {
             int luckDice = Game.Dice.Roll();
-            bool goodLuck = luckDice % 2 == 0;
+            goodLuck = luckDice % 2 == 0;
             string odd = goodLuck ? "чётное" : "нечётное";
 
-            List<string> luckCheck = new List<string> {
-                $"Проверка удачи: {Game.Dice.Symbol(luckDice)} - {odd}" };
+            luckLines.Add($"Проверка удачи: {Game.Dice.Symbol(luckDice)} - {odd}");
+        }
 
-            luckCheck.Add(Result(goodLuck, "BOLD|УСПЕХ", "BOLD|НЕУДАЧА"));
+        public List<string> Luck()
+        {
+            List<string> luckCheck = new List<string>();
+            LuckCheck(out bool goodLuck, ref luckCheck);
+
+            luckCheck.Add(Result(goodLuck, "BIG|BOLD|УСПЕХ", "BIG|BOLD|НЕУДАЧА"));
 
             Game.Buttons.Disable(goodLuck, "Повезло", "Не повезло");
 
             return luckCheck;
+        }
+
+        public List<string> HitTable()
+        {
+            List<string> hitLines = new List<string>();
+
+            Game.Dice.DoubleRoll(out int firstDice, out int secondDixe);
+            int hit = firstDice + secondDixe;
+
+            hitLines.Add($"Бросок по таблице: " +
+                $"{Game.Dice.Symbol(firstDice)} + {Game.Dice.Symbol(secondDixe)} = {hit}");
+            
+            string prefix = hit == 7 ? "GOOD|" : "BAD|";
+            hitLines.Add($"BIG|BOLD|{prefix}{Constants.HitNames[hit]}");
+
+            switch (hit)
+            {
+                case 2:
+                    Game.Option.Trigger("оптика");
+                    return hitLines;
+
+                case 3:
+                    Game.Option.Trigger("пулемет 1");
+                    return hitLines;
+
+                case 4:
+                case 5:
+                case 6:
+                    Character.Protagonist.Immobilized = 1;
+                    return hitLines;
+
+                case 8:
+                case 9:
+                case 11:
+                    Character.Protagonist.Dead = 1;
+                    return hitLines;
+
+                case 10:
+                    Game.Option.Trigger("орудие");
+                    Game.Option.Trigger("пулемет 2");
+                    return hitLines;
+
+                case 12:
+                    LuckCheck(out bool goodLuck, ref hitLines);
+                    hitLines.Add(goodLuck ? "BAD|BOLD|Все сгорели..." : "GOOD|BOLD|Все спаслись!");
+
+                    if (!goodLuck)
+                        Character.Protagonist.Dead = 1;
+
+                    return hitLines;
+
+                default:
+                    return hitLines;
+            }
         }
     }
 }
