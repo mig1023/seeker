@@ -125,7 +125,7 @@ namespace Seeker.Gamebook.PrairieLaw
             string not = isLuck ? "не " : String.Empty;
 
             luckCheck.Add($"Проверка удачи: {Game.Dice.Symbol(goodLuck)} - {not}зачёркунтый");
-            luckCheck.Add(Result(isLuck, "УСПЕХ|НЕУДАЧА"));
+            luckCheck.Add(Result(isLuck, "УСПЕХ", "НЕУДАЧА"));
 
             Game.Buttons.Disable(isLuck, "Повезло", "Не повезло");
 
@@ -194,7 +194,7 @@ namespace Seeker.Gamebook.PrairieLaw
                 $"{Game.Dice.Symbol(secondDice)} {skillLine} " +
                 $"{Character.Protagonist.Skill}" };
 
-            luckCheck.Add(Result(goodSkill, "УСПЕХ|НЕУДАЧА"));
+            luckCheck.Add(Result(goodSkill, "УСПЕХ", "НЕУДАЧА"));
 
             return luckCheck;
         }
