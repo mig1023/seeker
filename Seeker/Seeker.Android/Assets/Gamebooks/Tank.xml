@@ -102,10 +102,18 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="8">
-			<Text>Проверьте, попали ли вы в цель - тест вашего Наводчика.</Text>
+			<Text>Проверьте, попали ли вы в цель:</Text>
+			<Actions>
+				<Test>
+					<Crew>Gunner</Crew>
+					<Text Style="Small">В случае попадания запишите на листик +1 Победное очко.</Text>
+				</Test>
+			</Actions>
 			<Options>
-				<Option Goto="14" Text="Если попали (запишите на листик +1 Победное очко)"/>
-				<Option Goto="9" Text="Если нет"/>
+				<Option Goto="14" Text="В случае успеха">
+					<VictoryPoints Value="1"/>
+				</Option>
+				<Option Goto="9" Text="В случае провала"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="9">
