@@ -2,5 +2,8 @@
 
 namespace Seeker.Gamebook.Tank
 {
-    class Constants : Prototypes.Constants, Abstract.IConstants { }
+    class Constants : Prototypes.Constants, Abstract.IConstants
+    {
+        public static Dictionary<string, string> CrewNames { get; set; }
+    }
 }
