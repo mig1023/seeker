@@ -25,16 +25,14 @@ namespace Seeker.Gamebook.Tank
             if (Character.Protagonist.Dead > 0)
                 status = "подбит";
 
-            return new List<string> { $"Состояние танка: {status}" };
-        }
+            List<string> statuses = new List<string>
+            {
+                $"Победных очков: {Character.Protagonist.VictoryPoints}",
+                $"Состояние танка: {status}"
+            };
 
-        public override List<string> AdditionalStatus() => new List<string>
-        {
-            $"Победных очков: {Character.Protagonist.VictoryPoints}",
-            $"Механик: {Character.Protagonist.Driver}",
-            $"Стрелок: {Character.Protagonist.Shooter}",
-            $"Наводчик: {Character.Protagonist.Gunner}",
-        };
+            return statuses;
+        }
 
         private void CrewNames(string name, out string nominative, out string accusative)
         {
