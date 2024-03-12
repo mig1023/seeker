@@ -28,6 +28,9 @@
 			<HideDisabledOption/>
 			<FontSize Value="Big"/>
 		</Default>
+		<Buttons>
+			<Test>Проверить</Test>
+		</Buttons>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph No="0">
@@ -758,17 +761,14 @@
 			<Actions>
 				<Get-Decrease>
 					<Button>Увеличить, Уменьшить</Button>
-					<Head>МЕХАНИК</Head>
 					<Crew>Driver</Crew>
 				</Get-Decrease>
 				<Get-Decrease>
 					<Button>Увеличить, Уменьшить</Button>
-					<Head>СТРЕЛОК</Head>
 					<Crew>Shooter</Crew>
 				</Get-Decrease>
 				<Get-Decrease>
 					<Button>Увеличить, Уменьшить</Button>
-					<Head>НАВОДЧИК</Head>
 					<Crew>Gunner</Crew>
 					<Text>По ходу игры вы будете иногда тестировать умения ваших бойцов. Если выбросить на кубике меньше или равно опыту бойца – то он успешно прошел тест</Text>
 				</Get-Decrease>
