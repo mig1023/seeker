@@ -75,7 +75,7 @@ namespace Seeker.Gamebook.Tank
 
             testLines.Add(Result(testIsOk, $"BOLD|{nominative} СПРАВИЛСЯ", $"BOLD|{nominative} НЕ СПРАВИЛСЯ"));
 
-            Game.Buttons.Disable(testIsOk, "В случае успеха", "В случае провала");
+            Game.Buttons.Disable(testIsOk, "В случае успеха, Попал", "В случае провала, Нет");
 
             return testLines;
         }
