@@ -183,7 +183,7 @@ namespace Seeker.Gamebook.Moria
                 }
             }
 
-            fight.Add(Result(Character.Protagonist.Fellowship.Count > 0, "Вы ПОБЕДИЛИ!|Вы ПРОИГРАЛИ..."));
+            fight.Add(Result(Character.Protagonist.Fellowship.Count > 0, "Вы ПОБЕДИЛИ!", "Вы ПРОИГРАЛИ..."));
 
             return fight;
         }
