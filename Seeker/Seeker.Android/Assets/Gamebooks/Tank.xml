@@ -30,6 +30,7 @@
 		</Default>
 		<Buttons>
 			<Test>Проверить</Test>
+			<Luck>Проверить удачу</Luck>
 		</Buttons>
 	</Introduction>
 	<Paragraphs>
@@ -177,6 +178,9 @@
 		</Paragraph>
 		<Paragraph No="17">
 			<Text>Проверьте свою Удачу.</Text>
+			<Actions>
+				<Luck/>
+			</Actions>
 			<Options>
 				<Option Goto="3" Text="Повезло"/>
 				<Option Goto="7" Text="Не повезло"/>
