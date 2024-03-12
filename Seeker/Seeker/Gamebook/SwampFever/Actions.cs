@@ -122,7 +122,7 @@ namespace Seeker.Gamebook.SwampFever
                 $"Итого получаем {mentalAndFury}, что " +
                 $"{not}меньше {level} уровня проверки");
 
-            mentalCheck.Add(Result(success, "УСПЕХ|НЕУДАЧА"));
+            mentalCheck.Add(Result(success, "УСПЕХ", "НЕУДАЧА"));
 
             if (DeathTest && !success)
             {
@@ -556,7 +556,7 @@ namespace Seeker.Gamebook.SwampFever
             }
 
             pullReport.Add($"Итого, вы развили тягу: {thrust}");
-            pullReport.Add(Result(thrust >= 14, "Вы вытащили ялик|Трос оборвался и ялик утонул"));
+            pullReport.Add(Result(thrust >= 14, "Вы вытащили ялик", "Трос оборвался и ялик утонул"));
 
             return pullReport;
         }
@@ -592,7 +592,7 @@ namespace Seeker.Gamebook.SwampFever
             }
 
             pullReport.Add($"Итого, вы развили тягу: {thrust}");
-            pullReport.Add(Result(thrust >= 14, "Вы вытащили ялик|Трос оборвался и ялик утонул"));
+            pullReport.Add(Result(thrust >= 14, "Вы вытащили ялик", "Трос оборвался и ялик утонул"));
 
             return pullReport;
         }
@@ -710,7 +710,7 @@ namespace Seeker.Gamebook.SwampFever
                 warReport.Add(String.Empty);
             }
 
-            warReport.Add(Result(position > 0, "Вы выиграли|Вы проиграли"));
+            warReport.Add(Result(position > 0, "Вы выиграли", "Вы проиграли"));
 
             return warReport;
         }
