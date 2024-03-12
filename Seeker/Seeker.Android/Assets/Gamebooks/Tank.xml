@@ -386,10 +386,15 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="46">
-			<Text>Вы снова навели орудие на цель. Все решали секунды. Проверьте свою меткость.</Text>
+			<Text>Вы снова навели орудие на цель. Все решали секунды. Проверьте свою меткость:</Text>
+			<Actions>
+				<Test>
+					<Crew>Gunner</Crew>
+				</Test>
+			</Actions>
 			<Options>
-				<Option Goto="41" Text="Удачно"/>
-				<Option Goto="35" Text="Нет"/>
+				<Option Goto="41" Text="В случае успеха"/>
+				<Option Goto="35" Text="В случае провала"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="47">
