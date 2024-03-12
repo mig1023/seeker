@@ -895,8 +895,8 @@
 				<Test>
 					<Crew>Gunner</Crew>
 				</Test>
-				<Option Goto="96" Text="В случае успеха"/>
-				<Option Goto="100" Text="В случае провала">
+				<Option Goto="96" Text="В случае успеха" Availability="!орудие"/>
+				<Option Goto="100" Text="В случае провала" Availability="!орудие">
 					<Text>Или тест вашего стрелка (если у вас не записано слово «пулемет №1»):</Text>
 				</Option>
 				<Test>
@@ -904,8 +904,8 @@
 				</Test>
 			</Actions>
 			<Options>
-				<Option Goto="97" Text="В случае успеха"/>
-				<Option Goto="99" Text="В случае провала"/>
+				<Option Goto="97" Text="В случае успеха" Availability="!пулемет 1"/>
+				<Option Goto="99" Text="В случае провала" Availability="!пулемет 1"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="95">
