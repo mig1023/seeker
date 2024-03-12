@@ -633,7 +633,12 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="70">
-			<Text>Выполните тест попадания в лобовую броню по Таблице попаданий.</Text>
+			<Text>Выполните тест попадания в лобовую броню по Таблице попаданий:</Text>
+			<Actions>
+				<HitTable>
+					<FrontHit/>
+				</HitTable>
+			</Actions>
 			<Options>
 				<Option Goto="76" Text="Если танк обездвижен"/>
 				<Option Goto="60" Text="Если ваш танк еще цел"/>
