@@ -75,9 +75,25 @@ namespace Seeker.Gamebook.Tank
 
             testLines.Add(Result(testIsOk, $"BOLD|{nominative} СПРАВИЛСЯ", $"BOLD|{nominative} НЕ СПРАВИЛСЯ"));
 
-            Game.Buttons.Disable(testIsOk, "В случае успеха, Попал", "В случае провала, Нет");
+            Game.Buttons.Disable(testIsOk, "В случае успеха", "В случае провала");
 
             return testLines;
+        }
+
+        public List<string> Luck()
+        {
+            int luckDice = Game.Dice.Roll();
+            bool goodLuck = luckDice % 2 == 0;
+            string odd = goodLuck ? "чётное" : "нечётное";
+
+            List<string> luckCheck = new List<string> {
+                $"Проверка удачи: {Game.Dice.Symbol(luckDice)} - {odd}" };
+
+            luckCheck.Add(Result(goodLuck, "BOLD|УСПЕХ", "BOLD|НЕУДАЧА"));
+
+            Game.Buttons.Disable(goodLuck, "Повезло", "Не повезло");
+
+            return luckCheck;
         }
     }
 }
