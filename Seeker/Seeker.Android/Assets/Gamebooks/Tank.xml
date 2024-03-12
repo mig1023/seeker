@@ -123,10 +123,14 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="10">
-			<Text>Тест наводчика.</Text>
+			<Actions>
+				<Test>
+					<Crew>Gunner</Crew>
+				</Test>
+			</Actions>
 			<Options>
-				<Option Goto="25" Text="Если тест пройден"/>
-				<Option Goto="15" Text="Если нет"/>
+				<Option Goto="25" Text="В случае успеха"/>
+				<Option Goto="15" Text="В случае провала"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="11">
