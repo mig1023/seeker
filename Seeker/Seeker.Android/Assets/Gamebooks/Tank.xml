@@ -455,7 +455,9 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="49">
-			<Text>Выполните тест попадания в борт по Таблице попаданий.</Text>
+			<Actions>
+				<HitTable/>
+			</Actions>
 			<Options>
 				<Option Goto="76" Text="Если танк обездвижен"/>
 				<Option Goto="42" Text="Если ваш танк еще цел"/>
