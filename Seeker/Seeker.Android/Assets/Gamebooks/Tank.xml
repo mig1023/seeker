@@ -23,6 +23,19 @@
 				<Item Name="Shooter" Value="Стрелка|Стрелок"/>
 				<Item Name="Gunner" Value="Наводчика|Наводчик"/>
 			</CrewNames>
+			<HitNames>
+				<Item Name="2" Value="Разбита оптика на башне"/>
+				<Item Name="3" Value="Разбит пулемет стрелка"/>
+				<Item Name="4" Value="Пробит люк водителя (механик убит и танк подбит)"/>
+				<Item Name="5" Value="Разбита «гусеница» (танк обездвижен)"/>
+				<Item Name="6" Value="Разбита «гусеница» (танк обездвижен)"/>
+				<Item Name="7" Value="Мимо"/>
+				<Item Name="8" Value="Танк подбит (экипаж убит)"/>
+				<Item Name="9" Value="Танк подбит в башню (командир и наводчик убиты)"/>
+				<Item Name="10" Value="Орудие и спаренный пулемет разбиты"/>
+				<Item Name="11" Value="Попадание под башню (танк подбит и все убиты)"/>
+				<Item Name="12" Value="Попадание в двигатель - пожар!"/>
+			</HitNames>
 		</Dictionaries>
 		<Default>
 			<HideDisabledOption/>
@@ -31,6 +44,7 @@
 		<Buttons>
 			<Test>Проверить</Test>
 			<Luck>Проверить удачу</Luck>
+			<HitTable>Бросить кубики</HitTable>
 		</Buttons>
 	</Introduction>
 	<Paragraphs>
@@ -51,7 +65,10 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="2">
-			<Text>Рядом с танком разорвался снаряд. По вам стреляли в борт. Поверьте куда вам попали по Таблице попаданий! (бросьте 2 кубика, чтобы определить ущерб).</Text>
+			<Text>Рядом с танком разорвался снаряд. По вам стреляли в борт. Поверьте куда вам попали по Таблице попаданий!</Text>
+			<Actions>
+				<HitTable/>
+			</Actions>
 			<Options>
 				<Option Goto="76" Text="Если танк обездвижен"/>
 				<Option Goto="3" Text="Если ваш танк еще цел"/>
