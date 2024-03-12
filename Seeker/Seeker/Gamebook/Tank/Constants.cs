@@ -7,5 +7,7 @@ namespace Seeker.Gamebook.Tank
         public static Dictionary<string, string> CrewNames { get; set; }
 
         public static Dictionary<int, string> HitNames { get; set; }
+
+        public static List<int> FrontMisses { get; set; }
     }
 }

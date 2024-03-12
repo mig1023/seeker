@@ -7,6 +7,7 @@ namespace Seeker.Gamebook.Tank
     class Actions : Prototypes.Actions, Abstract.IActions
     {
         public string Crew { get; set; }
+        public bool FrontHit { get; set; } 
 
         public override List<string> Status()
         {
@@ -124,7 +125,15 @@ namespace Seeker.Gamebook.Tank
                 $"{Game.Dice.Symbol(firstDice)} + {Game.Dice.Symbol(secondDixe)} = {hit}");
             
             string prefix = hit == 7 ? "GOOD|" : "BAD|";
-            hitLines.Add($"BIG|BOLD|{prefix}{Constants.HitNames[hit]}");
+            string hitLine = Constants.HitNames[hit];
+
+            if (FrontHit && Constants.FrontMisses.Contains(hit))
+            {
+                prefix = "GOOD|";
+                hitLine = "Мимо!";
+            }
+
+            hitLines.Add($"BIG|BOLD|{prefix}{hitLine}");
 
             switch (hit)
             {
