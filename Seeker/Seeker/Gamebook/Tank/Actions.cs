@@ -11,8 +11,30 @@ namespace Seeker.Gamebook.Tank
 
         public override List<string> Status()
         {
-            return new List<string> { $"Состояние танка: исправен" };
+            string status = "исправен";
+
+            bool optics = Game.Option.IsTriggered("оптика");
+            bool gun = Game.Option.IsTriggered("орудие");
+            bool machineGun1 = Game.Option.IsTriggered("пулемёт 1");
+            bool machineGun2 = Game.Option.IsTriggered("пулемёт 2");
+            bool immobil = Character.Protagonist.Immobilized > 0;
+
+            if (optics || gun || machineGun1 || machineGun2 || immobil)
+                status = "повреждён";
+
+            if (Character.Protagonist.Dead > 0)
+                status = "подбит";
+
+            return new List<string> { $"Состояние танка: {status}" };
         }
+
+        public override List<string> AdditionalStatus() => new List<string>
+        {
+            $"Победных очков: {Character.Protagonist.VictoryPoints}",
+            $"Механик: {Character.Protagonist.Driver}",
+            $"Стрелок: {Character.Protagonist.Shooter}",
+            $"Наводчик: {Character.Protagonist.Gunner}",
+        };
 
         private void CrewNames(string name, out string nominative, out string accusative)
         {
