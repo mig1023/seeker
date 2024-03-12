@@ -13,27 +13,36 @@ namespace Seeker.Gamebook.Tank
             return new List<string> { $"Состояние танка: исправен" };
         }
 
-        private void CrewNames(string name, out string first, out string second)
+        private void CrewNames(string name, out string nominative, out string accusative)
         {
             string crewName = Constants.CrewNames[name];
             List<string> crew = crewName.ToUpper().Split('|').ToList();
-            first = crew[0];
-            second = crew[1];
+            accusative = crew[0];
+            nominative = crew[1];
         }
 
         public override List<string> Representer()
         {
-            CrewNames(Constants.CrewNames[Crew], out string _, out string crew);
-            int currentStat = GetProperty(Character.Protagonist, Crew);
-            string points = Game.Services.CoinsNoun(currentStat, "очко", "очка", "очков");
-            string line = currentStat > 0 ? $"ТЕСТ {crew} (опыт {currentStat} {points})" : String.Empty;
+            CrewNames(Crew, out string nominative, out string accusative);
+            string line = String.Empty;
 
-            return new List<string> { $"{Head}{line}" };
+            if (Type == "Test")
+            {
+                line = $"ТЕСТ {accusative}";
+            }
+            else
+            {
+                int currentStat = GetProperty(Character.Protagonist, Crew);
+                string points = Game.Services.CoinsNoun(currentStat, "очко", "очка", "очков");
+                line = $"{nominative}" + (currentStat > 0 ? $" (опыт {currentStat} {points})" : String.Empty);
+            }
+
+            return new List<string> { line };
         }
 
         public override bool IsButtonEnabled(bool secondButton = false)
         {
-            if (String.IsNullOrEmpty(Crew))
+            if (String.IsNullOrEmpty(Crew) || (Type != "Get-Decrease"))
                 return true;
 
             int stat = GetProperty(Character.Protagonist, Crew);
@@ -54,8 +63,8 @@ namespace Seeker.Gamebook.Tank
         {
             List<string> testLines = new List<string>();
 
-            CrewNames(Constants.CrewNames[Crew], out string crew, out string crewResult);
-            testLines.Add($"ТЕСТ {crew}:");
+            CrewNames(Crew, out string nominative, out string accusative);
+            testLines.Add($"ТЕСТ НА ОПЫТ {nominative}:");
 
             int experience = GetProperty(Character.Protagonist, Crew);
             string points = Game.Services.CoinsNoun(experience, "очко", "очка", "очков");
@@ -66,7 +75,7 @@ namespace Seeker.Gamebook.Tank
             string diffLine = testIsOk ? "<=" : ">";
             testLines.Add($"Проверка: {Game.Dice.Symbol(dice)} {diffLine} {experience}");
 
-            testLines.Add(Result(testIsOk, $"BOLD|{crewResult} СПРАВИЛСЯ", $"BOLD|{crewResult} НЕ СПРАВИЛСЯ"));
+            testLines.Add(Result(testIsOk, $"BOLD|{accusative} СПРАВИЛСЯ", $"BOLD|{accusative} НЕ СПРАВИЛСЯ"));
 
             //Game.Buttons.Disable(testIsOk, "В случае успеха, Обе проверки успешны", "В случае провала");
 
