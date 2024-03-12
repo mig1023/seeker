@@ -39,7 +39,6 @@
 			</HitNames>
 		</Dictionaries>
 		<Default>
-			<HideDisabledOption/>
 			<FontSize Value="Big"/>
 		</Default>
 		<Buttons>
@@ -169,7 +168,7 @@
 		<Paragraph No="12">
 			<Options>
 				<Option Goto="16" Text="Если у вас записано слово «овраг»" Availability="овраг"/>
-				<Option Goto="5" Text="Если нет"/>
+				<Option Goto="5" Text="Если нет" Availability="!овраг"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="13">
@@ -283,8 +282,8 @@
 		<Paragraph No="24">
 			<Text>Тем временем ваша машина начала приближаться к вражеским траншеям.</Text>
 			<Options>
-				<Option Goto="31" Text="Если у вас НЕ записано слово «оптика» - можете оглядеть поле боя"/>
-				<Option Goto="36" Text="Если оптика разбита, можете рискнуть и высунуться из люка"/>
+				<Option Goto="31" Text="Если у вас НЕ записано слово «оптика» - можете оглядеть поле боя"  Availability="!оптика"/>
+				<Option Goto="36" Text="Если оптика разбита, можете рискнуть и высунуться из люка" Availability="оптика"/>
 				<Option Goto="27" Text="Можете приказать двигаться дальше"/>
 			</Options>
 		</Paragraph>
