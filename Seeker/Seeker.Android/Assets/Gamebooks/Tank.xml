@@ -74,15 +74,15 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="5">
-			<Text>Нужно было срочно подавить вражеское орудие. Тест наводчика!</Text>
+			<Text>Нужно было срочно подавить вражеское орудие.</Text>
 			<Actions>
 				<Test>
 					<Crew>Gunner</Crew>
 				</Test>
 			</Actions>
 			<Options>
-				<Option Goto="25" Text="Если тест прошли"/>
-				<Option Goto="15" Text="Если нет"/>
+				<Option Goto="25" Text="В случае успеха"/>
+				<Option Goto="15" Text="В случае провала"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="6">
