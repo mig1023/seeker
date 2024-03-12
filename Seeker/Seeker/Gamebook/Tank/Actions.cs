@@ -62,22 +62,20 @@ namespace Seeker.Gamebook.Tank
         public List<string> Test()
         {
             List<string> testLines = new List<string>();
-
             CrewNames(Crew, out string nominative, out string accusative);
-            testLines.Add($"ТЕСТ НА ОПЫТ {nominative}:");
 
             int experience = GetProperty(Character.Protagonist, Crew);
             string points = Game.Services.CoinsNoun(experience, "очко", "очка", "очков");
-            testLines.Add($"Опыт: {experience} {points}");
+            testLines.Add($"Опыт {accusative.ToLower()}: {experience} {points}");
 
             int dice = Game.Dice.Roll();
             bool testIsOk = dice <= experience;
             string diffLine = testIsOk ? "<=" : ">";
-            testLines.Add($"Проверка: {Game.Dice.Symbol(dice)} {diffLine} {experience}");
+            testLines.Add($"Тест: {Game.Dice.Symbol(dice)} {diffLine} {experience} опыта");
 
-            testLines.Add(Result(testIsOk, $"BOLD|{accusative} СПРАВИЛСЯ", $"BOLD|{accusative} НЕ СПРАВИЛСЯ"));
+            testLines.Add(Result(testIsOk, $"BOLD|{nominative} СПРАВИЛСЯ", $"BOLD|{nominative} НЕ СПРАВИЛСЯ"));
 
-            //Game.Buttons.Disable(testIsOk, "В случае успеха, Обе проверки успешны", "В случае провала");
+            Game.Buttons.Disable(testIsOk, "В случае успеха", "В случае провала");
 
             return testLines;
         }
