@@ -226,7 +226,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
 
             bool goodReaction = Reactions.Good(ref reaction);
 
-            reaction.Add(Result(goodReaction, "СРЕАГИРОВАЛИ|НЕ СРЕАГИРОВАЛИ"));
+            reaction.Add(Result(goodReaction, "СРЕАГИРОВАЛИ", "НЕ СРЕАГИРОВАЛИ"));
 
             if (goodReaction && (Benefit != null))
                 Benefit.Do();
@@ -311,7 +311,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             List<string> stoneThrow = new List<string> { };
 
             stoneThrow.Add($"На кубике выпало: {Game.Dice.Symbol(dice)}");
-            stoneThrow.Add(Result(dice > 4, "Вы попали|Вы промахнулись"));
+            stoneThrow.Add(Result(dice > 4, "Вы попали", "Вы промахнулись"));
 
             return stoneThrow;
         }
