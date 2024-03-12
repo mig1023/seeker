@@ -195,10 +195,14 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="20">
-			<Text>Тест умения Механика.</Text>
+			<Actions>
+				<Test>
+					<Crew>Driver</Crew>
+				</Test>
+			</Actions>
 			<Options>
-				<Option Goto="11" Text="Если прошли тест"/>
-				<Option Goto="4" Text="Если нет"/>
+				<Option Goto="11" Text="В случае успеха"/>
+				<Option Goto="4" Text="В случае провала"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="21">
