@@ -162,13 +162,7 @@ namespace Seeker.Gamebook.Tank
 
         private void DisableButtonsExcept(string button)
         {
-            List<string> allButtons = new List<string>
-            {
-                "Танк обездвижен",
-                "Танк еще цел",
-                "Танк подбит и вы еще живы",
-                "Все погибли"
-            };
+            List<string> allButtons = new List<string>(Constants.FightStatuses);
 
             allButtons.Remove(button);
 
