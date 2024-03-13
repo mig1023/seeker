@@ -112,14 +112,6 @@ namespace Seeker.Gamebook.Tank
                 {
                     return Character.Protagonist.VictoryPoints > 7;
                 }
-                else if (option.Contains("ОБЕЗДВИЖЕН"))
-                {
-                    return Character.Protagonist.Immobilized > 0;
-                }
-                else if (option.Contains("ПОДБИТ"))
-                {
-                    return Character.Protagonist.Dead == 2;
-                }
                 else
                 {
                     return AvailabilityTrigger(option);
@@ -208,11 +200,13 @@ namespace Seeker.Gamebook.Tank
 
                 case 4:
                     Character.Protagonist.Dead = 2;
+                    Game.Buttons.Disable("Танк обездвижен, Танк еще цел, Все погибли");
                     return hitLines;
 
                 case 5:
                 case 6:
                     Character.Protagonist.Immobilized = 1;
+                    Game.Buttons.Disable("Танк подбит и вы еще живы, Танк еще цел, Все погибли");
                     return hitLines;
 
                 case 8:
@@ -224,14 +218,24 @@ namespace Seeker.Gamebook.Tank
                 case 10:
                     Game.Option.Trigger("орудие");
                     Game.Option.Trigger("пулемет 2");
+                    Game.Buttons.Disable("Танк обездвижен, Танк еще цел, Все погибли");
                     return hitLines;
 
                 case 12:
                     LuckCheck(out bool goodLuck, ref hitLines);
-                    hitLines.Add(goodLuck ? "BAD|BOLD|Все сгорели..." : "GOOD|BOLD|Все спаслись!");
 
-                    Character.Protagonist.Dead = (goodLuck ? 2 : 1);
-
+                    if (goodLuck)
+                    {
+                        hitLines.Add("GOOD|BOLD|Все спаслись!");
+                        Character.Protagonist.Dead = 2;
+                        Game.Buttons.Disable("Танк обездвижен, Танк еще цел, Все погибли");
+                    }
+                    else
+                    {
+                        hitLines.Add("BAD|BOLD|Все сгорели...");
+                        Character.Protagonist.Dead = 1;
+                    }
+                    
                     return hitLines;
 
                 default:
