@@ -71,9 +71,9 @@
 				<HitTable/>
 			</Actions>
 			<Options>
-				<Option Goto="76" Text="Если танк обездвижен"/>
+				<Option Goto="76" Text="Если танк обездвижен" Singleton="ОБЕЗДВИЖЕН"/>
 				<Option Goto="3" Text="Если ваш танк еще цел"/>
-				<Option Goto="18" Text="Если танк подбит и вы еще живы"/>
+				<Option Goto="18" Text="Если танк подбит и вы еще живы" Singleton="ПОДБИТ"/>
 				<Option Goto="30" Text="Если все погибли"/>
 			</Options>
 		</Paragraph>
@@ -121,9 +121,9 @@
 				<HitTable/>
 			</Actions>
 			<Options>
-				<Option Goto="76" Text="Если танк обездвижен"/>
+				<Option Goto="76" Text="Если танк обездвижен" Singleton="ОБЕЗДВИЖЕН"/>
 				<Option Goto="24" Text="Если ваш танк еще цел"/>
-				<Option Goto="18" Text="Если танк подбит и вы еще живы"/>
+				<Option Goto="18" Text="Если танк подбит и вы еще живы" Singleton="ПОДБИТ"/>
 				<Option Goto="30" Text="Если все погибли"/>
 			</Options>
 		</Paragraph>
@@ -193,9 +193,9 @@
 				</HitTable>
 			</Actions>
 			<Options>
-				<Option Goto="76" Text="Если танк обездвижен"/>
+				<Option Goto="76" Text="Если танк обездвижен" Singleton="ОБЕЗДВИЖЕН"/>
 				<Option Goto="10" Text="Если ваш танк еще цел"/>
-				<Option Goto="18" Text="Если танк подбит и вы еще живы"/>
+				<Option Goto="18" Text="Если танк подбит и вы еще живы" Singleton="ПОДБИТ"/>
 				<Option Goto="30" Text="Если все погибли"/>
 			</Options>
 		</Paragraph>
@@ -255,9 +255,9 @@
 				<HitTable/>
 			</Actions>
 			<Options>
-				<Option Goto="76" Text="Если танк обездвижен"/>
+				<Option Goto="76" Text="Если танк обездвижен" Singleton="ОБЕЗДВИЖЕН"/>
 				<Option Goto="29" Text="Если ваш танк еще цел"/>
-				<Option Goto="18" Text="Если танк подбит и вы еще живы"/>
+				<Option Goto="18" Text="Если танк подбит и вы еще живы" Singleton="ПОДБИТ"/>
 				<Option Goto="30" Text="Если все погибли"/>
 			</Options>
 		</Paragraph>
@@ -427,9 +427,9 @@
 				</HitTable>
 			</Actions>
 			<Options>
-				<Option Goto="76" Text="Если танк обездвижен"/>
+				<Option Goto="76" Text="Если танк обездвижен" Singleton="ОБЕЗДВИЖЕН"/>
 				<Option Goto="46" Text="Если ваш танк еще цел"/>
-				<Option Goto="60" Text="Если танк подбит и вы еще живы"/>
+				<Option Goto="60" Text="Если танк подбит и вы еще живы" Singleton="ПОДБИТ"/>
 				<Option Goto="30" Text="Если все погибли"/>
 			</Options>
 		</Paragraph>
@@ -439,9 +439,9 @@
 				<HitTable/>
 			</Actions>
 			<Options>
-				<Option Goto="76" Text="Если танк обездвижен"/>
+				<Option Goto="76" Text="Если танк обездвижен" Singleton="ОБЕЗДВИЖЕН"/>
 				<Option Goto="33" Text="Если ваш танк еще цел"/>
-				<Option Goto="60" Text="Если танк подбит и вы еще живы"/>
+				<Option Goto="60" Text="Если танк подбит и вы еще живы" Singleton="ПОДБИТ"/>
 				<Option Goto="30" Text="Если все погибли"/>
 			</Options>
 		</Paragraph>
@@ -513,9 +513,9 @@
 				<HitTable/>
 			</Actions>
 			<Options>
-				<Option Goto="76" Text="Если танк обездвижен"/>
+				<Option Goto="76" Text="Если танк обездвижен" Singleton="ОБЕЗДВИЖЕН"/>
 				<Option Goto="42" Text="Если ваш танк еще цел"/>
-				<Option Goto="60" Text="Если танк подбит и вы еще живы"/>
+				<Option Goto="60" Text="Если танк подбит и вы еще живы" Singleton="ПОДБИТ"/>
 				<Option Goto="30" Text="Если все погибли"/>
 			</Options>
 		</Paragraph>
@@ -577,9 +577,9 @@
 				</HitTable>
 			</Actions>
 			<Options>
-				<Option Goto="76" Text="Если танк обездвижен"/>
+				<Option Goto="76" Text="Если танк обездвижен" Singleton="ОБЕЗДВИЖЕН"/>
 				<Option Goto="64" Text="Если ваш танк еще цел"/>
-				<Option Goto="60" Text="Если танк подбит и вы еще живы"/>
+				<Option Goto="60" Text="Если танк подбит и вы еще живы" Singleton="ПОДБИТ"/>
 				<Option Goto="30" Text="Если все погибли"/>
 			</Options>
 		</Paragraph>
@@ -714,9 +714,9 @@
 				</HitTable>
 			</Actions>
 			<Options>
-				<Option Goto="76" Text="Если танк обездвижен"/>
+				<Option Goto="76" Text="Если танк обездвижен" Singleton="ОБЕЗДВИЖЕН"/>
 				<Option Goto="60" Text="Если ваш танк еще цел"/>
-				<Option Goto="60" Text="Если танк подбит и вы еще живы"/>
+				<Option Goto="60" Text="Если танк подбит и вы еще живы" Singleton="ПОДБИТ"/>
 				<Option Goto="30" Text="Если все погибли"/>
 			</Options>
 		</Paragraph>
@@ -737,8 +737,9 @@
 				</HitTable>
 			</Actions>
 			<Options>
-				<Option Goto="76" Text="Если танк обездвижен"/>
-				<Option Goto="60" Text="Если ваш танк еще цел - если танк подбит и вы еще живы"/>
+				<Option Goto="76" Text="Если танк обездвижен" Singleton="ОБЕЗДВИЖЕН"/>
+				<Option Goto="60" Text="Если ваш танк еще цел"/>
+				<Option Goto="60" Text="Если танк подбит и вы еще живы" Singleton="ПОДБИТ"/>
 				<Option Goto="30" Text="Если все погибли"/>
 			</Options>
 		</Paragraph>
@@ -942,9 +943,9 @@
 				</HitTable>
 			</Actions>
 			<Options>
-				<Option Goto="76" Text="Если танк обездвижен"/>
+				<Option Goto="76" Text="Если танк обездвижен" Singleton="ОБЕЗДВИЖЕН"/>
 				<Option Goto="12" Text="Если ваш танк еще цел"/>
-				<Option Goto="60" Text="Если танк подбит и вы еще живы"/>
+				<Option Goto="60" Text="Если танк подбит и вы еще живы" Singleton="ПОДБИТ"/>
 				<Option Goto="30" Text="Если все погибли"/>
 			</Options>
 		</Paragraph>
@@ -956,9 +957,9 @@
 				</HitTable>
 			</Actions>
 			<Options>
-				<Option Goto="76" Text="Если танк обездвижен"/>
+				<Option Goto="76" Text="Если танк обездвижен" Singleton="ОБЕЗДВИЖЕН"/>
 				<Option Goto="12" Text="Если ваш танк еще цел"/>
-				<Option Goto="60" Text="Если танк подбит и вы еще живы"/>
+				<Option Goto="60" Text="Если танк подбит и вы еще живы" Singleton="ПОДБИТ"/>
 				<Option Goto="30" Text="Если все погибли"/>
 			</Options>
 		</Paragraph>
