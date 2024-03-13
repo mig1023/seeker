@@ -70,8 +70,12 @@ namespace Seeker.Gamebook.Tank
             return new List<string> { line };
         }
 
-        public override bool GameOver(out int toEndParagraph, out string toEndText) =>
-            GameOverBy(Character.Protagonist.Dead > 0, out toEndParagraph, out toEndText);
+        public override bool GameOver(out int toEndParagraph, out string toEndText)
+        {
+            toEndParagraph = 30;
+            return GameOverBy(Character.Protagonist.Dead > 0, out int _, out toEndText);
+        }
+            
 
         public override bool IsButtonEnabled(bool secondButton = false)
         {
