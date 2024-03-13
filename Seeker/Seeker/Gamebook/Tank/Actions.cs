@@ -70,13 +70,6 @@ namespace Seeker.Gamebook.Tank
             return new List<string> { line };
         }
 
-        public override bool GameOver(out int toEndParagraph, out string toEndText)
-        {
-            toEndParagraph = 30;
-            return GameOverBy(Character.Protagonist.Dead == 1, out int _, out toEndText);
-        }
-            
-
         public override bool IsButtonEnabled(bool secondButton = false)
         {
             if (String.IsNullOrEmpty(Crew) || (Type != "Get-Decrease"))
@@ -167,6 +160,21 @@ namespace Seeker.Gamebook.Tank
             return luckCheck;
         }
 
+        private void DisableButtonsExcept(string button)
+        {
+            List<string> allButtons = new List<string>
+            {
+                "Танк обездвижен",
+                "Танк еще цел",
+                "Танк подбит и вы еще живы",
+                "Все погибли"
+            };
+
+            allButtons.Remove(button);
+
+            Game.Buttons.Disable(String.Join(",", allButtons));
+        }
+
         public List<string> HitTable()
         {
             List<string> hitLines = new List<string>();
@@ -200,25 +208,30 @@ namespace Seeker.Gamebook.Tank
 
                 case 4:
                     Character.Protagonist.Dead = 2;
-                    Game.Buttons.Disable("Танк обездвижен, Танк еще цел, Все погибли");
+                    DisableButtonsExcept("Танк подбит и вы еще живы");
                     return hitLines;
 
                 case 5:
                 case 6:
                     Character.Protagonist.Immobilized = 1;
-                    Game.Buttons.Disable("Танк подбит и вы еще живы, Танк еще цел, Все погибли");
+                    DisableButtonsExcept("Танк обездвижен");
+                    return hitLines;
+
+                case 7:
+                    DisableButtonsExcept("Танк еще цел");
                     return hitLines;
 
                 case 8:
                 case 9:
                 case 11:
                     Character.Protagonist.Dead = 1;
+                    DisableButtonsExcept("Все погибли");
                     return hitLines;
 
                 case 10:
                     Game.Option.Trigger("орудие");
                     Game.Option.Trigger("пулемет 2");
-                    Game.Buttons.Disable("Танк обездвижен, Танк еще цел, Все погибли");
+                    DisableButtonsExcept("Танк еще цел");
                     return hitLines;
 
                 case 12:
@@ -228,12 +241,13 @@ namespace Seeker.Gamebook.Tank
                     {
                         hitLines.Add("GOOD|BOLD|Все спаслись!");
                         Character.Protagonist.Dead = 2;
-                        Game.Buttons.Disable("Танк обездвижен, Танк еще цел, Все погибли");
+                        DisableButtonsExcept("Танк подбит и вы еще живы");
                     }
                     else
                     {
                         hitLines.Add("BAD|BOLD|Все сгорели...");
                         Character.Protagonist.Dead = 1;
+                        DisableButtonsExcept("Все погибли");
                     }
                     
                     return hitLines;
