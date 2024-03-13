@@ -738,7 +738,8 @@
 			</Actions>
 			<Options>
 				<Option Goto="76" Text="Танк обездвижен"/>
-				<Option Goto="60" Text="Если ваш танк еще цел - если танк подбит и вы еще живы"/>
+				<Option Goto="60" Text="Танк еще цел"/>
+				<Option Goto="60" Text="Танк подбит и вы еще живы"/>
 				<Option Goto="30" Text="Все погибли"/>
 			</Options>
 		</Paragraph>
