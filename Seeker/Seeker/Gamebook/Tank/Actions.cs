@@ -73,7 +73,7 @@ namespace Seeker.Gamebook.Tank
         public override bool GameOver(out int toEndParagraph, out string toEndText)
         {
             toEndParagraph = 30;
-            return GameOverBy(Character.Protagonist.Dead > 0, out int _, out toEndText);
+            return GameOverBy(Character.Protagonist.Dead == 1, out int _, out toEndText);
         }
             
 
@@ -111,6 +111,14 @@ namespace Seeker.Gamebook.Tank
                 else if (option.Contains("ПОБЕДНЫХ ОЧКОВ МНОГО"))
                 {
                     return Character.Protagonist.VictoryPoints > 7;
+                }
+                else if (option.Contains("ОБЕЗДВИЖЕН"))
+                {
+                    return Character.Protagonist.Immobilized > 0;
+                }
+                else if (option.Contains("ПОДБИТ"))
+                {
+                    return Character.Protagonist.Dead == 2;
                 }
                 else
                 {
@@ -199,6 +207,9 @@ namespace Seeker.Gamebook.Tank
                     return hitLines;
 
                 case 4:
+                    Character.Protagonist.Dead = 2;
+                    return hitLines;
+
                 case 5:
                 case 6:
                     Character.Protagonist.Immobilized = 1;
@@ -219,8 +230,7 @@ namespace Seeker.Gamebook.Tank
                     LuckCheck(out bool goodLuck, ref hitLines);
                     hitLines.Add(goodLuck ? "BAD|BOLD|Все сгорели..." : "GOOD|BOLD|Все спаслись!");
 
-                    if (!goodLuck)
-                        Character.Protagonist.Dead = 1;
+                    Character.Protagonist.Dead = (goodLuck ? 2 : 1);
 
                     return hitLines;
 
