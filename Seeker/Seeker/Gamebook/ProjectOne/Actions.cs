@@ -256,6 +256,10 @@ namespace Seeker.Gamebook.ProjectOne
 
             luckCheck.Add(goodLuck ? "BIG|GOOD|ПОВЕЗЛО :)" : "BIG|BAD|НЕ ПОВЕЗЛО :(");
 
+            Game.Buttons.Disable(goodLuck,
+                "Фортуна на вашей стороне, Фортуна с Вами и вы благополучно достигаете суши",
+                "Удача отвернулась от Вас, Вы провалили проверку");
+
             if (Fall && !goodLuck)
             {
                 Character.Protagonist.Endurance -= 3;
