@@ -172,6 +172,8 @@ namespace Seeker.Gamebook.Cyberpunk
             test.Add($"BOLD|BIG|Бросок кубика: {dice} - {Game.Services.Сomparison(dice, paramsLevel)}!");
             test.Add(Result(success, "УСПЕХ", "НЕУДАЧА"));
 
+            Game.Buttons.Disable(success, "Успех", "Неудача");
+
             return test;
         }
 
