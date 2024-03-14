@@ -1879,7 +1879,7 @@
 			</Actions>
 			<Options>
 				<Option Goto="76" Text="Всё получилось"/>
-				<Option Goto="286" Text="Вы потерпели неудачу"/>
+				<Option Goto="286" Text="Проверка провалилась"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="246">
