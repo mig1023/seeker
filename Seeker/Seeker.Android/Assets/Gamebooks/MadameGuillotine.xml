@@ -1471,8 +1471,8 @@
 				</Test>
 			</Actions>
 			<Options>
-				<Option Goto="234" Text="Проверка не прошла"/>
-				<Option Goto="145" Text="Прошла успешно"/>
+				<Option Goto="234" Text="Проверка провалилась"/>
+				<Option Goto="145" Text="Проверка прошла успешно"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="190">
