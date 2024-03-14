@@ -1267,8 +1267,8 @@
 				<Goodluck/>
 			</Actions>
 			<Options>
-				<Option Goto="6" Text="Она с вами"/>
-				<Option Goto="340" Text="Она отвернулась от вас"/>
+				<Option Goto="6" Text="Вам повезло"/>
+				<Option Goto="340" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="169">
