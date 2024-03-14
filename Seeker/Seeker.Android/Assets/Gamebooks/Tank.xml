@@ -169,8 +169,8 @@
 		</Paragraph>
 		<Paragraph No="12">
 			<Options>
-				<Option Goto="16" Text="Если у вас записано слово «овраг»" Availability="овраг"/>
-				<Option Goto="5" Text="Если нет" Availability="!овраг"/>
+				<Option Goto="16" Text="У вас записано слово «овраг»" Availability="овраг"/>
+				<Option Goto="5" Text="Не записано" Availability="!овраг"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="13">
