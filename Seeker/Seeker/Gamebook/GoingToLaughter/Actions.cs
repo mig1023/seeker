@@ -180,16 +180,21 @@ namespace Seeker.Gamebook.GoingToLaughter
                 luckCheck.Add("В броске даже нет необходимости!");
                 luckCheck.Add("BIG|GOOD|УСПЕХ :)");
 
+                Game.Buttons.Disable("Бросок провален");
+
                 return luckCheck;
             }
             else
             {
                 int level = 6 - Character.Protagonist.Heroism;
                 int dice = Game.Dice.Roll();
+                bool okResult = dice >= level;
 
                 luckCheck.Add($"Для прохождения проверки нужно выбросить {level} или больше.");
                 luckCheck.Add($"Бросок: {Game.Dice.Symbol(dice)}");
-                luckCheck.Add(Result(dice >= level, "УСПЕХ", "НЕУДАЧА"));
+                luckCheck.Add(Result(okResult, "УСПЕХ", "НЕУДАЧА"));
+
+                Game.Buttons.Disable(okResult, "Бросок успешен", "Бросок провален");
 
                 return luckCheck;
             }
