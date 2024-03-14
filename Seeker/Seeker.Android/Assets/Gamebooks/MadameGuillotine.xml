@@ -2055,8 +2055,8 @@
 				</Test>
 			</Actions>
 			<Options>
-				<Option Goto="299" Text="Получилось"/>
-				<Option Goto="43" Text="Нет"/>
+				<Option Goto="299" Text="Всё получилось"/>
+				<Option Goto="43" Text="Проверка провалилась"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="271">
