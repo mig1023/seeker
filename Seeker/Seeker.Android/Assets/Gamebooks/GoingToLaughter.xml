@@ -1333,7 +1333,7 @@
 				</HeroismCheck>
 			</Actions>
 			<Options>
-				<Option Goto="106" Text="Вы выдержали проверку"/>
+				<Option Goto="106" Text="Бросок успешен"/>
 				<Option Goto="231" Text="Бросок провален"/>
 			</Options>
 		</Paragraph>
