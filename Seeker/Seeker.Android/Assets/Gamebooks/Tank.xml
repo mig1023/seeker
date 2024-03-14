@@ -284,9 +284,9 @@
 		<Paragraph No="24">
 			<Text>Тем временем ваша машина начала приближаться к вражеским траншеям.</Text>
 			<Options>
-				<Option Goto="31" Text="Если у вас НЕ записано слово «оптика» - можете оглядеть поле боя" Availability="!оптика"/>
-				<Option Goto="36" Text="Если оптика разбита, можете рискнуть и высунуться из люка" Availability="оптика"/>
-				<Option Goto="27" Text="Можете приказать двигаться дальше"/>
+				<Option Goto="31" Text="Оглядеть поле боя через оптику" Availability="!оптика"/>
+				<Option Goto="36" Text="Рискнуть и высунуться из люка" Availability="оптика"/>
+				<Option Goto="27" Text="Приказать двигаться дальше"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="25">
@@ -299,9 +299,9 @@
 				<VictoryPoints Value="2"/>
 			</Modifications>
 			<Options>
-				<Option Goto="31" Text="Если у вас НЕ записано слово «оптика» - можете оглядеть поле боя" Availability="!оптика"/>
-				<Option Goto="36" Text="Если оптика разбита, можете рискнуть и высунуться из люка" Availability="оптика"/>
-				<Option Goto="27" Text="Можете приказать двигаться дальше"/>
+				<Option Goto="31" Text="Оглядеть поле боя через оптику" Availability="!оптика"/>
+				<Option Goto="36" Text="Рискнуть и высунуться из люка" Availability="оптика"/>
+				<Option Goto="27" Text="Приказать двигаться дальше"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="26">
