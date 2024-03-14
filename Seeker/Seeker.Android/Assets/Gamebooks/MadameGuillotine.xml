@@ -640,7 +640,7 @@
 				</Test>
 			</Actions>
 			<Options>
-				<Option Goto="31" Text="Получилось"/>
+				<Option Goto="31" Text="Всё получилось"/>
 				<Option Goto="172" Text="Не получилось, или вы решили не утруждать себя уговорами"/>
 			</Options>
 		</Paragraph>
