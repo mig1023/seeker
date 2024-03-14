@@ -932,7 +932,7 @@
 				<VictoryPoints Value="1"/>
 			</Modifications>
 			<Options>
-				<Option Goto="12" Text="Прикажете вести огонь по орудию в кустах (если у вас исправное орудие)"/>
+				<Option Goto="12" Text="Прикажете вести огонь по орудию в кустах" Availability="!орудие"/>
 				<Option Goto="27" Text="Прикажете быстро двигаться вперед и прорываться на вершину холма"/>
 			</Options>
 		</Paragraph>
