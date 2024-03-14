@@ -1997,7 +1997,7 @@
 			</Actions>
 			<Options>
 				<Option Goto="34" Text="Проверка успешная"/>
-				<Option Goto="104" Text="Нет"/>
+				<Option Goto="104" Text="Вы дали слабину"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="257">
@@ -2043,7 +2043,7 @@
 			</Actions>
 			<Options>
 				<Option Goto="137" Text="Оказались достаточно ловки"/>
-				<Option Goto="190" Text="Нет"/>
+				<Option Goto="190" Text="Вы дали слабину"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="263">
