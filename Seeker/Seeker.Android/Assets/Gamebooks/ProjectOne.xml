@@ -1979,8 +1979,8 @@
 				<Luck/>
 			</Actions>
 			<Options>
-				<Option Goto="217" Text="Повезет"/>
-				<Option Goto="129" Text="Нет"/>
+				<Option Goto="217" Text="Фортуна на вашей стороне"/>
+				<Option Goto="129" Text="Удача отвернулась от Вас"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="255">
