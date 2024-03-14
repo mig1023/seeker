@@ -76,7 +76,7 @@
 			</Actions>
 			<Options>
 				<Option Goto="352" Text="Удача на его стороне"/>
-				<Option Goto="133" Text="Она его подвела"/>
+				<Option Goto="133" Text="Удача его подвела"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="4">
@@ -669,7 +669,7 @@
 			</Actions>
 			<Options>
 				<Option Goto="321" Text="Удача на его стороне"/>
-				<Option Goto="334" Text="Она его подвела"/>
+				<Option Goto="334" Text="Удача его подвела"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="85">
@@ -784,8 +784,8 @@
 				<Goodluck/>
 			</Actions>
 			<Options>
-				<Option Goto="7" Text="Сейчас повезет"/>
-				<Option Goto="38" Text="Нет"/>
+				<Option Goto="7" Text="Удача на его стороне"/>
+				<Option Goto="38" Text="Удача его подвела"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="102">
