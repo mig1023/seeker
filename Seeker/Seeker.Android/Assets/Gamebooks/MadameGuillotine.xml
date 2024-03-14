@@ -782,7 +782,7 @@
 				</Test>
 			</Actions>
 			<Options>
-				<Option Goto="157" Text="Попали в него"/>
+				<Option Goto="157" Text="Попали"/>
 				<Option Goto="90" Text="Промахнулись"/>
 			</Options>
 		</Paragraph>
