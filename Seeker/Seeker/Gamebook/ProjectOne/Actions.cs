@@ -292,6 +292,10 @@ namespace Seeker.Gamebook.ProjectOne
 
             skillCheck.Add(goodSkill ? "BIG|GOOD|ЛОВКОСТИ ХВАТИЛО :)" : "BIG|BAD|ЛОВКОСТИ НЕ ХВАТИЛО :(");
 
+            Game.Buttons.Disable(goodSkill,
+                "Мастерство Вас не подвело, Проверка успешная, Оказались достаточно ловки",
+                "Вы дали слабину");
+
             return skillCheck;
         }
 
