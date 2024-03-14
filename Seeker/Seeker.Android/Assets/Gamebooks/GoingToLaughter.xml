@@ -1883,8 +1883,8 @@
 				</HeroismCheck>
 			</Actions>
 			<Options>
-				<Option Goto="106" Text="Если вы выдержали проверку"/>
-				<Option Goto="237" Text="Если бросок провален"/>
+				<Option Goto="106" Text="Бросок успешен"/>
+				<Option Goto="237" Text="Бросок провален"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="182">
