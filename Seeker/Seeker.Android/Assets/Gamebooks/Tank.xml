@@ -792,9 +792,12 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="79">
-			<Text>Если вы подбили танк врага в ходе атаки.</Text>
+			<Text>Если вы подбили хоть один танк врага в ходе атаки:</Text>
 			<Options>
-				<Option Goto="91"/>
+				<Option Goto="91">
+					<Text>Если не подбивали:</Text>
+				</Option>
+				<Gameover/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="80">
