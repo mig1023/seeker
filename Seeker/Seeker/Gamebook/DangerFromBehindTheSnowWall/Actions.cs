@@ -138,15 +138,17 @@ namespace Seeker.Gamebook.DangerFromBehindTheSnowWall
         {
             Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
 
-            bool goodLuck = (firstDice + secondDice + Character.Protagonist.Observation) > 10;
-            string luckLine = goodLuck ? ">" : "<=";
+            bool notice = (firstDice + secondDice + Character.Protagonist.Observation) > 10;
+            string noticeLine = notice ? ">" : "<=";
 
             List<string> observationCheck = new List<string> {
                 $"Проверка наблюдательности: {Game.Dice.Symbol(firstDice)} + " +
                 $"{Game.Dice.Symbol(secondDice)} + {Character.Protagonist.Observation} " +
-                $"{luckLine} 10" };
+                $"{noticeLine} 10" };
 
-            observationCheck.Add(goodLuck ? "BIG|GOOD|УСПЕХ :)" : "BIG|BAD|НЕУДАЧА :(");
+            observationCheck.Add(notice ? "BIG|GOOD|УСПЕХ :)" : "BIG|BAD|НЕУДАЧА :(");
+
+            Game.Buttons.Disable(notice, "Заметили", "Нет");
 
             return observationCheck;
         }
