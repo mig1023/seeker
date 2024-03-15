@@ -173,11 +173,13 @@ namespace Seeker.Gamebook.DangerFromBehindTheSnowWall
             };
 
             int goodLuck = Game.Dice.Roll();
+            bool okResult = Character.Protagonist.Luck[goodLuck];
+            string luckLine = okResult ? "не " : String.Empty;
 
-            string luckLine = Character.Protagonist.Luck[goodLuck] ? "не " : String.Empty;
             luckCheck.Add($"Проверка удачи: {Game.Dice.Symbol(goodLuck)} - {luckLine}является Числом Удачи");
+            luckCheck.Add(Result(okResult, "УСПЕХ", "НЕУДАЧА"));
 
-            luckCheck.Add(Result(Character.Protagonist.Luck[goodLuck], "УСПЕХ", "НЕУДАЧА"));
+            Game.Buttons.Disable(okResult, "Удачливы, Вы удачливы все три попытки из трех", "Не повезло");
 
             return luckCheck;
         }
