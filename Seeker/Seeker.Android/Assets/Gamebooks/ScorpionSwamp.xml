@@ -833,10 +833,11 @@
 		<Paragraph No="86">
 			<Actions>
 				<Luck/>
+				<Text>Если не повезёт, то твои поиски не увенчиваются успехом.</Text>
 			</Actions>
 			<Options>
-				<Option Goto="189" Text="Тебе повезло"/>
-				<Option Goto="348" Text="Не повезло и твои поиски не увенчиваются успехом"/>
+				<Option Goto="189" Text="Повезло"/>
+				<Option Goto="348" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="87">
