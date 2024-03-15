@@ -1793,7 +1793,7 @@
 			</Actions>
 			<Options>
 				<Option Goto="203" Text="Удачливы"/>
-				<Option Goto="674" Text="Нет"/>
+				<Option Goto="674" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="235">
