@@ -4125,7 +4125,7 @@
 			</Actions>
 			<Options>
 				<Option Goto="366" Text="Удачливы"/>
-				<Option Goto="681" Text="Нет"/>
+				<Option Goto="681" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="545">
