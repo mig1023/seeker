@@ -35,6 +35,8 @@ namespace Seeker.Gamebook.ScorpionSwamp
 
             luckCheck.Add(goodLuck ? "BIG|GOOD|УСПЕХ :)" : "BIG|BAD|НЕУДАЧА :(");
 
+            Game.Buttons.Disable(goodLuck, "Повезло", "Не повезло");
+
             if ((UnluckDamage > 0) && !goodLuck)
             {
                 Character.Protagonist.Endurance -= UnluckDamage;
