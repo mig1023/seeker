@@ -36,11 +36,13 @@ namespace Seeker.Gamebook.TenementBuilding
                 luckCheck.Add("BIG|GOOD|УСПЕХ :)");
                 luckCheck.Add($"GRAY|Цифра {goodLuck} теперь зачёркнута");
 
+                Game.Buttons.Disable("Не повезло");
                 Character.Protagonist.Luck[goodLuck] = false;
             }
             else
             {
                 luckCheck.Add("BIG|BAD|НЕУДАЧА :(");
+                Game.Buttons.Disable("Повезло");
             }
 
             return luckCheck;
