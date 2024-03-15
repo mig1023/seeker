@@ -2629,10 +2629,10 @@
 				<Luck/>
 			</Actions>
 			<Options>
-				<Option Goto="150" Text="Если тебе повезёт">
+				<Option Goto="150" Text="Повезло">
 					<Text>Если не повезёт, собирай свои пожитки и, покинув постоялый двор, отправляйся на юг по направлению к Скорпионьей Топи...</Text>
 				</Option>
-				<Option Goto="343"/>
+				<Option Goto="343" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="290">
