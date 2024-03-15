@@ -415,7 +415,8 @@
 				<Luck/>
 			</Actions>
 			<Options>
-				<Option Goto="270" Text="Тебе повезло (всего лишь уменьши уровень своей ВЫНОСЛИВОСТИ на 2)" Availability="!Прогалина 30">
+				<Option Goto="270" Text="Повезло" Availability="!Прогалина 30">
+					<Text Style="Small">При везении всего лишь уменьши уровень своей ВЫНОСЛИВОСТИ на 2.</Text>
 					<Endurance Value="-2"/>
 				</Option>
 				<Option Goto="87" Text="Не повезло" Availability="!Прогалина 30"/>
