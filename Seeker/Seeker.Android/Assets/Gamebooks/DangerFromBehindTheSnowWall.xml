@@ -76,8 +76,8 @@
 				<Luck/>
 			</Actions>
 			<Options>
-				<Option Goto="190" Text="Если вы удачливы все три попытки из трех"/>
-				<Option Goto="502" Text="Если хоть раз неудачливы"/>
+				<Option Goto="190" Text="Вы удачливы все три попытки из трех"/>
+				<Option Goto="502" Text="Хоть раз неудачливы"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="5">
