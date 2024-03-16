@@ -15,6 +15,9 @@ namespace Seeker.Gamebook.Tank
             foreach (string param in GetProperties(action))
                 SetProperty(action, param, xmlAction);
 
+            if (action.Type == "Option")
+                action.Option = OptionParse(xmlAction);
+
             return action;
         }
 
