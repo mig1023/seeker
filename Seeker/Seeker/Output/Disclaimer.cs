@@ -18,7 +18,7 @@ namespace Seeker.Output
 
             if (List.Sort(Constants.SortBy.Author))
             {
-                text = gamebook.AuthorsIndex();
+                text = gamebook.AuthorsIndex(noUpper: true);
             }
 
             if (List.Sort(Constants.SortBy.Paragraphs))

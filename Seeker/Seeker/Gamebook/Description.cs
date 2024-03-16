@@ -46,13 +46,18 @@ namespace Seeker.Gamebook
 
         public string Setting;
 
-        public string AuthorsIndex()
+        public string AuthorsIndex(bool noUpper = false)
         {
-            string[] elements = Authors.First().Split(' ');
+            string author = Authors.First();
+
+            if (!noUpper)
+                author = author.ToUpper();
+
+            string[] elements = author.Split(' ');
 
             if (!ConfusionOfAuthors && !SinglePseudonym && !FullPseudonym && (elements.Length > 1))
             {
-                return String.Format("{0} {1}", elements[1], elements[0]);
+                return $"{elements[1]} {elements[0]}";
             }
             else if (ConfusionOfAuthors)
             {
@@ -64,7 +69,7 @@ namespace Seeker.Gamebook
             }
             else if (FullPseudonym)
             {
-                return Authors.First();
+                return author;
             }
             else
             {

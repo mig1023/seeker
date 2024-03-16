@@ -56,7 +56,8 @@ namespace Seeker.Gamebook
 
         public static List<Description> GetSortedBooks()
         {
-            List<Description> list = new List<Description>(List.GetBooks().Select(x => List.GetDescription(x)));
+            var descriptions = List.GetBooks().Select(x => List.GetDescription(x));
+            List<Description> list = new List<Description>(descriptions);
 
             switch (Sort())
             {
