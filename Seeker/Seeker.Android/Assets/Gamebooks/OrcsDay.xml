@@ -749,7 +749,7 @@
 				</Test>
 			</Actions>
 			<Options>
-				<Option Goto="4" Text="Тебе повезло"/>
+				<Option Goto="4" Text="Повезло"/>
 				<Option Goto="60" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
