@@ -926,8 +926,8 @@
 				</Test>
 			</Actions>
 			<Options>
-				<Option Goto="80" Text="Если тебе повезло"/>
-				<Option Goto="70" Text="В ином случае"/>
+				<Option Goto="80" Text="Повезло"/>
+				<Option Goto="70" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="60">
