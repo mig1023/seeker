@@ -135,6 +135,7 @@
 					<Stat>Courage</Stat>
 					<LevelNull/>
 					<OrcishnessTest/>
+					<Text>Если проверка успешна, ты возглавляешь Великую Оркскую Революцию!</Text>
 				</Test>
 			</Actions>
 			<Modifications>
@@ -142,8 +143,8 @@
 				<Orcishness Value="-1"/>
 			</Modifications>
 			<Options>
-				<Option Goto="26" Text="Если проверка успешна, ты возглавляешь Великую Оркскую Революцию"/>
-				<Option Goto="75" Text="В случае провала"/>
+				<Option Goto="26" Text="Успешно"/>
+				<Option Goto="75" Text="Провально"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="9">
