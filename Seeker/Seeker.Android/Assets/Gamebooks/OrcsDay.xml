@@ -675,7 +675,7 @@
 				<WayBack Value="42"/>
 			</Modifications>
 			<Options>
-				<Option Goto="62" Text="В случае неудачи">
+				<Option Goto="62" Text="Провально">
 					<Text>Если преуспеешь, значит, в тебе слишком много от орка — и ты...</Text>
 				</Option>
 				<Option Goto="53" Text="Атакуешь его"/>
