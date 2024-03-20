@@ -1256,7 +1256,7 @@
 				<Orcishness Value="-1"/>
 			</Modifications>
 			<Options>
-				<Option Goto="34" Text="Если проверка успешна"/>
+				<Option Goto="34" Text="Успешно"/>
 				<Option Goto="52" Text="Если ты провалился, в тебе ещё слишком много от орка, чтобы отказаться от его предложения"/>
 			</Options>
 		</Paragraph>
