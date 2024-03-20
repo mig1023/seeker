@@ -762,8 +762,8 @@
 				</Test>
 			</Actions>
 			<Options>
-				<Option Goto="80" Text="Тебе везёт"/>
-				<Option Goto="20" Text="Не везёт"/>
+				<Option Goto="80" Text="Повезло"/>
+				<Option Goto="20" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="48">
