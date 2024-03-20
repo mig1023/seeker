@@ -233,7 +233,7 @@
 				</Test>
 			</Actions>
 			<Options>
-				<Option Goto="38" Text="Повезло">
+				<Option Goto="38" Text="Успешно">
 					<Text>В обратном случае в тебе ещё слишком много от орка, чтобы восстать против закона...</Text>
 				</Option>
 				<Option Goto="56"/>
