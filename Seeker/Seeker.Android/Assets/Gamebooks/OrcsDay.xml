@@ -708,7 +708,7 @@
 				</Test>
 			</Actions>
 			<Options>
-				<Option Goto="51" Text="Если проверка провалена">
+				<Option Goto="51" Text="Провально">
 					<Text>Если успешна, тебе придётся выбрать один из предыдущих вариантов.</Text>
 				</Option>
 			</Options>
