@@ -404,8 +404,8 @@
 				<Orcishness Value="-1"/>
 			</Modifications>
 			<Options>
-				<Option Goto="94" Text="Если ты успешно прошёл проверку Мозгов"/>
-				<Option Goto="41" Text="Если ты провалился"/>
+				<Option Goto="94" Text="Успешно"/>
+				<Option Goto="41" Text="Провально"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="25">
