@@ -576,7 +576,7 @@
 				<WayBack Value="34"/>
 			</Modifications>
 			<Options>
-				<Option Goto="5" Text="Тебе повезло"/>
+				<Option Goto="5" Text="Повезло"/>
 				<Option Goto="99" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
