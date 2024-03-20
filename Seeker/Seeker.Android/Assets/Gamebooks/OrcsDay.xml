@@ -729,7 +729,7 @@
 				<Orcishness Value="1"/>
 			</Modifications>
 			<Options>
-				<Option Goto="14" Text="Тебе повезло"/>
+				<Option Goto="14" Text="Повезло"/>
 				<Option Goto="88" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
