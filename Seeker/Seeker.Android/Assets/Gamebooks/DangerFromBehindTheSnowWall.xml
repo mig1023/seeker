@@ -293,7 +293,13 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="31">
-			<Text>Магия: -33. Заметная убыль магических ресурсов, но зато можно спать спокойно.</Text>
+			<Texts>
+				<Text Style="Small">Магия: -33.</Text>
+				<Text>Заметная убыль магических ресурсов, но зато можно спать спокойно.</Text>
+			</Texts>
+			<Modifications>
+				<Magic Value="-33"/>
+			</Modifications>
 			<Options>
 				<Option Goto="274"/>
 			</Options>
