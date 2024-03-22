@@ -6227,7 +6227,13 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="747">
-			<Text>Магия: -15. Северная Ярость действует. В бою увеличьте ЛОВКОСТЬ и УДАР на 1.</Text>
+			<Texts>
+				<Text Style="Small">Магия: -15.</Text>
+				<Text>Северная Ярость действует. В бою увеличьте ЛОВКОСТЬ и УДАР на 1.</Text>
+			</Texts>
+			<Modifications>
+				<Magic Value="-15"/>
+			</Modifications>
 			<Options>
 				<Option Goto="55"/>
 			</Options>
