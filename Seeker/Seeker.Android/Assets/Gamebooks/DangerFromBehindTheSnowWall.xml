@@ -3791,6 +3791,7 @@
 			</Texts>
 			<Modifications>
 				<Strength Value="-4"/>
+				<Magic Value="-25"/>
 			</Modifications>
 			<Options>
 				<Option Goto="103"/>
