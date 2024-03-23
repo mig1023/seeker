@@ -8,6 +8,7 @@ namespace Seeker.Gamebook.DangerFromBehindTheSnowWall
     {
         public List<Character> Enemies { get; set; }
         public bool StrengthLossByDices { get; set; }
+        public bool Difference { get; set; }
 
         public override List<string> Status() => new List<string>
         {
@@ -201,7 +202,23 @@ namespace Seeker.Gamebook.DangerFromBehindTheSnowWall
                 Character.Protagonist.Strength -= result;
                 string strength = Game.Services.CoinsNoun(result, "СИЛУ", "СИЛЫ", "СИЛ");
 
-                line += $"BIG|BOLD|Вы потеряли {result} {strength}";
+                line += $"\nBIG|BAD|BOLD|Вы потеряли {result} {strength}";
+            }
+
+            if (Difference)
+            {
+                if (diceFirst == diceSecond)
+                {
+                    line += "\nBIG|BOLD|Выпали два одинаковых числа!";
+                }
+                else if (Math.Abs(diceFirst - diceSecond) == 1)
+                {
+                    line += "\nBIG|BOLD|Разница между выпавшими числами составляет единицу!";
+                }
+                else
+                {
+                    line += "\nBIG|BOLD|Разница между выпавшими числами больше единицы!";
+                }
             }
 
             return new List<string> { $"BIG|Кубики: {line}" };
