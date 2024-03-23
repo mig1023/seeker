@@ -185,5 +185,16 @@ namespace Seeker.Gamebook.DangerFromBehindTheSnowWall
 
             return luckCheck;
         }
+
+        public List<string> SimpleDoubleDice()
+        {
+            int diceFirst = Game.Dice.Roll();
+            int diceSecond = Game.Dice.Roll();
+
+            string line = $"{Game.Dice.Symbol(diceFirst)} + " +
+                $"{Game.Dice.Symbol(diceSecond)} = {diceFirst + diceSecond}";
+
+            return new List<string> { $"BIG|Кубики: {line}" };
+        }
     }
 }
