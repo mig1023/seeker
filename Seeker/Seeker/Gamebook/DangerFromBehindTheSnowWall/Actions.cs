@@ -9,7 +9,7 @@ namespace Seeker.Gamebook.DangerFromBehindTheSnowWall
         public List<Character> Enemies { get; set; }
         public bool StrengthLossByDices { get; set; }
         public bool Difference { get; set; }
-        public bool DiceUntil { get; set; }
+        public bool BarnDoor { get; set; }
 
         public override List<string> Status() => new List<string>
         {
@@ -42,6 +42,18 @@ namespace Seeker.Gamebook.DangerFromBehindTheSnowWall
                 enemies.Add($"{enemy.Name}\nловкость {enemy.Skill}  сила {enemy.Strength}  удар {enemy.Damage}");
 
             return enemies;
+        }
+
+        public override bool Availability(string option)
+        {
+            if (String.IsNullOrEmpty(option))
+            {
+                return true;
+            }
+            else
+            {
+                return AvailabilityTrigger(option);
+            }
         }
 
         public static bool NoMoreEnemies(List<Character> enemies) =>
@@ -227,7 +239,8 @@ namespace Seeker.Gamebook.DangerFromBehindTheSnowWall
 
         public List<string> Break()
         {
-            List<string> breakingLock = new List<string> { "Сбиваете замок:" };
+            List<string> breakingLock = new List<string>();
+            breakingLock.Add(BarnDoor ? "Ломаете дверь:" : "Сбиваете замок:");
 
             bool succesBreaked = false;
 
@@ -237,18 +250,24 @@ namespace Seeker.Gamebook.DangerFromBehindTheSnowWall
 
                 int dice = Game.Dice.Roll();
                 string result = "не получилось...";
+                bool lockSuccess = !BarnDoor && (dice < 3);
+                bool doorSuccess = BarnDoor && (dice == 3);
 
-                if (dice < 3)
+                if (lockSuccess || doorSuccess)
                 {
                     result = "удачно!";
                     succesBreaked = true;
+                    Game.Option.Trigger("ЗАМОК СБИТ");
                 }
 
                 breakingLock.Add($"Бьёте по замку: {Game.Dice.Symbol(dice)}  - {result}");
                 breakingLock.Add("BAD|За эту попытку вы теряете 1 СИЛУ...");
             }
 
-            breakingLock.Add(Result(succesBreaked, "ЗАМОК СБИТ", "ВЫ УБИЛИСЬ ОБ ЗАМОК"));
+            if (BarnDoor)
+                breakingLock.Add(Result(succesBreaked, "ДВЕРЬ СЛОМАНА", "ВЫ УБИЛИСЬ ОБ ДВЕРЬ"));
+            else
+                breakingLock.Add(Result(succesBreaked, "ЗАМОК СБИТ", "ВЫ УБИЛИСЬ ОБ ЗАМОК"));
 
             return breakingLock;
         }
