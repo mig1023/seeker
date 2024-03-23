@@ -9,6 +9,7 @@ namespace Seeker.Gamebook.DangerFromBehindTheSnowWall
         public List<Character> Enemies { get; set; }
         public bool StrengthLossByDices { get; set; }
         public bool Difference { get; set; }
+        public bool DiceUntil { get; set; }
 
         public override List<string> Status() => new List<string>
         {
@@ -222,6 +223,34 @@ namespace Seeker.Gamebook.DangerFromBehindTheSnowWall
             }
 
             return new List<string> { $"BIG|Кубики: {line}" };
+        }
+
+        public List<string> Break()
+        {
+            List<string> breakingLock = new List<string> { "Сбиваете замок:" };
+
+            bool succesBreaked = false;
+
+            while (!succesBreaked && (Character.Protagonist.Strength > 0))
+            {
+                Character.Protagonist.Strength -= 1;
+
+                int dice = Game.Dice.Roll();
+                string result = "не получилось...";
+
+                if (dice < 3)
+                {
+                    result = "удачно!";
+                    succesBreaked = true;
+                }
+
+                breakingLock.Add($"Бьёте по замку: {Game.Dice.Symbol(dice)}  - {result}");
+                breakingLock.Add("BAD|За эту попытку вы теряете 1 СИЛУ...");
+            }
+
+            breakingLock.Add(Result(succesBreaked, "ЗАМОК СБИТ", "ВЫ УБИЛИСЬ ОБ ЗАМОК"));
+
+            return breakingLock;
         }
     }
 }
