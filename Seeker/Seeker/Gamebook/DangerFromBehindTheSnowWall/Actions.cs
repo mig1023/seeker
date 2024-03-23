@@ -7,6 +7,7 @@ namespace Seeker.Gamebook.DangerFromBehindTheSnowWall
     class Actions : Prototypes.Actions, Abstract.IActions
     {
         public List<Character> Enemies { get; set; }
+        public bool StrengthLossByDices { get; set; }
 
         public override List<string> Status() => new List<string>
         {
@@ -190,9 +191,18 @@ namespace Seeker.Gamebook.DangerFromBehindTheSnowWall
         {
             int diceFirst = Game.Dice.Roll();
             int diceSecond = Game.Dice.Roll();
+            int result = diceFirst + diceSecond;
 
             string line = $"{Game.Dice.Symbol(diceFirst)} + " +
-                $"{Game.Dice.Symbol(diceSecond)} = {diceFirst + diceSecond}";
+                $"{Game.Dice.Symbol(diceSecond)} = {result}";
+
+            if (StrengthLossByDices)
+            {
+                Character.Protagonist.Strength -= result;
+                string strength = Game.Services.CoinsNoun(result, "СИЛУ", "СИЛЫ", "СИЛ");
+
+                line += $"BIG|BOLD|Вы потеряли {result} {strength}";
+            }
 
             return new List<string> { $"BIG|Кубики: {line}" };
         }
