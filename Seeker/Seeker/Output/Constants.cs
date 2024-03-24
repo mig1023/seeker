@@ -48,6 +48,7 @@ namespace Seeker.Output
             Year,
             Setting,
             Time,
+            Random,
         };
 
         public static Dictionary<TextFontSize, double> FontSize = new Dictionary<TextFontSize, double>

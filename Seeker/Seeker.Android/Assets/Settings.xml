@@ -60,6 +60,7 @@
 			<Option>По году издания</Option>
 			<Option>По тематике</Option>
 			<Option>По времени прохождения</Option>
+			<Option>По рандому</Option>
 		</Options>
 		<Description>Выбор порядка отображения книг-игр на начальном экране.</Description>
 	</Setting>

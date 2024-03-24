@@ -11,7 +11,7 @@ namespace Seeker.Gamebook
         public static List<string> GetBooks() =>
             Game.Xml.GetGamebooksList();
 
-        public static SortBy Sort()
+        private static SortBy Sort()
         {
             string value = Game.Settings.GetValue("Sort").ToString();
             return (SortBy)Enum.Parse(typeof(SortBy), value);
@@ -100,6 +100,12 @@ namespace Seeker.Gamebook
                     return list
                         .OrderBy(x => PLAYTHROUGH_ORDER[x.PlaythroughTime])
                         .ThenBy(x => x.ParagraphSize())
+                        .ToList();
+
+                case SortBy.Random:
+
+                    return list
+                        .OrderBy(x => Guid.NewGuid())
                         .ToList();
 
                 default:
