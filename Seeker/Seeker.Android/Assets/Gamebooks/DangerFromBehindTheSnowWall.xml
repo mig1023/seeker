@@ -24,6 +24,7 @@
 		<Default>
 			<HideDisabledOption/>
 			<FontSize Value="Little"/>
+			<EqualPartsInStatuses/>
 		</Default>
 		<Buttons>
 			<Fight>Сражаться</Fight>
