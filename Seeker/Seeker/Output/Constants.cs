@@ -90,8 +90,11 @@ namespace Seeker.Output
         public static Dictionary<string, int> PLAYTHROUGH_ORDER = new Dictionary<string, int>
         {
             ["На пять минут"] = 0,
-            ["На часок-другой"] = 1,
-            ["На весь вечер"] = 2,
+            ["На полчаса"] = 1,
+            ["На часок-полтора"] = 2,
+            ["На пару часов"] = 3,
+            ["На весь вечер"] = 4,
+            ["На пару дней"] = 5,
         };
 
         public static Dictionary<ButtonTypes, string> DEFAULT_BUTTONS = new Dictionary<ButtonTypes, string>
