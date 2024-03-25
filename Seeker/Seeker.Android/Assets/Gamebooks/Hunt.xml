@@ -5,10 +5,10 @@
 			<Author>Mak_Sim, 2019</Author>
 		</Copyright>
 		<Styles>
-			<Color Name="Main, Option" Value="54c571"/>
-			<Continue Value="4bb165"/>
-			<System Value="a9e2b8"/>
-			<StatusBar Value="4bb165"/>
+			<Color Name="Main, Option" Value="41742c"/>
+			<Continue Value="668f56"/>
+			<System Value="b3c7aa"/>
+			<StatusBar Value="548141"/>
 		</Styles>
 		<Default>
 			<HideDisabledOption/>
