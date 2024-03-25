@@ -303,8 +303,8 @@
 		</Paragraph>
 		<Paragraph No="40">
 			<Options>
-				<Option Goto="29" Text="Если вы здесь в первый раз"/>
-				<Option Goto="95" Text="Если уже были"/>
+				<Option Goto="29" Text="Вы здесь в первый раз"/>
+				<Option Goto="95" Text="Уже были здесь"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="41">
