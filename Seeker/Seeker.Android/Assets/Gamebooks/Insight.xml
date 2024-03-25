@@ -1314,9 +1314,9 @@
 		<Paragraph No="187">
 			<Text>Понимая, что договориться всё равно врятли получится игнорируете слова маньяка. Вскинув оружие нажимаете на спуск.</Text>
 			<Options>
-				<Option Goto="198" Text="Если ваша Меткость равна или больше 8"/>
-				<Option Goto="265" Text="Если равна 7"/>
-				<Option Goto="217" Text="Если 6 и меньше"/>
+				<Option Goto="198" Text="Ваша Меткость равна или больше 8"/>
+				<Option Goto="265" Text="Меткость равна 7"/>
+				<Option Goto="217" Text="Меткость 6 и меньше"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="188">
@@ -1359,14 +1359,14 @@
 		</Paragraph>
 		<Paragraph No="194">
 			<Options>
-				<Option Goto="263" Text="Если ваша Меткость больше или равна 3"/>
-				<Option Goto="129" Text="Если меньше"/>
+				<Option Goto="263" Text="Ваша Меткость больше или равна 3"/>
+				<Option Goto="129" Text="Меткость меньше"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="195">
 			<Options>
-				<Option Goto="259" Text="Если ваша Меткость равна 6"/>
-				<Option Goto="208" Text="Если меньше"/>
+				<Option Goto="259" Text="Ваша Меткость равна 6"/>
+				<Option Goto="208" Text="Меткость меньше"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="196">
