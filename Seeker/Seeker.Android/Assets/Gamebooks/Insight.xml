@@ -10,6 +10,9 @@
 			<ActionBox Value="efefef"/>
 			<System Value="f4f4f4"/>
 		</Styles>
+		<Lists>
+			<WithoutStatuses Items="0, 334, 335"/>
+		</Lists>
 		<Dictionaries>
 			<GetStartValues>
 				<Item Name="Skill" Value="10"/>
@@ -18,7 +21,6 @@
 		</Dictionaries>
 		<Default>
 			<HideDisabledOption/>
-			<EqualPartsInStatuses/>
 		</Default>
 	</Introduction>
 	<Paragraphs>
