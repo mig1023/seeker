@@ -1916,8 +1916,8 @@
 		</Paragraph>
 		<Paragraph No="275">
 			<Options>
-				<Option Goto="107" Text="Если есть ключевое слово «зерк»"/>
-				<Option Goto="203" Text="Если нет"/>
+				<Option Goto="107" Text="Есть ключевое слово «зерк»"/>
+				<Option Goto="203" Text="Нет"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="276">
