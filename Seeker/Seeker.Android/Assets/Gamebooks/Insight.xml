@@ -79,7 +79,13 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="6">
-			<Text>Зачеркните одну клетку времени.\n\nОблетев опасное место, приближаетесь к огромному камню.</Text>
+			<Texts>
+				<Text Style="Small">Зачеркните одну клетку времени.</Text>
+				<Text>Облетев опасное место, приближаетесь к огромному камню.</Text>
+			</Texts>
+			<Modifications>
+				<Time Value="1"/>
+			</Modifications>
 			<Options>
 				<Option Goto="53"/>
 			</Options>
