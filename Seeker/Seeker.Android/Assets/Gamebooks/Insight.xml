@@ -419,7 +419,12 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="42">
-			<Text>Зачеркните одну клетку времени.</Text>
+			<Texts>
+				<Text>Зачеркните одну клетку времени.</Text>
+			</Texts>
+			<Modifications>
+				<Time Value="1"/>
+			</Modifications>
 			<Options>
 				<Option Goto="89" Text="Вы здесь в первый раз"/>
 				<Option Goto="68" Text="Уже были здесь"/>
