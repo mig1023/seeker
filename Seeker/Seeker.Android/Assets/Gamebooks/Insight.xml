@@ -413,6 +413,7 @@
 			</Texts>
 			<Modifications>
 				<Life Value="-2"/>
+				<Memory Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Goto="65" Text="Отправитесь в свою каюту"/>
