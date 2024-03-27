@@ -420,7 +420,7 @@
 		</Paragraph>
 		<Paragraph No="42">
 			<Texts>
-				<Text>Зачеркните одну клетку времени.</Text>
+				<Text Style="Small">Зачеркните одну клетку времени.</Text>
 			</Texts>
 			<Modifications>
 				<Time Value="1"/>
