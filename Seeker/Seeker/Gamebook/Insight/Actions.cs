@@ -49,6 +49,56 @@ namespace Seeker.Gamebook.Insight
             return !(disabledByBonusesRemove || disabledByBonusesAdd);
         }
 
+        public override bool Availability(string option)
+        {
+            if (String.IsNullOrEmpty(option))
+            {
+                return true;
+            }
+            else
+            {
+                foreach (string oneOption in option.Split(','))
+                {
+                    if (oneOption.Contains(">") || oneOption.Contains("<") || oneOption.Contains("="))
+                    {
+                        int level = Game.Services.LevelParse(option);
+
+                        if (oneOption.Contains("АУРА >") && (level >= Character.Protagonist.Aura))
+                            return false;
+
+                        if (oneOption.Contains("АУРА <") && (level <= Character.Protagonist.Aura))
+                            return false;
+
+                        if (oneOption.Contains("ЛОВКОСТЬ >") && (level >= Character.Protagonist.Skill))
+                            return false;
+
+                        if (oneOption.Contains("ЛОВКОСТЬ <") && (level <= Character.Protagonist.Skill))
+                            return false;
+
+                        if (oneOption.Contains("МЕТКОСТЬ >") && (level >= Character.Protagonist.Weapon))
+                            return false;
+
+                        if (oneOption.Contains("МЕТКОСТЬ =") && (level != Character.Protagonist.Weapon))
+                            return false;
+
+                        if (oneOption.Contains("МЕТКОСТЬ <") && (level >= Character.Protagonist.Weapon))
+                            return false;
+                    }
+                    else if (oneOption.Contains("!"))
+                    {
+                        if (Game.Option.IsTriggered(oneOption.Replace("!", String.Empty).Trim()))
+                            return false;
+                    }
+                    else if (!Game.Option.IsTriggered(oneOption.Trim()))
+                    {
+                        return false;
+                    }
+                }
+
+                return true;
+            }
+        }
+
         public List<string> Get()
         {
             if (!String.IsNullOrEmpty(Bonus) && (Character.Protagonist.Bonuses >= 0))
