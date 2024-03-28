@@ -1,4 +1,5 @@
-﻿using System.Xml;
+﻿using System.Collections.Generic;
+using System.Xml;
 using Seeker.Game;
 
 namespace Seeker.Gamebook.Insight
@@ -16,7 +17,7 @@ namespace Seeker.Gamebook.Insight
                 if (ThisIsBack(xmlOption))
                 {
                     option.Goto = GetGoto(xmlOption, wayBack: Character.Protagonist.WayBack);
-                }
+                 }
                 else
                 {
                     option.Goto = Xml.IntParse(xmlOption.Attributes["Goto"]);
@@ -33,6 +34,8 @@ namespace Seeker.Gamebook.Insight
 
             foreach (XmlNode xmlModification in xmlParagraph.SelectNodes("Modifications/*"))
                 paragraph.Modification.Add(Xml.ModificationParse(xmlModification, new Modification()));
+
+            Character.Protagonist.WithoutEvidence = 0;
 
             return  paragraph;
         }
@@ -57,7 +60,7 @@ namespace Seeker.Gamebook.Insight
             int link = evidence ? id + 10 : 336;
             Character.Protagonist.WayBack = id;
 
-            return GetOption(link, text: "Искать улики");
+            return GetOption(link, text: "Искать улики тут");
         }
 
         private bool WhithoutEvidenceSearch(int id)
@@ -66,7 +69,7 @@ namespace Seeker.Gamebook.Insight
             {
                 return true;
             }
-            else if (id == 336)
+            else if ((id == 336) || (Character.Protagonist.WithoutEvidence > 0))
             {
                 return true;
             }
@@ -76,10 +79,26 @@ namespace Seeker.Gamebook.Insight
             }
         }
 
-        private static Option GetOption(int link, string text) => new Option
+        private static Option GetOption(int link, string text)
         {
-            Goto = link,
-            Text = text,
-        };
+            Modification withoutEvidence = new Modification
+            {
+                Name = "WithoutEvidence",
+                Value = 1,
+            };
+
+            Option option = new Option
+            {
+                Goto = link,
+                Text = text,
+            };
+
+            if (option.Do == null)
+                option.Do = new List<Abstract.IModification>();
+
+            option.Do.Add(withoutEvidence);
+
+            return option;
+        }
     }
 }

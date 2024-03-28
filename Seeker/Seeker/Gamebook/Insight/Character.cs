@@ -46,8 +46,8 @@ namespace Seeker.Gamebook.Insight
         }
 
         public int Bonuses { get; set; }
-
         public int TimeStop { get; set; }
+        public int WithoutEvidence { get; set; }
 
         public override void Init()
         {
@@ -61,6 +61,7 @@ namespace Seeker.Gamebook.Insight
             Time = 0;
             Bonuses = 4;
             TimeStop = 0;
+            WithoutEvidence = 0;
         }
 
         public Character Clone() => new Character()
@@ -75,10 +76,12 @@ namespace Seeker.Gamebook.Insight
             Time = this.Time,
             Bonuses = this.Bonuses,
             TimeStop = this.TimeStop,
+            WithoutEvidence = this.WithoutEvidence,
         };
 
         public override string Save() => String.Join("|",
-            Life, Aura, Skill, Weapon, Memory, Time, Bonuses, TimeStop);
+            Life, Aura, Skill, Weapon, Memory, Time,
+            Bonuses, TimeStop, WithoutEvidence);
 
         public override void Load(string saveLine)
         {
@@ -91,7 +94,8 @@ namespace Seeker.Gamebook.Insight
             Memory = int.Parse(save[4]);
             Time = int.Parse(save[5]);
             Bonuses = int.Parse(save[6]);
-            TimeStop = int.Parse(save[6]);
+            TimeStop = int.Parse(save[7]);
+            WithoutEvidence = int.Parse(save[8]);
 
             IsProtagonist = true;
         }
