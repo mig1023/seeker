@@ -3009,8 +3009,8 @@
 		<Paragraph No="333">
 			<Text>Приходится приложить все силы и изворотливость, чтобы избежать столкновений.</Text>
 			<Options>
-				<Option Goto="106" Text="Ваша Ловкость меньше 8"/>
-				<Option Goto="16" Text="Ловкость 8 и больше"/>
+				<Option Goto="106" Text="Ваша Ловкость меньше 8" Availability = "ЛОВКОСТЬ &lt; 8"/>
+				<Option Goto="16" Text="Ловкость 8 и больше" Availability = "ЛОВКОСТЬ > 7"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="334">
