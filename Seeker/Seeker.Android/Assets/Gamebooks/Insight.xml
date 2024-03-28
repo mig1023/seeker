@@ -2580,8 +2580,8 @@
 		<Paragraph No="283">
 			<Text>Осторожно подходите и сразу же отскакиваете назад, увидев вспышку.</Text>
 			<Options>
-				<Option Goto="143" Text="Ваша Ловкость больше или равна 6"/>
-				<Option Goto="300" Text="Ловкость меньше"/>
+				<Option Goto="143" Text="Ваша Ловкость больше или равна 6" Availability = "ЛОВКОСТЬ > 5"/>
+				<Option Goto="300" Text="Ловкость меньше" Availability = "ЛОВКОСТЬ &lt; 6"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="284">
