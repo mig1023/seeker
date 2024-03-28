@@ -2626,8 +2626,8 @@
 				<Aura Value="-1"/>
 			</Modifications>
 			<Options>
-				<Option Goto="331" Text="Ваша Ловкость меньше 9"/>
-				<Option Goto="262" Text="Ловкость 9 и больше"/>
+				<Option Goto="331" Text="Ваша Ловкость меньше 9" Availability = "ЛОВКОСТЬ &lt; 9"/>
+				<Option Goto="262" Text="Ловкость 9 и больше" Availability = "ЛОВКОСТЬ > 8"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="289">
