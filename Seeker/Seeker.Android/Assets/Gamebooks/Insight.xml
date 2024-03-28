@@ -2423,8 +2423,8 @@
 			</Texts>
 			<Triggers>ранение</Triggers>
 			<Options>
-				<Option Goto="162" Text="Ваша Ловкость равна или больше 8"/>
-				<Option Goto="123" Text="Ловкость меньше"/>
+				<Option Goto="162" Text="Ваша Ловкость равна или больше 8" Availability = "ЛОВКОСТЬ > 7"/>
+				<Option Goto="123" Text="Ловкость меньше" Availability = "ЛОВКОСТЬ &lt; 8"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="265">
