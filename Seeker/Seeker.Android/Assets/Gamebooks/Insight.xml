@@ -1756,9 +1756,9 @@
 		<Paragraph No="187">
 			<Text>Понимая, что договориться всё равно врятли получится игнорируете слова маньяка. Вскинув оружие нажимаете на спуск.</Text>
 			<Options>
-				<Option Goto="198" Text="Ваша Меткость равна или больше 8"/>
-				<Option Goto="265" Text="Меткость равна 7"/>
-				<Option Goto="217" Text="Меткость 6 и меньше"/>
+				<Option Goto="198" Text="Ваша Меткость равна или больше 8" Availability = "МЕТКОСТЬ > 7"/>
+				<Option Goto="265" Text="Меткость равна 7" Availability = "МЕТКОСТЬ = 7"/>
+				<Option Goto="217" Text="Меткость 6 и меньше" Availability = "МЕТКОСТЬ &lt; 7"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="188">
