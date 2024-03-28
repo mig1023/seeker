@@ -2746,8 +2746,8 @@
 		</Paragraph>
 		<Paragraph No="303">
 			<Options>
-				<Option Goto="248" Text="Ваша Меткость (без целеуказателя) равна или больше 6"/>
-				<Option Goto="242" Text="Меткость меньше"/>
+				<Option Goto="248" Text="Ваша Меткость (без целеуказателя) равна или больше 6" Availability = "МЕТКОСТЬ > 5"/>
+				<Option Goto="242" Text="Меткость меньше" Availability = "МЕТКОСТЬ &lt; 6"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="304">
