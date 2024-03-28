@@ -592,8 +592,8 @@
 				<Life Value="-10"/>
 			</Modifications>
 			<Options>
-				<Option Goto="37" Text="Ваша Ловкость меньше 7"/>
-				<Option Goto="49" Text="Ловкость 7 и больше"/>
+				<Option Goto="37" Text="Ваша Ловкость меньше 7" Availability = "ЛОВКОСТЬ &lt; 7"/>
+				<Option Goto="49" Text="Ловкость 7 и больше" Availability = "ЛОВКОСТЬ > 6"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="60">
