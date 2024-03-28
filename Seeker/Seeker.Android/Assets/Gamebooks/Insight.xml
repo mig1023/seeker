@@ -384,8 +384,8 @@
 		<Paragraph No="36">
 			<Text>Осматриваетесь, пытаясь представить картину произошедшего.\n\n— Хорошее место для засады, — одобрительно заключает Грэм.</Text>
 			<Options>
-				<Option Goto="61" Text="Ваша Ловкость равна или больше 7"/>
-				<Option Goto="3" Text="Ловкость меньше"/>
+				<Option Goto="61" Text="Ваша Ловкость равна или больше 7" Availability = "ЛОВКОСТЬ > 6"/>
+				<Option Goto="3" Text="Ловкость меньше" Availability = "ЛОВКОСТЬ &lt; 7"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="37">
