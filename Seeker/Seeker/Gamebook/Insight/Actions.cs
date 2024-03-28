@@ -20,11 +20,18 @@ namespace Seeker.Gamebook.Insight
             return new List<string>();
         }
 
-        public override List<string> Status() => new List<string>
+        public override List<string> Status()
         {
-            $"Время: {Character.Protagonist.Time} / 30",
-            $"Ячейки памяти: {Character.Protagonist.Memory} / 8",
-        };
+            List<string> statuses = new List<string>
+            {
+                $"Ячейки памяти: {Character.Protagonist.Memory} / 8",
+            };
+
+            if (Character.Protagonist.TimeStop <= 0)
+                statuses.Add($"Время: {Character.Protagonist.Time} / 30");
+
+            return statuses;
+        }
 
         public override List<string> AdditionalStatus() => new List<string>
         {
@@ -34,8 +41,21 @@ namespace Seeker.Gamebook.Insight
             $"Меткость: {Character.Protagonist.Weapon}",
         };
 
-        public override bool GameOver(out int toEndParagraph, out string toEndText) =>
-            GameOverBy(Character.Protagonist.Life, out toEndParagraph, out toEndText);
+        public override bool GameOver(out int toEndParagraph, out string toEndText)
+        {
+            if ((Character.Protagonist.Time >= 30) && (Character.Protagonist.TimeStop <= 0))
+            {
+                toEndParagraph = 112;
+                toEndText = "Время вышло";
+                Character.Protagonist.TimeStop = 1;
+
+                return true;
+            }
+            else
+            {
+                return GameOverBy(Character.Protagonist.Life, out toEndParagraph, out toEndText);
+            }
+        }
 
         public override bool IsButtonEnabled(bool secondButton = false)
         {
