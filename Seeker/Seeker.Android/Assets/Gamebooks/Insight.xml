@@ -1813,8 +1813,8 @@
 		</Paragraph>
 		<Paragraph No="195">
 			<Options>
-				<Option Goto="259" Text="Ваша Меткость равна 6"/>
-				<Option Goto="208" Text="Меткость меньше"/>
+				<Option Goto="259" Text="Ваша Меткость равна 6" Availability = "МЕТКОСТЬ > 5"/>
+				<Option Goto="208" Text="Меткость меньше" Availability = "МЕТКОСТЬ &lt; 6"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="196">
