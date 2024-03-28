@@ -2600,8 +2600,8 @@
 				<Time Value="1"/>
 			</Modifications>
 			<Options>
-				<Option Goto="317" Text="Ваша Меткость (без целеуказателя) равна 5 и больше"/>
-				<Option Goto="270" Text="Меткость меньше"/>
+				<Option Goto="317" Text="Ваша Меткость (без целеуказателя) равна 5 и больше" Availability = "МЕТКОСТЬ > 4"/>
+				<Option Goto="270" Text="Меткость меньше" Availability = "МЕТКОСТЬ &lt; 5"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="286">
