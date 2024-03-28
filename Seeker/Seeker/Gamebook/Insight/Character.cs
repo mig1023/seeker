@@ -15,12 +15,7 @@ namespace Seeker.Gamebook.Insight
             set => _life = Game.Param.Setter(value, max: 22, _life, this);
         }
 
-        private int _aura;
-        public int Aura
-        {
-            get => _aura;
-            set => _aura = Game.Param.Setter(value, _aura, this);
-        }
+        public int Aura { get; set; }
 
         private int _skill;
         public int Skill
