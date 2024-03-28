@@ -290,8 +290,8 @@
 		</Paragraph>
 		<Paragraph No="26">
 			<Options>
-				<Option Goto="5" Text="Ваша Меткость равна 7 или выше"/>
-				<Option Goto="59" Text="Меткость ниже"/>
+				<Option Goto="5" Text="Ваша Меткость равна 7 или выше" Availability = "МЕТКОСТЬ > 6"/>
+				<Option Goto="59" Text="Меткость ниже" Availability = "МЕТКОСТЬ &lt; 7"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="27">
