@@ -476,5 +476,15 @@
 				<Option Goto="362"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="67">
+			<Text>Прикидываю, кто бы мог что-то знать о тех, кто напал на нас и похитил Бренду.\n\nВыполни Проверку: Сложность -2. Бетонные джунгли. Культурный+1. Логичный+1.</Text>
+			<Options>
+				<Option Goto="123" Text="Если Успех">
+					<Text>Если Провал, выбери что-то другое:</Text>
+				</Option>
+				<Option Goto="159" Text="Поискать в Чайнатауне"/>
+				<Option Goto="282" Text="Поискать в центре"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
