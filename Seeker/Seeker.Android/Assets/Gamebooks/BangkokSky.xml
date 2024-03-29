@@ -344,5 +344,12 @@
 				<Option Goto="144"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="48">
+			<Text>Прыгаю вперёд, проскальзывая между убийцами. Те продолжают в меня целиться и открывают огонь.\n\nВыполни Проверку: Сложность -3. Физподготовка. Отчаянный+2. Проворный+1.</Text>
+			<Options>
+				<Option Goto="26" Text="Если Провал"/>
+				<Option Goto="205" Text="Если Успех"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
