@@ -276,5 +276,11 @@
 				<Option Goto="60" Text="Убежать"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="37">
+			<Text>- Вижу высокое здание, высящееся над городом, всё - стекло и металл, - произносит старуха будто в трансе. - Отыщи высокое здание. Твоя судьба ждёт тебя там.</Text>
+			<Options>
+				<Option Goto="65"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
