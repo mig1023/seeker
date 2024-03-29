@@ -1,0 +1,30 @@
+<Gamebook>
+	<Introduction>
+		<Copyright>
+			<Title>Небо над Бангкоком</Title>
+			<Author>Хосе Луис Лопес Моралес, 2015</Author>
+		</Copyright>
+		<Styles>
+			<Color Name="Main, Action" Value="cbb58c"/>
+			<Background Value="eedfbe"/>
+			<Color Name="ButtonFont, StatusFont" Value="78491e"/>
+			<Continue Value="d5c3a3"/>
+			<ActionBox Value="b4a482"/>
+			<StatusBar Value="ae9879"/>
+		</Styles>
+	</Introduction>
+	<Paragraphs>
+		<Paragraph No="0">
+			<Text>START</Text>
+			<Options>
+				<Start Goto="1"/>
+			</Options>
+		</Paragraph>
+		<Paragraph No="1">
+			<Text>END</Text>
+			<Options>
+				<Option Goto="0"/>
+			</Options>
+		</Paragraph>
+	</Paragraphs>
+</Gamebook>
