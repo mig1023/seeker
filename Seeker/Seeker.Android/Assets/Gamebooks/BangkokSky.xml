@@ -441,5 +441,11 @@
 				<Option Goto="335" Text="Если Успех"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="62">
+			<Text>Проверив у всех документы, полицейские загружают нас в несколько фургонов и отвозят в полицейский участок.</Text>
+			<Options>
+				<Option Goto="198"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
