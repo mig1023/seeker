@@ -365,5 +365,12 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="51">
+			<Text>Сотри слово ХАЛТУРКА.\n\nГоворю полицейским, что я всего лишь обычный турист.\n\nВыполни Проверку: Сложность -3. Дипломатия. Красивый+1.\n\nКультурный+1.</Text>
+			<Options>
+				<Option Goto="198" Text="Если Провал, тебе не верят"/>
+				<Option Goto="289" Text="Если Успех, тебе поверили"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
