@@ -248,5 +248,12 @@
 				<Option Goto="387" Text="Бежать дальше и прыгнуть на следующую крышу"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="33">
+			<Text>Вынимаю пистолет и, держа его двумя руками, прицеливаюсь в спину бегущему.\n\nВыполни Проверку: Сложность -2. Огнестрел. Холодный+2, Умелый+1.</Text>
+			<Options>
+				<Option Goto="283" Text="Если Провал"/>
+				<Option Goto="362" Text="Если Успех"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
