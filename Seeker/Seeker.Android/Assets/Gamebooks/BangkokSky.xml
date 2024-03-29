@@ -687,5 +687,14 @@
 				<Option Goto="328" Text="Если Успех"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="97">
+			<Text>Отправляюсь по лавкам и ларькам, любуясь животными, поддельной бижутерией и всевозможными журналами.\n\nБрось 1D6 и иди на соответствующий параграф:</Text>
+			<Options>
+				<Option Goto="22" Text="Если выпало 1"/>
+				<Option Goto="169" Text="Если выпало 2"/>
+				<Option Goto="211" Text="Если выпало 3"/>
+				<Option Goto="255" Text="Если выпало от 4 до 6"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
