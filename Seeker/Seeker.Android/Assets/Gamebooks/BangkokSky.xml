@@ -153,5 +153,13 @@
 				<Option Goto="72"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="20">
+			<Text>Провожу пару часов, кружа Чайнатауном. Под конец, утомившись, решаю отправиться куда-то ещё.</Text>
+			<Options>
+				<Option Goto="27" Text="Сесть на паром до делового центра"/>
+				<Option Goto="185" Text="Прошвырнуться по Силом-роуд"/>
+				<Option Goto="388" Text="Вернуться отдыхать в мотель"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
