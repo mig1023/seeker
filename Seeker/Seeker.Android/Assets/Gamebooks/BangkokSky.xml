@@ -716,5 +716,12 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="101">
+			<Text>Наконец я вешаю трубку и ложусь на кровать.</Text>
+			<Options>
+				<Option Goto="151" Text="Посмотреть телек"/>
+				<Option Goto="284" Text="Попробовать поспать"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
