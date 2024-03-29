@@ -211,5 +211,13 @@
 				<Option Goto="391" Text="Если выпало 6"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="28">
+			<Text>Просыпаюсь глубоко за полдень и далеко не сразу выползаю на улицу. Перекусив у ближайшего лотка, решаю, куда пойти дальше.</Text>
+			<Options>
+				<Option Goto="159" Text="Пойти в Чайнатаун"/>
+				<Option Goto="282" Text="Пойти в деловой центр"/>
+				<Option Goto="354" Text="Подыскать работу, а то денег совсем не осталось"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
