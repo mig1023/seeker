@@ -781,5 +781,12 @@
 				<Option Goto="77" Text="Нанести ему низкий удар ногой"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="111">
+			<Text>- Звони, если нужна будет ещё капуста, - говорит он на прощание.\n\nВыхожу со склада, и вижу, что снаружи уже темнеет.</Text>
+			<Options>
+				<Option Goto="388" Text="Пойти в мотель отдыхать"/>
+				<Option Goto="185" Text="Прошвырнуться по Силом-роуд"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
