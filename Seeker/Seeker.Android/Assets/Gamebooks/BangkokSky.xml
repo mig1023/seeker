@@ -1023,5 +1023,11 @@
 				<Option Goto="206" Text="Если нет, ты выходишь, несолоно хлебавши, и снова топаешь в центр"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="146">
+			<Text>Посмотрев пару передач, выключаю телек и пытаюсь немного поспать.</Text>
+			<Options>
+				<Option Goto="284"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
