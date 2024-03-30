@@ -1029,5 +1029,11 @@
 				<Option Goto="284"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="147">
+			<Text>- Ого, целая история, - говорит девушка, получив от меня три короба вранья.\n\nУдовлетворившись, она улыбается и как будто слегка расслабилась.\n\nПолучаешь 1 очко Уважения, затем.</Text>
+			<Options>
+				<Option Goto="298"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
