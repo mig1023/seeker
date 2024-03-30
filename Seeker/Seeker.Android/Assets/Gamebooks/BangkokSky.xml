@@ -1395,5 +1395,12 @@
 				<Option Goto="150" Text="Оставить всё как есть и ждать, когда тебя выпустят"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="199">
+			<Text>Парень делает круговой взмах своей монтировкой.\n\nВыполни Проверку: Сложность -2. Боевые искусства.\n\nПроворный+1. Жестокий+1.</Text>
+			<Options>
+				<Option Goto="83" Text="Если Провал"/>
+				<Option Goto="336" Text="Если Успех"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
