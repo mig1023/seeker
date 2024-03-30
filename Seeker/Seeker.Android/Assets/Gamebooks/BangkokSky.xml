@@ -1223,5 +1223,12 @@
 				<Option Goto="193" Text="Если такого слова нет"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="175">
+			<Text>Делаю вид, что тянусь за кошельком, а сам бью с разворота стилем кулаций-у-мордаций.\n\nВыполни Проверку: Сложность -2. Боевые искусства. Жестокий+2. Сильный+1.</Text>
+			<Options>
+				<Option Goto="119" Text="Если Провал"/>
+				<Option Goto="295" Text="Если Успех"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
