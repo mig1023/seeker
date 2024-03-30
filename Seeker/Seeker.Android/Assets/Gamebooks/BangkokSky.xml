@@ -1230,5 +1230,12 @@
 				<Option Goto="295" Text="Если Успех"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="176">
+			<Text>Пробираюсь сквозь толпу, а убийцы стреляют мне вслед.\n\nВыполни Проверку: Сложность -3. Бетонные джунгли. Холодный+2. Жестокий+1.</Text>
+			<Options>
+				<Option Goto="26" Text="Если Провал"/>
+				<Option Goto="34" Text="Если Успех"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
