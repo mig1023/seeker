@@ -1054,5 +1054,13 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="151">
+			<Text>Маясь от усталости и скуки, устраиваюсь на кровати и щёлкаю пультом, включая телек.</Text>
+			<Options>
+				<Option Goto="12" Text="Посмотреть новости"/>
+				<Option Goto="355" Text="Ткнуть в случайный канал"/>
+				<Option Goto="146" Text="Выключить телек и поспать"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
