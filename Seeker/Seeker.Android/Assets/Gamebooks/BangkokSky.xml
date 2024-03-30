@@ -815,5 +815,11 @@
 				<Option Goto="274" Text="Если Успех"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="116">
+			<Text>Мзда делает свое дело (теряешь 1000 бат), и привратники снимают шнур, пропуская меня.</Text>
+			<Options>
+				<Option Goto="143"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
