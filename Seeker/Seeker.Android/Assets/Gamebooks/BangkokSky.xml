@@ -1153,5 +1153,12 @@
 				<Option Goto="351" Text="Гнаться за ним дальше"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="165">
+			<Text>Выскакиваю из укрытия и выбрасываю вперёд левый кулак.\n\nВыполни Проверку: Сложность -2. Боевые искусства.\n\nПроворный+1. Жестокий+1.</Text>
+			<Options>
+				<Option Goto="254" Text="Если Провал"/>
+				<Option Goto="333" Text="Если Успех"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
