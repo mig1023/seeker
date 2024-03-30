@@ -876,5 +876,12 @@
 				<Option Goto="285" Text="Если Успех"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="125">
+			<Text>В кабинете грохочут выстрелы, и одна из пуль находит меня (получаешь 2 Ранения).</Text>
+			<Options>
+				<Option Goto="250" Text="Если у тебя 6 Ранений"/>
+				<Option Goto="386" Text="Не обращая внимания на боль, меняю позицию и продолжаю стрелять"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
