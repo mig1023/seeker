@@ -989,5 +989,12 @@
 				<Option Goto="262" Text="Наврать ему, чтобы тебя пропустил"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="141">
+			<Text>Прикрываясь пленником как щитом, поднимаю руку и стреляю в ответ.\n\nВыполни Проверку: Сложность -3. Огнестрел. Сильный+1.\n\nУпрямый+1.</Text>
+			<Options>
+				<Option Goto="10" Text="Если Провал"/>
+				<Option Goto="294" Text="Если Успех"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
