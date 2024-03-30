@@ -1493,5 +1493,12 @@
 				<Option Goto="293"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="213">
+			<Text>Я тянусь рукой к ночному столику, но несколько дробинок попадают мне в спину (получаешь 2 Ранения).</Text>
+			<Options>
+				<Option Goto="250" Text="Если у тебя 6 Ранений"/>
+				<Option Goto="130" Text="Чувствуя, что ещё немного и мне конец, из последних сил хватаю пистолет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
