@@ -1372,5 +1372,12 @@
 				<Option Goto="146"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="196">
+			<Text>Но мне не хватает расторопности - я только начинаю движение, как пуля клюнула меня в плечо (получаешь 2 Ранения).</Text>
+			<Options>
+				<Option Goto="250" Text="Если у тебя 6 Ранений"/>
+				<Option Goto="75" Text="Едва успеваю шагнуть в сторону и укрыться за лимузином"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
