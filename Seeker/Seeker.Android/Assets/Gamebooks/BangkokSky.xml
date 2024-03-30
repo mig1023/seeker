@@ -968,5 +968,12 @@
 				<Option Goto="388" Text="Плюнуть и вернуться в свой мотель"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="138">
+			<Text>Один выстрел в висок, и мистер Уэствуд умирает на коленях под своим столом. Не теряя времени, выхожу из офиса (теряешь 2 очка УВАЖЕНИЯ).</Text>
+			<Options>
+				<Option Goto="29" Text="Если есть слово ПОМОЩЬ"/>
+				<Option Goto="261" Text="Если такого слова нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
