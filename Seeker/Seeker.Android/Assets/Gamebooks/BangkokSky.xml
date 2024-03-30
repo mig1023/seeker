@@ -1506,5 +1506,11 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="215">
+			<Text>Контакт всё не замыкается. И как раз в этот момент охранник обнаруживает меня в машине в странной позе и криком поднимает тревогу. Остаётся только спасаться бегством.</Text>
+			<Options>
+				<Option Goto="233"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
