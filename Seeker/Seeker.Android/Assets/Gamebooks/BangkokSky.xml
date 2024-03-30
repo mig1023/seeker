@@ -869,5 +869,12 @@
 				<Option Goto="282" Text="Поискать следы в центре"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="124">
+			<Text>Поднимаюсь и стреляю в капот автомобиля.\n\nВыполни Проверку: Сложность -3. Огнестрел. Умелый+1. Холодный+1.</Text>
+			<Options>
+				<Option Goto="357" Text="Если Провал"/>
+				<Option Goto="285" Text="Если Успех"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
