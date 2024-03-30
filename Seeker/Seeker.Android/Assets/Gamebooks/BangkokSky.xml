@@ -1524,5 +1524,12 @@
 				<Option Goto="379"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="218">
+			<Text>- Звиняй, мужик, но ничего нет, - отвечает Ён. - Перезвони завтра, может что-то наклюнется.\n\nБлагодарю и вешаю трубку. Делать больше нечего, надо топать.</Text>
+			<Options>
+				<Option Goto="159" Text="Пойти в Чайнатаун"/>
+				<Option Goto="282" Text="Пойти в центр"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
