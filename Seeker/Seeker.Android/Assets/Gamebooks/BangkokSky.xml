@@ -1252,5 +1252,12 @@
 				<Option Goto="308"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="179">
+			<Text>Присев, открываю огонь по полицейским. Винтовка грохочет в моих руках, выбрасывая лязгающие по асфальту гильзы.\n\nВыполни Проверку: Сложность -3. Огнестрел. Умелый+2.\n\nПроворный+1.</Text>
+			<Options>
+				<Option Goto="54" Text="Если Провал"/>
+				<Option Goto="280" Text="Если Успех"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
