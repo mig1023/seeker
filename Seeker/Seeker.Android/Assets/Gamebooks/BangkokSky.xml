@@ -2235,5 +2235,12 @@
 				<Option Goto="238" Text="Если Успех"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="319">
+			<Text>Негр с рёвом атакует. Ухожу в сторону, чтобы из меня не сделали отбивную.\n\nВыполни Проверку: Сложность -2. Физподготовка. Проворный+2. Логичный+1.</Text>
+			<Options>
+				<Option Goto="77" Text="Если Провал"/>
+				<Option Goto="174" Text="Если Успех"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
