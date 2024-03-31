@@ -1788,5 +1788,12 @@
 				<Option Goto="333" Text="Не обращая внимания на боль, продолжаю бой, засветив киллеру кулаком"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="255">
+			<Text>Погуляв пару часов вокруг спортзала, решаю вернуться, пока не слишком стемнело.</Text>
+			<Options>
+				<Option Goto="185" Text="Пойти прошвырнуться по Силом-роуд"/>
+				<Option Goto="388" Text="Пойти в мотель отдыхать"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
