@@ -1946,5 +1946,11 @@
 				<Option Goto="337" Text="Вытащить ствол и побазарить"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="278">
+			<Text>Сую деньги полицейскому (вычти 1000 бат из своих «Вещей»). Деньги-то он берёт, но тут же обо мне забывает и приказывает вести нас в полицейский участок.</Text>
+			<Options>
+				<Option Goto="198"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
