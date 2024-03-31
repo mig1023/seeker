@@ -1860,5 +1860,11 @@
 				<Option Goto="146"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="266">
+			<Text>Немного поколебавшись, привратники снимают шнур, пропуская меня.</Text>
+			<Options>
+				<Option Goto="143"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
