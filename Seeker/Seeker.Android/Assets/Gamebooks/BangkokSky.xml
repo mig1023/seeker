@@ -2112,5 +2112,11 @@
 				<Option Goto="236" Text="Если Успех"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="302">
+			<Text>Доперев, что не на того батон крошат, сявки поджимают хвосты и канают отсюда. Выдохнув, продолжаю свой путь к центру.</Text>
+			<Options>
+				<Option Goto="206"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
