@@ -1834,5 +1834,12 @@
 				<Option Goto="312" Text="Стрелять в них"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="262">
+			<Text>Вешаю ему лапшу на уши, чтобы он меня впустил.\n\nВыполни Проверку: Сложность -3. Дипломатия. Красивый+2.\n\nКультурный+2.</Text>
+			<Options>
+				<Option Goto="58" Text="Если Провал"/>
+				<Option Goto="398" Text="Если Успех"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
