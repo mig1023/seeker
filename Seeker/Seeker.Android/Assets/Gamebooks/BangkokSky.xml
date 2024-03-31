@@ -2218,5 +2218,12 @@
 				<Option Goto="219"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="317">
+			<Text>Пробираюсь по переполненным улочкам к центру города.\n\nВыполни Проверку: Сложность -2. Бетонные джунгли. Холодный+1. Логичный+1.</Text>
+			<Options>
+				<Option Goto="76" Text="Если Провал"/>
+				<Option Goto="206" Text="Если Успех"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
