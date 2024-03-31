@@ -1551,5 +1551,12 @@
 				<Option Goto="298" Text="Больше ничего не говорить"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="222">
+			<Text>Надуваю щёки и смотрю на них, как дон Корлеоне на, э... уличную шпану.\n\nВыполни Проверку: Сложность -2. Дипломатия. Сильный+2. Упрямый+1.</Text>
+			<Options>
+				<Option Goto="119" Text="Если Провал"/>
+				<Option Goto="302" Text="Если Успех"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
