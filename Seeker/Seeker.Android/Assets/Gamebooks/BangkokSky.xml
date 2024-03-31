@@ -1916,5 +1916,12 @@
 				<Option Goto="28"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="274">
+			<Text>Приземляюсь на соседней крыше, погасив кувырком инерцию, поднимаюсь и продолжаю удирать.\n\nБрось 1D6 и иди на соответствующий параграф:</Text>
+			<Options>
+				<Option Goto="32" Text="Если выпало от 1 до 3"/>
+				<Option Goto="325" Text="Если выпало от 4 до 6"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
