@@ -1989,5 +1989,20 @@
 				<Option Goto="388" Text="Вернуться в свой номер в мотеле"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="284">
+			<Text>Внешний мир для меня исчезает, пока я сплю пару часов (восстанавливаешь 1 Ранение).</Text>
+			<Options>
+				<Option Goto="339" Text="Если есть слово ЛОВУШКА"/>
+				<Option Goto="14" Text="Если есть слово НОЧЬ"/>
+				<Option Goto="180" Text="Если есть слово ТЮРЬМА"/>
+				<Option Goto="344" Text="Если есть слово ТЕЛЕФОН"/>
+				<Option Goto="73" Text="Если есть слово ПРОШЛОЕ"/>
+				<Option Goto="273" Text="Если есть слово СКЛАД"/>
+				<Option Goto="59" Text="Если есть слово ОТЕЦ"/>
+				<Option Goto="395" Text="Если есть слово НЕБО"/>
+				<Option Goto="109" Text="Если есть слово ОТРИЦАНИЕ или ЛОДКА"/>
+				<Option Goto="43" Text="Если ни одного из этих слов нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
