@@ -1608,5 +1608,12 @@
 				<Option Goto="356" Text="Пойти в Чайнатаун"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="230">
+			<Text>Сотри слово ПУШЕР.\n\nНа меня бросается второй великан. Закручиваю вертушку, метя ногой ему в лицо.\n\nВыполни Проверку: Сложность +0. Боевые искусства. Проворный+2. Логичный+1.</Text>
+			<Options>
+				<Option Goto="133" Text="Если Провал"/>
+				<Option Goto="377" Text="Если Успех"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
