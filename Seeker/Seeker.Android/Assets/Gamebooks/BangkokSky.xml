@@ -2295,5 +2295,11 @@
 				<Option Goto="287" Text="Если Успех"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="328">
+			<Text>Грохочет выстрел. Пуля пролетает всего в волоске от меня, угодив в мужчину за мной. Резво разворачиваюсь и припускаю бежать среди вопящих от ужаса людей.</Text>
+			<Options>
+				<Option Goto="225"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
