@@ -1686,5 +1686,11 @@
 				<Option Goto="23"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="241">
+			<Text>Жду, пока полицейские подойдут ко мне. Пытаюсь всё им объяснить, но меня даже не слушают и заковывают вместе с остальными туристами.</Text>
+			<Options>
+				<Option Goto="252"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
