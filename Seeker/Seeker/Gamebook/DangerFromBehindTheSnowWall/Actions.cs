@@ -9,6 +9,7 @@ namespace Seeker.Gamebook.DangerFromBehindTheSnowWall
         public List<Character> Enemies { get; set; }
         public bool StrengthLossByDices { get; set; }
         public bool Difference { get; set; }
+        public bool Divided { get; set; }
         public int DoorBreakNumber { get; set; }
 
         public override List<string> Status() => new List<string>
@@ -239,6 +240,18 @@ namespace Seeker.Gamebook.DangerFromBehindTheSnowWall
                 else
                 {
                     line += "\nBIG|BOLD|Разница между выпавшими числами больше единицы!";
+                }
+            }
+
+            if (Divided)
+            {
+                if ((result % 4) == 0)
+                {
+                    line += "\nBIG|BOLD|GOOD|Делится на 4 без остатка!";
+                }
+                else
+                {
+                    line += "\nBIG|BOLD|BAD|Не делится на 4 без остатка!";
                 }
             }
 
