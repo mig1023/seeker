@@ -2368,5 +2368,11 @@
 				<Option Goto="313" Text="Если Успех"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="338">
+			<Text>Стою на проспекте один, чувствуя себя полным кретином. Вдоволь нажалев себя, топаю обратно в мотель.</Text>
+			<Options>
+				<Option Goto="388"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
