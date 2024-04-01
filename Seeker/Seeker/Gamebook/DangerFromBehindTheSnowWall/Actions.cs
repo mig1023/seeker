@@ -245,6 +245,19 @@ namespace Seeker.Gamebook.DangerFromBehindTheSnowWall
             return new List<string> { $"BIG|Кубики: {line}" };
         }
 
+        public List<string> DiceWound()
+        {
+            int dice = Game.Dice.Roll();
+            Character.Protagonist.Strength -= dice;
+            string strength = Game.Services.CoinsNoun(dice, "СИЛУ", "СИЛЫ", "СИЛ");
+
+            return new List<string>
+            {
+                $"BIG|На кубике выпало: {Game.Dice.Symbol(dice)}",
+                $"BIG|BAD|BOLD|Вы потеряли {dice} {strength}"
+            };
+        }
+
         public List<string> Break()
         {
             bool doorBreak = DoorBreakNumber > 0;
@@ -362,7 +375,8 @@ namespace Seeker.Gamebook.DangerFromBehindTheSnowWall
             int athleticShape = Character.Protagonist.AthleticShape ?? 0;
             Character.Protagonist.AthleticShape += dice;
 
-           return new List<string> {
+           return new List<string>
+           {
                 $"BIG|На кубике выпало: {Game.Dice.Symbol(dice)}",
                 $"BIG|BOLD|Форма увеличилась на {athleticShape} и теперь равна {athleticShape + dice}"
             };
