@@ -2632,5 +2632,12 @@
 				<Option Goto="204"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="375">
+			<Text>Бросаюсь на последнего из убийц, а тот наводит на меня пистолет.\n\nВыполни Проверку: Сложность -2. Боевые искусства. Сильный+1.\n\nПроворный+1.</Text>
+			<Options>
+				<Option Goto="114" Text="Если Провал"/>
+				<Option Goto="40" Text="Если Успех"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
