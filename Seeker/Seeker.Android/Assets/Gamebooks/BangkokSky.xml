@@ -2395,5 +2395,11 @@
 				<Option Goto="276" Text="Если Успех"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="342">
+			<Text>Бросаюсь в сторону и под огнём слетаю по ступеням на улицу. Но там уже ждут полицейские в патрульных машинах, и я отчаянно бегу, даже не слушая, что они кричат мне вслед.</Text>
+			<Options>
+				<Option Goto="220"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
