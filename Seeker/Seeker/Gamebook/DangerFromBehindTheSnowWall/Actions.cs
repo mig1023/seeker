@@ -9,7 +9,7 @@ namespace Seeker.Gamebook.DangerFromBehindTheSnowWall
         public List<Character> Enemies { get; set; }
         public bool StrengthLossByDices { get; set; }
         public bool Difference { get; set; }
-        public bool BarnDoor { get; set; }
+        public int DoorBreakNumber { get; set; }
 
         public override List<string> Status() => new List<string>
         {
@@ -239,8 +239,9 @@ namespace Seeker.Gamebook.DangerFromBehindTheSnowWall
 
         public List<string> Break()
         {
+            bool doorBreak = DoorBreakNumber > 0;
             List<string> breakingLock = new List<string>();
-            breakingLock.Add(BarnDoor ? "Ломаете дверь:" : "Сбиваете замок:");
+            breakingLock.Add(doorBreak ? "Ломаете дверь:" : "Сбиваете замок:");
 
             bool succesBreaked = false;
 
@@ -250,8 +251,8 @@ namespace Seeker.Gamebook.DangerFromBehindTheSnowWall
 
                 int dice = Game.Dice.Roll();
                 string result = "не получилось...";
-                bool lockSuccess = !BarnDoor && (dice < 3);
-                bool doorSuccess = BarnDoor && (dice == 3);
+                bool lockSuccess = !doorBreak && (dice < 3);
+                bool doorSuccess = doorBreak && (dice == DoorBreakNumber);
 
                 if (lockSuccess || doorSuccess)
                 {
@@ -264,12 +265,30 @@ namespace Seeker.Gamebook.DangerFromBehindTheSnowWall
                 breakingLock.Add("BAD|За эту попытку вы теряете 1 СИЛУ...");
             }
 
-            if (BarnDoor)
+            if (doorBreak)
                 breakingLock.Add(Result(succesBreaked, "ДВЕРЬ СЛОМАНА", "ВЫ УБИЛИСЬ ОБ ДВЕРЬ"));
             else
                 breakingLock.Add(Result(succesBreaked, "ЗАМОК СБИТ", "ВЫ УБИЛИСЬ ОБ ЗАМОК"));
 
             return breakingLock;
+        }
+
+        public List<string> Skill()
+        {
+            int dice = Game.Dice.Roll();
+            bool goodSkill = (dice * 3) <= Character.Protagonist.Skill;
+            string skillLine = goodSkill ? "<=" : ">";
+
+            List<string> skillCheck = new List<string> {
+                $"Проверка ловкости: {Game.Dice.Symbol(dice)} х 3 = " +
+                $"{dice * 3} {skillLine} {Character.Protagonist.Skill} ловкость" };
+
+            skillCheck.Add(Result(goodSkill, "ЛОВКОСТИ ХВАТИЛО", "ЛОВКОСТИ НЕ ХВАТИЛО"));
+
+            Game.Buttons.Disable(goodSkill,
+                "Сумма оказалась меньше или равна вашей ЛОВКОСТИ", "Оказалась больше");
+
+            return skillCheck;
         }
     }
 }
