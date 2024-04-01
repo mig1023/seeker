@@ -2487,5 +2487,15 @@
 				<Option Goto="218" Text="Если выпало от 4 до 6"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="355">
+			<Text>Щёлкаю по каналам, переключаясь между местными и международными со спутника.\n\nБрось 1D6 и перейди на соответствующий параграф:</Text>
+			<Options>
+				<Option Goto="44" Text="Если выпало 1"/>
+				<Option Goto="113" Text="Если выпало 2"/>
+				<Option Goto="265" Text="Если выпало 3"/>
+				<Option Goto="242" Text="Если выпало 4"/>
+				<Option Goto="146" Text="Если выпало 5 или 6"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
