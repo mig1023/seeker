@@ -2557,5 +2557,11 @@
 				<Option Goto="111"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="365">
+			<Text>Первому киллеру попадаю точно в голову. Поворачиваюсь к его товарищу и стреляю, пока тот наводит свою пушку.</Text>
+			<Options>
+				<Option Goto="287"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
