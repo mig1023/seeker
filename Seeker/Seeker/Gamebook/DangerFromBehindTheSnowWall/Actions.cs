@@ -355,5 +355,17 @@ namespace Seeker.Gamebook.DangerFromBehindTheSnowWall
 
             return lines;
         }
+
+        public List<string> AthleticBonus()
+        {
+            int dice = Game.Dice.Roll();
+            int athleticShape = Character.Protagonist.AthleticShape ?? 0;
+            Character.Protagonist.AthleticShape += dice;
+
+           return new List<string> {
+                $"BIG|На кубике выпало: {Game.Dice.Symbol(dice)}",
+                $"BIG|BOLD|Форма увеличилась на {athleticShape} и теперь равна {athleticShape + dice}"
+            };
+        }
     }
 }
