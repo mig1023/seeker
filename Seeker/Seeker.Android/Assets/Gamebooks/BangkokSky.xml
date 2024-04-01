@@ -2754,5 +2754,12 @@
 				<Option Goto="363"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="393">
+			<Text>Я отворачиваюсь к двери, оставив мистера Уэствуда стоять на коленях и скулить под столом в огромном офисе на вершине мира.\n\nЗапиши слово МЕСТЬ.</Text>
+			<Options>
+				<Option Goto="29" Text="Если есть слово ПОМОЩЬ"/>
+				<Option Goto="261" Text="Если такого слова нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
