@@ -2337,5 +2337,12 @@
 				<Option Goto="176" Text="Убежать по улице"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="334">
+			<Text>Мы продолжаем какое-то время, пока я жалуюсь ей на свою несчастную жизнь.\n\nВыполни Проверку: Сложность -2. Дипломатия. Культурный+2.\n\nУпрямый+2.</Text>
+			<Options>
+				<Option Goto="286" Text="Если Провал"/>
+				<Option Goto="85" Text="Если Успех"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
