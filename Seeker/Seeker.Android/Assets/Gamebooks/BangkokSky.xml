@@ -2741,5 +2741,12 @@
 				<Option Goto="245"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="391">
+			<Text>Всю дорогу я безмятежно смотрю на проплывающие мимо дома и улицы.\n\nВыполни Проверку: Сложность -2. Бетонные джунгли. Холодный+2. Логичный+1.</Text>
+			<Options>
+				<Option Goto="64" Text="Если Провал"/>
+				<Option Goto="219" Text="Если Успех"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
