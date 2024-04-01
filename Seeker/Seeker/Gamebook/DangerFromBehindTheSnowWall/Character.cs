@@ -49,6 +49,8 @@ namespace Seeker.Gamebook.DangerFromBehindTheSnowWall
             set => _magic = Game.Param.Setter(value, _magic, this);
         }
 
+        public int? AthleticShape { get; set; }
+
         public List<bool> Luck { get; set; }
 
         public override void Init()
@@ -66,6 +68,7 @@ namespace Seeker.Gamebook.DangerFromBehindTheSnowWall
             Money = Constants.Money[dice];
 
             Magic = 100;
+            AthleticShape = null;
 
             Luck = new List<bool> { false, false, false, false, false, false, false };
 
@@ -85,10 +88,12 @@ namespace Seeker.Gamebook.DangerFromBehindTheSnowWall
             Observation = this.Observation,
             Money = this.Money,
             Magic = this.Magic,
+            AthleticShape = this.AthleticShape,
         };
 
         public override string Save() => String.Join("|",
-            MaxSkill, Skill, MaxStrength, Strength, Damage, Observation, Money, Magic,
+            MaxSkill, Skill, MaxStrength, Strength,
+            Damage, Observation, Money, Magic, AthleticShape,
             String.Join(",", Luck.Select(x => x ? "1" : "0")));
 
         public override void Load(string saveLine)
@@ -103,6 +108,7 @@ namespace Seeker.Gamebook.DangerFromBehindTheSnowWall
             Observation = int.Parse(save[5]);
             Money = int.Parse(save[6]);
             Magic = int.Parse(save[7]);
+            AthleticShape = int.Parse(save[8]);
 
             Luck = save[8].Split(',').Select(x => x == "1").ToList();
 

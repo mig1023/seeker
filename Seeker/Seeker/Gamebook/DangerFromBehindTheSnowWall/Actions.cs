@@ -18,13 +18,21 @@ namespace Seeker.Gamebook.DangerFromBehindTheSnowWall
             $"Удар: {Character.Protagonist.Damage}",
         };
 
-        public override List<string> AdditionalStatus() => new List<string>
+        public override List<string> AdditionalStatus()
         {
-            $"Наблюдательность: {Character.Protagonist.Skill}",
-            $"Деньги: {MoneyFormat(Character.Protagonist.Money)}",
-            $"Магия: {Character.Protagonist.Magic}",
-        };
+            List<string> statuses = new List<string>
+            {
+                $"Наблюдательность: {Character.Protagonist.Skill}",
+                $"Деньги: {MoneyFormat(Character.Protagonist.Money)}",
+                $"Магия: {Character.Protagonist.Magic}",
+            };
 
+            if (Character.Protagonist.AthleticShape != null)
+                statuses.Add($"Форма: {Character.Protagonist.AthleticShape}");
+
+            return statuses;
+        }
+            
         private static string MoneyFormat(int ecu) =>
             String.Format("{0:f1}", (double)ecu / 10).TrimEnd('0').TrimEnd(',').Replace(',', '.');
 
@@ -289,6 +297,63 @@ namespace Seeker.Gamebook.DangerFromBehindTheSnowWall
                 "Сумма оказалась меньше или равна вашей ЛОВКОСТИ", "Оказалась больше");
 
             return skillCheck;
+        }
+
+        public List<string> AthleticShape()
+        {
+            List<string> lines = new List<string> { "BIG|Рассчитываем ФОРМУ:" };
+
+            int athletic = Character.Protagonist.Skill - 8;
+
+            lines.Add($"1. Из Ловкости ({Character.Protagonist.Skill} ед.) " +
+                $"вычитаем восемь и получаем {athletic} ед. Формы.");
+
+            if (Character.Protagonist.Strength < 4)
+            {
+                athletic -= 2;
+
+                lines.Add($"2. Т.к. Сила равна или меньше трём (а она равна " +
+                    $"{Character.Protagonist.Strength}), то Форма уменьшается " +
+                    $"на 2 ед. и становится равна {athletic}.");
+            }
+            else if ((Character.Protagonist.Strength > 3) && (Character.Protagonist.Strength < 7))
+            {
+                lines.Add($"2. Т.к. Сила в диапазоне от 4 до 6 ед. (а она равна " +
+                    $"{Character.Protagonist.Strength}), то Форма не получает никаких " +
+                    $"бонусов и остаётся равна {athletic}.");
+            }
+            else
+            {
+                string range = String.Empty;
+                int bonus = 0;
+
+                if (Character.Protagonist.Strength < 15)
+                {
+                    bonus += 1;
+                    range = "в диапазоне от 7 до 14 ед.";
+                }
+                else if ((Character.Protagonist.Strength > 14) && (Character.Protagonist.Strength < 21))
+                {
+                    bonus += 2;
+                    range = "в диапазоне от 15 до 20 ед.";
+                }
+                else
+                {
+                    bonus += 3;
+                    range = "равна или больше 20 ед.";
+                }
+
+                athletic += bonus;
+
+                lines.Add($"2. Т.к. Сила {range} (а она равна {Character.Protagonist.Strength}), " +
+                    $"то Форма увеличивается на {bonus} ед. и становится равна {athletic}.");
+            }
+
+            Character.Protagonist.AthleticShape = athletic;
+            string athleticLine = Game.Services.CoinsNoun(athletic, "единица", "единицы", "единиц");
+            lines.Add($"BIG|BOLD|Итоговая Форма: {athletic} {athleticLine}");
+
+            return lines;
         }
     }
 }
