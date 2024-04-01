@@ -2519,5 +2519,11 @@
 				<Option Goto="178" Text="Если Успех"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="359">
+			<Text>Стирая покрышки, делаю полный разворот, но тут меня настигает одна из патрульных машин. Они идут на таран.</Text>
+			<Options>
+				<Option Goto="56"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
