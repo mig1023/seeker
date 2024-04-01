@@ -2651,5 +2651,12 @@
 				<Option Goto="111"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="378">
+			<Text>У стены возле дверей лифта уже ждут трое солдат.\n\n- А это что за хуй в пальто? - матерно реагирует один из них на моё появление.</Text>
+			<Options>
+				<Option Goto="61" Text="Выстрелить в них из пистолета"/>
+				<Option Goto="190" Text="Если есть граната и хочешь её бросить"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
