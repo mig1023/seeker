@@ -212,8 +212,7 @@ namespace Seeker.Gamebook.DangerFromBehindTheSnowWall
 
         public List<string> SimpleDoubleDice()
         {
-            int diceFirst = Game.Dice.Roll();
-            int diceSecond = Game.Dice.Roll();
+            Game.Dice.DoubleRoll(out int diceFirst, out int diceSecond);
             int result = diceFirst + diceSecond;
 
             string line = $"{Game.Dice.Symbol(diceFirst)} + " +
@@ -305,6 +304,23 @@ namespace Seeker.Gamebook.DangerFromBehindTheSnowWall
                 breakingLock.Add(Result(succesBreaked, "ЗАМОК СБИТ", "ВЫ УБИЛИСЬ ОБ ЗАМОК"));
 
             return breakingLock;
+        }
+
+        public List<string> SkillSum()
+        {
+            List<string> skillSum = new List<string>();
+            Game.Dice.DoubleRoll(out int diceFirst, out int diceSecond);
+            
+            int result = diceFirst + diceSecond;
+            skillSum.Add($"Кубики: {Game.Dice.Symbol(diceFirst)} + " +
+                $"{Game.Dice.Symbol(diceSecond)} = {result}");
+
+            int fullResult = result + Character.Protagonist.Skill;
+            skillSum.Add($"Прибавляем Ловкость: {result} + " +
+                $"{Character.Protagonist.Skill} = {fullResult}");
+            skillSum.Add($"BIG|BOLD|Итоговая сумма: {result}");
+
+            return skillSum;
         }
 
         public List<string> Skill()
