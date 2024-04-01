@@ -2714,5 +2714,12 @@
 				<Option Goto="259" Text="Если есть слово ПРОШЛОЕ"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="387">
+			<Text>Пробегаю по крыше и прыгаю над улицей, а за моей спиной раздаются выстрелы.\n\nВыполни Проверку: Сложность -3. Физподготовка. Проворный+2. Отчаянный+1.</Text>
+			<Options>
+				<Option Goto="25" Text="Если Провал"/>
+				<Option Goto="68" Text="Если Успех"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
