@@ -2532,5 +2532,11 @@
 				<Option Goto="245" Text="Если Успех"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="361">
+			<Text>Я не хочу проблем, поэтому отдаю им деньги (вычти 2000 бат из своих «Вещей»), и шпана исчезает в переулке. А я продолжаю свой путь к центру города.</Text>
+			<Options>
+				<Option Goto="206"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
