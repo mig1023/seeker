@@ -3004,7 +3004,7 @@
 			</Texts>
 			<Triggers>драка</Triggers>
 			<Modifications>
-				<Life Value="-10"/>
+				<Life Value="-10" BodyArmour="-6"/>
 				<Time Value="1"/>
 			</Modifications>
 			<Options>
