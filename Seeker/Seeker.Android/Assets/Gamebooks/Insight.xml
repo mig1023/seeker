@@ -2412,7 +2412,7 @@
 			</Texts>
 			<Triggers>драка, жалоба</Triggers>
 			<Modifications>
-				<Life Value="-6"/>
+				<Life Value="-6" BodyArmour="-4"/>
 			</Modifications>
 			<Options>
 				<Option Goto="95"/>
