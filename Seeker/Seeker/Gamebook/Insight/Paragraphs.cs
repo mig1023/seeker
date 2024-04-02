@@ -33,7 +33,7 @@ namespace Seeker.Gamebook.Insight
                 paragraph.Actions.Add(ActionParse(xmlAction));
 
             foreach (XmlNode xmlModification in xmlParagraph.SelectNodes("Modifications/*"))
-                paragraph.Modification.Add(Xml.ModificationParse(xmlModification, new Modification()));
+                paragraph.Modification.Add(ModificationParse(xmlModification));
 
             Character.Protagonist.WithoutEvidence = 0;
 
@@ -51,8 +51,16 @@ namespace Seeker.Gamebook.Insight
         public override Option OptionParse(XmlNode xmlOption) =>
             OptionParseWithDo(xmlOption, new Modification());
 
-        public override Abstract.IModification ModificationParse(XmlNode xmlModification) =>
-            Game.Xml.ModificationParse(xmlModification, new Modification());
+        public override Abstract.IModification ModificationParse(XmlNode xmlModification)
+        {
+            Modification modification = new Modification();
+
+            if (xmlModification.Attributes["BodyArmour"] != null)
+                modification.BodyArmour = Xml.IntParse(xmlModification.Attributes["BodyArmour"]);
+
+            return Xml.ModificationParse(xmlModification, modification);
+        }
+            
 
         private static Option GetEvidenceSearch(int id, XmlNode xmlParagraph)
         {
