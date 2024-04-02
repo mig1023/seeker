@@ -1748,7 +1748,7 @@
 				<Text Style="Small">Уменьшите Здоровье на 10 (или на 7, если на вас бронежилет).</Text>
 			</Texts>
 			<Modifications>
-				<Life Value="-10"/>
+				<Life Value="-10" BodyArmour="-4"/>
 			</Modifications>
 			<Options>
 				<Option Goto="265" Text="Есть оружие"/>
