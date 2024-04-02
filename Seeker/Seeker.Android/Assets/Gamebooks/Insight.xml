@@ -378,7 +378,7 @@
 			</Texts>
 			<Triggers>двое</Triggers>
 			<Modifications>
-				<Life Value="-4"/>
+				<Life Value="-4" BodyArmour="-2"/>
 			</Modifications>
 			<Options>
 				<Option Goto="95"/>
