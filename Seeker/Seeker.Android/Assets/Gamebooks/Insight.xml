@@ -199,7 +199,7 @@
 				<Text>Вскоре приближаетесь к цели своего полета.</Text>
 			</Texts>
 			<Modifications>
-				<Life Value="-6"/>
+				<Life Value="-6" BodyArmour="-4"/>
 			</Modifications>
 			<Options>
 				<Option Goto="53"/>
