@@ -105,7 +105,7 @@
 				<Text Style="Small">Уменьшите Здоровье на 2 (на 0, если вы в бронежилете).</Text>
 			</Texts>
 			<Modifications>
-				<Life Value="-2"/>
+				<Life Value="-2" BodyArmour="0"/>
 			</Modifications>
 			<Options>
 				<Option Goto="72" Text="На вас есть снаряжение для выхода в открытый космос"/>
