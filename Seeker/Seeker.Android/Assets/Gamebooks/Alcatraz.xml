@@ -523,5 +523,11 @@
 				<Option Goto="26"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="80">
+			<Text>Мы перелезаем через забор и бежим к берегу, хватая по пути ветки, палки и другой плавучий мусор. Мы уже практически добрались до воды, но охранник нас все же заметил.</Text>
+			<Options>
+				<Option Goto="33"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
