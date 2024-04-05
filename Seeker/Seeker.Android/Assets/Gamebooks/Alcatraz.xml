@@ -172,5 +172,11 @@
 				<Option Goto="109" Text="— Деревообрабатывающий цех"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="24">
+			<Text>Я снимаю веревку и незаметно выношу ее из прачечной.\n\nЗапишите слово СУДОСТРОИТЕЛЬ.</Text>
+			<Options>
+				<Option Goto="100"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
