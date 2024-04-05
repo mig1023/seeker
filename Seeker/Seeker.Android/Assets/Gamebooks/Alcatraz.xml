@@ -25,5 +25,11 @@
 				<Option Goto="101"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="2">
+			<Text>Ловко орудуя самодельным\n\nдомкратом, я очень быстро раздвигаю прутья решетки и выбираюсь на улицу.</Text>
+			<Options>
+				<Option Goto="57"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
