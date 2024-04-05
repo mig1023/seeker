@@ -469,5 +469,14 @@
 				<Option Goto="46" Text="Если нет"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="72">
+			<Options>
+				<Option Goto="96" Text="Если у Вас уже есть КРАСКИ и БУМАГА">
+					<Text>— Где же я их возьму, Фрэнк?\n\n— Я уже все придумал, Джонни. Главное, чтобы ты сделал все точно так, как я тебе скажу.</Text>
+				</Option>
+				<Option Goto="98" Text="Начнем с красок"/>
+				<Option Goto="20" Text="Начнем с бумаги"/>	
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
