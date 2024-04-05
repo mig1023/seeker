@@ -1,0 +1,29 @@
+<Gamebook>
+	<Introduction>
+		<Copyright>
+			<Title>Алькатрас</Title>
+			<Author>Павел Горохов, 2016</Author>
+		</Copyright>
+		<Styles>
+			<Main Value="15465d"/>
+			<Color Name="Option, Continue, System" Value="457e8f"/>
+		</Styles>
+		<Default>
+			<FontSize Value="Big"/>
+		</Default>
+	</Introduction>
+	<Paragraphs>
+		<Paragraph No="0">
+			<Text>START</Text>
+			<Options>
+				<Start Goto="1"/>
+			</Options>
+		</Paragraph>
+		<Paragraph No="1">
+			<Text>END</Text>
+			<Options>
+				<Option Goto="0"/>
+			</Options>
+		</Paragraph>
+	</Paragraphs>
+</Gamebook>
