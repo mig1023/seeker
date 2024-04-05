@@ -529,5 +529,11 @@
 				<Option Goto="33"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="81">
+			<Text>Но Бобби продолжает бежать. Зря, Малыш! Очень зря. С этой позиции охранник видит нас как на ладони. Звучит выстрел. Бобби падает лицом на землю и замирает.</Text>
+			<Options>
+				<Option Goto="66"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
