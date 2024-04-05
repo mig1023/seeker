@@ -343,5 +343,11 @@
 				<Option Goto="17"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="52">
+			<Options>
+				<Option Goto="82" Text="— Ты работаешь в столярном цеху, Бобби. Выкради оттуда молоток. Это ведь тоже оружие"/>
+				<Option Goto="111" Text="— Мы с тобой проникнем на западный склад с оружием"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
