@@ -313,5 +313,11 @@
 				<Option Goto="113"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="47">
+			<Text>— Ты должен обязательно что-нибудь нарисовать, Джонни. Иначе надзиратели заподозрят неладное.\n\n— Но что же мне нарисовать, Фрэнк.\n\n— Нарисуй морской пейзаж.\n\nЗапишите слово КРАСКИ.</Text>
+			<Options>
+				<Option Goto="72"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
