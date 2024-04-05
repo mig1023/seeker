@@ -349,5 +349,12 @@
 				<Option Goto="111" Text="— Мы с тобой проникнем на западный склад с оружием"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="53">
+			<Text>Бобби скидывает мне автомат Томпсона, а сам вооружается винтовкой Спрингфилд.</Text>
+			<Options>
+				<Option Goto="105" Text="Если у Вас записано слово ДЕРЗКИЙ"/>
+				<Option Goto="28" Text="Если слово БЕСШУМНЫЙ"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
