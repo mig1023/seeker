@@ -388,5 +388,11 @@
 				<Option Goto="90" Text="Можно бежать вплавь"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="59">
+			<Text>Рана оказалась пустяковая. Кость не задета. Около месяца я провел в лазарете. После чего меня вернули обратно в блок.</Text>
+			<Options>
+				<Option Goto="22"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
