@@ -240,5 +240,11 @@
 				<Option Goto="66"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="35">
+			<Text>С таким метким стрелком лучше не соревноваться в беге. Тем более что на кону стоит моя жизнь.\n\nКо мне подбегают надзиратели и валят меня с ног, заламывая руки за спину.</Text>
+			<Options>
+				<Option Goto="22"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
