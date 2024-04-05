@@ -691,5 +691,11 @@
 				<Option Goto="34"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="106">
+			<Text>Бобби не отстает ни на шаг. Звучит выстрел. Я слышу звук падающего тела у себя за спиной. Следующая пуля моя. Пожалуй, еще слишком рано. Я останавливаюсь и поднимаю руки вверх.</Text>
+			<Options>
+				<Option Goto="66"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
