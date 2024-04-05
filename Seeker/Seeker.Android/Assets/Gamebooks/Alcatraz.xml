@@ -94,5 +94,11 @@
 				<Option Goto="66"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="13">
+			<Text>Запишите слово ДЕРЗКИЙ.\n\n— Захватим заложников?! Клево,\n\nФрэнк! Но как мы это сделаем?! У нас ведь нет\n\nоружия\n\n— Я подумал и об этом.</Text>
+			<Options>
+				<Option Goto="52"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
