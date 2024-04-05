@@ -703,5 +703,11 @@
 				<Option Goto="63"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="108">
+			<Text>Запишите слово БЕСШУМНЫЙ\n\n— Да! Да! Мы ликвидируем охрану! Но как мы это сделаем, Фрэнк?! У нас ведь нет оружия!\n\n— Я подумал и об этом.</Text>
+			<Options>
+				<Option Goto="52"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
