@@ -58,5 +58,11 @@
 				<Option Goto="65" Text="Этот не тот вариант, которым я хотел бы воспользоваться"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="7">
+			<Options>
+				<Option Goto="99" Text="Если украсть веревку в прачечной, то можно соорудить плот из досок, которых полным-полно в доке"/>
+				<Option Goto="84" Text="Получится что-то типа надувного плота"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
