@@ -382,5 +382,11 @@
 				<Option Goto="27" Text="Если ни одно из этих двух слов у Вас не записано"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="58">
+			<Options>
+				<Option Goto="107" Text="Можно сбежать от надзирателя, спрятаться где-нибудь, дождаться прибытия катера и попытаться проникнуть на него"/>
+				<Option Goto="90" Text="Можно бежать вплавь"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
