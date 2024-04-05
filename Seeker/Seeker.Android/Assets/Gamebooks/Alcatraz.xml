@@ -394,5 +394,12 @@
 				<Option Goto="22"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="60">
+			<Text>— Стоять! — раздается отчетливый крик с вышки.</Text>
+			<Options>
+				<Option Goto="81" Text="Я останавливаюсь и поднимаю руки вверх"/>
+				<Option Goto="106" Text="Я продолжаю бежать"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
