@@ -138,10 +138,10 @@
 		<Paragraph No="18">
 			<Text>Я выбираюсь из камеры. Плуто уже здесь. Глаза его лихорадочно блестят.</Text>
 			<Options>
-				<Option Goto="75" Text="Если у Вас записано слово ХУДОЖНИК" Availability="ХУДОЖНИК"/>
-				<Option Goto="91" Text="Если у Вас записано слово БИБЛИОТЕКАРЬ" Availability="БИБЛИОТЕКАРЬ"/>
-				<Option Goto="67" Text="Если у Вас записаны оба этих слова"/>
-				<Option Goto="44" Text="Если ни одного"/>
+				<Option Goto="75" Text="Записано слово ХУДОЖНИК" Availability="ХУДОЖНИК"/>
+				<Option Goto="91" Text="Записано слово БИБЛИОТЕКАРЬ" Availability="БИБЛИОТЕКАРЬ"/>
+				<Option Goto="67" Text="Записаны оба этих слова" Availability="ХУДОЖНИК, БИБЛИОТЕКАРЬ"/>
+				<Option Goto="44" Text="Ни одного слова не записано"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="19">
