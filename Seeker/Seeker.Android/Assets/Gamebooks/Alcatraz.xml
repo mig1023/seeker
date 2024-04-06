@@ -416,9 +416,9 @@
 		</Paragraph>
 		<Paragraph No="57">
 			<Options>
-				<Option Goto="40" Text="Если у Вас записано слово СУДОСТРОИТЕЛЬ" Availability="СУДОСТРОИТЕЛЬ"/>
-				<Option Goto="79" Text="Если у Вас записано слово МЕДИК" Availability="МЕДИК"/>
-				<Option Goto="27" Text="Если ни одно из этих двух слов у Вас не записано"/>
+				<Option Goto="40" Text="Записано слово СУДОСТРОИТЕЛЬ" Availability="СУДОСТРОИТЕЛЬ"/>
+				<Option Goto="79" Text="Записано слово МЕДИК" Availability="МЕДИК"/>
+				<Option Goto="27" Text="Ни одно из этих двух слов не записано"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="58">
