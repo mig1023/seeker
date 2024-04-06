@@ -163,13 +163,13 @@
 		<Paragraph No="23">
 			<Text>— Далтон! — услышал я свою фамилию.\n\n— Здесь.</Text>
 			<Options>
-				<Option Goto="103" Text="— Тюремный двор. Печь для сжигания отходов"/>
-				<Option Goto="77" Text="— Работы в доке"/>
-				<Option Goto="6" Text="— Уборка уличной территории"/>
-				<Option Goto="31" Text="— Уборка внутренних помещений"/>
-				<Option Goto="37" Text="— Прачечная"/>
-				<Option Goto="29" Text="— Мастерская по обработке железа"/>
-				<Option Goto="109" Text="— Деревообрабатывающий цех"/>
+				<Option Goto="103" Text="Тюремный двор. Печь для сжигания отходов"/>
+				<Option Goto="77" Text="Работы в доке"/>
+				<Option Goto="6" Text="Уборка уличной территории"/>
+				<Option Goto="31" Text="Уборка внутренних помещений"/>
+				<Option Goto="37" Text="Прачечная"/>
+				<Option Goto="29" Text="Мастерская по обработке железа"/>
+				<Option Goto="109" Text="Деревообрабатывающий цех"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="24">
