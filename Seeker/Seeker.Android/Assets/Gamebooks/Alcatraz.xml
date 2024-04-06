@@ -6,11 +6,9 @@
 		</Copyright>
 		<Styles>
 			<Main Value="15465d"/>
-			<Color Name="Option, Continue, System" Value="457e8f"/>
+			<System Value="b4cbd2"/>
+			<Color Name="Option, Continue" Value="457e8f"/>
 		</Styles>
-		<Default>
-			<FontSize Value="Big"/>
-		</Default>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph No="0">
