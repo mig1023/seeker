@@ -391,8 +391,8 @@
 		<Paragraph No="53">
 			<Text>Бобби скидывает мне автомат Томпсона, а сам вооружается винтовкой Спрингфилд.</Text>
 			<Options>
-				<Option Goto="105" Text="Если у Вас записано слово ДЕРЗКИЙ" Availability="ДЕРЗКИЙ"/>
-				<Option Goto="28" Text="Если слово БЕСШУМНЫЙ" Availability="БЕСШУМНЫЙ"/>
+				<Option Goto="105" Text="Записано слово ДЕРЗКИЙ" Availability="ДЕРЗКИЙ"/>
+				<Option Goto="28" Text="Записано слово БЕСШУМНЫЙ" Availability="БЕСШУМНЫЙ"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="54">
