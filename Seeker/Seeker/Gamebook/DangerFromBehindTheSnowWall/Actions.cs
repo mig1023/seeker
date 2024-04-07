@@ -10,6 +10,7 @@ namespace Seeker.Gamebook.DangerFromBehindTheSnowWall
         public bool StrengthLossByDices { get; set; }
         public bool Difference { get; set; }
         public bool Divided { get; set; }
+        public bool Double { get; set; }
         public int DoorBreakNumber { get; set; }
 
         public override List<string> Status() => new List<string>
@@ -309,11 +310,22 @@ namespace Seeker.Gamebook.DangerFromBehindTheSnowWall
         public List<string> SkillSum()
         {
             List<string> skillSum = new List<string>();
-            Game.Dice.DoubleRoll(out int diceFirst, out int diceSecond);
-            
-            int result = diceFirst + diceSecond;
-            skillSum.Add($"Кубики: {Game.Dice.Symbol(diceFirst)} + " +
-                $"{Game.Dice.Symbol(diceSecond)} = {result}");
+            int result = 0;
+            if (Double)
+            {
+                Game.Dice.DoubleRoll(out int diceFirst, out int diceSecond);
+
+                result = diceFirst + diceSecond;
+
+                skillSum.Add($"Кубики: {Game.Dice.Symbol(diceFirst)} + " +
+                    $"{Game.Dice.Symbol(diceSecond)} = {result}");
+            }
+            else
+            {
+                result = Game.Dice.Roll();
+
+                skillSum.Add($"Кубик: {Game.Dice.Symbol(result)}");
+            }
 
             int fullResult = result + Character.Protagonist.Skill;
             skillSum.Add($"Прибавляем Ловкость: {result} + " +
