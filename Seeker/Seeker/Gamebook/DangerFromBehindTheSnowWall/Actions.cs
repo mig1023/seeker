@@ -11,6 +11,7 @@ namespace Seeker.Gamebook.DangerFromBehindTheSnowWall
         public bool Difference { get; set; }
         public bool Divided { get; set; }
         public bool Double { get; set; }
+        public bool Triple { get; set; }
         public int DoorBreakNumber { get; set; }
 
         public override List<string> Status() => new List<string>
@@ -214,10 +215,20 @@ namespace Seeker.Gamebook.DangerFromBehindTheSnowWall
         public List<string> SimpleDoubleDice()
         {
             Game.Dice.DoubleRoll(out int diceFirst, out int diceSecond);
+            
             int result = diceFirst + diceSecond;
+            int diceThird = 0;
+            string thirdLine = String.Empty;
+
+            if (Triple)
+            {
+                diceThird = Game.Dice.Roll();
+                result += diceThird;
+                thirdLine = $" + {Game.Dice.Symbol(diceThird)}";
+            }
 
             string line = $"{Game.Dice.Symbol(diceFirst)} + " +
-                $"{Game.Dice.Symbol(diceSecond)} = {result}";
+                $"{Game.Dice.Symbol(diceSecond)}{thirdLine} = {result}";
 
             if (StrengthLossByDices)
             {
