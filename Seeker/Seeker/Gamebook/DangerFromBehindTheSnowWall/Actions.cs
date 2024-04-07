@@ -9,6 +9,7 @@ namespace Seeker.Gamebook.DangerFromBehindTheSnowWall
         public List<Character> Enemies { get; set; }
         public bool StrengthBonus { get; set; }
         public bool StrengthLossByDices { get; set; }
+        public bool StrengthAlreadyLoss { get; set; }
         public bool Difference { get; set; }
         public bool Divided { get; set; }
         public bool Double { get; set; }
@@ -230,6 +231,11 @@ namespace Seeker.Gamebook.DangerFromBehindTheSnowWall
 
             string line = $"{Game.Dice.Symbol(diceFirst)} + " +
                 $"{Game.Dice.Symbol(diceSecond)}{thirdLine} = {result}";
+
+            if (StrengthAlreadyLoss)
+            {
+                Character.Protagonist.Strength -= 2;
+            }
 
             if (StrengthLossByDices)
             {
