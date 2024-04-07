@@ -295,6 +295,35 @@ namespace Seeker.Gamebook.DangerFromBehindTheSnowWall
             };
         }
 
+        private int ColdWounds(int dice)
+        {
+            if (dice == 1)
+            {
+                return 1;
+            }
+            else if (dice < 5)
+            {
+                return 2;
+            }
+            else
+            {
+                return 4;
+            }
+        }
+
+        public List<string> ColdDiceWound()
+        {
+            int dice = Game.Dice.Roll();
+            int loss = ColdWounds(dice);
+            string strength = Game.Services.CoinsNoun(loss, "СИЛУ", "СИЛЫ", "СИЛ");
+
+            return new List<string>
+            {
+                $"BIG|На кубике выпало: {Game.Dice.Symbol(dice)}",
+                $"BIG|BAD|BOLD|Вы потеряли {loss} {strength}"
+            };
+        }
+
         public List<string> Break()
         {
             bool doorBreak = DoorBreakNumber > 0;
