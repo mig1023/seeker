@@ -311,6 +311,7 @@ namespace Seeker.Gamebook.DangerFromBehindTheSnowWall
         {
             List<string> skillSum = new List<string>();
             int result = 0;
+
             if (Double)
             {
                 Game.Dice.DoubleRoll(out int diceFirst, out int diceSecond);
@@ -333,6 +334,39 @@ namespace Seeker.Gamebook.DangerFromBehindTheSnowWall
             skillSum.Add($"BIG|BOLD|Итоговая сумма: {result}");
 
             return skillSum;
+        }
+
+        public List<string> Dispute()
+        {
+            List<string> dispute = new List<string>();
+
+            int diceFirst, diceSecond;
+
+            do
+            {
+                Game.Dice.DoubleRoll(out diceFirst, out diceSecond);
+
+                dispute.Add($"Кубик Собеседника 1: {Game.Dice.Symbol(diceFirst)}");
+                dispute.Add($"Кубик Собеседника 2: {Game.Dice.Symbol(diceSecond)}");
+
+                if (diceFirst == diceSecond)
+                    dispute.Add($"Спор продолжается...");
+            }
+            while (diceFirst == diceSecond);
+
+            if (diceFirst > diceSecond)
+            {
+                dispute.Add("BIG|BOLD|В споре победил Собеседник 1");
+                Game.Buttons.Disable("Победил Собеседник 2");
+            }
+            else
+            {
+                dispute.Add("BIG|BOLD|В споре победил Собеседник 2");
+                Game.Buttons.Disable("Победил Собеседник 1");
+            }
+
+            
+            return dispute;
         }
 
         public List<string> Skill()
