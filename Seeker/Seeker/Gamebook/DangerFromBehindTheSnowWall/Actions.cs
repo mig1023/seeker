@@ -7,6 +7,7 @@ namespace Seeker.Gamebook.DangerFromBehindTheSnowWall
     class Actions : Prototypes.Actions, Abstract.IActions
     {
         public List<Character> Enemies { get; set; }
+        public bool StrengthBonus { get; set; }
         public bool StrengthLossByDices { get; set; }
         public bool Difference { get; set; }
         public bool Divided { get; set; }
@@ -264,6 +265,12 @@ namespace Seeker.Gamebook.DangerFromBehindTheSnowWall
                 {
                     line += "\nBIG|BOLD|BAD|Не делится на 4 без остатка!";
                 }
+            }
+
+            if (StrengthBonus)
+            {
+                line += $" + {Character.Protagonist.Strength} Сила";
+                line += $"\nBIG|BOLD|Итого сумма: {result + Character.Protagonist.Strength}";
             }
 
             return new List<string> { $"BIG|Кубики: {line}" };
