@@ -14,6 +14,7 @@ namespace Seeker.Gamebook.DangerFromBehindTheSnowWall
         public bool Divided { get; set; }
         public bool Double { get; set; }
         public bool Triple { get; set; }
+        public bool DayWounds { get; set; }
         public int DoorBreakNumber { get; set; }
 
         public override List<string> Status() => new List<string>
@@ -295,7 +296,7 @@ namespace Seeker.Gamebook.DangerFromBehindTheSnowWall
             };
         }
 
-        private int ColdWounds(int dice)
+        private int ColdNightWounds(int dice)
         {
             if (dice == 1)
             {
@@ -311,10 +312,26 @@ namespace Seeker.Gamebook.DangerFromBehindTheSnowWall
             }
         }
 
+        private int ColdDayWounds(int dice)
+        {
+            if (dice < 3)
+            {
+                return 4;
+            }
+            else if (dice < 5)
+            {
+                return 5;
+            }
+            else
+            {
+                return 6;
+            }
+        }
+
         public List<string> ColdDiceWound()
         {
             int dice = Game.Dice.Roll();
-            int loss = ColdWounds(dice);
+            int loss = DayWounds ? ColdDayWounds(dice) : ColdNightWounds(dice);
             string strength = Game.Services.CoinsNoun(loss, "СИЛУ", "СИЛЫ", "СИЛ");
 
             return new List<string>
