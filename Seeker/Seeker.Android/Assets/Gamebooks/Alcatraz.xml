@@ -523,11 +523,11 @@
 		</Paragraph>
 		<Paragraph No="72">
 			<Options>
-				<Option Goto="96" Text="Если у Вас уже есть КРАСКИ и БУМАГА" Availability="КРАСКИ, БУМАГА">
+				<Option Goto="96" Text="У Вас уже есть КРАСКИ и БУМАГА" Availability="КРАСКИ, БУМАГА">
 					<Text>— Где же я их возьму, Фрэнк?\n\n— Я уже все придумал, Джонни. Главное, чтобы ты сделал все точно так, как я тебе скажу.</Text>
 				</Option>
-				<Option Goto="98" Text="Начнем с красок"/>
-				<Option Goto="20" Text="Начнем с бумаги"/>	
+				<Option Goto="98" Text="Раздобыть краски" Availability="!КРАСКИ"/>
+				<Option Goto="20" Text="Раздобыть бумагу" Availability="!БУМАГА"/>	
 			</Options>
 		</Paragraph>
 		<Paragraph No="73">
