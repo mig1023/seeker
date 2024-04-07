@@ -526,5 +526,63 @@ namespace Seeker.Gamebook.DangerFromBehindTheSnowWall
                 $"BIG|BOLD|Форма увеличилась на {athleticShape} и теперь равна {athleticShape + dice}"
             };
         }
+
+        public List<string> EscapeFromFire()
+        {
+            List<string> lines = new List<string> { "BIG|Уклоняемся от обстрела:" };
+            List<int> inTarget = new List<int> { 1 };
+
+            int shoot = 1;
+            int hit = 0;
+
+            while (shoot < 8)
+            {
+                int dice = Game.Dice.Roll();
+                lines.Add($"BOLD|{shoot} выстрел");
+                lines.Add($"На кубике выпало: {Game.Dice.Symbol(dice)}");
+
+                shoot += 1;
+
+                if (!inTarget.Contains(dice))
+                {
+                    lines.Add("GOOD|Промах!");
+                }
+                else
+                {
+                    hit += 1;
+
+                    lines.Add("BAD|BIG|Попали!!");
+
+                    if (hit == 1)
+                    {
+                        Character.Protagonist.Strength -= 3;
+                        lines.Add("BAD|Вы теряелете 3 СИЛЫ!");
+
+                        inTarget.Add(2);
+                        lines.Add("GRAY|Далее торронги попадают при выпадении на кубике 1 или 2");
+                    }
+                    else if (hit == 2)
+                    {
+                        Character.Protagonist.Strength -= 7;
+                        lines.Add("BAD|Вы теряелете 7 СИЛ!");
+
+                        inTarget.Add(3);
+                        lines.Add("GRAY|Далее торронги попадают при выпадении на кубике 1, 2 или 3");
+                    }
+                    else
+                    {
+                        Character.Protagonist.Strength = 0;
+                        lines.Add("BAD|BIG|Третье попадание оказалось смертельным...");
+
+                        break;
+                    }
+                }
+            }
+
+            if (hit < 3)
+                lines.Add("GOOD|BIG|Вам успешно удалось уйти от стрельбы!");
+
+            return lines;
+        }
     }
 }
