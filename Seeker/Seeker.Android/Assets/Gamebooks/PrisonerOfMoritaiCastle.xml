@@ -117,5 +117,11 @@
 				<Option Goto="11"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="16">
+			<Text>Вы сорвались и покатились по крутому склону, кувыркаясь и обдирая бока об острые камни.\n\nУдарившись о большой валун, вы потеряли сознание (вы потеряли 2 Жизненные силы).</Text>
+			<Options>
+				<Option Goto="6"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
