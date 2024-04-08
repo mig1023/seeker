@@ -137,5 +137,11 @@
 				<Option Goto="23" Text="Направо вдоль хребта"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="19">
+			<Text>Вы стремглав бросились вниз по склону перепрыгивая через валуны и торчащие тут и там корни карликовых сосен (ваша Жизненная сила уменьшилась на 1).</Text>
+			<Options>
+				<Option Goto="27"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
