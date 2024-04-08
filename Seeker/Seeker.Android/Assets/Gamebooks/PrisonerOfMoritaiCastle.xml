@@ -713,5 +713,12 @@
 				<Option Goto="294" Text="Вернетесь обратно в конюшню"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="104">
+			<Text>Вскоре слуга вернулся с полным ведром воды. Пока он повернулся к вам спиной и ставил ведро перед лошадью, вы могли бы незаметно подкрасться к нему.</Text>
+			<Options>
+				<Option Goto="110" Text="Оглушите слугу по голове"/>
+				<Option Goto="122" Text="Прирежете его"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
