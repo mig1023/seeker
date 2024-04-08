@@ -573,5 +573,11 @@
 				<Option Goto="273"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="84">
+			<Options>
+				<Option Goto="69" Text="Попытаетесь его задушить руками"/>
+				<Option Goto="90" Text="Заколете его мечем"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
