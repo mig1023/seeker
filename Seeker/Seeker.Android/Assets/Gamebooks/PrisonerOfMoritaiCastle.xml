@@ -333,5 +333,12 @@
 				<Option Goto="33" Text="Уже ничем не сможете помочь жителям этой деревни"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="48">
+			<Text>Вы вернулись обратно и, свернув с дороги, укрылись в чаще.</Text>
+			<Options>
+				<Option Goto="235" Text="Переоденетесь в одежду ниндзя и, приготовив свое оружие, нападете на заставу"/>
+				<Option Goto="26" Text="Поищите путь в обход этой заставы"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
