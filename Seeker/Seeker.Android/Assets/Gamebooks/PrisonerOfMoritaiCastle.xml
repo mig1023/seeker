@@ -464,5 +464,11 @@
 				<Option Goto="59" Text="Продолжите наблюдать за стражей"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="68">
+			<Text>Вам удалось забросить крюк и зацепиться за край стены.\n\nВы начали подниматься.</Text>
+			<Options>
+				<Option Goto="80"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
