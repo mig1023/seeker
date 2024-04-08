@@ -182,5 +182,12 @@
 				<Option Goto="49" Text="Попытаетесь припугнуть стражников"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="26">
+			<Options>
+				<Option Goto="63" Text="Будете искать обходной путь по горам"/>
+				<Option Goto="43" Text="Попытаетесь перейти через бурную горную реку"/>
+				<Option Goto="48" Text="Все же рискнете прорываться с боем через заставу"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
