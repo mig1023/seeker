@@ -417,5 +417,11 @@
 				<Option Goto="1" Text="Не будете терять времени и пойдете в сторону замка Моритаи"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="61">
+			<Options>
+				<Option Goto="37" Text="Вы вынырнули из воды через 2-15 минут"/>
+				<Option Goto="34" Text="Вы вынырнули из воды через 20 минут"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
