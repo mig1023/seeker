@@ -306,5 +306,12 @@
 				<Option Goto="26" Text="Вернетесь к заставе, и будете искать другой путь"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="44">
+			<Options>
+				<Option Goto="37" Text="Вы вынырнули из воды через 2 минуты"/>
+				<Option Goto="28" Text="Вы вынырнули из воды через 5-10 минут"/>
+				<Option Goto="34" Text="Вы вынырнули из воды через 15-20 минут"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
