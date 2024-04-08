@@ -313,5 +313,11 @@
 				<Option Goto="34" Text="Вы вынырнули из воды через 15-20 минут"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="45">
+			<Options>
+				<Option Goto="243" Text="Будете расстреливать врага из лука"/>
+				<Option Goto="246" Text="Броситесь рубить мечем"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
