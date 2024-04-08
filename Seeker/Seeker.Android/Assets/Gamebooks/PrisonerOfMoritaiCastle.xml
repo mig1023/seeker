@@ -245,5 +245,12 @@
 				<Option Goto="68,56" Text="Проверьте свою удачу"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="35">
+			<Text>Как вы хотите встретить всадников?</Text>
+			<Options>
+				<Option Goto="42" Text="В одежде мирного монаха ямабуси"/>
+				<Option Goto="39" Text="Не будете скрываться под личиной монаха и сбросив неудобную одежду монаха достанете свой меч и лук"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
