@@ -1,0 +1,26 @@
+<Gamebook>
+	<Introduction>
+		<Copyright>
+			<Title>Пленница замка Моритаи</Title>
+			<Author>Константин Таро, 2010</Author>
+		</Copyright>
+		<Styles>
+			<Color Name="Main, Option, Continue, System" Value="ff6501"/>
+			<Color Name="Background, ButtonFont" Value="000000"/>
+		</Styles>
+	</Introduction>
+	<Paragraphs>
+		<Paragraph No="0">
+			<Text>START</Text>
+			<Options>
+				<Start Goto="1"/>
+			</Options>
+		</Paragraph>
+		<Paragraph No="1">
+			<Text>END</Text>
+			<Options>
+				<Start Goto="0"/>
+			</Options>
+		</Paragraph>
+	</Paragraphs>
+</Gamebook>

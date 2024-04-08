@@ -854,4 +854,18 @@
 		<Setting>Приключения</Setting>
 		<Color>15465d</Color>
 	</Alcatraz>
+	<PrisonerOfMoritaiCastle>
+		<Title>Пленница замка Моритаи</Title>
+		<Author>Константин Таро</Author>
+		<Year>2010</Year>
+		<Text>Вы — молодой ученик клана ниндзя в провинции Ига. Ваш наставник дал вам срочное задание - проникнуть в замок Моритаи и освободить похищенную хозяином замка дочь князя Хаттори. Вы намереваетесь доказать своему учителю, что достойны его доверия... или погибнуть.</Text>
+		<Paragraphs>297</Paragraphs>
+		<Size>0</Size>
+		<Playthrough>На полчаса</Playthrough>
+		<Setting>История</Setting>
+		<Colors>
+			<Book>ff6501</Book>
+			<Font>000000</Font>
+		</Colors>
+	</PrisonerOfMoritaiCastle>
 </Gamebooks>
