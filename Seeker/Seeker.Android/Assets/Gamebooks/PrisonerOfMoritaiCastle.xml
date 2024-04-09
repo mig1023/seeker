@@ -1324,5 +1324,11 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="196">
+			<Options>
+				<Option Goto="207" Text="Будете драться с преследователями"/>
+				<Option Goto="203" Text="Попытаетесь убежать"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
