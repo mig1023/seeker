@@ -1082,5 +1082,11 @@
 				<Option Goto="146"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="159">
+			<Text>Вы все же успели первым ударить мечем своего противника. Он упал на пол, схватившись за горло. Теперь вы могли двигаться дальше.</Text>
+			<Options>
+				<Option Goto="114"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
