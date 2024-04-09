@@ -1125,5 +1125,11 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="166">
+			<Text>Вы метнули сюрикен в фонарь у дальней стены.</Text>
+			<Options>
+				<Option Goto="173,179" Text="Проверьте свою удачу"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
