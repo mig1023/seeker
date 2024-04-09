@@ -1311,5 +1311,12 @@
 				<Option Goto="197" Text="Слово «сигнал» не записано"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="194">
+			<Text>Перед вами было два пути:</Text>
+			<Options>
+				<Option Goto="215" Text="Влево по коридору во двор замка"/>
+				<Option Goto="192" Text="Прямо по коридору, который вел в сторону угловой башни и крепостной стене"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
