@@ -802,5 +802,11 @@
 				<Option Goto="127" Text="По лестнице наверх"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="117">
+			<Options>
+				<Option Goto="133" Text="У вас записано слово «тревога»"/>
+				<Option Goto="112" Text="Слово «тревога» не записано"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
