@@ -1401,5 +1401,11 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="208">
+			<Text>Вы вышли в освещенный фонарем длинный коридор. На полу все еще лежали два убитых вами охранника. Вы переступили через трупы и потащили девушку в помещение башни.</Text>
+			<Options>
+				<Option Goto="201"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
