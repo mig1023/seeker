@@ -917,5 +917,11 @@
 				<Option Goto="144" Text="Слово «трупы» не записано"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="134">
+			<Options>
+				<Option Goto="126" Text="Постараетесь осторожно вынуть ногу из ее рук"/>
+				<Option Goto="152" Text="Заколете женщину"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
