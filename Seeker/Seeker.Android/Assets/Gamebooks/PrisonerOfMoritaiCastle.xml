@@ -1057,5 +1057,11 @@
 				<Option Goto="157" Text="Попытаетесь выскользнуть наружу, через окно-бойницу башни"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="155">
+			<Options>
+				<Option Goto="161" Text="У вас не записано слово «пожар №1», но записано слово «сигнал»"/>
+				<Option Goto="186" Text="Нет слова «сигнал»"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
