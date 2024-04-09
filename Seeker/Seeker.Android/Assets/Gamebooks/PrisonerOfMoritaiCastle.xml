@@ -746,5 +746,10 @@
 				<Option Goto="98" Text="Попытаетесь рискнуть и пробиться через охранников у костра"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="109">
+			<Options>
+				<Option Goto="159,147" Text="Проверьте свою удачу"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
