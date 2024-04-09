@@ -997,5 +997,11 @@
 				<Option Goto="148" Text="Будете молчать"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="146">
+			<Options>
+				<Option Goto="170" Text="Пойдете следом"/>
+				<Option Goto="135" Text="Останетесь в укрытии и будете дальше наблюдать за Сугиямой"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
