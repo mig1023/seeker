@@ -888,5 +888,12 @@
 				<Option Goto="130"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="130">
+			<Text>Вы решили двигаться дальше.</Text>
+			<Options>
+				<Option Goto="118" Text="У вас записано слово «башня»"/>
+				<Option Goto="116" Text="Слово «башня» не записано"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
