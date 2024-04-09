@@ -990,5 +990,12 @@
 				<Option Goto="127" Text="Поднимитесь по лестнице на следующий этаж"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="145">
+			<Text>- Судзуки?... Это ты? - шепотом спросила она в темноту.</Text>
+			<Options>
+				<Option Goto="156" Text="Ответите ей «Да»"/>
+				<Option Goto="148" Text="Будете молчать"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
