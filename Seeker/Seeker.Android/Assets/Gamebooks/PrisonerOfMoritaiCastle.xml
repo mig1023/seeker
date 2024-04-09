@@ -1304,5 +1304,12 @@
 				<Option Goto="198" Text="Слово «трупы» не записано"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="193">
+			<Text>Вы шли за спиной князя Сугиямы по коридорам замка.</Text>
+			<Options>
+				<Option Goto="199" Text="У вас записано слово «сигнал»"/>
+				<Option Goto="197" Text="Слово «сигнал» не записано"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
