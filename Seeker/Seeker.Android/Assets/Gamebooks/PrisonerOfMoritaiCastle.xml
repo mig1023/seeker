@@ -765,5 +765,12 @@
 				<Option Goto="113" Text="Пойдете дальше по коридору"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="112">
+			<Text>Вы вышли в темный коридор.</Text>
+			<Options>
+				<Option Goto="150" Text="Идти дальше по коридору"/>
+				<Option Goto="127" Text="Подняться вверх по лестнице на следующий этаж"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
