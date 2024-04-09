@@ -1113,5 +1113,11 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="164">
+			<Text>Прямо за окном оказалась покатая черепичная крыша башни. Ударившись о черепицу, вы кувыркнулись и сорвались с крыши вниз.</Text>
+			<Options>
+				<Option Goto="293"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
