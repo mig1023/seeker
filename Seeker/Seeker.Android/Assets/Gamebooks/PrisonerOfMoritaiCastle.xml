@@ -816,5 +816,11 @@
 				<Option Goto="127" Text="Подняться по лестнице наверх"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="119">
+			<Text>- Сугияма держит ее в башне наверху - затараторила служанка - Это там по коридору и вверх по лестнице.</Text>
+			<Options>
+				<Option Goto="266"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
