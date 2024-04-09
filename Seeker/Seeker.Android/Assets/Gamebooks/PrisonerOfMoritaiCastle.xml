@@ -1035,5 +1035,11 @@
 				<Option Goto="181" Text="Нет стрелы, но есть еще сюрикены"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="152">
+			<Text>Вы зажали ей лицо рукой и ударили мечем в грудь. Женщина глухо охнула и разом откинулась на лежанку. Вы тихо выбрались из комнаты.</Text>
+			<Options>
+				<Option Goto="117"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
