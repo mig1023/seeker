@@ -1107,5 +1107,11 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="163">
+			<Text>Вы бросились на врагов, рубя налево и направо. Однако силы были неравны и вас сбили с ног и закололи. Вы убиты.</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
