@@ -1298,5 +1298,11 @@
 				<Option Goto="170"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="192">
+			<Options>
+				<Option Goto="208" Text="У вас записано слово «трупы»"/>
+				<Option Goto="198" Text="Слово «трупы» не записано"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
