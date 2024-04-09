@@ -1088,5 +1088,11 @@
 				<Option Goto="114"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="160">
+			<Options>
+				<Option Goto="140" Text="Спрячетесь под потолочной балкой в коридоре"/>
+				<Option Goto="127" Text="Побежите дальше и поднимитесь по лестнице этажом выше"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
