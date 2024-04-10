@@ -1715,5 +1715,11 @@
 				<Option Goto="274" Text="Если вы еще живы"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="258">
+			<Text>Камень подпрыгнул и с размаха ударил вам в плечо. Вы рухнули вниз и, кувыркаясь, полетели вниз, увлекая за собой целый поток камней. Вы погибли.</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
