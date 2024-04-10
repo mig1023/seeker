@@ -1821,5 +1821,11 @@
 				<Option Goto="279" Text="Если вы еще живы"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="274">
+			<Text>Вы услышали, как навстречу вам по лестнице поднимается еще несколько человек, громыхая доспехами. Вам ничего не оставалось, как броситься в окно башни.</Text>
+			<Options>
+				<Option Goto="157"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
