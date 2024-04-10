@@ -1852,5 +1852,11 @@
 				<Option Goto="157"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="279">
+			<Text>Вы бросились в дверной проем ворот центральной башни замка. Из темного зала влево вел коридор, и вы осторожно двинулись наощупь, оглядываясь по сторонам.</Text>
+			<Options>
+				<Option Goto="111"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
