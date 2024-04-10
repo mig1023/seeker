@@ -1776,5 +1776,12 @@
 				<Option Goto="138" Text="Оставите служанку в живых и побежите к лестнице, ведущей наверх"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="267">
+			<Text>Дверь отошла в сторону, и через порог переступил самурай с маленьким фонарем в руке.</Text>
+			<Options>
+				<Option Goto="260" Text="Ударите его мечем"/>
+				<Option Goto="272" Text="Выбьете у него из рук фонарь"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
