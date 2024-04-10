@@ -1920,5 +1920,11 @@
 				<Option Goto="285"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="290">
+			<Text>Вы сделали ложный выпад, но князь ожидал, что вы примените одну из ваших\n\nхитростей. Он резко сместился вбок и рубанул вас по диагонали мечем. Вы рухнули на пол. Вы убиты.</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
