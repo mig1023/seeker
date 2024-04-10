@@ -1677,5 +1677,11 @@
 				<Option Goto="262" Text="Вправо"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="252">
+			<Text>После непродолжительного отдыха у костра, вы решили идти дальше к замку Моритаи.</Text>
+			<Options>
+				<Option Goto="70"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
