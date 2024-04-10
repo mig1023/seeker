@@ -1877,5 +1877,11 @@
 				<Option Goto="103" Text="Поищите другой путь к главной башне замка"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="283">
+			<Text>Вы прошли по темному коридору и увидели пробивающийся через вощеную бумагу дверной перегородки свет. Вы прислушались...</Text>
+			<Options>
+				<Option Goto="286"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
