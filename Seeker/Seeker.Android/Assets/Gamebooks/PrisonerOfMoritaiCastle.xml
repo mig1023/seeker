@@ -1444,5 +1444,12 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="215">
+			<Text>Вы нырнули и поплыли под водой вбок от стены, чтобы уйти из-под обстрела вражеских лучников.</Text>
+			<Options>
+				<Option Goto="218" Text="У вас записано слово «пожар»"/>
+				<Option Goto="220" Text="Слова «пожар» у вас не записано"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
