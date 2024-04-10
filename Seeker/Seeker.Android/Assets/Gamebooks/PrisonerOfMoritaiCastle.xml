@@ -1933,5 +1933,11 @@
 				<Option Goto="127" Text="Поскорее поползете по канату дальше"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="292">
+			<Text>Вы ошиблись и столкнулись с обернувшимся охранником лицом к лицу. От неожиданности самурай отпрянул назад и вскрикнул.</Text>
+			<Options>
+				<Option Goto="87"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
