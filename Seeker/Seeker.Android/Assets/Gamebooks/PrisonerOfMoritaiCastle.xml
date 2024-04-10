@@ -1503,5 +1503,11 @@
 				<Option Goto="227" Text="Вернетесь обратно в башню и поищете другой путь"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="224">
+			<Text>Ваши пальцы разжались, и вы вместе с девушкой мешком рухнули с высоты вниз во двор замка. Вы погибли.</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
