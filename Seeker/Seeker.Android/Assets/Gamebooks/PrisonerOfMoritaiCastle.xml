@@ -1664,5 +1664,11 @@
 				<Option Goto="252"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="250">
+			<Text>Вы оказались в темном зале. Отсюда влево вел длинный коридор. Вы осторожно двинулись на ощупь по коридору.</Text>
+			<Options>
+				<Option Goto="111"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
