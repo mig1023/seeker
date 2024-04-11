@@ -413,10 +413,17 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="48">
-			<Text>Прыгаю вперёд, проскальзывая между убийцами. Те продолжают в меня целиться и открывают огонь.\n\nВыполни Проверку: Сложность -3. Физподготовка. Отчаянный+2. Проворный+1.</Text>
+			<Text>Прыгаю вперёд, проскальзывая между убийцами. Те продолжают в меня целиться и открывают огонь.</Text>
+			<Actions>
+				<Test>
+					<Level>3</Level>
+					<Skill>Physical</Skill>
+					<Bonuses>Отчаянный:2, Проворный:1</Bonuses>
+				</Test>
+			</Actions>
 			<Options>
-				<Option Goto="26" Text="Если Провал"/>
-				<Option Goto="205" Text="Если Успех"/>
+				<Option Goto="26" Text="Провал"/>
+				<Option Goto="205" Text="Успех"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="49">
