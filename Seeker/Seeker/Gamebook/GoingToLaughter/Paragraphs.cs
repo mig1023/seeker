@@ -25,10 +25,10 @@ namespace Seeker.Gamebook.GoingToLaughter
                 {
                     option.Goto = Xml.IntParse(xmlOption.Attributes["Goto"]);
                 }
-                    
-                XmlNode optionMod = xmlOption.SelectSingleNode("Modification");
 
-                if (optionMod != null)
+                XmlNode optionMod = xmlOption.SelectSingleNode("*");
+
+                if ((optionMod != null) && (optionMod["Value"] != null))
                     option.Do.Add(Xml.ModificationParse(optionMod, new Modification()));
 
                 paragraph.Options.Add(option);
