@@ -1,4 +1,5 @@
-﻿using System.Xml;
+﻿using System;
+using System.Xml;
 using Seeker.Game;
 
 namespace Seeker.Gamebook.BangkokSky
@@ -15,7 +16,7 @@ namespace Seeker.Gamebook.BangkokSky
             foreach (string param in GetProperties(action))
                 SetProperty(action, param, xmlAction);
 
-            if (action.Type == "Get")
+            if ((action.Type == "Get") && String.IsNullOrEmpty(action.Stat))
                 action.Trigger = action.Button;
 
             return action;
