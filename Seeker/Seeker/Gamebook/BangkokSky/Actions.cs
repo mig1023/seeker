@@ -32,7 +32,7 @@ namespace Seeker.Gamebook.BangkokSky
             {
                 int value = GetProperty(Character.Protagonist, Stat);
                 min = secondButton && (value < 1);
-                max = !secondButton && (value > 2);
+                max = !secondButton && ((value > 2) || (Character.Protagonist.StatBonuses <= 0));
             }
 
             return !(triggeredAlready || advantagesCount || min || max);
