@@ -704,10 +704,17 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="79">
-			<Text>Подхожу к негру, как будто собираюсь что-то ему сказать, и внезапно бросаюсь вперёд, выбросив кулак прямо ему в лицо.\n\nВыполни Проверку: Сложность -3. Боевые искусства. Сильный+2. Отчаянный+1.</Text>
+			<Text>Подхожу к негру, как будто собираюсь что-то ему сказать, и внезапно бросаюсь вперёд, выбросив кулак прямо ему в лицо.</Text>
+			<Actions>
+				<Test>
+					<Level>3</Level>
+					<Skill>MartialArts</Skill>
+					<Bonuses>Сильный:2, Отчаянный:1</Bonuses>
+				</Test>
+			</Actions>
 			<Options>
-				<Option Goto="368" Text="Если Провал"/>
-				<Option Goto="110" Text="Если Успех"/>
+				<Option Goto="368" Text="Провал"/>
+				<Option Goto="110" Text="Успех"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="80">
