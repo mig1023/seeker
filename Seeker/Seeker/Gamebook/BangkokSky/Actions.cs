@@ -1,11 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Seeker.Gamebook.BangkokSky
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {
         public string Stat { get; set; }
+        public int Level { get; set; }
+        public string Skill { get; set; }
+        public string Bonuses { get; set; }
 
         public override List<string> AdditionalStatus()
         {
@@ -73,5 +77,62 @@ namespace Seeker.Gamebook.BangkokSky
 
         public List<string> Decrease() =>
             ChangeProtagonistParam(Stat, Character.Protagonist, "StatBonuses", decrease: true);
+
+        public List<string> Test()
+        {
+            List<string> lines = new List<string>();
+
+            Game.Dice.DoubleRoll(out int positiveDice, out int negativeDice);
+
+            lines.Add($"Кубик положительный: {Game.Dice.Symbol(positiveDice)}");
+            lines.Add($"Кубик отрицательный: {Game.Dice.Symbol(negativeDice)}");
+
+            int result = positiveDice - negativeDice;
+
+            lines.Add($"Итого на кубиках получаем: {positiveDice} - {negativeDice} = {result}");
+
+            int modificator = GetProperty(Character.Protagonist, Skill);
+            int resultModified = result + modificator;
+
+            lines.Add($"Добавляем модификатор {modificator} по способности {Constants.StatNames[Skill]}: " +
+                $"{result} + {modificator} = {resultModified}");
+
+            List<string> bonuses = Bonuses.Split(',').ToList();
+
+            foreach (string bonus in bonuses)
+            {
+                List<string> bonusParts = bonus.Trim().Split(':').ToList();
+                string name = bonusParts[0];
+                string value = bonusParts[1];
+
+                if (Game.Option.IsTriggered(name))
+                {
+                    int oldResult = resultModified;
+                    resultModified += int.Parse(value);
+
+                    lines.Add($"Бонус {value} за то, что {name}: " +
+                        $"{oldResult} + {value} = {resultModified}");
+                }
+            }
+
+            bool testIsOk = (resultModified - Level) > 0;
+            lines.Add($"Считаем по сложности {Level}: {resultModified} - {Level} = {resultModified - Level}");
+
+            if (testIsOk)
+            {
+                lines.Add("Результат равен или больше нуля!");
+                lines.Add("GOOD|BIG|Проверка пройдена!");
+            }
+            else
+            {
+                lines.Add("Результат ниже нуля!");
+                lines.Add("BAD|BIG|Проверка проавлена...");
+            }
+
+            Game.Buttons.Disable(testIsOk, "Успех", "Провал");
+
+            return lines;
+        }
+
     }
 }
