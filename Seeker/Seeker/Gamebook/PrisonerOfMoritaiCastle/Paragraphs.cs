@@ -32,6 +32,11 @@ namespace Seeker.Gamebook.PrisonerOfMoritaiCastle
                     option.Goto = int.Parse(link[random.Next(link.Count())]);
                 }
 
+                XmlNode trigger = xmlOption.SelectSingleNode("Trigger");
+
+                if (trigger != null)
+                    option.Do.Add(Xml.ModificationParse(trigger, new Modification()));
+
                 paragraph.Options.Add(option);
             }
 
