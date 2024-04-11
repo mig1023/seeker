@@ -777,10 +777,17 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="87">
-			<Text>Как в замедленной киносъемке ныряю в сторону, чтобы укрыться за лимузином.\n\nВыполни Проверку: Сложность -2. Физподготовка. Проворный+2. Логичный+1.</Text>
+			<Text>Как в замедленной киносъемке ныряю в сторону, чтобы укрыться за лимузином.</Text>
+			<Actions>
+				<Test>
+					<Level>2</Level>
+					<Skill>Physical</Skill>
+					<Bonuses>Проворный:2, Логичный:1</Bonuses>
+				</Test>
+			</Actions>
 			<Options>
-				<Option Goto="196" Text="Если Провал"/>
-				<Option Goto="75" Text="Если Успех"/>
+				<Option Goto="196" Text="Провал"/>
+				<Option Goto="75" Text="Успех"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="88">
