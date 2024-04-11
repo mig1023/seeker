@@ -25,9 +25,9 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                     option.Goto = Xml.IntParse(xmlOption.Attributes["Goto"]);
                 }
 
-                XmlNode optionMod = xmlOption.SelectSingleNode("Modification");
+                XmlNode optionMod = xmlOption.SelectSingleNode("*");
 
-                if (optionMod != null)
+                if ((optionMod != null) && (optionMod["Value"] != null))
                     option.Do.Add(Xml.ModificationParse(optionMod, new Modification()));
 
                 paragraph.Options.Add(option);
