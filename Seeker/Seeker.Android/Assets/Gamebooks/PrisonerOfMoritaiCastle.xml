@@ -1913,7 +1913,13 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="273">
-			<Text>Схватка была яростной и короткой. Охранники были убиты, но и вы получили ранение (вы потеряли 2 Жизненные силы).</Text>
+			<Texts>
+				<Text>Схватка была яростной и короткой. Охранники были убиты, но и вы получили ранение.</Text>
+				<Text Style="Small">Вы потеряли 2 Жизненные силы.</Text>
+			</Texts>
+			<Modifications>
+				<Hitpoints Value="-2"/>
+			</Modifications>
 			<Options>
 				<Option Goto="279" Text="Если вы еще живы"/>
 			</Options>
