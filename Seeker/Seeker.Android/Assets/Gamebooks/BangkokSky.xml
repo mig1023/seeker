@@ -727,10 +727,17 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="81">
-			<Text>Скольжу вдоль стены к дверному проёму, и когда первый киллер с дробовиком входит, бросаюсь на него, пока тот не выстрелил.\n\nВыполни Проверку: Сложность -2. Боевые искусства. Сильный+2.\n\nУмелый+1.</Text>
+			<Text>Скольжу вдоль стены к дверному проёму, и когда первый киллер с дробовиком входит, бросаюсь на него, пока тот не выстрелил.</Text>
+			<Actions>
+				<Test>
+					<Level>2</Level>
+					<Skill>MartialArts</Skill>
+					<Bonuses>Сильный:2, Умелый:1</Bonuses>
+				</Test>
+			</Actions>
 			<Options>
-				<Option Goto="142" Text="Если Провал"/>
-				<Option Goto="327" Text="Если Успех"/>
+				<Option Goto="142" Text="Провал"/>
+				<Option Goto="327" Text="Успех"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="82">
