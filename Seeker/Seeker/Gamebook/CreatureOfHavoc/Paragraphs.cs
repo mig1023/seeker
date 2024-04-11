@@ -29,9 +29,9 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                     option.Goto = int.Parse(link[random.Next(link.Count())]);
                 }
 
-                XmlNode optionMod = xmlOption.SelectSingleNode("Modification");
+                XmlNode optionMod = xmlOption.SelectSingleNode("*");
 
-                if (optionMod != null)
+                if ((optionMod != null) && (optionMod["Value"] != null))
                     option.Do.Add(Xml.ModificationParse(optionMod, new Modification()));
 
                 paragraph.Options.Add(option);
@@ -64,6 +64,9 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                 foreach (XmlNode xmlEnemy in xmlAction.SelectNodes("Enemies/Enemy"))
                     action.Enemies.Add(EnemyParse(xmlEnemy));
             }
+
+            if (action.Type == "Option")
+                action.Option = OptionParseWithDo(xmlAction, new Modification());
 
             return action;
         }
