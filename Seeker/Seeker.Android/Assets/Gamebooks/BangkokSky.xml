@@ -1437,7 +1437,14 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="165">
-			<Text>Выскакиваю из укрытия и выбрасываю вперёд левый кулак.\n\nВыполни Проверку: Сложность -2. Боевые искусства.\n\nПроворный+1. Жестокий+1.</Text>
+			<Text>Выскакиваю из укрытия и выбрасываю вперёд левый кулак.</Text>
+			<Actions>
+				<Test>
+					<Level>2</Level>
+					<Skill>MartialArts</Skill>
+					<Bonuses>Проворный:1, Жестокий:1</Bonuses>
+				</Test>
+			</Actions>
 			<Options>
 				<Option Goto="254" Text="Если Провал"/>
 				<Option Goto="333" Text="Если Успех"/>
