@@ -5,13 +5,16 @@
 			<Author>Хосе Луис Лопес Моралес, 2015</Author>
 		</Copyright>
 		<Styles>
-			<Color Name="Main, Action" Value="cbb58c"/>
+			<Color Name="Main, Action" Value="8f7545"/>
 			<Background Value="eedfbe"/>
-			<Color Name="ButtonFont, StatusFont" Value="78491e"/>
+			<StatusFont Value="78491e"/>
 			<Continue Value="d5c3a3"/>
-			<ActionBox Value="b4a482"/>
-			<StatusBar Value="ae9879"/>
+			<Color Name="ActionBox, AdditionalStatus" Value="b4a482"/>
+			<StatusBar Value="78491e"/>
 		</Styles>
+		<Lists>
+			<WithoutStatuses Items="0, 401, 402"/>
+		</Lists>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph No="0">
