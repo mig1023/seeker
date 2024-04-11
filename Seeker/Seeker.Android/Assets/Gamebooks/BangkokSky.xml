@@ -2936,6 +2936,50 @@
 				</Get>
 			</Actions>
 			<Options>
+				<Option Goto="402"/>
+			</Options>
+		</Paragraph>
+		<Paragraph No="402">
+			<Text>Второй шаг – определить твои Умения. Есть 6 Умений, среди которых ты должен распределить 8 очков, приписывая каждому Умению от нуля до 3 очков. Ниже дано краткое описание каждого из Умений, чтобы ты мог решить, в чём твой персонаж должен быть искуснее:</Text>
+			<Actions>
+				<Get-Decrease>
+					<Button>Увеличить, Уменьшить</Button>
+					<Head>Боевые искусства</Head>
+					<Stat>MartialArts</Stat>
+					<Text Style="Small">Способность сражаться без оружия или устранять врага без лишнего шума.</Text>
+				</Get-Decrease>
+				<Get-Decrease>
+					<Button>Увеличить, Уменьшить</Button>
+					<Head>Физподготовка</Head>
+					<Stat>Physical</Stat>
+					<Text Style="Small">Способность бегать, прыгать или прилагать физические усилия.</Text>
+				</Get-Decrease>
+				<Get-Decrease>
+					<Button>Увеличить, Уменьшить</Button>
+					<Head>Вождение</Head>
+					<Stat>Driving</Stat>
+					<Text Style="Small">Способность водить все виды транспорта.</Text>
+				</Get-Decrease>
+				<Get-Decrease>
+					<Button>Увеличить, Уменьшить</Button>
+					<Head>Огнестрел</Head>
+					<Stat>Firearms</Stat>
+					<Text Style="Small">Умение обращаться с пистолетами, дробовиками и прочим огнестрелом.</Text>
+				</Get-Decrease>
+				<Get-Decrease>
+					<Button>Увеличить, Уменьшить</Button>
+					<Head>Дипломатия</Head>
+					<Stat>Diplomacy</Stat>
+					<Text Style="Small">Умение поддержать разговор, договариваться или вытягивать информацию, как с помощью вопросов, так и чистого обаяния.</Text>
+				</Get-Decrease>
+				<Get-Decrease>
+					<Button>Увеличить, Уменьшить</Button>
+					<Head>Бетонные джунгли</Head>
+					<Stat>ConcreteJungle</Stat>
+					<Text Style="Small">У тебя есть контакты в мире улиц, связи, ты знаешь места и полезные вещи, выученные в «школе жизни». Также способность не привлекать внимания.\n\nРаспредели 8 очков, как сочтёшь нужным.</Text>
+				</Get-Decrease>
+			</Actions>
+			<Options>
 				<Start Goto="1"/>
 			</Options>
 		</Paragraph>
