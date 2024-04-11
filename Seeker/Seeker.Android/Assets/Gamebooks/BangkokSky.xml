@@ -15,6 +15,19 @@
 		<Lists>
 			<WithoutStatuses Items="0, 401, 402"/>
 		</Lists>
+		<Dictionaries>
+			<StatNames>
+				<Item Name="MartialArts" Value="боевые искусства"/>
+				<Item Name="Physical" Value="физподготовка"/>
+				<Item Name="Driving" Value="вождение"/>
+				<Item Name="Firearms" Value="огнестрел"/>
+				<Item Name="Diplomacy" Value="дипломатия"/>
+				<Item Name="ConcreteJungle" Value="бетонные джунгли"/>
+			</StatNames>
+		</Dictionaries>
+		<Buttons>
+			<Test>Выполнить проверку</Test>
+		</Buttons>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph No="0">
@@ -55,10 +68,17 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="5">
-			<Text>Сжимая пистолет, я выжидаю мгновение, вслушиваясь в шаги окружающих лимузин убийц. Затем вскакиваю, как пружина, застигнув врасплох того, что у капота автомобиля. Стреляю ему в лицо, пока его товарищи разворачиваются, чтобы взять меня на прицел.\n\nВыполни Проверку: Сложность -3. Огнестрел. Умелый+2.\n\nХолодный+1.</Text>
+			<Text>Сжимая пистолет, я выжидаю мгновение, вслушиваясь в шаги окружающих лимузин убийц. Затем вскакиваю, как пружина, застигнув врасплох того, что у капота автомобиля. Стреляю ему в лицо, пока его товарищи разворачиваются, чтобы взять меня на прицел.</Text>
+			<Actions>
+				<Test>
+					<Level>3</Level>
+					<Skill>Firearms</Skill>
+					<Bonuses>Умелый:2, Холодный:1</Bonuses>
+				</Test>
+			</Actions>
 			<Options>
-				<Option Goto="367" Text="Если Провал"/>
-				<Option Goto="134" Text="Если Успех"/>
+				<Option Goto="367" Text="Провал"/>
+				<Option Goto="134" Text="Успех"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="6">
