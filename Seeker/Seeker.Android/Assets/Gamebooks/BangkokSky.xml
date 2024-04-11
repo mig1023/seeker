@@ -1542,10 +1542,17 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="176">
-			<Text>Пробираюсь сквозь толпу, а убийцы стреляют мне вслед.\n\nВыполни Проверку: Сложность -3. Бетонные джунгли. Холодный+2. Жестокий+1.</Text>
+			<Text>Пробираюсь сквозь толпу, а убийцы стреляют мне вслед.</Text>
+			<Actions>
+				<Test>
+					<Level>3</Level>
+					<Skill>ConcreteJungle</Skill>
+					<Bonuses>Холодный:2, Жестокий:1</Bonuses>
+				</Test>
+			</Actions>
 			<Options>
-				<Option Goto="26" Text="Если Провал"/>
-				<Option Goto="34" Text="Если Успех"/>
+				<Option Goto="26" Text="Провал"/>
+				<Option Goto="34" Text="Успех"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="177">
