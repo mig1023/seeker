@@ -28,7 +28,17 @@ namespace Seeker.Gamebook.PrisonerOfMoritaiCastle
             {
                 foreach (string oneOption in option.Split(','))
                 {
-                    if (oneOption.Contains("!"))
+                    if (oneOption.Contains(">") || oneOption.Contains("<"))
+                    {
+                        int level = Game.Services.LevelParse(option);
+
+                        if (oneOption.Contains("ЖИЗНЕЙ >") && (level >= Character.Protagonist.Hitpoints))
+                            return false;
+
+                        if (oneOption.Contains("ЖИЗНЕЙ <=") && (level < Character.Protagonist.Hitpoints))
+                            return false;
+                    }
+                    else if (oneOption.Contains("!"))
                     {
                         if (Game.Option.IsTriggered(oneOption.Replace("!", String.Empty).Trim()))
                             return false;
