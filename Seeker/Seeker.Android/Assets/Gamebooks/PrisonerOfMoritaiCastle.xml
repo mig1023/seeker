@@ -527,8 +527,8 @@
 		<Paragraph No="69">
 			<Text>Вы бросились на упавшего самурая и схватив его за горло стали душить.</Text>
 			<Options>
-				<Option Goto="64" Text="У вас жизненная сила больше трех"/>
-				<Option Goto="65" Text="У вас жизненная сила меньше трех"/>
+				<Option Goto="64" Availability="ЖИЗНЕЙ > 3"/>
+				<Option Goto="65" Availability="ЖИЗНЕЙ &lt;= 3"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="70">
