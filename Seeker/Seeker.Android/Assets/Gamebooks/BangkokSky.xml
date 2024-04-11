@@ -441,10 +441,17 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="51">
-			<Text>Сотри слово ХАЛТУРКА.\n\nГоворю полицейским, что я всего лишь обычный турист.\n\nВыполни Проверку: Сложность -3. Дипломатия. Красивый+1.\n\nКультурный+1.</Text>
+			<Text>Сотри слово ХАЛТУРКА.\n\nГоворю полицейским, что я всего лишь обычный турист.</Text>
+			<Actions>
+				<Test>
+					<Level>3</Level>
+					<Skill>Diplomacy</Skill>
+					<Bonuses>Красивый:1, Культурный:1</Bonuses>
+				</Test>
+			</Actions>
 			<Options>
-				<Option Goto="198" Text="Если Провал, тебе не верят"/>
-				<Option Goto="289" Text="Если Успех, тебе поверили"/>
+				<Option Goto="198" Text="Провал, тебе не верят"/>
+				<Option Goto="289" Text="Успех, тебе поверили"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="52">
