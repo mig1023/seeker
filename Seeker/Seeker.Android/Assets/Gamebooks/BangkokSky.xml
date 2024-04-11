@@ -1068,7 +1068,7 @@
 				<Test>
 					<Level>2</Level>
 					<Skill>MartialArts</Skill>
-					<Bonuses>Сильный:2, nПроворный:1</Bonuses>
+					<Bonuses>Сильный:2, Проворный:1</Bonuses>
 				</Test>
 			</Actions>
 			<Options>
@@ -1098,10 +1098,17 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="124">
-			<Text>Поднимаюсь и стреляю в капот автомобиля.\n\nВыполни Проверку: Сложность -3. Огнестрел. Умелый+1. Холодный+1.</Text>
+			<Text>Поднимаюсь и стреляю в капот автомобиля.</Text>
+			<Actions>
+				<Test>
+					<Level>3</Level>
+					<Skill>Firearms</Skill>
+					<Bonuses>Умелый:1, Холодный:1</Bonuses>
+				</Test>
+			</Actions>
 			<Options>
-				<Option Goto="357" Text="Если Провал"/>
-				<Option Goto="285" Text="Если Успех"/>
+				<Option Goto="357" Text="Провал"/>
+				<Option Goto="285" Text="Успех"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="125">
