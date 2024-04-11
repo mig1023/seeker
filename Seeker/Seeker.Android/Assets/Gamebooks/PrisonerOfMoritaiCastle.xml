@@ -5,7 +5,7 @@
 			<Author>Константин Таро, 2010</Author>
 		</Copyright>
 		<Styles>
-			<Color Name="Main, Option, Continue, System, Font, StatusBorder" Value="cc5000"/>
+			<Color Name="Main, Option, Continue, System, Font, StatusBorder, StatusFont" Value="cc5000"/>
 			<Color Name="Background, ButtonFont, StatusBar" Value="000000"/>
 		</Styles>
 	</Introduction>
