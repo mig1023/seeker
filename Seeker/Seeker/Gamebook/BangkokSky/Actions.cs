@@ -7,6 +7,31 @@ namespace Seeker.Gamebook.BangkokSky
     {
         public string Stat { get; set; }
 
+        public override List<string> AdditionalStatus()
+        {
+            List<string> statusLines = new List<string>();
+
+            if (Character.Protagonist.MartialArts > 0)
+                statusLines.Add($"Боевые искусства: {Character.Protagonist.MartialArts}");
+
+            if (Character.Protagonist.Physical > 0)
+                statusLines.Add($"Физподготовка: {Character.Protagonist.Physical}");
+
+            if (Character.Protagonist.Driving > 0)
+                statusLines.Add($"Вождение: {Character.Protagonist.Driving}");
+
+            if (Character.Protagonist.Firearms > 0)
+                statusLines.Add($"Огнестрел: {Character.Protagonist.Firearms}");
+
+            if (Character.Protagonist.Diplomacy > 0)
+                statusLines.Add($"Дипломатия: {Character.Protagonist.Diplomacy}");
+
+            if (Character.Protagonist.ConcreteJungle > 0)
+                statusLines.Add($"Бетонные джунгли: {Character.Protagonist.ConcreteJungle}");
+
+            return statusLines.Count <= 0 ? null : statusLines;
+        }
+
         public override List<string> Representer()
         {
             List<string> test = new List<string>();
