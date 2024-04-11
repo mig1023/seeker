@@ -38,15 +38,21 @@ namespace Seeker.Gamebook.BangkokSky
 
         public override List<string> Representer()
         {
-            List<string> test = new List<string>();
+            if (!String.IsNullOrEmpty(Skill))
+            {
+                var allBonuses = Bonuses.Split(',').Select(x => x.Substring(0, x.IndexOf(':'))).ToList();
+                string bonuses = String.Join(", ", allBonuses);
 
-            if (!String.IsNullOrEmpty(Stat))
+                return new List<string> { $"ПРОВЕРКА ПО НАВЫКУ {Constants.StatNames[Skill].ToUpper()}\n" +
+                    $"Уровень сложности: -{Level}\nБонусы за: {bonuses}" };
+            }
+            else if (!String.IsNullOrEmpty(Stat))
             {
                 return new List<string> { $"{Head}\n(текущее значение: " +
                     $"{GetProperty(Character.Protagonist, Stat)})" };
             }
 
-            return test;
+            return new List<string>(); ;
         }
 
         public override bool IsButtonEnabled(bool secondButton = false)
@@ -116,17 +122,19 @@ namespace Seeker.Gamebook.BangkokSky
             }
 
             bool testIsOk = (resultModified - Level) > 0;
-            lines.Add($"Считаем по сложности {Level}: {resultModified} - {Level} = {resultModified - Level}");
+
+            lines.Add($"Считаем по сложности {Constants.TestLevelNames[Level]}: " +
+                $"{resultModified} - {Level} = {resultModified - Level}");
 
             if (testIsOk)
             {
                 lines.Add("Результат равен или больше нуля!");
-                lines.Add("GOOD|BIG|Проверка пройдена!");
+                lines.Add("GOOD|BIG|BOLD|Проверка пройдена!");
             }
             else
             {
                 lines.Add("Результат ниже нуля!");
-                lines.Add("BAD|BIG|Проверка проавлена...");
+                lines.Add("BAD|BIG|BOLD|Проверка проавлена...");
             }
 
             Game.Buttons.Disable(testIsOk, "Успех", "Провал");
