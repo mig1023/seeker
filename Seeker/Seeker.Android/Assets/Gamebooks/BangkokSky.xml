@@ -3071,9 +3071,16 @@
 		</Paragraph>
 		<Paragraph No="353">
 			<Text>Бросаюсь в погоню за парнем, расталкивая запрудивших улицу людей и стараясь не потерять из виду свою цель среди моря неотличимых лиц.\n\nВыполни Проверку: Сложность -1. Бетонные джунгли. Упрямый+2. Логичный+1.</Text>
+			<Actions>
+				<Test>
+					<Level>1</Level>
+					<Skill>ConcreteJungle</Skill>
+					<Bonuses>Упрямый:2, Логичный:1</Bonuses>
+				</Test>
+			</Actions>
 			<Options>
-				<Option Goto="283" Text="Если Провал"/>
-				<Option Goto="164" Text="Если Успех"/>
+				<Option Goto="283" Text="Провал"/>
+				<Option Goto="164" Text="Успех"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="354">
