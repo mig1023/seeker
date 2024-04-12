@@ -3028,9 +3028,16 @@
 		</Paragraph>
 		<Paragraph No="349">
 			<Text>Быстро сую пистолет в штаны и тороплюсь прочь по тротуару, среди людей, с ужасом глядящих на окровавленные труппы.\n\nВыполни Проверку: Сложность -2. Бетонные джунгли. Красивый +1. Логичный+1.</Text>
+			<Actions>
+				<Test>
+					<Level>2</Level>
+					<Skill>ConcreteJungle</Skill>
+					<Bonuses>Красивый:2, Логичный:1</Bonuses>
+				</Test>
+			</Actions>
 			<Options>
-				<Option Goto="376" Text="Если Провал"/>
-				<Option Goto="105" Text="Если Успех"/>
+				<Option Goto="376" Text="Провал"/>
+				<Option Goto="105" Text="Успех"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="350">
