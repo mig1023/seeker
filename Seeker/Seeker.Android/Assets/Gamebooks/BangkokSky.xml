@@ -3395,10 +3395,17 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="391">
-			<Text>Всю дорогу я безмятежно смотрю на проплывающие мимо дома и улицы.\n\nВыполни Проверку: Сложность -2. Бетонные джунгли. Холодный+2. Логичный+1.</Text>
+			<Text>Всю дорогу я безмятежно смотрю на проплывающие мимо дома и улицы.</Text>
+			<Actions>
+				<Test>
+					<Level>2</Level>
+					<Skill>ConcreteJungle</Skill>
+					<Bonuses>Холодный:2, Логичный:1</Bonuses>
+				</Test>
+			</Actions>
 			<Options>
-				<Option Goto="64" Text="Если Провал"/>
-				<Option Goto="219" Text="Если Успех"/>
+				<Option Goto="64" Text="Провал"/>
+				<Option Goto="219" Text="Успех"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="392">
