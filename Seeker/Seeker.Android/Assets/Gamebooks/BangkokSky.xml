@@ -1572,10 +1572,17 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="179">
-			<Text>Присев, открываю огонь по полицейским. Винтовка грохочет в моих руках, выбрасывая лязгающие по асфальту гильзы.\n\nВыполни Проверку: Сложность -3. Огнестрел. Умелый+2.\n\nПроворный+1.</Text>
+			<Text>Присев, открываю огонь по полицейским. Винтовка грохочет в моих руках, выбрасывая лязгающие по асфальту гильзы.</Text>
+			<Actions>
+				<Test>
+					<Level>3</Level>
+					<Skill>Firearms</Skill>
+					<Bonuses>Умелый:2, Проворный:1</Bonuses>
+				</Test>
+			</Actions>
 			<Options>
-				<Option Goto="54" Text="Если Провал"/>
-				<Option Goto="280" Text="Если Успех"/>
+				<Option Goto="54" Text="Провал"/>
+				<Option Goto="280" Text="Успех"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="180">
