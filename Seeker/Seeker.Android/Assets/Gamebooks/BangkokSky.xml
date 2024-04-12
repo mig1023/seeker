@@ -2701,10 +2701,17 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="315">
-			<Text>Быстрым движением пытаюсь схватить охранника за шею.\n\nВыполни Проверку: Сложность -2. Боевые искусства. Жестокий+2. Проворный+1.</Text>
+			<Text>Быстрым движением пытаюсь схватить охранника за шею.</Text>
+			<Actions>
+				<Test>
+					<Level>2</Level>
+					<Skill>MartialArts</Skill>
+					<Bonuses>Жестокий:2, Проворный:1</Bonuses>
+				</Test>
+			</Actions>
 			<Options>
-				<Option Goto="150" Text="Если Провал, не остается ничего другого, как ждать решения своей участи"/>
-				<Option Goto="156" Text="Если Успех"/>
+				<Option Goto="150" Text="Провал, не остается ничего другого, как ждать решения своей участи"/>
+				<Option Goto="156" Text="Успех"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="316">
