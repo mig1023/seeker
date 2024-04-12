@@ -2882,10 +2882,17 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="334">
-			<Text>Мы продолжаем какое-то время, пока я жалуюсь ей на свою несчастную жизнь.\n\nВыполни Проверку: Сложность -2. Дипломатия. Культурный+2.\n\nУпрямый+2.</Text>
+			<Text>Мы продолжаем какое-то время, пока я жалуюсь ей на свою несчастную жизнь.</Text>
+			<Actions>
+				<Test>
+					<Level>2</Level>
+					<Skill>Diplomacy</Skill>
+					<Bonuses>Культурный:2, Упрямый:1</Bonuses>
+				</Test>
+			</Actions>
 			<Options>
-				<Option Goto="286" Text="Если Провал"/>
-				<Option Goto="85" Text="Если Успех"/>
+				<Option Goto="286" Text="Провал"/>
+				<Option Goto="85" Text="Успех"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="335">
