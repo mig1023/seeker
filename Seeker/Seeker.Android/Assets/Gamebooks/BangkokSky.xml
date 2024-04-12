@@ -3271,9 +3271,16 @@
 		</Paragraph>
 		<Paragraph No="375">
 			<Text>Бросаюсь на последнего из убийц, а тот наводит на меня пистолет.\n\nВыполни Проверку: Сложность -2. Боевые искусства. Сильный+1.\n\nПроворный+1.</Text>
+			<Actions>
+				<Test>
+					<Level>2</Level>
+					<Skill>MartialArts</Skill>
+					<Bonuses>Сильный:2, Проворный:1</Bonuses>
+				</Test>
+			</Actions>
 			<Options>
-				<Option Goto="114" Text="Если Провал"/>
-				<Option Goto="40" Text="Если Успех"/>
+				<Option Goto="114" Text="Провал"/>
+				<Option Goto="40" Text="Успех"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="376">
