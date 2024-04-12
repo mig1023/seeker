@@ -3140,10 +3140,17 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="360">
-			<Text>Убедившись, что на улице ни души, укрываюсь в тени возле двери и осматриваю замок.\n\nВыполни Проверку: Сложность -3. Бетонные джунгли. Умелый+2.\n\nКультурный+1. Отмычка+2.</Text>
+			<Text>Убедившись, что на улице ни души, укрываюсь в тени возле двери и осматриваю замок.</Text>
+			<Actions>
+				<Test>
+					<Level>3</Level>
+					<Skill>ConcreteJungle</Skill>
+					<Bonuses>Умелый:2, Культурный:1, ОТМЫЧКА:2</Bonuses>
+				</Test>
+			</Actions>
 			<Options>
-				<Option Goto="293" Text="Если Провал, ты не можешь открыть его"/>
-				<Option Goto="245" Text="Если Успех"/>
+				<Option Goto="293" Text="Провал, ты не можешь открыть его"/>
+				<Option Goto="245" Text="Успех"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="361">
