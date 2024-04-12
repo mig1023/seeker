@@ -2006,10 +2006,17 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="230">
-			<Text>Сотри слово ПУШЕР.\n\nНа меня бросается второй великан. Закручиваю вертушку, метя ногой ему в лицо.\n\nВыполни Проверку: Сложность +0. Боевые искусства. Проворный+2. Логичный+1.</Text>
+			<Text>Сотри слово ПУШЕР.\n\nНа меня бросается второй великан. Закручиваю вертушку, метя ногой ему в лицо.</Text>
+			<Actions>
+				<Test>
+					<Level>0</Level>
+					<Skill>MartialArts</Skill>
+					<Bonuses>Проворный:2, Логичный:1</Bonuses>
+				</Test>
+			</Actions>
 			<Options>
-				<Option Goto="133" Text="Если Провал"/>
-				<Option Goto="377" Text="Если Успех"/>
+				<Option Goto="133" Text="Провал"/>
+				<Option Goto="377" Text="Успех"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="231">
