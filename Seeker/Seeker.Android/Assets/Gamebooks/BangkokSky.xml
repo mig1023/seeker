@@ -1925,10 +1925,17 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="222">
-			<Text>Надуваю щёки и смотрю на них, как дон Корлеоне на, э... уличную шпану.\n\nВыполни Проверку: Сложность -2. Дипломатия. Сильный+2. Упрямый+1.</Text>
+			<Text>Надуваю щёки и смотрю на них, как дон Корлеоне на, э... уличную шпану.</Text>
+			<Actions>
+				<Test>
+					<Level>2</Level>
+					<Skill>Diplomacy</Skill>
+					<Bonuses>Сильный:2, Упрямый:1</Bonuses>
+				</Test>
+			</Actions>
 			<Options>
-				<Option Goto="119" Text="Если Провал"/>
-				<Option Goto="302" Text="Если Успех"/>
+				<Option Goto="119" Text="Провал"/>
+				<Option Goto="302" Text="Успех"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="223">
