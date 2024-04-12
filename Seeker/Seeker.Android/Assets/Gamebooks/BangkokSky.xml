@@ -1740,10 +1740,17 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="199">
-			<Text>Парень делает круговой взмах своей монтировкой.\n\nВыполни Проверку: Сложность -2. Боевые искусства.\n\nПроворный+1. Жестокий+1.</Text>
+			<Text>Парень делает круговой взмах своей монтировкой.</Text>
+			<Actions>
+				<Test>
+					<Level>2</Level>
+					<Skill>MartialArts</Skill>
+					<Bonuses>Проворный:1, Жестокий:1</Bonuses>
+				</Test>
+			</Actions>
 			<Options>
-				<Option Goto="83" Text="Если Провал"/>
-				<Option Goto="336" Text="Если Успех"/>
+				<Option Goto="83" Text="Провал"/>
+				<Option Goto="336" Text="Успех"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="200">
