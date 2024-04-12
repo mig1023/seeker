@@ -2042,10 +2042,17 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="234">
-			<Text>Вешаю секьюрити лапшу о ждущих меня внутри товарищах. Для правдоподобия называю пару имён.\n\nВыполни Проверку: Сложность -3. Бетонные джунгли.\n\nКрасивый+2. Логичный+1.</Text>
+			<Text>Вешаю секьюрити лапшу о ждущих меня внутри товарищах. Для правдоподобия называю пару имён.</Text>
+			<Actions>
+				<Test>
+					<Level>3</Level>
+					<Skill>ConcreteJungle</Skill>
+					<Bonuses>Красивый:2, Логичный:1</Bonuses>
+				</Test>
+			</Actions>
 			<Options>
-				<Option Goto="19" Text="Если Провал"/>
-				<Option Goto="266" Text="Если Успех"/>
+				<Option Goto="19" Text="Провал"/>
+				<Option Goto="266" Text="Успех"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="235">
