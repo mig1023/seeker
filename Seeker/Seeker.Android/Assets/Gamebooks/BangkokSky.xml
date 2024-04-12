@@ -2860,10 +2860,17 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="332">
-			<Text>Разворачиваюсь к фургону, одновременно с этим нащупывая свой пистолет.\n\nВыполни Проверку: Сложность -2. Огнестрел. Умелый+2.\n\nОтчаянный+1.</Text>
+			<Text>Разворачиваюсь к фургону, одновременно с этим нащупывая свой пистолет.</Text>
+			<Actions>
+				<Test>
+					<Level>2</Level>
+					<Skill>Firearms</Skill>
+					<Bonuses>Умелый:2, Отчаянный:1</Bonuses>
+				</Test>
+			</Actions>
 			<Options>
-				<Option Goto="196" Text="Если Провал"/>
-				<Option Goto="373" Text="Если Успех"/>
+				<Option Goto="196" Text="Провал"/>
+				<Option Goto="373" Text="Успех"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="333">
