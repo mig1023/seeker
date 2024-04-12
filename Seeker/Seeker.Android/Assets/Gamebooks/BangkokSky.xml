@@ -2766,10 +2766,17 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="320">
-			<Text>Прыгаю к кровати в тот самый момент, как убийцы входят в комнату и стреляют.\n\nВыполни Проверку: Сложность -3. Физподготовка. Проворный+2.\n\nОтчаянный+1.</Text>
+			<Text>Прыгаю к кровати в тот самый момент, как убийцы входят в комнату и стреляют.</Text>
+			<Actions>
+				<Test>
+					<Level>3</Level>
+					<Skill>Physical</Skill>
+					<Bonuses>Проворный:2, Отчаянный:1</Bonuses>
+				</Test>
+			</Actions>
 			<Options>
-				<Option Goto="213" Text="Если Провал"/>
-				<Option Goto="130" Text="Если Успех"/>
+				<Option Goto="213" Text="Провал"/>
+				<Option Goto="130" Text="Успех"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="321">
