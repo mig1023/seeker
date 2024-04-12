@@ -3229,10 +3229,17 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="370">
-			<Text>Не раздумывая, бросаюсь в погоню за пацаном, лавирующим среди загромождающих переулок лотков со всякой фигнёй.\n\nВыполни Проверку: Сложность -2. Физподготовка. Проворный+2.\n\nУпрямый+1.</Text>
+			<Text>Не раздумывая, бросаюсь в погоню за пацаном, лавирующим среди загромождающих переулок лотков со всякой фигнёй.</Text>
+			<Actions>
+				<Test>
+					<Level>2</Level>
+					<Skill>Physical</Skill>
+					<Bonuses>Проворный:2, Упрямый:1</Bonuses>
+				</Test>
+			</Actions>
 			<Options>
-				<Option Goto="17" Text="Если Провал"/>
-				<Option Goto="260" Text="Если Успех"/>
+				<Option Goto="17" Text="Провал"/>
+				<Option Goto="260" Text="Успех"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="371">
