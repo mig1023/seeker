@@ -2687,10 +2687,17 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="314">
-			<Text>Покидаю укрытие за машиной и, пригнувшись, бегу к зданиям, а полицейские открывают огонь из винтовок.\n\nВыполни Проверку: Сложность -3. Физподготовка. Проворный+2. Логичный+1.</Text>
+			<Text>Покидаю укрытие за машиной и, пригнувшись, бегу к зданиям, а полицейские открывают огонь из винтовок.</Text>
+			<Actions>
+				<Test>
+					<Level>3</Level>
+					<Skill>Physical</Skill>
+					<Bonuses>Проворный:2, Логичный:1</Bonuses>
+				</Test>
+			</Actions>
 			<Options>
-				<Option Goto="167" Text="Если Провал"/>
-				<Option Goto="270" Text="Если Успех"/>
+				<Option Goto="167" Text="Провал"/>
+				<Option Goto="270" Text="Успех"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="315">
