@@ -398,9 +398,23 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="50">
-			<Text>Выберите, сколько минут вы будете сидеть под водой? - 2, 5, 10, 15, 20? - и проверьте, что случилось с вами, когда вы вынырнули.</Text>
+			<Text>Выберите, сколько минут вы будете сидеть под водой и проверьте, что случилось с вами, когда вы вынырнули.</Text>
 			<Options>
-				<Option Goto="61"/>
+				<Option Goto="61" Text="2 минуты">
+					<Trigger Value="нырок 2 минуты"/>
+				</Option>
+				<Option Goto="61" Text="5 минут">
+					<Trigger Value="нырок 5 минут"/>
+				</Option>
+				<Option Goto="61" Text="10 минут">
+					<Trigger Value="нырок 10 минут"/>
+				</Option>
+				<Option Goto="61" Text="15 минут">
+					<Trigger Value="нырок 15 минут"/>
+				</Option>
+				<Option Goto="61" Text="20 минут">
+					<Trigger Value="нырок 20 минут"/>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph No="51">
@@ -476,8 +490,8 @@
 		</Paragraph>
 		<Paragraph No="61">
 			<Options>
-				<Option Goto="37" Text="Вы вынырнули из воды через 2-15 минут"/>
-				<Option Goto="34" Text="Вы вынырнули из воды через 20 минут"/>
+				<Option Goto="37" Text="Вы вынырнули из воды через 2-15 минут" Availability="нырок 2 минуты|нырок 5 минут|нырок 10 минут|нырок 15 минут"/>
+				<Option Goto="34" Text="Вы вынырнули из воды через 20 минут" Availability="нырок 20 минут"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="62">
