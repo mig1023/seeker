@@ -1271,10 +1271,10 @@
 		<Paragraph No="142">
 			<Text>Киллер уворачивается и стреляет ещё раз, всадив в меня весь заряд (брось 1D6 - столько Ранений ты получаешь.</Text>
 			<Options>
-				<Option Goto="250" Text="Если у тебя 6 Ранений">
+				<Option Goto="250" Text="Если у тебя 6 Ранений" Availability="РАНЕНИЙ >= 6">
 					<Text>Тяжело раненый, я поворачиваюсь, чтобы схватить свой пистолет...</Text>
 				</Option>
-				<Option Goto="320"/>
+				<Option Goto="320" Availability="РАНЕНИЙ &lt; 6"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="143">
