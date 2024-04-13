@@ -128,7 +128,7 @@
 				<Option Goto="250" Text="Если у тебя 6 Ранений" Availability="РАНЕНИЙ >= 6">
 					<Text>Боль заставляет меня кричать - но я всё равно бросаюсь на боковую дверь под поливающим коридор свинцовым дождём...</Text>
 				</Option>
-				<Option Goto="86" Availability="РАНЕНИЙ < 6"/>
+				<Option Goto="86" Availability="РАНЕНИЙ &lt; 6"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="11">
@@ -182,7 +182,7 @@
 				<Option Goto="350" Text="Если у тебя 6 Ранений" Availability="РАНЕНИЙ >= 6">
 					<Text>Когда я поднимаюсь на ноги, вора уже и след простыл, так что мне остаётся лишь идти своей дорогой дальше...</Text>
 				</Option>
-				<Option Goto="20" Availability="РАНЕНИЙ < 6"/>
+				<Option Goto="20" Availability="РАНЕНИЙ &lt; 6"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="18">
@@ -238,7 +238,7 @@
 				<Option Goto="350" Text="Если у тебя 6 Ранений" Availability="РАНЕНИЙ >= 6">
 					<Text>С трудом встав на ноги, обнаруживаю себя в окружении целящихся в меня полицейских...</Text>
 				</Option>
-				<Option Goto="198" Availability="РАНЕНИЙ < 6"/>
+				<Option Goto="198" Availability="РАНЕНИЙ &lt; 6"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="26">
@@ -247,7 +247,7 @@
 				<Option Goto="250" Text="Если у тебя 6 Ранений" Availability="РАНЕНИЙ >= 6">
 					<Text>Делаю кувырок, пока убийцы ведут за мной стволами, чтобы добить. Но тут я разворачиваюсь и вскакиваю между двумя убийцами, тем самым подставляя их под дружественный огонь...</Text>
 				</Option>
-				<Option Goto="205" Availability="РАНЕНИЙ < 6"/>
+				<Option Goto="205" Availability="РАНЕНИЙ &lt; 6"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="27">
@@ -286,8 +286,8 @@
 				</Test>
 			</Actions>
 			<Options>
-				<Option Goto="55" Text="Провал" Availability="РАНЕНИЙ < 6"/>
-				<Option Goto="281" Text="Успех" Availability="РАНЕНИЙ < 6"/>
+				<Option Goto="55" Text="Провал" Availability="РАНЕНИЙ &lt; 6"/>
+				<Option Goto="281" Text="Успех" Availability="РАНЕНИЙ &lt; 6"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="31">
@@ -473,7 +473,7 @@
 				<Option Goto="250" Text="Если у тебя 6 Ранений" Availability="РАНЕНИЙ >= 6">
 					<Text>Переношу вес на здоровую ногу и выглядываю для ответного огня...</Text>
 				</Option>
-				<Option Goto="374" Availability="РАНЕНИЙ < 6"/>
+				<Option Goto="374" Availability="РАНЕНИЙ &lt; 6"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="54">
@@ -488,13 +488,13 @@
 				<Option Goto="350" Text="Если у тебя 6 Ранений" Availability="РАНЕНИЙ >= 6">
 					<Text>Я корчусь на земле от боли, и когда, наконец, поднимаюсь, сил у меня хватает лишь на то, чтобы ковылять в свой мотель...</Text>
 				</Option>
-				<Option Goto="388" Availability="РАНЕНИЙ < 6"/>
+				<Option Goto="388" Availability="РАНЕНИЙ &lt; 6"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="56">
 			<Text>Маневр не выходит, и я впиливаюсь в капот машины. Скрежет металла, радость полета и боль приземления на асфальт (получаешь 2 Ранения).</Text>
 			<Actions>
-				<Option Goto="350" Text="Если у тебя 6 Ранений">
+				<Option Goto="350" Text="Если у тебя 6 Ранений" Availability="РАНЕНИЙ >= 6">
 					<Text>Оглушённый, с большим трудом поднимаюсь и укрываюсь за машиной от приближающихся полицейских с направленными в мою сторону винтовками. Терять мне всё равно нечего, и я бросаюсь врукопашную.</Text>
 				</Option>
 				<Test>
@@ -504,8 +504,8 @@
 				</Test>
 			</Actions>
 			<Options>
-				<Option Goto="207" Text="Провал"/>
-				<Option Goto="322" Text="Успех"/>
+				<Option Goto="207" Text="Провал" Availability="РАНЕНИЙ &lt; 6"/>
+				<Option Goto="322" Text="Успех" Availability="РАНЕНИЙ &lt; 6"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="57">
