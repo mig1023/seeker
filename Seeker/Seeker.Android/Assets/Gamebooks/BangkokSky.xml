@@ -1195,7 +1195,14 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="125">
-			<Text>В кабинете грохочут выстрелы, и одна из пуль находит меня (получаешь 2 Ранения).</Text>
+		<Texts>
+			<Texts>
+				<Text>В кабинете грохочут выстрелы, и одна из пуль находит меня.</Text>
+				<Text Style="Small">Получаешь 2 Ранение.</Text>
+			</Texts>
+			<Modifications>
+				<Wounds Value="2"/>
+			</Modifications>
 			<Options>
 				<Option Goto="250" Text="Если у тебя 6 Ранений" Availability="РАНЕНИЙ >= 6">
 					<Text>Не обращая внимания на боль, меняю позицию и продолжаю стрелять...</Text>
