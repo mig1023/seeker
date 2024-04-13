@@ -912,7 +912,7 @@
 				<Text Style="Small">Получаешь 2 Ранение.</Text>
 			</Texts>
 			<Modifications>
-				<Wounds Value="1"/>
+				<Wounds Value="2"/>
 			</Modifications>
 			<Options>
 				<Option Goto="350" Text="Если у тебя 6 Ранений" Availability="РАНЕНИЙ >= 6">
@@ -1083,7 +1083,13 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="114">
-			<Text>Мой кулак встречает пустоту. В ответ киллер стреляет почти не целясь, но всё равно попадает мне в живот (получаешь 2 Ранения).</Text>
+			<Texts>
+				<Text>Мой кулак встречает пустоту. В ответ киллер стреляет почти не целясь, но всё равно попадает мне в живот.</Text>
+				<Text Style="Small">Получаешь 2 Ранение.</Text>
+			</Texts>
+			<Modifications>
+				<Wounds Value="2"/>
+			</Modifications>	
 			<Options>
 				<Option Goto="250" Text="Если у тебя 6 Ранений" Availability="РАНЕНИЙ >= 6">
 					<Text>Чувствую холод в кишках, но выбиваю у противника пистолет и наношу ему удар ногой...</Text>
