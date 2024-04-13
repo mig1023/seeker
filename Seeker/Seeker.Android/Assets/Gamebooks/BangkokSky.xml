@@ -1410,10 +1410,10 @@
 		<Paragraph No="160">
 			<Text>Меня накрывает облако дроби, пробивающей кучу дырочек в моей груди (брось 1D6 - столько Ранений ты получаешь).</Text>
 			<Options>
-				<Option Goto="250" Text="Если у тебя 6 Ранений">
+				<Option Goto="250" Text="Если у тебя 6 Ранений" Availability="РАНЕНИЙ >= 6">
 					<Text>Не обращая внимания на боль, продолжаю движение, а азиат снова жмёт спуск...</Text>
 				</Option>
-				<Option Goto="383"/>
+				<Option Goto="383" Availability="РАНЕНИЙ &lt; 6"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="161">
