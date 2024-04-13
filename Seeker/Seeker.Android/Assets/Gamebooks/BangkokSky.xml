@@ -1712,10 +1712,10 @@
 		<Paragraph No="194">
 			<Text>Солдат быстро реагирует, выпустив очередь мне в живот (брось 1D6 - столько Ранений ты получаешь).</Text>
 			<Options>
-				<Option Goto="250" Text="Если у тебя 6 Ранений">
+				<Option Goto="250" Text="Если у тебя 6 Ранений" Availability="РАНЕНИЙ >= 6">
 					<Text>Превозмогая боль, нажимаю на курок и убиваю его...</Text>
 				</Option>
-				<Option Goto="335"/>
+				<Option Goto="335" Availability="РАНЕНИЙ &lt; 6"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="195">
