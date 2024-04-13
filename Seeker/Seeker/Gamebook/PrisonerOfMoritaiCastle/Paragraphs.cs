@@ -35,12 +35,18 @@ namespace Seeker.Gamebook.PrisonerOfMoritaiCastle
                 XmlNode trigger = xmlOption.SelectSingleNode("Trigger");
 
                 if (trigger != null)
-                    option.Do.Add(Xml.ModificationParse(trigger, new Modification()));
+                    option.Do.Add(ModificationParse(trigger));
 
                 paragraph.Options.Add(option);
             }
 
+            foreach (XmlNode xmlModification in xmlParagraph.SelectNodes("Modifications/*"))
+                paragraph.Modification.Add(ModificationParse(xmlModification));
+
             return paragraph;
         }
+
+        public override Abstract.IModification ModificationParse(XmlNode xmlModification) =>
+            Xml.ModificationParse(xmlModification, new Modification());
     }
 }
