@@ -11,6 +11,11 @@ namespace Seeker.Gamebook.BangkokSky
         public string Skill { get; set; }
         public string Bonuses { get; set; }
 
+        public override List<string> Status() => new List<string>
+        {
+            $"Ранений: {Character.Protagonist.Wounds} / 6",
+        };
+
         public override List<string> AdditionalStatus()
         {
             List<string> statusLines = new List<string>();
@@ -83,6 +88,26 @@ namespace Seeker.Gamebook.BangkokSky
 
         public List<string> Decrease() =>
             ChangeProtagonistParam(Stat, Character.Protagonist, "StatBonuses", decrease: true);
+
+        public override bool Availability(string option)
+        {
+            if (String.IsNullOrEmpty(option))
+            {
+                return true;
+            }
+            else if (option.Contains("РАНЕНИЙ >="))
+            {
+                return Character.Protagonist.Wounds >= Game.Services.LevelParse(option);
+            }
+            else if (option.Contains("РАНЕНИЙ <"))
+            {
+                return Character.Protagonist.Wounds < Game.Services.LevelParse(option);
+            }
+            else
+            {
+                return AvailabilityTrigger(option.Trim());
+            }
+        }
 
         public List<string> Test()
         {

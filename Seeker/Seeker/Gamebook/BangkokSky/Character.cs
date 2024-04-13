@@ -15,6 +15,13 @@ namespace Seeker.Gamebook.BangkokSky
         public int Diplomacy { get; set; }
         public int ConcreteJungle { get; set; }
 
+        private int _wounds;
+        public int Wounds
+        {
+            get => _wounds;
+            set => _wounds = Game.Param.Setter(value, _wounds, this);
+        }
+
         public int StatBonuses { get; set; }
 
         public override void Init()
@@ -27,6 +34,7 @@ namespace Seeker.Gamebook.BangkokSky
             Firearms = 0;
             Diplomacy = 0;
             ConcreteJungle = 0;
+            Wounds = 0;
             StatBonuses = 8;
         }
 
@@ -40,12 +48,13 @@ namespace Seeker.Gamebook.BangkokSky
             Firearms = this.Firearms,
             Diplomacy = this.Diplomacy,
             ConcreteJungle = this.ConcreteJungle,
+            Wounds = this.Wounds,
             StatBonuses = this.StatBonuses,
         };
 
         public override string Save() => String.Join("|",
             Name, MartialArts, Physical, Driving, Firearms,
-            Diplomacy, ConcreteJungle, StatBonuses);
+            Diplomacy, ConcreteJungle, Wounds, StatBonuses);
 
         public override void Load(string saveLine)
         {
@@ -58,7 +67,8 @@ namespace Seeker.Gamebook.BangkokSky
             Firearms = int.Parse(save[4]);
             Diplomacy = int.Parse(save[5]);
             ConcreteJungle = int.Parse(save[6]);
-            StatBonuses = int.Parse(save[7]);
+            Wounds = int.Parse(save[7]);
+            StatBonuses = int.Parse(save[8]);
 
             IsProtagonist = true;
         }
