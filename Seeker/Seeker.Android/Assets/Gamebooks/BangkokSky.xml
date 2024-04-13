@@ -2612,7 +2612,13 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="284">
-			<Text>Внешний мир для меня исчезает, пока я сплю пару часов (восстанавливаешь 1 Ранение).</Text>
+			<Texts>
+				<Text>Внешний мир для меня исчезает, пока я сплю пару часов.</Text>
+				<Text Style="Small">Восстанавливаешь 1 Ранение.</Text>
+			</Texts>
+			<Modifications>
+				<Wounds Value="-1"/>
+			</Modifications>
 			<Options>
 				<Option Goto="339" Text="Если есть слово ЛОВУШКА"/>
 				<Option Goto="14" Text="Если есть слово НОЧЬ"/>
