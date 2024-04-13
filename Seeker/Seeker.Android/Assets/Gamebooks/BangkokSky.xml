@@ -125,10 +125,10 @@
 		<Paragraph No="10">
 			<Text>Я промахиваюсь, а в ответ получаю несколько пуль (брось 1D6 - столько Ранений ты получаешь).</Text>
 			<Options>
-				<Option Goto="250" Text="Если у тебя 6 Ранений">
+				<Option Goto="250" Text="Если у тебя 6 Ранений" Availability="РАНЕНИЙ >= 6">
 					<Text>Боль заставляет меня кричать - но я всё равно бросаюсь на боковую дверь под поливающим коридор свинцовым дождём...</Text>
 				</Option>
-				<Option Goto="86"/>
+				<Option Goto="86" Availability="РАНЕНИЙ < 6"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="11">
@@ -1497,9 +1497,11 @@
 				</Test>
 			</Actions>
 			<Options>
-				<Option Goto="388" Text="Провал и плохое самочувствие вынуждает тебя вернуться в мотель"/>
+				<Option Goto="388" Text="Провал">
+					<Text>...и плохое самочувствие вынуждает тебя вернуться в мотель.</Text>
+				</Option>
 				<Option Goto="206" Text="Успех м">
-					<Text>...и тебе полегчало, в результате ты продолжаешь прогулку центром</Text>
+					<Text>...и тебе полегчало, в результате ты продолжаешь прогулку центром.</Text>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -1972,8 +1974,12 @@
 				</Test>
 			</Actions>
 			<Options>
-				<Option Goto="388" Text="Провал и тебе так погано, что приходится ползти в мотель"/>
-				<Option Goto="356" Text="Если Успех, тебе полегчало, и можно топать в Чайнатаун"/>
+				<Option Goto="388" Text="Провал">
+					<Text>...и тебе так погано, что приходится ползти в мотель.</Text>
+				</Option>
+				<Option Goto="356" Text="Успех">
+					<Text>...тебе полегчало, и можно топать в Чайнатаун</Text>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph No="225">
@@ -2718,7 +2724,9 @@
 				</Test>
 			</Actions>
 			<Options>
-				<Option Goto="150" Text="Провал, не остается ничего другого, как ждать решения своей участи"/>
+				<Option Goto="150" Text="Провал">
+					<Text>...и не остается ничего другого, как ждать решения своей участи.</Text>
+				</Option>
 				<Option Goto="156" Text="Успех"/>
 			</Options>
 		</Paragraph>
@@ -2978,7 +2986,9 @@
 				</Test>
 			</Actions>
 			<Options>
-				<Option Goto="72" Text="Провал, ничего не происходит, и ты решаешь пойти спать"/>
+				<Option Goto="72" Text="Провал">
+					<Text>...и ничего не происходит, и ты решаешь пойти спать.</Text>
+				</Option>
 				<Option Goto="276" Text="Успех"/>
 			</Options>
 		</Paragraph>
@@ -3157,7 +3167,9 @@
 				</Test>
 			</Actions>
 			<Options>
-				<Option Goto="293" Text="Провал, ты не можешь открыть его"/>
+				<Option Goto="293" Text="Провал">
+					<Text>...ты не можешь открыть его.</Text>
+				</Option>
 				<Option Goto="245" Text="Успех"/>
 			</Options>
 		</Paragraph>
