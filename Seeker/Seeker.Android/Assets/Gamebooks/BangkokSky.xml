@@ -1727,10 +1727,10 @@
 		<Paragraph No="196">
 			<Text>Но мне не хватает расторопности - я только начинаю движение, как пуля клюнула меня в плечо (получаешь 2 Ранения).</Text>
 			<Options>
-				<Option Goto="250" Text="Если у тебя 6 Ранений">
+				<Option Goto="250" Text="Если у тебя 6 Ранений" Availability="РАНЕНИЙ >= 6">
 					<Text>Едва успеваю шагнуть в сторону и укрыться за лимузином...</Text>
 				</Option>
-				<Option Goto="75"/>
+				<Option Goto="75" Availability="РАНЕНИЙ &lt; 6"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="197">
