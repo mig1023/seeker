@@ -285,7 +285,7 @@
 				<Text Style="Small">Получаешь 2 Ранения.</Text>
 			</Texts>
 			<Modifications>
-				<Wounds Value="1"/>
+				<Wounds Value="2"/>
 			</Modifications>
 			<Actions>
 				<Option Goto="350" Text="Если у тебя 6 Ранений" Availability="РАНЕНИЙ >= 6">
@@ -480,7 +480,13 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="53">
-			<Text>Один из солдат палит из своей винтовки, как ненормальный. От колонны отлетают кусочки бетона, но одна из пуль всё-таки попадает мне в ногу (получаешь 2 Ранения).</Text>
+			<Texts>
+				<Text>Один из солдат палит из своей винтовки, как ненормальный. От колонны отлетают кусочки бетона, но одна из пуль всё-таки попадает мне в ногу.</Text>
+				<Text Style="Small">Получаешь 2 Ранение.</Text>
+			</Texts>
+			<Modifications>
+				<Wounds Value="2"/>
+			</Modifications>
 			<Options>
 				<Option Goto="250" Text="Если у тебя 6 Ранений" Availability="РАНЕНИЙ >= 6">
 					<Text>Переношу вес на здоровую ногу и выглядываю для ответного огня...</Text>
