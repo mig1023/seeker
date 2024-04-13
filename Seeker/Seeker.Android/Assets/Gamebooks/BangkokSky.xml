@@ -1351,10 +1351,10 @@
 		<Paragraph No="153">
 			<Text>Киллер делает шаг в сторону, уклоняясь от моего выстрела, в свою очередь попав мне в бок (получаешь 2 Ранения).</Text>
 			<Options>
-				<Option Goto="250" Text="Если у тебя 6 Ранений">
+				<Option Goto="250" Text="Если у тебя 6 Ранений" Availability="РАНЕНИЙ >= 6">
 					<Text>Укрываюсь за стеной и выжидаю момент, чтобы выскочить и выстрелить в него ещё раз...</Text>
 				</Option>
-				<Option Goto="287"/>
+				<Option Goto="287" Availability="РАНЕНИЙ &lt; 6"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="154">
