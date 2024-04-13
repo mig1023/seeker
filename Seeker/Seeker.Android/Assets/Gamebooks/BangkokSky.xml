@@ -806,7 +806,13 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="83">
-			<Text>Получаю монтировкой в челюсть (получаешь 1 ранение).</Text>
+			<Texts>
+				<Text>Получаю монтировкой в челюсть.</Text>
+				<Text Style="Small">Получаешь 1 Ранение.</Text>
+			</Texts>
+			<Modifications>
+				<Wounds Value="1"/>
+			</Modifications>
 			<Options>
 				<Option Goto="350" Text="Если у тебя 6 Ранений" Availability="РАНЕНИЙ >= 6">
 					<Text>В голове у меня полыхнула вспышка, а пацан пользуется моей ошарашенностью, чтобы удрать в переулок. Пытаюсь не упасть и продолжить погоню...</Text>
