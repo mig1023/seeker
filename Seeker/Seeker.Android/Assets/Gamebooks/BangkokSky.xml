@@ -1668,7 +1668,7 @@
 		<Paragraph No="189">
 			<Text>Но я промахиваюсь, а головорез достаёт меня ногой в живот. Его удар вышибает из меня дух и швыряет меня спиной вперёд на заставленную компьютерными запчастями полку (получаешь 1 Ранение).</Text>
 			<Actions>
-				<Option Goto="350" Text="Если у тебя 6 Ранений">
+				<Option Goto="350" Text="Если у тебя 6 Ранений" Availability="РАНЕНИЙ >= 6">
 					<Text>Не теряя времени, вскакиваю на ноги, но тут к веселью подключается толстяк с деревянной битой.</Text>
 				</Option>
 				<Test>
@@ -1678,8 +1678,8 @@
 				</Test>
 			</Actions>
 			<Options>
-				<Option Goto="55" Text="Провал"/>
-				<Option Goto="240" Text="Успех"/>
+				<Option Goto="55" Text="Провал" Availability="РАНЕНИЙ &lt; 6"/>
+				<Option Goto="240" Text="Успех" Availability="РАНЕНИЙ &lt; 6"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="190">
