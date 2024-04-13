@@ -3207,10 +3207,10 @@
 		<Paragraph No="366">
 			<Text>Я двигаюсь слишком медленно, не успеваю укрыться. Винтовка выплёвывает язычок пламени, и в меня впивается пуля (получаешь 2 Ранения).</Text>
 			<Options>
-				<Option Goto="250" Text="Если у тебя 6 Ранений">
+				<Option Goto="250" Text="Если у тебя 6 Ранений" Availability="РАНЕНИЙ >= 6">
 					<Text>Пошатнувшись, я сдвигаюсь вбок, уходя с линии огня...</Text>
 				</Option>
-				<Option Goto="202"/>
+				<Option Goto="202" Availability="РАНЕНИЙ &lt; 6"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="367">
