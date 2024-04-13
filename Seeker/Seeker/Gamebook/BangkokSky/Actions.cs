@@ -167,5 +167,20 @@ namespace Seeker.Gamebook.BangkokSky
             return lines;
         }
 
+        public List<string> RandomWounds()
+        {
+            List<string> lines = new List<string>();
+
+            int dice = Game.Dice.Roll();
+            string wounds = Game.Services.CoinsNoun(dice, "ранение", "ранения", "ранений");
+
+            lines.Add($"BIG|BOLD|На кубике выпало: {Game.Dice.Symbol(dice)}");
+            lines.Add($"BAD|Вы получили {dice} {wounds}");
+
+            Character.Protagonist.Wounds += dice;
+
+            return lines;
+        }
+
     }
 }
