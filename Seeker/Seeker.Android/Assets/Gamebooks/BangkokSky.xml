@@ -276,7 +276,7 @@
 		<Paragraph No="30">
 			<Text>Пытаюсь увернуться, но двигаюсь недостаточно быстро и получаю ломиком в челюсть (получаешь 2 Ранения).</Text>
 			<Actions>
-				<Option Goto="350" Text="Если у тебя 6 Ранений">
+				<Option Goto="350" Text="Если у тебя 6 Ранений" Availability="РАНЕНИЙ >= 6">
 					<Text>Наполовину оглушённый, делаю шаг в сторону, чтобы уклониться от второго, но тут первый снова взмахивает монтировкой.</Text>
 				</Option>
 				<Test>
@@ -286,8 +286,8 @@
 				</Test>
 			</Actions>
 			<Options>
-				<Option Goto="55" Text="Провал"/>
-				<Option Goto="281" Text="Успех"/>
+				<Option Goto="55" Text="Провал" Availability="РАНЕНИЙ < 6"/>
+				<Option Goto="281" Text="Успех" Availability="РАНЕНИЙ < 6"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="31">
