@@ -357,11 +357,7 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="44">
-			<Options>
-				<Option Goto="37" Text="Вы вынырнули из воды через 2 минуты"/>
-				<Option Goto="28" Text="Вы вынырнули из воды через 5-10 минут"/>
-				<Option Goto="34" Text="Вы вынырнули из воды через 15-20 минут"/>
-			</Options>
+			<Text>[пустой парграф]</Text>
 		</Paragraph>
 		<Paragraph No="45">
 			<Options>
@@ -398,23 +394,13 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="50">
-			<Text>Выберите, сколько минут вы будете сидеть под водой и проверьте, что случилось с вами, когда вы вынырнули.</Text>
+			<Text>Выберите, сколько минут вы будете сидеть под водой:</Text>
 			<Options>
-				<Option Goto="61" Text="2 минуты">
-					<Trigger Value="нырок 2 минуты"/>
-				</Option>
-				<Option Goto="61" Text="5 минут">
-					<Trigger Value="нырок 5 минут"/>
-				</Option>
-				<Option Goto="61" Text="10 минут">
-					<Trigger Value="нырок 10 минут"/>
-				</Option>
-				<Option Goto="61" Text="15 минут">
-					<Trigger Value="нырок 15 минут"/>
-				</Option>
-				<Option Goto="61" Text="20 минут">
-					<Trigger Value="нырок 20 минут"/>
-				</Option>
+				<Option Goto="37" Text="2 минуты"/>
+				<Option Goto="37" Text="5 минут"/>
+				<Option Goto="37" Text="10 минут"/>
+				<Option Goto="37" Text="15 минут">
+				<Option Goto="34" Text="20 минут">
 			</Options>
 		</Paragraph>
 		<Paragraph No="51">
@@ -462,9 +448,13 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="58">
-			<Text>Выберите, сколько минут вы будете сидеть под водой? - (2, 5, 10, 15, 20) и проверьте, что случилось, когда вы вынырнули</Text>
+			<Text>Выберите, сколько минут вы будете сидеть под водой и проверьте, что случилось, когда вы вынырнули.</Text>
 			<Options>
-				<Option Goto="44"/>
+				<Option Goto="37" Text="Сидеть 2 минуты"/>
+				<Option Goto="28" Text="Сидеть 5 минут"/>
+				<Option Goto="28" Text="Сидеть 10 минут"/>
+				<Option Goto="34" Text="Сидеть 15 минут"/>
+				<Option Goto="34" Text="Сидеть 20 минут"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="59">
@@ -489,10 +479,7 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="61">
-			<Options>
-				<Option Goto="37" Text="Вы вынырнули из воды через 2-15 минут" Availability="нырок 2 минуты|нырок 5 минут|нырок 10 минут|нырок 15 минут"/>
-				<Option Goto="34" Text="Вы вынырнули из воды через 20 минут" Availability="нырок 20 минут"/>
-			</Options>
+			<Text>[пустой парграф]</Text>
 		</Paragraph>
 		<Paragraph No="62">
 			<Text>- Стой! Тревога!! - закричал первый охранник, увидев вас, когда вы вытащили меч из тайника походного алтаря. Вы не дали ему опомниться и несколькими ударами опрокинули на землю. Однако не успели его добить. На вас набросилось сразу пятеро врагов. Вы поняли, что не рассчитали своих сил и с трудом успевали парировать их удары. Сильный толчок опрокинул вас на землю, и сразу несколько клинков вонзилось в ваше тело. Вы убиты.</Text>
