@@ -1538,9 +1538,9 @@
 				<SimpleDice/>
 			</Actions>
 			<Options>
-				<Option Goto="11" Text="Если выпало 1"/>
-				<Option Goto="224" Text="Если выпало 2"/>
-				<Option Goto="356" Text="Если выпало от 3 до 6"/>
+				<Option Goto="11" Text="Выпало 1"/>
+				<Option Goto="224" Text="Выпало 2"/>
+				<Option Goto="356" Text="Выпало от 3 до 6"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="160">
