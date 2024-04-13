@@ -29,6 +29,7 @@
 		<Buttons>
 			<Test>Выполнить проверку</Test>
 			<RandomWounds>Подсчитать раны</RandomWounds>
+			<SimpleDice>Бросьте кубик</SimpleDice>
 		</Buttons>
 	</Introduction>
 	<Paragraphs>
@@ -62,11 +63,14 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="4">
-			<Text>Запрыгиваю на мотоцикл, завожу его и под завывания полицейских сирен за спиной качу на полной скорости по улице.\n\nБрось 1D6 и переходи на соответствующий параграф:</Text>
+			<Text>Запрыгиваю на мотоцикл, завожу его и под завывания полицейских сирен за спиной качу на полной скорости по улице.</Text>
+			<Actions>
+				<SimpleDice/>
+			</Actions>
 			<Options>
-				<Option Goto="78" Text="Если выпало 1 или 2"/>
-				<Option Goto="162" Text="Если выпало 3 или 4"/>
-				<Option Goto="306" Text="Если выпало 5 или 6"/>
+				<Option Goto="78" Text="Выпало 1 или 2"/>
+				<Option Goto="162" Text="Выпало 3 или 4"/>
+				<Option Goto="306" Text="Выпало 5 или 6"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="5">
