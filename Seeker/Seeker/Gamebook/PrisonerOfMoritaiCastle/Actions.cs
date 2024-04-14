@@ -66,5 +66,11 @@ namespace Seeker.Gamebook.PrisonerOfMoritaiCastle
                 return true;
             }
         }
+
+        public override bool IsHealingEnabled() =>
+            Character.Protagonist.Hitpoints < 5;
+
+        public override void UseHealing(int healingLevel) =>
+            Character.Protagonist.Hitpoints = 5;
     }
 }

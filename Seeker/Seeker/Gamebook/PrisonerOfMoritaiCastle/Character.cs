@@ -36,6 +36,8 @@ namespace Seeker.Gamebook.PrisonerOfMoritaiCastle
             Hitpoints = 5;
             Shuriken = 5;
             Arrows = 10;
+
+            Game.Healing.Add(name: "Тонизирующее", healing: 1, portions: 1);
         }
 
         public Character Clone() => new Character()
