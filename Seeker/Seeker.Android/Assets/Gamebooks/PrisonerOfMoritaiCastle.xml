@@ -399,8 +399,8 @@
 				<Option Goto="37" Text="2 минуты"/>
 				<Option Goto="37" Text="5 минут"/>
 				<Option Goto="37" Text="10 минут"/>
-				<Option Goto="37" Text="15 минут">
-				<Option Goto="34" Text="20 минут">
+				<Option Goto="37" Text="15 минут"/>
+				<Option Goto="34" Text="20 минут"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="51">
