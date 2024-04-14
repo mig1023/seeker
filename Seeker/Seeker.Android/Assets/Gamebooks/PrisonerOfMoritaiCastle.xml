@@ -1271,6 +1271,9 @@
 		</Paragraph>
 		<Paragraph No="167">
 			<Text>Вы прицелились и спустили тетиву.\n\n«Вум-м-м!» - черная стрела пронзила череп жертвы.\n\n- Он там! Скорее за подмогой! - закричал один из самураев.</Text>
+			<Modifications>
+				<Arrows Value="-1"/>
+			</Modifications>
 			<Options>
 				<Option Goto="168" Text="Cтреляйте из лука" Availability="СТРЕЛЫ > 0"/>
 				<Option Goto="181" Text="Метните сюрикен" Availability="СЮРИКЕНЫ > 0"/>
