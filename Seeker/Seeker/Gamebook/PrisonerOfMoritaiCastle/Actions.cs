@@ -37,6 +37,12 @@ namespace Seeker.Gamebook.PrisonerOfMoritaiCastle
 
                         if (oneOption.Contains("ЖИЗНЕЙ <=") && (level < Character.Protagonist.Hitpoints))
                             return false;
+
+                        if (oneOption.Contains("СЮРИКЕНЫ >") && (level >= Character.Protagonist.Shuriken))
+                            return false;
+
+                        if (oneOption.Contains("СЮРИКЕНЫ <=") && (level < Character.Protagonist.Shuriken))
+                            return false;
                     }
                     else if (oneOption.Contains("!"))
                     {

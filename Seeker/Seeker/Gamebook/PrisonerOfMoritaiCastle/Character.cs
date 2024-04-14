@@ -15,11 +15,19 @@ namespace Seeker.Gamebook.PrisonerOfMoritaiCastle
             set => _hitpoints = Game.Param.Setter(value, _hitpoints, this);
         }
 
+        private int _shuriken;
+        public int Shuriken
+        {
+            get => _shuriken;
+            set => _shuriken = Game.Param.Setter(value, _shuriken, this);
+        }
+
         public override void Init()
         {
             base.Init();
 
             Hitpoints = 5;
+            Shuriken = 5;
         }
 
         public Character Clone() => new Character()
@@ -27,14 +35,19 @@ namespace Seeker.Gamebook.PrisonerOfMoritaiCastle
             IsProtagonist = this.IsProtagonist,
             Name = this.Name,
             Hitpoints = this.Hitpoints,
+            Shuriken = this.Shuriken,
         };
 
-        public override string Save() =>
-            Hitpoints.ToString();
+        public override string Save() => String.Join("|",
+            Hitpoints, Shuriken);
 
         public override void Load(string saveLine)
         {
-            Hitpoints = int.Parse(saveLine);
+            string[] save = saveLine.Split('|');
+
+            Hitpoints = int.Parse(save[0]);
+            Shuriken = int.Parse(save[1]);
+
             IsProtagonist = true;
         }
     }
