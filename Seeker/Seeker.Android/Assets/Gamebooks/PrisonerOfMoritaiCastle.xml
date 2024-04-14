@@ -1164,7 +1164,7 @@
 				<Shuriken Value="-1"/>
 			</Modifications>
 			<Options>
-				<Option Goto="168" Text="У вас есть стрела"/>
+				<Option Goto="168" Text="У вас есть стрела" Availability="СТРЕЛЫ > 0"/>
 				<Option Goto="181" Text="Нет стрелы, но есть еще сюрикены" Availability="СЮРИКЕНЫ > 0"/>
 			</Options>
 		</Paragraph>
