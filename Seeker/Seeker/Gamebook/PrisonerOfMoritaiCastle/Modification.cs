@@ -16,6 +16,13 @@ namespace Seeker.Gamebook.PrisonerOfMoritaiCastle
                 if (Character.Protagonist.Hitpoints > 3)
                     Character.Protagonist.Hitpoints -= 1;
             }
+            else if (Name == "ColdMedicine")
+            {
+                if (Game.Option.IsTriggered("противопростудное"))
+                    Game.Option.Trigger("противопростудное", remove: true);
+                else
+                    Character.Protagonist.Hitpoints -= 1;
+            }
             else
             {
                 base.Do(Character.Protagonist);
