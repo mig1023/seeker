@@ -332,7 +332,7 @@
 			</Modifications>
 			<Options>
 				<Option Goto="60" Text="Броситесь бежать"/>
-				<Option Goto="54" Text="Метнете в самурая сюрикен"/>
+				<Option Goto="54" Text="Метнете в самурая сюрикен" Availability="СЮРИКЕНЫ > 1"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="41">
