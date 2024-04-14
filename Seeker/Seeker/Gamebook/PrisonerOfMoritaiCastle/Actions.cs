@@ -9,6 +9,8 @@ namespace Seeker.Gamebook.PrisonerOfMoritaiCastle
         public override List<string> Status() => new List<string>
         {
             $"Жизненные силы: {Character.Protagonist.Hitpoints}",
+            $"Стрелы: {Character.Protagonist.Arrows}",
+            $"Сюрикены: {Character.Protagonist.Shuriken}",
         };
 
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
