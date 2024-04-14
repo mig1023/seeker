@@ -1741,7 +1741,7 @@
 			<Options>
 				<Option Goto="162" Text="Ворветесь в комнату и нападете на охранников"/>
 				<Option Goto="167" Text="Выстрелите в охранников из лука (если есть хотя бы одна стрела)"/>
-				<Option Goto="151" Text="Метнете сюрикен"/>
+				<Option Goto="151" Text="Метнете сюрикен" Availability="СЮРИКЕНЫ > 1"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="232">
