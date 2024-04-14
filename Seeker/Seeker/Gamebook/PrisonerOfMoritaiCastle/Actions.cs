@@ -8,7 +8,7 @@ namespace Seeker.Gamebook.PrisonerOfMoritaiCastle
     {
         public override List<string> Status() => new List<string>
         {
-            $"Жизненные силы: {Character.Protagonist.Hitpoints}",
+            $"Жизненные силы: {Character.Protagonist.Hitpoints} / 5",
             $"Стрелы: {Character.Protagonist.Arrows}",
             $"Сюрикены: {Character.Protagonist.Shuriken}",
         };
@@ -58,7 +58,7 @@ namespace Seeker.Gamebook.PrisonerOfMoritaiCastle
                     }
                     else if (oneOption.Contains("НЕТ ЛЕКАРСТВ"))
                     {
-                        return (Game.Healing.List().Count <= 0) && !Game.Option.IsTriggered("обезболивающее";
+                        return (Game.Healing.List().Count <= 0) && !Game.Option.IsTriggered("обезболивающее");
                     }
                     else if (oneOption.Contains("!"))
                     {
