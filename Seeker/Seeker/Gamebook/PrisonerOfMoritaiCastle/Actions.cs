@@ -52,6 +52,14 @@ namespace Seeker.Gamebook.PrisonerOfMoritaiCastle
                         if (oneOption.Contains("СТРЕЛЫ <=") && (level < Character.Protagonist.Arrows))
                             return false;
                     }
+                    else if (oneOption.Contains("ЕСТЬ ЛЕКАРСТВА"))
+                    {
+                        return Game.Healing.List().Count > 0;
+                    }
+                    else if (oneOption.Contains("НЕТ ЛЕКАРСТВ"))
+                    {
+                        return Game.Healing.List().Count <= 0;
+                    }
                     else if (oneOption.Contains("!"))
                     {
                         if (Game.Option.IsTriggered(oneOption.Replace("!", String.Empty).Trim()))
