@@ -127,7 +127,7 @@
 				<Text Style="Small">Теряешь 2 очка Уважения.</Text>
 			</Texts>
 			<Modifications>
-				<Respect Value="1"/>
+				<Respect Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Goto="346"/>
@@ -1441,7 +1441,7 @@
 				<Text Style="Small">Получаешь 1 очко УВАЖЕНИЯ.</Text>
 			</Texts>
 			<Modifications>
-				<Respect Value="-1"/>
+				<Respect Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Goto="298"/>
