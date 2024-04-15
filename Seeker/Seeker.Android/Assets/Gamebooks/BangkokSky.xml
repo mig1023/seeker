@@ -3011,7 +3011,7 @@
 				<Option Goto="229" Text="Если есть слово ОТРИЦАНИЕ" Availability="ОТРИЦАНИЕ"/>
 				<Option Goto="137" Text="Если есть слово ЛОДКА" Availability="ЛОДКА"/>
 				<Option Goto="70" Text="Если есть слово ЛОВУШКА" Availability="ЛОВУШКА"/>
-				<Option Goto="237" Text="Если есть слово ОТЕЦ">
+				<Option Goto="237" Text="Если есть слово ОТЕЦ" Availability="ОТЕЦ">
 					<Text>Если нет ни одного из этих слов, возвращайся в центр...</Text>
 				</Option>
 				<Option Goto="206"/>
