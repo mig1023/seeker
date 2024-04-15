@@ -103,6 +103,14 @@ namespace Seeker.Gamebook.BangkokSky
             {
                 return Character.Protagonist.Wounds < Game.Services.LevelParse(option);
             }
+            else if (option.Contains("УВАЖЕНИЕ >="))
+            {
+                return Character.Protagonist.Respect >= Game.Services.LevelParse(option);
+            }
+            else if (option.Contains("УВАЖЕНИЕ <"))
+            {
+                return Character.Protagonist.Respect < Game.Services.LevelParse(option);
+            }
             else
             {
                 return AvailabilityTrigger(option.Trim());

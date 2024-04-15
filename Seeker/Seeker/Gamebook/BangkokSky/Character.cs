@@ -14,19 +14,13 @@ namespace Seeker.Gamebook.BangkokSky
         public int Firearms { get; set; }
         public int Diplomacy { get; set; }
         public int ConcreteJungle { get; set; }
+        public int Respect { get; set; }
 
         private int _wounds;
         public int Wounds
         {
             get => _wounds;
             set => _wounds = Game.Param.Setter(value, _wounds, this);
-        }
-
-        private int _respect;
-        public int Respect
-        {
-            get => _respect;
-            set => _respect = Game.Param.Setter(value, _respect, this);
         }
 
         public int StatBonuses { get; set; }
