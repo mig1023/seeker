@@ -1523,7 +1523,7 @@
 		<Paragraph No="155">
 			<Text>Набираю номер Каева и выслушиваю дюжину гудков.</Text>
 			<Options>
-				<Option Goto="244" Text="Если есть слово ЛОДКА"/>
+				<Option Goto="244" Text="Если есть слово ЛОДКА" Availability="ЛОДКА"/>
 				<Option Goto="348" Text="Если есть слово ОТЕЦ"/>
 				<Option Goto="101" Text="Если таких слов нет"/>
 			</Options>
