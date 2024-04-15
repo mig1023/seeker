@@ -974,8 +974,8 @@
 		<Paragraph No="94">
 			<Text>Шагаю по переулку среди хаоса из коробок с продающимися компьютерами, телеэкранами и всевозможной периферией, мусора и людской толчеи.</Text>
 			<Options>
-				<Option Goto="277" Text="Есть слово КОНТАКТ"/>
-				<Option Goto="20" Text="Нет такого слова"/>
+				<Option Goto="277" Text="Есть слово КОНТАКТ" Availability="КОНТАКТ"/>
+				<Option Goto="20" Text="Нет такого слова" Availability="!КОНТАКТ"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="95">
