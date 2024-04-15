@@ -2753,7 +2753,7 @@
 				<Option Goto="273" Text="Если есть слово СКЛАД"/>
 				<Option Goto="59" Text="Если есть слово ОТЕЦ"/>
 				<Option Goto="395" Text="Если есть слово НЕБО"/>
-				<Option Goto="109" Text="Если есть слово ОТРИЦАНИЕ или ЛОДКА" Availability="ЛОДКА"/>
+				<Option Goto="109" Text="Если есть слово ОТРИЦАНИЕ или ЛОДКА" Availability="ОТРИЦАНИЕ|ЛОДКА"/>
 				<Option Goto="43" Text="Если ни одного из этих слов нет"/>
 			</Options>
 		</Paragraph>
