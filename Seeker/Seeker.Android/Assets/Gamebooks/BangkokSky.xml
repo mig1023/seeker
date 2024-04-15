@@ -2752,7 +2752,7 @@
 				<Option Goto="339" Text="Если есть слово ЛОВУШКА" Availability="ЛОВУШКА"/>
 				<Option Goto="14" Text="Если есть слово НОЧЬ" Availability="НОЧЬ"/>
 				<Option Goto="180" Text="Если есть слово ТЮРЬМА" Availability="ТЮРЬМА"/>
-				<Option Goto="344" Text="Если есть слово ТЕЛЕФОН"/>
+				<Option Goto="344" Text="Если есть слово ТЕЛЕФОН" Availability="ТЕЛЕФОН"/>
 				<Option Goto="73" Text="Если есть слово ПРОШЛОЕ"/>
 				<Option Goto="273" Text="Если есть слово СКЛАД"/>
 				<Option Goto="59" Text="Если есть слово ОТЕЦ"/>
