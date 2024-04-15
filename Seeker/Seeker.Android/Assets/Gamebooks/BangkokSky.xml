@@ -3328,7 +3328,7 @@
 				</Option>
 				<Option Goto="208" Text="Если есть слово ОТРИЦАНИЕ"/>
 				<Option Goto="37" Text="Если есть слово СКЛАД"/>
-				<Option Goto="171" Text="Если есть слово ЛОДКА"/>
+				<Option Goto="171" Text="Если есть слово ЛОДКА" Availability="ЛОДКА"/>
 				<Option Goto="216" Text="Если ни одного из этих слов нет"/>
 			</Options>
 		</Paragraph>
