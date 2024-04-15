@@ -3137,8 +3137,12 @@
 				</Test>
 			</Actions>
 			<Options>
-				<Option Goto="71" Text="Провал"/>
-				<Option Goto="238" Text="Успех"/>
+				<Option Goto="71" Text="Провал">
+					<Trigger Value="КИЛЛЕР"/>
+				</Option>
+				<Option Goto="238" Text="Успех">
+					<Trigger Value="КИЛЛЕР"/>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph No="319">
