@@ -1387,8 +1387,8 @@
 				<Respect Value="-2"/>
 			</Modifications>
 			<Options>
-				<Option Goto="29" Text="Если есть слово ПОМОЩЬ"/>
-				<Option Goto="261" Text="Если такого слова нет"/>
+				<Option Goto="29" Text="Если есть слово ПОМОЩЬ" Availability="ПОМОЩЬ"/>
+				<Option Goto="261" Text="Если такого слова нет" Availability="!ПОМОЩЬ"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="139">
