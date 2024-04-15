@@ -486,7 +486,11 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="51">
-			<Text>Сотри слово ХАЛТУРКА.\n\nГоворю полицейским, что я всего лишь обычный турист.</Text>
+			<Texts>
+				<Text Style="Small">Сотри слово ХАЛТУРКА.</Text>
+				<Text>Говорю полицейским, что я всего лишь обычный турист.</Text>
+			</Texts>
+			<Untriggers>ХАЛТУРКА</Untriggers>
 			<Actions>
 				<Test>
 					<Level>3</Level>
