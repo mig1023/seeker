@@ -1695,6 +1695,8 @@
 				<Text Style="Small">Вылечи 1 Ранение.</Text>
 				<Text>Сотри слово КАМЕРА и запиши слово СМЕРТЬ.</Text>
 			</Texts>
+			<Triggers>СМЕРТЬ</Triggers>
+			<Untriggers>КАМЕРА</Untriggers>
 			<Modifications>
 				<Wounds Value="-1"/>
 			</Modifications>
