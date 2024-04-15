@@ -2777,7 +2777,7 @@
 				<Option Goto="180" Text="Если есть слово ТЮРЬМА" Availability="ТЮРЬМА"/>
 				<Option Goto="344" Text="Если есть слово ТЕЛЕФОН" Availability="ТЕЛЕФОН"/>
 				<Option Goto="73" Text="Если есть слово ПРОШЛОЕ" Availability="ПРОШЛОЕ"/>
-				<Option Goto="273" Text="Если есть слово СКЛАД"/>
+				<Option Goto="273" Text="Если есть слово СКЛАД" Availability="СКЛАД"/>
 				<Option Goto="59" Text="Если есть слово ОТЕЦ"/>
 				<Option Goto="395" Text="Если есть слово НЕБО"/>
 				<Option Goto="109" Text="Если есть слово ОТРИЦАНИЕ или ЛОДКА" Availability="ОТРИЦАНИЕ|ЛОДКА"/>
