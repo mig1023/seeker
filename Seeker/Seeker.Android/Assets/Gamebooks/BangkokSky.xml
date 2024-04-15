@@ -2328,7 +2328,11 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="230">
-			<Text>Сотри слово ПУШЕР.\n\nНа меня бросается второй великан. Закручиваю вертушку, метя ногой ему в лицо.</Text>
+			<Texts>
+				<Text Style="Small">Сотри слово ПУШЕР.</Text>
+				<Text>На меня бросается второй великан. Закручиваю вертушку, метя ногой ему в лицо.</Text>
+			</Texts>
+			<Untriggers>ПУШЕР</Untriggers>
 			<Actions>
 				<Test>
 					<Level>0</Level>
