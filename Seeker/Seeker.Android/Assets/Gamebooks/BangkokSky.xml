@@ -159,7 +159,7 @@
 			<Options>
 				<Option Goto="352" Text="Если есть слово НОЧЬ" Availability="НОЧЬ"/>
 				<Option Goto="46" Text="Если есть слово ЛОВУШКА" Availability="ЛОВУШКА"/>
-				<Option Goto="195" Text="Если есть слово СКЛАД"/>
+				<Option Goto="195" Text="Если есть слово СКЛАД" Availability="СКЛАД"/>
 				<Option Goto="321" Text="Если есть слово МЕСТЬ"/>
 				<Option Goto="146" Text="Если ни одного из этих слов нет"/>
 			</Options>
