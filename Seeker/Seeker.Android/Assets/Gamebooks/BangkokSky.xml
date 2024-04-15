@@ -2026,7 +2026,7 @@
 			<Triggers>КАМЕРА</Triggers>
 			<Untriggers>ХАЛТУРКА, ПОРТФЕЛЬ</Untriggers>
 			<Options>
-				<Option Goto="150" Text="Если есть слово СМЕРТЬ"/>
+				<Option Goto="150" Text="Если есть слово СМЕРТЬ" Availability="СМЕРТЬ"/>
 				<Option Goto="69" Text="Попробовать открыть замок"/>
 				<Option Goto="330" Text="Громко позвать охранника"/>
 				<Option Goto="150" Text="Оставить всё как есть и ждать, когда тебя выпустят"/>
