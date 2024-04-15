@@ -14,6 +14,7 @@ namespace Seeker.Gamebook.BangkokSky
         public override List<string> Status() => new List<string>
         {
             $"Ранений: {Character.Protagonist.Wounds} / 6",
+            $"Очки уважения: {Character.Protagonist.Respect}",
         };
 
         public override List<string> AdditionalStatus()
