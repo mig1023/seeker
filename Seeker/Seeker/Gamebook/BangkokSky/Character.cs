@@ -22,6 +22,13 @@ namespace Seeker.Gamebook.BangkokSky
             set => _wounds = Game.Param.Setter(value, _wounds, this);
         }
 
+        private int _respect;
+        public int Respect
+        {
+            get => _respect;
+            set => _respect = Game.Param.Setter(value, _respect, this);
+        }
+
         public int StatBonuses { get; set; }
 
         public override void Init()
@@ -35,6 +42,7 @@ namespace Seeker.Gamebook.BangkokSky
             Diplomacy = 0;
             ConcreteJungle = 0;
             Wounds = 0;
+            Respect = 0;
             StatBonuses = 8;
         }
 
@@ -49,12 +57,13 @@ namespace Seeker.Gamebook.BangkokSky
             Diplomacy = this.Diplomacy,
             ConcreteJungle = this.ConcreteJungle,
             Wounds = this.Wounds,
+            Respect = this.Respect,
             StatBonuses = this.StatBonuses,
         };
 
         public override string Save() => String.Join("|",
             Name, MartialArts, Physical, Driving, Firearms,
-            Diplomacy, ConcreteJungle, Wounds, StatBonuses);
+            Diplomacy, ConcreteJungle, Wounds, Respect, StatBonuses);
 
         public override void Load(string saveLine)
         {
@@ -68,7 +77,8 @@ namespace Seeker.Gamebook.BangkokSky
             Diplomacy = int.Parse(save[5]);
             ConcreteJungle = int.Parse(save[6]);
             Wounds = int.Parse(save[7]);
-            StatBonuses = int.Parse(save[8]);
+            Respect = int.Parse(save[8]);
+            StatBonuses = int.Parse(save[9]);
 
             IsProtagonist = true;
         }
