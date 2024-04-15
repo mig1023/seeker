@@ -3640,8 +3640,8 @@
 		<Paragraph No="362">
 			<Text>В переулке грохочет выстрел, и беглец падает в мусор.</Text>
 			<Options>
-				<Option Goto="197" Text="Если у тебя есть слово ВОР"/>
-				<Option Goto="290" Text="Если нет такого слова"/>
+				<Option Goto="197" Text="Если у тебя есть слово ВОР" Availability="ВОР"/>
+				<Option Goto="290" Text="Если нет такого слова" Availability="!ВОР"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="363">
