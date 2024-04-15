@@ -157,7 +157,7 @@
 		<Paragraph No="12">
 			<Text>Включаю новостной канал «24 часа».</Text>
 			<Options>
-				<Option Goto="352" Text="Если есть слово НОЧЬ"/>
+				<Option Goto="352" Text="Если есть слово НОЧЬ" Availability="НОЧЬ"/>
 				<Option Goto="46" Text="Если есть слово ЛОВУШКА" Availability="ЛОВУШКА"/>
 				<Option Goto="195" Text="Если есть слово СКЛАД"/>
 				<Option Goto="321" Text="Если есть слово МЕСТЬ"/>
