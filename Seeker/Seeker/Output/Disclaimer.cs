@@ -62,17 +62,26 @@ namespace Seeker.Output
         private static void AddLtlElement(string head1, string body1, string head2, string body2,
             ref StackLayout disclaimer, Frame border, Label change)
         {
-            StackLayout tables = new StackLayout { Orientation = StackOrientation.Horizontal };
-            StackLayout stackLeft = new StackLayout { Orientation = StackOrientation.Vertical };
-            StackLayout stackRight = new StackLayout { Orientation = StackOrientation.Vertical };
+            Grid grid = new Grid
+            {
+                RowDefinitions =
+                {
+                    new RowDefinition(),
+                    new RowDefinition(),
+                },
+                ColumnDefinitions =
+                {
+                    new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) },
+                    new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) }
+                }
+            };
 
-            AddElement(head1, body1, ref stackLeft, border, change, little: true, littleHead: true);
-            AddElement(head2, body2, ref stackRight, border, change, little: true, littleHead: true);
+            grid.Children.Add(Element(head1, CloseTapped(border, change), little: true, bold: true), 0, 0);
+            grid.Children.Add(Element(body1, CloseTapped(border, change), little: true), 0, 1);
+            grid.Children.Add(Element(head2, CloseTapped(border, change), little: true, bold: true), 1, 0);
+            grid.Children.Add(Element(body2, CloseTapped(border, change), little: true), 1, 1);
 
-            tables.Children.Add(stackLeft);
-            tables.Children.Add(stackRight);
-
-            disclaimer.Children.Add(tables);
+            disclaimer.Children.Add(grid);
         }
 
         private static void AddElement(string head, string body, ref StackLayout disclaimer,
@@ -196,17 +205,14 @@ namespace Seeker.Output
                     Regex.Unescape(gamebook.Text), ref disclaimer, border, change, little: true);
             }
 
-            string paragraphs = gamebook.ParagraphSizeLine(full: true);
-            string size = gamebook.SizeLine();
-            string separator = (paragraphs.Contains('(') ? "\n" : " / ");
-            int paragraphSize = int.Parse(gamebook.Size) / gamebook.ParagraphSize(); 
+            int paragraphSize = int.Parse(gamebook.Size) / gamebook.ParagraphSize();
+            string sizeLine = Game.Services.CoinsNoun(paragraphSize, "слово", "слова", "слов");
 
-            //AddElement("Обьём:", String.Join(String.Empty, paragraphs, separator, size), ref disclaimer, border, change);
+            AddLtlElement("Кол-во параграфов", gamebook.ParagraphSizeLine(full: true),
+                "Объём", gamebook.SizeLine(), ref disclaimer, border, change);
 
-
-            AddLtlElement("Количество параграфов", paragraphs, "Объём", size, ref disclaimer, border, change);
-            AddLtlElement("Средний размер параграфа", paragraphSize.ToString(), "Время игры", gamebook.PlaythroughTime, ref disclaimer, border, change);
-
+            AddLtlElement("Размер параграфа", $"В среднем {paragraphSize} {sizeLine}" ,
+                "Время игры", gamebook.PlaythroughTime, ref disclaimer, border, change);
 
             border.GestureRecognizers.Add(CloseTapped(border, change));
 

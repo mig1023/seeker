@@ -115,7 +115,9 @@ namespace Seeker.Gamebook
             }
             else
             {
-                return $"{fullSize / 1000} тыс. слов";
+                int size = fullSize / 1000;
+                string line = Game.Services.CoinsNoun(size, "тысяча", "тысячи", "тысяч");
+                return $"{size} {line} слов";
             }
         }
     }
