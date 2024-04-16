@@ -7,10 +7,10 @@
 		<Styles>
 			<Color Name="Main, Action" Value="8f7545"/>
 			<Background Value="eedfbe"/>
-			<StatusFont Value="78491e"/>
+			<StatusFont Value="000000"/>
 			<Continue Value="d5c3a3"/>
 			<Color Name="ActionBox, AdditionalStatus" Value="b4a482"/>
-			<StatusBar Value="78491e"/>
+			<StatusBar Value="ae9178"/>
 		</Styles>
 		<Lists>
 			<WithoutStatuses Items="0, 401, 402"/>
