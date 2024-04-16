@@ -66,8 +66,8 @@ namespace Seeker.Output
             {
                 RowDefinitions =
                 {
-                    new RowDefinition(),
-                    new RowDefinition(),
+                    new RowDefinition { Height = GridLength.Auto },
+                    new RowDefinition { Height = GridLength.Auto },
                 },
                 ColumnDefinitions =
                 {
