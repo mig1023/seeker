@@ -114,29 +114,95 @@ namespace Seeker.Output
             return element;
         }
 
-        private static TapGestureRecognizer OpenTapped(Frame disclaimer, Label changedPart)
+        private static void FullDescription(Frame border, Label changedPart, Description gamebook)
+        {
+            StackLayout disclaimer = new StackLayout();
+
+            if (!String.IsNullOrEmpty(gamebook.Original))
+            {
+                AddElement("Оригинальное название:",
+                    gamebook.Original, ref disclaimer, border, changedPart);
+            }
+
+            if (gamebook.Authors.Count > 1)
+            {
+                string authors = String.Join("\n", gamebook.Authors);
+
+                AddElement("Авторы:",
+                    authors, ref disclaimer, border, changedPart);
+            }
+            else
+            {
+                AddElement("Автор:",
+                    gamebook.Authors.First(), ref disclaimer, border, changedPart);
+            }
+
+            if (gamebook.Translators.Count > 1)
+            {
+                string translators = String.Join("\n", gamebook.Translators);
+
+                AddElement("Переводчики:",
+                    translators, ref disclaimer, border, changedPart);
+            }
+            else if (gamebook.Translators.Count > 0)
+            {
+                AddElement("Переводчик:",
+                    gamebook.Translators.First(), ref disclaimer, border, changedPart);
+            }
+
+            if (!String.IsNullOrEmpty(gamebook.Text))
+            {
+                AddElement("Описание:",
+                    Regex.Unescape(gamebook.Text), ref disclaimer, border, changedPart, little: true);
+            }
+
+            int paragraphSize = int.Parse(gamebook.Size) / gamebook.ParagraphSize();
+            string sizeLine = Game.Services.CoinsNoun(paragraphSize, "слово", "слова", "слов");
+
+            AddLtlElement("Кол-во параграфов", gamebook.ParagraphSizeLine(full: true),
+                "Объём", gamebook.SizeLine(), ref disclaimer, border, changedPart);
+
+            AddLtlElement("Размер параграфа", $"В среднем {paragraphSize} {sizeLine}",
+                "Время игры", gamebook.PlaythroughTime, ref disclaimer, border, changedPart);
+
+            border.GestureRecognizers.Add(CloseTapped(border, changedPart));
+
+            border.Content = disclaimer;
+        }
+
+        private static TapGestureRecognizer OpenTapped(Frame border, Label changedPart, Description gamebook)
         {
             TapGestureRecognizer open = new TapGestureRecognizer();
             open.Tapped += (s, e) =>
             {
-                disclaimer.IsVisible = !disclaimer.IsVisible;
+                if (!border.IsVisible)
+                {
+                    FullDescription(border, changedPart, gamebook);
 
-                changedPart.Text = disclaimer.IsVisible ?
-                    Constants.DISCLAIMER_LINK_OPENED : Constants.DISCLAIMER_LINK;
+                    border.IsVisible = true;
+                    changedPart.Text = Constants.DISCLAIMER_LINK_OPENED;
+                }
+                else
+                {
+                    border.Content = null;
+                    border.IsVisible = false;
+                    changedPart.Text = Constants.DISCLAIMER_LINK;
+                }
 
-                disclaimer.ForceLayout();
+                border.ForceLayout();
             };
 
             return open;
         }
 
-        private static TapGestureRecognizer CloseTapped(Frame disclaimer, Label changedPart)
+        private static TapGestureRecognizer CloseTapped(Frame border, Label changedPart)
         {
             TapGestureRecognizer close = new TapGestureRecognizer();
 
             close.Tapped += (s, e) =>
             {
-                disclaimer.IsVisible = false;
+                border.Content = null;
+                border.IsVisible = false;
                 changedPart.Text = Constants.DISCLAIMER_LINK;
             };
 
@@ -160,63 +226,10 @@ namespace Seeker.Output
 
             Label change = Link(gamebook.BookColor);
 
-            textLayout.Children.Add(LinkedElement(GamebookDisclaimer(gamebook), OpenTapped(border, change)));
-            textLayout.Children.Add(LinkedElement(change, OpenTapped(border, change)));
+            textLayout.Children.Add(LinkedElement(GamebookDisclaimer(gamebook), OpenTapped(border, change, gamebook)));
+            textLayout.Children.Add(LinkedElement(change, OpenTapped(border, change, gamebook)));
 
             options.Children.Add(textLayout);
-
-            StackLayout disclaimer = new StackLayout();
-
-            if (!String.IsNullOrEmpty(gamebook.Original))
-            {
-                AddElement("Оригинальное название:",
-                    gamebook.Original, ref disclaimer, border, change);
-            }
-
-            if (gamebook.Authors.Count > 1)
-            {
-                string authors = String.Join("\n", gamebook.Authors);
-
-                AddElement("Авторы:",
-                    authors, ref disclaimer, border, change);
-            }
-            else
-            {
-                AddElement("Автор:",
-                    gamebook.Authors.First(), ref disclaimer, border, change);
-            }
-
-            if (gamebook.Translators.Count > 1)
-            {
-                string translators = String.Join("\n", gamebook.Translators);
-
-                AddElement("Переводчики:",
-                    translators, ref disclaimer, border, change);
-            }
-            else if (gamebook.Translators.Count > 0)
-            {
-                AddElement("Переводчик:",
-                    gamebook.Translators.First(), ref disclaimer, border, change);
-            }
-
-            if (!String.IsNullOrEmpty(gamebook.Text))
-            {
-                AddElement("Описание:",
-                    Regex.Unescape(gamebook.Text), ref disclaimer, border, change, little: true);
-            }
-
-            int paragraphSize = int.Parse(gamebook.Size) / gamebook.ParagraphSize();
-            string sizeLine = Game.Services.CoinsNoun(paragraphSize, "слово", "слова", "слов");
-
-            AddLtlElement("Кол-во параграфов", gamebook.ParagraphSizeLine(full: true),
-                "Объём", gamebook.SizeLine(), ref disclaimer, border, change);
-
-            AddLtlElement("Размер параграфа", $"В среднем {paragraphSize} {sizeLine}" ,
-                "Время игры", gamebook.PlaythroughTime, ref disclaimer, border, change);
-
-            border.GestureRecognizers.Add(CloseTapped(border, change));
-
-            border.Content = disclaimer;
             options.Children.Add(border);
         }
     }
