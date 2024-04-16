@@ -43,8 +43,9 @@ namespace Seeker.Output
         {
             Title = 1,
             Author,
-            Paragraphs,
             Size,
+            Paragraphs,
+            Texts,
             Year,
             Setting,
             Time,

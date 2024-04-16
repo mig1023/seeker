@@ -78,6 +78,12 @@ namespace Seeker.Gamebook
                 case SortBy.Size:
 
                     return list
+                        .OrderByDescending(x => int.Parse(x.Size) / x.ParagraphSize())
+                        .ToList();
+
+                case SortBy.Texts:
+
+                    return list
                         .OrderByDescending(x => int.Parse(x.Size))
                         .ToList();
 
