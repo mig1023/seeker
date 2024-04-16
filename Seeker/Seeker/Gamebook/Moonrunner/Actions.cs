@@ -153,7 +153,6 @@ namespace Seeker.Gamebook.Moonrunner
                 {
                     enemies.Add($"{enemy.Name}\nмастерство {enemy.Mastery} ");
                 }
-                    
             }
 
             return enemies;

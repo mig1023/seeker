@@ -14,7 +14,7 @@ namespace Seeker.Gamebook.DzungarWar
 
             foreach (string param in GetProperties(action))
                 SetProperty(action, param, xmlAction);
-            
+
             action.Benefit = ModificationParse(xmlAction["Benefit"]);
 
             bool bargain = Xml.BoolParse(xmlAction["Bargain"]);
@@ -27,6 +27,7 @@ namespace Seeker.Gamebook.DzungarWar
 
             return action;
         }
+
 
         public override Option OptionParse(XmlNode xmlOption) =>
             OptionParseWithDo(xmlOption, new Modification());

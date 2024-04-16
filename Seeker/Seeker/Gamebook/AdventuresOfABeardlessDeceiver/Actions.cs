@@ -182,7 +182,9 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                             return false;
                     }
                     else if (!Game.Option.IsTriggered(oneOption.Trim()))
+                    {
                         return false;
+                    }
                 }
 
                 return true;
