@@ -59,10 +59,26 @@ namespace Seeker.Output
             return link;
         }
 
-        private static void AddElement(string head, string body,
-            ref StackLayout disclaimer, Frame border, Label change, bool little = false)
+        private static void AddLtlElement(string head1, string body1, string head2, string body2,
+            ref StackLayout disclaimer, Frame border, Label change)
         {
-            disclaimer.Children.Add(Element(head, CloseTapped(border, change), bold: true));
+            StackLayout tables = new StackLayout { Orientation = StackOrientation.Horizontal };
+            StackLayout stackLeft = new StackLayout { Orientation = StackOrientation.Vertical };
+            StackLayout stackRight = new StackLayout { Orientation = StackOrientation.Vertical };
+
+            AddElement(head1, body1, ref stackLeft, border, change, little: true, littleHead: true);
+            AddElement(head2, body2, ref stackRight, border, change, little: true, littleHead: true);
+
+            tables.Children.Add(stackLeft);
+            tables.Children.Add(stackRight);
+
+            disclaimer.Children.Add(tables);
+        }
+
+        private static void AddElement(string head, string body, ref StackLayout disclaimer,
+            Frame border, Label change, bool little = false, bool littleHead = false)
+        {
+            disclaimer.Children.Add(Element(head, CloseTapped(border, change), little: littleHead, bold: true));
             disclaimer.Children.Add(Element(body, CloseTapped(border, change), little: little));
         }
 
@@ -183,7 +199,14 @@ namespace Seeker.Output
             string paragraphs = gamebook.ParagraphSizeLine(full: true);
             string size = gamebook.SizeLine();
             string separator = (paragraphs.Contains('(') ? "\n" : " / ");
-            AddElement("Обьём:", String.Join(String.Empty, paragraphs, separator, size), ref disclaimer, border, change);
+            int paragraphSize = int.Parse(gamebook.Size) / gamebook.ParagraphSize(); 
+
+            //AddElement("Обьём:", String.Join(String.Empty, paragraphs, separator, size), ref disclaimer, border, change);
+
+
+            AddLtlElement("Количество параграфов", paragraphs, "Объём", size, ref disclaimer, border, change);
+            AddLtlElement("Средний размер параграфа", paragraphSize.ToString(), "Время игры", gamebook.PlaythroughTime, ref disclaimer, border, change);
+
 
             border.GestureRecognizers.Add(CloseTapped(border, change));
 
