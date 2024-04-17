@@ -489,7 +489,7 @@
 				<Money Value="-300"/>
 			</Modifications>
 			<Options>
-				<Option Goto="334" Text="Заплатить ещё 500 бат и продолжить разговор"/>
+				<Option Goto="334" Text="Заплатить ещё 500 бат и продолжить разговор" Availability="ДЕНЕГ >= 500"/>
 				<Option Goto="151" Text="Повесить трубку и посмотреть телек"/>
 				<Option Goto="284" Text="Лечь спать"/>
 			</Options>
