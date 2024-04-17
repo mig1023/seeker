@@ -132,10 +132,19 @@ namespace Seeker.Gamebook.BangkokSky
             lines.Add($"Итого на кубиках получаем: {positiveDice} - {negativeDice} = {result}");
 
             int modificator = GetProperty(Character.Protagonist, Skill);
-            int resultModified = result + modificator;
 
-            lines.Add($"Добавляем модификатор {modificator} по способности {Constants.StatNames[Skill]}: " +
-                $"{result} + {modificator} = {resultModified}");
+            if (modificator > 0)
+            {
+                int oldResult = result;
+                result += modificator;
+
+                lines.Add($"Добавляем модификатор {modificator} по способности {Constants.StatNames[Skill]}: " +
+                    $"{oldResult} + {modificator} = {result}");
+            }
+            else
+            {
+                lines.Add($"Способность {Constants.StatNames[Skill]} равна нулю и не даёт никаких бонусов...");
+            }
 
             List<string> bonuses = Bonuses.Split(',').ToList();
 
@@ -147,18 +156,18 @@ namespace Seeker.Gamebook.BangkokSky
 
                 if (Game.Option.IsTriggered(name))
                 {
-                    int oldResult = resultModified;
-                    resultModified += int.Parse(value);
+                    int oldResult = result;
+                    result += int.Parse(value);
 
                     lines.Add($"Бонус {value} за то, что {name}: " +
-                        $"{oldResult} + {value} = {resultModified}");
+                        $"{oldResult} + {value} = {result}");
                 }
             }
 
-            bool testIsOk = (resultModified - Level) > 0;
+            bool testIsOk = (result - Level) > 0;
 
             lines.Add($"Считаем по сложности {Constants.TestLevelNames[Level]}: " +
-                $"{resultModified} - {Level} = {resultModified - Level}");
+                $"{result} - {Level} = {result - Level}");
 
             if (testIsOk)
             {
