@@ -245,7 +245,7 @@
 				<Option Goto="317" Text="Если у тебя есть слово ЛОДКА" Availability="ЛОДКА"/>
 				<Option Goto="175" Text="Дать ему в ухо"/>
 				<Option Goto="222" Text="Взять босяков на понт"/>
-				<Option Goto="361" Text="Дать им 2000 бат, чтобы они отстали"/>
+				<Option Goto="361" Text="Дать им 2000 бат, чтобы они отстали" Availability="ДЕНЕГ >= 2000"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="22">
