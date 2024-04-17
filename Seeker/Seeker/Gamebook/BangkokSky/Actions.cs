@@ -14,7 +14,8 @@ namespace Seeker.Gamebook.BangkokSky
         public override List<string> Status() => new List<string>
         {
             $"Ранений: {Character.Protagonist.Wounds} / 6",
-            $"Очки уважения: {Character.Protagonist.Respect}",
+            $"Уважение: {Character.Protagonist.Respect}",
+            $"Деньги: {Character.Protagonist.Money} бат",
         };
 
         public override List<string> AdditionalStatus()
@@ -111,6 +112,14 @@ namespace Seeker.Gamebook.BangkokSky
             else if (option.Contains("УВАЖЕНИЕ <"))
             {
                 return Character.Protagonist.Respect < Game.Services.LevelParse(option);
+            }
+            else if (option.Contains("ДЕНЕГ >="))
+            {
+                return Character.Protagonist.Money >= Game.Services.LevelParse(option);
+            }
+            else if (option.Contains("ДЕНЕГ <"))
+            {
+                return Character.Protagonist.Money < Game.Services.LevelParse(option);
             }
             else
             {
