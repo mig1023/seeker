@@ -1256,7 +1256,7 @@
 				<Money Value="-200"/>
 			</Modifications>
 			<Options>
-				<Option Goto="49" Text="Заплатить ещё 300 бат"/>
+				<Option Goto="49" Text="Заплатить ещё 300 бат" Availability="ДЕНЕГ >= 300"/>
 				<Option Goto="151" Text="Повесить трубку и посмотреть телек"/>
 				<Option Goto="284" Text="Лечь спать"/>
 			</Options>
