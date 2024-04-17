@@ -117,10 +117,6 @@ namespace Seeker.Gamebook.BangkokSky
             {
                 return Character.Protagonist.Money >= Game.Services.LevelParse(option);
             }
-            else if (option.Contains("ДЕНЕГ <"))
-            {
-                return Character.Protagonist.Money < Game.Services.LevelParse(option);
-            }
             else
             {
                 return AvailabilityTrigger(option.Trim());
