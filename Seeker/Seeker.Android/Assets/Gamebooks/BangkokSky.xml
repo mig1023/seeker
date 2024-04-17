@@ -1190,7 +1190,13 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="116">
-			<Text>Мзда делает свое дело (теряешь 1000 бат), и привратники снимают шнур, пропуская меня.</Text>
+			<Texts>
+				<Text>Мзда делает свое дело, и привратники снимают шнур, пропуская меня.</Text>
+				<Text Style="Small">Теряешь 1000 бат.</Text>
+			</Texts>
+			<Modifications>
+				<Money Value="-1000"/>
+			</Modifications>
 			<Options>
 				<Option Goto="143"/>
 			</Options>
