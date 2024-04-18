@@ -247,6 +247,26 @@ namespace Seeker.Gamebook.BangkokSky
             return lines;
         }
 
+        public List<string> FiveDiceTest()
+        {
+            List<string> lines = new List<string>();
+
+            for (int i = 1; i < 6; i += 1)
+            {
+                int dice = Game.Dice.Roll();
+                lines.Add($"На {i} кубике выпало: {Game.Dice.Symbol(dice)}");
+
+                if (dice == 1)
+                {
+                    lines.Add("BIG|BAD|Выпала единица! :(");
+                    return lines;
+                }
+            }
+
+            lines.Add("BIG|GOOD|Ни одной единицы не выпало! :)");
+            return lines;
+        }
+
         public override bool IsHealingEnabled() =>
             Character.Protagonist.Wounds > 0;
 
