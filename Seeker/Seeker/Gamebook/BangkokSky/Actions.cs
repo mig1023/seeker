@@ -12,6 +12,7 @@ namespace Seeker.Gamebook.BangkokSky
         public string Traits { get; set; }
         public string Bonuses { get; set; }
         public bool Free { get; set; }
+        public int Fighter { get; set; }
 
 
         public override List<string> Status() => new List<string>
@@ -69,6 +70,11 @@ namespace Seeker.Gamebook.BangkokSky
             {
                 return new List<string> { Head };
             }
+            else if (Fighter > 0)
+            {
+                string[] lines = Head.Split(':');
+                return new List<string> { $"{lines[0]}\n{lines[1]}" };
+            }
 
             return new List<string>();
         }
@@ -98,6 +104,10 @@ namespace Seeker.Gamebook.BangkokSky
                     .Count();
 
                 return !Used && (triggers < 2);
+            }
+            else if (Fighter > 0)
+            {
+                return !Game.Option.IsTriggered("бой");
             }
 
             return !(triggeredAlready || advantagesCount || min || max);
@@ -265,6 +275,86 @@ namespace Seeker.Gamebook.BangkokSky
 
             lines.Add("BIG|GOOD|Ни одной единицы не выпало! :)");
             return lines;
+        }
+
+        private void FightResult(bool good, ref List<string> lines)
+        {
+            if (good)
+            {
+                lines.Add($"GOOD|Вы выиграли 1000 бат и вернули свою ставку! :)");
+                Character.Protagonist.Money += 1000;
+            }
+            else
+            {
+                lines.Add($"BAD|Вы проиграли 1000 бат! :(");
+                Character.Protagonist.Money -= 1000;
+            }
+        }
+
+        public List<string> Fight()
+        {
+            if (Game.Option.IsTriggered("бой"))
+            {
+                return new List<string> { "Бой уже закончился" };
+            }
+
+            Game.Option.Trigger("бой");
+
+            List<string> lines = new List<string> { "БОЙ НАЧИНАЕТСЯ:" };
+
+            int round = 0;
+            int firstStrength = 3;
+            int secondStrength = 4;
+
+            while (true)
+            {
+                round += 1;
+                lines.Add(String.Empty);
+                lines.Add($"HEAD|BOLD|*  *  *    РАУНД: {round}    *  *  * ");
+
+                Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
+
+                int firstHit = firstDice + 3;
+                lines.Add($"Удар первого: {Game.Dice.Symbol(firstDice)} + 3 = {firstHit}");
+
+                int secondHit = secondDice + 2;
+                lines.Add($"Удар второго: {Game.Dice.Symbol(secondDice)} + 2 = {secondHit}");
+                
+                if (firstHit > secondHit)
+                {
+                    lines.Add("Первый боец отоварил второго!");
+                    secondStrength -= 1;
+                    lines.Add($"У второго бойца осталось выносливости: {secondStrength}");
+                }
+                else if (secondHit > firstHit)
+                {
+                    lines.Add("Второй боец отоварил первого!");
+                    firstStrength -= 1;
+                    lines.Add($"У первого бойца осталось выносливости: {firstStrength}");
+                }
+                else
+                {
+                    lines.Add("Ничья в этом раунде!");
+                }
+
+                if ((firstStrength <= 0) || (secondStrength <= 0))
+                {
+                    lines.Add(String.Empty);
+
+                    if (firstStrength <= 0)
+                    {
+                        lines.Add($"BIG|BOLD|Второй боец выиграл!");
+                        FightResult(Fighter == 2, ref lines);
+                    }
+                    else
+                    {
+                        lines.Add($"BIG|BOLD|Первый боец выиграл!");
+                        FightResult(Fighter == 1, ref lines);
+                    }
+                    
+                    return lines;
+                }
+            }
         }
 
         public override bool IsHealingEnabled() =>
