@@ -37,7 +37,7 @@ namespace Seeker.Gamebook.PrisonerOfMoritaiCastle
             Shuriken = 5;
             Arrows = 10;
 
-            Game.Healing.Add(name: "Тонизирующее", healing: 1, portions: 1);
+            Game.Healing.Add(name: "тонизирующее", healing: 1, portions: 1);
             Game.Option.Trigger("обезболивающее");
             Game.Option.Trigger("противопростудное");
             Game.Option.Trigger("противоядие");
