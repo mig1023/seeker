@@ -19,6 +19,9 @@ namespace Seeker.Gamebook.BangkokSky
             if ((action.Type == "Get") && String.IsNullOrEmpty(action.Stat))
                 action.Trigger = action.Button;
 
+            if (xmlAction["Benefit"] != null)
+                action.Benefit = ModificationParse(xmlAction["Benefit"]);
+
             return action;
         }
 

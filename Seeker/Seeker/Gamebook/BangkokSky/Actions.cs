@@ -58,8 +58,12 @@ namespace Seeker.Gamebook.BangkokSky
                 return new List<string> { $"{Head}\n(текущее значение: " +
                     $"{GetProperty(Character.Protagonist, Stat)})" };
             }
+            else if (Price > 0) 
+            {
+                return new List<string> { $"{Head}, {Price} бат" };
+            }
 
-            return new List<string>(); ;
+            return new List<string>();
         }
 
         public override bool IsButtonEnabled(bool secondButton = false)
@@ -76,14 +80,30 @@ namespace Seeker.Gamebook.BangkokSky
                 min = secondButton && (value < 1);
                 max = !secondButton && ((value > 2) || (Character.Protagonist.StatBonuses <= 0));
             }
+            else if (Price > 0)
+            {
+                return !Used && (Character.Protagonist.Money >= Price);
+            }
 
             return !(triggeredAlready || advantagesCount || min || max);
         }
 
         public List<string> Get()
         {
-            if (!String.IsNullOrEmpty(Stat))
+            if ((Price > 0) && (Character.Protagonist.Money >= Price))
+            {
+                Character.Protagonist.Money -= Price;
+
+                if (!Multiple)
+                    Used = true;
+
+                if (Benefit != null)
+                    Benefit.Do();
+            }
+            else if (!String.IsNullOrEmpty(Stat))
+            {
                 ChangeProtagonistParam(Stat, Character.Protagonist, "StatBonuses");
+            }
 
             return new List<string> { "RELOAD" };
         }
