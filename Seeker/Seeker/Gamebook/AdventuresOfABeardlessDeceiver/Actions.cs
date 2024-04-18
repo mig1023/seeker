@@ -257,9 +257,10 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                 if (Benefit != null)
                     Benefit.Do();
             }
-
             else if(!String.IsNullOrEmpty(Stat))
+            {
                 ChangeProtagonistParam(Stat, Character.Protagonist, "StatBonuses");
+            }
 
             return new List<string> { "RELOAD" };
         }
