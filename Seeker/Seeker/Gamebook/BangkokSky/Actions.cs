@@ -9,8 +9,10 @@ namespace Seeker.Gamebook.BangkokSky
         public string Stat { get; set; }
         public int Level { get; set; }
         public string Skill { get; set; }
+        public string Traits { get; set; }
         public string Bonuses { get; set; }
         public bool Free { get; set; }
+
 
         public override List<string> Status() => new List<string>
         {
@@ -95,7 +97,7 @@ namespace Seeker.Gamebook.BangkokSky
                     .Where(x => x == "выбор")
                     .Count();
 
-                return triggers < 2;
+                return !Used && (triggers < 2);
             }
 
             return !(triggeredAlready || advantagesCount || min || max);
@@ -115,6 +117,8 @@ namespace Seeker.Gamebook.BangkokSky
             }
             else if (Free)
             {
+                Used = true;
+
                 if (Benefit != null)
                     Benefit.Do();
             }

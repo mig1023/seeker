@@ -16,8 +16,11 @@ namespace Seeker.Gamebook.BangkokSky
             foreach (string param in GetProperties(action))
                 SetProperty(action, param, xmlAction);
 
-            if ((action.Type == "Get") && String.IsNullOrEmpty(action.Stat))
-                action.Trigger = action.Button;
+            if (!String.IsNullOrEmpty(action.Traits))
+            {
+                action.Trigger = action.Traits;
+                action.Button = action.Traits;
+            }
 
             if (xmlAction["Benefit"] != null)
                 action.Benefit = ModificationParse(xmlAction["Benefit"]);
