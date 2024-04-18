@@ -10,6 +10,7 @@ namespace Seeker.Gamebook.BangkokSky
         public int Level { get; set; }
         public string Skill { get; set; }
         public string Bonuses { get; set; }
+        public bool Free { get; set; }
 
         public override List<string> Status() => new List<string>
         {
@@ -62,6 +63,10 @@ namespace Seeker.Gamebook.BangkokSky
             {
                 return new List<string> { $"{Head}, {Price} бат" };
             }
+            else if (Free)
+            {
+                return new List<string> { Head };
+            }
 
             return new List<string>();
         }
@@ -84,6 +89,14 @@ namespace Seeker.Gamebook.BangkokSky
             {
                 return !Used && (Character.Protagonist.Money >= Price);
             }
+            else if (Free)
+            {
+                int triggers = Game.Data.Triggers
+                    .Where(x => x == "выбор")
+                    .Count();
+
+                return triggers < 2;
+            }
 
             return !(triggeredAlready || advantagesCount || min || max);
         }
@@ -97,6 +110,11 @@ namespace Seeker.Gamebook.BangkokSky
                 if (!Multiple)
                     Used = true;
 
+                if (Benefit != null)
+                    Benefit.Do();
+            }
+            else if (Free)
+            {
                 if (Benefit != null)
                     Benefit.Do();
             }
@@ -225,5 +243,10 @@ namespace Seeker.Gamebook.BangkokSky
             return lines;
         }
 
+        public override bool IsHealingEnabled() =>
+            Character.Protagonist.Wounds > 0;
+
+        public override void UseHealing(int healingLevel) =>
+            Character.Protagonist.Wounds -= healingLevel;
     }
 }
