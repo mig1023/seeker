@@ -1,0 +1,25 @@
+<Gamebook>
+	<Introduction>
+		<Copyright>
+			<Title>Меч и Судьба</Title>
+			<Author>Александр Куликов, 1993</Author>
+		</Copyright>
+		<Styles>
+			<Color Name="Main, Option, System, Continue" Value="989a9a"/>
+		</Styles>
+	</Introduction>
+	<Paragraphs>
+		<Paragraph No="0">
+			<Text>START</Text>
+			<Options>
+				<Start Goto="1"/>
+			</Options>
+		</Paragraph>
+		<Paragraph No="1">
+			<Text>END</Text>
+			<Options>
+				<Option Goto="0"/>
+			</Options>
+		</Paragraph>
+	</Paragraphs>
+</Gamebook>
