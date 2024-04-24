@@ -1,0 +1,26 @@
+<Gamebook>
+	<Introduction>
+		<Copyright>
+			<Title>Кошмар на весь день</Title>
+			<Author>Роберт Лоуренс Стайн, 2003</Author>
+		</Copyright>
+		<Styles>
+			<Color Name="Main, Option, Continue" Value="151c3e"/>
+			<System Value="b8bac5"/>
+		</Styles>
+	</Introduction>
+	<Paragraphs>
+		<Paragraph No="0">
+			<Text>START</Text>
+			<Options>
+				<Start Goto="1"/>
+			</Options>
+		</Paragraph>
+		<Paragraph No="1">
+			<Text>END</Text>
+			<Options>
+				<Option Goto="0"/>
+			</Options>
+		</Paragraph>
+	</Paragraphs>
+</Gamebook>

@@ -879,4 +879,17 @@
 		<Setting>История</Setting>
 		<Color>989a9a</Color>
 	</SwordAndFate>
+	<Nightmare>
+		<Title>Кошмар на весь день</Title>
+		<Original>All-Day Nightmare</Original>
+		<Author>Роберт Лоуренс Стайн</Author>
+		<Translator>Н. А. Соломатина</Translator>
+		<Year>2000</Year>
+		<Text>Какой чудовищный кошмар приснился тебе ночью. Ты пытаешься проснуться, но страшные образы все еще не оставляют тебя... Да это же не твоя спальня! Ты в чужом доме. Старом и ужасном. Но самое неприятное то, что ты не можешь вспомнить даже своего имени! Что делать? Выпрыгнуть в окно или спрятаться на чердаке..?</Text>
+		<Paragraphs>138</Paragraphs>
+		<Size>0</Size>
+		<Playthrough>На полчаса</Playthrough>
+		<Setting>Ужасы</Setting>
+		<Color>151c3e</Color>
+	</Nightmare>
 </Gamebooks>
