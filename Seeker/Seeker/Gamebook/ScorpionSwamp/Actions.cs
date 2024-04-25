@@ -70,7 +70,13 @@ namespace Seeker.Gamebook.ScorpionSwamp
             }
             else
             {
-                return AvailabilityTrigger(option);
+                foreach (string oneOption in option.Split(','))
+                {
+                    if (!AvailabilityTrigger(oneOption))
+                        return false;
+                }
+
+                return true;
             }
         }
 
