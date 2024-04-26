@@ -590,5 +590,11 @@
 				<Option Goto="70" Text="Больше ничего не говорить"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="87">
+			<Text>Участники сражений уже разошлись по своим делам, и арена пустовала. Лишь какой-то старик ржавыми граблями ровнял изрытый поединщиками песок.</Text>
+			<Options>
+				<Option Goto="125"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
