@@ -1,0 +1,26 @@
+<Gamebook>
+	<Introduction>
+		<Copyright>
+			<Title>Власть страха</Title>
+			<Author>Егор Андросов, 2022</Author>
+		</Copyright>
+		<Styles>
+			<Color Name="Main, Option, Continue" Value="2c3b4b"/>
+			<System Value="bfc4c9"/>
+		</Styles>
+	</Introduction>
+	<Paragraphs>
+		<Paragraph No="0">
+			<Text>START</Text>
+			<Options>
+				<Start Goto="13"/>
+			</Options>
+		</Paragraph>
+		<Paragraph No="1">
+			<Text>END</Text>
+			<Options>
+				<Option Goto="0"/>
+			</Options>
+		</Paragraph>
+	</Paragraphs>
+</Gamebook>
