@@ -563,5 +563,12 @@
 				<Option Goto="183"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="83">
+			<Text>Проклиная свою неуклюжесть, я продирался сквозь дебри под уханье филина, да воронье карканье. Не долго следуя по тропе я, наконец, вышел на большую поляну.</Text>
+			<Options>
+				<Option Goto="150" Text="Если вы были на поляне с менгиром"/>
+				<Option Goto="53" Text="Если же нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
