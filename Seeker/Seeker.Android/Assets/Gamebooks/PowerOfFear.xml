@@ -1443,5 +1443,11 @@
 				<Option Goto="215" Text="Если проверка провалена или навык отсутствует"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="211">
+			<Text>Получите умение «Знание трав»: можете отнять 2 от любого кубика противника, при определении силы его удара.</Text>
+			<Options>
+				<Option Goto="195"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
