@@ -1467,5 +1467,11 @@
 				<Option Goto="52"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="215">
+			<Options>
+				<Option Goto="224" Text="Удалось ли вам спасти стряпуху на кухнях и Ланку у колодца?"/>
+				<Option Goto="207" Text="Если кто-то из них умер или вы никого из них не встречали"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
