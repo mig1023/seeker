@@ -1455,5 +1455,11 @@
 				<Option Goto="200"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="213">
+			<Text>Если у вас больше не осталось важных дел в замке и окрестностях, можете принять приглашение Вионы и отправится с ней на прогулку.</Text>
+			<Options>
+				<Option Goto="66"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
