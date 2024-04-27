@@ -1461,5 +1461,11 @@
 				<Option Goto="66"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="214">
+			<Text>Хоровод видений закружился в голове, окутывая меня ворохом мыслей и тайных желаний. Краски, яркими сполохами обволакивали сознание, выстраиваясь в ряд. Потом я увидел!</Text>
+			<Options>
+				<Option Goto="52"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
