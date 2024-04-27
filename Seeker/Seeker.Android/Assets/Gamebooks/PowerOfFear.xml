@@ -1430,5 +1430,11 @@
 				<Option Goto="189"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="209">
+			<Text>Получите умение «Шестое чувство»! (Один раз за бой перебросьте все свои кубики)</Text>
+			<Options>
+				<Option Goto="183"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
