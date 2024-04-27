@@ -1188,5 +1188,11 @@
 				<Option Goto="164"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="173">
+			<Text>Да ну ее, эту мазню! Наверняка, в доме барона есть множество более изящных картин, на которые стоит обратить внимание. Но все это исключительно после ужина!</Text>
+			<Options>
+				<Option Goto="133"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
