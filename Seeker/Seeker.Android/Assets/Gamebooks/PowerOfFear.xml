@@ -1274,5 +1274,11 @@
 				<Option Goto="158"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="185">
+			<Text>Нет, ничего не выйдет. Лучше пойду спать, завтра предстоял тяжелый день.</Text>
+			<Options>
+				<Option Goto="122"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
