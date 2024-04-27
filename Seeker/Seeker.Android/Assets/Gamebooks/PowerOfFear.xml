@@ -1048,5 +1048,11 @@
 				<Option Goto="125"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="152">
+			<Text>Я вернулся по своим следам к подземному ходу и мне не оставалось больше ничего, как пойти по опушке в надежде отыскать что-то еще, ведь с менгиром ничего не вышло.</Text>
+			<Options>
+				<Option Goto="64"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
