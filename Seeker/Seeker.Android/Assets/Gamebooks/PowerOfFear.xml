@@ -1286,5 +1286,11 @@
 				<Option Goto="49"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="187">
+			<Text>- Очнулся? Приди в себя, соберись! Осталось не много, - Мара заглядывала мне в глаза.\n\nЯ наклонил голову в знак согласия, и она продолжила говорить.</Text>
+			<Options>
+				<Option Goto="144"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
