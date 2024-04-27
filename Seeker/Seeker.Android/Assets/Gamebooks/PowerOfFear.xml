@@ -1170,5 +1170,11 @@
 				<Option Goto="180"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="170">
+			<Options>
+				<Option Goto="60" Text="Если вы обладаете состоянием «Злость»"/>
+				<Option Goto="135" Text="Если же нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
