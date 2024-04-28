@@ -11,6 +11,9 @@
 			<StatusBar Value="414e5d"/>
 			<System Value="bfc4c9"/>
 		</Styles>
+		<Lists>
+			<WithoutStatuses Items="0, 230"/>
+		</Lists>
 		<Dictionaries>
 			<PropertiesNames>
 				<Item Name="Hunting" Value="Охота"/>
