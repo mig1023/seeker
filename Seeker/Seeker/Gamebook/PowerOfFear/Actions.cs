@@ -165,14 +165,15 @@ namespace Seeker.Gamebook.PowerOfFear
                 lines.Add($"Выпавшее значение {result} больше уровня навыка!");
                 lines.Add($"BIG|BAD|BOLD|Проверка провалена :(");
 
-                Game.Buttons.Disable("Проверка удачна");
+                Game.Buttons.Disable("Проверка удачна, Вам повезло");
             }
             else
             {
                 lines.Add($"Выпавшее значение {result} непревышает уровня навыка!");
                 lines.Add($"BIG|GOOD|BOLD|Проверка успешно пройдена :)");
 
-                Game.Buttons.Disable("Проверка неудачна или же навык отсутствует");
+                Game.Buttons.Disable("Проверка неудачна или же навык отсутствует, " +
+                    "Удача от вас отвернулась, Не получилось");
             }
 
             return lines;
