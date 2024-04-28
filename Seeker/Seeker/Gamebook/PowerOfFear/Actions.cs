@@ -5,8 +5,10 @@ namespace Seeker.Gamebook.PowerOfFear
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {
+        public string Name { get; set; }
         public string Skill { get; set; }
         public int Level { get; set; }
+        public int Dices { get; set; }
 
         public override List<string> Status() => new List<string>
         {
@@ -50,6 +52,11 @@ namespace Seeker.Gamebook.PowerOfFear
             {
                 return new List<string> { $"ПРОВЕРКА ПО НАВЫКУ " +
                     $"{Constants.PropertiesNames[Skill].ToUpper()}" };
+            }
+            else if (Type == "Fight")
+            {
+                return new List<string> { $"{Name}\n" +
+                    $"Атакует на {Dices} кубиках" };
             }
             else if (!String.IsNullOrEmpty(Skill))
             {
@@ -178,5 +185,81 @@ namespace Seeker.Gamebook.PowerOfFear
 
             return lines;
         }
+
+        private void AttackDices(int dicesCount, out int dices, out string dicesLines)
+        {
+            dices = 0;
+            dicesLines = String.Empty;
+
+            for (int i = 1; i <= dicesCount; i += 1)
+            {
+                if (dices > 0)
+                    dicesLines += " +";
+
+                int dice = Game.Dice.Roll();
+                dices += dice;
+                dicesLines += $" {Game.Dice.Symbol(dice)}";
+            }
+        }
+
+        public List<string> Fight()
+        {
+            List<string> lines = new List<string> { "BIG|BOLD|БОЙ:" };
+
+            int round = 0;
+            int attackCount = 3;
+            string attackCountLine = "Кол-во ваших кубиков атаки: 3 (базовое)";
+
+            if (Character.Protagonist.Weapon > 0)
+            {
+                attackCount += 1;
+                attackCountLine += " + 1 (за Владение оружием)";
+            }
+
+            lines.Add(attackCountLine);
+            lines.Add($"Кол-во кубиков атаки противника: {Dices}");
+
+            while (true)
+            {
+                round += 1;
+
+                lines.Add($"HEAD|\n*   *   *   РАУНД {round}   *   *   *\n");
+
+                AttackDices(Dices, out int enemyAttack, out string enemyLine);
+                lines.Add($"Кубики противника:{enemyLine}");
+
+                AttackDices(attackCount, out int heroAttack, out string heroLine);
+                lines.Add($"Ваши кубики:{heroLine}");
+
+                if (enemyAttack > heroAttack)
+                {
+                    lines.Add($"Атака противника ({enemyAttack} ед.) сильнее вашей ({heroAttack} ед.)!");
+                    lines.Add("BAD|Противник вас ранил!");
+
+                    Character.Protagonist.Hitpoints -= 1;
+
+                    if (Character.Protagonist.Hitpoints <= 0)
+                    {
+                        lines.Add("BAD|BIG|Вы проиграли :(");
+                        return lines;
+                    }
+
+                }
+                else if (enemyAttack < heroAttack)
+                {
+                    lines.Add($"Ваша атака ({heroAttack} ед.) сильнее, чем у противника ({enemyAttack} ед.)!");
+                    lines.Add("GOOD|BOLD|Противник повержен!");
+                    lines.Add("GOOD|BIG|Вы победили :)");
+                    return lines;
+                }
+                else
+                {
+                    lines.Add("BOLD|Ничья в раунде!");
+                }
+            }
+        }
+
+        public override bool GameOver(out int toEndParagraph, out string toEndText) =>
+            GameOverBy(Character.Protagonist.Hitpoints, out toEndParagraph, out toEndText);
     }
 }
