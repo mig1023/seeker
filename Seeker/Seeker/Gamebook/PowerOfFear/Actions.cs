@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Seeker.Gamebook.PowerOfFear
 {
@@ -9,6 +10,7 @@ namespace Seeker.Gamebook.PowerOfFear
         public string Skill { get; set; }
         public int Level { get; set; }
         public int Dices { get; set; }
+        public bool AdditionalPenalty { get; set; }
 
         public override List<string> Status() => new List<string>
         {
@@ -186,10 +188,13 @@ namespace Seeker.Gamebook.PowerOfFear
             return lines;
         }
 
-        private void AttackDices(int dicesCount, out int dices, out string dicesLines)
+        private void AttackDices(int dicesCount, out int dices,
+            out string dicesLines, out bool doubleDice)
         {
             dices = 0;
             dicesLines = String.Empty;
+
+            List<int> allDices = new List<int>();
 
             for (int i = 1; i <= dicesCount; i += 1)
             {
@@ -199,7 +204,16 @@ namespace Seeker.Gamebook.PowerOfFear
                 int dice = Game.Dice.Roll();
                 dices += dice;
                 dicesLines += $" {Game.Dice.Symbol(dice)}";
+
+                allDices.Add(dice);
             }
+
+            int doubles = allDices
+                .GroupBy(x => x)
+                .Where(x => x.Count() > 1)
+                .Sum(x => x.Count());
+
+            doubleDice = doubles > 0;
         }
 
         public List<string> Fight()
@@ -225,11 +239,19 @@ namespace Seeker.Gamebook.PowerOfFear
 
                 lines.Add($"HEAD|\n*   *   *   РАУНД {round}   *   *   *\n");
 
-                AttackDices(Dices, out int enemyAttack, out string enemyLine);
+                AttackDices(Dices, out int enemyAttack, out string enemyLine, out bool doubleDice);
                 lines.Add($"Кубики противника:{enemyLine}");
 
-                AttackDices(attackCount, out int heroAttack, out string heroLine);
+                AttackDices(attackCount, out int heroAttack, out string heroLine, out bool _);
                 lines.Add($"Ваши кубики:{heroLine}");
+
+                if (doubleDice && AdditionalPenalty)
+                {
+                    heroAttack -= 2;
+
+                    lines.Add($"Противник выкинул дубль! По специальному правилу " +
+                        $"от силы вашей атаки отнимается 2, теперь она равна {heroAttack}");
+                }
 
                 if (enemyAttack > heroAttack)
                 {
@@ -237,6 +259,14 @@ namespace Seeker.Gamebook.PowerOfFear
                     lines.Add("BAD|Противник вас ранил!");
 
                     Character.Protagonist.Hitpoints -= 1;
+
+                    if (doubleDice && !AdditionalPenalty)
+                    {
+                        lines.Add("На кубиках противника выпал дубль!");
+                        lines.Add("BAD|Противник наносит вам дополнительный урон!");
+
+                        Character.Protagonist.Hitpoints -= 1;
+                    }
 
                     if (Character.Protagonist.Hitpoints <= 0)
                     {
