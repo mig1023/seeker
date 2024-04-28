@@ -6,7 +6,7 @@ namespace Seeker.Gamebook.PowerOfFear
     {
         public override void Do()
         {
-            if (Constants.PropertiesNames.ContainsKey(Name))
+            if (Constants.PropertiesNames.ContainsKey(Name) && (Value == 0))
             {
                 int current = GetProperty(Character.Protagonist, Name);
 
