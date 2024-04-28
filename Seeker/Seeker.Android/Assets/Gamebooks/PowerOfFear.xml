@@ -1512,5 +1512,11 @@
 				<Option Goto="194"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="222">
+			<Text>Я услышал, как где-то справа хрустнула ветка и Мара отвела взгляд. Всего на мгновение! В этот момент я собрал всю доступную мне силу и прорвал барьер, отогнав страх прочь.</Text>
+			<Options>
+				<Option Goto="163"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
