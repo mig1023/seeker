@@ -5,7 +5,7 @@ namespace Seeker.Gamebook.PowerOfFear
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {
-        public string Stat { get; set; }
+        public string Skill { get; set; }
         public int Level { get; set; }
 
         public override List<string> Status() => new List<string>
@@ -46,10 +46,10 @@ namespace Seeker.Gamebook.PowerOfFear
 
         public override List<string> Representer()
         {
-            if (!String.IsNullOrEmpty(Stat))
+            if (!String.IsNullOrEmpty(Skill))
             {
                 return new List<string> { $"{Head}\n(текущее значение: " +
-                    $"{GetProperty(Character.Protagonist, Stat)})" };
+                    $"{GetProperty(Character.Protagonist, Skill)})" };
             }
 
             return new List<string>();
@@ -59,7 +59,7 @@ namespace Seeker.Gamebook.PowerOfFear
         {
             int count = 0;
 
-            foreach (string name in Constants.PropertiesNames)
+            foreach (string name in Constants.PropertiesNames.Keys)
             {
                 bool anyLevel = level == 0;
                 int current = GetProperty(Character.Protagonist, name);
@@ -76,23 +76,29 @@ namespace Seeker.Gamebook.PowerOfFear
 
         public override bool IsButtonEnabled(bool secondButton = false)
         {
-            bool min = false, max = false, count = false;
+            bool disabled = false;
 
             if (Type == "Get-Decrease")
             {
-                int value = GetProperty(Character.Protagonist, Stat);
-                min = secondButton && (value <= 0);
-                max = !secondButton && (value >= 8);
+                int value = GetProperty(Character.Protagonist, Skill);
+                bool min = secondButton && (value <= 0);
+                bool max = !secondButton && (value >= 8);
 
                 int countMax = GetPropertiesCountByLevel(8);
                 bool alreadyAll = (GetPropertiesCountByLevel() >= 5) && (value <= 0);
                 bool alreadyMax = (countMax >= 3) && (GetPropertiesCountByLevel(7) >= 2);
                 bool alreadyMiddle = (countMax >= 3) && (value >= 7);
+                bool count = (alreadyAll || alreadyMax || alreadyMiddle) && !secondButton;
 
-                count = (alreadyAll || alreadyMax || alreadyMiddle) && !secondButton;
+                disabled = (min || max || count);
             }
 
-            return !(min || max || count);
+            if (Type == "Test")
+            {
+                int value = GetProperty(Character.Protagonist, Skill);
+            }
+
+            return !disabled;
         }
 
         private int GetSteps(int current)
@@ -108,12 +114,9 @@ namespace Seeker.Gamebook.PowerOfFear
 
         public List<string> Get()
         {
-            if (!String.IsNullOrEmpty(Stat))
-            {
-                int current = GetProperty(Character.Protagonist, Stat);
-                int bonus = GetSteps(current);
-                SetProperty(Character.Protagonist, Stat, current + bonus);
-            }
+            int current = GetProperty(Character.Protagonist, Skill);
+            int bonus = GetSteps(current);
+            SetProperty(Character.Protagonist, Skill, current + bonus);
 
             return new List<string> { "RELOAD" };
         }
@@ -131,11 +134,43 @@ namespace Seeker.Gamebook.PowerOfFear
 
         public List<string> Decrease()
         {
-            int current = GetProperty(Character.Protagonist, Stat);
+            int current = GetProperty(Character.Protagonist, Skill);
             int decrease = DecreaseSteps(current);
-            SetProperty(Character.Protagonist, Stat, current - decrease);
+            SetProperty(Character.Protagonist, Skill, current - decrease);
 
             return new List<string> { "RELOAD" };
+        }
+
+        public List<string> Test()
+        {
+            List<string> lines = new List<string>();
+
+            Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
+            int result = firstDice + secondDice;
+
+            lines.Add($"Кубики: {Game.Dice.Symbol(firstDice)} + " +
+                $"{Game.Dice.Symbol(firstDice)} = {result}");
+
+            int level = GetProperty(Character.Protagonist, Skill);
+
+            lines.Add($"Уровень навыка «{Constants.PropertiesNames[Skill]}» равен {level}");
+
+            if (result > level)
+            {
+                lines.Add($"Выпавшее значение {result} больше уровня навыка!");
+                lines.Add($"BIG|BAD|Проверка провалена :(");
+
+                Game.Buttons.Disable("Проверка удачна");
+            }
+            else
+            {
+                lines.Add($"Выпавшее значение {result} непревышает уровня навыка!");
+                lines.Add($"BIG|GOOD|Проверка успешно пройдена :)");
+
+                Game.Buttons.Disable("Проверка неудачна или же навык отсутствует");
+            }
+
+            return lines;
         }
     }
 }

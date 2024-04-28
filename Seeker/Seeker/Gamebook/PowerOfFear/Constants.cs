@@ -4,6 +4,6 @@ namespace Seeker.Gamebook.PowerOfFear
 {
     class Constants : Prototypes.Constants, Abstract.IConstants
     {
-        public static List<string> PropertiesNames { get; set; }
+        public static Dictionary<string, string> PropertiesNames { get; set; }
     }
 }
