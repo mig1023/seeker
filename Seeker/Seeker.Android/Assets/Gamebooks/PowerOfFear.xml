@@ -20,10 +20,10 @@
 				<Item Name="Agility" Value="Ловкость"/>
 				<Item Name="Luck" Value="Удача"/>
 				<Item Name="Weapon" Value="Владение оружием"/>
-				<Item Name="Theft" Value="Взлом"/>
+				<Item Name="Theft" Value="Взлом и форовство"/>
 				<Item Name="Stealth" Value="Скрытность"/>
 				<Item Name="Knowledge" Value="Знания"/>
-				<Item Name="Strength" Value="Сила"/>
+				<Item Name="Strength" Value="Физическая сила"/>
 			</PropertiesNames>
 		</Dictionaries>
 		<Buttons>
@@ -1763,7 +1763,6 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="223">
-			<Text>Пройдите проверку навыка «Взлом и Воровство».</Text>
 			<Actions>
 				<Test>
 					<Skill>Theft</Skill>
