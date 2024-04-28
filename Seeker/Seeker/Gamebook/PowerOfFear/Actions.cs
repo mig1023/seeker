@@ -156,6 +156,23 @@ namespace Seeker.Gamebook.PowerOfFear
             return new List<string> { "RELOAD" };
         }
 
+        public override bool Availability(string option)
+        {
+            if (String.IsNullOrEmpty(option))
+            {
+                return true;
+            }
+            else if (Constants.PropertiesNames.ContainsKey(option))
+            {
+                int level = GetProperty(Character.Protagonist, Name);
+                return level > 0;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
         public List<string> Test()
         {
             List<string> lines = new List<string>();
