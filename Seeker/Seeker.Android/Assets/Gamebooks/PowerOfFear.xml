@@ -1668,10 +1668,14 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="227">
-			<Text>Пройдите проверку навыка «Владение оружием».</Text>
+			<Actions>
+				<Test>
+					<Skill>Weapon</Skill>
+				</Test>
+			</Actions>
 			<Options>
-				<Option Goto="229" Text="Если проверка удачна"/>
-				<Option Goto="67" Text="Если же нет или навык отсутствует, то остается лишь заглянуть за занавеску"/>
+				<Option Goto="229" Text="Проверка удачна"/>
+				<Option Goto="67" Text="Не получилось"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="228">
