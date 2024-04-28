@@ -1506,5 +1506,11 @@
 				<Option Goto="228" Text="Если проверка провалена или навык отсутствует"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="221">
+			<Text>Я не знал, что делать. Он был очень силен! Я кивнул Маре, и мы атаковали вместе. Атаковали в последний раз!</Text>
+			<Options>
+				<Option Goto="194"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
