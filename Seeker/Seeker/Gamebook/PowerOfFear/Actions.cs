@@ -11,6 +11,7 @@ namespace Seeker.Gamebook.PowerOfFear
         public int Level { get; set; }
         public int Dices { get; set; }
         public bool AdditionalPenalty { get; set; }
+        public bool NoHitpointsLoss { get; set; }
 
         public override List<string> Status() => new List<string>
         {
@@ -222,6 +223,7 @@ namespace Seeker.Gamebook.PowerOfFear
 
             int round = 0;
             int attackCount = 3;
+            int hiptoints = Character.Protagonist.Hitpoints;
             string attackCountLine = "Кол-во ваших кубиков атаки: 3 (базовое)";
 
             if (Character.Protagonist.Weapon > 0)
@@ -270,6 +272,9 @@ namespace Seeker.Gamebook.PowerOfFear
 
                     if (Character.Protagonist.Hitpoints <= 0)
                     {
+                        if (NoHitpointsLoss)
+                            Character.Protagonist.Hitpoints = hiptoints;
+
                         lines.Add("BAD|BIG|Вы проиграли :(");
                         return lines;
                     }
@@ -277,6 +282,9 @@ namespace Seeker.Gamebook.PowerOfFear
                 }
                 else if (enemyAttack < heroAttack)
                 {
+                    if (NoHitpointsLoss)
+                        Character.Protagonist.Hitpoints = hiptoints;
+
                     lines.Add($"Ваша атака ({heroAttack} ед.) сильнее, чем у противника ({enemyAttack} ед.)!");
                     lines.Add("GOOD|BOLD|Противник повержен!");
                     lines.Add("GOOD|BIG|Вы победили :)");
@@ -291,5 +299,11 @@ namespace Seeker.Gamebook.PowerOfFear
 
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
             GameOverBy(Character.Protagonist.Hitpoints, out toEndParagraph, out toEndText);
+
+        public override bool IsHealingEnabled() =>
+            Character.Protagonist.Hitpoints < 10;
+
+        public override void UseHealing(int healingLevel) =>
+            Character.Protagonist.Hitpoints = 10;
     }
 }
