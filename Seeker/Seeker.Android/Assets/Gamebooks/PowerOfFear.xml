@@ -11,9 +11,21 @@
 			<StatusBar Value="414e5d"/>
 			<System Value="bfc4c9"/>
 		</Styles>
-		<Lists>
-			<PropertiesNames Items="Hunting, Agility, Luck, Weapon, Theft, Stealth, Knowledge, Strength"/>
-		</Lists>
+		<Dictionaries>
+			<PropertiesNames>
+				<Item Name="Hunting" Value="Охота"/>
+				<Item Name="Agility" Value="Ловкость"/>
+				<Item Name="Luck" Value="Удача"/>
+				<Item Name="Weapon" Value="Владение оружием"/>
+				<Item Name="Theft" Value="Взлом"/>
+				<Item Name="Stealth" Value="Скрытность"/>
+				<Item Name="Knowledge" Value="Знания"/>
+				<Item Name="Strength" Value="Сила"/>
+			</PropertiesNames>
+		</Dictionaries>
+		<Buttons>
+			<Test>Проверка навыка</Test>
+		</Buttons>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph No="0">
@@ -117,9 +129,14 @@
 		</Paragraph>
 		<Paragraph No="14">
 			<Text>Я потянул за медное кольцо и дубовая дверь, на хорошо смазанных петлях, не скрипнув отворилась. Внутри было довольно темно, а масленый фонарь, что стоял на столе был естественно погашен. Переступив через порог, я услышал тихий, еле слышимый щелчок и бросился на пол.\n\nПройдите проверку навыка «Ловкость»</Text>
+			<Actions>
+				<Test>
+					<Skill>Agility</Skill>
+				</Test>
+			</Actions>
 			<Options>
-				<Option Goto="43" Text="Если проверка удачна"/>
-				<Option Goto="181" Text="Если проверка неудачна или же навык отсутствует"/>
+				<Option Goto="43" Text="Проверка удачна"/>
+				<Option Goto="181" Text="Проверка неудачна или же навык отсутствует"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="15">
@@ -1589,49 +1606,49 @@
 				<Get-Decrease>
 					<Button>Увеличить, Уменьшить</Button>
 					<Head>ОХОТА</Head>
-					<Stat>Hunting</Stat>
+					<Skill>Hunting</Skill>
 					<Text Style="Small">Даёт возможность добывать пищу в тяжелых условиях.</Text>
 				</Get-Decrease>
 				<Get-Decrease>
 					<Button>Увеличить, Уменьшить</Button>
 					<Head>ЛОВКОСТЬ</Head>
-					<Stat>Agility</Stat>
+					<Skill>Agility</Skill>
 					<Text Style="Small">Позволяет преодолевать препятствия и быстро бегать.</Text>
 				</Get-Decrease>
 				<Get-Decrease>
 					<Button>Увеличить, Уменьшить</Button>
 					<Head>УДАЧА</Head>
-					<Stat>Luck</Stat>
+					<Skill>Luck</Skill>
 					<Text Style="Small">Позволяет быть чуточку удачливее остальных.</Text>
 				</Get-Decrease>
 				<Get-Decrease>
 					<Button>Увеличить, Уменьшить</Button>
 					<Head>ВЛАДЕНИЕ ОРУЖИЕМ</Head>
-					<Stat>Weapon</Stat>
+					<Skill>Weapon</Skill>
 					<Text Style="Small">Даёт в бою один дополнительный кубик для определения своей силы удара.</Text>
 				</Get-Decrease>
 				<Get-Decrease>
 					<Button>Увеличить, Уменьшить</Button>
 					<Head>ВЗЛОМ И ВОРОВСТВО</Head>
-					<Stat>Theft</Stat>
+					<Skill>Theft</Skill>
 					<Text Style="Small">Возможность открывать двери и вскрывать замки.</Text>
 				</Get-Decrease>
 				<Get-Decrease>
 					<Button>Увеличить, Уменьшить</Button>
 					<Head>СКРЫТНОСТЬ</Head>
-					<Stat>Stealth</Stat>
+					<Skill>Stealth</Skill>
 					<Text Style="Small">Способность красться совершенно бесшумно и скрыться в нужный момент от чужих глаз.</Text>
 				</Get-Decrease>
 				<Get-Decrease>
 					<Button>Увеличить, Уменьшить</Button>
 					<Head>ЗНАНИЯ</Head>
-					<Stat>Knowledge</Stat>
+					<Skill>Knowledge</Skill>
 					<Text Style="Small">Знание тайного и сокровенного.</Text>
 				</Get-Decrease>
 				<Get-Decrease>
 					<Button>Увеличить, Уменьшить</Button>
 					<Head>ФИЗИЧЕСКАЯ СИЛА</Head>
-					<Stat>Strength</Stat>
+					<Skill>Strength</Skill>
 					<Texts>
 						<Text Style="Small">Повышенная сила и выносливость! Прибавьте два к уровню начального значения вашего Здоровья.</Text>
 						<Text>Присвойте выбранным навыкам следующие значения в любом порядке: 8-8-8-7-7.\n\nУ вас должны оказаться выбранным пять навыков по одному из значений указанных выше</Text>
