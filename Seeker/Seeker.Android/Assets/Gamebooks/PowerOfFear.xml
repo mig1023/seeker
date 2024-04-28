@@ -6,10 +6,14 @@
 		</Copyright>
 		<Styles>
 			<Color Name="Main, Option, Continue, Action" Value="2c3b4b"/>
-			<Color Name="ActionBox, AdditionalStatus" Value="56626e"/>
+			<AdditionalStatus Value="56626e"/>
+			<AdditionalFont Value="ffffff"/>
 			<StatusBar Value="414e5d"/>
 			<System Value="bfc4c9"/>
 		</Styles>
+		<Lists>
+			<PropertiesNames Items="Hunting, Agility, Luck, Weapon, Theft, Stealth, Knowledge, Strength"/>
+		</Lists>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph No="0">
