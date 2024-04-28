@@ -134,6 +134,7 @@
 					<Name>Ковель</Name>
 					<Dices>3</Dices>
 					<AdditionalPenalty/>
+					<NoHitpointsLoss/>
 				</Fight>
 			</Actions>
 			<Options>
