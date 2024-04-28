@@ -20,5 +20,8 @@ namespace Seeker.Gamebook.PowerOfFear
 
             return action;
         }
+
+        public override Abstract.IModification ModificationParse(XmlNode xmlModification) =>
+            Xml.ModificationParse(xmlModification, new Modification());
     }
 }
