@@ -1638,9 +1638,14 @@
 		</Paragraph>
 		<Paragraph No="223">
 			<Text>Пройдите проверку навыка «Взлом и Воровство».</Text>
+			<Actions>
+				<Test>
+					<Skill>Theft</Skill>
+				</Test>
+			</Actions>
 			<Options>
-				<Option Goto="219" Text="Если проверка удачна"/>
-				<Option Goto="225" Text="Если проверка провальная или навык отсутствует"/>
+				<Option Goto="219" Text="Проверка удачна"/>
+				<Option Goto="225" Text="Проверка неудачна или же навык отсутствует"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="224">
