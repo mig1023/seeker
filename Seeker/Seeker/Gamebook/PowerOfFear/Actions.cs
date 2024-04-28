@@ -46,7 +46,12 @@ namespace Seeker.Gamebook.PowerOfFear
 
         public override List<string> Representer()
         {
-            if (!String.IsNullOrEmpty(Skill))
+            if (Type == "Test")
+            {
+                return new List<string> { $"ПРОВЕРКА ПО НАВЫКУ " +
+                    $"{Constants.PropertiesNames[Skill].ToUpper()}" };
+            }
+            else if (!String.IsNullOrEmpty(Skill))
             {
                 return new List<string> { $"{Head}\n(текущее значение: " +
                     $"{GetProperty(Character.Protagonist, Skill)})" };
@@ -95,7 +100,7 @@ namespace Seeker.Gamebook.PowerOfFear
 
             if (Type == "Test")
             {
-                int value = GetProperty(Character.Protagonist, Skill);
+                disabled = GetProperty(Character.Protagonist, Skill) <= 0;
             }
 
             return !disabled;
@@ -149,7 +154,7 @@ namespace Seeker.Gamebook.PowerOfFear
             int result = firstDice + secondDice;
 
             lines.Add($"Кубики: {Game.Dice.Symbol(firstDice)} + " +
-                $"{Game.Dice.Symbol(firstDice)} = {result}");
+                $"{Game.Dice.Symbol(secondDice)} = {result}");
 
             int level = GetProperty(Character.Protagonist, Skill);
 
@@ -158,14 +163,14 @@ namespace Seeker.Gamebook.PowerOfFear
             if (result > level)
             {
                 lines.Add($"Выпавшее значение {result} больше уровня навыка!");
-                lines.Add($"BIG|BAD|Проверка провалена :(");
+                lines.Add($"BIG|BAD|BOLD|Проверка провалена :(");
 
                 Game.Buttons.Disable("Проверка удачна");
             }
             else
             {
                 lines.Add($"Выпавшее значение {result} непревышает уровня навыка!");
-                lines.Add($"BIG|GOOD|Проверка успешно пройдена :)");
+                lines.Add($"BIG|GOOD|BOLD|Проверка успешно пройдена :)");
 
                 Game.Buttons.Disable("Проверка неудачна или же навык отсутствует");
             }
