@@ -1518,5 +1518,12 @@
 				<Option Goto="163"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="223">
+			<Text>Пройдите проверку навыка «Взлом и Воровство».</Text>
+			<Options>
+				<Option Goto="219" Text="Если проверка удачна"/>
+				<Option Goto="225" Text="Если проверка провальная или навык отсутствует"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
