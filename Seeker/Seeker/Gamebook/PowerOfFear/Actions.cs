@@ -55,35 +55,87 @@ namespace Seeker.Gamebook.PowerOfFear
             return new List<string>();
         }
 
+        private int GetPropertiesCountByLevel(int level = 0)
+        {
+            int count = 0;
+
+            foreach (string name in Constants.PropertiesNames)
+            {
+                bool anyLevel = level == 0;
+                int current = GetProperty(Character.Protagonist, name);
+
+                if (!anyLevel && (current == level))
+                    count += 1;
+
+                if (anyLevel && (current > 0))
+                    count += 1;
+            }
+
+            return count;
+        }
+
         public override bool IsButtonEnabled(bool secondButton = false)
         {
-            bool getAvantages = (Type == "Get") && String.IsNullOrEmpty(Stat);
-            bool triggeredAlready = getAvantages && Game.Option.IsTriggered(Trigger);
-            bool advantagesCount = getAvantages && (Game.Data.Triggers.Count >= 4);
-
-            bool min = false, max = false;
+            bool min = false, max = false, count = false;
 
             if (Type == "Get-Decrease")
             {
                 int value = GetProperty(Character.Protagonist, Stat);
-                min = secondButton && (value < 0);
-                max = !secondButton && ((value >= 8);
+                min = secondButton && (value <= 0);
+                max = !secondButton && (value >= 8);
+
+                int countMax = GetPropertiesCountByLevel(8);
+                bool alreadyAll = (GetPropertiesCountByLevel() >= 5) && (value <= 0);
+                bool alreadyMax = (countMax >= 3) && (GetPropertiesCountByLevel(7) >= 2);
+                bool alreadyMiddle = (countMax >= 3) && (value >= 7);
+
+                count = (alreadyAll || alreadyMax || alreadyMiddle) && !secondButton;
             }
 
-            return !(triggeredAlready || advantagesCount || min || max);
+            return !(min || max || count);
+        }
+
+        private int GetSteps(int current)
+        {
+            if (current == 0)
+                return 7;
+
+            if (current == 7)
+                return 1;
+
+            return 0;
         }
 
         public List<string> Get()
         {
             if (!String.IsNullOrEmpty(Stat))
             {
-                ChangeProtagonistParam(Stat, Character.Protagonist, "StatBonuses");
+                int current = GetProperty(Character.Protagonist, Stat);
+                int bonus = GetSteps(current);
+                SetProperty(Character.Protagonist, Stat, current + bonus);
             }
 
             return new List<string> { "RELOAD" };
         }
 
-        public List<string> Decrease() =>
-            ChangeProtagonistParam(Stat, Character.Protagonist, "StatBonuses", decrease: true);
+        private int DecreaseSteps(int current)
+        {
+            if (current == 8)
+                return 1;
+
+            if (current == 7)
+                return 7;
+
+            return 0;
+        }
+
+        public List<string> Decrease()
+        {
+            int current = GetProperty(Character.Protagonist, Stat);
+            int decrease = DecreaseSteps(current);
+            SetProperty(Character.Protagonist, Stat, current - decrease);
+
+            return new List<string> { "RELOAD" };
+        }
     }
 }

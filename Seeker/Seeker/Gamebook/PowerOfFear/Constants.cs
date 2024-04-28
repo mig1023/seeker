@@ -2,5 +2,8 @@
 
 namespace Seeker.Gamebook.PowerOfFear
 {
-    class Constants : Prototypes.Constants, Abstract.IConstants { }
+    class Constants : Prototypes.Constants, Abstract.IConstants
+    {
+        public static List<string> PropertiesNames { get; set; }
+    }
 }
