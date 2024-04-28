@@ -1544,5 +1544,12 @@
 				<Option Goto="102"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="227">
+			<Text>Пройдите проверку навыка «Владение оружием».</Text>
+			<Options>
+				<Option Goto="229" Text="Если проверка удачна"/>
+				<Option Goto="67" Text="Если же нет или навык отсутствует, то остается лишь заглянуть за занавеску"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
