@@ -164,8 +164,11 @@ namespace Seeker.Gamebook.PowerOfFear
             }
             else if (Constants.PropertiesNames.ContainsKey(option))
             {
-                int level = GetProperty(Character.Protagonist, Name);
-                return level > 0;
+                return GetProperty(Character.Protagonist, Name) > 0;
+            }
+            else if (Constants.PropertiesNames.ContainsKey(option.Replace("!", String.Empty)))
+            {
+                return GetProperty(Character.Protagonist, Name) == 0;
             }
             else
             {
