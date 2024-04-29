@@ -601,7 +601,7 @@
 			</Actions>
 			<Options>
 				<Option Goto="92" Text="Проверка удачна" Availability="Knowledge"/>
-				<Option Goto="126" Text="Проверка неудачна или же навык отсутствует" Availability="Knowledge"/>
+				<Option Goto="126" Text="Проверка неудачна" Availability="Knowledge"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="66">
