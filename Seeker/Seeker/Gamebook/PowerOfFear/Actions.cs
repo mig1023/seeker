@@ -51,7 +51,11 @@ namespace Seeker.Gamebook.PowerOfFear
 
         public override List<string> Representer()
         {
-            if (Type == "Test")
+            if ((Type == "Test") && (Skill == "Random"))
+            {
+                return new List<string> { "ПРОВЕРКА ПО СЛУЧАЙНОМУ НАВЫКУ" };
+            }
+            else if (Type == "Test")
             {
                 return new List<string> { $"ПРОВЕРКА ПО НАВЫКУ " +
                     $"{Constants.PropertiesNames[Skill].ToUpper()}" };
@@ -108,7 +112,11 @@ namespace Seeker.Gamebook.PowerOfFear
                 disabled = (min || max || count);
             }
 
-            if (Type == "Test")
+            if ((Type == "Test") && (Skill == "Random"))
+            {
+                return true;
+            }
+            else if (Type == "Test")
             {
                 disabled = GetProperty(Character.Protagonist, Skill) <= 0;
             }
@@ -186,6 +194,18 @@ namespace Seeker.Gamebook.PowerOfFear
             lines.Add($"Кубики: {Game.Dice.Symbol(firstDice)} + " +
                 $"{Game.Dice.Symbol(secondDice)} = {result}");
 
+            if (Skill == "Random")
+            {
+                Dictionary<string, int> allSkills = new Dictionary<string, int>();
+
+                foreach (string skill in Constants.PropertiesNames.Keys)
+                    allSkills.Add(skill, GetProperty(Character.Protagonist, skill));
+
+                Skill = allSkills.OrderByDescending(x => x.Value).First().Key;
+
+                lines.Add($"GRAY|Для теста выбран навык «{Constants.PropertiesNames[Skill]}»");
+            }
+
             int level = GetProperty(Character.Protagonist, Skill);
 
             lines.Add($"Уровень навыка «{Constants.PropertiesNames[Skill]}» равен {level}");
@@ -199,7 +219,7 @@ namespace Seeker.Gamebook.PowerOfFear
             }
             else
             {
-                lines.Add($"Выпавшее значение {result} непревышает уровня навыка!");
+                lines.Add($"Выпавшее значение {result} не превышает уровня навыка!");
                 lines.Add($"BIG|GOOD|BOLD|Проверка успешно пройдена :)");
 
                 Game.Buttons.Disable("Проверка неудачна или же навык отсутствует, " +
