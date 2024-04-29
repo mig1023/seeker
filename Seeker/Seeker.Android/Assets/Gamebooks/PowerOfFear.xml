@@ -522,13 +522,14 @@
 		<Paragraph No="56">
 			<Text>Я продирался сквозь лес практически в полной темноте. Свет луны едва освещал тропу. Его хватало лишь на то, чтобы не упасть и не напороться на торчащие корни, и не раскроить себе лицо. Ветки хлестали по лицу и норовили выколоть либо глаз, либо проткнуть шею и сделать меня вечным гостем в своих владениях.</Text>
 			<Actions>
+				<Option Goto="123" Text="Если вы не обладаете навыком «Ловкость»" Availability="!Agility"/>
 				<Test>
 					<Skill>Agility</Skill>
 				</Test>
 			</Actions>
 			<Options>
-				<Option Goto="99" Text="Проверка удачна"/>
-				<Option Goto="123" Text="Проверка неудачна или же навык отсутствует"/>
+				<Option Goto="99" Text="Проверка удачна" Availability="Agility"/>
+				<Option Goto="123" Text="Проверка неудачна" Availability="Agility"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="57">
