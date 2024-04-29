@@ -20,7 +20,7 @@
 				<Item Name="Agility" Value="Ловкость"/>
 				<Item Name="Luck" Value="Удача"/>
 				<Item Name="Weapon" Value="Владение оружием"/>
-				<Item Name="Theft" Value="Взлом и форовство"/>
+				<Item Name="Theft" Value="Взлом и воровство"/>
 				<Item Name="Stealth" Value="Скрытность"/>
 				<Item Name="Knowledge" Value="Знания"/>
 				<Item Name="Strength" Value="Физическая сила"/>
@@ -1656,7 +1656,7 @@
 		<Paragraph No="180">
 			<Text>Солнце, бледным шаром висело над головой и пыталось пробиться сквозь свинцовое небо. Деревья, что росли вдоль дороги, отвоевывая понемногу свои владения у людей, так и норовили отхлестать жалящими ветками проезжающих мимо путников.\n\n- Береги глаза! Чуть зазеваешься и можно лишиться глаза, - я вел лошадь правее, подальше от цепких веток, но те все равно умудрялись зацепить плащ или гриву лошади.\n\nВнезапно на дорогу, прямо перед конскими копытами, вывалился шар, размером со свинью весь обросший травой и пожухлой листвой. Кобыла встала на дыбы и дико заржала, молотя копытами в воздухе.</Text>
 			<Actions>
-				<Option Goto="177" Text="Если же вы не обладаете навыком ловкости" Availability="!Agility"/>
+				<Option Goto="177" Text="Если же вы не обладаете навыком Ловкости" Availability="!Agility"/>
 				<Test>
 					<Skill>Agility</Skill>
 				</Test>
@@ -1870,7 +1870,7 @@
 			</Texts>
 			<Actions>
 				<Option Goto="194" Text="Броситься в последнюю, смертоубийственную атаку вместе c Марой!"/>
-				<Option Goto="202" Text="Если же вы не обладаете данным навыком Знания" Availability="!Knowledge"/>
+				<Option Goto="202" Text="Если же вы не обладаете данным навыком Знаний" Availability="!Knowledge"/>
 				<Test>
 					<Skill>Knowledge</Skill>
 				</Test>
@@ -2018,13 +2018,14 @@
 		</Paragraph>
 		<Paragraph No="223">
 			<Actions>
+				<Option Goto="225" Text="Если же вы не обладаете навыком Взлома и воровства" Availability="!Theft"/>
 				<Test>
 					<Skill>Theft</Skill>
 				</Test>
 			</Actions>
 			<Options>
-				<Option Goto="219" Text="Проверка удачна"/>
-				<Option Goto="225" Text="Проверка неудачна или же навык отсутствует"/>
+				<Option Goto="219" Text="Проверка удачна" Availability="Theft"/>
+				<Option Goto="225" Text="Проверка неудачна" Availability="Theft"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="224">
