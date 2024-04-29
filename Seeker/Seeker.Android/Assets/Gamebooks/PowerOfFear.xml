@@ -168,13 +168,14 @@
 		<Paragraph No="14">
 			<Text>Я потянул за медное кольцо и дубовая дверь, на хорошо смазанных петлях, не скрипнув отворилась. Внутри было довольно темно, а масленый фонарь, что стоял на столе был естественно погашен. Переступив через порог, я услышал тихий, еле слышимый щелчок и бросился на пол.</Text>
 			<Actions>
+				<Option Goto="181" Text="Если вы не обладаете навыком «Ловкость»" Availability="!Agility"/>
 				<Test>
 					<Skill>Agility</Skill>
 				</Test>
 			</Actions>
 			<Options>
-				<Option Goto="43" Text="Проверка удачна"/>
-				<Option Goto="181" Text="Проверка неудачна или же навык отсутствует"/>
+				<Option Goto="43" Text="Проверка удачна" Availability="Agility"/>
+				<Option Goto="181" Text="Проверка неудачна" Availability="Agility"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="15">
