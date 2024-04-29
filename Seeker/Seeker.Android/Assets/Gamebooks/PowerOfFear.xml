@@ -2065,6 +2065,7 @@
 				<Text Style="Small">Отнимите 1 от уровня вашего «Здоровья».</Text>
 			</Texts>
 			<Actions>
+				<Option Goto="62" Text="Если вы не обладаете навыком «Удача»" Availability="!Luck"/>
 				<Test>
 					<Skill>Luck</Skill>
 				</Test>
@@ -2073,8 +2074,8 @@
 				<Hitpoints Value="-1"/>
 			</Modifications>
 			<Options>
-				<Option Goto="222" Text="Вам повезло"/>
-				<Option Goto="62" Text="Проверка неудачна или же навык отсутствует"/>
+				<Option Goto="222" Text="Вам повезло" Availability="Luck"/>
+				<Option Goto="62" Text="Проверка неудачна" Availability="Luck"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="229">
