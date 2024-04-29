@@ -1209,13 +1209,14 @@
 		<Paragraph No="135">
 			<Text>Страх вползал в мое сознание, оплетая его своими мерзкими, липкими щупальцами! Я не мог этому сопротивляться и чувствовал, что не выдержу долго под гнетом этих безжизненных, уже не человеческих глаз.</Text>
 			<Actions>
+				<Option Goto="220" Text="Если же вы не обладаете навыком Физической силы" Availability="!Strength"/>
 				<Test>
 					<Skill>Strength</Skill>
 				</Test>
 			</Actions>
 			<Options>
-				<Option Goto="163" Text="Проверка удачна"/>
-				<Option Goto="220" Text="Проверка неудачна или же навык отсутствует"/>
+				<Option Goto="163" Text="Проверка удачна" Availability="Strength"/>
+				<Option Goto="220" Text="Проверка неудачна" Availability="Strength"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="136">
