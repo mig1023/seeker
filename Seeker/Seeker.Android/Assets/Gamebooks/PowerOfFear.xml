@@ -731,13 +731,14 @@
 		<Paragraph No="80">
 			<Text>Труп лошади (а то что это наш каурый я понял сразу), я увидел до того, как вступил в круг света. Над ним склонилось нечто на столько ужасное, что у меня перехватило дыхание. В ужасе я прильнул к, казалось, спасительному стволу дерева. Сквозь размеренное чавканье я слышал лишь шелест ветра в высоких кронах.</Text>
 			<Actions>
+				<Option Goto="131" Text="Если вы не обладаете навыком «Скрытность»" Availability="!Stealth"/>
 				<Test>
 					<Skill>Stealth</Skill>
 				</Test>
 			</Actions>
 			<Options>
-				<Option Goto="45" Text="Проверка удачна"/>
-				<Option Goto="131" Text="Проверка неудачна или же навык отсутствует"/>
+				<Option Goto="45" Text="Проверка удачна" Availability="Agility"/>
+				<Option Goto="131" Text="Проверка неудачна" Availability="Agility"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="81">
