@@ -42,5 +42,12 @@
 				<Option Goto="5"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="5">
+			<Text>Свернув направо и пройдя немного по лесу, ты замечаешь среди деревьев небольшое озеро. Тебя так и тянет в нем искупаться!</Text>
+			<Options>
+				<Option Goto="50" Text="Искупаешься"/>
+				<Option Goto="27" Text="Пройдешь мимо"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
