@@ -378,8 +378,15 @@ namespace Seeker.Gamebook.PowerOfFear
             }
         }
 
-        public override bool GameOver(out int toEndParagraph, out string toEndText) =>
-            GameOverBy(Character.Protagonist.Hitpoints, out toEndParagraph, out toEndText);
+        public override bool GameOver(out int toEndParagraph, out string toEndText)
+        {
+            toEndParagraph = Character.Protagonist.GameoverPath;
+
+            toEndText = Character.Protagonist.GameoverPath > 0 ?
+                "Силы оставили вас..." : Output.Constants.GAMEOVER_TEXT;
+
+            return Character.Protagonist.Hitpoints > 0;
+        }
 
         public override bool IsHealingEnabled() =>
             Character.Protagonist.Hitpoints < 10;
