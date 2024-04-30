@@ -313,10 +313,26 @@ namespace Seeker.Gamebook.PowerOfFear
 
                 if (doubleDice && AdditionalPenalty)
                 {
-                    heroAttack -= 2;
+                    lines.Add("Противник выкинул дубль!");
 
-                    lines.Add($"Противник выкинул дубль! По специальному правилу " +
-                        $"от силы вашей атаки отнимается 2, теперь она равна {heroAttack}");
+                    if (Game.Option.IsTriggered("Уворот"))
+                    {
+                        lines.Add("Но это ничего ему не даст из-за вашего умерия «Уворот»!");
+                    }
+                    else
+                    {
+                        heroAttack -= 2;
+
+                        lines.Add($"По специальному правилу от силы вашей атаки " +
+                            $"отнимается 2, теперь она равна {heroAttack}");
+                    }
+                }
+
+                if (Game.Option.IsTriggered("Знание трав"))
+                {
+                    enemyAttack -= 2;
+
+                    lines.Add($"Из силы атаки противника вычитается 2 ед. за состояние «Знание трав»");
                 }
 
                 if (enemyAttack > heroAttack)
@@ -328,10 +344,18 @@ namespace Seeker.Gamebook.PowerOfFear
 
                     if (doubleDice && !AdditionalPenalty)
                     {
-                        lines.Add("На кубиках противника выпал дубль!");
-                        lines.Add("BAD|Противник наносит вам дополнительный урон!");
+                        lines.Add("Противник выкинул дубль!");
 
-                        Character.Protagonist.Hitpoints -= 1;
+                        if (Game.Option.IsTriggered("Уворот"))
+                        {
+                            lines.Add("Но это ничего ему не даст из-за вашего умерия «Уворот»!");
+                        }
+                        else
+                        {
+                            lines.Add("BAD|Противник наносит вам дополнительный урон!");
+
+                            Character.Protagonist.Hitpoints -= 1;
+                        }
                     }
 
                     if (Character.Protagonist.Hitpoints <= 0)
