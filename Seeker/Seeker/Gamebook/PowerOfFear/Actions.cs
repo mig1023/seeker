@@ -267,6 +267,18 @@ namespace Seeker.Gamebook.PowerOfFear
         {
             List<string> lines = new List<string> { "BIG|BOLD|БОЙ:" };
 
+            if (Game.Option.IsTriggered("Жестокий удар"))
+            {
+                Character.Protagonist.Hitpoints -= 1;
+                Game.Option.Trigger("Жестокий удар", remove: true);
+
+                lines.Add("GOOD|BOLD|Враг повержен «Жестоким ударом»!");
+                lines.Add("Вы только лишь потеряли 1 ед. Здоровья по условиям применения этого состояния");
+                lines.Add("GOOD|BIG|Вы победили :)");
+
+                return lines;
+            }
+
             if (Game.Option.IsTriggered("Злость"))
             {
                 Character.Protagonist.Hitpoints -= 1;
