@@ -1607,8 +1607,8 @@
 				</Fight>
 			</Actions>
 			<Options>
-				<Option Goto="188" Text="Если вам удалось победить"/>
-				<Option Goto="12" Text="Если вы проиграли"/>
+				<Option Goto="188" Text="Вам удалось победить"/>
+				<Option Goto="12" Text="Вы проиграли"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="176">
