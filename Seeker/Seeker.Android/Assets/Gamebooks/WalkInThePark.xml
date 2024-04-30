@@ -11,15 +11,15 @@
 	</Introduction>
 	<Paragraphs>
 		<Paragraph No="0">
-			<Text>START</Text>
+			<Text>...Ты решил съездить в Павловский Парк, заодно прибить по дороге репера Шляпогрыза. Сев на поселковую электричку, ты вскоре выходишь на вокзале. Парк прямо впереди... Ты покупаешь билет и входишь. Скоро твое путешествие начнется.</Text>
 			<Options>
 				<Start Goto="1"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="1">
-			<Text>END</Text>
+			<Text>﻿Ты начинаешь игру в Павловском Парке. Войдя в него с юга, ты двигаешься вперед по длинной аллее.</Text>
 			<Options>
-				<Option Goto="0"/>
+				<Option Goto="6"/>
 			</Options>
 		</Paragraph>
 	</Paragraphs>
