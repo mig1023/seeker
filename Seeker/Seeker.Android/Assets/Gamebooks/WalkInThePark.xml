@@ -251,5 +251,11 @@
 				<Option Goto="25" Text="Углубишься в северный лес"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="35">
+			<Text>Ловко зацепившись рукой за самый край моста, ты подтягиваешься и перелезаешь через перила.\n\nНемного пообсохнув на мосту, ты решаешь перейти его и идти дальше...</Text>
+			<Options>
+				<Option Goto="76"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
