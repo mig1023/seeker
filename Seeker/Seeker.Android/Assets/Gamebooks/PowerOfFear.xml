@@ -338,8 +338,8 @@
 				</Fight>
 			</Actions>
 			<Options>
-				<Option Goto="129" Text="Если вам удалось победить"/>
-				<Option Goto="68" Text="Если же нет"/>
+				<Option Goto="129" Text="Вам удалось победить"/>
+				<Option Goto="68" Text="Вы проиграли"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="35">
