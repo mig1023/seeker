@@ -178,5 +178,11 @@
 				<Option Goto="19" Text="Желтую"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="25">
+			<Text>Дорожка очень долго петляет между деревьев, и ты уже решаешь, что заблудился, но потом слышишь где-то недалеко шум воды. Стремглав несешься туда сквозь лес...</Text>
+			<Options>
+				<Option Goto="28"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
