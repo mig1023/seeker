@@ -275,5 +275,11 @@
 				<Option Goto="21"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="39">
+			<Text>Миновав деревню, ты идешь на север вдоль больших штабелей досок. Потом они кончаются, и тебе приходится углубиться в лес...</Text>
+			<Options>
+				<Option Goto="6"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
