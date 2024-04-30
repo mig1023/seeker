@@ -894,6 +894,17 @@
 		<Setting>История</Setting>
 		<Color>989a9a</Color>
 	</SwordAndFate>
+	<WalkInThePark>
+		<Title>Прогулка по парку</Title>
+		<Author>Пётр Александров</Author>
+		<Year>2000</Year>
+		<Text>...Ты решил съездить в Павловский Парк, заодно прибить по дороге репера Шляпогрыза. Сев на поселковую электричку, ты вскоре выходишь на вокзале. Парк прямо впереди... Ты покупаешь билет и входишь. Скоро твое путешествие начнется.</Text>
+		<Paragraphs>100</Paragraphs>
+		<Size>0</Size>
+		<Playthrough>На пять минут</Playthrough>
+		<Setting>Юмор</Setting>
+		<Color>cd1618</Color>
+	</WalkInThePark>
 	<PowerOfFear>
 		<Title>Власть страха</Title>
 		<Author>Егор Андросов</Author>

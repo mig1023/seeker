@@ -1,0 +1,26 @@
+<Gamebook>
+	<Introduction>
+		<Copyright>
+			<Title>Прогулка по парку</Title>
+			<Author>Пётр Александров, 2000</Author>
+		</Copyright>
+		<Styles>
+			<Main Value="cd1618"/>
+			<Color Name="Option, System, Continue" Value="d22d2f"/>
+		</Styles>
+	</Introduction>
+	<Paragraphs>
+		<Paragraph No="0">
+			<Text>START</Text>
+			<Options>
+				<Start Goto="1"/>
+			</Options>
+		</Paragraph>
+		<Paragraph No="1">
+			<Text>END</Text>
+			<Options>
+				<Option Goto="0"/>
+			</Options>
+		</Paragraph>
+	</Paragraphs>
+</Gamebook>
