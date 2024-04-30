@@ -285,7 +285,6 @@ namespace Seeker.Gamebook.PowerOfFear
                 lines.Add($"BAD|Теряете 1 ед. Здоровья за состояние «Злость»");
             }
 
-            int round = 0;
             int attackCount = 3;
             int hiptoints = Character.Protagonist.Hitpoints;
             string attackCountLine = "Кол-во ваших кубиков атаки: 3 (базовое)";
@@ -301,10 +300,6 @@ namespace Seeker.Gamebook.PowerOfFear
 
             while (true)
             {
-                round += 1;
-
-                lines.Add($"HEAD|\n*   *   *   РАУНД {round}   *   *   *\n");
-
                 AttackDices(Dices, out int enemyAttack, out string enemyLine, out bool doubleDice);
                 lines.Add($"Кубики противника:{enemyLine}");
 
@@ -358,15 +353,12 @@ namespace Seeker.Gamebook.PowerOfFear
                         }
                     }
 
-                    if (Character.Protagonist.Hitpoints <= 0)
-                    {
-                        if (NoHitpointsLoss)
-                            Character.Protagonist.Hitpoints = hiptoints;
+                    if (NoHitpointsLoss)
+                        Character.Protagonist.Hitpoints = hiptoints;
 
-                        lines.Add("BAD|BIG|Вы проиграли :(");
-                        return lines;
-                    }
-
+                    lines.Add("BAD|BOLD|Противник победил!");
+                    lines.Add("BAD|BIG|Вы проиграли :(");
+                    return lines;
                 }
                 else if (enemyAttack < heroAttack)
                 {
@@ -380,7 +372,8 @@ namespace Seeker.Gamebook.PowerOfFear
                 }
                 else
                 {
-                    lines.Add("BOLD|Ничья в раунде!");
+                    lines.Add("BOLD|Ничья!");
+                    lines.Add("Вам необходимо сойтись в ещё одном раунде противостояния!");
                 }
             }
         }
