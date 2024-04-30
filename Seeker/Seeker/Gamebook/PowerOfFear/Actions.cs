@@ -261,6 +261,12 @@ namespace Seeker.Gamebook.PowerOfFear
         {
             List<string> lines = new List<string> { "BIG|BOLD|БОЙ:" };
 
+            if (Game.Option.IsTriggered("Злость"))
+            {
+                Character.Protagonist.Hitpoints -= 1;
+                lines.Add($"BAD|Теряете 1 ед. Здоровья за состояние «Злость»");
+            }
+
             int round = 0;
             int attackCount = 3;
             int hiptoints = Character.Protagonist.Hitpoints;
