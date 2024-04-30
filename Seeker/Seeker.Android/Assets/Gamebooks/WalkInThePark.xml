@@ -184,5 +184,11 @@
 				<Option Goto="28"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="26">
+			<Text>Ты решаешь подзаработать и идешь искать белку с золотой цепочкой на лодочной станции.</Text>
+			<Options>
+				<Option Goto="4"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
