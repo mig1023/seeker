@@ -23,6 +23,11 @@ namespace Seeker.Gamebook.PowerOfFear
             {
                 Character.Protagonist.Hitpoints = 10;
             }
+            else if (Name == "HitpointsLoss")
+            {
+                if (Character.Protagonist.Strength == 0)
+                    Character.Protagonist.Hitpoints -= 2;
+            }
             else if (Name == "HitpointsBySkills")
             {
                 Character.Protagonist.Hitpoints += (Character.Protagonist.Strength > 0 ? 2 : 0);

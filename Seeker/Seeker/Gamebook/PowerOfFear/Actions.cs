@@ -11,6 +11,7 @@ namespace Seeker.Gamebook.PowerOfFear
         public int Level { get; set; }
         public int Dices { get; set; }
         public bool AdditionalPenalty { get; set; }
+        public bool HitpointsLoss { get; set; }
         public bool NoHitpointsLoss { get; set; }
 
         public override List<string> Status() => new List<string>
@@ -222,6 +223,12 @@ namespace Seeker.Gamebook.PowerOfFear
                 lines.Add($"BIG|BAD|BOLD|Проверка провалена :(");
 
                 Game.Buttons.Disable("Проверка удачна, Вам повезло");
+
+                if (HitpointsLoss)
+                {
+                    Character.Protagonist.Hitpoints -= 1;
+                    lines.Add("BAD|Кроме того, вы теряете 1 ед. Здоровья");
+                }
             }
             else
             {
@@ -230,6 +237,12 @@ namespace Seeker.Gamebook.PowerOfFear
 
                 Game.Buttons.Disable("Проверка неудачна, " +
                     "Удача от вас отвернулась, Не получилось");
+
+                if (HitpointsLoss)
+                {
+                    Character.Protagonist.Strength += 1;
+                    lines.Add("GOOD|Кроме того, вы получаете 1 ед. навыка «Физическая сила»");
+                }
             }
 
             return lines;
