@@ -210,6 +210,12 @@ namespace Seeker.Gamebook.PowerOfFear
 
             lines.Add($"Уровень навыка «{Constants.PropertiesNames[Skill]}» равен {level}");
 
+            if (Game.Option.IsTriggered("Муки совести"))
+            {
+                level -= 1;
+                lines.Add($"BAD|Из-за мук совести уровень навыка при проверки снижается на единицу и будет равен {level}");
+            }
+
             if (result > level)
             {
                 lines.Add($"Выпавшее значение {result} больше уровня навыка!");
