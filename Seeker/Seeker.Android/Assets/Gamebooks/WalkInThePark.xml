@@ -78,5 +78,11 @@
 				<Option Goto="85" Text="На север"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="10">
+			<Text>Пуля попадает тебе прямо промеж глаз. Ты ногаешь дрыга-ми и головаешь мотою, у тебя из крови льется живот...\n\nНа этом ты и сдох!..</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
