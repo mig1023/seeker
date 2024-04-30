@@ -12,7 +12,7 @@
 	<Paragraphs>
 		<Paragraph No="0">
 			<Options>
-				<Option Goto="Часть 1: прибить Шляпогрыза"/>
+				<Option Goto="1" Text="Часть 1: прибить Шляпогрыза"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="1">
