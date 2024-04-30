@@ -119,5 +119,11 @@
 				<Option Goto="9" Text="Откажешься и пойдешь мимо"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="16">
+			<Text>Ты сжимаешь кулаки и нападаешь на МУЖИКА.\n\nмужик с топором\n\nСИЛА 3; ВЫНОСЛИВОСТЬ 2; УРОН 1.0</Text>
+			<Options>
+				<Option Goto="23" Text="Если тебе удалось прибить МУЖИКА С ТОПОРОМ"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
