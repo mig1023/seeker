@@ -36,5 +36,11 @@
 				<Option Goto="15" Text="Направо, где ошивается какой-то мужик"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="4">
+			<Text>Ты подходишь к прокату катамаранов. Вдруг видишь, что на катамаране плывет эта белка, а ее на руках держит какой-то бомж...</Text>
+			<Options>
+				<Option Goto="5"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
