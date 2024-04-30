@@ -28,5 +28,13 @@
 				<Option Goto="39"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="3">
+			<Text>Ты идешь прямо и через пару минут выходишь на развилку. Куда направишься?</Text>
+			<Options>
+				<Option Goto="76" Text="Прямо, туда, где ты видишь какое-то строение, похожее на магазин"/>
+				<Option Goto="46" Text="Свернешь налево, туда, где виднеется какое-то поселение"/>
+				<Option Goto="15" Text="Направо, где ошивается какой-то мужик"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
