@@ -8,6 +8,7 @@
 			<Main Value="cd1618"/>
 			<Color Name="Option, System, Continue" Value="d22d2f"/>
 			<Action Value="ba2020"/>
+			<StatusBar Value="b81315"/>
 		</Styles>
 		<Buttons>
 			<Fight>Бить морду</Fight>
