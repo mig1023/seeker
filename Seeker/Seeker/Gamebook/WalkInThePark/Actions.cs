@@ -88,7 +88,14 @@ namespace Seeker.Gamebook.WalkInThePark
                     Used = true;
 
                 if (Benefit != null)
+                {
                     Benefit.Do();
+                }
+                else if (BenefitList != null)
+                {
+                    foreach (Modification modification in BenefitList)
+                        modification.Do();
+                }
             }
 
             return new List<string> { "RELOAD" };

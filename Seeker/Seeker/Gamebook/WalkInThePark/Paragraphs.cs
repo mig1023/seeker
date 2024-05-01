@@ -28,7 +28,17 @@ namespace Seeker.Gamebook.WalkInThePark
                     action.Enemies.Add(EnemyParse(xmlEnemy));
             }
 
-            action.Benefit = Xml.ModificationParse(xmlAction["Benefit"], new Modification());
+            if (xmlAction["Benefit"] != null)
+            {
+                action.BenefitList = new List<Abstract.IModification> { ModificationParse(xmlAction["Benefit"]) };
+            }
+            else if (xmlAction["Benefits"] != null)
+            {
+                action.BenefitList = new List<Abstract.IModification>();
+
+                foreach (XmlNode bonefit in xmlAction.SelectNodes("Benefits/*"))
+                    action.BenefitList.Add(ModificationParse(bonefit));
+            }
 
             return action;
         }
