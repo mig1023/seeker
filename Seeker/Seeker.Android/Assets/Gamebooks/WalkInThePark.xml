@@ -408,5 +408,15 @@
 				<Option Goto="1"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="59">
+			<Text>Все охранники откинулись, ты можешь взять их ДУБИНКИ (урон 0.5, ПОМЕТЬ ИХ НА игровой карте). Ты прячешь тела в зале за статуей и выходишь в западную дверь.\n\nТы в большом зале, в нем есть две лестницы наверх:</Text>
+			<Options>
+				<Option Goto="64" Text="На запад"/>
+				<Option Goto="95" Text="На восток">
+					<Text>А также дверь в восточной стене:</Text>
+				</Option>
+				<Option Goto="78" Text="В дверь"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
