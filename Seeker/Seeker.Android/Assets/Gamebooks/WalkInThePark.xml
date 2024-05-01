@@ -526,6 +526,11 @@
 		</Paragraph>
 		<Paragraph No="55">
 			<Text>Обыскав семейку, ты находишь у сына АРМЕЙСКИЙ НОЖ (урон 0.5), а у Платоныча 30 рублей. Можешь взять все это с собой, в таком случае отметь эти предметы на ИГРОВОЙ КАРТЕ.</Text>
+			<Modifications>
+				<Money Value="30"/>
+				<Damage Value="5"/>
+				<Weapon Value="армейский нож"/>
+			</Modifications>
 			<Options>
 				<Option Goto="67"/>
 			</Options>
