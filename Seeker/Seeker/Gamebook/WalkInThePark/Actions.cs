@@ -189,5 +189,11 @@ namespace Seeker.Gamebook.WalkInThePark
                 round += 1;
             }
         }
+
+        public override bool IsHealingEnabled() =>
+            true;
+
+        public override void UseHealing(int healingLevel) =>
+            Character.Protagonist.Endurance += 1;
     }
 }

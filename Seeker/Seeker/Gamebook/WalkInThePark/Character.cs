@@ -15,6 +15,8 @@ namespace Seeker.Gamebook.WalkInThePark
             set => _strength = Game.Param.Setter(value, _strength, this);
         }
 
+        public int StartStrength { get; set; }
+
         private int _endurance;
         public int Endurance
         {
@@ -50,6 +52,7 @@ namespace Seeker.Gamebook.WalkInThePark
             base.Init();
 
             Strength = Game.Dice.Roll();
+            StartStrength = Strength;
             Endurance = 10 * Game.Dice.Roll();
             Luck = Game.Dice.Roll();
             Endurance = Game.Dice.Roll();
@@ -63,6 +66,7 @@ namespace Seeker.Gamebook.WalkInThePark
             IsProtagonist = this.IsProtagonist,
             Name = this.Name,
             Strength = this.Strength,
+            StartStrength = this.StartStrength,
             Endurance = this.Endurance,
             Luck = this.Luck,
             Money = this.Money,
@@ -71,18 +75,19 @@ namespace Seeker.Gamebook.WalkInThePark
         };
 
         public override string Save() => String.Join("|",
-            Strength, Endurance, Luck, Money, Damage, Weapon);
+            Strength, StartStrength, Endurance, Luck, Money, Damage, Weapon);
 
         public override void Load(string saveLine)
         {
             string[] save = saveLine.Split('|');
 
             Strength = int.Parse(save[0]);
-            Endurance = int.Parse(save[1]);
-            Luck = int.Parse(save[2]);
-            Money = int.Parse(save[3]);
-            Damage = int.Parse(save[4]);
-            Weapon = save[5];
+            StartStrength = int.Parse(save[1]);
+            Endurance = int.Parse(save[2]);
+            Luck = int.Parse(save[3]);
+            Money = int.Parse(save[4]);
+            Damage = int.Parse(save[5]);
+            Weapon = save[6];
 
             IsProtagonist = true;
         }

@@ -10,6 +10,10 @@ namespace Seeker.Gamebook.WalkInThePark
             {
                 Character.Protagonist.Money /= 2;
             }
+            else if (Name == "StartStrength")
+            {
+                Character.Protagonist.Strength = Character.Protagonist.StartStrength;
+            }
             else
             {
                 base.Do(Character.Protagonist);
