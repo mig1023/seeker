@@ -449,5 +449,11 @@
 				<Option Goto="69" Text="Пойдешь дальше по коридору"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="65">
+			<Text>Теперь оба охранника откинулись. Ничего интересного ты у них не находишь. Далее тебе ничего не остается, как пройти до конца коридора и подняться по лестнице.</Text>
+			<Options>
+				<Option Goto="51"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
