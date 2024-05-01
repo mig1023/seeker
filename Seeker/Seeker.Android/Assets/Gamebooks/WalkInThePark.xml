@@ -574,5 +574,11 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="84">
+			<Text>Они все-таки замечают тебя и с криком «Не положено!» бросаются в битву!\n\nпервый охранник\n\nСИЛА 3; ВЫНОСЛИВОСТЬ 2; УРОН 0.5\n\nвторой охранник\n\nСИЛА 2; ВЫНОСЛИВОСТЬ 3; УРОН 0.5\n\n</Text>
+			<Options>
+				<Option Goto="65" Text="Оба они откинулись"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
