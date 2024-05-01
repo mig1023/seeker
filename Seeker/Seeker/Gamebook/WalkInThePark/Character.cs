@@ -55,7 +55,6 @@ namespace Seeker.Gamebook.WalkInThePark
             StartStrength = Strength;
             Endurance = 10 * Game.Dice.Roll();
             Luck = Game.Dice.Roll();
-            Endurance = Game.Dice.Roll();
             Money = 0;
             Damage = 1;
             Weapon = "кулаки";
