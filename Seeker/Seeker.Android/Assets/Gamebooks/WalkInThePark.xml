@@ -7,7 +7,12 @@
 		<Styles>
 			<Main Value="cd1618"/>
 			<Color Name="Option, System, Continue" Value="d22d2f"/>
+			<Action Value="ba2020"/>
 		</Styles>
+		<Buttons>
+			<Fight>Бить морду</Fight>
+			<Luck>Узнать фартануло ли</Luck>
+		</Buttons>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph No="0">
@@ -120,7 +125,12 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="16">
-			<Text>Ты сжимаешь кулаки и нападаешь на МУЖИКА.\n\nмужик с топором\n\nСИЛА 3; ВЫНОСЛИВОСТЬ 2; УРОН 1.0</Text>
+			<Text>Ты сжимаешь кулаки и нападаешь на МУЖИКА.</Text>
+			<Actions>
+				<Fight>
+					<Enemy Name="МУЖИК С ТОПОРОМ" Strength="3" Endurance="2" Damage="10"/>
+				</Fight>
+			</Actions>
 			<Options>
 				<Option Goto="23" Text="Если тебе удалось прибить МУЖИКА С ТОПОРОМ"/>
 			</Options>
