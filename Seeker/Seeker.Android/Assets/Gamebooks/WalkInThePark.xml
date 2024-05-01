@@ -776,7 +776,15 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="86">
-			<Text>Все, им конец!\n\nПетрович\n\nСИЛА 2; ВЫНОСЛИВОСТЬ 1; УРОН 0.1\n\nмихалыч\n\nСИЛА 2; ВЫНОСЛИВОСТЬ 2; УРОН 0.2</Text>
+			<Text>Все, им конец!</Text>
+			<Actions>
+				<Fight>
+					<Enemies>
+						<Enemy Name="ПЕТРОВИЧ" Strength="2" Endurance="1" Damage="1"/>
+						<Enemy Name="МИХАЛЫЧ" Strength="2" Endurance="2" Damage="2"/>
+					</Enemies>
+				</Fight>
+			</Actions>
 			<Options>
 				<Option Goto="48" Text="Оба БОМЖА откинулись"/>
 			</Options>
