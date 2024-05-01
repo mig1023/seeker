@@ -586,5 +586,11 @@
 				<Option Goto="16"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="86">
+			<Text>Все, им конец!\n\nПетрович\n\nСИЛА 2; ВЫНОСЛИВОСТЬ 1; УРОН 0.1\n\nмихалыч\n\nСИЛА 2; ВЫНОСЛИВОСТЬ 2; УРОН 0.2</Text>
+			<Options>
+				<Option Goto="48" Text="Оба БОМЖА откинулись"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
