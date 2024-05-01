@@ -370,5 +370,11 @@
 				<Option Goto="17"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="53">
+			<Text>Ты подплываешь к бомжу, и вдруг белка сама прыгает тебе на плечо. Бомж достает топор мясника и говорит: «Мужик, лучше вали по-хорошему!»</Text>
+			<Options>
+				<Option Goto="96" Text="Ты решаешь спасти свою жизнь"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
