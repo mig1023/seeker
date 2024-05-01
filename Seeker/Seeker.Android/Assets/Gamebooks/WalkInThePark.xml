@@ -592,5 +592,11 @@
 				<Option Goto="48" Text="Оба БОМЖА откинулись"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="87">
+			<Text>Ты отдаешь ГОПНИКАМ то, что они хотели. Вычеркни деньги или сэмечки на ИГРОВОЙ КАРТЕ.\n\nГопники гладят тебя по головке, и ты скорей уходишь...</Text>
+			<Options>
+				<Option Goto="66"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
