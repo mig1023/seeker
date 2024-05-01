@@ -514,5 +514,13 @@
 				<Option Goto="91"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="75">
+			<Text>Ты подходишь к тетке.\n\nОна долго смотрит на тебя, а потом говорит:\n\n— Ну и чего тебе надо?\n\nИ действительно, чего тебе надо?</Text>
+			<Options>
+				<Option Goto="57" Text="Напасть на нее"/>
+				<Option Goto="7" Text="С ней поговорить"/>
+				<Option Goto="63" Text="Ничего не будешь делать"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
