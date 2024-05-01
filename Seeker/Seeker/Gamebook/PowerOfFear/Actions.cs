@@ -398,7 +398,7 @@ namespace Seeker.Gamebook.PowerOfFear
             toEndText = Character.Protagonist.GameoverPath > 0 ?
                 "Силы оставили вас..." : Output.Constants.GAMEOVER_TEXT;
 
-            return Character.Protagonist.Hitpoints > 0;
+            return Character.Protagonist.Hitpoints <= 0;
         }
 
         public override bool IsHealingEnabled() =>
