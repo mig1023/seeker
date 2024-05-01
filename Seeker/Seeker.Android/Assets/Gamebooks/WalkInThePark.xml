@@ -729,7 +729,12 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="80">
-			<Text>Ты сумел выжить, и теперь можешь приняться и за нервно визжащего Шляпогрыза!\n\nшляпогрыз\n\nСИЛА 1; ВЫНОСЛИВОСТЬ 2; УРОН 5</Text>
+			<Text>Ты сумел выжить, и теперь можешь приняться и за нервно визжащего Шляпогрыза!</Text>
+			<Actions>
+				<Fight>
+					<Enemy Name="ШЛЯПОГРЫЗ" Strength="1" Endurance="2" Damage="50"/>
+				</Fight>
+			</Actions>
 			<Options>
 				<Option Goto="100" Text="Ты погубил этого козла"/>
 			</Options>
