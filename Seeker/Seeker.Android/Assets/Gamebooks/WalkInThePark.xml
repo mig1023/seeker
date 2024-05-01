@@ -475,5 +475,12 @@
 				<Option Goto="9" Text="Откажешься"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="69">
+			<Text>Коридор вскоре делится на две части: слева лестница наверх, а справа — еще один такой же коридор. Странно, что ты так и не встретил Шляпогрыза...</Text>
+			<Options>
+				<Option Goto="51" Text="На лестницу"/>
+				<Option Goto="72" Text="По коридору"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
