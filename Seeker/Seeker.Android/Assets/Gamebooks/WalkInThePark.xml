@@ -864,7 +864,12 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="97">
-			<Text>Ничего не говоря, ты набрасываешься на этого мужика:\n\nвор\n\nСИЛА 3; ВЫНОСЛИВОСТЬ 1; УРОН 0.5</Text>
+			<Text>Ничего не говоря, ты набрасываешься на этого мужика:</Text>
+			<Actions>
+				<Fight>
+					<Enemy Name="ВОР" Strength="3" Endurance="1" Damage="5"/>
+				</Fight>
+			</Actions>
 			<Options>
 				<Option Goto="62" Text="Если ворюга откинулся, скорее беги на север"/>
 			</Options>
