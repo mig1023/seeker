@@ -547,5 +547,11 @@
 				<Option Goto="89" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="80">
+			<Text>Ты сумел выжить, и теперь можешь приняться и за нервно визжащего Шляпогрыза!\n\nшляпогрыз\n\nСИЛА 1; ВЫНОСЛИВОСТЬ 2; УРОН 5</Text>
+			<Options>
+				<Option Goto="100" Text="Ты погубил этого козла"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
