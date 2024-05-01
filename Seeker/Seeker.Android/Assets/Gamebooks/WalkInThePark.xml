@@ -598,5 +598,11 @@
 				<Option Goto="66"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="88">
+			<Text>Ты решаешь последовать совету ВОРА. Пройдя, как он сказал, по лесу и перейдя реку по мосту, вскоре замечаешь дворец.</Text>
+			<Options>
+				<Option Goto="40" Text="Ты обходишь его с севера"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
