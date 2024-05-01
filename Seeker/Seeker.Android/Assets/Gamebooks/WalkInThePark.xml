@@ -610,5 +610,11 @@
 				<Option Goto="12"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="90">
+			<Text>Ты заходишь в служебный туалет. Там ничего интересного нет, поэтому ты решаешь насладиться его прелестями.\n\nПрибавь 1 к уровню своей УДАЧИ и ВЫНОСЛИВОСТИ, а затем иди в дальнюю дверь.</Text>
+			<Options>
+				<Option Goto="70"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
