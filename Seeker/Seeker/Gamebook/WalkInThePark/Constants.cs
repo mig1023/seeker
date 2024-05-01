@@ -2,5 +2,9 @@
 
 namespace Seeker.Gamebook.WalkInThePark
 {
-    class Constants : Prototypes.Constants, Abstract.IConstants { }
+    class Constants : Prototypes.Constants, Abstract.IConstants
+    {
+        public static List<string> What { get; set; }
+        public static List<string> Where { get; set; }
+    }
 }

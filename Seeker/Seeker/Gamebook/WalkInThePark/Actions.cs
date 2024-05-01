@@ -8,6 +8,8 @@ namespace Seeker.Gamebook.WalkInThePark
     {
         public List<Character> Enemies { get; set; }
 
+        private static Random rand = new Random();
+
         public override List<string> Status() => new List<string>
         {
             $"Сила: {Character.Protagonist.Strength}",
@@ -116,6 +118,9 @@ namespace Seeker.Gamebook.WalkInThePark
         public static bool NoMoreEnemies(List<Character> enemies) =>
             enemies.Where(x => x.Endurance > 0).Count() == 0;
 
+        public static string Hit() =>
+            $"{Constants.What[rand.Next(Constants.What.Count)]} {Constants.Where[rand.Next(Constants.Where.Count)]}";
+
         public List<string> Fight()
         {
             List<string> fight = new List<string>();
@@ -152,7 +157,7 @@ namespace Seeker.Gamebook.WalkInThePark
 
                     if (protagonistHitStrength > enemyHitStrength)
                     {
-                        fight.Add($"GOOD|{enemy.Name} ранен");
+                        fight.Add($"GOOD|BOLD|{enemy.Name} {Hit()}");
                         fight.Add($"Противник теряет {(double)Character.Protagonist.Damage / 10} ед. Выносливости");
 
                         enemy.Endurance -= Character.Protagonist.Damage;
@@ -169,7 +174,7 @@ namespace Seeker.Gamebook.WalkInThePark
                     }
                     else if (protagonistHitStrength < enemyHitStrength)
                     {
-                        fight.Add($"BAD|{enemy.Name} ранил вас");
+                        fight.Add($"BAD|BOLD|{enemy.Name} заехал вам по морде");
                         fight.Add($"Вы теряете {(double)enemy.Damage / 10} ед. Выносливости");
 
                         Character.Protagonist.Endurance -= enemy.Damage;

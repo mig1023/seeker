@@ -53,6 +53,8 @@ namespace Seeker.Gamebook.WalkInThePark
             foreach (string param in GetProperties(enemy))
                 SetPropertyByAttr(enemy, param, xmlEnemy, maxPrefix: true);
 
+            enemy.Endurance *= 10;
+
             return enemy;
         }
     }
