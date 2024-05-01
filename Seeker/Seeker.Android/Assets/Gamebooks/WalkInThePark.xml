@@ -12,6 +12,7 @@
 		<Buttons>
 			<Fight>Бить морду</Fight>
 			<Luck>Узнать фартануло ли</Luck>
+			<Get>Затариться</Get>
 		</Buttons>
 	</Introduction>
 	<Paragraphs>
@@ -142,7 +143,30 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="18">
-			<Text>Ты подходишь к магазу и видишь:\n\nсэмечки рублей\n\nОРЕХИ ДЛЯ БЕЛОК\n\nРУБЛЕЙ ГРЕЦКИЕ ОРЕХИ\n\nРУБЛЕЙ НОЖ ДЛЯ МЯСА (УРОН 0.5) РУБЛЕЙ\n\nПокупая что-либо, не забывай вычеркнуть необходимую сумму денег на своей ИГРОВОЙ КАРТЕ, и вписать купленный предмет.</Text>
+			<Text>Ты подходишь к магазу и видишь:</Text>
+			<Actions>
+				<Get>
+					<Head>СЭМЕЧКИ</Head>
+					<Price>5</Price>
+				</Get>
+				<Get>
+					<Head>ОРЕХИ ДЛЯ БЕЛОК</Head>
+					<Price>10</Price>
+				</Get>
+				<Get>
+					<Head>ГРЕЦКИЕ ОРЕХИ</Head>
+					<Price>25</Price>
+				</Get>
+				<Get>
+					<Head>НОЖ ДЛЯ МЯСА (УРОН 0.5)</Head>
+					<Price>50</Price>
+					<Benefits>
+						<Damage Value="6"/>
+						<Weapon Value="нож для мяса"/>
+					</Benefits>
+					<Text>Покупая что-либо, не забывай вычеркнуть необходимую сумму денег на своей ИГРОВОЙ КАРТЕ, и вписать купленный предмет.</Text>
+				</Get>
+			</Actions>
 			<Options>
 				<Option Goto="3"/>
 			</Options>
