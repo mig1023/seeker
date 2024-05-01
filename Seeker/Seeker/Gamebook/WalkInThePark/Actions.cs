@@ -13,7 +13,7 @@ namespace Seeker.Gamebook.WalkInThePark
         public override List<string> Status() => new List<string>
         {
             $"Сила: {Character.Protagonist.Strength}",
-            $"Выносливость: {Character.Protagonist.Endurance}",
+            $"Выносливость: {(double)Character.Protagonist.Endurance / 10}",
             $"Удача: {Character.Protagonist.Luck}",
         };
 
@@ -141,7 +141,7 @@ namespace Seeker.Gamebook.WalkInThePark
                     if (enemy.Endurance <= 0)
                         continue;
 
-                    fight.Add($"{enemy.Name} (выносливость {enemy.Endurance})");
+                    fight.Add($"{enemy.Name} (выносливость {(double)enemy.Endurance / 10})");
 
                     int protagonistRoll = Game.Dice.Roll();
                     int protagonistHitStrength = protagonistRoll + Character.Protagonist.Strength;
