@@ -466,7 +466,19 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="52">
-			<Text>Не давая ГОПНИКАМ опомниться, ты с яростью бросаешься в битву:\n\nгопник саня\n\nСИЛА 1; ВЫНОСЛИВОСТЬ 2; УРОН 0.1\n\nгопник гоша\n\nСИЛА 1; ВЫНОСЛИВОСТЬ 2; УРОН 0.2\n\nгопник сэмэн\n\nСИЛА 2; ВЫНОСЛИВОСТЬ 1; УРОН 0.1\n\nгопник миша\n\nСИЛА 1; ВЫНОСЛИВОСТЬ 2; УРОН 0.3\n\nгопник паша\n\nСИЛА 2; ВЫНОСЛИВОСТЬ 1; УРОН 0.2\n\nЕсли ты убил всех ГОПНИКОВ</Text>
+			<Text>Не давая ГОПНИКАМ опомниться, ты с яростью бросаешься в битву:</Text>
+			<Actions>
+				<Fight>
+					<Enemies>
+						<Enemy Name="ГОПНИК САНЯ" Strength="1" Endurance="2" Damage="1"/>
+						<Enemy Name="ГОПНИК ГОША" Strength="1" Endurance="2" Damage="2"/>
+						<Enemy Name="ГОПНИК СЭМЭН" Strength="2" Endurance="1" Damage="1"/>
+						<Enemy Name="ГОПНИК МИША" Strength="1" Endurance="2" Damage="3"/>
+						<Enemy Name="ГОПНИК ПАША" Strength="2" Endurance="1" Damage="2"/>
+					</Enemies>
+					<Text>Если ты прибил всех ГОПНИКОВ:</Text>
+				</Fight>
+			</Actions>
 			<Options>
 				<Option Goto="17"/>
 			</Options>
