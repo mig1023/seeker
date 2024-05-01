@@ -1,6 +1,186 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Seeker.Gamebook.WalkInThePark
 {
-    class Actions : Prototypes.Actions, Abstract.IActions { }
+    class Actions : Prototypes.Actions, Abstract.IActions
+    {
+        public List<Character> Enemies { get; set; }
+
+        public override List<string> Status() => new List<string>
+        {
+            $"Сила: {Character.Protagonist.Strength}",
+            $"Выносливость: {Character.Protagonist.Endurance}",
+            $"Удача: {Character.Protagonist.Luck}",
+        };
+
+        public override List<string> AdditionalStatus() => new List<string>
+        {
+            $"Оружие: {Character.Protagonist.Weapon} (урон {(double)Character.Protagonist.Damage / 10})",
+            $"Деньги: {Character.Protagonist.Money}",
+        };
+
+        public override bool GameOver(out int toEndParagraph, out string toEndText) =>
+            GameOverBy(Character.Protagonist.Endurance, out toEndParagraph, out toEndText);
+
+        public override List<string> Representer()
+        {
+            List<string> enemies = new List<string>();
+
+            if (Price > 0)
+            {
+                string price = Game.Services.CoinsNoun(Price, "рубль", "рубля", "рублей");
+                return new List<string> { $"{Head}, {Price} {price}" };
+            }
+
+            if (Enemies == null)
+                return enemies;
+
+            foreach (Character enemy in Enemies)
+            {
+                enemies.Add($"{enemy.Name}\nсила {enemy.Strength}  " +
+                    $"выносливость {enemy.Endurance}  урон {(double)enemy.Damage / 10}");
+            }
+
+            return enemies;
+        }
+
+        public List<string> Luck()
+        {
+            int dice = Game.Dice.Roll();
+
+            bool goodLuck = dice <= Character.Protagonist.Luck;
+            string luckLine = goodLuck ? "<=" : ">";
+
+            List<string> luckCheck = new List<string> {
+                $"Проверка фарта: {Game.Dice.Symbol(dice)} " +
+                $"{luckLine} {Character.Protagonist.Luck}" };
+
+            luckCheck.Add(goodLuck ? "BIG|GOOD|ФАРТАНУЛО :)" : "BIG|BAD|НЕ ФАРТАНУЛО :(");
+
+            if (Character.Protagonist.Luck > 0)
+            {
+                Character.Protagonist.Luck -= 1;
+                luckCheck.Add("Уровень удачи снижен на единицу");
+            }
+
+            Game.Buttons.Disable(goodLuck, "Повезло", $"Не повезло");
+
+            return luckCheck;
+        }
+
+        public override bool IsButtonEnabled(bool secondButton = false)
+        {
+            bool disabledGetOptions = (Price > 0) && Used;
+            bool disabledByPrice = (Price > 0) && (Character.Protagonist.Money < Price);
+
+            return !(disabledGetOptions || disabledByPrice);
+        }
+
+        public List<string> Get()
+        {
+            if ((Price > 0) && (Character.Protagonist.Money >= Price))
+            {
+                Character.Protagonist.Money -= Price;
+
+                if (!Multiple)
+                    Used = true;
+
+                if (Benefit != null)
+                    Benefit.Do();
+            }
+
+            return new List<string> { "RELOAD" };
+        }
+
+        public override bool Availability(string option)
+        {
+            if (String.IsNullOrEmpty(option))
+            {
+                return true;
+            }
+            else
+            {
+                return AvailabilityTrigger(option);
+            }
+        }
+
+        public static bool NoMoreEnemies(List<Character> enemies) =>
+            enemies.Where(x => x.Endurance > 0).Count() == 0;
+
+        public List<string> Fight()
+        {
+            List<string> fight = new List<string>();
+
+            List<Character> FightEnemies = new List<Character>();
+
+            foreach (Character enemy in Enemies)
+                FightEnemies.Add(enemy.Clone());
+
+            int round = 1;
+
+            while (true)
+            {
+                fight.Add($"HEAD|BOLD|Раунд: {round}");
+
+                foreach (Character enemy in FightEnemies)
+                {
+                    if (enemy.Endurance <= 0)
+                        continue;
+
+                    fight.Add($"{enemy.Name} (выносливость {enemy.Endurance})");
+
+                    int protagonistRoll = Game.Dice.Roll();
+                    int protagonistHitStrength = protagonistRoll + Character.Protagonist.Strength;
+
+                    fight.Add($"Сила вашего удара: {Game.Dice.Symbol(protagonistRoll)} + " +
+                        $"{Character.Protagonist.Strength} = {protagonistHitStrength}");
+
+                    int enemyRoll = Game.Dice.Roll();
+                    int enemyHitStrength = enemyRoll + enemy.Strength;
+
+                    fight.Add($"Сила удара противника: " +
+                        $"{Game.Dice.Symbol(enemyRoll)} + {enemy.Strength} = {enemyHitStrength}");
+
+                    if (protagonistHitStrength > enemyHitStrength)
+                    {
+                        fight.Add($"GOOD|{enemy.Name} ранен");
+                        fight.Add($"Противник теряет {(double)Character.Protagonist.Damage / 10} ед. Выносливости");
+
+                        enemy.Endurance -= Character.Protagonist.Damage;
+
+                        if (NoMoreEnemies(FightEnemies))
+                        {
+                            fight.Add(String.Empty);
+                            fight.Add("BIG|GOOD|Вы ПОБЕДИЛИ :)");
+                            return fight;
+                        }
+                    }
+                    else if (protagonistHitStrength < enemyHitStrength)
+                    {
+                        fight.Add($"BAD|{enemy.Name} ранил вас");
+                        fight.Add($"Вы теряете {(double)enemy.Damage / 10} ед. Выносливости");
+
+                        Character.Protagonist.Endurance -= enemy.Damage;
+
+                        if (Character.Protagonist.Endurance <= 0)
+                        {
+                            fight.Add(String.Empty);
+                            fight.Add("BIG|BAD|Вы ПРОИГРАЛИ :(");
+                            return fight;
+                        }
+                    }
+                    else
+                    {
+                        fight.Add("BOLD|Ничья в раунде");
+                    }
+
+                    fight.Add(String.Empty);
+                }
+
+                round += 1;
+            }
+        }
+    }
 }
