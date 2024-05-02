@@ -1522,5 +1522,11 @@
 				<Option Goto="232"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="188">
+			<Text>Становится ну совсем темно и ты выходишь на дворцовую площадь. Ну, что еще скажешь? Пора! Ты собираешься с духом и входишь.</Text>
+			<Options>
+				<Option Goto="160"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
