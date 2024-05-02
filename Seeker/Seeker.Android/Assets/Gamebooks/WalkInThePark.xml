@@ -1151,5 +1151,14 @@
 				<Option Goto="178" Text="Пойдешь по правой"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="131">
+			<Text>Близкое нахождение открывает следующие ходы:</Text>
+			<Options>
+				<Option Goto="193" Text="Разговор с охранником"/>
+				<Option Goto="345" Text="Нападение на оного"/>
+				<Option Goto="290" Text="Проход мимо него в следующую комнату"/>
+				<Option Goto="365" Text="Заход в дверь с буквой «М»"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
