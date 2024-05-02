@@ -14,6 +14,14 @@ namespace Seeker.Gamebook.WalkInThePark
             {
                 Character.Protagonist.Strength = Character.Protagonist.StartStrength;
             }
+            else if (Name == "Weapon")
+            {
+                Character.Protagonist.Weapon = ValueString;
+            }
+            else if (Name == "Damage")
+            {
+                Character.Protagonist.Damage = Value;
+            }
             else
             {
                 base.Do(Character.Protagonist);
