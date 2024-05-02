@@ -1569,5 +1569,11 @@
 		<Paragraph No="195">
 			<Text>[пустой параграф]</Text>
 		</Paragraph>
+		<Paragraph No="196">
+			<Text>Наконец ты обходишь пруд. Аж вспотел весь. Ну, теперь начинается финишная прямая ко дворцу.</Text>
+			<Options>
+				<Option Goto="383"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
