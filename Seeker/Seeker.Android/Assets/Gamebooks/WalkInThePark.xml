@@ -1144,5 +1144,12 @@
 				<Option Goto="295"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="130">
+			<Text>За дверь обнаруживается коридор, уходящий и на запад, и на восток, причем в обоих концах обнаруживаются лестницы на второй этаж.</Text>
+			<Options>
+				<Option Goto="132" Text="Пойдешь по левой"/>
+				<Option Goto="178" Text="Пойдешь по правой"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
