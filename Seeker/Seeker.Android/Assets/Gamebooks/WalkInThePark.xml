@@ -1018,5 +1018,11 @@
 				<Option Goto="286" Text="В то время как в левом ты замечаешь уборную"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="109">
+			<Text>Обыскав охрану, ты находишь, что твой РЕЙТИНГ пал на 2 единицы. Кроме того, ты находишь у них форму, каковую можешь взять с собой.</Text>
+			<Options>
+				<Option Goto="220"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
