@@ -1460,5 +1460,11 @@
 		<Paragraph No="177">
 			<Text>[пустой параграф]</Text>
 		</Paragraph>
+		<Paragraph No="178">
+			<Text>Ты в гордом одиночестве прошествуешь через полутемный зал к лестнице и преодолеваешь два здоровенных пролета.</Text>
+			<Options>
+				<Option Goto="105"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
