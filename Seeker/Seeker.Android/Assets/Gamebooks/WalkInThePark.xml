@@ -1212,5 +1212,11 @@
 				<Option Goto="124"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="140">
+			<Text>Ты выходишь и оказываешься нос к носу с охранником, который говорит «Не положено!», и, взяв тебя за шиворот, пинков вышвыривает за дверь, ведущую на лестницу!</Text>
+			<Options>
+				<Option Goto="346"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
