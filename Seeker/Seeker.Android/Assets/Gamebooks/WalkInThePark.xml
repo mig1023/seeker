@@ -1298,5 +1298,11 @@
 				<Option Goto="296"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="153">
+			<Text>После всех совершенных манипуляций твое САМОЧУВСТВИЕ восстанавливается на 2 единицы.</Text>
+			<Options>
+				<Option Goto="178"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
