@@ -1390,5 +1390,12 @@
 		<Paragraph No="166">
 			<Text>[пустой параграф]</Text>
 		</Paragraph>
+		<Paragraph No="167">
+			<Text>Вскоре ты сворачиваешь на тихую безлюдную тропинку, окруженную соснами. Через двадцать метров она раздваивается. Куда направишься?</Text>
+			<Options>
+				<Option Goto="172" Text="На северо-запад"/>
+				<Option Goto="376" Text="На северо-восток"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
