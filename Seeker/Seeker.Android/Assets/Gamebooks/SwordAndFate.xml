@@ -5,8 +5,9 @@
 			<Author>Александр Куликов, 1993</Author>
 		</Copyright>
 		<Styles>
-			<Color Name="Main, Option, System, Continue" Value="989a9a"/>
+			<Main Value="989a9a"/>
 			<Action Value="6a6b6b"/>
+			<Color Name="Option, System, Continue" Value="b6b8b8"/>
 		</Styles>
 		<Buttons>
 			<RollCoin>Бросить монетку</RollCoin>
