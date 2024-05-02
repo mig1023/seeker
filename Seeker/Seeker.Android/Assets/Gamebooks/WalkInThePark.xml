@@ -1330,5 +1330,12 @@
 				<Option Goto="192" Text="Если дядя Слава отоварен"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="158">
+			<Text>Испытай ТИХОПОПОСТЬ, что бы узнать, смог ли ты подкрасться к домовику незамеченным.</Text>
+			<Options>
+				<Option Goto="397" Text="Испытания прошли успешно"/>
+				<Option Goto="221" Text="Досадная ошибка испортила тебе все подсчеты"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
