@@ -1387,5 +1387,8 @@
 				<Option Goto="183" Text="Забьешь на все эти занятие и пойдешь дальше"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="166">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
