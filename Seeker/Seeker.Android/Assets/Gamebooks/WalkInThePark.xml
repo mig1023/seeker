@@ -1311,5 +1311,11 @@
 				<Option Goto="328" Text="Откажешься"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="155">
+			<Text>В последний момент ты уворачиваешься и ком падает туда, где ты только что стоял. Поблагодарив матушку елку, ты пинаешь ее ногой и идешь дальше.</Text>
+			<Options>
+				<Option Goto="204"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
