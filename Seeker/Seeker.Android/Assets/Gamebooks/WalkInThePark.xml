@@ -1002,5 +1002,8 @@
 				<Option Goto="367" Text="Направишься туда же"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="106">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
