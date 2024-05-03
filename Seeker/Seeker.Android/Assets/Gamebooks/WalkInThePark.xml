@@ -1631,5 +1631,11 @@
 				<Option Goto="172"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="206">
+			<Text>И тут ты вспоминаешь, что когда-то выпил у Абраши непонятную тогда колбу с серой жидкость!\n\nТак знай же, что это была какава с цикорием.</Text>
+			<Options>
+				<Option Goto="142"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
