@@ -1951,5 +1951,16 @@
 				<Option Goto="187"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="254">
+			<Text>Тебя заинтересовали следующие журналы:</Text>
+			<Options>
+				<Option Goto="304" Text="«Ваши 666 соток» за 10"/>
+				<Option Goto="118" Text="«Народные рецепты» за 30"/>
+				<Option Goto="384" Text="«Пиромания в школе и дома» за 60">
+					<Text>Если такие журналы тебя не интересуют, то прощайся с тетей Таней и иди в Парк...</Text>
+				</Option>
+				<Option Goto="325"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
