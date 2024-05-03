@@ -2194,5 +2194,11 @@
 				<Option Goto="307"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="290">
+			<Text>Ты решаешь поскорей покинуть комнату через западную дверь, которая ведет к лестнице на второй этаж.</Text>
+			<Options>
+				<Option Goto="346"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
