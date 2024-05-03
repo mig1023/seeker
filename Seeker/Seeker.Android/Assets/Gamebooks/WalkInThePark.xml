@@ -1978,5 +1978,12 @@
 				<Option Goto="341"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="257">
+			<Text>Охранник валится вверх тормашками, и ты чувствуешь, что теряешь 2 единицы РЕЙТИНГА.\n\nЗато больше ни кто не мешает тебе посетить комнату:</Text>
+			<Options>
+				<Option Goto="176" Text="С домовиком"/>
+				<Option Goto="310" Text="С буквой «М»"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
