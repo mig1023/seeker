@@ -1618,5 +1618,12 @@
 				<Option Goto="317"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="204">
+			<Text>Ты почти в самой чаще этого небольшого, но густого леска. Поскольку дорог тут нет, ты можешь лишь примерно держать направление. Итак, куда пойдешь:</Text>
+			<Options>
+				<Option Goto="113" Text="На север"/>
+				<Option Goto="320" Text="На восток"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
