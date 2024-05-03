@@ -2218,5 +2218,11 @@
 				<Option Goto="250"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="294">
+			<Text>Пришло время снять личины!\n\nСАМОЧУВСТВИЕ\n\nБРАТ ВЭБЗДРИДЖ/ЛУПЕНЬ/ВИТЕК	9\n\nБРАТ ПИППЕРПОТ/БАХАРЬ/ИГОРЕК	8\n\nБРАТ ЁББОТ/БРЯХОТЬ/АНДРЮХА	7\n\nБРАТ ВОНЗИЛИН/СЛОНИК/САНЕК	6\n\nМОЧЕСТЬ</Text>
+			<Options>
+				<Option Goto="359" Text="Все Братки откинулись"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
