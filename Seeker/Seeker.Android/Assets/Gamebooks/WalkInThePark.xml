@@ -1810,5 +1810,11 @@
 				<Option Goto="250"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="233">
+			<Text>ЗЕЛЕНЫЙ МУЖИК настроен решительно, тебе предстоит опасная битва! САМОЧУВСТВИЕ МОЧЕСТЬ\n\nЗЕЛЕНЫЙ МУЖИК	10	3</Text>
+			<Options>
+				<Option Goto="318" Text="Твой зеленый противник повержен"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
