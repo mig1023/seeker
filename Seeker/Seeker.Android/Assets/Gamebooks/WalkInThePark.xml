@@ -1674,5 +1674,16 @@
 				<Option Goto="327" Text="В «собачни»"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="212">
+			<Text>Перед тобой старый добрый ларек с сэмачками... Но что это?! Теперь это огромный магазин - бар «У Зураба»! Что будешь делать?</Text>
+			<Options>
+				<Option Goto="136" Text="Зайдешь к Зурабу">
+					<Text>Либо пойдёшь мимо:</Text>
+				</Option>
+				<Option Goto="330" Text="На север"/>
+				<Option Goto="124" Text="На запад"/>
+				<Option Goto="269" Text="На восток"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
