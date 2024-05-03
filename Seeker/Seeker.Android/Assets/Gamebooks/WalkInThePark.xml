@@ -1998,5 +1998,8 @@
 				<Option Goto="108" Text="В ту, где «вверх»"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="260">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
