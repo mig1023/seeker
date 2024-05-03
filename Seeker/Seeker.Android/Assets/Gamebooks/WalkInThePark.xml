@@ -1933,5 +1933,11 @@
 				<Option Goto="188" Text="Cразу во Дворец"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="251">
+			<Text>Наконец тебе удается перебраться со льдины на надежный толстый лед, по которому ты гусино - утиным шагом добегаешь до противоположного берега пруда.</Text>
+			<Options>
+				<Option Goto="196"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
