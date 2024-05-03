@@ -1717,5 +1717,11 @@
 				<Option Goto="251" Text="Когда все это проделаешь"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="218">
+			<Text>Ты из последних сил вскидываешь руку, и Чукотский Прибор задевает домовиху. Она пускается в крик и зовет охрану!</Text>
+			<Options>
+				<Option Goto="142"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
