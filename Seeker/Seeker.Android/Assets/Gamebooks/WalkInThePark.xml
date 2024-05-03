@@ -2081,5 +2081,12 @@
 				<Option Goto="187" Text="Пойдёшь нафиг отсюда"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="273">
+			<Text>Надо тебе, анаконда, проверить ТИХОПОПОСТЬ.</Text>
+			<Options>
+				<Option Goto="388" Text="Прокатило"/>
+				<Option Goto="173" Text="Нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
