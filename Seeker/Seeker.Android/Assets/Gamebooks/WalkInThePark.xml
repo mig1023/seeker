@@ -1775,5 +1775,8 @@
 				<Option Goto="319" Text="Прикинешься школьником, чтобы заплатить 50 рублей вместо 100"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="227">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
