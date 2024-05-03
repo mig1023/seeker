@@ -2224,5 +2224,11 @@
 				<Option Goto="359" Text="Все Братки откинулись"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="295">
+			<Text>Вскоре ты выходишь на весьма цивилизованную такую дорожку и шагаешь по ней на восток.</Text>
+			<Options>
+				<Option Goto="369"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
