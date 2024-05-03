@@ -2007,5 +2007,12 @@
 				<Option Goto="337"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="262">
+			<Text>Испытай ТИХОПОПОСТЬ.</Text>
+			<Options>
+				<Option Goto="387" Text="Оная повернулась к тебе своим, так сказать, лицом"/>
+				<Option Goto="213" Text="В противном случае"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
