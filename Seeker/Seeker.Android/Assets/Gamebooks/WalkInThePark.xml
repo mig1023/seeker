@@ -2001,5 +2001,11 @@
 		<Paragraph No="260">
 			<Text>[пустой параграф]</Text>
 		</Paragraph>
+		<Paragraph No="261">
+			<Text>Поскорей спустившись и выбежав из дома, ты вновь идешь на север.</Text>
+			<Options>
+				<Option Goto="337"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
