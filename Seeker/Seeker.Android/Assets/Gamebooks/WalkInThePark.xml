@@ -2665,5 +2665,8 @@
 				<Option Goto="311" Text="Пойдешь дальше на север"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="361">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
