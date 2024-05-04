@@ -2572,5 +2572,11 @@
 				<Option Goto="257" Text="Ты его упогостил"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="346">
+			<Text>Ты покидаешь зал через дверь с лестницей, за которой, как бы фантастично это не звучало, обнаруживается ни что иное, как лестница, по которой ты и поднимаешься.</Text>
+			<Options>
+				<Option Goto="132"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
