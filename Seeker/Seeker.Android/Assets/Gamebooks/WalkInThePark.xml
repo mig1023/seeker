@@ -2866,5 +2866,12 @@
 				<Option Goto="334"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="393">
+			<Text>Через несколько метров ты подходишь к развилке. Там стоит указатель, на котором написано следующее: «Налево: Музей искусства и мастерства (left: the Museum of art and mastery), направо: гостеприимный домик Себастьяна Некроригмоса (right: the House of Hell). Прочитав указатель восемнадцать раз, ты без колебаний решаешь пойти...</Text>
+			<Options>
+				<Option Goto="216" Text="Налево"/>
+				<Option Goto="301" Text="Направо"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
