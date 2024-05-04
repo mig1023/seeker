@@ -2563,5 +2563,8 @@
 				<Option Goto="289" Text="Ты оказался четче"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="344">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
