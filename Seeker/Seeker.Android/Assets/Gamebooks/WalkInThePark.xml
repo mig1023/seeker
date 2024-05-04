@@ -2457,5 +2457,11 @@
 				<Option Goto="112" Text="Решишь вернуться и пойти в другую дверь"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="328">
+			<Text>- Ах так? Лупень, Бахарь, Слоник, мочите его!\n\nБратья, тоись Братки встают и надвигаются на неверного!</Text>
+			<Options>
+				<Option Goto="294"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
