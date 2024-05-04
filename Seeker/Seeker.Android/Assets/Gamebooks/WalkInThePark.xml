@@ -2485,5 +2485,8 @@
 				<Option Goto="180" Text="Да. Да начнется битва!"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="332">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
