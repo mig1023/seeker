@@ -2479,5 +2479,11 @@
 				</Option>
 			</Options>
 		</Paragraph>
+		<Paragraph No="331">
+			<Text>- Ну что ж, ребята, - одухотворенно улыбаясь, говоришь ты и идешь к попсистам.</Text>
+			<Options>
+				<Option Goto="180" Text="Да. Да начнется битва!"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
