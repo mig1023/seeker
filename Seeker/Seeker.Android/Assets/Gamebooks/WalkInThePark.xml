@@ -2854,5 +2854,11 @@
 				<Option Goto="400"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="391">
+			<Text>Пройдя по краю пруда, ты выкарабкиваешься на дорогу. Она идет с юга на север, куда ты и направляешься.</Text>
+			<Options>
+				<Option Goto="167"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
