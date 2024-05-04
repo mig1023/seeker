@@ -2808,5 +2808,11 @@
 				<Option Goto="250"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="384">
+			<Text>Ты открываешь твой любимый журнал «Пиромания в школе и дома». Чтение его как и всегда доставляет тебе огромное удовольствие, поэтому повысь начальный уровень ФАВОРА на 1!</Text>
+			<Options>
+				<Option Goto="144"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
