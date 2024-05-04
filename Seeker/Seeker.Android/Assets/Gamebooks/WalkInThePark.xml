@@ -2658,5 +2658,12 @@
 				<Option Goto="181"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="360">
+			<Text>Ты решительно поворачиваешь на север и идешь, утопая в глубоком снегу. Вдруг сбоку от дороги ты замечаешь в снегу что-то черное и круглое.</Text>
+			<Options>
+				<Option Goto="234" Text="Свернуть с дороги и посмотреть, что это"/>
+				<Option Goto="311" Text="Пойдешь дальше на север"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
