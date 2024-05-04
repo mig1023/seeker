@@ -2737,5 +2737,11 @@
 				<Option Goto="111" Text="На соседнюю башню"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="373">
+			<Text>Не дождавшись сэмак, Андрей Александрович тихо произносит:\n\n- Ну и дурак, - и удаляется.\n\nПожав плечами, ты отправляешься дальше.</Text>
+			<Options>
+				<Option Goto="172"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
