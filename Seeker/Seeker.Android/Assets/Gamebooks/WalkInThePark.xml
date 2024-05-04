@@ -2288,5 +2288,11 @@
 				<Option Goto="144"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="305">
+			<Text>Тучное тело дяди Зураба валится на прилавок. В этот момент срабатывает сигнализация и ты поскорее убегаешь. Но тебе придется отнять у себя 2 единицы РЕЙТИНГА.</Text>
+			<Options>
+				<Option Goto="212"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
