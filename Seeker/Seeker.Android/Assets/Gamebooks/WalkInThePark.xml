@@ -2711,5 +2711,12 @@
 				<Option Goto="251"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="369">
+			<Text>Ты попадаешь на развилку. Смысл идти есть только:</Text>
+			<Options>
+				<Option Goto="249" Text="На восток, к центру парка"/>
+				<Option Goto="293" Text="На север, ко дворцу"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
