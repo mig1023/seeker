@@ -2652,5 +2652,11 @@
 				<Option Goto="262" Text="Попробуешь прокрасться мимо, к проходу в противоположенной стене"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="359">
+			<Text>У братков ты находишь 5 бутылок пива «Арсенальное» и 150 рублей. А теряешь 3 единицы РЕЙТИНГА.</Text>
+			<Options>
+				<Option Goto="181"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
