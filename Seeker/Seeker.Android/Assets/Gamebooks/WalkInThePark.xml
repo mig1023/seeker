@@ -2750,5 +2750,12 @@
 				<Option Goto="191" Text="Нет"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="375">
+			<Text>Как тебе сообщает тетка в кассе, экскурсия стоит ажно 1000 рублей.</Text>
+			<Options>
+				<Option Goto="394" Text="У тебя есть таковое количество единиц данной валюты"/>
+				<Option Goto="188" Text="Нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
