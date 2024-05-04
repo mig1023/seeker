@@ -2307,5 +2307,13 @@
 				<Option Goto="337" Text="Отправишься дальше, в надежде найти наконец вход в парк"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="308">
+			<Text>На середине пути ты замечаешь сидящего на берегу мужика с удочкой, который увлеченно шалудит концом оной в маленькой проруби.</Text>
+			<Options>
+				<Option Goto="274" Text="Поговорить с ним"/>
+				<Option Goto="351" Text="Напасть"/>
+				<Option Goto="196" Text="Пойдешь мимо"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
