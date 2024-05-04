@@ -2693,5 +2693,11 @@
 				<Option Goto="310" Text="Еще немного тут потусуешь"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="366">
+			<Text>Ты расчехляешь свое смертоносное орудие и с криком «Battlecry will begin the fight!» - кидаешься на охрану. Та отвечает «Не положено!» - и тоже стремительно расчехляет.\n\nПервый ОХРАННИК\n\nВторой ОХРАННИК\n\nСАМОЧУВСТВИЕ\n\n9	4\n\nМОЧЕСТЬ\n\n10	3</Text>
+			<Options>
+				<Option Goto="109" Text="Стражи повержены"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
