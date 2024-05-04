@@ -2367,5 +2367,13 @@
 				<Option Goto="386" Text="В северную дверь"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="316">
+			<Text>Над входом висит табличка:\n\n«Музей искусства и мастерства.\nThe museum of art and mastery.\nMusie des Arts et Mitiers.\nKunst und handwerksmuseum.\nMuseum for kunst og haandverk.\nMuseo dell arte e mestiere...» - и еще на пятидесяти восьми знакомых тебе языках. Выставлена в музее экспозиция «Быт и нравы и повадки и среда обитания и оптимальные климатические условия и условия содержания и выведения в неволе народов крайнего севера».</Text>
+			<Options>
+				<Option Goto="163" Text="Осмотреть экспозицию"/>
+				<Option Goto="241" Text="Пойдешь поговоришь со смотрителем"/>
+				<Option Goto="232" Text="Если передумал"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
