@@ -10,12 +10,32 @@ namespace Seeker.Gamebook.WalkInThePark
 
         private static Random rand = new Random();
 
-        public override List<string> Status() => new List<string>
+
+        private bool IfThisIsFirstPart() =>
+            Game.Data.CurrentParagraphID <= Constants.FirstPartSize;
+
+        public override List<string> Status()
         {
-            $"Сила: {Character.Protagonist.Strength}",
-            $"Выносливость: {(double)Character.Protagonist.Endurance / 10}",
-            $"Удача: {Character.Protagonist.Luck}",
-        };
+            if (IfThisIsFirstPart())
+            {
+                return new List<string>
+                {
+                    $"Сила: {Character.Protagonist.Strength}",
+                    $"Выносливость: {(double)Character.Protagonist.Endurance / 10}",
+                    $"Удача: {Character.Protagonist.Luck}",
+                };
+            }
+            else
+            {
+                return new List<string>
+                {
+                    $"Самочувствие: {Character.Protagonist.Health}",
+                    $"Мочесть: {(double)Character.Protagonist.Power}",
+                    $"Тихопопость: {Character.Protagonist.Stealth}",
+                    $"Фавор: {Character.Protagonist.Fortune}",
+                };
+            }   
+        }
 
         public override List<string> AdditionalStatus() => new List<string>
         {

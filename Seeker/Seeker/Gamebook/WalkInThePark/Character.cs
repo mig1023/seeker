@@ -47,6 +47,36 @@ namespace Seeker.Gamebook.WalkInThePark
 
         public string Weapon { get; set; }
 
+        private int _health;
+        public int Health
+        {
+            get => _health;
+            set => _health = Game.Param.Setter(value, _health, this);
+        }
+
+        private int _power;
+        public int Power
+        {
+            get => _power;
+            set => _power = Game.Param.Setter(value, _power, this);
+        }
+
+        private int _stealth;
+        public int Stealth
+        {
+            get => _stealth;
+            set => _stealth = Game.Param.Setter(value, _stealth, this);
+        }
+
+        private int _fortune;
+        public int Fortune
+        {
+            get => _fortune;
+            set => _fortune = Game.Param.Setter(value, _fortune, this);
+        }
+
+        
+
         public override void Init()
         {
             base.Init();
@@ -58,6 +88,12 @@ namespace Seeker.Gamebook.WalkInThePark
             Money = 0;
             Damage = 1;
             Weapon = "кулаки";
+
+            Health = 6 + Game.Dice.Roll();
+            Power = Game.Dice.Roll();
+            Stealth = Game.Dice.Roll();
+            Fortune = Game.Dice.Roll(dices: 2);
+
         }
 
         public Character Clone() => new Character()
@@ -71,10 +107,15 @@ namespace Seeker.Gamebook.WalkInThePark
             Money = this.Money,
             Damage = this.Damage,
             Weapon = this.Weapon,
+            Health = this.Health,
+            Power = this.Power,
+            Stealth = this.Stealth,
+            Fortune = this.Fortune,
         };
 
         public override string Save() => String.Join("|",
-            Strength, StartStrength, Endurance, Luck, Money, Damage, Weapon);
+            Strength, StartStrength, Endurance, Luck, Money,
+            Damage, Weapon, Health, Power, Stealth, Fortune);
 
         public override void Load(string saveLine)
         {
@@ -87,6 +128,10 @@ namespace Seeker.Gamebook.WalkInThePark
             Money = int.Parse(save[4]);
             Damage = int.Parse(save[5]);
             Weapon = save[6];
+            Health = int.Parse(save[7]);
+            Power = int.Parse(save[8]);
+            Stealth = int.Parse(save[9]);
+            Fortune = int.Parse(save[10]);
 
             IsProtagonist = true;
         }
