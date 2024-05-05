@@ -132,6 +132,27 @@ namespace Seeker.Gamebook.WalkInThePark
             return luck;
         }
 
+        public List<string> Stealth()
+        {
+            List<string> luck = Test(Character.Protagonist.Fortune,
+                "Проверка Тихопопости", "ПОЛНЫЙ УСПЕХ в ТИХОПОПОСТИ", "ПОЛНЫЙ ПРОВАЛ в ТИХОПОПОСТИ",
+                "Проканало, Выгорело, Она вынесла все твои пытки и козни",
+                "Не проканало, Не выгорело, Откинулась в мучениях", out bool success);
+
+            if (success)
+            {
+                Character.Protagonist.Stealth += 1;
+                luck.Add("Уровень Тихопопости вырос на единицу");
+            }
+            else if (Character.Protagonist.Stealth > 1)
+            {
+                Character.Protagonist.Stealth -= 1;
+                luck.Add("Уровень Тихопопости снижен на единицу");
+            }
+
+            return luck;
+        }
+
         public List<string> Test(int param, string test, string testOk, string testFail,
             string buttonOk, string buttonFail, out bool testPassed)
         {
