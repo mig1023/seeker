@@ -1635,9 +1635,12 @@
 		</Paragraph>
 		<Paragraph No="197">
 			<Text>Для этого тебе придется проверить ТИХОПОПОСТЬ. Ну как там?</Text>
+			<Actions>
+				<Stealth/>
+			</Actions>
 			<Options>
-				<Option Goto="355" Text="Проверка удалась"/>
-				<Option Goto="117" Text="Нет"/>
+				<Option Goto="355" Text="Выгорело"/>
+				<Option Goto="117" Text="Не выгорело"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="198">
