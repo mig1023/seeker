@@ -2620,7 +2620,7 @@
 			<Options>
 				<Option Goto="129" Text="Возьмешь велосипед и поедешь на север"/>
 				<Option Goto="202" Text="Спустишься в люк"/>
-				<Option Goto="284" Text="Попробуешь перелезть?"/>
+				<Option Goto="284" Text="Попробуешь перелезть"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="338">
