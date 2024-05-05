@@ -1858,6 +1858,11 @@
 		</Paragraph>
 		<Paragraph No="233">
 			<Text>ЗЕЛЕНЫЙ МУЖИК настроен решительно, тебе предстоит опасная битва! САМОЧУВСТВИЕ МОЧЕСТЬ\n\nЗЕЛЕНЫЙ МУЖИК	10	3</Text>
+			<Actions>
+				<Fight>
+					<Enemy Name="ЗЕЛЕНЫЙ МУЖИК" Strength="3" Health="10" Damage="1"/>
+				</Fight>
+			</Actions>
 			<Options>
 				<Option Goto="318" Text="Твой зеленый противник повержен"/>
 			</Options>
