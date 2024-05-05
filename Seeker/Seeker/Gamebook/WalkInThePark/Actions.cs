@@ -58,6 +58,12 @@ namespace Seeker.Gamebook.WalkInThePark
             {
                 return GameOverBy(Character.Protagonist.Endurance, out toEndParagraph, out toEndText);
             }
+            else if (Game.Data.CurrentParagraphID == 200)
+            {
+                toEndParagraph = 0;
+                toEndText = Output.Constants.GAMEOVER_TEXT;
+                return true;
+            }
             else
             {
                 toEndParagraph = 200;
