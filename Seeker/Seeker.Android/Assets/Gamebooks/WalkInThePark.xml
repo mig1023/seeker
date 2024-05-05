@@ -2086,10 +2086,12 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="262">
-			<Text>Испытай ТИХОПОПОСТЬ.</Text>
+			<Actions>
+				<Stealth/>
+			</Actions>
 			<Options>
-				<Option Goto="387" Text="Оная повернулась к тебе своим, так сказать, лицом"/>
-				<Option Goto="213" Text="В противном случае"/>
+				<Option Goto="387" Text="Выгорело"/>
+				<Option Goto="213" Text="Не выгорело"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="263">
