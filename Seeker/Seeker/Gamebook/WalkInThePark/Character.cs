@@ -48,10 +48,11 @@ namespace Seeker.Gamebook.WalkInThePark
         public string Weapon { get; set; }
 
         private int _health;
+        public int MaxHealth { get; set; }
         public int Health
         {
             get => _health;
-            set => _health = Game.Param.Setter(value, _health, this);
+            set => _health = Game.Param.Setter(value, max: MaxHealth, _health, this);
         }
 
         private int _stealth;
@@ -91,7 +92,8 @@ namespace Seeker.Gamebook.WalkInThePark
             Damage = 1;
             Weapon = "кулаки";
 
-            Health = 6 + Game.Dice.Roll();
+            MaxHealth = 6 + Game.Dice.Roll();
+            Health = MaxHealth;
             Stealth = Game.Dice.Roll();
             Fortune = Game.Dice.Roll(dices: 2);
 
@@ -108,6 +110,7 @@ namespace Seeker.Gamebook.WalkInThePark
             Money = this.Money,
             Damage = this.Damage,
             Weapon = this.Weapon,
+            MaxHealth = this.MaxHealth,
             Health = this.Health,
             Stealth = this.Stealth,
             Fortune = this.Fortune,
@@ -115,7 +118,7 @@ namespace Seeker.Gamebook.WalkInThePark
 
         public override string Save() => String.Join("|",
             Strength, StartStrength, Endurance, Luck, Money,
-            Damage, Weapon, Health, Stealth, Fortune);
+            Damage, Weapon, MaxHealth, Health, Stealth, Fortune);
 
         public override void Load(string saveLine)
         {
@@ -128,9 +131,10 @@ namespace Seeker.Gamebook.WalkInThePark
             Money = int.Parse(save[4]);
             Damage = int.Parse(save[5]);
             Weapon = save[6];
-            Health = int.Parse(save[7]);
-            Stealth = int.Parse(save[8]);
-            Fortune = int.Parse(save[9]);
+            MaxHealth = int.Parse(save[7]);
+            Health = int.Parse(save[8]);
+            Stealth = int.Parse(save[9]);
+            Fortune = int.Parse(save[10]);
 
             IsProtagonist = true;
         }

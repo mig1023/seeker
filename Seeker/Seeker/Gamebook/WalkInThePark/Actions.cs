@@ -28,7 +28,7 @@ namespace Seeker.Gamebook.WalkInThePark
             {
                 return new List<string>
                 {
-                    $"Самочувствие: {Character.Protagonist.Health}",
+                    $"Самочувствие: {Character.Protagonist.Health} / {Character.Protagonist.MaxHealth}",
                     $"Мочесть: {(double)Character.Protagonist.Strength}",
                     $"Тихопопость: {Character.Protagonist.Stealth}",
                     $"Фавор: {Character.Protagonist.Fortune}",
