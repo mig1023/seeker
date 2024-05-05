@@ -1366,9 +1366,12 @@
 		</Paragraph>
 		<Paragraph No="158">
 			<Text>Испытай ТИХОПОПОСТЬ, что бы узнать, смог ли ты подкрасться к домовику незамеченным.</Text>
+			<Actions>
+				<Stealth/>
+			</Actions>
 			<Options>
-				<Option Goto="397" Text="Испытания прошли успешно"/>
-				<Option Goto="221" Text="Досадная ошибка испортила тебе все подсчеты"/>
+				<Option Goto="397" Text="Проканало"/>
+				<Option Goto="221" Text="Не проканало"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="159">
