@@ -1943,7 +1943,12 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="245">
-			<Text>Ярость вскипает в тебе, ты выхватываешь оружие и бросаешься на дядю Зураба:\n\nСАМОЧУВСТВИЕ МОЧЕСТЬ\n\nДЯДЯ ЗУРАБ	9	3</Text>
+			<Text>Ярость вскипает в тебе, ты выхватываешь оружие и бросаешься на дядю Зураба:</Text>
+			<Actions>
+				<Fight>
+					<Enemy Name="ДЯДЯ ЗУРАБ" Strength="3" Health="9" Damage="1"/>
+				</Fight>
+			</Actions>
 			<Options>
 				<Option Goto="305" Text="Если сможешь угрохать продавца"/>
 			</Options>
