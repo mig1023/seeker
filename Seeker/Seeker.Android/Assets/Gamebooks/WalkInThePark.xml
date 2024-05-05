@@ -1932,10 +1932,12 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="240">
-			<Text>Проверь свою ТИХОПОПОСТЬ.</Text>
+			<Actions>
+				<Stealth/>
+			</Actions>
 			<Options>
-				<Option Goto="306" Text="Она тебя не подвела"/>
-				<Option Goto="219" Text="Произошла осечка"/>
+				<Option Goto="306" Text="Проканало"/>
+				<Option Goto="219" Text="Не проканало"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="241">
