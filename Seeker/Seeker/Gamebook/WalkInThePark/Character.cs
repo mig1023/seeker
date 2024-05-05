@@ -68,7 +68,16 @@ namespace Seeker.Gamebook.WalkInThePark
             set => _fortune = Game.Param.Setter(value, _fortune, this);
         }
 
-        
+        public int GetHealth(bool part1) =>
+            part1 ? Endurance : Health;
+
+        public void SetHealth(bool part1, int value)
+        {
+            if (part1)
+                Endurance = value;
+            else
+                Health = value;
+        }
 
         public override void Init()
         {

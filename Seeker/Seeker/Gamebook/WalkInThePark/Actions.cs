@@ -10,7 +10,6 @@ namespace Seeker.Gamebook.WalkInThePark
 
         private static Random rand = new Random();
 
-
         private static bool IfThisIsFirstPart() =>
             Game.Data.CurrentParagraphID <= Constants.FirstPartSize;
 
@@ -83,8 +82,16 @@ namespace Seeker.Gamebook.WalkInThePark
 
             foreach (Character enemy in Enemies)
             {
-                enemies.Add($"{enemy.Name}\nсила {enemy.Strength}  " +
-                    $"выносливость {enemy.Endurance}  урон {(double)enemy.Damage / 10}");
+                if (IfThisIsFirstPart())
+                {
+                    enemies.Add($"{enemy.Name}\nсила {enemy.Strength}  " +
+                        $"выносливость {enemy.Endurance}  урон {(double)enemy.Damage / 10}");
+                }
+                else
+                {
+                    enemies.Add($"{enemy.Name}\nсамочувствие {enemy.Health}  " +
+                        $"мочность {enemy.Strength}  урон {(double)enemy.Damage}");
+                }
             }
 
             return enemies;
@@ -157,30 +164,25 @@ namespace Seeker.Gamebook.WalkInThePark
             }
         }
 
-        public static bool NoMoreEnemies(List<Character> enemies)
+        private static bool NoMoreEnemies(List<Character> enemies)
         {
             bool part1 = IfThisIsFirstPart();
 
             int enemiesCount = enemies
-                .Where(x => (part1 ? x.Endurance : x.Health) > 0)
+                .Where(x => x.GetHealth(part1) > 0)
                 .Count();
 
             return enemiesCount == 0;
         }
-            
 
-        public static string Hit() =>
+        private static string Hit() =>
             $"{Constants.What[rand.Next(Constants.What.Count)]} {Constants.Where[rand.Next(Constants.Where.Count)]}";
 
         public List<string> Fight()
         {
             bool part1 = IfThisIsFirstPart();
-            string hitpoints = part1 ? "выносливость" : "самочувствие";
-            string hitpointLost = part1 ? "Выносливости" : "Самочувствия";
-            string strength = part1 ? "Сила" : "Охрененность";
 
             List<string> fight = new List<string>();
-
             List<Character> FightEnemies = new List<Character>();
 
             foreach (Character enemy in Enemies)
@@ -194,13 +196,17 @@ namespace Seeker.Gamebook.WalkInThePark
 
                 foreach (Character enemy in FightEnemies)
                 {
-                    if (enemy.Endurance <= 0)
+                    if (enemy.GetHealth(part1) <= 0)
                         continue;
 
-                    fight.Add($"{enemy.Name} ({hitpoints} {(double)enemy.Endurance / 10})");
+                    if (part1)
+                        fight.Add($"{enemy.Name} (выносливость {(double)enemy.Endurance / 10})");
+                    else
+                        fight.Add($"{enemy.Name} (самочувствие {enemy.Health})");
 
                     int protagonistRoll = Game.Dice.Roll();
                     int protagonistHitStrength = protagonistRoll + Character.Protagonist.Strength;
+                    string strength = part1 ? "Сила" : "Охрененность";
 
                     fight.Add($"{strength} вашего удара: {Game.Dice.Symbol(protagonistRoll)} + " +
                         $"{Character.Protagonist.Strength} = {protagonistHitStrength}");
@@ -214,9 +220,13 @@ namespace Seeker.Gamebook.WalkInThePark
                     if (protagonistHitStrength > enemyHitStrength)
                     {
                         fight.Add($"GOOD|BOLD|{enemy.Name} {Hit()}");
-                        fight.Add($"Противник теряет {(double)Character.Protagonist.Damage / 10} ед. {hitpointLost}");
 
-                        enemy.Endurance -= Character.Protagonist.Damage;
+                        if (part1)
+                            fight.Add($"Противник теряет {(double)Character.Protagonist.Damage / 10} ед. Выносливости");
+                        else
+                            fight.Add($"Противник теряет {Character.Protagonist.Damage} ед. Самочувствия");
+
+                        enemy.SetHealth(part1, enemy.GetHealth(part1) - Character.Protagonist.Damage);
 
                         if (NoMoreEnemies(FightEnemies))
                         {
@@ -231,11 +241,16 @@ namespace Seeker.Gamebook.WalkInThePark
                     else if (protagonistHitStrength < enemyHitStrength)
                     {
                         fight.Add($"BAD|BOLD|{enemy.Name} заехал вам по морде");
-                        fight.Add($"Вы теряете {(double)enemy.Damage / 10} ед. {hitpointLost}");
 
-                        Character.Protagonist.Endurance -= enemy.Damage;
+                        if (part1)
+                            fight.Add($"Вы теряете {(double)enemy.Damage / 10} ед. Выносливости");
+                        else
+                            fight.Add($"Вы теряете {enemy.Damage} ед. Самочувствия");
 
-                        if (Character.Protagonist.Endurance <= 0)
+                        Character.Protagonist.SetHealth(part1,
+                            Character.Protagonist.GetHealth(part1) - enemy.Damage);
+
+                        if (Character.Protagonist.GetHealth(part1) <= 0)
                         {
                             fight.Add(String.Empty);
                             fight.Add("BIG|BAD|Вы ПРОИГРАЛИ :(");
