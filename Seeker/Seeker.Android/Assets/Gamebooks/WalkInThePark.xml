@@ -20,6 +20,9 @@
 			<Luck>Узнать фартануло ли</Luck>
 			<Get>Затариться</Get>
 		</Buttons>
+		<Default>
+			<EqualPartsInStatuses/>
+		</Default>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph No="0">
