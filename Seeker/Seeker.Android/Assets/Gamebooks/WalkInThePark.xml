@@ -2169,9 +2169,12 @@
 		</Paragraph>
 		<Paragraph No="273">
 			<Text>Надо тебе, анаконда, проверить ТИХОПОПОСТЬ.</Text>
+			<Actions>
+				<Stealth/>
+			</Actions>
 			<Options>
-				<Option Goto="388" Text="Прокатило"/>
-				<Option Goto="173" Text="Нет"/>
+				<Option Goto="388" Text="Проканало"/>
+				<Option Goto="173" Text="Не проканало"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="274">
@@ -2779,10 +2782,12 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="357">
-			<Text>Проверь ТИХОПОПОСТЬ.</Text>
+			<Actions>
+				<Stealth/>
+			</Actions>
 			<Options>
-				<Option Goto="209" Text="Результат не отрицательный"/>
-				<Option Goto="285" Text="Результат не положительный"/>
+				<Option Goto="209" Text="Проканало"/>
+				<Option Goto="285" Text="Не проканало"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="358">
