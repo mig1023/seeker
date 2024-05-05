@@ -37,14 +37,36 @@ namespace Seeker.Gamebook.WalkInThePark
             }   
         }
 
-        public override List<string> AdditionalStatus() => new List<string>
+        public override List<string> AdditionalStatus()
         {
-            $"Оружие: {Character.Protagonist.Weapon} (урон {(double)Character.Protagonist.Damage / 10})",
-            $"Деньги: {Character.Protagonist.Money}",
-        };
+            if (IfThisIsFirstPart())
+            {
+                return new List<string>
+                {
+                    $"Оружие: {Character.Protagonist.Weapon} (урон {(double)Character.Protagonist.Damage / 10})",
+                    $"Деньги: {Character.Protagonist.Money}",
+                };
+            }
+            else
+            {
+                return null;
+            }
+        }
 
-        public override bool GameOver(out int toEndParagraph, out string toEndText) =>
-            GameOverBy(Character.Protagonist.Endurance, out toEndParagraph, out toEndText);
+        public override bool GameOver(out int toEndParagraph, out string toEndText)
+        {
+            if (IfThisIsFirstPart())
+            {
+                return GameOverBy(Character.Protagonist.Endurance, out toEndParagraph, out toEndText);
+            }
+            else
+            {
+                toEndParagraph = 200;
+                toEndText = "Финита ля комедия";
+                return GameOverBy(Character.Protagonist.Health, out _, out _);
+            }
+        }
+            
 
         public override List<string> Representer()
         {
