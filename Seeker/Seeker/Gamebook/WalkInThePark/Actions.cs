@@ -105,26 +105,49 @@ namespace Seeker.Gamebook.WalkInThePark
 
         public List<string> Luck()
         {
-            int dice = Game.Dice.Roll();
-
-            bool goodLuck = dice <= Character.Protagonist.Luck;
-            string luckLine = goodLuck ? "<=" : ">";
-
-            List<string> luckCheck = new List<string> {
-                $"Проверка фарта: {Game.Dice.Symbol(dice)} " +
-                $"{luckLine} {Character.Protagonist.Luck}" };
-
-            luckCheck.Add(goodLuck ? "BIG|GOOD|ФАРТАНУЛО :)" : "BIG|BAD|НЕ ФАРТАНУЛО :(");
+            List<string> luck = Test(Character.Protagonist.Luck,
+                "Проверка фарта", "ФАРТАНУЛО", "НЕ ФАРТАНУЛО", "Повезло", "Не повезло", out _);
 
             if (Character.Protagonist.Luck > 0)
             {
                 Character.Protagonist.Luck -= 1;
-                luckCheck.Add("Уровень удачи снижен на единицу");
+                luck.Add("Уровень удачи снижен на единицу");
             }
 
-            Game.Buttons.Disable(goodLuck, "Повезло", $"Не повезло");
+            return luck;
+        }
 
-            return luckCheck;
+        public List<string> Fortune()
+        {
+            List<string> luck = Test(Character.Protagonist.Fortune,
+                "Проверка фавора", "ВЫ В ФАВОРЕ", "ВЫ НЕ В ФАВОРЕ", "В фаворе", "Не в фаворе", out _);
+
+            if (Character.Protagonist.Fortune > 0)
+            {
+                Character.Protagonist.Fortune -= 1;
+                luck.Add("Уровень фавора снижен на единицу");
+            }
+
+            return luck;
+        }
+
+        public List<string> Test(int param, string test, string testOk, string testFail,
+            string buttonOk, string buttonFail, out bool testPassed)
+        {
+            int dice = Game.Dice.Roll();
+
+            testPassed = dice <= param;
+            string testLine = testPassed ? "<=" : ">";
+
+            List<string> testResult = new List<string> {
+                $"{test}: {Game.Dice.Symbol(dice)} " +
+                $"{testLine} {param}" };
+
+            testResult.Add(testPassed ? $"BIG|GOOD|{testOk} :)" : $"BIG|BAD|{testFail} :(");
+
+            Game.Buttons.Disable(testPassed, buttonOk, buttonFail);
+
+            return testResult;
         }
 
         public override bool IsButtonEnabled(bool secondButton = false)
