@@ -2301,7 +2301,17 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="294">
-			<Text>Пришло время снять личины!\n\nСАМОЧУВСТВИЕ\n\nБРАТ ВЭБЗДРИДЖ/ЛУПЕНЬ/ВИТЕК	9\n\nБРАТ ПИППЕРПОТ/БАХАРЬ/ИГОРЕК	8\n\nБРАТ ЁББОТ/БРЯХОТЬ/АНДРЮХА	7\n\nБРАТ ВОНЗИЛИН/СЛОНИК/САНЕК	6\n\nМОЧЕСТЬ</Text>
+			<Text>Пришло время снять личины!</Text>
+			<Actions>
+				<Fight>
+					<Enemies>
+						<Enemy Name="ЛУПЕНЬ/ВИТЕК" Strength="2" Health="9" Damage="1"/>
+						<Enemy Name="БАХАРЬ/ИГОРЕК" Strength="3" Health="8" Damage="1"/>
+						<Enemy Name="БРЯХОТЬ/АНДРЮХА" Strength="4" Health="7" Damage="1"/>
+						<Enemy Name="СЛОНИК/САНЕК" Strength="5" Health="6" Damage="1"/>
+					</Enemies>
+				</Fight>
+			</Actions>
 			<Options>
 				<Option Goto="359" Text="Все Братки откинулись"/>
 			</Options>
