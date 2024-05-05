@@ -120,7 +120,8 @@ namespace Seeker.Gamebook.WalkInThePark
         public List<string> Fortune()
         {
             List<string> luck = Test(Character.Protagonist.Fortune,
-                "Проверка фавора", "ВЫ В ФАВОРЕ", "ВЫ НЕ В ФАВОРЕ", "В фаворе", "Не в фаворе", out _);
+                "Проверка фавора", "ВЫ В ФАВОРЕ", "ВЫ НЕ В ФАВОРЕ",
+                "В фаворе, Под пытками он во всем сознался", "Не в фаворе, Он ничего не рассказал", out _);
 
             if (Character.Protagonist.Fortune > 0)
             {
