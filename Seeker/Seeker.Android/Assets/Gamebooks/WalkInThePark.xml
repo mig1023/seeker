@@ -2810,7 +2810,15 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="366">
-			<Text>Ты расчехляешь свое смертоносное орудие и с криком «Battlecry will begin the fight!» - кидаешься на охрану. Та отвечает «Не положено!» - и тоже стремительно расчехляет.\n\nПервый ОХРАННИК\n\nВторой ОХРАННИК\n\nСАМОЧУВСТВИЕ\n\n9	4\n\nМОЧЕСТЬ\n\n10	3</Text>
+			<Text>Ты расчехляешь свое смертоносное орудие и с криком «Battlecry will begin the fight!» - кидаешься на охрану. Та отвечает «Не положено!» - и тоже стремительно расчехляет.</Text>
+			<Actions>
+				<Fight>
+					<Enemies>
+						<Enemy Name="Первый ОХРАННИК" Strength="4" Health="9" Damage="1"/>
+						<Enemy Name="Второй ОХРАННИК" Strength="3" Health="10" Damage="1"/>
+					</Enemies>
+				</Fight>
+			</Actions>
 			<Options>
 				<Option Goto="109" Text="Стражи повержены"/>
 			</Options>
