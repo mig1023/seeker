@@ -2115,6 +2115,9 @@
 		</Paragraph>
 		<Paragraph No="257">
 			<Text>Охранник валится вверх тормашками, и ты чувствуешь, что теряешь 2 единицы РЕЙТИНГА.\n\nЗато больше ни кто не мешает тебе посетить комнату:</Text>
+			<Modifications>
+				<Rating Value="-2"/>
+			</Modifications>
 			<Options>
 				<Option Goto="176" Text="С домовиком"/>
 				<Option Goto="310" Text="С буквой «М»"/>
