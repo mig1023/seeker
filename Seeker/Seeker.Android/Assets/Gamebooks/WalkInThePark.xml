@@ -2568,6 +2568,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="ДОМОВИК (без перфоратора)" Strength="6" Health="8" Damage="1"/>
+					<Benefit Name="Rating" Value="-10"/>
 					<Text>Если ты ухайдакал мерзостного гада вручную, отыми 10 единиц РЕЙТИНГА...</Text>
 				</Fight>
 			</Actions>
