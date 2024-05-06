@@ -1247,6 +1247,7 @@
 						<Enemy Name="Первый ВОЛЧАРА" Strength="3" Health="8" Damage="1"/>
 						<Enemy Name="Второй ВОЛЧАРА" Strength="4" Health="7" Damage="1"/>
 					</Enemies>
+					<Benefit Name="Rating" Value="1"/>
 					<Text>Если ВОЛЧАРЫ изничтожены, прибавь себе 1 единицу РЕЙТИНГА. Еще немного поплутав по лесу, ты наконец выходишь на какую-то дорогу.</Text>
 				</Fight>
 			</Actions>
