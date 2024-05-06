@@ -1031,6 +1031,9 @@
 		</Paragraph>
 		<Paragraph No="109">
 			<Text>Обыскав охрану, ты находишь, что твой РЕЙТИНГ пал на 2 единицы. Кроме того, ты находишь у них форму, каковую можешь взять с собой.</Text>
+			<Modifications>
+				<Rating Value="-2"/>
+			</Modifications>
 			<Options>
 				<Option Goto="220"/>
 			</Options>
