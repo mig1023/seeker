@@ -43,12 +43,17 @@ namespace Seeker.Gamebook.WalkInThePark
                 return new List<string>
                 {
                     $"Оружие: {Character.Protagonist.Weapon} (урон {(double)Character.Protagonist.Damage / 10})",
-                    $"Деньги: {Character.Protagonist.Money}",
+                    $"Деньги: {Character.Protagonist.Money} руб",
                 };
             }
             else
             {
-                return null;
+                return new List<string>
+                {
+                    $"Оружие: {Character.Protagonist.Weapon} (урон {Character.Protagonist.Damage})",
+                    $"Деньги: {Character.Protagonist.Money} руб",
+                    $"Рейтинг: {Character.Protagonist.Rating}",
+                };
             }
         }
 
