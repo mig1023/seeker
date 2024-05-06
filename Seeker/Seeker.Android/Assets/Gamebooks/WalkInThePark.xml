@@ -2784,6 +2784,9 @@
 		</Paragraph>
 		<Paragraph No="342">
 			<Text>Ты чувствуешь неприятное покалывание в области подмышки - чувство, говорящие о том, что твой РЕЙТИНГ пал на 2 единицы. Теперь ты можешь взять форму охранников.</Text>
+			<Modifications>
+				<Rating Value="-2"/>
+			</Modifications>
 			<Options>
 				<Option Goto="130"/>
 			</Options>
