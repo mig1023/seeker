@@ -1358,6 +1358,9 @@
 		</Paragraph>
 		<Paragraph No="153">
 			<Text>После всех совершенных манипуляций твое САМОЧУВСТВИЕ восстанавливается на 2 единицы.</Text>
+			<Modifications>
+				<Health Value="2"/>
+			</Modifications>
 			<Options>
 				<Option Goto="178"/>
 			</Options>
