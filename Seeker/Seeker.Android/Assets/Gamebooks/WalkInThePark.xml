@@ -2193,6 +2193,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="ДОМОВИК (с перфоратором)" Strength="6" Health="8" Damage="1"/>
+					<Benefit Name="Rating" Value="10"/>
 					<Text>Если ты сумел скемперить врага на дальней дистанции, прибавь себе 10 единиц РЕЙТИНГА.</Text>
 				</Fight>
 			</Actions>
