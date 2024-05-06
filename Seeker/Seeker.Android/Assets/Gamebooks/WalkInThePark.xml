@@ -2826,6 +2826,9 @@
 		</Paragraph>
 		<Paragraph No="359">
 			<Text>У братков ты находишь 5 бутылок пива «Арсенальное» и 150 рублей. А теряешь 3 единицы РЕЙТИНГА.</Text>
+			<Modifications>
+				<Money Value="150"/>
+			</Modifications>
 			<Options>
 				<Option Goto="181"/>
 			</Options>
