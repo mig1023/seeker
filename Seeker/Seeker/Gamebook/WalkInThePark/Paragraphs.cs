@@ -57,5 +57,8 @@ namespace Seeker.Gamebook.WalkInThePark
 
             return enemy;
         }
+
+        public override Option OptionParse(XmlNode xmlOption) =>
+            OptionParseWithDo(xmlOption, new Modification());
     }
 }
