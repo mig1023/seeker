@@ -2263,6 +2263,7 @@
 				</Fight>
 				<Fight>
 					<Enemy Name="НАЧАЛЬНИК ОХРАНЫ ДВОРЦА" Strength="6" Health="15" Damage="1"/>
+					<Benefit Name="Rating" Value="3"/>
 					<Text>Если правосудие свершилось, отними 3 единицы РЕЙТИНГА и иди в башню.</Text>
 				</Fight>
 			</Actions>
