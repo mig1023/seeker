@@ -2833,6 +2833,10 @@
 		</Paragraph>
 		<Paragraph No="348">
 			<Text>Ну ты молодчина. Добавь себе по единице РЕЙТИНГА и ФАВОРА.\n\nНа шее псины ты находишь украшенный алмазами ошейник, который записываешь в ЛИСТКЕ ПУТЕШЕСТВЕННИКА.</Text>
+			<Modifications>
+				<Rating Value="1"/>
+				<Fortune Value="1"/>
+			</Modifications>
 			<Options>
 				<Option Goto="201"/>
 			</Options>
