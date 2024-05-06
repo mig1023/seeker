@@ -2260,6 +2260,9 @@
 		</Paragraph>
 		<Paragraph No="281">
 			<Text>Скрепя сердце, ты отдаешь тетке 100 рублей (Вычеркни их в ЛИСТЕ ПУТЕШЕСТВЕННИКА, и впиши БИЛЕТ). Теперь ты можешь войти в Парк.</Text>
+			<Modifications>
+				<Money Value="-100"/>
+			</Modifications>
 			<Options>
 				<Option Goto="333"/>
 			</Options>
