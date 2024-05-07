@@ -308,6 +308,12 @@ namespace Seeker.Gamebook.PowerOfFear
                 attackCountLine += " + 1 (за Владение оружием)";
             }
 
+            if (Game.Option.IsTriggered("Меч"))
+            {
+                attackCount += 1;
+                attackCountLine += " + 1 (за меч)";
+            }
+
             lines.Add(attackCountLine);
             lines.Add($"Кол-во кубиков атаки противника: {Dices}");
 
