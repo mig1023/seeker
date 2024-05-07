@@ -30,6 +30,9 @@
 			<Test>Проверка навыка</Test>
 			<Fight>Сражаться</Fight>
 		</Buttons>
+		<Default>
+			<EqualPartsInStatuses/>
+		</Default>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph No="0">
