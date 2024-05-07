@@ -181,7 +181,7 @@ namespace Seeker.Gamebook.PowerOfFear
             }
             else
             {
-                return true;
+                return AvailabilityTrigger(option);
             }
         }
 
