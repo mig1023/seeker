@@ -249,10 +249,11 @@ namespace Seeker.Gamebook.PowerOfFear
         }
 
         private void AttackDices(int dicesCount, out int dices,
-            out string dicesLines, out bool doubleDice)
+            out string dicesLines, out bool doubleDice, out int smaller)
         {
             dices = 0;
             dicesLines = String.Empty;
+            smaller = 6;
 
             List<int> allDices = new List<int>();
 
@@ -266,6 +267,9 @@ namespace Seeker.Gamebook.PowerOfFear
                 dicesLines += $" {Game.Dice.Symbol(dice)}";
 
                 allDices.Add(dice);
+
+                if (dice < smaller)
+                    smaller = dice;
             }
 
             int doubles = allDices
@@ -320,27 +324,35 @@ namespace Seeker.Gamebook.PowerOfFear
 
             while (true)
             {
-                AttackDices(Dices, out int enemyAttack, out string enemyLine, out bool doubleDice);
+                AttackDices(Dices, out int enemyAttack, out string enemyLine, out bool doubleDice, out _);
                 lines.Add($"Кубики противника:{enemyLine}");
 
-                AttackDices(attackCount, out int heroAttack, out string heroLine, out bool _);
+                AttackDices(attackCount, out int heroAttack, out string heroLine, out bool _, out int smaller);
                 lines.Add($"Ваши кубики:{heroLine}");
 
                 bool addPenalty = doubleDice && AdditionalPenalty;
+                bool needToReroll = enemyAttack > heroAttack;
+                bool needWithPenalty = addPenalty && (enemyAttack + 2 > heroAttack);
 
-                if (Game.Option.IsTriggered("Шестое чувство") && !alreadyRerolled)
+                if (needToReroll || needWithPenalty)
                 {
-                    bool needToReroll = enemyAttack > heroAttack;
-                    bool needWithPenalty = addPenalty && (enemyAttack + 2 > heroAttack);
-
-                    if (needToReroll || needWithPenalty)
+                    if (Game.Option.IsTriggered("Шестое чувство") && !alreadyRerolled)
                     {
-                        lines.Add("Умение «Шестое чувство» позволяет вам перебросить кубики!");
+                        lines.Add("GRAY|Умение «Шестое чувство» позволяет вам перебросить кубики!");
 
-                        AttackDices(attackCount, out heroAttack, out heroLine, out bool _);
+                        AttackDices(attackCount, out heroAttack, out heroLine, out bool _, out _);
                         lines.Add($"Теперь ваши кубики:{heroLine}");
 
                         alreadyRerolled = true;
+                    }
+                    else if (Game.Option.IsTriggered("Первобытная ярость"))
+                    {
+                        lines.Add("GRAY|Умение «Первобытная ярость» позволяет вам перебросить наименьший кубик!");
+                        lines.Add($"Наименьший выпавший кубик: {Game.Dice.Symbol(smaller)}");
+
+                        int newDice = Game.Dice.Roll();
+                        lines.Add($"Перебрасываем его: {Game.Dice.Symbol(newDice)}");
+                        heroAttack += newDice - smaller;
                     }
                 }
 
@@ -350,7 +362,7 @@ namespace Seeker.Gamebook.PowerOfFear
 
                     if (Game.Option.IsTriggered("Уворот"))
                     {
-                        lines.Add("Но это ничего ему не даст из-за вашего умерия «Уворот»!");
+                        lines.Add("GRAY|Но это ничего ему не даст из-за вашего умерия «Уворот»!");
                     }
                     else
                     {
@@ -364,7 +376,7 @@ namespace Seeker.Gamebook.PowerOfFear
                 if (Game.Option.IsTriggered("Знание трав"))
                 {
                     enemyAttack -= 2;
-                    lines.Add($"Из силы атаки противника вычитается 2 ед. за состояние «Знание трав»");
+                    lines.Add($"GRAY|Из силы атаки противника вычитается 2 ед. за состояние «Знание трав»!");
                 }
 
                 if (enemyAttack > heroAttack)
@@ -380,7 +392,7 @@ namespace Seeker.Gamebook.PowerOfFear
 
                         if (Game.Option.IsTriggered("Уворот"))
                         {
-                            lines.Add("Но это ничего ему не даст из-за вашего умерия «Уворот»!");
+                            lines.Add("GRAY|Но это ничего ему не даст из-за вашего умерия «Уворот»!");
                         }
                         else
                         {
