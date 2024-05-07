@@ -139,7 +139,7 @@ namespace Seeker.Gamebook.WalkInThePark
 
         public List<string> Stealth()
         {
-            List<string> luck = Test(Character.Protagonist.Fortune,
+            List<string> luck = Test(Character.Protagonist.Stealth,
                 "Проверка Тихопопости", "ПОЛНЫЙ УСПЕХ в ТИХОПОПОСТИ", "ПОЛНЫЙ ПРОВАЛ в ТИХОПОПОСТИ",
                 "Проканало, Выгорело, Она вынесла все твои пытки и козни",
                 "Не проканало, Не выгорело, Откинулась в мучениях", out bool success);
