@@ -29,6 +29,10 @@ namespace Seeker.Output
             {
                 ltlInfo = gamebook.SizeLine();
             }
+            else if (List.Sort(Constants.SortBy.Texts))
+            {
+                ltlInfo = gamebook.ParagraphsAverageSizeLine();
+            }
 
             string disclaimerText = $"© {text.Trim() + AndOtherMark(gamebook)}, {ltlInfo}";
 

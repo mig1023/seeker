@@ -120,5 +120,16 @@ namespace Seeker.Gamebook
                 return $"{size} {line} слов";
             }
         }
+
+        public int ParagraphsAverageSize() =>
+            int.Parse(Size) / ParagraphSize();
+
+        public string ParagraphsAverageSizeLine()
+        {
+            int size = ParagraphsAverageSize();
+            string line = Game.Services.CoinsNoun(size, "слово", "слова", "слов");
+
+            return $"в ср. {size} {line}";
+        }
     }
 }

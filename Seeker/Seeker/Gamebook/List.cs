@@ -84,7 +84,7 @@ namespace Seeker.Gamebook
                 case SortBy.Texts:
 
                     return list
-                        .OrderByDescending(x => int.Parse(x.Size) / x.ParagraphSize())
+                        .OrderByDescending(x => x.ParagraphsAverageSize())
                         .ToList();
 
                 case SortBy.Year:
