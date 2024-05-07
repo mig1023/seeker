@@ -299,6 +299,7 @@ namespace Seeker.Gamebook.PowerOfFear
             }
 
             int attackCount = 3;
+            bool alreadyRerolled = false;
             int hiptoints = Character.Protagonist.Hitpoints;
             string attackCountLine = "Кол-во ваших кубиков атаки: 3 (базовое)";
 
@@ -325,7 +326,25 @@ namespace Seeker.Gamebook.PowerOfFear
                 AttackDices(attackCount, out int heroAttack, out string heroLine, out bool _);
                 lines.Add($"Ваши кубики:{heroLine}");
 
-                if (doubleDice && AdditionalPenalty)
+                bool addPenalty = doubleDice && AdditionalPenalty;
+
+                if (Game.Option.IsTriggered("Шестое чувство") && !alreadyRerolled)
+                {
+                    bool needToReroll = enemyAttack > heroAttack;
+                    bool needWithPenalty = addPenalty && (enemyAttack + 2 > heroAttack);
+
+                    if (needToReroll || needWithPenalty)
+                    {
+                        lines.Add("Умение «Шестое чувство» позволяет вам перебросить кубики!");
+
+                        AttackDices(attackCount, out heroAttack, out heroLine, out bool _);
+                        lines.Add($"Теперь ваши кубики:{heroLine}");
+
+                        alreadyRerolled = true;
+                    }
+                }
+
+                if (addPenalty)
                 {
                     lines.Add("Противник выкинул дубль!");
 
@@ -345,7 +364,6 @@ namespace Seeker.Gamebook.PowerOfFear
                 if (Game.Option.IsTriggered("Знание трав"))
                 {
                     enemyAttack -= 2;
-
                     lines.Add($"Из силы атаки противника вычитается 2 ед. за состояние «Знание трав»");
                 }
 
@@ -367,7 +385,6 @@ namespace Seeker.Gamebook.PowerOfFear
                         else
                         {
                             lines.Add("BAD|Противник наносит вам дополнительный урон!");
-
                             Character.Protagonist.Hitpoints -= 1;
                         }
                     }
