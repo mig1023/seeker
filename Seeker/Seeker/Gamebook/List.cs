@@ -69,22 +69,22 @@ namespace Seeker.Gamebook
 
                     return SortByAuthors(list);
 
+                case SortBy.Size:
+
+                    return list
+                        .OrderByDescending(x => int.Parse(x.Size))
+                        .ToList();
+
                 case SortBy.Paragraphs:
 
                     return list
                         .OrderByDescending(x => x.ParagraphSize())
                         .ToList();
 
-                case SortBy.Size:
-
-                    return list
-                        .OrderByDescending(x => int.Parse(x.Size) / x.ParagraphSize())
-                        .ToList();
-
                 case SortBy.Texts:
 
                     return list
-                        .OrderByDescending(x => int.Parse(x.Size))
+                        .OrderByDescending(x => int.Parse(x.Size) / x.ParagraphSize())
                         .ToList();
 
                 case SortBy.Year:
