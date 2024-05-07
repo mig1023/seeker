@@ -32,6 +32,11 @@ namespace Seeker.Gamebook.PowerOfFear
             {
                 Character.Protagonist.Hitpoints += (Character.Protagonist.Strength > 0 ? 2 : 0);
             }
+            else if (Name == "Time")
+            {
+                if (Game.Option.IsTriggered("Отсчёт времени"))
+                    Character.Protagonist.Time += 1;
+            }
             else
             {
                 base.Do(Character.Protagonist);

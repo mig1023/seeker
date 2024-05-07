@@ -179,6 +179,14 @@ namespace Seeker.Gamebook.PowerOfFear
             {
                 return GetProperty(Character.Protagonist, option.Replace("!", String.Empty)) == 0;
             }
+            else if (option == "Время ещё есть")
+            {
+                return Character.Protagonist.Time < 3;
+            }
+            else if (option == "Время кончилось")
+            {
+                return Character.Protagonist.Time >= 3;
+            }
             else
             {
                 return AvailabilityTrigger(option);

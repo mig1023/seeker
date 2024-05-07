@@ -73,6 +73,8 @@ namespace Seeker.Gamebook.PowerOfFear
 
         public int GameoverPath { get; set; }
 
+        public int Time { get; set; }
+
         public override void Init()
         {
             base.Init();
@@ -87,6 +89,7 @@ namespace Seeker.Gamebook.PowerOfFear
             Knowledge = 0;
             Strength = 0;
             GameoverPath = 0;
+            Time = 0;
         }
 
         public Character Clone() => new Character()
@@ -103,11 +106,12 @@ namespace Seeker.Gamebook.PowerOfFear
             Knowledge = this.Knowledge,
             Strength = this.Strength,
             GameoverPath = this.GameoverPath,
+            Time = this.Time,
         };
 
         public override string Save() => String.Join("|",
             Hitpoints, Hunting, Agility, Luck, Weapon, Theft, Stealth,
-            Knowledge, Strength, GameoverPath);
+            Knowledge, Strength, GameoverPath, Time);
 
         public override void Load(string saveLine)
         {
@@ -123,6 +127,7 @@ namespace Seeker.Gamebook.PowerOfFear
             Knowledge = int.Parse(save[7]);
             Strength = int.Parse(save[8]);
             GameoverPath = int.Parse(save[9]);
+            Time = int.Parse(save[10]);
             
             IsProtagonist = true;
         }
