@@ -45,7 +45,7 @@ namespace Seeker.Gamebook.PowerOfFear
                 statusLines.Add($"Знания: {Character.Protagonist.Knowledge}");
 
             if (Character.Protagonist.Strength > 0)
-                statusLines.Add($"Сила: {Character.Protagonist.Strength}");
+                statusLines.Add($"Физическая сила: {Character.Protagonist.Strength}");
 
             return statusLines.Count <= 0 ? null : statusLines;
         }
