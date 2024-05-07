@@ -34,7 +34,7 @@ namespace Seeker.Gamebook.PowerOfFear
             }
             else
             {
-                base.Do();
+                base.Do(Character.Protagonist);
             }
         }
     }
