@@ -1959,7 +1959,8 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="209">
-			<Text>Получите умение «Шестое чувство»! (Один раз за бой перебросьте все свои кубики)</Text>
+			<Text Style="Small">Получите умение «Шестое чувство»! Один раз за бой перебросьте все свои кубики.</Text>
+			<Triggers>Шестое чувство</Triggers>
 			<Options>
 				<Option Goto="183"/>
 			</Options>
