@@ -1,4 +1,5 @@
 ﻿using Seeker.Gamebook;
+using System;
 using Xamarin.Forms;
 
 namespace Seeker.Output
@@ -25,17 +26,17 @@ namespace Seeker.Output
             if (lastMarker == marker)
                 return;
 
-            options.Children.Add(Sort(marker));
+            options.Children.Add(Sort(marker, lastMarker));
             lastMarker = marker;
         }
 
-        private static Label Sort(string setting) => new Label
+        private static Label Sort(string setting, string lastMarker) => new Label
         {
             Text = $"― {setting} ―",
             HorizontalTextAlignment = TextAlignment.Center,
             FontSize = Interface.Font(NamedSize.Large),
             HorizontalOptions = LayoutOptions.Center,
-            Margin = new Thickness(0, 20),
+            Margin = new Thickness(0, (String.IsNullOrEmpty(lastMarker) ? 5 : 20), 0, 20),
         };
 
         public static View Line(Thickness? thickness, Color? color) => new BoxView
