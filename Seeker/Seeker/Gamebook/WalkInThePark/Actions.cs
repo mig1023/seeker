@@ -158,6 +158,34 @@ namespace Seeker.Gamebook.WalkInThePark
             return luck;
         }
 
+        public List<string> Dodge()
+        {
+            int dice = Game.Dice.Roll();
+
+            List<string> dodge = new List<string> { $"BIG|Уклоняемся: {Game.Dice.Symbol(dice)}" };
+
+            if (dice < Character.Protagonist.Strength)
+            {
+                dodge.Add($"Это меньше, чем уровень МОЧЕСТИ в {Character.Protagonist.Strength} ед.!");
+                dodge.Add("GOOD|BIG|BOLD|Извернулся!");
+            }
+            else if (dice > Character.Protagonist.Strength)
+            {
+                Character.Protagonist.Health -= 4;
+
+                dodge.Add($"Это больше, чем уровень МОЧЕСТИ в {Character.Protagonist.Strength} ед.!");
+                dodge.Add("BAD|BIG|BOLD|Гвоздь попал прямо в рыло!");
+                dodge.Add("BAD|Теряешь 4 ед. Самочувствия...!");
+            }
+            else
+            {
+                dodge.Add($"Это равно уровню МОЧЕСТИ в {Character.Protagonist.Strength} ед.");
+                dodge.Add("BOLD|BIG|Пёс его знает чего случилось, вроде пронесло...");
+            }
+
+            return dodge;
+        }
+
         public List<string> Test(int param, string test, string testOk, string testFail,
             string buttonOk, string buttonFail, out bool testPassed)
         {
