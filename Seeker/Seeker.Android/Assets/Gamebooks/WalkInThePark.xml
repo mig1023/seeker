@@ -1878,24 +1878,31 @@
 					<Head>«Доширак» Лапша</Head>
 					<Price>150</Price>
 					<Multiple/>
+					<Text Style="Small">САМОЧУВСТВИЕ +10.</Text>
 				</Get>
 				<Get>
 					<Head>«Просто Ирак»</Head>
 					<Price>300</Price>
+					<Text Style="Small">САМОЧУВСТВИЕ восстанавливается до начального значения.</Text>
 				</Get>
 				<Get>
 					<Head>Гороховый суп</Head>
 					<Price>250</Price>
+					<Text Style="Small">САМОЧУВСТВИЕ восстанавливается до начального значения, но ТИХОПОПОСТЬ, ты уж извини, -5.</Text>
 				</Get>
 				<Get>
 					<Head>Пиво «Невское»</Head>
 					<Price>150</Price>
 					<Multiple/>
+					<Text Style="Small">ФАВОР +5.</Text>
 				</Get>
 				<Get>
 					<Head>Маринованные грибочки «Баба Маня»</Head>
 					<Price>500</Price>
-					<Text>ВААА! Сколько всего интересного, не правда ли?</Text>
+					<Texts>
+						<Text Style="Small">МОЧЕСТЬ +2.</Text>
+						<Text>ВААА! Сколько всего интересного, не правда ли?</Text>
+					</Texts>
 				</Get>
 			</Actions>
 			<Options>
