@@ -40,6 +40,9 @@ namespace Seeker.Gamebook.WalkInThePark
                     action.BenefitList.Add(ModificationParse(bonefit));
             }
 
+            if (action.Type == "Option")
+                action.Option = OptionParse(xmlAction);
+
             return action;
         }
 
