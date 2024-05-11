@@ -8,7 +8,7 @@ namespace Seeker.Output
         public static void Add(Description gamebook, ref string lastMarker, ref StackLayout options)
         {
             if (List.Sort(Constants.SortBy.Setting) && (lastMarker != gamebook.Setting))
-                Add(gamebook.Setting, ref lastMarker, gamebook.Setting, ref options);
+                Add(gamebook.Setting, ref options, ref lastMarker);
 
             if (List.Sort(Constants.SortBy.Author))
                 Add(gamebook.AuthorsIndex()[0].ToString(), ref options, ref lastMarker);
@@ -22,13 +22,10 @@ namespace Seeker.Output
 
         private static void Add(string marker, ref StackLayout options, ref string lastMarker)
         {
-            if (lastMarker != marker)
-                Add(marker, ref lastMarker, marker, ref options);
-        }
+            if (lastMarker == marker)
+                return;
 
-        private static void Add(string splitter, ref string lastMarker, string marker, ref StackLayout options)
-        {
-            options.Children.Add(Sort(splitter));
+            options.Children.Add(Sort(marker));
             lastMarker = marker;
         }
 
