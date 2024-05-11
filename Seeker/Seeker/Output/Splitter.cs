@@ -19,6 +19,9 @@ namespace Seeker.Output
 
             if (List.Sort(Constants.SortBy.Time))
                 Add(gamebook.PlaythroughTime, ref options, ref lastMarker);
+
+            if (List.Sort(Constants.SortBy.Year))
+                Add(Years(gamebook.Year), ref options, ref lastMarker);
         }
 
         private static void Add(string marker, ref StackLayout options, ref string lastMarker)
@@ -46,5 +49,12 @@ namespace Seeker.Output
             Color = color ?? Color.Black,
             Margin = thickness ?? new Thickness(0),
         };
+
+        private static string Years(int year)
+        {
+            char decade = year.ToString()[2];
+            string centry = year < 2000 ? String.Empty : "20";
+            return $"{centry}{decade}0-е";
+        }
     }
 }
