@@ -455,5 +455,11 @@
 				<Option Goto="226,227,228,229,136,329"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="73">
+			<Text>Торговая эскадра ганзейских коггов осторожно обходит высокий айсберг.\n\nВы следуете их примеру.</Text>
+			<Options>
+				<Option Goto="230,231,143,266,135,328"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
