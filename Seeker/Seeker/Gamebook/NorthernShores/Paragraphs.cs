@@ -30,5 +30,22 @@ namespace Seeker.Gamebook.NorthernShores
 
             return option;
         }
+
+        public override Abstract.IActions ActionParse(XmlNode xmlAction)
+        {
+            Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
+
+            foreach (string param in GetProperties(action))
+                SetProperty(action, param, xmlAction);
+
+            action.Dices = xmlAction.Attributes["Dices"].InnerText;
+            action.Throws = Xml.IntParse(xmlAction.Attributes["Throws"].InnerText);
+            action.Heat = Xml.IntParse(xmlAction.Attributes["Heat"].InnerText);
+
+            return action;
+        }
+
+        public override Abstract.IModification ModificationParse(XmlNode xmlModification) =>
+           (Abstract.IModification)base.ModificationParse(xmlModification, new Modification());
     }
 }
