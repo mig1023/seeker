@@ -323,5 +323,11 @@
 				<Option Goto="169,170,171,292,158,351"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="51">
+			<Text>В этот день корабль угодил в шторм. К счастью, ничего ужасного не случилось, но погода в последнее время стоит неважная.</Text>
+			<Options>
+				<Option Goto="172,137,260,186,157,350"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
