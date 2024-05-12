@@ -23,7 +23,7 @@
 		<Paragraphs>629</Paragraphs>
 		<Size>48184</Size>
 		<Playthrough>На часок-полтора</Playthrough>
-		<Setting>Приключения</Setting>
+		<Setting>Морские приключения</Setting>
 		<Color>4682B4</Color>
 	</CaptainSheltonsSecret>
 	<FaithfulSwordOfTheKing>
@@ -916,4 +916,15 @@
 		<Setting>Фэнтези</Setting>
 		<Color>2c3b4b</Color>
 	</PowerOfFear>
+	<NorthernShores>
+		<Title>Северные берега</Title>
+		<Author>Геннадий Логинов</Author>
+		<Year>2018</Year>
+		<Text>Про отважного Карстена Клеменса, капитана корабля «Иосиф Обручник», всегда ходило немало сплетен и небылиц. Каждый уважающий себя забулдыга считал своим долгом что-нибудь доплести. И таким образом лёгкий ветерок превращался в смертельный шторм, небольшое волнение — в девятибалльную волну, канонерская лодка с парой жалких фальконетов — в линейный корабль с водоизмещением в пять тысяч тонн и тремя рядами пушек и кулеврин на орудийных палубах, а мелкая каракатица — в настоящего кракена...</Text>
+		<Paragraphs>400</Paragraphs>
+		<Size>0</Size>
+		<Playthrough>На полчаса</Playthrough>
+		<Setting>Морские приключения</Setting>
+		<Color>536172</Color>
+	</NorthernShores>
 </Gamebooks>
