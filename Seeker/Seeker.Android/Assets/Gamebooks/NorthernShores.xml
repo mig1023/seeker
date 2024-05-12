@@ -299,5 +299,11 @@
 				<Option Goto="159,135,291,64,162,355"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="47">
+			<Text>Очередная миграция тролльвалов проложила новый путь через ледники.\n\nКто бы мог подумать, что даже эти твари иногда бывают полезными?</Text>
+			<Options>
+				<Option Goto="160,161,162,259,161,354"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
