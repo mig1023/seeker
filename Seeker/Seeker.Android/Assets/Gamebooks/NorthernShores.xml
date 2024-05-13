@@ -803,5 +803,11 @@
 				<Option Goto="393,3,301,394,172,271"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="131">
+			<Text>Коротая время, вы написали записку, положили её в бутылку, запечатали и бросили за борт. В ней было написано: «Высылайте свои вопросы и предложения на почту SeaTales@mail.ru».</Text>
+			<Options>
+				<Option Goto="396,395,49,197,86,270"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
