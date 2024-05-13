@@ -923,5 +923,11 @@
 				<Option Goto="46,11,200,47,95,251"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="151">
+			<Text>Огибая высокий айсберг, вы замечаете надпись, оставленную, судя по всему, каким-то северным великаном: «Здесь был Олаф».</Text>
+			<Options>
+				<Option Goto="48,49,50,309,179,250"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
