@@ -821,5 +821,11 @@
 				<Option Goto="1,400,50,173,87,268"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="134">
+			<Text>Сегодня очередной матрос примёрз к гальюну. С такой погодой явно лучше не шутить!</Text>
+			<Options>
+				<Option Goto="2,3,303,5,4,267"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
