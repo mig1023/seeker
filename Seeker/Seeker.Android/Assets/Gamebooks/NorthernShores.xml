@@ -1793,5 +1793,11 @@
 				<Option Goto="294,293,389,295,296,7"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="296">
+			<Text>Ваши люди находят в море бутылку с запиской следующего содержания: «Ошибка. Записка не найдена».\n\nИ переводят же бумагу почём зря!</Text>
+			<Options>
+				<Option Goto="390,184,71,358,139,8"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
