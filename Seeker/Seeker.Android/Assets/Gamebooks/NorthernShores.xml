@@ -2243,5 +2243,11 @@
 				<Option Goto="347,250,219,103,111,82"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="371">
+			<Text>Шведский линейный корабль ведёт эскадру хольков к берегам Дании. Намечается серьёзная битва. Но это не ваша война.</Text>
+			<Options>
+				<Option Goto="345,343,344,249,346,83"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
