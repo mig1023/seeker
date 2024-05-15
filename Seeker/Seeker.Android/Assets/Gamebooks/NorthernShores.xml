@@ -2003,5 +2003,11 @@
 				<Option Goto="26,25,215,272,148,42"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="331">
+			<Text>Ваши люди находят в море бутылку с запиской следующего содержания: «Как суровые шведы умерщвляют птиц? Бросают их в пропасть!».</Text>
+			<Options>
+				<Option Goto="24,23,270,200,51,43"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
