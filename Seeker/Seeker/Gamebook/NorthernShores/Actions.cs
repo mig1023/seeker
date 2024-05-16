@@ -47,7 +47,9 @@ namespace Seeker.Gamebook.NorthernShores
         public override List<string> Representer()
         {
             List<int> targetDices = GetTragetDices(out string dicesLine);
-            return new List<string> { $"Выбросить {dicesLine} за {Constants.Throws[Throws]}" };
+
+            return new List<string> { $"Нужно выбросить {dicesLine}\n" +
+                $"за {Constants.Throws[Throws]}\nесли получится, то +{Heat} Тепла" };
         }
 
         public List<string> Test()
@@ -56,7 +58,7 @@ namespace Seeker.Gamebook.NorthernShores
 
             List<int> targetDices = GetTragetDices(out string dicesLine);
 
-            test.Add($"GRAY|Необходимо выбросить {dicesLine} за {Constants.Throws[Throws]}");
+            test.Add($"GRAY|Пробуем выбросить {dicesLine} за {Constants.Throws[Throws]}");
 
             for (int i = 1; i <= Throws; i += 1)
             {
@@ -72,7 +74,7 @@ namespace Seeker.Gamebook.NorthernShores
                 {
                     Character.Protagonist.Heat += Heat;
 
-                    test.Add("GOOD|BOLD|Успех! :)");
+                    test.Add("BIG|GOOD|BOLD|Успех! :)");
                     test.Add($"Вы получаете {Heat} Тепла!");
                     return test;
                 }
@@ -82,7 +84,7 @@ namespace Seeker.Gamebook.NorthernShores
                 }
             }
 
-            test.Add("BAD|BOLD|Неудачно :(");
+            test.Add("BIG|BAD|BOLD|Неудачно :(");
             return test;
         }
     }
