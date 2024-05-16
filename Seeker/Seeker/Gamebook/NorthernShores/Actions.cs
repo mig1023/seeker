@@ -48,8 +48,13 @@ namespace Seeker.Gamebook.NorthernShores
         {
             List<int> targetDices = GetTragetDices(out string dicesLine);
 
-            return new List<string> { $"Нужно выбросить {dicesLine}\n" +
-                $"за {Constants.Throws[Throws]}\nесли получится, то +{Heat} Тепла" };
+            List<string> lines = new List<string> { $"Нужно выбросить {dicesLine}\n" +
+                $"за {Constants.Throws[Throws]}" };
+
+            lines.Add(Heat > 0 ? $"\nесли получится, то +{Heat} Тепла" :
+                "\nесли получится, то игра продолжится");
+
+            return lines;
         }
 
         public List<string> Test()
@@ -72,20 +77,35 @@ namespace Seeker.Gamebook.NorthernShores
 
                 if (targetDices.Contains(dice))
                 {
-                    Character.Protagonist.Heat += Heat;
-
                     test.Add("BIG|GOOD|BOLD|Успех! :)");
-                    test.Add($"Вы получаете {Heat} Тепла!");
+
+                    if (Heat > 0)
+                    {
+                        Character.Protagonist.Heat += Heat;
+                        test.Add($"Вы получаете {Heat} Тепла!");
+                    }
+                    else
+                    {
+                        test.Add($"Ваше путешествие продолжается!");
+                    }
+                   
                     return test;
                 }
                 else
                 {
                     string fail = i > 1 ? "Опять" : "Нет,";
-                    test.Add($"{fail} выпал неправильный кубик...");
+                    test.Add($"{fail} выпал неправильный кубик...\n");
                 }
             }
 
             test.Add("BIG|BAD|BOLD|Неудачно :(");
+
+            if (Heat <= 0)
+            {
+                test.Add($"Здесь ваше путешествие заканчивается");
+                Character.Protagonist.Heat = 0;
+            }
+
             return test;
         }
     }
