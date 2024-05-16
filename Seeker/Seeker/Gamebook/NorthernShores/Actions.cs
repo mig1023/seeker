@@ -14,7 +14,7 @@ namespace Seeker.Gamebook.NorthernShores
 
         public override List<string> Status() => new List<string>
         {
-            $"Теплота: {Character.Protagonist.Heat}",
+            $"Теплота: {Character.Protagonist.Heat} ℃",
         };
 
         private List<int> GetTragetDices(out string dicesLine)
@@ -51,10 +51,31 @@ namespace Seeker.Gamebook.NorthernShores
             List<string> lines = new List<string> { $"Нужно выбросить {dicesLine}\n" +
                 $"за {Constants.Throws[Throws]}" };
 
-            lines.Add(Heat > 0 ? $"\nесли получится, то +{Heat} Тепла" :
+            lines.Add(Heat > 0 ? $"если получится, то +{Heat} Тепла" :
                 "\nесли получится, то игра продолжится");
 
             return lines;
+        }
+
+        public override bool GameOver(out int toEndParagraph, out string toEndText)
+        {
+            toEndParagraph = 0;
+
+            if ((Character.Protagonist.Heat <= -100) || Character.Protagonist.Gameover)
+            {
+                toEndText = "Температура снизилась слишком сильно... Ваше плавание провалено... Надо начинать игру сначала...";
+                return true;
+            }
+            else if (Character.Protagonist.Heat >= 100)
+            {
+                toEndText = "Температура достаточно повысилась! Вы победили! Остаётся только начать с начала!";
+                return true;
+            }
+            else
+            {
+                toEndText = String.Empty;
+                return false;
+            }
         }
 
         public List<string> Test()
@@ -102,8 +123,8 @@ namespace Seeker.Gamebook.NorthernShores
 
             if (Heat <= 0)
             {
-                test.Add($"Здесь ваше путешествие заканчивается");
-                Character.Protagonist.Heat = 0;
+                test.Add($"Здесь ваше путешествие заканчивается...");
+                Character.Protagonist.Gameover = true;
             }
 
             return test;

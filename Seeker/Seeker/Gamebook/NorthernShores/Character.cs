@@ -8,17 +8,15 @@ namespace Seeker.Gamebook.NorthernShores
         public override void Set(object character) =>
             Protagonist = (Character)character;
 
-        private int _heat;
-        public int Heat
-        {
-            get => _heat;
-            set => _heat = Game.Param.Setter(value, _heat, this);
-        }
+        public int Heat { get; set; }
+
+        public bool Gameover { get; set; }
 
         public override void Init()
         {
             base.Init();
             Heat = 0;
+            Gameover = false;
         }
 
         public Character Clone() => new Character()
@@ -26,13 +24,19 @@ namespace Seeker.Gamebook.NorthernShores
             IsProtagonist = this.IsProtagonist,
             Name = this.Name,
             Heat = this.Heat,
+            Gameover = this.Gameover,
         };
 
-        public override string Save() => Heat.ToString();
+        public override string Save() => String.Join("|",
+            Heat, Gameover ? 1 : 0);
 
         public override void Load(string saveLine)
         {
-            Heat = int.Parse(saveLine);
+            string[] save = saveLine.Split('|');
+
+            Heat = Game.Xml.IntParse(save[0]);
+            Gameover = save[1] == "1";
+
             IsProtagonist = true;
         }
     }

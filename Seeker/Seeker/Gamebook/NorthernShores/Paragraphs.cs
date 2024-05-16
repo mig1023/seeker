@@ -7,8 +7,13 @@ namespace Seeker.Gamebook.NorthernShores
 {
     class Paragraphs : Prototypes.Paragraphs, Abstract.IParagraphs
     {
-        public override Paragraph Get(int id, XmlNode xmlParagraph) =>
-            base.Get(xmlParagraph);
+        public override Paragraph Get(int id, XmlNode xmlParagraph)
+        {
+            if (Data.CurrentParagraphID > 1)
+                Character.Protagonist.Heat -= 1;
+
+            return base.Get(xmlParagraph);
+        }
 
         public override Option OptionParse(XmlNode xmlOption)
         {
