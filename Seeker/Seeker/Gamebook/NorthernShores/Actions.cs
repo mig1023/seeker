@@ -12,10 +12,11 @@ namespace Seeker.Gamebook.NorthernShores
 
         public int Heat { get; set; }
 
-        public override List<string> Status() => new List<string>
+        public override List<string> Status()
         {
-            $"Теплота: {Character.Protagonist.Heat} ℃",
-        };
+            string negativ = Character.Protagonist.Heat < 0 ? "—" : String.Empty;
+            return new List<string> { $"Теплота: {negativ}{Math.Abs(Character.Protagonist.Heat)} ℃" };
+        }
 
         private List<int> GetTragetDices(out string dicesLine)
         {
@@ -48,13 +49,11 @@ namespace Seeker.Gamebook.NorthernShores
         {
             List<int> targetDices = GetTragetDices(out string dicesLine);
 
-            List<string> lines = new List<string> { $"Нужно выбросить {dicesLine}\n" +
-                $"за {Constants.Throws[Throws]}" };
+            string bonus = Heat > 0 ? $"если получится, то +{Heat} Тепла" :
+                "если получится, то игра продолжится";
 
-            lines.Add(Heat > 0 ? $"если получится, то +{Heat} Тепла" :
-                "\nесли получится, то игра продолжится");
-
-            return lines;
+            return new List<string> { $"Нужно выбросить {dicesLine}\n" +
+                $"за {Constants.Throws[Throws]}\n{bonus}" };
         }
 
         public override bool GameOver(out int toEndParagraph, out string toEndText)
