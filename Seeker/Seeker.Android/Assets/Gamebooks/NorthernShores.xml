@@ -5,9 +5,13 @@
 			<Author>Геннадий Логинов, 2018</Author>
 		</Copyright>
 		<Styles>
-			<Color Name="Main, Option, Continue" Value="536172"/>
-			<System Value="babfc6"/>
-			<Action Value="536172"/>
+			<Main Value="455a64"/>
+			<Color Name="Option, Continue" Value="546e7a"/>
+			<System Value="90a4ae"/>
+			<Action Value="455a64"/>
+			<StatusBar Value="37474f"/>
+			<ActionBox Value="90a4ae"/>
+			<Background Value="cfd8dc"/>
 		</Styles>
 		<Lists>
 			<Throws Items="ноль, одну попытку, две попытки, три попытки"/>

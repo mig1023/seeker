@@ -925,6 +925,9 @@
 		<Size>0</Size>
 		<Playthrough>На полчаса</Playthrough>
 		<Setting>Морские приключения</Setting>
-		<Color>536172</Color>
+		<Colors>
+			<Book>cfd8dc</Book>
+			<Font>263238</Font>
+		</Colors>
 	</NorthernShores>
 </Gamebooks>
