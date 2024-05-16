@@ -58,17 +58,17 @@ namespace Seeker.Gamebook.NorthernShores
 
             List<int> targetDices = GetTragetDices(out string dicesLine);
 
-            test.Add($"GRAY|Пробуем выбросить {dicesLine} за {Constants.Throws[Throws]}");
+            test.Add($"BOLD|Пробуем выбросить {dicesLine} за {Constants.Throws[Throws]}\n");
 
             for (int i = 1; i <= Throws; i += 1)
             {
                 string num = String.Empty;
 
                 if (Throws > 1)
-                    num = $" попытка {i}";
+                    num = $", попытка {i}";
 
                 int dice = Game.Dice.Roll();
-                test.Add($"Бросок{num}: {Game.Dice.Symbol(dice)}");
+                test.Add($"Бросаем{num}: {Game.Dice.Symbol(dice)}");
 
                 if (targetDices.Contains(dice))
                 {
@@ -80,7 +80,8 @@ namespace Seeker.Gamebook.NorthernShores
                 }
                 else
                 {
-                    test.Add("Нет, выпал неправильный кубик...");
+                    string fail = i > 1 ? "Опять" : "Нет,";
+                    test.Add($"{fail} выпал неправильный кубик...");
                 }
             }
 
