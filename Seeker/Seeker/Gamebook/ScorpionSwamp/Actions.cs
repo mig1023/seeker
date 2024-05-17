@@ -11,7 +11,7 @@ namespace Seeker.Gamebook.ScorpionSwamp
         public int UnluckDamage { get; set; }
         public int UnluckMasteryDamage { get; set; }
         public bool UntilFirstBlood { get; set; }
-        public bool EnduranceDomage { get; set; }
+        public bool EnduranceDamage { get; set; }
 
         public override List<string> Status() => new List<string>
         {
@@ -76,7 +76,7 @@ namespace Seeker.Gamebook.ScorpionSwamp
 
             enduranceCheck.Add(endurance ? "BIG|GOOD|УСПЕХ :)" : "BIG|BAD|НЕУДАЧА :(");
 
-            if (!endurance && EnduranceDomage)
+            if (!endurance && EnduranceDamage)
             {
                 Character.Protagonist.Mastery -= 1;
                 enduranceCheck.Add($"BAD|Выносливость снижена на 3 единицы");
