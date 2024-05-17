@@ -84,6 +84,34 @@ namespace Seeker.Gamebook.ScorpionSwamp
             return enduranceCheck;
         }
 
+        public List<string> Mastery()
+        {
+            Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
+
+            bool mastery = (firstDice + secondDice) <= Character.Protagonist.Mastery;
+            string enduranceLine = mastery ? "<=" : ">";
+
+            List<string> enduranceCheck = new List<string> {
+                $"Проверка мастерства: {Game.Dice.Symbol(firstDice)} + " +
+                $"{Game.Dice.Symbol(secondDice)} {enduranceLine} {Character.Protagonist.Mastery}" };
+
+            enduranceCheck.Add(mastery ? "BIG|GOOD|УСПЕХ :)" : "BIG|BAD|НЕУДАЧА :(");
+
+            if (mastery)
+            {
+                Character.Protagonist.Luck += 2;
+                enduranceCheck.Add($"GOOD|Удача увеличена на 2 единицы");
+                Game.Buttons.Disable("Ты приземляешься прямо на голову ужасающему чудовищу");
+            }
+            else
+            {
+                Game.Buttons.Disable("Ты удачно перепрыгиваешь через медленно " +
+                    "приближающегося Монстра и сломя голову несешься по тропинке");
+            }
+
+            return enduranceCheck;
+        }
+
         public List<string> DiceWounds()
         {
             List<string> wounds = new List<string> { };
