@@ -60,9 +60,14 @@ namespace Seeker.Gamebook.NorthernShores
         {
             toEndParagraph = 0;
 
-            if ((Character.Protagonist.Heat <= -100) || Character.Protagonist.Gameover)
+            if (Character.Protagonist.Heat <= -100)
             {
                 toEndText = "Температура снизилась слишком сильно... Ваше плавание провалено... Надо начинать игру сначала...";
+                return true;
+            }
+            else if (Character.Protagonist.Gameover)
+            {
+                toEndText = "Ваше плавание подошло к печальному концу... Надо начинать игру сначала...";
                 return true;
             }
             else if (Character.Protagonist.Heat >= 100)
