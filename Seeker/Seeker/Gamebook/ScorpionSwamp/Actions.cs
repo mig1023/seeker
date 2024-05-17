@@ -84,6 +84,20 @@ namespace Seeker.Gamebook.ScorpionSwamp
             return enduranceCheck;
         }
 
+        public List<string> DiceWounds()
+        {
+            List<string> wounds = new List<string> { };
+
+            int dice = Game.Dice.Roll();
+            wounds.Add($"BIG|На кубике выпало: {Game.Dice.Symbol(dice)}");
+
+            Character.Protagonist.Endurance -= dice;
+
+            wounds.Add($"BIG|BAD|Вы потеряли жизней: {dice}");
+
+            return wounds;
+        }
+
         public override bool Availability(string option)
         {
             if (String.IsNullOrEmpty(option))
