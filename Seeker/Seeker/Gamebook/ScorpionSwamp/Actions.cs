@@ -62,6 +62,28 @@ namespace Seeker.Gamebook.ScorpionSwamp
             return luckCheck;
         }
 
+        public List<string> Endurance()
+        {
+            Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
+
+            bool endurance = (firstDice + secondDice) <= Character.Protagonist.Endurance;
+            string enduranceLine = endurance ? "<=" : ">";
+
+            List<string> enduranceCheck = new List<string> {
+                $"Проверка выносливости: {Game.Dice.Symbol(firstDice)} + " +
+                $"{Game.Dice.Symbol(secondDice)} {enduranceLine} {Character.Protagonist.Endurance}" };
+
+            enduranceCheck.Add(endurance ? "BIG|GOOD|УСПЕХ :)" : "BIG|BAD|НЕУДАЧА :(");
+
+            if (!endurance)
+            {
+                Character.Protagonist.Mastery -= 1;
+                enduranceCheck.Add($"BAD|Мастерства снижено на единицы");
+            }
+
+            return enduranceCheck;
+        }
+
         public override bool Availability(string option)
         {
             if (String.IsNullOrEmpty(option))
