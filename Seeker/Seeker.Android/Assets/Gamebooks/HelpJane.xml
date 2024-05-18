@@ -145,5 +145,12 @@
 				<Option Goto="60"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="19">
+			<Text>И куда же Вы пойдёте дальше:</Text>
+			<Options>
+				<Option Goto="111" Text="В дверь налево"/>
+				<Option Goto="41" Text="На второй этаж"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
