@@ -201,5 +201,17 @@
 				<Option Goto="55" Text="Возьмёте комнату штурмом"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="27">
+			<Text>Мистера и миссис Маккензи в поезде нет. Их купе заперто.</Text>
+			<Options>
+				<Option Goto="59" Text="Попросите проводника его открыть"/>
+				<Option Goto="130" Text="Сделаете это сами"/>
+				<Option Goto="63" Text="Поговорите с соседями">
+					<Text>А может, лучше поискать Джейн?</Text>
+				</Option>
+				<Option Goto="23" Text="Искать Джейн Эшер"/>
+				<Option Goto="45" Text="Искать Джейн Келли"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
