@@ -674,5 +674,12 @@
 				<Option Goto="86"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="94">
+			<Text>Что же Вы предпримете?</Text>
+			<Options>
+				<Option Goto="68" Text="Вернётесь в кафе и допросите всех, кого Вы там встретили"/>
+				<Option Goto="99" Text="Гудок электровоза, донёсшийся с вокзала, наводит на мысль, что не мешало бы заглянуть и туда"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
