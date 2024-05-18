@@ -726,5 +726,14 @@
 				<Option Goto="124"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="101">
+			<Text>Поднявшись по лестнице, Вы видите коридор. В нём четыре двери.\n\nКакую из них Вы хотите открыть:</Text>
+			<Options>
+				<Option Goto="46" Text="Дверь слева"/>
+				<Option Goto="95" Text="Дверь впереди"/>
+				<Option Goto="22" Text="Ближайшую к Вам дверь справа"/>
+				<Option Goto="78" Text="Дверь, находящуюся тоже справа, но в конце коридора"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
