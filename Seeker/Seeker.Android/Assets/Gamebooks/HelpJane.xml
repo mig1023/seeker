@@ -765,5 +765,11 @@
 				<Option Goto="25"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="107">
+			<Text>В ответ раздаётся выстрел.</Text>
+			<Options>
+				<Option Goto="159"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
