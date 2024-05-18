@@ -791,5 +791,13 @@
 				<Option Goto="124"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="111">
+			<Text>За левой дверью гостиная. Ни Джейн, ни преступника здесь нет, зато на столе валяется мобильный телефон.</Text>
+			<Options>
+				<Option Goto="74" Text="Вызовете подкрепление"/>
+				<Option Goto="41" Text="Поспешите обратно, чтобы подняться вверх по лестнице"/>
+				<Option Goto="127" Text="Зайти в комнату справа"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
