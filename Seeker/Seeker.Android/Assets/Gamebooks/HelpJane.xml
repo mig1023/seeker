@@ -76,5 +76,14 @@
 				<Option Goto="65" Text="Действовать пока самостоятельно"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="9">
+			<Text>На втором этаже коридор. Из него выходят четыре двери.\n\nКакую из них Вы хотите открыть:</Text>
+			<Options>
+				<Option Goto="165" Text="Дверь слева"/>
+				<Option Goto="15" Text="Дверь впереди"/>
+				<Option Goto="34" Text="Ближайшую к Вам дверь справа"/>
+				<Option Goto="167" Text="Дверь, находящуюся тоже справа, но в конце коридора"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
