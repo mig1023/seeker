@@ -720,5 +720,11 @@
 				<Option Goto="48" Text="Поговорить с проводниками"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="100">
+			<Text>Вы что-то путаете. У персонажа, в фамилии которого есть эта буква, совсем другая внешность.</Text>
+			<Options>
+				<Option Goto="124"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
