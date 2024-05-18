@@ -468,5 +468,17 @@
 				<Option Goto="141" Text="Сильно толкнуть её"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="65">
+			<Text>Что же Вы предпримете?\n\nВернётесь в кафе и допросите, в первую очередь...</Text>
+			<Options>
+				<Option Goto="72" Text="Доктора"/>
+				<Option Goto="104" Text="Тома"/>
+				<Option Goto="139" Text="Гарри"/>
+				<Option Goto="10" Text="Толстого коротышку">
+					<Text>Гудок электровоза, донёсшийся с вокзала, наводит на мысль...</Text>
+				</Option>
+				<Option Goto="99" Text="Не мешало бы заглянуть и туда"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
