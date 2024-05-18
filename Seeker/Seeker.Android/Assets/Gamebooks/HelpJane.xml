@@ -741,5 +741,11 @@
 				<Option Goto="142"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="103">
+			<Text>«Сопротивление бесполезно, Доджсон, - кричите Вы через дверь. Выходите!»\n\nВ ответ слышится выстрел и мягкий стук тела, падающего на ковёр.</Text>
+			<Options>
+				<Option Goto="159"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
