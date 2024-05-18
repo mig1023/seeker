@@ -525,5 +525,14 @@
 				<Option Goto="137"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="73">
+			<Text>Купе миссис Джейн Маккензи заперто.</Text>
+			<Options>
+				<Option Goto="59" Text="Попросите проводника его открыть"/>
+				<Option Goto="130" Text="Сделаете это сами"/>
+				<Option Goto="63" Text="Поговорите с соседями"/>
+				<Option Goto="23" Text="Поищете третью Джейн"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
