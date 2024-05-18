@@ -384,5 +384,12 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="53">
+			<Text>Проверьте свою везучесть. Для этого возьмите любую монету и подбросьте её.</Text>
+			<Options>
+				<Option Goto="144" Text="Выпал «орёл»"/>
+				<Option Goto="36" Text="Выпала «решка»"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
