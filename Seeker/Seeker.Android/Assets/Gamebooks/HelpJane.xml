@@ -647,5 +647,14 @@
 				<Option Goto="52" Text="Подождёте, что будет дальше"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="90">
+			<Text>«Начинай допрашивать свидетелей, я сейчас приеду», - говорит Дайн. Удобнее всего провести допрос прямо в кафе, и Вы возвращаетесь туда.\n\nКого из свидетелей стоит допросить в первую очередь:</Text>
+			<Options>
+				<Option Goto="72" Text="Англичанина"/>
+				<Option Goto="104" Text="Тома"/>
+				<Option Goto="139" Text="Гарри"/>
+				<Option Goto="10" Text="Коротышку"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
