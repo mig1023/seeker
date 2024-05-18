@@ -614,5 +614,11 @@
 				<Option Goto="9"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="85">
+			<Text>«Сними у пострадавших отпечатки пальцев и отправляйся с пистолетом в офис, - говорит Дайн. - Проверь всё это по базам данных». Вы так и поступаете.</Text>
+			<Options>
+				<Option Goto="82"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
