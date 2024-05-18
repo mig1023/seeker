@@ -302,5 +302,11 @@
 				<Option Goto="88"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="41">
+			<Text>Как только Ваша нога встаёт на нижнюю ступеньку, сверху раздаётся грохот, как будто упала деревянная мебель. Кажется, Вы избрали нужное направление.</Text>
+			<Options>
+				<Option Goto="9"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
