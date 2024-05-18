@@ -627,5 +627,12 @@
 				<Option Goto="118" Text="Выпала «решка»"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="87">
+			<Text>В коридоре нет ковров, и Вы подбегаете к дверям с топотом молодого слона. Но Вы не забыли, что в конце коридора целых две двери. Какую из них Вы откроете?</Text>
+			<Options>
+				<Option Goto="159" Text="Справа"/>
+				<Option Goto="49" Text="Впереди"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
