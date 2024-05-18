@@ -916,6 +916,20 @@
 		<Setting>Фэнтези</Setting>
 		<Color>2c3b4b</Color>
 	</PowerOfFear>
+	<HelpJane>
+		<Title>Помогите Джейн!</Title>
+		<Author>Эдуард Жидков</Author>
+		<Year>2009</Year>
+		<Text>Эта игра – детектив, где главный герой – Вы, читатель. В роли полицейского Джеффри Лаки Вам предстоит испытать свою удачу и дедуктивные способности, расследуя убийство в небольшом городке в США.</Text>
+		<Paragraphs>174</Paragraphs>
+		<Size>19599</Size>
+		<Playthrough>На полчаса</Playthrough>
+		<Setting>Расследование</Setting>
+		<Colors>
+			<Book>f2f189</Book>
+			<Font>000000</Font>
+		</Colors>
+	</HelpJane>
 	<NorthernShores>
 		<Title>Северные берега</Title>
 		<Author>Геннадий Логинов</Author>

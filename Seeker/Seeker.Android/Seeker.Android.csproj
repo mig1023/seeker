@@ -630,10 +630,16 @@
   <ItemGroup>
     <AndroidAsset Include="Assets\Gamebooks\NorthernShores.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\HelpJane.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Gamebooks\HelpJane.xml" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties XamarinHotReloadGenericExceptionInfoBarSeekerAndroidHideInfoBar="True" XamarinHotReloadDebuggerTimeoutExceptionSeekerAndroidHideInfoBar="True" />
+      <UserProperties XamarinHotReloadDebuggerTimeoutExceptionSeekerAndroidHideInfoBar="True" XamarinHotReloadGenericExceptionInfoBarSeekerAndroidHideInfoBar="True" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>
