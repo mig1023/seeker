@@ -289,5 +289,12 @@
 				<Option Goto="133"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="39">
+			<Text>В шкафах нет ничего интересного для сыщика: пакеты, бутылки, средство для мытья посуды - всё самое обыкновенное.</Text>
+			<Options>
+				<Option Goto="30" Text="Пройдёте в следующую комнату"/>
+				<Option Goto="19" Text="Вернётесь в холл"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
