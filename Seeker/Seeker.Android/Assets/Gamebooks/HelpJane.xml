@@ -397,5 +397,12 @@
 				<Option Goto="47"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="55">
+			<Text>Как же Вы хотите поступить:</Text>
+			<Options>
+				<Option Goto="143" Text="Выстрелить в убийцу через дверь"/>
+				<Option Goto="87" Text="Вбежать прямо в комнату"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
