@@ -785,5 +785,11 @@
 				<Option Goto="59"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="110">
+			<Text>Не угадали. Это не тот человек, о котором Вы подумали.</Text>
+			<Options>
+				<Option Goto="124"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
