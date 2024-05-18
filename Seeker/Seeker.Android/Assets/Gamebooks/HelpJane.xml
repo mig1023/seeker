@@ -119,5 +119,11 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="15">
+			<Text>Вы не успеваете дойти до цели: в конце коридора, за одной из дверей, раздаётся выстрел.</Text>
+			<Options>
+				<Option Goto="69"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
