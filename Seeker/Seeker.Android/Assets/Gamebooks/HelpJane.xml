@@ -60,5 +60,14 @@
 				<Option Goto="168" Text="Вежливо откажетесь"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="7">
+			<Text>Пройдя по вагонам, Вы находите нужное купе, но оно заперто.</Text>
+			<Options>
+				<Option Goto="59" Text="Попросите проводника его открыть"/>
+				<Option Goto="130" Text="Сделаете это сами"/>
+				<Option Goto="63" Text="Поговорите с соседями"/>
+				<Option Goto="23" Text="Поищете третью Джейн"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
