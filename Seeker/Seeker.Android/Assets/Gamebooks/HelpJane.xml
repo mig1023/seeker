@@ -499,5 +499,12 @@
 				<Option Goto="137"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="69">
+			<Text>В тот же миг из-за дверей раздаётся мужской голос, искажённый эхом от деревянных стен:\n\n- Стой! Брось оружие, или я прикончу ребёнка!</Text>
+			<Options>
+				<Option Goto="150" Text="Поступите, как велит убийца"/>
+				<Option Goto="55" Text="Возьмёте комнату штурмом"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
