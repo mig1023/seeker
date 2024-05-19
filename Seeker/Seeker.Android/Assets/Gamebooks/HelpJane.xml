@@ -1047,5 +1047,13 @@
 				<Option Goto="137" Text="Возвращаться в офис шерифа"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="148">
+			<Text>Начинается буря, и фермер предлагает заночевать в его доме. Проснувшись рано утром, Вы решаете:</Text>
+			<Options>
+				<Option Goto="37" Text="Вернуться в Дрейтон, чтобы посетить Симпсонов"/>
+				<Option Goto="3" Text="Посетить Гордона"/>
+				<Option Goto="157" Text="Отправиться в Управление ФБР"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
