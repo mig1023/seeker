@@ -1196,5 +1196,14 @@
 				<Option Goto="27" Text="Джейн Маккензи с мужем"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="170">
+			<Text>И что же Вы ему скажете?</Text>
+			<Options>
+				<Option Goto="117" Text="Сопротивление бесполезно и лучше сдаться"/>
+				<Option Goto="107" Text="Скоро подъедет подкрепление, и лучше сдаться, пока не поздно"/>
+				<Option Goto="154" Text="Пообещаете добиться смягчения наказания"/>
+				<Option Goto="121" Text="Скажете, что выпустите «Доктора», если он отпустит девочку"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
