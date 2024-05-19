@@ -11,6 +11,9 @@
 			<ButtonFont Value="000000"/>
 			<Action Value="a8804c"/>
 		</Styles>
+		<Buttons>
+			<RollCoin>Бросить монетку</RollCoin>
+		</Buttons>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph No="0">
