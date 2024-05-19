@@ -1080,5 +1080,12 @@
 				<Option Goto="146" Text="Поспешите к шерифу, несмотря на усталость"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="152">
+			<Text>Попрощавшись с собеседником, Вы решаете, куда ехать дальше:</Text>
+			<Options>
+				<Option Goto="142" Text="В гостиницу, чтобы переночевать"/>
+				<Option Goto="145" Text="В Уотертаун"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
