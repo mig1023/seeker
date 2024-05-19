@@ -950,5 +950,11 @@
 				<Option Goto="58" Text="Проверить список пассажиров экспресса"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="134">
+			<Text>Левая дверь не заперта, и Вы врываетесь в комнату.</Text>
+			<Options>
+				<Option Goto="46"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
