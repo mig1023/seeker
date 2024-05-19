@@ -1061,5 +1061,17 @@
 				<Option Goto="14"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="150">
+			<Text>Как же Вы к нему обратитесь? Возможно, Вам уже известна фамилия подозреваемого или Вы её вычислили.\n\nКакая буква есть в этой фамилии?</Text>
+			<Options>
+				<Option Goto="158" Text="«Э»"/>
+				<Option Goto="128" Text="«Ф»"/>
+				<Option Goto="103" Text="«Ж»"/>
+				<Option Goto="123" Text="«Й»">
+					<Text>Если Вы не знаете, как обратиться к преступнику, зовите его «Доктором»...</Text>
+				</Option>
+				<Option Goto="170"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
