@@ -1186,5 +1186,15 @@
 				<Option Goto="166"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="169">
+			<Text>Начальник поезда предоставляет Вам список пассажиров. Среди них три женщины по имени Джейн.</Text>
+			<Options>
+				<Option Goto="12" Text="Посетить вагон первого класса, где едет Джейн Эшер">
+					<Text>Либо отправиться в купе в вагонах второго класса, которые занимают:</Text>
+				</Option>
+				<Option Goto="45" Text="Джейн Келли"/>
+				<Option Goto="27" Text="Джейн Маккензи с мужем"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
