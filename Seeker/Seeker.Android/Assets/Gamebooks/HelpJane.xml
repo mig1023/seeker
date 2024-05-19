@@ -871,5 +871,11 @@
 				<Option Goto="60"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="123">
+			<Text>«Грейв, я знаю, что это вы, - кричите Вы через дверь. Выходите!» В ответ раздаётся выстрел.</Text>
+			<Options>
+				<Option Goto="159"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
