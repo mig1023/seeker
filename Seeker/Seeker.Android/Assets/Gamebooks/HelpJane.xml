@@ -9,7 +9,7 @@
 			<System Value="dbb37e"/>
 			<Color Name="Option, Continue" Value="dfbc8f"/>
 			<ButtonFont Value="000000"/>
-			<Action Value="a8804c"/>
+			<Action Value="d6a96f"/>
 		</Styles>
 		<Buttons>
 			<RollCoin>Бросить монетку</RollCoin>
@@ -392,6 +392,9 @@
 		</Paragraph>
 		<Paragraph No="53">
 			<Text>Проверьте свою везучесть. Для этого возьмите любую монету и подбросьте её.</Text>
+			<Actions>
+				<RollCoin/>
+			</Actions>
 			<Options>
 				<Option Goto="144" Text="Выпал «орёл»"/>
 				<Option Goto="36" Text="Выпала «решка»"/>
