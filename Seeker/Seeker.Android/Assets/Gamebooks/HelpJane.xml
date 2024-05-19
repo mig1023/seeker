@@ -839,5 +839,11 @@
 				<Option Goto="159"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="118">
+			<Text>Вторая пуля преступника попадает в бензобак Вашей машины. Перед смертью Вы успеваете вспомнить, что раньше видели столь сильные взрывы только в кино и по телевизору...</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
