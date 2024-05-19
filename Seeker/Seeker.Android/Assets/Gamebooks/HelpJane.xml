@@ -877,5 +877,12 @@
 				<Option Goto="159"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="124">
+			<Text>У вас нет оснований ни следить за англичанином, ни задерживать его. Мало ли рыжих в Дрейтоне! Вы, правда, можете проверить его документы.</Text>
+			<Options>
+				<Option Goto="129" Text="Хотите это сделать"/>
+				<Option Goto="105" Text="Не хотите"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
