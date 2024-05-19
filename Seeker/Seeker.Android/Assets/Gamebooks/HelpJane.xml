@@ -1174,5 +1174,11 @@
 				<Option Goto="53" Text="Дождётесь окончания процедуры"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="167">
+			<Text>Вы идёте по коридору, но звук выстрела за одной из дверей заставляет Вас притормозить.</Text>
+			<Options>
+				<Option Goto="69"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
