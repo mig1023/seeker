@@ -1093,5 +1093,11 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="154">
+			<Text>Бесполезно: убийца не хуже Вас знает, что ему грозит электрический стул, и Вы ему ничем не поможете. «Доктор» стреляет в Джейн.</Text>
+			<Options>
+				<Option Goto="159"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
