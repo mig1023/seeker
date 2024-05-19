@@ -5,8 +5,11 @@
 			<Author>Эдуард Жидков, 2009</Author>
 		</Copyright>
 		<Styles>
-			<Color Name="Main, Option, Continue, System" Value="f2f189"/>
-			<Color Name="ButtonFont, StatusFont" Value="000000"/>
+			<Main Value="d2a05f"/>
+			<System Value="dbb37e"/>
+			<Color Name="Option, Continue" Value="dfbc8f"/>
+			<ButtonFont Value="000000"/>
+			<Action Value="a8804c"/>
 		</Styles>
 	</Introduction>
 	<Paragraphs>
