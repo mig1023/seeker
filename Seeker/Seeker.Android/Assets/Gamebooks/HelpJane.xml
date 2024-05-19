@@ -1117,5 +1117,11 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="158">
+			<Text>«Выходите, Эндерби, сопротивление бесполезно!» - кричите Вы через дверь, но в ответ раздаётся выстрел.</Text>
+			<Options>
+				<Option Goto="159"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
