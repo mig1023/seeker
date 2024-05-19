@@ -890,5 +890,13 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="126">
+			<Text>Скоро ночь, и Вы успеете съездить только по одному адресу.</Text>
+			<Options>
+				<Option Goto="29" Text="К свидетелю первого убийства - фермеру Дэна Хорна"/>
+				<Option Goto="135" Text="К Дейлу Гордону, мужу одной из убитых"/>
+				<Option Goto="37" Text="К супругам Симпсонам, родственникам третьей жертвы"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
