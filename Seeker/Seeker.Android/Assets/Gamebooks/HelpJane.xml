@@ -898,5 +898,13 @@
 				<Option Goto="37" Text="К супругам Симпсонам, родственникам третьей жертвы"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="127">
+			<Text>Вы отворяете правую дверь. За ней - кухня с плитой, холодильником, двумя высокими шкафами и ещё одной дверью в противоположной стене.</Text>
+			<Options>
+				<Option Goto="84" Text="Зайдёте туда"/>
+				<Option Goto="39" Text="Осмотрите шкафы"/>
+				<Option Goto="19" Text="Вернётесь"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
