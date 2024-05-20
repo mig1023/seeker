@@ -2960,6 +2960,9 @@
 				<Get>
 					<Head>Телогрейка «Dirty Spade»</Head>
 					<Price>1000</Price>
+					<Benefits>
+						<MaxHealth Value="1"/>
+					</Benefits>
 					<Text Style="Small">САМОЧУВСТВИЕ +1.</Text>
 				</Get>
 				<Get>
