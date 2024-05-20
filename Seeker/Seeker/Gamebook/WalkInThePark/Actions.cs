@@ -236,17 +236,8 @@ namespace Seeker.Gamebook.WalkInThePark
             return new List<string> { "RELOAD" };
         }
 
-        public override bool Availability(string option)
-        {
-            if (String.IsNullOrEmpty(option))
-            {
-                return true;
-            }
-            else
-            {
-                return AvailabilityTrigger(option);
-            }
-        }
+        public override bool Availability(string option) =>
+            AvailabilityTrigger(option);
 
         private static bool NoMoreEnemies(List<Character> enemies)
         {
