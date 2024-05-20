@@ -2952,6 +2952,9 @@
 				<Get>
 					<Head>Берцы «Прямо в каку!»</Head>
 					<Price>1000</Price>
+					<Benefits>
+						<Strength Value="1"/>
+					</Benefits>
 					<Text Style="Small">МОЧЕСТЬ +1.</Text>
 				</Get>
 				<Get>
