@@ -253,6 +253,93 @@ namespace Seeker.Gamebook.WalkInThePark
         private static string Hit() =>
             $"{Constants.What[rand.Next(Constants.What.Count)]} {Constants.Where[rand.Next(Constants.Where.Count)]}";
 
+        public List<string> EpicFight()
+        {
+            List<string> fight = new List<string>();
+
+            int popCount = 25;
+            int rockCount = 25;
+            int round = 0;
+            bool isFortune = Character.Protagonist.Fortune > 0;
+            bool popSide = Game.Option.IsTriggered("за попсу");
+            bool rockSide = Game.Option.IsTriggered("за рокеров");
+
+            while ((popCount > 0) && (rockCount > 0))
+            {
+                round += 1;
+                fight.Add($"HEAD|BOLD|\n*  *  *  РАУНД {round} *  *  *\n");
+
+                int rockDice = Game.Dice.Roll();
+                fight.Add($"Кубик рокеров: {Game.Dice.Symbol(rockDice)}");
+
+                int popDice = Game.Dice.Roll();
+                fight.Add($"Кубик попсы: {Game.Dice.Symbol(popDice)}");
+
+                if ((rockDice < popDice) && isFortune && rockSide)
+                {
+                    fight.Add($"Ты добавляешь рокерам свой фавор: +{Character.Protagonist.Fortune}");
+                    rockDice += Character.Protagonist.Fortune;
+                }
+                else if ((rockDice > popDice) && isFortune && popSide)
+                {
+                    fight.Add($"Ты добавляешь попсе свой фавор: +{Character.Protagonist.Fortune}");
+                    popDice += Character.Protagonist.Fortune;
+                }
+
+                if (rockDice < popDice)
+                {
+                    fight.Add($"{popDice} у попсы больше {rockDice} у рокеров");
+
+                    rockCount -= 5;
+
+                    string goodOrBad = popSide ? "GOOD" : "BAD";
+                    fight.Add($"BOLD|{goodOrBad}|РОКЕРЫ ОГРЕБЛИ!!");
+                    fight.Add($"{goodOrBad}|Их стало на 5 рыл меньше!");
+
+                    if (rockCount > 0)
+                        fight.Add($"Всего рокеров осталось: {rockCount} рыл");
+                }
+                else if (rockDice > popDice)
+                {
+                    fight.Add($"{rockDice} у рокеров больше {popDice} у попсы");
+
+                    popCount -= 5;
+
+                    string goodOrBad = rockSide ? "GOOD" : "BAD";
+                    fight.Add($"BOLD|{goodOrBad}|ПОПСА ОГРЕБЛА!!");
+                    fight.Add($"{goodOrBad}|Их стало на 5 харь меньше!");
+
+                    if (popCount > 0)
+                        fight.Add($"Всего попсы осталось: {popCount} харь");
+                }
+                else
+                {
+                    fight.Add($"Рокеры и попса выкинули одинаковые кубики!");
+                    fight.Add($"BOLD|В этом раунде они просто чутка подрихтовали друг другу морды!");
+                }
+            }
+
+            fight.Add($"BIG|BOLD|БИТВА ОКОНЧЕНА!");
+
+            if ((rockCount > 0) && rockSide)
+            {
+                fight.Add("GOOD|BIG|Твои победили! :)");
+                Game.Buttons.Disable("Победили попсисты (а ты был за них), Твои проиграли (за кого бы ни был)");
+            }
+            else if ((popCount > 0) && popSide)
+            {
+                fight.Add("GOOD|BIG|Твои победили! :)");
+                Game.Buttons.Disable("Победили рокеры (и при этом ты за них), Твои проиграли (за кого бы ни был)");
+            }
+            else
+            {
+                fight.Add("BAD|BIG|Твои продули! :(");
+                Game.Buttons.Disable("Победили рокеры (и при этом ты за них), Победили попсисты (а ты был за них)");
+            }
+
+            return fight;
+        }
+
         public List<string> Fight()
         {
             bool part1 = IfThisIsFirstPart();
