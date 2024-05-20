@@ -15,5 +15,8 @@ namespace Seeker.Gamebook.HelpJane
 
             return new List<string> { $"BIG|BOLD|{line}" };
         }
+
+        public override bool Availability(string option) =>
+            AvailabilityTrigger(option);
     }
 }
