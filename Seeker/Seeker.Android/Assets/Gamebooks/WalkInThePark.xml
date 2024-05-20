@@ -2952,30 +2952,25 @@
 				<Get>
 					<Head>Берцы «Прямо в каку!»</Head>
 					<Price>1000</Price>
-					<Benefits>
-						<Strength Value="1"/>
-					</Benefits>
+					<Benefit Name="Strength" Value="1"/>
 					<Text Style="Small">МОЧЕСТЬ +1.</Text>
 				</Get>
 				<Get>
 					<Head>Телогрейка «Dirty Spade»</Head>
 					<Price>1000</Price>
-					<Benefits>
-						<MaxHealth Value="1"/>
-					</Benefits>
+					<Benefit Name="MaxHealth" Value="1"/>
 					<Text Style="Small">САМОЧУВСТВИЕ +1.</Text>
 				</Get>
 				<Get>
 					<Head>Накладная борода «Сифон»</Head>
 					<Price>1000</Price>
-					<Benefits>
-						<Stealth Value="1"/>
-					</Benefits>
+					<Benefit Name="Stealth" Value="1"/>
 					<Text Style="Small">ТИХОПОПОСТЬ +1.</Text>
 				</Get>
 				<Get>
 					<Head>Кэпочка «По мэлочи»</Head>
 					<Price>1000</Price>
+					<Benefit Name="Fortune" Value="1"/>
 					<Text Style="Small">ФАВОР +1.</Text>
 				</Get>
 				<Get>
