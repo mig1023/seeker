@@ -2940,8 +2940,12 @@
 				<Get>
 					<Head>Перфоратор «Красная Революционная Жидкость»</Head>
 					<Price>1000</Price>
+					<Benefits>
+						<Damage Value="5"/>
+						<Weapon Value="перфоратор"/>
+					</Benefits>
 					<Texts>
-						<Text Style="Small">УРОН 5, 5 выстрелов.</Text>
+						<Text Style="Small">УРОН 5.</Text>
 						<Text>ОДЕЖДА:</Text>
 					</Texts>
 				</Get>
