@@ -2968,6 +2968,9 @@
 				<Get>
 					<Head>Накладная борода «Сифон»</Head>
 					<Price>1000</Price>
+					<Benefits>
+						<Stealth Value="1"/>
+					</Benefits>
 					<Text Style="Small">ТИХОПОПОСТЬ +1.</Text>
 				</Get>
 				<Get>
