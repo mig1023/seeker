@@ -2479,6 +2479,8 @@
 			</Texts>
 			<Modifications>
 				<Money Value="-100"/>
+				<Damage Value="3"/>
+				<Weapon Value="монтировка"/>
 			</Modifications>
 			<Options>
 				<Option Goto="311"/>
