@@ -2922,6 +2922,10 @@
 				<Get>
 					<Head>Тесак «Взаимовыручка»</Head>
 					<Price>2000</Price>
+					<Benefits>
+						<Damage Value="4"/>
+						<Weapon Value="тесак «Взаимовыручка»"/>
+					</Benefits>
 					<Text Style="Small">УРОН 4.</Text>
 				</Get>
 				<Get>
