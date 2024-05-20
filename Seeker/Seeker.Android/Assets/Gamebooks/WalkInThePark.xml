@@ -2912,6 +2912,11 @@
 				<Get>
 					<Head>Бензопила «Дружба»</Head>
 					<Price>5000</Price>
+					<Benefits>
+						<Damage Value="6"/>
+						<Strength Value="-1"/>
+						<Weapon Value="бензопила «Дружба»"/>
+					</Benefits>
 					<Text Style="Small">УРОН 6, МОЧЕСТЬ -1.</Text>
 				</Get>
 				<Get>
