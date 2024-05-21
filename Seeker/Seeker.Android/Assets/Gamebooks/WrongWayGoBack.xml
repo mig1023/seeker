@@ -403,5 +403,11 @@
 				<Option Goto="51" Text="Возле барной стойки"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="56">
+			<Text>Ты попадаешь и робот пёс отлетает назад, разбрызгивая яркие искры.\n\nТы проходишь в салон космического катера.</Text>
+			<Options>
+				<Option Goto="59"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
