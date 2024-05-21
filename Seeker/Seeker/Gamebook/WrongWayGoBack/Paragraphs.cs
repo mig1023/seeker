@@ -17,5 +17,8 @@ namespace Seeker.Gamebook.WrongWayGoBack
 
             return action;
         }
+
+        public override Abstract.IModification ModificationParse(XmlNode xmlModification) =>
+            (Abstract.IModification)base.ModificationParse(xmlModification, new Modification());
     }
 }
