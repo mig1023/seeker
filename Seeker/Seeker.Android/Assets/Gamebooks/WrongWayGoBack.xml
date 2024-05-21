@@ -297,5 +297,12 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="41">
+			<Text>Ты достигаешь конца коридора, разветвление уводит налево и направо, коридоры выглядят абсолютно идентичными.\n\nПойдёшь...</Text>
+			<Options>
+				<Option Goto="6" Text="Направо"/>
+				<Option Goto="32" Text="Налево"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
