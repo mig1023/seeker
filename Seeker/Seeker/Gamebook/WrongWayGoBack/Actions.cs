@@ -7,8 +7,15 @@ namespace Seeker.Gamebook.WrongWayGoBack
     {
         public override List<string> Status()
         {
-            TimeSpan time = TimeSpan.FromSeconds(Character.Protagonist.Time);
-            return new List<string> { "Оставшееся время:" + time.ToString(@"hh\:mm\:ss") };
+            if (Character.Protagonist.Time > 0)
+            {
+                TimeSpan time = TimeSpan.FromSeconds(Character.Protagonist.Time);
+                return new List<string> { "Оставшееся время:" + time.ToString(@"hh\:mm\:ss") };
+            }
+            else
+            {
+                return new List<string> { "Оставшееся время: 00:00:00" };
+            }
         }
 
         public override bool GameOver(out int toEndParagraph, out string toEndText)
