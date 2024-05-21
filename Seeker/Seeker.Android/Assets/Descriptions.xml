@@ -926,7 +926,7 @@
 		<Playthrough>На полчаса</Playthrough>
 		<Setting>Расследование</Setting>
 		<Colors>
-			<Book>f2f189</Book>
+			<Book>d2a05f</Book>
 			<Font>000000</Font>
 		</Colors>
 	</HelpJane>
@@ -944,4 +944,17 @@
 			<Font>263238</Font>
 		</Colors>
 	</NorthernShores>
+	<WrongWayGoBack>
+		<Title>Точка отсчёта</Title>
+		<Original>Wrong Way Go Back</Original>
+		<Author>Улиссей Ай</Author>
+		<Translator>Александр Слюта</Translator>
+		<Year>2009</Year>
+		<Text>Ты сможешь сбежать с корабля, который летит к солнцу? Ты должен использовать всё своё остроумие, смекалку, умение и... удачу! Ты всё ещё думаешь, что это легко? А если к обычным для тебя трудностям прибавится лимит во времени? Ты должен успеть покинуть межпланетное судно за 1 час 1 минуту и 1 секунду. Оно неуклонно течёт и оно против тебя!</Text>
+		<Paragraphs>60</Paragraphs>
+		<Size>0</Size>
+		<Playthrough>На пять минут</Playthrough>
+		<Setting>Приключения</Setting>
+		<Color>1a768d</Color>
+	</WrongWayGoBack>
 </Gamebooks>
