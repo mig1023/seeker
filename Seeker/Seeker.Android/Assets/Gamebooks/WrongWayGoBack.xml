@@ -344,5 +344,11 @@
 				<Option Goto="31"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="48">
+			<Text>Обыскав второй этаж и балкончики, ты находишь своё удостоверение личности! Ура!</Text>
+			<Options>
+				<Option Goto="23"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
