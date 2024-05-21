@@ -291,5 +291,11 @@
 				<Option Goto="49"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="40">
+			<Text>Ты в отчаянии кричишь, но помощи ждать неоткуда. Воздух становится всё более горячим. Ты испёкся, как картофель в золе.\n\nТвоё приключение закончилось.</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
