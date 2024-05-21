@@ -562,6 +562,9 @@
 		</Paragraph>
 		<Paragraph No="56">
 			<Text>Ты попадаешь и робот пёс отлетает назад, разбрызгивая яркие искры.\n\nТы проходишь в салон космического катера.</Text>
+			<Modifications>
+				<Time Value="-17"/>
+			</Modifications>
 			<Options>
 				<Option Goto="59"/>
 			</Options>
