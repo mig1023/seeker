@@ -10,5 +10,25 @@ namespace Seeker.Gamebook.WrongWayGoBack
             TimeSpan time = TimeSpan.FromSeconds(Character.Protagonist.Time);
             return new List<string> { "Оставшееся время:" + time.ToString(@"hh\:mm\:ss") };
         }
+
+        public override bool GameOver(out int toEndParagraph, out string toEndText)
+        {
+            toEndParagraph = 33;
+            toEndText = String.Empty;
+
+            if (Game.Data.CurrentParagraphID == 33)
+            {
+                return false;
+            }
+            else if (Character.Protagonist.Time > 0)
+            {
+                return false;
+            }
+            else
+            {
+                toEndText = "Время истекло...";
+                return true;
+            }
+        }
     }
 }
