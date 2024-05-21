@@ -6,7 +6,11 @@
 		</Copyright>
 		<Styles>
 			<Color Name="Main, Option, Continue, System" Value="1a768d"/>
+			<StatusBar Value="125262"/>
 		</Styles>
+		<Lists>
+			<WithoutStatuses Items=""/>
+		</Lists>
 		<Default>
 			<HideDisabledOption/>
 		</Default>
