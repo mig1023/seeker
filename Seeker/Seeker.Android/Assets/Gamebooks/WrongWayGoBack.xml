@@ -392,5 +392,16 @@
 				<Option Goto="33"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="55">
+			<Text>Ты зарываешься в гору подушек и извлекаешь оттуда парадную офицерскую саблю.\n\nЕсли ты будешь использовать её в бою, то будешь наносить повреждение в 4 Выносливости, также можешь добавить себе 2 Мастерства.</Text>
+			<Options>
+				<Option Goto="23" Text="Ты готов покинуть клуб"/>
+				<Option Goto="4" Text="Под столами"/>
+				<Option Goto="25" Text="Танц.пол"/>
+				<Option Goto="37" Text="VIP-кабинки"/>
+				<Option Goto="48" Text="Лестница на второй этаж"/>
+				<Option Goto="51" Text="Возле барной стойки"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
