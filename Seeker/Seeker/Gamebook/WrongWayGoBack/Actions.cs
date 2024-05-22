@@ -5,6 +5,8 @@ namespace Seeker.Gamebook.WrongWayGoBack
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {
+        public Character Enemy { get; set; }
+
         public override List<string> Status()
         {
             if (Character.Protagonist.Time > 0)
@@ -110,6 +112,84 @@ namespace Seeker.Gamebook.WrongWayGoBack
             }
 
             return lines;
+        }
+
+        public override List<string> Representer()
+        {
+            List<string> enemy = new List<string>();
+
+            if (Enemy == null)
+                return enemy;
+
+            enemy.Add($"{Enemy.Name}\nмастерство {Enemy.Skill}  выносливость {Enemy.Hitpoints}");
+
+            return enemy;
+        }
+
+        public List<string> Fight()
+        {
+            List<string> fight = new List<string>();
+            Character enemy = Enemy.Clone();
+
+            int round = 1;
+
+            while (true)
+            {
+                fight.Add($"HEAD|BOLD|Раунд: {round}");
+                fight.Add($"{enemy.Name} (выносливость {enemy.Hitpoints})");
+
+                Game.Dice.DoubleRoll(out int heroRollFirst, out int heroRollSecond);
+                int heroHitStrength = heroRollFirst + heroRollSecond + Character.Protagonist.Skill;
+
+                fight.Add($"Сила твоей атаки: " +
+                    $"{Game.Dice.Symbol(heroRollFirst)} + " +
+                    $"{Game.Dice.Symbol(heroRollSecond)} + " +
+                    $"{Character.Protagonist.Skill} = {heroHitStrength}");
+
+                Game.Dice.DoubleRoll(out int enemyRollFirst, out int enemyRollSecond);
+                int enemyHitStrength = enemyRollFirst + enemyRollSecond + enemy.Skill;
+
+                fight.Add($"Сила его атаки: " +
+                    $"{Game.Dice.Symbol(enemyRollFirst)} + " +
+                    $"{Game.Dice.Symbol(enemyRollSecond)} + " +
+                    $"{enemy.Skill} = {enemyHitStrength}");
+
+                if (heroHitStrength > enemyHitStrength)
+                {
+                    fight.Add($"GOOD|{enemy.Name} ранен");
+                    fight.Add("Он теряет 2 очка Выносливости");
+
+                    enemy.Hitpoints -= 2;
+
+                    if (enemy.Hitpoints <= 0)
+                    {
+                        fight.Add(String.Empty);
+                        fight.Add("BIG|GOOD|Ты ПОБЕДИЛ :)");
+                        return fight;
+                    }
+                }
+                else if (heroHitStrength < enemyHitStrength)
+                {
+                    fight.Add($"BAD|{enemy.Name} ранил тебя");
+                    fight.Add("Ты теряешь 2 очка Выносливости");
+
+                    Character.Protagonist.Hitpoints -= 2;
+
+                    if (Character.Protagonist.Hitpoints <= 0)
+                    {
+                        fight.Add(String.Empty);
+                        fight.Add("BIG|BAD|Ты ПРОИГРАЛ :(");
+                        return fight;
+                    }
+                }
+                else
+                {
+                    fight.Add("BOLD|Ничья в раунде");
+                }
+
+                fight.Add(String.Empty);
+                round += 1;
+            }
         }
     }
 }
