@@ -9,7 +9,7 @@
 			<StatusBar Value="125262"/>
 		</Styles>
 		<Lists>
-			<WithoutStatuses Items="61"/>
+			<WithoutStatuses Items=""/>
 		</Lists>
 		<Default>
 			<HideDisabledOption/>
