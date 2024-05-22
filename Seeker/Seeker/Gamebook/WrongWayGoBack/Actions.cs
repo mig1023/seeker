@@ -49,5 +49,33 @@ namespace Seeker.Gamebook.WrongWayGoBack
                 return false;
             }
         }
+
+        public List<string> Skill()
+        {
+            List<string> lines = new List<string>();
+
+            Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
+            int result = firstDice + secondDice;
+
+            lines.Add($"Кубики: {Game.Dice.Symbol(firstDice)} + " +
+                $"{Game.Dice.Symbol(secondDice)}");
+
+            if (result <= Character.Protagonist.Skill)
+            {
+                lines.Add($"Выпавшее значение {result} не превышает уровень Мастерства!");
+                lines.Add($"BIG|GOOD|BOLD|Проверка успешно пройдена :)");
+               
+                Game.Buttons.Disable("Промахнулся");
+            }
+            else
+            {
+                lines.Add($"Выпавшее значение {result} больше уровня Мастерства!");
+                lines.Add($"BIG|BAD|BOLD|Проверка провалена :(");
+
+                Game.Buttons.Disable("Ты попал");
+            }
+
+            return lines;
+        }
     }
 }
