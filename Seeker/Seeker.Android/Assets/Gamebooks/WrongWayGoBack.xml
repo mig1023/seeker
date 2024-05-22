@@ -20,6 +20,7 @@
 		<Default>
 			<HideDisabledOption/>
 			<EqualPartsInStatuses/>
+			<WalkingInCirclesAcceptable/>
 		</Default>
 	</Introduction>
 	<Paragraphs>
