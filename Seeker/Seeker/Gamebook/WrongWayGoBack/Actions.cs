@@ -18,6 +18,13 @@ namespace Seeker.Gamebook.WrongWayGoBack
             }
         }
 
+        public override List<string> AdditionalStatus() => new List<string>
+        {
+            $"Мастерство: {Character.Protagonist.Skill}",
+            $"Выносливость: {Character.Protagonist.Hitpoints}",
+            $"Удача: {Character.Protagonist.Luck}",
+        };
+
         public override bool GameOver(out int toEndParagraph, out string toEndText)
         {
             toEndParagraph = 33;
@@ -27,14 +34,19 @@ namespace Seeker.Gamebook.WrongWayGoBack
             {
                 return false;
             }
-            else if (Character.Protagonist.Time > 0)
-            {
-                return false;
-            }
-            else
+            else if (Character.Protagonist.Time <= 0)
             {
                 toEndText = "Время истекло...";
                 return true;
+            }
+            else if (Character.Protagonist.Hitpoints <= 0)
+            {
+                toEndText = "Начать сначала";
+                return true;
+            }
+            else
+            {
+                return false;
             }
         }
     }
