@@ -146,6 +146,14 @@ namespace Seeker.Gamebook.WrongWayGoBack
                     $"{Game.Dice.Symbol(heroRollSecond)} + " +
                     $"{Character.Protagonist.Skill} = {heroHitStrength}");
 
+                if (heroRollFirst == heroRollSecond)
+                {
+                    fight.Add($"GOOD|Ты выкинул дубль!!");
+                    fight.Add(String.Empty);
+                    fight.Add("BIG|GOOD|Ты ПОБЕДИЛ :)");
+                    return fight;
+                }
+
                 Game.Dice.DoubleRoll(out int enemyRollFirst, out int enemyRollSecond);
                 int enemyHitStrength = enemyRollFirst + enemyRollSecond + enemy.Skill;
 
@@ -153,6 +161,14 @@ namespace Seeker.Gamebook.WrongWayGoBack
                     $"{Game.Dice.Symbol(enemyRollFirst)} + " +
                     $"{Game.Dice.Symbol(enemyRollSecond)} + " +
                     $"{enemy.Skill} = {enemyHitStrength}");
+
+                if (enemyRollFirst == enemyRollSecond)
+                {
+                    fight.Add($"BAD|Он выкинул дубль!!");
+                    fight.Add(String.Empty);
+                    fight.Add("BIG|BAD|Ты ПРОИГРАЛ :(");
+                    return fight;
+                }
 
                 if (heroHitStrength > enemyHitStrength)
                 {
