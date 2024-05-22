@@ -89,14 +89,34 @@ namespace Seeker.Prototypes
         private void SetPropertyValue(string name, object value) =>
             this.GetType().GetProperty(name).SetValue(this, value);
 
+        private object EmptyList(PropertyInfo listType)
+        {
+            if (listType.PropertyType == typeof(List<int>))
+                return new List<int>();
+            else
+                return new List<string>();
+        }
+
         public virtual void LoadList(string name, List<string> list)
         {
             PropertyInfo listType = this.GetType().GetProperty(name);
 
-            if (listType.PropertyType == typeof(List<int>))
+            if (list.Count == 0)
+            {
+                SetPropertyValue(name, EmptyList(listType));
+            }
+            else if ((list.Count == 1) && String.IsNullOrEmpty(list[0]))
+            {
+                SetPropertyValue(name, EmptyList(listType));
+            }
+            else if (listType.PropertyType == typeof(List<int>))
+            {
                 SetPropertyValue(name, list.Select(x => int.Parse(x)).ToList());
+            }
             else
+            {
                 SetPropertyValue(name, list.Select(x => x.Trim()).ToList());
+            }
         }
 
         public virtual void LoadDictionary(string name, Dictionary<string, string> dictionary)
