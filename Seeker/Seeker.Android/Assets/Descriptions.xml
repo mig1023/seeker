@@ -81,7 +81,7 @@
 		<Paragraphs>80</Paragraphs>
 		<Size>10847</Size>
 		<Playthrough>На весь вечер</Playthrough>
-		<Setting>Научная фантастика</Setting>
+		<Setting>Космос</Setting>
 		<Colors>
 			<Book>ffffff</Book>
 			<Font>000000</Font>
@@ -96,7 +96,7 @@
 		<Paragraphs>200</Paragraphs>
 		<Size>17353</Size>
 		<Playthrough>На часок-полтора</Playthrough>
-		<Setting>Научная фантастика</Setting>
+		<Setting>Космос</Setting>
 		<Color>ff557c48</Color>
 	</SwampFever>
 	<MentorsAlwaysRight>
@@ -812,7 +812,7 @@
 		<Paragraphs>333</Paragraphs>
 		<Size>44353</Size>
 		<Playthrough>На часок-полтора</Playthrough>
-		<Setting>Научная фантастика</Setting>
+		<Setting>Космос</Setting>
 		<Colors>
 			<Book>ffffff</Book>
 			<Font>000000</Font>
@@ -954,7 +954,7 @@
 		<Paragraphs>60</Paragraphs>
 		<Size>7644</Size>
 		<Playthrough>На пять минут</Playthrough>
-		<Setting>Приключения</Setting>
+		<Setting>Космос</Setting>
 		<Color>1a768d</Color>
 	</WrongWayGoBack>
 </Gamebooks>
