@@ -544,12 +544,37 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="49">
-			<Text>Элеватор движется невыносимо медленно, ты всматриваешься в проплывающие светящиеся буквы, гадая, правильный ли ты выбор сделал. Наконец двери открываются с приятным переливчатым звоном и ты оказываешься на совершенно другой палубе. Чёрт! Время то идёт! Ты заскакиваешь в лифт и нажимаешь другую кнопку.\n\nЕсли ты опять не угадал, то прибавляй время и возвращайся...</Text>
+			<Text>Элеватор движется невыносимо медленно, ты всматриваешься в проплывающие светящиеся буквы, гадая, правильный ли ты выбор сделал. Наконец двери открываются с приятным переливчатым звоном и ты оказываешься на совершенно другой палубе. Чёрт! Время то идёт! Ты заскакиваешь в лифт и нажимаешь другую кнопку...</Text>
 			<Modifications>
 				<Time Value="-135"/>
 			</Modifications>
 			<Options>
-				<Option Goto="49"/>
+				<Option Goto="49" Text="A"/>
+				<Option Goto="49" Text="B"/>
+				<Option Goto="49" Text="C"/>
+				<Option Goto="49" Text="D"/>
+				<Option Goto="49" Text="E"/>
+				<Option Goto="49" Text="F"/>
+				<Option Goto="49" Text="G"/>
+				<Option Goto="49" Text="H"/>
+				<Option Goto="49" Text="I"/>
+				<Option Goto="10" Text="J"/>
+				<Option Goto="49" Text="K"/>
+				<Option Goto="49" Text="L"/>
+				<Option Goto="49" Text="M"/>
+				<Option Goto="49" Text="N"/>
+				<Option Goto="49" Text="O"/>
+				<Option Goto="49" Text="P"/>
+				<Option Goto="49" Text="Q"/>
+				<Option Goto="49" Text="R"/>
+				<Option Goto="49" Text="S"/>
+				<Option Goto="49" Text="T"/>
+				<Option Goto="49" Text="U"/>
+				<Option Goto="49" Text="V"/>
+				<Option Goto="49" Text="W"/>
+				<Option Goto="49" Text="X"/>
+				<Option Goto="49" Text="Y"/>
+				<Option Goto="49" Text="Z"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="50">
