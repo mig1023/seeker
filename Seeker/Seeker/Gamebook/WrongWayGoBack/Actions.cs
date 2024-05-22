@@ -177,7 +177,7 @@ namespace Seeker.Gamebook.WrongWayGoBack
 
                     enemy.Hitpoints -= 2;
 
-                    if (enemy.Hitpoints <= 0)
+                    if (enemy.Hitpoints <= 2)
                     {
                         fight.Add(String.Empty);
                         fight.Add("BIG|GOOD|Ты ПОБЕДИЛ :)");
@@ -191,7 +191,7 @@ namespace Seeker.Gamebook.WrongWayGoBack
 
                     Character.Protagonist.Hitpoints -= 2;
 
-                    if (Character.Protagonist.Hitpoints <= 0)
+                    if (Character.Protagonist.Hitpoints <= 2)
                     {
                         fight.Add(String.Empty);
                         fight.Add("BIG|BAD|Ты ПРОИГРАЛ :(");
