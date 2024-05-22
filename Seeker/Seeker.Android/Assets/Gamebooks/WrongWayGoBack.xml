@@ -7,12 +7,14 @@
 		<Styles>
 			<Color Name="Main, Option, Continue, System" Value="1a768d"/>
 			<StatusBar Value="125262"/>
+			<AdditionalStatus Value="b7cbcf"/>
 		</Styles>
 		<Lists>
 			<WithoutStatuses Items=""/>
 		</Lists>
 		<Default>
 			<HideDisabledOption/>
+			<EqualPartsInStatuses/>
 		</Default>
 	</Introduction>
 	<Paragraphs>
