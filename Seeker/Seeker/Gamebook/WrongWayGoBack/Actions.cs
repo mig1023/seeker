@@ -203,7 +203,10 @@ namespace Seeker.Gamebook.WrongWayGoBack
                     fight.Add("BOLD|Ничья в раунде");
                 }
 
+                fight.Add("GRAY|+10 секунд времени прошло");
                 fight.Add(String.Empty);
+
+                Character.Protagonist.Time -= 10;
                 round += 1;
             }
         }
