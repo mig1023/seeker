@@ -77,5 +77,39 @@ namespace Seeker.Gamebook.WrongWayGoBack
 
             return lines;
         }
+
+        public List<string> Luck()
+        {
+            List<string> lines = new List<string>();
+
+            Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
+            int result = firstDice + secondDice;
+
+            lines.Add($"Кубики: {Game.Dice.Symbol(firstDice)} + " +
+                $"{Game.Dice.Symbol(secondDice)}");
+
+            if (result <= Character.Protagonist.Luck)
+            {
+                lines.Add($"Выпавшее значение {result} не превышает уровень Удачи!");
+                lines.Add($"BIG|GOOD|BOLD|Удача на вашей стороне :)");
+
+                Game.Buttons.Disable("Она подвела тебя");
+            }
+            else
+            {
+                lines.Add($"Выпавшее значение {result} больше уровня Удачи!");
+                lines.Add($"BIG|BAD|BOLD|Удача отвернулась от вас :(");
+
+                Game.Buttons.Disable("Она на твоей стороне");
+            }
+
+            if (Character.Protagonist.Luck > 2)
+            {
+                Character.Protagonist.Luck -= 1;
+                lines.Add("Уровень Удачи снижен на единицу");
+            }
+
+            return lines;
+        }
     }
 }
