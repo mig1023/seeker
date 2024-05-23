@@ -6,6 +6,8 @@
 		</Copyright>
 		<Styles>
 			<Color Name="Main, Option, Continue, System" Value="1a768d"/>
+			<System Value="d1e3e8"/>
+			<Action Value="125262"/>
 			<StatusBar Value="125262"/>
 			<AdditionalStatus Value="b7cbcf"/>
 		</Styles>
