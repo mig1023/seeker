@@ -28,10 +28,11 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
         public override List<string> AdditionalStatus()
         {
-            List<string> statusLines = new List<string>();
-
-            statusLines.Add($"День: {Character.Protagonist.Day}");
-            statusLines.Add($"Экю: {ToEcu(Character.Protagonist.Ecu)}");
+            List<string> statusLines = new List<string>
+            {
+                $"День: {Character.Protagonist.Day}",
+                $"Экю: {ToEcu(Character.Protagonist.Ecu)}"
+            };
 
             if (Character.Protagonist.BulletsAndGubpowder > 0)
                 statusLines.Add($"Выстрелов: {Character.Protagonist.BulletsAndGubpowder}");
