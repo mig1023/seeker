@@ -6,11 +6,21 @@ namespace Seeker.Gamebook.ByTheWillOfRome
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {
-        public override List<string> Status() => new List<string>
+        public override List<string> Status()
         {
-            $"Сестерциев: {Character.Protagonist.Sestertius}",
-            $"Честь: {Character.Protagonist.Honor}",
-        };
+            if (Game.Data.CurrentParagraphID < Constants.AddonStartParagraph)
+            {
+                return new List<string>
+                {
+                    $"Сестерциев: {Character.Protagonist.Sestertius}",
+                    $"Честь: {Character.Protagonist.Honor}",
+                };
+            }
+            else
+            {
+                return new List<string>();
+            }
+        }           
 
         public override List<string> AdditionalStatus()
         {
