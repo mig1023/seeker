@@ -14,6 +14,17 @@ namespace Seeker.Gamebook.Ants
                 $"Прирост: {Character.Protagonist.Increase}"
             };
 
+            string government = String.Empty;
+
+            foreach (string name in Constants.Government.Keys)
+            {
+                if (Game.Option.IsTriggered(name))
+                    government = name;
+            }
+
+            if (!String.IsNullOrEmpty(government))
+                statusLines.Insert(0, $"Правит: {government}");
+
             if (Character.Protagonist.Defence > 0)
                 statusLines.Add($"Защита: {Character.Protagonist.Defence}");
 
