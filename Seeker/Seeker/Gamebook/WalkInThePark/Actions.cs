@@ -76,7 +76,6 @@ namespace Seeker.Gamebook.WalkInThePark
                 return GameOverBy(Character.Protagonist.Health, out _, out _);
             }
         }
-            
 
         public override List<string> Representer()
         {
@@ -203,6 +202,34 @@ namespace Seeker.Gamebook.WalkInThePark
             Game.Buttons.Disable(testPassed, buttonOk, buttonFail);
 
             return testResult;
+        }
+
+        public List<string> Rating()
+        {
+            List<string> ratingReport = new List<string>();
+            Dictionary<string, List<int>> rating = new Dictionary<string, List<int>>();
+
+            foreach (KeyValuePair<string, string> ratingLine in Constants.Rating)
+            {
+                string name = ratingLine.Key;
+                string[] values = ratingLine.Value.Split(':');
+                rating.Add(name, new List<int> { int.Parse(values[0]), int.Parse(values[1]) });
+            }
+
+            foreach (KeyValuePair<string, List<int>> line in rating.OrderByDescending(x => x.Value[0]))
+            {
+                int rated = Character.Protagonist.Rating;
+                int min = line.Value[0];
+                int max = line.Value[1];
+                bool selected = (rated >= min) && (rated <= max);
+                string selectedLine = selected ? "BIG|BOLD|" : "GRAY|";
+                string minLine = min < -41 ? "от дна" : $"от {min}";
+                string maxLine = max > 51 ? "до бесконечности" : $"до {max}";
+
+                ratingReport.Add($"{selectedLine}{line.Key} ({minLine} {maxLine})");
+            }
+
+            return ratingReport;
         }
 
         public override bool IsButtonEnabled(bool secondButton = false)

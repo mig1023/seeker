@@ -8,5 +8,7 @@ namespace Seeker.Gamebook.WalkInThePark
 
         public static List<string> What { get; set; }
         public static List<string> Where { get; set; }
+
+        public static Dictionary<string, string> Rating { get; set; }
     }
 }
