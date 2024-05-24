@@ -147,14 +147,6 @@ namespace Seeker.Prototypes
         public virtual string GetFont() =>
             String.Empty;
 
-        public virtual bool GetParagraphsStatusesLimit(out int limitStart, out int limitEnd)
-        {
-            limitStart = 0;
-            limitEnd = 0;
-
-            return false;
-        }
-
         public virtual Dictionary<string, string> ButtonText() =>
             ButtonTextList;
 

@@ -85,30 +85,11 @@ namespace Seeker.Game
         public static string ValueStringFuse(string value) =>
             value == "ValueString" ? "Value" : value;
 
-        public static bool ParagraphsWithoutStatuses(List<string> statuses)
-        {
-            bool withoutStatuses = (statuses == null) ||
-                Data.Constants.GetParagraphsWithoutStatuses().Contains(Data.CurrentParagraphID);
+        public static bool ParagraphsWithoutStatuses(List<string> statuses) =>
+            statuses == null || Data.Constants.GetParagraphsWithoutStatuses().Contains(Data.CurrentParagraphID);
 
-            int limitStart = 0, limitEnd = 0;
-            bool isLimited = Data.Constants?.GetParagraphsStatusesLimit(out limitStart, out limitEnd) ?? false;
-            bool statusesLimit = false;
-
-            if (statuses == null)
-            {
-                statusesLimit = false;
-            }
-            else if (isLimited)
-            {
-                bool moreThenMinimum = Data.CurrentParagraphID >= limitStart;
-                bool lessThenMaximum = Data.CurrentParagraphID <= limitEnd;
-                statusesLimit = moreThenMinimum && lessThenMaximum;
-            }
-
-            return (withoutStatuses || statusesLimit);
-        }
-
-        public static void BookmarkName(Dictionary<string, string> bookmarks, string bookmarkIn, out string bookmarkOut, out string saveName)
+        public static void BookmarkName(Dictionary<string, string> bookmarks,
+            string bookmarkIn, out string bookmarkOut, out string saveName)
         {
             int bookmarkIndex = 0;
             bookmarkOut = bookmarkIn;
