@@ -21,16 +21,37 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             ["ЗАКЛЯТИЕ СЛАБОСТИ"] = false,
         };
 
-        public override List<string> Status() => new List<string>
+        private bool PartsWithStatuses()
         {
-            $"Мастерство: {Character.Protagonist.Mastery}",
-            $"Выносливость: {Character.Protagonist.Endurance}/{Character.Protagonist.MaxEndurance}",
-            $"Удача: {Character.Protagonist.Luck}",
-            $"Золото: {Character.Protagonist.Gold}"
-        };
+            bool firstPart = Game.Data.CurrentParagraphID < Constants.SecondPartStartParagraph;
+            bool thirdPart = Game.Data.CurrentParagraphID >= Constants.ThirdPartStartParagraph;
+
+            return firstPart || thirdPart;
+        }
+
+        public override List<string> Status()
+        {
+            if (PartsWithStatuses())
+            {
+                return new List<string>
+                {
+                    $"Мастерство: {Character.Protagonist.Mastery}",
+                    $"Выносливость: {Character.Protagonist.Endurance}/{Character.Protagonist.MaxEndurance}",
+                    $"Удача: {Character.Protagonist.Luck}",
+                    $"Золото: {Character.Protagonist.Gold}"
+                };
+            }
+            else
+            {
+                return null;
+            }
+        }
 
         public override List<string> AdditionalStatus()
         {
+            if (!PartsWithStatuses())
+                return null;
+
             Dictionary<string, int> currentSpells = new Dictionary<string, int>();
 
             if (Character.Protagonist.Spells == null)
