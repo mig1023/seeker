@@ -14,7 +14,6 @@
 		<Lists>
 			<WithoutStatuses Items="0, 619, 753"/>
 			<WithoutStaticsButtons Items="0, 619, 753"/>
-			<ParagraphsStatusesLimit Items="620, 752"/>
 			<StaticSpells Items="ЗАКЛЯТИЕ КОПИИ, ЗАКЛЯТИЕ СИЛЫ, ЗАКЛЯТИЕ СЛАБОСТИ"/>
 		</Lists>
 		<Default>
