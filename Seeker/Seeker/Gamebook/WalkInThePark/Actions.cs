@@ -383,6 +383,7 @@ namespace Seeker.Gamebook.WalkInThePark
 
             int round = 1;
             bool deviceUsed = false;
+            bool armour = Game.Option.IsTriggered("бронированный полушубок");
 
             while (true)
             {
@@ -401,9 +402,16 @@ namespace Seeker.Gamebook.WalkInThePark
                     int protagonistRoll = Game.Dice.Roll();
                     int protagonistHitStrength = protagonistRoll + Character.Protagonist.Strength;
                     string strength = part1 ? "Сила" : "Охрененность";
+                    string penalty = String.Empty;
+
+                    if (armour)
+                    {
+                        protagonistHitStrength -= 1;
+                        penalty = " - 1 за полушубок";
+                    }
 
                     fight.Add($"{strength} твоего удара: {Game.Dice.Symbol(protagonistRoll)} + " +
-                        $"{Character.Protagonist.Strength} = {protagonistHitStrength}");
+                        $"{Character.Protagonist.Strength}{penalty} = {protagonistHitStrength}");
 
                     int enemyRoll = Game.Dice.Roll();
                     int enemyHitStrength = enemyRoll + enemy.Strength;
@@ -462,13 +470,22 @@ namespace Seeker.Gamebook.WalkInThePark
                     {
                         fight.Add($"BAD|BOLD|{enemy.Name} заехал тебе по морде");
 
+                        int damage = enemy.Damage;
+                        string damagePenelty = String.Empty;
+
+                        if (armour)
+                        {
+                            damage -= 1;
+                            damagePenelty = " (урон уменьшен полушубком!)";
+                        }
+
                         if (part1)
-                            fight.Add($"Ты теряешь {(double)enemy.Damage / 10} ед. Выносливости");
+                            fight.Add($"Ты теряешь {(double)damage / 10} ед. Выносливости");
                         else
-                            fight.Add($"Ты теряешь {enemy.Damage} ед. Самочувствия");
+                            fight.Add($"Ты теряешь {damage} ед. Самочувствия{damagePenelty}");
 
                         Character.Protagonist.SetHealth(part1,
-                            Character.Protagonist.GetHealth(part1) - enemy.Damage);
+                            Character.Protagonist.GetHealth(part1) - damage);
 
                         if (Character.Protagonist.GetHealth(part1) <= 0)
                         {
