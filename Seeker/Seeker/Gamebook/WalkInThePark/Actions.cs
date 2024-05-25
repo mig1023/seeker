@@ -423,7 +423,7 @@ namespace Seeker.Gamebook.WalkInThePark
                         bonus = " + 2 за неуравновешенность";
                     }
 
-                    fight.Add($"{strength} удара противника: " +
+                    fight.Add($"{strength} противника: " +
                         $"{Game.Dice.Symbol(enemyRoll)} + {enemy.Strength}{bonus} = {enemyHitStrength}");
 
                     if (protagonistHitStrength > enemyHitStrength)
