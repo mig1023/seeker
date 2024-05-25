@@ -237,12 +237,29 @@ namespace Seeker.Gamebook.WalkInThePark
             return ratingReport;
         }
 
+        private bool IsTriggered(string startWith, out string trigger)
+        {
+            trigger = String.Empty;
+
+            foreach (string triggered in Game.Data.Triggers)
+            {
+                if (triggered.StartsWith(startWith))
+                {
+                    trigger = triggered;
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
         public override bool IsButtonEnabled(bool secondButton = false)
         {
             bool disabledGetOptions = (Price > 0) && Used;
             bool disabledByPrice = (Price > 0) && (Character.Protagonist.Money < Price);
+            bool noBeer = (Type == "SellBeer") && !IsTriggered("пиво", out _);
 
-            return !(disabledGetOptions || disabledByPrice);
+            return !(disabledGetOptions || disabledByPrice || noBeer);
         }
 
         public List<string> Get()
@@ -268,24 +285,33 @@ namespace Seeker.Gamebook.WalkInThePark
             return new List<string> { "RELOAD" };
         }
 
+        public List<string> SellBeer()
+        {
+            List<string> sell = new List<string>();
+
+            while (IsTriggered("пиво", out string beer))
+            {
+                sell.Add($"Продаём {beer} (50р)");
+                sell.Add($"GOOD|BOLD|Ты заработал полтинник!");
+                Character.Protagonist.Money += 50;
+
+                Game.Option.Trigger(beer, remove: true);
+            }
+
+            return sell;
+        }
+
         public override bool Availability(string option)
         {
             if (option == "пиво")
             {
-                foreach (string trigger in Game.Data.Triggers)
-                {
-                    if (trigger.StartsWith("пиво"))
-                        return true;
-                }
-
-                return false;
+                return IsTriggered("пиво", out _);
             }
             else
             {
                 return AvailabilityTrigger(option);
             }
         }
-            
 
         private static bool NoMoreEnemies(List<Character> enemies)
         {
