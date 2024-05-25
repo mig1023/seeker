@@ -450,7 +450,14 @@ namespace Seeker.Gamebook.WalkInThePark
                         if (NoMoreEnemies(FightEnemies))
                         {
                             if (Benefit != null)
+                            {
                                 Benefit.Do();
+                            }
+                            else if (BenefitList != null)
+                            {
+                                foreach (Modification modification in BenefitList)
+                                    modification.Do();
+                            }
 
                             fight.Add(String.Empty);
                             fight.Add("BIG|GOOD|Ты ПОБЕДИЛ :)");
