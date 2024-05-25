@@ -26,6 +26,17 @@ namespace Seeker.Gamebook.WalkInThePark
             {
                 Character.Protagonist.Rating += Character.Protagonist.MapParts * 10;
             }
+            else if (Name == "BeerUsing")
+            {
+                foreach (string trigger in Game.Data.Triggers)
+                {
+                    if (!trigger.StartsWith("пиво"))
+                        continue;
+
+                    Game.Option.Trigger(trigger, remove: true);
+                    return;
+                }
+            }
             else
             {
                 base.Do(Character.Protagonist);

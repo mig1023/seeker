@@ -268,8 +268,24 @@ namespace Seeker.Gamebook.WalkInThePark
             return new List<string> { "RELOAD" };
         }
 
-        public override bool Availability(string option) =>
-            AvailabilityTrigger(option);
+        public override bool Availability(string option)
+        {
+            if (option == "пиво")
+            {
+                foreach (string trigger in Game.Data.Triggers)
+                {
+                    if (trigger.StartsWith("пиво"))
+                        return true;
+                }
+
+                return false;
+            }
+            else
+            {
+                return AvailabilityTrigger(option);
+            }
+        }
+            
 
         private static bool NoMoreEnemies(List<Character> enemies)
         {
