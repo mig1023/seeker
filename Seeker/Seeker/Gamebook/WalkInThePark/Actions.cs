@@ -399,7 +399,7 @@ namespace Seeker.Gamebook.WalkInThePark
                     int protagonistHitStrength = protagonistRoll + Character.Protagonist.Strength;
                     string strength = part1 ? "Сила" : "Охрененность";
 
-                    fight.Add($"{strength} вашего удара: {Game.Dice.Symbol(protagonistRoll)} + " +
+                    fight.Add($"{strength} твоего удара: {Game.Dice.Symbol(protagonistRoll)} + " +
                         $"{Character.Protagonist.Strength} = {protagonistHitStrength}");
 
                     int enemyRoll = Game.Dice.Roll();
@@ -425,18 +425,18 @@ namespace Seeker.Gamebook.WalkInThePark
                                 Benefit.Do();
 
                             fight.Add(String.Empty);
-                            fight.Add("BIG|GOOD|Вы ПОБЕДИЛИ :)");
+                            fight.Add("BIG|GOOD|Ты ПОБЕДИЛ :)");
                             return fight;
                         }
                     }
                     else if (protagonistHitStrength < enemyHitStrength)
                     {
-                        fight.Add($"BAD|BOLD|{enemy.Name} заехал вам по морде");
+                        fight.Add($"BAD|BOLD|{enemy.Name} заехал тебе по морде");
 
                         if (part1)
-                            fight.Add($"Вы теряете {(double)enemy.Damage / 10} ед. Выносливости");
+                            fight.Add($"Ты теряешь {(double)enemy.Damage / 10} ед. Выносливости");
                         else
-                            fight.Add($"Вы теряете {enemy.Damage} ед. Самочувствия");
+                            fight.Add($"Ты теряешь {enemy.Damage} ед. Самочувствия");
 
                         Character.Protagonist.SetHealth(part1,
                             Character.Protagonist.GetHealth(part1) - enemy.Damage);
@@ -444,7 +444,7 @@ namespace Seeker.Gamebook.WalkInThePark
                         if (Character.Protagonist.GetHealth(part1) <= 0)
                         {
                             fight.Add(String.Empty);
-                            fight.Add("BIG|BAD|Вы ПРОИГРАЛИ :(");
+                            fight.Add("BIG|BAD|Ты ПРОИГРАЛ :(");
                             return fight;
                         }
                     }
@@ -466,7 +466,7 @@ namespace Seeker.Gamebook.WalkInThePark
                     {
                         Character.Protagonist.Fortune -= 1;
 
-                        fight.Add("BAD|Они задавили вас авторитетом :(");
+                        fight.Add("BAD|Они задавили тебя авторитетом :(");
                         fight.Add("BOLD|Фавор снижается на единицу...");
                     }
                     else
