@@ -3268,6 +3268,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="НЕУРАВНОВЕШЕННЫЙ МУЖИК" Strength="6" Health="5" Damage="1"/>
+					<StrengthBonus/>
 				</Fight>
 			</Actions>
 			<Options>
