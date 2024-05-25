@@ -382,6 +382,7 @@ namespace Seeker.Gamebook.WalkInThePark
                 FightEnemies.Add(enemy.Clone());
 
             int round = 1;
+            bool deviceUsed = false;
 
             while (true)
             {
@@ -427,6 +428,15 @@ namespace Seeker.Gamebook.WalkInThePark
                             fight.Add($"Противник теряет {Character.Protagonist.Damage} ед. Самочувствия");
 
                         enemy.SetHealth(part1, enemy.GetHealth(part1) - Character.Protagonist.Damage);
+
+                        if (Game.Option.IsTriggered("чукотский прибор") && !deviceUsed)
+                        {
+                            enemy.Health -= 1;
+                            deviceUsed = true;
+
+                            fight.Add($"GOOD|Плюс к тому, противник теряет 1 ед. Самочувствия " +
+                                $"от меткого попадания складного лезвия чукотского прибора!");
+                        }
 
                         if (NoMoreEnemies(FightEnemies))
                         {
