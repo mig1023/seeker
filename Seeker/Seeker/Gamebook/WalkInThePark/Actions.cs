@@ -10,6 +10,7 @@ namespace Seeker.Gamebook.WalkInThePark
 
         public bool Authority { get; set; }
         public bool FourRounds { get; set; }
+        public bool StrengthBonus { get; set; }
 
         private static Random rand = new Random();
 
@@ -405,9 +406,16 @@ namespace Seeker.Gamebook.WalkInThePark
 
                     int enemyRoll = Game.Dice.Roll();
                     int enemyHitStrength = enemyRoll + enemy.Strength;
+                    string bonus = String.Empty;
+
+                    if (StrengthBonus)
+                    {
+                        enemyHitStrength += 2;
+                        bonus = " + 2 за неуравновешенность";
+                    }
 
                     fight.Add($"{strength} удара противника: " +
-                        $"{Game.Dice.Symbol(enemyRoll)} + {enemy.Strength} = {enemyHitStrength}");
+                        $"{Game.Dice.Symbol(enemyRoll)} + {enemy.Strength}{bonus} = {enemyHitStrength}");
 
                     if (protagonistHitStrength > enemyHitStrength)
                     {
