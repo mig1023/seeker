@@ -8,6 +8,8 @@ namespace Seeker.Gamebook.WalkInThePark
     {
         public List<Character> Enemies { get; set; }
 
+        public bool Authority { get; set; }
+
         private static Random rand = new Random();
 
         private static bool IfThisIsFirstPart() =>
@@ -452,6 +454,25 @@ namespace Seeker.Gamebook.WalkInThePark
                     }
 
                     fight.Add(String.Empty);
+                }
+
+                if (Authority)
+                {
+                    int dice = Game.Dice.Roll();
+
+                    fight.Add($"Кидаем кубик за ихний наезд: {Game.Dice.Symbol(dice)}");
+
+                    if (dice == 6)
+                    {
+                        Character.Protagonist.Fortune -= 1;
+
+                        fight.Add("BAD|Они задавили вас авторитетом :(");
+                        fight.Add("BOLD|Фавор снижается на единицу...");
+                    }
+                    else
+                    {
+                        fight.Add("BOLD|Их наезды пошли лесом!");
+                    }
                 }
 
                 round += 1;
