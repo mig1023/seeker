@@ -1965,6 +1965,10 @@
 					<Head>Пиво «Невское»</Head>
 					<Price>150</Price>
 					<Multiple/>
+					<Benefits>
+						<Trigger Value="пиво невское"/>
+						<Fortune Value="5"/>
+					</Benefits>
 					<Text Style="Small">ФАВОР +5.</Text>
 				</Get>
 				<Get>
