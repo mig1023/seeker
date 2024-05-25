@@ -40,6 +40,7 @@
 			<EpicFight>Летс мортал комбат бегин!</EpicFight>
 			<Rating>Определить</Rating>
 			<SellBeer>Продать пиво</SellBeer>
+			<SellAccordion>Продать баян</SellAccordion>
 		</Buttons>
 		<Default>
 			<EqualPartsInStatuses/>
@@ -2137,6 +2138,7 @@
 			<Text>К сожалению, от населения тут принимаются только бутылки пива по цене 50 рублей за штуку, пачки сэмак по цене 25 рублей за штуку и баяны по цене 1000 за штуку.</Text>
 			<Actions>
 				<SellBeer/>
+				<SellAccordion/>
 			</Actions>
 			<Options>
 				<Option Goto="188" Text="Станешь сваливать"/>
