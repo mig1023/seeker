@@ -9,6 +9,7 @@ namespace Seeker.Gamebook.WalkInThePark
         public List<Character> Enemies { get; set; }
 
         public bool Authority { get; set; }
+        public bool FourRounds { get; set; }
 
         private static Random rand = new Random();
 
@@ -426,6 +427,16 @@ namespace Seeker.Gamebook.WalkInThePark
 
                             fight.Add(String.Empty);
                             fight.Add("BIG|GOOD|Ты ПОБЕДИЛ :)");
+
+                            if (FourRounds && (round <= 4))
+                            {
+                                Game.Buttons.Disable("Одержал победу за более чем 4 раунда");
+                            }
+                            else if (FourRounds && (round > 4))
+                            {
+                                Game.Buttons.Disable("Ты одержал победу за 4 или менее раундов битвы");
+                            }
+
                             return fight;
                         }
                     }
