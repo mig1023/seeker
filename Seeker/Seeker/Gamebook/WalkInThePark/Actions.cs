@@ -258,8 +258,9 @@ namespace Seeker.Gamebook.WalkInThePark
             bool disabledGetOptions = (Price > 0) && Used;
             bool disabledByPrice = (Price > 0) && (Character.Protagonist.Money < Price);
             bool noBeer = (Type == "SellBeer") && !IsTriggered("пиво", out _);
+            bool noAccordion = (Type == "SellAccordion") && !IsTriggered("баян", out _);
 
-            return !(disabledGetOptions || disabledByPrice || noBeer);
+            return !(disabledGetOptions || disabledByPrice || noBeer || noAccordion);
         }
 
         public List<string> Get()
@@ -297,6 +298,21 @@ namespace Seeker.Gamebook.WalkInThePark
 
                 Game.Option.Trigger(beer, remove: true);
             }
+
+            return sell;
+        }
+        
+        public List<string> SellAccordion()
+        {
+            List<string> sell = new List<string>
+            {
+                $"Продаём баян (1000р)",
+                $"GOOD|BOLD|Ты заработал косарь!"
+            };
+
+            Character.Protagonist.Money += 1000;
+
+            Game.Option.Trigger("баян", remove: true);
 
             return sell;
         }
