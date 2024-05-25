@@ -57,6 +57,7 @@ namespace Seeker.Gamebook.WalkInThePark
                     $"Оружие: {Character.Protagonist.Weapon} (урон {Character.Protagonist.Damage})",
                     $"Деньги: {Character.Protagonist.Money} руб",
                     $"Рейтинг: {Character.Protagonist.Rating}",
+                    $"Частей карты: {Character.Protagonist.MapParts}",
                 };
             }
         }

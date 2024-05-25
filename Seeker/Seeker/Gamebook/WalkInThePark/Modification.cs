@@ -22,6 +22,10 @@ namespace Seeker.Gamebook.WalkInThePark
             {
                 Character.Protagonist.Damage = Value;
             }
+            else if (Name == "MapsToRating")
+            {
+                Character.Protagonist.Rating += Character.Protagonist.MapParts * 10;
+            }
             else
             {
                 base.Do(Character.Protagonist);

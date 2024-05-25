@@ -71,6 +71,8 @@ namespace Seeker.Gamebook.WalkInThePark
 
         public int Rating { get; set; }
 
+        public int MapParts { get; set; }
+
         public int GetHealth(bool part1) =>
             part1 ? Endurance : Health;
 
@@ -99,6 +101,7 @@ namespace Seeker.Gamebook.WalkInThePark
             Stealth = Game.Dice.Roll();
             Fortune = Game.Dice.Roll(dices: 2);
             Rating = 0;
+            MapParts = 0;
         }
 
         public Character Clone() => new Character()
@@ -117,11 +120,12 @@ namespace Seeker.Gamebook.WalkInThePark
             Stealth = this.Stealth,
             Fortune = this.Fortune,
             Rating = this.Rating,
+            MapParts = this.MapParts,
         };
 
         public override string Save() => String.Join("|",
             Strength, StartStrength, Endurance, Luck, Money, Damage,
-            Weapon, MaxHealth, Health, Stealth, Fortune, Rating);
+            Weapon, MaxHealth, Health, Stealth, Fortune, Rating, MapParts);
 
         public override void Load(string saveLine)
         {
@@ -139,6 +143,7 @@ namespace Seeker.Gamebook.WalkInThePark
             Stealth = int.Parse(save[9]);
             Fortune = int.Parse(save[10]);
             Rating = int.Parse(save[11]);
+            MapParts = int.Parse(save[12]);
 
             IsProtagonist = true;
         }
