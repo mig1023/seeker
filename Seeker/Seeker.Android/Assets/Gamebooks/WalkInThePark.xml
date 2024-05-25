@@ -1693,6 +1693,7 @@
 						<Enemy Name="МОРФФАА" Strength="5" Health="6" Damage="1"/>
 						<Enemy Name="РМГУСВА" Strength="4" Health="7" Damage="1"/>
 					</Enemies>
+					<Authority/>
 					<Texts>
 						<Text Style="Small">Поскольку твои противники постоянно пытаются задавить тебя авторитетом, то после каждого раунда битвы кидай один кубик. Если выпадет 1, 2, 3, 4 или 5 они промахиваются, если же 6 отними 1 от уровня своего ФАВОРА!</Text>
 						<Text>Если тебе удастся победить этих мужиков:</Text>
@@ -2084,6 +2085,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="ДОМОВИК" Strength="2" Health="11" Damage="1"/>
+					<FourRounds/>
 				</Fight>
 			</Actions>
 			<Options>
