@@ -5,7 +5,8 @@
 			<Author>Роберт Лоуренс Стайн, 2000</Author>
 		</Copyright>
 		<Styles>
-			<Color Name="Main, Option, Continue" Value="151c3e"/>
+			<Color Name="Main, Option" Value="151c3e"/>
+			<Continue Value="5b6077"/>
 			<System Value="b8bac5"/>
 		</Styles>
 	</Introduction>
