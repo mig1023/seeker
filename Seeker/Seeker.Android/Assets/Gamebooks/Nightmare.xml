@@ -3113,5 +3113,11 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="499">
+			<Text>Заложи пальцем эту страницу, чтобы время от времени смотреть на карту.</Text>
+			<Options>
+				<Option Goto="474"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
