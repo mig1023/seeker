@@ -5,8 +5,10 @@
 			<Author>Константин Таро, 2010</Author>
 		</Copyright>
 		<Styles>
-			<Color Name="Main, Option, Continue, System, Font, StatusBorder, StatusFont" Value="cc5000"/>
-			<Color Name="Background, ButtonFont, StatusBar" Value="000000"/>
+			<Color Name="Main, Option, Continue, System, StatusFont" Value="cc5000"/>
+			<Font Value="ff4d00"/>
+			<Background Value="333333"/>
+			<Color Name="ButtonFont, StatusBar" Value="000000"/>
 		</Styles>
 		<Default>
 			<HideDisabledOption/>
