@@ -4739,5 +4739,11 @@
 				<Option Goto="701"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="761">
+			<Text>Ты выскакиваешь в коридор и вдруг замираешь на полпути.\n\nГде ванная?\n\nТы не помнишь.</Text>
+			<Options>
+				<Option Goto="738" Text="Скорей, пока ты не превратился в урода"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
