@@ -7723,5 +7723,11 @@
 				<Option Goto="1340" Text="Падай"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="1241">
+			<Text>Не умеешь жонглировать? Вот и прекрасно. Мало кто умеет. Это дело нелегкое!\n\nНо ведь наша история магическая. Так что: раз, два, три — PRESTO! — ты умеешь жонглировать!</Text>
+			<Options>
+				<Option Goto="1230"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
