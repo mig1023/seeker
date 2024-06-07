@@ -7644,5 +7644,11 @@
 				<Option Goto="1250"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="1228">
+			<Text>Итак, ты думаешь, что шарик под средним стаканчиком.\n\nНеверно!\n\nУ тебя есть еще один шанс.\n\nНа этот раз сконцентрируйся. Не спускай глаз с красного шарика.</Text>
+			<Options>
+				<Option Goto="1239"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
