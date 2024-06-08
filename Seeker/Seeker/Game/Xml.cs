@@ -42,8 +42,16 @@ namespace Seeker.Game
             return lines;
         }
         
-        public static string ImageName(XmlNode xmlNode) =>
+        private static string ImageName(XmlNode xmlNode) =>
             $"{Data.CurrentGamebook}_{xmlNode.Name}.jpg";
+
+        public static string ImageParse(XmlNode xmlNode)
+        {
+            if (xmlNode == null)
+                return String.Empty;
+            else
+                return $"{Data.CurrentGamebook}_{xmlNode.InnerText}.jpg";
+        }
 
         public static Dictionary<string, string> ImagesParse(XmlNode xmlNode)
         {

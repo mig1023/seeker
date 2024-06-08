@@ -372,7 +372,10 @@ namespace Seeker
                 {
                     continue;
                 }
-                
+
+                if (!String.IsNullOrEmpty(option.Image) && !Game.Settings.IsEnabled("WithoutStyles"))
+                    Options.Children.Add(Output.Interface.IllustrationImage(option.Image));
+
                 Options.Children.Add(button);
 
                 if (!String.IsNullOrEmpty(option.Input))

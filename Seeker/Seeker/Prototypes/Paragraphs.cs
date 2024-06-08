@@ -176,6 +176,7 @@ namespace Seeker.Prototypes
             Input = Xml.StringParse(xmlOption.Attributes["Input"]),
             Aftertexts = TextsParse(xmlOption),
             Style = Xml.StringParse(xmlOption.Attributes["Style"]),
+            Image = Xml.ImageParse(xmlOption.Attributes["Image"]),
             Do = new List<Abstract.IModification>(),
         };
             
