@@ -46,6 +46,25 @@ namespace Seeker.Gamebook.WalkInThePark
             return action;
         }
 
+        public override int GetGoto(XmlNode xmlOption, int? wayBack = null)
+        {
+            if (ThisIsGameover(xmlOption) && Actions.IfThisIsFirstPart())
+            {
+                return GetStartParagraph();
+            }
+            else if (ThisIsGameover(xmlOption))
+            {
+                if (Data.CurrentParagraphID == Constants.GameoverRating)
+                    return GetStartParagraph();
+                else
+                    return Constants.GameoverRating;
+            }
+            else
+            {
+                return Xml.IntParse(xmlOption.Attributes["Goto"]);
+            }
+        }
+
         public override Abstract.IModification ModificationParse(XmlNode xmlModification) =>
             Xml.ModificationParse(xmlModification, new Modification());
 

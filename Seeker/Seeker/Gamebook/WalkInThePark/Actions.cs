@@ -14,7 +14,7 @@ namespace Seeker.Gamebook.WalkInThePark
 
         private static Random rand = new Random();
 
-        private static bool IfThisIsFirstPart() =>
+        public static bool IfThisIsFirstPart() =>
             Game.Data.CurrentParagraphID <= Constants.FirstPartSize;
 
         public override List<string> Status()

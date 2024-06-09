@@ -75,7 +75,7 @@ namespace Seeker.Prototypes
                 return 0;
         }
 
-        protected int GetGoto(XmlNode xmlOption, int? wayBack = null)
+        public virtual int GetGoto(XmlNode xmlOption, int? wayBack = null)
         {
             if (ThisIsGameover(xmlOption))
             {
