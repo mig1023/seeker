@@ -9321,5 +9321,13 @@
 				<Option Goto="1500" Text="Иди"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="1498">
+			<Text>Ты выбрал камень и вытянул руку, сжатую в кулак.\n\nТо же самое сделала Джемми.\n\nНичья!\n\n— Очень хорошо. Еще раз! — приказала она.\n\nЧто же сделать?\n\nСнова выбрать камень?\n\nДумай быстро!</Text>
+			<Options>
+				<Option Goto="1617" Text="Выбираешь камень"/>
+				<Option Goto="1606" Text="Выбираешь бумагу"/>
+				<Option Goto="1538" Text="Выбираешь ножницы"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
