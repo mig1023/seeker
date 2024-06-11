@@ -9628,5 +9628,11 @@
 				<Option Goto="1525"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="1546">
+			<Text>Длинный нож навис над тобой.\n\nТы отклонился в сторону, но сделал это слишком медленно.\n\nИ понял, что тебе не увернуться.\n\nКОНЕЦ.</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
