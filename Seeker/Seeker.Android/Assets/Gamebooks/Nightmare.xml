@@ -9494,5 +9494,15 @@
 				<Option Goto="1572"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="1525">
+			<Text>Все кнопки в трансваторе выглядели одинаково, кроме тех, рядом с которыми были надписи.\n\nТы заколебался.\n\nКакую кнопку нажать?</Text>
+			<Options>
+				<Option Goto="1561" Text="«ФАУНА»"/>
+				<Option Goto="1509" Text="«ВЕРХ-НИЗ»"/>
+				<Option Goto="1558" Text="«СЛЕДОПЫТ»"/>
+				<Option Goto="1578" Text="«ЖУКИ»"/>
+				<Option Goto="1532" Text="«ТРУАНТЫ»"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
