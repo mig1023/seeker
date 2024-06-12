@@ -10069,5 +10069,13 @@
 				<Option Goto="1593"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="1617">
+			<Text>Ты снова выбрал камень.\n\nИ выбросил вперед кулак, надеясь, что Джемми выберет ножницы.\n\nНо она тоже выбрала камень.\n\nСнова ничья.\n\nПридется играть дальше.\n\nЧто выбрать?</Text>
+			<Options>
+				<Option Goto="1498" Text="Камень"/>
+				<Option Goto="1606" Text="Бумагу"/>
+				<Option Goto="1538" Text="Ножницы"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
