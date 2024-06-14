@@ -13,7 +13,7 @@
 	<Paragraphs>
 		<Paragraph No="0">
 			<Options>
-				<Option Goto="140" Text="Человекосжималки" Image="Squeezer"/>
+				<Option Goto="140" Text="Человекосжималки" Image="Squeezer" Style="6a9f49"/>
 				<Option Goto="947" Text="Цирк-западня" Image="Circus"/>
 				<Option Goto="546" Text="Ночь в лесу оборотней" Image="Night"/>
 				<Option Goto="1078" Text="Каникулы в джунглях" Image="Jungle"/>
