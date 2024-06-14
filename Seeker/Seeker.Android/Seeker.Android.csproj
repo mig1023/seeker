@@ -642,6 +642,21 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\WrongWayGoBack.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Nightmare_AllDay.jpg" />
+    <AndroidResource Include="Resources\drawable\Nightmare_Circus.jpg" />
+    <AndroidResource Include="Resources\drawable\Nightmare_Diary.jpg" />
+    <AndroidResource Include="Resources\drawable\Nightmare_Dummy.jpg" />
+    <AndroidResource Include="Resources\drawable\Nightmare_Elevator.jpg" />
+    <AndroidResource Include="Resources\drawable\Nightmare_Focus.jpg" />
+    <AndroidResource Include="Resources\drawable\Nightmare_Internet.jpg" />
+    <AndroidResource Include="Resources\drawable\Nightmare_Jungle.jpg" />
+    <AndroidResource Include="Resources\drawable\Nightmare_Magic.jpg" />
+    <AndroidResource Include="Resources\drawable\Nightmare_Night.jpg" />
+    <AndroidResource Include="Resources\drawable\Nightmare_Plants.jpg" />
+    <AndroidResource Include="Resources\drawable\Nightmare_Squeezer.jpg" />
+    <AndroidResource Include="Resources\drawable\Nightmare_Twister.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
