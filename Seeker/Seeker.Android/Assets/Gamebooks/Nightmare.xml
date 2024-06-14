@@ -17,7 +17,7 @@
 				<Option Goto="947" Text="Цирк-западня" Image="Circus" Style="8c0312"/>
 				<Option Goto="546" Text="Ночь в лесу оборотней" Image="Night" Style="323864"/>
 				<Option Goto="1078" Text="Каникулы в джунглях" Image="Jungle" Style="10360b"/>
-				<Option Goto="1214" Text="Заклятие чародея" Image="Magic"/>
+				<Option Goto="1214" Text="Заклятие чародея" Image="Magic" Style="f94b54"/>
 				<Option Goto="410" Text="Дневник сумасшедшей мумии" Image="Diary"/>
 				<Option Goto="679" Text="Он явился из интернета" Image="Internet"/>
 				<Option Goto="1349" Text="Ужас фокус-покуса" Image="Focus"/>
