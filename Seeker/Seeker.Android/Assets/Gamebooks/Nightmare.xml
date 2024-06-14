@@ -13,19 +13,45 @@
 	<Paragraphs>
 		<Paragraph No="0">
 			<Options>
-				<Option Goto="140" Text="Человекосжималки" Image="Squeezer" Style="6a9f49"/>
-				<Option Goto="947" Text="Цирк-западня" Image="Circus" Style="8c0312"/>
-				<Option Goto="546" Text="Ночь в лесу оборотней" Image="Night" Style="323864"/>
-				<Option Goto="1078" Text="Каникулы в джунглях" Image="Jungle" Style="10360b"/>
-				<Option Goto="1214" Text="Заклятие чародея" Image="Magic" Style="f94b54"/>
-				<Option Goto="410" Text="Дневник сумасшедшей мумии" Image="Diary" Style="736fa4"/>
-				<Option Goto="679" Text="Он явился из интернета" Image="Internet" Style="076ea6"/>
-				<Option Goto="1349" Text="Ужас фокус-покуса" Image="Focus" Style="6f4895"/>
-				<Option Goto="1" Text="Кошмар на весь день" Image="AllDay" Style="083855"/>
-				<Option Goto="1486" Text="Лифт в никуда" Image="Elevator" Style="6a6f70"/>
-				<Option Goto="274" Text="Ты — удобрение для растений" Image="Plants" Style="1f3310"/>
-				<Option Goto="1622" Text="Оживший манекен" Image="Dummy" Style="724a3a"/>
-				<Option Goto="814" Text="Наперегонки с торнадо" Image="Twister" Style="6c8aa8"/>
+				<Option Goto="140" Text="Человекосжималки" Image="Squeezer" Style="6a9f49">
+					<Text Style="Small">Invasion of the Body Squeezers, 1998</Text>
+				</Option>
+				<Option Goto="947" Text="Цирк-западня" Image="Circus" Style="8c0312">
+					<Text Style="Small">Trapped in the Circus of Fear, 1998</Text>
+				</Option>
+				<Option Goto="546" Text="Ночь в лесу оборотней" Image="Night" Style="323864">
+					<Text Style="Small">Night in Werewolf Woods, 1996</Text>
+				</Option>
+				<Option Goto="1078" Text="Каникулы в джунглях" Image="Jungle" Style="10360b">
+					<Text Style="Small">Deep in the Jungle of Doom, 1996</Text>
+				</Option>
+				<Option Goto="1214" Text="Заклятие чародея" Image="Magic" Style="f94b54">
+					<Text Style="Small">Under the Magician's Spell, 1996</Text>
+				</Option>
+				<Option Goto="410" Text="Дневник сумасшедшей мумии" Image="Diary" Style="736fa4">
+					<Text Style="Small">Diary of a Mad Mummy, 1996</Text>
+				</Option>
+				<Option Goto="679" Text="Он явился из интернета" Image="Internet" Style="076ea6">
+					<Text Style="Small">It Came from the Internet, 1999</Text>
+				</Option>
+				<Option Goto="1349" Text="Ужас фокус-покуса" Image="Focus" Style="6f4895">
+					<Text Style="Small">Hocus-Pocus Horror, 1999</Text>
+				</Option>
+				<Option Goto="1" Text="Кошмар на весь день" Image="AllDay" Style="083855">
+					<Text Style="Small">All-Day Nightmare, 2000</Text>
+				</Option>
+				<Option Goto="1486" Text="Лифт в никуда" Image="Elevator" Style="6a6f70">
+					<Text Style="Small">Elevator to Nowhere, 1999</Text>
+				</Option>
+				<Option Goto="274" Text="Ты — удобрение для растений" Image="Plants" Style="1f3310">
+					<Text Style="Small">You're Plant Food!, 1998</Text>
+				</Option>
+				<Option Goto="1622" Text="Оживший манекен" Image="Dummy" Style="724a3a">
+					<Text Style="Small">Shop 'Til You Drop... Dead!, 1998</Text>
+				</Option>
+				<Option Goto="814" Text="Наперегонки с торнадо" Image="Twister" Style="6c8aa8">
+					<Text Style="Small">Into the Twister of Terror, 1999</Text>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph No="1">
