@@ -21,7 +21,7 @@
 				<Option Goto="410" Text="Дневник сумасшедшей мумии" Image="Diary" Style="736fa4"/>
 				<Option Goto="679" Text="Он явился из интернета" Image="Internet" Style="076ea6"/>
 				<Option Goto="1349" Text="Ужас фокус-покуса" Image="Focus" Style="6f4895"/>
-				<Option Goto="1" Text="Кошмар на весь день" Image="AllDay"/>
+				<Option Goto="1" Text="Кошмар на весь день" Image="AllDay" Style="083855"/>
 				<Option Goto="1486" Text="Лифт в никуда" Image="Elevator"/>
 				<Option Goto="274" Text="Ты — удобрение для растений" Image="Plants"/>
 				<Option Goto="1622" Text="Оживший манекен" Image="Dummy"/>
