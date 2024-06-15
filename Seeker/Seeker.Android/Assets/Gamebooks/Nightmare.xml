@@ -1867,8 +1867,8 @@
 				<Coin/>
 			</Actions>
 			<Options>
-				<Option Goto="309" Text="Если выпал орел, беги в Арктику"/>
-				<Option Goto="339" Text="Если выпала решка, торопись в горы"/>
+				<Option Goto="309" Text="Если выпал орел - беги в Арктику"/>
+				<Option Goto="339" Text="Если выпала решка - торопись в горы"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="291">
@@ -2385,7 +2385,10 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="373">
-			<Text>БОТАНИЧЕСКИЙ САД\n\nЭ. ВИЛЛА КРУТОУ\n\nОзнакомьтесь со всеми нашими отделениями:</Text>
+			<Texts>
+				<Text Style="Center">БОТАНИЧЕСКИЙ САД\nЭ. ВИЛЛА КРУТОУ</Text>
+				<Text>Ознакомьтесь со всеми нашими отделениями:</Text>
+			</Texts>
 			<Options>
 				<Option Goto="278" Text="ТРОПИКИ"/>
 				<Option Goto="314" Text="АРКТИКА"/>
@@ -5610,8 +5613,8 @@
 				<Coin/>
 			</Actions>
 			<Options>
-				<Option Goto="908" Text="Выпал «орёл», нажимай на кнопку «Стоп»"/>
-				<Option Goto="846" Text="Выпала «решка», нажми на кнопку «План Б»"/>
+				<Option Goto="908" Text="Выпал «орёл» - нажимай на кнопку «Стоп»"/>
+				<Option Goto="846" Text="Выпала «решка» - нажми на кнопку «План Б»"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="892">
@@ -7062,8 +7065,8 @@
 				<Coin/>
 			</Actions>
 			<Options>
-				<Option Goto="1120" Text="Если выпал орел, иди налево"/>
-				<Option Goto="1180" Text="Если выпала решка, иди направо"/>
+				<Option Goto="1120" Text="Если выпал орел - иди налево"/>
+				<Option Goto="1180" Text="Если выпала решка - иди направо"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="1124">
