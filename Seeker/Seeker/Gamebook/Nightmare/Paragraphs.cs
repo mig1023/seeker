@@ -7,5 +7,8 @@ namespace Seeker.Gamebook.Nightmare
     {
         public override Paragraph Get(int id, XmlNode xmlParagraph) =>
             base.Get(xmlParagraph);
+
+        public override Abstract.IActions ActionParse(XmlNode xmlAction) =>
+            (Actions)ActionTemplate(xmlAction, new Actions());
     }
 }

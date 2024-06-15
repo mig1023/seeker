@@ -12,7 +12,7 @@ namespace Seeker.Gamebook.Nightmare
 
         public override string GetColor(ButtonTypes type)
         {
-            if (type == ButtonTypes.Main)
+            if ((type == ButtonTypes.Main) || (type == ButtonTypes.Action))
             {
                 string currentColor = String.Empty;
 
