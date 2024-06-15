@@ -666,6 +666,7 @@
     <AndroidResource Include="Resources\drawable\Nightmare_Pic4.jpg" />
     <AndroidResource Include="Resources\drawable\Nightmare_Pic5.jpg" />
     <AndroidResource Include="Resources\drawable\Nightmare_Pic6.jpg" />
+    <AndroidResource Include="Resources\drawable\Nightmare_Pic7.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>
