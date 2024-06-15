@@ -9,6 +9,7 @@ namespace Seeker.Output
         public string Alignment { get; set; }
         public bool Selected { get; set; }
         public bool Box { get; set; }
+        public bool Upper { get; set; }
 
         public Interface.TextFontSize Size { get; set; }
         public string Background { get; set; }

@@ -225,7 +225,9 @@ namespace Seeker.Output
         {
             bool selected = text.Selected || text.Box;
 
-            ExtendedLabel label = Text(RedStyle(text.Content), italic: text.Italic, size: text.Size, selected: selected);
+            ExtendedLabel label = Text(RedStyle(text.Content), italic: text.Italic,
+                upper: text.Upper, size: text.Size, selected: selected);
+
             label.FontFamily = TextFontFamily(bold: text.Bold, italic: text.Italic);
 
             if (text.Alignment == "Center")
@@ -311,10 +313,11 @@ namespace Seeker.Output
             return grid;
         }
 
-        public static ExtendedLabel Text(string text, bool defaultParams = false, bool italic = false, bool bold = false,
+        public static ExtendedLabel Text(string text, bool defaultParams = false,
+            bool italic = false, bool bold = false, bool upper = false,
             TextFontSize size = TextFontSize.Nope, bool selected = false)
         {
-            bool justyfy = (defaultParams ? false : (Game.Settings.IsEnabled("Justyfy")));
+            bool justyfy = defaultParams ? false : (Game.Settings.IsEnabled("Justyfy"));
 
             ExtendedLabel label = new ExtendedLabel
             {
@@ -326,13 +329,23 @@ namespace Seeker.Output
             };
 
             if (bold)
+            {
                 label.FontAttributes = FontAttributes.Bold;
+            }
 
-            if (!selected)
+            if (upper)
+            {
+                label.Margin = new Thickness(0, -5, 0, 10);
+            }
+            else if (!selected)
+            {
                 label.Margin = Constants.TEXT_LABEL_MARGIN;
-
+            }
+             
             if (defaultParams)
+            {
                 return label;
+            }
 
             int fontSize = Game.Settings.GetValue("FontSize");
 
