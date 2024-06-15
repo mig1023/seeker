@@ -21,6 +21,9 @@
 				<Item Name="1622" Value="724a3a"/>
 			</Buttons>
 		</Dictionaries>
+		<Buttons>
+			<Coin>Брось монетку!</Coin>
+		</Buttons>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph No="0">
@@ -1187,10 +1190,13 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="182">
-			<Text>Ты увёртываешься. Быстро.\n\nНо достаточно ли быстро?\n\nГм... сейчас увидим. Вообще–то говоря, это зависит от того, удачный у тебя сегодня день или нет.\n\nХочешь узнать?\n\nБрось монетку!\n\nБрось три раза.\n\nТолько поторапливайся.</Text>
+			<Text>Ты увёртываешься. Быстро.\n\nНо достаточно ли быстро?\n\nГм... сейчас увидим. Вообще–то говоря, это зависит от того, удачный у тебя сегодня день или нет.\n\nХочешь узнать?</Text>
+			<Actions>
+				<Coin/>
+			</Actions>
 			<Options>
-				<Option Goto="229" Text="Дважды выпадет решка"/>
-				<Option Goto="155" Text="Дважды выпадет орёл"/>
+				<Option Goto="229" Text="Выпала решка"/>
+				<Option Goto="155" Text="Выпал орёл"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="183">
