@@ -28,43 +28,43 @@
 	<Paragraphs>
 		<Paragraph No="0">
 			<Options>
-				<Option Goto="140" Text="Человекосжималки" Image="Squeezer" Style="6a9f49">
+				<Option Goto="140" Text="Человекосжималки" Image="Squeezer">
 					<Text Style="Small, Upper">Invasion of the Body Squeezers, 1998</Text>
 				</Option>
-				<Option Goto="947" Text="Цирк-западня" Image="Circus" Style="8c0312">
+				<Option Goto="947" Text="Цирк-западня" Image="Circus">
 					<Text Style="Small, Upper">Trapped in the Circus of Fear, 1998</Text>
 				</Option>
-				<Option Goto="546" Text="Ночь в лесу оборотней" Image="Night" Style="323864">
+				<Option Goto="546" Text="Ночь в лесу оборотней" Image="Night">
 					<Text Style="Small, Upper">Night in Werewolf Woods, 1996</Text>
 				</Option>
-				<Option Goto="1078" Text="Каникулы в джунглях" Image="Jungle" Style="10360b">
+				<Option Goto="1078" Text="Каникулы в джунглях" Image="Jungle">
 					<Text Style="Small, Upper">Deep in the Jungle of Doom, 1996</Text>
 				</Option>
-				<Option Goto="1214" Text="Заклятие чародея" Image="Magic" Style="f94b54">
+				<Option Goto="1214" Text="Заклятие чародея" Image="Magic">
 					<Text Style="Small, Upper">Under the Magician's Spell, 1996</Text>
 				</Option>
-				<Option Goto="410" Text="Дневник сумасшедшей мумии" Image="Diary" Style="736fa4">
+				<Option Goto="410" Text="Дневник сумасшедшей мумии" Image="Diary">
 					<Text Style="Small, Upper">Diary of a Mad Mummy, 1996</Text>
 				</Option>
-				<Option Goto="679" Text="Он явился из интернета" Image="Internet" Style="076ea6">
+				<Option Goto="679" Text="Он явился из интернета" Image="Internet">
 					<Text Style="Small, Upper">It Came from the Internet, 1999</Text>
 				</Option>
-				<Option Goto="1349" Text="Ужас фокус-покуса" Image="Focus" Style="6f4895">
+				<Option Goto="1349" Text="Ужас фокус-покуса" Image="Focus">
 					<Text Style="Small, Upper">Hocus-Pocus Horror, 1999</Text>
 				</Option>
-				<Option Goto="1" Text="Кошмар на весь день" Image="AllDay" Style="083855">
+				<Option Goto="1" Text="Кошмар на весь день" Image="AllDay">
 					<Text Style="Small, Upper">All-Day Nightmare, 2000</Text>
 				</Option>
-				<Option Goto="1486" Text="Лифт в никуда" Image="Elevator" Style="6a6f70">
+				<Option Goto="1486" Text="Лифт в никуда" Image="Elevator">
 					<Text Style="Small, Upper">Elevator to Nowhere, 1999</Text>
 				</Option>
-				<Option Goto="274" Text="Ты — удобрение для растений" Image="Plants" Style="1f3310">
+				<Option Goto="274" Text="Ты — удобрение для растений" Image="Plants">
 					<Text Style="Small, Upper">You're Plant Food!, 1998</Text>
 				</Option>
-				<Option Goto="1622" Text="Оживший манекен" Image="Dummy" Style="724a3a">
+				<Option Goto="1622" Text="Оживший манекен" Image="Dummy">
 					<Text Style="Small, Upper">Shop 'Til You Drop... Dead!, 1998</Text>
 				</Option>
-				<Option Goto="814" Text="Наперегонки с торнадо" Image="Twister" Style="6c8aa8">
+				<Option Goto="814" Text="Наперегонки с торнадо" Image="Twister">
 					<Text Style="Small, Upper">Into the Twister of Terror, 1999</Text>
 				</Option>
 			</Options>
@@ -72,7 +72,7 @@
 		<Paragraph No="1">
 			<Text>Берегись, читатель!\n\nСам выбрал наш ужастик — никто тебе не поможет!\n\nНу и ну! Какой чудовищный кошмар приснился тебе ночью. Ты пытаешься проснуться, но страшные образы всё ещё не оставляют тебя...\n\nПостой-ка! Да это же не твоя спальня! Ты в чужом доме. Старом и ужасном. Но самое неприятное то, что ты не можешь вспомнить даже своего имени!\n\nЧто делать? Выпрыгнуть в окно или спрятаться на чердаке? Если выпрыгнешь, тебе не избежать встречи с инопланетянами. Уж они-то знают, как поступить с твоей памятью.\n\nЛучше уж беги, пока они снова не достали тебя со своим прибором — мозгопотрошителем.\n\nПравда, идея прокрасться в подвал не намного веселее... если, конечно, ты не против «подкормить» голодную стаю волков-оборотней, ведь у них, ты знаешь, одно на уме — вкусно пообедать!\n\nДалее следуй инструкциям в конце каждой страницы. И делай выбор. Если твой выбор будет удачным — вернешься домой целым и невредимым. Но если примешь неверное решение — БЕРЕГИСЬ!</Text>
 			<Options>
-				<Start Goto="3"/>
+				<Option Goto="3"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="2">
@@ -4240,7 +4240,8 @@
 		<Paragraph No="668">
 			<Texts>
 				<Text>Лицо у Лорен серьезное. Она продолжает внимательно наблюдать за огненно-рыжими муравьями, изъясняющимися с ней на языке жестов.\n\n— Они говорят, чтоб мы опасались оборотней Лесного мира, — переводит она. — Еще они говорят, что мы в безопасности только, если у нас в руках красная жестяная коробка.\n\n— А они знают, где она? — спрашивает Тодд.\n\n— Говорят, знают, но не могут сказать. В лесу есть и другая власть, им неизвестная. Они говорят, мы можем найти эту коробку, но это надо сделать до утра.\n\n— Верно! — соглашаешься ты.\n\nЗатем вытаскиваешь из кармана сложенный листочек бумаги и снова читаешь стихотворное послание:</Text>
-				<Text Style="Italic, Box">На рассвете, когда исчезает и ночь, и луна,\nРастворятся и оборотни. С ними вместе — коробка...</Text>\n\n— Нельзя терять ни минуты, — обращаешься ты к друзьям. — Лорен, скажи муравьям, что мы нечаянно врезались в их дерево и просим нас извинить. Мы не будем вредить им, если они не будут вредить нам. Наши беды только начинаются, а муравьям скажи, что их несчастью пришел\n\nКОНЕЦ.</Text>
+				<Text Style="Italic, Box">На рассвете, когда исчезает и ночь, и луна,\nРастворятся и оборотни. С ними вместе — коробка...</Text>
+				<Text>— Нельзя терять ни минуты, — обращаешься ты к друзьям. — Лорен, скажи муравьям, что мы нечаянно врезались в их дерево и просим нас извинить. Мы не будем вредить им, если они не будут вредить нам. Наши беды только начинаются, а муравьям скажи, что их несчастью пришел\n\nКОНЕЦ.</Text>
 			</Texts>
 			<Options>
 				<Gameover/>
