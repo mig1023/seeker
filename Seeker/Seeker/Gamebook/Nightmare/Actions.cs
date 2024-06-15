@@ -16,11 +16,29 @@ namespace Seeker.Gamebook.Nightmare
             if (coin)
             {
                 lines.Add("BIG|BOLD|GOOD|Выпал ОРЁЛ!");
-                Buttons.Disable("Выпала решка");
+
+                List<string> buttons = new List<string>
+                {
+                    "Выпала решка",
+                    "Если выпала решка - торопись в горы",
+                    "Выпала «решка» - нажми на кнопку «План Б»",
+                    "Если выпала решка - иди направо",
+                };
+                
+                Buttons.Disable(string.Join(",", buttons));
             }
             else
             {
                 lines.Add("BIG|BOLD|BAD|Выпала РЕШКА!");
+
+                List<string> buttons = new List<string>
+                {
+                    "Выпал орёл",
+                    "Если выпал орел - беги в Арктику",
+                    "Выпал «орёл» - нажимай на кнопку «Стоп»",
+                    "Если выпал орел - иди налево",
+                };
+
                 Buttons.Disable("Выпал орёл");
             }
 
