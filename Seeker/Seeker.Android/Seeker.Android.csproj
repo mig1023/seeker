@@ -663,6 +663,7 @@
   <ItemGroup>
     <Content Include="Resources\drawable\Nightmare_Pic2.jpg" />
     <AndroidResource Include="Resources\drawable\Nightmare_Pic3.jpg" />
+    <Content Include="Resources\drawable\Nightmare_Pic4.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>
