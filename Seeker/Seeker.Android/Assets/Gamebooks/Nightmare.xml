@@ -4,11 +4,23 @@
 			<Title>Ужастики</Title>
 			<Author>Роберт Лоуренс Стайн, 2000</Author>
 		</Copyright>
-		<Styles>
-			<Color Name="Main, Option" Value="7b719c"/>
-			<Continue Value="6c7ba9"/>
-			<System Value="cdc2d5"/>
-		</Styles>
+		<Dictionaries>
+			<Buttons>
+				<Item Name="1" Value="083855"/>
+				<Item Name="140" Value="6a9f49"/>
+				<Item Name="274" Value="1f3310"/>
+				<Item Name="410" Value="736fa4"/>
+				<Item Name="546" Value="323864"/>
+				<Item Name="679" Value="076ea6"/>
+				<Item Name="814" Value="6c8aa8"/>
+				<Item Name="947" Value="8c0312"/>
+				<Item Name="1078" Value="10360b"/>
+				<Item Name="1214" Value="f94b54"/>
+				<Item Name="1349" Value="6f4895"/>
+				<Item Name="1486" Value="6a6f70"/>
+				<Item Name="1622" Value="724a3a"/>
+			</Buttons>
+		</Dictionaries>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph No="0">
