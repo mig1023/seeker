@@ -1,22 +1,25 @@
 ﻿using System.Collections.Generic;
 using Seeker.Game;
+using Xamarin.Forms.Shapes;
 
 namespace Seeker.Gamebook.Nightmare
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {
+        private void CoinResult(ref List<string> lines, string text, List<string> buttons)
+        {
+            lines.Add($"BIG|BOLD|{text}!");
+            Buttons.Disable(string.Join(",", buttons));
+        }
+
         public List<string> Coin()
         {
-            List<string> lines = new List<string>();
-
-            lines.Add("Бросаем монетку:");
+            List<string> lines = new List<string> { "Бросаем монетку:" };
 
             bool coin = Dice.Roll() % 2 == 0;
 
             if (coin)
             {
-                lines.Add("BIG|BOLD|GOOD|Выпал ОРЁЛ!");
-
                 List<string> buttons = new List<string>
                 {
                     "Выпала решка",
@@ -24,13 +27,11 @@ namespace Seeker.Gamebook.Nightmare
                     "Выпала «решка» - нажми на кнопку «План Б»",
                     "Если выпала решка - иди направо",
                 };
-                
-                Buttons.Disable(string.Join(",", buttons));
+
+                CoinResult(ref lines, "GOOD|Выпал ОРЁЛ", buttons);
             }
             else
             {
-                lines.Add("BIG|BOLD|BAD|Выпала РЕШКА!");
-
                 List<string> buttons = new List<string>
                 {
                     "Выпал орёл",
@@ -39,7 +40,7 @@ namespace Seeker.Gamebook.Nightmare
                     "Если выпал орел - иди налево",
                 };
 
-                Buttons.Disable("Выпал орёл");
+                CoinResult(ref lines, "BAD|Выпала РЕШКА", buttons);
             }
 
             return lines;
