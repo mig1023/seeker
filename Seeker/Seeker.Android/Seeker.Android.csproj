@@ -643,6 +643,8 @@
     <AndroidResource Include="Resources\drawable\Nightmare_Pic1.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ChooseYourOwnAdventure.jpg" />
+    <AndroidAsset Include="Assets\Gamebooks\ChooseYourOwnAdventure.xml" />
     <Content Include="Resources\drawable\Nightmare_Pic2.jpg" />
     <AndroidResource Include="Resources\drawable\Nightmare_Pic3.jpg" />
     <AndroidResource Include="Resources\drawable\Nightmare_Pic4.jpg" />
@@ -653,7 +655,7 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties XamarinHotReloadGenericExceptionInfoBarSeekerAndroidHideInfoBar="True" XamarinHotReloadDebuggerTimeoutExceptionSeekerAndroidHideInfoBar="True" />
+      <UserProperties XamarinHotReloadDebuggerTimeoutExceptionSeekerAndroidHideInfoBar="True" XamarinHotReloadGenericExceptionInfoBarSeekerAndroidHideInfoBar="True" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>

@@ -612,6 +612,27 @@
 		<Setting>История</Setting>
 		<Color>613a33</Color>
 	</ConquistadorDiary>
+	<ChooseYourOwnAdventure>
+		<Title>Серия «Выбери себе приключение»</Title>
+		<Original>Choose Your Own Adventure</Original>
+		<Authors>
+			<Author>Эдвард Паккард</Author>
+			<Author>Джей Либолд</Author>
+			<Author>Эллен Кушнер</Author>
+		</Authors>
+		<Translators>
+			<Translator>С. Дубовик</Translator>
+			<Translator>Сергей Посниченко</Translator>
+			<Translator>Е. Нестерова</Translator>
+		</Translators>
+		<Year>1979</Year>
+		<Text>Серия детских книг-игр, впервые опубликованная Bantam Books между 1979—1998 годами, и ныне выходящая в издательстве Chooseco. Каждая история написана от второго лица, где игрок выступает в роли протагониста и должен выбирать нужное со своей точки зрения действие, влияющее на дальнейшее прохождение. «Выбери себе приключение» одна из самых популярных детских серий с 1980-х по 90-е годы, так, начиная с 1979 года было продано более 250 миллионов копий книг, а также осуществлён перевод более чем на 38 языков, включая русский.</Text>
+		<Paragraphs>1</Paragraphs>
+		<Size>1</Size>
+		<Playthrough>На полчаса</Playthrough>
+		<Setting>Приключения</Setting>
+		<Color>e17b5f</Color>
+	</ChooseYourOwnAdventure>
 	<Trail>
 		<Title>След</Title>
 		<Author>Павел Горохов</Author>

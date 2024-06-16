@@ -1,0 +1,22 @@
+<Gamebook>
+	<Introduction>
+		<Copyright>
+			<Title>Выбери себе приключение</Title>
+			<Author>Эдвард Паккард, Джей Либолд, Эллен Кушнер, 1979</Author>
+		</Copyright>
+	</Introduction>
+	<Paragraphs>
+		<Paragraph No="0">
+			<Text>START</Text>
+			<Options>
+				<Start Goto="1"/>
+			</Options>
+		</Paragraph>
+		<Paragraph No="1">
+			<Text>END</Text>
+			<Options>
+				<Option Goto="0"/>
+			</Options>
+		</Paragraph>
+	</Paragraphs>
+</Gamebook>
