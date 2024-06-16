@@ -475,12 +475,6 @@
     <AndroidResource Include="Resources\drawable\ConquistadorDiary.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Gamebooks\DinosaurIsland.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\DinosaurIsland.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable\Trail.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -491,12 +485,6 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\Trail_Report.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\Gamebooks\OutlawsOfSherwoodForest.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\OutlawsOfSherwoodForest.jpg" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Gamebooks\AlamutFortress.xml" />
@@ -515,12 +503,6 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\Moria.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\Gamebooks\YouAreMillionaire.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\YouAreMillionaire.jpg" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Gamebooks\ProjectOne.xml" />
@@ -671,7 +653,7 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties XamarinHotReloadDebuggerTimeoutExceptionSeekerAndroidHideInfoBar="True" XamarinHotReloadGenericExceptionInfoBarSeekerAndroidHideInfoBar="True" />
+      <UserProperties XamarinHotReloadGenericExceptionInfoBarSeekerAndroidHideInfoBar="True" XamarinHotReloadDebuggerTimeoutExceptionSeekerAndroidHideInfoBar="True" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>

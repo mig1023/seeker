@@ -612,19 +612,6 @@
 		<Setting>История</Setting>
 		<Color>613a33</Color>
 	</ConquistadorDiary>
-	<DinosaurIsland>
-		<Title>Остров динозавров</Title>
-		<Original>Dinosaur island</Original>
-		<Author>Эдвард Паккард</Author>
-		<Translator>Е. Нестерова</Translator>
-		<Year>1993</Year>
-		<Text>После крушения самолета тебе удалось спастись, и море выбросило тебя на остров, где живут динозавры. Эти доисторические животные появились там благодаря экспериментам сумасшедшего ученого. Если он узнает, что ты раскрыл его тайну, тебе несдобровать. Да и сами динозавры очень опасны.\n\nЧто же делать? Удрать отсюда при первой же возможности или остаться и побольше узнать о динозаврах? Все зависит от твоего выбора и смекалки.</Text>
-		<Paragraphs>119</Paragraphs>
-		<Size>15053</Size>
-		<Playthrough>На полчаса</Playthrough>
-		<Setting>Выживач</Setting>
-		<Color>023c42</Color>
-	</DinosaurIsland>
 	<Trail>
 		<Title>След</Title>
 		<Author>Павел Горохов</Author>
@@ -647,19 +634,6 @@
 		<Setting>Выживач</Setting>
 		<Color>b19081</Color>
 	</UnexpectedPassenger>
-	<OutlawsOfSherwoodForest>
-		<Title>Разбойники Шервудского леса</Title>
-		<Original>Outlaws of Sherwood Forest</Original>
-		<Author>Эллен Кушнер</Author>
-		<Translator>Сергей Посниченко</Translator>
-		<Year>1985</Year>
-		<Text>РОБИНУ ГУДУ НУЖНА ТВОЯ ПОМОЩЬ!\nЭтим летом тебя услали в лагерь. Как-то ночью ты, нарушив режим, отправляешься в лес на поиски пропавшей стрелы. Неожиданно луна скрывается за облаками – и тебя волшебным образом переносит в Шервудский лес. Ты очутился лицом к лицу с одетым во всё зелёное стрелком. Это Робин Гуд, и ему нужна твоя помощь! Шериф Ноттингемский схватил деву Мэриан!</Text>
-		<Paragraphs>68</Paragraphs>
-		<Size>18239</Size>
-		<Playthrough>На полчаса</Playthrough>
-		<Setting>Приключения</Setting>
-		<Color>43574d</Color>
-	</OutlawsOfSherwoodForest>
 	<AlamutFortress>
 		<Title>Крепость Аламут</Title>
 		<Original>La Forteresse D’Alamuth</Original>
@@ -687,33 +661,6 @@
 		<Setting>Фанфикшен</Setting>
 		<Color>361e22</Color>
 	</Moria>
-	<YouAreMillionaire>
-		<Title>Ты – миллионер</Title>
-		<Original>You are a Millionaire</Original>
-		<Author>Джей Либолд</Author>
-		<Translator>С. Дубовик</Translator>
-		<Year>1990</Year>
-		<Text>Состояние, которое ты неожиданно находишь, может стать мечтой, превратившейся в реальность, или... кошмаром! Что с тобой будет дальше? Чем все кончится? Только ты способен ответить на эти вопросы. А самое главное, ты сможешь читать и перечитывать эту книгу до тех пор, пока не попробуешь все варианты.</Text>
-		<Paragraphs>118</Paragraphs>
-		<Size>20066</Size>
-		<Playthrough>На пять минут</Playthrough>
-		<Setting>Приключения</Setting>
-		<Color>6b806b</Color>
-	</YouAreMillionaire>
-	<ProjectOne>
-		<Title>Проект 1</Title>
-		<Authors>
-			<Author>Дмитрий Гавриченко</Author>
-			<Author>Пётр Александров</Author>
-		</Authors>
-		<Year>2008</Year>
-		<Text>Давным-давно мир рухнул – произошёл тот самый апокалипсис которого многие боялись и ожидали. С тех пор мир изменился до неузнаваемости, но всё также в нем есть место оружию и насилию. А выживает в таком мире – сильнейший.\n\nЭто не просто книга, ведь здесь главный герой – Вы. Всё что вам потребуется для игры это пара игральных кубиков, карандаш, ластик, и отпечатанный лист персонажа.</Text>
-		<Paragraphs>350</Paragraphs>
-		<Size>47302</Size>
-		<Playthrough>На часок-полтора</Playthrough>
-		<Setting>Научная фантастика</Setting>
-		<Color>352d39</Color>
-	</ProjectOne>
 	<MadameGuillotine>
 		<Title>Мадам Гильотина</Title>
 		<Original>Madame Guillotine</Original>
@@ -730,6 +677,20 @@
 		<Setting>История</Setting>
 		<Color>011066</Color>
 	</MadameGuillotine>
+	<ProjectOne>
+		<Title>Проект 1</Title>
+		<Authors>
+			<Author>Дмитрий Гавриченко</Author>
+			<Author>Пётр Александров</Author>
+		</Authors>
+		<Year>2008</Year>
+		<Text>Давным-давно мир рухнул – произошёл тот самый апокалипсис которого многие боялись и ожидали. С тех пор мир изменился до неузнаваемости, но всё также в нем есть место оружию и насилию. А выживает в таком мире – сильнейший.\n\nЭто не просто книга, ведь здесь главный герой – Вы. Всё что вам потребуется для игры это пара игральных кубиков, карандаш, ластик, и отпечатанный лист персонажа.</Text>
+		<Paragraphs>350</Paragraphs>
+		<Size>47302</Size>
+		<Playthrough>На часок-полтора</Playthrough>
+		<Setting>Научная фантастика</Setting>
+		<Color>352d39</Color>
+	</ProjectOne>
 	<TenementBuilding>
 		<Title>Доходный дом</Title>
 		<Author>Владислав Кривчиков</Author>
