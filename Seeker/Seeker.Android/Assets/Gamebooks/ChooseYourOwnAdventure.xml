@@ -938,5 +938,8 @@
 				<Option Goto="152" Text="Принимаешь решение позвонить Джин Фейи"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="167">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
