@@ -700,5 +700,8 @@
 				<Option Goto="129" Text="Решаешь умолчать о набитом деньгами портфеле"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="124">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
