@@ -9,24 +9,30 @@ namespace Seeker.Gamebook.ChooseYourOwnAdventure
     {
         public static Dictionary<int, string> Buttons { get; set; }
 
+        public static int MillionerStartParagraph = 120;
+
+        public static int GetCurrentStartParagraph()
+        {
+            int start = 0;
+            int current = Game.Data.CurrentParagraphID;
+
+            foreach (int startParagraph in Constants.Buttons.Keys.OrderBy(x => x))
+            {
+                if (current >= startParagraph)
+                    start = startParagraph;
+            }
+
+            return start;
+        }
+
         public override string GetColor(ButtonTypes type)
         {
-            if ((type == ButtonTypes.Main) || (type == ButtonTypes.Action))
-            {
-                string currentColor = String.Empty;
+            int currentStart = GetCurrentStartParagraph();
 
-                foreach (int startParagraph in Constants.Buttons.Keys.OrderBy(x => x))
-                {
-                    if (Game.Data.CurrentParagraphID >= startParagraph)
-                        currentColor = Constants.Buttons[startParagraph];
-                }
-
-                return currentColor;
-            }
+            if (((type == ButtonTypes.Main) || (type == ButtonTypes.Action)) && currentStart > 0)
+                return Constants.Buttons[currentStart];
             else
-            {
                 return base.GetColor(type);
-            }
         }
     }
 }

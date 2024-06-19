@@ -16,6 +16,14 @@ namespace Seeker.Gamebook.ChooseYourOwnAdventure
             if (Constants.Buttons.ContainsKey(option.Goto))
                 option.Style = Constants.Buttons[option.Goto];
 
+            if (Constants.GetCurrentStartParagraph() == Constants.MillionerStartParagraph)
+            {
+                if (String.IsNullOrEmpty(option.Text))
+                    option.Text = (option.Goto == 0 ? "Начать сначала" : "Далее");
+
+                option.Text = $"$$$  {option.Text}  $$$";
+            }
+
             return option;
         }
     }
