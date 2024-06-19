@@ -260,13 +260,13 @@ namespace Seeker
 
             if ((Game.Data.CurrentParagraphID != id) || startOfGame || loadGame)
             {
-                paragraph = Game.Data.Paragraphs.Get(id, Game.Data.XmlParagraphs[id]);
-
-                Game.Data.CurrentParagraph = paragraph;
                 Game.Data.CurrentParagraphID = id;
+                paragraph = Game.Data.Paragraphs.Get(id, Game.Data.XmlParagraphs[id]);
+                Game.Data.CurrentParagraph = paragraph;
             }
             else
             {
+                Game.Data.CurrentParagraphID = id;
                 paragraph = Game.Data.CurrentParagraph;
             }
 
