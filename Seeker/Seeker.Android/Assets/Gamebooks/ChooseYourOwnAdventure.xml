@@ -2312,5 +2312,11 @@
 				<Option Goto="402"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="402">
+			<Text>Тебя беспокоит, что этот человек так легко и быстро взял власть над Хубертом. А Хуберт так поглощен машинами и гонками, что порой не замечает происходящего вокруг.</Text>
+			<Options>
+				<Option Goto="390"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
