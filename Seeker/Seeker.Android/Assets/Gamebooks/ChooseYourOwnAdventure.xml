@@ -1811,5 +1811,8 @@
 				<Option Goto="376" Text="Если решил не обращать на него внимания и ехать дальше"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="310">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
