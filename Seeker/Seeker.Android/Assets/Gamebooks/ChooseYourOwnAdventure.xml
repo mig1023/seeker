@@ -2153,5 +2153,8 @@
 				<Option Goto="317" Text="Ввести «порше» в Альпийском ралли"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="373">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
