@@ -1916,5 +1916,8 @@
 				<Option Goto="333" Text="Оставить кейс и заняться слежкой"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="329">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
