@@ -2587,5 +2587,8 @@
 				<Option Goto="459" Text="Следуешь за Свейном"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="450">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
