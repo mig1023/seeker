@@ -3101,5 +3101,8 @@
 				<Option Goto="635" Text="Заговорите с ним в ратуше"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="542">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
