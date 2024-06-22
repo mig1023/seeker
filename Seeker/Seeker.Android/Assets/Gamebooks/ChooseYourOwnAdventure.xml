@@ -3293,5 +3293,8 @@
 				<Option Goto="541" Text="Решаешь обратиться к Стрессену"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="577">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
