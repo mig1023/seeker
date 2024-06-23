@@ -4104,5 +4104,8 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="716">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
