@@ -3653,5 +3653,8 @@
 				<Option Goto="643" Text="Отцепить трос и нырнуть на «Искателе» во впадину на дне океана"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="642">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
