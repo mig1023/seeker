@@ -4184,5 +4184,8 @@
 				<Option Goto="742" Text="Стать музыкантом"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="730">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
