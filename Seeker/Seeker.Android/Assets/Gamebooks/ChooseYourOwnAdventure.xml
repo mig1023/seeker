@@ -3708,5 +3708,8 @@
 				<Option Goto="657" Text="Тихонько подождать в надежде, что акула уплывет"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="651">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
