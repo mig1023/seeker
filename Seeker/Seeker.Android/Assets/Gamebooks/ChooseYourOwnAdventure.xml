@@ -4285,5 +4285,11 @@
 				<Option Goto="747"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="747">
+			<Text>И тут распахивается дверь. Врываются три охранника — они открывают огонь, и ты, и все, кто стоит рядом с тобой, исчезаете во вспышках ослепительного сияния.\n\nКОНЕЦ</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
