@@ -3944,5 +3944,8 @@
 				<Option Goto="712" Text="Отойти от дел и жить в свое удовольствие"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="690">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
