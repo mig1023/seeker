@@ -3953,5 +3953,9 @@
 				<Option Goto="707" Text="Попытаешься выплыть из водоворота"/>
 				<Option Goto="708" Text="Нырнешь вниз в надежде достичь дна и таким образом выбраться"/>
 			</Options>
+		</Paragraph>
+		<Paragraph No="692">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
