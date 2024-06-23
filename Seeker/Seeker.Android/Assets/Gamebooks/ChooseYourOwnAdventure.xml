@@ -3846,5 +3846,8 @@
 				<Option Goto="691" Text="Спокойно отдохнуть, набраться сил и выработать план действии"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="674">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
