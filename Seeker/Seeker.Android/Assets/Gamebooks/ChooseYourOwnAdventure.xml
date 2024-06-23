@@ -4004,5 +4004,8 @@
 				<Option Goto="724" Text="Помочь им только разработать план, а сам хочешь бежать из этого мира"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="700">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
