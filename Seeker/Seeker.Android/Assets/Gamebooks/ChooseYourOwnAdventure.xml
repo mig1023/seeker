@@ -3670,5 +3670,8 @@
 				<Option Goto="650" Text="Ускользнуть в надежде, что тебя заметят спасатели"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="645">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
