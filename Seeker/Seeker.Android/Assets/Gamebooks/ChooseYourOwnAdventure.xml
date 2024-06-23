@@ -3810,5 +3810,8 @@
 				<Option Goto="682" Text="Бросишься к «Искателю», чтобы уйти от опасности"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="668">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
