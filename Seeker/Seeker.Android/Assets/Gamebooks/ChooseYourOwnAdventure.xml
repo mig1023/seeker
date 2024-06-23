@@ -4133,5 +4133,8 @@
 				<Option Goto="752" Text="Воспользоваться случаем и бежать"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="721">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
