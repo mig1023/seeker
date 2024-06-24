@@ -4913,5 +4913,8 @@
 				<Option Goto="854" Text="Выходишь в Паркерсвилле"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="849">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
