@@ -4370,5 +4370,8 @@
 				<Option Goto="868" Text="Отклоняешь предложение, так как тебе необходимо вернуться в Пещеру Времени"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="761">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
