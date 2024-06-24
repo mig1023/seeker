@@ -4575,5 +4575,8 @@
 				<Option Goto="841" Text="Возвращаешься в ущелье"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="793">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
