@@ -4471,5 +4471,8 @@
 				<Option Goto="791" Text="Пытаешься придумать какую-нибудь правдоподобную историю"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="777">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
