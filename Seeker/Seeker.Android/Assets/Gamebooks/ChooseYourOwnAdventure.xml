@@ -4448,5 +4448,8 @@
 				<Option Goto="784" Text="Продолжаешь путь на своих двоих"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="773">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
