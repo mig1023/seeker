@@ -5101,5 +5101,11 @@
 				<Option Goto="880"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="880">
+			<Text>Повернувшись к Наде, ты говоришь:\n\n— Похоже, мы проучили его.\n\nНада кивает:\n\n— Давай вернемся в додзё.\n\nКОНЕЦ</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
