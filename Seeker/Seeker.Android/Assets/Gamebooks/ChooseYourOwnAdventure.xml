@@ -5269,5 +5269,8 @@
 				<Option Goto="918" Text="Задержаться в замке"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="908">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
