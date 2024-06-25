@@ -5227,5 +5227,8 @@
 				<Option Goto="919" Text="Решаешь дождаться Хитоси"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="901">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
