@@ -5079,5 +5079,8 @@
 				<Option Goto="977" Text="Бросаешься к ниндзя"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="876">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
