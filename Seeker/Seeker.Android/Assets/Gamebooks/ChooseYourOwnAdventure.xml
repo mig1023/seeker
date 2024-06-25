@@ -5184,5 +5184,12 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="894">
+			<Text>Музыка прекращается, а затем раздаются звуки новой, более медленной мелодии.\n\n— Танцуй! — неистово кричат ямабуси.</Text>
+			<Options>
+				<Option Goto="964" Text="Решаешь танцевать"/>
+				<Option Goto="983" Text="Предпочитаешь поскорее уйти"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
