@@ -5161,5 +5161,8 @@
 				<Option Goto="972" Text="Выхватываешь сюрикен"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="890">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
