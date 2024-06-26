@@ -5595,5 +5595,8 @@
 				<Option Goto="953" Text="Согласна с Надой и считаешь, что меч надо сохранить"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="967">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
