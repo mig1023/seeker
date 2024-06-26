@@ -5385,5 +5385,11 @@
 		<Paragraph No="929">
 			<Text>[пустой параграф]</Text>
 		</Paragraph>
+		<Paragraph No="930">
+			<Text>Сидя на дереве, ты дергаешь за конец веревки, протянутой поперек дороги. Первые четверо всадников валятся на землю.</Text>
+			<Options>
+				<Option Goto="931"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
