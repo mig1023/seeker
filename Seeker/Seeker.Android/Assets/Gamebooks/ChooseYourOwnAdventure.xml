@@ -5467,5 +5467,8 @@
 				<Option Goto="906" Text="Взмахиваешь мечом"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="944">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
