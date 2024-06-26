@@ -5524,5 +5524,8 @@
 				<Option Goto="932" Text="Считаешь, что надо бросить меч существам из лавы"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="954">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
