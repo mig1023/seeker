@@ -5496,5 +5496,8 @@
 				<Option Goto="970" Text="Отвечаешь: «Давайте все же попытаемся выяснить, кто прислал меч»"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="949">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
