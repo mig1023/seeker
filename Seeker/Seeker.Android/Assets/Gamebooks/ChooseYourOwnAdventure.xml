@@ -5920,5 +5920,8 @@
 				<Option Goto="1015" Text="Обождать и еще раз поговорить с мадам Загра"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="1024">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
