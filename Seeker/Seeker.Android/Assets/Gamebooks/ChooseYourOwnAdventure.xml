@@ -6226,5 +6226,11 @@
 				<Option Goto="1079"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="1079">
+			<Text>— Вы кто, чего вам надо? — испуганно кричит сопровождающий Нортмонда парень.</Text>
+			<Options>
+				<Option Goto="1066"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
