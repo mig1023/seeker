@@ -6245,5 +6245,8 @@
 				<Option Goto="1026" Text="Если решил устроить засаду"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="1082">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
