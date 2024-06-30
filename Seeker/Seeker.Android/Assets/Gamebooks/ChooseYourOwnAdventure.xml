@@ -7126,5 +7126,8 @@
 				<Option Goto="1226" Text="Возвращаешься на лестничную площадку"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="1220">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
