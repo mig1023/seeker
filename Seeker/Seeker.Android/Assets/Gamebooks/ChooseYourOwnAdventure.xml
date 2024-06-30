@@ -7253,5 +7253,8 @@
 				<Option Goto="1266" Text="Возвращаешься по лестнице к люку"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="1240">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
