@@ -7150,5 +7150,8 @@
 				<Option Goto="1231" Text="Говоришь, что приведешь кого-нибудь на помощь"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="1224">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
