@@ -7181,5 +7181,8 @@
 				<Option Goto="1245" Text="Собираешься заглянуть в музыкальную комнату"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="1229">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
