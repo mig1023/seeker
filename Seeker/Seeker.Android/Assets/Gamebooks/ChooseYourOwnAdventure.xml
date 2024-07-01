@@ -7665,5 +7665,11 @@
 				<Option Goto="1221"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="1309">
+			<Text>Ты мчишься прямо на кошку. Она становится все больше и больше. Кошка прыгает на тебя, и ты понимаешь, что это совсем не сон. Для тебя это…\n\nКОНЕЦ</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
