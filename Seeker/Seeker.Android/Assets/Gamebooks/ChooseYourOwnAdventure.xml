@@ -7535,5 +7535,8 @@
 				<Option Goto="1303" Text="Убегаешь"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="1286">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
