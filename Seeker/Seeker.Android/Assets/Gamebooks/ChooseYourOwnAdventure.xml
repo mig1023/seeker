@@ -7387,5 +7387,8 @@
 				<Option Goto="1311" Text="Остаешься, желая расспросить старушку"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="1262">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
