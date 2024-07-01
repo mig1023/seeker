@@ -7339,5 +7339,8 @@
 				<Option Goto="1292" Text="Спрашиваешь: «Где Джейн?»"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="1254">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
