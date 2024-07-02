@@ -7885,5 +7885,8 @@
 				<Option Goto="1369" Text="Решаешь идти в пещеры"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="1347">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
