@@ -8066,5 +8066,8 @@
 				<Option Goto="1410" Text="Остаешься"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="1379">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
