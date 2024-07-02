@@ -7902,5 +7902,8 @@
 				<Option Goto="1363" Text="Уходишь в джунгли"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="1350">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
