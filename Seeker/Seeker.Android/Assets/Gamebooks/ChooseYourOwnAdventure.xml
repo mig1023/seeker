@@ -8277,5 +8277,8 @@
 				<Option Goto="1396" Text="Снова прячешься в лесу"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="1417">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
