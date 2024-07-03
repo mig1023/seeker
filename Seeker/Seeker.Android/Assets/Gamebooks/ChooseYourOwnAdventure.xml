@@ -8436,5 +8436,8 @@
 				<Option Goto="1336" Text="Прячешься под автобусом"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="1446">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
