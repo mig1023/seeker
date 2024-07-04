@@ -8808,5 +8808,8 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="1514">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
