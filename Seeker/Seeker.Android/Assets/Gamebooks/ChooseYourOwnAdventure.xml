@@ -8836,5 +8836,8 @@
 				<Option Goto="1468" Text="Решил поплавать"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="1519">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
