@@ -8522,5 +8522,8 @@
 				<Option Goto="1534" Text="Уубедил себя в том, что это робот"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="1461">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
