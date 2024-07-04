@@ -8863,5 +8863,11 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="1524">
+			<Text>За поворотом тропа разветвляется...</Text>
+			<Options>
+				<Option Goto="1525"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
