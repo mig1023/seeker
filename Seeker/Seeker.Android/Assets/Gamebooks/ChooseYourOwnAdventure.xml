@@ -9448,5 +9448,8 @@
 				<Option Goto="1660" Text="Выбрали изумрудно-зеленый"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="1625">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
