@@ -9674,5 +9674,11 @@
 				<Option Goto="1641" Text="Отказаться"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="1664">
+			<Text>Через какое-то время скрюченный карлик приоткрывает дверь. Он неописуемо безобразен, взгляд у него невидящий и ничего не выражающий.</Text>
+			<Options>
+				<Option Goto="1665"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
