@@ -9465,5 +9465,8 @@
 				<Option Goto="1596" Text="Послушаться Фаино"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="1628">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
