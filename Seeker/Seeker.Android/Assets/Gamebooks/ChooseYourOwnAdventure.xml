@@ -9495,5 +9495,8 @@
 				<Option Goto="1657" Text="Спуститься по лестнице на заднюю площадку"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="1633">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
