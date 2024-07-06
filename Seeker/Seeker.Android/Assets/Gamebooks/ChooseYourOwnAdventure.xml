@@ -9523,5 +9523,8 @@
 				<Option Goto="1603" Text="Говоришь: «Перенесите нас домой»"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="1638">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
