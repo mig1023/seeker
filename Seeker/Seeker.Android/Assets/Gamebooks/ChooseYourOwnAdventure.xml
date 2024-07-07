@@ -9913,5 +9913,8 @@
 				<Option Goto="1693" Text="Вначале лучше заглянуть в следующую комнату"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="1706">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
