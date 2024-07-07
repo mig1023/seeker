@@ -9891,5 +9891,8 @@
 				<Option Goto="1756" Text="Считаешь, что лучше будет последить за Бонзой и узнать, как он творит свои чудеса"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="1702">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
