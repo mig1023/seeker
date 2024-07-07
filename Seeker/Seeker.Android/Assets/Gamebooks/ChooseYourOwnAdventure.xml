@@ -9957,5 +9957,8 @@
 				<Option Goto="1698" Text="Соглашаешься, что Ральф в самом деле экстрасенс"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="1714">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
