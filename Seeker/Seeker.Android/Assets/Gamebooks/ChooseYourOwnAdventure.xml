@@ -10335,5 +10335,8 @@
 				<Option Goto="1760"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="1783">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
