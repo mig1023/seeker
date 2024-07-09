@@ -10612,5 +10612,8 @@
 				<Option Goto="1868" Text="Позвонить в полицию"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="1834">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
