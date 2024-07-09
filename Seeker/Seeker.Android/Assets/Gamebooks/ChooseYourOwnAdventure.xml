@@ -10971,5 +10971,8 @@
 				<Option Goto="1908" Text="Прячешься в палатку"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="1899">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
