@@ -10903,5 +10903,11 @@
 				<Option Goto="1887"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="1887">
+			<Text>Самолет болтает в воздушных ямах, но уже спустя несколько минут вы оказываетесь на земле, готовые приступить к исследованиям.</Text>
+			<Options>
+				<Option Goto="1892"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
