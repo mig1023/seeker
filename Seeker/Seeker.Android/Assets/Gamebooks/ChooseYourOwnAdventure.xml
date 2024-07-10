@@ -34,10 +34,10 @@
 					<Text Style="Small, Upper">Эдвард Паккард, перевод Е. Нестеровой, 1993</Text>
 				</Option>
 				<Option Goto="1561" Text="В поезде с вампирами" Image="Vampires">
-					<Text Style="Small, Upper">Тони Кольтц, перевод Ю. Рознатовской, 1995</Text>
+					<Text Style="Small, Upper">Тони Кольтц, перевод Ю. Рознатовской, 1984</Text>
 				</Option>
 				<Option Goto="120" Text="Ты – миллионер" Image="Millionaire">
-					<Text Style="Small, Upper">Джей Либолд, перевод Сергея Посниченко, 1985</Text>
+					<Text Style="Small, Upper">Джей Либолд, перевод Сергея Посниченко, 1990</Text>
 				</Option>
 				<Option Goto="306" Text="За рулём" Image="Wheel">
 					<Text Style="Small, Upper">Раймонд Монтгомери, перевод М. Веретинниковой, 1992</Text>
@@ -46,43 +46,43 @@
 					<Text Style="Small, Upper">Эллен Кушнер, перевод Сергея Посниченко, 1985</Text>
 				</Option>
 				<Option Goto="640" Text="Путешествие на дно моря" Image="Sea">
-					<Text Style="Small, Upper">Раймонд Монтгомери, перевод М. Веретинниковой, 1995</Text>
-				</Option>
-				<Option Goto="416" Text="Викинги-завоеватели" Image="Vikings">
-					<Text Style="Small, Upper">Эдвард Паккард, перевод У. Сапциной, 1998</Text>
-				</Option>
-				<Option Goto="526" Text="Место преступления" Image="Scene">
-					<Text Style="Small, Upper">Дуг Уилхелм, перевод В. Коровиной, 1995</Text>
-				</Option>
-				<Option Goto="756" Text="Пещера времени" Image="Cave">
 					<Text Style="Small, Upper">Раймонд Монтгомери, перевод М. Веретинниковой, 1977</Text>
 				</Option>
+				<Option Goto="416" Text="Викинги-завоеватели" Image="Vikings">
+					<Text Style="Small, Upper">Эдвард Паккард, перевод У. Сапциной, 1992</Text>
+				</Option>
+				<Option Goto="526" Text="Место преступления" Image="Scene">
+					<Text Style="Small, Upper">Дуг Уилхелм, перевод В. Коровиной, 1993</Text>
+				</Option>
+				<Option Goto="756" Text="Пещера времени" Image="Cave">
+					<Text Style="Small, Upper">Раймонд Монтгомери, перевод М. Веретинниковой, 1979</Text>
+				</Option>
 				<Option Goto="870" Text="Секрет ниндзя" Image="Ninja">
-					<Text Style="Small, Upper">Джей Либолд, перевод У. Сапициной, 1998</Text>
+					<Text Style="Small, Upper">Джей Либолд, перевод У. Сапициной, 1987</Text>
 				</Option>
 				<Option Goto="985" Text="Каньон разбойников" Image="Canyon">
-					<Text Style="Small, Upper">Раймонд Монтгомери, перевод М. Вертенниковой, 1995</Text>
+					<Text Style="Small, Upper">Раймонд Монтгомери, перевод М. Вертенниковой, 1992</Text>
 				</Option>
 				<Option Goto="1101" Text="Зачарованное королевство" Image="Kingdom">
 					<Text Style="Small, Upper">Эллен Кушнер, перевод Сергея Посниченко, 1986</Text>
 				</Option>
 				<Option Goto="1333" Text="Похищены!" Image="Hijacked">
-					<Text Style="Small, Upper">Ричард Брайтфилд, перевод Е. Ревзиной, 1995</Text>
+					<Text Style="Small, Upper">Ричард Брайтфилд, перевод Е. Ревзиной, 1990</Text>
 				</Option>
 				<Option Goto="1150" Text="Трон Зевса" Image="Zeus">
 					<Text Style="Small, Upper">Дебора Гудман, перевод Сергея Посниченко, 1985</Text>
 				</Option>
 				<Option Goto="1213" Text="Тайна заброшенного замка" Image="Castle">
-					<Text Style="Small, Upper">Эдвард Паккард, перевод М. Абрамовой, 1995</Text>
+					<Text Style="Small, Upper">Эдвард Паккард, перевод М. Абрамовой, 1980</Text>
 				</Option>
 				<Option Goto="1449" Text="Луна-парк для смельчаков" Image="LunaPark">
-					<Text Style="Small, Upper">Сара и Спенсер Комптон, перевод И. Заславской, 1995</Text>
+					<Text Style="Small, Upper">Сара и Спенсер Комптон, перевод И. Заславской, 1991</Text>
 				</Option>
 				<Option Goto="1679" Text="Великий волшебник" Image="Magic">
-					<Text Style="Small, Upper">Эдвард Паккард, перевод Н. Нестеровой, 1998</Text>
+					<Text Style="Small, Upper">Эдвард Паккард, перевод Н. Нестеровой, 1992</Text>
 				</Option>
 				<Option Goto="1795" Text="Пришельцы из космоса" Image="Invaders">
-					<Text Style="Small, Upper">Эдвард Паккард, перевод  У. Сапциной, 1998</Text>
+					<Text Style="Small, Upper">Эдвард Паккард, перевод  У. Сапциной, 1991</Text>
 				</Option>
 			</Options>
 		</Paragraph>
