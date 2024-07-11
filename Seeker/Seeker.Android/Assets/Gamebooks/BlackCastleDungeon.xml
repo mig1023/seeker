@@ -3706,7 +3706,7 @@
 			</Modifications>
 			<Options>
 				<Option Goto="183" Text="Выхватить меч и драться">
-					<Text>Либо попробовать наложить какое-нибудь заклятие:</Text>
+					<Text>А, может, вы попробуете наложить какое-нибудь заклятие?</Text>
 				</Option>
 				<Option Goto="36" Text="Заклятие Силы" Availability="ЗАКЛЯТИЕ СИЛЫ">
 					<RemoveSpell Value="ЗАКЛЯТИЕ СИЛЫ"/>
