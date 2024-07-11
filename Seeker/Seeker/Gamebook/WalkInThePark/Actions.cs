@@ -262,7 +262,10 @@ namespace Seeker.Gamebook.WalkInThePark
             bool noBeer = (Type == "SellBeer") && !IsTriggered("пиво", out _);
             bool noAccordion = (Type == "SellAccordion") && !IsTriggered("баян", out _);
 
-            return !(disabledGetOptions || disabledByPrice || noBeer || noAccordion);
+            bool noSunflowerSeeds = (Type == "SellSunflowerSeeds") &&
+                (Character.Protagonist.SunflowerSeeds <= 0);
+
+            return !(disabledGetOptions || disabledByPrice || noBeer || noAccordion || noSunflowerSeeds);
         }
 
         public List<string> Get()
@@ -294,8 +297,8 @@ namespace Seeker.Gamebook.WalkInThePark
 
             while (IsTriggered("пиво", out string beer))
             {
-                sell.Add($"Продаём {beer} (50р)");
-                sell.Add($"GOOD|BOLD|Ты заработал полтинник!");
+                sell.Add($"Продаём {beer} (по 50р)");
+                sell.Add($"BIG|GOOD|BOLD|Ты заработал полтинник!");
                 Character.Protagonist.Money += 50;
 
                 Game.Option.Trigger(beer, remove: true);
@@ -309,12 +312,31 @@ namespace Seeker.Gamebook.WalkInThePark
             List<string> sell = new List<string>
             {
                 $"Продаём баян (1000р)",
-                $"GOOD|BOLD|Ты заработал косарь!"
+                $"BIG|GOOD|BOLD|Ты заработал косарь!"
             };
 
             Character.Protagonist.Money += 1000;
 
             Game.Option.Trigger("баян", remove: true);
+
+            return sell;
+        }
+        
+        public List<string> SellSunflowerSeeds()
+        {
+            List<string> sell = new List<string>
+            {
+                "BOLD|Продаём сэмки (по 25р пачка)",
+            };
+
+            int count = Character.Protagonist.SunflowerSeeds;
+            string pack = Game.Services.CoinsNoun(count, "пачку", "пачки", "пачек");
+            sell.Add($"Всего {count} {pack} сэмак");
+
+            int sum = Character.Protagonist.SunflowerSeeds * 25;
+            Character.Protagonist.Money += sum;
+
+            sell.Add($"BIG|GOOD|BOLD|Ты заработал {sum} рублёв!");
 
             return sell;
         }
