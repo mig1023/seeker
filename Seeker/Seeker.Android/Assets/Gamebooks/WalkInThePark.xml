@@ -2186,6 +2186,7 @@
 					<Head>Сэмачки «Я - гражданин!»</Head>
 					<Price>10</Price>
 					<Multiple/>
+					<Benefit Name="SunflowerSeeds" Value="1"/>
 					<Text Style="Small">Самая обычная еда. Одна упаковка восстановит 2 пункта твоего САМОЧУВСТВИЯ.</Text>
 				</Get>
 				<Get>
