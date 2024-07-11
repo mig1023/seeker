@@ -19,16 +19,16 @@ namespace Seeker.Gamebook.PresidentSimulator
 
             int part = Option.IsTriggered("полугодие") ? 2 : 1;
 
-            if ((Character.Protagonist.Year == 1980) && (part == 2))
+            if ((Character.Protagonist.InnerYear == 1980) && (part == 2))
             {
                 part = Option.IsTriggered("Ультраправые террористы") ? 3 : 2;
             }
-            else if ((Character.Protagonist.Year == 1983) && (part == 1))
+            else if ((Character.Protagonist.InnerYear == 1983) && (part == 1))
             {
                 part = Option.IsTriggered("Повстанцы-коммунисты") ? 1 : 3;
             }
 
-            string yearPart = $"{Character.Protagonist.Year}-{part}";
+            string yearPart = $"{Character.Protagonist.InnerYear}-{part}";
             string yearLine = Constants.TextByYears[yearPart];
             return yearLine.Split('|').ToList();
         }

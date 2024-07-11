@@ -15,6 +15,7 @@ namespace Seeker.Gamebook.PresidentSimulator
             set => _rating = Game.Param.Setter(value, max: 100, _rating, this);
         }
 
+        public int InnerYear { get; set; }
         public int Year { get; set; }
 
         private int _relationWithUSA;
@@ -79,6 +80,7 @@ namespace Seeker.Gamebook.PresidentSimulator
 
             Rating = 57;
             Year = 1979;
+            InnerYear = 1979;
             RelationWithUSA = 6;
             RelationWithUSSR = 4;
             Money = 1;
@@ -103,6 +105,7 @@ namespace Seeker.Gamebook.PresidentSimulator
             Name = this.Name,
             Rating = this.Rating,
             Year = this.Year,
+            InnerYear = this.InnerYear,
             RelationWithUSA = this.RelationWithUSA,
             RelationWithUSSR = this.RelationWithUSSR,
             Money = this.Money,
@@ -114,7 +117,7 @@ namespace Seeker.Gamebook.PresidentSimulator
         };
 
         public override string Save() => String.Join("|",
-            Rating, Year, RelationWithUSA, RelationWithUSSR, Money,
+            Rating, Year, InnerYear, RelationWithUSA, RelationWithUSSR, Money,
             BusinessLoyalty, ArmyLoyalty, Army, Rebels, AgrarianReform);
 
         public override void Load(string saveLine)
@@ -123,14 +126,15 @@ namespace Seeker.Gamebook.PresidentSimulator
 
             Rating = int.Parse(save[0]);
             Year = int.Parse(save[1]);
-            RelationWithUSA = int.Parse(save[2]);
-            RelationWithUSSR = int.Parse(save[3]);
-            Money = int.Parse(save[4]);
-            BusinessLoyalty = int.Parse(save[5]);
-            ArmyLoyalty = int.Parse(save[6]);
-            Army = int.Parse(save[7]);
-            Rebels = int.Parse(save[8]);
-            AgrarianReform = int.Parse(save[9]);
+            InnerYear = int.Parse(save[2]);
+            RelationWithUSA = int.Parse(save[3]);
+            RelationWithUSSR = int.Parse(save[4]);
+            Money = int.Parse(save[5]);
+            BusinessLoyalty = int.Parse(save[6]);
+            ArmyLoyalty = int.Parse(save[7]);
+            Army = int.Parse(save[8]);
+            Rebels = int.Parse(save[9]);
+            AgrarianReform = int.Parse(save[10]);
 
             IsProtagonist = true;
         }

@@ -53,7 +53,7 @@ namespace Seeker.Gamebook.PresidentSimulator
                         if (!Services.LevelAvailability("РЕЙТИНГ", line, Character.Protagonist.Rating, level))
                             return false;
 
-                        else if (!Services.LevelAvailability("ГОД", line, Character.Protagonist.Year, level))
+                        else if (!Services.LevelAvailability("ГОД", line, Character.Protagonist.InnerYear, level))
                             return false;
 
                         else if (!Services.LevelAvailability("ОТНОШЕНИЯ С США", line, Character.Protagonist.RelationWithUSA, level))
