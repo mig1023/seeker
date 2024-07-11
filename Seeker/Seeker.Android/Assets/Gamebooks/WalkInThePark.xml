@@ -191,9 +191,7 @@
 				<Get>
 					<Head>СЭМЕЧКИ</Head>
 					<Price>5</Price>
-					<Benefits>
-						<SunflowerSeeds Value="1"/>
-					</Benefits>
+					<Benefit Name="SunflowerSeeds" Value="1"/>
 				</Get>
 				<Get>
 					<Head>ОРЕХИ ДЛЯ БЕЛОК</Head>
@@ -465,9 +463,7 @@
 				<Get>
 					<Head>ПАКЕТ СЭМЕЧЕК</Head>
 					<Price>10</Price>
-					<Benefits>
-						<SunflowerSeeds Value="1"/>
-					</Benefits>
+					<Benefit Name="SunflowerSeeds" Value="1"/>
 				</Get>
 				<Get>
 					<Head>КЭПОЧКА ГОПНИКА</Head>
@@ -774,6 +770,7 @@
 				<Get>
 					<Head>ПАКЕТ СЭМЕЧЕК</Head>
 					<Price>15</Price>
+					<Benefit Name="SunflowerSeeds" Value="1"/>
 				</Get>
 				<Get>
 					<Head>КЭПОЧКА ГОПНИКА</Head>
