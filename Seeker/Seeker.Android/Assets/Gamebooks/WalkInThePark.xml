@@ -49,8 +49,8 @@
 	<Paragraphs>
 		<Paragraph No="0">
 			<Options>
-				<Option Goto="1" Text="Часть 1: прибить Шляпогрыза"/>
-				<Option Goto="101" Text="Часть 2: клад деда Похома"/>
+				<Option Goto="1" Text="Часть 1: прибить Шляпогрыза" Image="Part1"/>
+				<Option Goto="101" Text="Часть 2: клад деда Похома" Image="Part2"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="1">
