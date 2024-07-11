@@ -14,12 +14,12 @@ namespace Seeker.Gamebook.WalkInThePark
 
         private static Random rand = new Random();
 
-        public static bool IfThisIsFirstPart() =>
+        public static bool ThisIsFirstPart() =>
             Game.Data.CurrentParagraphID <= Constants.FirstPartSize;
 
         public override List<string> Status()
         {
-            if (IfThisIsFirstPart())
+            if (ThisIsFirstPart())
             {
                 return new List<string>
                 {
@@ -42,7 +42,7 @@ namespace Seeker.Gamebook.WalkInThePark
 
         public override List<string> AdditionalStatus()
         {
-            if (IfThisIsFirstPart())
+            if (ThisIsFirstPart())
             {
                 return new List<string>
                 {
@@ -66,7 +66,7 @@ namespace Seeker.Gamebook.WalkInThePark
 
         public override bool GameOver(out int toEndParagraph, out string toEndText)
         {
-            if (IfThisIsFirstPart())
+            if (ThisIsFirstPart())
             {
                 return GameOverBy(Character.Protagonist.Endurance, out toEndParagraph, out toEndText);
             }
@@ -99,7 +99,7 @@ namespace Seeker.Gamebook.WalkInThePark
 
             foreach (Character enemy in Enemies)
             {
-                if (IfThisIsFirstPart())
+                if (ThisIsFirstPart())
                 {
                     enemies.Add($"{enemy.Name}\nсила {enemy.Strength}  " +
                         $"выносливость {enemy.Endurance}  урон {(double)enemy.Damage / 10}");
@@ -363,7 +363,7 @@ namespace Seeker.Gamebook.WalkInThePark
 
         private static bool NoMoreEnemies(List<Character> enemies)
         {
-            bool part1 = IfThisIsFirstPart();
+            bool part1 = ThisIsFirstPart();
 
             int enemiesCount = enemies
                 .Where(x => x.GetHealth(part1) > 0)
@@ -464,7 +464,7 @@ namespace Seeker.Gamebook.WalkInThePark
 
         public List<string> Fight()
         {
-            bool part1 = IfThisIsFirstPart();
+            bool part1 = ThisIsFirstPart();
 
             List<string> fight = new List<string>();
             List<Character> FightEnemies = new List<Character>();
