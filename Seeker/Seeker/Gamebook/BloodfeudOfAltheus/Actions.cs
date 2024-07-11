@@ -37,17 +37,22 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
         public override List<string> AdditionalStatus()
         {
-            List<string> statusLines = new List<string>();
-
-            statusLines.Add($"Покровитель: {Character.Protagonist.Patron}");
+            List<string> statusLines = new List<string>
+            {
+                $"Покровитель: {Character.Protagonist.Patron}"
+            };
 
             Character.Protagonist.GetWeapons(out string name, out int strength, out int defence);
-            statusLines.Add($"Оружие: {name} (сила {strength}, защита {defence})");
+
+            string defenceLine = defence > 0 ? $", защита {defence}" : String.Empty;
+            statusLines.Add($"Оружие: {name} (сила {strength}{defenceLine})");
 
             Character.Protagonist.GetArmour(out int armour, out string armourLine, status: true);
             
             if (armour > 0)
+            {
                 statusLines.Add($"Броня: {armourLine} (защита {armour})");
+            }
 
             return statusLines.Count > 0 ? statusLines : null;
         }
