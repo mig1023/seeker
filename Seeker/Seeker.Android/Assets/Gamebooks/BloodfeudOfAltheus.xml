@@ -3628,7 +3628,7 @@
 			<Options>
 				<Option Goto="422" Text="Сдаетесь"/>
 				<Option Goto="163" Text="Победили их"/>
-				<Option Goto="536" Text="Пали, но были спасены Зевсом, то очнетесь" Availability="ВОСКРЕШЕНИЕ">
+				<Option Goto="536" Text="Пали, но были спасены Зевсом" Availability="ВОСКРЕШЕНИЕ">
 					<Resurrection Value="-1"/>
 				</Option>
 			</Options>
