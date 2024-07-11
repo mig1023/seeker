@@ -21,6 +21,37 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             }
         }
 
+        public static string SeverityOfWound(int Health, bool hero = false)
+        {
+            if (hero)
+            {
+                switch (Health)
+                {
+                    default:
+                    case 2:
+                        return "ранен";
+                    case 1:
+                        return "тяжело ранен";
+                    case 0:
+                        return "убит";
+                }
+            }
+            else
+            {
+                switch (Health)
+                {
+                    default:
+                    case 2:
+                        return "ранил";
+                    case 1:
+                        return "тяжело ранил";
+                    case 0:
+                        return "убил";
+                }
+
+            }
+        }
+
         public static int UseGloryInFight(Character enemy, int protagonistHitStrength,
             bool autoHit, bool autoFail, out string usedGlory)
         {

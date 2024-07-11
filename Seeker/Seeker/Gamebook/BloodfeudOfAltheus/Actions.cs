@@ -559,9 +559,10 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
                     if ((autoHit || (protagonistHitStrength > enemy.Defence)) && !autoFail)
                     {
-                        fight.Add($"BOLD|GOOD|{enemy.Name} ранен");
-
                         enemy.Health -= 1;
+
+                        string severityOfWound = Fights.SeverityOfWound(enemy.Health);
+                        fight.Add($"BOLD|GOOD|{enemy.Name} {severityOfWound}");
 
                         bool enemyLost = Fights.NoMoreEnemies(FightEnemies, noHealthy: !FightToDeath);
 
@@ -630,8 +631,6 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                         
                     if ((autoHit || (enemyHitStrength > (Character.Protagonist.Defence + armourDefence))) && !autoFail)
                     {
-                        fight.Add($"BOLD|BAD|{enemy.Name} ранил вас");
-
                         if (Game.Option.IsTriggered("FirstWoundProtection"))
                         {
                             fight.Add("GOOD|Асклепий защитил вас от этого удара!");
@@ -639,6 +638,9 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                         }
                         else
                         {
+                            string severityOfWound = Fights.SeverityOfWound(Character.Protagonist.Health, hero: true);
+                            fight.Add($"BOLD|BAD|{enemy.Name} {severityOfWound} вас");
+
                             Character.Protagonist.Health -= 1;
                         }
 
