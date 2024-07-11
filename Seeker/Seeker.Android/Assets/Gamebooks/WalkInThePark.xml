@@ -2098,7 +2098,9 @@
 				<Text Style="Small">Но вот 2 РЕЙТЕНГА придется отнять, уж извини.</Text>
 			</Texts>
 			<Modifications>
+				<Rating Value="-2"/>
 				<Money Value="50"/>
+				<SunflowerSeeds Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Goto="196"/>
