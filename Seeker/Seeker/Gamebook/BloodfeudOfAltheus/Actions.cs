@@ -546,11 +546,11 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
                     if (autoHit)
                     {
-                        fight.Add("GRAY|На кубиках выпало больше 10, вы попадаете авоматически!");
+                        fight.Add("GRAY|На кубиках выпало больше 10, вы попадаете автоматически!");
                     }
                     else if (autoFail)
                     {
-                        fight.Add("GRAY|На кубиках выпало слишком мало, вы промахиваетесь авоматически!");
+                        fight.Add("GRAY|На кубиках выпало слишком мало, вы промахиваетесь автоматически!");
                     }
                     else
                     {
@@ -617,11 +617,11 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
                     if (autoHit)
                     {
-                        fight.Add("GRAY|На кубиках выпало больше 10, он попадает авоматически!");
+                        fight.Add("GRAY|На кубиках выпало больше 10, он попадает автоматически!");
                     }
                     else if (autoFail)
                     {
-                        fight.Add("GRAY|На кубиках выпало слишком мало, он промахиваетесь авоматически!");
+                        fight.Add("GRAY|На кубиках выпало слишком мало, он промахиваетесь автоматически!");
                     }
                     else
                     {
