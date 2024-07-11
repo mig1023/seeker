@@ -38,6 +38,13 @@ namespace Seeker.Gamebook.WalkInThePark
             set => _money = Game.Param.Setter(value, _money, this);
         }
 
+        private int _sunflowerSeeds;
+        public int SunflowerSeeds
+        {
+            get => _sunflowerSeeds;
+            set => _sunflowerSeeds = Game.Param.Setter(value, _sunflowerSeeds, this);
+        }
+
         private int _damage;
         public int Damage
         {
@@ -93,6 +100,7 @@ namespace Seeker.Gamebook.WalkInThePark
             Endurance = 10 * Game.Dice.Roll();
             Luck = Game.Dice.Roll();
             Money = 0;
+            SunflowerSeeds = 0;
             Damage = 1;
             Weapon = "кулаки";
 
@@ -113,6 +121,7 @@ namespace Seeker.Gamebook.WalkInThePark
             Endurance = this.Endurance,
             Luck = this.Luck,
             Money = this.Money,
+            SunflowerSeeds = this.SunflowerSeeds,
             Damage = this.Damage,
             Weapon = this.Weapon,
             MaxHealth = this.MaxHealth,
@@ -125,7 +134,8 @@ namespace Seeker.Gamebook.WalkInThePark
 
         public override string Save() => String.Join("|",
             Strength, StartStrength, Endurance, Luck, Money, Damage,
-            Weapon, MaxHealth, Health, Stealth, Fortune, Rating, MapParts);
+            Weapon, MaxHealth, Health, Stealth, Fortune, Rating, MapParts,
+            SunflowerSeeds);
 
         public override void Load(string saveLine)
         {
@@ -144,6 +154,7 @@ namespace Seeker.Gamebook.WalkInThePark
             Fortune = int.Parse(save[10]);
             Rating = int.Parse(save[11]);
             MapParts = int.Parse(save[12]);
+            SunflowerSeeds = int.Parse(save[13]);
 
             IsProtagonist = true;
         }

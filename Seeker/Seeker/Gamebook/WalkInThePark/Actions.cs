@@ -48,6 +48,7 @@ namespace Seeker.Gamebook.WalkInThePark
                 {
                     $"Оружие: {Character.Protagonist.Weapon} (урон {(double)Character.Protagonist.Damage / 10})",
                     $"Деньги: {Character.Protagonist.Money} руб",
+                    $"Сэмки: {Character.Protagonist.SunflowerSeeds}",
                 };
             }
             else
@@ -58,6 +59,7 @@ namespace Seeker.Gamebook.WalkInThePark
                     $"Деньги: {Character.Protagonist.Money} руб",
                     $"Рейтинг: {Character.Protagonist.Rating}",
                     $"Частей карты: {Character.Protagonist.MapParts}",
+                    $"Сэмки: {Character.Protagonist.SunflowerSeeds}",
                 };
             }
         }
@@ -319,7 +321,15 @@ namespace Seeker.Gamebook.WalkInThePark
 
         public override bool Availability(string option)
         {
-            if (option == "пиво")
+            if (option == "сэмки")
+            {
+                return Character.Protagonist.SunflowerSeeds > 0;
+            }
+            else if (option == "бабки")
+            {
+                return Character.Protagonist.Money >= 50;
+            }
+            else if (option == "пиво")
             {
                 return IsTriggered("пиво", out _);
             }
