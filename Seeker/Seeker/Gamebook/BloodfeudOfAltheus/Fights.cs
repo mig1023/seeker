@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Seeker.Gamebook.BloodfeudOfAltheus
 {
@@ -21,19 +22,20 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
         }
 
         public static int UseGloryInFight(Character enemy, int protagonistHitStrength,
-            bool autoHit, bool autoFail, ref List<string> fight)
+            bool autoHit, bool autoFail, out string usedGlory)
         {
             bool cantFightOtherwise = protagonistHitStrength < enemy.Defence;
             int availableGlory = (Character.Protagonist.Glory - Character.Protagonist.Shame);
 
             if (autoHit || autoFail || !cantFightOtherwise)
             {
+                usedGlory = String.Empty;
                 return 0;
             }
 
             if (cantFightOtherwise && (availableGlory < 1))
             {
-                fight.Add("Кажется, что положение безнадёжно...");
+                usedGlory = "Кажется, что положение безнадёжно...";
                 return 0;
             }
 
@@ -41,12 +43,12 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
             if (needGlory > availableGlory)
             {
-                fight.Add("Не хватит очков Славы, чтобы что-то исправить...");
+                usedGlory = "Не хватит очков Славы, чтобы что-то исправить...";
                 return -1;
             }
             else
             {
-                fight.Add("Вам придётся использовать Славу!");
+                usedGlory = "Вам придётся использовать Славу!");
 
                 Character.Protagonist.Glory -= needGlory;
                 return needGlory;

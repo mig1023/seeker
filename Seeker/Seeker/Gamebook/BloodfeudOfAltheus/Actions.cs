@@ -526,8 +526,8 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
                     string useGloryLine = String.Empty;
 
-                    int useGlory = Fights.UseGloryInFight(enemy,
-                        protagonistHitStrength, autoHit, autoFail, ref fight);
+                    int useGlory = Fights.UseGloryInFight(enemy, protagonistHitStrength,
+                        autoHit, autoFail, out string gloryUsed);
 
                     if (useGlory > 0)
                     {
@@ -538,6 +538,11 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                     fight.Add($"Мощность вашего удара: {Game.Dice.Symbol(protagonistRollFirst)}" +
                         $"{secondRollLine} + {Character.Protagonist.Strength} Сила + {weaponStrength} " +
                         $"{weaponName}{useGloryLine} = {protagonistHitStrength}");
+
+                    if (!String.IsNullOrEmpty(gloryUsed))
+                    {
+                        fight.Add(gloryUsed);
+                    }
 
                     if (autoHit)
                     {
