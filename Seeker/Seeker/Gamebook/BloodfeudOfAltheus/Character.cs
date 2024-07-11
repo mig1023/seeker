@@ -186,7 +186,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                 if (weaponDefence > 0)
                 {
                     defence += weaponDefence;
-                    defenceLine += $" + {weaponDefence} {name}";
+                    defenceLine += $" + {weaponDefence} ({name})";
                 }
             }
 
@@ -221,7 +221,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                 if (status)
                     defenceLine += $"{actualArmour.Name}, ";
                 else
-                    defenceLine += $" + {actualArmour.Name} {actualArmour.Level}";
+                    defenceLine += $" + {actualArmour.Level} ({actualArmour.Name}) ";
             }
 
             armourDefence = defence;
