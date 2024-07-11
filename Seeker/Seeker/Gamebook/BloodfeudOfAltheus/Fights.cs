@@ -29,11 +29,11 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                 {
                     default:
                     case 2:
-                        return "ранен";
+                        return "ранил";
                     case 1:
-                        return "тяжело ранен";
+                        return "тяжело ранил";
                     case 0:
-                        return "убит";
+                        return "убил";
                 }
             }
             else
@@ -42,13 +42,12 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                 {
                     default:
                     case 2:
-                        return "ранил";
+                        return "ранен";
                     case 1:
-                        return "тяжело ранил";
+                        return "тяжело ранен";
                     case 0:
-                        return "убил";
+                        return "убит";
                 }
-
             }
         }
 
@@ -74,14 +73,14 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
             if (needGlory > availableGlory)
             {
-                usedGlory = "Не хватит очков Славы, чтобы что-то исправить...";
+                usedGlory = "Не хватило очков Славы, чтобы что-то исправить...";
                 return -1;
             }
             else
             {
                 Character.Protagonist.Glory -= needGlory;
 
-                usedGlory = "Вам придётся использовать Славу!";
+                usedGlory = "Вам пришлось использовать Славу...";
                 return needGlory;
             }
         }
