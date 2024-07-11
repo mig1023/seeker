@@ -531,13 +531,13 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
                     if (useGlory > 0)
                     {
-                        useGloryLine = $" + {useGlory} Славы";
+                        useGloryLine = $" + {useGlory} (используем Славу)";
                         protagonistHitStrength += useGlory;
                     }
 
                     fight.Add($"Мощность вашего удара: {Game.Dice.Symbol(protagonistRollFirst)}" +
-                        $"{secondRollLine} + {Character.Protagonist.Strength} Сила + {weaponStrength} " +
-                        $"{weaponName}{useGloryLine} = {protagonistHitStrength}");
+                        $"{secondRollLine} + {Character.Protagonist.Strength} (Сила) + {weaponStrength} " +
+                        $"({weaponName}){useGloryLine} = {protagonistHitStrength}");
 
                     if (!String.IsNullOrEmpty(gloryUsed))
                     {
@@ -603,11 +603,11 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                     if (comradesBonus > 0)
                     {
                         enemyHitStrength += comradesBonus;
-                        comradesBonusLine = $" + {comradesBonus} за товарищей";
+                        comradesBonusLine = $" + {comradesBonus} (за товарищей)";
                     }
 
                     fight.Add($"Мощность его удара: {Game.Dice.Symbol(enemyRollFirst)}" +
-                        $"{ememySecondRollLine} + {enemy.Strength} Сила{comradesBonusLine} = " +
+                        $"{ememySecondRollLine} + {enemy.Strength} (Сила){comradesBonusLine} = " +
                         $"{enemyHitStrength}");
 
                     Character.Protagonist.GetArmour(out int armourDefence, out string armourLine);

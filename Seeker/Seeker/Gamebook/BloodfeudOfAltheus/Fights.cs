@@ -48,9 +48,9 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             }
             else
             {
-                usedGlory = "Вам придётся использовать Славу!");
-
                 Character.Protagonist.Glory -= needGlory;
+
+                usedGlory = "Вам придётся использовать Славу!";
                 return needGlory;
             }
         }
