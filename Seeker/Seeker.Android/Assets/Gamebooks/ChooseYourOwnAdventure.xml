@@ -24,6 +24,8 @@
 				<Item Name="1561" Value="730220"/>
 				<Item Name="1679" Value="5f2152"/>
 				<Item Name="1795" Value="268483"/>
+				<Item Name="1909" Value="2f3467"/>
+				<Item Name="1925" Value="bd8324"/>
 			</Buttons>
 		</Dictionaries>
 	</Introduction>
@@ -84,10 +86,10 @@
 				<Option Goto="1795" Text="Пришельцы из космоса" Image="Invaders">
 					<Text Style="Small, Upper">Эдвард Паккард, перевод  У. Сапциной, 1991</Text>
 				</Option>
-				<Option Goto="1909" Text="Похищение феи">
+				<Option Goto="1909" Text="Похищение феи" Image="Fairy">
 					<Text Style="Small, Upper">Шэннон Гиллиган, перевод Сергея Посниченко, 1985</Text>
 				</Option>
-				<Option Goto="1925" Text="Затонувшие сокровища">
+				<Option Goto="1925" Text="Затонувшие сокровища" Image="Treasures">
 					<Text Style="Small, Upper">Эдвард Паккард, перевод Сергея Посниченко, 1982</Text>
 				</Option>
 			</Options>
