@@ -6,10 +6,12 @@ namespace Seeker.Gamebook.Hunt
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {
-        public override List<string> Status() => new List<string>
+        public override List<string> Status()
         {
-            $"Укушенные: {Character.Protagonist.Bitten}",
-        };
+            string zombies = new string('x', Character.Protagonist.Bitten).Replace("x", "🧟");
+            string bitten = String.IsNullOrEmpty(zombies) ? "ни одного" : zombies;
+            return new List<string>{ $"Укушенные: {bitten}" };
+        }
 
         public override bool Availability(string option)
         {
