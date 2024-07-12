@@ -18,28 +18,35 @@ namespace Seeker.Gamebook.ByTheWillOfRome
             }
             else
             {
-                return new List<string>();
+                return null;
             }
         }           
+
+        private string Squad(string symbol, int size)
+        {
+            string legionaries = new string('x', size).Replace("x", symbol);
+            string squad = String.IsNullOrEmpty(legionaries) ? "ни одного" : legionaries;
+
+            return squad;
+        }
 
         public override List<string> AdditionalStatus()
         {
             if (Character.Protagonist.Legionaries > 0)
             {
-                string legionaries = new string('♙', Character.Protagonist.Legionaries);
+                string legioner = Character.Protagonist.Discipline >= 0 ? "🙂" : "😡";
 
                 return new List<string>
                 {
-                    $"Легионеров: {legionaries}",
+                    $"Легионеров: {Squad(legioner, Character.Protagonist.Legionaries)}",
                     $"Дисциплина: {Game.Services.NegativeMeaning(Character.Protagonist.Discipline)}",
                 };
             }
             else if (Character.Protagonist.Horsemen > 0)
             {
-                string horsemen = new string('♘', Character.Protagonist.Horsemen);
                 return new List<string>
                 {
-                    $"Всадников: {horsemen}",
+                    $"Всадников: {Squad("🐎", Character.Protagonist.Horsemen)}",
                     $"Навыки рукопашного боя: 2",
                 };
             }
