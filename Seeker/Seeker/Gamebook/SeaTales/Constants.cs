@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Seeker.Gamebook.NorthernShores
+namespace Seeker.Gamebook.SeaTales
 {
     class Constants : Prototypes.Constants, Abstract.IConstants
     {

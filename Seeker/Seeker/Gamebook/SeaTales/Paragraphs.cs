@@ -3,7 +3,7 @@ using System.Linq;
 using System.Xml;
 using Seeker.Game;
 
-namespace Seeker.Gamebook.NorthernShores
+namespace Seeker.Gamebook.SeaTales
 {
     class Paragraphs : Prototypes.Paragraphs, Abstract.IParagraphs
     {
@@ -51,6 +51,6 @@ namespace Seeker.Gamebook.NorthernShores
         }
 
         public override Abstract.IModification ModificationParse(XmlNode xmlModification) =>
-           (Abstract.IModification)base.ModificationParse(xmlModification, new Modification());
+            (Abstract.IModification)base.ModificationParse(xmlModification, new Modification());
     }
 }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Seeker.Gamebook.NorthernShores
+namespace Seeker.Gamebook.SeaTales
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {

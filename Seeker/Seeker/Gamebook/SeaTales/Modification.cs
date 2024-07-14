@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Seeker.Gamebook.NorthernShores
+namespace Seeker.Gamebook.SeaTales
 {
     class Modification : Prototypes.Modification, Abstract.IModification
     {
