@@ -4,18 +4,15 @@
 			<Title>Северные берега</Title>
 			<Author>Геннадий Логинов, 2018</Author>
 		</Copyright>
-		<Styles>
-			<Main Value="455a64"/>
-			<Color Name="Option, Continue" Value="546e7a"/>
-			<System Value="90a4ae"/>
-			<Action Value="455a64"/>
-			<StatusBar Value="37474f"/>
-			<ActionBox Value="90a4ae"/>
-			<Background Value="cfd8dc"/>
-		</Styles>
 		<Lists>
 			<Throws Items="ноль, одну попытку, две попытки, три попытки"/>
 		</Lists>
+		<Dictionaries>
+			<Colors>
+				<Item Name="1" Value="455a64, 546e7a, 90a4ae, 455a64, 37474f, 90a4ae, cfd8dc"/>
+				<Item Name="401" Value="f4533a, fa7775, dfbc99, d11417, fc7c51, eeae64, f0d6b3"/>
+			</Colors>
+		</Dictionaries>
 		<Buttons>
 			<Test>Бросить кубики</Test>
 		</Buttons>
@@ -23,8 +20,8 @@
 	<Paragraphs>
 		<Paragraph No="0">
 			<Options>
-				<Option Goto="1" Text="Северные берега"/>
-				<Option Goto="609" Text="Восточные берега"/>
+				<Option Goto="1" Text="Северные берега" Image="NorthernShores"/>
+				<Option Goto="609" Text="Восточные берега" Image="EasternShores"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="1">
