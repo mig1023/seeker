@@ -20,8 +20,12 @@
 	<Paragraphs>
 		<Paragraph No="0">
 			<Options>
-				<Option Goto="1" Text="Северные берега" Image="NorthernShores"/>
-				<Option Goto="609" Text="Восточные берега" Image="EasternShores"/>
+				<Option Goto="1" Text="Северные берега" Image="NorthernShores" Style="455a64">
+					<Text Style="Small, Upper">Геннадий Логинов, 2018</Text>
+				</Option>
+				<Option Goto="609" Text="Восточные берега" Image="EasternShores" Style="f4533a">
+					<Text Style="Small, Upper">Геннадий Логинов, 2018</Text>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph No="1">
