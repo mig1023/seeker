@@ -86,6 +86,20 @@ namespace Seeker.Prototypes
         public virtual List<int> GetParagraphsWithoutStaticsButtons() =>
             WithoutStaticsButtons;
 
+        public static int GetCurrentStartParagraph(Dictionary<int, string> paragraphs)
+        {
+            int start = 0;
+            int current = Game.Data.CurrentParagraphID;
+
+            foreach (int startParagraph in paragraphs.Keys.OrderBy(x => x))
+            {
+                if (current >= startParagraph)
+                    start = startParagraph;
+            }
+
+            return start;
+        }
+
         private void SetPropertyValue(string name, object value) =>
             this.GetType().GetProperty(name).SetValue(this, value);
 

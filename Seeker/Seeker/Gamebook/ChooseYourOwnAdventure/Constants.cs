@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using static Seeker.Output.Buttons;
-using System.Linq;
 
 namespace Seeker.Gamebook.ChooseYourOwnAdventure
 {
@@ -11,23 +9,12 @@ namespace Seeker.Gamebook.ChooseYourOwnAdventure
 
         public static int MillionerStartParagraph = 120;
 
-        public static int GetCurrentStartParagraph()
-        {
-            int start = 0;
-            int current = Game.Data.CurrentParagraphID;
-
-            foreach (int startParagraph in Constants.Buttons.Keys.OrderBy(x => x))
-            {
-                if (current >= startParagraph)
-                    start = startParagraph;
-            }
-
-            return start;
-        }
-
         public override string GetColor(ButtonTypes type)
         {
-            int currentStart = GetCurrentStartParagraph();
+            if (Game.Settings.IsEnabled("WithoutStyles"))
+                return base.GetColor(type);
+
+            int currentStart = GetCurrentStartParagraph(Buttons);
 
             if (((type == ButtonTypes.Main) || (type == ButtonTypes.Action)) && currentStart > 0)
                 return Constants.Buttons[currentStart];
