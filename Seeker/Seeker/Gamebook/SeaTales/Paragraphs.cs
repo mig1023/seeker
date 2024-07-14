@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Xml;
 using Seeker.Game;
@@ -43,9 +44,10 @@ namespace Seeker.Gamebook.SeaTales
             foreach (string param in GetProperties(action))
                 SetProperty(action, param, xmlAction);
 
-            action.Dices = xmlAction.Attributes["Dices"].InnerText;
-            action.Throws = Xml.IntParse(xmlAction.Attributes["Throws"].InnerText);
-            action.Heat = Xml.IntParse(xmlAction.Attributes["Heat"].InnerText);
+            action.Dices = xmlAction.Attributes["Dices"]?.InnerText ?? String.Empty;
+            action.Throws = Xml.IntParse(xmlAction.Attributes["Throws"]);
+            action.Heat = Xml.IntParse(xmlAction.Attributes["Heat"]);
+            action.Level = xmlAction.Attributes["Level"]?.InnerText ?? String.Empty;
 
             return action;
         }

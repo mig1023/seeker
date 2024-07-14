@@ -12,6 +12,8 @@ namespace Seeker.Gamebook.SeaTales
 
         public static Dictionary<int, string> Colors { get; set; }
 
+        public static int FirstPartSize = 400;
+
         private bool ColorsList(out List<string> colors)
         {
             colors = null;

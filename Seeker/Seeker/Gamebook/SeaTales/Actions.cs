@@ -12,15 +12,27 @@ namespace Seeker.Gamebook.SeaTales
 
         public int Heat { get; set; }
 
+        public string Level { get; set; }
+
+        public static bool ThisIsFirstPart() =>
+           Game.Data.CurrentParagraphID <= Constants.FirstPartSize;
+
         public override List<string> Status()
         {
-            string negativ = Character.Protagonist.Heat < 0 ? "—" : String.Empty;
-            return new List<string> { $"Теплота: {negativ}{Math.Abs(Character.Protagonist.Heat)} ℃" };
+            if (ThisIsFirstPart())
+            {
+                string negativ = Character.Protagonist.Heat < 0 ? "—" : String.Empty;
+                return new List<string> { $"Теплота: {negativ}{Math.Abs(Character.Protagonist.Heat)} ℃" };
+            }
+            else
+            {
+                return new List<string> { $"Брехня: {Character.Protagonist.Nonsense}" };
+            }
         }
 
-        private List<int> GetTragetDices(out string dicesLine)
+        private List<int> GetTragetDices(string dices, out string dicesLine)
         {
-            List<int> targets = Dices
+            List<int> targets = dices
                 .Split(',')
                 .Select(x => int.Parse(x))
                 .ToList();
@@ -45,40 +57,91 @@ namespace Seeker.Gamebook.SeaTales
             return targets;
         }
 
+        private string GetCredibilityLevel(string level, out string levelNamePart)
+        {
+            switch (level)
+            {
+                case "Difficult":
+                    levelNamePart = "сложн";
+                    return "6";
+                case "Standard":
+                    levelNamePart = "стандартн";
+                    return "5,6";
+                default:
+                    levelNamePart = "лёгк";
+                    return "4,5,6";
+            }
+        }
+
         public override List<string> Representer()
         {
-            List<int> targetDices = GetTragetDices(out string dicesLine);
+            if (ThisIsFirstPart())
+            {
+                List<int> targetDices = GetTragetDices(Dices, out string dicesLine);
 
-            string bonus = Heat > 0 ? $"если получится, то +{Heat} Тепла" :
-                "если получится, то игра продолжится";
+                string bonus = Heat > 0 ? $"если получится, то +{Heat} Тепла" :
+                    "если получится, то игра продолжится";
 
-            return new List<string> { $"Нужно выбросить {dicesLine}\n" +
-                $"за {Constants.Throws[Throws]}\n{bonus}" };
+                return new List<string> { $"Нужно выбросить {dicesLine}\n" +
+                    $"за {Constants.Throws[Throws]}\n{bonus}" };
+            }
+            else
+            {
+                List<int> targetDices = GetTragetDices(
+                    GetCredibilityLevel(Level, out string levelNamePart), out string dicesLine);
+
+                return new List<string> { $"{levelNamePart.ToUpper()}АЯ ПРОВЕРКА\n" +
+                    $"Нужно выбросить {Constants.Throws[Throws]}" };
+            }
         }
 
         public override bool GameOver(out int toEndParagraph, out string toEndText)
         {
-            toEndParagraph = 0;
+            if (ThisIsFirstPart())
+            {
+                toEndParagraph = 0;
 
-            if (Character.Protagonist.Heat <= -100)
-            {
-                toEndText = "Температура снизилась слишком сильно... Ваше плавание провалено... Надо начинать игру сначала...";
-                return true;
-            }
-            else if (Character.Protagonist.Gameover)
-            {
-                toEndText = "Ваше плавание подошло к печальному концу... Надо начинать игру сначала...";
-                return true;
-            }
-            else if (Character.Protagonist.Heat >= 100)
-            {
-                toEndText = "Температура достаточно повысилась! Вы победили! Остаётся только начать с начала!";
-                return true;
+                if (Character.Protagonist.Heat <= -100)
+                {
+                    toEndText = "Температура снизилась слишком сильно... Ваше плавание провалено... Надо начинать игру сначала...";
+                    return true;
+                }
+                else if (Character.Protagonist.Gameover)
+                {
+                    toEndText = "Ваше плавание подошло к печальному концу... Надо начинать игру сначала...";
+                    return true;
+                }
+                else if (Character.Protagonist.Heat >= 100)
+                {
+                    toEndText = "Температура достаточно повысилась! Вы победили! Остаётся только начать с начала!";
+                    return true;
+                }
+                else
+                {
+                    toEndText = String.Empty;
+                    return false;
+                }
             }
             else
             {
-                toEndText = String.Empty;
-                return false;
+                toEndParagraph = 0;
+
+                if ((Character.Protagonist.Nonsense >= 100) && (Game.Data.CurrentParagraphID == 544))
+                {
+                    toEndText = Output.Constants.GAMEOVER_TEXT;
+                    return true;
+                }
+                else if (Character.Protagonist.Nonsense >= 100)
+                {
+                    toEndParagraph = 544;
+                    toEndText = "Индекс брехни зашкалил!";
+                    return true;
+                }
+                else
+                {
+                    toEndText = String.Empty;
+                    return false;
+                }
             }
         }
 
@@ -86,7 +149,7 @@ namespace Seeker.Gamebook.SeaTales
         {
             List<string> test = new List<string>();
 
-            List<int> targetDices = GetTragetDices(out string dicesLine);
+            List<int> targetDices = GetTragetDices(Dices, out string dicesLine);
 
             test.Add($"BOLD|Пробуем выбросить {dicesLine} за {Constants.Throws[Throws]}\n");
 
@@ -129,6 +192,36 @@ namespace Seeker.Gamebook.SeaTales
             {
                 test.Add($"Здесь ваше путешествие заканчивается...");
                 Character.Protagonist.Gameover = true;
+            }
+
+            return test;
+        }
+
+        public List<string> Credibility()
+        {
+            List<string> test = new List<string>();
+
+            List<int> targetDices = GetTragetDices(
+                GetCredibilityLevel(Level, out string levelNamePart), out string dicesLine);
+
+            test.Add($"BOLD|Нужно выдержать {levelNamePart}ую проверку!\nПробуем выбросить {dicesLine}\n");
+
+            int dice = Game.Dice.Roll();
+            test.Add($"Бросаем кубик: {Game.Dice.Symbol(dice)}");
+
+            if (targetDices.Contains(dice))
+            {
+                test.Add("BIG|GOOD|BOLD|Успех! :)");
+                return test;
+            }
+            else
+            {
+                Character.Protagonist.Nonsense = 0;
+
+                test.Add("BIG|BAD|BOLD|Провал :(");
+                test.Add("\nРассказчик наплёл совсем уж околесицу - в такое никто не поверит! " +
+                    "Его перебивает другой выпивоха и начинает свой рассказ.");
+                test.Add("BAD|BOLD|Пункты Брехни обнуляются.");
             }
 
             return test;
