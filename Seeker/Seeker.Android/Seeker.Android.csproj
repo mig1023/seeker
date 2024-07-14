@@ -607,9 +607,6 @@
     <AndroidAsset Include="Assets\Gamebooks\WalkInThePark.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Gamebooks\NorthernShores.xml" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable\HelpJane.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -706,6 +703,13 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\SeaTales.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\SeaTales_EasternShores.jpg" />
+    <AndroidResource Include="Resources\drawable\SeaTales_NorthernShores.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Gamebooks\SeaTales.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>
