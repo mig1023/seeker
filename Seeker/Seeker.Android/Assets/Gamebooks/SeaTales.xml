@@ -15,6 +15,7 @@
 		</Dictionaries>
 		<Buttons>
 			<Test>Бросить кубики</Test>
+			<Credibility>Поверят ли этому?</Credibility>
 		</Buttons>
 	</Introduction>
 	<Paragraphs>
