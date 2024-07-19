@@ -52,6 +52,7 @@ namespace Seeker.Gamebook.SeaTales
             action.Throws = Xml.IntParse(xmlAction.Attributes["Throws"]);
             action.Heat = Xml.IntParse(xmlAction.Attributes["Heat"]);
             action.Level = xmlAction.Attributes["Level"]?.InnerText ?? String.Empty;
+            action.Success = xmlAction.Attributes["Success"]?.InnerText ?? String.Empty;
 
             return action;
         }

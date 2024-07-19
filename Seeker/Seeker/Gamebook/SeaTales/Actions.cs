@@ -14,6 +14,8 @@ namespace Seeker.Gamebook.SeaTales
 
         public string Level { get; set; }
 
+        public string Success { get; set; }
+
         public static bool ThisIsFirstPart() =>
            Game.Data.CurrentParagraphID <= Constants.FirstPartSize;
 
@@ -87,11 +89,11 @@ namespace Seeker.Gamebook.SeaTales
             }
             else
             {
-                List<int> targetDices = GetTragetDices(
+                List<int> _ = GetTragetDices(
                     GetCredibilityLevel(Level, out string levelNamePart), out string dicesLine);
 
                 return new List<string> { $"{levelNamePart.ToUpper()}АЯ ПРОВЕРКА\n" +
-                    $"Нужно выбросить {Constants.Throws[Throws]}" };
+                    $"Нужно выбросить {dicesLine}" };
             }
         }
 
@@ -211,17 +213,18 @@ namespace Seeker.Gamebook.SeaTales
 
             if (targetDices.Contains(dice))
             {
-                test.Add("BIG|GOOD|BOLD|Успех! :)");
+                test.Add("BIG|GOOD|BOLD|Слушают! :)");
+                test.Add(Success);
                 return test;
             }
             else
             {
                 Character.Protagonist.Nonsense = 0;
 
-                test.Add("BIG|BAD|BOLD|Провал :(");
+                test.Add("BIG|BAD|BOLD|Никто не верит :(");
                 test.Add("\nРассказчик наплёл совсем уж околесицу - в такое никто не поверит! " +
                     "Его перебивает другой выпивоха и начинает свой рассказ.");
-                test.Add("BAD|BOLD|Пункты Брехни обнуляются.");
+                test.Add("BOLD|Пункты Брехни обнуляются.");
             }
 
             return test;
