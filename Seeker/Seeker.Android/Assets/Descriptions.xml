@@ -260,7 +260,7 @@
 		<Paragraphs>64 (21+43)</Paragraphs>
 		<Size>4993</Size>
 		<Playthrough>На пять минут</Playthrough>
-		<Setting>Юмор</Setting>
+		<Setting>Сатира</Setting>
 		<Color>030436</Color>
 	</PensionerSimulator>
 	<LordOfTheSteppes>
@@ -300,7 +300,7 @@
 		<Paragraphs>350</Paragraphs>
 		<Size>34020</Size>
 		<Playthrough>На полчаса</Playthrough>
-		<Setting>Юмор</Setting>
+		<Setting>Сатира</Setting>
 		<Color>333f4b</Color>
 	</StainlessSteelRat>
 	<LastHokku>
@@ -404,7 +404,7 @@
 		<Paragraphs>58</Paragraphs>
 		<Size>8105</Size>
 		<Playthrough>На пять минут</Playthrough>
-		<Setting>Юмор</Setting>
+		<Setting>Сатира</Setting>
 		<Color>9e003a</Color>
 	</LandOfUnwaryBears>
 	<YounglingTournament>
@@ -437,7 +437,7 @@
 		<Paragraphs>48</Paragraphs>
 		<Size>2629</Size>
 		<Playthrough>На пять минут</Playthrough>
-		<Setting>Юмор</Setting>
+		<Setting>Сатира</Setting>
 		<Color>86964f</Color>
 	</WildDeath>
 	<ChooseCthulhu>
@@ -494,7 +494,7 @@
 		<Paragraphs>100</Paragraphs>
 		<Size>10408</Size>
 		<Playthrough>На полчаса</Playthrough>
-		<Setting>Юмор</Setting>
+		<Setting>Сатира</Setting>
 		<Colors>
 			<Book>a4be84</Book>
 			<Font>000000</Font>
@@ -910,7 +910,7 @@
 		<Paragraphs>400 (100+300)</Paragraphs>
 		<Size>32226</Size>
 		<Playthrough>На часок-полтора</Playthrough>
-		<Setting>Юмор</Setting>
+		<Setting>Сатира</Setting>
 		<Color>cd1618</Color>
 	</WalkInThePark>
 	<PowerOfFear>
