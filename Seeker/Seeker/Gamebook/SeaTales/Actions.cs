@@ -62,13 +62,13 @@ namespace Seeker.Gamebook.SeaTales
             {
                 case "Difficult":
                     levelNamePart = "сложн";
-                    return "6";
+                    return "4,6";
                 case "Standard":
                     levelNamePart = "стандартн";
-                    return "5,6";
+                    return "4,5,6";
                 default:
                     levelNamePart = "лёгк";
-                    return "4,5,6";
+                    return "3,4,5,6";
             }
         }
 
