@@ -169,11 +169,11 @@ namespace Seeker.Gamebook.SeaTales
                     if (Heat > 0)
                     {
                         Character.Protagonist.Heat += Heat;
-                        test.Add($"Вы получаете {Heat} Тепла!");
+                        test.Add($"BOLD|Вы получаете {Heat} Тепла!");
                     }
                     else
                     {
-                        test.Add($"Ваше путешествие продолжается!");
+                        test.Add($"BOLD|Ваше путешествие продолжается!");
                     }
                    
                     return test;
