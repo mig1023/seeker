@@ -10,8 +10,14 @@ namespace Seeker.Gamebook.SeaTales
     {
         public override Paragraph Get(int id, XmlNode xmlParagraph)
         {
-            if (Data.CurrentParagraphID > 1)
+            if ((Data.CurrentParagraphID > 1) && Constants.ThisIsFirstPart())
                 Character.Protagonist.Heat -= 1;
+
+            if (!Constants.ThisIsFirstPart() && Character.Protagonist.NeedCredibilityCheck)
+            {
+                Character.Protagonist.Nonsense -= 1;
+                Character.Protagonist.NeedCredibilityCheck = false;
+            }
 
             return base.Get(xmlParagraph);
         }
@@ -53,6 +59,9 @@ namespace Seeker.Gamebook.SeaTales
             action.Heat = Xml.IntParse(xmlAction.Attributes["Heat"]);
             action.Level = xmlAction.Attributes["Level"]?.InnerText ?? String.Empty;
             action.Success = xmlAction.Attributes["Success"]?.InnerText ?? String.Empty;
+
+            if (!Constants.ThisIsFirstPart())
+                Character.Protagonist.NeedCredibilityCheck = true;
 
             return action;
         }

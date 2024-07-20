@@ -16,12 +16,9 @@ namespace Seeker.Gamebook.SeaTales
 
         public string Success { get; set; }
 
-        public static bool ThisIsFirstPart() =>
-           Game.Data.CurrentParagraphID <= Constants.FirstPartSize;
-
         public override List<string> Status()
         {
-            if (ThisIsFirstPart())
+            if (Constants.ThisIsFirstPart())
             {
                 string negativ = Character.Protagonist.Heat < 0 ? "—" : String.Empty;
                 return new List<string> { $"Теплота: {negativ}{Math.Abs(Character.Protagonist.Heat)} ℃" };
@@ -77,7 +74,7 @@ namespace Seeker.Gamebook.SeaTales
 
         public override List<string> Representer()
         {
-            if (ThisIsFirstPart())
+            if (Constants.ThisIsFirstPart())
             {
                 List<int> targetDices = GetTragetDices(Dices, out string dicesLine);
 
@@ -99,7 +96,7 @@ namespace Seeker.Gamebook.SeaTales
 
         public override bool GameOver(out int toEndParagraph, out string toEndText)
         {
-            if (ThisIsFirstPart())
+            if (Constants.ThisIsFirstPart())
             {
                 toEndParagraph = 0;
 
@@ -202,6 +199,9 @@ namespace Seeker.Gamebook.SeaTales
         public List<string> Credibility()
         {
             List<string> test = new List<string>();
+
+            if (!Constants.ThisIsFirstPart())
+                Character.Protagonist.NeedCredibilityCheck = false;
 
             List<int> targetDices = GetTragetDices(
                 GetCredibilityLevel(Level, out string levelNamePart), out string dicesLine);

@@ -19,11 +19,14 @@ namespace Seeker.Gamebook.SeaTales
 
         public bool Gameover { get; set; }
 
+        public bool NeedCredibilityCheck { get; set; }
+
         public override void Init()
         {
             base.Init();
             Heat = 0;
             Nonsense = 0;
+            NeedCredibilityCheck = false;
             Gameover = false;
         }
 
@@ -33,11 +36,12 @@ namespace Seeker.Gamebook.SeaTales
             Name = this.Name,
             Heat = this.Heat,
             Nonsense = this.Nonsense,
+            NeedCredibilityCheck = this.NeedCredibilityCheck,
             Gameover = this.Gameover,
         };
 
         public override string Save() => String.Join("|",
-            Heat, Nonsense, Gameover ? 1 : 0);
+            Heat, Nonsense, NeedCredibilityCheck ? 1 : 0, Gameover ? 1 : 0);
 
         public override void Load(string saveLine)
         {
@@ -45,7 +49,8 @@ namespace Seeker.Gamebook.SeaTales
 
             Heat = Game.Xml.IntParse(save[0]);
             Nonsense = Game.Xml.IntParse(save[1]);
-            Gameover = save[2] == "1";
+            NeedCredibilityCheck = save[2] == "1";
+            Gameover = save[3] == "1";
 
             IsProtagonist = true;
         }
