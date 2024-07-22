@@ -3976,7 +3976,7 @@
 		<Paragraph No="468">
 			<Texts>
 				<Text>Ваши матросы обнаруживают в море бутылку с запиской следующего содержания:</Text>
-				<Text Style="Italic, Selected">Продам необитаемый остров. Недорого.</Text>
+				<Text Style="Italic, Box, Background:d8c0a1">Продам необитаемый остров. Недорого.</Text>
 				<Text Style="Small">Вы получаете +1 пункт Брехни!</Text>
 				<Text>Не интересует. У Вас и без того забот хватает.</Text>
 			</Texts>
