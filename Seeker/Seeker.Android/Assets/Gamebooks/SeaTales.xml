@@ -2491,7 +2491,7 @@
 		<Paragraph No="331">
 			<Texts>
 				<Text>Ваши люди находят в море бутылку с запиской следующего содержания:</Text>
-				<Text Style="Italic, Selected">Как суровые шведы умерщвляют птиц? Бросают их в пропасть!</Text>
+				<Text Style="Italic, Box, Background:bac2c6">Как суровые шведы умерщвляют птиц? Бросают их в пропасть!</Text>
 			</Texts>
 			<Options>
 				<Option Goto="24, 23, 270, 200, 51, 43"/>
