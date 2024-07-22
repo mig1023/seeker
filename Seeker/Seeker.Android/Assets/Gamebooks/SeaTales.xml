@@ -28,6 +28,7 @@
 				<Option Goto="609" Text="Восточные берега" Image="EasternShores" Style="f4533a">
 					<Text Style="Small, Upper">Геннадий Логинов, 2018</Text>
 				</Option>
+				<Option Goto="559" Text="TEST"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="1">
@@ -322,7 +323,7 @@
 		<Paragraph No="36">
 			<Texts>
 				<Text>Ваши люди находят в море бутылку с запиской следующего содержания:</Text>
-				<Text Style="Italic, Selected">Как жалко, что под Москвой не стоит сейчас какой-нибудь заклятый враг. Такие холода пропадают!</Text>
+				<Text Style="Italic, Box, Background:bac2c6">Как жалко, что под Москвой не стоит сейчас какой-нибудь заклятый враг. Такие холода пропадают!</Text>
 				<Text>Да уж, интересное наблюдение.</Text>
 			</Texts>
 			<Options>
@@ -5231,7 +5232,7 @@
 		<Paragraph No="559">
 			<Texts>
 				<Text>Ваши матросы вылавливают в море бутылку. Внутри неё находится бутылка поменьше и записка:</Text>
-				<Text Style="Italic, Selected">Это письмо с вложнением.</Text>
+				<Text Style="Italic, Selected">Это письмо с вложением.</Text>
 				<Text Style="Small">Вы получаете +1 пункт Брехни!</Text>
 				<Text>Ну, надо же! Кто бы мог подумать?</Text>
 			</Texts>
