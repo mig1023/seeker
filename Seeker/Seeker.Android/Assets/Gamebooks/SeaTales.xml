@@ -5300,7 +5300,7 @@
 		<Paragraph No="564">
 			<Texts>
 				<Text>Ваши матросы вылавливают в море бутылку с запиской следующего содержания:</Text>
-				<Text Style="Italic, Selected">Кто написал — не знаю, а я, дурак, читаю!</Text>
+				<Text Style="Italic, Box, Background:d8c0a1">Кто написал — не знаю, а я, дурак, читаю!</Text>
 				<Text Style="Small">Вы получаете +1 пункт Брехни!</Text>
 				<Text>Ну вот, ещё один «остряк» выискался...</Text>
 			</Texts>
