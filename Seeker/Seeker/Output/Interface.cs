@@ -225,7 +225,7 @@ namespace Seeker.Output
         {
             bool selected = text.Selected || text.Box;
 
-            ExtendedLabel label = Text(RedStyle(text.Content), italic: text.Italic,
+            ExtendedLabel label = Text(RedStyle(text.Content.Trim()), italic: text.Italic,
                 upper: text.Upper, size: text.Size, selected: selected);
 
             label.FontFamily = TextFontFamily(bold: text.Bold, italic: text.Italic);
@@ -298,13 +298,12 @@ namespace Seeker.Output
                     new ColumnDefinition { Width = new GridLength(2) },
                     new ColumnDefinition { }
                 },
-                Margin = Constants.TEXT_LABEL_MARGIN,
+                Margin = new Thickness(5, 0, 0, 0),
             };
 
             BoxView verticalLine = new BoxView
             {
                 Color = Color.FromHex(Game.Data.Constants.GetColor(ColorTypes.StatusBar)),
-                Margin = new Thickness(0, 3, 0, 0)
             };
 
             grid.Children.Add(verticalLine, 0, 0);
@@ -341,7 +340,12 @@ namespace Seeker.Output
             {
                 label.Margin = Constants.TEXT_LABEL_MARGIN;
             }
-             
+
+            if (selected)
+            {
+                label.VerticalTextAlignment = TextAlignment.Center;
+            }
+
             if (defaultParams)
             {
                 return label;
