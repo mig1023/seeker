@@ -2842,7 +2842,7 @@
 		<Paragraph No="373">
 			<Texts>
 				<Text>Ваши люди находят в море бутылку с запиской следующего содержания:</Text>
-				<Text Style="Italic, Selected">Как шведы умерщвляют рыбу? Топят её в воде.</Text>
+				<Text Style="Italic, Box, Background:bac2c6">Как шведы умерщвляют рыбу? Топят её в воде.</Text>
 			</Texts>
 			<Options>
 				<Option Goto="339, 338, 104, 340, 341, 85"/>
