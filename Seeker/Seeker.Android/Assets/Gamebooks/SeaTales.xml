@@ -5232,7 +5232,7 @@
 		<Paragraph No="559">
 			<Texts>
 				<Text>Ваши матросы вылавливают в море бутылку. Внутри неё находится бутылка поменьше и записка:</Text>
-				<Text Style="Italic, Selected">Это письмо с вложением.</Text>
+				<Text Style="Italic, Box, Background:d8c0a1">Это письмо с вложением.</Text>
 				<Text Style="Small">Вы получаете +1 пункт Брехни!</Text>
 				<Text>Ну, надо же! Кто бы мог подумать?</Text>
 			</Texts>
