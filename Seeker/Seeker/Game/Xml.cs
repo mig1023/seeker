@@ -152,7 +152,8 @@ namespace Seeker.Game
             return xmlFile;
         }
 
-        public static void GameLoad(string name, Data.DisableMethodDelegate disableOption)
+        public static void GameLoad(string name,
+            Data.DisableMethodDelegate disableOption, Data.RenameMethodDelegate renameOption)
         {
             Data.XmlParagraphs.Clear();
             Data.Triggers.Clear();
@@ -169,6 +170,7 @@ namespace Seeker.Game
 
             Data.Constants.Clean();
             Data.DisableMethod = disableOption;
+            Data.RenameMethod = renameOption;
 
             foreach (XmlNode xmlNode in xmlFile.SelectNodes(Intro("Styles/*")))
             {

@@ -85,6 +85,20 @@ namespace Seeker
             }
         }
 
+        public void RenameMethod(string oldName, string newName)
+        {
+            foreach (View option in Options.Children)
+            {
+                if (!(option is Button))
+                    continue;
+
+                Button button = option as Button;
+
+                if (button.Text == oldName)
+                    button.Text = newName;
+            }
+        }
+
         private void Gamebook_Click(string gamebook)
         {
             Game.Continue.CurrentGame(gamebook);
@@ -92,7 +106,7 @@ namespace Seeker
             try
             {
                 Game.Data.CreateGamebookInstances(gamebook);
-                Game.Xml.GameLoad(gamebook, DisableMethod);
+                Game.Xml.GameLoad(gamebook, DisableMethod, RenameMethod);
             }
             catch (Exception ex)
             {

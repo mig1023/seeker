@@ -28,6 +28,9 @@ namespace Seeker.Game
             return false;
         }
 
+        public static void Rename(string oldName, string newName) =>
+            Data.RenameMethod(oldName, newName);
+
         public static void Disable(string name) =>
             Data.DisableMethod(name);
 

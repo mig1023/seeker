@@ -8,6 +8,7 @@ namespace Seeker.Game
     class Data
     {
         public delegate void DisableMethodDelegate(string name);
+        public delegate void RenameMethodDelegate(string oldName, string newName);
 
         public static string CurrentGamebook { get; set; }
         public static Paragraph CurrentParagraph { get; set; }
@@ -67,6 +68,8 @@ namespace Seeker.Game
         }
 
         public static DisableMethodDelegate DisableMethod { get; set; }
+
+        public static RenameMethodDelegate RenameMethod { get; set; }
 
         public static string InputResponse { get; set; }
 
