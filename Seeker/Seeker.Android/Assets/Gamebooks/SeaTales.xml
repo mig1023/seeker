@@ -3034,7 +3034,7 @@
 		<Paragraph No="399">
 			<Texts>
 				<Text>Ваши люди находят в море бутылку с запиской следующего содержания:</Text>
-				<Text Style="Italic, Selected">Заходите к нам на Рагнарёк!</Text>
+				<Text Style="Italic, Box, Background:bac2c6">Заходите к нам на Рагнарёк!</Text>
 				<Text>И снова — эти пережитки языческих времён...</Text>
 			</Texts>
 			<Options>
