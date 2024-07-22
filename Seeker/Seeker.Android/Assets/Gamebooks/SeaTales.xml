@@ -363,7 +363,7 @@
 		<Paragraph No="41">
 			<Texts>
 				<Text>Ваши люди вылавливают в море подмёрзшую бутылку с запиской следующего содержания:</Text>
-				<Text Style="Italic, Selected">Продам снег. Недорого.</Text>
+				<Text Style="Italic, Box, Background:bac2c6">Продам снег. Недорого.</Text>
 				<Text>Да, некоторым людям свойственно извлекать выгоду из всего...</Text>
 			</Texts>
 			<Options>
