@@ -10,13 +10,23 @@ namespace Seeker.Gamebook.SeaTales
     {
         public override Paragraph Get(int id, XmlNode xmlParagraph)
         {
-            if ((Data.CurrentParagraphID > 1) && Constants.ThisIsFirstPart())
-                Character.Protagonist.Heat -= 1;
-
-            if (!Constants.ThisIsFirstPart() && Character.Protagonist.NeedCredibilityCheck)
+            if (Constants.ThisIsFirstPart())
             {
-                Character.Protagonist.Nonsense -= 1;
-                Character.Protagonist.NeedCredibilityCheck = false;
+                if (Data.CurrentParagraphID > 1)
+                    Character.Protagonist.Heat -= 1;
+            }
+            else
+            {
+                if (Character.Protagonist.NeedCredibilityCheck)
+                {
+                    Character.Protagonist.Nonsense -= 1;
+                    Character.Protagonist.NeedCredibilityCheck = false;
+                }
+                
+                if (xmlParagraph.SelectNodes("Actions").Count > 0)
+                {
+                    Character.Protagonist.NeedCredibilityCheck = true;
+                }
             }
 
             return base.Get(xmlParagraph);
@@ -44,6 +54,11 @@ namespace Seeker.Gamebook.SeaTales
                 option.Goto = int.Parse(link[random.Next(link.Count())]);
             }
 
+            if (Character.Protagonist.NeedCredibilityCheck && String.IsNullOrEmpty(option.Text))
+            {
+                option.Text = "Пропустить";
+            }
+
             return option;
         }
 
@@ -59,10 +74,7 @@ namespace Seeker.Gamebook.SeaTales
             action.Heat = Xml.IntParse(xmlAction.Attributes["Heat"]);
             action.Level = xmlAction.Attributes["Level"]?.InnerText ?? String.Empty;
             action.Success = xmlAction.Attributes["Success"]?.InnerText ?? String.Empty;
-
-            if (!Constants.ThisIsFirstPart())
-                Character.Protagonist.NeedCredibilityCheck = true;
-
+                
             return action;
         }
 

@@ -215,7 +215,6 @@ namespace Seeker.Gamebook.SeaTales
             {
                 test.Add("BIG|GOOD|BOLD|Слушают! :)");
                 test.Add(Success);
-                return test;
             }
             else
             {
@@ -226,6 +225,8 @@ namespace Seeker.Gamebook.SeaTales
                     "Его перебивает другой выпивоха и начинает свой рассказ.");
                 test.Add("BOLD|Пункты Брехни обнуляются.");
             }
+
+            Game.Buttons.Rename("Пропустить", "Далее");
 
             return test;
         }
