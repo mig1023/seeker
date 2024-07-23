@@ -52,5 +52,11 @@
 				<Option Goto="394"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="7">
+			<Text>Дракончик пока спит и у тебя нет желания ждать, когда он проснется.</Text>
+			<Options>
+				<Option Goto="334"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
