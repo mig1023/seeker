@@ -217,5 +217,11 @@
 				<Option Goto="130"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="33">
+			<Text>Фонтан создает приятную прохладу в этом уголке парка.</Text>
+			<Options>
+				<Option Goto="314"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
