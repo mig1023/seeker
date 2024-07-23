@@ -454,5 +454,11 @@
 				<Option Goto="240" Text="К западному берегу"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="68">
+			<Text>Створки ворот лежат на земле. На них следы огромных зубов. Ты осторожно входишь.</Text>
+			<Options>
+				<Option Goto="13"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
