@@ -613,5 +613,11 @@
 				<Option Goto="327"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="93">
+			<Text>Массивные двери и трон Мнгаха рассыпались в пыль, в центре залы - яма, которая ведет наверно в преисподнюю. Там, далеко внизу, клокочет лава.</Text>
+			<Options>
+				<Option Goto="324"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
