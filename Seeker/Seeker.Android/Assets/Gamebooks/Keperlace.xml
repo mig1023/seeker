@@ -406,5 +406,12 @@
 				<Option Goto="263"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="61">
+			<Text>Корабль стоит около острова, покачиваясь на мелкой зыби. "Плывем в Кеперлейс или хотите сойти на берег" - спрашивает матрос.\n\nРешай:</Text>
+			<Options>
+				<Option Goto="199" Text="Отдать приказ выйти в море"/>
+				<Option Goto="164" Text="Хочешь выйти на берег"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
