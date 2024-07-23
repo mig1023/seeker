@@ -496,5 +496,11 @@
 				<Option Goto="174"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="75">
+			<Text>Больше в подвале этого дома ничего интересного нет. Так что нечего на него время терять.</Text>
+			<Options>
+				<Option Goto="258"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
