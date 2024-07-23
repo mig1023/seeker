@@ -339,5 +339,11 @@
 				<Option Goto="341"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="52">
+			<Text>Начальника Гильдии стеклодувов нет на месте.</Text>
+			<Options>
+				<Option Goto="160"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
