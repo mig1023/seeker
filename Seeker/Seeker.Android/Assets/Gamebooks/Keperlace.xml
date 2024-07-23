@@ -400,5 +400,11 @@
 				</Option>
 			</Options>
 		</Paragraph>
+		<Paragraph No="60">
+			<Text>Кузнец сидит рядом с дочерью. Вероятно, все боится отпустить ее надолго. Так что если у тебя нет к нему дел, то лучше уйти.</Text>
+			<Options>
+				<Option Goto="263"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
