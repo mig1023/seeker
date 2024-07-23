@@ -263,5 +263,11 @@
 				<Option Goto="185"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="40">
+			<Text>Обязательный переход по модификаторам:М61 М62\n\nТы решил зайти в Гильдию стеклодувов.</Text>
+			<Options>
+				<Option Goto="311"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
