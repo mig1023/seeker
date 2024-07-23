@@ -547,5 +547,11 @@
 				<Option Goto="195"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="82">
+			<Text>Обязательный переход по модификаторам:М57 М59\n\nТы решил встретиться со старшими священниками Храма.</Text>
+			<Options>
+				<Option Goto="69"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
