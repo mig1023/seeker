@@ -426,5 +426,12 @@
 				<Option Goto="37" Text="К ручью, у которого собираются все дороги"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="64">
+			<Text>Перед тобой квартал, где люди занимаются всевозможной магией, эзотерикой и лечением.</Text>
+			<Options>
+				<Option Goto="242" Text="Посетить здешних спецов"/>
+				<Option Goto="281" Text="Пойдешь куда-то еще"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
