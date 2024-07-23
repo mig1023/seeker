@@ -419,5 +419,12 @@
 				<Option Goto="258"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="63">
+			<Text>Широкая и удобная дорога ведет от города до гавани.</Text>
+			<Options>
+				<Option Goto="346" Text="По ней пойти к городским воротам"/>
+				<Option Goto="37" Text="К ручью, у которого собираются все дороги"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
