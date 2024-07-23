@@ -205,5 +205,11 @@
 				<Option Goto="147"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="31">
+			<Text>Обязательный переход по модификаторам:М80\n\nПеред тобой массивная дверь, на ней изображены различные чудовища.</Text>
+			<Options>
+				<Option Goto="191"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
