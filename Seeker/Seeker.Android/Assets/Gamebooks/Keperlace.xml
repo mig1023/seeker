@@ -478,5 +478,11 @@
 				<Option Goto="255"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="72">
+			<Text>Обязательный переход по модификаторам:М46\n\nТы отворяешь дверь, ведущую в подвал.</Text>
+			<Options>
+				<Option Goto="323"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
