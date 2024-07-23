@@ -607,5 +607,11 @@
 				<Option Goto="341"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="92">
+			<Text>Ты вспоминаешь о посещении Храма и просишь помощи Господа. Ужас пропадает так же бесследно, как и начался. Точки в коридоре пропали.</Text>
+			<Options>
+				<Option Goto="327"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
