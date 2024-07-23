@@ -301,5 +301,11 @@
 				<Option Goto="27" Text="Выйдешь"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="46">
+			<Text>Ты решаешь, что другие измерения - это не по твоей части, тебе дел и в этом хватит и выпазишь через пролом из корабля.</Text>
+			<Options>
+				<Option Goto="172"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
