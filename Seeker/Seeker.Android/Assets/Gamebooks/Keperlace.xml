@@ -472,5 +472,11 @@
 				<Option Goto="341"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="71">
+			<Text>Твои следы останутся в этой пещере на сотни лет. Если только ее не затопит магма. Больше ничего в ней нет и ты уходишь.</Text>
+			<Options>
+				<Option Goto="255"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
