@@ -553,5 +553,11 @@
 				<Option Goto="69"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="83">
+			<Text>Обязательный переход по модификаторам:М14 М15\n\nТы находишься на дороге, ведущей от перекрестка всех дорог к лесу.</Text>
+			<Options>
+				<Option Goto="301"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
