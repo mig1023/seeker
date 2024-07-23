@@ -502,5 +502,11 @@
 				<Option Goto="258"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="76">
+			<Text>Обязательный переход по модификаторам:М27\n\nТы заходишь в лавку, на вывеске которой реторта.</Text>
+			<Options>
+				<Option Goto="3"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
