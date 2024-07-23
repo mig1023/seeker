@@ -288,5 +288,11 @@
 				<Option Goto="225"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="44">
+			<Text>Обязательный переход по модификаторам:М45\n\nТы открываешь дверь королевской канцелярии.</Text>
+			<Options>
+				<Option Goto="264"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
