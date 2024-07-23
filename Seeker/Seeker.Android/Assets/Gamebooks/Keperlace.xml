@@ -313,5 +313,11 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="48">
+			<Text>Ты срезаешь канат, пробуешь его на прочность, накрепко привязываешь к остаткам мачты и лезешь в трюм.</Text>
+			<Options>
+				<Option Goto="269"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
