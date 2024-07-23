@@ -484,5 +484,11 @@
 				<Option Goto="323"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="73">
+			<Text>Обязательный переход по модификаторам:М70 М71\n\nТы осторожно идешь к воротам.</Text>
+			<Options>
+				<Option Goto="392"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
