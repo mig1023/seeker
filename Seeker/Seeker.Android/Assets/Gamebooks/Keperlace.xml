@@ -711,5 +711,11 @@
 				<Option Goto="4" Text="Попробуешь высадиться"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="108">
+			<Text>Обязательный переход по модификаторам:М18\n\nТы направляешься к фонтану.</Text>
+			<Options>
+				<Option Goto="230"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
