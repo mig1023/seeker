@@ -167,5 +167,11 @@
 				<Option Goto="263"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="26">
+			<Text>"Именем Господа приказываю вам - уйдите" - грозно кричишь ты скелетам. Они, словно по команде, рассыпаются и скрываются в воде. Хохот прекращается. И тишина....</Text>
+			<Options>
+				<Option Goto="404"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
