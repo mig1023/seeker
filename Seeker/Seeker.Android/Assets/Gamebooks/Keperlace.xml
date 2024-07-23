@@ -22,5 +22,11 @@
 				<Option Goto="283"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="2">
+			<Text>Ты идешь по болоту, следуя указаниям разведчика. Вскоре ты и впрямь видишь какой-то замок.</Text>
+			<Options>
+				<Option Goto="336"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
