@@ -269,5 +269,12 @@
 				<Option Goto="311"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="41">
+			<Text>"Ты можешь поговорить с заключенными" - говорит начальник - "Но будь осторожен!"</Text>
+			<Options>
+				<Option Goto="138" Text="Поговорим"/>
+				<Option Goto="281" Text="Уходим"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
