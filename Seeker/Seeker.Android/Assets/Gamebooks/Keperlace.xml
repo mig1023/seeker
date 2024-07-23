@@ -571,5 +571,11 @@
 				<Option Goto="7"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="86">
+			<Text>Обязательный переход по модификаторам:М67 М68 М69\n\nТы решительно шагаешь к воротам, ведущим к подземельям.</Text>
+			<Options>
+				<Option Goto="200"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
