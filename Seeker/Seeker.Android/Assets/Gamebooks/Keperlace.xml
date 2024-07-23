@@ -294,5 +294,12 @@
 				<Option Goto="264"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="45">
+			<Text>Различные демонические надписи на каменных стенах подвала - вот и все, что напоминает о демоне. Но скоро сотрутся и они.</Text>
+			<Options>
+				<Option Goto="343" Text="Побродить по подвалу"/>
+				<Option Goto="27" Text="Выйдешь"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
