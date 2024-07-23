@@ -34,5 +34,11 @@
 				<Option Goto="242"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="4">
+			<Text>Обязательный переход по модификаторам:М63\n\nТы решительно направляешь бег корабля к берегу.</Text>
+			<Options>
+				<Option Goto="326"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
