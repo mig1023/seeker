@@ -625,5 +625,11 @@
 				<Option Goto="61"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="95">
+			<Text>Обязательный переход по модификаторам:М73\n\nТы осторожно спускается все глубже.</Text>
+			<Options>
+				<Option Goto="237"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
