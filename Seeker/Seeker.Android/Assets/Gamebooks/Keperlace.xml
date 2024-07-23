@@ -637,5 +637,15 @@
 				<Option Goto="398"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="97">
+			<Text>Ты выходишь к королевскому дворцу. У ворот дворца стоит караул. Не думаю, что он пропустит всякого встречного-поперечного к вельможе.</Text>
+			<Options>
+				<Option Goto="397" Text="Попробовать">
+					<Text>А если пробовать не охота, то:</Text>
+				</Option>
+				<Option Goto="281" Text="Вернуться на городскую площадь"/>
+				<Option Goto="377" Text="Пойти по небольшой улочку куда-то за дворец"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
