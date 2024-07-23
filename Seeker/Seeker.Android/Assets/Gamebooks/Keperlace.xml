@@ -541,5 +541,11 @@
 				<Option Goto="281" Text="Вернуться на площадь"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="81">
+			<Text>Обязательный переход по модификаторам:М39\n\nТы подходишь к вывеске с сапогом. Это лавка сапожника.</Text>
+			<Options>
+				<Option Goto="195"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
