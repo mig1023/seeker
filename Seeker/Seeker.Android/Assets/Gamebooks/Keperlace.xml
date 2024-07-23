@@ -58,5 +58,11 @@
 				<Option Goto="334"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="8">
+			<Text>У входа в гавань в город стоит караул. "Пропуск" - властно говорит капрал -"Без пропуска вход не разрешен". Кажется, тебе придется уйти.</Text>
+			<Options>
+				<Option Goto="37"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
