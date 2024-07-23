@@ -654,5 +654,11 @@
 				<Option Goto="46" Text="Уйдешь"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="99">
+			<Text>На двери лавки висит табличка "Закрыто. Все ушли на борьбу с Мнгахом".</Text>
+			<Options>
+				<Option Goto="242"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
