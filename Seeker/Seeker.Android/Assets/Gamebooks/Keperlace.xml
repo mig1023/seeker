@@ -1435,5 +1435,11 @@
 				<Option Goto="258"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="219">
+			<Text>Обязательный переход по модификаторам:М54\n\nДверь с легким скрипом открывается и на тебя сыплется пыль. Давно ей никто не пользовался.</Text>
+			<Options>
+				<Option Goto="371"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
