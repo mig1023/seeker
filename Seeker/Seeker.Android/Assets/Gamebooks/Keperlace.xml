@@ -894,5 +894,11 @@
 				<Option Goto="160"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="137">
+			<Text>Обязательный переход по модификаторам:М23\n\nТы решил зайти в магическую лавку.</Text>
+			<Options>
+				<Option Goto="186"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
