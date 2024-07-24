@@ -1355,5 +1355,11 @@
 				<Option Goto="225"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="206">
+			<Text>М7=267\n\nВид бумаги с королевской печатью заставляет их резко сбавить наглость (читать-то они не умеют).</Text>
+			<Options>
+				<Option Goto="267"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
