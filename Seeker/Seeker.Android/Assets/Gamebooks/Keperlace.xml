@@ -1361,5 +1361,11 @@
 				<Option Goto="267"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="207">
+			<Text>"Желаю вам быстрой победы" - говорит тебе офицер. Он, с маленькой группой солдат, остается охранять город.</Text>
+			<Options>
+				<Option Goto="97"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
