@@ -741,5 +741,12 @@
 				<Option Goto="151"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="113">
+			<Text>Шхуна тут появилась значительно позже остальных кораблей. Никакой пиратской символики на ней нет. Мачта у ней сломана почти у самой палубы и следов мачты не видно нигде.</Text>
+			<Options>
+				<Option Goto="142" Text="Завезти на нее"/>
+				<Option Goto="226" Text="Отойдешь"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
