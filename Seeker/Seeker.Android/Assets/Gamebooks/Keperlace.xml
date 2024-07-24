@@ -1367,5 +1367,11 @@
 				<Option Goto="97"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="208">
+			<Text>Обязательный переход по модификаторам:М72\n\nТы крепче сжимаешь в руках серебренный клинок и продолжаешь спуск.</Text>
+			<Options>
+				<Option Goto="157"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
