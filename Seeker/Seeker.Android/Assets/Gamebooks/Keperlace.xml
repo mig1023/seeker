@@ -810,5 +810,16 @@
 				<Option Goto="60"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="124">
+			<Text>Ну а если манит суша, то выбирай, куда направить ноги: Матрос отдает тебе честь своим топором и говорит "Ну что на корабль или пока ждем?"</Text>
+			<Options>
+				<Option Goto="94" Text="Взойти на корабль">
+					<Text>Ну а если манит суша, то выбирай, куда направить ноги:</Text>
+				</Option>
+				<Option Goto="333" Text="К западному берегу"/>
+				<Option Goto="194" Text="К восточному берегу"/>
+				<Option Goto="164" Text="Взобраться на холм в центре"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
