@@ -941,5 +941,13 @@
 				<Option Goto="53"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="144">
+			<Text>Море идет до самого горизонта без каких-нибудь намеков на сушу. Там, где ты недавно освободил птицу, уже никого нет.\n\nТак что остается пойти...</Text>
+			<Options>
+				<Option Goto="164" Text="К огромному дереву"/>
+				<Option Goto="376" Text="На северный берег"/>
+				<Option Goto="240" Text="На южный берег острова"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
