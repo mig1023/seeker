@@ -798,5 +798,11 @@
 				<Option Goto="161"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="122">
+			<Text>Алхимик колдует со своей новой посудой. До тебя ему уже дела нет.</Text>
+			<Options>
+				<Option Goto="242"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
