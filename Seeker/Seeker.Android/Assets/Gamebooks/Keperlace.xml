@@ -1192,5 +1192,12 @@
 				<Option Goto="263" Text="Нет"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="182">
+			<Text>Ты осторожно поднимаешься на борт корабля. Доски скрепят под ногами и прогибаются. Так и шею запросто свернуть можно. Внутри корабля ты видишь багровый свет.</Text>
+			<Options>
+				<Option Goto="249" Text="Хочешь заглянуть"/>
+				<Option Goto="226" Text="Предпочтешь исчезнуть"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
