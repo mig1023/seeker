@@ -1071,5 +1071,11 @@
 				<Option Goto="197" Text="Ты хочешь покинуть Храм"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="162">
+			<Text>Обязательный переход по модификаторам:М74\n\nТы хочешь подойти к столику, за которым сидят мужчина и девушка.</Text>
+			<Options>
+				<Option Goto="43"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
