@@ -1150,5 +1150,11 @@
 				<Option Goto="27"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="175">
+			<Text>Ты показываешь перстень короля и говоришь "Я приглашен на аудиенцию, вот доказательство".</Text>
+			<Options>
+				<Option Goto="213"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
