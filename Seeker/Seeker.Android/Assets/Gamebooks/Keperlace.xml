@@ -1053,5 +1053,16 @@
 				<Option Goto="341"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="160">
+			<Text>Твой корабль стоит около Стеклянного острова. Можно сойти на берег, охрана тут не строгая.\n\nНа берегу к твоим услугам:</Text>
+			<Options>
+				<Option Goto="283" Text="Таверна"/>
+				<Option Goto="40" Text="Гильдия стеклодувов"/>
+				<Option Goto="256" Text="Дворец правительницы острова">
+					<Text>Ну а можно покинуть эти воды...</Text>
+				</Option>
+				<Option Goto="212"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
