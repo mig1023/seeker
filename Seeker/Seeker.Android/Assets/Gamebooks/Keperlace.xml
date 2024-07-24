@@ -949,5 +949,12 @@
 				<Option Goto="240" Text="На южный берег острова"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="145">
+			<Text>Ты направляешься к входу в подвалы дворца. Похоже, что подвалом не сильно пользуются.</Text>
+			<Options>
+				<Option Goto="72" Text="Спускаемся"/>
+				<Option Goto="27" Text="Вернемся в Центральный зал"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
