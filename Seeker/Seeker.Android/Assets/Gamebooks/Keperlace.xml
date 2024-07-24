@@ -1168,5 +1168,11 @@
 				<Option Goto="403"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="178">
+			<Text>Обязательный переход по модификаторам:М49\n\nТы заходишь в другой дом, он более низкий и приземистый, но пошире остальных.</Text>
+			<Options>
+				<Option Goto="28"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
