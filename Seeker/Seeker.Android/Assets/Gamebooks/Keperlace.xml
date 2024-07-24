@@ -1077,5 +1077,12 @@
 				<Option Goto="43"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="163">
+			<Text>Судя по следам на полу, сюда прошли два матерых волка. Обратно вышел только один. Их сопровождали еще волки, но они не пошли в этот коридор.</Text>
+			<Options>
+				<Option Goto="95" Text="Идем дальше"/>
+				<Option Goto="381" Text="Вернуться на развилку и принять другое решение"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
