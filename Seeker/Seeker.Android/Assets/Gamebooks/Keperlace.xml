@@ -1102,5 +1102,11 @@
 				<Option Goto="138"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="167">
+			<Text>"Ты всегда желанный гость в моем доме" - приветствует тебя кузнец. Ты приветствуешь его. Если тебе тут больше ничего не надо, то можно уйти.</Text>
+			<Options>
+				<Option Goto="263"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
