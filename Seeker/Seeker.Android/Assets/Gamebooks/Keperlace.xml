@@ -1379,5 +1379,12 @@
 				<Option Goto="129"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="210">
+			<Text>Ты видишь, как два помощника кабатчика грузят на телегу пустые бочки. Вероятно, поедут за водой.</Text>
+			<Options>
+				<Option Goto="261" Text="Попробовать забраться в такую бочку"/>
+				<Option Goto="79" Text="Не будешь рисковать"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
