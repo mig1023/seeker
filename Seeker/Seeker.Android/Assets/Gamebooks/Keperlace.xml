@@ -767,5 +767,11 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="117">
+			<Text>Тебе предлагают бесплатный обед, если ты голоден.</Text>
+			<Options>
+				<Option Goto="197"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
