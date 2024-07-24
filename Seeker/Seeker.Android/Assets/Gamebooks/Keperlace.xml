@@ -1186,5 +1186,11 @@
 				<Option Goto="147"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="181">
+			<Text>"Чиню, паяю, очищаю, восстанавливаю" - говорит ювелир. Хочешь еще что-то изготовить?</Text>
+			<Options>
+				<Option Goto="263" Text="Нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
