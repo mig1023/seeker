@@ -779,5 +779,12 @@
 				<Option Goto="187"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="119">
+			<Text>Глубже и глубже спускаешься ты. Мерзкий запах и постоянные шорохи. Внезапно, снизу доносится леденящий душу вой и нечеловеческий крик.</Text>
+			<Options>
+				<Option Goto="55" Text="На поверхность"/>
+				<Option Goto="208" Text="В глубину гор"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
