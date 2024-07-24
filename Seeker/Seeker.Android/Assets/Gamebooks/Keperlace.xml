@@ -1144,5 +1144,11 @@
 				<Option Goto="79"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="174">
+			<Text>На каждом столе в канцелярии стоит табличка "Временный перерыв". Слой пыли на некоторых табличках свидетельствует, что "временный" - очень относительно понятие.</Text>
+			<Options>
+				<Option Goto="27"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
