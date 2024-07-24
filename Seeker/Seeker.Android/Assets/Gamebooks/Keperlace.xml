@@ -864,5 +864,11 @@
 				<Option Goto="362"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="132">
+			<Text>Обязательный переход по модификаторам:М37 М38\n\nТы решаешь заглянуть к портному.</Text>
+			<Options>
+				<Option Goto="286"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
