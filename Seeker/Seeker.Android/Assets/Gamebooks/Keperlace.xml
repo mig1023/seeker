@@ -1405,5 +1405,11 @@
 				<Option Goto="97" Text="Нет"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="214">
+			<Text>"Удачи вам" - напутствует тебя начальник форта. Тут больше ни чем помогать не хотят.</Text>
+			<Options>
+				<Option Goto="53"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
