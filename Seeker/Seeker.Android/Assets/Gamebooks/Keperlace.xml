@@ -922,5 +922,11 @@
 				<Option Goto="384" Text="Решил вернуться"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="141">
+			<Text>Ты направляешь корабль туда, где, по указаниям книги из библиотеки, должен быть Храм. Скоро вдалеке показывается небольшая гавань. Ты причаливаешь к берегу.</Text>
+			<Options>
+				<Option Goto="197"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
