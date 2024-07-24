@@ -900,5 +900,14 @@
 				<Option Goto="186"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="138">
+			<Text>Три камеры заняты в данный момент. Не много, хочешь познакомиться с обитателями? Обитателей только мало, заняты всего три камеры.</Text>
+			<Options>
+				<Option Goto="342" Text="В одной сидит пират"/>
+				<Option Goto="391" Text="Во второй - один из гоблинов-вожаков"/>
+				<Option Goto="252" Text="В третьей - какой-то гном"/>
+				<Option Goto="281" Text="Предпочтешь уйти"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
