@@ -1120,5 +1120,11 @@
 				<Option Goto="387"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="170">
+			<Text>Больше в этой лаборатории ничего не происходит и все дальнейшие призывы к Вейзему остаются без ответа. Остается покинуть ее.</Text>
+			<Options>
+				<Option Goto="384"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
