@@ -1096,5 +1096,11 @@
 				<Option Goto="53"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="166">
+			<Text>"Я теперь живу только ожиданием того дня, когда сюда войдет священник из Храма" - говорит тебе пират.</Text>
+			<Options>
+				<Option Goto="138"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
