@@ -755,5 +755,11 @@
 				<Option Goto="281" Text="Пойдешь в другое место"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="115">
+			<Text>"Больше тут спасать некого" - говорит капитан и поворачивает корабль назад.</Text>
+			<Options>
+				<Option Goto="355"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
