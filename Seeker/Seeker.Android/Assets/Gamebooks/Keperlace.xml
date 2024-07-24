@@ -1304,5 +1304,14 @@
 				<Option Goto="283"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="199">
+			<Text>Волны покачивают корабль и ветер поет в парусах. Решай, куда путь держать.</Text>
+			<Options>
+				<Option Goto="212" Text="В королевство Кеперлейс"/>
+				<Option Goto="61" Text="На остров, с которого все начиналось">
+					<Text>А может быть, тебе еще какие-то координаты известны?</Text>
+				</Option>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
