@@ -833,5 +833,11 @@
 				<Option Goto="320"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="127">
+			<Text>Ты находишься на небольшой площадке. Можно надуть воздушный шар, вернуться к своим и уплыть в Кеперлейс , а можно пойти к огромному тоннелю, уводящему в глубину гор.</Text>
+			<Options>
+				<Option Goto="104"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
