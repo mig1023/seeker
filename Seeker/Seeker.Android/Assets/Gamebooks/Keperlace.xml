@@ -852,5 +852,11 @@
 				<Option Goto="314"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="130">
+			<Text>В каюте лежат остатки скелета, рваные судовые журналы, но время (или еще что) стерло все надписи. Больше тут ничего нет.</Text>
+			<Options>
+				<Option Goto="189"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
