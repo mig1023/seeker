@@ -1398,5 +1398,12 @@
 				<Option Goto="53"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="213">
+			<Text>"А, проходи-проходи" - говорит тебе начальник стражи.</Text>
+			<Options>
+				<Option Goto="154" Text="Входим"/>
+				<Option Goto="97" Text="Нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
