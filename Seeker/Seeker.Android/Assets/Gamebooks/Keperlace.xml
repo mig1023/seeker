@@ -1213,5 +1213,11 @@
 				<Option Goto="384"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="185">
+			<Text>Ты подходишь к пещере. Дракон, судя по храпу, там. Ну что, войти рискнет только самоубийца. Если ничего ни приходит в голову, то надо сматывать удочки, пока цел.</Text>
+			<Options>
+				<Option Goto="334"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
