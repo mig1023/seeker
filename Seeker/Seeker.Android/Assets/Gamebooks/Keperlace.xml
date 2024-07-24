@@ -748,5 +748,12 @@
 				<Option Goto="226" Text="Отойдешь"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="114">
+			<Text>Ты подходишь к решетке, окружающей городской сад. Ворота туда открыты.</Text>
+			<Options>
+				<Option Goto="314" Text="Хочешь войти"/>
+				<Option Goto="281" Text="Пойдешь в другое место"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
