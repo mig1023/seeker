@@ -1011,5 +1011,11 @@
 				<Option Goto="255"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="153">
+			<Text>Обязательный переход по модификаторам:М26\n\nТы решил зайти в дом, на вывеске которого изображены звезды,.</Text>
+			<Options>
+				<Option Goto="9"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
