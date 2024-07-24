@@ -1250,5 +1250,11 @@
 				<Option Goto="341"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="191">
+			<Text>Внезапно она распихивается и внезапно властный голос нарушает тишину - "Ко мне!!!" И твои ноги против твоей воли подчиняются ему.</Text>
+			<Options>
+				<Option Goto="358"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
