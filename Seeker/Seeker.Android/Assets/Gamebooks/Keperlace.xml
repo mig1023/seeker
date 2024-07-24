@@ -1084,5 +1084,11 @@
 				<Option Goto="381" Text="Вернуться на развилку и принять другое решение"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="164">
+			<Text>Обязательный переход по модификаторам:М1\n\nТы взбираешься по склону холма, находящегося в центре острова.</Text>
+			<Options>
+				<Option Goto="67"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
