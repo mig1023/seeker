@@ -735,5 +735,11 @@
 				<Option Goto="406"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="112">
+			<Text>Обязательный переход по модификатору: М36\n\nТы заходишь в ювелирную лавку.</Text>
+			<Options>
+				<Option Goto="151"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
