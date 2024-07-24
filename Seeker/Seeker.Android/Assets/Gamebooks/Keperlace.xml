@@ -1319,5 +1319,11 @@
 				<Option Goto="322"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="201">
+			<Text>В баше тихо. Королевский маг лежит у на лежанке у окна. Судя по паутине и пыли на нем - он так лежит не первый день. Да, поговорить с ним в таком состоянии явно не удастся.</Text>
+			<Options>
+				<Option Goto="27"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
