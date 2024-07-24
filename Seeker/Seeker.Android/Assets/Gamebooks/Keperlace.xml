@@ -1017,5 +1017,11 @@
 				<Option Goto="9"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="154">
+			<Text>Двери перед тобой распахивают и ты входишь в центральный зал дворца.</Text>
+			<Options>
+				<Option Goto="27"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
