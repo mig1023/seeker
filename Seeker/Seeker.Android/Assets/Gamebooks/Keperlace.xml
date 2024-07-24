@@ -1263,5 +1263,11 @@
 				<Option Goto="234" Text="Заглянуть в его подземелья"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="193">
+			<Text>"Что, тебя уже можно Ваше высочество называть или нет?" - спрашивает портной. Похоже, что еще нельзя.</Text>
+			<Options>
+				<Option Goto="263"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
