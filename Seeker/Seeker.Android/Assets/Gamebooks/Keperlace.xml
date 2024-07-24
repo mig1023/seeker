@@ -1231,5 +1231,11 @@
 				<Option Goto="263"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="188">
+			<Text>"Как можно бороться с драконом" - говоришь ты. Пророчица отвечает очень коротко "Раньше драконов звали иначе, они по мудрому называются Горготы".</Text>
+			<Options>
+				<Option Goto="202"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
