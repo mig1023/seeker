@@ -1064,5 +1064,12 @@
 				<Option Goto="212"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="161">
+			<Text>Священник спрашивает тебя, что ты хочешь.</Text>
+			<Options>
+				<Option Goto="66" Text="Хочешь помолиться и получить наставления в вере и поддержку Господа"/>
+				<Option Goto="197" Text="Ты хочешь покинуть Храм"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
