@@ -1029,5 +1029,11 @@
 				<Option Goto="79"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="156">
+			<Text>Итак, что есть с собой? Ага, нож на поясе (-110) и моток веревки в сумке (-20). Да теперь еще имя этого призрака - Вейздем (-130). А теперь внимательно осмотрим окрестности.</Text>
+			<Options>
+				<Option Goto="67"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
