@@ -1337,5 +1337,11 @@
 				<Option Goto="242"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="203">
+			<Text>"Ну, скоро я услышу, что гоблины навсегда изгнаны из Кеперлейса?" - спрашивает король. Больше ему ничего не надо.</Text>
+			<Options>
+				<Option Goto="27"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
