@@ -999,5 +999,11 @@
 				<Option Goto="212" Text="Уплывешь от этих берегов"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="151">
+			<Text>"Чиню, паяю, очищаю, восстанавливаю" - говорит ювелир - "Мог бы что-нибудь изготовить, но золота нет". Да, с золотом нынче напряженка.</Text>
+			<Options>
+				<Option Goto="263"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
