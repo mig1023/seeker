@@ -1343,5 +1343,11 @@
 				<Option Goto="27"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="204">
+			<Text>На полу небольшого зала, в пыли отчетливо видны только твои следы. Дороги дальше нет. Ты у самого основания гор.</Text>
+			<Options>
+				<Option Goto="381"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
