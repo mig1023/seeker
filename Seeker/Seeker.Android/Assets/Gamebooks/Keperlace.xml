@@ -1815,5 +1815,11 @@
 				<Option Goto="160" Text="Дарить нечего"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="274">
+			<Text>Ты сворачиваешь направо и осторожно идешь все глубже и глубже, местами тебе попадаются клочья шкуры или кости. Иногда в боковых тоннелях ты замечаешь красные точки.</Text>
+			<Options>
+				<Option Goto="119"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
