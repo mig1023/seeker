@@ -1901,5 +1901,11 @@
 				<Option Goto="183"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="285">
+			<Text>"По моему, ты уже получил, что хотел" - произносит начальник склада -"Или что-то забыл?" Надо уходить.</Text>
+			<Options>
+				<Option Goto="53"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
