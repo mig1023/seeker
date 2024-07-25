@@ -2081,5 +2081,12 @@
 				<Option Goto="370"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="313">
+			<Text>"Именем Господа повелеваю - пошли вон" - спокойно говоришь ты. Скелеты падают на землю и рассыпаются на отдельные кости.</Text>
+			<Options>
+				<Option Goto="345" Text="Зайти в башню"/>
+				<Option Goto="150" Text="Уйти"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
