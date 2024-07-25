@@ -1845,5 +1845,11 @@
 				<Option Goto="341"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="279">
+			<Text>Ты показываешь приказ короля о помощи священнику. Он говорит тебе - "С этой бумагой сходи к братьям в хозяйственные постройки. А я могу помочь тебе духовным наставлением".</Text>
+			<Options>
+				<Option Goto="197"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
