@@ -2105,5 +2105,11 @@
 				<Option Goto="212"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="316">
+			<Text>Обязательный переход по модификаторам:М16 М17\n\nТы решил зайти в сторожевую башню над воротами.</Text>
+			<Options>
+				<Option Goto="356"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
