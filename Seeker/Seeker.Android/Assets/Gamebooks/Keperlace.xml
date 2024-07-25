@@ -1969,5 +1969,11 @@
 				<Option Goto="202"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="296">
+			<Text>Твои друзья музыканты теперь регулярно играют в этом трактире и приносят заведению славу (а следовательно - и не малый доход).</Text>
+			<Options>
+				<Option Goto="225"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
