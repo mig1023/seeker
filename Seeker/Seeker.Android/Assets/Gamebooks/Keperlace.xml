@@ -1524,5 +1524,11 @@
 				<Option Goto="314"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="231">
+			<Text>"Корабли возвращаются" - говоришь ты главе гильдии. Он не верит и выбегает на мол. Так и есть, корабли швартуются в гавани Стеклянного острова.</Text>
+			<Options>
+				<Option Goto="409"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
