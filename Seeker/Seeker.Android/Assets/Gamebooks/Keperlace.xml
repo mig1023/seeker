@@ -1635,5 +1635,11 @@
 				<Option Goto="18"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="248">
+			<Text>Обязательный переход по модификаторам:М7 М8\n\nТы идешь к воротам форта.</Text>
+			<Options>
+				<Option Goto="396"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
