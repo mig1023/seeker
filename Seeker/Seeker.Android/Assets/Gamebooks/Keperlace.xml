@@ -2088,5 +2088,16 @@
 				<Option Goto="150" Text="Уйти"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="314">
+			<Text>Ты идешь по центральной аллее городского сада. Людей здесь почти нет. Тишина и покой.</Text>
+			<Options>
+				<Option Goto="281" Text="Куда-то свернуть или погуляешь и уйдешь">
+					<Text>А если свернуть, то куда? Тут (судя по указателям) есть:</Text>
+				</Option>
+				<Option Goto="108" Text="Фонтан"/>
+				<Option Goto="297" Text="Беседка"/>
+				<Option Goto="257" Text="Пруд"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
