@@ -1654,5 +1654,12 @@
 				<Option Goto="124"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="251">
+			<Text>Ты бочком-бочком подходишь к краю стойки и осматриваешься. За стойкой есть дверь куда-то, но что за ней - не видно.</Text>
+			<Options>
+				<Option Goto="128" Text="Осторожно зайти за стойку и посмотреть"/>
+				<Option Goto="79" Text="Вернешься в зал"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
