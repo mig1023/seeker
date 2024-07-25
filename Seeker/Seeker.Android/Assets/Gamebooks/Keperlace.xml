@@ -2142,5 +2142,13 @@
 				<Option Goto="232"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="322">
+			<Text>По дороге ты подходишь к воротам, ведущим в гору. Массивные каменные створки приоткрыты. Из-за них слышится слабый стук молотков.</Text>
+			<Options>
+				<Option Goto="86" Text="Хочешь войти"/>
+				<Option Goto="280" Text="Вернешься на развилку"/>
+				<Option Goto="55" Text="Отправишься к заброшенной дороге"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
