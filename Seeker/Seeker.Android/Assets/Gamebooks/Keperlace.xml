@@ -1833,5 +1833,11 @@
 				<Option Goto="150"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="277">
+			<Text>"Что нового, мой верный рыцарь? - спрашивает король, - Я всегда рад слышать о твоих подвигах".</Text>
+			<Options>
+				<Option Goto="27"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
