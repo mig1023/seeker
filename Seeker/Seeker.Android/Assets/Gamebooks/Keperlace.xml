@@ -1679,5 +1679,18 @@
 				<Option Goto="27"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="255">
+			<Text>Корабль стоит около Огненного острова. Судя по всему, на острове идет извержение вулкана.</Text>
+			<Options>
+				<Option Goto="14" Text="Хочешь высадиться"/>
+				<Option Goto="212" Text="Поплывешь назад"/>
+			</Options>
+		</Paragraph>
+		<Paragraph No="256">
+			<Text>Обязательный переход по модификаторам:М75 М76\n\nТы подходишь к дворцу правительницы Стеклянного острова.</Text>
+			<Options>
+				<Option Goto="136"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
