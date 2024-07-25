@@ -2032,5 +2032,11 @@
 				<Option Goto="194" Text="Восточный берег острова"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="305">
+			<Text>Участок стены длинной несколько метров развалился и ты входишь во двор бастиона через этот пролом.</Text>
+			<Options>
+				<Option Goto="13"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
