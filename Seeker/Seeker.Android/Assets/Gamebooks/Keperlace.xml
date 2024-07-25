@@ -2136,5 +2136,11 @@
 				<Option Goto="37" Text="К ручью, где все дороги сходятся"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="321">
+			<Text>Ты собираешь волю в кулак и идешь в дальний конце этого зала с ловушками.</Text>
+			<Options>
+				<Option Goto="232"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
