@@ -2010,5 +2010,11 @@
 				<Option Goto="334" Text="Пойдешь в лес"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="302">
+			<Text>Обязательный переход по модификаторам:М24 М25\n\nТы направляешься в аптеку.</Text>
+			<Options>
+				<Option Goto="412"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
