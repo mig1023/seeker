@@ -1548,5 +1548,11 @@
 				<Option Goto="328"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="235">
+			<Text>Обязательный переход по модификаторам:М44\n\nУзкая винтовая лестница ведет тебя в башню придворного мага.</Text>
+			<Options>
+				<Option Goto="201"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
