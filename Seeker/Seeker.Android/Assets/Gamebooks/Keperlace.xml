@@ -1881,5 +1881,19 @@
 				<Option Goto="147"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="283">
+			<Text>Маленькая таверна "Золотой дублон" практически пуста. Трое посетителей тут больше коротают время, чем питаются.</Text>
+			<Options>
+				<Option Goto="198" Text="Подойдешь к стойке и поговоришь с хозяином">
+					<Text>Либо поговоришь с кем-то из посетителей. Они не сильно отличаются, так что выбирай наугад: </Text>
+				</Option>
+				<Option Goto="1" Text="Первый"/>
+				<Option Goto="262" Text="Второй"/>
+				<Option Goto="105" Text="Третий">
+					<Text>Ну а если хочешь уйти...</Text>
+				</Option>
+				<Option Goto="160"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
