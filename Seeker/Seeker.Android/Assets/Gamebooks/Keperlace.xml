@@ -1629,5 +1629,11 @@
 				<Option Goto="341"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="247">
+			<Text>И тут ты вспоминаешь о том, что священники Храма обещали молиться за тебя. Ты уже неоднократно убеждался в силе имени Господа, не нужно сомневаться и в этот раз.</Text>
+			<Options>
+				<Option Goto="18"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
