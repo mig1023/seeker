@@ -1692,5 +1692,11 @@
 				<Option Goto="136"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="257">
+			<Text>Обязательный переход по модификаторам:М22\n\nТы направляешься к пруду.</Text>
+			<Options>
+				<Option Goto="229"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
