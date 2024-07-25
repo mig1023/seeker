@@ -1785,5 +1785,11 @@
 				<Option Goto="307"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="269">
+			<Text>Ты спустился в трюм. Там тихо и темно. Прямо перед тобой лежит скелет человека. Точнее - остатки скелета, все кости изгрызены. А чуть дальше лежит... золотой слиток.</Text>
+			<Options>
+				<Option Goto="47"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
