@@ -1536,5 +1536,11 @@
 				<Option Goto="219"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="233">
+			<Text>Обязательный переход по модификаторам:М13\n\nТы решил поговорить со стариком, сидящим у стойки.</Text>
+			<Options>
+				<Option Goto="216"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
