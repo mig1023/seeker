@@ -1542,5 +1542,11 @@
 				<Option Goto="216"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="234">
+			<Text>Обязательный переход по модификаторам:М50 М51\n\nТы находишь лестницу, ведущую в подземелье и идешь по ней.</Text>
+			<Options>
+				<Option Goto="328"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
