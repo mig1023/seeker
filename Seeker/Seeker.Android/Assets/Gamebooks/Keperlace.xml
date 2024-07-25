@@ -1827,5 +1827,11 @@
 				<Option Goto="100"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="276">
+			<Text>Ты выходишь на берег. Только ветер шуршит морским песком. Ни травинки, ни былинки. Нервы на взводе, тут все может быть.</Text>
+			<Options>
+				<Option Goto="150"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
