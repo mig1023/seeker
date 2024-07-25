@@ -2117,5 +2117,11 @@
 				<Option Goto="298"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="318">
+			<Text>М52=59\n\nТы надеваешь на себя маскировочный костюм и становишься очень похож на гоблина. Стража пропускает тебя даже не удостоив словом. Теперь ты в замке.</Text>
+			<Options>
+				<Option Goto="59"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
