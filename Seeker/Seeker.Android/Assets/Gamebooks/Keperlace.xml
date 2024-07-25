@@ -1975,5 +1975,11 @@
 				<Option Goto="225"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="297">
+			<Text>Обязательный переход по модификаторам:М19 М20 М21\n\nТы идешь к тенистой беседке, увитой плющом.</Text>
+			<Options>
+				<Option Goto="146"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
