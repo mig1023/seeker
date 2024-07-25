@@ -1719,5 +1719,13 @@
 				<Option Goto="52"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="260">
+			<Text>Там, где недавно был окаменевший капитан - только мятая трава. И табличка "Воду не пить! Заколдовано Мнгахом".</Text>
+			<Options>
+				<Option Goto="164" Text="В центр острова"/>
+				<Option Goto="240" Text="На южный берег"/>
+				<Option Goto="376" Text="На северный берег"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
