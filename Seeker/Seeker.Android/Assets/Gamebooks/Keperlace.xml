@@ -2016,5 +2016,11 @@
 				<Option Goto="412"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="303">
+			<Text>Обязательный переход по модификаторам:М34 М35\n\nТы решил заглянуть в лавку, на вывеске которой крылья.</Text>
+			<Options>
+				<Option Goto="87"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
