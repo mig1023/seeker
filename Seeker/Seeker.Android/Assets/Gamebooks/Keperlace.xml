@@ -2162,5 +2162,11 @@
 				<Option Goto="212"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="325">
+			<Text>Дом закрыт, шторы на окнах задернуты. Да, тут ничего и никого не хотят видеть.</Text>
+			<Options>
+				<Option Goto="242"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
