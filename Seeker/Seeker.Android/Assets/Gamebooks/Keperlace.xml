@@ -1803,5 +1803,11 @@
 				<Option Goto="358"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="272">
+			<Text>Да, это на Мнгаха не подействовало. Может быть еще что-то придумать.</Text>
+			<Options>
+				<Option Goto="358"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
