@@ -1859,5 +1859,21 @@
 				<Option Goto="55" Text="По старой дороге"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="281">
+			<Text>Город Кеперлейс по конфигурации напоминает звезду - все основные улицы идут как лучи от центра. Так что выбирай, куда хочешь идти.</Text>
+			<Options>
+				<Option Goto="97" Text="К королевскому дворцу"/>
+				<Option Goto="80" Text="к городской тюрьме"/>
+				<Option Goto="64" Text="К кварталу, где всякие маги и лекари сидят">
+					<Text>Может быть ты хочешь погулять:</Text>
+				</Option>
+				<Option Goto="148" Text="По кварталу ремесленников"/>
+				<Option Goto="114" Text="По городскому саду"/>
+				<Option Goto="225" Text="Ну а если проголодался - то заходи в трактир">
+					<Text>Покинуть город:</Text>
+				</Option>
+				<Option Goto="346"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
