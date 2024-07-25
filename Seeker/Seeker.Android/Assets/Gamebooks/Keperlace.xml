@@ -1990,5 +1990,12 @@
 				<Option Goto="240" Text="Южный"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="299">
+			<Text>"Начальник посты осматривает" - сообщает солдат - "Когда вернется - не знаю".</Text>
+			<Options>
+				<Option Goto="281" Text="Остается только пойти в Кеперлейс"/>
+				<Option Goto="63" Text="Прочь из города"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
