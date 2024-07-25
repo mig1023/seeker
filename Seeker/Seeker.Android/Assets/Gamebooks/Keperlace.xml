@@ -1997,5 +1997,11 @@
 				<Option Goto="63" Text="Прочь из города"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="300">
+			<Text>В Храме тихо, горят свечи. Священник читает молитвы, прося Господа помиловать всех и направить на путь истинный.</Text>
+			<Options>
+				<Option Goto="197"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
