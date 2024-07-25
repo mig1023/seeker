@@ -1797,5 +1797,11 @@
 				<Option Goto="322"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="271">
+			<Text>И это не помогло, хотя определенно какой-то эффект возымело. Мнгах начинает злиться. Пламя в центе пещеры разгорается все ярче.</Text>
+			<Options>
+				<Option Goto="358"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
