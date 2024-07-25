@@ -2044,5 +2044,12 @@
 				<Option Goto="225"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="307">
+			<Text>"Ну что, где они там потерпели крушение?» - спрашивает капитан -"Давай сюда записку."</Text>
+			<Options>
+				<Option Goto="245" Text="Плыть к нужному острову"/>
+				<Option Goto="355" Text="Передумал"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
