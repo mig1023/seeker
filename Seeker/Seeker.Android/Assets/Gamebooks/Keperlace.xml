@@ -1499,5 +1499,11 @@
 				<Option Goto="150"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="227">
+			<Text>Небольшая комната-тайник пуста. Не сильно много богатств там было.</Text>
+			<Options>
+				<Option Goto="27"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
