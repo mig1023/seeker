@@ -1554,5 +1554,11 @@
 				<Option Goto="201"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="236">
+			<Text>Молчаливый юноша неторопливо поглощает неплохой ужин. Что странное - он почти не пьет. Все твои попытки разговорить его оказываются тщетными.</Text>
+			<Options>
+				<Option Goto="225"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
