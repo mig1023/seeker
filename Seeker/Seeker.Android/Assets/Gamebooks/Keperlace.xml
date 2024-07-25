@@ -1779,5 +1779,11 @@
 				<Option Goto="53"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="268">
+			<Text>Обязательный переход по модификаторам:М55\n\n"Пойдем, поищем тех, кто кораблекрушение тут потерпел" - говоришь ты.</Text>
+			<Options>
+				<Option Goto="307"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
