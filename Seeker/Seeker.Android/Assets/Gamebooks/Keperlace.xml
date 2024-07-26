@@ -2499,5 +2499,11 @@
 				<Option Goto="80"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="376">
+			<Text>Обязательный переход по модификаторам:М2\n\nТы направляешься к северному берегу острова.</Text>
+			<Options>
+				<Option Goto="304"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
