@@ -2463,5 +2463,11 @@
 				<Option Goto="212"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="370">
+			<Text>Аптекарь готовит все новые порции противоядия. "Я им покажу, как деревни разорять" - бормочет он.</Text>
+			<Options>
+				<Option Goto="242"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
