@@ -2401,5 +2401,11 @@
 				<Option Goto="325"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="360">
+			<Text>Правительница очень довольна твоим подарком и приглашает тебя погостить у нее недельку. Но тебя ждет Мнгах.</Text>
+			<Options>
+				<Option Goto="160"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
