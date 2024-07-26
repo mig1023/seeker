@@ -2383,5 +2383,11 @@
 				<Option Goto="281" Text="Пойти на городскую площадь"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="357">
+			<Text>Обязательный переход по модификаторам:М28\n\nТы подходишь к городской тюрьме.</Text>
+			<Options>
+				<Option Goto="375"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
