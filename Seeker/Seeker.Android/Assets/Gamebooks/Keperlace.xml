@@ -2481,5 +2481,11 @@
 				<Option Goto="71"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="373">
+			<Text>Сапожник опять чинит чей-то туфель и насвистывает что-то веселое. Ты перебрасываешься с ним несколькими фразами, но ничего из него выжать не удается.</Text>
+			<Options>
+				<Option Goto="263"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
