@@ -2217,5 +2217,15 @@
 				<Option Goto="363"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="334">
+			<Text>Ты входишь в лес. Что ты хочешь делать в нем:</Text>
+			<Options>
+				<Option Goto="24" Text="Поискать кого-нибудь живого"/>
+				<Option Goto="49" Text="Пособирать редкие растения">
+					<Text>А может быть - решишь покинуть лес...</Text>
+				</Option>
+				<Option Goto="83"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
