@@ -2337,5 +2337,11 @@
 				<Option Goto="334"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="350">
+			<Text>Обязательный переход по модификаторам:М60\n\nТы направляешься к хозяйственным постройкам, находящимся за Храмом.</Text>
+			<Options>
+				<Option Goto="366"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
