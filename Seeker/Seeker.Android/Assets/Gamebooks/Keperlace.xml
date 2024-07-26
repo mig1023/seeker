@@ -2586,5 +2586,11 @@
 				<Option Goto="149"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="390">
+			<Text>Обязательный переход по модификаторам:М31 М32 М33\n\nТы открываешь низкую, закопченную дверь кузнецы.</Text>
+			<Options>
+				<Option Goto="25"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
