@@ -2355,5 +2355,11 @@
 				<Option Goto="288"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="353">
+			<Text>М11=339\n\nТы протягиваешь ему бумагу, которую выписал начальник форта. Он внимательно изучает ее. Утвердительно хмыкает и возвращает тебе. "Бумага верная" - говорит он</Text>
+			<Options>
+				<Option Goto="339"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
