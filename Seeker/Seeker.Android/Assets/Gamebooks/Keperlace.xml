@@ -2530,5 +2530,13 @@
 				<Option Goto="33"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="381">
+			<Text>Путь в глубины гор. Коридор раздваивается.</Text>
+			<Options>
+				<Option Goto="274" Text="Пойти направо, где много следов волков"/>
+				<Option Goto="337" Text="Пойти налево, где следов нет"/>
+				<Option Goto="55" Text="Ну их всех, скорее покинуть это место"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
