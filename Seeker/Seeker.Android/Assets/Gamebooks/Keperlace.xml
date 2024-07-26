@@ -2413,5 +2413,11 @@
 				<Option Goto="413"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="362">
+			<Text>Гномы приводят тебя к Грольшу. "Ты всегда желанный гость у нас! " - говорит он -"Расскажи, какие еще подвиги ты совершил?" Можешь немного похвалиться, но время не ждет.</Text>
+			<Options>
+				<Option Goto="322"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
