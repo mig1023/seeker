@@ -2211,5 +2211,11 @@
 				<Option Goto="189"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="333">
+			<Text>Обязательный переход по модификаторам:М3\n\nТы направляешься к западному берегу.</Text>
+			<Options>
+				<Option Goto="363"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
