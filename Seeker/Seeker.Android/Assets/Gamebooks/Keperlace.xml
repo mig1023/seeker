@@ -2259,5 +2259,12 @@
 				<Option Goto="53"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="340">
+			<Text>Дыра в палубе, скорее всего, искусственная. Как будто кто-то разодрал настил и прорвался внутрь.</Text>
+			<Options>
+				<Option Goto="48" Text="Спуститься туда (придется по веревке, все конструкции там разрушены)"/>
+				<Option Goto="226" Text="Не будешь рисковать"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
