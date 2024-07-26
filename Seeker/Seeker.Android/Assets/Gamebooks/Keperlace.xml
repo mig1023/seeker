@@ -2325,5 +2325,11 @@
 				<Option Goto="381"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="348">
+			<Text>"Ну как с горелкой?" - спрашивает авиатор. Можно уходить.</Text>
+			<Options>
+				<Option Goto="263"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
