@@ -2715,5 +2715,11 @@
 				<Option Goto="197"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="411">
+			<Text>Обязательный переход по модификаторам:М64\n\nТы входишь в каюту капитана.</Text>
+			<Options>
+				<Option Goto="332"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
