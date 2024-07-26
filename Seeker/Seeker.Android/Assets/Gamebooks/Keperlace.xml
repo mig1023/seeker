@@ -2709,5 +2709,11 @@
 				<Option Goto="160"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="410">
+			<Text>"Чего ты еще хочешь от нас?" - спрашивают тебя священники. У них тоже дел хватает, так что толкаться тут без дела не стоит.</Text>
+			<Options>
+				<Option Goto="197"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
