@@ -2287,5 +2287,11 @@
 				<Option Goto="211" Text="Тринадцатая, очень толстая, с какими-то нарисованными коротышками"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="342">
+			<Text>Обязательный переход по модификаторам:М29\n\nТы решил поговорить со старым пиратом.</Text>
+			<Options>
+				<Option Goto="379"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
