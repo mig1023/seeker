@@ -2538,5 +2538,11 @@
 				<Option Goto="55" Text="Ну их всех, скорее покинуть это место"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="382">
+			<Text>"Ну так как с рутой?" - спрашивает аптекарь. Наверно, надо пойти, поискать.</Text>
+			<Options>
+				<Option Goto="242"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
