@@ -2671,5 +2671,12 @@
 				<Option Goto="55"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="404">
+			<Text>Корабль тыкается носом в песок. Ты спрыгиваешь на землю Пиратского острова.</Text>
+			<Options>
+				<Option Goto="276" Text="Пойдешь по берегу"/>
+				<Option Goto="212" Text="Лучше сразу уплывешь"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
