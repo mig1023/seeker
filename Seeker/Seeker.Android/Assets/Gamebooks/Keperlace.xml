@@ -2757,5 +2757,11 @@
 				<Option Goto="143"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="418">
+			<Text>Ты извлекаешь пропуск и солдаты расступаются.</Text>
+			<Options>
+				<Option Goto="53"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
