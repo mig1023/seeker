@@ -2361,5 +2361,12 @@
 				<Option Goto="339"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="354">
+			<Text>Ты вспоминаешь указания лесника и идешь в нужном направлении. Выходишь к небольшому холму, в склоне которого огромная нора. До тебя доносится храп ну очень крупного зверя.</Text>
+			<Options>
+				<Option Goto="39" Text="Пойти на звук"/>
+				<Option Goto="334" Text="Нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
