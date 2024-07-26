@@ -2233,5 +2233,12 @@
 				<Option Goto="373"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="336">
+			<Text>Ты находишься недалеко от замка.</Text>
+			<Options>
+				<Option Goto="384" Text="Подойдешь к замку"/>
+				<Option Goto="258" Text="Лучше пойдешь прочь"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
