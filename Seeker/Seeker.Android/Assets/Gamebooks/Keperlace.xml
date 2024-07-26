@@ -2451,5 +2451,11 @@
 				<Option Goto="204"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="368">
+			<Text>В башне придворного мага больше никого нет. Так что придется ее покинуть.</Text>
+			<Options>
+				<Option Goto="27"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
