@@ -2739,5 +2739,11 @@
 				<Option Goto="152"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="415">
+			<Text>Ты демонстрируешь пропуск из королевской канцелярии и тебя пропускают. Стены гавани остаются позади и ты выходишь на дорогу.</Text>
+			<Options>
+				<Option Goto="37"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
