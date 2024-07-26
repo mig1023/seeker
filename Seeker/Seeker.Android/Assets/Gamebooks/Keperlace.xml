@@ -2505,5 +2505,11 @@
 				<Option Goto="304"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="377">
+			<Text>Обязательный переход по модификаторам:М47 М48\n\nТы подходишь к нескольким зданиям, которые отгорожены от остального города забором. А, это же казармы.</Text>
+			<Options>
+				<Option Goto="12"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
