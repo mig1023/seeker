@@ -2343,5 +2343,11 @@
 				<Option Goto="366"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="351">
+			<Text>"Да поможет тебе Господь" - говорят тебе священники.</Text>
+			<Options>
+				<Option Goto="197"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
