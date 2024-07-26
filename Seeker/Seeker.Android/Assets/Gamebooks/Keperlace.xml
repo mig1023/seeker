@@ -2550,5 +2550,11 @@
 				<Option Goto="296"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="384">
+			<Text>Обязательный переход по модификаторам:М52 М53\n\nТы осторожно крадешься к замку.</Text>
+			<Options>
+				<Option Goto="218"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
