@@ -36,6 +36,9 @@
 		</Paragraph>
 		<Paragraph No="4">
 			<Text>Обязательный переход по модификаторам:М63\n\nТы решительно направляешь бег корабля к берегу.</Text>
+			<Modifications>
+				<Redirect Value="M63"/>
+			</Modifications>
 			<Options>
 				<Option Goto="326"/>
 			</Options>
@@ -169,6 +172,9 @@
 		</Paragraph>
 		<Paragraph No="26">
 			<Text>"Именем Господа приказываю вам - уйдите" - грозно кричишь ты скелетам. Они, словно по команде, рассыпаются и скрываются в воде. Хохот прекращается. И тишина....</Text>
+			<Modifications>
+				<MPath Value="M63=404"/>
+			</Modifications>
 			<Options>
 				<Option Goto="404"/>
 			</Options>
