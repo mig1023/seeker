@@ -3170,7 +3170,10 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="417">
-			<Text>Обязательный переход по модификаторам:М11 М12\n\nТы решил заглянуть в склад может там что-то интересное.</Text>
+			<Text>Ты решил заглянуть в склад может там что-то интересное.</Text>
+			<Modifications>
+				<Redirect Value="М11,М12"/>
+			</Modifications>
 			<Options>
 				<Option Goto="143"/>
 			</Options>
