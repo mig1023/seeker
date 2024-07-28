@@ -309,7 +309,10 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="40">
-			<Text>Обязательный переход по модификаторам:М61 М62\n\nТы решил зайти в Гильдию стеклодувов.</Text>
+			<Text>Ты решил зайти в Гильдию стеклодувов.</Text>
+			<Modifications>
+				<Redirect Value="М61,М62"/>
+			</Modifications>
 			<Options>
 				<Option Goto="311"/>
 			</Options>
