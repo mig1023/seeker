@@ -2528,7 +2528,10 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="333">
-			<Text>Обязательный переход по модификаторам:М3\n\nТы направляешься к западному берегу.</Text>
+			<Text>Ты направляешься к западному берегу.</Text>
+			<Modifications>
+				<Redirect Value="М3"/>
+			</Modifications>
 			<Options>
 				<Option Goto="363"/>
 			</Options>
