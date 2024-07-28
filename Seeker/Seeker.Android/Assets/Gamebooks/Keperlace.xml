@@ -1262,7 +1262,10 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="164">
-			<Text>Обязательный переход по модификаторам:М1\n\nТы взбираешься по склону холма, находящегося в центре острова.</Text>
+			<Text>Ты взбираешься по склону холма, находящегося в центре острова.</Text>
+			<Modifications>
+				<Redirect Value="М1"/>
+			</Modifications>
 			<Options>
 				<Option Goto="67"/>
 			</Options>
