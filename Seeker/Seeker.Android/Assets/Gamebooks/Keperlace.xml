@@ -619,7 +619,10 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="81">
-			<Text>Обязательный переход по модификаторам:М39\n\nТы подходишь к вывеске с сапогом. Это лавка сапожника.</Text>
+			<Text>Ты подходишь к вывеске с сапогом. Это лавка сапожника.</Text>
+			<Modifications>
+				<Redirect Value="М39"/>
+			</Modifications>
 			<Options>
 				<Option Goto="195"/>
 			</Options>
