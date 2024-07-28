@@ -733,7 +733,10 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="95">
-			<Text>Обязательный переход по модификаторам:М73\n\nТы осторожно спускается все глубже.</Text>
+			<Text>Ты осторожно спускается все глубже.</Text>
+			<Modifications>
+				<Redirect Value="М73"/>
+			</Modifications>
 			<Options>
 				<Option Goto="237"/>
 			</Options>
