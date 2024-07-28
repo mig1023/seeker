@@ -169,6 +169,12 @@ namespace Seeker.Output
             AddLtlElement("Размер параграфа", $"В среднем {paragraphSize} {sizeLine}",
                 "Время игры", gamebook.PlaythroughTime, ref disclaimer, border, changedPart);
 
+            if (!String.IsNullOrEmpty(gamebook.Additional))
+            {
+                AddElement("Дополнительная информация:", gamebook.Additional, ref disclaimer,
+                    border, changedPart, little: true);
+            }
+
             border.GestureRecognizers.Add(CloseTapped(border, changedPart));
 
             border.Content = disclaimer;

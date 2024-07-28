@@ -46,6 +46,8 @@ namespace Seeker.Gamebook
 
         public string Setting;
 
+        public string Additional;
+
         public string AuthorsIndex(bool noUpper = false)
         {
             string author = Authors.First();
