@@ -1246,7 +1246,10 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="162">
-			<Text>Обязательный переход по модификаторам:М74\n\nТы хочешь подойти к столику, за которым сидят мужчина и девушка.</Text>
+			<Text>Ты хочешь подойти к столику, за которым сидят мужчина и девушка.</Text>
+			<Modifications>
+				<Redirect Value=":М74"/>
+			</Modifications>
 			<Options>
 				<Option Goto="43"/>
 			</Options>
