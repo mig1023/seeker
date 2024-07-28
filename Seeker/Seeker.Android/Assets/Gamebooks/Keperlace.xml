@@ -1180,7 +1180,10 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="153">
-			<Text>Обязательный переход по модификаторам:М26\n\nТы решил зайти в дом, на вывеске которого изображены звезды,.</Text>
+			<Text>Ты решил зайти в дом, на вывеске которого изображены звезды.</Text>
+			<Modifications>
+				<Redirect Value="М26"/>
+			</Modifications>
 			<Options>
 				<Option Goto="9"/>
 			</Options>
