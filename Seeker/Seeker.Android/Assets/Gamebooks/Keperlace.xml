@@ -1778,7 +1778,10 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="235">
-			<Text>Обязательный переход по модификаторам:М44\n\nУзкая винтовая лестница ведет тебя в башню придворного мага.</Text>
+			<Text>Узкая винтовая лестница ведет тебя в башню придворного мага.</Text>
+			<Modifications>
+				<Redirect Value="М44"/>
+			</Modifications>
 			<Options>
 				<Option Goto="201"/>
 			</Options>
