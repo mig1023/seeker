@@ -661,7 +661,10 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="86">
-			<Text>Обязательный переход по модификаторам:М67 М68 М69\n\nТы решительно шагаешь к воротам, ведущим к подземельям.</Text>
+			<Text>Ты решительно шагаешь к воротам, ведущим к подземельям.</Text>
+			<Modifications>
+				<Redirect Value="М67,М68,М69"/>
+			</Modifications>
 			<Options>
 				<Option Goto="200"/>
 			</Options>
