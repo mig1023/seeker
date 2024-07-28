@@ -340,7 +340,10 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="44">
-			<Text>Обязательный переход по модификаторам:М45\n\nТы открываешь дверь королевской канцелярии.</Text>
+			<Text>Ты открываешь дверь королевской канцелярии.</Text>
+			<Modifications>
+				<Redirect Value="М45"/>
+			</Modifications>
 			<Options>
 				<Option Goto="264"/>
 			</Options>
