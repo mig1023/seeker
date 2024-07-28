@@ -1361,7 +1361,10 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="178">
-			<Text>Обязательный переход по модификаторам:М49\n\nТы заходишь в другой дом, он более низкий и приземистый, но пошире остальных.</Text>
+			<Text>Ты заходишь в другой дом, он более низкий и приземистый, но пошире остальных.</Text>
+			<Modifications>
+				<Redirect Value="М49"/>
+			</Modifications>
 			<Options>
 				<Option Goto="28"/>
 			</Options>
