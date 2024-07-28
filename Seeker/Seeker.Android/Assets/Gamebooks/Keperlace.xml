@@ -2759,7 +2759,10 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="361">
-			<Text>Обязательный переход по модификаторам:М9 М10\n\nТы идешь к маяку.</Text>
+			<Text>Ты идешь к маяку.</Text>
+			<Modifications>
+				<Redirect Value="М9,М10"/>
+			</Modifications>
 			<Options>
 				<Option Goto="413"/>
 			</Options>
