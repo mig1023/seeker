@@ -1760,7 +1760,10 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="233">
-			<Text>Обязательный переход по модификаторам:М13\n\nТы решил поговорить со стариком, сидящим у стойки.</Text>
+			<Text>Ты решил поговорить со стариком, сидящим у стойки.</Text>
+			<Modifications>
+				<Redirect Value=":М13"/>
+			</Modifications>
 			<Options>
 				<Option Goto="216"/>
 			</Options>
