@@ -480,7 +480,7 @@
 		<Playthrough>На полчаса</Playthrough>
 		<Setting>Античная история</Setting>
 		<Color>670b0c</Color>
-		<Additional>Оригинальная игра (374 параграфа) + дополнение "Даки против Римаа" (43 параграфа).</Additional>
+		<Additional>Оригинальная игра (374 параграфа) + дополнение "Даки против Рима" (43 параграфа).</Additional>
 	</ByTheWillOfRome>
 	<OrcsDay>
 		<Title>День Орка</Title>
@@ -914,11 +914,12 @@
 		<Author>Пётр Александров</Author>
 		<Year>2000</Year>
 		<Text>...Ты решил съездить в Павловский Парк, заодно прибить по дороге репера Шляпогрыза. Сев на поселковую электричку, ты вскоре выходишь на вокзале. Но так всё только начинается...</Text>
-		<Paragraphs>400 (100+300)</Paragraphs>
+		<Paragraphs>400</Paragraphs>
 		<Size>32226</Size>
 		<Playthrough>На часок-полтора</Playthrough>
 		<Setting>Сатира</Setting>
 		<Color>cd1618</Color>
+		<Additional>Две части, 100 и 300 параграфов.</Additional>
 	</WalkInThePark>
 	<PowerOfFear>
 		<Title>Власть страха</Title>
