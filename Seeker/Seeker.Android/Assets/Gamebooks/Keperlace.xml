@@ -628,7 +628,10 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="82">
-			<Text>Обязательный переход по модификаторам:М57 М59\n\nТы решил встретиться со старшими священниками Храма.</Text>
+			<Text>Ты решил встретиться со старшими священниками Храма.</Text>
+			<Modifications>
+				<Redirect Value="М57,М59"/>
+			</Modifications>
 			<Options>
 				<Option Goto="69"/>
 			</Options>
