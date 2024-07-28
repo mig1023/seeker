@@ -2674,7 +2674,10 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="350">
-			<Text>Обязательный переход по модификаторам:М60\n\nТы направляешься к хозяйственным постройкам, находящимся за Храмом.</Text>
+			<Text>Ты направляешься к хозяйственным постройкам, находящимся за Храмом.</Text>
+			<Modifications>
+				<Redirect Value="М60"/>
+			</Modifications>
 			<Options>
 				<Option Goto="366"/>
 			</Options>
