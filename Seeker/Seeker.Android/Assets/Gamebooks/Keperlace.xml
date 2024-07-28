@@ -828,7 +828,10 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="108">
-			<Text>Обязательный переход по модификаторам:М18\n\nТы направляешься к фонтану.</Text>
+			<Text>Ты направляешься к фонтану.</Text>
+			<Modifications>
+				<Redirect Value="М18"/>
+			</Modifications>
 			<Options>
 				<Option Goto="230"/>
 			</Options>
