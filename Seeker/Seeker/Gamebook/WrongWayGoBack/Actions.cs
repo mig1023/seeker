@@ -9,15 +9,14 @@ namespace Seeker.Gamebook.WrongWayGoBack
 
         public override List<string> Status()
         {
-            if (Character.Protagonist.Time > 0)
-            {
-                TimeSpan time = TimeSpan.FromSeconds(Character.Protagonist.Time);
-                return new List<string> { "Оставшееся время:" + time.ToString(@"hh\:mm\:ss") };
-            }
-            else
-            {
-                return new List<string> { "Оставшееся время: 00:00:00" };
-            }
+            TimeSpan time = TimeSpan.FromSeconds(Character.Protagonist.Time);
+
+            string hours = Game.Services.CoinsNoun(time.Hours, String.Empty, "а", "ов");
+            string minutes = Game.Services.CoinsNoun(time.Minutes, "а", "ы", String.Empty);
+            string seconds = Game.Services.CoinsNoun(time.Seconds, "а", "ы", String.Empty);
+
+            return new List<string> { "Оставшееся время: " +
+                $"{time.Hours} час{hours} {time.Minutes} минут{minutes} {time.Seconds} секунд{seconds}" };
         }
 
         public override List<string> AdditionalStatus() => new List<string>
