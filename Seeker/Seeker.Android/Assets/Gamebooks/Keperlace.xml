@@ -1881,7 +1881,10 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="248">
-			<Text>Обязательный переход по модификаторам:М7 М8\n\nТы идешь к воротам форта.</Text>
+			<Text>Ты идешь к воротам форта.</Text>
+			<Modifications>
+				<Redirect Value="М7,М8"/>
+			</Modifications>
 			<Options>
 				<Option Goto="396"/>
 			</Options>
