@@ -2310,7 +2310,10 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="303">
-			<Text>Обязательный переход по модификаторам:М34 М35\n\nТы решил заглянуть в лавку, на вывеске которой крылья.</Text>
+			<Text>Ты решил заглянуть в лавку, на вывеске которой крылья.</Text>
+			<Modifications>
+				<Redirect Value="М34,М35"/>
+			</Modifications>
 			<Options>
 				<Option Goto="87"/>
 			</Options>
