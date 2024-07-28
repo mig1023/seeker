@@ -2971,7 +2971,10 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="390">
-			<Text>Обязательный переход по модификаторам:М31 М32 М33\n\nТы открываешь низкую, закопченную дверь кузнецы.</Text>
+			<Text>Ты открываешь низкую, закопченную дверь кузнецы.</Text>
+			<Modifications>
+				<Redirect Value="М31,М32,М33"/>
+			</Modifications>
 			<Options>
 				<Option Goto="25"/>
 			</Options>
