@@ -2689,7 +2689,10 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="352">
-			<Text>Обязательный переход по модификаторам:М41 М42 М43\n\nТы идешь в тронный зал.</Text>
+			<Text>Ты идешь в тронный зал.</Text>
+			<Modifications>
+				<Redirect Value="М41,М42,М43"/>
+			</Modifications>
 			<Options>
 				<Option Goto="288"/>
 			</Options>
