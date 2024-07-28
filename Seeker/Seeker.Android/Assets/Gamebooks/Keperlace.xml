@@ -35,9 +35,9 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="4">
-			<Text>Обязательный переход по модификаторам:М63\n\nТы решительно направляешь бег корабля к берегу.</Text>
+			<Text>Ты решительно направляешь бег корабля к берегу.</Text>
 			<Modifications>
-				<Redirect Value="M63"/>
+				<Redirect Value="М63"/>
 			</Modifications>
 			<Options>
 				<Option Goto="326"/>
@@ -239,7 +239,10 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="31">
-			<Text>Обязательный переход по модификаторам:М80\n\nПеред тобой массивная дверь, на ней изображены различные чудовища.</Text>
+			<Text>Перед тобой массивная дверь, на ней изображены различные чудовища.</Text>
+			<Modifications>
+				<Redirect Value="М80"/>
+			</Modifications>
 			<Options>
 				<Option Goto="191"/>
 			</Options>
