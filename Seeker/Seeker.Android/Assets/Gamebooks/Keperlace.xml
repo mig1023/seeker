@@ -1941,7 +1941,10 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="256">
-			<Text>Обязательный переход по модификаторам:М75 М76\n\nТы подходишь к дворцу правительницы Стеклянного острова.</Text>
+			<Text>Ты подходишь к дворцу правительницы Стеклянного острова.</Text>
+			<Modifications>
+				<Redirect Value="М75,М76"/>
+			</Modifications>
 			<Options>
 				<Option Goto="136"/>
 			</Options>
