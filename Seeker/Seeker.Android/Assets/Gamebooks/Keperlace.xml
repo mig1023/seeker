@@ -637,7 +637,10 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="83">
-			<Text>Обязательный переход по модификаторам:М14 М15\n\nТы находишься на дороге, ведущей от перекрестка всех дорог к лесу.</Text>
+			<Text>Ты находишься на дороге, ведущей от перекрестка всех дорог к лесу.</Text>
+			<Modifications>
+				<Redirect Value="М14,М15"/>
+			</Modifications>
 			<Options>
 				<Option Goto="301"/>
 			</Options>
