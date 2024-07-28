@@ -2406,7 +2406,10 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="316">
-			<Text>Обязательный переход по модификаторам:М16 М17\n\nТы решил зайти в сторожевую башню над воротами.</Text>
+			<Text>Ты решил зайти в сторожевую башню над воротами.</Text>
+			<Modifications>
+				<Redirect Value="М16,М17"/>
+			</Modifications>
 			<Options>
 				<Option Goto="356"/>
 			</Options>
