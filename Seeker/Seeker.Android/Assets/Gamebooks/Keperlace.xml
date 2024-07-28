@@ -3125,7 +3125,10 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="411">
-			<Text>Обязательный переход по модификаторам:М64\n\nТы входишь в каюту капитана.</Text>
+			<Text>Ты входишь в каюту капитана.</Text>
+			<Modifications>
+				<Redirect Value="М64"/>
+			</Modifications>
 			<Options>
 				<Option Goto="332"/>
 			</Options>
