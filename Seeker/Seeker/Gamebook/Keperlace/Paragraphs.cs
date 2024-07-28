@@ -14,19 +14,25 @@ namespace Seeker.Gamebook.Keperlace
                 if (xmlModification.Name != "Redirect")
                     continue;
 
-                string redirect = xmlModification.Attributes["Value"].InnerText;
+                var redirects = xmlModification.Attributes["Value"].InnerText;
 
-                if (!Character.Protagonist.MPaths.ContainsKey(redirect))
-                    continue;
+                foreach (var redirect in redirects.Split(','))
+                {
+                    if (!Character.Protagonist.MPaths.ContainsKey(redirect.Trim()))
+                        continue;
 
-                id = Character.Protagonist.MPaths[redirect];
+                    id = Character.Protagonist.MPaths[redirect];
+                    xmlParagraph = Game.Data.XmlParagraphs[id];
+                    paragraph = ParagraphTemplate(xmlParagraph);
 
-                xmlParagraph = Game.Data.XmlParagraphs[id];
-                paragraph = ParagraphTemplate(xmlParagraph);
+                    break;
+                }
             }
 
             foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/*"))
+            {
                 paragraph.Options.Add(OptionParse(xmlOption));
+            }
 
             foreach (XmlNode xmlModification in xmlParagraph.SelectNodes("Modifications/*"))
             {
