@@ -3024,7 +3024,10 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="397">
-			<Text>Обязательный переход по модификаторам:М40\n\nТы направляешься к входу во дворец.</Text>
+			<Text>Ты направляешься к входу во дворец.</Text>
+			<Modifications>
+				<Redirect Value="М40"/>
+			</Modifications>
 			<Options>
 				<Option Goto="385"/>
 			</Options>
