@@ -259,11 +259,12 @@
 		</Translators>
 		<Year>2018</Year>
 		<Text>Все совпадения случайны. Всё написанное художественный вымысел. Автор уважает стариков.</Text>
-		<Paragraphs>64 (21+43)</Paragraphs>
+		<Paragraphs>64</Paragraphs>
 		<Size>4993</Size>
 		<Playthrough>На пять минут</Playthrough>
 		<Setting>Сатира</Setting>
 		<Color>030436</Color>
+		<Additional>Оригинальная игра (21 параграф) + дополнение "Кровавая охота" (43 параграфа).</Additional>
 	</PensionerSimulator>
 	<LordOfTheSteppes>
 		<Title>Владыка степей</Title>
