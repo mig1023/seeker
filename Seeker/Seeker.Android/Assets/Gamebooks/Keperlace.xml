@@ -928,7 +928,10 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="121">
-			<Text>Обязательный переход по модификаторам:М56\n\nТы входишь в сам Храм.</Text>
+			<Text>Ты входишь в сам Храм.</Text>
+			<Modifications>
+				<Redirect Value="М56"/>
+			</Modifications>
 			<Options>
 				<Option Goto="161"/>
 			</Options>
