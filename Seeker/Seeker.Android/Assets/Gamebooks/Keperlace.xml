@@ -2926,7 +2926,10 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="384">
-			<Text>Обязательный переход по модификаторам:М52 М53\n\nТы осторожно крадешься к замку.</Text>
+			<Text>Ты осторожно крадешься к замку.</Text>
+			<Modifications>
+				<Redirect Value="М52,М53"/>
+			</Modifications>
 			<Options>
 				<Option Goto="218"/>
 			</Options>
