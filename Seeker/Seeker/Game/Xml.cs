@@ -315,11 +315,12 @@ namespace Seeker.Game
             description.Translators = AllStringParse(data["Translator"], data["Translators"], "Translator");
             description.Year = IntParse(data["Year"]);
             description.Text = StringParse(data["Text"]);
-            description.Paragraphs = StringParse(data["Paragraphs"]);
+            description.Paragraphs = IntParse(data["Paragraphs"]);
             description.OnlyFirstParagraphsValue = BoolParse(data["OnlyFirstParagraphsValue"]);
             description.Size = StringParse(data["Size"]);
             description.PlaythroughTime = StringParse(data["Playthrough"]);
             description.Setting = StringParse(data["Setting"]);
+            description.Additional = StringParse(data["Additional"]);
 
             XmlNode colors = data.SelectSingleNode("Colors");
 

@@ -78,7 +78,7 @@ namespace Seeker.Gamebook
                 case SortBy.Paragraphs:
 
                     return list
-                        .OrderByDescending(x => x.ParagraphSize())
+                        .OrderByDescending(x => x.Paragraphs)
                         .ToList();
 
                 case SortBy.Texts:
@@ -105,7 +105,7 @@ namespace Seeker.Gamebook
 
                     return list
                         .OrderBy(x => PLAYTHROUGH_ORDER[x.PlaythroughTime])
-                        .ThenBy(x => x.ParagraphSize())
+                        .ThenBy(x => x.Paragraphs)
                         .ToList();
 
                 case SortBy.Random:

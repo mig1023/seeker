@@ -32,7 +32,7 @@ namespace Seeker.Gamebook
 
         public int Year;
 
-        public string Paragraphs;
+        public int Paragraphs;
 
         public bool OnlyFirstParagraphsValue;
 
@@ -79,31 +79,10 @@ namespace Seeker.Gamebook
             }
         }
 
-        public int ParagraphSize(bool full = false)
-        {
-            if (Paragraphs.Contains("(") && OnlyFirstParagraphsValue && !full)
-            {
-                int start = Paragraphs.IndexOf("(") + 1;
-                int len = Paragraphs.IndexOf("+") - Paragraphs.IndexOf("(") - 1;
-
-                return Game.Xml.IntParse(Paragraphs.Substring(start, len));
-            }
-            else
-            {
-                string paragraphs = (Paragraphs.Contains("(") ?
-                    Paragraphs.Substring(0, Paragraphs.IndexOf(" ")) : Paragraphs);
-
-                return Game.Xml.IntParse(paragraphs);
-            }
-        }
-
         public string ParagraphSizeLine(bool full = false)
         {
-            int paragraphs = ParagraphSize(full);
-            string line = Game.Services.CoinsNoun(paragraphs, "параграф", "параграфа", "параграфов");
-            string outputParagraphs = full ? Paragraphs : paragraphs.ToString();
-
-            return $"{outputParagraphs} {line}";
+            string line = Game.Services.CoinsNoun(Paragraphs, "параграф", "параграфа", "параграфов");
+            return $"{Paragraphs} {line}";
         }
 
         public string SizeLine()
@@ -124,7 +103,7 @@ namespace Seeker.Gamebook
         }
 
         public int ParagraphsAverageSize() =>
-            int.Parse(Size) / ParagraphSize();
+            int.Parse(Size) / Paragraphs;
 
         public string ParagraphsAverageSizeLine()
         {

@@ -160,7 +160,7 @@ namespace Seeker.Output
                     Regex.Unescape(gamebook.Text), ref disclaimer, border, changedPart, little: true);
             }
 
-            int paragraphSize = int.Parse(gamebook.Size) / gamebook.ParagraphSize();
+            int paragraphSize = gamebook.ParagraphsAverageSize();
             string sizeLine = Game.Services.CoinsNoun(paragraphSize, "слово", "слова", "слов");
 
             AddLtlElement("Кол-во параграфов", gamebook.ParagraphSizeLine(full: true),
