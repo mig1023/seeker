@@ -300,7 +300,10 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="39">
-			<Text>Обязательный переход по модификаторам:М66\n\nТы решил пойти и посмотреть, кто это так храпит.</Text>
+			<Text>Ты решил пойти и посмотреть, кто это так храпит.</Text>
+			<Modifications>
+				<Redirect Value="М66"/>
+			</Modifications>
 			<Options>
 				<Option Goto="185"/>
 			</Options>
