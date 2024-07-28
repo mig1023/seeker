@@ -1465,7 +1465,10 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="194">
-			<Text>Обязательный переход по модификаторам:М4 М5\n\nТы идешь к восточному берегу острова.</Text>
+			<Text>Ты идешь к восточному берегу острова.</Text>
+			<Modifications>
+				<Redirect Value="М4,М5"/>
+			</Modifications>
 			<Options>
 				<Option Goto="29"/>
 			</Options>
