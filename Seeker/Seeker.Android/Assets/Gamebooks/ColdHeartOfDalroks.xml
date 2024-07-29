@@ -33,5 +33,13 @@
 				<Option Goto="547"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="3">
+			<Text>Снег становится все непролазней, вновь начинается метель, а горизонт прямо перед вами подозрительно чернеет от надвигающейся бури.</Text>
+			<Options>
+				<Option Goto="421" Text="Свернете на юг"/>
+				<Option Goto="344" Text="Свернете на запад"/>
+				<Option Goto="196" Text="Поедете дальше"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
