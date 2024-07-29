@@ -552,9 +552,9 @@
 			<Options>
 				<Option Goto="317" Text="Воспользваться картой" Availability="Карта"/>
 				<Option Goto="376" Text="К северному берегу"/>
-				<Option Goto="333" Text="К южному берегу"/>
+				<Option Goto="240" Text="К южному берегу"/>
 				<Option Goto="194" Text="К восточному берегу"/>
-				<Option Goto="240" Text="К западному берегу"/>
+				<Option Goto="333" Text="К западному берегу"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="68">
