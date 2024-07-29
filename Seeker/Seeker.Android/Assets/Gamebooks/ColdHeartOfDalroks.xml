@@ -1,0 +1,30 @@
+<Gamebook>
+	<Introduction>
+		<Copyright>
+			<Title>Холодное сердце Далрока</Title>
+			<Author>Дмитрий Браславский, 2007</Author>
+		</Copyright>
+		<Styles>
+			<Main Value="764c2e"/>
+			<Color Name="Option, Continue" Value="61805d"/>
+			<StatusBar Value="737083"/>
+			<Background Value="bfccbe"/>
+			<System Value="4d664a"/>
+			<SystemFont Value="ffffff"/>
+		</Styles>
+	</Introduction>
+	<Paragraphs>
+		<Paragraph No="0">
+			<Text>START</Text>
+			<Options>
+				<Start Goto="1"/>
+			</Options>
+		</Paragraph>
+		<Paragraph No="1">
+			<Text>END</Text>
+			<Options>
+				<Option Goto="0"/>
+			</Options>
+		</Paragraph>
+	</Paragraphs>
+</Gamebook>
