@@ -6,8 +6,12 @@
 		</Copyright>
 		<Styles>
 			<Color Name="Font, ButtonFont, Border, System" Value="a0f4ef"/>
-			<Color Name="Background, Main, Option, Continue, SystemFont" Value="065cb0"/>
+			<Color Name="Background, Main, Continue, SystemFont" Value="065cb0"/>
+			<Option Value="377cbf"/>
 		</Styles>
+		<Default>
+			<HideDisabledOption/>
+		</Default>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph No="0">
