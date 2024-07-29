@@ -41,5 +41,12 @@
 				<Option Goto="196" Text="Поедете дальше"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="4">
+			<Text>ПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+			<Options>
+				<Option Goto="449" Text="Боги не отвернулись от вас"/>
+				<Option Goto="312" Text="Вы неудачливы"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
