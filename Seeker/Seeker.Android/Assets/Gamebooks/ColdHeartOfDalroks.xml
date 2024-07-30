@@ -112,5 +112,11 @@
 				<Option Goto="230"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="15">
+			<Text>Увы, владыка морей остается глух к вашим молитвам...</Text>
+			<Options>
+				<Option Goto="561"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
