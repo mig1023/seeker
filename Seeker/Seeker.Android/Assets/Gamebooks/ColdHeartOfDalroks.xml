@@ -347,5 +347,11 @@
 				<Option Goto="368"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="49">
+			<Text>Эта добытая вами ракушка приносит благосклонность Юрайи — владыки морей. И он приходит на помощь: Пээ выпускает вас, и корабль продолжает путь.</Text>
+			<Options>
+				<Option Goto="389"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
