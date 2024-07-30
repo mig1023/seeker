@@ -202,5 +202,11 @@
 				<Option Goto="569" Text="Будете драться"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="28">
+			<Text>Если вам случалось победить тролля по имени Харач, вы знаете, что надо сделать. Иначе...</Text>
+			<Options>
+				<Option Goto="374"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
