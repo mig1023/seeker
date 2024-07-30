@@ -208,5 +208,22 @@
 				<Option Goto="374"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="29">
+			<Options>
+				<Option Goto="463" Text="Если вы уже побывали в двух местах и пора возвращаться">
+					<Text>Иначе решайте, куда направитесь дальше:</Text>
+				</Option>
+				<Option Goto="192" Text="В библиотеку Совета тридцати"/>
+				<Option Goto="611" Text="На рыночную площадь"/>
+				<Option Goto="384" Text="К залу заседаний Совета тридцати"/>
+				<Option Goto="232" Text="В храм бога войны Темеса"/>
+				<Option Goto="445" Text="В храм богини любви Ашшарат"/>
+				<Option Goto="88" Text="К Диллилль"/>
+				<Option Goto="490" Text="В трактир, отдохнуть и подкрепиться">
+					<Text>Если ни одно из этих мест вас не интересует...</Text>
+				</Option>
+				<Option Goto="271"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
