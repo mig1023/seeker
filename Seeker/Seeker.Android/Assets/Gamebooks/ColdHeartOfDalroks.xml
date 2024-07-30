@@ -239,5 +239,11 @@
 				<Option Goto="478"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="32">
+			<Text>Идти на риск быть обманутым, да еще и платить такую цену... Ну, уж нет! Вы возвращаетесь на корабль и даете приказ к отплытию.</Text>
+			<Options>
+				<Option Goto="607"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
