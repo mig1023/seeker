@@ -282,5 +282,11 @@
 				<Option Goto="126"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="39">
+			<Text>Однако старуха не шутила: вы прибегли к помощи черной магии и должны заплатить за это. Киньте кубик и зачеркните еще одн на Листке путешественника.</Text>
+			<Options>
+				<Option Goto="463"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
