@@ -118,5 +118,11 @@
 				<Option Goto="561"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="16">
+			<Text>Вейри отдает приказ поменять курс не настолько явно, чтобы второй драккар мог обратить на это внимание. Удача улыбнулась вам: троллям не пришло в голову преследовать своих.</Text>
+			<Options>
+				<Option Goto="461"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
