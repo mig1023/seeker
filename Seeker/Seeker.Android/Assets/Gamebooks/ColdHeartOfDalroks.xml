@@ -392,5 +392,11 @@
 				<Option Goto="122" Text="Вернетесь на первый этаж; и пойдете по лестнице вверх, ведь других выходов из комнаты нет"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="56">
+			<Text>Если у вас есть защищающий от холода плащ, лучше завернуться в него.</Text>
+			<Options>
+				<Option Goto="498" Text="Если нет..."/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
