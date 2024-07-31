@@ -707,5 +707,11 @@
 				<Option Goto="529"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="104">
+			<Text>Стрела попадает в цель, и коротышка падает к вашим ногам. «Так будет с каждым нахалом, который встретится у меня на пути!» — удовлетворенно думаете вы и пришпориваете Лучика.</Text>
+			<Options>
+				<Option Goto="547"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
