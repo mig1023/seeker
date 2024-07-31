@@ -764,5 +764,11 @@
 				<Option Goto="622" Text="Направитесь обратно в город"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="113">
+			<Text>Дверь приоткрывается, и шесть монет перекочевывают в карман жреца. После этого он впускает вас внутрь и проводит к алтарю.</Text>
+			<Options>
+				<Option Goto="516"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
