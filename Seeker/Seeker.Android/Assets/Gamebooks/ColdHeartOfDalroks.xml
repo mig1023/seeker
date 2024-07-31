@@ -720,5 +720,12 @@
 				<Option Goto="79" Text="Не хотите"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="106">
+			<Text>Когда людоед появляется на поверхности, привлеченный то ли громкими криками, то ли запахом пиши, вы прицеливаетесь и выпускаете эльфийскую стрелу.\n\nПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+			<Options>
+				<Option Goto="346" Text="Вы удачливы"/>
+				<Option Goto="623" Text="Нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
