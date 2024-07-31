@@ -470,5 +470,11 @@
 				<Option Goto="587"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="68">
+			<Text>Медведь и не думает вас преследовать, и постепенно вы переходите на шаг.</Text>
+			<Options>
+				<Option Goto="300"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
