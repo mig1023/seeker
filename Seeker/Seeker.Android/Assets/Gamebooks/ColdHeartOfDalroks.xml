@@ -476,5 +476,12 @@
 				<Option Goto="300"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="69">
+			<Text>А вот и оно — интересное. В стену примерно на расстоянии шага вделаны непонятные мозаичные пластины.</Text>
+			<Options>
+				<Option Goto="124" Text="Дотронуться до одной из них"/>
+				<Option Goto="297" Text="Не станете терять время на разгадывание этой загадки и пойдете дальше"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
