@@ -426,5 +426,11 @@
 				</Option>
 			</Options>
 		</Paragraph>
+		<Paragraph No="61">
+			<Text>Вы слишком слабы, чтобы изображать из себя гимнаста. Придется вернуться и попробовать что-нибудь другое.</Text>
+			<Options>
+				<Option Goto="130"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
