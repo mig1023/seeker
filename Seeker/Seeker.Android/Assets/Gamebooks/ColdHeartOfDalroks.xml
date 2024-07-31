@@ -432,5 +432,11 @@
 				<Option Goto="130"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="62">
+			<Text>Кобарги приятно мерцает во тьме. Издав радостный вопль, призрак хватает его и исчезает, а вы можете спокойно вернуться на дорогу и продолжить путь.</Text>
+			<Options>
+				<Option Goto="593"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
