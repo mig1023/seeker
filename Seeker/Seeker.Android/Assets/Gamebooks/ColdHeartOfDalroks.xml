@@ -597,5 +597,12 @@
 				<Option Goto="507"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="87">
+			<Text>ПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+			<Options>
+				<Option Goto="207" Text="Фортуна за вас"/>
+				<Option Goto="537" Text="Она хмурится и отворачивается"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
