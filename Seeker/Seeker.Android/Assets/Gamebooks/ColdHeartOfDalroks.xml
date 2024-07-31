@@ -701,5 +701,11 @@
 				<Option Goto="651" Text="Нет"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="103">
+			<Text>«Еще один!» — радостно кричит свита.</Text>
+			<Options>
+				<Option Goto="529"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
