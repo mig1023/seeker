@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Seeker.Gamebook.ColdHeartOfDalroks
+namespace Seeker.Gamebook.ColdHeartOfDalrok
 {
     class Character : Prototypes.Character, Abstract.ICharacter { }
 }
