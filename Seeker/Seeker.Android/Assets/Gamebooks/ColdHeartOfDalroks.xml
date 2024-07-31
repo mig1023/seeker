@@ -359,5 +359,12 @@
 				<Option Goto="388"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="51">
+			<Text>За воротами две дороги: направо и налево вдоль стены. К сожалению, вы не успели заметить, куда именно побежали за подмогой. Выбирайте:</Text>
+			<Options>
+				<Option Goto="390" Text="По правой дороге"/>
+				<Option Goto="583" Text="По левой дороге"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
