@@ -866,5 +866,12 @@
 				<Option Goto="300"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="129">
+			<Text>В последний момент вы успеваете отклониться, и стрела пролетает мимо. Дело принимает нешуточный оборот.</Text>
+			<Options>
+				<Option Goto="601" Text="Будете сражаться с Дриадом"/>
+				<Option Goto="341" Text="Попробуете вразумить его"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
