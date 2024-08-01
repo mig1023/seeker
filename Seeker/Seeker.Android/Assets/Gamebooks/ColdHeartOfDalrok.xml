@@ -961,5 +961,11 @@
 				<Option Goto="228"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="144">
+			<Text>Несколько шагов — и противник перед вами.\n\nЛЮДОЕД: Ловкость 1 Cила 10</Text>
+			<Options>
+				<Option Goto="534" Text="Если вы победили его"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
