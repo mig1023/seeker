@@ -929,5 +929,11 @@
 				<Option Goto="251"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="139">
+			<Text>Если вы можете предложить ему прядь волос людоеда, золотое блюдо или Кобарги, сделайте это. Иначе придется драться.</Text>
+			<Options>
+				<Option Goto="299"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
