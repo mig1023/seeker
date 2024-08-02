@@ -1352,5 +1352,11 @@
 				<Option Goto="176" Text="Нет"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="202">
+			<Text>Видимо, посетители решают, что стража не случайно выбрала ваш столик. Так или иначе, за полчаса к вам так никто и не подходит. Пора уходить.</Text>
+			<Options>
+				<Option Goto="247"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
