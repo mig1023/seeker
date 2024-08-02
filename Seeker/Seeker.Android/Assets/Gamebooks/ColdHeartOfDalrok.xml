@@ -1056,5 +1056,11 @@
 				<Option Goto="335"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="157">
+			<Text>Мгновенно выпив жидкость из флакончика, вернитесь и продолжайте бой. Однако ее хватило на защиту только от одного укуса — второго вам уже не пережить.</Text>
+			<Options>
+				<Option Goto="92"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
