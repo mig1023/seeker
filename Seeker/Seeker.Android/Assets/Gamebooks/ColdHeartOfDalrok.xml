@@ -1740,5 +1740,12 @@
 				<Option Goto="44"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="259">
+			<Text>Кобарги в вашей руке меняет цвет с розового на зеленый.</Text>
+			<Options>
+				<Option Goto="336" Text="Войдете в дверь несмотря ни на что"/>
+				<Option Goto="52" Text="Отправитесь дальше"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
