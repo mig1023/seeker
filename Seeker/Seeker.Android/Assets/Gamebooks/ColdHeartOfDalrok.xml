@@ -1269,5 +1269,11 @@
 				<Option Goto="217" Text="Нет"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="191">
+			<Text>Ничего себе недорого! Да это целое состояние. Жалея о потраченном даром времени, поворачиваете Лучика назад.</Text>
+			<Options>
+				<Option Goto="329"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
