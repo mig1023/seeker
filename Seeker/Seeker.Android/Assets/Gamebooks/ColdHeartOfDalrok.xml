@@ -1068,5 +1068,11 @@
 				<Option Goto="478"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="159">
+			<Options>
+				<Option Goto="297" Text="Поторопитесь вперед"/>
+				<Option Goto="69" Text="Осмотрите стены в поисках чего-нибудь интересного"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
