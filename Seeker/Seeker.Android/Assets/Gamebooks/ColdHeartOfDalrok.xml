@@ -1174,5 +1174,11 @@
 				<Option Goto="388"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="176">
+			<Text>К сожалению, противники оказываются проворней: трое из них перегораживают выход.</Text>
+			<Options>
+				<Option Goto="95"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
