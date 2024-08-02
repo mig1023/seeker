@@ -1144,5 +1144,11 @@
 				<Option Goto="61" Text="Меньше или равна"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="171">
+			<Text>Кто бы это ни был, он отлично стреляет из арбалета. Ваша миссия окончена...</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
