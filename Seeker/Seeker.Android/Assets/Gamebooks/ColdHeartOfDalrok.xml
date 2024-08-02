@@ -1130,5 +1130,12 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="169">
+			<Text>Через час дорога выводит вас к озеру Мрака.</Text>
+			<Options>
+				<Option Goto="238" Text="Если хотите, можете пойти по ней обратно"/>
+				<Option Goto="594" Text="Можете избрать и другой путь, который ведет от озера прямо на восток"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
