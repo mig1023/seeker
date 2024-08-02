@@ -1037,5 +1037,11 @@
 				<Option Goto="374" Text="Иначе..."/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="154">
+			<Text>Вы не слишком верите этому подозрительному жрецу, который больше всего на свете, кажется, хочет от вас отделаться. Тем не менее он проводит вас к алтарю.</Text>
+			<Options>
+				<Option Goto="516"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
