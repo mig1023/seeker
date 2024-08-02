@@ -1294,5 +1294,12 @@
 				<Option Goto="271"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="193">
+			<Text>Вы хватаетесь за меч, но двое эльфов, стоящих по краям моста, мгновенно поднимают луки и выпускают стрелы.\n\nПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+			<Options>
+				<Option Goto="450" Text="Вам повезло"/>
+				<Option Goto="285" Text="Нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
