@@ -1644,5 +1644,12 @@
 				<Option Goto="527" Text="Откажетесь"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="246">
+			<Text>«Но к этому благородному лорду ведет иная дорога», — отвечает великан. И в самом деле — прямо от ног гигантов бежит дорога на юго-восток.</Text>
+			<Options>
+				<Option Goto="493" Text="Поедете по ней"/>
+				<Option Goto="264" Text="Будете прорываться силой"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
