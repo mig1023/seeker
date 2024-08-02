@@ -1630,5 +1630,12 @@
 				<Option Goto="408" Text="Предложите отработать переправу"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="244">
+			<Text>«Путники должны платить 5 золотых за право въезда в земли лорда», — говорит капитан.</Text>
+			<Options>
+				<Option Goto="530" Text="Заплатите"/>
+				<Option Goto="193" Text="Будете прорываться силой"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
