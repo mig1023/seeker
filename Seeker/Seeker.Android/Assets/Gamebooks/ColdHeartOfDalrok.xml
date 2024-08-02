@@ -1007,5 +1007,12 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="151">
+			<Text>Река и мост скрываются из виду, а дорога раздваивается. Куда вы поедете:</Text>
+			<Options>
+				<Option Goto="523" Text="Прямо"/>
+				<Option Goto="140" Text="Налево"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
