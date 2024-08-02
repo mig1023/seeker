@@ -1431,5 +1431,11 @@
 				<Option Goto="461"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="214">
+			<Text>Здраво рассудив, что людям ничего не угрожает и со временем они всегда смогут найти корабль до Грейкейпа, вы выходите в море, несмотря на сгущающиеся сумерки.</Text>
+			<Options>
+				<Option Goto="514"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
