@@ -1544,5 +1544,11 @@
 				<Option Goto="536"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="231">
+			<Text>К сожалению, ни деньги, ни меч нельзя ни съесть, ни выпить. Вам было суждено спастись от смерти в огне, чтобы найти ее в морских водах...</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
