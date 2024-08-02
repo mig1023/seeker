@@ -1031,5 +1031,11 @@
 				<Option Goto="271"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="153">
+			<Text>Если вам случалось встречать тролля по имени Харач, то вы знаете, какой параграф посмотреть.</Text>
+			<Options>
+				<Option Goto="374" Text="Иначе..."/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
