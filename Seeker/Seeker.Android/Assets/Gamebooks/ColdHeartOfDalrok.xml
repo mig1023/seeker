@@ -1950,5 +1950,14 @@
 				<Option Goto="568" Text="Если победили"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="291">
+			<Text>Стражники мертвы, но вы предпочитаете не задерживаться: шум боя могли услышать. Сразу же от ворот ведут две дороги, прижимающиеся к стене:</Text>
+			<Options>
+				<Option Goto="465" Text="Направо"/>
+				<Option Goto="583" Text="Налево">
+					<Text>По какой из них вы направитесь?</Text>
+				</Option>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
