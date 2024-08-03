@@ -1797,5 +1797,11 @@
 				<Option Goto="136" Text="Пойти разбудить вейри и экипаж, чтобы атаковать всем вместе"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="268">
+			<Text>Если у вас есть латунная подкова, можете воспользоваться ей.</Text>
+			<Options>
+				<Option Goto="578" Text="Если нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
