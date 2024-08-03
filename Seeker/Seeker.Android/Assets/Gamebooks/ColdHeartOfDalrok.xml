@@ -1891,5 +1891,12 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="282">
+			<Text>Киньте кубик.</Text>
+			<Options>
+				<Option Goto="613" Text="Выпало от 1 до 3"/>
+				<Option Goto="185" Text="Выпало от 4 до 6"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
