@@ -1910,5 +1910,11 @@
 				<Option Goto="7"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="285">
+			<Text>Эльфы — меткие стрелки, и обе стрелы попадают в цель. Считайте, что вас убили дважды...</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
