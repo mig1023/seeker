@@ -1819,5 +1819,11 @@
 				<Option Goto="92" Text="Если добились успеха"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="271">
+			<Text>Город надоел вам, а команда как раз закончила погрузку всего необходимого. Несмотря на сгущающиеся сумерки, вы выходите в море.</Text>
+			<Options>
+				<Option Goto="514"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
