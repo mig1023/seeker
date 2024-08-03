@@ -1930,5 +1930,12 @@
 				<Option Goto="607" Text="Все же попытаетесь доплыть до Тролльхейма"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="288">
+			<Text>ПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+			<Options>
+				<Option Goto="426" Text="Вы удачливы"/>
+				<Option Goto="347" Text="Нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
