@@ -1937,5 +1937,11 @@
 				<Option Goto="347" Text="Нет"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="289">
+			<Text>Незнакомец удивленно смотрит на вас, а потом поворачивается и выходит из трактира. Еще полчаса вы сидите в гордом одиночестве, после чего решаете, что пора уходить.</Text>
+			<Options>
+				<Option Goto="247"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
