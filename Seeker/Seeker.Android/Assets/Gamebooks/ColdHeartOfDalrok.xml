@@ -2478,5 +2478,11 @@
 				<Option Goto="538"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="374">
+			<Text>Бог остается глух к вашим молитвам.</Text>
+			<Options>
+				<Option Goto="618"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
