@@ -2389,5 +2389,12 @@
 				<Option Goto="630" Text="Если вы их убили, или они бежали"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="360">
+			<Text>Вы быстро возвращаетесь на корабль и, приведя свой рукав в соответствующий вид, вновь идете в город. Проверьте ваше ОБАЯНИЕ.</Text>
+			<Options>
+				<Option Goto="212" Text="Все в порядке"/>
+				<Option Goto="566" Text="Нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
