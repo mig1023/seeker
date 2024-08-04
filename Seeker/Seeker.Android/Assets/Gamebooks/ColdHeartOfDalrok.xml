@@ -2465,5 +2465,12 @@
 				<Option Goto="227" Text="Прогоните и будете спать дальше"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="372">
+			<Text>К вечеру вы вспоминаете о магическом шаре Рондуэла.</Text>
+			<Options>
+				<Option Goto="14" Text="Хотите воспользоваться им"/>
+				<Option Goto="536" Text="Просто ляжете спать, чтобы лишний раз не расстраиваться"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
