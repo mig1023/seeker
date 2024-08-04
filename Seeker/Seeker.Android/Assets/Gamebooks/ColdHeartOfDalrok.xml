@@ -2446,5 +2446,11 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="369">
+			<Text>Обруч, конечно, штука нужная, но сделанного не воротишь. Зато можно будет попытаться уговорить вождя согласиться на бесплатный ремонт «Дайнаэля».</Text>
+			<Options>
+				<Option Goto="177"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
