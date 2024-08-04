@@ -2452,5 +2452,11 @@
 				<Option Goto="177"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="370">
+			<Text>Если у вас висит на шее серебряный барашек на цепочке, то вы знаете, какой параграф надо посмотреть.</Text>
+			<Options>
+				<Option Goto="504" Text="Если нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
