@@ -2307,5 +2307,11 @@
 				<Option Goto="485" Text="Если вам удалось победить его"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="347">
+			<Text>«Тогда ты умрешь немедленно, трус!» — кричит Уруаз, выхватывая кинжал.</Text>
+			<Options>
+				<Option Goto="608"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
