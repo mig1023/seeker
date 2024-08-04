@@ -2023,5 +2023,12 @@
 				<Option Goto="63" Text="Продолжите путь"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="302">
+			<Text>Кобарги в вашей руке становится ярко-зеленым.</Text>
+			<Options>
+				<Option Goto="379" Text="Пойдете дальше"/>
+				<Option Goto="122" Text="Подниметесь наверх"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
