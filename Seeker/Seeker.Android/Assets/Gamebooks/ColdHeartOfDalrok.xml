@@ -2370,5 +2370,12 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="357">
+			<Text>Они охотно двигаются, освобождая вам место за столом. Кто-то наполняет кружку вином и ставит ее перед вами.</Text>
+			<Options>
+				<Option Goto="557" Text="Будете пить"/>
+				<Option Goto="617" Text="Откажетесь"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
