@@ -2226,5 +2226,12 @@
 				<Option Goto="540" Text="Останетесь"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="334">
+			<Text>Если в последний раз вы виделись:</Text>
+			<Options>
+				<Option Goto="36" Text="В таверне у Мортлэндских топей"/>
+				<Option Goto="492" Text="В осажденном варварами замке"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
