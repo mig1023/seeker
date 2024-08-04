@@ -2144,5 +2144,11 @@
 				<Option Goto="281" Text="Нет"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="321">
+			<Text>Пока на шум не прибежали другие охранники, вы тихо открываете дверь и проскальзываете внутрь.</Text>
+			<Options>
+				<Option Goto="208"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
