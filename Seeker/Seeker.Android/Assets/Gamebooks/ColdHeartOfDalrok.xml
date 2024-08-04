@@ -2484,5 +2484,11 @@
 				<Option Goto="618"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="375">
+			<Text>Из-за двери слышатся удаляющиеся шаги. Кажется, он обиделся. Что ж, придется уходить несолоно хлебавши.</Text>
+			<Options>
+				<Option Goto="29"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
