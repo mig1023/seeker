@@ -2320,5 +2320,12 @@
 				<Option Goto="509" Text="Прикажете продолжать бегство"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="349">
+			<Text>ПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+			<Options>
+				<Option Goto="483" Text="Повезло"/>
+				<Option Goto="512" Text="Нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
