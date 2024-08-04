@@ -2333,5 +2333,11 @@
 				<Option Goto="516"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="351">
+			<Text>С первого взгляда становится понятно, что бой будет нелегким.\n\nДУЭЛЯНТ: Ловкость 11 Сила 12</Text>
+			<Options>
+				<Option Goto="620" Text="Если вы победили"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
