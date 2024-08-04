@@ -2123,5 +2123,12 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="318">
+			<Text>ПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+			<Options>
+				<Option Goto="16" Text="Вам повезло"/>
+				<Option Goto="268" Text="Нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
