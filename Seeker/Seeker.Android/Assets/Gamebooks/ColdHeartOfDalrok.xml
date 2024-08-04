@@ -2080,5 +2080,11 @@
 				<Option Goto="579"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="311">
+			<Text>Заинтересованные эльфы толпятся вокруг, а вы садитесь поудобнее и произносите слова несложного заклинания...</Text>
+			<Options>
+				<Option Goto="528"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
