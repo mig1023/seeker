@@ -2584,5 +2584,11 @@
 				<Option Goto="271"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="389">
+			<Text>«Мы на широте Тархейма, — докладывает Байэлл, — половина пути уже позади». Что ж, это совсем неплохо.</Text>
+			<Options>
+				<Option Goto="447"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
