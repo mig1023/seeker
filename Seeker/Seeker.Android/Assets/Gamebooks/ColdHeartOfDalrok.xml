@@ -2646,5 +2646,11 @@
 				<Option Goto="561" Text="Нет"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="399">
+			<Text>Как это ни печально, стража не верит вам и наотрез отказывается пропустить в город, пока вы не предъявите ей соответствующие бумаги. Выхода нет — придется драться.</Text>
+			<Options>
+				<Option Goto="438"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
