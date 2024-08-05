@@ -2490,5 +2490,11 @@
 				<Option Goto="29"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="376">
+			<Text>Шар медленно гаснет, и на вас наваливается страшная усталость. «Посмотрим, чьи идеи окажутся более интересными», — бормочете вы, засыпая.</Text>
+			<Options>
+				<Option Goto="416"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
