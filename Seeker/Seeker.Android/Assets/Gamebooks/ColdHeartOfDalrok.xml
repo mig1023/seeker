@@ -2614,5 +2614,11 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="394">
+			<Text>Один за другим падают рядом с вами эльфы и шауриты. Повинуясь команде вейри, оставшиеся пытаются спасти вам жизнь, но битва проиграна...</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
