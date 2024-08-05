@@ -2538,5 +2538,11 @@
 				<Option Goto="532"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="383">
+			<Text>ПЕРВЫЙ ШАУРИТ: Ловкость 7 Сила 7\n\nВТОРОЙ ШАУРИТ: Ловкость 8 Сила 7</Text>
+			<Options>
+				<Option Goto="535" Text="Если вам удалось их убить"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
