@@ -2900,5 +2900,11 @@
 				<Option Goto="573" Text="Откажетесь"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="435">
+			<Text>Пляска мечей начинает казаться единым сверкающим водоворотом, и вы теряете сознание.</Text>
+			<Options>
+				<Option Goto="386"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
