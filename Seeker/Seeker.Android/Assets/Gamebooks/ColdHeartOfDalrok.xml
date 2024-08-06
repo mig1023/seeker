@@ -3071,5 +3071,11 @@
 				<Option Goto="275"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="460">
+			<Text>Видя, что вы серьезный противник, шумная компания быстро испаряется. Пора идти и вам, если не хотите платить за разбитую посуду и поломанную мебель.</Text>
+			<Options>
+				<Option Goto="247"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
