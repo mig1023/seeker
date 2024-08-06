@@ -3198,5 +3198,14 @@
 				<Option Goto="520"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="480">
+			<Text>Сколько вы предложите жрецу за то, чтобы вас впустили в храм (разумеется, если вы располагаете такими деньгами и желанием с ними расстаться)?</Text>
+			<Options>
+				<Option Goto="375" Text="Два золотых"/>
+				<Option Goto="73" Text="Четыре золотых"/>
+				<Option Goto="113" Text="Шесть золотых"/>
+				<Option Goto="209" Text="Восемь золотых"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
