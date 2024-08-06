@@ -2838,5 +2838,23 @@
 				<Option Goto="524"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="427">
+			<Text>Если вы там еще не были, можете выбрать еще одно место, стоящее внимания.</Text>
+			<Options>
+				<Option Goto="463" Text="Если ваш лимит времени исчерпан, придется возвращаться на корабль">
+					<Text>Иначе — куда теперь?</Text>
+				</Option>
+				<Option Goto="510" Text="В храм владыки морей Юрайи"/>
+				<Option Goto="192" Text="В библиотеку Совета тридцати"/>
+				<Option Goto="384" Text="К залу заседаний Совета тридцати"/>
+				<Option Goto="232" Text="В храм бога войны Темеса"/>
+				<Option Goto="445" Text="В храм богини любви Ашшарат"/>
+				<Option Goto="88" Text="К Диллилль"/>
+				<Option Goto="490" Text="В трактир, отдохнуть и подкрепиться">
+					<Text>Если ни одно из этих мест вас не привлекает...</Text>
+				</Option>
+				<Option Goto="271"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
