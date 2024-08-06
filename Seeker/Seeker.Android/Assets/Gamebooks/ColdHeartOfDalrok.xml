@@ -3233,5 +3233,12 @@
 				<Option Goto="267" Text="Нет"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="485">
+			<Text>Противник мертв, и вы срезаете прядь волос с его головы (+22), чтобы предоставить Луку доказательства своей победы. Из логова доносится невыносимый смрад.</Text>
+			<Options>
+				<Option Goto="24" Text="Хотите спуститься туда"/>
+				<Option Goto="82" Text="Поедете к реке"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
