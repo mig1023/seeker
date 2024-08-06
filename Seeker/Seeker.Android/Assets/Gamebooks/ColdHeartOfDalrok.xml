@@ -3240,5 +3240,11 @@
 				<Option Goto="82" Text="Поедете к реке"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="486">
+			<Text>...змею, которая мгновенно делает атакующий выпад. Если можете, утешьтесь тем, что ваша смерть была быстра и безболезненна.</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
