@@ -3214,5 +3214,11 @@
 				<Option Goto="373" Text="Если же вы убьете противника"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="482">
+			<Text>«Дайнаэль» меняет курс и теперь направляется прямо к побережью Тролльхейма.</Text>
+			<Options>
+				<Option Goto="325"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
