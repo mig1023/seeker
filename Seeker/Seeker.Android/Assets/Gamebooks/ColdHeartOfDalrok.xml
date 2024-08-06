@@ -2790,5 +2790,11 @@
 				<Option Goto="496" Text="Не измените решения"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="420">
+			<Text>«Народ эльфов ведет войну с царем троллей, — говорите вы, — и я поклялся внести свою лепту в будущую победу».</Text>
+			<Options>
+				<Option Goto="77"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
