@@ -2783,5 +2783,12 @@
 				<Option Goto="9" Text="А быть может, вы умеете разговаривать с животными"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="419">
+			<Text>Кобарги в вашей руке светится зеленым светом, выражая свое неодобрение.</Text>
+			<Options>
+				<Option Goto="256" Text="Хотите вернуться обратно на развилку и пойти направо"/>
+				<Option Goto="496" Text="Не измените решения"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
