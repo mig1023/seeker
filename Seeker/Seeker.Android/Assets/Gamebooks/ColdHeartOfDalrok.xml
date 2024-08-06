@@ -2983,5 +2983,11 @@
 				<Option Goto="416" Text="Не хотите"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="448">
+			<Text>Вы взываете к богу, однако, как это ни печально, ничего не происходит.</Text>
+			<Options>
+				<Option Goto="393"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
