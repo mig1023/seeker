@@ -3186,5 +3186,11 @@
 				<Option Goto="579"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="478">
+			<Options>
+				<Option Goto="257" Text="Вы идете один"/>
+				<Option Goto="646" Text="Нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
