@@ -2796,5 +2796,11 @@
 				<Option Goto="77"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="421">
+			<Text>Если у вас есть кулон с серебряным барашком, воспользуйтесь им.</Text>
+			<Options>
+				<Option Goto="180" Text="Если нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
