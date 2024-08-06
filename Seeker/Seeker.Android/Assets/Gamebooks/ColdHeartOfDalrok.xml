@@ -2956,5 +2956,12 @@
 				<Option Goto="251"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="444">
+			<Text>К полудню тропинка внезапно обрывается прямо посреди леса. Но это не беда: впереди через кусты хорошо видна дорога.</Text>
+			<Options>
+				<Option Goto="495" Text="На северо-восток"/>
+				<Option Goto="169" Text="На юго-запад"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
