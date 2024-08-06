@@ -3167,5 +3167,12 @@
 				<Option Goto="589" Text="Посмотрите, кто идет вам навстречу"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="475">
+			<Text>Проверьте ваше ОБАЯНИЕ.</Text>
+			<Options>
+				<Option Goto="173" Text="Все в порядке"/>
+				<Option Goto="588" Text="Нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
