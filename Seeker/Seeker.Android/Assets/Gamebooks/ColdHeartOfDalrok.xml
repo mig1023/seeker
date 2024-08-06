@@ -2746,5 +2746,11 @@
 				<Option Goto="581" Text="Иначе"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="414">
+			<Text>Вы мигом выскакиваете из трактира. Кажется, они все-таки решили оставить вас в покое и не гоняться по всему городу за таким невежей.</Text>
+			<Options>
+				<Option Goto="247"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
