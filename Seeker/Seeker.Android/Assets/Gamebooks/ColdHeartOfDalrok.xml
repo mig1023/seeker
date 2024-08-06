@@ -2862,5 +2862,11 @@
 				<Option Goto="177"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="429">
+			<Text>Суд назначен на послезавтра...</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
