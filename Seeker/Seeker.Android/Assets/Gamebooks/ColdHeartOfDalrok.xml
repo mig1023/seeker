@@ -2976,5 +2976,12 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="447">
+			<Text>Дело к вечеру, и вы вспоминаете о магическом шаре Рондуэла.</Text>
+			<Options>
+				<Option Goto="116" Text="Хотите посмотреть в него — если он, конечно, у вас сохранился"/>
+				<Option Goto="416" Text="Не хотите"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
