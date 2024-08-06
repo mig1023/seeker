@@ -3048,5 +3048,22 @@
 				<Option Goto="19" Text="Если вы убили его"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="458">
+			<Options>
+				<Option Goto="463" Text="Если еще не пора возвращаться на корабль">
+					<Text>Можете посетить еще одну достопримечательность Тархейма:</Text>
+				</Option>
+				<Option Goto="510" Text="Храм владыки морей Юрайи"/>
+				<Option Goto="192" Text="Библиотеку Совета тридцати"/>
+				<Option Goto="611" Text="Рыночную площадь"/>
+				<Option Goto="232" Text="Храм бога войны Темеса"/>
+				<Option Goto="445" Text="Храм богини любви Ашшарат"/>
+				<Option Goto="88" Text="Диллилль"/>
+				<Option Goto="490" Text="Трактир, чтобы отдохнуть и подкрепиться">
+					<Text>Если ни одно из этих мест вас не привлекает...</Text>
+				</Option>
+				<Option Goto="271" Text=""/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
