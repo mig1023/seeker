@@ -3192,5 +3192,11 @@
 				<Option Goto="646" Text="Нет"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="479">
+			<Text>«Если ты не смог познать дружбу, любовь тебе неведома, — слышится мелодичный голос, исходящий из уст статуи. — Тебе нечего делать в этих стенах». Что ж, придется уходить.</Text>
+			<Options>
+				<Option Goto="520"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
