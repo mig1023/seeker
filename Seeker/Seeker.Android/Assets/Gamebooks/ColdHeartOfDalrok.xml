@@ -3226,5 +3226,12 @@
 				<Option Goto="17"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="484">
+			<Text>Проверьте ваше ОБАЯНИЕ.</Text>
+			<Options>
+				<Option Goto="183" Text="Если все в порядке"/>
+				<Option Goto="267" Text="Нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
