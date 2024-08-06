@@ -2856,5 +2856,11 @@
 				<Option Goto="271"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="428">
+			<Text>Все равно неизвестно, для чего эта вещица могла бы пригодиться, так что особенно ее и не жалко.</Text>
+			<Options>
+				<Option Goto="177"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
