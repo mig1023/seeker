@@ -2931,5 +2931,11 @@
 				<Option Goto="251"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="440">
+			<Text>А что если попробовать усыпить их порошком из листьев силлиэла? Кажется неплохая идея. Вы высыпаете порошок в бадью и вновь прячетесь в кустах.</Text>
+			<Options>
+				<Option Goto="638"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
