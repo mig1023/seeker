@@ -3010,5 +3010,11 @@
 				<Option Goto="329"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="452">
+			<Text>Свет от гнилушек не слишком сильный, но его достаточно, чтобы видеть, куда вы идете.</Text>
+			<Options>
+				<Option Goto="648"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
