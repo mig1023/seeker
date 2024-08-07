@@ -3419,5 +3419,12 @@
 				<Option Goto="208"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="514">
+			<Text>Наступает ночь.</Text>
+			<Options>
+				<Option Goto="250" Text="Хотите воспользоваться магическим шаром Рондуэла"/>
+				<Option Goto="42" Text="Нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
