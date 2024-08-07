@@ -3665,5 +3665,12 @@
 				<Option Goto="231" Text="Если нет"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="550">
+			<Text>Острые зубы и когти косолапого ничем не уступают вашему мечу.\n\nМЕДВЕДЬ: Ловкость 1 Cила 16\n\nЕсли вы убили его:</Text>
+			<Options>
+				<Option Goto="300" Text="Уйти"/>
+				<Option Goto="128" Text="Рискнуть войти в дом"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
