@@ -3533,5 +3533,11 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="530">
+			<Text>Вы отдаете деньги капитану (не забудьте вычеркнуть их с Листка путешественника), и он отходит в сторону. Путь свободен.</Text>
+			<Options>
+				<Option Goto="571"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
