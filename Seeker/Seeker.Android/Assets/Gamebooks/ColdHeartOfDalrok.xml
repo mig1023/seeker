@@ -3401,5 +3401,11 @@
 				<Option Goto="233" Text="Все же попробуете добиться, чтобы вас впустили"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="511">
+			<Text>Шатаясь от полученных ран, вы прекращаете бой и уходите с мостика.</Text>
+			<Options>
+				<Option Goto="111"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
