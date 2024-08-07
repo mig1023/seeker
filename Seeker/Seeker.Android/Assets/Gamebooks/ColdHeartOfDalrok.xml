@@ -3310,5 +3310,12 @@
 				<Option Goto="256" Text="Вернетесь на развилку и пойдете направо"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="497">
+			<Text>Киньте кубик.</Text>
+			<Options>
+				<Option Goto="15" Text="Выпало 1, 2 или 4"/>
+				<Option Goto="310" Text="Выпало 3, 5 или 6"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
