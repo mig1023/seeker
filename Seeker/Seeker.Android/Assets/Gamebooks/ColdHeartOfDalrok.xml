@@ -3270,5 +3270,11 @@
 				<Option Goto="616"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="491">
+			<Text>Выхватив меч, бросаетесь на своего спутника. Кажется, он вполне подготовлен к нападению: умело парирует удар и начинает бой.\n\nНЕЗНАКОМЕЦ: Ловкость 1 Cила 12</Text>
+			<Options>
+				<Option Goto="117" Text="Если вы убили его"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
