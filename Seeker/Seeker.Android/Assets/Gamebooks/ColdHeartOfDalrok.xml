@@ -3553,5 +3553,12 @@
 				<Option Goto="222" Text="Нет"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="533">
+			<Text>Два одинаковых холщовых мешочка. Так, загадки продолжаются. Лорд Тэмпест продолжает улыбаться. «Смелее, мой друг, — говорит он. — Развяжите один из них». Какой мешочек вы возьмете:</Text>
+			<Options>
+				<Option Goto="10" Text="Правый"/>
+				<Option Goto="600" Text="Левый"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
