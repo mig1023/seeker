@@ -3581,5 +3581,11 @@
 				<Option Goto="410" Text="Идти вперед и готовиться к бою"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="537">
+			<Text>Несмотря на оставшийся запас прочности, разрушения, причиненные огнем, более чем серьезны.</Text>
+			<Options>
+				<Option Goto="349"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
