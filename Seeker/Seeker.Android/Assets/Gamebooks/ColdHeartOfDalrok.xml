@@ -3672,5 +3672,11 @@
 				<Option Goto="128" Text="Рискнуть войти в дом"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="551">
+			<Text>...за которыми вас ждет готовый к бою отряд из дюжины стражников. Интересно все же, что вы сделали не так?..</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
