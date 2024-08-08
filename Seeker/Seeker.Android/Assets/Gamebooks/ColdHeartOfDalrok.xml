@@ -4117,5 +4117,12 @@
 				<Option Goto="247" Text="Уйдете и поищете иных развлечений"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="617">
+			<Text>Отказ до смерти обижает ваших «собутыльников», и они хватаются за ножи.</Text>
+			<Options>
+				<Option Goto="201" Text="Попытаетесь убежать"/>
+				<Option Goto="95" Text="Будете драться"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
