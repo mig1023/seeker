@@ -3684,5 +3684,21 @@
 				<Option Goto="248"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="553">
+			<Text>Где вы еще не были, но хотите побывать?</Text>
+			<Options>
+				<Option Goto="510" Text="В храме владыки морей Юрайи"/>
+				<Option Goto="192" Text="В библиотеке Совета тридцати"/>
+				<Option Goto="611" Text="На рыночной площади"/>
+				<Option Goto="384" Text="У зала заседаний Совета тридцати"/>
+				<Option Goto="232" Text="В храме бога войны Темеса"/>
+				<Option Goto="445" Text="В храме богини любви Ашшарат"/>
+				<Option Goto="490" Text="В трактире, чтобы отдохнуть и подкрепиться"/>
+				<Option Goto="463" Text="Если уже пора, лучше вернуться на корабль">
+					<Text>Если ни одно из этих мест вас не привлекает...</Text>
+				</Option>
+				<Option Goto="271"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
