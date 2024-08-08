@@ -4124,5 +4124,22 @@
 				<Option Goto="95" Text="Будете драться"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="618">
+			<Options>
+				<Option Goto="463" Text="Если пора возвращаться">
+					<Text>Иначе решайте, куда пойти теперь:</Text>
+				</Option>
+				<Option Goto="510" Text="В храм владыки морей Юрайи"/>
+				<Option Goto="192" Text="В библиотеку Совета тридцати"/>
+				<Option Goto="611" Text="На рыночную площадь"/>
+				<Option Goto="384" Text="К залу заседаний Совета тридцати"/>
+				<Option Goto="445" Text="В храм богини любви Ашшарат"/>
+				<Option Goto="88" Text="К Диллилль"/>
+				<Option Goto="490" Text="В трактир, чтобы отдохнуть и подкрепиться">
+					<Text>Если ни одно из этих мест вас не привлекает...</Text>
+				</Option>
+				<Option Goto="271"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
