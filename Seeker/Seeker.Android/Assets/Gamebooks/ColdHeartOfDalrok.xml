@@ -3874,12 +3874,29 @@
 			<Options>
 				<Option Goto="458"/>
 			</Options>
-			<Paragraph No="581">
+		</Paragraph>
+		<Paragraph No="581">
 			<Text>Вскоре служанка приносит еду (можете восстановить 4 СИЛЫ), но место за столом напротив вас так и остается пустым. И это легко объяснимо: трактир не переполнен, а ваше лицо не внушает особого доверия. Что ж, уже поздно, и придется уходить.</Text>
 			<Options>
 				<Option Goto="247"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="582">
+			<Options>
+				<Option Goto="463" Text="Если время вышло, возвращайтесь на корабль">
+					<Text>Если нет, то куда теперь:</Text>
+				</Option>
+				<Option Goto="510" Text="В храм владыки морей Юрайи"/>
+				<Option Goto="192" Text="В библиотеку Совета тридцати"/>
+				<Option Goto="611" Text="На рыночную площадь"/>
+				<Option Goto="384" Text="К залу заседаний Совета тридцати"/>
+				<Option Goto="232" Text="В храм бога войны Темеса"/>
+				<Option Goto="88" Text="К Диллилль"/>
+				<Option Goto="490" Text="В трактир, отдохнуть и подкрепиться">
+					<Text>Если ни одно из этих мест вас не привлекает...</Text>
+				</Option>
+				<Option Goto="271"/>
+			</Options>
 		</Paragraph>
 	</Paragraphs>
 </Gamebook>
