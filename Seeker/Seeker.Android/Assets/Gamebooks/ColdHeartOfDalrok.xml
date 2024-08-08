@@ -4149,5 +4149,11 @@
 				<Option Goto="412" Text="Сразитесь с охраной"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="620">
+			<Text>К счастью, городские стражники не появляются, и все заканчивается благополучно. Незнакомец честно отдает вам 30 золотых и провожает обратно в город.</Text>
+			<Options>
+				<Option Goto="247"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
