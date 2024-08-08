@@ -3732,5 +3732,11 @@
 				<Option Goto="143"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="559">
+			<Text>Шар постепенно темнеет, и вы засыпаете, пытаясь осмыслить увиденное.</Text>
+			<Options>
+				<Option Goto="42"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
