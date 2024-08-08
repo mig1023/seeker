@@ -3720,5 +3720,11 @@
 				<Option Goto="618" Text="Решите продолжить осмотр города"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="557">
+			<Text>Вино оказывается приятным на вкус. Пьяницы вокруг, не стесняясь вашего присутствия, продолжают разговор. Что ж, послушаем.</Text>
+			<Options>
+				<Option Goto="71"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
