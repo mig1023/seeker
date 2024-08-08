@@ -3782,5 +3782,11 @@
 				<Option Goto="438"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="567">
+			<Text>А что если попробовать усыпить их купленным на Тархейме сбором трав? Кажется, неплохая идея. Вы высыпаете травы из пакетика в бадью и вновь прячетесь в кустах.</Text>
+			<Options>
+				<Option Goto="638"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
