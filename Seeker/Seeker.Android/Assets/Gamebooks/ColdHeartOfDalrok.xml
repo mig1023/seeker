@@ -3904,5 +3904,11 @@
 				<Option Goto="130"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="584">
+			<Text>На сегодня, пожалуй, с вас зверинца хватит. Не дожидаясь, пока остальные хищники или слуги прибудут выяснить, в чем дело, торопитесь к входу в башню.</Text>
+			<Options>
+				<Option Goto="60"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
