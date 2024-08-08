@@ -3854,5 +3854,12 @@
 				<Option Goto="23"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="578">
+			<Text>Повинуясь команде, ваш корабль меняет курс, но тролли замечают это и начинают погоню. ПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+			<Options>
+				<Option Goto="109" Text="Повезло"/>
+				<Option Goto="348" Text="Нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
