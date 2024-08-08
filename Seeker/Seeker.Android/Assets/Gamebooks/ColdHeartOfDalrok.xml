@@ -3941,5 +3941,12 @@
 				<Option Goto="99" Text="Если нет"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="590">
+			<Text>Из зала с Ойной ведут два коридора. По какому из них вы пойдете:</Text>
+			<Options>
+				<Option Goto="259" Text="Направо"/>
+				<Option Goto="496" Text="Прямо"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
