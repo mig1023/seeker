@@ -4391,5 +4391,11 @@
 				<Option Goto="525"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="657">
+			<Text>Вождь удивленно поднимает глаза от разложенных на столе карт: «Время позднее, мой друг, однако ты можешь подождать до конца совета и выяснить со мной все необходимое».</Text>
+			<Options>
+				<Option Goto="317"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
