@@ -4359,5 +4359,11 @@
 				<Option Goto="493" Text="Ехать по дороге вдоль берега на запад"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="652">
+			<Text>Да, кто знает, сколько еще подобных существ может подстерегать во мгле. Лучше уж остановиться и подождать, пока распогодится.</Text>
+			<Options>
+				<Option Goto="489"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
