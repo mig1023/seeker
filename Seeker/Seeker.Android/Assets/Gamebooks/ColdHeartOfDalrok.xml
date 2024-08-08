@@ -3806,5 +3806,12 @@
 				<Option Goto="7"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="571">
+			<Text>Река и мост скрываются из виду, а дорога раздваивается. Куда вы поедете:</Text>
+			<Options>
+				<Option Goto="223" Text="Прямо"/>
+				<Option Goto="140" Text="Налево"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
