@@ -4352,5 +4352,12 @@
 				<Option Goto="618" Text="Откажетесь и покинете храм"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="651">
+			<Text>Чудище оживляется: «Конечно нет, за тем я здесь и стою». Как ни жалко убитого на разговоры времени, а придется...</Text>
+			<Options>
+				<Option Goto="226" Text="Драться"/>
+				<Option Goto="493" Text="Ехать по дороге вдоль берега на запад"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
