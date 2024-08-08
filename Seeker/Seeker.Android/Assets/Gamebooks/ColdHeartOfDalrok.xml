@@ -4053,5 +4053,11 @@
 				<Option Goto="286" Text="Попробуете выманить врага из его логова"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="607">
+			<Text>Эльфы ставят потрепанные бурей паруса, и «Дайнаэль» с недовольным скрипом направляется в сторону Тролльхейма.</Text>
+			<Options>
+				<Option Goto="132"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
