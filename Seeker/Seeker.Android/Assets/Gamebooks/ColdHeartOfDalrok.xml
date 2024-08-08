@@ -4012,5 +4012,12 @@
 				<Option Goto="262"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="601">
+			<Options>
+				<Option Goto="261" Text="Если у вас есть лук и вы хотите им воспользоваться"/>
+				<Option Goto="487" Text="Если нет, но в запасе умение лазить по деревьям"/>
+				<Option Goto="570" Text="Если ни того, ни другого"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
