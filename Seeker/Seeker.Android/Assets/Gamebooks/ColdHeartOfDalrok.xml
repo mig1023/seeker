@@ -4207,5 +4207,11 @@
 				<Option Goto="175" Text="Как узнать полезное заклятие"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="628">
+			<Text>Мастерство капитана не оставляет течению ни малейшей возможности победить: корабль продолжает плыть прежним курсом, и вскоре Пээ остается позади.</Text>
+			<Options>
+				<Option Goto="389"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
