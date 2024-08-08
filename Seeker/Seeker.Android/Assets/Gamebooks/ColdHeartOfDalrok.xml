@@ -3794,5 +3794,11 @@
 				<Option Goto="335"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="569">
+			<Text>Видя, что вы собираетесь оказать сопротивление, лучники выходят вперед и начинают обстреливать «Дайнаэль» горящими стрелами. В пламени пожара погибаете и вы, и команда...</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
