@@ -138,26 +138,30 @@ namespace Seeker.Output
         {
             string font = String.Empty;
             int fontSetting = Game.Settings.GetValue("FontType");
-            string boldLine = bold ? "Bold" : String.Empty;
+            string addLine = String.Empty;
+            
+            if (italic)
+            {
+                addLine = "Italic";
+            }
+            else if (bold)
+            {
+                addLine = "Bold";
+            }
 
             if (fontSetting > 0)
             {
-                font = $"{Constants.FONT_TYPE_VALUES[fontSetting]}{boldLine}";
+                font = $"{Constants.FONT_TYPE_VALUES[fontSetting]}{addLine}";
             }
             else if (standart || (Game.Data.Constants == null) || String.IsNullOrEmpty(Game.Data.Constants.GetFont()))
             {
-                font = bold ? "YanoneFontBold" : "YanoneFont";
+                font = $"YanoneFont{addLine}";
             }
             else
             {
-                font = $"{Game.Data.Constants.GetFont()}{boldLine}";
+                font = $"{Game.Data.Constants.GetFont()}{addLine}";
             }
-                
-            if (italic)
-            {
-                font = "RobotoFontItalic";
-            }
-
+            
             return TextFontFamily(font);
         }
 
@@ -169,16 +173,9 @@ namespace Seeker.Output
             return fontFamily.ToString();
         }
 
-        public static double FontSize(TextFontSize size, bool italic = false)
+        public static double FontSize(TextFontSize size)
         {
-            if (Game.Settings.GetValue("FontType") == 1)
-                italic = false;
-
-            if (italic && Constants.FontSizeItalic.ContainsKey(size))
-            {
-                return Constants.FontSizeItalic[size];
-            }
-            else if (!italic && Constants.FontSize.ContainsKey(size))
+            if (Constants.FontSizeItalic.ContainsKey(size))
             {
                 return Constants.FontSize[size];
             }
@@ -369,7 +366,7 @@ namespace Seeker.Output
                 if (Enum.TryParse(constantFontLine, out TextFontSize constantFontSize))
                     labelFontSize = constantFontSize;
 
-                label.FontSize = FontSize(labelFontSize, italic: italic);
+                label.FontSize = FontSize(labelFontSize);
             }
 
             if (ColorFormConstants(ColorTypes.Font, out string color))

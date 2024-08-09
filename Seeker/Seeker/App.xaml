@@ -12,6 +12,9 @@
         <OnPlatform x:TypeArguments="x:String" x:Key="YanoneFontBold">
             <On Platform="Android" Value="Fonts/YanoneKaffeesatz-Bold.ttf#YanoneKaffeesatz-Bold" />
         </OnPlatform>
+        <OnPlatform x:TypeArguments="x:String" x:Key="YanoneFontItalic">
+            <On Platform="Android" Value="Fonts/YanoneKaffeesatz-Italic.ttf#YanoneKaffeesatz-Italic" />
+        </OnPlatform>
         <OnPlatform x:TypeArguments="x:String" x:Key="RobotoFontThin">
             <On Platform="Android" Value="Fonts/Roboto-Thin.ttf#Roboto-Thin" />
         </OnPlatform>
