@@ -234,7 +234,7 @@ namespace Seeker.Prototypes
             {
                 return Xml.BoolParse(value);
             }
-            else if (param.PropertyType == typeof(int))
+            else if (param.PropertyType == typeof(int) || param.PropertyType == typeof(int?))
             {
                 return Xml.IntParse(value);
             }
