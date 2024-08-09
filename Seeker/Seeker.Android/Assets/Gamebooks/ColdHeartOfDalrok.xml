@@ -7,11 +7,24 @@
 		<Styles>
 			<Main Value="764c2e"/>
 			<Color Name="Option, Continue" Value="61805d"/>
-			<StatusBar Value="737083"/>
+			<StatusBar Value="523520"/>
 			<Background Value="bfccbe"/>
 			<System Value="4d664a"/>
 			<SystemFont Value="ffffff"/>
+			<ActionBox Value="90a68d"/>
+			<Action Value="6a4429"/>
 		</Styles>
+		<Dictionaries>
+			<Skills ItemsByOrder=", 8, 10, 12, 9, 11, 9, 10, 8, 9, 10, 11"/>
+			<Strengths ItemsByOrder=", 22, 20, 16, 18, 20, 20, 16, 24, 22, 18, 20"/>
+			<Charms ItemsByOrder=", 8, 6, 5, 8, 6, 7, 7, 7, 6, 7, 5"/>
+			<LuckList Items="1:①, 2:②, 3:③, 4:④, 5:⑤, 6:⑥, 11:❶, 12:❷, 13:❸, 14:❹, 15:❺, 16:❻"/>
+		</Dictionaries>
+		<Buttons>
+			<Fight>Сражаться</Fight>
+			<Luck>Проверить удачу</Luck>
+			<LuckRecovery>Восстановить 1 цифру удачи</LuckRecovery>
+		</Buttons>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph No="0">
@@ -2388,7 +2401,16 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="359">
-			<Text>Вейри и эльфы, конечно, помогут вам, но и самому придется попотеть.\n\nПЕРВЫЙ ВОИН: Ловкость 8 Сила 8 Верность 10\n\nВТОРОЙ ВОИН: Ловкость 7 Сила 8 Верность 9\n\nТРЕТИЙ ВОИН: Ловкость 7 Сила 6 Верность 12</Text>
+			<Text>Вейри и эльфы, конечно, помогут вам, но и самому придется попотеть.</Text>
+			<Actions>
+				<Fight>
+					<Enemies>
+						<Enemy Name="ПЕРВЫЙ ВОИН" Skill="8" Strength="8" Loyalty="10"/>
+						<Enemy Name="ВТОРОЙ ВОИН" Skill="7" Strength="8" Loyalty="9"/>
+						<Enemy Name="ТРЕТИЙ ВОИН" Skill="7" Strength="6" Loyalty="12"/>
+					</Enemies>
+				</Fight>
+			</Actions>
 			<Options>
 				<Option Goto="630" Text="Если вы их убили, или они бежали"/>
 			</Options>
