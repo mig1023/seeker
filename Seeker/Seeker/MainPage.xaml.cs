@@ -242,7 +242,7 @@ namespace Seeker
             }
             else if (!String.IsNullOrEmpty(singleton))
             {
-                singleIf = Game.Data.Actions.Availability(option);
+                singleIf = Game.Data.Actions.Availability(singleton);
             }
             else
             {
