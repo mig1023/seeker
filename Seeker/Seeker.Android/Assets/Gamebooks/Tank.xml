@@ -602,7 +602,7 @@
 				</Test>
 			</Actions>
 			<Modifications>
-				<VictoryPoints Value="1"/>
+				<VictoryPoints Value="2"/>
 			</Modifications>
 			<Options>
 				<Option Goto="54" Text="В случае успеха"/>
