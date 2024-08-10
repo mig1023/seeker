@@ -41,8 +41,10 @@ namespace Seeker.Gamebook.ColdHeartOfDalrok
 
         public List<bool> Luck { get; set; }
         public int Coins { get; set; }
-        public int Loyalty { get; set; }
+        public int? Loyalty { get; set; }
         public int RoundWithoutSuccess { get; set; }
+        public int BonusesAvailability { get; set; }
+        public int Arrows { get; set; }
 
         public override void Init()
         {
@@ -56,8 +58,10 @@ namespace Seeker.Gamebook.ColdHeartOfDalrok
             Strength = MaxStrength;
             Charm = Constants.Charms[dice];
             Coins = 0;
-            Loyalty = 0;
+            Loyalty = null;
             RoundWithoutSuccess = 0;
+            BonusesAvailability = 2;
+            Arrows = 0;
 
             Luck = new List<bool> { false, true, true, true, true, true, true };
 
@@ -77,11 +81,13 @@ namespace Seeker.Gamebook.ColdHeartOfDalrok
             Coins = this.Coins,
             Loyalty = this.Loyalty,
             RoundWithoutSuccess = this.RoundWithoutSuccess,
+            BonusesAvailability = this.BonusesAvailability,
+            Arrows = this.Arrows,
         };
 
         public override string Save() => String.Join("|",
-            MaxSkill, Skill, MaxStrength, Strength, Charm, Coins, Loyalty,
-            String.Join(",", Luck.Select(x => x ? "1" : "0")));
+            MaxSkill, Skill, MaxStrength, Strength, Charm, Coins, BonusesAvailability,
+            Arrows, String.Join(",", Luck.Select(x => x ? "1" : "0")));
 
         public override void Load(string saveLine)
         {
@@ -93,9 +99,10 @@ namespace Seeker.Gamebook.ColdHeartOfDalrok
             Strength = int.Parse(save[3]);
             Charm = int.Parse(save[4]);
             Coins = int.Parse(save[5]);
-            Loyalty = int.Parse(save[6]);
+            BonusesAvailability = int.Parse(save[6]);
+            Arrows = int.Parse(save[7]);
 
-            Luck = save[7].Split(',').Select(x => x == "1").ToList();
+            Luck = save[8].Split(',').Select(x => x == "1").ToList();
 
             IsProtagonist = true;
         }

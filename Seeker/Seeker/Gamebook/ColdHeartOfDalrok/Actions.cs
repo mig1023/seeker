@@ -21,14 +21,41 @@ namespace Seeker.Gamebook.ColdHeartOfDalrok
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
             GameOverBy(Character.Protagonist.Strength, out toEndParagraph, out toEndText);
 
-        public override bool IsButtonEnabled(bool secondButton = false) =>
-            true;
+        public override bool IsButtonEnabled(bool secondButton = false)
+        {
+            if (Type == "Get")
+            {
+                if (Character.Protagonist.BonusesAvailability <= 0)
+                {
+                    return false;
+                }
+                else if (Game.Option.IsTriggered(Head))
+                {
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+            }
+            else
+            {
+                return true;
+            }
+        }
 
         public override bool Availability(string option)
         {
             if (String.IsNullOrEmpty(option))
             {
                 return true;
+            }
+            else if (option == "Стрельба из лука")
+            {
+                bool skill = Game.Option.IsTriggered(option);
+                bool arrows = Character.Protagonist.Arrows > 0;
+
+                return skill && arrows;
             }
             else
             {
@@ -172,11 +199,36 @@ namespace Seeker.Gamebook.ColdHeartOfDalrok
 
         public List<string> Get()
         {
+            Game.Option.Trigger(Head);
+            Character.Protagonist.BonusesAvailability -= 1;
+
+            if (Head == "Стрельба из лука")
+            {
+                Character.Protagonist.Arrows = 5;
+            }
+
             return new List<string> { "RELOAD" };
         }
 
+        private static bool IsAlive(Character enemy)
+        {
+            if (enemy.Strength > 0)
+            {
+                if (enemy.Loyalty == null)
+                {
+                    return true;
+                }
+                else if (enemy.Loyalty > 3)
+                {
+                    return true;
+                }
+            }
+            
+            return false;
+        }
+
         private static bool NoMoreEnemies(List<Character> enemies) =>
-            enemies.Where(x => x.Strength > 0 && x.Loyalty > 3).Count() == 0;
+            enemies.Where(x => IsAlive(x)).Count() == 0;
 
         public List<string> Fight()
         {
@@ -198,7 +250,7 @@ namespace Seeker.Gamebook.ColdHeartOfDalrok
 
                 foreach (Character enemy in FightEnemies)
                 {
-                    if (enemy.Strength <= 0 || enemy.Loyalty <= 3)
+                    if (!IsAlive(enemy))
                         continue;
 
                     fight.Add($"{enemy.Name} (сила {enemy.Strength})");
@@ -227,7 +279,7 @@ namespace Seeker.Gamebook.ColdHeartOfDalrok
 
                         enemy.Strength -= 2;
 
-                        if (enemy.Strength > 0 && enemy.Loyalty > 3)
+                        if ((enemy.Loyalty != null) && IsAlive(enemy))
                         {
                             enemy.Loyalty -= 2;
                             fight.Add($"GRAY|Его верность снизилась на 2 единицы и теперь равна {enemy.Loyalty}");
@@ -272,11 +324,14 @@ namespace Seeker.Gamebook.ColdHeartOfDalrok
                             return fight;
                         }
 
-                        enemy.RoundWithoutSuccess = 0;
-                        enemy.Loyalty += 1;
+                        if (enemy.Loyalty != null)
+                        {
+                            enemy.RoundWithoutSuccess = 0;
+                            enemy.Loyalty += 1;
 
-                        fight.Add($"GRAY|Он нанёс вам ранение и взбодрился - " +
-                            $"его верность повысилась на 1 единицу и теперь равна {enemy.Loyalty}");
+                            fight.Add($"GRAY|Он нанёс вам ранение и взбодрился - " +
+                                $"его верность повысилась на 1 единицу и теперь равна {enemy.Loyalty}");
+                        }
                     }
                     else
                     {
@@ -285,7 +340,7 @@ namespace Seeker.Gamebook.ColdHeartOfDalrok
 
                     attackAlready = true;
 
-                    if (enemy.Strength > 0 && enemy.RoundWithoutSuccess > 1)
+                    if ((enemy.Loyalty != null) && IsAlive(enemy) && (enemy.RoundWithoutSuccess > 1))
                     {
                         enemy.Loyalty -= 1;
                         enemy.RoundWithoutSuccess = 0;

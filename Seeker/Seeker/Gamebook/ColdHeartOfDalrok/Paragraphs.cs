@@ -47,9 +47,7 @@ namespace Seeker.Gamebook.ColdHeartOfDalrok
 
             enemy.Skill = enemy.MaxSkill;
             enemy.Strength = enemy.MaxStrength;
-
-            if (enemy.Loyalty == 0)
-                enemy.Loyalty = -1;
+            enemy.Loyalty = enemy.Loyalty == 0 ? null : enemy.Loyalty;
 
             return enemy;
         }
