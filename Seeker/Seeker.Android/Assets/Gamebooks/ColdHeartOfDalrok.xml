@@ -651,7 +651,9 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="87">
-			<Text>ПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+			<Actions>
+				<Luck/>
+			</Actions>
 			<Options>
 				<Option Goto="207" Text="Фортуна за вас"/>
 				<Option Goto="537" Text="Она хмурится и отворачивается"/>
