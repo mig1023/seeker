@@ -1466,7 +1466,10 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="201">
-			<Text>Понимая, что драка будет нелегкой, поворачиваетесь и бежите. ПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+			<Text>Понимая, что драка будет нелегкой, поворачиваетесь и бежите.</Text>
+			<Actions>
+				<Luck/>
+			</Actions>
 			<Options>
 				<Option Goto="414" Text="Повезло"/>
 				<Option Goto="176" Text="Нет"/>
