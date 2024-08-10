@@ -3927,7 +3927,13 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="550">
-			<Text>Острые зубы и когти косолапого ничем не уступают вашему мечу.\n\nМЕДВЕДЬ: Ловкость 1 Cила 16\n\nЕсли вы убили его:</Text>
+			<Text>Острые зубы и когти косолапого ничем не уступают вашему мечу.</Text>
+			<Actions>
+				<Fight>
+					<Enemy Name="МЕДВЕДЬ" Skill="10" Strength="16"/>
+					<Text>Если вы убили его:</Text>
+				</Fight>
+			</Actions>
 			<Options>
 				<Option Goto="300" Text="Уйти"/>
 				<Option Goto="128" Text="Рискнуть войти в дом"/>
