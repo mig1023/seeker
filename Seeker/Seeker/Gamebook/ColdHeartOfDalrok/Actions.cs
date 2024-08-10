@@ -98,7 +98,10 @@ namespace Seeker.Gamebook.ColdHeartOfDalrok
 
             luckCheck.Add(Result(isLuck, "УСПЕХ", "НЕУДАЧА"));
 
-            Game.Buttons.Disable(isLuck, "Повезло", "Не повезло");
+            string luck = "Боги не отвернулись от вас, Повезло, Удачливы, Фортуна за вас";
+            string fail = "Вы неудачливы, Нет, Она хмурится и отворачивается, Нет - вы промахнулись";
+
+            Game.Buttons.Disable(isLuck, luck, fail);
 
             Character.Protagonist.Luck[goodLuck] = !Character.Protagonist.Luck[goodLuck];
 
