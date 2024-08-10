@@ -2467,7 +2467,12 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="351">
-			<Text>С первого взгляда становится понятно, что бой будет нелегким.\n\nДУЭЛЯНТ: Ловкость 11 Сила 12</Text>
+			<Text>С первого взгляда становится понятно, что бой будет нелегким.</Text>
+			<Actions>
+				<Fight>
+					<Enemy Name="ДУЭЛЯНТ" Skill="11" Strength="11"/>
+				</Fight>
+			</Actions>
 			<Options>
 				<Option Goto="620" Text="Если вы победили"/>
 			</Options>
