@@ -1028,7 +1028,12 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="144">
-			<Text>Несколько шагов — и противник перед вами.\n\nЛЮДОЕД: Ловкость 1 Cила 10</Text>
+			<Text>Несколько шагов — и противник перед вами.</Text>
+			<Actions>
+				<Fight>
+					<Enemy Name="ЛЮДОЕД" Skill="10" Strength="10"/>
+				</Fight>
+			</Actions>
 			<Options>
 				<Option Goto="534" Text="Если вы победили его"/>
 			</Options>
