@@ -724,6 +724,7 @@
 						<Enemy Name="ВТОРОЙ ПЬЯНИЦА" Skill="7" Strength="8"/>
 						<Enemy Name="ТРЕТИЙ ПЬЯНИЦА" Skill="6" Strength="7"/>
 					</Enemies>
+					<LastRunsAway/>
 				</Fight>
 			</Actions>
 			<Options>
