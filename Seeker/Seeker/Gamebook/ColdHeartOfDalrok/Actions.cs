@@ -256,6 +256,7 @@ namespace Seeker.Gamebook.ColdHeartOfDalrok
                 FightEnemies.Add(enemy.Clone());
 
             int round = 1;
+            bool alreadyDejected = false;
 
             while (true)
             {
@@ -272,9 +273,10 @@ namespace Seeker.Gamebook.ColdHeartOfDalrok
                     fight.Add($"{enemy.Name} (сила {enemy.Strength})");
                     enemy.RoundWithoutSuccess += 1;
 
-                    if (LastIsDejected && LastEnemy(FightEnemies))
+                    if (LastIsDejected && LastEnemy(FightEnemies) && !alreadyDejected)
                     {
                         enemy.Loyalty -= 4;
+                        alreadyDejected = true;
 
                         fight.Add($"GRAY|Оставшись в одиночестве {enemy.Name} здорово трухнул: " +
                             $"его верность теперь равна  {enemy.Loyalty}");
@@ -286,6 +288,15 @@ namespace Seeker.Gamebook.ColdHeartOfDalrok
                             fight.Add("BIG|GOOD|Вы ПОБЕДИЛИ :)");
                             return fight;
                         }
+                    }
+
+                    if (LastRunsAway && LastEnemy(FightEnemies))
+                    {
+                        fight.Add($"GOOD|{enemy.Name} не будет испытывать свою судьбу: " +
+                            $"он обращается в позорное бегство :)");
+                        fight.Add(String.Empty);
+                        fight.Add("BIG|GOOD|Вы ПОБЕДИЛИ :)");
+                        return fight;
                     }
 
                     if (!attackAlready)
@@ -320,15 +331,6 @@ namespace Seeker.Gamebook.ColdHeartOfDalrok
 
                             if (enemy.Loyalty <= 3)
                                 fight.Add($"GOOD|{enemy.Name} обращается в позорное бегство :)");
-                        }
-
-                        if (LastRunsAway && !IsAlive(enemy) && LastEnemy(FightEnemies))
-                        {
-                            fight.Add($"GOOD|Последний оставшийся не будет испытывать свою судьбу: " +
-                                $"он обращается в позорное бегство :)");
-                            fight.Add(String.Empty);
-                            fight.Add("BIG|GOOD|Вы ПОБЕДИЛИ :)");
-                            return fight;
                         }
 
                         if (NoMoreEnemies(FightEnemies))
@@ -367,7 +369,9 @@ namespace Seeker.Gamebook.ColdHeartOfDalrok
                             return fight;
                         }
 
-                        if (enemy.Loyalty != null)
+                        bool lastDoomed = LastIsDoomed && LastEnemy(FightEnemies);
+
+                        if (!lastDoomed && (enemy.Loyalty != null))
                         {
                             enemy.RoundWithoutSuccess = 0;
                             enemy.Loyalty += 1;
@@ -382,8 +386,10 @@ namespace Seeker.Gamebook.ColdHeartOfDalrok
                     }
 
                     attackAlready = true;
+                    bool enemyDoomed = LastIsDoomed && LastEnemy(FightEnemies);
+                    bool roundsFails = enemy.RoundWithoutSuccess > 1;
 
-                    if ((enemy.Loyalty != null) && IsAlive(enemy) && (enemy.RoundWithoutSuccess > 1))
+                    if (!enemyDoomed && (enemy.Loyalty != null) && IsAlive(enemy) && roundsFails)
                     {
                         enemy.Loyalty -= 1;
                         enemy.RoundWithoutSuccess = 0;
