@@ -299,6 +299,7 @@
 						<Enemy Name="ВТОРОЙ ВОЛК" Skill="7" Strength="6"/>
 						<Enemy Name="ТРЕТИЙ ВОЛК" Skill="6" Strength="6"/>
 					</Enemies>
+					<LastRunsAway/>
 					<Text>Если вам удастся убить двух волков, третий решит не испытывать судьбу и убежит.</Text>
 				</Fight>
 			</Actions>
