@@ -1963,6 +1963,7 @@
 						<Enemy Name="ПЕРВЫЙ ЭЛЬФ" Skill="8" Strength="8" Loyalty="10"/>
 						<Enemy Name="ВТОРОЙ ЭЛЬФ" Skill="7" Strength="6" Loyalty="8"/>
 					</Enemies>
+					<LastIsDoomed/>
 					<Text>Когда ВЕРНОСТЬ одного или двух противников опустится до 3, им удастся бежать, пока вы будете вынуждены возиться с их товарищем.</Text>
 				</Fight>
 			</Actions>
