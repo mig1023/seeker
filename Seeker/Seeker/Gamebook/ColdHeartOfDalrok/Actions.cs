@@ -9,6 +9,7 @@ namespace Seeker.Gamebook.ColdHeartOfDalrok
         public int RoundsToWin { get; set; }
         public bool HeroWoundsLimit { get; set; }
         public bool LastIsDoomed { get; set; }
+        public bool LastRunsAway { get; set; }
 
         public List<Character> Enemies { get; set; }
 
@@ -302,6 +303,15 @@ namespace Seeker.Gamebook.ColdHeartOfDalrok
 
                             if (enemy.Loyalty <= 3)
                                 fight.Add($"GOOD|{enemy.Name} обращается в позорное бегство :)");
+                        }
+
+                        if (LastRunsAway && !IsAlive(enemy) && LastEnemy(FightEnemies))
+                        {
+                            fight.Add($"GOOD|Последний оставшийся не будет испытывать свою судьбу: " +
+                                $"он обращается в позорное бегство :)");
+                            fight.Add(String.Empty);
+                            fight.Add("BIG|GOOD|Вы ПОБЕДИЛИ :)");
+                            return fight;
                         }
 
                         if (NoMoreEnemies(FightEnemies))
