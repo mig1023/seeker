@@ -150,9 +150,14 @@ namespace Seeker.Gamebook.ColdHeartOfDalrok
             if (goodCharm)
             {
                 luckCheck.Add("BIG|GOOD|УСПЕХ :)");
-                luckCheck.Add("Вы увеличили своё обаяние на единицу");
 
-                Character.Protagonist.Charm += 1;
+                if (Character.Protagonist.Charm < 12)
+                {
+                    luckCheck.Add("Вы увеличили своё обаяние на единицу");
+                    Character.Protagonist.Charm += 1;
+                }
+
+                Game.Buttons.Disable("Нет");
             }
             else
             {
@@ -163,6 +168,8 @@ namespace Seeker.Gamebook.ColdHeartOfDalrok
                     luckCheck.Add("Вы уменьшили своё обаяние на единицу");
                     Character.Protagonist.Charm -= 1;
                 }
+
+                Game.Buttons.Disable("Все в порядке");
             }
 
             return luckCheck;
