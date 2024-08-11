@@ -10,6 +10,7 @@ namespace Seeker.Gamebook.ColdHeartOfDalrok
         public bool HeroWoundsLimit { get; set; }
         public bool LastIsDoomed { get; set; }
         public bool LastRunsAway { get; set; }
+        public bool LastIsDejected { get; set; }
 
         public List<Character> Enemies { get; set; }
 
@@ -270,6 +271,22 @@ namespace Seeker.Gamebook.ColdHeartOfDalrok
 
                     fight.Add($"{enemy.Name} (сила {enemy.Strength})");
                     enemy.RoundWithoutSuccess += 1;
+
+                    if (LastIsDejected && LastEnemy(FightEnemies))
+                    {
+                        enemy.Loyalty -= 4;
+
+                        fight.Add($"GRAY|Оставшись в одиночестве {enemy.Name} здорово трухнул: " +
+                            $"его верность теперь равна  {enemy.Loyalty}");
+
+                        if (enemy.Loyalty <= 3)
+                        {
+                            fight.Add($"GOOD|{enemy.Name} обращается в позорное бегство :)");
+                            fight.Add(String.Empty);
+                            fight.Add("BIG|GOOD|Вы ПОБЕДИЛИ :)");
+                            return fight;
+                        }
+                    }
 
                     if (!attackAlready)
                     {
