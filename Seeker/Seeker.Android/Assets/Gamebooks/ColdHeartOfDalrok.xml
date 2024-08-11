@@ -43,8 +43,6 @@
 			<Options>
 				<Option Goto="311" Text="Посмотреть в хрустальный шар"/>
 				<Option Goto="105" Text="Не станешь"/>
-				<Option Goto="26" Text="TEST"/>
-				<Option Goto="359" Text="TEST 2"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="2">
@@ -3201,6 +3199,7 @@
 						<Enemy Name="ПЕРВЫЙ СТРАЖНИК" Skill="9" Strength="10"/>
 						<Enemy Name="ВТОРОЙ СТРАЖНИК" Skill="8" Strength="10"/>
 					</Enemies>
+					<LastIsDejected/>
 					<Text>Если ВЕРНОСТЬ одного из них опустится до 3, он побежит в город, а ВЕРНОСТЬ второго уменьшится на 4 единицы.</Text>
 				</Fight>
 			</Actions>
