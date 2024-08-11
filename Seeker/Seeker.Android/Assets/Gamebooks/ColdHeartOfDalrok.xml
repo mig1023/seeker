@@ -357,7 +357,9 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="43">
-			<Text>Проверьте ваше ОБАЯНИЕ.</Text>
+			<Actions>
+				<Charm/>
+			</Actions>
 			<Options>
 				<Option Goto="273" Text="Все в порядке"/>
 				<Option Goto="399" Text="Нет"/>
