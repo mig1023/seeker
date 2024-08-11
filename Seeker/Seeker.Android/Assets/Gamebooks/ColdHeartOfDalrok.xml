@@ -212,6 +212,7 @@
 						<Enemy Name="КАПИТАН" Skill="10" Strength="10" Loyalty="12"/>
 						<Enemy Name="ПЕРВЫЙ ЭЛЬФ" Skill="7" Strength="6" Loyalty="8"/>
 					</Enemies>
+					<LastIsDoomed/>
 					<Text>Когда ВЕРНОСТЬ одного из противников опустится до 3, ему удастся бежать, пока вы вынуждены возиться с его товарищем.</Text>
 				</Fight>
 			</Actions>
