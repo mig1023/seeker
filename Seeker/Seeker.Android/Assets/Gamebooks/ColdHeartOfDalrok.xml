@@ -2573,7 +2573,7 @@
 			</Actions>
 			<Options>
 				<Option Goto="25" Text="Повезло"/>
-				<Option Goto="269" Text="Нет, вы промахнулись"/>
+				<Option Goto="269" Text="Нет - вы промахнулись"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="355">
@@ -2625,7 +2625,10 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="360">
-			<Text>Вы быстро возвращаетесь на корабль и, приведя свой рукав в соответствующий вид, вновь идете в город. Проверьте ваше ОБАЯНИЕ.</Text>
+			<Text>Вы быстро возвращаетесь на корабль и, приведя свой рукав в соответствующий вид, вновь идете в город.</Text>
+			<Actions>
+				<Charm/>
+			</Actions>
 			<Options>
 				<Option Goto="212" Text="Все в порядке"/>
 				<Option Goto="566" Text="Нет"/>
