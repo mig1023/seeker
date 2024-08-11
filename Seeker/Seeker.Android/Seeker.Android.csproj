@@ -751,6 +751,12 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\ColdHeartOfDalrok_Pic8.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ColdHeartOfDalrok_Pic9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ColdHeartOfDalrok_Pic10.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
