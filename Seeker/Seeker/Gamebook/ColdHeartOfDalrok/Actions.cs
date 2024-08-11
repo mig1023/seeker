@@ -8,6 +8,7 @@ namespace Seeker.Gamebook.ColdHeartOfDalrok
     {
         public int RoundsToWin { get; set; }
         public bool HeroWoundsLimit { get; set; }
+        public bool LastIsDoomed { get; set; }
 
         public List<Character> Enemies { get; set; }
 
@@ -237,6 +238,9 @@ namespace Seeker.Gamebook.ColdHeartOfDalrok
             return false;
         }
 
+        private static bool LastEnemy(List<Character> enemies) =>
+            enemies.Where(x => IsAlive(x)).Count() == 1;
+
         private static bool NoMoreEnemies(List<Character> enemies) =>
             enemies.Where(x => IsAlive(x)).Count() == 0;
 
@@ -289,7 +293,9 @@ namespace Seeker.Gamebook.ColdHeartOfDalrok
 
                         enemy.Strength -= 2;
 
-                        if ((enemy.Loyalty != null) && IsAlive(enemy))
+                        bool lastDoomed = LastIsDoomed && IsAlive(enemy) && LastEnemy(FightEnemies);
+
+                        if (!lastDoomed && (enemy.Loyalty != null) && IsAlive(enemy))
                         {
                             enemy.Loyalty -= 2;
                             fight.Add($"GRAY|Его верность снизилась на 2 единицы и теперь равна {enemy.Loyalty}");
