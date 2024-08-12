@@ -1309,6 +1309,9 @@
 					<Enemy Name="ТИГР" Skill="11" Strength="12"/>
 				</Fight>
 			</Actions>
+			<Modifications>
+				<Strength Value="-2"/>
+			</Modifications>
 			<Options>
 				<Option Goto="44" Text="Если каким-то чудом вам удалось его убить"/>
 			</Options>
