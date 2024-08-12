@@ -4561,6 +4561,9 @@
 			<Actions>
 				<Luck/>
 			</Actions>
+			<Modifications>
+				<Arrows Value="-1"/>
+			</Modifications>
 			<Options>
 				<Option Goto="104" Text="Удачливы"/>
 				<Option Goto="328" Text="Вы промахнулись, и остается только уехать прочь"/>
