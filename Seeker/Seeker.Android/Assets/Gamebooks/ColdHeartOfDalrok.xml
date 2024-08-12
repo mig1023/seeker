@@ -836,6 +836,9 @@
 			<Actions>
 				<Luck/>
 			</Actions>
+			<Modifications>
+				<Arrows Value="-1"/>
+			</Modifications>
 			<Options>
 				<Option Goto="346" Text="Повезло"/>
 				<Option Goto="623" Text="Нет"/>
