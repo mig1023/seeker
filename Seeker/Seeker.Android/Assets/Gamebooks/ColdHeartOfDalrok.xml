@@ -3412,6 +3412,9 @@
 		</Paragraph>
 		<Paragraph No="450">
 			<Text>Зная, что эльфы — меткие стрелки, вы мгновенно бросаетесь с лошади на землю, и обе стрелы пролетают мимо. Потеряйте только 1 СИЛУ, да и то от удара.</Text>
+			<Modifications>
+				<Strength Value="-1"/>
+			</Modifications>
 			<Options>
 				<Option Goto="354" Text="Вы овладели искусством стрельбы из лука" Availability="Стрельба из лука"/>
 				<Option Goto="269" Text="Нет"/>
