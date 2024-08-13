@@ -34,6 +34,26 @@ namespace Seeker.Gamebook.ColdHeartOfDalrok
             return false;
         }
 
+        public static void DicesRecovery(List<string> luckRecovery)
+        {
+            for (int i = 1; i < 4; i++)
+            {
+                int dice = Game.Dice.Roll();
+
+                luckRecovery.Add($"{i} бросок кубика: {Game.Dice.Symbol(dice)}");
+
+                if (!Character.Protagonist.Luck[dice])
+                {
+                    luckRecovery.Add($"GOOD|Цифра {dice} восстановлена!");
+                    Character.Protagonist.Luck[dice] = true;
+                }
+                else
+                {
+                    luckRecovery.Add($"Цифра {dice} и так счастливая...");
+                }
+            }
+        }
+
         public static bool Lose(List<string> luckLose)
         {
             for (int i = 1; i < 7; i++)

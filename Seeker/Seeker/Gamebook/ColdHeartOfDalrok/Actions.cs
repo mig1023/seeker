@@ -121,14 +121,27 @@ namespace Seeker.Gamebook.ColdHeartOfDalrok
 
         public List<string> LuckRecovery()
         {
-            List<string> luckRecovery = new List<string> { "Восстановление удачи:" };
+            List<string> luckRecovery = new List<string> { "ВОССТАНОВЛЕНИЕ УДАЧИ:\n" };
 
             bool success = Luckiness.Recovery(luckRecovery);
 
             if (!success)
                 luckRecovery.Add("BAD|Все цифры и так счастливые!");
 
-            luckRecovery.Add("Цифры удачи теперь:");
+            luckRecovery.Add("BIG|Цифры удачи теперь:");
+            luckRecovery.Add("BIG|" + Luckiness.Numbers());
+
+            return luckRecovery;
+        }
+
+        public List<string> DicesLuckRecovery()
+        {
+            List<string> luckRecovery = new List<string> { "ВОССТАНОВЛЕНИЕ УДАЧИ:\n" };
+
+            Luckiness.DicesRecovery(luckRecovery);
+
+            luckRecovery.Add(String.Empty);
+            luckRecovery.Add("BIG|Цифры удачи теперь:");
             luckRecovery.Add("BIG|" + Luckiness.Numbers());
 
             return luckRecovery;
