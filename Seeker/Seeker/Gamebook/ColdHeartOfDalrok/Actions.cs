@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Seeker.Game;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 
 namespace Seeker.Gamebook.ColdHeartOfDalrok
 {
@@ -261,6 +263,62 @@ namespace Seeker.Gamebook.ColdHeartOfDalrok
             diceCheck.Add($"BIG|BAD|Вы потеряли {dices} {line}");
 
             return diceCheck;
+        }
+
+        public List<string> SeaBattle()
+        {
+            List<string> battle = new List<string> { };
+
+            int heroShip = 16;
+            int enemyShip = 16;
+
+            for (int i = 1; i <= 5; i++)
+            {
+                battle.Add($"HEAD|BOLD|Раунд {i}");
+
+                Game.Dice.DoubleRoll(out int heroDice, out int enemyDice);
+
+                battle.Add($"Выстрел вашего корабля: {Game.Dice.Symbol(heroDice)}");
+                battle.Add($"Выстрел корабля противника: {Game.Dice.Symbol(enemyDice)}");
+
+                if (heroDice > enemyDice)
+                {
+                    enemyShip -= 4;
+
+                    battle.Add("GOOD|BOLD|Ваш огненный шар поразил вражеский корабль!");
+                    battle.Add($"GRAY|У вражеского корабля осталось {enemyShip} ед. прочности");
+                }
+                else if (heroDice < enemyDice)
+                {
+                    heroShip -= 4;
+
+                    battle.Add("BAD|BOLD|Вражеский огненный шар поразил ваш корабль!");
+                    battle.Add($"GRAY|У вашего корабля осталось {heroShip} ед. прочности");
+                }
+                else
+                {
+                    battle.Add("BOLD|Промах!");
+                }
+
+                if (enemyShip <= 0)
+                {
+                    battle.Add(String.Empty);
+                    battle.Add($"GOOD|Вражеский корабль пошёл ко дну!");
+                    battle.Add($"BIG|GOOD|Вы ПОБЕДИЛИ :)");
+                    return battle;
+                }
+                else if (heroShip <= 0)
+                {
+                    battle.Add(String.Empty);
+                    battle.Add($"BAD|Ваш корабль пошёл ко дну!");
+                    battle.Add($"BIG|BAD|Вы ПРОИГРАЛИ :(");
+                    return battle;
+                }
+            }
+
+            battle.Add(String.Empty);
+            battle.Add($"BIG|Ничья! Оба корабля остались на плаву!");
+            return battle;
         }
 
         private static bool IsAlive(Character enemy)
