@@ -119,19 +119,7 @@ namespace Seeker.Gamebook.ColdHeartOfDalrok
         {
             List<string> luckRecovery = new List<string> { "Восстановление удачи:" };
 
-            bool success = false;
-
-            for (int i = 1; i < 7; i++)
-            {
-                if (!Character.Protagonist.Luck[i])
-                {
-                    luckRecovery.Add($"GOOD|Цифра {i} восстановлена!");
-                    Character.Protagonist.Luck[i] = true;
-                    success = true;
-
-                    break;
-                }
-            }
+            bool success = Luckiness.Recovery(luckRecovery);
 
             if (!success)
                 luckRecovery.Add("BAD|Все цифры и так счастливые!");
@@ -140,6 +128,21 @@ namespace Seeker.Gamebook.ColdHeartOfDalrok
             luckRecovery.Add("BIG|" + Luckiness.Numbers());
 
             return luckRecovery;
+        }
+
+        public List<string> LuckLose()
+        {
+            List<string> luckLose = new List<string> { "Потеря удачи:" };
+
+            bool success = Luckiness.Lose(luckLose);
+
+            if (success)
+                luckLose.Add("GOOD|Все цифры и так несчастливые!\nВам повезло хоть в чём-то!");
+
+            luckLose.Add("Цифры удачи теперь:");
+            luckLose.Add("BIG|" + Luckiness.Numbers());
+
+            return luckLose;
         }
 
         public List<string> Charm()
