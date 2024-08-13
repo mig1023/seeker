@@ -3798,6 +3798,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="ДРИАД" Skill="8" Strength="10"/>
+					<SkillPenalty Value="2"/>
 					<Text>На время боя вам придется уменьшить свою ЛОВКОСТЬ на 2, но отступать уже поздно.</Text>
 				</Fight>
 			</Actions>
