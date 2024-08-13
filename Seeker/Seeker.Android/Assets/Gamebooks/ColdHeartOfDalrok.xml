@@ -3452,6 +3452,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="ЗАКЛЯТЫЙ ВОИН" Skill="11" Strength="12"/>
+					<SkillPenalty Value="1"/>
 					<Text>Во время боя вам придется на 1 уменьшать МОЩНОСТЬ удара: доспехи врага ослабят ее.</Text>
 				</Fight>
 			</Actions>
