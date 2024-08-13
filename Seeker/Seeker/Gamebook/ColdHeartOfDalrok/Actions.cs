@@ -13,6 +13,7 @@ namespace Seeker.Gamebook.ColdHeartOfDalrok
         public bool LastIsDejected { get; set; }
         public int HeroDamage { get; set; }
         public int EnemyDamage { get; set; }
+        public int Dices { get; set; }
 
         public List<Character> Enemies { get; set; }
 
@@ -223,6 +224,36 @@ namespace Seeker.Gamebook.ColdHeartOfDalrok
             }
 
             return new List<string> { "RELOAD" };
+        }
+
+        public List<string> DiceWounds()
+        {
+            List<string> diceCheck = new List<string> { };
+
+            int dices = 0;
+            int count = Dices > 0 ? Dices : 1;
+
+            if (Dices == 0)
+            {
+                dices = Game.Dice.Roll();
+                diceCheck.Add($"На кубике выпало: {Game.Dice.Symbol(dices)}");
+            }
+            else
+            {
+                for (int i = 1; i <= Dices; i++)
+                {
+                    int dice = Game.Dice.Roll();
+                    dices += dice;
+                    diceCheck.Add($"На {i} выпало: {Game.Dice.Symbol(dice)}");
+                }
+            }
+
+            Character.Protagonist.Strength -= dices;
+
+            string line = Game.Services.CoinsNoun(dices, "силу", "силы", "сил");
+            diceCheck.Add($"BIG|BAD|Вы потеряли {dices} {line}");
+
+            return diceCheck;
         }
 
         private static bool IsAlive(Character enemy)
