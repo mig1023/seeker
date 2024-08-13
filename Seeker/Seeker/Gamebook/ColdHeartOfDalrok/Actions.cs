@@ -17,6 +17,7 @@ namespace Seeker.Gamebook.ColdHeartOfDalrok
         public int EnemyDamage { get; set; }
         public int Dices { get; set; }
         public int DeathDice { get; set; }
+        public int StrengthPenalty { get; set; }
 
         public List<Character> Enemies { get; set; }
 
@@ -377,7 +378,7 @@ namespace Seeker.Gamebook.ColdHeartOfDalrok
                         alreadyDejected = true;
 
                         fight.Add($"GRAY|Оставшись в одиночестве {enemy.Name} здорово трухнул: " +
-                            $"его верность теперь равна  {enemy.Loyalty}");
+                            $"его верность теперь равна {enemy.Loyalty}");
 
                         if (enemy.Loyalty <= 3)
                         {
@@ -405,6 +406,14 @@ namespace Seeker.Gamebook.ColdHeartOfDalrok
                         fight.Add($"Мощность вашего удара: " +
                             $"{Game.Dice.Symbol(dice)} x 2 + " +
                             $"{Character.Protagonist.Skill} = {protagonistHitStrength}");
+
+                        if (StrengthPenalty > 0)
+                        {
+                            protagonistHitStrength -= StrengthPenalty;
+
+                            fight.Add($"GRAY|Мощность снижается на {StrengthPenalty} " +
+                                $"и равна {protagonistHitStrength}");
+                        }
                     }
 
                     int enemyDice = Game.Dice.Roll();
