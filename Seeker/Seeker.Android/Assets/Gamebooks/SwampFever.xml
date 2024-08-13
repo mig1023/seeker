@@ -52,6 +52,8 @@
 				<Item Name="1" Value="Милитарист"/>
 				<Item Name="2" Value="Берсерк"/>
 			</GetFuryLevel>
+			<AllNumTexts ItemsByOrder=", единицы, двойки, тройки, четвёрки, пятёрки, шестёрки"/>
+			<NumTexts ItemsByOrder=", единичку, двойку, тройку, четвёрку, пятёрку, шестёрку"/>
 		</Dictionaries>
 		<Default>
 			<HideDisabledOption/>

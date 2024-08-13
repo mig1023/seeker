@@ -188,6 +188,9 @@ namespace Seeker.Gamebook.SwampFever
             return upgradeInAction;
         }
 
+        private string ToTxt(int num, bool all = false) =>
+            all ? Constants.AllNumTexts[num] : Constants.NumTexts[num];
+
         public List<string> Fight()
         {
             List<string> fight = new List<string>();
@@ -246,7 +249,7 @@ namespace Seeker.Gamebook.SwampFever
                         {
                             if ((enemyCombination[i] == dice) && (maneuvers > 0))
                             {
-                                fight.Add($"Убираем у противника {dice}-ку за ваше маневрирование");
+                                fight.Add($"Убираем у противника {ToTxt(dice)} за ваше маневрирование");
                                 enemyCombination[i] = 0;
                                 maneuvers -= 1;
                                 failManeuvers = false;
@@ -317,7 +320,7 @@ namespace Seeker.Gamebook.SwampFever
                             int myAttack = myDice + myBonus;
 
                             if (myBonus > 0)
-                                bonuses = $", +{myBonus} за {range}-ки, итого {myAttack}";
+                                bonuses = $", +{myBonus} за {ToTxt(range, all: true)}, итого {myAttack}";
 
                             fight.Add($"Ваша атака: {Game.Dice.Symbol(myDice)}{bonuses}");
 
@@ -328,7 +331,7 @@ namespace Seeker.Gamebook.SwampFever
                             int enemyAttack = enemyDice + enemyBonus;
 
                             if (enemyBonus > 0)
-                                bonuses = $", +{enemyBonus} за {range}-ки, итого {enemyAttack}";
+                                bonuses = $", +{enemyBonus} за {ToTxt(range, all: true)}, итого {enemyAttack}";
 
 
                             fight.Add($"Атака противника: {Game.Dice.Symbol(enemyDice)}{bonuses}");
@@ -375,16 +378,16 @@ namespace Seeker.Gamebook.SwampFever
                         int enemyEvasion = myDice + myBonus - myPenalty;
 
                         if (myBonus > 0)
-                            bonuses = $", +{myBonus} за ваши 3-ки";
+                            bonuses = $", +{myBonus} за ваши тройки";
 
                         if (myPenalty > 0)
-                            penalties = $", -{myPenalty} за его 2-ки";
+                            penalties = $", -{myPenalty} за его двойки";
 
                         fight.Add($"Противник пытется уклониться: " +
                             $"{Game.Dice.Symbol(myDice)}{bonuses}{penalties}, " +
                             $"итого {enemyEvasion} - это " +
                             $"{Game.Services.Сomparison(enemyEvasion, 2)} " +
-                            $"порогового значения '2'");
+                            $"порогового значения 'два'");
 
                         if (enemyEvasion > 2)
                         {
@@ -420,16 +423,16 @@ namespace Seeker.Gamebook.SwampFever
                         int myEvasion = enemyDice + enemyBonus - enemyPenalty;
 
                         if (enemyBonus > 0)
-                            bonuses = $", +{enemyBonus} за его 3-ки";
+                            bonuses = $", +{enemyBonus} за его тройки";
 
                         if (enemyPenalty > 0)
-                            penalties = $", -{enemyPenalty} за ваши 2-ки";
+                            penalties = $", -{enemyPenalty} за ваши двойки";
 
                         fight.Add($"Вы пытется уклониться: " +
                             $"{Game.Dice.Symbol(enemyDice)}{bonuses}{penalties}, " +
                             $"итого {myEvasion} - это " +
                             $"{Game.Services.Сomparison(myEvasion, 2)} " +
-                            $"порогового значения '2'");
+                            $"порогового значения 'два'");
 
                         if (myEvasion > 2)
                         {
