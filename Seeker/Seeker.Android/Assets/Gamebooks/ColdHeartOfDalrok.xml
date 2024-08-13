@@ -2306,7 +2306,9 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="298">
-			<Text>Киньте кубик.</Text>
+			<Actions>
+				<SimpleDice/>
+			</Actions>
 			<Options>
 				<Option Goto="654" Text="Выпало 2, 3 или 5"/>
 				<Option Goto="448" Text="Выпало 1, 4 или 6"/>
