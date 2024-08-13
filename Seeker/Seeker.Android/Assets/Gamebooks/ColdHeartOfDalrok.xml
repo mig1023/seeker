@@ -26,6 +26,7 @@
 			<LuckRecovery>Восстановить 1 цифру удачи</LuckRecovery>
 			<Get>Выбрать</Get>
 			<DiceWounds>Испытать судьбу</DiceWounds>
+			<SimpleDice>Бросьте кубик</SimpleDice>
 		</Buttons>
 	</Introduction>
 	<Paragraphs>
@@ -709,6 +710,9 @@
 		</Paragraph>
 		<Paragraph No="91">
 			<Text>Служанка приносит еду (можете восстановить 4 СИЛЫ) — кстати, очень неплохо приготовленную, хотя случалось вам трапезничать и повкуснее. Трактир потихоньку заполняется, и вы не сомневаетесь, что вот-вот кто-нибудь подсядет за ваш столик. Но кто? Бросьте кубик.</Text>
+			<Actions>
+				<SimpleDice/>
+			</Actions>
 			<Modifications>
 				<Strength Value="4"/>
 			</Modifications>
