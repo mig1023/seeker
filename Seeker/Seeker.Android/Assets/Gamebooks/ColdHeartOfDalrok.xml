@@ -24,6 +24,7 @@
 			<Fight>Сражаться</Fight>
 			<Luck>Проверить удачу</Luck>
 			<LuckRecovery>Восстановить 1 цифру удачи</LuckRecovery>
+			<LuckLose>Потерять 1 цифру удачи</LuckLose>
 			<Get>Выбрать</Get>
 			<DiceWounds>Испытать судьбу</DiceWounds>
 			<SimpleDice>Бросьте кубик</SimpleDice>
@@ -347,7 +348,10 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="39">
-			<Text>Однако старуха не шутила: вы прибегли к помощи черной магии и должны заплатить за это. Киньте кубик и зачеркните еще одн на Листке путешественника.</Text>
+			<Text>Однако старуха не шутила: вы прибегли к помощи черной магии и должны заплатить за это.</Text>
+			<Actions>
+				<LuckLose/>
+			</Actions>
 			<Options>
 				<Option Goto="463"/>
 			</Options>
