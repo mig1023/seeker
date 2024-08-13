@@ -1226,7 +1226,7 @@
 						<Enemy Name="ПЕРВЫЙ ТРОЛЛЬ" Skill="9" Strength="12"/>
 						<Enemy Name="ВТОРОЙ ТРОЛЛЬ" Skill="7" Strength="9"/>
 					</Enemies>
-					<Damage Value="3"/>
+					<EnemyDamage Value="3"/>
 					<Text Style="Small">Каждый их удар, попавший в цель, отнимет у вас не 2, а 3 СИЛЫ. Правда, ваш меч сделает то же самое и с противниками. Однако вам придется на время боя уменьшить свою ЛОВКОСТЬ на 1, поскольку вы сражаетесь со всадниками, стоя на земле.</Text>
 				</Fight>
 			</Actions>
@@ -2292,7 +2292,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="ДИТЯ ТЬМЫ" Skill="10" Strength="6"/>
-					<Damage Value="1"/>
+					<EnemyDamage Value="1"/>
 					<Text>Если вам удалось шесть раз нанести точные удары, призрак с душераздирающим воем исчезает, а вы можете возвращаться на дорогу и продолжать путь.</Text>
 				</Fight>
 			</Actions>
@@ -3477,7 +3477,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="Р'ЗАУРУ" Skill="11" Strength="18"/>
-					<Damage Value="3"/>
+					<EnemyDamage Value="3"/>
 				</Fight>
 			</Actions>
 			<Options>
@@ -3489,8 +3489,8 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="ТРОЛЛЬ" Skill="8" Strength="12"/>
-					<Damage Value="3"/>
-					<Text> Каждый ее удар отнимет у вас не 2, а 3 СИЛЫ, однако вы, без сомнения, будете иметь по сравнению с этой глыбой преимущество в ловкости.</Text>
+					<EnemyDamage Value="3"/>
+					<Text>Каждый ее удар отнимет у вас не 2, а 3 СИЛЫ, однако вы, без сомнения, будете иметь по сравнению с этой глыбой преимущество в ловкости.</Text>
 				</Fight>
 			</Actions>
 			<Options>
@@ -3669,7 +3669,8 @@
 				<Fight>
 					<Enemy Name="КАПИТАН" Skill="10" Strength="14"/>
 					<HeroWoundsLimit/>
-					<Damage Value="3"/>
+					<HeroDamage Value="3"/>
+					<EnemyDamage Value="3"/>
 					<Text>И в этот раз каждая рана будет стоить вам не 2, а 3 СИЛЫ. Правда, и ваша сталь отнимет у врага столько же СИЛ.</Text>
 				</Fight>
 			</Actions>
