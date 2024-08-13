@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Seeker.Game;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Seeker.Gamebook.ColdHeartOfDalrok
 {
@@ -51,6 +53,22 @@ namespace Seeker.Gamebook.ColdHeartOfDalrok
                 {
                     luckRecovery.Add($"Цифра {dice} и так счастливая...");
                 }
+            }
+        }
+
+        private static int UnluckNumersCount() =>
+            Character.Protagonist.Luck.Where(x => x == false).Count();
+
+        public static void FullDicesRecovery(List<string> luckRecovery)
+        {
+            if (UnluckNumersCount() <= 2)
+            {
+                luckRecovery.Add($"Делать нечего: и так только 1 цифра несчастливая...");
+            }
+            else
+            {
+                while (UnluckNumersCount() > 2)
+                    Recovery(luckRecovery);
             }
         }
 

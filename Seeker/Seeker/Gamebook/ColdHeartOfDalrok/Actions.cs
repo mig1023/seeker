@@ -146,6 +146,19 @@ namespace Seeker.Gamebook.ColdHeartOfDalrok
 
             return luckRecovery;
         }
+        
+        public List<string> FullLuckRecovery()
+        {
+            List<string> luckRecovery = new List<string> { "ВОССТАНОВЛЕНИЕ УДАЧИ:\n" };
+
+            Luckiness.FullDicesRecovery(luckRecovery);
+
+            luckRecovery.Add(String.Empty);
+            luckRecovery.Add("BIG|Цифры удачи теперь:");
+            luckRecovery.Add("BIG|" + Luckiness.Numbers());
+
+            return luckRecovery;
+        }
 
         public List<string> LuckLose()
         {
