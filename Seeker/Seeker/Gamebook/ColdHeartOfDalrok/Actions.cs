@@ -14,6 +14,7 @@ namespace Seeker.Gamebook.ColdHeartOfDalrok
         public int HeroDamage { get; set; }
         public int EnemyDamage { get; set; }
         public int Dices { get; set; }
+        public int DeathDice { get; set; }
 
         public List<Character> Enemies { get; set; }
 
@@ -233,18 +234,21 @@ namespace Seeker.Gamebook.ColdHeartOfDalrok
             int dices = 0;
             int count = Dices > 0 ? Dices : 1;
 
-            if (Dices == 0)
+            for (int i = 1; i <= dices; i++)
             {
-                dices = Game.Dice.Roll();
-                diceCheck.Add($"На кубике выпало: {Game.Dice.Symbol(dices)}");
-            }
-            else
-            {
-                for (int i = 1; i <= Dices; i++)
+                int dice = Game.Dice.Roll();
+                dices += dice;
+
+                string diceLine = count == 1 ? String.Empty : $"на {i} ";
+                diceCheck.Add($"На {diceLine}кубике выпало: {Game.Dice.Symbol(dice)}");
+
+                if (dice == DeathDice)
                 {
-                    int dice = Game.Dice.Roll();
-                    dices += dice;
-                    diceCheck.Add($"На {i} выпало: {Game.Dice.Symbol(dice)}");
+                    diceCheck.Add($"BIG|BAD|Ох, как не повезло!");
+                    diceCheck.Add($"BAD|Вы убиты наповал :(");
+
+                    Character.Protagonist.Strength = 0;
+                    return diceCheck;
                 }
             }
 
