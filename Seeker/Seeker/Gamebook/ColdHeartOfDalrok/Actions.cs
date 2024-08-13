@@ -18,6 +18,7 @@ namespace Seeker.Gamebook.ColdHeartOfDalrok
         public int Dices { get; set; }
         public int DeathDice { get; set; }
         public int StrengthPenalty { get; set; }
+        public int SkillPenalty { get; set; }
 
         public List<Character> Enemies { get; set; }
 
@@ -362,7 +363,7 @@ namespace Seeker.Gamebook.ColdHeartOfDalrok
                 fight.Add($"HEAD|BOLD|Раунд: {round}");
 
                 bool attackAlready = false;
-                int protagonistHitStrength = 0;
+                int protagonistHit = 0;
 
                 foreach (Character enemy in FightEnemies)
                 {
@@ -401,29 +402,38 @@ namespace Seeker.Gamebook.ColdHeartOfDalrok
                     if (!attackAlready)
                     {
                         int dice = Game.Dice.Roll();
-                        protagonistHitStrength = Character.Protagonist.Skill + (dice * 2);
+                        int skill = Character.Protagonist.Skill;
+
+                        if (SkillPenalty > 0)
+                        {
+                            skill -= SkillPenalty;
+
+                            fight.Add($"GRAY|Ловкость снижена на {SkillPenalty} " +
+                               $"и равна {skill}");
+                        }
+
+                        protagonistHit = skill + (dice * 2);
 
                         fight.Add($"Мощность вашего удара: " +
-                            $"{Game.Dice.Symbol(dice)} x 2 + " +
-                            $"{Character.Protagonist.Skill} = {protagonistHitStrength}");
+                            $"{Game.Dice.Symbol(dice)} x 2 + {skill} = {protagonistHit}");
 
                         if (StrengthPenalty > 0)
                         {
-                            protagonistHitStrength -= StrengthPenalty;
+                            protagonistHit -= StrengthPenalty;
 
                             fight.Add($"GRAY|Мощность снижается на {StrengthPenalty} " +
-                                $"и равна {protagonistHitStrength}");
+                                $"и равна {protagonistHit}");
                         }
                     }
 
                     int enemyDice = Game.Dice.Roll();
-                    int enemyHitStrength = enemy.Skill + (enemyDice * 2);
+                    int enemyHit = enemy.Skill + (enemyDice * 2);
 
                     fight.Add($"Мощность его удара: " +
                         $"{Game.Dice.Symbol(enemyDice)} x 2 + " +
-                        $"{enemy.Skill} = {enemyHitStrength}");
+                        $"{enemy.Skill} = {enemyHit}");
 
-                    if ((protagonistHitStrength > enemyHitStrength) && !attackAlready)
+                    if ((protagonistHit > enemyHit) && !attackAlready)
                     {
                         fight.Add($"GOOD|{enemy.Name} ранен");
 
@@ -456,11 +466,11 @@ namespace Seeker.Gamebook.ColdHeartOfDalrok
                             return fight;
                         }
                     }
-                    else if (protagonistHitStrength > enemyHitStrength)
+                    else if (protagonistHit > enemyHit)
                     {
                         fight.Add($"BOLD|{enemy.Name} не смог вас ранить");
                     }
-                    else if (protagonistHitStrength < enemyHitStrength)
+                    else if (protagonistHit < enemyHit)
                     {
                         fight.Add($"BAD|{enemy.Name} ранил вас");
 
