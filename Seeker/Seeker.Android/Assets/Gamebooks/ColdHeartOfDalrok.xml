@@ -1025,6 +1025,7 @@
 						<Enemy Name="ПЕРВЫЙ ЛАТНИК" Skill="10" Strength="10"/>
 						<Enemy Name="ВТОРОЙ ЛАТНИК" Skill="10" Strength="8"/>
 					</Enemies>
+					<StrengthPenalty Value="1"/>
 				</Fight>
 			</Actions>
 			<Options>
