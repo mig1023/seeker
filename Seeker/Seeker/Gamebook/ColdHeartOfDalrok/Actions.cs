@@ -11,6 +11,7 @@ namespace Seeker.Gamebook.ColdHeartOfDalrok
         public bool LastIsDoomed { get; set; }
         public bool LastRunsAway { get; set; }
         public bool LastIsDejected { get; set; }
+        public int Damage { get; set; }
 
         public List<Character> Enemies { get; set; }
 
@@ -354,6 +355,12 @@ namespace Seeker.Gamebook.ColdHeartOfDalrok
                         {
                             Character.Protagonist.Strength -= 3;
                             fight.Add($"BAD|Его верность так высока, что ранение обошлось вам в 3 силы!");
+                        }
+                        else if (Damage > 0)
+                        {
+                            Character.Protagonist.Strength -= Damage;
+                            string line = Game.Services.CoinsNoun(Damage, "силу", "силы", "сил");
+                            fight.Add($"BAD|Ранение обошлось вам в {Damage} {line}!");
                         }
                         else
                         {
