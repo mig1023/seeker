@@ -11,7 +11,8 @@ namespace Seeker.Gamebook.ColdHeartOfDalrok
         public bool LastIsDoomed { get; set; }
         public bool LastRunsAway { get; set; }
         public bool LastIsDejected { get; set; }
-        public int Damage { get; set; }
+        public int HeroDamage { get; set; }
+        public int EnemyDamage { get; set; }
 
         public List<Character> Enemies { get; set; }
 
@@ -321,7 +322,16 @@ namespace Seeker.Gamebook.ColdHeartOfDalrok
                     {
                         fight.Add($"GOOD|{enemy.Name} ранен");
 
-                        enemy.Strength -= 2;
+                        if (HeroDamage > 0)
+                        {
+                            enemy.Strength -= HeroDamage;
+                            string line = Game.Services.CoinsNoun(EnemyDamage, "силу", "силы", "сил");
+                            fight.Add($"GOOD|Ранение обошлось вашему противнику в {EnemyDamage} {line}!");
+                        }
+                        else
+                        {
+                            enemy.Strength -= 2;
+                        }
 
                         bool lastDoomed = LastIsDoomed && IsAlive(enemy) && LastEnemy(FightEnemies);
 
@@ -356,11 +366,11 @@ namespace Seeker.Gamebook.ColdHeartOfDalrok
                             Character.Protagonist.Strength -= 3;
                             fight.Add($"BAD|Его верность так высока, что ранение обошлось вам в 3 силы!");
                         }
-                        else if (Damage > 0)
+                        else if (EnemyDamage > 0)
                         {
-                            Character.Protagonist.Strength -= Damage;
-                            string line = Game.Services.CoinsNoun(Damage, "силу", "силы", "сил");
-                            fight.Add($"BAD|Ранение обошлось вам в {Damage} {line}!");
+                            Character.Protagonist.Strength -= EnemyDamage;
+                            string line = Game.Services.CoinsNoun(EnemyDamage, "силу", "силы", "сил");
+                            fight.Add($"BAD|Ранение обошлось вам в {EnemyDamage} {line}!");
                         }
                         else
                         {
