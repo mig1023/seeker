@@ -6081,5 +6081,11 @@
 				<Option Goto="910"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="635">
+			<Text>Причиной была громадная рыбина, которая случайно задела корабль, когда проплывала под ним. Совершенно некстати. Ну да ладно.</Text>
+			<Options>
+				<Option Goto="860"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
