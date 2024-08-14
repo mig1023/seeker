@@ -6588,5 +6588,12 @@
 				<Option Goto="860"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="716">
+			<Text>О! Это ему явно не понравилось! Взбеленившись, морской змей пошёл на Вас в наступление!\n\nВыдержите проверку со сложностью 10!</Text>
+			<Options>
+				<Option Goto="465" Text="Если всё хорошо"/>
+				<Option Goto="49" Text="если нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
