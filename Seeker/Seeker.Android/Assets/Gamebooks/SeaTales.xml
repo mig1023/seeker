@@ -6087,5 +6087,12 @@
 				<Option Goto="860"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="636">
+			<Text>Ну что ж, француз заслужил свою славу превосходного дуэлянта. Вот только бой в условиях корабельной качки и замкнутых помещений - совсем другое дело.\n\nВыдержите проверку со сложностью 5!</Text>
+			<Options>
+				<Option Goto="48" Text="Она успешна"/>
+				<Option Goto="550" Text="Нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
