@@ -6100,5 +6100,12 @@
 				<Option Goto="1160"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="638">
+			<Text>А и в самом деле, почему бы и нет? Люди, в конце концов, должны помогать друг другу, а вместе с этой дрянью совладать намного проще.\n\nВыдержите проверку со сложностью 5!</Text>
+			<Options>
+				<Option Goto="58" Text="Всё успешно"/>
+				<Option Goto="558" Text="Нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
