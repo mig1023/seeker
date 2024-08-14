@@ -6424,5 +6424,11 @@
 				<Option Goto="860"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="690">
+			<Text>Враг силён, и даже более чем. Но разве это Вас когда-нибудь останавливало?\n\nИспытайте судъбу!</Text>
+			<Options>
+				<Option Goto="691,692,693,694,695,696"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
