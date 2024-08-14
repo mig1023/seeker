@@ -6039,5 +6039,11 @@
 				<Option Goto="31" Text="Укрыться всем в трюме и надёжно задраить все входы и выходы - авось и пронесёт"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="628">
+			<Text>Есть, капитан! Право руля! Плаванье проходит нормально!\n\nИспытайте судьбу!</Text>
+			<Options>
+				<Option Goto="629,630,631,633,634,635"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
