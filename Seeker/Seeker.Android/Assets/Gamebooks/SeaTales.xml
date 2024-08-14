@@ -6211,5 +6211,11 @@
 				<Option Goto="650"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="656">
+			<Text>Вы ведёте своих людей в атаку, врезаясь во вражеское скопление. В какой-то момент перед Вами оказывается сам вражеский капитан, умело фехтующий двумя руками сразу...</Text>
+			<Options>
+				<Option Goto="690"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
