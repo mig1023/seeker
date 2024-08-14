@@ -6272,5 +6272,11 @@
 				<Option Goto="49" Text="Нет"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="666">
+			<Text>К тому моменту, как кровавая битва подошла к концу, судно уже пылало вовсю и пламя подобралось к пороховым запасам. Бабахнуло так, что мама не горюй...</Text>
+			<Options>
+				<Option Goto="830"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
