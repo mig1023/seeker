@@ -6075,5 +6075,11 @@
 				<Option Goto="1058"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="634">
+			<Text>К сожалению, плохие погодные условия вынудили Вас изменить курс.\n\nВы теряете 1 пункт Авантюризма и 1 пункт Плаванья!\n\nЧто поделать, такова жизнь...</Text>
+			<Options>
+				<Option Goto="910"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
