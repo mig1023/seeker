@@ -6543,5 +6543,13 @@
 				<Option Goto="987"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="709">
+			<Text>Остаётся надеяться, что внесённая Вами лепта склонит чашу весов на сторону обороняющихся и определит исход сражения.\n\nПо местам! К бою - готовсь!\n\nВыдержите десять стандартных проверок!</Text>
+			<Options>
+				<Option Goto="495" Text="Выдержали все"/>
+				<Option Goto="550" Text="Не все"/>
+				<Option Goto="49" Text="Ни одной"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
