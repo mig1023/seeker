@@ -6406,5 +6406,11 @@
 				<Option Goto="681"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="687">
+			<Text>В какой-то момент Вас сграбастывает огромное количество птиц и поднимает ввысь...</Text>
+			<Options>
+				<Option Goto="659"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
