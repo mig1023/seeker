@@ -6982,5 +6982,11 @@
 				<Option Goto="860"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="778">
+			<Text>Всё. Как говорится, кирдык башибузукам.\n\nВы получаете +2 пункта Авантюризма, +10 пунктов Героизма, +10 пунктов Вдохновения и +10 пунктов Репутации!\n\nЛадно, поплыли...</Text>
+			<Options>
+				<Option Goto="860"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
