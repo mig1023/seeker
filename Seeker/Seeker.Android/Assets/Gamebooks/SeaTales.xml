@@ -6740,5 +6740,11 @@
 				<Option Goto="860"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="740">
+			<Text>Увлечённый поединком, Вы вскоре понимаете, что ситуация, как это часто случается в бою, разительно изменилась...\n\nИспытайте судьбу!</Text>
+			<Options>
+				<Option Goto="741,742,743,744,745,746"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
