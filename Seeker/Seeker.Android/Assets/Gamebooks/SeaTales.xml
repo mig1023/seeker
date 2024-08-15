@@ -7151,5 +7151,11 @@
 				<Option Goto="800"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="804">
+			<Text>Выждав момент, противник наносит Вам мастерски выверенный удар!\n\nЕсли Вы выдержали проверку, то отразили его. В таком случае, Возвращайтесь и испытайте судьбу снова!</Text>
+			<Options>
+				<Option Goto="800"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
