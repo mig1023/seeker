@@ -6674,5 +6674,11 @@
 				<Option Goto="807"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="729">
+			<Text>Ты смотри, прошло как по маслу. Молодца, капитан!</Text>
+			<Options>
+				<Option Goto="987"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
