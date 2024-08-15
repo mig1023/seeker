@@ -7044,5 +7044,11 @@
 				<Option Goto="49" Text="Нет"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="788">
+			<Text>Всё-таки Ваше сердце ещё не настолько огрубело. Поэтому, оставив его наслаждаться жизнью, Вы продолжили свой путь.</Text>
+			<Options>
+				<Option Goto="987"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
