@@ -6680,5 +6680,11 @@
 				<Option Goto="987"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="730">
+			<Text>Артиллерийский поединок в самом разгаре!\n\nИспытайте судьбу!</Text>
+			<Options>
+				<Option Goto="731,732,733,734,735,736"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
