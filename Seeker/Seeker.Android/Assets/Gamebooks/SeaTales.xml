@@ -6846,5 +6846,12 @@
 				<Option Goto="659"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="757">
+			<Text>Ваш ответ на ультиматум был предельно простым:\n\n- Экипаж! К бою!\n\nБросьте игральную кость девять раз и сложите выпавшие значения! Это - сложность проверки, которую Вы должны выдержать!</Text>
+			<Options>
+				<Option Goto="460" Text="Всё успешно"/>
+				<Option Goto="49" Text="Нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
