@@ -7171,5 +7171,42 @@
 				<Option Goto="740"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="807">
+			<Text>Спустя некоторое время пробоины подлатали, мачты заделали, оснастку поправили, страсти на корабле улеглись, положение дел более или менее пришло в порядок, а все уцелевшие члены экипажа воспрянули духом. «Иосиф Обручник» был готов продолжить прерванное плаванье...\n\nПрокладывайте курс, капитан!</Text>
+			<Options>
+				<Option Goto="263" Text="Норд"/>
+				<Option Goto="305" Text="Норд-тень-ост"/>
+				<Option Goto="325" Text="Норд-норд-ост"/>
+				<Option Goto="240" Text="Норд-ост-тень-норд"/>
+				<Option Goto="505" Text="Норд-ост"/>
+				<Option Goto="544" Text="Норд-ост-тень-ост"/>
+				<Option Goto="323" Text="Ост-норд-ост"/>
+				<Option Goto="245" Text="Ост-тень-норд"/>
+				<Option Goto="314" Text="Ост"/>
+				<Option Goto="527" Text="Ост-тень-зюйд"/>
+				<Option Goto="562" Text="Ост-зюйд-ост"/>
+				<Option Goto="239" Text="Зюйд-ост-тень-ост"/>
+				<Option Goto="309" Text="Зюйд-ост"/>
+				<Option Goto="274" Text="Зюйд-ост-тень-зюйд"/>
+				<Option Goto="324" Text="Зюйд-зюйд-ост"/>
+				<Option Goto="528" Text="Зюйд-тень-ост"/>
+				<Option Goto="247" Text="Зюйд"/>
+				<Option Goto="569" Text="Зюйд-тень-вест"/>
+				<Option Goto="321" Text="Зюйд-зюйд-вест"/>
+				<Option Goto="561" Text="Зюйд-вест-тень-зюйд"/>
+				<Option Goto="204" Text="Зюйд-вест"/>
+				<Option Goto="535" Text="Зюйд-вест-тень-вест"/>
+				<Option Goto="332" Text="Вест-зюйд-вест"/>
+				<Option Goto="227" Text="Вест-тень-зюйд"/>
+				<Option Goto="310" Text="Вест"/>
+				<Option Goto="237" Text="Вест-тень-норд"/>
+				<Option Goto="564" Text="Вест-норд-вест"/>
+				<Option Goto="536" Text="Норд-вест-тень-вест"/>
+				<Option Goto="244" Text="Норд-вест"/>
+				<Option Goto="333" Text="Норд-вест-тень-норд"/>
+				<Option Goto="322" Text="Норд-норд-вест"/>
+				<Option Goto="205" Text="Норд-тень-вест"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
