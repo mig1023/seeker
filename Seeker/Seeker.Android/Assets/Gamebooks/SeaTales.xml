@@ -7800,5 +7800,12 @@
 				<Option Goto="891,892,893,894,895,896"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="891">
+			<Text>Жуткий круговорот! Спасайтесь!\n\nВыдержите проверку со сложностью 4.</Text>
+			<Options>
+				<Option Goto="659" Text="Всё плохо"/>
+				<Option Goto="1141" Text="Всё хорошо"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
