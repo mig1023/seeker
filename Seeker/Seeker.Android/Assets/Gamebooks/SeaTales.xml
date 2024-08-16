@@ -7422,5 +7422,11 @@
 				<Option Goto="964"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="839">
+			<Text>Ну и ничего не случилось! Гы!</Text>
+			<Options>
+				<Option Goto="818"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
