@@ -7657,5 +7657,11 @@
 				<Option Goto="962" Text="Нет"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="870">
+			<Text>Есть, капитан! Поднять якорь! Отдать швартовы!\n\nИспытайте судьбу!</Text>
+			<Options>
+				<Option Goto="871,872,873,874,875,876"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
