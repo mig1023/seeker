@@ -7591,5 +7591,15 @@
 				<Option Goto="853" Text="Ост-зюйд-ост"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="863">
+			<Options>
+				<Option Goto="811" Text="Зюйд-ост-тень-ост"/>
+				<Option Goto="911" Text="Зюйд-ост"/>
+				<Option Goto="1177" Text="Зюйд-ост-тень-зюйд"/>
+				<Option Goto="948" Text="Зюйд-зюйд-ост"/>
+				<Option Goto="970" Text="Зюйд-тень-ост"/>
+				<Option Goto="870" Text="Зюйд"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
