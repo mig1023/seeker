@@ -7628,5 +7628,16 @@
 				<Option Goto="890" Text="Норд-тень-вест"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="867">
+			<Text>Море штормит не на шутку! Лучше бы причалить в ближайший порт и переждать!\n\nВы теряете 10 пунктов Плаванья!\n\nЧто поделать, такова жизнь...\n\nБросьте игральную кость! Ближайший к Вам порт:</Text>
+			<Options>
+				<Option Goto="1246" Text="Португальский"/>
+				<Option Goto="1307" Text="Голландский"/>
+				<Option Goto="1292" Text="Английский"/>
+				<Option Goto="1300" Text="Английский"/>
+				<Option Goto="1305" Text="Голландский"/>
+				<Option Goto="1286" Text="Английский"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
