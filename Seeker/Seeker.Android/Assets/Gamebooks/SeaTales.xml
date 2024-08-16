@@ -7639,5 +7639,16 @@
 				<Option Goto="1286" Text="Английский"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="868">
+			<Text>Навстречу Вам движется какое-то судно. Присмотревшись в подзорную трубу, Вы понимаете, что это.\n\nБросьте игральную кость:</Text>
+			<Options>
+				<Option Goto="1288" Text="Генуэзская галера"/>
+				<Option Goto="1293" Text="Французская шебека"/>
+				<Option Goto="1301" Text="Испанская каравелла"/>
+				<Option Goto="1299" Text="Португальская каракка"/>
+				<Option Goto="1219" Text="Шведский полакр"/>
+				<Option Goto="1222" Text="Алжирский самбук"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
