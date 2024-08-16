@@ -7277,5 +7277,11 @@
 				<Option Goto="1211" Text="Пальнуть в него из пушки: может быть, скорее отвяжется"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="818">
+			<Text>Хей-хо! Полный вперёд!\n\nВы получаете +1 пункт Плаванья!\n\nИспытайте судьбу!</Text>
+			<Options>
+				<Option Goto="989,868,889,907,969,828"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
