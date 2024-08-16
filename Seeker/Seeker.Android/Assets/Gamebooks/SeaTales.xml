@@ -7724,5 +7724,11 @@
 				<Option Goto="818"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="880">
+			<Text>Есть, капитан! Лево руля! Полный вперёд!\n\nИспытайте судьбу!</Text>
+			<Options>
+				<Option Goto="881,882,883,884,885,886"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
