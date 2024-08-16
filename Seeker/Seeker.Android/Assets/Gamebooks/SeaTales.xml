@@ -7601,5 +7601,14 @@
 				<Option Goto="870" Text="Зюйд"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="864">
+			<Options>
+				<Option Goto="1134" Text="Зюйд-тень-вест"/>
+				<Option Goto="1000" Text="Зюйд-зюйд-вест"/>
+				<Option Goto="1018" Text="Зюйд-вест-тень-зюйд"/>
+				<Option Goto="900" Text="Зюйд-вест"/>
+				<Option Goto="1025" Text="Зюйд-вест-тень-вест"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
