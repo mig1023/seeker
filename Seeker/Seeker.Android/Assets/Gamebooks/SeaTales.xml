@@ -7373,5 +7373,11 @@
 				<Option Goto="657"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="831">
+			<Text>Есть, капитан! Полный вперёд!\n\nИспытайте судьбу!</Text>
+			<Options>
+				<Option Goto="832,833,834,835,836,837"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
