@@ -7572,5 +7572,15 @@
 				<Option Goto="861,862,863,864,865,866"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="861">
+			<Options>
+				<Option Goto="628" Text="Норд"/>
+				<Option Goto="880" Text="Норд-тень-ост"/>
+				<Option Goto="790" Text="Норд-норд-ост"/>
+				<Option Goto="930" Text="Норд-ост-тень-норд"/>
+				<Option Goto="1190" Text="Норд-ост"/>
+				<Option Goto="1110" Text="Норд-ост-тень-ост"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
