@@ -7701,5 +7701,16 @@
 				<Option Goto="1160" Text="Не хотите её проходить"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="877">
+			<Text>Снова здорово!\n\nБросьте игральную кость!</Text>
+			<Options>
+				<Option Goto="1225" Text="Корабль несёт на рифы"/>
+				<Option Goto="1238" Text="Корабль затягивает в жуткий водоворот"/>
+				<Option Goto="1245" Text="Вихри свирепствуют, на море качка"/>
+				<Option Goto="1252" Text="Ьушует ураган"/>
+				<Option Goto="1262" Text="На Вас несётся тролльвал"/>
+				<Option Goto="1278" Text="Корабль атакован вивернами"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
