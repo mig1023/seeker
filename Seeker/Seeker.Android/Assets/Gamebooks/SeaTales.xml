@@ -7619,5 +7619,14 @@
 				<Option Goto="1051" Text="Вест-норд-вест"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="866">
+			<Options>
+				<Option Goto="918" Text="Норд-вест-тень-вест"/>
+				<Option Goto="1032" Text="Норд-вест"/>
+				<Option Goto="1058" Text="Норд-вест-тень-норд"/>
+				<Option Goto="1148" Text="Норд-норд-вест"/>
+				<Option Goto="890" Text="Норд-тень-вест"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
