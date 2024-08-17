@@ -8061,5 +8061,16 @@
 				<Option Goto="962" Text="Нет"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="926">
+			<Text>Море штормит не на шутку! Лучше бы причалить в ближайший порт и переждать!\n\nВы теряете 10 пунктов Плаванья!\n\nЧто поделать, такова жизнь...\n\nБросьте игральную кость! Ближайший к Вам порт:</Text>
+			<Options>
+				<Option Goto="1314" Text="Французский"/>
+				<Option Goto="1342" Text="Английский"/>
+				<Option Goto="1336" Text="Французский"/>
+				<Option Goto="1350" Text="Испанский"/>
+				<Option Goto="1366" Text="Португальский"/>
+				<Option Goto="1360" Text="Испанский"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
