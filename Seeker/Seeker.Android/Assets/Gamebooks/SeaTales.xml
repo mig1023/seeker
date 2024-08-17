@@ -7926,5 +7926,42 @@
 				<Option Goto="860"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="910">
+			<Text>В морской навигации округлость горизонта делится на тридцать два румба. Смело прокладывайте курс!</Text>
+			<Options>
+				<Option Goto="1008" Text="Норд"/>
+				<Option Goto="1026" Text="Норд-тень-ост"/>
+				<Option Goto="1044" Text="Норд-норд-ост"/>
+				<Option Goto="1033" Text="Норд-ост-тень-норд"/>
+				<Option Goto="1054" Text="Норд-ост"/>
+				<Option Goto="1041" Text="Норд-ост-тень-ост"/>
+				<Option Goto="1053" Text="Ост-норд-ост"/>
+				<Option Goto="1007" Text="Ост-тень-норд"/>
+				<Option Goto="1052" Text="Ост"/>
+				<Option Goto="1027" Text="Ост-тень-зюйд"/>
+				<Option Goto="1042" Text="Ост — зюйд-ост"/>
+				<Option Goto="1006" Text="Зюйд-ост-тень-ост"/>
+				<Option Goto="1043" Text="Зюйд-ост"/>
+				<Option Goto="1029" Text="Зюйд-ост-тень-зюйд"/>
+				<Option Goto="1020" Text="Зюйд-зюйд-ост"/>
+				<Option Goto="1002" Text="Зюйд-тень-ост"/>
+				<Option Goto="1192" Text="Зюйд"/>
+				<Option Goto="1031" Text="Зюйд-тень-вест"/>
+				<Option Goto="1013" Text="Зюйд-зюйд-вест"/>
+				<Option Goto="1004" Text="Зюйд-вест-тень-зюйд"/>
+				<Option Goto="1181" Text="Зюйд-вест"/>
+				<Option Goto="1001" Text="Зюйд-вест-тень-вест"/>
+				<Option Goto="1196" Text="Вест-зюйд-вест"/>
+				<Option Goto="1003" Text="Вест-тень-зюйд"/>
+				<Option Goto="975" Text="Вест"/>
+				<Option Goto="1191" Text="Вест-тень-норд"/>
+				<Option Goto="913" Text="Вест-норд-вест"/>
+				<Option Goto="925" Text="Норд-вест-тень-вест"/>
+				<Option Goto="971" Text="Норд-вест"/>
+				<Option Goto="1180" Text="Норд-вест-тень-норд"/>
+				<Option Goto="953" Text="Норд-норд-вест"/>
+				<Option Goto="974" Text="Норд-тень-вест"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
