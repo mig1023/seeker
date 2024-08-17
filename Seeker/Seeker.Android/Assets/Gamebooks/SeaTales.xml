@@ -8164,5 +8164,11 @@
 				<Option Goto="964"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="939">
+			<Text>Благословив Вас, монах провожает Вас до корабля и долго машет рукой вослед.\n\nВы получаете +20 пунктов Вдохновения!\n\nВас не покидает ощущение того, что всё будет хорошо.</Text>
+			<Options>
+				<Option Goto="964"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
