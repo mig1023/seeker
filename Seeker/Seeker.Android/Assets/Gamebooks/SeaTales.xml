@@ -7939,7 +7939,7 @@
 				<Option Goto="1007" Text="Ост-тень-норд"/>
 				<Option Goto="1052" Text="Ост"/>
 				<Option Goto="1027" Text="Ост-тень-зюйд"/>
-				<Option Goto="1042" Text="Ост — зюйд-ост"/>
+				<Option Goto="1042" Text="Ост-зюйд-ост"/>
 				<Option Goto="1006" Text="Зюйд-ост-тень-ост"/>
 				<Option Goto="1043" Text="Зюйд-ост"/>
 				<Option Goto="1029" Text="Зюйд-ост-тень-зюйд"/>
@@ -7961,6 +7961,12 @@
 				<Option Goto="1180" Text="Норд-вест-тень-норд"/>
 				<Option Goto="953" Text="Норд-норд-вест"/>
 				<Option Goto="974" Text="Норд-тень-вест"/>
+			</Options>
+		</Paragraph>
+		<Paragraph No="911">
+			<Text>Капитан, докладываю: плаванье проходит нормально!\n\nВы получаете +1 пункт Плаванья!\n\nРазрешите идти?\n\nИспытайте судьбу!</Text>
+			<Options>
+				<Option Goto="912,913,914,915,916,917"/>
 			</Options>
 		</Paragraph>
 	</Paragraphs>
