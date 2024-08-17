@@ -7826,5 +7826,11 @@
 				<Option Goto="970"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="895">
+			<Text>До поры до времени, путь протекает спокойно и безмятежно...\n\nВы получаете +1 пункт Плаванья!\n\n...Пока на Вашем пути не возникает морской великан</Text>
+			<Options>
+				<Option Goto="747"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
