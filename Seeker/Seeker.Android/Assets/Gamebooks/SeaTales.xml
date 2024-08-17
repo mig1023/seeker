@@ -7838,5 +7838,11 @@
 				<Option Goto="627"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="897">
+			<Text>Дождавшись, когда сезон штормов пройдёт, Вы продолжили прерванный путь...</Text>
+			<Options>
+				<Option Goto="818"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
