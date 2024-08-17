@@ -8072,5 +8072,15 @@
 				<Option Goto="1360" Text="Испанский"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="927">
+			<Text>Дело хорошее, но всё-таки нужно уточнить детали.</Text>
+			<Options>
+				<Option Goto="878" Text="50% на 50% экипажу и Вам"/>
+				<Option Goto="958" Text="70% экипажу и 30% Вам"/>
+				<Option Goto="962" Text="30% экипажу и 70% Вам"/>
+				<Option Goto="1247" Text="90% экипажу и 10% Вам"/>
+				<Option Goto="1071" Text="90% Вам и 10% экипажу"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
