@@ -7903,5 +7903,16 @@
 				<Option Goto="1039"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="907">
+			<Text>Навстречу Вам движется какое-то судно.\n\nБросьте игральную кость!\n\nПрисмотревшись в подзорную трубу, Вы понимаете, что это...</Text>
+			<Options>
+				<Option Goto="1243" Text="Баркалон Братства Святого Сильвестра"/>
+				<Option Goto="1275" Text="Гардкоут Братства Святого Сильвестра"/>
+				<Option Goto="1227" Text="Французская каравелла"/>
+				<Option Goto="1236" Text="Английский полакр"/>
+				<Option Goto="1311" Text="Голландский полакр"/>
+				<Option Goto="1320" Text="Испанская каракка"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
