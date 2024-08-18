@@ -8475,5 +8475,42 @@
 				<Option Goto="612"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="987">
+			<Text>Выше нос, капитан! Плаванье продолжается! Прокладывайте курс!</Text>
+			<Options>
+				<Option Goto="1180" Text="Норд"/>
+				<Option Goto="913" Text="Норд-тень-ост"/>
+				<Option Goto="925" Text="Норд-норд-ост"/>
+				<Option Goto="953" Text="Норд-ост-тень-норд"/>
+				<Option Goto="971" Text="Норд-ост"/>
+				<Option Goto="1055" Text="Норд-ост-тень-ост"/>
+				<Option Goto="1063" Text="Ост-норд-ост"/>
+				<Option Goto="818" Text="Ост-тень-норд"/>
+				<Option Goto="1191" Text="Ост"/>
+				<Option Goto="974" Text="Ост-тень-зюйд"/>
+				<Option Goto="889" Text="Ост-зюйд-ост"/>
+				<Option Goto="964" Text="Зюйд-ост-тень-ост"/>
+				<Option Goto="1181" Text="Зюйд-ост"/>
+				<Option Goto="969" Text="Зюйд-ост-тень-зюйд"/>
+				<Option Goto="827" Text="Зюйд-зюйд-ост"/>
+				<Option Goto="1061" Text="Зюйд-тень-ост"/>
+				<Option Goto="1196" Text="Зюйд"/>
+				<Option Goto="926" Text="Зюйд-тень-вест"/>
+				<Option Goto="867" Text="Зюйд-зюйд-вест"/>
+				<Option Goto="989" Text="Зюйд-вест-тень-зюйд"/>
+				<Option Goto="1192" Text="Зюйд-вест"/>
+				<Option Goto="1060" Text="Зюйд-вест-тень-вест"/>
+				<Option Goto="955" Text="Вест-зюйд-вест"/>
+				<Option Goto="841" Text="Вест-тень-зюйд"/>
+				<Option Goto="907" Text="Вест"/>
+				<Option Goto="877" Text="Вест-тень-норд"/>
+				<Option Goto="1062" Text="Вест-норд-вест"/>
+				<Option Goto="818" Text="Норд-вест-тень-вест"/>
+				<Option Goto="828" Text="Норд-вест"/>
+				<Option Goto="964" Text="Норд-вест-тень-норд"/>
+				<Option Goto="868" Text="Норд-норд-вест"/>
+				<Option Goto="975" Text="Норд-тень-вест"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
