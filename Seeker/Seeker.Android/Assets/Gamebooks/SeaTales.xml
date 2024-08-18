@@ -8632,5 +8632,11 @@
 				<Option Goto="965" Text="Нет"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="1005">
+			<Text>Крошка Флинт заверят, что недавно видел за бортом розу ветров, прямо как на Вашей карте. Ну да, ну да, конечно: всё так и было.\n\nВы получаете +1 пункт Плаванья!\n\nХотя, кто его знает...</Text>
+			<Options>
+				<Option Goto="860"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
