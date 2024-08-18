@@ -8414,5 +8414,11 @@
 				<Option Goto="628"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="977">
+			<Text>Ладно, пусть живёт. В конце концов, есть немало добычи попроще и повкуснее.</Text>
+			<Options>
+				<Option Goto="987"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
