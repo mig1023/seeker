@@ -8358,5 +8358,16 @@
 				<Option Goto="659" Text="Нет"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="969">
+			<Text>Навстречу Вам движется какое-то судно. Присмотревшись в подзорную трубу, Вы понимаете, что это.\n\nБросьте игральную кость!</Text>
+			<Options>
+				<Option Goto="1324" Text="Генуэзская галера"/>
+				<Option Goto="1331" Text="Венецианская галера"/>
+				<Option Goto="1372" Text="Испанский галеон"/>
+				<Option Goto="1379" Text="Португальский галеасхсй"/>
+				<Option Goto="1376" Text="Французский полакр"/>
+				<Option Goto="1387" Text="Английская каравелла"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
