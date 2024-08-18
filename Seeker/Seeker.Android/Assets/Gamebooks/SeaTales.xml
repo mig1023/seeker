@@ -8326,5 +8326,11 @@
 				<Option Goto="818"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="964">
+			<Text>Тем временем, Ваша одиссея продолжается!\n\nВы получаете +1 пункт Плаванья!\n\nБросьте игральную кость!</Text>
+			<Options>
+				<Option Goto="827,926,867,955,841,877"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
