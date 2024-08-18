@@ -8444,5 +8444,11 @@
 				<Option Goto="980"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="982">
+			<Text>Вы рубите и колите и так, и этак, но проклятые щупальца не поддаются. У, чтоб их.\n\nВозвращайтесь и испытайте судьбу снова!</Text>
+			<Options>
+				<Option Goto="980"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
