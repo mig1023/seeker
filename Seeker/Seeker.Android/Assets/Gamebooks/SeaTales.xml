@@ -8571,5 +8571,11 @@
 				<Option Goto="965"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="996">
+			<Text>Когда казалось, что Вы уже вот-вот разобьётесь, буквально перед самой палубой Вас перехватило другое щупальце, стремительно потащив к морскому чудовищу...</Text>
+			<Options>
+				<Option Goto="659"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
