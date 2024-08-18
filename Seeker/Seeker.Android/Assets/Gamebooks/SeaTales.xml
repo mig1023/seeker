@@ -8275,5 +8275,12 @@
 				<Option Goto="1363" Text="Французский"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="956">
+			<Text>Ну что ж, зададим гадам перца! Орудия! К бою!\n\nБросьте игральную кость десять раз и сложите выпавшие результаты! Это - сложность проверки, которую необходимо выдержать!</Text>
+			<Options>
+				<Option Goto="1330" Text="Всё успешно"/>
+				<Option Goto="878" Text="Нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
