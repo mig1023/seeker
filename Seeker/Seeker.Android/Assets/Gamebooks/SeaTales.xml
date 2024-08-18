@@ -8521,5 +8521,16 @@
 				<Option Goto="1406" Text="Попытаться взять замок"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="989">
+			<Text>Навстречу Вам движется какое-то судно. Присмотревшись в подзорную трубу, Вы понимаете, что это...\n\nБросьте игральную кость!</Text>
+			<Options>
+				<Option Goto="1407" Text="Английский когг"/>
+				<Option Goto="1377" Text="Испанский галеон"/>
+				<Option Goto="1385" Text="Французская тартана"/>
+				<Option Goto="1381" Text="Венецианская галера"/>
+				<Option Goto="1390" Text="Голландский флейтхсЫй"/>
+				<Option Goto="1397" Text="Португальский бригс"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
