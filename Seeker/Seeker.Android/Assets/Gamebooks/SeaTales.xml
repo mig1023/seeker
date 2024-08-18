@@ -8911,5 +8911,11 @@
 				<Option Goto="818"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="1048">
+			<Text>Предложение, конечно же, заманчивое. И всё-таки, Вы вынуждены отказаться.\n\nВы теряете 1 пункт Авантюризма!\n\nБыть может, позднее Вы ещё не раз об этом пожалеете.</Text>
+			<Options>
+				<Option Goto="910"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
