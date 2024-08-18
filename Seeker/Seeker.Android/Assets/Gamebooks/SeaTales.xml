@@ -8420,5 +8420,11 @@
 				<Option Goto="987"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="978">
+			<Text>Ну ладно, не будем мучить людей - на них аж лица нет. Вот только пусть потом не обижаются, если в пути начнётся цинга...</Text>
+			<Options>
+				<Option Goto="910"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
