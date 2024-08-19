@@ -9372,5 +9372,11 @@
 				<Option Goto="990"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="1122">
+			<Text>Стиснув Вас в удушающих скользких объятьях, кракен потащил Вас к себе...</Text>
+			<Options>
+				<Option Goto="659"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
