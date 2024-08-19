@@ -9366,5 +9366,11 @@
 				<Option Goto="1121,1122,1123,1124,1125,1126"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="1121">
+			<Text>Встряхнув Вас так, что едва не вытряс из Вас все кости, кракен в какой-то момент разжал свои щупальца, метнув Вас будто камень из пращи...</Text>
+			<Options>
+				<Option Goto="990"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
