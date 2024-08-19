@@ -9629,5 +9629,11 @@
 				<Option Goto="830"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="1163">
+			<Text>«Эй ты, медузий потрох, ну-ка меня послушай!»</Text>
+			<Options>
+				<Option Goto="940"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
