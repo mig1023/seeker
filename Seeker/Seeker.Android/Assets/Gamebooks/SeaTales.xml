@@ -9635,5 +9635,11 @@
 				<Option Goto="940"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="1164">
+			<Text>«Якорь вам в дышло! Послушайте, что я скажу!»</Text>
+			<Options>
+				<Option Goto="1050"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
