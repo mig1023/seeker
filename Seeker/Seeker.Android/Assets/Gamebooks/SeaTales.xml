@@ -9641,5 +9641,11 @@
 				<Option Goto="1050"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="1165">
+			<Text>«А ну-ка закрыли рты, щенки безбородые! Поплавали бы сперва с моё! Уж я-то такого за свою жизнь навидался!»</Text>
+			<Options>
+				<Option Goto="627"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
