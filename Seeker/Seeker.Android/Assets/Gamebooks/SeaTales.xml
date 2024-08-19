@@ -9623,5 +9623,11 @@
 				<Option Goto="720"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="1162">
+			<Text>«А я настаиваю, что так!»</Text>
+			<Options>
+				<Option Goto="830"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
