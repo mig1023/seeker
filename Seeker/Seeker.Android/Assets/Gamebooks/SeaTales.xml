@@ -9617,5 +9617,11 @@
 				<Option Goto="1161,1162,1163,1164,1165,1166"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="1161">
+			<Text>«Я говорю, что всё было так!»</Text>
+			<Options>
+				<Option Goto="720"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
