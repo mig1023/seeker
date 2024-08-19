@@ -9378,5 +9378,11 @@
 				<Option Goto="659"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="1123">
+			<Text>Выстрел Оливера заставляет кракена вздрогнуть и разжать щупальце, выпуская Вас прямо в воздухе над палубой...</Text>
+			<Options>
+				<Option Goto="962"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
