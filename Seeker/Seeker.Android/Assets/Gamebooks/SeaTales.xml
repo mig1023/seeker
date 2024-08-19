@@ -9599,5 +9599,11 @@
 				<Option Goto="948"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="1158">
+			<Text>Возможно, это было самое мудрое решение из возможных. Они пошли своей дорогой, а «Иосиф Обручник» - своей...</Text>
+			<Options>
+				<Option Goto="1097"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
