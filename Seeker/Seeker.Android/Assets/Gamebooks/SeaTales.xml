@@ -9671,5 +9671,11 @@
 				<Option Goto="853"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="1170">
+			<Text>Море журчит, альбатрос кричит, а путешествие продолжается!\n\nВы получаете +1 пункт Плаванья!\n\nИспытайте судьбу!</Text>
+			<Options>
+				<Option Goto="1171,1172,1173,1174,1175,1176"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
