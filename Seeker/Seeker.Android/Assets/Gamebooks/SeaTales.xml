@@ -9647,5 +9647,11 @@
 				<Option Goto="627"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="1166">
+			<Text>«Значит ты, осьминожья каракатица, смеешь сомневаться в моих словах?! Ну, так слушай!»</Text>
+			<Options>
+				<Option Goto="747"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
