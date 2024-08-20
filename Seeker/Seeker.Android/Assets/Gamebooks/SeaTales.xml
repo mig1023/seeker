@@ -10117,5 +10117,12 @@
 				<Option Goto="860"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="1238">
+			<Text>Команда надеется на Ваше мудрое руководство! Не обманите их доверие!\n\nБросьте две игральные кости и сложите выпавшие значения!\n\nЭто - сложность проверки, которую Вам необходимо преодолеть!</Text>
+			<Options>
+				<Option Goto="910" Text="Всё успешно"/>
+				<Option Goto="1160" Text="Нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
