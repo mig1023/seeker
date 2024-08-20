@@ -9931,5 +9931,12 @@
 				<Option Goto="860"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="1209">
+			<Text>Это достаточно сложно. Но, на данный момент, в этом нет ничего невозможного.\n\nВыдержите проверку со сложностью 25!</Text>
+			<Options>
+				<Option Goto="1199" Text="Всё успешно"/>
+				<Option Goto="659" Text="Нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
