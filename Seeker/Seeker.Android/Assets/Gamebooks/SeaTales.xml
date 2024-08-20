@@ -10354,5 +10354,11 @@
 				<Option Goto="860"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="1276">
+			<Text>Экипаж, конечно же, подчинился, но Ваше решение показалось, по меньшей мере, необоснованным и странным.\n\nВы теряете 15 пунктов Репутации!\n\nНу да ладно...</Text>
+			<Options>
+				<Option Goto="964"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
