@@ -9797,5 +9797,11 @@
 				<Option Goto="965" Text="Нет"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="1188">
+			<Text>Что ж, Вы решили не связываться. Это Ваше право. И Ваше решение ни сколечко не ударило по Вашему авторитету...</Text>
+			<Options>
+				<Option Goto="987"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
