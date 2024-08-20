@@ -9790,5 +9790,12 @@
 				<Option Goto="659" Text="Не очень"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="1187">
+			<Text>Ну, что ж, у Вас есть все шансы.\n\nВыдержите проверку со сложностью 5!</Text>
+			<Options>
+				<Option Goto="860" Text="Всё успешно"/>
+				<Option Goto="965" Text="Нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
