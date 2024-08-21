@@ -10642,5 +10642,11 @@
 				<Option Goto="818"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="1322">
+			<Text>Ну что ж, просто и без соплей. Команда это понимает и уважает.\n\nВы получаете +10 пунктов Репутации!\n\nЛадно, долго тут обсуждать нечего.</Text>
+			<Options>
+				<Option Goto="841"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
