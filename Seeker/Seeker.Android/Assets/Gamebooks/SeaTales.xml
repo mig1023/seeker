@@ -10586,5 +10586,11 @@
 				<Option Goto="1327" Text="Займётесь своими насущными делами и уплывёте"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="1313">
+			<Text>Уфф... Совсем близко... Возможно, стоит подумать о том, чтобы сменить профессию? Хотя, куда ж Вы денетесь от моря?</Text>
+			<Options>
+				<Option Goto="818"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
