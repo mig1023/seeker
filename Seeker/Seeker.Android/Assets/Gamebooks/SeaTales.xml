@@ -10467,5 +10467,11 @@
 				<Option Goto="1050" Text="Не очень"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="1294">
+			<Text>Сказано-сделано. Вы не особенно сентиментальны.\n\nЛадно, чего встали? За работу!</Text>
+			<Options>
+				<Option Goto="964"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
