@@ -11197,5 +11197,12 @@
 				<Option Goto="964"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="1412">
+			<Text>Так сложнее и рискованнее. Но иначе Вы не можете.\n\nБросьте игральную кость десять раз и сложите выпавшие значения! Это - сложность проверки, которую Вам необходимо преодолеть!</Text>
+			<Options>
+				<Option Goto="1419" Text="Всё хорошо"/>
+				<Option Goto="878" Text="Нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
