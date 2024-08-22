@@ -11115,5 +11115,12 @@
 				<Option Goto="964"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="1399">
+			<Text>Что ж, это проще, быстрее и эффективнее.\n\nБросьте пять игральных костей, и сложите выпавшие значения!\n\nЭто - сложность проверки, которую Вам необходимо преодолеть.</Text>
+			<Options>
+				<Option Goto="1405" Text="Всё хорошо"/>
+				<Option Goto="878" Text="Нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
