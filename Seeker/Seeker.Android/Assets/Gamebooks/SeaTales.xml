@@ -11216,5 +11216,12 @@
 				<Option Goto="818"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="1415">
+			<Text>Вы не одиноки в своей борьбе, поэтому одолеть монстра будет несложно. В теории...\n\nБросьте игральную кость! Выпавшее значение - это сложность проверки, которую Вам необходимо выдержать!</Text>
+			<Options>
+				<Option Goto="1429" Text="Всё хорошо"/>
+				<Option Goto="958" Text="Нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
