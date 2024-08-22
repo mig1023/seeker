@@ -11371,5 +11371,11 @@
 				<Option Goto="818"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="1440">
+			<Text>Морской волне нет дела до людей и языков, на которых они разговаривают. Она накрывает корабль, разбив его в щепки...</Text>
+			<Options>
+				<Option Goto="958"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
