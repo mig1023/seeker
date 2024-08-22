@@ -10797,5 +10797,11 @@
 				<Option Goto="910"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="1347">
+			<Text>Да уж, говорили ей, не якшайся с тритонами. И вот результат. Ну, что теперь скажешь - придётся формировать из таких мальков настоящее подразделение морской пехоты...</Text>
+			<Options>
+				<Option Goto="958"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
