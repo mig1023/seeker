@@ -11347,5 +11347,11 @@
 				<Option Goto="964"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="1436">
+			<Text>Как и ожидалось, пальба из пушек по волне не нанесла ей никакого урона. Зато она накрыла корабль, отправив его на дно...</Text>
+			<Options>
+				<Option Goto="962"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
