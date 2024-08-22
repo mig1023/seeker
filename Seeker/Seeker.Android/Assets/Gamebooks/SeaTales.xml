@@ -10773,5 +10773,11 @@
 				<Option Goto="860"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="1343">
+			<Text>Мертвецу не было дела до слов смертного...</Text>
+			<Options>
+				<Option Goto="958"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
