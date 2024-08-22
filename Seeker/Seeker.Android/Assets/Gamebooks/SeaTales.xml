@@ -11395,5 +11395,12 @@
 				<Option Goto="818"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="1444">
+			<Text>Ваше обращение не возымело никакой реакции.</Text>
+			<Options>
+				<Option Goto="1394" Text="Открыть пальбу"/>
+				<Option Goto="839" Text="Плыть, ничего не предпринимать"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
