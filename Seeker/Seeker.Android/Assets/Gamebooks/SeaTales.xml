@@ -10851,5 +10851,11 @@
 				<Option Goto="818"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="1356">
+			<Text>Естественно, ядра пролетели насквозь, не причинив никакого вреда...</Text>
+			<Options>
+				<Option Goto="1247"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
