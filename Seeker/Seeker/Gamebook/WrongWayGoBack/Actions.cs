@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Seeker.Game;
+using System;
 using System.Collections.Generic;
 
 namespace Seeker.Gamebook.WrongWayGoBack
@@ -64,6 +65,28 @@ namespace Seeker.Gamebook.WrongWayGoBack
 
         public override bool Availability(string option) =>
             AvailabilityTrigger(option);
+
+        public override bool IsButtonEnabled(bool secondButton = false)
+        {
+            if (Type == "FirstAidKit")
+            {
+                return Game.Option.IsTriggered("Аптечка");
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        public List<string> FirstAidKit()
+        {
+            Character.Protagonist.Hitpoints += 4;
+            Character.Protagonist.Time -= 60;
+
+            Data.Triggers.Remove("Аптечка");
+
+            return new List<string> { "RELOAD" };
+        }
 
         public List<string> Skill()
         {
