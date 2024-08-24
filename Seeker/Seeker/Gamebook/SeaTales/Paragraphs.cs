@@ -10,12 +10,12 @@ namespace Seeker.Gamebook.SeaTales
     {
         public override Paragraph Get(int id, XmlNode xmlParagraph)
         {
-            if (Constants.ThisIsFirstPart())
+            if (Constants.StoryPart() == 1)
             {
                 if (Data.CurrentParagraphID > 1)
                     Character.Protagonist.Heat -= 1;
             }
-            else
+            else if (Constants.StoryPart() == 2)
             {
                 if (Character.Protagonist.NeedCredibilityCheck)
                 {

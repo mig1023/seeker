@@ -21,6 +21,48 @@ namespace Seeker.Gamebook.SeaTales
 
         public bool NeedCredibilityCheck { get; set; }
 
+        public int Heroism { get; set; }
+
+        private int _alcoholism;
+        public int Alcoholism
+        {
+            get => _alcoholism;
+            set => _alcoholism = Game.Param.Setter(value);
+        }
+
+        private int _adventurism;
+        public int Adventurism
+        {
+            get => _adventurism;
+            set
+            {
+                if (value < 0)
+                    _adventurism = 0;
+                else if (value > 10)
+                    _adventurism = 10;
+                else
+                    _adventurism = value;
+            }
+        }
+
+        private int _travel;
+        public int Travel
+        {
+            get => _travel;
+            set
+            {
+                if (value < -100)
+                    _travel = -100;
+                else if (value > 100)
+                    _travel = 100;
+                else
+                    _travel = value;
+            }
+        }
+
+        public int Reputation { get; set; }
+
+
         public override void Init()
         {
             base.Init();
@@ -28,6 +70,12 @@ namespace Seeker.Gamebook.SeaTales
             Nonsense = 0;
             NeedCredibilityCheck = false;
             Gameover = false;
+
+            Heroism = 0;
+            Alcoholism = 0;
+            Adventurism = 5;
+            Travel = 0;
+            Reputation = 0;
         }
 
         public Character Clone() => new Character()
@@ -38,10 +86,17 @@ namespace Seeker.Gamebook.SeaTales
             Nonsense = this.Nonsense,
             NeedCredibilityCheck = this.NeedCredibilityCheck,
             Gameover = this.Gameover,
+
+            Heroism = this.Heroism,
+            Alcoholism = this.Alcoholism,
+            Adventurism = this.Adventurism,
+            Travel = this.Travel,
+            Reputation = this.Reputation,
         };
 
         public override string Save() => String.Join("|",
-            Heat, Nonsense, NeedCredibilityCheck ? 1 : 0, Gameover ? 1 : 0);
+            Heat, Nonsense, NeedCredibilityCheck ? 1 : 0, Gameover ? 1 : 0,
+            Heroism, Alcoholism, Adventurism, Travel, Reputation);
 
         public override void Load(string saveLine)
         {
@@ -51,6 +106,12 @@ namespace Seeker.Gamebook.SeaTales
             Nonsense = Game.Xml.IntParse(save[1]);
             NeedCredibilityCheck = save[2] == "1";
             Gameover = save[3] == "1";
+
+            Heroism = Game.Xml.IntParse(save[4]);
+            Alcoholism = Game.Xml.IntParse(save[5]);
+            Adventurism = Game.Xml.IntParse(save[6]);
+            Travel = Game.Xml.IntParse(save[7]);
+            Reputation = Game.Xml.IntParse(save[8]);
 
             IsProtagonist = true;
         }

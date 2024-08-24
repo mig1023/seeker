@@ -12,10 +12,19 @@ namespace Seeker.Gamebook.SeaTales
 
         public static Dictionary<int, string> Colors { get; set; }
 
-        private static int FirstPartSize = 400;
+        public static int StoryPart()
+        {
+            int part = 0;
+            int current = Game.Data.CurrentParagraphID;
 
-        public static bool ThisIsFirstPart() =>
-            Game.Data.CurrentParagraphID <= FirstPartSize;
+            foreach (int startParagraph in Colors.Keys.OrderBy(x => x))
+            {
+                if (current >= startParagraph)
+                    part += 1;
+            }
+
+            return part > 0 ? part : 1;
+        }
 
         private bool ColorsList(out List<string> colors)
         {
