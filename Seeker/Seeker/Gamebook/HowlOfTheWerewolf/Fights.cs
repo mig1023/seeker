@@ -120,6 +120,9 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
         public static bool GunShot(ref List<Character> fightEnemies, ref List<string> fight,
             ref int enemyWounds, int WoundsToWin, int WoundsLimit)
         {
+            if (Character.Protagonist.Gun <= 0)
+                return false;
+
             int shots = Character.Protagonist.Mastery - fightEnemies[0].Mastery;
 
             if (shots <= 0)
