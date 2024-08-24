@@ -62,6 +62,9 @@ namespace Seeker.Gamebook.WrongWayGoBack
             }
         }
 
+        public override bool Availability(string option) =>
+            AvailabilityTrigger(option);
+
         public List<string> Skill()
         {
             List<string> lines = new List<string>();
