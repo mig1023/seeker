@@ -48,7 +48,7 @@ namespace Seeker.Gamebook.WalkInThePark
 
         public override int GetGoto(XmlNode xmlOption, int? wayBack = null)
         {
-            if (ThisIsGameover(xmlOption) && Actions.ThisIsFirstPart())
+            if (ThisIsGameover(xmlOption) && (Constants.StoryPart() == 1))
             {
                 return GetStartParagraph();
             }
