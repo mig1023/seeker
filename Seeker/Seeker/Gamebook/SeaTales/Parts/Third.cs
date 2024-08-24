@@ -50,7 +50,7 @@ namespace Seeker.Gamebook.SeaTales.Parts
                 toEndParagraph = 755;
                 toEndText = "Плавание достигло своей цели!";
             }
-            else if (Character.Protagonist.Travel <= -100)
+            else if ((Character.Protagonist.Travel <= -100) && !Game.Option.IsTriggered("Параграф 888"))
             {
                 toEndParagraph = 888;
                 toEndText = "Плавание занесло куда-то не туда...";
