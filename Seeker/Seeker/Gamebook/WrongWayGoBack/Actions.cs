@@ -209,9 +209,17 @@ namespace Seeker.Gamebook.WrongWayGoBack
                 if (heroHitStrength > enemyHitStrength)
                 {
                     fight.Add($"GOOD|{enemy.Name} ранен");
-                    fight.Add("Он теряет 2 очка Выносливости");
 
-                    enemy.Hitpoints -= 2;
+                    if (Game.Option.IsTriggered("Кирка"))
+                    {
+                        fight.Add("От удара кирки он теряет 3 очка Выносливости");
+                        enemy.Hitpoints -= 3;
+                    }
+                    else
+                    {
+                        fight.Add("Он теряет 2 очка Выносливости");
+                        enemy.Hitpoints -= 2;
+                    }
 
                     if (enemy.Hitpoints <= 2)
                     {
