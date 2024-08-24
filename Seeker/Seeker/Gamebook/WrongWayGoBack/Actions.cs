@@ -72,6 +72,10 @@ namespace Seeker.Gamebook.WrongWayGoBack
             {
                 return Game.Option.IsTriggered("Аптечка");
             }
+            else if (Type == "Stimulant")
+            {
+                return Game.Option.IsTriggered("Стимулятор");
+            }
             else
             {
                 return true;
@@ -84,6 +88,15 @@ namespace Seeker.Gamebook.WrongWayGoBack
             Character.Protagonist.Time -= 60;
 
             Data.Triggers.Remove("Аптечка");
+
+            return new List<string> { "RELOAD" };
+        }
+        
+        public List<string> Stimulant()
+        {
+            Character.Protagonist.Hitpoints += 2;
+
+            Data.Triggers.Remove("Стимулятор");
 
             return new List<string> { "RELOAD" };
         }
