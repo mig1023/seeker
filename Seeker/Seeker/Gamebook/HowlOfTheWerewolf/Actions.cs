@@ -180,7 +180,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             List<string> changeCheck = new List<string> {
                 $"Проверка: {Game.Dice.Symbol(firstDice)} + " +
                 $"{Game.Dice.Symbol(secondDice)}{bonusLine} {cmpLine} " +
-                $"{Character.Protagonist.Change} изменение" };
+                $"{Character.Protagonist.Change} (ед. изменения)" };
 
             changeCheck.Add(Result(changeOk, "Победил ЧЕЛОВЕК", "Победил ВОЛК"));
 
