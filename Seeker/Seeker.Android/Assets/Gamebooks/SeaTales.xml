@@ -6135,6 +6135,9 @@
 		</Paragraph>
 		<Paragraph No="639">
 			<Text>У Вас есть достаточно неплохие шансы бежать.\n\nВыдержите проверку!</Text>
+			<Actions>
+				<Test/>
+			</Actions>
 			<Options>
 				<Option Goto="667" Text="Всё успешно"/>
 				<Option Goto="649" Text="Нет"/>
