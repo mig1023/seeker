@@ -18,7 +18,10 @@ namespace Seeker.Gamebook.SeaTales.Parts
 
         public List<string> Representer(Actions action)
         {
-            return new List<string>();
+            string dices = GetTestLevel(out string _);
+            List<int> _ = action.GetTragetDices(dices, out string dicesLine);
+
+            return new List<string> { $"ПРОВЕРКА\nНужно выбросить {dicesLine}" };
         }
 
         public bool GameOver(out int toEndParagraph, out string toEndText)
@@ -105,19 +108,19 @@ namespace Seeker.Gamebook.SeaTales.Parts
             string dices = GetTestLevel(out string heroism);
             List<int> targetDices = action.GetTragetDices(dices, out string dicesLine);
 
-            test.Add($"BOLD|Нужно выдержать проверку!\n" +
-                $"Ввиду того, что Героизм {heroism} нужно выбросить {dicesLine}\n");
+            test.Add($"Нужно выдержать проверку!");
+            test.Add($"BOLD|Ввиду того, что Героизм {heroism} нужно выбросить {dicesLine}");
 
             int dice = Game.Dice.Roll();
-            test.Add($"Бросаем кубик: {Game.Dice.Symbol(dice)}");
+            test.Add($"BIG|Бросаем кубик: {Game.Dice.Symbol(dice)}");
 
             if (targetDices.Contains(dice))
             {
-                test.Add("BIG|GOOD|BOLD|Проверка успешно пройдена! :)");
+                test.Add("BIG|GOOD|BOLD|Проверка УСПЕШНО пройдена! :)");
             }
             else
             {
-                test.Add("BIG|BAD|BOLD|Проверка провалена :(");
+                test.Add("BIG|BAD|BOLD|Проверка ПРОВАЛЕНА :(");
             }
 
             return test;
