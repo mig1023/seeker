@@ -417,10 +417,12 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             Fights.PassageDice(out int dice, out int protagonistPassage);
 
             fight.Add($"Вы обороняете:" +
-                $"{Game.Dice.Symbol(dice)} / 2 = {protagonistPassage}," +
-                $"это {Constants.GetPassageName[protagonistPassage]}");
+                $"{Game.Dice.Symbol(dice)} / 2 = {protagonistPassage}, " +
+                $"это {Constants.GetPassageName[protagonistPassage].ToUpper()}");
 
             fight.Add(String.Empty);
+
+            fight.Add("Считаем куда ломятся волки:");
 
             int woulfCount = 0;
 
@@ -430,13 +432,11 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
                 fight.Add($"{wolf} волк: " +
                     $"{Game.Dice.Symbol(wolfDice)} / 2 = {wolfPassage}, " +
-                    $"ломится через {Constants.GetPassageName[wolfPassage]}");
+                    $"через {Constants.GetPassageName[wolfPassage]}");
 
                 if (protagonistPassage == wolfPassage)
                     woulfCount += 1;
             }
-
-            fight.Add(String.Empty);
 
             if (woulfCount <= 0)
             {
@@ -445,7 +445,9 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             }
             else
             {
-                fight.Add($"BOLD|Вам предстоит сразиться с волками в количестве: {woulfCount}");
+                string count = Game.Services.CoinsNoun(woulfCount, "а", "и", String.Empty);
+                fight.Add($"BOLD|Вам предстоит сразиться " +
+                    $"с волками в количестве: {woulfCount} штук{count}");
             }
 
             fight.Add(String.Empty);
