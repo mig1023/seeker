@@ -33,6 +33,7 @@
 		</Default>
 		<Buttons>
 			<Fight>Сражаться</Fight>
+			<WolfFight>Сражаться с волками</WolfFight>
 			<Luck>Проверить удачу</Luck>
 			<Button Action="Dice, DiceGold, DiceAnxiety, DiceWounds, DicesRestore, DicesEndurance">Кинуть кубик</Button>
 		</Buttons>
