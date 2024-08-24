@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Seeker.Gamebook.WalkInThePark.Parts;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -14,105 +15,38 @@ namespace Seeker.Gamebook.WalkInThePark
 
         private static Random rand = new Random();
 
-        public static bool ThisIsFirstPart() =>
-            Game.Data.CurrentParagraphID <= Constants.FirstPartSize;
+        private static Dictionary<int, IParts> Parts = new Dictionary<int, IParts>();
 
-        public override List<string> Status()
+        public IParts NewPart(int part)
         {
-            if (ThisIsFirstPart())
+            if (part == 1)
             {
-                return new List<string>
-                {
-                    $"Сила: {Character.Protagonist.Strength}",
-                    $"Выносливость: {(double)Character.Protagonist.Endurance / 10}",
-                    $"Удача: {Character.Protagonist.Luck}",
-                };
+                return new First();
             }
             else
             {
-                return new List<string>
-                {
-                    $"Самочувствие: {Character.Protagonist.Health} / {Character.Protagonist.MaxHealth}",
-                    $"Мочесть: {(double)Character.Protagonist.Strength}",
-                    $"Тихопопость: {Character.Protagonist.Stealth}",
-                    $"Фавор: {Character.Protagonist.Fortune}",
-                };
-            }   
+                return new Second();
+            }
         }
 
-        public override List<string> AdditionalStatus()
+        public IParts GetPart()
         {
-            if (ThisIsFirstPart())
-            {
-                return new List<string>
-                {
-                    $"Оружие: {Character.Protagonist.Weapon} (урон {(double)Character.Protagonist.Damage / 10})",
-                    $"Деньги: {Character.Protagonist.Money} руб",
-                    $"Сэмки: {Character.Protagonist.SunflowerSeeds}",
-                };
-            }
-            else
-            {
-                return new List<string>
-                {
-                    $"Оружие: {Character.Protagonist.Weapon} (урон {Character.Protagonist.Damage})",
-                    $"Деньги: {Character.Protagonist.Money} руб",
-                    $"Рейтинг: {Character.Protagonist.Rating}",
-                    $"Частей карты: {Character.Protagonist.MapParts}",
-                    $"Сэмки: {Character.Protagonist.SunflowerSeeds}",
-                };
-            }
+            int part = Constants.StoryPart();
+
+            if (!Parts.ContainsKey(part))
+                Parts[part] = NewPart(part);
+
+            return Parts[part];
         }
 
-        public override bool GameOver(out int toEndParagraph, out string toEndText)
-        {
-            if (ThisIsFirstPart())
-            {
-                return GameOverBy(Character.Protagonist.Endurance, out toEndParagraph, out toEndText);
-            }
-            else if (Game.Data.CurrentParagraphID == 200)
-            {
-                toEndParagraph = 0;
-                toEndText = Output.Constants.GAMEOVER_TEXT;
-                return true;
-            }
-            else
-            {
-                toEndParagraph = 200;
-                toEndText = "Финита ля комедия";
-                return GameOverBy(Character.Protagonist.Health, out _, out _);
-            }
-        }
+        public override List<string> Status() => GetPart().Status();
 
-        public override List<string> Representer()
-        {
-            List<string> enemies = new List<string>();
+        public override List<string> AdditionalStatus() => GetPart().AdditionalStatus();
 
-            if (Price > 0)
-            {
-                string price = Game.Services.CoinsNoun(Price, "рубль", "рубля", "рублей");
-                return new List<string> { $"{Head}, {Price} {price}" };
-            }
+        public override bool GameOver(out int toEndParagraph, out string toEndText) =>
+            GetPart().GameOver(this, out toEndParagraph, out toEndText);
 
-            if (Enemies == null)
-                return enemies;
-
-            foreach (Character enemy in Enemies)
-            {
-                if (ThisIsFirstPart())
-                {
-                    enemies.Add($"{enemy.Name}\nсила {enemy.Strength}  " +
-                        $"выносливость {enemy.Endurance}  урон {(double)enemy.Damage / 10}");
-                }
-                else
-                {
-                    enemies.Add($"{enemy.Name}\nсамочувствие {enemy.Health}  " +
-                        $"мочность {enemy.Strength}  урон {(double)enemy.Damage}");
-                }
-            }
-
-            return enemies;
-        }
+        public override List<string> Representer() => GetPart().Representer(this);
 
         public List<string> Luck()
         {
@@ -363,7 +297,7 @@ namespace Seeker.Gamebook.WalkInThePark
 
         private static bool NoMoreEnemies(List<Character> enemies)
         {
-            bool part1 = ThisIsFirstPart();
+            bool part1 = Constants.StoryPart() == 1;
 
             int enemiesCount = enemies
                 .Where(x => x.GetHealth(part1) > 0)
@@ -464,7 +398,7 @@ namespace Seeker.Gamebook.WalkInThePark
 
         public List<string> Fight()
         {
-            bool part1 = ThisIsFirstPart();
+            bool part1 = Constants.StoryPart() == 1;
 
             List<string> fight = new List<string>();
             List<Character> FightEnemies = new List<Character>();
