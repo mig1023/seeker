@@ -20,7 +20,6 @@
 			<Test>Проверить мастерство</Test>
 		</Buttons>
 		<Default>
-			<HideDisabledOption/>
 			<EqualPartsInStatuses/>
 			<WalkingInCirclesAcceptable/>
 		</Default>
@@ -434,6 +433,7 @@
 			<Modifications>
 				<Time Value="-114"/>
 			</Modifications>
+			<Triggers>Отвёртка</Triggers>
 			<Options>
 				<Option Goto="23" Text="Ты готов покинуть клуб"/>
 				<Option Goto="4" Text="Под столами"/>
@@ -509,8 +509,8 @@
 				<Time Value="-35"/>
 			</Modifications>
 			<Options>
-				<Option Goto="28" Text="У тебя есть электро-пневмо-отвёртка и энергетическая батарея"/>
-				<Option Goto="54" Text="Нет"/>
+				<Option Goto="28" Text="У тебя есть электро-пневмо-отвёртка и энергетическая батарея" Availability="Отвёртка"/>
+				<Option Goto="54" Text="Отвёртки нет"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="43">
