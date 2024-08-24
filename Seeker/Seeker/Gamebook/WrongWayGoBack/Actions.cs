@@ -210,7 +210,12 @@ namespace Seeker.Gamebook.WrongWayGoBack
                 {
                     fight.Add($"GOOD|{enemy.Name} ранен");
 
-                    if (Game.Option.IsTriggered("Кирка"))
+                    if (Game.Option.IsTriggered("Сабля"))
+                    {
+                        fight.Add("От удара парадной офицерской сабли он теряет 4 очка Выносливости");
+                        enemy.Hitpoints -= 4;
+                    }
+                    else if (Game.Option.IsTriggered("Кирка"))
                     {
                         fight.Add("От удара кирки он теряет 3 очка Выносливости");
                         enemy.Hitpoints -= 3;
