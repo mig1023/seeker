@@ -6655,6 +6655,9 @@
 		</Paragraph>
 		<Paragraph No="716">
 			<Text>О! Это ему явно не понравилось! Взбеленившись, морской змей пошёл на Вас в наступление!\n\nВыдержите проверку со сложностью 10!</Text>
+			<Actions>
+				<Test/>
+			</Actions>
 			<Options>
 				<Option Goto="1075" Text="Всё хорошо"/>
 				<Option Goto="659" Text="Нет"/>
