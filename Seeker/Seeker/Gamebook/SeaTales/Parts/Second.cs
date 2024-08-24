@@ -62,8 +62,7 @@ namespace Seeker.Gamebook.SeaTales.Parts
         {
             List<string> test = new List<string>();
 
-            if (Constants.StoryPart() == 1)
-                Character.Protagonist.NeedCredibilityCheck = false;
+            Character.Protagonist.NeedCredibilityCheck = false;
 
             List<int> targetDices = action.GetTragetDices(
                 GetCredibilityLevel(action.Level, out string levelNamePart), out string dicesLine);

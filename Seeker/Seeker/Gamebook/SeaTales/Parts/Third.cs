@@ -69,9 +69,56 @@ namespace Seeker.Gamebook.SeaTales.Parts
             return true;
         }
 
+        private string GetTestLevel(out string heroism)
+        {
+            if (Character.Protagonist.Heroism > 100)
+            {
+                heroism = "выше 100";
+                return "2,3,4,5,6";
+            }
+            else if (Character.Protagonist.Heroism > 75)
+            {
+                heroism = "выше 75";
+                return "3,4,5,6";
+            }
+            else if (Character.Protagonist.Heroism > 50)
+            {
+                heroism = "выше 50";
+                return "4,5,6";
+            }
+            else if (Character.Protagonist.Heroism > 25)
+            {
+                heroism = "выше 25";
+                return "5,6";
+            }
+            else
+            {
+                heroism = "не превышает 25";
+                return "6";
+            }
+        }
+
         public List<string> Test(Actions action)
         {
             List<string> test = new List<string>();
+
+            string dices = GetTestLevel(out string heroism);
+            List<int> targetDices = action.GetTragetDices(dices, out string dicesLine);
+
+            test.Add($"BOLD|Нужно выдержать проверку!\n" +
+                $"Ввиду того, что Героизм {heroism} нужно выбросить {dicesLine}\n");
+
+            int dice = Game.Dice.Roll();
+            test.Add($"Бросаем кубик: {Game.Dice.Symbol(dice)}");
+
+            if (targetDices.Contains(dice))
+            {
+                test.Add("BIG|GOOD|BOLD|Проверка успешно пройдена! :)");
+            }
+            else
+            {
+                test.Add("BIG|BAD|BOLD|Проверка провалена :(");
+            }
 
             return test;
         }
