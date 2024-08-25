@@ -12,6 +12,8 @@ namespace Seeker.Gamebook.SeaTales
 
         public static Dictionary<int, string> Colors { get; set; }
 
+        public static Dictionary<string, string> Properties { get; set; }
+
         public static int StoryPart()
         {
             int part = 0;

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Seeker.Gamebook.SeaTales.Parts
 {
@@ -101,6 +102,38 @@ namespace Seeker.Gamebook.SeaTales.Parts
             }
         }
 
+        private void AdditionalEffects(Actions action, ref List<string> test, string line, bool good)
+        {
+            if (String.IsNullOrEmpty(line))
+                return;
+
+            List<string> effects = line
+                .Split(';')
+                .Select(x => x.Trim())
+                .ToList();
+
+            foreach (string effect in effects)
+            {
+                if (effect.Contains(':'))
+                {
+                    string color = good ? "GOOD" : "BAD";
+                    string[] element = effect.Split(':');
+                    string property = element[0].Trim();
+                    string value = element[1].Trim();
+                    int currentValue = action.GetProperty(Character.Protagonist, property);
+                    int bonus = int.Parse(value);
+                    action.SetProperty(Character.Protagonist, property, currentValue + bonus);
+
+                    test.Add($"{color}|{Constants.Properties[property]} {value}");
+                }
+                else
+                {
+                    test.Add(String.Empty);
+                    test.Add($"{effect}");
+                }
+            }
+        }
+
         public List<string> Test(Actions action)
         {
             List<string> test = new List<string>();
@@ -117,10 +150,12 @@ namespace Seeker.Gamebook.SeaTales.Parts
             if (targetDices.Contains(dice))
             {
                 test.Add("BIG|GOOD|BOLD|Проверка УСПЕШНО пройдена! :)");
+                AdditionalEffects(action, ref test, action.Success, good: true);
             }
             else
             {
                 test.Add("BIG|BAD|BOLD|Проверка ПРОВАЛЕНА :(");
+                AdditionalEffects(action, ref test, action.Fail, good: false);
             }
 
             return test;

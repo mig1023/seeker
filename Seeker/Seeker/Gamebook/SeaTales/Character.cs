@@ -29,6 +29,13 @@ namespace Seeker.Gamebook.SeaTales
             get => _alcoholism;
             set => _alcoholism = Game.Param.Setter(value);
         }
+        
+        private int _inspiration;
+        public int Inspiration
+        {
+            get => _inspiration;
+            set => _inspiration = Game.Param.Setter(value);
+        }
 
         private int _adventurism;
         public int Adventurism
@@ -74,6 +81,7 @@ namespace Seeker.Gamebook.SeaTales
             Heroism = 0;
             Alcoholism = 0;
             Adventurism = 5;
+            Inspiration = 1;
             Travel = 0;
             Reputation = 0;
         }
@@ -90,13 +98,14 @@ namespace Seeker.Gamebook.SeaTales
             Heroism = this.Heroism,
             Alcoholism = this.Alcoholism,
             Adventurism = this.Adventurism,
+            Inspiration = this.Inspiration,
             Travel = this.Travel,
             Reputation = this.Reputation,
         };
 
         public override string Save() => String.Join("|",
             Heat, Nonsense, NeedCredibilityCheck ? 1 : 0, Gameover ? 1 : 0,
-            Heroism, Alcoholism, Adventurism, Travel, Reputation);
+            Heroism, Alcoholism, Adventurism, Inspiration, Travel, Reputation);
 
         public override void Load(string saveLine)
         {
@@ -110,8 +119,9 @@ namespace Seeker.Gamebook.SeaTales
             Heroism = Game.Xml.IntParse(save[4]);
             Alcoholism = Game.Xml.IntParse(save[5]);
             Adventurism = Game.Xml.IntParse(save[6]);
-            Travel = Game.Xml.IntParse(save[7]);
-            Reputation = Game.Xml.IntParse(save[8]);
+            Inspiration = Game.Xml.IntParse(save[7]);
+            Travel = Game.Xml.IntParse(save[8]);
+            Reputation = Game.Xml.IntParse(save[9]);
 
             IsProtagonist = true;
         }
