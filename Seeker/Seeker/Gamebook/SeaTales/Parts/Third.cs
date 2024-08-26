@@ -13,6 +13,7 @@ namespace Seeker.Gamebook.SeaTales.Parts
             $"Героизм: {Character.Protagonist.Heroism}",
             $"Алкоголизм: {Character.Protagonist.Alcoholism}",
             $"Авантюризм: {Character.Protagonist.Adventurism}",
+            $"Вдохновение: {Character.Protagonist.Inspiration}",
             $"Плавание: {Character.Protagonist.Travel}",
             $"Репутация: {Character.Protagonist.Reputation}",
         };
@@ -75,24 +76,26 @@ namespace Seeker.Gamebook.SeaTales.Parts
 
         private string GetTestLevel(out string heroism)
         {
+            heroism = "выше ";
+
             if (Character.Protagonist.Heroism > 100)
             {
-                heroism = "выше 100";
+                heroism += "100";
                 return "2,3,4,5,6";
             }
             else if (Character.Protagonist.Heroism > 75)
             {
-                heroism = "выше 75";
+                heroism += "75";
                 return "3,4,5,6";
             }
             else if (Character.Protagonist.Heroism > 50)
             {
-                heroism = "выше 50";
+                heroism += "50";
                 return "4,5,6";
             }
             else if (Character.Protagonist.Heroism > 25)
             {
-                heroism = "выше 25";
+                heroism += "25";
                 return "5,6";
             }
             else
@@ -122,8 +125,8 @@ namespace Seeker.Gamebook.SeaTales.Parts
                     string value = element[1].Trim();
                     int currentValue = action.GetProperty(Character.Protagonist, property);
                     int bonus = int.Parse(value);
-                    action.SetProperty(Character.Protagonist, property, currentValue + bonus);
 
+                    action.SetProperty(Character.Protagonist, property, currentValue + bonus);
                     test.Add($"{color}|{Constants.Properties[property]} {value}");
                 }
                 else
