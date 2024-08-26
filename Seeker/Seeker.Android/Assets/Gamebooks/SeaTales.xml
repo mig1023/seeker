@@ -10126,7 +10126,10 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="1187">
-			<Text>Ну, что ж, у Вас есть все шансы.\n\nВыдержите проверку со сложностью 5!</Text>
+			<Text>Ну, что ж, у Вас есть все шансы.</Text>
+			<Actions>
+				<Test/>
+			</Actions>
 			<Options>
 				<Option Goto="860" Text="Всё успешно"/>
 				<Option Goto="965" Text="Нет"/>
