@@ -14,6 +14,10 @@ namespace Seeker.Gamebook.SeaTales
 
         public static Dictionary<string, string> Properties { get; set; }
 
+        public static List<string> SuccessButtons { get; set; }
+
+        public static List<string> FailButtons { get; set; }
+
         public static int StoryPart()
         {
             int part = 0;
