@@ -12,33 +12,45 @@ namespace Seeker.Gamebook.LastHokku
         public override Paragraph Get(int id, XmlNode xmlParagraph) =>
             base.Get(xmlParagraph);
 
+        private List<string> HokkuFormat(List<string> text)
+        {
+            List<string> oldHokku = Character.Protagonist.Hokku;
+
+            oldHokku[2] = new System.Globalization
+                .CultureInfo("ru-RU", false)
+                .TextInfo
+                .ToTitleCase(oldHokku[2]);
+
+            List<string> newHokku = new List<string>
+            {
+                $"{oldHokku[0]} {oldHokku[1]}",
+                $"{oldHokku[2]} {oldHokku[3]}.",
+                $"{oldHokku[4]} - {oldHokku[5]} {oldHokku[6]}...",
+            };
+
+            return newHokku;
+        }
+
         private string TextByOptions(string option)
         {
             if (Character.Protagonist.Hokku == null)
+            {
                 return String.Empty;
+            }
 
-            bool wihoutHokku = Constants.GetParagraphsWithoutHokkuCreation.Contains(Game.Data.CurrentParagraphID);
+            bool wihoutHokku = Constants.GetParagraphsWithoutHokkuCreation
+                .Contains(Game.Data.CurrentParagraphID);
 
-            bool needToAdd = (Character.Protagonist.Hokku.Count == 0) || (Character.Protagonist.Hokku.Last() != option);
-            bool fullHokku = (Character.Protagonist.Hokku.Count > 0) && Character.Protagonist.Hokku.Last().Contains('.');
+            string last = Character.Protagonist.Hokku.LastOrDefault() ?? String.Empty;
 
-            if (!wihoutHokku && !String.IsNullOrEmpty(option) && needToAdd && !fullHokku)
+            if (!wihoutHokku && (last != option) && !last.Contains('.'))
+            {
                 Character.Protagonist.Hokku.Add(option);
 
-            if (Character.Protagonist.Hokku.Count >= 7)
-            {
-                List<string> oldHokku = Character.Protagonist.Hokku;
-
-                oldHokku[2] = new System.Globalization.CultureInfo("ru-RU", false).TextInfo.ToTitleCase(oldHokku[2]);
-
-                List<string> newHokku = new List<string>
+                if (Character.Protagonist.Hokku.Count >= 7)
                 {
-                    $"{oldHokku[0]} {oldHokku[1]}",
-                    $"{oldHokku[2]} {oldHokku[3]}.",
-                    $"{oldHokku[4]} - {oldHokku[5]} {oldHokku[6]}...",
-                };
-
-                Character.Protagonist.Hokku = newHokku;
+                    Character.Protagonist.Hokku = HokkuFormat(Character.Protagonist.Hokku);
+                }
             }
 
             return String.Join("\n", Character.Protagonist.Hokku);
