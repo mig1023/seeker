@@ -1,4 +1,4 @@
 # seeker
 
-Mobile platform for gamebooks, based on the Xamarin framework 
-105 gamebooks is digitalized
+Mobile platform for gamebooks, based on the Xamarin framework.<br>
+105 gamebooks is digitalized.
