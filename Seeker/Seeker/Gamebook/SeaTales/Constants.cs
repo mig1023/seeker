@@ -88,6 +88,7 @@ namespace Seeker.Gamebook.SeaTales
                 [ColorTypes.StatusBar] = colorsList[4],
                 [ColorTypes.ActionBox] = colorsList[5],
                 [ColorTypes.Background] = colorsList[6],
+                [ColorTypes.AdditionalStatus] = colorsList[7],
             };
 
             if (colors.ContainsKey(type))
