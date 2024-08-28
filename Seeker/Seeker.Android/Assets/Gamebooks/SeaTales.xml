@@ -6427,12 +6427,18 @@
 					<Text>Ладно, дело надо делать...</Text>
 				</Test>
 			</Actions>
+			<Modifications>
+				<Adventurism Value="-1"/>
+			</Modifications>
 			<Options>
 				<Option Goto="807"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="664">
 			<Text>Во время отражения атаки шальная пуля сразила одного из Ваших офицеров. Это не просто серьёзная личная утрата для Вас, но и серьёзные проблемы: за всем самому не уследить, и есть масса серьёзных дел и задач, распределённых между командным составом.\n\nВы теряете 1 пункт Авантюризма!\n\nЧто поделать. Вы скорбите об утрате, но такова жизнь.</Text>
+			<Modifications>
+				<Adventurism Value="-1"/>
+			</Modifications>
 			<Options>
 				<Option Goto="807"/>
 			</Options>
