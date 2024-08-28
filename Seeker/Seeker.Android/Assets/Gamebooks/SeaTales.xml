@@ -7656,6 +7656,12 @@
 		</Paragraph>
 		<Paragraph No="797">
 			<Text>Как говорится, секир башка сарацинам!\n\nВы получаете +3 пункта Авантюризма, +15 пунктов Героизма, +15 пунктов Вдохновения и +15 пунктов Репутации!\n\nЛадно, разобрались - и поплыли.</Text>
+			<Modifications>
+				<Adventurism Value="3"/>
+				<Heroism Value="15"/>
+				<Inspiration Value="15"/>
+				<Reputation Value="15"/>
+			</Modifications>
 			<Options>
 				<Option Goto="807"/>
 			</Options>
