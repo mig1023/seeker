@@ -6461,6 +6461,13 @@
 		</Paragraph>
 		<Paragraph No="667">
 			<Text>Йо-хо-хо! Так ему, тупой образине!\n\nВы получаете +3 пункта Авантюризма, +20 пунктов Героизма, +20 пунктов Вдохновения, +30 пунктов Репутации и +1 пункт Плаванья!\n\nЛадно, теперь нужно определиться, как быть дальше...</Text>
+			<Modifications>
+				<Adventurism Value="3"/>
+				<Heroism Value="20"/>
+				<Inspiration Value="20"/>
+				<Reputation Value="30"/>
+				<Travel Value="1"/>
+			</Modifications>
 			<Options>
 				<Option Goto="987"/>
 			</Options>
