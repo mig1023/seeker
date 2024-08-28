@@ -11725,6 +11725,9 @@
 					<Text>Ладно, не в Ваших силах изменить это. Остаётся только принять и жить дальше. Быть может, Вы поможете другим людям, и всё не напрасно...</Text>
 				</Test>
 			</Actions>
+			<Modifications>
+				<Adventurism Value="-4"/>
+			</Modifications>
 			<Options>
 				<Option Goto="964"/>
 			</Options>
