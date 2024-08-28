@@ -7646,6 +7646,9 @@
 			<Actions>
 				<Test/>
 			</Actions>
+			<Modifications>
+				<Travel Value="1"/>
+			</Modifications>
 			<Options>
 				<Option Goto="769" Text="Всё успешно"/>
 				<Option Goto="659" Text="Нет"/>
