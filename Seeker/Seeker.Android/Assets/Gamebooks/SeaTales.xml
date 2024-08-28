@@ -7088,6 +7088,12 @@
 		</Paragraph>
 		<Paragraph No="736">
 			<Text>Несколько точных попаданий раскололи китайское коромысло как скорлупку, отправив джонку на дно, а её экипаж - кормить рыбок.\n\nВы получаете +2 пункта Авантюризма, +25 пунктов Героизма, +15 пунктов Вдохновения и +15 пунктов Репутации!\n\nЛадно, посмотрели - и хватит...</Text>
+			<Modifications>
+				<Adventurism Value="2"/>
+				<Heroism Value="25"/>
+				<Inspiration Value="15"/>
+				<Reputation Value="15"/>
+			</Modifications>
 			<Options>
 				<Option Goto="910"/>
 			</Options>
