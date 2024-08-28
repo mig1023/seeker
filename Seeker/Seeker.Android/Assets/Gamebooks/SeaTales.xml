@@ -7459,6 +7459,12 @@
 		</Paragraph>
 		<Paragraph No="778">
 			<Text>Всё. Как говорится, кирдык башибузукам.\n\nВы получаете +2 пункта Авантюризма, +10 пунктов Героизма, +10 пунктов Вдохновения и +10 пунктов Репутации!\n\nЛадно, поплыли...</Text>
+			<Modifications>
+				<Adventurism Value="2"/>
+				<Heroism Value="10"/>
+				<Inspiration Value="10"/>
+				<Reputation Value="10"/>
+			</Modifications>
 			<Options>
 				<Option Goto="860"/>
 			</Options>
