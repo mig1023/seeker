@@ -9384,6 +9384,12 @@
 			<Actions>
 				<Test/>
 			</Actions>
+			<Modifications>
+				<Adventurism Value="2"/>
+				<Heroism Value="10"/>
+				<Inspiration Value="10"/>
+				<Reputation Value="10"/>
+			</Modifications>
 			<Options>
 				<Option Goto="937" Text="Всё хорошо"/>
 				<Option Goto="899" Text="Не очень"/>
