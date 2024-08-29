@@ -9412,6 +9412,9 @@
 		</Paragraph>
 		<Paragraph No="964">
 			<Text>Тем временем, Ваша одиссея продолжается!\n\nВы получаете +1 пункт Плаванья!\n\nИспытайте судьбу!</Text>
+			<Modifications>
+				<Travel Value="1"/>
+			</Modifications>
 			<Options>
 				<Option Goto="827,926,867,955,841,877"/>
 			</Options>
