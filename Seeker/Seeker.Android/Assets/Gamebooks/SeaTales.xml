@@ -8902,6 +8902,9 @@
 					<Text>Но и о делах забывать нельзя...</Text>
 				</Test>
 			</Actions>
+			<Modifications>
+				<Travel Value="1"/>
+			</Modifications>
 			<Options>
 				<Option Goto="628"/>
 			</Options>
