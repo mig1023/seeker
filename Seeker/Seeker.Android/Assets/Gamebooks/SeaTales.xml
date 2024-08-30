@@ -10363,6 +10363,9 @@
 					<Text>Капитан, возьмите себя в руки</Text>
 				</Test>
 			</Actions>
+			<Modifications>
+				<Travel Value="1"/>
+			</Modifications>
 			<Options>
 				<Option Goto="860"/>
 			</Options>
