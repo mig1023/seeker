@@ -10982,6 +10982,9 @@
 					<Text>...Ладно, поплыли.</Text>
 				</Test>
 			</Actions>
+			<Modifications>
+				<Adventurism Value="-1"/>
+			</Modifications>
 			<Options>
 				<Option Goto="860"/>
 			</Options>
