@@ -10226,6 +10226,9 @@
 		</Paragraph>
 		<Paragraph No="1045">
 			<Text>По правому борту плывёт так называемый британский кит. Ему нет никакого дела до Вас, как и Вам - до него.\n\nВы получаете +1 пункт Плаванья!\n\nНу, вот и славно...</Text>
+			<Modifications>
+				<Travel Value="1"/>
+			</Modifications>
 			<Options>
 				<Option Goto="880"/>
 			</Options>
