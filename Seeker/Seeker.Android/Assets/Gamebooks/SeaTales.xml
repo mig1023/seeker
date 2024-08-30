@@ -10257,6 +10257,9 @@
 		</Paragraph>
 		<Paragraph No="1048">
 			<Text>Предложение, конечно же, заманчивое. И всё-таки, Вы вынуждены отказаться.\n\nВы теряете 1 пункт Авантюризма!\n\nБыть может, позднее Вы ещё не раз об этом пожалеете.</Text>
+			<Modifications>
+				<Adventurism Value="-1"/>
+			</Modifications>
 			<Options>
 				<Option Goto="910"/>
 			</Options>
