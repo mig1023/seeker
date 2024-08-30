@@ -10420,6 +10420,10 @@
 			<Actions>
 				<Test/>
 			</Actions>
+			<Modifications>
+				<Adventurism Value="-3"/>
+				<Travel Value="1"/>
+			</Modifications>
 			<Options>
 				<Option Goto="1423" Text="Всё успешно"/>
 				<Option Goto="958" Text="Нет"/>
