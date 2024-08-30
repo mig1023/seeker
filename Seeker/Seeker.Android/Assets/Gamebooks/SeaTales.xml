@@ -10597,6 +10597,10 @@
 					<Text>...Ничего, всякое в жизни случается. Учитесь и делайте выводы...</Text>
 				</Test>
 			</Actions>
+			<Modifications>
+				<Adventurism Value="2"/>
+				<Reputation Value="10"/>
+			</Modifications>
 			<Options>
 				<Option Goto="860"/>
 			</Options>
