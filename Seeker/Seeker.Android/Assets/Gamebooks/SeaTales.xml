@@ -11246,6 +11246,9 @@
 				<Test/>
 				<Test/>
 			</Actions>
+			<Modifications>
+				<Travel Value="1"/>
+			</Modifications>
 			<Options>
 				<Option Goto="1434" Text="Выдержали все"/>
 				<Option Goto="878" Text="Выдержали три"/>
