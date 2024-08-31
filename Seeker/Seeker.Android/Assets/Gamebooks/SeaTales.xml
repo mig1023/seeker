@@ -12736,6 +12736,12 @@
 		</Paragraph>
 		<Paragraph No="1303">
 			<Text>Ну что ж, это война. Они первые развязали её и погромили Ваш город. Сентиментальность здесь неуместна.\n\nВы получаете +1 пункт Авантюризма, +5 пунктов Героизма, +5 пунктов Вдохновения и +5 пунктов Репутации!\n\nВы им ещё покажете, чей это океан.</Text>
+			<Modifications>
+				<Adventurism Value="1"/>
+				<Heroism Value="5"/>
+				<Inspiration Value="5"/>
+				<Reputation Value="5"/>
+			</Modifications>
 			<Options>
 				<Option Goto="987"/>
 			</Options>
