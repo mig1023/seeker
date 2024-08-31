@@ -13406,6 +13406,12 @@
 		</Paragraph>
 		<Paragraph No="1378">
 			<Text>Голландский флейт разбит, а Вы - испытываете чувство глубокого удовлетворения. Кто б знал, как они уже Вас доконали...\n\nВы получаете +3 пункта Авантюризма, +15 пунктов Героизма, +15 пунктов Вдохновения и +15 пунктов Репутации!\n\nЛадно, поглазели - и будет...</Text>
+			<Modifications>
+				<Adventurism Value="3"/>
+				<Heroism Value="15"/>
+				<Inspiration Value="15"/>
+				<Reputation Value="15"/>
+			</Modifications>
 			<Options>
 				<Option Goto="964"/>
 			</Options>
