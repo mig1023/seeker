@@ -12375,6 +12375,12 @@
 		</Paragraph>
 		<Paragraph No="1265">
 			<Text>Всё, кирдык шайтанам!\n\nВы получаете +4 пункта Авантюризма, +20 пунктов Героизма, +20 пунктов Вдохновения, +20 пунктов Репутации!\n\nБудут знать, как соваться в Ваши воды.</Text>
+			<Modifications>
+				<Adventurism Value="4"/>
+				<Heroism Value="20"/>
+				<Inspiration Value="20"/>
+				<Reputation Value="20"/>
+			</Modifications>
 			<Options>
 				<Option Goto="807"/>
 			</Options>
