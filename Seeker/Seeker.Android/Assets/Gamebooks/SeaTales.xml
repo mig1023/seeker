@@ -11667,6 +11667,9 @@
 		</Paragraph>
 		<Paragraph No="1190">
 			<Text>Долгое время не происходит решительно ничего, достойного упоминания. И это - уже хорошо.\n\nВы получаете +1 пункт Плаванья!\n\nИспытайте судьбу!</Text>
+			<Modifications>
+				<Travel Value="1"/>
+			</Modifications>
 			<Options>
 				<Option Goto="1191,1192,1193,1194,1195,1196"/>
 			</Options>
