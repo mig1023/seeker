@@ -12321,6 +12321,10 @@
 		</Paragraph>
 		<Paragraph No="1260">
 			<Text>Поговорив с англичанами о том и о сём, пошутив и потравив байки, Вы несколько прибавили оптимизма и, тепло попрощавшись, продолжили плаванье.\n\nВы получаете +1 пункт Авантюризма и +5 пунктов Вдохновения!\n\nПолный вперёд!</Text>
+			<Modifications>
+				<Adventurism Value="1"/>
+				<Inspiration Value="5"/>
+			</Modifications>
 			<Options>
 				<Option Goto="910"/>
 			</Options>
