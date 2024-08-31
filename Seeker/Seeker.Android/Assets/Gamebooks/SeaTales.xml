@@ -12491,6 +12491,9 @@
 		</Paragraph>
 		<Paragraph No="1276">
 			<Text>Экипаж, конечно же, подчинился, но Ваше решение показалось, по меньшей мере, необоснованным и странным.\n\nВы теряете 15 пунктов Репутации!\n\nНу да ладно...</Text>
+			<Modifications>
+				<Reputation Value="15"/>
+			</Modifications>
 			<Options>
 				<Option Goto="964"/>
 			</Options>
