@@ -11611,6 +11611,10 @@
 			<Actions>
 				<Test/>
 			</Actions>
+			<Modifications>
+				<Adventurism Value="-1"/>
+				<Reputation Value="-5"/>
+			</Modifications>
 			<Options>
 				<Option Goto="1167" Text="Всё прошло удачно"/>
 				<Option Goto="1156" Text="Нет"/>
