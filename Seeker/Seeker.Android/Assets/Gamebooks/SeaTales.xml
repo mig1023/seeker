@@ -12233,6 +12233,9 @@
 		</Paragraph>
 		<Paragraph No="1250">
 			<Text>Экипаж, конечно же, подчинился приказу. Но тотчас же усомнился в Вашей компетентности и адекватности.\n\nВы теряете 20 пунктов Репутации!\n\nКак знать, как знать...</Text>
+			<Modifications>
+				<Reputation Value="-20"/>
+			</Modifications>
 			<Options>
 				<Option Goto="818"/>
 			</Options>
