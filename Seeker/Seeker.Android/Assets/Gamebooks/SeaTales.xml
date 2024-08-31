@@ -12748,6 +12748,12 @@
 		</Paragraph>
 		<Paragraph No="1304">
 			<Text>Получив решительный и жёсткий отпор, к которому он оказался не готов, гигант уплыл в поисках добычи повкуснее и попроще.\n\nВы получаете +1 пункт Авантюризма, +5 пунктов Героизма, +5 пунктов Вдохновения и +5 пунктов Репутации!\n\nИшь ты! Понарасплодились тут, понимаешь!</Text>
+			<Modifications>
+				<Adventurism Value="1"/>
+				<Heroism Value="5"/>
+				<Inspiration Value="5"/>
+				<Reputation Value="5"/>
+			</Modifications>
 			<Options>
 				<Option Goto="818"/>
 			</Options>
