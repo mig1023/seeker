@@ -11941,6 +11941,12 @@
 		</Paragraph>
 		<Paragraph No="1220">
 			<Text>Без труда разгромив это плавучее недоразумение, Вы вскоре уплыли, забыв о нём, как о прошедшей плохой погоде.\n\nВы получаете +1 пункт Авантюризма, +5 пунктов Героизма, +5 пунктов Вдохновения, +5 пунктов Репутации!\n\nЧто ж, измельчал пират, да...</Text>
+			<Modifications>
+				<Adventurism Value="1"/>
+				<Heroism Value="5"/>
+				<Inspiration Value="5"/>
+				<Reputation Value="5"/>
+			</Modifications>
 			<Options>
 				<Option Goto="910"/>
 			</Options>
