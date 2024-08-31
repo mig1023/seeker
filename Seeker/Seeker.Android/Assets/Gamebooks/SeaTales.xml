@@ -12036,6 +12036,12 @@
 		</Paragraph>
 		<Paragraph No="1230">
 			<Text>В скором времени Вы уничтожили этих назойливых комариков, и продолжили прерванный путь.\n\nВы получаете +1 пункт Авантюризма, +5 пунктов Героизма, +5 пунктов Вдохновения, +5 пунктов Репутации!\n\nЗаполонили уже весь океан, понимаешь...</Text>
+			<Modifications>
+				<Adventurism Value="1"/>
+				<Heroism Value="5"/>
+				<Inspiration Value="5"/>
+				<Reputation Value="5"/>
+			</Modifications>
 			<Options>
 				<Option Goto="860"/>
 			</Options>
