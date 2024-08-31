@@ -12460,6 +12460,12 @@
 		</Paragraph>
 		<Paragraph No="1273">
 			<Text>Да, капитан, Вы - явно человек не промах, и обладаете многими талантами. А матросам - просто любо слушать, как Вы запеваете. И работа ладится, и плыть веселее.\n\nВы получаете +1 пункт Авантюризма, +5 пунктов Героизма, +5 пунктов Вдохновения, +5 пунктов Репутации!\n\nХей-хо!</Text>
+			<Modifications>
+				<Adventurism Value="1"/>
+				<Heroism Value="5"/>
+				<Inspiration Value="5"/>
+				<Reputation Value="5"/>
+			</Modifications>
 			<Options>
 				<Option Goto="818"/>
 			</Options>
