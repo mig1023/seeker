@@ -12612,6 +12612,12 @@
 		</Paragraph>
 		<Paragraph No="1289">
 			<Text>Битва была насыщенной. Но, слава Богу, всё уже позади.\n\nВы получаете +5 пунктов Авантюризма, +25 пунктов Героизма, +25 пунктов Вдохновения и +25 пунктов Репутации!\n\nЧто ж, теперь нужно подлатать корабль и продолжить путь.</Text>
+			<Modifications>
+				<Adventurism Value="5"/>
+				<Heroism Value="25"/>
+				<Inspiration Value="25"/>
+				<Reputation Value="25"/>
+			</Modifications>
 			<Options>
 				<Option Goto="807"/>
 			</Options>
