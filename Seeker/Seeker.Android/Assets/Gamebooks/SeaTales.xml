@@ -11755,6 +11755,12 @@
 					<Text>Ладно, поплыли...</Text>
 				</Test>
 			</Actions>
+			<Modifications>
+				<Adventurism Value="5"/>
+				<Heroism Value="50"/>
+				<Inspiration Value="50"/>
+				<Reputation Value="50"/>
+			</Modifications>
 			<Options>
 				<Option Goto="860"/>
 			</Options>
