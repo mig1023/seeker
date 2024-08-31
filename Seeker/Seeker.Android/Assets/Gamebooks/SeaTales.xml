@@ -12911,6 +12911,9 @@
 		</Paragraph>
 		<Paragraph No="1322">
 			<Text>Ну что ж, просто и без соплей. Команда это понимает и уважает.\n\nВы получаете +10 пунктов Репутации!\n\nЛадно, долго тут обсуждать нечего.</Text>
+			<Modifications>
+				<Reputation Value="10"/>
+			</Modifications>
 			<Options>
 				<Option Goto="841"/>
 			</Options>
