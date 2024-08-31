@@ -12387,6 +12387,12 @@
 		</Paragraph>
 		<Paragraph No="1266">
 			<Text>Получив решительный отпор, монстр уходит, скрывшись в морской пучине.\n\nВы получаете +1 пункт Авантюризма, +5 пунктов Героизма, +5 пунктов Вдохновения, +5 пунктов Репутации!\n\nИшь ты! Будет знать, как связываться с людьми...</Text>
+			<Modifications>
+				<Adventurism Value="1"/>
+				<Heroism Value="5"/>
+				<Inspiration Value="5"/>
+				<Reputation Value="5"/>
+			</Modifications>
 			<Options>
 				<Option Goto="860"/>
 			</Options>
