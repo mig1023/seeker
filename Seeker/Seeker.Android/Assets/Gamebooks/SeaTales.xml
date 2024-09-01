@@ -13937,6 +13937,12 @@
 		</Paragraph>
 		<Paragraph No="1429">
 			<Text>Ну что ж, монстр плавает кверху брюхом. Больше он не будет топить корабли. Вместо этого его жир пойдёт на свечи, мясо на колбасу, ну и прочее не пропадёт...\n\nВы получаете +1 пункт Авантюризма, +5 пунктов Героизма, +5 пунктов Вдохновения, +5 пунктов Репутации!\n\nПрекрасно...</Text>
+			<Modifications>
+				<Adventurism Value="1"/>
+				<Heroism Value="5"/>
+				<Inspiration Value="5"/>
+				<Reputation Value="5"/>
+			</Modifications>
 			<Options>
 				<Option Goto="818"/>
 			</Options>
