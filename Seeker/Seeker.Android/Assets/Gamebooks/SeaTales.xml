@@ -14043,6 +14043,12 @@
 		</Paragraph>
 		<Paragraph No="1439">
 			<Text>Досадная мелочь, не более.\n\nВы получаете +1 пункт Авантюризма, +5 пунктов Героизма, +5 пунктов Вдохновения и +5 пунктов Репутации!\n\nНу что, поплыли...</Text>
+			<Modifications>
+				<Adventurism Value="1"/>
+				<Heroism Value="5"/>
+				<Inspiration Value="5"/>
+				<Reputation Value="5"/>
+			</Modifications>
 			<Options>
 				<Option Goto="818"/>
 			</Options>
