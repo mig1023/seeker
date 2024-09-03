@@ -26,6 +26,24 @@ namespace Seeker.Gamebook.SeaTales.Parts
             return new List<string> { $"ПРОВЕРКА\nНужно выбросить {dicesLine}" };
         }
 
+        public bool Availability(string option)
+        {
+            if (option == "Already")
+            {
+                string currendId = Game.Data.CurrentParagraphID.ToString();
+
+                int count = Game.Data.Path
+                    .Where(x => x == currendId)
+                    .Count();
+
+                return count > 1;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
         public bool GameOver(out int toEndParagraph, out string toEndText)
         {
             toEndParagraph = 0;
