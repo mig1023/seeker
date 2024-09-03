@@ -12,8 +12,6 @@ namespace Seeker.Gamebook.SeaTales
 
         List<string> Representer(Actions action);
 
-        bool Availability(string option);
-
         bool GameOver(out int toEndParagraph, out string toEndText);
 
         List<string> Test(Actions action);

@@ -24,8 +24,6 @@ namespace Seeker.Gamebook.SeaTales.Parts
                 $"за {Constants.Throws[action.Throws]}\n{bonus}" };
         }
 
-        public bool Availability(string option) => true;
-
         public bool GameOver(out int toEndParagraph, out string toEndText)
         {
             toEndParagraph = 0;

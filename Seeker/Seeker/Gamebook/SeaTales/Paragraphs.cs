@@ -40,10 +40,6 @@ namespace Seeker.Gamebook.SeaTales
             {
                 option.Goto = GetGoto(xmlOption);
             }
-            else if (xmlOption.Attributes["Goto"].Value == "Next")
-            {
-                option.Goto = Game.Data.CurrentParagraphID + 1;
-            }
             else if (int.TryParse(xmlOption.Attributes["Goto"].Value, out int _))
             {
                 option.Goto = Xml.IntParse(xmlOption.Attributes["Goto"]);

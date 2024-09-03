@@ -20,8 +20,6 @@ namespace Seeker.Gamebook.SeaTales.Parts
                 $"Нужно выбросить {dicesLine}" };
         }
 
-        public bool Availability(string option) => true;
-
         public bool GameOver(out int toEndParagraph, out string toEndText)
         {
             toEndParagraph = 0;

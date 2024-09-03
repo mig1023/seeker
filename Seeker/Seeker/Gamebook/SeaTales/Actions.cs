@@ -50,8 +50,6 @@ namespace Seeker.Gamebook.SeaTales
 
         public override List<string> AdditionalStatus() => GetPart().AdditionalStatus();
 
-        public override bool Availability(string option) => GetPart().Availability(option);
-
         public List<int> GetTragetDices(string dices, out string dicesLine)
         {
             List<int> targets = dices
