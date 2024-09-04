@@ -5989,10 +5989,12 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="615">
-			<Text>Если Вы попадали на этот параграф раньше, не читайте написанного ниже, а сразу переходите на следующий параграф по списку.</Text>
 			<Actions>
 				<Test Success="Adventurism: +1; Heroism: +1; Inspiration: +5; Вы отсекаете палашом очередное щупальце, схватившее одного из Ваших матросов. Честь Вам и хвала!" Fail="Adventurism: -1; Несчастного утянуло под воду прямо у Вас на глазах..."/>
 			</Actions>
+			<Modifications>
+				<Redirect Value="Next"/>
+			</Modifications>
 			<Options>
 				<Option Goto="612" Text="Возвращайтесь и испытайте судьбу снова!"/>
 			</Options>
