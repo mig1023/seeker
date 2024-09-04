@@ -6837,12 +6837,15 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="694">
-			<Text>Если Вы попадали на этот параграф раньше, не читайте написанного ниже, а сразу переходите на следующий параграф по списку.\n\nВыпад, отражение, снова выпад, и снова парирование. Атака, контратака. Вы с противником входите в раж!\n\nВыдержите три проверки!</Text>
+			<Text>Выпад, отражение, снова выпад, и снова парирование. Атака, контратака. Вы с противником входите в раж!\n\nВыдержите три проверки!</Text>
 			<Actions>
 				<Test Success="Heroism: +5; Inspiration: +1" Fail="Adventurism: -1"/>
 				<Test Success="Heroism: +5; Inspiration: +1" Fail="Adventurism: -1"/>
 				<Test Success="Heroism: +5; Inspiration: +1" Fail="Adventurism: -1"/>
 			</Actions>
+			<Modifications>
+				<Redirect Value="Next"/>
+			</Modifications>
 			<Options>
 				<Option Goto="690" Text="Возвращайтесь и испытайте судьбу снова!"/>
 			</Options>
