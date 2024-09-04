@@ -10,6 +10,10 @@ namespace Seeker.Gamebook.SeaTales
             {
                 Character.Protagonist.Init();
             }
+            else if (Name == "Redirect")
+            {
+                // nothing to do here
+            }
             else
             {
                 base.Do(Character.Protagonist);

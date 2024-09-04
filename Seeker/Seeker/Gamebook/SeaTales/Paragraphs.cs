@@ -10,6 +10,28 @@ namespace Seeker.Gamebook.SeaTales
     {
         public override Paragraph Get(int id, XmlNode xmlParagraph)
         {
+            foreach (XmlNode xmlModification in xmlParagraph.SelectNodes("Modifications/*"))
+            {
+                if (xmlModification.Name != "Redirect")
+                    continue;
+
+                var currendId = Game.Data.CurrentParagraphID;
+
+                int count = Game.Data.Path
+                    .Where(x => x == currendId.ToString())
+                    .Count();
+
+                if (count == 0)
+                    continue;
+
+                var redirect = xmlModification.Attributes["Value"].InnerText;
+                id = redirect == "Next" ? id + 1 : int.Parse(redirect);
+
+                Game.Data.CurrentParagraphID = id;
+                xmlParagraph = Game.Data.XmlParagraphs[id];
+                return Get(id, xmlParagraph);
+            }
+
             if (Constants.StoryPart() == 1)
             {
                 if (Data.CurrentParagraphID > 1)
@@ -82,6 +104,6 @@ namespace Seeker.Gamebook.SeaTales
         }
 
         public override Abstract.IModification ModificationParse(XmlNode xmlModification) =>
-            (Abstract.IModification)base.ModificationParse(xmlModification, new Modification());
+             (Abstract.IModification)base.ModificationParse(xmlModification, new Modification());
     }
 }

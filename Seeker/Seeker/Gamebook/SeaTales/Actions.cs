@@ -38,7 +38,7 @@ namespace Seeker.Gamebook.SeaTales
 
         public IParts GetPart()
         {
-            int part = Constants.StoryPart();
+            var part = Constants.StoryPart();
 
             if (!Parts.ContainsKey(part))
                 Parts[part] = NewPart(part);
@@ -52,7 +52,7 @@ namespace Seeker.Gamebook.SeaTales
 
         public List<int> GetTragetDices(string dices, out string dicesLine)
         {
-            List<int> targets = dices
+            var targets = dices
                 .Split(',')
                 .Select(x => int.Parse(x))
                 .ToList();
