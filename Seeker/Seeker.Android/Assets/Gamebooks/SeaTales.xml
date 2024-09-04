@@ -9029,10 +9029,13 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="876">
-			<Text>Если Вы попадали на этот параграф раньше, не читайте написанного ниже, а сразу переходите на следующий параграф по списку.\n\nКорабль заносит к морским рифам. Неприятная встреча.</Text>
+			<Text>Корабль заносит к морским рифам. Неприятная встреча.</Text>
 			<Actions>
 				<Test/>
 			</Actions>
+			<Modifications>
+				<Redirect Value="Next"/>
+			</Modifications>
 			<Options>
 				<Option Goto="926" Text="Всё путём"/>
 				<Option Goto="1160" Text="Не хотите её проходить"/>
