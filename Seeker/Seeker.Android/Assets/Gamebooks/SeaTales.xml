@@ -6013,10 +6013,13 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="617">
-			<Text>Если Вы попадали на этот параграф раньше, не читайте написанного ниже, а сразу переходите на следующий параграф по списку.\n\nСграбастав тяжёлую бочку, кракен роняет её прямо на Вас!</Text>
+			<Text>Сграбастав тяжёлую бочку, кракен роняет её прямо на Вас!</Text>
 			<Actions>
 				<Test Success="Adventurism: +1; Heroism: +5; Inspiration: +5; Вы своевременно уклонились!"/>
 			</Actions>
+			<Modifications>
+				<Redirect Value="Next"/>
+			</Modifications>
 			<Options>
 				<Option Goto="612" Text="Если всё успешно - возвращайтесь и испытайте судьбу снова!"/>
 				<Option Goto="1160" Text="Если же нет..."/>
