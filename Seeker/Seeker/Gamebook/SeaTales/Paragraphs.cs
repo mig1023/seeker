@@ -24,8 +24,8 @@ namespace Seeker.Gamebook.SeaTales
                 if (count == 0)
                     continue;
 
-                var redirect = xmlModification.Attributes["Value"].InnerText;
-                id = redirect == "Next" ? id + 1 : int.Parse(redirect);
+                string redirect = xmlModification.Attributes["Value"]?.InnerText ?? null;
+                id = redirect == null ? id + 1 : int.Parse(redirect);
 
                 Game.Data.CurrentParagraphID = id;
                 xmlParagraph = Game.Data.XmlParagraphs[id];
