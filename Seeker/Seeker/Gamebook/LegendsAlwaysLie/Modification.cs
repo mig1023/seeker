@@ -36,6 +36,10 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                     Character.Protagonist.Gold -= 10;
                 }
             }
+            else if (Name == "Healing")
+            {
+                Game.Healing.Add(ValueString);
+            }
             else
             {
                 int currentValue = GetProperty(Character.Protagonist, Name);
