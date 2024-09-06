@@ -135,7 +135,7 @@ namespace Seeker.Gamebook.OctopusIsland
 
             while (true)
             {
-                fight.Add("HEAD|Раунд: {round}");
+                fight.Add($"HEAD|Раунд: {round}");
 
                 foreach (Character enemy in FightEnemies)
                 {
