@@ -77,11 +77,20 @@ namespace Seeker.Gamebook.SeaTales
             return targets;
         }
 
+        public override bool Availability(string option) =>
+            GetPart().Availability(option);
+
+        public override bool IsButtonEnabled(bool secondButton = false) =>
+            GetPart().IsButtonEnabled(this);
+
         public override List<string> Representer() =>
             GetPart().Representer(this);
 
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
             GetPart().GameOver(out toEndParagraph, out toEndText);
+
+        public List<string> RandomOption() =>
+            GetPart().RandomOption();
 
         public List<string> Test() => GetPart().Test(this);
     }

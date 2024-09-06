@@ -391,6 +391,7 @@ namespace Seeker
                     Options.Children.Add(Output.Interface.IllustrationImage(option.Image));
 
                 Options.Children.Add(button);
+                Game.Option.TextsAdd(button.Text);
 
                 if (!String.IsNullOrEmpty(option.Input))
                     Options.Children.Add(AddInputField(option, button));
@@ -743,6 +744,7 @@ namespace Seeker
             Footer.Children.Clear();
 
             Game.Option.ListClean();
+            Game.Option.TextsClean();
         }
     }
 }

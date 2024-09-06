@@ -13,6 +13,10 @@ namespace Seeker.Gamebook.SeaTales.Parts
 
         public List<string> AdditionalStatus() => null;
 
+        public bool Availability(string option) => true;
+
+        public bool IsButtonEnabled(Actions action) => true;
+
         public List<string> Representer(Actions action)
         {
             List<int> targetDices = action.GetTragetDices(action.Dices, out string dicesLine);
@@ -55,6 +59,9 @@ namespace Seeker.Gamebook.SeaTales.Parts
                 return false;
             }
         }
+
+        public List<string> RandomOption() =>
+            new List<string>();
 
         public List<string> Test(Actions action)
         {

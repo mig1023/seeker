@@ -10,6 +10,10 @@ namespace Seeker.Gamebook.SeaTales.Parts
 
         public List<string> AdditionalStatus() => null;
 
+        public bool Availability(string option) => true;
+
+        public bool IsButtonEnabled(Actions action) => true;
+
         public List<string> Representer(Actions action)
         {
             string dices = GetCredibilityLevel(action.Level, out string levelNamePart);
@@ -57,6 +61,9 @@ namespace Seeker.Gamebook.SeaTales.Parts
                     return "3,4,5,6";
             }
         }
+
+        public List<string> RandomOption() =>
+            new List<string>();
 
         public List<string> Test(Actions action)
         {

@@ -69,6 +69,7 @@ namespace Seeker.Gamebook.SeaTales
 
         public int Reputation { get; set; }
 
+        public string LastSelectedOption { get; set; }
 
         public override void Init()
         {
@@ -84,6 +85,7 @@ namespace Seeker.Gamebook.SeaTales
             Inspiration = 1;
             Travel = 0;
             Reputation = 0;
+            LastSelectedOption = String.Empty;
         }
 
         public Character Clone() => new Character()
@@ -101,11 +103,13 @@ namespace Seeker.Gamebook.SeaTales
             Inspiration = this.Inspiration,
             Travel = this.Travel,
             Reputation = this.Reputation,
+            LastSelectedOption = this.LastSelectedOption,
         };
 
         public override string Save() => String.Join("|",
             Heat, Nonsense, NeedCredibilityCheck ? 1 : 0, Gameover ? 1 : 0,
-            Heroism, Alcoholism, Adventurism, Inspiration, Travel, Reputation);
+            Heroism, Alcoholism, Adventurism, Inspiration, Travel, Reputation,
+            LastSelectedOption);
 
         public override void Load(string saveLine)
         {
@@ -122,6 +126,8 @@ namespace Seeker.Gamebook.SeaTales
             Inspiration = Game.Xml.IntParse(save[7]);
             Travel = Game.Xml.IntParse(save[8]);
             Reputation = Game.Xml.IntParse(save[9]);
+
+            LastSelectedOption = save[10];
 
             IsProtagonist = true;
         }

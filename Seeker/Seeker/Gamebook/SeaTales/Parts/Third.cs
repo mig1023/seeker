@@ -26,6 +26,54 @@ namespace Seeker.Gamebook.SeaTales.Parts
             return new List<string> { $"ПРОВЕРКА\nНужно выбросить {dicesLine}" };
         }
 
+        public void GetLastSelected(out int id, out string selected)
+        {
+            List<string> lastSelected = Character.Protagonist.LastSelectedOption
+                .Split('%')
+                .ToList();
+
+            id = int.Parse(lastSelected[0]);
+            selected = lastSelected[1];
+        }
+
+        public bool Availability(string option)
+        {
+            if (String.IsNullOrEmpty(Character.Protagonist.LastSelectedOption))
+            {
+                return true;
+            }
+            else
+            {
+                GetLastSelected(out int id, out string selected);
+
+                if (id != Game.Data.CurrentParagraphID)
+                {
+                    return true;
+                }
+                else
+                {
+                    return selected == option;
+                }
+            }
+        }
+
+        public bool IsButtonEnabled(Actions action)
+        {
+            if (action.Type != "RandomOption")
+            {
+                return true;
+            }
+            else if (String.IsNullOrEmpty(Character.Protagonist.LastSelectedOption))
+            {
+                return true;
+            }
+            else
+            {
+                GetLastSelected(out int id, out string _);
+                return id != Game.Data.CurrentParagraphID;
+            }
+        }
+
         public bool GameOver(out int toEndParagraph, out string toEndText)
         {
             toEndParagraph = 0;
@@ -135,6 +183,16 @@ namespace Seeker.Gamebook.SeaTales.Parts
                     test.Add($"{effect}");
                 }
             }
+        }
+
+        public List<string> RandomOption()
+        {
+            List<string> options = Game.Option.GetTexts();
+
+            string selected = options[Game.Dice.Roll() - 1];
+            Character.Protagonist.LastSelectedOption = $"{Game.Data.CurrentParagraphID}%{selected}";
+
+            return new List<string> { "RELOAD" };
         }
 
         public List<string> Test(Actions action)

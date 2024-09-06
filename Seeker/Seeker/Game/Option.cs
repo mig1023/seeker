@@ -21,6 +21,8 @@ namespace Seeker.Game
 
         private static Dictionary<Option, Button> Options { get; set; }
 
+        private static List<string> AllOptionsTexts { get; set; }
+
         public static void Trigger(string triggers, bool remove = false)
         {
             if (String.IsNullOrEmpty(triggers))
@@ -49,6 +51,14 @@ namespace Seeker.Game
 
         public static void ListAdd(Option option, Button button) =>
             Options.Add(option, button);
+
+        public static void TextsClean() =>
+            AllOptionsTexts = new List<string>();
+
+        public static void TextsAdd(string text) =>
+            AllOptionsTexts.Add(text);
+
+        public static List<string> GetTexts() => AllOptionsTexts;
 
         public static void OpenButtonByGoto(int destination)
         {

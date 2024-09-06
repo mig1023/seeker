@@ -104,6 +104,6 @@ namespace Seeker.Gamebook.SeaTales
         }
 
         public override Abstract.IModification ModificationParse(XmlNode xmlModification) =>
-             (Abstract.IModification)base.ModificationParse(xmlModification, new Modification());
+            (Abstract.IModification)base.ModificationParse(xmlModification, new Modification());
     }
 }
