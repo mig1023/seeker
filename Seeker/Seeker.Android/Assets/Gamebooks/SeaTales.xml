@@ -8426,12 +8426,12 @@
 				<Travel Value="-10"/>
 			</Modifications>
 			<Options>
-				<Option Goto="1308" Text="Испанский (северный)"/>
+				<Option Goto="1308" Text="Испанский (Валенсия)"/>
 				<Option Goto="1214" Text="Португальский"/>
 				<Option Goto="1232" Text="Французский"/>
 				<Option Goto="1253" Text="Английский"/>
 				<Option Goto="1287" Text="Голландский"/>
-				<Option Goto="1295" Text="Испанский (южный)"/>
+				<Option Goto="1295" Text="Испанский (Малага)"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="828">
@@ -8940,11 +8940,11 @@
 			</Modifications>
 			<Options>
 				<Option Goto="1246" Text="Португальский"/>
-				<Option Goto="1307" Text="Голландский (северный)"/>
-				<Option Goto="1292" Text="Английский (северный)"/>
-				<Option Goto="1300" Text="Английский (южный)"/>
-				<Option Goto="1305" Text="Голландский (южный)"/>
-				<Option Goto="1286" Text="Английский (восточный)"/>
+				<Option Goto="1307" Text="Голландский (Эмсхавен)"/>
+				<Option Goto="1292" Text="Английский (Бристоль)"/>
+				<Option Goto="1300" Text="Английский (Ливерпуль)"/>
+				<Option Goto="1305" Text="Голландский (Роттердама)"/>
+				<Option Goto="1286" Text="Английский (Саутгемптон)"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="868">
@@ -10220,10 +10220,10 @@
 				<Travel Value="-10"/>
 			</Modifications>
 			<Options>
-				<Option Goto="1368" Text="Испанский (северный)"/>
-				<Option Goto="1323" Text="Португальский (северный)"/>
-				<Option Goto="1337" Text="Испанский (южный)"/>
-				<Option Goto="1329" Text="Португальский (южный)"/>
+				<Option Goto="1368" Text="Испанский (Малага)"/>
+				<Option Goto="1323" Text="Португальский (Лиссабон)"/>
+				<Option Goto="1337" Text="Испанский (Валенсия)"/>
+				<Option Goto="1329" Text="Португальский (Авейру)"/>
 				<Option Goto="1370" Text="Английский"/>
 				<Option Goto="1363" Text="Французский"/>
 			</Options>
