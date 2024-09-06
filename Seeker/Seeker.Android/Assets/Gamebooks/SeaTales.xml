@@ -8433,6 +8433,9 @@
 		</Paragraph>
 		<Paragraph No="828">
 			<Text>Навстречу Вам движется какое-то судно. Присмотревшись в подзорную трубу, Вы понимаете, что это.\n\nБросьте игральную кость!</Text>
+			<Actions>
+				<RandomOption/>
+			</Actions>
 			<Options>
 				<Option Goto="1215" Text="Шведский хольк"/>
 				<Option Goto="1260" Text="Английский гекбот"/>
