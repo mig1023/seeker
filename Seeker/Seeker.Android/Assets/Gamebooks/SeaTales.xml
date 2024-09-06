@@ -8925,18 +8925,23 @@
 			<Texts>
 				<Text>Море штормит не на шутку! Лучше бы причалить в ближайший порт и переждать!</Text>
 				<Text Style="Small">Вы теряете 10 пунктов Плаванья!</Text>
-				<Text>Что поделать, такова жизнь...\n\nБросьте игральную кость! Ближайший к Вам порт:</Text>
+				<Text>Что поделать, такова жизнь...</Text>
 			</Texts>
+			<Actions>
+				<RandomOption>
+					<Text>Ближайший к Вам порт...</Text>
+				</RandomOption>
+			</Actions>
 			<Modifications>
 				<Travel Value="-10"/>
 			</Modifications>
 			<Options>
 				<Option Goto="1246" Text="Португальский"/>
-				<Option Goto="1307" Text="Голландский"/>
-				<Option Goto="1292" Text="Английский"/>
-				<Option Goto="1300" Text="Английский"/>
-				<Option Goto="1305" Text="Голландский"/>
-				<Option Goto="1286" Text="Английский"/>
+				<Option Goto="1307" Text="Голландский (северный)"/>
+				<Option Goto="1292" Text="Английский (северный)"/>
+				<Option Goto="1300" Text="Английский (южный)"/>
+				<Option Goto="1305" Text="Голландский (южный)"/>
+				<Option Goto="1286" Text="Английский (восточный)"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="868">
