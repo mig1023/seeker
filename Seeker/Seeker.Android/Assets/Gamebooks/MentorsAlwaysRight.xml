@@ -23,7 +23,8 @@
 			<HideDisabledOption/>
 		</Default>
 		<Buttons>
-			<Fight>Сражаться</Fight>
+			<Button Action="Fight, LeechFight">Сражаться</Button>
+			<Button Action="Dice, DiceWounds, StoneThrow, SimpleDice, DicesGame">Кинуть кубик</Button>
 			<Luck>Проверить удачу</Luck>
 		</Buttons>
 	</Introduction>
