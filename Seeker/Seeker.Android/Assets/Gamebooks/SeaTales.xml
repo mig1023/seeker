@@ -9798,6 +9798,9 @@
 		</Paragraph>
 		<Paragraph No="927">
 			<Text>Дело хорошее, но всё-таки нужно уточнить детали.</Text>
+			<Actions>
+				<RandomOption/>
+			</Actions>
 			<Options>
 				<Option Goto="878" Text="50% на 50% экипажу и Вам"/>
 				<Option Goto="958" Text="70% экипажу и 30% Вам"/>
