@@ -626,7 +626,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                     {
                         golemRound = 4;
 
-                        fight.Add("BOLD|Коннери улучил момент для удара");
+                        fight.Add("BOLD|«Прикрой!» - кричит Коннери, который улучил момент для удара");
 
                         if (!Reactions.Good(ref fight))
                         {
