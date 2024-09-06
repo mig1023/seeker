@@ -56,7 +56,15 @@ namespace Seeker.Gamebook.SeaTales
 
         public override Option OptionParse(XmlNode xmlOption)
         {
-            Option option = OptionsTemplateWithoutGoto(xmlOption);
+            var modifications = new List<Abstract.IModification>();
+
+            foreach (XmlNode optionMod in xmlOption.SelectNodes("*"))
+            {
+                if (!optionMod.Name.StartsWith("Text"))
+                    modifications.Add(new Modification());
+            }
+
+            Option option = OptionParseWithDo(xmlOption, modifications);
 
             if (ThisIsGameover(xmlOption))
             {
