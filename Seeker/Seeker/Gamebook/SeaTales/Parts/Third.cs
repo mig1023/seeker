@@ -20,57 +20,16 @@ namespace Seeker.Gamebook.SeaTales.Parts
 
         public List<string> Representer(Actions action)
         {
-            string dices = GetTestLevel(out string _);
-            List<int> _ = action.GetTragetDices(dices, out string dicesLine);
-
-            return new List<string> { $"ПРОВЕРКА\nНужно выбросить {dicesLine}" };
-        }
-
-        public void GetLastSelected(out int id, out string selected)
-        {
-            List<string> lastSelected = Character.Protagonist.LastSelectedOption
-                .Split('%')
-                .ToList();
-
-            id = int.Parse(lastSelected[0]);
-            selected = lastSelected[1];
-        }
-
-        public bool Availability(string option)
-        {
-            if (String.IsNullOrEmpty(Character.Protagonist.LastSelectedOption))
+            if (action.Type == "RandomOption")
             {
-                return true;
+                return new List<string> { $"ДАЛЬНЕЙШИЙ ПУТЬ ОПРЕДЕЛИТ ИГРАЛЬНАЯ КОСТЬ" };
             }
             else
             {
-                GetLastSelected(out int id, out string selected);
+                string dices = GetTestLevel(out string _);
+                List<int> _ = action.GetTragetDices(dices, out string dicesLine);
 
-                if (id != Game.Data.CurrentParagraphID)
-                {
-                    return true;
-                }
-                else
-                {
-                    return selected == option;
-                }
-            }
-        }
-
-        public bool IsButtonEnabled(Actions action)
-        {
-            if (action.Type != "RandomOption")
-            {
-                return true;
-            }
-            else if (String.IsNullOrEmpty(Character.Protagonist.LastSelectedOption))
-            {
-                return true;
-            }
-            else
-            {
-                GetLastSelected(out int id, out string _);
-                return id != Game.Data.CurrentParagraphID;
+                return new List<string> { $"ПРОВЕРКА\nНужно выбросить {dicesLine}" };
             }
         }
 
@@ -189,10 +148,22 @@ namespace Seeker.Gamebook.SeaTales.Parts
         {
             List<string> options = Game.Option.GetTexts();
 
+            int dice = Game.Dice.Roll();
             string selected = options[Game.Dice.Roll() - 1];
-            Character.Protagonist.LastSelectedOption = $"{Game.Data.CurrentParagraphID}%{selected}";
 
-            return new List<string> { "RELOAD" };
+            foreach (var option in options)
+            {
+                if (selected != option)
+                    Game.Buttons.Disable(option);
+            }
+
+            List<string> text = new List<string>
+            {
+                $"BIG|Бросаем кубик: {Game.Dice.Symbol(dice)}",
+                $"Выбран вариант: {selected}"
+            };
+
+            return text;
         }
 
         public List<string> Test(Actions action)

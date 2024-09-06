@@ -77,12 +77,6 @@ namespace Seeker.Gamebook.SeaTales
             return targets;
         }
 
-        public override bool Availability(string option) =>
-            GetPart().Availability(option);
-
-        public override bool IsButtonEnabled(bool secondButton = false) =>
-            GetPart().IsButtonEnabled(this);
-
         public override List<string> Representer() =>
             GetPart().Representer(this);
 
