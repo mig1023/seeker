@@ -27,6 +27,7 @@
 		</Dictionaries>
 		<Buttons>
 			<Test>Бросить кубики</Test>
+			<RandomOption>Бросить кубик</RandomOption>
 		</Buttons>
 	</Introduction>
 	<Paragraphs>
@@ -8411,18 +8412,23 @@
 			<Texts>
 				<Text>Море штормит не на шутку! Лучше бы причалить в ближайший порт и переждать!</Text>
 				<Text Style="Small">Вы теряете 10 пунктов Плаванья!</Text>
-				<Text>Что поделать, такова жизнь.\n\nБросьте игральную кость! Ближайший к Вам порт...</Text>
+				<Text>Что поделать, такова жизнь.</Text>
 			</Texts>
+			<Actions>
+				<RandomOption>
+					<Text>Ближайший к Вам порт...</Text>
+				</RandomOption>
+			</Actions>
 			<Modifications>
 				<Travel Value="-10"/>
 			</Modifications>
 			<Options>
-				<Option Goto="1308" Text="Испанский"/>
+				<Option Goto="1308" Text="Испанский (северный)"/>
 				<Option Goto="1214" Text="Португальский"/>
 				<Option Goto="1232" Text="Французский"/>
-				<Option Goto="1253" Text="Фнглийский"/>
+				<Option Goto="1253" Text="Английский"/>
 				<Option Goto="1287" Text="Голландский"/>
-				<Option Goto="1295" Text="Испанский"/>
+				<Option Goto="1295" Text="Испанский (южный)"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="828">
