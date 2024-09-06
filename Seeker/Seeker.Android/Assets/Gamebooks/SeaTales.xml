@@ -9062,7 +9062,10 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="877">
-			<Text>Снова здорово!\n\nБросьте игральную кость!</Text>
+			<Text>Снова здорово!</Text>
+			<Actions>
+				<RandomOption/>
+			</Actions>
 			<Options>
 				<Option Goto="1225" Text="Корабль несёт на рифы"/>
 				<Option Goto="1238" Text="Корабль затягивает в жуткий водоворот"/>
