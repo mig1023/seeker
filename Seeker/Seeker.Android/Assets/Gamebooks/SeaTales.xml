@@ -9777,8 +9777,13 @@
 			<Texts>
 				<Text>Море штормит не на шутку! Лучше бы причалить в ближайший порт и переждать!</Text>
 				<Text Style="Small">Вы теряете 10 пунктов Плаванья!</Text>
-				<Text>Что поделать, такова жизнь...\n\nБросьте игральную кость! Ближайший к Вам порт:</Text>
+				<Text>Что поделать, такова жизнь...</Text>
 			</Texts>
+			<Actions>
+				<RandomOption>
+					<Text>Ближайший к Вам порт...</Text>
+				</RandomOption>
+			</Actions>
 			<Modifications>
 				<Travel Value="-10"/>
 			</Modifications>
