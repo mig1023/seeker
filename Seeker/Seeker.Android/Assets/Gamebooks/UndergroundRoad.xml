@@ -1,0 +1,30 @@
+<Gamebook>
+	<Introduction>
+		<Copyright>
+			<Title>Подземная дорога</Title>
+			<Author>Дмитрий Багров, 2009</Author>
+		</Copyright>
+		<Styles>
+			<Main Value="153736"/>
+			<Option Value="153736"/>
+			<System Value="8a9b9a"/>
+		</Styles>
+		<Default>
+			<HideDisabledOption/>
+		</Default>
+	</Introduction>
+	<Paragraphs>
+		<Paragraph No="0">
+			<Text>START</Text>
+			<Options>
+				<Start Goto="1"/>
+			</Options>
+		</Paragraph>
+		<Paragraph No="1">
+			<Text>END</Text>
+			<Options>
+				<Option Goto="0"/>
+			</Options>
+		</Paragraph>
+	</Paragraphs>
+</Gamebook>
