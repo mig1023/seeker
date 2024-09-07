@@ -36,10 +36,10 @@
 				<Option Goto="610" Text="Интерактивный роман" Image="InteractiveNovel" Style="2c8194">
 					<Text Style="Small, Upper">Геннадий Логинов, 2018</Text>
 				</Option>
-				<Option Goto="1" Text="Северные берега" Image="NorthernShores" Style="455a64">
+				<Option Goto="609" Text="Восточные берега" Image="EasternShores" Style="f4533a">
 					<Text Style="Small, Upper">Геннадий Логинов, 2018</Text>
 				</Option>
-				<Option Goto="609" Text="Восточные берега" Image="EasternShores" Style="f4533a">
+				<Option Goto="1" Text="Северные берега" Image="NorthernShores" Style="455a64">
 					<Text Style="Small, Upper">Геннадий Логинов, 2018</Text>
 				</Option>
 			</Options>
