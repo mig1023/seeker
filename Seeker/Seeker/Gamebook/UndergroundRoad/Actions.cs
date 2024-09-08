@@ -15,11 +15,11 @@ namespace Seeker.Gamebook.UndergroundRoad
             {
                 return true;
             }
-            else if (option.Contains("НЕ РАНЕН ДВАЖДЫ"))
+            else if (option.Contains("!РАНЕН ДВАЖДЫ"))
             {
                 return Character.Protagonist.Wounds < 2;
             }
-            else if (option.Contains("НЕ РАНЕН"))
+            else if (option.Contains("!РАНЕН"))
             {
                 return Character.Protagonist.Wounds < 1;
             }
