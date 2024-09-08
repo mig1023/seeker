@@ -5,9 +5,13 @@
 			<Author>Дмитрий Багров, 2009</Author>
 		</Copyright>
 		<Styles>
-			<Main Value="153736"/>
-			<Option Value="153736"/>
-			<System Value="8a9b9a"/>
+			<Main Value="0e2625"/>
+			<Color Name="Option, Continue" Value="123130"/>
+			<System Value="435e5e"/>
+			<SystemFont Value="b8c3c2"/>
+			<StatusBar Value="081615"/>
+			<Background Value="153736"/>
+			<Font Value="a1afae"/>
 		</Styles>
 	</Introduction>
 	<Paragraphs>
