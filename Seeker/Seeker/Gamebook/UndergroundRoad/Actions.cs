@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Seeker.Gamebook.UndergroundRoad
 {
@@ -8,42 +9,47 @@ namespace Seeker.Gamebook.UndergroundRoad
         public override List<string> Status() =>
             new List<string> { $"Ранений: {Character.Protagonist.Wounds}" };
 
-        private bool SilverHeart() =>
-            Game.Option.IsTriggered("Голубое каменное сердце");
-
         public override bool Availability(string option)
         {
             if (String.IsNullOrEmpty(option))
             {
                 return true;
             }
-            else if (option.Contains("!РАНЕН ДВАЖДЫ и ЕСТЬ СЕРДЦЕ"))
-            {
-                return SilverHeart() && Character.Protagonist.Wounds < 2;
-            }
             else if (option.Contains("РАНЕН ДВАЖДЫ или НЕТ СЕРДЦА"))
             {
-                return !SilverHeart() || Character.Protagonist.Wounds > 1;
-            }
-            else if (option.Contains("!РАНЕН ДВАЖДЫ"))
-            {
-                return Character.Protagonist.Wounds < 2;
-            }
-            else if (option.Contains("!РАНЕН"))
-            {
-                return Character.Protagonist.Wounds < 1;
-            }
-            else if (option.Contains("РАНЕН ДВАЖДЫ"))
-            {
-                return Character.Protagonist.Wounds == 2;
-            }
-            else if (option.Contains("РАНЕН"))
-            {
-                return Character.Protagonist.Wounds > 0;
+                bool heart = Game.Option.IsTriggered("Голубое каменное сердце");
+                bool wounded = Character.Protagonist.Wounds > 1;
+                return !heart || wounded;
             }
             else
             {
-                return base.Availability(option);
+                foreach (string oneOption in option.Split(','))
+                {
+                    string opt = oneOption.Trim();
+
+                    if ((opt == "!РАНЕН ДВАЖДЫ") && (Character.Protagonist.Wounds > 1))
+                    {
+                        return false;
+                    }
+                    else if ((opt == "!РАНЕН") && (Character.Protagonist.Wounds > 0))
+                    {
+                        return false;
+                    }
+                    else if ((opt == "РАНЕН ДВАЖДЫ") && Character.Protagonist.Wounds < 2)
+                    {
+                        return false;
+                    }
+                    else if ((opt == "РАНЕН" ) && Character.Protagonist.Wounds < 1)
+                    {
+                        return false;
+                    }
+                    else if (!AvailabilityTrigger(opt))
+                    {
+                        return false;
+                    }
+                }
+
+                return true;
             }
         }
     }
