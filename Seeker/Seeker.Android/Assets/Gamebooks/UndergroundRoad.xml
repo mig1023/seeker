@@ -540,5 +540,11 @@
 				<Option Goto="40" Text="Нет"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="77">
+			<Text>Вы выбираетесь из лаза в тоннель, который, как Вы определяете по компасу, направлен с севера на юг. Сориентировавшись, Вы продолжаете свой путь.</Text>
+			<Options>
+				<Option Goto="58"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
