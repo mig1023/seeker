@@ -636,5 +636,12 @@
 				<Option Goto="3"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="92">
+			<Text>Ослепительный свет от Вашей ладони заливает тоннель, ослепленная ящерица нагибает голову и отворачивается от Вас в сторону. Зверь напуган, и не представляет для Вас опасности.</Text>
+			<Options>
+				<Option Goto="45" Text="Добьете его"/>
+				<Option Goto="67" Text="Аккуратно обойдете"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
