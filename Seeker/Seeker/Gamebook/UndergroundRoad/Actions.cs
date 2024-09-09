@@ -27,21 +27,24 @@ namespace Seeker.Gamebook.UndergroundRoad
                 {
                     string opt = oneOption.Trim();
 
-                    if ((opt == "!РАНЕН ДВАЖДЫ") && (Character.Protagonist.Wounds > 1))
+                    if (opt.Contains("РАНЕН"))
                     {
-                        return false;
-                    }
-                    else if ((opt == "!РАНЕН") && (Character.Protagonist.Wounds > 0))
-                    {
-                        return false;
-                    }
-                    else if ((opt == "РАНЕН ДВАЖДЫ") && Character.Protagonist.Wounds < 2)
-                    {
-                        return false;
-                    }
-                    else if ((opt == "РАНЕН" ) && Character.Protagonist.Wounds < 1)
-                    {
-                        return false;
+                        if ((opt == "!РАНЕН ДВАЖДЫ") && (Character.Protagonist.Wounds > 1))
+                        {
+                            return false;
+                        }
+                        else if ((opt == "!РАНЕН") && (Character.Protagonist.Wounds > 0))
+                        {
+                            return false;
+                        }
+                        else if ((opt == "РАНЕН ДВАЖДЫ") && Character.Protagonist.Wounds < 2)
+                        {
+                            return false;
+                        }
+                        else if ((opt == "РАНЕН") && Character.Protagonist.Wounds < 1)
+                        {
+                            return false;
+                        }
                     }
                     else if (!AvailabilityTrigger(opt))
                     {
