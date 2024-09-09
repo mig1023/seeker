@@ -231,8 +231,8 @@
 				<Option Goto="96" Text="Вы можете броситься вперед и атаковать их из темноты">
 					<Text>Использовать еще одно заклинание:</Text>
 				</Option>
-				<Option Goto="65" Text="Ярость огня"/>
-				<Option Goto="74" Text="Вспышку">
+				<Option Goto="65" Text="Ярость огня" Availability="!Ярость огня"/>
+				<Option Goto="74" Text="Вспышку" Availability="!Вспышка">
 					<Text>После боя с гатранами действие глаза ангела прекратится.</Text>
 				</Option>
 			</Options>
