@@ -76,8 +76,8 @@
 				<Option Goto="7" Text="Будете драться">
 					<Text>Применить заклинания:</Text>
 				</Option>
-				<Option Goto="50" Text="Вспышка"/>
-				<Option Goto="38" Text="Ярость огня">
+				<Option Goto="50" Text="Вспышка" Availability="!Вспышка"/>
+				<Option Goto="38" Text="Ярость огня" Availability="!Ярость огня">
 					<Text> Помните, что, если Вы использовали какое-то заклинание, то второй раз Вы его применить не можете.</Text>
 				</Option>
 			</Options>
