@@ -625,8 +625,8 @@
 		<Paragraph No="80">
 			<Text>Какое заклинание Вы используете:</Text>
 			<Options>
-				<Option Goto="92" Text="Вспышку"/>
-				<Option Goto="71" Text="Ярость огня">
+				<Option Goto="92" Text="Вспышку" Availability="!Вспышка"/>
+				<Option Goto="71" Text="Ярость огня" Availability="!Ярость огня">
 					<Text>Помните, что Вы должны будете вычеркнуть использованное заклинание из листка путешественника, и не сможете применить его снова.</Text>
 				</Option>
 			</Options>
