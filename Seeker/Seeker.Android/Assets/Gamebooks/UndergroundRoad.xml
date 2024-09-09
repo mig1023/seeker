@@ -13,6 +13,9 @@
 			<Background Value="153736"/>
 			<Font Value="a1afae"/>
 		</Styles>
+		<Lists>
+			<WithoutStatuses Items="0, 103"/>
+		</Lists>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph No="0">
