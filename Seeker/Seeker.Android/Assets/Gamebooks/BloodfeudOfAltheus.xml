@@ -5,13 +5,13 @@
 			<Author>Джон Баттерфилд, Дэвид Хонигман и Филип Паркер, 1985</Author>
 		</Copyright>
 		<Styles>
-			<Color Name="Main, Action" Value="ebd5b3"/>
-			<Color Name="Option, Background" Value="f9f2e8"/>
-			<Color Name="ButtonFont, StatusFont" Value="000000"/>
 			<Continue Value="f5ead9"/>
 			<ActionBox Value="f3e5d1"/>
 			<StatusBar Value="bcaa8f"/>
 			<AdditionalStatus Value="d0c3b0"/>
+			<Color Name="Main, Action" Value="ebd5b3"/>
+			<Color Name="Option, Background" Value="f9f2e8"/>
+			<Color Name="ButtonFont, StatusFont" Value="000000"/>
 		</Styles>
 		<Lists>
 			<WithoutStaticsButtons Items="0, 1"/>
