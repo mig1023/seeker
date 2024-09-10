@@ -5,11 +5,11 @@
 			<Author>Егор Андросов, 2022</Author>
 		</Copyright>
 		<Styles>
-			<Color Name="Main, Option, Continue, Action" Value="2c3b4b"/>
 			<AdditionalStatus Value="56626e"/>
 			<AdditionalFont Value="ffffff"/>
 			<StatusBar Value="414e5d"/>
 			<System Value="bfc4c9"/>
+			<Color Name="Main, Option, Continue, Action" Value="2c3b4b"/>
 		</Styles>
 		<Lists>
 			<WithoutStatuses Items="0, 231"/>
