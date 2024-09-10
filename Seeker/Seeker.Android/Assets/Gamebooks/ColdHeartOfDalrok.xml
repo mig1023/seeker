@@ -24,13 +24,12 @@
 			<Fight>Сражаться</Fight>
 			<Luck>Проверить удачу</Luck>
 			<LuckRecovery>Восстановить 1 цифру удачи</LuckRecovery>
-			<DicesLuckRecovery>Восстановить удачу</DicesLuckRecovery>
-			<FullLuckRecovery>Восстановить удачу</FullLuckRecovery>
 			<LuckLose>Потерять 1 цифру удачи</LuckLose>
 			<Get>Выбрать</Get>
 			<DiceWounds>Испытать судьбу</DiceWounds>
 			<SimpleDice>Бросьте кубик</SimpleDice>
 			<SeaBattle>Морской бой</SeaBattle>
+			<Button Action="DicesLuckRecovery, FullLuckRecovery">Восстановить удачу</Button>
 		</Buttons>
 	</Introduction>
 	<Paragraphs>
