@@ -6,9 +6,8 @@
 		</Copyright>
 		<Styles>
 			<Main Value="646464"/>
-			<Continue Value="8f8f8f"/>
-			<StatusBar Value="8f8f8f"/>
 			<SystemFont Value="ffffff"/>
+			<Color Name="Continue, StatusBar" Value="8f8f8f"/>
 		</Styles>
 		<Default>
 			<HideDisabledOption/>
