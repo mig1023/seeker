@@ -5,11 +5,10 @@
 			<Author>Улиссей Ай, 2009</Author>
 		</Copyright>
 		<Styles>
-			<Color Name="Main, Option, Continue" Value="1a768d"/>
 			<System Value="d1e3e8"/>
-			<Action Value="125262"/>
-			<StatusBar Value="125262"/>
 			<AdditionalStatus Value="b7cbcf"/>
+			<Color Name="Main, Option, Continue" Value="1a768d"/>
+			<Color Name="Action, StatusBar" Value="125262"/>
 		</Styles>
 		<Lists>
 			<WithoutStatuses Items=""/>
