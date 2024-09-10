@@ -2472,7 +2472,7 @@
 				</Fight>
 			</Actions>
 			<Options>
-				<Option Goto="141" Text="Когда у нее останется 2 СИЛЫ, можете пощадить ее"/>
+				<Option Goto="141" Text="Когда победите - можете пощадить ее"/>
 				<Option Goto="625" Text="Деритесь до конца, и тогда уж..."/>
 			</Options>
 		</Paragraph>
