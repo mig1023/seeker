@@ -32,6 +32,9 @@ namespace Seeker.Gamebook.ColdHeartOfDalrok
             if (xmlAction["Benefit"] != null)
                 action.Benefit = Xml.ModificationParse(xmlAction["Benefit"], new Modification());
 
+            if (action.Type == "Option")
+                action.Option = OptionParseWithDo(xmlAction, new Modification());
+
             return action;
         }
 
