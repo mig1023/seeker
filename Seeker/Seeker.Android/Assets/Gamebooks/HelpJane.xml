@@ -7,9 +7,9 @@
 		<Styles>
 			<Main Value="d2a05f"/>
 			<System Value="dbb37e"/>
-			<Color Name="Option, Continue" Value="dfbc8f"/>
 			<ButtonFont Value="000000"/>
 			<Action Value="d6a96f"/>
+			<Color Name="Option, Continue" Value="dfbc8f"/>
 		</Styles>
 		<Buttons>
 			<RollCoin>Бросить монетку</RollCoin>
