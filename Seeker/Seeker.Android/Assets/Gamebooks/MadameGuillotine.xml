@@ -5,13 +5,10 @@
 			<Author>Симон Фаррел, Джон Сазерленд, 1986</Author>
 		</Copyright>
 		<Styles>
-			<Main Value="011066"/>
-			<Color Name="Option, System, Continue" Value="6a0002"/>
-			<SystemFont Value="ffffff"/>
 			<StatusBar Value="870808"/>
-			<Action Value="6a0002"/>
-			<AdditionalStatus Value="011066"/>
-			<AdditionalFont Value="ffffff"/>
+			<Color Name="Main, AdditionalStatus" Value="011066"/>
+			<Color Name="Action, Option, System, Continue" Value="6a0002"/>
+			<Color Name="SystemFont, AdditionalFont" Value="ffffff"/>
 		</Styles>
 		<Lists>
 			<WithoutStatuses Items="0, 301, 302"/>
