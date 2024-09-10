@@ -16,6 +16,7 @@ namespace Seeker.Gamebook.ColdHeartOfDalrok
         public int HeroDamage { get; set; }
         public int EnemyDamage { get; set; }
         public int Dices { get; set; }
+        public string Success { get; set; }
         public int DeathDice { get; set; }
         public int StrengthPenalty { get; set; }
         public int SkillPenalty { get; set; }
@@ -229,38 +230,6 @@ namespace Seeker.Gamebook.ColdHeartOfDalrok
             return luckCheck;
         }
 
-        public List<string> Break()
-        {
-            List<string> breakingDoor = new List<string> { "Ломаете дверь:" };
-
-            bool succesBreaked = false;
-
-            while (!succesBreaked && (Character.Protagonist.Strength > 0))
-            {
-                Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
-
-                if (firstDice == secondDice)
-                {
-                    succesBreaked = true;
-                }
-                else
-                {
-                    Character.Protagonist.Strength -= 1;
-                }
-
-                string result = succesBreaked ?
-                    "удачный, дверь поддалась!" : "неудачный, -1 сила";
-
-                breakingDoor.Add($"Удар: " +
-                    $"{Game.Dice.Symbol(firstDice)} + " +
-                    $"{Game.Dice.Symbol(secondDice)} = {result}");
-            }
-
-            breakingDoor.Add(Result(succesBreaked, "ДВЕРЬ ВЗЛОМАНА", "ВЫ УБИЛИСЬ ОБ ДВЕРЬ"));
-
-            return breakingDoor;
-        }
-
         public List<string> Get()
         {
             Game.Option.Trigger(Head);
@@ -305,6 +274,46 @@ namespace Seeker.Gamebook.ColdHeartOfDalrok
             diceCheck.Add($"BIG|BAD|Вы потеряли {dices} {line}");
 
             return diceCheck;
+        }
+
+        public List<string> Break()
+        {
+            Random rand = new Random();
+
+            List<string> breaking = new List<string> { "BIG|ПЫТАЕМСЯ:" };
+
+            List<int> success = Success
+                .Split(',')
+                .Select(x => int.Parse(x))
+                .ToList();
+
+            int count = 0;
+
+            while (true)
+            {
+                int dice = Game.Dice.Roll();
+                count += 1;
+
+                breaking.Add($"BOLD|Попытка {count}: {Game.Dice.Symbol(dice)}");
+                breaking.Add("GRAY|За эту попытку вы теряете 1 СИЛУ...");
+
+                Character.Protagonist.Strength -= 1;
+
+                if (Character.Protagonist.Strength <= 0)
+                {
+                    breaking.Add("BIG|BAD|Вы убились в процессе... :(");
+                }
+                else if (success.Contains(dice))
+                {
+                    breaking.Add("BIG|BOLD|GOOD|ПОЛУЧИЛОСЬ!");
+                    return breaking;
+                }
+                else
+                {
+                    string fail = Constants.Fails[rand.Next(Constants.Fails.Count)];
+                    breaking.Add($"{fail}...");
+                }
+            }
         }
 
         public List<string> SeaBattle()
