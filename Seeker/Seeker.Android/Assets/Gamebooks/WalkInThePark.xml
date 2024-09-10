@@ -6,10 +6,10 @@
 		</Copyright>
 		<Styles>
 			<Main Value="cd1618"/>
-			<Color Name="Option, System, Continue" Value="8f0f10"/>
 			<Action Value="ba2020"/>
 			<StatusBar Value="b81315"/>
 			<SystemFont Value="ffffff"/>
+			<Color Name="Option, System, Continue" Value="8f0f10"/>
 		</Styles>
 		<Lists>
 			<What Items="получил, огрёб, заработал, выхватил, выцепил, принял, отхватил, хватанул"/>
