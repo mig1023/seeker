@@ -15,9 +15,8 @@
 		<Buttons>
 			<Fight>Сражаться</Fight>
 			<Luck>Проверить удачу</Luck>
-			<Endurance>Бросить два кубика</Endurance>
-			<Mastery>Бросить два кубика</Mastery>
 			<DiceWounds>Бросить кубик</DiceWounds>
+			<Button Action="Endurance, Mastery">Бросить два кубика</Button>
 		</Buttons>
 	</Introduction>
 	<Paragraphs>
