@@ -6,13 +6,13 @@
 		</Copyright>
 		<Styles>
 			<Main Value="764c2e"/>
-			<Color Name="Option, Continue" Value="61805d"/>
 			<StatusBar Value="523520"/>
 			<Background Value="bfccbe"/>
 			<System Value="4d664a"/>
 			<SystemFont Value="ffffff"/>
 			<ActionBox Value="90a68d"/>
 			<Action Value="6a4429"/>
+			<Color Name="Option, Continue" Value="61805d"/>
 		</Styles>
 		<Dictionaries>
 			<Skills ItemsByOrder=", 8, 10, 12, 9, 11, 9, 10, 8, 9, 10, 11"/>
