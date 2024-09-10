@@ -5,13 +5,13 @@
 			<Author>mmvvss, 2018</Author>
 		</Copyright>
 		<Styles>
-			<Color Name="Main, Option" Value="d52b1e"/>
-			<Color Name="ButtonFont, StatusFont" Value="eede49"/>
 			<Continue Value="e57f78"/>
 			<System Value="eca5a0"/>
 			<Background Value="ffdadb"/>
 			<StatusBar Value="aa2218"/>
 			<SystemFont Value="f7f1b6"/>
+			<Color Name="Main, Option" Value="d52b1e"/>
+			<Color Name="ButtonFont, StatusFont" Value="eede49"/>
 		</Styles>
 		<Lists>
 			<GetApartments Items="один, два, три, один, два, три"/>
