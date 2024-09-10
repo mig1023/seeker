@@ -5,11 +5,11 @@
 			<Author>Константин Шепелин, 2014</Author>
 		</Copyright>
 		<Styles>
-			<Color Name="Main, Action, Continue" Value="f8ecc2"/>
 			<Option Value="fdfaf0"/>
 			<ButtonFont Value="000000"/>
 			<StatusBar Value="dfd4ae"/>
 			<ActionBox Value="fcf9ec"/>
+			<Color Name="Main, Action, Continue" Value="f8ecc2"/>
 		</Styles>
 		<Default>
 			<FontSize Value="Little"/>
