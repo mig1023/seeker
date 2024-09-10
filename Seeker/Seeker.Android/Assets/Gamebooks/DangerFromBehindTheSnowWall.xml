@@ -6,12 +6,12 @@
 		</Copyright>
 		<Styles>
 			<Main Value="acc6dc"/>
-			<Color Name="Continue, System" Value="9ab2c6"/>	
 			<Background Value="e7edf3"/>
-			<Color Name="ActionBox, StatusBar" Value="a0afc4"/>
-			<Color Name="Action, Option" Value="7c8898"/>
 			<SystemFont Value="ffffff"/>
 			<AdditionalStatus Value="bcc7d5"/>
+			<Color Name="Continue, System" Value="9ab2c6"/>	
+			<Color Name="ActionBox, StatusBar" Value="a0afc4"/>
+			<Color Name="Action, Option" Value="7c8898"/>
 		</Styles>
 		<Dictionaries>
 			<Skills ItemsByOrder="9, 10, 12, 11, 11, 9"/>
@@ -30,15 +30,12 @@
 			<Fight>Сражаться</Fight>
 			<Luck>Проверить удачу</Luck>
 			<Observation>Проверить наблюдательности</Observation>
-			<SimpleDice>Бросьте кубик</SimpleDice>
 			<SimpleDoubleDice>Бросьте кубик дважды</SimpleDoubleDice>
 			<Break>Сломать</Break>
-			<Skill>Проверить ловкость</Skill>
 			<AthleticShape>Рассчитать</AthleticShape>
-			<AthleticBonus>Бросьте кубик</AthleticBonus>
-			<DiceWound>Бросьте кубик</DiceWound>
-			<SkillSum>Проверить ловкость</SkillSum>
 			<EscapeFromFire>Уклоняться</EscapeFromFire>
+			<Button Action="SimpleDice, AthleticBonus, DiceWound">Бросьте кубик</Button>
+			<Button Action="Skill, SkillSum">Проверить ловкость</Button>
 		</Buttons>
 	</Introduction>
 	<Paragraphs>
