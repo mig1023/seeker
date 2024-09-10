@@ -13,9 +13,9 @@
 			<Color Name="ActionBox, Continue" Value="e6d9ae"/>
 		</Styles>
 		<Buttons>
-			<Button Action="SwordFight, MixedFightAttack">Сражаться</Button>
 			<FireFight>Перестрелка</FireFight>
 			<ForceTest>Пройти проверку</ForceTest>
+			<Button Action="SwordFight, MixedFightAttack">Сражаться</Button>
 			<Button Action="SimpleDice, DiceWounds, EnemyDiceWounds">Кинуть кубик</Button>
 		</Buttons>
 	</Introduction>
