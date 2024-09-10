@@ -5,9 +5,9 @@
 			<Author>Глеб Гадяцкий, 2009</Author>
 		</Copyright>
 		<Styles>
+			<Option Value="377cbf"/>
 			<Color Name="Font, ButtonFont, Border, System" Value="a0f4ef"/>
 			<Color Name="Background, Main, Continue, SystemFont" Value="065cb0"/>
-			<Option Value="377cbf"/>
 		</Styles>
 		<Default>
 			<HideDisabledOption/>
