@@ -280,7 +280,7 @@ namespace Seeker.Gamebook.ColdHeartOfDalrok
         {
             Random rand = new Random();
 
-            List<string> breaking = new List<string> { "BIG|ПЫТАЕМСЯ:" };
+            List<string> breaking = new List<string> { "BIG|ПЫТАЕМСЯ:", String.Empty };
 
             List<int> success = Success
                 .Split(',')
@@ -314,6 +314,51 @@ namespace Seeker.Gamebook.ColdHeartOfDalrok
                     breaking.Add($"{fail}...");
                 }
             }
+        }
+
+        public List<string> Forest()
+        {
+            List<string> forest = new List<string> { "BIG|ПУТЬ ЧЕРЕЗ ЛЕС:", String.Empty };
+
+            for (int i = 0; i < 6; i += 1)
+            {
+                int dice = Game.Dice.Roll();
+
+                forest.Add($"BOLD|Бросок {i + 1}: {Game.Dice.Symbol(dice)}");
+
+                if (dice == 3)
+                {
+                    Character.Protagonist.Strength = 0;
+
+                    forest.Add($"BIG|BAD|Выпала тройка - вам уже не уйти живым от деревьев-убийц...");
+
+                    return forest;
+                }
+                else if ((dice == 1) || (dice == 6))
+                {
+                    forest.Add("Вы успешно уклонились от смертоносных сосулек!");
+                }
+                else
+                {
+                    Character.Protagonist.Strength -= dice;
+
+                    string line = Game.Services.CoinsNoun(dice, "СИЛУ", "СИЛЫ", "СИЛ");
+                    forest.Add($"BAD|Вы теряете {dice} {line} от попавших сосулек...");
+                }
+            }
+
+            forest.Add(String.Empty);
+
+            if (Character.Protagonist.Strength > 0)
+            {
+                forest.Add("BIG|GOOD|Вам успешно удалось пройти через лес :)");
+            }
+            else
+            {
+                forest.Add("BIG|BAD|Вам не удалось пройти через лес :(");
+            }
+
+            return forest;
         }
 
         public List<string> SeaBattle()
