@@ -15,8 +15,8 @@
 		<Buttons>
 			<Fight>Сражаться</Fight>
 			<FindTheWay>Искать путь</FindTheWay>
-			<Button Action="Dices, InlineWoundsByDices">Бросить кости</Button>
 			<HobgoblinGame>Играть</HobgoblinGame>
+			<Button Action="Dices, InlineWoundsByDices">Бросить кости</Button>
 		</Buttons>
 	</Introduction>
 	<Paragraphs>
