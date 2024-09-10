@@ -6,8 +6,7 @@
 		</Copyright>
 		<Styles>
 			<Main Value="b19081"/>
-			<Option Value="efceb1"/>
-			<System Value="efceb1"/>
+			<Color Name="Option, System" Value="efceb1"/>
 		</Styles>
 		<Default>
 			<HideDisabledOption/>
