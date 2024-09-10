@@ -5,15 +5,14 @@
 			<Author>Константин Таро, 2011</Author>
 		</Copyright>
 		<Styles>
-			<Main Value="8b0000"/>
 			<Background Value="373737"/>
 			<ActionBox Value="d77f7f"/>
 			<Font Value="b4b4b4"/>
-			<Color Name="SystemFont, AdditionalFont" Value="ffffff"/>
 			<StatusBar Value="961919"/>
 			<AdditionalStatus Value="781414"/>
+			<Color Name="Main, Action" Value="8b0000"/>
 			<Color Name="Option, Continue, System" Value="610000"/>
-			<Action Value="8b0000"/>
+			<Color Name="SystemFont, AdditionalFont" Value="ffffff"/>
 		</Styles>
 		<Lists>
 			<WithoutStatuses Items="0, 101"/>
