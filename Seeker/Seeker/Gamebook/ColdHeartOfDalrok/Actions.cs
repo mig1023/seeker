@@ -19,6 +19,7 @@ namespace Seeker.Gamebook.ColdHeartOfDalrok
         public int DeathDice { get; set; }
         public int StrengthPenalty { get; set; }
         public int SkillPenalty { get; set; }
+        public bool DriadStrength { get; set; }
 
         public List<Character> Enemies { get; set; }
 
@@ -86,8 +87,9 @@ namespace Seeker.Gamebook.ColdHeartOfDalrok
 
             foreach (Character enemy in Enemies)
             {
+                string strength = DriadStrength ? "???" : enemy.Strength.ToString();
                 string loyalty = enemy.Loyalty > 0 ? $"  верность {enemy.Loyalty}" : String.Empty;
-                enemies.Add($"{enemy.Name}\nловкость {enemy.Skill}  сила {enemy.Strength}{loyalty}");
+                enemies.Add($"{enemy.Name}\nловкость {enemy.Skill}   сила {strength}{loyalty}");
             }
 
             return enemies;
@@ -395,6 +397,30 @@ namespace Seeker.Gamebook.ColdHeartOfDalrok
 
             int round = 1;
             bool alreadyDejected = false;
+
+            if (DriadStrength)
+            {
+                int driad = Game.Dice.Roll();
+
+                fight.Add($"GRAY|Узнаём силу Дриада. Бросаем кубик: {Game.Dice.Symbol(driad)}");
+
+                if (driad == 4)
+                {
+                    fight.Add("BOLD|Выпала четвёрка - Дриад убит!");
+                    fight.Add("BIG|GOOD|Вы ПОБЕДИЛИ :)");
+
+                    return fight;
+                }
+                else
+                {
+                    int strength = 10 - driad;
+                    FightEnemies[0].Strength = strength;
+
+                    string line = Game.Services.CoinsNoun(strength, "СИЛА", "СИЛЫ", "СИЛ");
+                    fight.Add($"BOLD|Сила Дриада: 10 - {driad} = {strength} {line}");
+                    fight.Add(String.Empty);
+                }
+            }
 
             while (true)
             {
