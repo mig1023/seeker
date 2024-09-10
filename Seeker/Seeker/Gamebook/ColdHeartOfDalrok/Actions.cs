@@ -95,6 +95,21 @@ namespace Seeker.Gamebook.ColdHeartOfDalrok
 
         public List<string> Luck()
         {
+            string luck = "Боги не отвернулись от вас, Повезло, Удачливы, Фортуна за вас";
+            string fail = "Вы неудачливы, Нет, Она хмурится и отворачивается, Нет - вы промахнулись";
+
+            if (Game.Option.IsTriggered("Месть Темеса"))
+            {
+                Game.Buttons.Disable(luck);
+                Game.Option.Trigger("Месть Темеса", remove: true);
+                
+                return new List<string>
+                {
+                    "Бог войны Темес припомнил вам обиду...",
+                    "BIG|BAD|Вас постигла НЕУДАЧА :("
+                };
+            }
+
             List<string> luckCheck = new List<string>
             {
                 "Цифры удачи:",
@@ -108,9 +123,6 @@ namespace Seeker.Gamebook.ColdHeartOfDalrok
             luckCheck.Add($"Проверка удачи: {Game.Dice.Symbol(goodLuck)} - {not}зачёркунтый");
 
             luckCheck.Add(Result(isLuck, "УСПЕХ", "НЕУДАЧА"));
-
-            string luck = "Боги не отвернулись от вас, Повезло, Удачливы, Фортуна за вас";
-            string fail = "Вы неудачливы, Нет, Она хмурится и отворачивается, Нет - вы промахнулись";
 
             Game.Buttons.Disable(isLuck, luck, fail);
 
