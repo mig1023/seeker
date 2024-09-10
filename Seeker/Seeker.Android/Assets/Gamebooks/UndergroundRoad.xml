@@ -6,12 +6,12 @@
 		</Copyright>
 		<Styles>
 			<Main Value="0e2625"/>
-			<Color Name="Option, Continue" Value="123130"/>
 			<System Value="435e5e"/>
 			<SystemFont Value="b8c3c2"/>
 			<StatusBar Value="081615"/>
 			<Background Value="153736"/>
 			<Font Value="a1afae"/>
+			<Color Name="Option, Continue" Value="123130"/>
 		</Styles>
 		<Lists>
 			<WithoutStatuses Items="0, 103"/>
