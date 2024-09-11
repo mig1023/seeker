@@ -84,7 +84,7 @@
 					<Text Style="Small, Upper">Эдвард Паккард, перевод Н. Нестеровой, 1992</Text>
 				</Option>
 				<Option Goto="1795" Text="Пришельцы из космоса" Image="Invaders">
-					<Text Style="Small, Upper">Эдвард Паккард, перевод  У. Сапциной, 1991</Text>
+					<Text Style="Small, Upper">Эдвард Паккард, перевод У. Сапциной, 1991</Text>
 				</Option>
 				<Option Goto="1909" Text="Похищение феи" Image="Fairy">
 					<Text Style="Small, Upper">Шэннон Гиллиган, перевод Сергея Посниченко, 1985</Text>
