@@ -5096,6 +5096,9 @@
 		</Paragraph>
 		<Paragraph No="620">
 			<Text>К счастью, городские стражники не появляются, и все заканчивается благополучно. Незнакомец честно отдает вам 30 золотых и провожает обратно в город.</Text>
+			<Modifications>
+				<Coins Value="30"/>
+			</Modifications>
 			<Options>
 				<Option Goto="247"/>
 			</Options>
