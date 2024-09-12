@@ -69,6 +69,11 @@ namespace Seeker.Gamebook.ColdHeartOfDalrok
             {
                 return true;
             }
+            else if (option.Contains("ДЕНЕГ >="))
+            {
+                int level = Game.Services.LevelParse(option);
+                return Character.Protagonist.Coins >= level;
+            }
             else if (option == "Стрельба из лука")
             {
                 bool skill = Game.Option.IsTriggered(option);
