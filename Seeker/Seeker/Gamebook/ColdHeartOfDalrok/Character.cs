@@ -57,7 +57,7 @@ namespace Seeker.Gamebook.ColdHeartOfDalrok
             MaxStrength = Constants.Strengths[dice];
             Strength = MaxStrength;
             Charm = Constants.Charms[dice];
-            Coins = 0;
+            Coins = 15;
             Loyalty = null;
             RoundWithoutSuccess = 0;
             BonusesAvailability = 2;
