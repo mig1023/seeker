@@ -31,6 +31,12 @@ namespace Seeker.Gamebook.ColdHeartOfDalrok
             $"Обаяние: {Character.Protagonist.Charm}",
         };
 
+        public override List<string> AdditionalStatus()
+        {
+            string line = Game.Services.CoinsNoun(Character.Protagonist.Coins, "золотой", "золотых", "золотых");
+            return new List<string> { $"Деньги: {Character.Protagonist.Coins} {line}" };
+        }
+
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
             GameOverBy(Character.Protagonist.Strength, out toEndParagraph, out toEndText);
 
