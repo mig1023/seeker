@@ -3088,6 +3088,9 @@
 			<Images>
 				<Pic5/>
 			</Images>
+			<Modifications>
+				<Coins Value="2"/>
+			</Modifications>
 			<Options>
 				<Option Goto="538"/>
 			</Options>
