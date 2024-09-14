@@ -8,7 +8,9 @@ namespace Seeker.Gamebook.SeaTales.Parts
     {
         public List<string> Status()
         {
-            return new List<string> { $"Пункты Повествования: {Character.Protagonist.NarrativePoints}" };
+            int points = Character.Protagonist.NarrativePoints;
+            points = points >= 0 ? points : 0;
+            return new List<string> { $"Пункты Повествования: {points}" };
         }
 
         public List<string> AdditionalStatus() => null;
@@ -20,15 +22,15 @@ namespace Seeker.Gamebook.SeaTales.Parts
 
         public bool GameOver(out int toEndParagraph, out string toEndText)
         {
-            toEndParagraph = 0;
+            toEndParagraph = 1448;
 
             if (Character.Protagonist.NarrativePoints < 0)
             {
                 Character.Protagonist.NarrativePoints = 0;
 
                 toEndText = "Так, этот краснобай настолько заврался, " +
-                    "что собутыльники перестали воспринимать краснобая " +
-                    "всерьёз и подняли на смех. Рассказ начинает другой...";
+                    "что собутыльники перестали воспринимать его всерьёз " +
+                    "и подняли на смех. Рассказ начинает другой...";
 
                 return true;
             }
@@ -67,8 +69,7 @@ namespace Seeker.Gamebook.SeaTales.Parts
 
             Character.Protagonist.NarrativePoints += int.Parse(success[0]);
 
-            fight.Add(String.Empty);
-            fight.Add($"BIG|GOOD|{success[1]}");
+            fight.Add($"BIG|{success[1]}");
         }
 
         private string ToTxt(int num, bool all = false) =>
