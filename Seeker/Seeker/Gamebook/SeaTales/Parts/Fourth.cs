@@ -17,7 +17,7 @@ namespace Seeker.Gamebook.SeaTales.Parts
 
         public List<string> Representer(Actions action)
         {
-            return new List<string> { $"КОСМИЧЕСКОЕ СРАЖЕНИЕ\nПротивник: {action.Enemy}" };
+            return new List<string> { $"КОСМИЧЕСКОЕ СРАЖЕНИЕ\nпротив {action.Enemy}" };
         }
 
         public bool GameOver(out int toEndParagraph, out string toEndText)
