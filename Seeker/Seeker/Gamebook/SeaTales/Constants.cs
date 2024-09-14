@@ -18,6 +18,12 @@ namespace Seeker.Gamebook.SeaTales
 
         public static List<string> FailButtons { get; set; }
 
+        public static Dictionary<int, string> GetRangeTypes { get; set; }
+
+        public static Dictionary<int, string> NumTexts { get; set; }
+
+        public static Dictionary<int, string> AllNumTexts { get; set; }
+
         public static int StoryPart()
         {
             int part = 0;

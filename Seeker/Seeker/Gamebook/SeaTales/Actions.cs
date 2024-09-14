@@ -19,6 +19,10 @@ namespace Seeker.Gamebook.SeaTales
 
         public string Fail { get; set; }
 
+        public string Enemy { get; set; }
+
+        public string Combination { get; set; }
+
         private static Dictionary<int, IParts> Parts = new Dictionary<int, IParts>();
 
         public IParts NewPart(int part)

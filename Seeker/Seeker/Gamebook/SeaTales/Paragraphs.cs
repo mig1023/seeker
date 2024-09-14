@@ -104,6 +104,8 @@ namespace Seeker.Gamebook.SeaTales
             action.Heat = Xml.IntParse(xmlAction.Attributes["Heat"]);
             action.Level = xmlAction.Attributes["Level"]?.InnerText ?? String.Empty;
             action.Success = xmlAction.Attributes["Success"]?.InnerText ?? String.Empty;
+            action.Combination = xmlAction.Attributes["Combination"]?.InnerText ?? String.Empty;
+            action.Enemy = xmlAction.Attributes["Enemy"]?.InnerText ?? String.Empty;
 
             if (action.Type == "Option")
                 action.Option = OptionParse(xmlAction);
