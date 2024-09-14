@@ -31,6 +31,8 @@ namespace Seeker.Gamebook.SeaTales
                     return new Second();
                 case 3:
                     return new Third();
+                case 4:
+                    return new Fourth();
             }
 
             return null;
