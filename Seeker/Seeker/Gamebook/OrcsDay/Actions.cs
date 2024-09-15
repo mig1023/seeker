@@ -49,13 +49,13 @@ namespace Seeker.Gamebook.OrcsDay
             }
             else if (Level > 0)
             {
-                return new List<string> { $"Проверка {Constants.StatNames[Stat]}, " +
+                return new List<string> { $"Проверка {Constants.StatNames[Stat]}\n" +
                     $"уровень {Level}" };
             }
             else if (!String.IsNullOrEmpty(Stat))
             {
-                return new List<string> { $"{Head}\n(текущее значение: " +
-                    $"{Game.Services.NegativeMeaning(GetProperty(Character.Protagonist, Stat))})" };
+                return new List<string> { $"{Head}\nтекущее значение: " +
+                    $"{Game.Services.NegativeMeaning(GetProperty(Character.Protagonist, Stat))}" };
             }
             else if (Price > 0)
             {
