@@ -45,7 +45,7 @@ namespace Seeker.Gamebook.Cyberpunk
                 int statValue = GetProperty(Character.Protagonist, Stat);
                 string statName = Constants.CharactersParams[Stat];
 
-                return new List<string> { $"{statName.ToUpper()} (значение: {statValue})" };
+                return new List<string> { $"{statName.ToUpper()}\nзначение: {statValue}" };
             }
             else if ((Type == "DiceRoll") || (Type == "OddDiceRoll"))
             {
