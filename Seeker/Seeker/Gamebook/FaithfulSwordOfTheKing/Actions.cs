@@ -115,7 +115,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             List<string> enemies = new List<string>();
 
             if (Price > 0)
-                return new List<string> { $"{Head}, {ToEcu(Price)} экю" };
+                return new List<string> { $"{Head}\n{ToEcu(Price)} экю" };
 
             if (Type == "Get")
                 return new List<string> { Head };
