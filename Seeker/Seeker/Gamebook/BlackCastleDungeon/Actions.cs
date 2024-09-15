@@ -155,12 +155,13 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             if (Price > 0)
             {
                 string gold = Game.Services.CoinsNoun(Price, "золотой", "золотых", "золотых");
-                return new List<string> { $"{Head}, {Price} {gold}" };
+                return new List<string> { $"{Head}\n{Price} {gold}" };
             }
             else if (ThisIsSpell)
             {
                 int count = (ThisIsSpell ? Character.Protagonist.Spells.Where(x => x == Head).Count() : 0);
-                string line = count > 0 ? $" ({count} шт)" : String.Empty;
+                string countLine = Game.Services.CoinsNoun(count, "штука", "штуки", "штук");
+                string line = count > 0 ? $"\n{count} {countLine}" : String.Empty;
                 return new List<string> { $"{Head}{line}" };
             }
 
