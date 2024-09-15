@@ -42,20 +42,21 @@ namespace Seeker.Gamebook.ColdHeartOfDalrok
 
         public override bool IsButtonEnabled(bool secondButton = false)
         {
-            if (Type == "Get")
+            if (Type != "Get")
             {
-                if (Character.Protagonist.BonusesAvailability <= 0)
-                {
-                    return false;
-                }
-                else if (Game.Option.IsTriggered(Head))
-                {
-                    return false;
-                }
-                else
-                {
-                    return true;
-                }
+                return true;
+            }
+            else if (Price > 0)
+            {
+                return !Used && !(Price > Character.Protagonist.Coins);
+            }
+            else if (Character.Protagonist.BonusesAvailability <= 0)
+            {
+                return false;
+            }
+            else if (Game.Option.IsTriggered(Head))
+            {
+                return false;
             }
             else
             {
@@ -91,11 +92,21 @@ namespace Seeker.Gamebook.ColdHeartOfDalrok
         {
             List<string> enemies = new List<string>();
 
+            if (Price > 0)
+            {
+                string gold = Game.Services.CoinsNoun(Price, "монета", "монеты", "монет");
+                return new List<string> { $"{Head}, {Price} {gold}" };
+            }
+
             if (!String.IsNullOrEmpty(Head))
+            {
                 return new List<string> { Head };
+            }
 
             if (Enemies == null)
+            {
                 return enemies;
+            }
 
             foreach (Character enemy in Enemies)
             {
@@ -243,12 +254,25 @@ namespace Seeker.Gamebook.ColdHeartOfDalrok
 
         public List<string> Get()
         {
-            Game.Option.Trigger(Head);
-            Character.Protagonist.BonusesAvailability -= 1;
-
-            if (Head == "Стрельба из лука")
+            if ((Price > 0) && (Character.Protagonist.Coins >= Price))
             {
-                Character.Protagonist.Arrows = 5;
+                Character.Protagonist.Coins -= Price;
+
+                if (!Multiple)
+                    Used = true;
+
+                if (Benefit != null)
+                    Benefit.Do();
+            }
+            else
+            {
+                Game.Option.Trigger(Head);
+                Character.Protagonist.BonusesAvailability -= 1;
+
+                if (Head == "Стрельба из лука")
+                {
+                    Character.Protagonist.Arrows = 5;
+                }
             }
 
             return new List<string> { "RELOAD" };
