@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Cryptography;
 
 namespace Seeker.Gamebook.ColdHeartOfDalrok
 {
@@ -21,6 +20,7 @@ namespace Seeker.Gamebook.ColdHeartOfDalrok
         public int StrengthPenalty { get; set; }
         public int SkillPenalty { get; set; }
         public bool DriadStrength { get; set; }
+        public bool Poison { get; set; }
 
         public List<Character> Enemies { get; set; }
 
@@ -652,6 +652,11 @@ namespace Seeker.Gamebook.ColdHeartOfDalrok
                         fight.Add($"BAD|{enemy.Name} ранил вас");
 
                         bool loyaltyBonus = enemy.Loyalty >= 18;
+
+                        if (Poison)
+                        {
+                            Game.Buttons.Disable("Вы убили зверька избежав укусов");
+                        }
 
                         if (loyaltyBonus)
                         {
