@@ -4583,13 +4583,14 @@
 			<Texts>
 				<Text>Идти всю ночь после наполненного событиями дня чертовски тяжело. Глаза слипаются, ноги заплетаются. Так вы долго не протянете.</Text>
 				<Text Style="Small">Потеряйте 2 СИЛЫ.</Text>
-				<Text>Если у вас есть веточка орти, вы знаете, какой параграф посмотреть.</Text>
+				<Text>Если у вас есть веточка орти?</Text>
 			</Texts>
 			<Modifications>
 				<Strength Value="-2"/>
 			</Modifications>
 			<Options>
-				<Option Goto="219" Text="Если нет"/>
+				<Option Goto="596" Text="Есть" Availability="Веточка орти"/>
+				<Option Goto="219" Text="Нет" Availability="!Веточка орти"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="544">
