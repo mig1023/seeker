@@ -64,7 +64,7 @@ namespace Seeker.Gamebook.Tank
                 CrewNames(Crew, out string nominative, out string _);
                 int currentStat = GetProperty(Character.Protagonist, Crew);
                 string points = Game.Services.CoinsNoun(currentStat, "очко", "очка", "очков");
-                line = $"{nominative}" + (currentStat > 0 ? $" (опыт {currentStat} {points})" : String.Empty);
+                line = $"{nominative}" + (currentStat > 0 ? $"\nОпыт {currentStat} {points}" : String.Empty);
             }
 
             return new List<string> { line };
