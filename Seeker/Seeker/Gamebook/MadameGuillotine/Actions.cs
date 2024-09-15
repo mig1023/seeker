@@ -29,11 +29,12 @@ namespace Seeker.Gamebook.MadameGuillotine
 
                 if (currentStat > 11)
                 {
-                    diffLine = " (максимум)";
+                    diffLine = "\nмаксимум";
                 }
                 else if (currentStat > 1)
                 {
-                    diffLine = $" (значение {currentStat})";
+                    string count = Game.Services.CoinsNoun(currentStat, "единица", "единицы", "единицы");
+                    diffLine = $"\nзначение {currentStat} {count}";
                 }
 
                 return new List<string> { $"{Head}{diffLine}" };
