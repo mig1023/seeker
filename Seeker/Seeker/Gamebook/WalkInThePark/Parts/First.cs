@@ -30,7 +30,7 @@ namespace Seeker.Gamebook.WalkInThePark.Parts
             if (action.Price > 0)
             {
                 string price = Game.Services.CoinsNoun(action.Price, "рубль", "рубля", "рублей");
-                return new List<string> { $"{action.Head}, {action.Price} {price}" };
+                return new List<string> { $"{action.Head}\n{action.Price} {price}" };
             }
 
             if (action.Enemies == null)
