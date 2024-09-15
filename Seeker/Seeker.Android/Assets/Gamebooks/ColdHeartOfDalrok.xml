@@ -4364,7 +4364,9 @@
 		<Paragraph No="514">
 			<Text>Наступает ночь.</Text>
 			<Options>
-				<Option Goto="250" Text="Хотите воспользоваться магическим шаром Рондуэла"/>
+				<Option Goto="250" Text="Хотите воспользоваться магическим шаром Рондуэла">
+					<Strength Value="-1"/>
+				</Option>
 				<Option Goto="42" Text="Нет"/>
 			</Options>
 		</Paragraph>
