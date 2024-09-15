@@ -107,7 +107,7 @@ namespace Seeker.Gamebook.YounglingTournament
         public override List<string> Representer()
         {
             if (Level > 0)
-                return new List<string> { $"Пройдите проверку Понимания Силы, сложностью {Level}" };
+                return new List<string> { $"Пройдите проверку Понимания Силы\nсложность {Level}" };
 
             List<string> enemies = new List<string>();
 
