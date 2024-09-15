@@ -20,14 +20,14 @@ namespace Seeker.Gamebook.DzungarWar
         {
             if (Type == "TestAll")
             {
-                return new List<string> { $"Проверить по совокупному уровню {Level}" };
+                return new List<string> { $"ПРОВЕРКА\nпо совокупному уровню {Level}" };
             }
             else if (Level > 0)
             {
                 int testResult = Tests.LevelWithPenalty(Level, out List<string> _,
                     ref NextTestWithTincture, ref NextTestWithGinseng, ref NextTestWithAirag, TriggerTestPenalty);
 
-                return new List<string> { $"Проверка {Constants.StatNames[Stat]}, уровень {testResult}" };
+                return new List<string> { $"ПРОВЕРКА {Constants.StatNames[Stat]}\nуровень {testResult}" };
             }
             else if (!String.IsNullOrEmpty(Stat) && !StatToMax)
             {
@@ -36,18 +36,19 @@ namespace Seeker.Gamebook.DzungarWar
 
                 if (currentStat > 11)
                 {
-                    diffLine = " (максимум)";
+                    diffLine = "\nмаксимум";
                 }
                 else if (currentStat > 1)
                 {
-                    diffLine = $" (+{currentStat - 1})";
+                    string count = Game.Services.CoinsNoun(currentStat - 1, "единица", "единицы", "единицы");
+                    diffLine = $"\n+{currentStat - 1} {count}";
                 }
 
                 return new List<string> { $"{Head}{diffLine}" };
             }
             else if (Price > 0)
             {
-                return new List<string> { $"{Head}, {Price} таньга" };
+                return new List<string> { $"{Head}\n{Price} таньга" };
             }
             else if (!String.IsNullOrEmpty(Head))
             {
