@@ -64,7 +64,7 @@ namespace Seeker.Gamebook.BangkokSky
             }
             else if (Price > 0) 
             {
-                return new List<string> { $"{Head}, {Price} бат" };
+                return new List<string> { $"{Head}\n{Price} бат" };
             }
             else if (Free)
             {
