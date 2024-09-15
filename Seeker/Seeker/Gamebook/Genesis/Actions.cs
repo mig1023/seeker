@@ -13,7 +13,8 @@ namespace Seeker.Gamebook.Genesis
             if (!String.IsNullOrEmpty(Bonus))
             {
                 int diff = GetProperty(Character.Protagonist, Bonus) - Constants.GetStartValues[Bonus];
-                string diffLine = diff > 0 ? $" (+{diff})" : String.Empty;
+                string count = Game.Services.CoinsNoun(diff, "единица", "единицы", "единицы");
+                string diffLine = diff > 0 ? $"\n+{diff} {count}" : String.Empty;
 
                 return new List<string> { $"{Head}{diffLine}" };
             }
