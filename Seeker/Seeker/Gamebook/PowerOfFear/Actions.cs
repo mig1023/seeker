@@ -58,7 +58,7 @@ namespace Seeker.Gamebook.PowerOfFear
             }
             else if (Type == "Test")
             {
-                return new List<string> { $"ПРОВЕРКА ПО НАВЫКУ " +
+                return new List<string> { $"ПРОВЕРКА ПО НАВЫКУ\n" +
                     $"{Constants.PropertiesNames[Skill].ToUpper()}" };
             }
             else if (Type == "Fight")
@@ -68,8 +68,11 @@ namespace Seeker.Gamebook.PowerOfFear
             }
             else if (!String.IsNullOrEmpty(Skill))
             {
-                return new List<string> { $"{Head}\n(текущее значение: " +
-                    $"{GetProperty(Character.Protagonist, Skill)})" };
+                int count = GetProperty(Character.Protagonist, Skill);
+                string line = Game.Services.CoinsNoun(count, "единица", "единицы", "единицы");
+
+                return new List<string> { $"{Head}\n" +
+                    $"текущее значение: {count} {line})" };
             }
 
             return new List<string>();
