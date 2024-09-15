@@ -33,8 +33,16 @@ namespace Seeker.Gamebook.ColdHeartOfDalrok
 
         public override List<string> AdditionalStatus()
         {
-            string line = Game.Services.CoinsNoun(Character.Protagonist.Coins, "золотой", "золотых", "золотых");
-            return new List<string> { $"Деньги: {Character.Protagonist.Coins} {line}" };
+            string coins = Game.Services.CoinsNoun(Character.Protagonist.Coins, "золотой", "золотых", "золотых");
+            var statuses = new List<string> { $"Деньги: {Character.Protagonist.Coins} {coins}" };
+
+            if (Character.Protagonist.Arrows > 0)
+            {
+                string arrows = Game.Services.CoinsNoun(Character.Protagonist.Arrows, "штука", "штуки", "штук");
+                statuses.Add($"Стрелы для лука: {Character.Protagonist.Arrows} {arrows}");
+            }
+
+            return statuses;
         }
 
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
