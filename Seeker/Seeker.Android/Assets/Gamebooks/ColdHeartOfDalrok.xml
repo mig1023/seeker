@@ -3396,9 +3396,10 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="397">
-			<Text>Если у вас есть сбор трав, помогающий против чар, вы знаете, какой параграф посмотреть.</Text>
+			<Text>Есть ли у вас сбор трав, помогающий против чар?</Text>
 			<Options>
-				<Option Goto="278" Text="Иначе..."/>
+				<Option Goto="306" Text="Есть" Availability="Сбор для пробуждения от чар"/>
+				<Option Goto="278" Text="Нет" Availability="!Сбор для пробуждения от чар"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="398">
