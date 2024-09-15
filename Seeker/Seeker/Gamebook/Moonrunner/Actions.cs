@@ -122,7 +122,7 @@ namespace Seeker.Gamebook.Moonrunner
             if (Price > 0)
             {
                 string gold = Game.Services.CoinsNoun(Price, "золотой", "золотых", "золотых");
-                return new List<string> { $"{Head}, {Price} {gold}" };
+                return new List<string> { $"{Head}\n{Price} {gold}" };
             }
             else if (!String.IsNullOrEmpty(Stat))
             {
@@ -130,7 +130,10 @@ namespace Seeker.Gamebook.Moonrunner
                 string diffLine = String.Empty;
 
                 if (currentStat > 0)
-                    diffLine = $" (текущее: {currentStat})";
+                {
+                    string count = Game.Services.CoinsNoun(currentStat, "единица", "единицы", "единицы");
+                    diffLine = $"\nтекущее: {currentStat} {count}";
+                }
 
                 return new List<string> { $"{Head}{diffLine}" };
             }
