@@ -578,6 +578,14 @@ namespace Seeker.Gamebook.ColdHeartOfDalrok
                         fight.Add($"Мощность вашего удара: " +
                             $"{Game.Dice.Symbol(dice)} x 2 + {skill} = {protagonistHit}");
 
+                        if (Game.Option.IsTriggered("Меч из отличного закаленного налья"))
+                        {
+                            protagonistHit += 1;
+
+                            fight.Add($"GRAY|Благодаря отличному мечу Мощность повышается " +
+                                $"на единицу и равна {protagonistHit}");
+                        }
+
                         if (StrengthPenalty > 0)
                         {
                             protagonistHit -= StrengthPenalty;
@@ -593,6 +601,14 @@ namespace Seeker.Gamebook.ColdHeartOfDalrok
                     fight.Add($"Мощность его удара: " +
                         $"{Game.Dice.Symbol(enemyDice)} x 2 + " +
                         $"{enemy.Skill} = {enemyHit}");
+
+                    if (Game.Option.IsTriggered("Кольчуга"))
+                    {
+                        enemyHit -= 1;
+
+                        fight.Add($"GRAY|Благодаря кольчуге Мощность понижается " +
+                            $"на единицу и равна {enemyHit}");
+                    }
 
                     if ((protagonistHit > enemyHit) && !attackAlready)
                     {
