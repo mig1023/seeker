@@ -1666,13 +1666,14 @@
 			<Texts>
 				<Text>В скором времени корабль готов к выходу в море и покидает порт. Капитан явно доволен выгодным пассажиром и всячески обхаживает вас. После обильного ужина...</Text>
 				<Text Style="Small">Можете восстановить 4 СИЛЫ.</Text>
-				<Text>...вы ложитесь спать. Если у вас есть лист растения слэкш, вы знаете, какой параграф надо посмотреть.</Text>
+				<Text>...вы ложитесь спать. Есть ли у вас лист растения слэкш?</Text>
 			</Texts>
 			<Modifications>
 				<Strength Value="4"/>
 			</Modifications>
 			<Options>
-				<Option Goto="437" Text="Если нет..."/>
+				<Option Goto="101" Text="Есть" Availability="Слэкш"/>
+				<Option Goto="437" Text="Нет" Availability="!Слэкш"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="190">
