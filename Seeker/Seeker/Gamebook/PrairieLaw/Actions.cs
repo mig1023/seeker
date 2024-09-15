@@ -44,7 +44,7 @@ namespace Seeker.Gamebook.PrairieLaw
 
             if (Price > 0)
             {
-                return new List<string> { $"{Head}, {ToDollars(Price)}$" };
+                return new List<string> { $"{Head}\n{ToDollars(Price)}$" };
             }
             else if (!String.IsNullOrEmpty(Head))
             {
