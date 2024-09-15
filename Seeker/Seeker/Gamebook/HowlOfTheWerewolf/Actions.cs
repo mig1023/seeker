@@ -53,7 +53,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             if (Price > 0)
             {
                 string gold = Game.Services.CoinsNoun(Price, "золотой", "золотых", "золотых");
-                return new List<string> { $"{Head}, {Price} {gold}" };
+                return new List<string> { $"{Head}\n{Price} {gold}" };
             }
 
             if (!String.IsNullOrEmpty(Head) || (Type == "Get"))
