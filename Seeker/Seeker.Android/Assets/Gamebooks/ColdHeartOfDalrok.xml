@@ -444,9 +444,10 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="47">
-			<Text>Сойдя с дороги, располагаетесь на ночлег. Если у вас есть веточка орти, вы знаете, какой параграф посмотреть.</Text>
+			<Text>Сойдя с дороги, располагаетесь на ночлег. Есть ли у вас есть веточка орти?</Text>
 			<Options>
-				<Option Goto="304" Text="Если нет"/>
+				<Option Goto="100" Text="Есть" Availability="Веточка орти"/>
+				<Option Goto="304" Text="Нет" Availability="!Веточка орти"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="48">
