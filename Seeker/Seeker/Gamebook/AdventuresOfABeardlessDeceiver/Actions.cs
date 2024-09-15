@@ -19,18 +19,19 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             if (Level > 0)
             {
                 return new List<string> {
-                    $"Проверка {Constants.StatNames[Stat]}, уровень {Level}" };
+                    $"Проверка {Constants.StatNames[Stat]}\nуровень {Level}" };
             }
             else if (!String.IsNullOrEmpty(Stat))
             {
                 int currentStat = GetProperty(Character.Protagonist, Stat);
-                string diffLine = currentStat > 1 ? $" (+{currentStat - 1})" : String.Empty;
+                string count = Game.Services.CoinsNoun(currentStat - 1, "единица", "единицы", "единицы");
+                string diffLine = currentStat > 1 ? $"\n+{currentStat - 1} {count}" : String.Empty;
 
                 return new List<string> { $"{Head}{diffLine}" };
             }
             else if (Price > 0)
             {
-                return new List<string> { $"{Head}, {Price} таньга" };
+                return new List<string> { $"{Head}\n{Price} таньга" };
             }
             else if (!String.IsNullOrEmpty(Head))
             {
