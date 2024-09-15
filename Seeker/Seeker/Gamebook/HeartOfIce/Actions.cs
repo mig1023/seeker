@@ -18,7 +18,7 @@ namespace Seeker.Gamebook.HeartOfIce
             if (Price > 0)
             {
                 string money = Game.Services.CoinsNoun(Price, "скад", "скада", "скадов");
-                return new List<string> { $"{Head}, {Price} скад{money}" };
+                return new List<string> { $"{Head}\n{Price} скад{money}" };
             }
             else if (!String.IsNullOrEmpty(Head))
             {
