@@ -3204,7 +3204,9 @@
 		<Paragraph No="372">
 			<Text>К вечеру вы вспоминаете о магическом шаре Рондуэла.</Text>
 			<Options>
-				<Option Goto="14" Text="Хотите воспользоваться им"/>
+				<Option Goto="14" Text="Хотите воспользоваться им">
+					<Strength Value="-1"/>
+				</Option>
 				<Option Goto="536" Text="Просто ляжете спать, чтобы лишний раз не расстраиваться"/>
 			</Options>
 		</Paragraph>
