@@ -708,5 +708,8 @@
 		<Paragraph No="101">
 			<Text>[пустой параграф]</Text>
 		</Paragraph>
+		<Paragraph No="102">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
