@@ -149,5 +149,12 @@
 				<Option Goto="201"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="21">
+			<Text>Обыск раскопанных могил отнял много времени и сил, но не принёс ничего нового.</Text>
+			<Options>
+				<Option Goto="22" Text="Обойти все нераскопанные могилы в поисках чего-либо приметного"/>
+				<Option Goto="30" Text="Вернуться в город"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
