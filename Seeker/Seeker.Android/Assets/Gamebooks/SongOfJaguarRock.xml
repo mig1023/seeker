@@ -131,5 +131,11 @@
 				<Option Goto="20"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="18">
+			<Text>«Эй, да ты легавый!» - произнёс всё тот же пьяница. Все умолкли на миг. И тут кто-то крикнул «Бей легавых! Смерть ему!», и началось... ВЫ ПРОИГРАЛИ!</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
