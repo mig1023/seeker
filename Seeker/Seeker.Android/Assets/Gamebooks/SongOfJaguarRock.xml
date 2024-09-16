@@ -671,5 +671,13 @@
 				<Option Goto="100" Text="Не тратить время на разговоры"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="97">
+			<Text>97.</Text>
+			<Options>
+				<Option Goto="127" Text="Если авторитет меньше 2"/>
+				<Option Goto="91" Text="Если авторитет от 2 до 3"/>
+				<Option Goto="126" Text="Если авторитет 4"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
