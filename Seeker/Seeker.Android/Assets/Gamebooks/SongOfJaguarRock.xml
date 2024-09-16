@@ -264,5 +264,14 @@
 				<Option Goto="202"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="40">
+			<Text>Несомненно, в этих горах могут водиться змеи. Интересно, хватит ли мне ловкости, чтобы отбиться от змеи. Тот факт, что я иду пешком, совсем меня не радовал.</Text>
+			<Options>
+				<Option Goto="28" Text="Вернуться в город за конём"/>
+				<Option Goto="30" Text="Просто вернуться в город"/>
+				<Option Goto="61" Text="Двигаться пешком дальше"/>
+			</Options>
+		</Paragraph>
+		<Paragraph No="41">
 	</Paragraphs>
 </Gamebook>
