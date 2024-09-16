@@ -240,5 +240,8 @@
 				<Option Goto="30" Text="Продолжить расследование в городе"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="33">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
