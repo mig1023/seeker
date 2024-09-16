@@ -46,5 +46,11 @@
 				<Option Goto="8" Text="Скакать дальше, не останавливаясь"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="5">
+			<Text>Вы вступили в бой с четырьмя индейцами. Его исход заранее известен. ВЫ ПРОИГРАЛИ!</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
