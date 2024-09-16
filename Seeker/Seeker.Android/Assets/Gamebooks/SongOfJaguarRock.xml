@@ -537,5 +537,11 @@
 				<Option Goto="75"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="78">
+			<Text>Вы пришпорили коня и помчали обратно в Пёпл Хэвен. По пути Вы увидели силуэт человека с ружьём. Вы выхватили оружие, но было слишком поздно. ВЫ ПРОИГРАЛИ!</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
