@@ -65,5 +65,11 @@
 				<Option Goto="10" Text="Если нет ни одного очка авторитета"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="8">
+			<Text>Пришпорив коня, Вы поскакали дальше. Но конь уже едва скакал, так что преследователю не составило труда вас нагнать и пустить пулю в спину. ВЫ ПРОИГРАЛИ...</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
