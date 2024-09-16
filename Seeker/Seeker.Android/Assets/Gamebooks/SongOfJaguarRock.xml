@@ -448,5 +448,11 @@
 				<Option Goto="65"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="65">
+			<Text>Я выхватил оружие, и над ухом тут же прозвенела пуля, выпущенная одних из индейцев.\n\nБОЙ</Text>
+			<Options>
+				<Option Goto="79" Text="Если вы победили"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
