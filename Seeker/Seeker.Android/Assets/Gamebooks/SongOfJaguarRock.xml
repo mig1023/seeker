@@ -430,5 +430,11 @@
 				<Option Goto="62"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="62">
+			<Text>После встречи со змеёй я решил больше не искушать судьбу. Без коня здесь делать нечего.</Text>
+			<Options>
+				<Option Goto="30" Text="Вернуться в город (время -2 суммарно на прямую и обратную дорогу)"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
