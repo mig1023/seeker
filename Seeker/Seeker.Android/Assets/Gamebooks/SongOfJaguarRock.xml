@@ -273,5 +273,10 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="41">
+			<Text>Примечание: За одно лечение доктор лечит 3 ранения. Время -1 за каждое лечение.</Text>
+			<Options>
+				<Option Goto="30"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
