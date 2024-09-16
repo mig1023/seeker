@@ -243,5 +243,8 @@
 		<Paragraph No="33">
 			<Text>[пустой параграф]</Text>
 		</Paragraph>
+		<Paragraph No="34">
+			<Text>[пустой параграф]</Text>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
