@@ -650,5 +650,11 @@
 				<Option Goto="95"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="94">
+			<Text>Я углубился в заросли, выискивая индейца. Неожиданно я обнаружил, что окружён.</Text>
+			<Options>
+				<Option Goto="95"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
