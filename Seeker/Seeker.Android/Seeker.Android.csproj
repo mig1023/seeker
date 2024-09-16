@@ -775,10 +775,16 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\SeaTales_Space.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Gamebooks\SongOfJaguarRock.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\SongOfJaguarRock.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties XamarinHotReloadDebuggerTimeoutExceptionSeekerAndroidHideInfoBar="True" XamarinHotReloadGenericExceptionInfoBarSeekerAndroidHideInfoBar="True" />
+      <UserProperties XamarinHotReloadGenericExceptionInfoBarSeekerAndroidHideInfoBar="True" XamarinHotReloadDebuggerTimeoutExceptionSeekerAndroidHideInfoBar="True" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>
