@@ -1442,5 +1442,11 @@
 				<Option Goto="30"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="210">
+			<Text>Потеряв три минуты, я нашёл абзац, где написано «Выдвинуть ^Гтэ, затем ». (время -3)</Text>
+			<Options>
+				<Option Goto="192" Text="Выдвинуть барельеф со знаками Г Г а"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
