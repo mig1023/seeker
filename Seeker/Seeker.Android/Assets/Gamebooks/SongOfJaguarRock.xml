@@ -1328,5 +1328,11 @@
 				<Option Goto="200" Text="Выдвинуть"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="193">
+			<Options>
+				<Option Goto="164" Text="Если у Вас нет метки «Кларк»"/>
+				<Option Goto="168" Text="Если у Вас есть метка «Кларк»"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
