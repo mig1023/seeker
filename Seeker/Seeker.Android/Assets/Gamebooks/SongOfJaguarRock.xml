@@ -1219,5 +1219,11 @@
 				<Option Goto="168"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="179">
+			<Text>Уцепившись за конец верёвки с ящиком, я медленно опустился на верёвке на пол.</Text>
+			<Options>
+				<Option Goto="170"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
