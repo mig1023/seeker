@@ -1121,5 +1121,11 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="165">
+			<Text>Я уцепился за верёвку с ящиком, и она начала медленно опускаться вниз. Через минуту я достиг уровня пола и спрыгнул, а ящик медленно пополз наверх.</Text>
+			<Options>
+				<Option Goto="154"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
