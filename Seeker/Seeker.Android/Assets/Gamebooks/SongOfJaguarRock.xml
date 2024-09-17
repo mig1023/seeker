@@ -705,10 +705,10 @@
 				<Option Goto="125" Text="Тщательно обследовать офис шерифа (только если нет пометки «Ж»)"/>
 			</Options>
 		</Paragraph>
-		<Paragraph No="101"/>
+		<Paragraph No="101">
 			<Text>[пустой параграф]</Text>
 		</Paragraph>
-		<Paragraph No="102"/>
+		<Paragraph No="102">
 			<Text>[пустой параграф]</Text>
 		</Paragraph>
 		<Paragraph No="103">
