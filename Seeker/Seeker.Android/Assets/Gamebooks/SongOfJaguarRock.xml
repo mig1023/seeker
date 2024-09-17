@@ -1229,5 +1229,11 @@
 				<Option Goto="170"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="180">
+			<Text>Схватившись за конец верёвки с камнем, Вы перевесили ящик на другом конце настолько, что вместе с камнем со свистом рухнули на каменные плиты. ВЫ ПРОИГРАЛИ!</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
