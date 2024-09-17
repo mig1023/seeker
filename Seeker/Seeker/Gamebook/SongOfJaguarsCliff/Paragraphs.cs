@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Seeker.Gamebook.SongOfJaguarRock
+namespace Seeker.Gamebook.SongOfJaguarsCliff
 {
     class Paragraphs : Prototypes.Paragraphs, Abstract.IParagraphs { }
 }

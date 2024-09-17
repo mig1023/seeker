@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Seeker.Gamebook.SongOfJaguarRock
+namespace Seeker.Gamebook.SongOfJaguarsCliff
 {
     class Actions : Prototypes.Actions, Abstract.IActions { }
 }

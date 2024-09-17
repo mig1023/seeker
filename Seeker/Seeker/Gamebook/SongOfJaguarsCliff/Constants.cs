@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Seeker.Gamebook.SongOfJaguarRock
+namespace Seeker.Gamebook.SongOfJaguarsCliff
 {
     class Constants : Prototypes.Constants, Abstract.IConstants { }
 }

@@ -994,7 +994,7 @@
 		<Setting>Фэнтези</Setting>
 		<Color>153736</Color>
 	</UndergroundRoad>
-	<SongOfJaguarRock>
+	<SongOfJaguarsCliff>
 		<Title>Песнь Ягуаровой Скалы</Title>
 		<Author>Андрей Тишин</Author>
 		<Year>2014</Year>
@@ -1004,5 +1004,5 @@
 		<Playthrough>На часок-полтора</Playthrough>
 		<Setting>Приключения</Setting>
 		<Color>884728</Color>
-	</SongOfJaguarRock>
+	</SongOfJaguarsCliff>
 </Gamebooks>
