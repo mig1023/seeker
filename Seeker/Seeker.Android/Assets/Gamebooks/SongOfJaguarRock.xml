@@ -1253,5 +1253,11 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="184">
+			<Text>Вы выдвинули барельеф, и каменная громада подалась. Вместе с барельефом в сторону отодвинулась плита пола, на которой Вы стояли, и Вы полетели вниз. ВЫ ПРОИГРАЛИ!</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
