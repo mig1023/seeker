@@ -1359,5 +1359,11 @@
 				<Option Goto="158"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="199">
+			<Text>Я выдвинул барельеф, и каменная громада подалась, открыв нишу в стене. Но через мгновение барельеф медленно пополз назад, и ниша снова закрылась. (время -1)</Text>
+			<Options>
+				<Option Goto="158"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
