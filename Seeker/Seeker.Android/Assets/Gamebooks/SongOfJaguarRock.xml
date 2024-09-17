@@ -1195,5 +1195,11 @@
 				<Option Goto="170"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="175">
+			<Text>Вы бросились на пол, но это не спасло Вас от ударной волны. ВЫ ПРОИГРАЛИ!</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
