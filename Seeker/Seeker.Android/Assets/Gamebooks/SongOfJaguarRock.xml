@@ -905,5 +905,11 @@
 				<Option Goto="138" Text="Если вы победили"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="137">
+			<Text>В тени от утёса я прокрался к пещере, пока Алекс и Джим разговаривали. (время -2)</Text>
+			<Options>
+				<Option Goto="138"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
