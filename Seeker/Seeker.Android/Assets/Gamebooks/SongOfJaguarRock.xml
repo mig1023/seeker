@@ -1301,5 +1301,32 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="192">
+			<Text>Я выдвинул барельеф, и каменная громада понемногу подалась, открыв пустую нишу в стене. Раздался щелчок, и барельеф замер на месте. Первая печать открыта... (время -1)\n\nЗападная группа:</Text>
+			<Options>
+				<Option Goto="185" Text="Выдвинуть"/>
+				<Option Goto="188" Text="Выдвинуть"/>
+				<Option Goto="186" Text="Выдвинуть"/>
+				<Option Goto="187" Text="Выдвинуть">
+					<Text>Южная группа:</Text>
+				</Option>
+				<Option Goto="189" Text="Выдвинуть"/>
+				<Option Goto="190" Text="Выдвинуть"/>
+				<Option Goto="191" Text="Выдвинуть"/>
+				<Option Goto="192" Text="Выдвинуть">
+					<Text>Восточная группа:</Text>
+				</Option>
+				<Option Goto="193" Text="Выдвинуть"/>
+				<Option Goto="194" Text="Выдвинуть"/>
+				<Option Goto="195" Text="Выдвинуть"/>
+				<Option Goto="196" Text="Выдвинуть">
+					<Text>Северная группа:</Text>
+				</Option>
+				<Option Goto="197" Text="Выдвинуть"/>
+				<Option Goto="198" Text="Выдвинуть"/>
+				<Option Goto="199" Text="Выдвинуть"/>
+				<Option Goto="200" Text="Выдвинуть"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
