@@ -872,5 +872,11 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="132">
+			<Text>Вы пошли в коридор слева, углубляясь во мрак. Внезапно пол выскользнул у Вас из-под ног, и Вы полетели в неожиданно разверзшуюся под ногами темноту. ВЫ ПРОИГРАЛИ!</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
