@@ -968,5 +968,11 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="146">
+			<Text>Я листал журнал, пока не нашёл комментарий, который был весьма лаконичен: «Правый коридор. Боком вдоль левой стены.» (время -1)</Text>
+			<Options>
+				<Option Goto="150"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
