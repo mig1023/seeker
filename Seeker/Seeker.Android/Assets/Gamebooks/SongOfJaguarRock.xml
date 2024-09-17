@@ -840,5 +840,11 @@
 				<Option Goto="100" Text="По завершении покупок"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="127">
+			<Text>- А не больно ли много ты захотел? - проворчал Алекс, - Ночью я магазин не открою. Во всяком случае, не для тебя! А теперь проваливай прочь с глаз моих.</Text>
+			<Options>
+				<Option Goto="100"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
