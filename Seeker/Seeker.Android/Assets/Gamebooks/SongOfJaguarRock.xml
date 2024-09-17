@@ -1147,5 +1147,14 @@
 				<Option Goto="206"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="169">
+			<Text>Я быстро настучал «БРОШЬ В КАРМАНЕ» и выждал, но ответа не было... (время -1)</Text>
+			<Options>
+				<Option Goto="161" Text="Заяц без пальца"/>
+				<Option Goto="163" Text="Услуга истории"/>
+				<Option Goto="166" Text="Принцесса Элис"/>
+				<Option Goto="154" Text="Не тратить больше время на попытки поговорить с отцом"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
