@@ -1213,5 +1213,11 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="178">
+			<Text>Подбежав к динамитной шашке, я погасил пальцами фитиль. Настало время уходить, пока Кларк не разобрался, что к чему.</Text>
+			<Options>
+				<Option Goto="168"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
