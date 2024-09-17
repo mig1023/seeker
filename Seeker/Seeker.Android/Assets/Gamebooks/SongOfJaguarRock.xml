@@ -1021,6 +1021,10 @@
 			<Options>
 				<Option Goto="210" Text="Пролистать журнал более внимательно"/>
 				<Option Goto="154" Text="Не тратить больше время на изучение журнала"/>
+			</Options>
+		</Paragraph>
+		<Paragraph No="154">
+			<Options>
 				<Option Goto="170" Text="Если у Вас остались незатраченные очки времени"/>
 				<Option Goto="156" Text="Если Вы затратили все 12 минут времени"/>
 			</Options>
