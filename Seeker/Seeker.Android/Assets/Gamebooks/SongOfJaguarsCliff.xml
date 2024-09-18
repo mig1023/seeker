@@ -476,7 +476,13 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="65">
-			<Text>Я выхватил оружие, и над ухом тут же прозвенела пуля, выпущенная одних из индейцев.\n\nБОЙ</Text>
+			<Text>Я выхватил оружие, и над ухом тут же прозвенела пуля, выпущенная одних из индейцев.</Text>
+			<Actions>
+				<Fight>
+					<Enemy Name="Первый индеец" Priority="2" Hitpoints="4" Distance="50" Weapons="Дерринджер,2,1,0-50,1"/>
+					<Enemy Name="Второй индеец" Priority="2" Hitpoints="3" Distance="100" Weapons="Винчестер,2,2,50-200,2"/>
+				</Fight>
+			</Actions>
 			<Options>
 				<Option Goto="79" Text="Если вы победили"/>
 			</Options>
