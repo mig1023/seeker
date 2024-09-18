@@ -7,6 +7,12 @@
 		<Styles>
 			<Color Name="Main, System, Option, Continue" Value="884728"/>
 		</Styles>
+		<Lists>
+			<PriorityNames Items="стреляет первым,,пропускает ход"/>
+		</Lists>
+		<Buttons>
+			<Fight>Перестрелка</Fight>
+		</Buttons>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph No="0">
@@ -17,7 +23,12 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="1">
-			<Text>1.</Text>
+			<Actions>
+				<Fight>
+					<Enemy Name="'Преследователь'" Priority="1" Hitpoints="2" Distance="50" Weapons="Дерринджер,3,1,0-50,1"/>
+					<Enemy Name="'Убегавший'" Priority="1" Hitpoints="2" Distance="50" Weapons="Первый дерринджер,4,1,0-50,1;Второй дерринджер,4,1,0-50,1"/>
+				</Fight>
+			</Actions>
 			<Options>
 				<Option Goto="4" Text="Если вы победили (авторитет +2)"/>
 				<Option Goto="3" Text="Если убежали"/>
