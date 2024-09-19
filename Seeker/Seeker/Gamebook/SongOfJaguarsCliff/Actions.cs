@@ -123,6 +123,17 @@ namespace Seeker.Gamebook.SongOfJaguarsCliff
                                 return fight;
                             }
                         }
+
+                        if (!fighter.CurrentWeapon.ColdWeapon)
+                        {
+                            fighter.CurrentWeapon.Cartridges -= 1;
+
+                            int cartridges = fighter.CurrentWeapon.Cartridges;
+                            string line = Game.Services.CoinsNoun(cartridges, "пуля", "пули", "пуль");
+
+                            fight.Add($"GRAY|В {fighter.CurrentWeapon.Name} у " +
+                                $"{fighter.Name} осталась {cartridges} {line}");
+                        }
                     }
                     else if (action == Weapon.NextAction.Recharge)
                     {
@@ -149,7 +160,7 @@ namespace Seeker.Gamebook.SongOfJaguarsCliff
                                 eachEnemy.Distance += changeDistace;
 
                             string change = changeDistace > 0 ? "увеличилась" : "сократилась";
-                            fight.Add($"Теперь дистанция со всеми противниками {changeDistace} на 50 ярдов");
+                            fight.Add($"Теперь дистанция со всеми противниками {change} на 50 ярдов");
                         }
                         else
                         {

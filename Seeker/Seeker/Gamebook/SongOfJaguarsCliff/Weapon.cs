@@ -89,6 +89,10 @@ namespace Seeker.Gamebook.SongOfJaguarsCliff
             else if (character.CurrentWeapon?.RechargeTimer > 0)
             {
                 character.CurrentWeapon.RechargeTimer -= 1;
+
+                if (character.CurrentWeapon.RechargeTimer == 0)
+                    character.CurrentWeapon.Cartridges = character.CurrentWeapon.Magazine;
+
                 return NextAction.Recharge;
             }
             else if ((character.CurrentWeapon?.Cartridges == 0) && (character.CurrentWeapon.Recharge > 0))
@@ -97,7 +101,7 @@ namespace Seeker.Gamebook.SongOfJaguarsCliff
 
                 if (dice % 2 == 0 || (character.Weapons.Count == 1))
                 {
-                    character.CurrentWeapon.RechargeTimer = character.CurrentWeapon.Recharge;
+                    character.CurrentWeapon.RechargeTimer = character.CurrentWeapon.Recharge - 1;
                     return NextAction.Recharge;
                 }
             }
