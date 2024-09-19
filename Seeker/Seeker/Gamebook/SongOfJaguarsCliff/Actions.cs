@@ -71,7 +71,7 @@ namespace Seeker.Gamebook.SongOfJaguarsCliff
             while (true)
             {
                 round += 1;
-                fight.Add($"HEAD|BOLD|Раунд {round}");
+                fight.Add($"HEAD|BOLD|\n*  *  *  РАУНД {round}  *  *  *");
 
                 foreach (Character fighter in fighters)
                 {
@@ -80,39 +80,44 @@ namespace Seeker.Gamebook.SongOfJaguarsCliff
                         continue;
                     }
 
-                    fight.Add(String.Empty);
-
                     if ((round == 1) && (fighter.Priority == 3))
                     {
-                        fight.Add($"{fighter.Name} пропускает ход");
+                        fight.Add($"GRAY|{fighter.Name} пропускает ход");
                         continue;
                     }
 
-                    Weapon.NextAction action = Weapon.ChooseWeapon(fighter);
+                    fight.Add(String.Empty);
+
                     Character enemy = ChooseEnemy(fighter, fighters);
+                    Weapon.NextAction action = Weapon.ChooseWeapon(fighter, enemy);
 
                     if ((action == Weapon.NextAction.Continue) || (action == Weapon.NextAction.Change))
                     {
                         if (action == Weapon.NextAction.Change)
-                            fight.Add($"{fighter.Name} хватается за {fighter.CurrentWeapon.Name}");
+                            fight.Add($"BOLD|{fighter.Name} использует {fighter.CurrentWeapon.Name}");
 
-                        fight.Add($"{fighter.Name} стреляет в {enemy.Name} из {fighter.CurrentWeapon.Name}");
-                        fight.Add($"{enemy.Name} получает {fighter.CurrentWeapon.Damage} ед. урона!!");
+                        fight.Add($"{fighter.Name} стреляет в {enemy.Name}");
 
-                        enemy.Wounds += fighter.CurrentWeapon.Damage;
+                        int damage = fighter.CurrentWeapon.Damage;
+                        string marker = enemy.IsProtagonist ? "BAD" : "GOOD";
+                        string count = Game.Services.CoinsNoun(damage, "единицу", "единицы", "единицы");
+
+                        fight.Add($"{marker}|{enemy.Name} получает {damage} {count} урона!");
+
+                        enemy.Wounds += damage;
 
                         if (enemy.Wounds >= enemy.Hitpoints)
                         {
-                            fight.Add($"{enemy.Name} ПОГИБАЕТ!");
+                            fight.Add($"{marker}|{enemy.Name} ПОГИБ!");
 
                             if (NoMoreEnemy(fighters))
                             {
-                                fight.Add($"ВЫ ПОБЕДИЛИ!!");
+                                fight.Add($"BIG|BOLD|ВЫ ПОБЕДИЛИ! :)");
                                 return fight;
                             }
                             else if (Character.Protagonist.Wounds >= Character.Protagonist.Hitpoints)
                             {
-                                fight.Add($"ВЫ ПРОИГРАЛИ...");
+                                fight.Add($"BIG|BOLD|ВЫ ПРОИГРАЛИ :(");
                                 return fight;
                             }
                         }

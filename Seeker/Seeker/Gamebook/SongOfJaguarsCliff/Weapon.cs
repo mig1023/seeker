@@ -49,9 +49,18 @@ namespace Seeker.Gamebook.SongOfJaguarsCliff
             this.Magazine = int.Parse(lines[1]);
             this.Cartridges = int.Parse(lines[1]);
             this.Damage = int.Parse(lines[2]);
-            this.DistanceMin = int.Parse(distance[0]);
-            this.DistanceMax = int.Parse(distance[1]);
             this.Recharge = int.Parse(lines[4]);
+
+            if (distance.Length > 1)
+            {
+                this.DistanceMin = int.Parse(distance[0]);
+                this.DistanceMax = int.Parse(distance[1]);
+            }
+            else
+            {
+                this.DistanceMin = int.Parse(distance[0]);
+                this.DistanceMax = this.DistanceMin;
+            }
         }
 
         public string Save()
@@ -62,15 +71,17 @@ namespace Seeker.Gamebook.SongOfJaguarsCliff
             return weapon;
         }
 
-        public static NextAction ChooseWeapon(Character character)
+        public static NextAction ChooseWeapon(Character character, Character enemy)
         {
+            int distance = character.Distance + enemy.Distance;
+
             if (character.CurrentWeapon?.IsSuitable ?? false)
             {
                 if (!character.CurrentWeapon.ColdWeapon)
                 {
                     return NextAction.Continue;
                 }
-                else if (character.Distance > 0)
+                else if (distance > 0)
                 {
                     return NextAction.GetCloser;
                 }
@@ -94,8 +105,8 @@ namespace Seeker.Gamebook.SongOfJaguarsCliff
             character.CurrentWeapon = null;
 
             var weapon = character.Weapons
-                .Where(x => x.DistanceMax >= character.Distance)
-                .Where(x => x.DistanceMin <= character.Distance)
+                .Where(x => x.DistanceMax >= distance)
+                .Where(x => x.DistanceMin <= distance)
                 .Where(x => x.IsSuitable)
                 .OrderByDescending(x => x.Damage)
                 .FirstOrDefault();
@@ -124,7 +135,7 @@ namespace Seeker.Gamebook.SongOfJaguarsCliff
                 {
                     character.CurrentWeapon = anyReadyWeapon;
 
-                    if (character.Distance > anyReadyWeapon.DistanceMax)
+                    if (distance > anyReadyWeapon.DistanceMax)
                     {
                         return NextAction.GetCloser;
                     }
