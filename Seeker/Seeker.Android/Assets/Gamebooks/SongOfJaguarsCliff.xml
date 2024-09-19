@@ -5,7 +5,9 @@
 			<Author>Андрей Тишин, 2014</Author>
 		</Copyright>
 		<Styles>
-			<Color Name="Main, System, Option, Continue" Value="884728"/>
+			<ActionBox Value="5f311c"/>
+			<System Value="b7907e"/>
+			<Color Name="Main, Option, Continue" Value="884728"/>
 		</Styles>
 		<Lists>
 			<PriorityNames Items="стреляет первым,,,пропускает ход"/>
