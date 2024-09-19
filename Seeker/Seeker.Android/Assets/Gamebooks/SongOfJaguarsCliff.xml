@@ -1001,9 +1001,17 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="139">
-			<Text>На выстрелы в пещеру сбежались люди. Трое бежали впереди, ещё один отстал от других.\n\nЗдоровье:\n\nЗдоровье:\n\nРасстояние: 50 ярдов\n\niCCi.	0-50 ярдов\n\nпатроны	урон дальность\n\nРасстояние: 50 ярдов\n\nурон\n\n0 ярдов дальность\n\nЗдоровье:\n\nРасстояние: 150 ярдов\n\nII II II II II	м\n\nпатроны	урон\n\n0-100 ярдов дальность\n\nЗдоровье:\n\nРасстояние: 50 ярдов\n\n>	0-50 ярдов\n\nпатроны	урон дальность</Text>
+			<Text>На выстрелы в пещеру сбежались люди. Трое бежали впереди, ещё один отстал от других.</Text>
+			<Actions>
+				<Fight>
+					<Enemy Name="Первый человек" Priority="2" Hitpoints="3" Distance="50" Weapons="Револьвер,3,2,0-50,1"/>
+					<Enemy Name="Второй человек" Priority="2" Hitpoints="3" Distance="50" Weapons="Нож,0,1,0,0"/>
+					<Enemy Name="Третий человек" Priority="2" Hitpoints="3" Distance="50" Weapons="Револьвер,5,2,0-100,1"/>
+					<Enemy Name="Четвёртый человек" Priority="2" Hitpoints="3" Distance="50" Weapons="Дерринджер,4,1,0-50,1"/>
+				</Fight>
+			</Actions>
 			<Options>
-				<Option Goto="138" Text="Если вы победили (время -1)"/>
+				<Option Goto="138" Text="Вы победили (время -1)"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="140">
