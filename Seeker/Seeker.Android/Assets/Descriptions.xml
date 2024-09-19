@@ -350,7 +350,7 @@
 		<Paragraphs>660</Paragraphs>
 		<Size>47630</Size>
 		<Playthrough>На пару часов</Playthrough>
-		<Setting>Приключения</Setting>
+		<Setting>Вестерн</Setting>
 		<Color>b66247</Color>
 	</PrairieLaw>
 	<HeartOfIce>
@@ -440,7 +440,7 @@
 		<Paragraphs>48</Paragraphs>
 		<Size>2629</Size>
 		<Playthrough>На пять минут</Playthrough>
-		<Setting>Сатира</Setting>
+		<Setting>Вестерн</Setting>
 		<Color>86964f</Color>
 	</WildDeath>
 	<ChooseCthulhu>
@@ -1002,7 +1002,7 @@
 		<Paragraphs>1</Paragraphs>
 		<Size>1</Size>
 		<Playthrough>На часок-полтора</Playthrough>
-		<Setting>Приключения</Setting>
+		<Setting>Вестерн</Setting>
 		<Color>884728</Color>
 	</SongOfJaguarsCliff>
 </Gamebooks>
