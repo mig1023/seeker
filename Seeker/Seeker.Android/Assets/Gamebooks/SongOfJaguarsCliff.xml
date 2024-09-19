@@ -971,9 +971,14 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="136">
-			<Text>Джимми Стивенс *	Здоровье:		Расстояние: 100 ярдов\n\n1  не видит Вас	0-50 ярдов  патроны	урон	дальность\n\nАлекс Уилсон *  не видит Вас	Здоровье:		Расстояние: 100 ярдов  Illi Il II II	Ы	я-д00  патроны	урон	дальность\n\nПримечание: бежать нельзя, перестрелка займёт минуту (время -1)\n\nЕсли вы победили</Text>
+			<Actions>
+				<Fight>
+					<Enemy Name="Стивенс" Priority="3" Hitpoints="3" Distance="50" Weapons="Дерринджер,4,1,0-50,1"/>
+					<Enemy Name="Уилсон" Priority="3" Hitpoints="3" Distance="50" Weapons="Револьвер,5,2,0-100,1"/>
+				</Fight>
+			</Actions>
 			<Options>
-				<Option Goto="138" Text="Если вы победили"/>
+				<Option Goto="138" Text="Вы победили"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="137">
