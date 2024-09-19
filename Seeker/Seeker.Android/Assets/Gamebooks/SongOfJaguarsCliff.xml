@@ -848,7 +848,7 @@
 				<Option Goto="130" Text="Убежать"/>
 				<Fight>
 					<Enemy Name="Первый бандит" Priority="2" Hitpoints="3" Distance="0" Weapons="Винчестер,2,3,50-150,2"/>
-					<Enemy Name="Второй бандит" Priority="3" Hitpoints="3" Distance="0" Weapons="Револьвер,4,2,0-100,1"/>
+					<Enemy Name="Второй бандит" Priority="3; ищет кольт" Hitpoints="3" Distance="0" Weapons="Револьвер,4,2,0-100,1"/>
 					<Enemy Name="Третий бандит" Priority="2" Hitpoints="4" Distance="0" Weapons="Первый револьвер,4,2,0-100,1;Второй револьвер,4,2,0-100,1"/>
 				</Fight>
 			</Actions>
