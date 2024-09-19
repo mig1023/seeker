@@ -980,8 +980,8 @@
 		<Paragraph No="136">
 			<Actions>
 				<Fight>
-					<Enemy Name="Стивенс" Priority="3" Hitpoints="3" Distance="50" Weapons="Дерринджер,4,1,0-50,1"/>
-					<Enemy Name="Уилсон" Priority="3" Hitpoints="3" Distance="50" Weapons="Револьвер,5,2,0-100,1"/>
+					<Enemy Name="Стивенс" Priority="3; не видит вас" Hitpoints="3" Distance="50" Weapons="Дерринджер,4,1,0-50,1"/>
+					<Enemy Name="Уилсон" Priority="3; не видит вас" Hitpoints="3" Distance="50" Weapons="Револьвер,5,2,0-100,1"/>
 				</Fight>
 			</Actions>
 			<Options>
