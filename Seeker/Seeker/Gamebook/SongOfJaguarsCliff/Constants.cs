@@ -2,5 +2,8 @@
 
 namespace Seeker.Gamebook.SongOfJaguarsCliff
 {
-    class Constants : Prototypes.Constants, Abstract.IConstants { }
+    class Constants : Prototypes.Constants, Abstract.IConstants
+    {
+        public static List<string> PriorityNames { get; set; }
+    }
 }

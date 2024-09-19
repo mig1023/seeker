@@ -5,9 +5,23 @@ namespace Seeker.Gamebook.SongOfJaguarsCliff
 {
     class Weapon
     {
+        public enum NextAction
+        {
+            Continue,
+            Change,
+            Recharge,
+            GetCloser,
+            MoveAway,
+        }
+
         public string Name { get; set; }
 
-        public int Cartridges { get; set; }
+        private int _cartridges;
+        public int Cartridges
+        {
+            get => _cartridges;
+            set => _cartridges = Game.Param.Setter(value);
+        }
 
         public int Magazine { get; set; }
 
@@ -18,6 +32,13 @@ namespace Seeker.Gamebook.SongOfJaguarsCliff
         public int DistanceMax { get; set; }
 
         public int Recharge { get; set; }
+
+        public int RechargeTimer { get; set; }
+
+        public bool ColdWeapon { get => this.Recharge == 0; }
+
+        public bool IsSuitable { get => this.Cartridges > 0 || this.Recharge == 0; }
+
 
         public Weapon(string line)
         {
@@ -41,15 +62,78 @@ namespace Seeker.Gamebook.SongOfJaguarsCliff
             return weapon;
         }
 
-        public static Weapon ChooseWeapon(List<Weapon> weapons, int distance)
+        public static NextAction ChooseWeapon(Character character)
         {
-            var weapon = weapons
-                .Where(x => x.DistanceMax >= distance)
-                .Where(x => x.DistanceMin <= distance)
-                .Where(x => x.Cartridges > 0)
+            if (character.CurrentWeapon?.IsSuitable ?? false)
+            {
+                if (!character.CurrentWeapon.ColdWeapon)
+                {
+                    return NextAction.Continue;
+                }
+                else if (character.Distance > 0)
+                {
+                    return NextAction.GetCloser;
+                }
+            }
+            else if (character.CurrentWeapon?.RechargeTimer > 0)
+            {
+                character.CurrentWeapon.RechargeTimer -= 1;
+                return NextAction.Recharge;
+            }
+            else if ((character.CurrentWeapon?.Cartridges == 0) && (character.CurrentWeapon.Recharge > 0))
+            {
+                int dice = Game.Dice.Roll();
+
+                if (dice % 2 == 0 || (character.Weapons.Count == 1))
+                {
+                    character.CurrentWeapon.RechargeTimer = character.CurrentWeapon.Recharge;
+                    return NextAction.Recharge;
+                }
+            }
+
+            character.CurrentWeapon = null;
+
+            var weapon = character.Weapons
+                .Where(x => x.DistanceMax >= character.Distance)
+                .Where(x => x.DistanceMin <= character.Distance)
+                .Where(x => x.IsSuitable)
+                .OrderByDescending(x => x.Damage)
                 .FirstOrDefault();
 
-            return weapon;
+            if (weapon != null)
+            {
+                character.CurrentWeapon = weapon;
+                return NextAction.Change;
+            }
+            else
+            {
+                var anyReadyWeapon = character.Weapons
+                    .Where(x => x.Cartridges > 0 || x.ColdWeapon)
+                    .OrderByDescending(x => x.Damage)
+                    .FirstOrDefault();
+
+                if (anyReadyWeapon == null)
+                {
+                    var anyWeapon = character.Weapons
+                        .FirstOrDefault();
+
+                    character.CurrentWeapon = anyWeapon;
+                    return NextAction.Recharge;
+                }
+                else
+                {
+                    character.CurrentWeapon = anyReadyWeapon;
+
+                    if (character.Distance > anyReadyWeapon.DistanceMax)
+                    {
+                        return NextAction.GetCloser;
+                    }
+                    else
+                    {
+                        return NextAction.MoveAway;
+                    }
+                }
+            }
         }
     }
 }
