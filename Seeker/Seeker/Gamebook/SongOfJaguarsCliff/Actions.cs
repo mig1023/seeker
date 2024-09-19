@@ -96,7 +96,8 @@ namespace Seeker.Gamebook.SongOfJaguarsCliff
                         if (action == Weapon.NextAction.Change)
                             fight.Add($"{fighter.Name} использует {fighter.CurrentWeapon.Name}");
 
-                        fight.Add($"BOLD|{fighter.Name} стреляет в {enemy.Name}");
+                        string act = fighter.CurrentWeapon.ColdWeapon ? "бьёт" : "стреляет в";
+                        fight.Add($"BOLD|{fighter.Name} {act} {enemy.Name}");
 
                         int damage = fighter.CurrentWeapon.Damage;
 
