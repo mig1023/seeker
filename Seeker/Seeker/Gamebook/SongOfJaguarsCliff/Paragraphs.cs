@@ -46,7 +46,7 @@ namespace Seeker.Gamebook.SongOfJaguarsCliff
 
             foreach (string param in GetProperties(enemy))
             {
-                if (param != "Weapons")
+                if ((param != "Weapons") && (param != "Priority"))
                     SetPropertyByAttr(enemy, param, xmlEnemy, maxPrefix: true);
             }
 
@@ -57,6 +57,19 @@ namespace Seeker.Gamebook.SongOfJaguarsCliff
                 enemy.Weapons.Add(new Weapon(weapon));
             }
 
+            string priority = xmlEnemy.Attributes["Priority"].Value;
+
+            if (priority.Contains(";"))
+            {
+                string[] priorities = priority.Split(';');
+                enemy.Priority = Xml.IntParse(priorities[0]);
+                enemy.PriorityComment = priorities[1].Trim();
+            }
+            else
+            {
+                enemy.Priority = Xml.IntParse(priority);
+            }
+            
             enemy.CurrentWeapon = null;
 
             return enemy;

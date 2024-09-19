@@ -20,8 +20,14 @@ namespace Seeker.Gamebook.SongOfJaguarsCliff
             {
                 string weapons = String.Join(", ", enemy.Weapons.Select(x => x.Name));
 
+                string priority = String.Empty;
                 string name = Constants.PriorityNames[enemy.Priority];
-                string priority = String.IsNullOrEmpty(name) ? name : $"\n{name}";
+
+                if (!String.IsNullOrEmpty(name))
+                    priority = $"\n{name}";
+
+                if (!String.IsNullOrEmpty(enemy.PriorityComment))
+                    priority += $" ({enemy.PriorityComment})";
 
                 enemies.Add($"{enemy.Name}{priority}\n" +
                     $"дистанция {enemy.Distance}  здоровье {enemy.Hitpoints}\n{weapons}");

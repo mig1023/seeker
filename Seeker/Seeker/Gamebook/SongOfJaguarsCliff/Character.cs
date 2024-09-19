@@ -21,6 +21,8 @@ namespace Seeker.Gamebook.SongOfJaguarsCliff
 
         public int Priority { get; set; }
 
+        public string PriorityComment { get; set; }
+
         public int Distance { get; set; }
 
         public List<Weapon> Weapons { get; set; } 
