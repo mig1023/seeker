@@ -102,22 +102,23 @@ namespace Seeker.Gamebook.SongOfJaguarsCliff
                         string marker = enemy.IsProtagonist ? "BAD" : "GOOD";
                         string count = Game.Services.CoinsNoun(damage, "единицу", "единицы", "единицы");
 
-                        fight.Add($"{marker}|{enemy.Name} получает {damage} {count} урона!");
+                        fight.Add($"{marker}|BOLD|{enemy.Name} получает {damage} {count} урона!");
+                        fight.Add($"Теперь у {enemy.Name} ранений: {enemy.Wounds} из {enemy.Hitpoints} возможных");
 
                         enemy.Wounds += damage;
 
                         if (enemy.Wounds >= enemy.Hitpoints)
                         {
-                            fight.Add($"{marker}|{enemy.Name} ПОГИБ!");
+                            fight.Add($"{marker}|BOLD|{enemy.Name} ПОГИБ!");
 
                             if (NoMoreEnemy(fighters))
                             {
-                                fight.Add($"BIG|BOLD|ВЫ ПОБЕДИЛИ! :)");
+                                fight.Add($"BIG|BOLD|\nВЫ ПОБЕДИЛИ! :)");
                                 return fight;
                             }
                             else if (Character.Protagonist.Wounds >= Character.Protagonist.Hitpoints)
                             {
-                                fight.Add($"BIG|BOLD|ВЫ ПРОИГРАЛИ :(");
+                                fight.Add($"BIG|BOLD|\nВЫ ПРОИГРАЛИ :(");
                                 return fight;
                             }
                         }
@@ -139,16 +140,20 @@ namespace Seeker.Gamebook.SongOfJaguarsCliff
                         {
                             changeDistace = 50;
                             fight.Add($"{fighter.Name} отбегает!");
-                        } 
+                        }
 
                         if (fighter.IsProtagonist)
                         {
                             foreach (Character eachEnemy in fighters)
                                 eachEnemy.Distance += changeDistace;
+
+                            string change = changeDistace > 0 ? "увеличилась" : "сократилась";
+                            fight.Add($"Теперь дистанция со всеми противниками {changeDistace} на 50 ярдов");
                         }
                         else
                         {
                             fighter.Distance += changeDistace;
+                            fight.Add($"Теперь дистанция между противнивами равна {fighter.Distance} ярдов");
                         }
                     }
                 }
