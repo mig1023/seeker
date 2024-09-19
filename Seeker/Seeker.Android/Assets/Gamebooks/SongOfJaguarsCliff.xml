@@ -868,9 +868,16 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="122">
-			<Text>Здоровье:\n\nспит\n\nЗдоровье:\n\nРасстояние: 50 ярдов\n\n50-150 ярдов\n\nпатроны	урон	дальность\n\nРасстояние: 50 ярдов\n\nм 0-100 ярдов\n\nпатроны	урон	дальность\n\nспит\n\nЗдоровье:\n\nРасстояние: 50 ярдов\n\n1111 0-100 ярдов\n\nпатроны	урон	дальность\n\nЕсли вы победили или убежали</Text>
+			<Actions>
+				<Option Goto="130" Text="Убежать"/>
+				<Fight>
+					<Enemy Name="Первый бандит" Priority="3" Hitpoints="3" Distance="50" Weapons="Винчестер,2,3,50-150,2"/>
+					<Enemy Name="Второй бандит" Priority="3" Hitpoints="3" Distance="50" Weapons="Револьвер,4,2,0-100,1"/>
+					<Enemy Name="Третий бандит" Priority="3" Hitpoints="4" Distance="50" Weapons="Первый револьвер,4,2,0-100,1;Второй револьвер,4,2,0-100,1"/>
+				</Fight>
+			</Actions>
 			<Options>
-				<Option Goto="130" Text="Если вы победили или убежали"/>
+				<Option Goto="130" Text="Вы победили"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="123">
