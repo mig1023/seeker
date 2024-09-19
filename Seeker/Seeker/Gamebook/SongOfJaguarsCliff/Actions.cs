@@ -94,18 +94,18 @@ namespace Seeker.Gamebook.SongOfJaguarsCliff
                     if ((action == Weapon.NextAction.Continue) || (action == Weapon.NextAction.Change))
                     {
                         if (action == Weapon.NextAction.Change)
-                            fight.Add($"BOLD|{fighter.Name} использует {fighter.CurrentWeapon.Name}");
+                            fight.Add($"{fighter.Name} использует {fighter.CurrentWeapon.Name}");
 
-                        fight.Add($"{fighter.Name} стреляет в {enemy.Name}");
+                        fight.Add($"BOLD|{fighter.Name} стреляет в {enemy.Name}");
 
                         int damage = fighter.CurrentWeapon.Damage;
-                        string marker = enemy.IsProtagonist ? "BAD" : "GOOD";
-                        string count = Game.Services.CoinsNoun(damage, "единицу", "единицы", "единицы");
-
-                        fight.Add($"{marker}|BOLD|{enemy.Name} получает {damage} {count} урона!");
-                        fight.Add($"Теперь у {enemy.Name} ранений: {enemy.Wounds} из {enemy.Hitpoints} возможных");
 
                         enemy.Wounds += damage;
+
+                        string marker = enemy.IsProtagonist ? "BAD" : "GOOD";
+                        string count = Game.Services.CoinsNoun(damage, "единицу", "единицы", "единицы");
+                        fight.Add($"{marker}|BOLD|{enemy.Name} получает {damage} {count} урона!");
+                        fight.Add($"Теперь у {enemy.Name} ранений: {enemy.Wounds} из {enemy.Hitpoints} возможных");
 
                         if (enemy.Wounds >= enemy.Hitpoints)
                         {
@@ -134,12 +134,12 @@ namespace Seeker.Gamebook.SongOfJaguarsCliff
                         if (action == Weapon.NextAction.GetCloser)
                         {
                             changeDistace = -50;
-                            fight.Add($"{fighter.Name} приближается!");
+                            fight.Add($"BOLD|{fighter.Name} приближается!");
                         }
                         else
                         {
                             changeDistace = 50;
-                            fight.Add($"{fighter.Name} отбегает!");
+                            fight.Add($"BOLD|{fighter.Name} отбегает!");
                         }
 
                         if (fighter.IsProtagonist)
@@ -153,7 +153,7 @@ namespace Seeker.Gamebook.SongOfJaguarsCliff
                         else
                         {
                             fighter.Distance += changeDistace;
-                            fight.Add($"Теперь дистанция между противнивами равна {fighter.Distance} ярдов");
+                            fight.Add($"Теперь дистанция между противниками равна {fighter.Distance} ярдов");
                         }
                     }
                 }
