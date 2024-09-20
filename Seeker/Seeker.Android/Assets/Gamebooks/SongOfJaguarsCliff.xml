@@ -410,7 +410,9 @@
 			</Modifications>
 			<Options>
 				<Option Goto="45" Text="Если «Авторитет = 1»" Availability="АВТОРИТЕТ = 1"/>
-				<Option Goto="30" Text="При любом другом значении (время -1)" Availability="АВТОРИТЕТ != 1"/>
+				<Option Goto="30" Text="При любом другом значении (время -1)" Availability="АВТОРИТЕТ != 1">
+					<Time Value="-1"/>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph No="45">
