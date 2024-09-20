@@ -1220,6 +1220,9 @@
 		</Paragraph>
 		<Paragraph No="137">
 			<Text>В тени от утёса я прокрался к пещере, пока Алекс и Джим разговаривали. (время -2)</Text>
+			<Modifications>
+				<Time Value="-2"/>
+			</Modifications>
 			<Options>
 				<Option Goto="138"/>
 			</Options>
