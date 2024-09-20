@@ -7,6 +7,7 @@
 		<Styles>
 			<Action Value="5f311c"/>
 			<System Value="b7907e"/>
+			<StatusBar Value="512a18"/>
 			<Color Name="Main, Option, Continue" Value="884728"/>
 		</Styles>
 		<Lists>
@@ -28,7 +29,6 @@
 			<Options>
 				<Option Goto="11" Text="Обойти убегающего и наставить дуло на грабителя"/>
 				<Option Goto="12" Text="Пришпорить коня и скакать в сторону Пёпл Хэвен"/>
-				<Option Goto="26" Text="TEST"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="1">
