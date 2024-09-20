@@ -13,6 +13,12 @@ namespace Seeker.Gamebook.SongOfJaguarsCliff
         {
             List<string> enemies = new List<string>();
 
+            if (Price > 0)
+            {
+                string dollars = Game.Services.CoinsNoun(Price, "доллар", "доллара", "долларов");
+                return new List<string> { $"{Head}\n{Price} {dollars}" };
+            }
+
             if (Enemies == null)
                 return enemies;
 
@@ -55,6 +61,34 @@ namespace Seeker.Gamebook.SongOfJaguarsCliff
             {
                 return AvailabilityTrigger(option);
             }
+        }
+
+        public override bool IsButtonEnabled(bool secondButton = false)
+        {
+            if (Price > 0)
+            {
+                return !Used && (Price <= Character.Protagonist.Dollars);
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        public List<string> Get()
+        {
+            if (Character.Protagonist.Dollars >= Price)
+            {
+                Character.Protagonist.Dollars -= Price;
+
+                if (!Multiple)
+                    Used = true;
+
+                if (Benefit != null)
+                    Benefit.Do();
+            }
+
+            return new List<string> { "RELOAD" };
         }
 
         private Character ChooseEnemy(Character fighter, List<Character> fighters)
