@@ -502,7 +502,7 @@
 			<Actions>
 				<Option Goto="30" Text="Убежать"/>
 				<Fight>
-					<Enemy Name="Джон Смит младший" Priority="2" Hitpoints="3" Distance="100" Weapons="Револьвер,6,2,0-100,1;Винчестер,10,3,2-150,2;Нож,0,1,0,0"/>
+					<Enemy Name="Джон Смит младший" Priority="2" Hitpoints="3" Distance="100" Weapons="Кольт,6,2,0-100,1;Винчестер,10,3,2-150,2;Нож,0,1,0,0"/>
 					<Text>Если Вы победили, то сотрите метку «Смит», если она есть. Получите свою ставку в удвоенном размере, если Вы ставили на себя.\n\nЯ целил в сердце, но в последний момент что-то заставило меня отвести руку и выстрелить в плечо. Смит упал и схватился за плечо. Эхо от выстрела повисло в воздухе. Кто-то привёл доктора Торнеро и он уже вытаскивал свои многочисленные склянки и бинты из портфеля. «Расступитесь все», кричал он. «Я ещё могу его спасти. Дорогу!»</Text>
 				</Fight>
 			</Actions>
@@ -919,8 +919,8 @@
 				<Option Goto="130" Text="Убежать"/>
 				<Fight>
 					<Enemy Name="Первый бандит" Priority="2" Hitpoints="3" Distance="100" Weapons="Винчестер,2,3,50-150,2"/>
-					<Enemy Name="Второй бандит" Priority="2" Hitpoints="3" Distance="100" Weapons="Револьвер,4,2,0-100,1"/>
-					<Enemy Name="Третий бандит" Priority="0" Hitpoints="4" Distance="100" Weapons="Первый револьвер,4,2,0-100,1;Второй револьвер,4,2,0-100,1"/>
+					<Enemy Name="Второй бандит" Priority="2" Hitpoints="3" Distance="100" Weapons="Кольт,4,2,0-100,1"/>
+					<Enemy Name="Третий бандит" Priority="0" Hitpoints="4" Distance="100" Weapons="Первый кольт,4,2,0-100,1;Второй кольт,4,2,0-100,1"/>
 				</Fight>
 			</Actions>
 			<Options>
@@ -940,8 +940,8 @@
 				<Option Goto="130" Text="Убежать"/>
 				<Fight>
 					<Enemy Name="Первый бандит" Priority="2" Hitpoints="3" Distance="0" Weapons="Винчестер,2,3,50-150,2"/>
-					<Enemy Name="Второй бандит" Priority="3; ищет кольт" Hitpoints="3" Distance="0" Weapons="Револьвер,4,2,0-100,1"/>
-					<Enemy Name="Третий бандит" Priority="2" Hitpoints="4" Distance="0" Weapons="Первый револьвер,4,2,0-100,1;Второй револьвер,4,2,0-100,1"/>
+					<Enemy Name="Второй бандит" Priority="3; ищет кольт" Hitpoints="3" Distance="0" Weapons="Кольт,4,2,0-100,1"/>
+					<Enemy Name="Третий бандит" Priority="2" Hitpoints="4" Distance="0" Weapons="Первый кольт,4,2,0-100,1;Второй кольт,4,2,0-100,1"/>
 				</Fight>
 			</Actions>
 			<Options>
@@ -971,8 +971,8 @@
 				<Option Goto="130" Text="Убежать"/>
 				<Fight>
 					<Enemy Name="Первый бандит" Priority="3; спит" Hitpoints="3" Distance="50" Weapons="Винчестер,2,3,50-150,2"/>
-					<Enemy Name="Второй бандит" Priority="3; спит" Hitpoints="3" Distance="50" Weapons="Револьвер,4,2,0-100,1"/>
-					<Enemy Name="Третий бандит" Priority="3; спит" Hitpoints="4" Distance="50" Weapons="Первый револьвер,4,2,0-100,1;Второй револьвер,4,2,0-100,1"/>
+					<Enemy Name="Второй бандит" Priority="3; спит" Hitpoints="3" Distance="50" Weapons="Кольт,4,2,0-100,1"/>
+					<Enemy Name="Третий бандит" Priority="3; спит" Hitpoints="4" Distance="50" Weapons="Первый кольт,4,2,0-100,1;Второй кольт,4,2,0-100,1"/>
 				</Fight>
 			</Actions>
 			<Options>
@@ -1104,7 +1104,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="Стивенс" Priority="0" Hitpoints="3" Distance="50" Weapons="Дерринджер,4,1,0-50,1"/>
-					<Enemy Name="Уилсон" Priority="2" Hitpoints="3" Distance="50" Weapons="Револьвер,5,2,0-100,1"/>
+					<Enemy Name="Уилсон" Priority="2" Hitpoints="3" Distance="50" Weapons="Кольт,5,2,0-100,1"/>
 				</Fight>
 			</Actions>
 			<Options>
@@ -1115,7 +1115,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="Стивенс" Priority="3; не видит вас" Hitpoints="3" Distance="50" Weapons="Дерринджер,4,1,0-50,1"/>
-					<Enemy Name="Уилсон" Priority="3; не видит вас" Hitpoints="3" Distance="50" Weapons="Револьвер,5,2,0-100,1"/>
+					<Enemy Name="Уилсон" Priority="3; не видит вас" Hitpoints="3" Distance="50" Weapons="Кольт,5,2,0-100,1"/>
 				</Fight>
 			</Actions>
 			<Options>
@@ -1132,8 +1132,8 @@
 			<Text>Двигаясь вдоль стены во мраке пещеры, я добрался до той самой головы ягуара. Возле неё спиной к спине стояли сын и отец Смиты. Позиция, которую выбрали они, не оставляла надежд обойти их. Однако густой мрак позволил мне напасть на них внезапно.</Text>
 			<Actions>
 				<Fight>
-					<Enemy Name="Джон Смит младший" Priority="3" Hitpoints="2" Distance="50" Weapons="Винчестер,5,3,50-150,2;Револьвер,5,2,0-100,1"/>
-					<Enemy Name="Джон Смит старший" Priority="3" Hitpoints="4" Distance="50" Weapons="Револьвер,2,2,0-100,1;Нож,0,2,0,0"/>
+					<Enemy Name="Джон Смит младший" Priority="3" Hitpoints="2" Distance="50" Weapons="Винчестер,5,3,50-150,2;Кольт,5,2,0-100,1"/>
+					<Enemy Name="Джон Смит старший" Priority="3" Hitpoints="4" Distance="50" Weapons="Кольт,2,2,0-100,1;Нож,0,2,0,0"/>
 				</Fight>
 			</Actions>
 			<Options>
@@ -1145,9 +1145,9 @@
 			<Text>На выстрелы в пещеру сбежались люди. Трое бежали впереди, ещё один отстал от других.</Text>
 			<Actions>
 				<Fight>
-					<Enemy Name="Первый человек" Priority="2" Hitpoints="3" Distance="50" Weapons="Револьвер,3,2,0-50,1"/>
+					<Enemy Name="Первый человек" Priority="2" Hitpoints="3" Distance="50" Weapons="Кольт,3,2,0-50,1"/>
 					<Enemy Name="Второй человек" Priority="2" Hitpoints="3" Distance="50" Weapons="Нож,0,1,0,0"/>
-					<Enemy Name="Третий человек" Priority="2" Hitpoints="3" Distance="50" Weapons="Револьвер,5,2,0-100,1"/>
+					<Enemy Name="Третий человек" Priority="2" Hitpoints="3" Distance="50" Weapons="Кольт,5,2,0-100,1"/>
 					<Enemy Name="Четвёртый человек" Priority="2" Hitpoints="3" Distance="50" Weapons="Дерринджер,4,1,0-50,1"/>
 				</Fight>
 			</Actions>
