@@ -1877,6 +1877,7 @@
 			<Modifications>
 				<Dollars Value="50"/>
 				<Authority Value="-1"/>
+				<Time Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Goto="209" Text="Согласиться"/>
