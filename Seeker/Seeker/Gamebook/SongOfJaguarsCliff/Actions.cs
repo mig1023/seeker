@@ -52,14 +52,34 @@ namespace Seeker.Gamebook.SongOfJaguarsCliff
             {
                 return true;
             }
-            else if (option.Contains("ДОЛЛАРЫ >="))
-            {
-                int level = Game.Services.LevelParse(option);
-                return Character.Protagonist.Dollars >= level;
-            }
             else
             {
-                return AvailabilityTrigger(option);
+                int level = Game.Services.LevelParse(option);
+
+                if (option.Contains("ДОЛЛАРЫ >="))
+                {
+                    return Character.Protagonist.Dollars >= level;
+                }
+                else if (option.Contains("АВТОРИТЕТ ="))
+                {
+                    return Character.Protagonist.Authority == level;
+                }
+                else if (option.Contains("АВТОРИТЕТ !="))
+                {
+                    return Character.Protagonist.Authority != level;
+                }
+                else if (option.Contains("АВТОРИТЕТ <="))
+                {
+                    return Character.Protagonist.Authority <= level;
+                }
+                else if (option.Contains("АВТОРИТЕТ >="))
+                {
+                    return Character.Protagonist.Authority >= level;
+                }
+                else
+                {
+                    return AvailabilityTrigger(option);
+                }
             }
         }
 
