@@ -68,40 +68,54 @@ namespace Seeker.Gamebook.SongOfJaguarsCliff
             }
             else
             {
-                int level = Game.Services.LevelParse(option);
+                foreach (string oneOption in option.Split(','))
+                {
+                    if (oneOption.Contains(">") || oneOption.Contains("<") || oneOption.Contains("="))
+                    {
+                        int level = Game.Services.LevelParse(option);
+                        Character hero = Character.Protagonist;
 
-                if (option.Contains("ДОЛЛАРЫ >="))
-                {
-                    return Character.Protagonist.Dollars >= level;
+                        if (option.Contains("ДОЛЛАРЫ >=") && (hero.Dollars < level))
+                        {
+                            return false;
+                        }
+                        else if (option.Contains("АВТОРИТЕТ =") && (hero.Authority != level))
+                        {
+                            return false;
+                        }
+                        else if (option.Contains("АВТОРИТЕТ !=") && (hero.Authority == level))
+                        {
+                            return false;
+                        }
+                        else if (option.Contains("АВТОРИТЕТ <=") && (hero.Authority > level))
+                        {
+                            return false;
+                        }
+                        else if (option.Contains("АВТОРИТЕТ >=") && (hero.Authority < level))
+                        {
+                            return false;
+                        }
+                        else if (option.Contains("ВРЕМЯ <=") && (hero.Time > level))
+                        {
+                            return false;
+                        }
+                        else if (option.Contains("ВРЕМЯ >=") && (hero.Time < level))
+                        {
+                            return false;
+                        }
+                    }
+                    else if (oneOption.Contains("!"))
+                    {
+                        if (Game.Option.IsTriggered(oneOption.Replace("!", String.Empty).Trim()))
+                            return false;
+                    }
+                    else if (!Game.Option.IsTriggered(oneOption.Trim()))
+                    {
+                        return false;
+                    }
                 }
-                else if (option.Contains("АВТОРИТЕТ ="))
-                {
-                    return Character.Protagonist.Authority == level;
-                }
-                else if (option.Contains("АВТОРИТЕТ !="))
-                {
-                    return Character.Protagonist.Authority != level;
-                }
-                else if (option.Contains("АВТОРИТЕТ <="))
-                {
-                    return Character.Protagonist.Authority <= level;
-                }
-                else if (option.Contains("АВТОРИТЕТ >="))
-                {
-                    return Character.Protagonist.Authority >= level;
-                }
-                else if (option.Contains("ВРЕМЯ <="))
-                {
-                    return Character.Protagonist.Time <= level;
-                }
-                else if (option.Contains("ВРЕМЯ >="))
-                {
-                    return Character.Protagonist.Time >= level;
-                }
-                else
-                {
-                    return AvailabilityTrigger(option);
-                }
+
+                return true;
             }
         }
 
