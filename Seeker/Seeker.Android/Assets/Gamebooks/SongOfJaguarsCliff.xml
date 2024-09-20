@@ -1524,6 +1524,9 @@
 		</Paragraph>
 		<Paragraph No="169">
 			<Text>Я быстро настучал «БРОШЬ В КАРМАНЕ» и выждал, но ответа не было... (время -1)</Text>
+			<Modifications>
+				<Time Value="-1"/>
+			</Modifications>
 			<Options>
 				<Option Goto="161" Text="Заяц без пальца"/>
 				<Option Goto="163" Text="Услуга истории"/>
