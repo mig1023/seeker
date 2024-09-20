@@ -844,11 +844,11 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="97">
-			<Text>97.</Text>
 			<Options>
-				<Option Goto="127" Text="Если авторитет меньше 2"/>
-				<Option Goto="91" Text="Если авторитет от 2 до 3"/>
-				<Option Goto="126" Text="Если авторитет 4"/>
+				<Option Goto="127" Text="Авторитет меньше 2" Availability="АВТОРИТЕТ &lt;= 1"/>
+				<Option Goto="91" Text="Авторитет 2" Availability="АВТОРИТЕТ = 2"/>
+				<Option Goto="91" Text="Авторитет 3" Availability="АВТОРИТЕТ = 3"/>
+				<Option Goto="126" Text="Авторитет 4" Availability="АВТОРИТЕТ = 4"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="98">
