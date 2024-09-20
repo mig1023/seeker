@@ -1381,8 +1381,8 @@
 		</Paragraph>
 		<Paragraph No="154">
 			<Options>
-				<Option Goto="170" Text="Если у Вас остались незатраченные очки времени"/>
-				<Option Goto="156" Text="Если Вы затратили все 12 минут времени"/>
+				<Option Goto="170" Text="Если у Вас остались незатраченные очки времени" Availability="ВРЕМЯ >= 1"/>
+				<Option Goto="156" Text="Если Вы затратили все 12 минут времени" Availability="ВРЕМЯ &lt;= 0"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="155">
