@@ -39,6 +39,8 @@ namespace Seeker.Gamebook.SongOfJaguarsCliff
             Priority = 1;
             Weapons = new List<Weapon> { new Weapon("Дерринджер,4,1,0-50,1") };
             CurrentWeapon = null;
+
+            Game.Healing.Add(name: "Перебинтовать рану", healing: 1, portions: 3);
         }
 
         public Character Clone() => new Character()

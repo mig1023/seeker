@@ -177,5 +177,11 @@ namespace Seeker.Gamebook.SongOfJaguarsCliff
                 }
             }
         }
+
+        public override bool IsHealingEnabled() =>
+            Character.Protagonist.Wounds > 0;
+
+        public override void UseHealing(int healingLevel) =>
+            Character.Protagonist.Wounds -= healingLevel;
     }
 }
