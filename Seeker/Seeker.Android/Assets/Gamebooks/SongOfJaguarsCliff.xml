@@ -452,7 +452,9 @@
 			<Options>
 				<Option Goto="53" Text="Сказать, что оружия нет (если у вас не винчестер «В», вы можете солгать)"/>
 				<Option Goto="55" Text="Принять вызов"/>
-				<Option Goto="56" Text="Убежать (авторитет -1)"/>
+				<Option Goto="56" Text="Убежать (авторитет -1)">
+					<Authority Value="-1"/>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph No="52">
