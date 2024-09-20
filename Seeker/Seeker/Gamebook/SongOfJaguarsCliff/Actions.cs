@@ -76,6 +76,14 @@ namespace Seeker.Gamebook.SongOfJaguarsCliff
                 {
                     return Character.Protagonist.Authority >= level;
                 }
+                else if (option.Contains("ВРЕМЯ <="))
+                {
+                    return Character.Protagonist.Time <= level;
+                }
+                else if (option.Contains("ВРЕМЯ >="))
+                {
+                    return Character.Protagonist.Time >= level;
+                }
                 else
                 {
                     return AvailabilityTrigger(option);
