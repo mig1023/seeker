@@ -33,14 +33,16 @@
 		</Paragraph>
 		<Paragraph No="1">
 			<Actions>
+				<Option Goto="3" Text="Убегать"/>
 				<Fight>
 					<Enemy Name="'Преследователь'" Priority="2" Hitpoints="2" Distance="50" Weapons="Дерринджер,3,1,0-50,1"/>
 					<Enemy Name="'Убегавший'" Priority="2" Hitpoints="2" Distance="50" Weapons="Первый дерринджер,4,1,0-50,1;Второй дерринджер,4,1,0-50,1"/>
 				</Fight>
 			</Actions>
 			<Options>
-				<Option Goto="4" Text="Если вы победили (авторитет +2)"/>
-				<Option Goto="3" Text="Если убежали"/>
+				<Option Goto="4" Text="Вы победили (авторитет +2)">
+					<Authority Value="2"/>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph No="2">
