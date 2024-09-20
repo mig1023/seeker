@@ -29,6 +29,13 @@ namespace Seeker.Gamebook.SongOfJaguarsCliff
 
         public Weapon CurrentWeapon { get; set; }
 
+        private int _dollars;
+        public int Dollars
+        {
+            get => _dollars;
+            set => _dollars = Game.Param.Setter(value, _dollars, this);
+        }
+
         public override void Init()
         {
             base.Init();
@@ -37,6 +44,7 @@ namespace Seeker.Gamebook.SongOfJaguarsCliff
             Wounds = 0;
             Hitpoints = 6;
             Priority = 1;
+            Dollars = 0;
             Weapons = new List<Weapon> { new Weapon("Дерринджер,4,1,0-50,1") };
             CurrentWeapon = null;
 
@@ -48,6 +56,7 @@ namespace Seeker.Gamebook.SongOfJaguarsCliff
             IsProtagonist = this.IsProtagonist,
             Wounds = this.Wounds,
             Hitpoints = this.Hitpoints,
+            Dollars = this.Dollars,
             Weapons = new List<Weapon>(this.Weapons),
             CurrentWeapon = this.CurrentWeapon,
         };
@@ -55,7 +64,7 @@ namespace Seeker.Gamebook.SongOfJaguarsCliff
         public override string Save()
         {
             string weapons = String.Join(";", Weapons.Select(x => x.Save()));
-            return String.Join("|", Wounds, Hitpoints, weapons);
+            return String.Join("|", Wounds, Hitpoints, Dollars, weapons);
         }
 
         public override void Load(string saveLine)
@@ -64,10 +73,11 @@ namespace Seeker.Gamebook.SongOfJaguarsCliff
 
             Wounds = int.Parse(save[0]);
             Hitpoints = int.Parse(save[1]);
+            Dollars = int.Parse(save[2]);
 
             Weapons = new List<Weapon>();
             
-            foreach (string weaponLine in save[1].Split(';'))
+            foreach (string weaponLine in save[3].Split(';'))
                 Weapons.Add(new Weapon(weaponLine));
 
             Name = "Главный герой";
