@@ -1782,6 +1782,9 @@
 		</Paragraph>
 		<Paragraph No="200">
 			<Text>Я выдвинул барельеф, и каменная громада подалась, открыв нишу в стене. Но через мгновение барельеф медленно пополз назад, и ниша снова закрылась. (время -1)</Text>
+			<Modifications>
+				<Time Value="-1"/>
+			</Modifications>
 			<Options>
 				<Option Goto="158"/>
 			</Options>
