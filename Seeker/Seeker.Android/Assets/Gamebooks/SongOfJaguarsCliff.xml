@@ -121,14 +121,16 @@
 		<Paragraph No="11">
 			<Text>Их трюк сработал. Я бросил уздцы, обошёл ближайшего ко мне всадника и наставил ствол на преследователя. В ту же секунду всадник у меня за спиной выстрелил.</Text>
 			<Actions>
+				<Option Goto="3" Text="Убежать"/>
 				<Fight>
 					<Enemy Name="'Преследователь'" Priority="2" Hitpoints="2" Distance="50" Weapons="Дерринджер,3,1,0-50,1"/>
 					<Enemy Name="'Убегавший'" Priority="0" Hitpoints="2" Distance="50" Weapons="Первый дерринджер,4,1,0-50,1;Второй дерринджер,4,1,0-50,1"/>
 				</Fight>
 			</Actions>
 			<Options>
-				<Option Goto="4" Text="Если Вы победили (авторитет +2)"/>
-				<Option Goto="3" Text="Если Вы убежали"/>
+				<Option Goto="4" Text="Если Вы победили (авторитет +2)">
+					<Authority Value="2"/>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph No="12">
