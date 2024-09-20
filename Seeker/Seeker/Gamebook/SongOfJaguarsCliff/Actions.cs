@@ -36,6 +36,10 @@ namespace Seeker.Gamebook.SongOfJaguarsCliff
             return enemies;
         }
 
+        public override bool GameOver(out int toEndParagraph, out string toEndText) =>
+            GameOverBy(Character.Protagonist.Wounds >= Character.Protagonist.Hitpoints,
+                out toEndParagraph, out toEndText);
+
         private Character ChooseEnemy(Character fighter, List<Character> fighters)
         {
             if (fighter.IsProtagonist)
