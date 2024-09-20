@@ -40,6 +40,23 @@ namespace Seeker.Gamebook.SongOfJaguarsCliff
             GameOverBy(Character.Protagonist.Wounds >= Character.Protagonist.Hitpoints,
                 out toEndParagraph, out toEndText);
 
+        public override bool Availability(string option)
+        {
+            if (String.IsNullOrEmpty(option))
+            {
+                return true;
+            }
+            else if (option.Contains("ДОЛЛАРЫ >="))
+            {
+                int level = Game.Services.LevelParse(option);
+                return Character.Protagonist.Dollars >= level;
+            }
+            else
+            {
+                return AvailabilityTrigger(option);
+            }
+        }
+
         private Character ChooseEnemy(Character fighter, List<Character> fighters)
         {
             if (fighter.IsProtagonist)
