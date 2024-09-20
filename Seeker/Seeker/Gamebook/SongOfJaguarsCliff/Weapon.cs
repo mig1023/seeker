@@ -39,6 +39,22 @@ namespace Seeker.Gamebook.SongOfJaguarsCliff
 
         public bool IsSuitable { get => this.Cartridges > 0 || this.Recharge == 0; }
 
+        public string Description
+        {
+            get
+            {
+                if (this.ColdWeapon)
+                {
+                    return $"{this.Name} (холодное оружие)";
+                }
+                else
+                {
+                    return $"{this.Name} (урон {this.Damage}, " +
+                        $"дальность {this.DistanceMin}-{this.DistanceMax})";
+                }
+            }
+        }
+
 
         public Weapon(string line)
         {

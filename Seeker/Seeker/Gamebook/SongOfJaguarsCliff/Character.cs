@@ -58,7 +58,7 @@ namespace Seeker.Gamebook.SongOfJaguarsCliff
             Wounds = 0;
             Hitpoints = 6;
             Priority = 1;
-            Dollars = 0;
+            Dollars = 100;
             Authority = 0;
             Time = 0;
             Weapons = new List<Weapon> { new Weapon("Дерринджер,4,1,0-50,1") };

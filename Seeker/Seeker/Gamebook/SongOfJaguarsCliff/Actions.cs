@@ -9,6 +9,20 @@ namespace Seeker.Gamebook.SongOfJaguarsCliff
     {
         public List<Character> Enemies { get; set; }
 
+        public override List<string> Status() => new List<string>
+        {
+            $"Ранений: {Character.Protagonist.Wounds}/{Character.Protagonist.Hitpoints}",
+            $"Авторитет: {Character.Protagonist.Authority}/4",
+            $"Деньги: {Character.Protagonist.Dollars}$",
+            $"Время: {Character.Protagonist.Time}/12",
+        };
+
+        public override List<string> AdditionalStatus()
+        {
+            string weapons = String.Join(", ", Character.Protagonist.Weapons.Select(x => x.Description));
+            return new List<string> { $"Оружие: {weapons}" };
+        }
+
         public override List<string> Representer()
         {
             List<string> enemies = new List<string>();
