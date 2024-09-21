@@ -316,7 +316,6 @@ namespace Seeker.Game
             description.Year = IntParse(data["Year"]);
             description.Text = StringParse(data["Text"]);
             description.Paragraphs = IntParse(data["Paragraphs"]);
-            description.OnlyFirstParagraphsValue = BoolParse(data["OnlyFirstParagraphsValue"]);
             description.Size = StringParse(data["Size"]);
             description.PlaythroughTime = StringParse(data["Playthrough"]);
             description.Setting = StringParse(data["Setting"]);

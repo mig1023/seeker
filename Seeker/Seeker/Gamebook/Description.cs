@@ -34,8 +34,6 @@ namespace Seeker.Gamebook
 
         public int Paragraphs;
 
-        public bool OnlyFirstParagraphsValue;
-
         public string Size;
 
         public string PlaythroughTime;
