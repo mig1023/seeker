@@ -1923,12 +1923,20 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="210">
-			<Text>Потеряв три минуты, я нашёл абзац, где написано «Выдвинуть ^Гтэ, затем ». (время -3)</Text>
+			<Text>Потеряв три минуты, я нашёл абзац, где написано, что сначала нужно выдвинуть...</Text>
+			<Images>
+				<Pic192>
+					<Text>...затем...</Text>
+				</Pic192>
+				<Pic181>
+					<Text>(время -3)</Text>
+				</Pic181>
+			</Images>
 			<Modifications>
 				<Time Value="-3"/>
 			</Modifications>
 			<Options>
-				<Option Goto="192" Text="Выдвинуть барельеф со знаками Г Г а"/>
+				<Option Goto="192" Text="Выдвинуть барельеф указанный первым"/>
 			</Options>
 		</Paragraph>
 	</Paragraphs>
