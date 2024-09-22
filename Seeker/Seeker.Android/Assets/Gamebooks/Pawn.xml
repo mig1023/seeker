@@ -5,20 +5,23 @@
 			<Author>Aleks Otter, 2023</Author>
 		</Copyright>
 		<Styles>
-			<Color Name="Main, Option, Continue" Value="000000"/>
+			<Color Name="Main, Option, Continue, StatusFont" Value="000000"/>
+			<System Value="f4f4f4"/>
 		</Styles>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph No="0">
-			<Text>START</Text>
+			<Text>Война всегда начинается внезапно.\n\nКакой беззаботной была Ваша жизнь ещё вчера! Но вот Вы стоите в шеренге таких же бледных от страха новобранцев, неуверенно переминаясь с ноги на ногу, нервно поглаживая рукоять меча. Позади слышится ржание коней, выкрики возниц и погонщиков слонов. А перед Вами расстилается душистое поле, ещё не знающее вида крови. На другой его стороне над стройными рядами солдат реют тёмные стяги иноземных захватчиков.</Text>
 			<Options>
 				<Start Goto="1"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="1">
-			<Text>END</Text>
+			<Text>Рёв боевого рога возвестил о начале атаки.</Text>
 			<Options>
-				<Option Goto="0"/>
+				<Option Goto="19" Text="Ринуться в бой! Пусть сам король восхитится вашей отвагой!"/>
+				<Option Goto="7" Text="Наступать медленно и неотвратимо, как сама Судьба"/>
+				<Option Goto="27" Text="Оставаться на месте и сохранять строй"/>
 			</Options>
 		</Paragraph>
 	</Paragraphs>
