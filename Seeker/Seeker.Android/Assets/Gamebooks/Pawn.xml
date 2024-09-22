@@ -101,5 +101,11 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="14">
+			<Text>Вы бросились на противника щитом вперёд! Но он легко отскочил в сторону и, дождавшись когда Вы откроетесь, ударил под рёбра.\n\nВы погибли. Глупо и бесславно.</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
