@@ -1436,30 +1436,35 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="158">
-			<Text>В зале было шестнадцать колонн. Я мысленно разделил их на четыре группы. Барельефы на них были массивными, но их можно сдвинуть с места в одиночку. Отец, судя по звукам, находился под крайней левой колонной восточной группы. На колоннах выбиты иероглифы, похожие на очки на игральных костях или знаки на карте.\n\nСеверная группа:</Text>
+			<Texts>
+				<Text>В зале было шестнадцать колонн. Я мысленно разделил их на четыре группы. Барельефы на них были массивными, но их можно сдвинуть с места в одиночку. Отец, судя по звукам, находился под крайней левой колонной восточной группы. На колоннах выбиты иероглифы, похожие на очки на игральных костях или знаки на карте.</Text>
+				<Text Style="Bold">СЕВЕРНАЯ ГРУППА:</Text>
+			</Texts>
 			<Options>
 				<Option Goto="181" Text="Выдвинуть" Image="Pic181"/>
 				<Option Goto="182" Text="Выдвинуть" Image="Pic182"/>
 				<Option Goto="183" Text="Выдвинуть" Image="Pic183"/>
 				<Option Goto="184" Text="Выдвинуть" Image="Pic184">
-					<Text>Западная группа:</Text>
+					<Text Style="Bold">\nЗАПАДНАЯ ГРУППА:</Text>
 				</Option>
 				<Option Goto="185" Text="Выдвинуть" Image="Pic185"/>
 				<Option Goto="186" Text="Выдвинуть" Image="Pic186"/>
 				<Option Goto="187" Text="Выдвинуть" Image="Pic187"/>
 				<Option Goto="188" Text="Выдвинуть" Image="Pic188">
-					<Text>Южная группа:</Text>
+					<Text Style="Bold">\nЮЖНАЯ ГРУППА:</Text>
 				</Option>
 				<Option Goto="189" Text="Выдвинуть" Image="Pic189"/>
 				<Option Goto="190" Text="Выдвинуть" Image="Pic190"/>
 				<Option Goto="191" Text="Выдвинуть" Image="Pic191"/>
 				<Option Goto="192" Text="Выдвинуть" Image="Pic192">
-					<Text>Восточная группа:</Text>
+					<Text Style="Bold">\nВОСТОЧНАЯ ГРУППА:</Text>
 				</Option>
 				<Option Goto="193" Text="Выдвинуть" Image="Pic193"/>
 				<Option Goto="194" Text="Выдвинуть" Image="Pic194"/>
 				<Option Goto="195" Text="Выдвинуть" Image="Pic195"/>
-				<Option Goto="196" Text="Выдвинуть" Image="Pic196"/>
+				<Option Goto="196" Text="Выдвинуть" Image="Pic196">
+					<Text>Так же можно:</Text>
+				</Option>
 				<Option Goto="170" Text="Подумать ещё немного и ничего не трогпть"/>
 				<Option Goto="210" Text="Проштудировать журнал отца и найти упоминания о том, как открыть гробницу"/>
 			</Options>
@@ -1727,33 +1732,36 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="192">
-			<Text>Я выдвинул барельеф, и каменная громада понемногу подалась, открыв пустую нишу в стене. Раздался щелчок, и барельеф замер на месте. Первая печать открыта... (время -1)\n\nЗападная группа:</Text>
+			<Texts>
+				<Text>Я выдвинул барельеф, и каменная громада понемногу подалась, открыв пустую нишу в стене. Раздался щелчок, и барельеф замер на месте. Первая печать открыта... (время -1)</Text>
+				<Text Style="Bold">ЗАПАДНАЯ ГРУППА:</Text>
+			</Texts>
 			<Modifications>
 				<Time Value="-1"/>
 			</Modifications>
 			<Options>
-				<Option Goto="185" Text="Выдвинуть"/>
-				<Option Goto="188" Text="Выдвинуть"/>
-				<Option Goto="186" Text="Выдвинуть"/>
-				<Option Goto="187" Text="Выдвинуть">
-					<Text>Южная группа:</Text>
+				<Option Goto="185" Text="Выдвинуть" Image="Pic185"/>
+				<Option Goto="186" Text="Выдвинуть" Image="Pic186"/>
+				<Option Goto="187" Text="Выдвинуть" Image="Pic187"/>
+				<Option Goto="188" Text="Выдвинуть" Image="Pic188">
+					<Text Style="Bold">\nЮЖНАЯ ГРУППА:</Text>
 				</Option>
-				<Option Goto="189" Text="Выдвинуть"/>
-				<Option Goto="190" Text="Выдвинуть"/>
-				<Option Goto="191" Text="Выдвинуть"/>
-				<Option Goto="192" Text="Выдвинуть">
-					<Text>Восточная группа:</Text>
+				<Option Goto="189" Text="Выдвинуть" Image="Pic189"/>
+				<Option Goto="190" Text="Выдвинуть" Image="Pic190"/>
+				<Option Goto="191" Text="Выдвинуть" Image="Pic191"/>
+				<Option Goto="192" Text="Выдвинуть" Image="Pic192">
+					<Text Style="Bold">\nВОСТОЧНАЯ ГРУППА:</Text>
 				</Option>
-				<Option Goto="193" Text="Выдвинуть"/>
-				<Option Goto="194" Text="Выдвинуть"/>
-				<Option Goto="195" Text="Выдвинуть"/>
-				<Option Goto="196" Text="Выдвинуть">
-					<Text>Северная группа:</Text>
+				<Option Goto="193" Text="Выдвинуть" Image="Pic193"/>
+				<Option Goto="194" Text="Выдвинуть" Image="Pic194"/>
+				<Option Goto="195" Text="Выдвинуть" Image="Pic195"/>
+				<Option Goto="196" Text="Выдвинуть" Image="Pic196">
+					<Text Style="Bold">\nСЕВЕРНАЯ ГРУППА:</Text>
 				</Option>
-				<Option Goto="197" Text="Выдвинуть"/>
-				<Option Goto="198" Text="Выдвинуть"/>
-				<Option Goto="199" Text="Выдвинуть"/>
-				<Option Goto="200" Text="Выдвинуть"/>
+				<Option Goto="197" Text="Выдвинуть" Image="Pic181"/>
+				<Option Goto="198" Text="Выдвинуть" Image="Pic182"/>
+				<Option Goto="199" Text="Выдвинуть" Image="Pic183"/>
+				<Option Goto="200" Text="Выдвинуть" Image="Pic184"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="193">
