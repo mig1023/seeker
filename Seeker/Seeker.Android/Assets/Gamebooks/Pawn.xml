@@ -8,6 +8,9 @@
 			<Color Name="Main, Option, Continue, StatusFont" Value="000000"/>
 			<System Value="f4f4f4"/>
 		</Styles>
+		<Default>
+			<FontSize Value="Big"/>
+		</Default>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph No="0">
