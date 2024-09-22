@@ -216,5 +216,11 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="32">
+			<Text>Слишком долго Вы оставались на одном месте.\n\nНа Вас мчится вражеская колесница. Щит не поможет Вам в этом бою. Вы погибли.</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
