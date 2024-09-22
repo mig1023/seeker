@@ -807,10 +807,29 @@
     <AndroidResource Include="Resources\drawable\Pawn_Move6.jpg" />
     <AndroidResource Include="Resources\drawable\Pawn_Move7.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\SongOfJaguarsCliff_Pic153.jpg" />
+    <AndroidResource Include="Resources\drawable\SongOfJaguarsCliff_Pic181.jpg" />
+    <AndroidResource Include="Resources\drawable\SongOfJaguarsCliff_Pic182.jpg" />
+    <AndroidResource Include="Resources\drawable\SongOfJaguarsCliff_Pic183.jpg" />
+    <AndroidResource Include="Resources\drawable\SongOfJaguarsCliff_Pic184.jpg" />
+    <AndroidResource Include="Resources\drawable\SongOfJaguarsCliff_Pic185.jpg" />
+    <AndroidResource Include="Resources\drawable\SongOfJaguarsCliff_Pic186.jpg" />
+    <AndroidResource Include="Resources\drawable\SongOfJaguarsCliff_Pic187.jpg" />
+    <AndroidResource Include="Resources\drawable\SongOfJaguarsCliff_Pic188.jpg" />
+    <AndroidResource Include="Resources\drawable\SongOfJaguarsCliff_Pic189.jpg" />
+    <AndroidResource Include="Resources\drawable\SongOfJaguarsCliff_Pic190.jpg" />
+    <AndroidResource Include="Resources\drawable\SongOfJaguarsCliff_Pic191.jpg" />
+    <AndroidResource Include="Resources\drawable\SongOfJaguarsCliff_Pic192.jpg" />
+    <AndroidResource Include="Resources\drawable\SongOfJaguarsCliff_Pic193.jpg" />
+    <AndroidResource Include="Resources\drawable\SongOfJaguarsCliff_Pic194.jpg" />
+    <AndroidResource Include="Resources\drawable\SongOfJaguarsCliff_Pic195.jpg" />
+    <AndroidResource Include="Resources\drawable\SongOfJaguarsCliff_Pic196.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties XamarinHotReloadDebuggerTimeoutExceptionSeekerAndroidHideInfoBar="True" XamarinHotReloadGenericExceptionInfoBarSeekerAndroidHideInfoBar="True" />
+      <UserProperties XamarinHotReloadGenericExceptionInfoBarSeekerAndroidHideInfoBar="True" XamarinHotReloadDebuggerTimeoutExceptionSeekerAndroidHideInfoBar="True" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>
