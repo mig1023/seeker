@@ -787,10 +787,30 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\Pawn.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Pawn_Move1.jpg" />
+    <AndroidResource Include="Resources\drawable\Pawn_Move12.jpg" />
+    <AndroidResource Include="Resources\drawable\Pawn_Move17.jpg" />
+    <AndroidResource Include="Resources\drawable\Pawn_Move18.jpg" />
+    <AndroidResource Include="Resources\drawable\Pawn_Move19.jpg" />
+    <AndroidResource Include="Resources\drawable\Pawn_Move2.jpg" />
+    <AndroidResource Include="Resources\drawable\Pawn_Move20.jpg" />
+    <AndroidResource Include="Resources\drawable\Pawn_Move22.jpg" />
+    <AndroidResource Include="Resources\drawable\Pawn_Move24.jpg" />
+    <AndroidResource Include="Resources\drawable\Pawn_Move25.jpg" />
+    <AndroidResource Include="Resources\drawable\Pawn_Move26.jpg" />
+    <AndroidResource Include="Resources\drawable\Pawn_Move27.jpg" />
+    <AndroidResource Include="Resources\drawable\Pawn_Move28.jpg" />
+    <AndroidResource Include="Resources\drawable\Pawn_Move29.jpg" />
+    <AndroidResource Include="Resources\drawable\Pawn_Move3.jpg" />
+    <AndroidResource Include="Resources\drawable\Pawn_Move30.jpg" />
+    <AndroidResource Include="Resources\drawable\Pawn_Move6.jpg" />
+    <AndroidResource Include="Resources\drawable\Pawn_Move7.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties XamarinHotReloadGenericExceptionInfoBarSeekerAndroidHideInfoBar="True" XamarinHotReloadDebuggerTimeoutExceptionSeekerAndroidHideInfoBar="True" />
+      <UserProperties XamarinHotReloadDebuggerTimeoutExceptionSeekerAndroidHideInfoBar="True" XamarinHotReloadGenericExceptionInfoBarSeekerAndroidHideInfoBar="True" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>
