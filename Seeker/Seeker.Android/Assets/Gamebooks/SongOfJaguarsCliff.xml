@@ -1438,28 +1438,28 @@
 		<Paragraph No="158">
 			<Text>В зале было шестнадцать колонн. Я мысленно разделил их на четыре группы. Барельефы на них были массивными, но их можно сдвинуть с места в одиночку. Отец, судя по звукам, находился под крайней левой колонной восточной группы. На колоннах выбиты иероглифы, похожие на очки на игральных костях или знаки на карте.\n\nСеверная группа:</Text>
 			<Options>
-				<Option Goto="181" Text="Выдвинуть"/>
-				<Option Goto="182" Text="Выдвинуть"/>
-				<Option Goto="183" Text="Выдвинуть"/>
-				<Option Goto="184" Text="Выдвинуть">
+				<Option Goto="181" Text="Выдвинуть" Image="Pic181"/>
+				<Option Goto="182" Text="Выдвинуть" Image="Pic182"/>
+				<Option Goto="183" Text="Выдвинуть" Image="Pic183"/>
+				<Option Goto="184" Text="Выдвинуть" Image="Pic184">
 					<Text>Западная группа:</Text>
 				</Option>
-				<Option Goto="185" Text="Выдвинуть"/>
-				<Option Goto="186" Text="Выдвинуть"/>
-				<Option Goto="187" Text="Выдвинуть"/>
-				<Option Goto="188" Text="Выдвинуть">
+				<Option Goto="185" Text="Выдвинуть" Image="Pic185"/>
+				<Option Goto="186" Text="Выдвинуть" Image="Pic186"/>
+				<Option Goto="187" Text="Выдвинуть" Image="Pic187"/>
+				<Option Goto="188" Text="Выдвинуть" Image="Pic188">
 					<Text>Южная группа:</Text>
 				</Option>
-				<Option Goto="189" Text="Выдвинуть"/>
-				<Option Goto="190" Text="Выдвинуть"/>
-				<Option Goto="191" Text="Выдвинуть"/>
-				<Option Goto="192" Text="Выдвинуть">
+				<Option Goto="189" Text="Выдвинуть" Image="Pic189"/>
+				<Option Goto="190" Text="Выдвинуть" Image="Pic190"/>
+				<Option Goto="191" Text="Выдвинуть" Image="Pic191"/>
+				<Option Goto="192" Text="Выдвинуть" Image="Pic192">
 					<Text>Восточная группа:</Text>
 				</Option>
-				<Option Goto="193" Text="Выдвинуть"/>
-				<Option Goto="194" Text="Выдвинуть"/>
-				<Option Goto="195" Text="Выдвинуть"/>
-				<Option Goto="196" Text="Выдвинуть"/>
+				<Option Goto="193" Text="Выдвинуть" Image="Pic193"/>
+				<Option Goto="194" Text="Выдвинуть" Image="Pic194"/>
+				<Option Goto="195" Text="Выдвинуть" Image="Pic195"/>
+				<Option Goto="196" Text="Выдвинуть" Image="Pic196"/>
 				<Option Goto="170" Text="Подумать ещё немного и ничего не трогпть"/>
 				<Option Goto="210" Text="Проштудировать журнал отца и найти упоминания о том, как открыть гробницу"/>
 			</Options>
