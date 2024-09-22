@@ -113,5 +113,11 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="16">
+			<Text>Победа!\n\nВаш подвиг был оценён по заслугам — король даровал Вам звание и земли.\n\nНайденный боевой конь стал Вашим любимцем. Вы верите, что он приносит удачу.</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
