@@ -1004,4 +1004,16 @@
 		<Setting>Вестерн</Setting>
 		<Color>884728</Color>
 	</SongOfJaguarsCliff>
+	<Pawn>
+		<Title>Пешка</Title>
+		<Author>Aleks Otter</Author>
+		<SinglePseudonym/>
+		<Year>2023</Year>
+		<Text>Остросюжетная игра с шахматными задачами. Вы играете за белую пешку E2.</Text>
+		<Paragraphs>1</Paragraphs>
+		<Size>1</Size>
+		<Playthrough>На пять минут</Playthrough>
+		<Setting>Приключения</Setting>
+		<Color>000000</Color>
+	</Pawn>
 </Gamebooks>

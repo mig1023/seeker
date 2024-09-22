@@ -1,0 +1,25 @@
+<Gamebook>
+	<Introduction>
+		<Copyright>
+			<Title>Пешка</Title>
+			<Author>Aleks Otter, 2023</Author>
+		</Copyright>
+		<Styles>
+			<Color Name="Main, Option, Continue" Value="000000"/>
+		</Styles>
+	</Introduction>
+	<Paragraphs>
+		<Paragraph No="0">
+			<Text>START</Text>
+			<Options>
+				<Start Goto="1"/>
+			</Options>
+		</Paragraph>
+		<Paragraph No="1">
+			<Text>END</Text>
+			<Options>
+				<Option Goto="0"/>
+			</Options>
+		</Paragraph>
+	</Paragraphs>
+</Gamebook>
