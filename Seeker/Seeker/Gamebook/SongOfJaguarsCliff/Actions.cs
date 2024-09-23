@@ -66,6 +66,14 @@ namespace Seeker.Gamebook.SongOfJaguarsCliff
             {
                 return true;
             }
+            else if (option == "НЕТ ВИНЧЕСТЕРА")
+            {
+                int count = Character.Protagonist.Weapons
+                    .Where(x => x.Name == "Винчестер")
+                    .Count();
+
+                return count == 0;
+            }
             else
             {
                 foreach (string oneOption in option.Split(','))
