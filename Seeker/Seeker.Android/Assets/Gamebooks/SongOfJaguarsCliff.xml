@@ -1685,7 +1685,10 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="169">
-			<Text>Я быстро настучал «БРОШЬ В КАРМАНЕ» и выждал, но ответа не было... (время -1)</Text>
+			<Texts>
+				<Text>Я быстро настучал «БРОШЬ В КАРМАНЕ» и выждал, но ответа не было...</Text>
+				<Text Style="Small">Время -1</Text>
+			</Texts>
 			<Modifications>
 				<Time Value="-1"/>
 			</Modifications>
