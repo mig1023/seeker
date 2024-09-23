@@ -1673,7 +1673,6 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="167">
-			<Text>167.</Text>
 			<Options>
 				<Option Goto="164" Text="Если у Вас нет метки «Кларк»"/>
 				<Option Goto="197" Text="Если у Вас есть метка «Кларк»"/>
