@@ -20,6 +20,8 @@ namespace Seeker.Gamebook.SeaTales
 
         public static Dictionary<int, string> GetRangeTypes { get; set; }
 
+        public static Dictionary<int, string> GetBattleTypes { get; set; }
+
         public static Dictionary<int, string> NumTexts { get; set; }
 
         public static Dictionary<int, string> AllNumTexts { get; set; }

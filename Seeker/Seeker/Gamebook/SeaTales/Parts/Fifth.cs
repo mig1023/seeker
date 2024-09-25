@@ -4,51 +4,24 @@ using System.Linq;
 
 namespace Seeker.Gamebook.SeaTales.Parts
 {
-    class Fourth : IParts
+    class Fifth : IParts
     {
-        public List<string> Status()
-        {
-            int points = Character.Protagonist.NarrativePoints;
-            points = points >= 0 ? points : 0;
-            return new List<string> { $"Пункты Повествования: {points}" };
-        }
+        public List<string> Status() =>
+            new List<string> { $"Героизм: {Character.Protagonist.Heroism}" };
 
         public List<string> AdditionalStatus() => null;
 
         public List<string> Representer(Actions action)
         {
-            return new List<string> { $"КОСМИЧЕСКОЕ СРАЖЕНИЕ\nпротив {action.Enemy}" };
+            return new List<string> { $"СРАЖЕНИЕ\nпротив {action.Enemy}" };
         }
 
         public bool GameOver(out int toEndParagraph, out string toEndText)
         {
-            toEndParagraph = 1448;
+            toEndParagraph = 0;
+            toEndText = String.Empty;
 
-            if (Character.Protagonist.NarrativePoints < 0)
-            {
-                Character.Protagonist.NarrativePoints = 0;
-
-                toEndText = "Так, этот краснобай настолько заврался, " +
-                    "что собутыльники перестали воспринимать его всерьёз " +
-                    "и подняли на смех. Рассказ начинает другой...";
-
-                return true;
-            }
-            else if (Character.Protagonist.NarrativePoints >= 100)
-            {
-                Character.Protagonist.NarrativePoints = 0;
-
-                toEndText = "Это была потрясающая история, но рассказчика " +
-                    "перебил другой, чуть больше принявший на грудь и начинается " +
-                    "совсем другая история!";
-
-                return true;
-            }
-            else
-            {
-                toEndText = String.Empty;
-                return false;
-            }
+            return false;
         }
 
         public List<string> RandomOption() =>
@@ -70,7 +43,7 @@ namespace Seeker.Gamebook.SeaTales.Parts
                 .Select(x => x.Trim())
                 .ToList();
 
-            Character.Protagonist.NarrativePoints += int.Parse(success[0]);
+            Character.Protagonist.Heroism += int.Parse(success[0]);
 
             fight.Add($"BIG|{success[1]}");
         }
@@ -82,7 +55,7 @@ namespace Seeker.Gamebook.SeaTales.Parts
         {
             List<string> fight = new List<string>();
 
-            Dictionary<int, string> rangeType = Constants.GetRangeTypes;
+            Dictionary<int, string> rangeType = Constants.GetBattleTypes;
 
             List<int> myCombination = new List<int>();
             List<string> myCombinationLine = new List<string>();
@@ -157,7 +130,7 @@ namespace Seeker.Gamebook.SeaTales.Parts
 
                         if (range == 4)
                         {
-                            fight.Add("BIG|GOOD|Вы уничтожили противника в ближнем бою! :)");
+                            fight.Add("BIG|GOOD|Вы взяли противника на абордаж! :)");
 
                             Success(action, ref fight);
 
@@ -174,8 +147,8 @@ namespace Seeker.Gamebook.SeaTales.Parts
 
                         if (range == 4)
                         {
-                            fight.Add("BIG|BAD|Противник уничтожил вас в ближнем бою :(");
-                            Character.Protagonist.NarrativePoints = -1;
+                            fight.Add("BIG|BAD|Противник взял вас на абордаж :(");
+                            Character.Protagonist.Heroism = 0;
                             return fight;
                         }
                         else
@@ -185,7 +158,7 @@ namespace Seeker.Gamebook.SeaTales.Parts
                     }
                     else
                     {
-                        fight.Add(range == 4 ? "Взаимные манёвры:" : "Перестрелка:");
+                        fight.Add(range == 4 ? "Взаимные манёвры:" : "Стрельба:");
 
                         while (roundResult == 0)
                         {
@@ -214,7 +187,7 @@ namespace Seeker.Gamebook.SeaTales.Parts
 
                             if ((myAttack > enemyAttack) && (range == 4))
                             {
-                                fight.Add("BIG|GOOD|Вы уничтожили противника в ближнем бою! :)");
+                                fight.Add("BIG|GOOD|Вы взяли противника на абордаж! :)");
 
                                 Success(action, ref fight);
 
@@ -222,8 +195,8 @@ namespace Seeker.Gamebook.SeaTales.Parts
                             }
                             else if ((myAttack < enemyAttack) && (range == 4))
                             {
-                                fight.Add("BIG|BAD|Противник уничтожил вас в ближнем бою :(");
-                                Character.Protagonist.NarrativePoints = -1;
+                                fight.Add("BIG|BAD|Противник взял вас на абордаж :(");
+                                Character.Protagonist.Heroism = 0;
                                 return fight;
                             }
                             else if (myAttack > enemyAttack)
@@ -301,7 +274,7 @@ namespace Seeker.Gamebook.SeaTales.Parts
                         if (myEvasion > 2)
                         {
                             fight.Add("BIG|BAD|Противник уничтожил вас :(");
-                            Character.Protagonist.NarrativePoints = -1;
+                            Character.Protagonist.Heroism = 0;
                             return fight;
                         }
                         else
