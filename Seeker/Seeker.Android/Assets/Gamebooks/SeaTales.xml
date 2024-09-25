@@ -16,7 +16,7 @@
 				<Item Name="401" Value="f4533a, fa7775, dfbc99, d11417, fc7c51, eeae64, f0d6b3, ffffff"/>
 				<Item Name="610" Value="175165, 2e6274, 5c8593, 04273a, 14485a, 7396a2, b9cad0, 8ba8b2"/>
 				<Item Name="1447" Value="457593, 66a8b3, 99ced4, 366e8a, 0f3c61, acc8d4, ffffff, ffffff"/>
-				<Item Name="1484" Value="455a64, 546e7a, 90a4ae, 455a64, 37474f, 90a4ae, cfd8dc, ffffff"/>
+				<Item Name="1484" Value="186c75, 468990, 468990, 104b51, 13565d, 5d989e, a2c4c7, ffffff"/>
 			</Colors>
 			<Properties>
 				<Item Name="Heroism" Value="Героизм"/>
@@ -51,11 +51,11 @@
 				<Option Goto="1" Text="Северные берега" Image="NorthernShores" Style="455a64">
 					<Text Style="Small, Upper">Геннадий Логинов, 2018</Text>
 				</Option>
+				<Option Goto="1484" Text="Морская лихорадка" Image="Fever" Style="186c75">
+					<Text Style="Small, Upper">Геннадий Логинов, 2018</Text>
+				</Option>
 				<Option Goto="1447" Text="Звёздные байки" Image="Space" Style="457593">
 					<Text Style="Small, Upper">Геннадий Логинов, 2024</Text>
-				</Option>
-				<Option Goto="1484" Text="Морская лихорадка" Style="457593">
-					<Text Style="Small, Upper">Геннадий Логинов, 2018</Text>
 				</Option>
 			</Options>
 		</Paragraph>
