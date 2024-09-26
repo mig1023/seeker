@@ -18,10 +18,24 @@ namespace Seeker.Gamebook.SeaTales.Parts
 
         public bool GameOver(out int toEndParagraph, out string toEndText)
         {
-            toEndParagraph = 0;
-            toEndText = String.Empty;
+            if (Character.Protagonist.Heroism >= 100)
+            {
+                toEndParagraph = 1484;
+                Character.Protagonist.Heroism = 0;
 
-            return false;
+                toEndText = "Это была завечательная история, " +
+                    "но она подошла к концу. Тут начинается " +
+                    "совсем другое приключение...";
+
+                return true;
+            }
+            else
+            {
+                toEndParagraph = 0;
+                toEndText = String.Empty;
+
+                return false;
+            }
         }
 
         public List<string> RandomOption() =>
