@@ -227,10 +227,10 @@ namespace Seeker.Gamebook.SongOfJaguarsCliff
                     if ((action == Weapon.NextAction.Continue) || (action == Weapon.NextAction.Change))
                     {
                         if (action == Weapon.NextAction.Change)
-                            fight.Add($"{fighter.Name} использует {fighter.CurrentWeapon.Name}");
+                            fight.Add($"GRAY|{fighter.Name} использует: {fighter.CurrentWeapon.Name}");
 
-                        string act = fighter.CurrentWeapon.ColdWeapon ? "бьёт" : "стреляет в";
-                        fight.Add($"BOLD|{fighter.Name} {act} {enemy.Name}");
+                        if (fighter.IsProtagonist)
+                            fight.Add($"GRAY|{fighter.Name} выбирает цель: {enemy.Name}");
 
                         int damage = fighter.CurrentWeapon.Damage;
 
@@ -243,7 +243,7 @@ namespace Seeker.Gamebook.SongOfJaguarsCliff
 
                         if (enemy.Wounds >= enemy.Hitpoints)
                         {
-                            fight.Add($"{marker}|BOLD|{enemy.Name} ПОГИБ!");
+                            fight.Add($"{marker}|BOLD|{enemy.Name} ПОБЕЖДЁН!");
 
                             if (NoMoreEnemy(fighters))
                             {
@@ -264,8 +264,7 @@ namespace Seeker.Gamebook.SongOfJaguarsCliff
                             int cartridges = fighter.CurrentWeapon.Cartridges;
                             string line = Game.Services.CoinsNoun(cartridges, "пуля", "пули", "пуль");
 
-                            fight.Add($"GRAY|В {fighter.CurrentWeapon.Name} у " +
-                                $"{fighter.Name} осталась {cartridges} {line}");
+                            fight.Add($"GRAY|В обойме у {fighter.Name} осталась {cartridges} {line}");
                         }
                     }
                     else if (action == Weapon.NextAction.Recharge)
