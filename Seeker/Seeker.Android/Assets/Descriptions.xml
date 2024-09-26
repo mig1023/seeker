@@ -647,7 +647,7 @@
 		<Playthrough>На полчаса</Playthrough>
 		<Setting>Приключения</Setting>
 		<Color>e17b5f</Color>
-		<Additional>20 отдельных книжек по 17-120 параграфов каждая.</Additional>
+		<Additional>20 отдельных книжек, от 17 до 120 параграфов каждая.</Additional>
 	</ChooseYourOwnAdventure>
 	<Trail>
 		<Title>След</Title>
@@ -857,15 +857,15 @@
 		<Author>Геннадий Логинов</Author>
 		<Year>2018</Year>
 		<Text>Про отважного Карстена Клеменса, капитана корабля «Иосиф Обручник», всегда ходило немало сплетен и небылиц. Каждый уважающий себя забулдыга считал своим долгом что-нибудь доплести. И таким образом лёгкий ветерок превращался в смертельный шторм, небольшое волнение — в девятибалльную волну, канонерская лодка с парой жалких фальконетов — в линейный корабль с водоизмещением в пять тысяч тонн и тремя рядами пушек и кулеврин на орудийных палубах, а мелкая каракатица — в настоящего кракена...</Text>
-		<Paragraphs>1483</Paragraphs>
-		<Size>153259</Size>
+		<Paragraphs>1584</Paragraphs>
+		<Size>161926</Size>
 		<Playthrough>На полчаса</Playthrough>
 		<Setting>Морские приключения</Setting>
 		<Colors>
 			<Book>f9f0ca</Book>
 			<Font>341f1b</Font>
 		</Colors>
-		<Additional>Четыре части: 838, 208, 400 и 36 параграфов.</Additional>
+		<Additional>Пять самостоятельных книг-игр, от 36 до 838 параграфов каждая.</Additional>
 	</SeaTales>
 	<PrisonerOfMoritaiCastle>
 		<Title>Пленница замка Моритаи</Title>
@@ -1010,8 +1010,8 @@
 		<SinglePseudonym/>
 		<Year>2023</Year>
 		<Text>Остросюжетная игра с шахматными задачами. Вы играете за белую пешку E2.</Text>
-		<Paragraphs>1</Paragraphs>
-		<Size>1</Size>
+		<Paragraphs>33</Paragraphs>
+		<Size>2343</Size>
 		<Playthrough>На пять минут</Playthrough>
 		<Setting>Приключения</Setting>
 		<Color>000000</Color>
