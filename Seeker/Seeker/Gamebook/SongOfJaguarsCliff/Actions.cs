@@ -146,6 +146,10 @@ namespace Seeker.Gamebook.SongOfJaguarsCliff
             {
                 return (Character.Protagonist.Wounds > 0) && (Character.Protagonist.Dollars > 10);
             }
+            else if (Type == "AuthorityBonus")
+            {
+                return !Game.Option.IsTriggered("Доп.авторитет");
+            }
             else if (Price > 0)
             {
                 return !Used && (Price <= Character.Protagonist.Dollars);
@@ -335,6 +339,16 @@ namespace Seeker.Gamebook.SongOfJaguarsCliff
 
             return new List<string> { "RELOAD" };
         }
+
+        public List<string> AuthorityBonus()
+        {
+            Character.Protagonist.Authority += 1;
+
+            Game.Option.Trigger("Доп.авторитет");
+
+            return new List<string> { "BIG|Ваш авторитет поднялся!" };
+        }
+        
 
         public override bool IsHealingEnabled() =>
             Character.Protagonist.Wounds > 0;
