@@ -229,7 +229,7 @@ namespace Seeker.Gamebook.SongOfJaguarsCliff
                         if (action == Weapon.NextAction.Change)
                             fight.Add($"GRAY|{fighter.Name} использует: {fighter.CurrentWeapon.Name}");
 
-                        if (fighter.IsProtagonist)
+                        if (fighter.IsProtagonist && (fighters.Count > 2))
                             fight.Add($"GRAY|{fighter.Name} выбирает цель: {enemy.Name}");
 
                         int damage = fighter.CurrentWeapon.Damage;
