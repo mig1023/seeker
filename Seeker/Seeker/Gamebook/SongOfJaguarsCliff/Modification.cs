@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace Seeker.Gamebook.SongOfJaguarsCliff
 {
@@ -19,6 +20,18 @@ namespace Seeker.Gamebook.SongOfJaguarsCliff
                 else
                 {
                     Character.Protagonist.Dollars -= 50;
+                }
+            }
+            else if (Name == "WoundsByWeapons")
+            {
+                bool heavyWeapons = Character.Protagonist.Weapons
+                    .Where(x => (x.Name == "Винчестер") || (x.Name == "Кольт"))
+                    .Count() > 0;
+
+                if (!heavyWeapons)
+                {
+                    Character.Protagonist.Wounds += 1;
+                    Character.Protagonist.Time += 1;
                 }
             }
             else
