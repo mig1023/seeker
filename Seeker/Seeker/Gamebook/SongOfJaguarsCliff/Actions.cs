@@ -339,7 +339,12 @@ namespace Seeker.Gamebook.SongOfJaguarsCliff
         public override bool IsHealingEnabled() =>
             Character.Protagonist.Wounds > 0;
 
-        public override void UseHealing(int healingLevel) =>
+        public override void UseHealing(int healingLevel)
+        {
             Character.Protagonist.Wounds -= healingLevel;
+
+            if (Game.Option.IsTriggered("Время на раны"))
+                Character.Protagonist.Time -= 1;
+        }
     }
 }
