@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Xamarin.Forms.Shapes;
 
 namespace Seeker.Gamebook.SongOfJaguarsCliff
 {
@@ -262,9 +263,16 @@ namespace Seeker.Gamebook.SongOfJaguarsCliff
                             fighter.CurrentWeapon.Cartridges -= 1;
 
                             int cartridges = fighter.CurrentWeapon.Cartridges;
-                            string line = Game.Services.CoinsNoun(cartridges, "пуля", "пули", "пуль");
 
-                            fight.Add($"GRAY|В обойме у {fighter.Name} осталась {cartridges} {line}");
+                            if (cartridges > 0)
+                            {
+                                string line = Game.Services.CoinsNoun(cartridges, "пуля", "пули", "пуль");
+                                fight.Add($"GRAY|В обойме осталась {cartridges} {line}");
+                            }
+                            else
+                            {
+                                fight.Add($"GRAY|В обойме не осталась пуль");
+                            }
                         }
                     }
                     else if (action == Weapon.NextAction.Recharge)
