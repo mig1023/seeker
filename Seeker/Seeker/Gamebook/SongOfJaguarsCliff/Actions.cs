@@ -138,7 +138,11 @@ namespace Seeker.Gamebook.SongOfJaguarsCliff
 
         public override bool IsButtonEnabled(bool secondButton = false)
         {
-            if (Price > 0)
+            if (Type == "Cure")
+            {
+                return Character.Protagonist.Wounds > 0;
+            }
+            else if (Price > 0)
             {
                 return !Used && (Price <= Character.Protagonist.Dollars);
             }
@@ -310,6 +314,14 @@ namespace Seeker.Gamebook.SongOfJaguarsCliff
                     }
                 }
             }
+        }
+
+        public List<string> Cure()
+        {
+            Character.Protagonist.Wounds -= 3;
+            Character.Protagonist.Time += 1;
+
+            return new List<string> { "RELOAD" };
         }
 
         public override bool IsHealingEnabled() =>
