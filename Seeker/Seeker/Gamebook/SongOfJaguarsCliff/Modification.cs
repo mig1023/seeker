@@ -34,6 +34,10 @@ namespace Seeker.Gamebook.SongOfJaguarsCliff
                     Character.Protagonist.Time += 1;
                 }
             }
+            else if (Name == "TimeByHorse")
+            {
+                Character.Protagonist.Time += Game.Option.IsTriggered("Л") ? 1 : 2;
+            }
             else
             {
                 base.Do(Character.Protagonist);
