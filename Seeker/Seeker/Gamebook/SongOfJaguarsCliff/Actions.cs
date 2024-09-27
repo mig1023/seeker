@@ -142,6 +142,10 @@ namespace Seeker.Gamebook.SongOfJaguarsCliff
             {
                 return Character.Protagonist.Wounds > 0;
             }
+            else if (Type == "PaidCure")
+            {
+                return (Character.Protagonist.Wounds > 0) && (Character.Protagonist.Dollars > 10);
+            }
             else if (Price > 0)
             {
                 return !Used && (Price <= Character.Protagonist.Dollars);
@@ -320,6 +324,14 @@ namespace Seeker.Gamebook.SongOfJaguarsCliff
         {
             Character.Protagonist.Wounds -= 3;
             Character.Protagonist.Time += 1;
+
+            return new List<string> { "RELOAD" };
+        }
+
+        public List<string> PaidCure()
+        {
+            Character.Protagonist.Wounds -= 1;
+            Character.Protagonist.Dollars -= 10;
 
             return new List<string> { "RELOAD" };
         }
