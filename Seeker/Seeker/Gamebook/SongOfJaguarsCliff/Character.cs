@@ -69,7 +69,7 @@ namespace Seeker.Gamebook.SongOfJaguarsCliff
             Priority = 1;
             Dollars = 100;
             Authority = 0;
-            Time = 0;
+            Time = 12;
             Weapons = new List<Weapon> { new Weapon("Дерринджер,4,1,0-50,1") };
             CurrentWeapon = null;
 

@@ -31,12 +31,12 @@ namespace Seeker.Gamebook.SongOfJaguarsCliff
                 if (!heavyWeapons)
                 {
                     Character.Protagonist.Wounds += 1;
-                    Character.Protagonist.Time += 1;
+                    Character.Protagonist.Time -= 1;
                 }
             }
             else if (Name == "TimeByHorse")
             {
-                Character.Protagonist.Time += (Game.Option.IsTriggered("Л") ? 1 : 2) * Value;
+                Character.Protagonist.Time -= (Game.Option.IsTriggered("Л") ? 1 : 2) * Value;
             }
             else
             {
