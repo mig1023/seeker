@@ -72,6 +72,11 @@ namespace Seeker.Gamebook.SongOfJaguarsCliff
             
             enemy.CurrentWeapon = null;
 
+            if ((enemy.Name == "Питер Кларк") && Game.Option.IsTriggered("Кларк"))
+            {
+                enemy.Hitpoints = 5;
+            }
+
             return enemy;
         }
     }
