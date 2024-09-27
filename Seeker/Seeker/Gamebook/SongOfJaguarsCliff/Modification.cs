@@ -10,6 +10,17 @@ namespace Seeker.Gamebook.SongOfJaguarsCliff
             {
                 Character.Protagonist.Weapons.Add(new Weapon(ValueString));
             }
+            else if (Name == "DollarsDuty")
+            {
+                if (Character.Protagonist.Dollars < 50)
+                {
+                    Game.Option.Trigger("DollarsDuty");
+                }
+                else
+                {
+                    Character.Protagonist.Dollars -= 50;
+                }
+            }
             else
             {
                 base.Do(Character.Protagonist);

@@ -33,7 +33,16 @@ namespace Seeker.Gamebook.SongOfJaguarsCliff
         public int Dollars
         {
             get => _dollars;
-            set => _dollars = Game.Param.Setter(value, _dollars, this);
+            set
+            {
+                _dollars = Game.Param.Setter(value, _dollars, this);
+
+                if (Game.Option.IsTriggered("DollarsDuty") && (_dollars >= 50))
+                {
+                    _dollars -= 50;
+                    Game.Option.Trigger("DollarsDuty", remove: true);
+                }
+            }
         }
         
         private int _authority;
