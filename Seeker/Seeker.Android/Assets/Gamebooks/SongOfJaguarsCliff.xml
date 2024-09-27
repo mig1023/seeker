@@ -1335,7 +1335,7 @@
 			</Texts>
 			<Triggers>Время на раны</Triggers>
 			<Modifications>
-				<Time Empty="true"/>
+				<Time Time="12"/>
 			</Modifications>
 			<Options>
 				<Option Goto="149" Text="Сдаться Питеру Кларку"/>
