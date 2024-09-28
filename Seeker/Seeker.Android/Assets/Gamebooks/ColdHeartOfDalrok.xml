@@ -570,8 +570,9 @@
 				<Strength Value="-2"/>
 			</Modifications>
 			<Options>
+				<Option Goto="96" Text="Обратиться к Натали" Availability="Натали"/>
 				<Option Goto="597" Text="Если у вас есть лук, стрелы и желание ими воспользоваться" Availability="Стрельба из лука"/>
-				<Option Goto="237" Text="Если нет"/>
+				<Option Goto="237"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="64">
