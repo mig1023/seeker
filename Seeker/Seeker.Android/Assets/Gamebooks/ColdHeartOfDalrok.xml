@@ -1299,7 +1299,6 @@
 					<Button>Купить</Button>
 					<Head>Рыбья кость на бронзовой цепочке</Head>
 					<Price>3</Price>
-					<Benefit Name="Trigger" Value="Рыбья кость на бронзовой цепочке"/>
 					<Text>...продаваемая как амулет бога Юрайи.</Text>
 				</Get>
 				<Get>
