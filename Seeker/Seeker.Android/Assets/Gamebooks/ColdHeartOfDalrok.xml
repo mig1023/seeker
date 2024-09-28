@@ -4241,6 +4241,7 @@
 		<Paragraph No="496">
 			<Text>Коридор заканчивается тупиком.</Text>
 			<Options>
+				<Option Goto="419" Text="Спросить Кобарги" Availability="Кобарги"/>
 				<Option Goto="303" Text="Осмотрите его повнимательнее"/>
 				<Option Goto="256" Text="Вернетесь на развилку и пойдете направо"/>
 			</Options>
