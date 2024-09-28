@@ -3286,6 +3286,7 @@
 				</Break>
 			</Actions>
 			<Options>
+				<Option Goto="302" Text="Спросить Кобарги" Availability="Кобарги"/>
 				<Option Goto="55" Text="Дверь удалось выломать"/>
 			</Options>
 		</Paragraph>
