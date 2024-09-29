@@ -54,5 +54,12 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="7">
+			<Text>Брось три кости.</Text>
+			<Options>
+				<Option Goto="387" Text="Если выпавшее число меньше ЧИСЛЕННОСТИ твоего экипажа"/>
+				<Option Goto="356" Text="Если выпавшее число больше или равно ЧИСЛЕННОСТИ твоего экипажа"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
