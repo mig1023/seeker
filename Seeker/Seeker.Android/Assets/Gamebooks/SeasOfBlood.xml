@@ -446,5 +446,11 @@
 				<Option Goto="207" Text="Если решишь повернуть обратно в море"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="65">
+			<Text>Изрубленные тела эльверин медленно опускаются на дно. Поток воды ослаб, и ты, окровавленный, выбираешься из ямы.</Text>
+			<Options>
+				<Option Goto="225"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
