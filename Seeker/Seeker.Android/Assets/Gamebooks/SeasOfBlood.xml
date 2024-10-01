@@ -684,5 +684,10 @@
 				<Option Goto="179"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="100">
+			<Options>
+				<Option Goto="50"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
