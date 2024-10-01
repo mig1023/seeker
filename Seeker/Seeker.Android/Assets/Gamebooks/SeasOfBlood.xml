@@ -479,5 +479,12 @@
 				<Option Goto="6" Text="Если не повезет"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="70">
+			<Text>Чудовище поднимает голову и, разинув пасть, ужаснее которой еще не доводилось видеть человеку, издает дикий рев! Глаза его пылают бешеной яростью.</Text>
+			<Options>
+				<Option Goto="163" Text="Если у тебя есть Арбалет Аксиллиона"/>
+				<Option Goto="110" Text="Если нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
