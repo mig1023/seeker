@@ -750,5 +750,11 @@
 				<Option Goto="395"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="110">
+			<Text>Чудовище в безумной ярости набрасывается на твоих людей:\n\nСИЛА ЧИСЛЕННОСТЬ\n\nЧУДОВИЩЕ	12	12\n\nЕсли твоим пиратам все же удастся победить его...</Text>
+			<Options>
+				<Option Goto="219"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
