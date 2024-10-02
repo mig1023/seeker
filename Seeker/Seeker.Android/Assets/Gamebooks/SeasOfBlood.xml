@@ -1362,5 +1362,12 @@
 				<Option Goto="50"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="201">
+			<Text>Ты хватаешь череп за рог и с силой тянешь на себя.\n\nИспытай удачу.</Text>
+			<Options>
+				<Option Goto="232" Text="Если тебе повезет"/>
+				<Option Goto="243" Text="Если не повезет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
