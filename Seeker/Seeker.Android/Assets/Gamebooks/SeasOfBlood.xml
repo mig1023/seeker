@@ -862,5 +862,11 @@
 				<Option Goto="199" Text="Полезешь наверх по трубе"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="126">
+			<Text>Твой меч свободно проходит сквозь коричневую кошку, не причинив ей ни малейшего вреда...</Text>
+			<Options>
+				<Option Goto="322"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
