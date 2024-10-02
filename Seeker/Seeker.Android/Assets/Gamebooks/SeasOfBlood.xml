@@ -1023,5 +1023,11 @@
 				<Option Goto="274"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="150">
+			<Text>Далее</Text>
+			<Options>
+				<Option Goto="50"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
