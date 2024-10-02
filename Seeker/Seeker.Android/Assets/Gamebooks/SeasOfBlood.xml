@@ -797,5 +797,12 @@
 				<Option Goto="7"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="117">
+			<Text>Поверженная птица падает в воду и идет ко дну. Пожурив своих пиратов за трусость, ты думаешь, что делать дальше.</Text>
+			<Options>
+				<Option Goto="49" Text="Если хочешь высадиться на остров"/>
+				<Option Goto="15" Text="Если решишь проплыть через пролив и выйти в Южное море"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
