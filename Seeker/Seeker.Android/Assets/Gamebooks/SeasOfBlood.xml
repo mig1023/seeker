@@ -1342,5 +1342,12 @@
 				<Option Goto="226" Text="Если решишь исследовать несколько оврагов и ущелий"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="198">
+			<Text>Брось три кости.</Text>
+			<Options>
+				<Option Goto="277" Text="Если выпавшее число меньше ЧИСЛЕННОСТИ твоего экипажа"/>
+				<Option Goto="341" Text="Если выпавшее число больше или равно ЧИСЛЕННОСТИ твоего экипажа"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
