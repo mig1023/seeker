@@ -1356,5 +1356,11 @@
 				<Option Goto="289" Text="Если правую"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="200">
+			<Text>Далее</Text>
+			<Options>
+				<Option Goto="50"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
