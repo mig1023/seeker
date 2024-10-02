@@ -1221,5 +1221,12 @@
 				<Option Goto="248" Text="Ничего не трогать, а просто пройти к другой двери"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="180">
+			<Text>Теперь ты можешь:</Text>
+			<Options>
+				<Option Goto="349" Text="Продать своих рабов (если не сделал этого раньше)"/>
+				<Option Goto="238" Text="Вернуться на «Банши», поднять якорь и покинуть Шуррупак"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
