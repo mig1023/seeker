@@ -981,5 +981,12 @@
 				<Option Goto="98"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="144">
+			<Text>«Ты проиграл, - говорит эль-Фазук. - «Банши» мой».</Text>
+			<Options>
+				<Option Goto="3" Text="Если отдашь ему «Банши» по доброй воле"/>
+				<Option Goto="81" Text="Если попытаешься с боем вырваться из игорного притона"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
