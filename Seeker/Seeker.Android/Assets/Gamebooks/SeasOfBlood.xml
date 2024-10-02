@@ -1173,5 +1173,12 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="173">
+			<Text>Коридор тонет в непроглядной тьме, лишь впереди ты можешь смутно различить неясные очертания дверного проема.\n\nИспытай удачу.</Text>
+			<Options>
+				<Option Goto="289" Text="Если тебе повезет"/>
+				<Option Goto="5" Text="Если не повезет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
