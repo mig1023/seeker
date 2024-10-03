@@ -1668,5 +1668,12 @@
 				<Option Goto="111"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="245">
+			<Text>После долгих расспросов и торговли ты, наконец, находишь агента, который обещает выгодно продать всех твоих рабов.\n\nИспытай удачу.</Text>
+			<Options>
+				<Option Goto="137" Text="Если тебе повезет"/>
+				<Option Goto="189" Text="Если не повезет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
