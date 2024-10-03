@@ -1907,5 +1907,12 @@
 				<Option Goto="216"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="279">
+			<Text>Теперь ты можешь:</Text>
+			<Options>
+				<Option Goto="371" Text="Завербовать новых членов в свою команду (если не сделал этого раньше)"/>
+				<Option Goto="238" Text="Вернуться на «Банши», поднять якорь и покинуть Шуррупак"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
