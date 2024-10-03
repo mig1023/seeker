@@ -1487,5 +1487,12 @@
 				<Option Goto="190" Text="Если не сделал этого ранее, внимательно рассмотреть разбросанные по полу странные яйцевидные камни"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="219">
+			<Text>К какому острову ты направишься теперь:</Text>
+			<Options>
+				<Option Goto="386" Text="К ухоженному (если не сделал этого раньше)"/>
+				<Option Goto="354" Text="К покрытому пальмами"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
