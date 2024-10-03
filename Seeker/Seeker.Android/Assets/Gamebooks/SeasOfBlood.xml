@@ -1702,5 +1702,11 @@
 				<Option Goto="93" Text="Если решишь предпринять какой-нибудь отвлекающий маневр"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="250">
+			<Text>Далее</Text>
+			<Options>
+				<Option Goto="50"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
