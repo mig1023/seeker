@@ -1836,5 +1836,13 @@
 				<Option Goto="207"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="269">
+			<Text>Заняв свободное место, ты выставляешь своих рабов на обозрение праздно гуляющих и приценивающихся к разным товарам покупателей.\n\nБрось одну кость.</Text>
+			<Options>
+				<Option Goto="94" Text="Если выпадет 1 или 2"/>
+				<Option Goto="72" Text="Если выпадет 3 или 4"/>
+				<Option Goto="59" Text="Если 5 или 6"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
