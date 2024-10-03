@@ -1377,5 +1377,11 @@
 				<Option Goto="106" Text="Если 5 или б"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="203">
+			<Text>Твой меч свободно проходит сквозь рыжую кошку, не причинив ей ни малейшего вреда.</Text>
+			<Options>
+				<Option Goto="322"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
