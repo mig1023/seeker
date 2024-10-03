@@ -1726,5 +1726,12 @@
 				<Option Goto="10" Text="К берегам Восточного Предела"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="253">
+			<Text>Чего только не найдешь на богатом шуррупакском рынке, так что у тебя вряд ли возникнут проблемы с вербовкой новых членов экипажа.\n\nИспытай удачу.</Text>
+			<Options>
+				<Option Goto="62" Text="Если тебе повезет"/>
+				<Option Goto="28" Text="Если не повезет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
