@@ -1746,5 +1746,11 @@
 				<Option Goto="107" Text="Если решишь остаться на месте и принять бой"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="256">
+			<Text>Твой меч свободно проходит сквозь белую кошку, не причинив ей ни малейшего вреда.</Text>
+			<Options>
+				<Option Goto="322"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
