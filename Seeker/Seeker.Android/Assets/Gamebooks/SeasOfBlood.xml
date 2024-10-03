@@ -1662,5 +1662,11 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="244">
+			<Text>Тебе и твоей команде удается благополучно вернуться на тропу.</Text>
+			<Options>
+				<Option Goto="111"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
