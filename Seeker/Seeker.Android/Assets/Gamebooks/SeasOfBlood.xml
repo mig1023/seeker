@@ -2291,5 +2291,11 @@
 				<Option Goto="222"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="334">
+			<Text>Падения с двадцатиметровой высоты на россыпь устилающих пол острых камней оказывается вполне достаточным, чтобы трагически оборвать твое приключение!</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
