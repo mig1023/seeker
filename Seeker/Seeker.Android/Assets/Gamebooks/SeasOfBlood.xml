@@ -2584,5 +2584,11 @@
 				<Option Goto="146" Text="Если не повезет"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="377">
+			<Text>Ты наносишь последний удар, и саламандра исчезает. Огонь в очаге затихает, ты пересекаешь зал и проходишь через дверь в его противоположной стене.</Text>
+			<Options>
+				<Option Goto="339"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
