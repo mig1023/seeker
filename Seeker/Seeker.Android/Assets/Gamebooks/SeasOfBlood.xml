@@ -2521,5 +2521,11 @@
 				<Option Goto="274"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="368">
+			<Text>Ты выдаешь своим людям 100 золотых монет - вычти их из своей Добычи.</Text>
+			<Options>
+				<Option Goto="401"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
