@@ -2542,5 +2542,13 @@
 				<Option Goto="236" Text="Cыграть в кости"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="371">
+			<Text>Где ты будешь вербовать новых членов в свою команду?</Text>
+			<Options>
+				<Option Goto="233" Text="В доках"/>
+				<Option Goto="253" Text="На рынке"/>
+				<Option Goto="293" Text="В городских трущобах"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
