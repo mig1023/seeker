@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Seeker.Gamebook.CreatureOfHavoc;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -31,9 +32,17 @@ namespace Seeker.Gamebook.SeasOfBlood
             if (Enemies == null)
                 return enemies;
 
-            foreach (Character enemy in Enemies)
-                enemies.Add($"{enemy.Name}\nмастерство {enemy.Mastery}  выносливость {enemy.Endurance}");
-
+            if (Type == "TeamFight")
+            {
+                Character enemy = Enemies.First();
+                enemies.Add($"{enemy.Name}\nсила {enemy.TeamStrength}  численность {enemy.TeamSize}");
+            }
+            else
+            {
+                foreach (Character enemy in Enemies)
+                    enemies.Add($"{enemy.Name}\nмастерство {enemy.Mastery}  выносливость {enemy.Endurance}");
+            }
+            
             return enemies;
         }
 
@@ -125,6 +134,75 @@ namespace Seeker.Gamebook.SeasOfBlood
 
                     fight.Add(String.Empty);
                 }
+
+                round += 1;
+            }
+        }
+
+        public List<string> TeamFight()
+        {
+            List<string> fight = new List<string>();
+
+            Character enemyTeam = Enemies.First().Clone();
+
+            int round = 1;
+
+            while (true)
+            {
+                fight.Add($"HEAD|BOLD|Раунд: {round}");
+
+                fight.Add($"{enemyTeam.Name} (численность {enemyTeam.TeamSize})");
+
+                Game.Dice.DoubleRoll(out int teamRollFirst, out int teamRollSecond);
+                int teamStrength = teamRollFirst + teamRollSecond + Character.Protagonist.TeamStrength;
+
+                fight.Add($"Сила удара вашей команды: " +
+                    $"{Game.Dice.Symbol(teamRollFirst)} + " +
+                    $"{Game.Dice.Symbol(teamRollSecond)} + " +
+                    $"{Character.Protagonist.TeamStrength} = {teamStrength}");
+
+                Game.Dice.DoubleRoll(out int enemyRollFirst, out int enemyRollSecond);
+                int enemyStrength = enemyRollFirst + enemyRollSecond + enemyTeam.TeamStrength;
+
+                fight.Add($"Сила его удара: " +
+                    $"{Game.Dice.Symbol(enemyRollFirst)} + " +
+                    $"{Game.Dice.Symbol(enemyRollSecond)} + " +
+                    $"{enemyTeam.TeamStrength} = {enemyStrength}");
+
+                if (teamStrength > enemyStrength)
+                {
+                    fight.Add("GOOD|Противник проиграл раунд");
+                    fight.Add("Его численность уменьшилась на 2");
+
+                    enemyTeam.TeamSize -= 2;
+
+                    if (enemyTeam.TeamSize <= 0)
+                    {
+                        fight.Add(String.Empty);
+                        fight.Add("BIG|GOOD|Вы ПОБЕДИЛИ :)");
+                        return fight;
+                    }
+                }
+                else if (teamStrength < enemyStrength)
+                {
+                    fight.Add($"BAD|Противник выиграл раунд");
+                    fight.Add("Численность вашей команды уменьшилась на 2");
+
+                    Character.Protagonist.TeamSize -= 2;
+
+                    if (Character.Protagonist.TeamSize <= 0)
+                    {
+                        fight.Add(String.Empty);
+                        fight.Add("BIG|BAD|Вы ПРОИГРАЛИ :(");
+                        return fight;
+                    }
+                }
+                else
+                {
+                    fight.Add("BOLD|Ничья в раунде");
+                }
+
+                fight.Add(String.Empty);
 
                 round += 1;
             }
