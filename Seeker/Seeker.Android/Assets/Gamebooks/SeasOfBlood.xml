@@ -834,7 +834,13 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="110">
-			<Text>Чудовище в безумной ярости набрасывается на твоих людей:\n\nСИЛА ЧИСЛЕННОСТЬ\n\nЧУДОВИЩЕ	12	12\n\nЕсли твоим пиратам все же удастся победить его...</Text>
+			<Text>Чудовище в безумной ярости набрасывается на твоих людей:</Text>
+			<Actions>
+				<TeamFight>
+					<Enemy Name="ЧУДОВИЩЕ" TeamStrength="12" TeamSize="12"/>
+					<Text>Если твоим пиратам все же удастся победить его:</Text>
+				</TeamFight>
+			</Actions>
 			<Options>
 				<Option Goto="219"/>
 			</Options>
