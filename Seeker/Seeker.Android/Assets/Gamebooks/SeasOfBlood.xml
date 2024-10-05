@@ -5,7 +5,11 @@
 			<Author>Эндрю Чапмен, 1985</Author>
 		</Copyright>
 		<Styles>
-			<Color Name="Main, Option, Continue" Value="c53712"/>
+			<Main Value="c53712"/>
+			<StatusBar Value="12a0c5"/>
+			<Action Value="0a6076"/>
+			<System Value="eeeeee"/>
+			<Color Name="Option, Continue" Value="d05e41"/>
 		</Styles>
 		<Buttons>
 			<Fight>Индивидуальное сражение</Fight>
