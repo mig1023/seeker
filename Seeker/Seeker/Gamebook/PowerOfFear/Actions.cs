@@ -69,10 +69,10 @@ namespace Seeker.Gamebook.PowerOfFear
             else if (!String.IsNullOrEmpty(Skill))
             {
                 int count = GetProperty(Character.Protagonist, Skill);
-                string line = Game.Services.CoinsNoun(count, "единица", "единицы", "единицы");
+                string line = Game.Services.CoinsNoun(count, "единица", "единицы", "единиц");
 
                 return new List<string> { $"{Head}\n" +
-                    $"текущее значение: {count} {line})" };
+                    $"текущее значение: {count} {line}" };
             }
 
             return new List<string>();
