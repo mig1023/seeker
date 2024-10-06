@@ -93,7 +93,7 @@ namespace Seeker.Gamebook.SeasOfBlood
                         Game.Dice.DoubleRoll(out int protagonistRollFirst, out int protagonistRollSecond);
                         protagonistHitStrength = protagonistRollFirst + protagonistRollSecond + Character.Protagonist.Mastery;
 
-                        fight.Add($"Сила вашего удара: " +
+                        fight.Add($"Сила твоего удара: " +
                             $"{Game.Dice.Symbol(protagonistRollFirst)} + " +
                             $"{Game.Dice.Symbol(protagonistRollSecond)} + " +
                             $"{Character.Protagonist.Mastery} = {protagonistHitStrength}");
@@ -117,25 +117,25 @@ namespace Seeker.Gamebook.SeasOfBlood
                         if (NoMoreEnemies(FightEnemies))
                         {
                             fight.Add(String.Empty);
-                            fight.Add("BIG|GOOD|Вы ПОБЕДИЛИ :)");
+                            fight.Add("BIG|GOOD|Ты ПОБЕДИЛ :)");
                             return fight;
                         }
                     }
                     else if (protagonistHitStrength > enemyHitStrength)
                     {
-                        fight.Add($"BOLD|{enemy.Name} не смог вас ранить");
+                        fight.Add($"BOLD|{enemy.Name} не смог тебя ранить");
                     }
                     else if (protagonistHitStrength < enemyHitStrength)
                     {
-                        fight.Add($"BAD|{enemy.Name} ранил вас");
-                        fight.Add("Вы теряете 2 очка Выносливости");
+                        fight.Add($"BAD|{enemy.Name} ранил тебя");
+                        fight.Add("Ты теряешь 2 очка Выносливости");
 
                         Character.Protagonist.Endurance -= 2;
 
                         if (Character.Protagonist.Endurance <= 0)
                         {
                             fight.Add(String.Empty);
-                            fight.Add("BIG|BAD|Вы ПРОИГРАЛИ :(");
+                            fight.Add("BIG|BAD|Ты ПРОИГРАЛ :(");
                             return fight;
                         }
                     }
@@ -170,7 +170,7 @@ namespace Seeker.Gamebook.SeasOfBlood
                 Game.Dice.DoubleRoll(out int teamRollFirst, out int teamRollSecond);
                 int teamStrength = teamRollFirst + teamRollSecond + Character.Protagonist.TeamStrength;
 
-                fight.Add($"Сила удара вашей команды: " +
+                fight.Add($"Сила удара твоей команды: " +
                     $"{Game.Dice.Symbol(teamRollFirst)} + " +
                     $"{Game.Dice.Symbol(teamRollSecond)} + " +
                     $"{Character.Protagonist.TeamStrength} = {teamStrength}");
@@ -200,14 +200,14 @@ namespace Seeker.Gamebook.SeasOfBlood
                 else if (teamStrength < enemyStrength)
                 {
                     fight.Add($"BAD|Противник выиграл раунд");
-                    fight.Add("Численность вашей команды уменьшилась на 2");
+                    fight.Add("Численность твоей команды уменьшилась на 2");
 
                     Character.Protagonist.TeamSize -= 2;
 
                     if (Character.Protagonist.TeamSize <= 0)
                     {
                         fight.Add(String.Empty);
-                        fight.Add("BIG|BAD|Вы ПРОИГРАЛИ :(");
+                        fight.Add("BIG|BAD|Ты ПРОИГРАЛИ :(");
                         return fight;
                     }
                 }
