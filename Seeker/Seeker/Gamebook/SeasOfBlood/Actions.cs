@@ -264,6 +264,12 @@ namespace Seeker.Gamebook.SeasOfBlood
                 string count = Game.Services.CoinsNoun(days, "день", "дня", "дней");
                 test.Add($"В судовой журнал пишем {days} {count}");
                 Character.Protagonist.Logbook += days;
+
+                if (Character.Protagonist.Endurance < Character.Protagonist.MaxEndurance)
+                {
+                    Character.Protagonist.Endurance += 1;
+                    test.Add("GRAY|Ты восстанавливаешь 1 единицу выносливости");
+                }
             }
 
             return test;
