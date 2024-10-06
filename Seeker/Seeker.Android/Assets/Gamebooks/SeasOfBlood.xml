@@ -14,6 +14,7 @@
 		<Buttons>
 			<Fight>Индивидуальное сражение</Fight>
 			<TeamFight>Командное сражение</TeamFight>
+			<TeamSizeTest>Бросить три кости</TeamSizeTest>
 		</Buttons>
 	</Introduction>
 	<Paragraphs>
@@ -66,7 +67,11 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="7">
-			<Text>Брось три кости.\n\nВыпавшее число:</Text>
+			<Actions>
+				<TeamSizeTest>
+					<Text>Выпавшее число:</Text>
+				</TeamSizeTest>
+			</Actions>
 			<Options>
 				<Option Goto="387" Text="Меньше ЧИСЛЕННОСТИ твоего экипажа"/>
 				<Option Goto="356" Text="Больше или равно ЧИСЛЕННОСТИ твоего экипажа"/>
