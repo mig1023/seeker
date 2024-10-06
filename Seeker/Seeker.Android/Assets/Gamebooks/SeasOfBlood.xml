@@ -461,10 +461,16 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="55">
-			<Text>Брось три кости.\n\nЕсли выпавшее число:</Text>
+			<Actions>
+				<TeamSizeTest>
+					<Less Value="5"/>
+					<More Value="6"/>
+					<Text>Если выпавшее число:</Text>
+				</TeamSizeTest>
+			</Actions>
 			<Options>
-				<Option Goto="68" Text="Меньше ЧИСЛЕННОСТИ твоего экипажа - запиши 5 дней в судовой журнал"/>
-				<Option Goto="181" Text="Больше или равно ЧИСЛЕННОСТИ твоего экипажа - запиши 6 дней в судовой журнал"/>
+				<Option Goto="68" Text="Меньше ЧИСЛЕННОСТИ твоего экипажа (запиши 5 дней в судовой журнал)"/>
+				<Option Goto="181" Text="Больше или равно ЧИСЛЕННОСТИ твоего экипажа (запиши 6 дней в судовой журнал)"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="56">
