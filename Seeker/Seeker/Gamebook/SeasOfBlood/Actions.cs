@@ -16,7 +16,7 @@ namespace Seeker.Gamebook.SeasOfBlood
         {
             $"Сила команды: {Character.Protagonist.TeamStrength}",
             $"Численность: {Character.Protagonist.TeamSize}/{Character.Protagonist.MaxTeamSize}",
-            $"Судовой журнал: {Character.Protagonist.Logbook}/50",
+            $"День: {Character.Protagonist.Logbook}/50",
         };
 
         public override List<string> AdditionalStatus() => new List<string>
@@ -47,6 +47,17 @@ namespace Seeker.Gamebook.SeasOfBlood
             }
             
             return enemies;
+        }
+
+        public override bool GameOver(out int toEndParagraph, out string toEndText)
+        {
+            toEndParagraph = 0;
+            toEndText = Output.Constants.GAMEOVER_TEXT;
+
+            bool byEndurance = Character.Protagonist.Endurance <= 0;
+            bool byTeamSize = Character.Protagonist.TeamSize <= 0;
+
+            return (byEndurance || byTeamSize);
         }
 
         public static bool NoMoreEnemies(List<Character> enemies) =>
