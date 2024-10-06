@@ -7,6 +7,9 @@ namespace Seeker.Gamebook.SeasOfBlood
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {
+        public int Less { get; set; }
+        public int More { get; set; }
+
         public List<Character> Enemies { get; set; }
 
         public override List<string> Status() => new List<string>
@@ -206,6 +209,53 @@ namespace Seeker.Gamebook.SeasOfBlood
 
                 round += 1;
             }
+        }
+
+        public List<string> TeamSizeTest()
+        {
+            List<string> test = new List<string>();
+
+            int first = Game.Dice.Roll();
+            int second = Game.Dice.Roll();
+            int third = Game.Dice.Roll();
+            int dicesSumm = first + second + third;
+
+            int size = Character.Protagonist.TeamSize;
+            string line = Game.Services.CoinsNoun(size, "пират", "пирата", "пиратов");
+            test.Add($"Численность команды: {size} {line}");
+
+            test.Add($"Бросаем кубики: {Game.Dice.Symbol(first)} + " +
+                $"{Game.Dice.Symbol(second)} + {Game.Dice.Symbol(third)} = {dicesSumm}");
+
+            int days = 0;
+
+            if (dicesSumm < size)
+            {
+                test.Add("BIG|BOLD|Выпало МЕНЬШЕ численности!");
+
+                if (Less > 0)
+                    days = Less;
+
+                Game.Buttons.Disable("Больше или равно ЧИСЛЕННОСТИ твоего экипажа");
+            }
+            else
+            {
+                test.Add("BIG|BOLD|Выпало БОЛЬШЕ или равно численности!");
+
+                if (More > 0)
+                    days = More;
+
+                Game.Buttons.Disable("Меньше ЧИСЛЕННОСТИ твоего экипажа");
+            }
+
+            if (days > 0)
+            {
+                string count = Game.Services.CoinsNoun(days, "день", "дня", "дней");
+                test.Add($"В судовой журнал пишем {days} {count}");
+                Character.Protagonist.Logbook += days;
+            }
+
+            return test;
         }
     }
 }
