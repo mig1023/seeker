@@ -357,7 +357,7 @@
 			<Actions>
 				<TeamFight>
 					<Enemy Name="ГОРОДСКАЯ СТРАЖА" TeamStrength="6" TeamSize="10"/>
-					<Text>Если твоей команде удастся победить:</Text>
+					<Text>Если твоей команде удалось победить:</Text>
 				</TeamFight>
 			</Actions>
 			<Options>
@@ -785,7 +785,7 @@
 			<Actions>
 				<TeamFight>
 					<Enemy Name="КИШИАНСКИЕ СОЛДАТЫ" TeamStrength="8" TeamSize="8"/>
-					<Text>Если твоей команде удастся одолеть кишианских солдат:</Text>
+					<Text>Если твоей команде удалось одолеть кишианских солдат:</Text>
 				</TeamFight>
 			</Actions>
 			<Options>
@@ -1348,7 +1348,7 @@
 			<Actions>
 				<TeamFight>
 					<Enemy Name="ЛАГАШСКИЕ КОРАБЛИ" TeamStrength="10" TeamSize="14"/>
-					<Text>Если твоей команде удастся одолеть неприятеля:</Text>
+					<Text>Если твоей команде удалось одолеть неприятеля:</Text>
 				</TeamFight>
 			</Actions>
 			<Options>
@@ -1372,8 +1372,8 @@
 		<Paragraph No="178">
 			<Text>Обогнув южную оконечность Острова Встречи, ты направляешься в сторону Готского Канала. Примерно в пятидесяти лигах от порта Марад впередсмотрящие замечают справа по борту остров, не обозначенный ни на одной из известных тебе карт.</Text>
 			<Options>
-				<Option Goto="38" Text="Если хочешь пристать к этому острову"/>
-				<Option Goto="4" Text="Если решишь продолжить путь к Готскому Каналу"/>
+				<Option Goto="38" Text="Пристать к этому острову"/>
+				<Option Goto="4" Text="Продолжить путь к Готскому Каналу"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="179">
@@ -1396,7 +1396,7 @@
 			<Actions>
 				<TeamFight>
 					<Enemy Name="БАРКА" TeamStrength="8" TeamSize="6"/>
-					<Text>Если твоим пиратам удастся победить:</Text>
+					<Text>Если твоим пиратам удалось победить:</Text>
 				</TeamFight>
 			</Actions>
 			<Options>
@@ -2195,7 +2195,7 @@
 			<Actions>
 				<TeamFight>
 					<Enemy Name="ОБИТАТЕЛИ ДЕРЕВНИ" TeamStrength="7" TeamSize="6"/>
-					<Text>Как только твоей команде удастся одолеть их:</Text>
+					<Text>Как только твоей команде удалось одолеть их:</Text>
 				</TeamFight>
 			</Actions>
 			<Options>
@@ -3033,7 +3033,7 @@
 			<Actions>
 				<TeamFight>
 					<Enemy Name="ПИРАТЫ" TeamStrength="10" TeamSize="6"/>
-					<Text>Если твоей команде удастся победить:</Text>
+					<Text>Если твоей команде удалось победить:</Text>
 				</TeamFight>
 			</Actions>
 			<Options>
@@ -3098,7 +3098,7 @@
 			<Actions>
 				<TeamFight>
 					<Enemy Name="ГОРОДСКАЯ СТРАЖА" TeamStrength="6" TeamSize="10"/>
-					<Text>Если твоей команде удастся победить:</Text>
+					<Text>Если твоей команде удалось победить:</Text>
 				</TeamFight>
 			</Actions>
 			<Options>
