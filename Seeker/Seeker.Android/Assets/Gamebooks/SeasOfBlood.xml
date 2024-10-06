@@ -1747,7 +1747,10 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="201">
-			<Text>Ты хватаешь череп за рог и с силой тянешь на себя.\n\nИспытай удачу.</Text>
+			<Text>Ты хватаешь череп за рог и с силой тянешь на себя.</Text>
+			<Actions>
+				<Luck/>
+			</Actions>
 			<Options>
 				<Option Goto="232" Text="Повезло"/>
 				<Option Goto="243" Text="Не повезло"/>
