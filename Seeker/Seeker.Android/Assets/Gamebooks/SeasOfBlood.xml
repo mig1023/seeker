@@ -2212,6 +2212,9 @@
 					<Text>Если тебе удалось победить:</Text>
 				</Fight>
 			</Actions>
+			<Modifications>
+				<Endurance Value="-1"/>
+			</Modifications>
 			<Options>
 				<Option Goto="381"/>
 			</Options>
