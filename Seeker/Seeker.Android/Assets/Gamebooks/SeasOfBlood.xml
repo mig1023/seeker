@@ -2733,6 +2733,9 @@
 					<Text>Выпавшее число:</Text>
 				</TeamSizeTest>
 			</Actions>
+			<Modifications>
+				<Spoils Value="3"/>
+			</Modifications>
 			<Options>
 				<Option Goto="90" Text="Меньше ЧИСЛЕННОСТИ твоего экипажа"/>
 				<Option Goto="309" Text="Больше или равно ЧИСЛЕННОСТИ твоего экипажа"/>
