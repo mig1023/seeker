@@ -25,7 +25,7 @@ namespace Seeker.Gamebook.SeasOfBlood
             $"Выносливость: {Character.Protagonist.Endurance}/{Character.Protagonist.MaxEndurance}",
             $"Удачливость: {Character.Protagonist.Luck}/{Character.Protagonist.MaxLuck}",
             $"Золото: {Character.Protagonist.Coins}",
-            $"Добыча: {Character.Protagonist.Spoils}",
+            $"Рабы: {Character.Protagonist.Spoils}",
         };
 
         public override List<string> Representer()
@@ -58,6 +58,18 @@ namespace Seeker.Gamebook.SeasOfBlood
             bool byTeamSize = Character.Protagonist.TeamSize <= 0;
 
             return (byEndurance || byTeamSize);
+        }
+
+        public override bool IsButtonEnabled(bool secondButton = false)
+        {
+            if (Type == "SellSlaves")
+            {
+                return Character.Protagonist.Spoils > 0;
+            }
+            else
+            {
+                return true;
+            }
         }
 
         public static bool NoMoreEnemies(List<Character> enemies) =>
@@ -297,6 +309,26 @@ namespace Seeker.Gamebook.SeasOfBlood
             Game.Buttons.Disable(goodLuck, "Повезло", $"Не повезло");
 
             return luckCheck;
+        }
+
+        public List<string> SellSlaves()
+        {
+            List<string> sell = new List<string>();
+
+            int spoils = Character.Protagonist.Spoils;
+
+            sell.Add($"Число невольников: {spoils}");
+            sell.Add($"Продажная цена: {Price}");
+
+            int summ = spoils * Price;
+
+            Character.Protagonist.Spoils = 0;
+            Character.Protagonist.Coins += summ;
+
+            string coins = Game.Services.CoinsNoun(summ, "монета", "монеты", "монет");
+            sell.Add($"BIG|Выручка: {spoils} x {Price} = {summ} {coins}");
+
+            return sell;
         }
     }
 }
