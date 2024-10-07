@@ -2676,6 +2676,9 @@
 			<Actions>
 				<Luck/>
 			</Actions>
+			<Modifications>
+				<TeamSize Value="-2"/>
+			</Modifications>
 			<Options>
 				<Option Goto="343" Text="Повезло"/>
 				<Option Goto="58" Text="Не повезло"/>
