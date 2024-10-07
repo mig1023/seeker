@@ -32,10 +32,11 @@ namespace Seeker.Gamebook.SeasOfBlood
         {
             List<string> enemies = new List<string>();
 
-            if (Type == "HirePirates")
+            if (Type.StartsWith("HirePirates"))
             {
                 string coins = Game.Services.CoinsNoun(Price, "монету", "монеты", "монет");
-                return new List<string> { $"НАЙМ ПИРАТА\nза {Price} {coins}" };
+                string multi = Type.EndsWith("Random") ? "ОВ" : "А";
+                return new List<string> { $"НАЙМ ПИРАТ{multi}\nза {Price} {coins}" };
             }
 
             if (Enemies == null)
@@ -74,7 +75,7 @@ namespace Seeker.Gamebook.SeasOfBlood
             {
                 return Character.Protagonist.Spoils > 0;
             }
-            else if (Type == "HirePirates")
+            else if (Type.StartsWith("HirePirates"))
             {
                 bool coins = Character.Protagonist.Coins >= Price;
                 bool team = Character.Protagonist.TeamSize < Character.Protagonist.MaxTeamSize;
@@ -346,12 +347,18 @@ namespace Seeker.Gamebook.SeasOfBlood
             return sell;
         }
 
-        public List<string> HirePirates()
+        private List<string> Hire(int count)
         {
             Character.Protagonist.Coins -= Price;
-            Character.Protagonist.TeamSize += 1;
+            Character.Protagonist.TeamSize += count;
 
             return new List<string> { "RELOAD" };
         }
+
+        public List<string> HirePirates() =>
+            Hire(1);
+
+        public List<string> HirePiratesRandom() =>
+            Hire(Game.Dice.Roll());
     }
 }
