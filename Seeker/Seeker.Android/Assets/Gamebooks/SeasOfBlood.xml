@@ -812,6 +812,9 @@
 		</Paragraph>
 		<Paragraph No="89">
 			<Text>Подплыв к одной из нор, ты спугиваешь гигантского морского угря, который кусает тебя за руку - отними 1 от уровня своего МАСТЕРСТВА. Отпрянув, ты продолжаешь спуск в пещеру.</Text>
+			<Modifications>
+				<Mastery Value="-1"/>
+			</Modifications>
 			<Options>
 				<Option Goto="105"/>
 			</Options>
