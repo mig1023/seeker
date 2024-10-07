@@ -2640,6 +2640,9 @@
 					<Text>Если тебе удалось победить его:</Text>
 				</Fight>
 			</Actions>
+			<Modifications>
+				<Endurance Value="-1"/>
+			</Modifications>
 			<Options>
 				<Option Goto="320"/>
 			</Options>
