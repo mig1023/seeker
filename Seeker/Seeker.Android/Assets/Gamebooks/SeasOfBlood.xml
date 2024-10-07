@@ -237,6 +237,9 @@
 			<Actions>
 				<Luck/>
 			</Actions>
+			<Modifications>
+				<Logbook Value="2"/>
+			</Modifications>
 			<Options>
 				<Option Goto="67" Text="Повезло"/>
 				<Option Goto="92" Text="Не повезло"/>
