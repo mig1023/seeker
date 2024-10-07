@@ -2145,6 +2145,9 @@
 					<Text>Если тебе удалось победить его:</Text>
 				</TeamFight>
 			</Actions>
+			<Modifications>
+				<Endurance Value="-2"/>
+			</Modifications>
 			<Options>
 				<Option Goto="84"/>
 			</Options>
