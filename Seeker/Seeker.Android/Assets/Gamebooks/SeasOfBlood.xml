@@ -1740,6 +1740,9 @@
 					<Text>Если тебе удалось справиться с шаром:</Text>
 				</Fight>
 			</Actions>
+			<Modifications>
+				<Endurance Value="-2"/>
+			</Modifications>
 			<Options>
 				<Option Goto="205"/>
 			</Options>
