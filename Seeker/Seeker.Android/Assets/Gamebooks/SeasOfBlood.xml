@@ -1787,6 +1787,7 @@
 			</Actions>
 			<Modifications>
 				<TeamSize Value="-2"/>
+				<Logbook Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Goto="329"/>
