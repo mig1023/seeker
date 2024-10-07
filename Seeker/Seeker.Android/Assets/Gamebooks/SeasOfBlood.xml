@@ -1720,6 +1720,9 @@
 					<Text>Если тебе удалось разделаться с человекоящерицами, запиши 1 день в судовой журнал.</Text>
 				</TeamFight>
 			</Actions>
+			<Modifications>
+				<TeamSize Value="-2"/>
+			</Modifications>
 			<Options>
 				<Option Goto="329"/>
 			</Options>
