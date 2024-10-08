@@ -28,8 +28,6 @@ namespace Seeker.Abstract
 
         void LoadDictionary(string name, Dictionary<string, string> dictionary);
 
-        bool GetParagraphsStatusesLimit(out int limitStart, out int limitEnd);
-
         Dictionary<string, string> ButtonText();
 
         void LoadButtonText(string button, string text);
