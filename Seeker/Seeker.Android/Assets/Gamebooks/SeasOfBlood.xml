@@ -2193,8 +2193,8 @@
 				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
-				<Option Goto="195" Text="Есть шлем Ут-Напиштима"/>
-				<Option Goto="174" Text="Нет шлема"/>
+				<Option Goto="195" Text="Есть шлем Ут-Напиштима" Availability="Шлем"/>
+				<Option Goto="174" Text="Нет шлема" Availability="!Шлем"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="230">
@@ -2805,6 +2805,7 @@
 			<Modifications>
 				<Coins Value="110"/>
 			</Modifications>
+			<Triggers>Шлем</Triggers>
 			<Options>
 				<Option Goto="358"/>
 			</Options>
