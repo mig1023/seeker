@@ -93,6 +93,11 @@ namespace Seeker.Gamebook.SeasOfBlood
                     return coins == level;
                 }
             }
+            else if (option.EndsWith("ЧИСЛО ДНЕЙ"))
+            {
+                bool even = Character.Protagonist.Logbook % 2 == 0;
+                return option.StartsWith("ЧЕТНОЕ") ? even : !even;
+            }
             else
             {
                 return AvailabilityTrigger(option);
