@@ -69,6 +69,36 @@ namespace Seeker.Gamebook.SeasOfBlood
             return (byEndurance || byTeamSize);
         }
 
+        public override bool Availability(string option)
+        {
+            if (String.IsNullOrEmpty(option))
+            {
+                return true;
+            }
+            else if (option.StartsWith("СОКРОВИЩА"))
+            {
+                int level = Game.Services.LevelParse(option);
+                int coins = (int)Math.Round((double)Character.Protagonist.Coins / 100) * 100;
+
+                if (level == 100)
+                {
+                    return coins <= 100;
+                }
+                else if (level == 800)
+                {
+                    return coins >= 800;
+                }
+                else
+                {
+                    return coins == level;
+                }
+            }
+            else
+            {
+                return AvailabilityTrigger(option);
+            }
+        }
+
         public override bool IsButtonEnabled(bool secondButton = false)
         {
             if (Type == "SellSlaves")
