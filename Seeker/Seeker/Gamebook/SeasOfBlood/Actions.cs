@@ -290,6 +290,19 @@ namespace Seeker.Gamebook.SeasOfBlood
             }
         }
 
+        private int TeamSizeBonus(ref List<string> test, string line, int summ, int bonus)
+        {
+            int newSumm = summ - bonus;
+
+            if (newSumm <= 0)
+                newSumm = 0;
+
+            test.Add($"GOOD|Благодаря {line}, " +
+                $"выпавшая сумма уменьшается на {bonus} и теперь равна {newSumm}");
+
+            return newSumm;
+        }
+
         public List<string> TeamSizeTest()
         {
             List<string> test = new List<string>();
@@ -308,10 +321,12 @@ namespace Seeker.Gamebook.SeasOfBlood
 
             if (Game.Option.IsTriggered("Благословление"))
             {
-                dicesSumm -= 2;
+                dicesSumm = TeamSizeBonus(ref test, "благословению призрака", dicesSumm, 2);
+            }
 
-                test.Add("GOOD|Благодаря благословению призрака, " +
-                    $"выпавшая сумма уменьшается на 2 и теперь равна {dicesSumm}");
+            if (Game.Option.IsTriggered("Мешки"))
+            {
+                dicesSumm = TeamSizeBonus(ref test, "мешкам Короля Четырех Ветров", dicesSumm, 4);
             }
 
             int days = 0;
