@@ -352,7 +352,8 @@
 				<Option Goto="50" Text="150"/>
 				<Option Goto="50" Text="200"/>
 				<Option Goto="50" Text="250"/>
-				<Option Goto="300" Text="300"/>
+				<Option Goto="50" Text="300"/>
+				<Option Goto="350" Text="350"/>
 				<Option Goto="400" Text="400 или больше"/>
 			</Options>
 		</Paragraph>
@@ -2862,10 +2863,7 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="300">
-			<Text>Далее</Text>
-			<Options>
-				<Option Goto="50"/>
-			</Options>
+			<Text>[пустой параграф]</Text>
 		</Paragraph>
 		<Paragraph No="301">
 			<Text>Шуррупак - большой богатый город, с симпатией относящийся к бесчинствующим во Внутреннем море пиратам, за что те, в свою очередь, строго соблюдают негласное правило не трогать купеческие суда, ходящие под его флагом.</Text>
