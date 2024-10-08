@@ -2867,8 +2867,8 @@
 		<Paragraph No="299">
 			<Text>После того, как Король Четырех Ветров подарил тебе два мешка, ты выдал своей команде 100 золотых монет, чтобы предотвратить начинавшийся было бунт?</Text>
 			<Options>
-				<Option Goto="32" Text="Да"/>
-				<Option Goto="379" Text="Нет"/>
+				<Option Goto="32" Text="Да" Availability="Деньги выданы"/>
+				<Option Goto="379" Text="Нет" Availability="!Деньги выданы"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="300">
@@ -3519,6 +3519,7 @@
 			<Modifications>
 				<Coins Value="-100"/>
 			</Modifications>
+			<Triggers>Деньги выданы</Triggers>
 			<Options>
 				<Option Goto="401"/>
 			</Options>
