@@ -350,7 +350,7 @@
 				<Option Goto="50" Text="50"/>
 				<Option Goto="50" Text="100"/>
 				<Option Goto="50" Text="150"/>
-				<Option Goto="200" Text="200"/>
+				<Option Goto="50" Text="200"/>
 				<Option Goto="300" Text="300"/>
 				<Option Goto="400" Text="400 или больше"/>
 			</Options>
@@ -1920,10 +1920,7 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="200">
-			<Text>Далее</Text>
-			<Options>
-				<Option Goto="50"/>
-			</Options>
+			<Text>[пустой параграф]</Text>
 		</Paragraph>
 		<Paragraph No="201">
 			<Text>Ты хватаешь череп за рог и с силой тянешь на себя.</Text>
