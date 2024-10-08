@@ -306,6 +306,14 @@ namespace Seeker.Gamebook.SeasOfBlood
             test.Add($"Бросаем кубики: {Game.Dice.Symbol(first)} + " +
                 $"{Game.Dice.Symbol(second)} + {Game.Dice.Symbol(third)} = {dicesSumm}");
 
+            if (Game.Option.IsTriggered("Благословление"))
+            {
+                dicesSumm -= 2;
+
+                test.Add("GOOD|Благодаря благословению призрака, " +
+                    $"выпавшая сумма уменьшается на 2 и теперь равна {dicesSumm}");
+            }
+
             int days = 0;
 
             if (dicesSumm < size)
