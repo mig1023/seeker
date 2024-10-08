@@ -3041,8 +3041,8 @@
 				</TeamSizeTest>
 			</Actions>
 			<Options>
-				<Option Goto="363" Text="Нечетное число"/>
-				<Option Goto="294" Text="Четное число"/>
+				<Option Goto="363" Text="Нечетное число" Availability="НЕЧЕТНОЕ ЧИСЛО ДНЕЙ"/>
+				<Option Goto="294" Text="Четное число" Availability="ЧЕТНОЕ ЧИСЛО ДНЕЙ"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="319">
