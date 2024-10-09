@@ -18,7 +18,7 @@
 			<SellSlaves>Продать невольников</SellSlaves>
 			<HirePirates>Нанять</HirePirates>
 			<HirePiratesRandom>Попытаться нанять</HirePiratesRandom>
-			<Button Action="TeamSizeTest, DeadByDice, WoundsByDice">Бросить кубики</Button>
+			<Button Action="TeamSizeTest, DeadByDice, WoundsByDice, MasteryTest">Бросить кубики</Button>
 		</Buttons>
 	</Introduction>
 	<Paragraphs>
@@ -37,7 +37,6 @@
 				<Option Goto="55" Text="К Лагашу - в опасный, но весьма прибыльный набег на бороздящие его прибрежные воды суда"/>
 				<Option Goto="20" Text="К Скитерианской пустоши в надежде ограбить богатый западный караван"/>
 				<Option Goto="76" Text="К берегам Энраки"/>
-				<Option Goto="213" Text="TEST"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="2">
@@ -1149,7 +1148,12 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="119">
-			<Text>С «висящим на хвосте» кишианским боевым судном ты поворачиваешь к отмелям Острова Встречи. Приближающийся грозный шум прибоя и то и дело прорезающие водную гладь пенистые буруны говорят о том, что с минуты на минуту ты достигнешь их.\n\nБрось две кости. Если выпавшее число:</Text>
+			<Text>С «висящим на хвосте» кишианским боевым судном ты поворачиваешь к отмелям Острова Встречи. Приближающийся грозный шум прибоя и то и дело прорезающие водную гладь пенистые буруны говорят о том, что с минуты на минуту ты достигнешь их.</Text>
+			<Actions>
+				<MasteryTest>
+					<Text>Если выпавшее число:</Text>
+				</MasteryTest>
+			</Actions>
 			<Options>
 				<Option Goto="134" Text="Меньше уровня твоего МАСТЕРСТВА"/>
 				<Option Goto="159" Text="Больше или равно уровню твоего МАСТЕРСТВА"/>
