@@ -313,14 +313,20 @@ namespace Seeker.Gamebook.SeasOfBlood
             test.Add($"Численность команды: {size} {line}");
 
             int dicesSumm = 0;
-
+            bool curse = Game.Option.IsTriggered("Проклятие морских эльфов");
             int first = Game.Dice.Roll();
             int second = Game.Dice.Roll();
 
-            if (Game.Option.IsTriggered("Благословление морских эльфов"))
+            if (curse)
             {
-                test.Add($"GOOD|Благодаря благословению морских эльфов, " +
-                    $"нужно кидать только два кубика вместо трёх!");
+                test.Add("BAD|Из-за проклятие морских эльфов нет нужды " +
+                    "в броске кубиков: выпавший результат всегда будет " +
+                    "больше численности команды!");
+            }
+            else if (Game.Option.IsTriggered("Благословление морских эльфов"))
+            {
+                test.Add("GOOD|Благодаря благословению морских эльфов, " +
+                    "нужно кидать только два кубика вместо трёх!");
 
                 dicesSumm = first + second;
 
@@ -336,19 +342,19 @@ namespace Seeker.Gamebook.SeasOfBlood
                     $"{Game.Dice.Symbol(second)} + {Game.Dice.Symbol(third)} = {dicesSumm}");
             }
 
-            if (Game.Option.IsTriggered("Благословление"))
+            if (!curse && Game.Option.IsTriggered("Благословление"))
             {
                 dicesSumm = TeamSizeBonus(ref test, "благословению призрака", dicesSumm, 2);
             }
 
-            if (Game.Option.IsTriggered("Мешки"))
+            if (!curse && Game.Option.IsTriggered("Мешки"))
             {
                 dicesSumm = TeamSizeBonus(ref test, "мешкам Короля Четырех Ветров", dicesSumm, 4);
             }
 
             int days = 0;
 
-            if (dicesSumm < size)
+            if ((dicesSumm < size) && !curse)
             {
                 test.Add("BIG|BOLD|Выпало МЕНЬШЕ численности!");
 
