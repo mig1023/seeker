@@ -1,5 +1,6 @@
 ﻿using Seeker.Gamebook.CreatureOfHavoc;
 using Seeker.Gamebook.SeaTales.Parts;
+using Seeker.Gamebook.WalkInThePark.Parts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -554,6 +555,22 @@ namespace Seeker.Gamebook.SeasOfBlood
             Character.Protagonist.Spoils -= count;
 
             return slaves;
+        }
+
+        public List<string> DayByDice()
+        {
+            List<string> test = new List<string>();
+
+            int dice = Game.Dice.Roll();
+
+            test.Add($"Бросаем кубик: {Game.Dice.Symbol(dice)}");
+
+            int days = dice <= 3 ? 2 : 3;
+
+            test.Add($"В судовой журнал пишем {days} дня!");
+            Character.Protagonist.Logbook += days;
+
+            return test;
         }
     }
 }
