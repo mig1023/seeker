@@ -11,6 +11,10 @@ namespace Seeker.Gamebook.SeasOfBlood
                 Character.Protagonist.Logbook += Value;
                 Character.Protagonist.Endurance += 1;
             }
+            else if (Name == "CyclopsInit")
+            {
+                Character.Protagonist.Cyclops = 16;
+            }
             else
             {
                 base.Do(Character.Protagonist);

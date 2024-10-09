@@ -14,12 +14,25 @@ namespace Seeker.Gamebook.SeasOfBlood
 
         public List<Character> Enemies { get; set; }
 
-        public override List<string> Status() => new List<string>
+        public override List<string> Status()
         {
-            $"Сила команды: {Character.Protagonist.TeamStrength}",
-            $"Численность: {Character.Protagonist.TeamSize}/{Character.Protagonist.MaxTeamSize}",
-            $"День: {Character.Protagonist.Logbook}/50",
-        };
+            if (Character.Protagonist.Cyclops == null)
+            {
+                return new List<string>
+                {
+                    $"Сила команды: {Character.Protagonist.TeamStrength}",
+                    $"Численность: {Character.Protagonist.TeamSize}/{Character.Protagonist.MaxTeamSize}",
+                    $"День: {Character.Protagonist.Logbook}/50",
+                };
+            }
+            else
+            {
+                return new List<string>
+                {
+                    $"Выносливость циклопа: {Character.Protagonist.Cyclops}/16"
+                };
+            }
+        }
 
         public override List<string> AdditionalStatus() => new List<string>
         {
@@ -62,13 +75,24 @@ namespace Seeker.Gamebook.SeasOfBlood
 
         public override bool GameOver(out int toEndParagraph, out string toEndText)
         {
-            toEndParagraph = 0;
-            toEndText = Output.Constants.GAMEOVER_TEXT;
+            if (Character.Protagonist.Cyclops == 0)
+            {
+                toEndParagraph = 311;
+                toEndText = "Вы победили циклопа!";
+                Character.Protagonist.Cyclops = null;
 
-            bool byEndurance = Character.Protagonist.Endurance <= 0;
-            bool byTeamSize = Character.Protagonist.TeamSize <= 0;
+                return true;
+            }
+            else
+            {
+                toEndParagraph = 0;
+                toEndText = Output.Constants.GAMEOVER_TEXT;
 
-            return (byEndurance || byTeamSize);
+                bool byEndurance = Character.Protagonist.Endurance <= 0;
+                bool byTeamSize = Character.Protagonist.TeamSize <= 0;
+
+                return (byEndurance || byTeamSize);
+            }
         }
 
         public override bool Availability(string option)

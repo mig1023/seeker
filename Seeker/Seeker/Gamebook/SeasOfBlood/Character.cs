@@ -71,6 +71,13 @@ namespace Seeker.Gamebook.SeasOfBlood
             get => _spoils;
             set => _spoils = Game.Param.Setter(value, _spoils, this);
         }
+        
+        private int? _cyclops;
+        public int? Cyclops
+        {
+            get => _cyclops;
+            set => _cyclops = Game.Param.Setter(value, max: 16, _cyclops, this);
+        }
 
         public override void Init()
         {
@@ -90,6 +97,7 @@ namespace Seeker.Gamebook.SeasOfBlood
             Logbook = 0;
             Coins = 20;
             Spoils = 0;
+            Cyclops = null;
         }
 
         public Character Clone() => new Character()
@@ -105,12 +113,12 @@ namespace Seeker.Gamebook.SeasOfBlood
             Endurance = this.Endurance,
             MaxLuck = this.MaxLuck,
             Luck = this.Luck,
+            Cyclops = this.Cyclops,
         };
 
         public override string Save() => String.Join("|",
-            TeamStrength, MaxTeamSize, TeamSize, MaxMastery,
-            Mastery, MaxEndurance, Endurance, MaxLuck, Luck
-        );
+            TeamStrength, MaxTeamSize, TeamSize, MaxMastery, Mastery,
+            MaxEndurance, Endurance, MaxLuck, Luck, Cyclops);
 
         public override void Load(string saveLine)
         {
@@ -125,6 +133,7 @@ namespace Seeker.Gamebook.SeasOfBlood
             Endurance = int.Parse(save[6]);
             MaxLuck = int.Parse(save[7]);
             Luck = int.Parse(save[8]);
+            Cyclops = Game.Continue.IntNullableParse(save[9]);
 
             IsProtagonist = true;
         }
