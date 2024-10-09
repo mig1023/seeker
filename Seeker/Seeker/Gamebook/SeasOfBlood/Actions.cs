@@ -567,8 +567,32 @@ namespace Seeker.Gamebook.SeasOfBlood
 
             int days = dice <= 3 ? 2 : 3;
 
-            test.Add($"В судовой журнал пишем {days} дня!");
+            test.Add($"BIG|В судовой журнал пишем {days} дня!");
             Character.Protagonist.Logbook += days;
+
+            return test;
+        }
+
+        public List<string> PathByDice()
+        {
+            List<string> test = new List<string>();
+
+            int dice = Game.Dice.Roll();
+
+            test.Add($"BIG|Бросаем кубик: {Game.Dice.Symbol(dice)}");
+
+            if (dice < 3)
+            {
+                Game.Buttons.Disable("Выпало 3 или 4, Выпало 5 или 6");
+            }
+            else if (dice < 5)
+            {
+                Game.Buttons.Disable("Выпало 1 или 2, Выпало 5 или 6");
+            }
+            else
+            {
+                Game.Buttons.Disable("Выпало 1 или 2, Выпало 3 или 4");
+            }
 
             return test;
         }
