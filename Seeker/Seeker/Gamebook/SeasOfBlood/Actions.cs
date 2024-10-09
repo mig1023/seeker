@@ -512,5 +512,30 @@ namespace Seeker.Gamebook.SeasOfBlood
 
         public List<string> HirePiratesRandom() =>
             Hire(Game.Dice.Roll());
+
+        public List<string> MasteryTest()
+        {
+            List<string> test = new List<string>();
+
+            Game.Dice.DoubleRoll(out int first, out int second);
+
+            int dicesSumm = first + second;
+
+            test.Add($"Бросаем кубики: {Game.Dice.Symbol(first)} + " +
+                $"{Game.Dice.Symbol(second)} = {dicesSumm}");
+
+            if (dicesSumm < Character.Protagonist.Mastery)
+            {
+                test.Add("BIG|BOLD|Выпало МЕНЬШЕ твоего мастерства!");
+                Game.Buttons.Disable("Больше или равно уровню твоего МАСТЕРСТВА");
+            }
+            else
+            {
+                test.Add("BIG|BOLD|Выпало БОЛЬШЕ или равно твоего мастерства!");
+                Game.Buttons.Disable("Меньше уровня твоего МАСТЕРСТВА");
+            }
+
+            return test;
+        }
     }
 }
