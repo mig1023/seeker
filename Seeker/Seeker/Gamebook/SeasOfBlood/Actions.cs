@@ -537,5 +537,23 @@ namespace Seeker.Gamebook.SeasOfBlood
 
             return test;
         }
+
+        public List<string> SlavesByDice()
+        {
+            List<string> slaves = new List<string>();
+
+            Game.Dice.DoubleRoll(out int first, out int second);
+            int count = first + second;
+
+            slaves.Add($"Бросаем кубики: {Game.Dice.Symbol(first)} + " +
+                $"{Game.Dice.Symbol(second)} = {count}");
+
+            string line = Game.Services.CoinsNoun(count, "невольника", "невольников", "невольников");
+            slaves.Add($"BIG|BAD|Ты захватил {count} {line}!");
+
+            Character.Protagonist.Spoils -= count;
+
+            return slaves;
+        }
     }
 }
