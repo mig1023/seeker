@@ -3,6 +3,7 @@ using Seeker.Gamebook.SeaTales.Parts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Xamarin.Forms.Shapes;
 
 namespace Seeker.Gamebook.SeasOfBlood
 {
@@ -431,6 +432,27 @@ namespace Seeker.Gamebook.SeasOfBlood
             sell.Add($"BIG|Выручка: {spoils} x {Price} = {summ} {coins}");
 
             return sell;
+        }
+
+        public List<string> DeadByDice()
+        {
+            List<string> dead = new List<string>();
+
+            int first = Game.Dice.Roll();
+            int second = Game.Dice.Roll();
+
+            int summ = first + second;
+
+            dead.Add($"Бросаем кубики: {Game.Dice.Symbol(first)} + " +
+                $"{Game.Dice.Symbol(second)} = {first}");
+
+            string line = Game.Services.CoinsNoun(summ, "члена", "членов", "членов");
+
+            dead.Add($"BIG|BAD|Ты потерял {summ} {line} экипажа!");
+
+            Character.Protagonist.TeamSize -= summ;
+
+            return dead;
         }
 
         private List<string> Hire(int count)
