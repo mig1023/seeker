@@ -434,18 +434,24 @@ namespace Seeker.Gamebook.SeasOfBlood
             return sell;
         }
 
-        public List<string> DeadByDice()
+        private int Dices(ref List<string> lines)
         {
-            List<string> dead = new List<string>();
-
             int first = Game.Dice.Roll();
             int second = Game.Dice.Roll();
 
             int summ = first + second;
 
-            dead.Add($"Бросаем кубики: {Game.Dice.Symbol(first)} + " +
+            lines.Add($"Бросаем кубики: {Game.Dice.Symbol(first)} + " +
                 $"{Game.Dice.Symbol(second)} = {first}");
 
+            return summ;
+        }
+
+        public List<string> DeadByDice()
+        {
+            List<string> dead = new List<string>();
+
+            int summ = Dices(ref dead);
             string line = Game.Services.CoinsNoun(summ, "члена", "членов", "членов");
 
             dead.Add($"BIG|BAD|Ты потерял {summ} {line} экипажа!");
@@ -453,6 +459,20 @@ namespace Seeker.Gamebook.SeasOfBlood
             Character.Protagonist.TeamSize -= summ;
 
             return dead;
+        }
+
+        public List<string> WoundsByDice()
+        {
+            List<string> wounds = new List<string>();
+
+            int summ = Dices(ref wounds);
+            string line = Game.Services.CoinsNoun(summ, "единицу", "единицы", "единиц");
+
+            wounds.Add($"BIG|BAD|Ты потерял {summ} {line} выносливости!");
+
+            Character.Protagonist.Endurance -= summ;
+
+            return wounds;
         }
 
         private List<string> Hire(int count)
