@@ -18,6 +18,7 @@
 			<SellSlaves>Продать невольников</SellSlaves>
 			<HirePirates>Нанять</HirePirates>
 			<HirePiratesRandom>Попытаться нанять</HirePiratesRandom>
+			<DayByDice>Бросить кубик</DayByDice>
 			<Button Action="TeamSizeTest, DeadByDice, WoundsByDice, MasteryTest, SlavesByDice">Бросить кубики</Button>
 		</Buttons>
 	</Introduction>
@@ -1378,7 +1379,15 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="142">
-			<Text>«Банши» отважно сражается с ветром. Брось одну кость. Если выпадет 1, 2 или 3, запиши 2 дня в судовой журнал. Если выпадет 4, 5 или 6, запиши 3 дня в судовой журнал.\n\nТеперь, общее число прошедших с начала твоего похода дней составляет:</Text>
+			<Text>«Банши» отважно сражается с ветром.</Text>
+			<Actions>
+				<DayByDice>
+					<Texts>
+						<Text Style="Small">Если выпадет 1, 2 или 3, запиши 2 дня в судовой журнал. Если выпадет 4, 5 или 6, запиши 3 дня в судовой журнал.</Text>
+						<Text>Теперь, общее число прошедших с начала твоего похода дней составляет:</Text>
+					</Texts>
+				</DayByDice>
+			</Actions>
 			<Options>
 				<Option Goto="255" Text="Нечетное число" Availability="НЕЧЕТНОЕ ЧИСЛО ДНЕЙ"/>
 				<Option Goto="212" Text="Четное число" Availability="ЧЕТНОЕ ЧИСЛО ДНЕЙ"/>
