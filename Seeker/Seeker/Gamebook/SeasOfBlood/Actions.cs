@@ -1,4 +1,5 @@
 ﻿using Seeker.Gamebook.CreatureOfHavoc;
+using Seeker.Gamebook.SeaTales.Parts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -307,17 +308,33 @@ namespace Seeker.Gamebook.SeasOfBlood
         {
             List<string> test = new List<string>();
 
-            int first = Game.Dice.Roll();
-            int second = Game.Dice.Roll();
-            int third = Game.Dice.Roll();
-            int dicesSumm = first + second + third;
-
             int size = Character.Protagonist.TeamSize;
             string line = Game.Services.CoinsNoun(size, "пират", "пирата", "пиратов");
             test.Add($"Численность команды: {size} {line}");
 
-            test.Add($"Бросаем кубики: {Game.Dice.Symbol(first)} + " +
-                $"{Game.Dice.Symbol(second)} + {Game.Dice.Symbol(third)} = {dicesSumm}");
+            int dicesSumm = 0;
+
+            int first = Game.Dice.Roll();
+            int second = Game.Dice.Roll();
+
+            if (Game.Option.IsTriggered("Благословление морских эльфов"))
+            {
+                test.Add($"GOOD|Благодаря благословению морских эльфов, " +
+                    $"нужно кидать только два кубика вместо трёх!");
+
+                dicesSumm = first + second;
+
+                test.Add($"Бросаем кубики: {Game.Dice.Symbol(first)} + " +
+                    $"{Game.Dice.Symbol(second)} = {dicesSumm}");
+            }
+            else
+            {
+                int third = Game.Dice.Roll();
+                dicesSumm = first + second + third;
+
+                test.Add($"Бросаем кубики: {Game.Dice.Symbol(first)} + " +
+                    $"{Game.Dice.Symbol(second)} + {Game.Dice.Symbol(third)} = {dicesSumm}");
+            }
 
             if (Game.Option.IsTriggered("Благословление"))
             {
