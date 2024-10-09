@@ -14,12 +14,11 @@
 		<Buttons>
 			<Fight>Индивидуальное сражение</Fight>
 			<TeamFight>Командное сражение</TeamFight>
-			<TeamSizeTest>Бросить три кости</TeamSizeTest>
 			<Luck>Испытай удачу</Luck>
 			<SellSlaves>Продать невольников</SellSlaves>
 			<HirePirates>Нанять</HirePirates>
 			<HirePiratesRandom>Попытаться нанять</HirePiratesRandom>
-			<DeadByDice>Бросить кубики</DeadByDice>
+			<Button Action="TeamSizeTest, DeadByDice, WoundsByDice">Бросить кубики</Button>
 		</Buttons>
 	</Introduction>
 	<Paragraphs>
@@ -2472,7 +2471,15 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="258">
-			<Text>Как только ты нажимаешь на каменный блок, он с оглушительным грохотом взрывается у тебя в руках. Брось две кости и отними полученное число от уровня своей ВЫНОСЛИВОСТИ.\n\nЕсли ты все еще жив...</Text>
+			<Text>Как только ты нажимаешь на каменный блок, он с оглушительным грохотом взрывается у тебя в руках.</Text>
+			<Actions>
+				<WoundsByDice>
+					<Texts>
+						<Text Style="Small">Брось две кости и отними полученное число от уровня своей ВЫНОСЛИВОСТИ.</Text>
+						<Text>Если ты все еще жив...</Text>
+					</Texts>
+				</WoundsByDice>
+			</Actions>
 			<Options>
 				<Option Goto="281"/>
 			</Options>
