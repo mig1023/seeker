@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Xamarin.Forms.Shapes;
 
 namespace Seeker.Gamebook.SeasOfBlood
 {
@@ -543,6 +544,26 @@ namespace Seeker.Gamebook.SeasOfBlood
                 $"{Game.Dice.Symbol(second)} = {first}");
 
             return summ;
+        }
+
+        public List<string> DebtGame()
+        {
+            List<string> game = new List<string>();
+
+            int summ = Dices(ref game);
+            
+            if (summ == 7)
+            {
+                game.Add("BIG|GOOD|BOLD|Выпала семёрка!!");
+                Game.Buttons.Disable("Выпало любое другое число");
+            }
+            else
+            {
+                game.Add("BIG|BAD|BOLD|Выпала не семёрка...");
+                Game.Buttons.Disable("Выпала семёрка");
+            }
+
+            return game;
         }
 
         public List<string> DeadByDice()
