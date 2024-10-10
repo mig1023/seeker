@@ -1,8 +1,6 @@
-﻿using Seeker.Gamebook.CreatureOfHavoc;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Xamarin.Forms.Shapes;
 
 namespace Seeker.Gamebook.SongOfJaguarsCliff
 {
