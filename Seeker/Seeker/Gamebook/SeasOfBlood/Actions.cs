@@ -11,6 +11,7 @@ namespace Seeker.Gamebook.SeasOfBlood
         public int MasteryPenalty { get; set; }
         public bool SilentMonk { get; set; }
         public bool Leech { get; set; }
+        public bool FirstBlood { get; set; }
 
         public List<Character> Enemies { get; set; }
 
@@ -209,6 +210,15 @@ namespace Seeker.Gamebook.SeasOfBlood
 
                         bool alreadyHit = false;
 
+                        if (FirstBlood)
+                        {
+                            Game.Buttons.Disable("Проиграл");
+
+                            fight.Add(String.Empty);
+                            fight.Add("BIG|GOOD|Ты ПОБЕДИЛ великана :)");
+                            return fight;
+                        }
+
                         if (Game.Option.IsTriggered("Посох безмолвного монаха"))
                         {
                             int monkStaff = Game.Dice.Roll();
@@ -244,6 +254,15 @@ namespace Seeker.Gamebook.SeasOfBlood
                     else if ((protagonistHitStrength < enemyHitStrength) && !Leech)
                     {
                         fight.Add($"BAD|{enemy.Name} ранил тебя");
+
+                        if (FirstBlood)
+                        {
+                            Game.Buttons.Disable("Победил");
+
+                            fight.Add(String.Empty);
+                            fight.Add("BIG|BAD|Ты ПРОИГРАЛ великану :(");
+                            return fight;
+                        }
 
                         if (SilentMonk)
                         {
