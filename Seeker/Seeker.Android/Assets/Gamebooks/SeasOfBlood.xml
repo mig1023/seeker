@@ -3869,7 +3869,7 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="368">
-			<Text>Ты выдаешь своим людям 100 золотых монет - вычти их из своей Добычи.</Text>
+			<Text>Ты выдаешь своим людям 100 золотых монет, забрав их из своей Добычи.</Text>
 			<Modifications>
 				<Coins Value="-100"/>
 			</Modifications>
