@@ -8,6 +8,7 @@ namespace Seeker.Gamebook.SeasOfBlood
     {
         public int Less { get; set; }
         public int More { get; set; }
+        public bool SilentMonk { get; set; }
 
         public List<Character> Enemies { get; set; }
 
@@ -219,9 +220,35 @@ namespace Seeker.Gamebook.SeasOfBlood
                     else if (protagonistHitStrength < enemyHitStrength)
                     {
                         fight.Add($"BAD|{enemy.Name} ранил тебя");
-                        fight.Add("Ты теряешь 2 очка Выносливости");
 
-                        Character.Protagonist.Endurance -= 2;
+                        if (SilentMonk)
+                        {
+                            int monkDice = Game.Dice.Roll();
+
+                            fight.Add("GRAY|Бросаем кубик ранений от посоха: " +
+                                $"{Game.Dice.Symbol(monkDice)}");
+
+                            if (monkDice < 3)
+                            {
+                                fight.Add("Ты теряешь 2 очка Выносливости обычным образом");
+                                Character.Protagonist.Endurance -= 2;
+                            }
+                            else if (monkDice < 5)
+                            {
+                                fight.Add("Ты теряешь 1 очко Мастерства");
+                                Character.Protagonist.Mastery -= 1;
+                            }
+                            else
+                            {
+                                fight.Add("Ты теряешь 1 очко Удачливости");
+                                Character.Protagonist.Luck -= 1;
+                            }
+                        }
+                        else
+                        {
+                            fight.Add("Ты теряешь 2 очка Выносливости");
+                            Character.Protagonist.Endurance -= 2;
+                        }
 
                         if (Character.Protagonist.Endurance <= 0)
                         {
