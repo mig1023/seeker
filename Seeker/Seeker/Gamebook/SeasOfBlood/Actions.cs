@@ -202,9 +202,29 @@ namespace Seeker.Gamebook.SeasOfBlood
                     if ((protagonistHitStrength > enemyHitStrength) && !attackAlready)
                     {
                         fight.Add($"GOOD|{enemy.Name} ранен");
-                        fight.Add("Он теряет 2 очка Выносливости");
 
-                        enemy.Endurance -= 2;
+                        bool alreadyHit = false;
+
+                        if (Game.Option.IsTriggered("Посох безмолвного монаха"))
+                        {
+                            int monkStaff = Game.Dice.Roll();
+
+                            fight.Add("GRAY|Бросаем кубик ранений от посоха: " +
+                                $"{Game.Dice.Symbol(monkStaff)}");
+
+                            if (monkStaff < 3)
+                            {
+                                fight.Add("Противник теряет 1 очко Мастерства");
+                                enemy.Mastery -= 1;
+                                alreadyHit = true;
+                            }
+                        }
+
+                        if (!alreadyHit)
+                        {
+                            fight.Add("Он теряет 2 очка Выносливости");
+                            enemy.Endurance -= 2;
+                        }
 
                         if (NoMoreEnemies(FightEnemies))
                         {
