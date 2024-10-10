@@ -9,6 +9,7 @@ namespace Seeker.Gamebook.SeasOfBlood
         public int Less { get; set; }
         public int More { get; set; }
         public bool SilentMonk { get; set; }
+        public bool Leech { get; set; }
 
         public List<Character> Enemies { get; set; }
 
@@ -222,7 +223,7 @@ namespace Seeker.Gamebook.SeasOfBlood
 
                         if (!alreadyHit)
                         {
-                            fight.Add("Он теряет 2 очка Выносливости");
+                            fight.Add("Противник теряет 2 очка Выносливости");
                             enemy.Endurance -= 2;
                         }
 
@@ -233,11 +234,11 @@ namespace Seeker.Gamebook.SeasOfBlood
                             return fight;
                         }
                     }
-                    else if (protagonistHitStrength > enemyHitStrength)
+                    else if ((protagonistHitStrength > enemyHitStrength) && !Leech)
                     {
                         fight.Add($"BOLD|{enemy.Name} не смог тебя ранить");
                     }
-                    else if (protagonistHitStrength < enemyHitStrength)
+                    else if ((protagonistHitStrength < enemyHitStrength) && !Leech)
                     {
                         fight.Add($"BAD|{enemy.Name} ранил тебя");
 
@@ -277,9 +278,16 @@ namespace Seeker.Gamebook.SeasOfBlood
                             return fight;
                         }
                     }
-                    else
+                    else if (!Leech)
                     {
                         fight.Add("BOLD|Ничья в раунде");
+                    }
+
+                    if (Leech)
+                    {
+                        fight.Add($"BAD|Пиявка высасывает силы");
+                        fight.Add("Ты теряешь 2 очка Выносливости");
+                        Character.Protagonist.Endurance -= 2;
                     }
 
                     attackAlready = true;
