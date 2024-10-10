@@ -1,10 +1,6 @@
-﻿using Seeker.Gamebook.CreatureOfHavoc;
-using Seeker.Gamebook.SeaTales.Parts;
-using Seeker.Gamebook.WalkInThePark.Parts;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Xamarin.Forms.Shapes;
 
 namespace Seeker.Gamebook.SeasOfBlood
 {
