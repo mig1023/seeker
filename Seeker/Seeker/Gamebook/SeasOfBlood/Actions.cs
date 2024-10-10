@@ -8,6 +8,7 @@ namespace Seeker.Gamebook.SeasOfBlood
     {
         public int Less { get; set; }
         public int More { get; set; }
+        public int MasteryPenalty { get; set; }
         public bool SilentMonk { get; set; }
         public bool Leech { get; set; }
 
@@ -183,13 +184,15 @@ namespace Seeker.Gamebook.SeasOfBlood
 
                     if (!attackAlready)
                     {
+                        int mastery = Character.Protagonist.Mastery - MasteryPenalty;
+
                         Game.Dice.DoubleRoll(out int protagonistRollFirst, out int protagonistRollSecond);
-                        protagonistHitStrength = protagonistRollFirst + protagonistRollSecond + Character.Protagonist.Mastery;
+                        protagonistHitStrength = protagonistRollFirst + protagonistRollSecond + mastery;
 
                         fight.Add($"Сила твоего удара: " +
                             $"{Game.Dice.Symbol(protagonistRollFirst)} + " +
                             $"{Game.Dice.Symbol(protagonistRollSecond)} + " +
-                            $"{Character.Protagonist.Mastery} = {protagonistHitStrength}");
+                            $"{mastery} = {protagonistHitStrength}");
                     }
 
                     Game.Dice.DoubleRoll(out int enemyRollFirst, out int enemyRollSecond);
