@@ -115,5 +115,11 @@
 				<Option Goto="589"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="16">
+			<Text>Одного заряда и в самом деле оказывается достаточно. Дверца сейфа приоткрывается...</Text>
+			<Options>
+				<Option Goto="270"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
