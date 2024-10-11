@@ -222,5 +222,11 @@
 				<Option Goto="311" Text="Нет"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="32">
+			<Text>Готовясь к любым неприятностям, вступаете в мягкий полумрак соседнего отсека.</Text>
+			<Options>
+				<Option Goto="480"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
