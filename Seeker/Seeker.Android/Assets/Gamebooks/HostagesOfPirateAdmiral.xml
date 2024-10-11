@@ -1,0 +1,26 @@
+<Gamebook>
+	<Introduction>
+		<Copyright>
+			<Title>Заложники пиратского адмирала</Title>
+			<Author>Ольга Голотвина, 2011</Author>
+		</Copyright>
+		<Styles>
+			<Color Name="Main, Option, Continue, StatusFont" Value="000000"/>
+			<System Value="f4f4f4"/>
+		</Styles>
+	</Introduction>
+	<Paragraphs>
+		<Paragraph No="0">
+			<Text>START</Text>
+			<Options>
+				<Start Goto="1"/>
+			</Options>
+		</Paragraph>
+		<Paragraph No="1">
+			<Text>END</Text>
+			<Options>
+				<Option Goto="0"/>
+			</Options>
+		</Paragraph>
+	</Paragraphs>
+</Gamebook>
