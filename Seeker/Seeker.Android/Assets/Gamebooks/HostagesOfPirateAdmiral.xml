@@ -135,5 +135,11 @@
 				<Option Goto="554" Text="Решите, что опасно подходить к этой компании слишком близко - могут распознать чужака"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="19">
+			<Text>С хриплыми воплями обезьяна обращается в бегство, оставив на ветке рюкзак.</Text>
+			<Options>
+				<Option Goto="121"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
