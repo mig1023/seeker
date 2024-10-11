@@ -248,5 +248,11 @@
 				<Option Goto="135" Text="Нет"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="36">
+			<Text>Вы решительно открываете дверь. Будем надеяться, что в соседнем отсеке змей нет...\n\nЗмей не видно. И выход отсюда, к счастью, имеется: в той же стене, что и вход, немного правее. Но...</Text>
+			<Options>
+				<Option Goto="596"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
