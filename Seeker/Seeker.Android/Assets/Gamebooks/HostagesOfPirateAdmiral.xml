@@ -95,5 +95,12 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="13">
+			<Text>Не очень-то вы привыкли к такому способу охоты, и, пожалуй, поможет здесь не меткость, а везение.\n\nПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+			<Options>
+				<Option Goto="409" Text="Повезло"/>
+				<Option Goto="615" Text="Нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
