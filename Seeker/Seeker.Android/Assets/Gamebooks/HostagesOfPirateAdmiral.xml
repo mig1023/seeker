@@ -254,5 +254,11 @@
 				<Option Goto="596"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="37">
+			<Text>Эти негодяи все-таки высмотрели вас! Сверкает залп лазерной пушки - и ваше путешествие обрывается, толком не начавшись.</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
