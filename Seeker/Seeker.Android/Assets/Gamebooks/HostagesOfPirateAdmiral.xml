@@ -30,5 +30,12 @@
 				<Option Goto="598"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="3">
+			<Text>БЕЛКА ЛОВКОСТЬ 9 СИЛА 9</Text>
+			<Options>
+				<Option Goto="511" Text="В любой момент драки вы можете броситься бежать"/>
+				<Option Goto="139" Text="Но, может быть, вам удастся одержать победу"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
