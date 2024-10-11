@@ -213,7 +213,13 @@
 				</Option>
 				<Option Goto="64" Text="В смотровую щель"/>
 				<Option Goto="164" Text="Под кожух"/>
-				
+			</Options>
+		</Paragraph>
+		<Paragraph No="31">
+			<Text>Кочка оказывается плавучей! Она мягко выскальзывает у вас из-под ног - и вы с маху плюхаетесь в болото.\n\nПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+			<Options>
+				<Option Goto="631" Text="Повезло"/>
+				<Option Goto="311" Text="Нет"/>
 			</Options>
 		</Paragraph>
 	</Paragraphs>
