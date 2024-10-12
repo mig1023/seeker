@@ -453,5 +453,12 @@
 				<Option Goto="461"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="68">
+			<Text>За штабелем на металлической перекладине сидит человек в рабочем комбинезоне и что-то ест из пластмассового судка.</Text>
+			<Options>
+				<Option Goto="518" Text="Пройдете мимо"/>
+				<Option Goto="488" Text="Попробуете заговорить с незнакомцем, надеясь узнать, где здесь лифт"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
