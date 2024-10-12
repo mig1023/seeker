@@ -447,5 +447,11 @@
 				<Option Goto="474"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="67">
+			<Text>Путешествовать по кочкам опасно, но вы, кажется, к этому уже привыкли. Благополучно добравшись до ближайшего дерева, взбираетесь на плетеную тропинку и идете дальше - на юг.</Text>
+			<Options>
+				<Option Goto="461"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
