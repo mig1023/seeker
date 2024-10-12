@@ -680,5 +680,12 @@
 				<Option Goto="332"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="103">
+			<Text>При вашем приближении пульт оживает. Прозрачные кнопки начинают светиться разноцветными огоньками.</Text>
+			<Options>
+				<Option Goto="7" Text="Попробуете наугад нажать одну из них"/>
+				<Option Goto="381" Text="Не станете экспериментировать с незнакомым устройством и уйдете"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
