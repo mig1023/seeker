@@ -647,5 +647,11 @@
 				<Option Goto="297"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="98">
+			<Text>На шум драки прибегает еще десяток пиратов - и вам приходит конец...</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
