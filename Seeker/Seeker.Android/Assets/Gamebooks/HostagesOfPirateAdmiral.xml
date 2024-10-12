@@ -377,5 +377,14 @@
 				<Option Goto="647" Text="Будете защищаться"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="56">
+			<Text>Вы приводите Джонни в чувство и оглядываете прямоугольный отсек. Из него два выхода:</Text>
+			<Options>
+				<Option Goto="380" Text="Один - в длинной стене"/>
+				<Option Goto="456" Text="Другой - в короткой">
+					<Text>Какую из дверей вы откроете?</Text>
+				</Option>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
