@@ -398,5 +398,11 @@
 				<Option Goto="300"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="59">
+			<Text>Вы сами себе не верите, услышав сквозь листву короткий предсмертный вскрик...\n\nА теперь можете подойти и осмотреть тело, бессильно повисшее на ветвях...</Text>
+			<Options>
+				<Option Goto="491"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
