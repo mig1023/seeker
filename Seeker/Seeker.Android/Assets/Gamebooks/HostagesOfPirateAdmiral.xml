@@ -514,5 +514,12 @@
 				<Option Goto="354"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="77">
+			<Text>Вскоре замечаете, что от вашей плетеной дорожки отделяется другая и бежит на юго-восток.</Text>
+			<Options>
+				<Option Goto="333" Text="Свернете на нее"/>
+				<Option Goto="207" Text="Продолжите прежний путь"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
