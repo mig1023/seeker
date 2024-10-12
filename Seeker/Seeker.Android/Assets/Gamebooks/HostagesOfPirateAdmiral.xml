@@ -404,5 +404,11 @@
 				<Option Goto="491"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="60">
+			<Text>Во мраке на вас набрасывается целая свора невидимых гнусных тварей. Их укусы уменьшат вашу СИЛУ на 8. Если вы еще живы...</Text>
+			<Options>
+				<Option Goto="138"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
