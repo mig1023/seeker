@@ -595,5 +595,11 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="90">
+			<Text>Уложив зажигалку (+40) в рюкзак, прощаетесь с новым знакомым и идете дальше вдоль пластиковой стены.</Text>
+			<Options>
+				<Option Goto="410"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
