@@ -534,5 +534,11 @@
 				<Option Goto="200"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="80">
+			<Text>Итак, вы почти у цели! По крайней мере, один из этих пленников совсем рядом, за этой дверью!\n\nУДАЧА: ВОССТАНОВИТЕ 1 ЦИФРУ.</Text>
+			<Options>
+				<Option Goto="170"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
