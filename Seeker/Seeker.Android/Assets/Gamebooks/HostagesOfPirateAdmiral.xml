@@ -410,5 +410,12 @@
 				<Option Goto="138"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="61">
+			<Text>Присаживаетесь на толстую ветку передохнуть... и замечаете внизу, у самой черты тины и мха, обрывки материи.</Text>
+			<Options>
+				<Option Goto="369" Text="Заинтересуетесь и спуститесь по корням (рискуя сорваться в трясину)"/>
+				<Option Goto="391" Text="Пойдете дальше"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
