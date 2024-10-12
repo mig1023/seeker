@@ -335,5 +335,11 @@
 				<Option Goto="617"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="50">
+			<Text>Чем тут так противно пахнет? Даже в тамбуре чувствуется острый запах. Может быть, вы сейчас войдете в клетку какого-нибудь зверя...</Text>
+			<Options>
+				<Option Goto="8"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
