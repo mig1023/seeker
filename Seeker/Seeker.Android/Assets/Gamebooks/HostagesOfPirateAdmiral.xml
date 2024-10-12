@@ -721,5 +721,11 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="109">
+			<Text>Не очень завидная добыча досталась вам: небольшой фонарик (-30). Впрочем, в дороге и фонарик пригодится.</Text>
+			<Options>
+				<Option Goto="599"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
