@@ -386,5 +386,11 @@
 				</Option>
 			</Options>
 		</Paragraph>
+		<Paragraph No="57">
+			<Text>Опять приходится ползти по жгучим листьям (вычтите 3 из СИЛЫ). К счастью, других неприятностей удается избежать, вы возвращаетесь на тропинку и идете дальше на юг.</Text>
+			<Options>
+				<Option Goto="5"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
