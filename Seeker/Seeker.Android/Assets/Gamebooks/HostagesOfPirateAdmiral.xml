@@ -508,5 +508,11 @@
 				<Option Goto="305"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="76">
+			<Text>Вы водите вдоль дверного косяка тихо жужжащей отмычкой... Ура, сработало! Можно перейти в соседний отсек!</Text>
+			<Options>
+				<Option Goto="354"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
