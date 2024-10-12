@@ -540,5 +540,11 @@
 				<Option Goto="170"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="81">
+			<Text>То ли этот тип умеет стрелять на слух, то ли ему просто повезло, но луч попадает вам прямо в грудь...</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
