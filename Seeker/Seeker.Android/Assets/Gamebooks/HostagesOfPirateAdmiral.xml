@@ -945,5 +945,11 @@
 				<Option Goto="547"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="142">
+			<Text>Вы мягко сползаете по стене на пол и засыпаете. А приходите в себя уже в темном отсеке, без оружия, в наручниках. У путешествия оказался печальный конец.</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
