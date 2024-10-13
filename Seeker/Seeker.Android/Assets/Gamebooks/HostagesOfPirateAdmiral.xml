@@ -902,5 +902,11 @@
 				<Option Goto="201"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="136">
+			<Text>Лекарство действует моментально, и вы облегченно оглядываетесь на шипящих, переплетающихся меж собой змей. Самый опасный участок пола остался позади...</Text>
+			<Options>
+				<Option Goto="306"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
