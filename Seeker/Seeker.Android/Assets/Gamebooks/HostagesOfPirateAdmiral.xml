@@ -969,5 +969,11 @@
 				<Option Goto="305"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="146">
+			<Text>Щелкнув зажигалкой, подносите огонь к факелу. При виде пламени броненосец возмущенно пыхтит и с топотом удирает в дальний угол отсека.</Text>
+			<Options>
+				<Option Goto="326"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
