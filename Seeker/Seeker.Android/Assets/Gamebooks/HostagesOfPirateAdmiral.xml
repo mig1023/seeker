@@ -766,5 +766,12 @@
 				<Option Goto="608" Text="Попытаетесь с ним сразиться"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="115">
+			<Text>Какую из дверей вы изберете:</Text>
+			<Options>
+				<Option Goto="405" Text="Ту, что в короткой стене"/>
+				<Option Goto="652" Text="Ту, что в длинной"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
