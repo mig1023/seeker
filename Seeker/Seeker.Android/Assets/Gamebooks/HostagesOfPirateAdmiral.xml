@@ -939,5 +939,11 @@
 				<Option Goto="66" Text="Ту, что перед вами"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="141">
+			<Text>Пенная струя пробивает дорогу к двери - и вы покидаете этот опасный отсек.</Text>
+			<Options>
+				<Option Goto="547"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
