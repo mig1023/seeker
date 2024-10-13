@@ -779,5 +779,11 @@
 				<Option Goto="506"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="117">
+			<Text>Некоторое время вы оба выжидаете. Затем туземец, решившись, перепрыгивает с ветки на ветку и исчезает, а вы идете дальше по тропинке...</Text>
+			<Options>
+				<Option Goto="281"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
