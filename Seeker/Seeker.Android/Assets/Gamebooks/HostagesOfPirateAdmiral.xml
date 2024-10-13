@@ -736,5 +736,12 @@
 				<Option Goto="230" Text="Слева, ближе к звездолету"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="111">
+			<Text>Подниматься приходится все медленнее: скобы расшатаны, еле держатся в стене. Как здесь спускались эти чертовы пираты?.. Вы уже собираетесь вернуться...\n\nПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+			<Options>
+				<Option Goto="228" Text="Повезло"/>
+				<Option Goto="364" Text="Нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
