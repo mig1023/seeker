@@ -915,5 +915,12 @@
 				<Option Goto="231" Text="Пойдете своей дорогой"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="138">
+			<Text>Стиснув от боли зубы, вслепую нашариваете какую-то дверь...\n\nБросьте кубик.</Text>
+			<Options>
+				<Option Goto="252" Text="Выпало четное число"/>
+				<Option Goto="590" Text="Выпало нечетное"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
