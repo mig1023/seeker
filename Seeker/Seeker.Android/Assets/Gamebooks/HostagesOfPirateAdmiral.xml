@@ -1023,5 +1023,11 @@
 				<Option Goto="489"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="154">
+			<Text>Нажимаете кнопку на серебристом пенальчике. Раздается легкое жужжание - и дверь отворяется. Скорее входите, пока она не захлопнулась снова.</Text>
+			<Options>
+				<Option Goto="300"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
