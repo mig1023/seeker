@@ -817,5 +817,11 @@
 				<Option Goto="550"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="123">
+			<Text>«Ну, это я и сам бы мог найти... - разочарованно тянет Кверри, но вцепившаяся в корень лапка выдает жадность. - Ладно, меняемся!»</Text>
+			<Options>
+				<Option Goto="517"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
