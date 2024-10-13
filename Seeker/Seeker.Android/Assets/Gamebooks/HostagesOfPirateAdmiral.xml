@@ -785,5 +785,12 @@
 				<Option Goto="281"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="118">
+			<Text>Из отсека ведут две двери - обе в стене, противоположной входу. Какую из них откроете:</Text>
+			<Options>
+				<Option Goto="240" Text="Левую"/>
+				<Option Goto="468" Text="Правую"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
