@@ -1062,5 +1062,11 @@
 				<Option Goto="83"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="160">
+			<Text>Схватив рюкзак за лямки, с размаху бьете петуха по гребню. Лапы жуткой птицы подгибаются, петух брякается на пол. Он в глубоком обмороке...</Text>
+			<Options>
+				<Option Goto="510"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
