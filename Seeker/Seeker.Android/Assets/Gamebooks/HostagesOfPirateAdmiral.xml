@@ -1220,5 +1220,11 @@
 				<Option Goto="500"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="185">
+			<Text>Не обращая внимания на шум и камни, стая несет вас дальше. И вот уже впереди большой черный утес, сплошь покрытый шевелящейся массой птеродактилей. Тут вас и съедят.</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
