@@ -1196,5 +1196,11 @@
 				<Option Goto="56"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="181">
+			<Text>Поверженный хищник медленно тонет в трясине, а вы продолжаете путь.</Text>
+			<Options>
+				<Option Goto="551"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
