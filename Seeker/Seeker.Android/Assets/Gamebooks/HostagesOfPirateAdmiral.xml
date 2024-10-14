@@ -1099,5 +1099,11 @@
 				<Option Goto="305"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="166">
+			<Text>ОСЬМИНОГ ЛОВКОСТЬ 9 СИЛА 10\n\nВам приходится драться в непривычной среде (не в воде даже, а в каком-то киселе), поэтому на время боя ваша ЛОВКОСТЬ уменьшается на 1.\n\nЕсли вы победили:</Text>
+			<Options>
+				<Option Goto="26"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
