@@ -1202,5 +1202,11 @@
 				<Option Goto="551"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="182">
+			<Text>Вы вертите браслет перед глазами пирата. Тот судорожно сглатывает слюну, пытаясь отвести взгляд от красивой вещи.</Text>
+			<Options>
+				<Option Goto="92"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
