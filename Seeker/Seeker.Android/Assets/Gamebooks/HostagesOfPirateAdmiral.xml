@@ -1270,5 +1270,11 @@
 				<Option Goto="450"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="193">
+			<Text>НЕЗНАКОМЕЦ ЛОВКОСТЬ 10 СИЛА 8\n\nЕсли вы победили:</Text>
+			<Options>
+				<Option Goto="491"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
