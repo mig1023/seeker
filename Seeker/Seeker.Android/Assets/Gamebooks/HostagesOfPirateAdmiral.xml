@@ -1320,5 +1320,12 @@
 				<Option Goto="548"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="201">
+			<Text>Дорожка отклоняется немного южнее, а затем раздваивается.</Text>
+			<Options>
+				<Option Goto="39" Text="Пойдете на юг"/>
+				<Option Goto="493" Text="Свернете на юго-запад"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
