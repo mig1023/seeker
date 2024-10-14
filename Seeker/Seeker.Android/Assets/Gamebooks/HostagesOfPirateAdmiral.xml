@@ -1339,5 +1339,11 @@
 				<Option Goto="381"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="204">
+			<Text>Нет, этот ключ сюда не подходит. Он и в скважину-то не пролезает. Вернитесь наи подумайте, нет ли другой возможности открыть дверь.</Text>
+			<Options>
+				<Option Goto="254"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
