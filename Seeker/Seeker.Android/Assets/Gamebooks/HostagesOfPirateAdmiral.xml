@@ -1378,5 +1378,11 @@
 				<Option Goto="585"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="210">
+			<Text>К сожалению, вы обнаружены. По сигналу одного из пиратов робот-охранник лазерным резаком располосовывает трубу. Вас вытаскивают из укрытия...</Text>
+			<Options>
+				<Option Goto="48"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
