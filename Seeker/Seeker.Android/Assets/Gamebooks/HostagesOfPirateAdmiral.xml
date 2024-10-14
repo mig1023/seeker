@@ -1351,5 +1351,12 @@
 				<Option Goto="285"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="206">
+			<Text>Придется прыгать. А ведь здесь и разбежаться негде...\n\nПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+			<Options>
+				<Option Goto="653" Text="Повезло"/>
+				<Option Goto="536" Text="Нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
