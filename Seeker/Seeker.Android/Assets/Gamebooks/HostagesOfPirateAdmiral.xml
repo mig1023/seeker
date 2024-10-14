@@ -1074,5 +1074,11 @@
 				<Option Goto="469"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="162">
+			<Text>Дверь не заперта. Толкнув ее, вы оказываетесь в темном узеньком коридорчике. Если есть фонарь, можете включить его. Если фонарика нет...</Text>
+			<Options>
+				<Option Goto="630"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
