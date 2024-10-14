@@ -1105,5 +1105,11 @@
 				<Option Goto="26"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="167">
+			<Text>Туземец с восторгом перебирает колоду, разглядывая цветные картинки. «Не знаю, зачем мне это надо, - заявляет он, - но очень надо. Согласен меняться».</Text>
+			<Options>
+				<Option Goto="517"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
