@@ -1093,5 +1093,11 @@
 				<Option Goto="550"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="165">
+			<Text>К счастью, пират не замечает вас. Когда он исчезает за деревьями, вы спускаетесь на тропинку и идете дальше...</Text>
+			<Options>
+				<Option Goto="305"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
