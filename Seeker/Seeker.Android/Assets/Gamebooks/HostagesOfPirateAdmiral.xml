@@ -1282,5 +1282,11 @@
 				<Option Goto="54"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="195">
+			<Text>На мгновение медлите в тамбуре. Интересно, в соседнем отсеке тоже змеи?\n\nНо первое, что вы ищете взглядом, все-таки выход. Ага, вот он, в этой же стене, левее входа...</Text>
+			<Options>
+				<Option Goto="655"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
