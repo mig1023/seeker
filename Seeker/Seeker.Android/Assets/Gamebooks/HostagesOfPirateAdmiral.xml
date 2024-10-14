@@ -1111,5 +1111,12 @@
 				<Option Goto="517"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="168">
+			<Text>Через несколько метров от узкого коридорчика отходит под прямым углом ответвление.</Text>
+			<Options>
+				<Option Goto="438" Text="Свернете туда"/>
+				<Option Goto="312" Text="Пойдете в прежнем направлении"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
