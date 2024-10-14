@@ -1118,5 +1118,12 @@
 				<Option Goto="312" Text="Пойдете в прежнем направлении"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="169">
+			<Text>Вскоре у очередного дерева опять приходится задуматься: на какую из тропок свернуть?</Text>
+			<Options>
+				<Option Goto="537" Text="На левую"/>
+				<Option Goto="229" Text="На правую"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
