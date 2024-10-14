@@ -1226,5 +1226,11 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="186">
+			<Text>Антигравитатор переносит вас через шевелящуюся смертоносную массу. Увы, это все, на что хватает его энергии. Зеленый огонек на пряжке гаснет. Больше вам не летать.</Text>
+			<Options>
+				<Option Goto="306"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
