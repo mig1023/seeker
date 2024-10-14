@@ -1276,5 +1276,11 @@
 				<Option Goto="491"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="194">
+			<Text>Открываете дверь, готовясь к любой драке. Ну, что за зверь ожидает вас?</Text>
+			<Options>
+				<Option Goto="54"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
