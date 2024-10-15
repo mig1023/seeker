@@ -1610,5 +1610,11 @@
 				<Option Goto="85"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="246">
+			<Text>Яростными рывками пытаетесь вы уплыть прочь, но безжалостные щупальца вцепляются в вас, рвут кожу (вычтите 3 из своей СИЛЫ). От сражения не уйти...</Text>
+			<Options>
+				<Option Goto="166"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
