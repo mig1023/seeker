@@ -1924,5 +1924,11 @@
 				<Option Goto="399"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="294">
+			<Text>Кто знает, какое зверье ждет вас в соседнем отсеке? На всякий случай лучше подготовиться к драке.</Text>
+			<Options>
+				<Option Goto="54"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
