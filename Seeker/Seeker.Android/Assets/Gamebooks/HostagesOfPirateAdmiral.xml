@@ -1797,5 +1797,11 @@
 				<Option Goto="270"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="275">
+			<Text>Зарядов, конечно, жаль, зато дверь в соседний отсек открыта.</Text>
+			<Options>
+				<Option Goto="354"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
