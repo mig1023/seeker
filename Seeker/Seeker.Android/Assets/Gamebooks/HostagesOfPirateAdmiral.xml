@@ -1470,5 +1470,11 @@
 				<Option Goto="581" Text="Посоветуете Пролазе убраться на все четыре стороны"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="224">
+			<Text>Три беззвучные вспышки - и охраны больше нет. Можете войти, только действуйте быстрее - кто знает, когда здесь смена караула.</Text>
+			<Options>
+				<Option Goto="572"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
