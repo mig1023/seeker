@@ -1504,5 +1504,12 @@
 				<Option Goto="479"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="229">
+			<Text>Вы долго идете без приключений. Начинает темнеть. Клуша настоятельно советует вам подыскать подходящее дерево и устроиться на ночлег.</Text>
+			<Options>
+				<Option Goto="503" Text="Послушаетесь ее"/>
+				<Option Goto="605" Text="Продолжите путь, несмотря не сгущающуюся тьму"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
