@@ -1863,5 +1863,14 @@
 				<Option Goto="189" Text="Нет"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="285">
+			<Text>И вновь развилка! На этот раз дорожки разбегаются не очень широко:</Text>
+			<Options>
+				<Option Goto="55" Text="Одна бежит на юг"/>
+				<Option Goto="395" Text="Другая - на юго-запад">
+					<Text>По какой из них вы пойдете?</Text>
+				</Option>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
