@@ -1746,5 +1746,12 @@
 				<Option Goto="655"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="267">
+			<Text>Угольно-черный мрак окутывает вас. Даже сзади, от входа, почему-то не падает свет. Если есть фонарик, можете его включить. Иначе придется:</Text>
+			<Options>
+				<Option Goto="23" Text="Брести в темноте"/>
+				<Option Goto="381" Text="Вернуться к выходу"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
