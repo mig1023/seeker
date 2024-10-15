@@ -2055,5 +2055,11 @@
 				<Option Goto="81" Text="Нет"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="314">
+			<Text>Еще раз взглянув на улыбку Несравненной, убираете фото (+82) в рюкзак. Рабочие уже исчезли, и вы продолжаете путь - вдоль стены с пластиковой обшивкой.</Text>
+			<Options>
+				<Option Goto="410"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
