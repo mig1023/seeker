@@ -1740,5 +1740,11 @@
 				<Option Goto="570"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="266">
+			<Text>Открываете дверь, проходите тамбур и первым делом нашариваете взглядом выход - в той стене, что слева от входа.</Text>
+			<Options>
+				<Option Goto="655"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
