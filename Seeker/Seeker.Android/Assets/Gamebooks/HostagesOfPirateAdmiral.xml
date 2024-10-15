@@ -1964,5 +1964,11 @@
 				<Option Goto="645" Text="Если вы одержали победу"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="300">
+			<Text>Дверь закрывается за вами. В льющемся с потолка неярком свете вы осматриваетесь.</Text>
+			<Options>
+				<Option Goto="548"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
