@@ -1616,5 +1616,12 @@
 				<Option Goto="166"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="247">
+			<Text>Туман вокруг все гуще, но все же можно заметить, что дорожка под ногами раздваивается. Куда свернете:</Text>
+			<Options>
+				<Option Goto="157" Text="Налево"/>
+				<Option Goto="597" Text="Направо"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
