@@ -1977,5 +1977,12 @@
 				<Option Goto="641" Text="Если меньше или равна ей"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="302">
+			<Text>ПРОВЕРЬТЕ СВОЕ ОБАЯНИЕ.</Text>
+			<Options>
+				<Option Goto="662" Text="Если оно выручит вас"/>
+				<Option Goto="592" Text="Если нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
