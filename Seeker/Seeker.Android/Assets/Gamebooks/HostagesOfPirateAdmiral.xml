@@ -1543,5 +1543,11 @@
 				<Option Goto="48"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="235">
+			<Text>За каждой из дверей может таиться опасность. Вы не убираете руки с рукояти оружия. Но, кажется, на сей раз оно вам не понадобится.</Text>
+			<Options>
+				<Option Goto="416"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
