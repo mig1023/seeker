@@ -2036,5 +2036,11 @@
 				<Option Goto="268"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="311">
+			<Text>К несчастью, упали вы лицом в тину. Пока удается подняться на локтях и протереть глаза, трясина уже крепко сжимает вас в объятиях. Как вы ни барахтаетесь, выбраться не удается.</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
