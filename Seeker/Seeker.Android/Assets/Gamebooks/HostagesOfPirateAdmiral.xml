@@ -1524,5 +1524,11 @@
 				<Option Goto="101"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="232">
+			<Text>После ярко освещенной комнаты соседний отсек кажется совсем темным, глаза не сразу привыкают к полумраку.</Text>
+			<Options>
+				<Option Goto="480"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
