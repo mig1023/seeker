@@ -1809,5 +1809,12 @@
 				<Option Goto="30"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="277">
+			<Text>Спрут отшвыривает своего обмякшего противника и с готовностью оборачивается к вам.\n\nСПРУТ ЛОВКОСТЬ 9 СИЛА 8</Text>
+			<Options>
+				<Option Goto="567" Text="В любой момент можно броситься бежать"/>
+				<Option Goto="99" Text="Если вы победили"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
