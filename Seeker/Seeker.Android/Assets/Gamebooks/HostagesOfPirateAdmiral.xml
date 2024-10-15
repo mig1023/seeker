@@ -1580,5 +1580,11 @@
 				<Option Goto="346"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="241">
+			<Text>Ветка подламывается под ногой, и вы летите в болото, которое с жадным чавканьем принимает вас в объятия - навсегда.</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
