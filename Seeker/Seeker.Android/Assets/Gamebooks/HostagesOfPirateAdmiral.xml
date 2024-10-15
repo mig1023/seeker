@@ -1970,5 +1970,12 @@
 				<Option Goto="548"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="301">
+			<Text>Увы, вам не поверили. Один из парней вскидывает руку - и в воздухе свистит тонкий нож.\n\nПРОВЕРЬТЕ СВОЮ ЛОВКОСТЬ. Бросьте кубик дважды.</Text>
+			<Options>
+				<Option Goto="91" Text="Если сумма выпавших чисел больше вашей ЛОВКОСТИ"/>
+				<Option Goto="641" Text="Если меньше или равна ей"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
