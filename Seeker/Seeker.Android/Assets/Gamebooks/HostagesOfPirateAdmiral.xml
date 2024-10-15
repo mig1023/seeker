@@ -2076,5 +2076,11 @@
 				</Option>
 			</Options>
 		</Paragraph>
+		<Paragraph No="317">
+			<Text>Мертвая обезьяна срывается в болото, а рюкзак, зацепившись за сук, остается на дереве.</Text>
+			<Options>
+				<Option Goto="121"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
