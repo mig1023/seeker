@@ -1665,5 +1665,12 @@
 				<Option Goto="108"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="255">
+			<Text>Целиться сквозь густую листву очень трудно, поэтому придется положиться не на мастерство, а на везение.\n\nПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+			<Options>
+				<Option Goto="375" Text="Повезло"/>
+				<Option Goto="445" Text="Нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
