@@ -2030,5 +2030,11 @@
 				<Option Goto="393"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="310">
+			<Text>Шаги затихают вдали. Ура, обошлось! Но торчать здесь опасно - пора уходить...</Text>
+			<Options>
+				<Option Goto="268"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
