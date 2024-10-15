@@ -1900,5 +1900,11 @@
 				<Option Goto="387" Text="Все-таки поползете дальше по болоту"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="290">
+			<Text>Из комнаты с воплем «ура!» вылетает мальчишка и восторженно виснет на вашем локте.</Text>
+			<Options>
+				<Option Goto="428"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
