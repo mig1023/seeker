@@ -1765,5 +1765,11 @@
 				<Option Goto="9"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="270">
+			<Text>Но вы даже не успеваете заглянуть в сейф. Воет сирена сигнализации, из стен бьют парализующие иглы...\n\nВы приходите в себя уже в окружении вооруженных пиратов.</Text>
+			<Options>
+				<Option Goto="48"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
