@@ -1574,5 +1574,11 @@
 				<Option Goto="83"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="240">
+			<Text>Входите в соседний отсек - и густая, вязкая темнота окружает вас.</Text>
+			<Options>
+				<Option Goto="346"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
