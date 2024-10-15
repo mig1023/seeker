@@ -1753,5 +1753,11 @@
 				<Option Goto="381" Text="Вернуться к выходу"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="268">
+			<Text>Вы поспешно идете вдоль стены, покрытой пластиковой обшивкой. Стена закругляется влево. Пока опасности нет, но с яруса надо побыстрее исчезнуть.</Text>
+			<Options>
+				<Option Goto="410"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
