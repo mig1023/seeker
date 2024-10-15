@@ -2005,5 +2005,12 @@
 				<Option Goto="285" Text="Пойдете прежней тропой"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="306">
+			<Text>Теперь вы в относительной безопасности и можете выбирать, какую из дверей отпереть:</Text>
+			<Options>
+				<Option Goto="36" Text="Ту, что в левой от входа стене"/>
+				<Option Goto="195" Text="Ту, что в правой"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
