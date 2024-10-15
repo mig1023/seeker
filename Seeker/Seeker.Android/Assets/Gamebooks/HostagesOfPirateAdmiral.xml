@@ -1647,5 +1647,11 @@
 				<Option Goto="219"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="252">
+			<Text>После кромешной темноты соседний отсек кажется ярко освещенным. Не сразу понимаете, что там всего лишь царит мягкий полумрак.</Text>
+			<Options>
+				<Option Goto="480"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
