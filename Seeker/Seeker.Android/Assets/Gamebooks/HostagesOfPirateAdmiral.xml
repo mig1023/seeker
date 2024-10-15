@@ -1629,5 +1629,11 @@
 				<Option Goto="52"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="249">
+			<Text>Вы называете пароль и, отключив рацию, разворачиваете катер для посадки.</Text>
+			<Options>
+				<Option Goto="533"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
