@@ -1930,5 +1930,11 @@
 				<Option Goto="54"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="295">
+			<Text>Но где же дверь? Вы с Джонни сантиметр за сантиметром осматриваете гладкие стены, но не находите никаких признаков выхода...</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
