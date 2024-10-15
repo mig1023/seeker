@@ -1785,5 +1785,11 @@
 				<Option Goto="522" Text="Правую"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="273">
+			<Text>Хорошо, что вас укрывает туман... Катер делает вокруг дерева еще пару кругов и улетает куда-то на юг. Можете без опаски идти дальше...</Text>
+			<Options>
+				<Option Goto="393"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
