@@ -1849,5 +1849,12 @@
 				<Option Goto="504"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="283">
+			<Text>Упругое покрытие пола чуть пружинит под ногой. Почему-то с каждым шагом становится все труднее идти.</Text>
+			<Options>
+				<Option Goto="381" Text="Повернуть, пока не поздно"/>
+				<Option Goto="579" Text="Все же рискнете закончить то, что начали"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
