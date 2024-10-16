@@ -2600,5 +2600,11 @@
 				<Option Goto="547"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="398">
+			<Text>Вы не успеваете исчезнуть восвояси. Подоспел патруль - дюжина верзил и пара роботов-охранников. Придумывать оправдания нет смысла, ведь вы пойманы на месте преступления.</Text>
+			<Options>
+				<Option Goto="48"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
