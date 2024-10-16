@@ -2575,5 +2575,11 @@
 				</Option>
 			</Options>
 		</Paragraph>
+		<Paragraph No="394">
+			<Text>Замок простенький, вибромагнитная отмычка справляется с ним в два счета. Легкое жужжание - и дверь открыта.</Text>
+			<Options>
+				<Option Goto="248"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
