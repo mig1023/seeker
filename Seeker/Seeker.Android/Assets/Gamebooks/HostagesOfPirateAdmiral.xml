@@ -2656,5 +2656,11 @@
 				<Option Goto="320"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="407">
+			<Text>Жаль, конечно, потраченных зарядов, зато путь вперед свободен.</Text>
+			<Options>
+				<Option Goto="659"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
