@@ -2197,5 +2197,11 @@
 				<Option Goto="654"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="336">
+			<Text>Одно нажатие на кнопку - и жуткое устройство больше не угрожает нам. Все-таки «Черный луч» - полезная вещь, хотя Клуша ненавидит даже разговоры о нем.</Text>
+			<Options>
+				<Option Goto="550"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
