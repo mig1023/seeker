@@ -2503,5 +2503,11 @@
 				<Option Goto="9"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="384">
+			<Text>Еще в тамбуре чувствуете резкий, противный запах. Как в зверинце. Не в клетку ли вы попали?</Text>
+			<Options>
+				<Option Goto="8"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
