@@ -2466,5 +2466,12 @@
 				<Option Goto="251"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="378">
+			<Text>Голоса все ближе... Кажется, погоня охватывает весь ярус. Убежать вряд ли удастся.</Text>
+			<Options>
+				<Option Goto="588" Text="Остановитесь и примете бой"/>
+				<Option Goto="128" Text="Попытаетесь где-нибудь спрятаться"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
