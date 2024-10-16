@@ -2377,5 +2377,11 @@
 				<Option Goto="281"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="364">
+			<Text>Подтягиваетесь на руках. Под вашей тяжестью скоба вылетает из стены. Коротко вскрикнув, падаете вы в бездонный колодец...</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
