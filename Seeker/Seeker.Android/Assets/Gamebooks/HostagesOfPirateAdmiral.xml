@@ -2172,5 +2172,11 @@
 				<Option Goto="593"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="332">
+			<Text>Вы осматриваете глаза Джонни. Кажется, все в порядке.\n\nИз отсека ведет лишь одна дверь, и вы немедленно ее открываете.</Text>
+			<Options>
+				<Option Goto="420"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
