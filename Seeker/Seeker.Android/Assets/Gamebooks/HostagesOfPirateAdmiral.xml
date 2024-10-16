@@ -2650,5 +2650,11 @@
 				<Option Goto="176"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="406">
+			<Text>На двери есть удобный выступ, вы забрасываете на него петлю. Остается пара пустяков - взобраться наверх и втащить за собой мальчика.</Text>
+			<Options>
+				<Option Goto="320"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
