@@ -2587,5 +2587,12 @@
 				<Option Goto="101"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="396">
+			<Text>Вы ждете долго, но броненосец не подает признаков жизни. Клуша сообщает, что эти животные могут неделями не двигаться с места.</Text>
+			<Options>
+				<Option Goto="576" Text="Придется все-таки стрелять"/>
+				<Option Goto="41" Text="Попытаться прогнать зверя ударами и криками"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
