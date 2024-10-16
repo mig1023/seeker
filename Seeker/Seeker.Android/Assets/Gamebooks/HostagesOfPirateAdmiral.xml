@@ -2701,5 +2701,11 @@
 				<Option Goto="137" Text="Нет"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="414">
+			<Text>Парни понимают, что обмен не состоится. В глазах их разочарование, досада и растущее подозрение. Пора отсюда уходить!</Text>
+			<Options>
+				<Option Goto="554"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
