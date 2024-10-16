@@ -2242,5 +2242,11 @@
 				<Option Goto="201"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="344">
+			<Text>Вы ускоряете шаг, обходя ремонтные автоматы, копошащиеся вокруг звездолета, и видите впереди стену, покрытую пластиковой обшивкой.</Text>
+			<Options>
+				<Option Goto="410"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
