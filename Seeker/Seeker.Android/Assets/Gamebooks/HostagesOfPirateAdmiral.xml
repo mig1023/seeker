@@ -2644,5 +2644,11 @@
 				<Option Goto="288"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="405">
+			<Text>Отсек совершенно пуст. Бегло оглядевшись, направляетесь к единственной двери - в стене слева от входа.</Text>
+			<Options>
+				<Option Goto="176"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
