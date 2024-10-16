@@ -2345,5 +2345,12 @@
 				<Option Goto="642" Text="Решите, что так вы слишком удалитесь от своей цели"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="359">
+			<Text>ПРОВЕРЬТЕ СВОЕ ОБАЯНИЕ.</Text>
+			<Options>
+				<Option Goto="425" Text="Если землянин поверит вам"/>
+				<Option Goto="159" Text="Если он все же примет вас за попавшего в беду пирата"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
