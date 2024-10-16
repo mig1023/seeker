@@ -2720,5 +2720,11 @@
 				<Option Goto="206"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="417">
+			<Text>ЛОСЬ ЛОВКОСТЬ 9 СИЛА 10\n\nЕсли вы победили, можете продолжать путь:</Text>
+			<Options>
+				<Option Goto="179"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
