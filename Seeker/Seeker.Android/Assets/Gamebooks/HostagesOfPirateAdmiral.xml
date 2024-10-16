@@ -2389,5 +2389,11 @@
 				<Option Goto="677"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="366">
+			<Text>Может быть, за этой дверью - лифт... или хотя бы лестница, ведущая наверх.</Text>
+			<Options>
+				<Option Goto="106"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
