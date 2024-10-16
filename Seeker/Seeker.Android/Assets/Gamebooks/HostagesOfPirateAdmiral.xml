@@ -2146,5 +2146,12 @@
 				<Option Goto="101"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="328">
+			<Text>«К врачу тебе, приятель, надо...» - беспокоится Герберт.</Text>
+			<Options>
+				<Option Goto="172" Text="Согласитесь"/>
+				<Option Goto="478" Text="Вспомните, что в любую минуту вас могут разоблачить, а потому нельзя тратить время"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
