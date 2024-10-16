@@ -2739,5 +2739,14 @@
 				<Option Goto="69"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="420">
+			<Text>Вы в узком продолговатом помещении, стены которого покрыты темным пластиком. Перед вами две ярко окрашенные двери:</Text>
+			<Options>
+				<Option Goto="125" Text="Красная"/>
+				<Option Goto="654" Text="Зеленая">
+					<Text>Какую из них вы попробуете открыть?</Text>
+				</Option>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
