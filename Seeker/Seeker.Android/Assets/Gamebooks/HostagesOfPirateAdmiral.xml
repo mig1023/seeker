@@ -2479,5 +2479,11 @@
 				<Option Goto="539"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="380">
+			<Text>За каждой дверью может поджидать опасность, поэтому вы входите в отсек первым, не снимая руки с оружия.</Text>
+			<Options>
+				<Option Goto="280"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
