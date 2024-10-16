@@ -2779,5 +2779,11 @@
 				<Option Goto="9"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="426">
+			<Text>Делаете шаг из тамбура - и чуть не срываетесь с узкой кафельной кромки. Вы стоите на краю бассейна.</Text>
+			<Options>
+				<Option Goto="486"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
