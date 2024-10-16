@@ -2401,5 +2401,11 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="368">
+			<Text>Вы настроены на новую драку - но в этом отсеке вас не встречает разъяренный хищник.</Text>
+			<Options>
+				<Option Goto="280"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
