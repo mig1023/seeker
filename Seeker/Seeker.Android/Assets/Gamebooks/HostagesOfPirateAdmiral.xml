@@ -2675,5 +2675,11 @@
 				<Option Goto="257"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="410">
+			<Text>В стене раздвигаются дверцы. Это лифт! Кажется, вы нашли то, что искали...</Text>
+			<Options>
+				<Option Goto="330"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
