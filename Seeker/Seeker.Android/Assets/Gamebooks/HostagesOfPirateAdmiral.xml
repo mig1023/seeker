@@ -2185,5 +2185,11 @@
 				<Option Goto="39" Text="Пойдете дальше"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="334">
+			<Text>Перешагиваете порог - и невольно оборачиваетесь, чтобы поскорее вернуться. Но дверь уже закрылась и так слилась со стеной, что ее не найти.</Text>
+			<Options>
+				<Option Goto="288"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
