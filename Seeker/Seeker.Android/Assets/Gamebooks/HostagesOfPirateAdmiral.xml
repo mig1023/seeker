@@ -2491,5 +2491,11 @@
 				<Option Goto="61"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="382">
+			<Text>Врач и в самом деле боится зацепить свои драгоценные шкафчики. Он стреляет, но луч проходит над вами и вонзается в стену.</Text>
+			<Options>
+				<Option Goto="262"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
