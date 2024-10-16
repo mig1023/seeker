@@ -2748,5 +2748,12 @@
 				</Option>
 			</Options>
 		</Paragraph>
+		<Paragraph No="421">
+			<Text>Луч срезает ветви рядом с вами. Тут уже не до разговоров.</Text>
+			<Options>
+				<Option Goto="261" Text="Будете стрелять в ответ"/>
+				<Option Goto="353" Text="Если не можете или не хотите сделать этого"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
