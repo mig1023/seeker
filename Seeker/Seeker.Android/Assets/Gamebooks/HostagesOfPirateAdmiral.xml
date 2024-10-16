@@ -2808,5 +2808,11 @@
 				<Option Goto="48"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="430">
+			<Text>Молниеносно вскидываете бластер - и луч пропарывает противника насквозь. Пират падает под ноги своим дружкам, которые сгрудились за его спиной.</Text>
+			<Options>
+				<Option Goto="82"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
