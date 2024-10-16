@@ -2295,5 +2295,11 @@
 				<Option Goto="147"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="352">
+			<Text>Рубин победно полыхает на вашей ладони - и, конечно же, пират не может устоять.</Text>
+			<Options>
+				<Option Goto="92"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
