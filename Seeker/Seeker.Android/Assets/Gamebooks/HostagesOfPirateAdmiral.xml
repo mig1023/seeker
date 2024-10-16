@@ -2275,5 +2275,12 @@
 				<Option Goto="644" Text="Объясните мастеру, что вы не рабочий"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="349">
+			<Text>Вы стараетесь укрыться в кроне. Заметят вас или не заметят?\n\nПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+			<Options>
+				<Option Goto="273" Text="Повезло"/>
+				<Option Goto="37" Text="Нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
