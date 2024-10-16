@@ -2566,5 +2566,14 @@
 				<Option Goto="242"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="393">
+			<Text>Вы спокойно и без приключений доходите до развилки.</Text>
+			<Options>
+				<Option Goto="457" Text="Одна плетеная дорожка бежит чуть левее"/>
+				<Option Goto="131" Text="Другая - чуть правее">
+					<Text>Какую из них выберете?</Text>
+				</Option>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
