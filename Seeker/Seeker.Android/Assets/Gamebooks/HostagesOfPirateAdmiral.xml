@@ -2338,5 +2338,12 @@
 				<Option Goto="179"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="358">
+			<Text>Герберт, повеселев, предлагает посетить казино или бассейн.</Text>
+			<Options>
+				<Option Goto="134" Text="Согласитесь"/>
+				<Option Goto="642" Text="Решите, что так вы слишком удалитесь от своей цели"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
