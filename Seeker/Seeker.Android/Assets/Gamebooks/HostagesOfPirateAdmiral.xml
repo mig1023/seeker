@@ -2969,5 +2969,12 @@
 				<Option Goto="584" Text="Справа"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="455">
+			<Text>Смело направляетесь вперед...\n\nПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+			<Options>
+				<Option Goto="651" Text="Повезло"/>
+				<Option Goto="256" Text="Нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
