@@ -3001,5 +3001,11 @@
 				<Option Goto="589"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="460">
+			<Text>ПЕТУХ ЛОВКОСТЬ 11 СИЛА 10\n\nЕсли вы победили:</Text>
+			<Options>
+				<Option Goto="510"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
