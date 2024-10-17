@@ -2927,5 +2927,12 @@
 				<Option Goto="54"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="449">
+			<Text>Уверенно направляетесь вперед - но вскоре снова останавливаетесь. Перед вами новая развилка, и опять предстоит выбирать, куда свернуть:</Text>
+			<Options>
+				<Option Goto="399" Text="Налево"/>
+				<Option Goto="601" Text="Направо"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
