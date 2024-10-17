@@ -3039,5 +3039,11 @@
 				<Option Goto="39"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="466">
+			<Text>Вот где пригодилось ваше умение плавать! Чудовище пытается удержать вас, но, проскользнув меж щупалец, вы оказываетесь в безопасности и выбираетесь из воды у самой двери.</Text>
+			<Options>
+				<Option Goto="656"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
