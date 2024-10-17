@@ -2921,5 +2921,11 @@
 				<Option Goto="659"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="448">
+			<Text>Вы переходите в соседний отсек. На всякий случай держите оружие наготове.\n\nКто знает, какие еще сюрпризы готовит этот склад?</Text>
+			<Options>
+				<Option Goto="54"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
