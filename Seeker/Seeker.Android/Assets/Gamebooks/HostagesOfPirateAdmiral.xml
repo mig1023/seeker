@@ -2833,5 +2833,12 @@
 				<Option Goto="271" Text="Продолжите прежний путь"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="434">
+			<Text>ПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+			<Options>
+				<Option Goto="610" Text="Повезло"/>
+				<Option Goto="112" Text="Нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
