@@ -3033,5 +3033,11 @@
 				<Option Goto="42"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="465">
+			<Text>На дне дупла извивается потревоженная светом черная змейка... Нет уж, голубушка, приманивай своим ароматом дураков. А вам пора вернуться на тропинку и продолжать свой путь.</Text>
+			<Options>
+				<Option Goto="39"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
