@@ -2955,5 +2955,12 @@
 				<Option Goto="370" Text="А может быть, вы хотите в открытую направиться к воротам, окликнуть охранников и заявить, что у вас дело к Пауку?"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="453">
+			<Text>ПРОВЕРЬТЕ СВОЕ ОБАЯНИЕ.</Text>
+			<Options>
+				<Option Goto="383" Text="Если этот человек поверит вам"/>
+				<Option Goto="159" Text="Если нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
