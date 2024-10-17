@@ -2915,5 +2915,11 @@
 				<Option Goto="266"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="447">
+			<Text>Отмычка негромко жужжит, и сквозь этот звук вы различаете тихое щелканье замка. Все в порядке!</Text>
+			<Options>
+				<Option Goto="659"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
