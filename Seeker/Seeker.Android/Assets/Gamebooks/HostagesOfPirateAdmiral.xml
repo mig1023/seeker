@@ -2962,5 +2962,12 @@
 				<Option Goto="159" Text="Если нет"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="454">
+			<Text>Дорогу преграждает широкая горизонтальная балка на металлических подпорках.\n\nОбойдете ее:</Text>
+			<Options>
+				<Option Goto="18" Text="Слева"/>
+				<Option Goto="584" Text="Справа"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
