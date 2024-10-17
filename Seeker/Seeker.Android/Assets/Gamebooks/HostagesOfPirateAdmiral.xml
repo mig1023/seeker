@@ -2840,5 +2840,11 @@
 				<Option Goto="112" Text="Нет"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="435">
+			<Text>Вы картинно повисаете на ветвях. Робот приближается и, подхватив вас длинными гибкими манипуляторами, укладывает в контейнер для добычи.</Text>
+			<Options>
+				<Option Goto="105"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
