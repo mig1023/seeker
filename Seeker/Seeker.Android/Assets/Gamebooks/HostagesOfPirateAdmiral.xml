@@ -3027,5 +3027,11 @@
 				<Option Goto="77"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="464">
+			<Text>Пират вглядывается в вас, глаза его вспыхивают. Узнал, негодяй! Остается только драться.\n\nПИРАТ ЛОВКОСТЬ 9 СИЛА 8\n\nЕсли вы победили:</Text>
+			<Options>
+				<Option Goto="42"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
