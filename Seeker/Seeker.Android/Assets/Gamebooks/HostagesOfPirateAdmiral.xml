@@ -3021,5 +3021,11 @@
 				<Option Goto="298" Text="Левую"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="463">
+			<Text>Прыжками, которые сделали бы честь любому кенгуру, перебираетесь с кочки на кочку и благополучно добираетесь до ближайшей дорожки. Теперь можно идти дальше - на юго-запад.</Text>
+			<Options>
+				<Option Goto="77"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
