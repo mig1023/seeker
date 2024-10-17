@@ -2897,5 +2897,11 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="444">
+			<Text>Ключ не подходит к скважине.\n\nВернитесь и посмотрите, что еще можно сделать в этой ситуации.</Text>
+			<Options>
+				<Option Goto="494"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
