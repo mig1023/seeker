@@ -2934,5 +2934,11 @@
 				<Option Goto="601" Text="Направо"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="450">
+			<Text>Ваш противник бьется молча, не желая никого звать на помощь. Да он и не из тех, кто нуждается в подмоге.\n\nГЕРБЕРТ ЛОВКОСТЬ 11 СИЛА 12\n\nЕсли вы победили:</Text>
+			<Options>
+				<Option Goto="214"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
