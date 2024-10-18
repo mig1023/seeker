@@ -3207,5 +3207,11 @@
 				<Option Goto="537"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="492">
+			<Text>Вы поворачиваетесь к конвоиру. Но он не ждет, когда вы на него наброситесь, а разряжает свое оружие в упор...</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
