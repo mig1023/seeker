@@ -3220,5 +3220,14 @@
 				<Option Goto="545" Text="Пойдете дальше"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="494">
+			<Text>Дверь заперта. Может быть, у вас есть ключ или отмычка?</Text>
+			<Options>
+				<Option Goto="616" Text="Выжечь замок лучом бластера (если, конечно, не боитесь, что это приведет в действие сигнализацию)">
+					<Text>Иначе придется обернуться к двери напротив...</Text>
+				</Option>
+				<Option Goto="162"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
