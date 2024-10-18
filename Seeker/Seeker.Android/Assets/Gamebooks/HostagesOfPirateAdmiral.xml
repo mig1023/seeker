@@ -3083,5 +3083,12 @@
 				<Option Goto="562"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="473">
+			<Text>От этой макси-жабы не удерешь! В несколько прыжков свистун настигает вас.\n\nОстается только:</Text>
+			<Options>
+				<Option Goto="181" Text="Стрелять"/>
+				<Option Goto="329" Text="Драться"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
