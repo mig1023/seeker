@@ -3090,5 +3090,11 @@
 				<Option Goto="329" Text="Драться"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="474">
+			<Text>БОЛЬШЕГЛОТ ЛОВКОСТЬ 9 СИЛА 8\n\nЕсли вы победили:</Text>
+			<Options>
+				<Option Goto="564"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
