@@ -3249,5 +3249,11 @@
 				<Option Goto="659"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="498">
+			<Text>Правильный ли выбор вы сделали? Что за странные звуки доносятся из-за двери?.. Но вернуться уже нельзя.</Text>
+			<Options>
+				<Option Goto="354"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
