@@ -3124,5 +3124,11 @@
 				<Option Goto="358"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="479">
+			<Text>Люк открывается легко. Первое, что вы видите, отворив его, - бластер, нацеленный вам в грудь.</Text>
+			<Options>
+				<Option Goto="520"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
