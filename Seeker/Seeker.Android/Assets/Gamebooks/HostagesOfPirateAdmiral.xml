@@ -3118,5 +3118,11 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="478">
+			<Text>Вы твердо отказываетесь от услуг врача. Герберт отступается - в конце концов, вам виднее.</Text>
+			<Options>
+				<Option Goto="358"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
