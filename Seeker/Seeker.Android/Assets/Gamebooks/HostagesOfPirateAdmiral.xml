@@ -3236,5 +3236,12 @@
 				<Option Goto="149" Text="Если любопытство сильнее вас - сунуть в дупло руку и на ощупь проверить, что же там есть"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="496">
+			<Text>ПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+			<Options>
+				<Option Goto="331" Text="Повезло"/>
+				<Option Goto="241" Text="Нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
