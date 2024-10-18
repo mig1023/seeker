@@ -3243,5 +3243,11 @@
 				<Option Goto="241" Text="Нет"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="497">
+			<Text>Ключ с тихим щелканьем поворачивается в скважине.</Text>
+			<Options>
+				<Option Goto="659"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
