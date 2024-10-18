@@ -3096,5 +3096,15 @@
 				<Option Goto="564"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="475">
+			<Text>Пустое помещение с низким потолком и голыми серыми стенами... Отсюда ведут три двери:</Text>
+			<Options>
+				<Option Goto="235" Text="Справа от вас"/>
+				<Option Goto="366" Text="Слева от вас"/>
+				<Option Goto="565" Text="Прямо перед вами">
+					<Text>Куда вы направитесь?</Text>
+				</Option>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
