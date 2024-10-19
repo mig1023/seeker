@@ -3768,5 +3768,11 @@
 				<Option Goto="48"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="579">
+			<Text>Наконец удается подняться на возвышение. И тут силы оставляют вас. Ноги подкашиваются, и, мягко опустившись на пол, вы засыпаете.</Text>
+			<Options>
+				<Option Goto="443"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
