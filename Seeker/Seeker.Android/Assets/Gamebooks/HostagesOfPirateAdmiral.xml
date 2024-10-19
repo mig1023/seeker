@@ -3587,5 +3587,11 @@
 				<Option Goto="448"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="551">
+			<Text>Тропинка вскоре обрывается, но вас это не смущает: деревья здесь густо сплелись ветвями. И вы бодро идете на юго-запад, пока вас не останавливает необычное зрелище.</Text>
+			<Options>
+				<Option Goto="101"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
