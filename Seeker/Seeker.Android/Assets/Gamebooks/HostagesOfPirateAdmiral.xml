@@ -3468,5 +3468,11 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="532">
+			<Text>Врач все-таки выстрелил. Но, видимо, опасался задеть шкафчики с медикаментами, и рука его дрогнула. Луч лишь вскользь задевает вас (вычтите 3 из своей СИЛЫ).</Text>
+			<Options>
+				<Option Goto="262"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
