@@ -3593,5 +3593,11 @@
 				<Option Goto="101"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="552">
+			<Text>Вы быстро очищаете тарелки. Никакой отравы! Еда вкусная, ароматная, она прибавит 5 к вашей СИЛЕ.</Text>
+			<Options>
+				<Option Goto="104"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
