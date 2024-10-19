@@ -3812,5 +3812,11 @@
 				<Option Goto="201" Text="Продолжите путь"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="586">
+			<Text>Перелетев решетку, аккуратно приземляетесь у самой двери и с досадой видите, что зеленый огонек на пряжке погас. Энергия иссякла.</Text>
+			<Options>
+				<Option Goto="656"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
