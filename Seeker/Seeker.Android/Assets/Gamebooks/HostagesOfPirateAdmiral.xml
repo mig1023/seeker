@@ -3774,5 +3774,11 @@
 				<Option Goto="443"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="580">
+			<Text>Рванувшись изо всех сил, выбираетесь на бортик бассейна и, отдышавшись, открываете дверь.</Text>
+			<Options>
+				<Option Goto="50"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
