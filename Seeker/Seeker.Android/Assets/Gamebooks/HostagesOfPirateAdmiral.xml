@@ -3347,5 +3347,12 @@
 				<Option Goto="114"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="513">
+			<Text>Свист впереди оборвался: незнакомец заметил вас и затаился.\n\nКак де вы намерены сражаться?</Text>
+			<Options>
+				<Option Goto="261" Text="Выстрелите сквозь облако листвы, закрывающее от вас цель"/>
+				<Option Goto="353" Text="Не можете или не хотите стрелять"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
