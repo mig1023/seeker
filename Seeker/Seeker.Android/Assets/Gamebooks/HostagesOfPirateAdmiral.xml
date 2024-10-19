@@ -3550,5 +3550,11 @@
 				<Option Goto="50"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="545">
+			<Text>Тропинка легко пружинит под ногами. Время от времени, хлопая крыльями, над вами пролетают птеродактили, но нападать в одиночку не решаются.</Text>
+			<Options>
+				<Option Goto="213"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
