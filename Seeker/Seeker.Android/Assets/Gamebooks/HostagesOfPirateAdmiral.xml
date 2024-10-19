@@ -3505,5 +3505,11 @@
 				<Option Goto="461" Text="Не станете рисковать из-за этой аппетитной красоты и пойдете своей дорогой"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="538">
+			<Text>ТИМС ЛОВКОСТЬ 9 СИЛА 9\n\nЕсли вы победили:</Text>
+			<Options>
+				<Option Goto="670"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
