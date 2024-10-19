@@ -3673,5 +3673,14 @@
 				<Option Goto="279" Text="Продолжите путь, надеясь, что дальше тропинка повернет в нужном направлении"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="564">
+			<Text>Теперь можно покинуть отсек. В стенах есть двери:</Text>
+			<Options>
+				<Option Goto="194" Text="В левой стене"/>
+				<Option Goto="232" Text="В правой стене">
+					<Text>Какую из них вы предпочтете?</Text>
+				</Option>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
