@@ -3456,5 +3456,11 @@
 				<Option Goto="19" Text="Если вы снизили СИЛУ обезьяны до 2"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="530">
+			<Text>Прежде чем выйти из тамбура, вы прислушиваетесь: не жужжит ли кто-нибудь в соседнем отсеке? Нет, кажется, все тихо... И вы перешагиваете порог.</Text>
+			<Options>
+				<Option Goto="46"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
