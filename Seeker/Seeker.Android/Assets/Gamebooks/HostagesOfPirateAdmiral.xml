@@ -3719,5 +3719,12 @@
 				<Option Goto="345"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="571">
+			<Text>ПРОВЕРЬТЕ СВОЕ ОБАЯНИЕ.</Text>
+			<Options>
+				<Option Goto="269" Text="Если слова ваши звучат правдиво"/>
+				<Option Goto="97" Text="Если же незнакомец все-таки примет вас за пирата"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
