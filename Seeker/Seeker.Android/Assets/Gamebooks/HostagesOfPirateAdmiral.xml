@@ -3928,5 +3928,11 @@
 				<Option Goto="664" Text="Невзирая ни на что, пойдете вперед"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="602">
+			<Text>Вы нажимаете на панели кнопки «4433997755» - и дверь распахивается перед вами.</Text>
+			<Options>
+				<Option Goto="300"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
