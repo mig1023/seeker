@@ -3626,5 +3626,12 @@
 				<Option Goto="280"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="557">
+			<Text>Тропинка бежит на юго-запад - и у ближайшего дерева раздваивается.</Text>
+			<Options>
+				<Option Goto="373" Text="Пойдете в прежнем направлении"/>
+				<Option Goto="287" Text="Возьмете немного восточнее"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
