@@ -3422,5 +3422,11 @@
 				<Option Goto="48"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="525">
+			<Text>От очередного электрического разряда вы теряете сознание - и приходите в себя уже в контейнере, куда робот складывает добычу.</Text>
+			<Options>
+				<Option Goto="105"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
