@@ -3385,5 +3385,11 @@
 				<Option Goto="410"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="519">
+			<Text>ЯЩЕРИЦА ЛОВКОСТЬ 8 СИЛА 8\n\nЕсли вы убили ее, можете идти дальше:</Text>
+			<Options>
+				<Option Goto="51"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
