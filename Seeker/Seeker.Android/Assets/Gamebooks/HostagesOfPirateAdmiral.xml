@@ -3780,5 +3780,11 @@
 				<Option Goto="50"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="581">
+			<Text>Разочарованный Кверри возвращается в деревню, а вы идете своей дорогой.</Text>
+			<Options>
+				<Option Goto="83"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
