@@ -3360,5 +3360,12 @@
 				<Option Goto="80"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="515">
+			<Text>ПРОВЕРЬТЕ СВОЮ ЛОВКОСТЬ. Бросьте кубик дважды.</Text>
+			<Options>
+				<Option Goto="145" Text="Если сумма выпавших чисел больше вашей ЛОВКОСТИ"/>
+				<Option Goto="75" Text="Если меньше или равна ей"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
