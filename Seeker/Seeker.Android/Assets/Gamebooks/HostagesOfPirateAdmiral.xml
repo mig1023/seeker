@@ -3274,5 +3274,11 @@
 				<Option Goto="61"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="502">
+			<Text>При первом вашем угрожающем движении из «глазка» в стене каюты вылетает тонкий луч и пропарывает вас насквозь. Пиратского адмирала неплохо охраняют!</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
