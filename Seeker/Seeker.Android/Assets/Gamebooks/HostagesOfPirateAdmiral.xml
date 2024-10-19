@@ -3480,5 +3480,11 @@
 				<Option Goto="347"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="534">
+			<Text>Нож - не то оружие, которым можно одолеть робота-убийцу. Разумеется, вы обречены.</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
