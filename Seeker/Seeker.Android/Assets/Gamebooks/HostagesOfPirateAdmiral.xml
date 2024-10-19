@@ -3517,5 +3517,11 @@
 				<Option Goto="21"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="540">
+			<Text>Перешагиваете порог - и вас окутывает беспросветная мгла.</Text>
+			<Options>
+				<Option Goto="346"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
