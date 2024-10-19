@@ -3786,5 +3786,11 @@
 				<Option Goto="83"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="582">
+			<Text>Шум драки растревожил это осиное гнездо, и к вашему противнику спешит подмога.</Text>
+			<Options>
+				<Option Goto="48"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
