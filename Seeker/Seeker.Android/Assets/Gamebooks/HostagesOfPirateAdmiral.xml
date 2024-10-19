@@ -3530,5 +3530,12 @@
 				<Option Goto="449" Text="По правой"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="542">
+			<Text>Не поздно ли вы приняли это решение? Поверят ли вам теперь?\n\nПРОВЕРЬТЕ СВОЕ ОБАЯНИЕ.</Text>
+			<Options>
+				<Option Goto="6" Text="Если удастся произвести впечатление недотепы, который запутался во вранье и готов во всем сознаться"/>
+				<Option Goto="234" Text="Если нет"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
