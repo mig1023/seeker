@@ -3874,5 +3874,11 @@
 				<Option Goto="398" Text="Если бой затянулся"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="595">
+			<Text>Назвав пароль, отключаете рацию и, заложив крутой вираж, идете на посадку.</Text>
+			<Options>
+				<Option Goto="367"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
