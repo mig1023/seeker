@@ -3319,5 +3319,11 @@
 				<Option Goto="158" Text="В правую"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="509">
+			<Text>Ваши старания напрасны. Голос умолкает, огни гаснут, под куполом воцаряется мрак. Кажется, пора уходить.</Text>
+			<Options>
+				<Option Goto="381"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
