@@ -3886,5 +3886,12 @@
 				<Option Goto="426"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="597">
+			<Text>Да сколько же здесь этих развилок! Вот и опять приходится выбирать между:</Text>
+			<Options>
+				<Option Goto="673" Text="Правой дорожкой"/>
+				<Option Goto="43" Text="Левой дорожкой"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
