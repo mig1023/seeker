@@ -3325,5 +3325,14 @@
 				<Option Goto="381"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="510">
+			<Text>Теперь можно без помех оглядеться.</Text>
+			<Options>
+				<Option Goto="340" Text="Из прямоугольного отсека ведет дверь - она находится в одной из его коротких стен"/>
+				<Option Goto="294" Text="Вы делаете шаг к ней - и тут же замечаете в длинной стене (по правую руку) еще одну дверь">
+					<Text>Какую из них предпочтете?</Text>
+				</Option>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
