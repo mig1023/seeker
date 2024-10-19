@@ -3462,5 +3462,11 @@
 				<Option Goto="46"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="531">
+			<Text>Вслепую, среди бушующих языков пламени, пытаетесь пробиться к двери.\n\nУвы, это не удается. Вас ожидает ужасная смерть в огне...</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
