@@ -3544,5 +3544,11 @@
 				<Option Goto="301" Text="Если нет"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="544">
+			<Text>К чему вам маска? Разве вы здесь подводным спортом собираетесь заниматься?.. Аккуратно пройдя по кафельной кромке, открываете дверь, ведущую в тамбур.</Text>
+			<Options>
+				<Option Goto="50"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
