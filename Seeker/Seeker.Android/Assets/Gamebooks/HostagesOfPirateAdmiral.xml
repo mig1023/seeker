@@ -3492,5 +3492,11 @@
 				<Option Goto="39"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="536">
+			<Text>Чуть-чуть не достаете вы в прыжке до края трещины - и срываетесь в бездонную черноту.</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
