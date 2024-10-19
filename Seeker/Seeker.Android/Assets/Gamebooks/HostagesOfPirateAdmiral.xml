@@ -3682,5 +3682,11 @@
 				</Option>
 			</Options>
 		</Paragraph>
+		<Paragraph No="565">
+			<Text>Дверь открывается - и в лицо вам веет холодом.</Text>
+			<Options>
+				<Option Goto="86"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
