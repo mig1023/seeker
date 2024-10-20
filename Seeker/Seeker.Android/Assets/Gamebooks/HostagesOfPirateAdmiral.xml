@@ -4033,5 +4033,11 @@
 				<Option Goto="48"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="619">
+			<Text>Вы промахнулись. Бегом добираетесь по дорожке до дерева - и из ветвей на вас обрушивается враг! Крепкий, тренированный парень, готовый биться насмерть.</Text>
+			<Options>
+				<Option Goto="193"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
