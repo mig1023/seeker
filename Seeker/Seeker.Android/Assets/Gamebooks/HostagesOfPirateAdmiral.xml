@@ -4162,5 +4162,11 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="640">
+			<Text>РАСТЕРЗАЙ ЛОВКОСТЬ 12 СИЛА 10\n\nЕсли вы победили, можете покинуть отсек через дверь...</Text>
+			<Options>
+				<Option Goto="514"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
