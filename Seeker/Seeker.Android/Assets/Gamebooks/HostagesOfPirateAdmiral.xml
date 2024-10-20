@@ -4209,5 +4209,12 @@
 				<Option Goto="376" Text="Левую"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="647">
+			<Text>РОБОТ-ОХОТНИК ЛОВКОСТЬ 10 СИЛА 10\n\nКаждый удачный удар робота вычтет 3 из вашей СИЛЬЕ.</Text>
+			<Options>
+				<Option Goto="245" Text="Если вы победили"/>
+				<Option Goto="525" Text="Но если ваша СИЛА снизилась до 3"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
