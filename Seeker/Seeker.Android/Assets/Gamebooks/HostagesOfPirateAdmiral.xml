@@ -4070,5 +4070,11 @@
 				<Option Goto="530"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="625">
+			<Text>Вы имеете право так поступить. И все же - вы бросили разумное существо на верную гибель. Этот поступок понизит ваше ОБАЯНИЕ на 1. А теперь можете идти дальше.</Text>
+			<Options>
+				<Option Goto="169"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
