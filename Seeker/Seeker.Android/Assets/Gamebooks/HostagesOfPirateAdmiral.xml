@@ -4039,5 +4039,11 @@
 				<Option Goto="193"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="620">
+			<Text>Бросив бесцельную возню у двери, начитаете осматривать коридор. Надо найти выход отсюда, а заодно, если повезет, и другой способ отпереть камеру пленницы.</Text>
+			<Options>
+				<Option Goto="477"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
