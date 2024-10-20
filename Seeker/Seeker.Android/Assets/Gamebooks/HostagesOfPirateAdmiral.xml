@@ -4276,5 +4276,11 @@
 				<Option Goto="286"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="656">
+			<Text>Внезапно вас охватывает страх: а что, если дверь заперта? Как вы будете возвращаться обратно?\n\nНо тревога оказывается напрасной: дверь под рукой послушно открывается.</Text>
+			<Options>
+				<Option Goto="547"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
