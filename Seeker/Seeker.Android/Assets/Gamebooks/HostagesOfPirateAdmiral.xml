@@ -4117,5 +4117,12 @@
 				<Option Goto="199"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="632">
+			<Text>Месиво не отличается приятным вкусом, но все же это еда (прибавьте 1 к СИЛЕ).</Text>
+			<Options>
+				<Option Goto="236" Text="Хотите получить еще порцию"/>
+				<Option Goto="344" Text="Задерживаться здесь опасно, нужно продолжать свой путь"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
