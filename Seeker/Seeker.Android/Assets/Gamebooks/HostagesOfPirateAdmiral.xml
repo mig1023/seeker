@@ -4264,5 +4264,11 @@
 				<Option Goto="266"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="654">
+			<Text>Вы с Джонни перешагиваете порог, дверь бесшумно закрывается за вами. Пустое, унылое помещение с серыми стенами... Ничего интересного здесь нет. Пора покинуть этот отсек.</Text>
+			<Options>
+				<Option Goto="295"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
