@@ -4234,5 +4234,11 @@
 				<Option Goto="326"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="650">
+			<Text>Другого способа покинуть отсек нет. Сидите здесь и ждите - может быть, хозяева склада наткнутся на вас. Иначе вас и Джонни ожидает голодная смерть.</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
