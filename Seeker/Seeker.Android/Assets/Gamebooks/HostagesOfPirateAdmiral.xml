@@ -4082,5 +4082,11 @@
 				<Option Goto="490"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="627">
+			<Text>По узкой дорожке и идти-то надо осторожно, а уж бежать... Вы срываетесь в цепкую, жадную трясину. Никто не услышит ваши крики и не придет на помощь.</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
