@@ -4307,5 +4307,11 @@
 				<Option Goto="214"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="661">
+			<Text>Туземец, оскорбленный отказом, перепрыгивает на ближайшую ветку и скрывается в листве. Вам остается только продолжить свой путь.</Text>
+			<Options>
+				<Option Goto="281"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
