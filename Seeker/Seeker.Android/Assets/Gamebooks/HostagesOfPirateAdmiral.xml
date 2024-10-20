@@ -4064,5 +4064,11 @@
 				<Option Goto="350" Text="Если меньше или равна ей"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="624">
+			<Text>Каким-то чудом вам удается не задеть ни один из цилиндров, и вы с Джонни благополучно пробираетесь к выходу.</Text>
+			<Options>
+				<Option Goto="530"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
