@@ -4301,5 +4301,11 @@
 				<Option Goto="202" Text="Если вы с ним еще не виделись"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="660">
+			<Text>Вы замедляете шаг, делая вид, что поправляете пояс... и, не отстегивая бластера, стреляете «с бедра», распоров противника пополам.</Text>
+			<Options>
+				<Option Goto="214"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
