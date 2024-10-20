@@ -4294,5 +4294,12 @@
 				<Option Goto="107"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="659">
+			<Text>Осталось лишь шагнуть через порог...</Text>
+			<Options>
+				<Option Goto="360" Text="Если в своем путешествии вы уже встречали профессора Хоули"/>
+				<Option Goto="202" Text="Если вы с ним еще не виделись"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
