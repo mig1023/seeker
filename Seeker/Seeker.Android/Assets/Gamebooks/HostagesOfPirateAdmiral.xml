@@ -4246,5 +4246,11 @@
 				<Option Goto="306"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="652">
+			<Text>Из тамбура прислушиваетесь к долетающим из-за двери странным звукам. Что там за шум? Может быть, вы напрасно выбрали эту дверь...</Text>
+			<Options>
+				<Option Goto="354"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
