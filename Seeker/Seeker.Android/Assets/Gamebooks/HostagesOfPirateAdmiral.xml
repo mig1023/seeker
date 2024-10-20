@@ -4008,5 +4008,11 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="615">
+			<Text>Палка пролетает рядом с птицей. Та начинает быстрее размахивать своими неуклюжими крыльями и исчезает в тумане. Проводив ее взглядом, идете дальше.</Text>
+			<Options>
+				<Option Goto="391"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
