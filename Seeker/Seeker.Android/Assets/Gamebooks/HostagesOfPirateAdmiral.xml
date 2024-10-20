@@ -4282,5 +4282,11 @@
 				<Option Goto="547"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="657">
+			<Text>Увы, придется вам узнать, что такое удар скорпионьего жала. Оно не ядовито, но способно пробить человека насквозь...</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
