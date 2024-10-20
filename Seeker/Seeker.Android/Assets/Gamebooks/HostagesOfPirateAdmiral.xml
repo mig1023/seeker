@@ -4366,5 +4366,12 @@
 				<Option Goto="312"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="671">
+			<Text>ЧЕРЕПАХА ЛОВКОСТЬ 10 СИЛА 10</Text>
+			<Options>
+				<Option Goto="29" Text="В любой момент боя вы можете отступить на тропинку"/>
+				<Option Goto="365" Text="Если вы победили"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
