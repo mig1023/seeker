@@ -4094,5 +4094,16 @@
 				<Option Goto="168"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="629">
+			<Text>Бросьте кубик. Выпало:</Text>
+			<Options>
+				<Option Goto="93" Text="1"/>
+				<Option Goto="666" Text="2"/>
+				<Option Goto="267" Text="3"/>
+				<Option Goto="303" Text="4"/>
+				<Option Goto="675" Text="5"/>
+				<Option Goto="521" Text="6"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
