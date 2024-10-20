@@ -4386,5 +4386,12 @@
 				<Gameover/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="674">
+			<Text>РОБОТ-САДОВНИК ЛОВКОСТЬ 9 СИЛА 10</Text>
+			<Options>
+				<Option Goto="282" Text="Если вы победили"/>
+				<Option Goto="424" Text="Но если противник снизил вашу СИЛУ до 2"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
