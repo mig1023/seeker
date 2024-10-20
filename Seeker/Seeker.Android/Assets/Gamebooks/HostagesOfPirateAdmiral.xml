@@ -4168,5 +4168,11 @@
 				<Option Goto="514"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="641">
+			<Text>Вы уворачиваетесь, и нож, скользнув мимо виска, улетает куда-то за камни... Что ж, теперь остается только драться.</Text>
+			<Options>
+				<Option Goto="587"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
