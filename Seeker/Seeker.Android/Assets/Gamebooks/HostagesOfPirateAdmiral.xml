@@ -3983,5 +3983,11 @@
 				<Option Goto="50"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="611">
+			<Text>Вы поворачиваетесь на тропинке - но тут одна из выдр в прыжке достает вас, сталкивает в болото. Вся стая набрасывается на добычу.</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
