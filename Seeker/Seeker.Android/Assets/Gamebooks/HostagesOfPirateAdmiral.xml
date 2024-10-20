@@ -4014,5 +4014,11 @@
 				<Option Goto="391"/>
 			</Options>
 		</Paragraph>
+		<Paragraph No="616">
+			<Text>Вам понадобился всего один заряд - а сигнализации здесь нет. Кажется, можно спокойно войти.</Text>
+			<Options>
+				<Option Goto="248"/>
+			</Options>
+		</Paragraph>
 	</Paragraphs>
 </Gamebook>
