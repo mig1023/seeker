@@ -3058,9 +3058,14 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="450">
-			<Text>Ваш противник бьется молча, не желая никого звать на помощь. Да он и не из тех, кто нуждается в подмоге.\n\nГЕРБЕРТ ЛОВКОСТЬ 11 СИЛА 12\n\nЕсли вы победили:</Text>
+			<Text>Ваш противник бьется молча, не желая никого звать на помощь. Да он и не из тех, кто нуждается в подмоге.</Text>
+			<Actions>
+				<Fight>
+					<Enemy Name="ГЕРБЕРТ" Skill="11" Strength="12"/>
+				</Fight>
+			</Actions>
 			<Options>
-				<Option Goto="214"/>
+				<Option Goto="214" Text="Если вы победили"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="451">
