@@ -2203,6 +2203,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="ВТОРОЙ ПИРАТ" Skill="9" Strength="7"/>
+					<HeroWoundsLimit/>
 				</Fight>
 			</Actions>
 			<Options>
