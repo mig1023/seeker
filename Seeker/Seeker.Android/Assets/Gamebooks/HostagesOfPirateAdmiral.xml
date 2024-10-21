@@ -4561,9 +4561,13 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="671">
-			<Text>ЧЕРЕПАХА ЛОВКОСТЬ 10 СИЛА 10</Text>
+			<Actions>
+				<Option Goto="29" Text="Вместо боя вы можете отступить на тропинку"/>
+				<Fight>
+					<Enemy Name="ЧЕРЕПАХА" Skill="10" Strength="10"/>
+				</Fight>
+			</Actions>
 			<Options>
-				<Option Goto="29" Text="В любой момент боя вы можете отступить на тропинку"/>
 				<Option Goto="365" Text="Если вы победили"/>
 			</Options>
 		</Paragraph>
