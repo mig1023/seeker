@@ -4591,7 +4591,11 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="674">
-			<Text>РОБОТ-САДОВНИК ЛОВКОСТЬ 9 СИЛА 10</Text>
+			<Actions>
+				<Fight>
+					<Enemy Name="РОБОТ-САДОВНИК" Skill="9" Strength="10"/>
+				</Fight>
+			</Actions>
 			<Options>
 				<Option Goto="282" Text="Если вы победили"/>
 				<Option Goto="424" Text="Но если противник снизил вашу СИЛУ до 2"/>
