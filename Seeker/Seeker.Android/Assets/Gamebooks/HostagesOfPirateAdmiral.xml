@@ -1371,9 +1371,14 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="198">
-			<Text>Увы, на время боя придется вычесть 1 из вашей ЛОВКОСТИ - так действует на зрение световая атака.\n\nУДАВ-ПРОЖЕКТОР ЛОВКОСТЬ 9 СИЛА 8\n\nЕсли вы победили:</Text>
+			<Actions>
+				<Fight>
+					<Enemy Name="УДАВ-ПРОЖЕКТОР" Skill="9" Strength="8"/>
+					<Text Style="Small">Увы, на время боя придется вычесть 1 из вашей ЛОВКОСТИ - так действует на зрение световая атака.</Text>
+				</Fight>
+			</Actions>
 			<Options>
-				<Option Goto="332"/>
+				<Option Goto="332" Text="Если вы победили"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="199">
