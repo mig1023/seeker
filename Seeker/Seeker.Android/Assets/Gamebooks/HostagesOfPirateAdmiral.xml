@@ -4600,6 +4600,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="РОБОТ-САДОВНИК" Skill="9" Strength="10"/>
+					<HeroWoundsLimit/>
 				</Fight>
 			</Actions>
 			<Options>
