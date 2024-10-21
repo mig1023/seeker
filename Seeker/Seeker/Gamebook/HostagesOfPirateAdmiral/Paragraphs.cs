@@ -63,6 +63,9 @@ namespace Seeker.Gamebook.HostagesOfPirateAdmiral
             if (xmlAction["Benefit"] != null)
                 action.Benefit = Xml.ModificationParse(xmlAction["Benefit"], new Modification());
 
+            if (action.Type == "Option")
+                action.Option = OptionParse(xmlAction);
+
             return action;
         }
 

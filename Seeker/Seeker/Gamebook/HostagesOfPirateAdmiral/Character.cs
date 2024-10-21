@@ -112,3 +112,4 @@ namespace Seeker.Gamebook.HostagesOfPirateAdmiral
             IsProtagonist = true;
         }
     }
+}
