@@ -3160,9 +3160,14 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="464">
-			<Text>Пират вглядывается в вас, глаза его вспыхивают. Узнал, негодяй! Остается только драться.\n\nПИРАТ ЛОВКОСТЬ 9 СИЛА 8\n\nЕсли вы победили:</Text>
+			<Text>Пират вглядывается в вас, глаза его вспыхивают. Узнал, негодяй! Остается только драться.</Text>
+			<Actions>
+				<Fight>
+					<Enemy Name="ПИРАТ" Skill="9" Strength="8"/>
+				</Fight>
+			</Actions>
 			<Options>
-				<Option Goto="42"/>
+				<Option Goto="42" Text="Если вы победили"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="465">
