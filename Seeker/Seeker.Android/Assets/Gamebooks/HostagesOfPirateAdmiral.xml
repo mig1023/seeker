@@ -23,6 +23,7 @@
 			<Fight>Сражаться</Fight>
 			<Luck>Проверить удачу</Luck>
 			<Charm>Проверить обаяние</Charm>
+			<Skill>Проверить ловкость</Skill>
 			<LuckRecovery>Восстановить 1 цифру удачи</LuckRecovery>
 		</Buttons>
 	</Introduction>
@@ -182,7 +183,9 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="22">
-			<Text>ПРОВЕРЬТЕ СВОЮ ЛОВКОСТЬ. Бросьте кубик дважды.</Text>
+			<Actions>
+				<Skill/>
+			</Actions>
 			<Options>
 				<Option Goto="342" Text="Если сумма выпавших очков больше вашей ЛОВКОСТИ"/>
 				<Option Goto="626" Text="Если меньше или равна ей"/>
