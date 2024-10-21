@@ -2459,7 +2459,10 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="349">
-			<Text>Вы стараетесь укрыться в кроне. Заметят вас или не заметят?\n\nПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+			<Text>Вы стараетесь укрыться в кроне. Заметят вас или не заметят?</Text>
+			<Actions>
+				<Luck/>
+			</Actions>
 			<Options>
 				<Option Goto="273" Text="Повезло"/>
 				<Option Goto="37" Text="Нет"/>
