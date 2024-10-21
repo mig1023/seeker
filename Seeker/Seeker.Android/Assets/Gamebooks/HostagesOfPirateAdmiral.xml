@@ -3438,7 +3438,9 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="488">
-			<Text>ПРОВЕРЬТЕ СВОЕ ОБАЯНИЕ.</Text>
+			<Actions>
+				<Charm/>
+			</Actions>
 			<Options>
 				<Option Goto="622" Text="Если произведете на незнакомца хорошее впечатление"/>
 				<Option Goto="220" Text="Если нет"/>
