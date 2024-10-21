@@ -3603,10 +3603,14 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="529">
-			<Text>ОБЕЗЬЯНА ЛОВКОСТЬ 10 СИЛА 10</Text>
+			<Actions>
+				<Option Goto="317" Text="Вместо боя вы можете пустить в ход бластер"/>
+				<Option Goto="177" Text="Также можно сразу отступить"/>
+				<Fight>
+					<Enemy Name="ОБЕЗЬЯНА" Skill="10" Strength="10"/>
+				</Fight>
+			</Actions>
 			<Options>
-				<Option Goto="317" Text="В любой момент боя вы можете пустить в ход бластер"/>
-				<Option Goto="177" Text="Отступить"/>
 				<Option Goto="19" Text="Если вы снизили СИЛУ обезьяны до 2"/>
 			</Options>
 		</Paragraph>
