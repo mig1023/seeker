@@ -716,9 +716,14 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="102">
-			<Text>Теперь глаза ваши защищены, можно вести бой на равных.\n\nУДАВ-ПРОЖЕКТОР ЛОВКОСТЬ 9 СИЛА 8\n\nЕсли вы победили:</Text>
+			<Text>Теперь глаза ваши защищены, можно вести бой на равных.</Text>
+			<Actions>
+				<Fight>
+					<Enemy Name="УДАВ-ПРОЖЕКТОР" Skill="9" Strength="8"/>
+				</Fight>
+			</Actions>
 			<Options>
-				<Option Goto="332"/>
+				<Option Goto="332" Text="Если вы победили"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="103">
