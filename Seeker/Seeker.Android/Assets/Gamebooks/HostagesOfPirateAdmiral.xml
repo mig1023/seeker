@@ -1836,7 +1836,10 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="261">
-			<Text>Стрелять, не видя мишени... тут требуется не меткость, а везение.\n\nПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+			<Text>Стрелять, не видя мишени... тут требуется не меткость, а везение.</Text>
+			<Actions>
+				<Luck/>
+			</Actions>
 			<Options>
 				<Option Goto="59" Text="Повезло"/>
 				<Option Goto="619" Text="Нет"/>
