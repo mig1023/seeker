@@ -11,6 +11,7 @@ namespace Seeker.Gamebook.HostagesOfPirateAdmiral
         public bool EnemyWoundsLimit { get; set; }
         public int DevastatingAttack { get; set; }
         public bool SkillPenalty { get; set; }
+        public bool HitPenalty { get; set; }
 
         public List<Character> Enemies { get; set; }
 
@@ -91,7 +92,7 @@ namespace Seeker.Gamebook.HostagesOfPirateAdmiral
 
             luckCheck.Add(Result(isLuck, "УСПЕХ", "НЕУДАЧА"));
 
-            Game.Buttons.Disable(isLuck, "Повезло", "Не повезло");
+            Game.Buttons.Disable(isLuck, "Повезло", "Нет");
 
             Character.Protagonist.Luck[goodLuck] = !Character.Protagonist.Luck[goodLuck];
 
@@ -215,7 +216,6 @@ namespace Seeker.Gamebook.HostagesOfPirateAdmiral
 
                 bool attackAlready = false;
                 int protagonistHitStrength = 0;
-                int skillPenalty = SkillPenalty ? 1 : 0;
 
                 foreach (Character enemy in FightEnemies)
                 {
@@ -227,18 +227,27 @@ namespace Seeker.Gamebook.HostagesOfPirateAdmiral
                     if (!attackAlready)
                     {
                         Game.Dice.DoubleRoll(out int protagonistRollFirst, out int protagonistRollSecond);
-                        int protagonistSkill = Character.Protagonist.Skill - skillPenalty;
-                        protagonistHitStrength = protagonistRollFirst + protagonistRollSecond + protagonistSkill;
 
+                        int protagonistSkill = Character.Protagonist.Skill;
+                        
                         if (SkillPenalty)
                         {
+                            protagonistSkill -= 1;
                             fight.Add($"GRAY|Ваша ловкость снижена на 1 и равна {protagonistSkill}");
                         }
+
+                        protagonistHitStrength = protagonistRollFirst + protagonistRollSecond + protagonistSkill;
 
                         fight.Add($"Мощность вашего удара: " +
                             $"{Game.Dice.Symbol(protagonistRollFirst)} + " +
                             $"{Game.Dice.Symbol(protagonistRollSecond)} + " +
                             $"{protagonistSkill} = {protagonistHitStrength}");
+
+                        if (HitPenalty)
+                        {
+                            protagonistHitStrength -= 1;
+                            fight.Add($"GRAY|Ваша мощность удара снижена на 1 и равна {protagonistHitStrength}");
+                        }
                     }
 
                     Game.Dice.DoubleRoll(out int enemyRollFirst, out int enemyRollSecond);
