@@ -3228,9 +3228,13 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="474">
-			<Text>БОЛЬШЕГЛОТ ЛОВКОСТЬ 9 СИЛА 8\n\nЕсли вы победили:</Text>
+			<Actions>
+				<Fight>
+					<Enemy Name="БОЛЬШЕГЛОТ" Skill="9" Strength="8"/>
+				</Fight>
+			</Actions>
 			<Options>
-				<Option Goto="564"/>
+				<Option Goto="564" Text="Если вы победили"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="475">
