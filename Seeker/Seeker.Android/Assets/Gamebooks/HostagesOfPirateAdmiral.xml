@@ -4407,7 +4407,9 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="623">
-			<Text>ПРОВЕРЬТЕ СВОЮ ЛОВКОСТЬ. Бросьте кубик дважды.</Text>
+			<Actions>
+				<Skill/>
+			</Actions>
 			<Options>
 				<Option Goto="549" Text="Если сумма выпавших чисел больше вашей ЛОВКОСТИ"/>
 				<Option Goto="350" Text="Если меньше или равна ей"/>
