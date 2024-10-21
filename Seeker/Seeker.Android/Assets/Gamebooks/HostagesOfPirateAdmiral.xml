@@ -3535,7 +3535,12 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="519">
-			<Text>ЯЩЕРИЦА ЛОВКОСТЬ 8 СИЛА 8\n\nЕсли вы убили ее, можете идти дальше:</Text>
+			<Actions>
+				<Fight>
+					<Enemy Name="ЯЩЕРИЦА" Skill="8" Strength="8"/>
+					<Text>Если вы убили ее, можете идти дальше:</Text>
+				</Fight>
+			</Actions>
 			<Options>
 				<Option Goto="51"/>
 			</Options>
