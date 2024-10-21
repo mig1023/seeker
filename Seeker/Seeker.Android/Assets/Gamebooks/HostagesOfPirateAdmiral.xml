@@ -2057,6 +2057,7 @@
 					<Enemies>
 						<Enemy Name="ПЕРВЫЙ ПИРАТ" Skill="9" Strength="8"/>
 						<Enemy Name="ВТОРОЙ ПИРАТ" Skill="8" Strength="10"/>
+						<EnemyWoundsLimit/>
 					</Enemies>
 					<Text Style="Small">Они неплохо дерутся, эти парни, но выносливостью не отличаются. Стоит СИЛЕ любого из них снизиться до 2, как он теряет сознание.</Text>
 				</Fight>
