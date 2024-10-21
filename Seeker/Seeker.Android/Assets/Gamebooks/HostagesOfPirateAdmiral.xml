@@ -1154,6 +1154,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="ОСЬМИНОГ" Skill="9" Strength="10"/>
+					<SkillPenalty/>
 					<Text Style="Small">Вам приходится драться в непривычной среде (не в воде даже, а в каком-то киселе), поэтому на время боя ваша ЛОВКОСТЬ уменьшается на 1.</Text>
 				</Fight>
 			</Actions>
