@@ -3130,9 +3130,13 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="460">
-			<Text>ПЕТУХ ЛОВКОСТЬ 11 СИЛА 10\n\nЕсли вы победили:</Text>
+			<Actions>
+				<Fight>
+					<Enemy Name="ПЕТУХ" Skill="11" Strength="10"/>
+				</Fight>
+			</Actions>
 			<Options>
-				<Option Goto="510"/>
+				<Option Goto="510" Text="Если вы победили"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="461">
