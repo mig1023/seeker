@@ -1583,6 +1583,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="КРИВОЗУБ" Skill="9" Strength="8"/>
+					<HitPenalty/>
 					<Text Style="Small">Приходится драться по пояс в болоте, поэтому вычитайте 1 из МОЩНОСТИ каждого УДАРА.</Text>
 				</Fight>
 			</Actions>
