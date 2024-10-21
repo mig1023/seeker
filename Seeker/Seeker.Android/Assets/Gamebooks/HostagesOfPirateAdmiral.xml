@@ -2268,9 +2268,13 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="329">
-			<Text>СВИСТУН ЛОВКОСТЬ 6 СИЛА 10</Text>
+			<Actions>
+				<Option Goto="181" Text="Вместо боя можете застрелить зверя"/>
+				<Fight>
+					<Enemy Name="СВИСТУН" Skill="6" Strength="10"/>
+				</Fight>
+			</Actions>
 			<Options>
-				<Option Goto="181" Text="В любой момент боя можете застрелить зверя"/>
 				<Option Goto="127" Text="Если вы снизили СИЛУ противника до 2"/>
 			</Options>
 		</Paragraph>
