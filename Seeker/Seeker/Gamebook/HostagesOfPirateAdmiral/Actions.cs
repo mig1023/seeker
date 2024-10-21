@@ -9,6 +9,7 @@ namespace Seeker.Gamebook.HostagesOfPirateAdmiral
         public int RoundsToWin { get; set; }
         public bool HeroWoundsLimit { get; set; }
         public bool EnemyWoundsLimit { get; set; }
+        public int DevastatingAttack { get; set; }
 
         public List<Character> Enemies { get; set; }
 
@@ -264,7 +265,7 @@ namespace Seeker.Gamebook.HostagesOfPirateAdmiral
                     {
                         fight.Add($"BAD|{enemy.Name} ранил вас");
 
-                        Character.Protagonist.Strength -= 2;
+                        Character.Protagonist.Strength -= (DevastatingAttack > 0 ? DevastatingAttack : 2);
 
                         if ((Character.Protagonist.Strength <= 0) || (HeroWoundsLimit && (Character.Protagonist.Strength <= 2)))
                         {
