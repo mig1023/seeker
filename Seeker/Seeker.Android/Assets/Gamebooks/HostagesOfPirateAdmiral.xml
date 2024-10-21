@@ -1378,6 +1378,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="УДАВ-ПРОЖЕКТОР" Skill="9" Strength="8"/>
+					<SkillPenalty/>
 					<Text Style="Small">Увы, на время боя придется вычесть 1 из вашей ЛОВКОСТИ - так действует на зрение световая атака.</Text>
 				</Fight>
 			</Actions>
