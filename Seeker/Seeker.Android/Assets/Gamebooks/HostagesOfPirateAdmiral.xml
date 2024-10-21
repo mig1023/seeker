@@ -3664,9 +3664,13 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="538">
-			<Text>ТИМС ЛОВКОСТЬ 9 СИЛА 9\n\nЕсли вы победили:</Text>
+			<Actions>
+				<Fight>
+					<Enemy Name="ТИМС" Skill="9" Strength="9"/>
+				</Fight>
+			</Actions>
 			<Options>
-				<Option Goto="670"/>
+				<Option Goto="670" Text="Если вы победили"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="539">
