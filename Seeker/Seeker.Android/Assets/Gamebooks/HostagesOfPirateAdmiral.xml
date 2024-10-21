@@ -3901,9 +3901,17 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="574">
-			<Text>1-Й ПАТРУЛЬНЫЙ ЛОВКОСТЬ 10 СИЛА 8\n\n2-Й ПАТРУЛЬНЫЙ ЛОВКОСТЬ 9 СИЛА 9\n\n3-Й ПАТРУЛЬНЫЙ ЛОВКОСТЬ 9 СИЛА 8\n\nЕсли вы победили:</Text>
+			<Actions>
+				<Fight>
+					<Enemies>
+						<Enemy Name="ПЕРВЫЙ ПАТРУЛЬНЫЙ" Skill="10" Strength="8"/>
+						<Enemy Name="ВТОРОЙ ПАТРУЛЬНЫЙ" Skill="9" Strength="9"/>
+						<Enemy Name="ТРЕТИЙ ПАТРУЛЬНЫЙ" Skill="9" Strength="8"/>
+					</Enemies>
+				</Fight>
+			</Actions>
 			<Options>
-				<Option Goto="178"/>
+				<Option Goto="178" Text="Если вы победили"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="575">
