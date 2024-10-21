@@ -3989,9 +3989,17 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="587">
-			<Text>1-Й НЕЗНАКОМЕЦ ЛОВКОСТЬ 9 СИЛА 9\n\n2-Й НЕЗНАКОМЕЦ ЛОВКОСТЬ 9 СИЛА 8\n\n3-Й НЕЗНАКОМЕЦ ЛОВКОСТЬ 8 СИЛА 10\n\nЕсли вы победили:</Text>
+			<Actions>
+				<Fight>
+					<Enemies>
+						<Enemy Name="ПЕРВЫЙ НЕЗНАКОМЕЦ" Skill="9" Strength="9"/>
+						<Enemy Name="ВТОРОЙ НЕЗНАКОМЕЦ" Skill="9" Strength="8"/>
+						<Enemy Name="ТРЕТИЙ НЕЗНАКОМЕЦ" Skill="8" Strength="10"/>
+					</Enemies>
+				</Fight>
+			</Actions>
 			<Options>
-				<Option Goto="197"/>
+				<Option Goto="197" Text="Если вы победили"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="588">
