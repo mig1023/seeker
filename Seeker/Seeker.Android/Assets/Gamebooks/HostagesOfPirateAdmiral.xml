@@ -1151,7 +1151,9 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="163">
-			<Text>ПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+			<Actions>
+				<Luck/>
+			</Actions>
 			<Options>
 				<Option Goto="239" Text="Повезло"/>
 				<Option Goto="611" Text="Нет"/>
