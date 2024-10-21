@@ -10,6 +10,7 @@ namespace Seeker.Gamebook.HostagesOfPirateAdmiral
         public bool HeroWoundsLimit { get; set; }
         public bool EnemyWoundsLimit { get; set; }
         public int DevastatingAttack { get; set; }
+        public bool SkillPenalty { get; set; }
 
         public List<Character> Enemies { get; set; }
 
@@ -214,6 +215,7 @@ namespace Seeker.Gamebook.HostagesOfPirateAdmiral
 
                 bool attackAlready = false;
                 int protagonistHitStrength = 0;
+                int skillPenalty = SkillPenalty ? 1 : 0;
 
                 foreach (Character enemy in FightEnemies)
                 {
@@ -225,8 +227,13 @@ namespace Seeker.Gamebook.HostagesOfPirateAdmiral
                     if (!attackAlready)
                     {
                         Game.Dice.DoubleRoll(out int protagonistRollFirst, out int protagonistRollSecond);
-                        int protagonistSkill = Character.Protagonist.Skill;
+                        int protagonistSkill = Character.Protagonist.Skill - skillPenalty;
                         protagonistHitStrength = protagonistRollFirst + protagonistRollSecond + protagonistSkill;
+
+                        if (SkillPenalty)
+                        {
+                            fight.Add($"GRAY|Ваша ловкость снижена на 1 и равна {protagonistSkill}");
+                        }
 
                         fight.Add($"Мощность вашего удара: " +
                             $"{Game.Dice.Symbol(protagonistRollFirst)} + " +
