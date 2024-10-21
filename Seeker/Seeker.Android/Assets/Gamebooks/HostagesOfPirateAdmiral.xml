@@ -4414,6 +4414,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="РОБОТ-ОХОТНИК" Skill="10" Strength="10"/>
+					<DevastatingAttack Value="3"/>
 					<Text Style="Small">Каждый удачный удар робота вычтет 3 из вашей СИЛЬЕ.</Text>
 				</Fight>
 			</Actions>
