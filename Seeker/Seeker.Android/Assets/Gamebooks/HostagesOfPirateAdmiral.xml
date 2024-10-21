@@ -4578,6 +4578,8 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="БРИГС" Skill="10" Strength="10"/>
+					<HeroWoundsLimit/>
+					<EnemyWoundsLimit/>
 					<Text>Бластер, конечно, пускать в ход нельзя.</Text>
 				</Fight>
 			</Actions>
