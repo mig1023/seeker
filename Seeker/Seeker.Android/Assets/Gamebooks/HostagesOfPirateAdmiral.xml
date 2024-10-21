@@ -2275,6 +2275,7 @@
 				<Option Goto="181" Text="Вместо боя можете застрелить зверя"/>
 				<Fight>
 					<Enemy Name="СВИСТУН" Skill="6" Strength="10"/>
+					<EnemyWoundsLimit/>
 				</Fight>
 			</Actions>
 			<Options>
